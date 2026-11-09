@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-09 16:17; owner delivery directive 12:40 in force)
+
+- Candidate of record V3.0.61 / master 1.61.0; NOT RELEASED. Gate B steps 3 (T-423 r3 62e18eed, text-only) and 4 (T-563 e04d99d9: FIN.PLASTER released 580.5819 -> 363.3738 m2, 4 lines HELD 262.018 .. 262.052 m2 on D-39) MERGED.
+- t485 red (V3.0.60 / V3.0.61 pending in 1.61.0) -> T-655 gate 0 (W2 16:39, also the t199 helper fix); step 5 T-314 r3 after it (master 1.63.0); then T-424 and the remaining V14 fix rows.
+- 10 Nov: trial BOQ r4 (T-654, W3 16:59) on the newest master with steps 3-4. Confidence: trial r4 merged by 10 Nov end HIGH (one W3 build, research only); step 5 merged by 10 Nov end MEDIUM (T-655 Checker run, then one W2 build at 18:39 or 20:39, then one Checker run).
+
 ## Status (Lead, 2026-11-09 12:20; owner delivery directive 12:40 in force)
 
 - Candidate of record V3.0.59 / master 1.59.0 (T-651 MERGED: registry promotes V3.0.59, t485 green again); NOT RELEASED.

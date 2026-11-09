@@ -1,5 +1,18 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-09 16:17 UTC
+
+Drive read OK (no file created in the Alsenan project folder since 12:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.61 / master 1.61.0 (NOT RELEASED); released V2.9 + route G unchanged.
+- Gate B step 4 MERGED (T-563 e04d99d9): plaster height to the slab / roof soffit (Q-72) wired into the 11 dry FIN.PLASTER lines. Released FIN.PLASTER 580.5819 -> 363.3738 m2 (-217.2081 m2, -37.4 %): 4 lines move from released to HELD 262.018 .. 262.052 m2 (+20.6 % on their old 217.21) because the roof build-up is not printed (D-39 / DCR-6, designer item, held never 0); 11 lines bound 840.646 .. 895.896 m2. FIN.PAINT 76 lines byte-identical. Checker own re-measure 1F-01 face 17.70 m AGREE 0.00; 4 / 11 rooms PARTIALLY VERIFIED, 0 new whole lines VERIFIED. Freelancer flat 3.60 / 3.40 / 3.50 m = RULE_DIFFERENCE (Q-72).
+- Gate B step 3 MERGED (T-423 r3 62e18eed): 22 lines text-only (thresholds, dome ceiling lists, D-1F-04 1.760 m2 face move); 0 m2 / m3 / kg moved.
+- Gate-0 fix MERGED (T-653 db8898c1): no process-global Decimal precision in 17 research modules; L4 21,843 pass 0 F. Lesson ADOPTED.
+- Worse / found: t485 RED on the working branch since 14:31 (T-423 and T-563 pending in master 1.61.0; second time after T-498). New t199 helper false failure blocks T-314 (F-T314-2). Both -> T-655 gate 0, worker 2 first; T-314 r3 (step 5, exterior plaster 1,007.93 .. 1,085.61 m2 vs freelancer 1,469.97 m2, -31 .. -26 %, reference only) right after.
+- Learned: PROPOSED a package rebased on a merged predecessor promotes it in its own master; registry tests pick writers among the files they govern.
+- 10 Nov: trial BOQ r4 (T-654, worker 3 first at 17:00) on the newest master, carrying steps 3-4. Gate: lowest open gate 0 (T-655, T-656).
+TEAM HEALTH: since 12:23 12 runs, all closed, 0 UNCLOSED; 3 MERGED, 0 REJECTED; 1 INCOMPLETE stage (T-314 r2, correct stop on a new failure, saved); 2 correct overlap-guard INCOMPLETE (Checker); 3 empty worker runs (W1 13:28 / 15:23, W3 15:01: no claimable row under the one-at-a-time Gate B order; all three lanes now have a TODO). All self-checks PASS. READY 0.
+OWNER PACKAGE: none today (no section 2.7 decision).
+NEEDS FIXING: (1) Scout paused since 27 Oct: no action unless you want it back. (2) venv incomplete at first use seen twice today: watch only.
+
 ## LEAD REPORT 2026-11-09 12:20 UTC
 
 Drive read OK (no file created in the Alsenan project folder since 08:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.59 / master 1.59.0 (NOT RELEASED); released V2.9 + route G unchanged; no candidate quantity moved since 08:20.
@@ -31,16 +44,3 @@ TEAM HEALTH: since 04:19 11 runs, all closed with a final line (Verifier 05:50 I
 OWNER PACKAGE: none today (no section 2.7 decision).
 NEEDS FIXING: (1) venv incomplete at first use (watch: not seen this cycle). (2) Scout paused since 27 Oct: no action unless you want it back.
 
-## LEAD REPORT 2026-11-09 04:16 UTC
-
-Drive read OK (no file created in the project folders since 00:00 UTC 9 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.57.0 (NOT RELEASED); NO quantity wired since 00:15 (before = after in every trade); released V2.9 + route G unchanged. Gate B started in the owner's order: step 1 T-525 MERGED, step 2 T-498 blockwork materials CLAIMED W3 03:01 (running).
-- Registry (T-525): master 1.56.0 -> 1.57.0 moves only B8-06 waterproofing base to INTEGRATED (m2 209.018867, lm 186.782544 unchanged); Checker reproduced the Drive chain V3.0.57 -> V3.0.58 c9570e6c exactly; L4 21,657 pass / 2 known t374 failures; t485 green again.
-- Lintels B9-02 (m3 / pcs): printed ST p.13 RC schedule covers every block wall -> 60 / 60 RC cast m3, precast pcs NOT_APPLICABLE on this villa; STR.CONC.LINTEL 8 BOUNDED + 10 HELD BY NAME 0.372692 .. 0.437542; B9-02 low 0.502 -> 0.991692 m3, high OPEN; freelancer no lintel row (RULE_DIFFERENCE). Lead ruling F-T650-3: lift-door ends 0.39996 m are 0.40 (printed chain 1.00 + 2 x 0.40), tolerance at printed precision; those lines stay HELD on the lift head item.
-- Roof / fence B13: 43 / 43 held-blank lines classed; screed AT_LEAST 10.628996 m3 .. OPEN (Checker own ROOF-430 AGREE); insulation / protection printed nowhere -> HELD; freelancer roof 285 m2 one line UNRESOLVED.
-- Blockwork B9 (m2): 39 UNKNOWN statement rows own 231.6726 vs stated 231.6737 (-0.0011 TOLERANCE); no ENGINE_WRONG; 50 HELD rows 561.22 untouched.
-- Rebar B11 (kg): T-647 REJECTED narrow: 17 lines 51.574 kg were DRAWING-CONFIRMED on a count the drawing does not print (A vs A+1) -> r2 HELD as a count-convention gap; 166 causes + 5 CN rows kept.
-- Learned: ADOPTED printed schedule before company rule (T-644 / T-650); PROPOSED: coincident bound on an unprinted count stays HELD (T-647), tolerance at printed precision (F-T650-3), UNKNOWN statement rows are gap components first (T-633).
-- Gate: lowest open gate 1 (T-647 r2). Next: T-498 Gate B, T-647 r2 (W1), T-648 (W2), V18 + trial BOQ r2 (T-649), then T-423 r2 -> T-563 -> T-314.
-TEAM HEALTH: since 00:19 10 runs closed + W3 03:01 running (scheduler PENDING), 0 empty, 4 MERGED, 1 REJECTED, READY 0; all ran code, self-check PASS; 'No module named pytest' at first use again 5 times (Verifier 03:43 / 04:01, W2 00:54 / 02:56, this Lead run), setup rebuilt it each time. queue check: 17 actionable rows, 0 flagged, 0 stall checks.
-OWNER PACKAGE: none today (F-T650-3 settled by the printed dimension chain; no section 2.7 decision).
-NEEDS FIXING: (1) venv incomplete at first use in about half of all runs ('No module named pytest' until setup re-runs): the main chat may want `status` to verify pytest imports before reporting prepared (agent code: not mine to change). (2) Scout paused since 27 Oct: no action unless you want it back.

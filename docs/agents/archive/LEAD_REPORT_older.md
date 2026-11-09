@@ -1,3 +1,17 @@
+## LEAD REPORT 2026-11-09 04:16 UTC
+
+Drive read OK (no file created in the project folders since 00:00 UTC 9 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.57.0 (NOT RELEASED); NO quantity wired since 00:15 (before = after in every trade); released V2.9 + route G unchanged. Gate B started in the owner's order: step 1 T-525 MERGED, step 2 T-498 blockwork materials CLAIMED W3 03:01 (running).
+- Registry (T-525): master 1.56.0 -> 1.57.0 moves only B8-06 waterproofing base to INTEGRATED (m2 209.018867, lm 186.782544 unchanged); Checker reproduced the Drive chain V3.0.57 -> V3.0.58 c9570e6c exactly; L4 21,657 pass / 2 known t374 failures; t485 green again.
+- Lintels B9-02 (m3 / pcs): printed ST p.13 RC schedule covers every block wall -> 60 / 60 RC cast m3, precast pcs NOT_APPLICABLE on this villa; STR.CONC.LINTEL 8 BOUNDED + 10 HELD BY NAME 0.372692 .. 0.437542; B9-02 low 0.502 -> 0.991692 m3, high OPEN; freelancer no lintel row (RULE_DIFFERENCE). Lead ruling F-T650-3: lift-door ends 0.39996 m are 0.40 (printed chain 1.00 + 2 x 0.40), tolerance at printed precision; those lines stay HELD on the lift head item.
+- Roof / fence B13: 43 / 43 held-blank lines classed; screed AT_LEAST 10.628996 m3 .. OPEN (Checker own ROOF-430 AGREE); insulation / protection printed nowhere -> HELD; freelancer roof 285 m2 one line UNRESOLVED.
+- Blockwork B9 (m2): 39 UNKNOWN statement rows own 231.6726 vs stated 231.6737 (-0.0011 TOLERANCE); no ENGINE_WRONG; 50 HELD rows 561.22 untouched.
+- Rebar B11 (kg): T-647 REJECTED narrow: 17 lines 51.574 kg were DRAWING-CONFIRMED on a count the drawing does not print (A vs A+1) -> r2 HELD as a count-convention gap; 166 causes + 5 CN rows kept.
+- Learned: ADOPTED printed schedule before company rule (T-644 / T-650); PROPOSED: coincident bound on an unprinted count stays HELD (T-647), tolerance at printed precision (F-T650-3), UNKNOWN statement rows are gap components first (T-633).
+- Gate: lowest open gate 1 (T-647 r2). Next: T-498 Gate B, T-647 r2 (W1), T-648 (W2), V18 + trial BOQ r2 (T-649), then T-423 r2 -> T-563 -> T-314.
+TEAM HEALTH: since 00:19 10 runs closed + W3 03:01 running (scheduler PENDING), 0 empty, 4 MERGED, 1 REJECTED, READY 0; all ran code, self-check PASS; 'No module named pytest' at first use again 5 times (Verifier 03:43 / 04:01, W2 00:54 / 02:56, this Lead run), setup rebuilt it each time. queue check: 17 actionable rows, 0 flagged, 0 stall checks.
+OWNER PACKAGE: none today (F-T650-3 settled by the printed dimension chain; no section 2.7 decision).
+NEEDS FIXING: (1) venv incomplete at first use in about half of all runs ('No module named pytest' until setup re-runs): the main chat may want `status` to verify pytest imports before reporting prepared (agent code: not mine to change). (2) Scout paused since 27 Oct: no action unless you want it back.
+
 ## LEAD REPORT 2026-11-09 00:15 UTC
 
 Drive read OK (no file created in the project folders since 20:00 UTC 8 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.56.0 (NOT RELEASED); NO quantity wired since 20:15; released V2.9 + route G unchanged. PR #4 MERGED by the owner 21:15 (main fd71bc30): Gate B opened this run in the owner's order.

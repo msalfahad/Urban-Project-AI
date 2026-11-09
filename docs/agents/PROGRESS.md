@@ -1,5 +1,24 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-09 16:17 UTC (Lead). Previous version: 2026-11-09 12:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4
+single lines; no trade subtotal); released: 0. Candidate of record now V3.0.61 (not released): your wiring steps 3 and
+4 are in.
+
+Since 9 Nov 12:20 (newest first; three checked and merged, none sent back):
+- Plaster heights (your step 4) wired: dry-room plaster now runs to the slab / roof underside (your rule). Plaster the
+  candidate can release falls from 580.58 to 363.37 m2: four upper-floor rooms (217.21 m2 before) are now held at
+  262.02 .. 262.05 m2 because the roof build-up thickness is not printed (designer item); they are held, not zero.
+  Paint lines unchanged. The checker re-measured one more room himself (face 17.70 m, exact match).
+- Ceilings / sills / thresholds wording (step 3) merged: no area, volume or weight moved.
+- The precision fault in 17 older research files is fixed; the full test run is clean again.
+- One check is red on the working branch: the family register still lists the last two merged steps as pending (the
+  same slip as on 8-9 Nov). A small fix is first for the finishes worker; it also clears a false test failure that
+  stopped the exterior plaster step (step 5, first build 1,007.93 .. 1,085.61 m2 vs freelancer 1,469.97 m2).
+- Next: register fix; 10 Nov trial BOQ r4 with steps 3-4 (integration worker, today); then exterior plaster (step 5).
+
+Previous section (2026-11-09 12:20):
 Last update: 2026-11-09 12:20 UTC (Lead). Previous version: 2026-11-09 08:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4

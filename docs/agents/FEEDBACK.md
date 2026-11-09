@@ -3,6 +3,14 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-09 16:17 (since 12:23)
+
+- T-423 r3 Gate B step 3: WORKED (MERGED 62e18eed, 22 lines text-only, 0 quantity moves). Left T-423 pending in the newest master (t485 red) -> T-655.
+- T-653 Decimal precision fix: WORKED (MERGED db8898c1, L4 0 F). F-T653-1 (t627 relies on t568 context) -> T-656 worker 1.
+- T-563 Gate B step 4: WORKED for the quantities (MERGED e04d99d9, 11 FIN.PLASTER lines = T-556 exactly, paint unchanged), PARTIAL for the registry (its master 1.61.0 kept V3.0.60 and V3.0.61 pending: F-C-T563-1) -> T-655 worker 2 FIRST. F-C-T563-2 -> T-654 now TODO.
+- T-314 r2: PARTIAL (INCOMPLETE stage 080ccaa5, correct stop on F-T314-2, figures = r1). Decision: the t199 helper fix goes into T-655; T-314 r3 resumes after it, master 1.63.0.
+- W1 13:28 / 15:23 and W3 15:01 no claim: correct under the one-at-a-time Gate B order; each lane now has a first TODO (T-656 / T-655 / T-654).
+
 ## Lead 2026-11-09 12:20 (since 08:22)
 
 - T-648 r2 finishes causes: WORKED (local Decimal context, outputs byte-identical, 198 -> 0 lines without cause). F-T648-2 (same fault in 19 merged research files) -> T-653 W2 FIRST.
