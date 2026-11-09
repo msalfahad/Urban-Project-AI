@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-09T20:52Z | Verifier | STARTED | run session_01E6cPnaS2Pk4cxwtm378EAa | repo-attached routine | task state: none READY (T-659 CLAIMED W2 20:42; T-657/658/660/662 TODO; T-661/T-314 QUEUED) | self-check pending
 - 2026-11-09T20:41Z | Worker 2 | STARTED | run session_01E6cPnbDqT2ThPQWetdgVZG | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09 20:18 UTC | Lead | SUCCESS | board | Owner 18:30 change of focus applied: concrete first; B10 baseline 140 HELD m3 lines (95 bounded 37.518976..73.227539, 45 blank) -> T-657 necks (W1), T-658 columns/GB/straps/footing (W3), T-659 small elements (W2), T-660 beams, T-662 rebar ratio calibration, T-661 concrete Gate B + F-T655-1; T-314 r3 QUEUED after T-661; since 16:20 4 MERGED 0 REJECTED, 0 UNCLOSED, 4 empty slots (no rows for the re-plan yet); no quantity moved; V2.9 + route G unchanged; Drive OK, no photos; no owner package; queue check: 16 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-09 20:13 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
