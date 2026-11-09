@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-09T00:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY per Lead 00:19 (W2 active since 00:41) | self-check pending
 - 2026-11-09 00:41 UTC | Worker 2 | STARTED | run session_01E6cPnc1JQyfYjciMPmskfa | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09T00:19Z | Lead | SUCCESS | board | Since 20:19: 7 MERGED (T-637 r2, T-641, T-642, T-645, T-643 WORKED; T-644, T-636 PARTIAL), 0 rejected, READY 0; 10 Nov trial BOQ delivered (5151 lines, 1559 released / 2750 HELD, 436 HELD without committed cause); nothing wired (V3.0.58 NOT RELEASED; V2.9 + route G unchanged); PR #4 merged by owner -> T-525/T-498/T-423 r2/T-563/T-314 TODO in owner order; rulings F-T644-1 (printed RC lintel schedule first) and F-T645-1; new rows T-647/T-648 (HELD causes), T-649 (V18 + trial BOQ r2), T-650 (lintel payable form); lessons 3 ADOPTED / 3 PROPOSED; Drive OK, no photos; milestone push sent; queue check: 21 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-09T00:12Z | Lead | STARTED | run session_01E6cPncJiAfQsqR4SGuXYmt | repo-attached routine | task state: board | report pending
