@@ -1,5 +1,31 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-09 00:15 UTC (Lead). Previous version: 2026-11-08 20:15 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4
+single lines; no trade subtotal); released: 0. The candidate of record stays V3.0.58 (not released). Your PR #4 merge
+(21:15) unblocked wiring: the first packages go to the checker in your order from this run.
+
+Since 8 Nov 20:15 (newest first; seven checked and merged, none sent back; NOTHING wired yet):
+- THE 10 NOV TRIAL BOQ exists, one day early: every trade B1 .. B13 in one document, 5,151 lines: 1,559 with a value,
+  2,750 held, 842 not BOQ lines; each trade and unit adds up exactly (checked by hand by the checker for concrete
+  284.57 m3 and reinforcement 9,787.75 kg calculated); no trade has a total yet because held lines remain (held is
+  never shown as 0). 2,314 held lines carry a written cause; 436 do not yet: two tasks give them one now.
+- Reinforcement: of 754.72 kg of column bars calculated on held concrete, 595.44 kg stay (their bar lengths do not
+  depend on the hold) and 159.29 kg are proposed held (top-floor interval to a roof level the drawings do not give);
+  when applied, calculated reinforcement 9,787.75 -> about 9,628 kg (checker validated the four records).
+- Concrete: the checker's findings closed: three were ours right; one strip north of a column set to 0.050 m3 with up
+  to 0.025 m3 held; the corner arc band depth is printed in a block on the drawing (0.283 m3 drawing-confirmed).
+- Lintels: all 60 openings classed under your precast rule (13 pieces established, 37 at most, 19 flagged, 4 held);
+  because the structural drawings print an RC lintel schedule for part of the walls, the printed schedule governs those
+  openings and your precast rule the rest (drawings come before company rules); one task restates each opening.
+- Stair finishes: 31 / 31 held lines classed: risers 6.84 m2 and flight edges 13.36 m measurable now; the rest held by
+  named designer items.
+- Next: wiring in your order (gate fix, blockwork materials, ceilings / sills, plaster heights, exterior plaster), the
+  trial BOQ updated with tonight's results, every held line given its written cause; 12-13 Nov statement and scorecard.
+- 10 Nov: trial BOQ document DONE; every held line with a cause by end of 10 Nov MEDIUM; first wired package MEDIUM.
+
+Previous section (2026-11-08 20:15):
 Last update: 2026-11-08 20:15 UTC (Lead). Previous version: 2026-11-08 16:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4

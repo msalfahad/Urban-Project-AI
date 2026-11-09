@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-09 00:15 (since 20:19)
+
+- T-637 r2 master 1.56.0: WORKED (registered in RULES_MANIFEST, L4 = 3 pre-existing failures only). Decision: grouping for T-636 / T-649.
+- T-641 manifest V17: WORKED (106 ops re-added AGREE). Decision: base of V18 (T-649).
+- T-642 Checker P02 / P04 fix rows: WORKED (3 ENGINE_RIGHT, 1 SET 0.050 + HELD 0..0.025, BAND0049 DRAWING-CONFIRMED). Decision: V18 (T-649).
+- T-644 lintels 60: PARTIAL (classed, but payable form conflicts with the printed RC schedule, F-T644-1). Decision: Lead ruling (schedule first) -> T-650 restate.
+- T-645 stair finishes 31: WORKED (10 fix rows Checker AGREE); F-T645-1 ruled by the Lead. Decision: V18 (T-649) with the ruling.
+- T-643 rebar on HELD concrete: WORKED (10 KEEP, 4 downgrade records validated, 208 classed). Decision: downgrades wired in V18 (T-649).
+- T-636 the 10 Nov trial BOQ: PARTIAL (delivered, re-adds exact; 436 HELD without committed cause, F-T636-1). Decision: T-647 (S) + T-648 (A), then trial BOQ r2 (T-649).
+
 ## Lead 2026-11-08 20:15 (since 16:19)
 
 - T-640 B4 / B5 finishes 72 HELD blank (Gate A): WORKED (72 / 72 classed, 33 bounded fix rows 87.234 .. 138.540 m2, F-T627-1 door heights ruled ENGINE_RIGHT 0.580 m2). Decision: wired as overlay in V17 (T-641).
@@ -22,12 +32,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-625, T-629: READY. Decision: T-629 first (V15 base for T-631 / T-630), T-625 second.
 - Worker 1 11:45: wrapper refused a research script; ran it with the venv python directly. Decision: board note: drive research scripts through pytest or record BLOCKED until PR #4; owner told under NEEDS FIXING.
 
-## Lead 2026-11-08 08:19 (since 04:15)
-
-- T-617 lift landing head (Gate A): WORKED (bounded by ring-beam soffits, low end HELD, 0.000 m2 change). Decision: fold into statement V11 (T-620); FR-T617-1 into manifest V15 (T-629).
-- T-614 r2 beam-end census (Gate A): WORKED (billing only inside the line's own extent, +0.061576 m3 fix rows, Checker re-measured 3 pieces). Decision: open items CB4 r2 0.01355 m3 + 5 T-229 add pairs -> T-624.
-- T-618 small finishes residuals (Gate A): WORKED (causes or ranges; E1 porch 3.50 lm omission candidate HELD; curved / corridor UNRESOLVED needing his sides). Decision: fold into V11; FR-T618-1 / -2 into V15.
-- T-619 manifest V14 (Gate A): WORKED (B10 66.392081 .. 66.393376 m3 as a range, passages 9 -> 6, Checker re-added). Decision: F-T619-1 / -2 -> T-624; next V15 (T-629).
-- T-621 floor tile rows (Gate A): PARTIAL (40 / 41 by handle; 3 rooms Checker-VERIFIED; row 0 round-stair footprint unmeasured, open-plan boundaries not closable on wall faces). Decision: T-625 with the boundary-per-open-side rule.
-- T-615 Q-80 block walls: READY. Decision: first Gate A item in the next Checker run.
-- Worker 3 05:00 BLOCKED (venv pip download 403): environment, self-recovered at 06:59; no action beyond watching for a repeat.

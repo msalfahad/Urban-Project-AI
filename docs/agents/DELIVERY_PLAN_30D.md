@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-09 00:15; owner delivery directive 12:40 in force; PR #4 merged 21:15 8 Nov)
+
+- Merged and Checker-verified since 20:15 (all Gate A, non-candidate): T-637 r2 master 1.56.0, T-641 overlay V17, T-642 Checker fix rows, T-644 lintels classed (60), T-645 stair finishes (31), T-643 rebar on held concrete (4 downgrade records), T-636 THE 10 NOV TRIAL BOQ (5151 lines; 1559 released / 2750 HELD / 842 excluded; every unit re-added by the Checker for B10 / B11).
+- 10 Nov milestone: trial BOQ document DELIVERED 9 Nov 00:05 (one day early) as a non-candidate document; 436 HELD lines still lack a committed cause (T-647 S / T-648 A) and the 8 Nov evening fix rows + downgrades go into V18 + trial BOQ r2 (T-649).
+- Gate B now open, owner order: T-525 (gate fix, W3 01:00) -> T-498 -> T-423 r2 (W1 builds in parallel) -> T-563 -> T-314; each package changes the candidate V3.0.58 -> V3.0.59+, Checker one at a time.
+- Confidence: trial BOQ r2 with every HELD carrying a cause by 10 Nov end MEDIUM (two parallel cause rows + one W3 run after T-525 / T-498); first wired Gate B package in the candidate by 10 Nov MEDIUM; 12-13 Nov statement V12 + scorecard (T-635) HIGH.
+
 ## Status (Lead, 2026-11-08 20:15; owner delivery directive 12:40 in force)
 
 - Merged and Checker-verified since 16:15 (all Gate A, unwired): T-640 finishes 72 causes, T-638 formwork 370 causes (+33.127 m2), T-639 rebar 807 causes (+412.444 kg), T-634 plaster / paint 31 rows. T-637 r1 rejected narrow, r2 READY.
