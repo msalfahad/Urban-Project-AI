@@ -123,7 +123,8 @@ def ledger():
             pr = R.projection_strip(p["plan_area_m2"])
             row.update(status=pr["status"], plan_area_m2=pr["plan_area_m2"],
                        basis=(SECTION_CROSS.get(lid, "no section crosses it") + "; no mark, no bars, depth not printed"
-                              + ("; dome detail ring depth 'AS PER ARCH', no B4 mark on the east ring (Q-61 C(3))"
+                              + ("; dome detail ring depth dimension 182F prints 'AS PER ARCH' (text override; its scaled measurement 0.75 on an "
+                                  "N.I.S. detail is an indication, never a quantity), no B4 mark on the east ring (Q-61 C(3))"
                                  if c == "RING" else "") + " (R-T660-3)"),
                        guard=pr["guard"] if c == "PROJECTION" else None,
                        parapet_note=PARAPET_NOTE if c == "PROJECTION" else None,

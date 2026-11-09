@@ -59,7 +59,11 @@ falls 1.800120 = -1.975 set aside + 0.174624 the valued piece above its old low 
    and 3 within 0.05, span 1 +0.27. 'B3 (With Stair)' is a plan annotation 0.15 m north of span 2 at the stair landing.
    Under B-S18 (schedule over plan annotation) the CB3 reading 0.3975 is the drawing-preferred one; Q-61 C(2) holds it
    until the Checker confirms the cross-reference (B-S18 owner condition 1). Not selected here.
-4. **BM-GF-059 value** on exact edges 0.500 x 1.500: 0.549624 (= Verifier's T-402 re-measure; T-402's 0.549284 used
+4. **East dome ring**: the dome detail (ST p.7, N.I.S.) dimensions the ring depth with 182F whose text is overridden
+   'AS PER ARCH'; the dimension's own measurement is 3750 x DIMLFAC 0.02 = 0.75, an indication on a not-to-scale detail,
+   inadmissible as a quantity (R-T402-6 spirit: the sheet SHOWS 'AS PER ARCH'). The ring stays held with plan 1.799 m2;
+   the architect's dome section is the missing fact.
+5. **BM-GF-059 value** on exact edges 0.500 x 1.500: 0.549624 (= Verifier's T-402 re-measure; T-402's 0.549284 used
    0.4996 x 1.5003). The column 335 outline (0.50 x 0.25, x 71.4634 .. 71.9634) and the piece do not overlap.
 
 ## Owner manual method beside the drawing-derived method; freelancer (quantities only)
