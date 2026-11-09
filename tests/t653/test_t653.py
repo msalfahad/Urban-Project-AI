@@ -148,8 +148,6 @@ def test_every_rebuilt_output_is_byte_identical_to_before(ledger, mode, prec):
     seen = set()
     for key, modes in ledger.items():
         r = modes[mode]
-        if key == "t627" and mode == "prec6":
-            continue    # t627 is a consumer, not one of the 19 modules: see test_t627_consumer_note
         assert r["error"] is None, (key, mode, r["error"])
         assert r["prec_after_build"] == prec, (key, mode, r["prec_after_build"])
         for o in r["outputs"]:
@@ -161,16 +159,18 @@ def test_every_rebuilt_output_is_byte_identical_to_before(ledger, mode, prec):
                 assert o["equal_committed"], (key, mode, o["output"])
             if o["output"].endswith("==committed"):
                 assert o["text"] == "True"
-    want = set(BEFORE) if mode == "default" else {k for k in BEFORE if k[0] != "t627"}
-    assert seen == want
+    assert seen == set(BEFORE)   # T-656: t627 is compared at prec 6 too (it skipped prec 6 before F-T653-1 was fixed)
 
 
 def test_t627_consumer_note(ledger):
     """t627_alsenan imports t568_alsenan and never set a context of its own: before T-653 it computed at 40 only through
-    t568's import side effect. At the default context its output is byte-identical (pinned above); at an adverse prec 6
-    its own arithmetic fails. It is outside T-653's file list and is reported as a finding (F-T653-1), not changed."""
-    assert ledger["t627"]["default"]["error"] is None
-    assert ledger["t627"]["prec6"]["error"] is not None and "InvalidOperation" in ledger["t627"]["prec6"]["error"]
+    t568's import side effect, and after T-653 at the caller's precision (an adverse prec 6 failed: finding F-T653-1).
+    T-656 gave it its own local 40-digit context (tests/t656): both modes now rebuild the pinned bytes."""
+    for mode, prec in (("default", 28), ("prec6", 6)):
+        r = ledger["t627"][mode]
+        assert r["error"] is None, (mode, r["error"])
+        assert r["prec_after_build"] == prec
+        assert all(o["rebuilt_sha256"] == BEFORE[("t627", o["output"])] and o["equal_committed"] for o in r["outputs"])
 
 
 # the rebuild ledger sets prec 6 only inside the CHILD processes it spawns (the adverse caller), never in its own
