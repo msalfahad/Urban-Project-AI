@@ -44,6 +44,15 @@ code written by newer modules alone is set aside. Same strength: every code an o
 Checked on the T-314 stage head 080ccaa5: the old helper fails test_1_25_0_every_written_item_code_..._full_strength,
 the new one passes (27/27). Normal + two adverse tests added (t655_* in that file).
 
+## Validation (task head)
+
+Targeted: tests/t655 + t485 + t651 + t563_plaster_height + t423_split_remainder + t199_formwork_metalwork PASS (t485
+stale-pending guard green: was ['T-423'] and V3.0.61 pending). L4: every test folder and root test file on c553cb8f,
+two halves (odd / even, 2 CPUs): the only failure was t463 test_requests_cover_every_freeze_the_patched_tests_prove
+(1.62.0 names merge 62e18eed, not yet in GIT_FACTS ancestry) -> GIT_FACTS refreshed by build_t463_facts (--check 0
+problems), t463 PASS on the final head. The t374 baseline pair did not fail in this run (private inputs skipped).
+Freeze 0 differing; codemap check clean; build_master --check equal, 0 problems; manifest check [].
+
 ## Findings (text only, not fixed here)
 
 - F-T655-1: tests/t328_roof_buildup/test_family_master_1_26_0.py (and t284 1.27.0) carry the same `_own_head` pattern
