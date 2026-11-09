@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-09T22:50Z | Verifier | STARTED | run session_01E6cPndcH7vBrXQWCvdCS9c | repo-attached routine | task state: none READY (T-657, T-659 MERGED 21:56; T-658 TODO after W3 INCOMPLETE; T-660 TODO; T-662 CLAIMED W2 22:40; T-661 QUEUED) | self-check pending
 - 2026-11-09T22:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09T21:58Z | Verifier | SUCCESS | T-659, T-657 | T-659 GATE A PASS MERGED 907ace46 (16 small-B10 lines stay HELD, 6 bounded 13.279574..24.498998 m3; own ST p.7/p.10/p.14 + arch sheet03: band 5.6392..11.0328, pad net 0.234, parapet 2F floor 1.6245, pool steps undrawn + pool blinding MISSING AGREE; residual: band under building-on-line stretches for T-661). T-657 GATE A PASS MERGED d96a2958 (necks 3.075..15.375 -> 32 bounded 8.7724..11.3460 + 4 lift >=0.9515; 5 necks by hand from ST p.9/p.13 AGREE; freelancer 8.805 below drawn low: ENGINE_RIGHT on the low end). Unwired research, no candidate quantity change; scoreboard restated; T-180 not used (none CLOSABLE NOW); no owner question; Drive read OK. Board note: a T-659 verdict commit cut BOARD rows T-660..end, restored next commit eca65642 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-09T21:51Z | Verifier | STARTED | run session_01E6cPnbaeqApvkTXra27pm8 | repo-attached routine | task state: READY T-659 (W2 8d546721), T-657 (W1 b42db4d6); T-658 INCOMPLETE W3 | self-check pending
