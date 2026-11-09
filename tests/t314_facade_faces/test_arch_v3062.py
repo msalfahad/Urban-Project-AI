@@ -19,7 +19,7 @@ import pytest
 
 from engine.source import arch_v30 as A30
 from engine.source import arch_v304 as A304
-from engine.source import arch_v3060 as A
+from engine.source import arch_v3062 as A
 from engine.source import boq_line as BL
 
 PID = "villa-n"

@@ -1,4 +1,4 @@
-"""T-314 inputs: URBAN_V3060_INPUTS_V1 for ARCH_TAKEOFF_V3.0.60 (exterior plaster / Sigma face rows, R-T314-1),
+"""T-314 inputs: URBAN_V3062_INPUTS_V1 for ARCH_TAKEOFF_V3.0.62 (exterior plaster / Sigma face rows, R-T314-1),
 built ONLY from the Checker-merged face ledgers (no drawing read here, no figure typed here):
 
   T-337 BINDING_T337.csv   every T-305 face band once, bound by element and levels to its owner line (merge ce3aaf8f)
@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[2]
 T337 = ROOT / "research" / "agents_t337"
 T348 = ROOT / "research" / "agents_t348"
 T567 = ROOT / "research" / "agents_t567" / "out"
-SCHEMA = "URBAN_V3060_INPUTS_V1"
+SCHEMA = "URBAN_V3062_INPUTS_V1"
 KIND = {"storey": "STOREY", "parapet": "PARAPET_OUTER", "plinth": "PLINTH", "slab_edge": "SLAB_EDGE"}
 EXISTING = {"L-b05f70c92405dbcfbe62": ("GF", [[0.30, 5.50]]),
             "L-8bb83e16cc7b104ab88b": ("1F", [[5.50, 9.70]]),
