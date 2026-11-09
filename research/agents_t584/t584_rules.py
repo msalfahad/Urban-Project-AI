@@ -29,9 +29,40 @@ is its own column label), OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 (outside stairs a
 from __future__ import annotations
 
 import math
-from decimal import Decimal, getcontext
+import functools
+import inspect
+import types
+from decimal import Context, Decimal, localcontext
 
-getcontext().prec = 40
+# T-653 (F-T648-2): 40 digits are used only INSIDE this module's functions, through a local Decimal context; importing
+# this module never changes the process-global context (it used to set getcontext().prec = 40 at import, which changed
+# every later Decimal result in the same process). in_prec40() at the end of the module applies the local context.
+PREC = 40
+
+
+def ctx40():
+    """a local 40-digit Decimal context: `with ctx40(): ...`; the caller's context is restored on exit."""
+    return localcontext(Context(prec=PREC))
+
+
+def in_prec40(namespace: dict) -> None:
+    """run every plain function DEFINED in the module of `namespace` (its globals()) inside ctx40(); generator
+    functions, classes and names imported from other modules are left as they are. Marks each wrapper
+    `_t653_prec40 = True`. Called once, at the end of the module (here and in its builder)."""
+    mod = namespace["__name__"]
+    for name, fn in list(namespace.items()):
+        if (isinstance(fn, types.FunctionType) and fn.__module__ == mod and not getattr(fn, "_t653_prec40", False)
+                and not inspect.isgeneratorfunction(fn) and name not in ("ctx40", "in_prec40")):
+            namespace[name] = _wrap40(fn)
+
+
+def _wrap40(fn):
+    @functools.wraps(fn)
+    def run40(*args, **kwargs):
+        with ctx40():
+            return fn(*args, **kwargs)
+    run40._t653_prec40 = True
+    return run40
 UNITS = ("lm", "m2", "nr")
 KINDS = ("THRESHOLD_STEP", "EXT_STEP", "NO_STEP", "FLIGHT_STEP")
 VERDICTS = ("AGREE", "TOLERANCE", "ENGINE_RIGHT", "ENGINE_WRONG", "ENGINE_OMISSION", "RULE_DIFFERENCE", "HELD",
@@ -200,3 +231,6 @@ def status_ok(s):
     if s not in STATUSES:
         raise RuleError(f"status {s!r} refused (VERIFIED is the Checker's word)")
     return s
+
+
+in_prec40(globals())   # T-653: every function of this module runs in a local 40-digit context

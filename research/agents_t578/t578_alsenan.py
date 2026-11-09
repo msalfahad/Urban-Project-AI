@@ -397,5 +397,10 @@ def main(argv):
     print(f"wrote {OUT.relative_to(ROOT)}")
 
 
+# T-653: this builder's functions run in the same local 40-digit context as its rules (before T-653 they ran
+# at 40 only because importing the rules changed the process-global context).
+R.in_prec40(globals())
+
+
 if __name__ == "__main__":
     main(sys.argv[1:])
