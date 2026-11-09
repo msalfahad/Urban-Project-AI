@@ -18,7 +18,7 @@ class, released net or held range to 1e-6) and stops on a stale line; (b) the ne
 high, both > 0, and a line whose room has a face under an unprinted roof build-up is never released (refused);
 (c) plaster and paint are separate layers: the room's paint line is named, must exist in the same room and is never
 changed by this version (a FIN.PAINT change is refused; asserted byte-identical); (d) the stale paint-height list
-(gross, deductions) is kept in the record, not on the line: a bounded line prints its range, never a gross at another
+(gross, deductions and the earlier records that close it, NET_RECORDS) is kept in the record, not on the line: a bounded line prints its range, never a gross at another
 layer's height; (e) nothing else moves.
 
 Nothing else moves: every V3.0.60 line not named by the inputs is byte-identical (asserted); every code total
@@ -71,6 +71,10 @@ TOT_TOL = 1e-4                           # code totals are rounded 6; a sum of 1
 MAX_Q = 2000.0                           # a room's wall plaster above it is a unit slip
 MAX_RISE = 1.0                           # a restated value more than double the old one is refused (unit / scope slip)
 LINE_ID_RE = re.compile(r"^L-[0-9a-f]{20}$")
+# earlier versions' records whose own check presupposes a VALUED line (gross - list = net, V3.0.36 check_lists): on a
+# line restated to HELD they describe the superseded paint-height figure, so they move into this version's 'was'
+# record (kept, never deleted) and leave the line's live inputs
+NET_RECORDS = ("deduction_listing_v3036",)
 
 PIECES = {
     P_PH: {"module": "engine/source/arch_v3061.py (a dry plaster line restated at its own height, slab / roof "
@@ -243,6 +247,7 @@ def _restate(b, e, srcs, paint):
         f"{METHOD}: HELD (BOUNDED) {_fmt(lo)} .. {_fmt(hi)} m2 = plaster at its own height (Q-72): {pt}; "
         f"{e['why_held']}")[:1500])
     inp = ln["calculation"]["inputs"] = dict(ln["calculation"].get("inputs") or {})
+    was["records"] = {k: inp.pop(k) for k in NET_RECORDS if k in inp}
     inp[REC_KEY] = _rec(srcs, action="PLASTER_HEIGHT", room=e["room"], was=was, after={"low": _r(lo), "high": _r(hi)},
                         basis=bs, why_held=e["why_held"][:600], paint_line_id=paint["line_id"],
                         paint_line_sha256=A30.line_sha(paint), remeasure_beside=e.get("remeasure_beside"))

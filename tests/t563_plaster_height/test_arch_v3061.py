@@ -48,9 +48,15 @@ def _ln(code, eid, state, net=None, room=None, rng=None, gross=None):
                         if eid == "R1:PLASTER" else ())
 
 
+def _r1():
+    ln = _ln("FIN.PLASTER", "R1:PLASTER", "PROVISIONAL", 44.31, "R1", gross=48.0)
+    ln["calculation"]["inputs"] = {"deduction_listing_v3036": {"action": "LIST_FILL", "deductions_sum": 3.69}}
+    return ln
+
+
 def lines():
     return [
-        _ln("FIN.PLASTER", "R1:PLASTER", "PROVISIONAL", 44.31, "R1", gross=48.0),
+        _r1(),
         _ln("FIN.PLASTER", "R2:PLASTER", "BLOCKED_RFI", None, "R2"),
         _ln("FIN.PLASTER", "R3:PLASTER", "BOUNDED_EXPOSURE", None, "R3", rng={"low": 20.0, "high": 22.0}),
         _ln("FIN.PLASTER", "R4:PLASTER", "PROVISIONAL", 10.0, "R4"),
@@ -122,6 +128,9 @@ def test_hand_values():
     rec = r1["calculation"]["inputs"][A.REC_KEY]
     assert rec["was"]["measured_net"] == 44.31 and rec["was"]["gross"] == 48.0 and len(rec["was"]["deductions"]) == 2
     assert rec["paint_line_id"] == ID["R1:PAINT"] and rec["was"]["class"] == "RELEASED"
+    # the V3.0.36 list record presupposes a valued net: kept in 'was', off the live inputs (its check would fail)
+    assert "deduction_listing_v3036" not in r1["calculation"]["inputs"]
+    assert rec["was"]["records"]["deduction_listing_v3036"]["deductions_sum"] == 3.69
     assert (a["R2:PLASTER"]["bounded_range"]["low"], a["R2:PLASTER"]["bounded_range"]["high"]) == (30.0, 32.5)
     assert (a["R3:PLASTER"]["bounded_range"]["low"], a["R3:PLASTER"]["bounded_range"]["high"]) == (24.0, 27.0)
     s = A.restated_sums(ch)
