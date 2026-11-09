@@ -1,0 +1,555 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.61 / trial BOQ r4 (T-654)",
+ "findings": [
+  {
+   "id": "F-T659-1",
+   "m3_per_pad": "0.078",
+   "what": "boundary pad coefficient 0.312 m3 (T-400) is gross of the G.B that runs through the pad on the same soffit (ST p.14 A-A): 0.078 m3 per pad counted twice with the band line; net 0.234 m3 per pad (R-T659-3)"
+  },
+  {
+   "id": "F-T659-2",
+   "what": "boundary band: candidate line V3.0.61 carries the single reading 7.2204 as a closed range; the drawn bound is 5.6392 .. 11.0328 (overlay F-T628-1 already carries it in trial r4); T-661 must wire the bound, Q-28 A 8.459 beside"
+  }
+ ],
+ "named_missing": [
+  {
+   "action": "Lead: a lane S row to add the line with its drawn bound",
+   "status": "MISSING (named, never 0)",
+   "what": "POOL BLINDING: ST p.7 prints '10cm PLAIN CONCRETE' under the pool base and slope; no STR.CONC.BLINDING (or any) line carries it in V3.0.61 (T-347 'pool blinding x2 MISSING'; T-183 B >= 1.222 m3)"
+  }
+ ],
+ "pins": {
+  "LINE_INDEX_V3_0_61.json": "10e5f116d30af67f",
+  "T572_HELD_BOUNDS.json": "a39e7b4b838e3590",
+  "TRIAL_BOQ_R4_T654_LINES.csv": "39e55ea327521a4c"
+ },
+ "reads": {
+  "ARCH_GF_FENCE": "p7757_arch_sheet03 (GF plan) own read along the neighbour side (31.37) and the street / sea fronts: the fence is drawn as two parallel lines; no 20 x 30 boundary-column symbol is drawn (agrees T-065 M4: none on either plan)",
+  "ST_P14_BW": "ST p.14 TYPICAL BOUNDARY WALL plan (N.I.S.): GROUND BEAM (20x40), pad (130x80x30) at each (20x30) column, spacing 'SEE ARCH PLAN'; SECTION A-A: lower G.B 20 wide on an 80 base (G.B soffit = base soffit, the base 80 measured from the G.B outer face), plain concrete under it projecting 10 on the inner side, depth 'AS PER EXCAVATION DEPTH BELOW N.G. LEVEL'",
+  "ST_P14_LIFT": "ST p.14 DETAIL OF LIFT WITH ISOLATED FOOTING: pit walls 20; pit depth 'As Per Lift Manufactures recommendations'; footing 'AS PER SCHEDULE'; under the footing '5cm Screed / Water proofing membrane / 10cm Plain con.'",
+  "ST_P14_PARAPET": "ST p.14 parapets: TYPICAL (P1) RC upstand 30 'MUST BE MORE THAN THE HEIGHT OF ROOF FINISHING', brick above, cap 'AS PER ARC.'; P2 RC 130 + 10 cap on a 40 beam; P3 RC 105 tapering 15 / 30; none keyed",
+  "ST_P7_DOME": "ST p.7 DETAIL OF DOME (N.I.S.): chord 442, rise 190, shell 10 (the two 1F-roof domes, Q-27; released)",
+  "ST_P7_POOL": "ST p.7 DETAIL OF SWIMMING POOL (N.I.S.): walls 20, base 40, plan and depths 'AS PER ARCH'; under the base '5cm SECREED / 5cm INSULATION MEMBRANE / 10cm PLAIN CONCRETE'; no step drawn"
+ },
+ "rows": [
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     null,
+     null
+    ]
+   },
+   "beside": [],
+   "coefficients": [
+    {
+     "basis": "drawn top m2 (T-324, high end)",
+     "m3_per_unit": "6.037010",
+     "per": "m of roof build-up depth at the edge (b_edge, D-39)"
+    }
+   ],
+   "element_id": "ANNEX_ROOF#PARAPET_RC",
+   "existence_open": false,
+   "floor": {
+    "basis": "annex roof +4.30: drawn top m2 x 0.30 m RC above the slab top, shared by P1 / P2 / P3",
+    "m3": "1.799103",
+    "status": "DRAWING-CONFIRMED (T-311 Checker run; T-319 MERGED)"
+   },
+   "high": null,
+   "high_basis": null,
+   "item": "Q-65 C (material above the upstand: designer) + D-39 (roof build-up b_edge) + the P1 margin; no P1/P2/P3 keyed to a run",
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": "L-1d419b64e8ca1af30fb4",
+   "low": null,
+   "low_basis": null,
+   "sources": [
+    "ST_P14_PARAPET"
+   ],
+   "status": "HELD_BLANK",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     null,
+     null
+    ]
+   },
+   "beside": [],
+   "coefficients": [
+    {
+     "basis": "drawn top m2 (T-324, high end)",
+     "m3_per_unit": "5.673980",
+     "per": "m of roof build-up depth at the edge (b_edge, D-39)"
+    }
+   ],
+   "element_id": "GF_TERRACE#PARAPET_RC",
+   "existence_open": false,
+   "floor": {
+    "basis": "GF terrace +5.50: drawn top m2 x 0.30 m RC above the slab top, shared by P1 / P2 / P3",
+    "m3": "1.677887",
+    "status": "DRAWING-CONFIRMED (T-311 Checker run; T-319 MERGED)"
+   },
+   "high": null,
+   "high_basis": null,
+   "item": "Q-65 C (material above the upstand: designer) + D-39 (roof build-up b_edge) + the P1 margin; no P1/P2/P3 keyed to a run",
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": "L-b5ffc172a354375ca107",
+   "low": null,
+   "low_basis": null,
+   "sources": [
+    "ST_P14_PARAPET"
+   ],
+   "status": "HELD_BLANK",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     null,
+     null
+    ]
+   },
+   "beside": [],
+   "coefficients": [
+    {
+     "basis": "drawn top m2 (T-324, high end)",
+     "m3_per_unit": "9.846530",
+     "per": "m of roof build-up depth at the edge (b_edge, D-39)"
+    }
+   ],
+   "element_id": "1F_ROOF#PARAPET_RC",
+   "existence_open": false,
+   "floor": {
+    "basis": "1F roof +9.70: drawn top m2 x 0.30 m RC above the slab top, shared by P1 / P2 / P3",
+    "m3": "2.949453",
+    "status": "DRAWING-CONFIRMED (T-311 Checker run; T-319 MERGED)"
+   },
+   "high": null,
+   "high_basis": null,
+   "item": "Q-65 C (material above the upstand: designer) + D-39 (roof build-up b_edge) + the P1 margin; no P1/P2/P3 keyed to a run",
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": "L-9a2c81164ec6499cc28c",
+   "low": null,
+   "low_basis": null,
+   "sources": [
+    "ST_P14_PARAPET"
+   ],
+   "status": "HELD_BLANK",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     null,
+     null
+    ]
+   },
+   "beside": [],
+   "coefficients": [
+    {
+     "basis": "drawn top m2 (T-324, high end)",
+     "m3_per_unit": "5.415000",
+     "per": "m of roof build-up depth at the edge (b_edge, D-39)"
+    }
+   ],
+   "element_id": "2F_ROOF#PARAPET_RC",
+   "existence_open": false,
+   "floor": {
+    "basis": "2F roof +13.90: drawn top m2 x 0.30 m RC above the slab top, shared by P1 / P2 / P3",
+    "m3": "1.624500",
+    "status": "DRAWING-CONFIRMED (T-311 Checker run; T-319 MERGED)"
+   },
+   "high": null,
+   "high_basis": null,
+   "item": "Q-65 C (material above the upstand: designer) + D-39 (roof build-up b_edge) + the P1 margin; no P1/P2/P3 keyed to a run",
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": "L-030538dda6a32c601c4c",
+   "low": null,
+   "low_basis": null,
+   "sources": [
+    "ST_P14_PARAPET"
+   ],
+   "status": "HELD_BLANK",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     null,
+     null
+    ]
+   },
+   "beside": [],
+   "coefficients": [
+    {
+     "basis": "1.30 x 0.80 x 0.30 - 0.20 x 1.30 x 0.30 (ST p.14 A-A)",
+     "m3_per_unit": "0.234000",
+     "per": "pad (net of the G.B running through it on the same soffit, R-T659-3)"
+    },
+    {
+     "basis": "1.30 x 0.80 x 0.30 (T-400 coefficient)",
+     "m3_per_unit": "0.312000",
+     "per": "pad gross (only if the G.B stops at each pad face)"
+    }
+   ],
+   "element_id": "FENCE:BAND:PADS",
+   "existence_open": false,
+   "floor": null,
+   "high": null,
+   "high_basis": null,
+   "item": "pad count = boundary-column count, 'SEE ARCH PLAN': no boundary column drawn on the architectural or structural plans (own GF read; T-065 M4); Q-28 A provisional",
+   "item_code": "STR.CONC.BOUNDARY_PAD",
+   "line_id": "L-cda8f41522dc6f42b3d6",
+   "low": null,
+   "low_basis": null,
+   "sources": [
+    "ST_P14_BW",
+    "ARCH_GF_FENCE"
+   ],
+   "status": "HELD_BLANK",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     7.2204,
+     7.2204
+    ]
+   },
+   "beside": [
+    {
+     "basis": "(91.94 - 21.45) x 0.20 x 0.60",
+     "m3": "8.459",
+     "what": "Q-28 A owner-provisional reading (not released)"
+    },
+    {
+     "m3": "7.2204",
+     "what": "candidate V3.0.61 line point (one reading, side 1 lost: T-065 / T-572)"
+    },
+    {
+     "class": "WITHIN",
+     "m3": "8.604",
+     "what": "freelancer"
+    }
+   ],
+   "coefficients": [],
+   "element_id": "P-C:SCOPE:BOUNDARY_WALL:FOUNDATION:CC-9fd936ab60:BEAM",
+   "existence_open": false,
+   "floor": null,
+   "high": "11.032800",
+   "high_basis": "B.W row 0.20 x 0.60 over the whole closed 91.94 m (ST p.10), gross of the 21.45 m inside footings",
+   "item": "section B.W 20x60 vs typical 20x40 (designer RFI, Q-28); band founding level 'AS PER EXCAVATION DEPTH' not printed, so whether the 21.45 m shares the footings' elevation is open (owner's Q-28 caveat)",
+   "item_code": "STR.CONC.BOUNDARY_WALL",
+   "line_id": "L-6290a9f3d93f38cd46d6",
+   "low": "5.639200",
+   "low_basis": "typical G.B 0.20 x 0.40 on the 70.49 m free of footings (ST p.14)",
+   "sources": [
+    "ST_P14_BW"
+   ],
+   "status": "BOUNDED",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     0.435,
+     0.59
+    ]
+   },
+   "beside": [],
+   "coefficients": [],
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTING:FTG:SH10:T652:10A5",
+   "existence_open": false,
+   "floor": null,
+   "high": "0.590000",
+   "high_basis": "T-233 / T-478: 0.10 under the F10 + F readings A / B, 10 cm past each face",
+   "item": "F10 + F readings A / B (Q-31 C), 0.10 thick 0.10 past each face",
+   "item_code": "STR.CONC.BLINDING",
+   "line_id": "L-080c97f5f6a92452cd04",
+   "low": "0.435000",
+   "low_basis": "T-233 / T-478: 0.10 under the F10 + F readings A / B, 10 cm past each face",
+   "sources": [],
+   "status": "BOUNDED",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     0.0,
+     0.189
+    ]
+   },
+   "beside": [],
+   "coefficients": [],
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BEYOND_PLOT_LINE",
+   "existence_open": true,
+   "floor": null,
+   "high": "0.189000",
+   "high_basis": "D-14: projection beyond the plot line may not be built (0) .. full 10 cm (T-100)",
+   "item": "D-14: the 0.10 projection beyond the plot line may not be built",
+   "item_code": "STR.CONC.BLINDING",
+   "line_id": "L-10032bf9a60368473a7b",
+   "low": "0.000000",
+   "low_basis": "D-14: projection beyond the plot line may not be built (0) .. full 10 cm (T-100)",
+   "sources": [],
+   "status": "BOUNDED",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     2.256,
+     2.352
+    ]
+   },
+   "beside": [],
+   "coefficients": [],
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_LIFT_RAFT_FF",
+   "existence_open": false,
+   "floor": null,
+   "high": "2.352000",
+   "high_basis": "T-478: 0.10 under the FF raft, projection readings",
+   "item": "FF raft projection not dimensioned (ST p.14 draws it, prints 10cm only)",
+   "item_code": "STR.CONC.BLINDING",
+   "line_id": "L-16b95607fc88cda3844a",
+   "low": "2.256000",
+   "low_basis": "T-478: 0.10 under the FF raft, projection readings",
+   "sources": [
+    "ST_P14_LIFT"
+   ],
+   "status": "BOUNDED",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     0.0,
+     0.912684
+    ]
+   },
+   "beside": [],
+   "coefficients": [],
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_STRAP",
+   "existence_open": true,
+   "floor": null,
+   "high": "0.912684",
+   "high_basis": "D-15: p.13 prints no blinding under straps (0) .. 0.10 under the 3 straps (T-100 / T-350)",
+   "item": "D-15: ST p.13 prints no blinding under straps",
+   "item_code": "STR.CONC.BLINDING",
+   "line_id": "L-35382b18e2e362df3ae6",
+   "low": "0.000000",
+   "low_basis": "D-15: p.13 prints no blinding under straps (0) .. 0.10 under the 3 straps (T-100 / T-350)",
+   "sources": [],
+   "status": "BOUNDED",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     4.949374,
+     9.422514
+    ]
+   },
+   "beside": [],
+   "coefficients": [],
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_GROUND_BEAM",
+   "existence_open": false,
+   "floor": null,
+   "high": "9.422514",
+   "high_basis": "T-478: 0.10 under the ground beams, plan-distinct of the pit layer; D-33 / D-35 sections",
+   "item": "D-33 / D-35 ground-beam sections; plan-distinct of the pit layer (T-478)",
+   "item_code": "STR.CONC.BLINDING",
+   "line_id": "L-7a5214a334ea3559fa2d",
+   "low": "4.949374",
+   "low_basis": "T-478: 0.10 under the ground beams, plan-distinct of the pit layer; D-33 / D-35 sections",
+   "sources": [],
+   "status": "BOUNDED",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     null,
+     null
+    ]
+   },
+   "beside": [],
+   "coefficients": [
+    {
+     "basis": "1.30 x 0.90 x 0.10 (ST p.14 A-A)",
+     "m3_per_unit": "0.117000",
+     "per": "pad (AT_LEAST: end projections not printed)"
+    }
+   ],
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BOUNDARY_WALL_BASE",
+   "existence_open": false,
+   "floor": null,
+   "high": null,
+   "high_basis": null,
+   "item": "pad count not printed (as the pad line); under the G.B between pads no blinding is drawn (A-A is cut through a pad); end projections of the pad blinding not dimensioned",
+   "item_code": "STR.CONC.BLINDING",
+   "line_id": "L-d0313e5d204e2758996a",
+   "low": null,
+   "low_basis": null,
+   "sources": [
+    "ST_P14_BW"
+   ],
+   "status": "HELD_BLANK",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     null,
+     null
+    ]
+   },
+   "beside": [],
+   "coefficients": [
+    {
+     "basis": "pi x (2.205^2 + 2.15^2)",
+     "m3_per_unit": "29.796514",
+     "per": "m of shell thickness (thin-shell outer cap area, architectural envelope reading)"
+    }
+   ],
+   "element_id": "DG5:DOME-3:SHELL",
+   "existence_open": false,
+   "floor": null,
+   "high": null,
+   "high_basis": null,
+   "item": "Q-27 A (three domes) with no structural detail for the upper-roof dome: shell thickness, ring and whether '215' is the shell rise not printed; the 1F-roof detail (442 / 190 / 10) is another element's (no borrowing)",
+   "item_code": "STR.CONC.DOME",
+   "line_id": "L-d5401fa8986900c66c37",
+   "low": null,
+   "low_basis": null,
+   "sources": [
+    "ST_P7_DOME"
+   ],
+   "status": "HELD_BLANK",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     null,
+     null
+    ]
+   },
+   "beside": [],
+   "coefficients": [],
+   "element_id": "HL:POOL_CONCRETE:POOL-1:STEPS",
+   "existence_open": false,
+   "floor": null,
+   "high": null,
+   "high_basis": null,
+   "item": "steps NOT DRAWN on ST p.7 (own read) nor dimensioned on the architectural plan: consultant item (owner 2026-10-19 16:45, T-183)",
+   "item_code": "STR.CONC.POOL",
+   "line_id": "L-b62a7065645589011141",
+   "low": null,
+   "low_basis": null,
+   "sources": [
+    "ST_P7_POOL"
+   ],
+   "status": "HELD_BLANK",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     null,
+     null
+    ]
+   },
+   "beside": [],
+   "coefficients": [
+    {
+     "basis": "drawn length 5.500 m (T-419 DRAWING-CONFIRMED)",
+     "m3_per_unit": "5.500000",
+     "per": "m2 of tie-beam section"
+    }
+   ],
+   "element_id": "LIFT_TIE_BEAM:GF",
+   "existence_open": false,
+   "floor": null,
+   "high": null,
+   "high_basis": null,
+   "item": "D-43: tie beam at 3.00 (ST p.8 note 19), section not printed",
+   "item_code": "STR.CONC.LIFT",
+   "line_id": "L-5ae06fda7d729d54c033",
+   "low": null,
+   "low_basis": null,
+   "sources": [],
+   "status": "HELD_BLANK",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "before": {
+    "candidate_V3_0_61": [
+     null,
+     null
+    ]
+   },
+   "beside": [
+    {
+     "class": "BELOW_DRAWN_LOWER if note 1 applies",
+     "m3": "1.650",
+     "what": "freelancer net share"
+    }
+   ],
+   "coefficients": [
+    {
+     "basis": "net ring 1.10 m2 (T-322 / R-T394-6)",
+     "m3_per_unit": "1.100000",
+     "per": "m of pit wall height"
+    }
+   ],
+   "element_id": "LIFT_PIT:WALLS",
+   "existence_open": false,
+   "floor": {
+    "basis": "net ring 1.10 m2 (walls 20, ST p.14; R-T394-6) x h >= 1.73 (T-572)",
+    "m3": "1.903000",
+    "status": "FLAGGED NOTE1_ON_LIFT_RAFT (Checker to accept ST p.9 note 1 on the lift raft)"
+   },
+   "high": null,
+   "high_basis": null,
+   "item": "D-43: pit depth 'As Per Lift Manufactures recommendations' (ST p.14) not printed",
+   "item_code": "STR.CONC.LIFT",
+   "line_id": "L-684fcad323adc0c8a267",
+   "low": null,
+   "low_basis": null,
+   "sources": [
+    "ST_P14_LIFT"
+   ],
+   "status": "HELD_BLANK",
+   "unit": "m3",
+   "value": null
+  }
+ ],
+ "schema": "T659_LEDGER_V1",
+ "totals_after": {
+  "blank": 10,
+  "bounded": 6,
+  "carried_high_m3": null,
+  "carried_low_m3": "13.279574",
+  "floors_beside_m3": "9.953943",
+  "lines": 16,
+  "lower_only": 0,
+  "total_stateable": false,
+  "valued": 0
+ }
+}
