@@ -1,0 +1,1047 @@
+{
+ "base_move": {
+  "base_totals_moved": {
+   "FIN.PLASTER|m2": {
+    "after": {
+     "excluded_n": 13,
+     "held_blank_n": 10,
+     "held_high": "1006.77641",
+     "held_high_open_n": 0,
+     "held_low": "932.72581",
+     "held_n": 24,
+     "released": "363.3738",
+     "released_n": 38
+    },
+    "before": {
+     "excluded_n": 13,
+     "held_blank_n": 12,
+     "held_high": "544.0606",
+     "held_high_open_n": 0,
+     "held_low": "488.201",
+     "held_n": 20,
+     "released": "580.5819",
+     "released_n": 42
+    }
+   }
+  },
+  "from": "ARCH_TAKEOFF_V3.0.59 (V19 base = the T-651 line index, asserted on every line)",
+  "lines_after_rebased_v19": 5152,
+  "overlay_rows_removed": [
+   "T-423 r2|TEXT_ONLY_22|L-3eba04f2458578e7dc19",
+   "T-423 r2|TEXT_ONLY_22|L-a34d09209fb5aad3eb63",
+   "T-423 r2|TEXT_ONLY_22|L-eb3be58fc760b39f0e38",
+   "T-423 r2|TEXT_ONLY_22|L-fc116bb666b184740090",
+   "T-423 r2|TEXT_ONLY_22|L-07ce1d24164207cd06ca",
+   "T-423 r2|TEXT_ONLY_22|L-0ca0f91144403e323c68",
+   "T-423 r2|TEXT_ONLY_22|L-1a229f1fead084efb881",
+   "T-423 r2|TEXT_ONLY_22|L-3b166c2b5d136302f2dd",
+   "T-423 r2|TEXT_ONLY_22|L-709aba3ec07bb0f26319",
+   "T-423 r2|TEXT_ONLY_22|L-791a94968230969c030f",
+   "T-423 r2|TEXT_ONLY_22|L-8901e416cbce62854fbe",
+   "T-423 r2|TEXT_ONLY_22|L-92721c425ab3612bb035",
+   "T-423 r2|TEXT_ONLY_22|L-a4909527ff598315be61",
+   "T-423 r2|TEXT_ONLY_22|L-bfdbdaa2d67a5c805f1e",
+   "T-423 r2|TEXT_ONLY_22|L-cbf11d0c1befb0519e98",
+   "T-423 r2|TEXT_ONLY_22|L-ccb1182ae9409b432968",
+   "T-423 r2|TEXT_ONLY_22|L-f2d296f1fc5184419774",
+   "T-563|PLASTER_HEIGHT_V1|L-b152995525ed123ddac9",
+   "T-563|PLASTER_HEIGHT_V1|L-1ddc23d5657b4c4e4d0d",
+   "T-563|PLASTER_HEIGHT_V1|L-0d93f2209cd9bb827c0a",
+   "T-563|PLASTER_HEIGHT_V1|L-8cecb1d010d5aafbf25d",
+   "T-563|PLASTER_HEIGHT_V1|L-af9621f43bc316a871ea",
+   "T-563|PLASTER_HEIGHT_V1|L-971f0bdaf68d7fd0966c",
+   "T-563|PLASTER_HEIGHT_V1|L-2ba8077ba9bb2e1ff0f6",
+   "T-563|PLASTER_HEIGHT_V1|L-31db3c83552682d92ca3",
+   "T-563|PLASTER_HEIGHT_V1|L-9b4a7bab033d677e2017",
+   "T-563|PLASTER_HEIGHT_V1|L-4ce74fc37a08d4bdf0d8",
+   "T-563|PLASTER_HEIGHT_V1|L-ae0cdd794cc5fdbe0c29",
+   "T-563|PAINT_UNCHANGED|L-cdf7f5cd2789b67004f1",
+   "T-563|PAINT_UNCHANGED|L-d7d6d2f765489a95c408",
+   "T-563|PAINT_UNCHANGED|L-7f083d3e2c2702d14356",
+   "T-563|PAINT_UNCHANGED|L-c0ac22c964a42e7d71b1",
+   "T-563|PAINT_UNCHANGED|L-ade6f0567f690a869499",
+   "T-563|PAINT_UNCHANGED|L-d9f4ecdb6ef9a42d0220",
+   "T-563|PAINT_UNCHANGED|L-f53c1329983ad689b7ae",
+   "T-563|PAINT_UNCHANGED|L-349db74a70e1eecda2d2",
+   "T-563|PAINT_UNCHANGED|L-be48ea84285be20645af",
+   "T-563|PAINT_UNCHANGED|L-5410f9045c80dd5933f0",
+   "T-563|PAINT_UNCHANGED|L-c74cfb4e07bcc47bc5d6"
+  ],
+  "overlay_rows_removed_n": 39,
+  "rebased_flagged_rows": 1,
+  "rule": "R-T654-1 (b): each removed row equal to its merged line; the V19 overlay re-applied on the V3.0.61 base is byte-equal to V19 on every line; FR-T617-1 stays chained (not in the merged module)",
+  "to": "ARCH_TAKEOFF_V3.0.61 (T-563 Gate B MERGED e04d99d9 on V3.0.60, T-423 r3 Gate B MERGED 62e18eed on V3.0.59; 5,073 lines: V3_0_59 75331a76 -> V3_0_60 8c8a9642 (22 text-only) -> V3_0_61 2bc99980 (11 FIN.PLASTER restated))",
+  "v3_0_60_set_aside_named": [
+   "L-eb3be58fc760b39f0e38",
+   "L-fc116bb666b184740090"
+  ],
+  "v3_0_60_text_only": {
+   "by_line": {
+    "L-05b1d88f06c38f962cb6": [
+     "LIST_CEILING"
+    ],
+    "L-07ce1d24164207cd06ca": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-0ca0f91144403e323c68": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-1a229f1fead084efb881": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-3b166c2b5d136302f2dd": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-3eba04f2458578e7dc19": [
+     "MOVE_FACE_DEDUCTION"
+    ],
+    "L-69ebc828b4c61f4ea348": [
+     "LIST_CEILING"
+    ],
+    "L-709aba3ec07bb0f26319": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-791a94968230969c030f": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-8901e416cbce62854fbe": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-92721c425ab3612bb035": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-a34d09209fb5aad3eb63": [
+     "MOVE_FACE_DEDUCTION"
+    ],
+    "L-a4909527ff598315be61": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-ac337bf041e8184a315c": [
+     "LIST_CEILING"
+    ],
+    "L-bfdbdaa2d67a5c805f1e": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-c25a76ebdaab3ec65076": [
+     "LIST_CEILING"
+    ],
+    "L-c85ec92c5f1e50dadd11": [
+     "LIST_CEILING"
+    ],
+    "L-c8b5c7f742b22388339e": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-cbf11d0c1befb0519e98": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-ccb1182ae9409b432968": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-f2d296f1fc5184419774": [
+     "MATERIAL_STATE",
+     "MEASURE_PAIR"
+    ],
+    "L-fcf3a49c67ae9e730028": [
+     "MEASURE_PAIR"
+    ]
+   },
+   "lines": 22,
+   "rule": "R-T654-1 (a): no class / net / held bound moves (asserted against the T-423 inputs' expect)"
+  },
+  "v3_0_61_restated": [
+   {
+    "after_v19_overlay": {
+     "class": "HELD",
+     "held_high": 62.607,
+     "held_low": 62.573,
+     "measured_net": null
+    },
+    "after_v20_overlay": {
+     "class": "HELD",
+     "held_high": 62.607,
+     "held_low": 62.573,
+     "measured_net": null
+    },
+    "line_id": "L-af9621f43bc316a871ea",
+    "overlay_row_after_merge": null,
+    "room": "1F-01",
+    "v3_0_60": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 51.415
+    },
+    "v3_0_61": {
+     "class": "HELD",
+     "held_high": 62.607,
+     "held_low": 62.573,
+     "measured_net": null
+    }
+   },
+   {
+    "after_v19_overlay": {
+     "class": "HELD",
+     "held_high": 63.141,
+     "held_low": 63.141,
+     "measured_net": null
+    },
+    "after_v20_overlay": {
+     "class": "HELD",
+     "held_high": 63.141,
+     "held_low": 63.141,
+     "measured_net": null
+    },
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "overlay_row_after_merge": null,
+    "room": "1F-04",
+    "v3_0_60": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 52.005
+    },
+    "v3_0_61": {
+     "class": "HELD",
+     "held_high": 63.141,
+     "held_low": 63.141,
+     "measured_net": null
+    }
+   },
+   {
+    "after_v19_overlay": {
+     "class": "HELD",
+     "held_high": 62.05,
+     "held_low": 58.026,
+     "measured_net": null
+    },
+    "after_v20_overlay": {
+     "class": "HELD",
+     "held_high": 62.05,
+     "held_low": 58.026,
+     "measured_net": null
+    },
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "overlay_row_after_merge": null,
+    "room": "1F-10",
+    "v3_0_60": {
+     "class": "HELD",
+     "held_high": 52.29,
+     "held_low": 48.94,
+     "measured_net": null
+    },
+    "v3_0_61": {
+     "class": "HELD",
+     "held_high": 62.05,
+     "held_low": 58.026,
+     "measured_net": null
+    }
+   },
+   {
+    "after_v19_overlay": {
+     "class": "HELD",
+     "held_high": 80.19841,
+     "held_low": 74.77651,
+     "measured_net": null
+    },
+    "after_v20_overlay": {
+     "class": "HELD",
+     "held_high": 80.19841,
+     "held_low": 74.77651,
+     "measured_net": null
+    },
+    "line_id": "L-31db3c83552682d92ca3",
+    "overlay_row_after_merge": null,
+    "room": "1F-11",
+    "v3_0_60": {
+     "class": "HELD",
+     "held_high": 61.7177,
+     "held_low": 61.4626,
+     "measured_net": null
+    },
+    "v3_0_61": {
+     "class": "HELD",
+     "held_high": 80.19841,
+     "held_low": 74.77651,
+     "measured_net": null
+    }
+   },
+   {
+    "after_v19_overlay": {
+     "class": "HELD",
+     "held_high": 139.6155,
+     "held_low": 136.2155,
+     "measured_net": null
+    },
+    "after_v20_overlay": {
+     "class": "HELD",
+     "held_high": 139.6155,
+     "held_low": 136.2155,
+     "measured_net": null
+    },
+    "line_id": "L-9b4a7bab033d677e2017",
+    "overlay_row_after_merge": "T-563|FR-T617-1|L-9b4a7bab033d677e2017",
+    "room": "1F-13",
+    "v3_0_60": {
+     "class": "HELD",
+     "held_high": 114.3677,
+     "held_low": 111.0177,
+     "measured_net": null
+    },
+    "v3_0_61": {
+     "class": "HELD",
+     "held_high": 139.6155,
+     "held_low": 135.6255,
+     "measured_net": null
+    }
+   },
+   {
+    "after_v19_overlay": {
+     "class": "HELD",
+     "held_high": 31.76591,
+     "held_low": 27.59991,
+     "measured_net": null
+    },
+    "after_v20_overlay": {
+     "class": "HELD",
+     "held_high": 31.76591,
+     "held_low": 27.59991,
+     "measured_net": null
+    },
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "overlay_row_after_merge": "T-563|FR-T617-1|L-ae0cdd794cc5fdbe0c29",
+    "room": "2F-01",
+    "v3_0_60": {
+     "class": "HELD",
+     "held_high": 26.0002,
+     "held_low": 22.6502,
+     "measured_net": null
+    },
+    "v3_0_61": {
+     "class": "HELD",
+     "held_high": 31.76591,
+     "held_low": 27.35991,
+     "measured_net": null
+    }
+   },
+   {
+    "after_v19_overlay": {
+     "class": "HELD",
+     "held_high": 69.775,
+     "held_low": 69.775,
+     "measured_net": null
+    },
+    "after_v20_overlay": {
+     "class": "HELD",
+     "held_high": 69.775,
+     "held_low": 69.775,
+     "measured_net": null
+    },
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "overlay_row_after_merge": null,
+    "room": "2F-03",
+    "v3_0_60": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 57.775
+    },
+    "v3_0_61": {
+     "class": "HELD",
+     "held_high": 69.775,
+     "held_low": 69.775,
+     "measured_net": null
+    }
+   },
+   {
+    "after_v19_overlay": {
+     "class": "HELD",
+     "held_high": 65.25433,
+     "held_low": 61.46433,
+     "measured_net": null
+    },
+    "after_v20_overlay": {
+     "class": "HELD",
+     "held_high": 65.25433,
+     "held_low": 61.46433,
+     "measured_net": null
+    },
+    "line_id": "L-b152995525ed123ddac9",
+    "overlay_row_after_merge": null,
+    "room": "GF-01",
+    "v3_0_60": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "v3_0_61": {
+     "class": "HELD",
+     "held_high": 65.25433,
+     "held_low": 61.46433,
+     "measured_net": null
+    }
+   },
+   {
+    "after_v19_overlay": {
+     "class": "HELD",
+     "held_high": 43.155,
+     "held_low": 43.155,
+     "measured_net": null
+    },
+    "after_v20_overlay": {
+     "class": "HELD",
+     "held_high": 43.155,
+     "held_low": 43.155,
+     "measured_net": null
+    },
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "overlay_row_after_merge": null,
+    "room": "GF-04",
+    "v3_0_60": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "v3_0_61": {
+     "class": "HELD",
+     "held_high": 43.155,
+     "held_low": 43.155,
+     "measured_net": null
+    }
+   },
+   {
+    "after_v19_overlay": {
+     "class": "HELD",
+     "held_high": 211.80527,
+     "held_low": 178.81057,
+     "measured_net": null
+    },
+    "after_v20_overlay": {
+     "class": "HELD",
+     "held_high": 211.80527,
+     "held_low": 178.81057,
+     "measured_net": null
+    },
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "overlay_row_after_merge": "T-563|FR-T617-1|L-8cecb1d010d5aafbf25d",
+    "room": "GF-08",
+    "v3_0_60": {
+     "class": "HELD",
+     "held_high": 178.805,
+     "held_low": 152.0505,
+     "measured_net": null
+    },
+    "v3_0_61": {
+     "class": "HELD",
+     "held_high": 211.80527,
+     "held_low": 178.22057,
+     "measured_net": null
+    }
+   },
+   {
+    "after_v19_overlay": {
+     "class": "HELD",
+     "held_high": 66.52899,
+     "held_low": 66.52899,
+     "measured_net": null
+    },
+    "after_v20_overlay": {
+     "class": "HELD",
+     "held_high": 66.52899,
+     "held_low": 66.52899,
+     "measured_net": null
+    },
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "overlay_row_after_merge": null,
+    "room": "GF-15",
+    "v3_0_60": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 56.0131
+    },
+    "v3_0_61": {
+     "class": "HELD",
+     "held_high": 66.52899,
+     "held_low": 66.52899,
+     "measured_net": null
+    }
+   }
+  ]
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.61 (T-563 Gate B MERGED e04d99d9 on V3.0.60, T-423 r3 Gate B MERGED 62e18eed on V3.0.59; 5,073 lines: V3_0_59 75331a76 -> V3_0_60 8c8a9642 (22 text-only) -> V3_0_61 2bc99980 (11 FIN.PLASTER restated))",
+ "candidate_files_touched": 0,
+ "f_t652_1": {
+  "base_m2": [
+   "55.9211",
+   "55.9729"
+  ],
+  "face_m2": [
+   "0.24",
+   "0.2918"
+  ],
+  "panel mortar": {
+   "bound": [
+    "0.618627",
+    "0.6192"
+   ],
+   "delta": [
+    "0.000312",
+    "0.000885"
+   ],
+   "line_id": "L-866a6602ffa70d03f210",
+   "was": "0.618315"
+  },
+  "units": {
+   "bound": [
+    "699.01375",
+    "699.66125"
+   ],
+   "delta": [
+    "0.3525",
+    "1"
+   ],
+   "line_id": "L-1e61a4aaeb00aa711dcd",
+   "was": "698.66125"
+  }
+ },
+ "inputs": {
+  "research/agents_t423/t423_inputs.py": "a0d446e5d30e708a2ffacf9962859836c7d7f57f300b6f292ab9111c98d77fcb",
+  "research/agents_t498/summary_t498.json": "47737dc2b80b3b656cb57b306b84c695bae3abaab2097c744993798ef9a46765",
+  "research/agents_t563/summary_t563.json": "7e34828ce9c72534c5c6776a13ae4fe9b89b0f632bd41326005e85132e83978c",
+  "research/agents_t563/t563_inputs.py": "b16ef3ffdbfbb348ab6096150615c9c7ef794e557a094c1e35a04073071491ce",
+  "research/agents_t650/out/T650_PAYABLE_FORM.json": "cd72b44596cc1b2840282ab56f1f6653a7b53b5601db2bb9f3f7bcb7eb0a1fb2",
+  "research/agents_t651/out/LINE_INDEX_V3_0_59.json": "2cd0ebd8e39db84510ba7a4a4f257cd3b2c1176f650ca7094ed71741fb698ab0",
+  "research/agents_t652/manifest_v19.py": "365b9281481bda086bdf62d30882354a6daddff1c1d5f0edbf402a078da424ba",
+  "research/agents_t652/out/WIRING_MANIFEST_V19.json": "39e1b1c157900f288196babd593ec15b4466e6e077bb75191bba126d42fbd07d"
+ },
+ "line_table": [
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 699.66125,
+    "held_low": 699.01375,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 698.66125
+   },
+   "evidence": "HELD",
+   "item": "MAS.UNITS.BLACK",
+   "kind": "SET",
+   "line_id": "L-1e61a4aaeb00aa711dcd",
+   "package": "T-498",
+   "row": "F-T652-1/units"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.6192,
+    "held_low": 0.618627,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.618315
+   },
+   "evidence": "HELD",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "SET",
+   "line_id": "L-866a6602ffa70d03f210",
+   "package": "T-498",
+   "row": "F-T652-1/panel"
+  }
+ ],
+ "overlay": {
+  "flagged_rows": [
+   {
+    "beside": {
+     "conditional_range_beside_kg": [
+      63.82125,
+      71.62425
+     ]
+    },
+    "index": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET",
+    "line_id": "L-4ccc5dc26bd2472b03ad",
+    "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+    "package": "T-498",
+    "row": "HOST_FACES_V5",
+    "status": "NO_BEFORE"
+   }
+  ],
+  "lines": {
+   "after_v19": 5152,
+   "after_v20": 5152,
+   "base_v3_0_61": 5073
+  },
+  "order": [
+   {
+    "ops": 65,
+    "package": "T-498",
+    "status": {
+     "APPLIED": 64,
+     "NO_BEFORE": 1
+    }
+   },
+   {
+    "ops": 3,
+    "package": "T-563",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 0,
+    "package": "T-513",
+    "status": {}
+   },
+   {
+    "ops": 4,
+    "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 57,
+    "package": "RETURN_PAINT_FACES",
+    "status": {
+     "APPLIED": 57
+    }
+   },
+   {
+    "ops": 1,
+    "package": "PIER_RETURNS_EXT (with T-314)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "W17_Q76A",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 6,
+    "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 11,
+    "package": "F package (no board row)",
+    "status": {
+     "APPLIED": 11
+    }
+   },
+   {
+    "ops": 15,
+    "package": "RAILS_GUARDS (T-578)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 16,
+    "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+    "status": {
+     "APPLIED": 16
+    }
+   },
+   {
+    "ops": 5,
+    "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 44,
+    "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+    "status": {
+     "APPLIED": 44
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FOOTING_S02_BOUND (T-595 R-T595-2)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 3,
+    "package": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 1,
+    "package": "GATE_STEP_G01 (T-602 FR-T602-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FLOORLESS_FACES (T-606 FR-T606-1; absorbs V12 FR-T601-3 on the same line)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 6,
+    "package": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 9,
+    "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+    "status": {
+     "APPLIED": 9
+    }
+   },
+   {
+    "ops": 5,
+    "package": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 1,
+    "package": "LINTEL_CAUSES (T-616 FR-T616-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "WALL_TILE_PANTRY (T-622 FR-T622-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 1,
+    "package": "WALL_TILE_GF14 (T-622 FR-T622-2)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 4,
+    "package": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 8,
+    "package": "FLOOR_BED_FOLLOWS_FINISH (T-641 F-T631-1)",
+    "status": {
+     "APPLIED": 8
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FOOTING_BAND_RANGE (T-628 F-T628-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 58,
+    "package": "FORMWORK_HOLD_RELEASE (T-638 FR-T638-1 .. -54)",
+    "status": {
+     "APPLIED": 58
+    }
+   },
+   {
+    "ops": 6,
+    "package": "GF_COLUMN_MAIN_BARS (T-639 FR-T639-1 .. -6)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 6,
+    "package": "FINISH_HOLD_BOUNDS (T-640 FR-T640-n)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 3,
+    "package": "STRIP_COL353 (T-642 FR-T642-2 / FR-T642-4)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 4,
+    "package": "CHECKER_DOWNGRADES (T-643 DGP-T643-*)",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 16,
+    "package": "STAIR_FINISH_HOLD_RELEASE (T-645 FR-T645-n)",
+    "status": {
+     "APPLIED": 16
+    }
+   },
+   {
+    "ops": 3,
+    "package": "ROOF_SCREED_AT_LEAST (T-646 R-T646-1)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 3,
+    "package": "LINTEL_RC_BOUNDS (T-650 R-T650-1)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 5,
+    "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 1,
+    "package": "THRESHOLD_STRIP_A_GF_01 (T-648 fix row)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "CHECKER_DOWNGRADES_F_T645_1 (T-649 DGP-T649-*)",
+    "status": {
+     "APPLIED": 1
+    }
+   }
+  ],
+  "other_lines_changed_vs_v19_overlay": [],
+  "stale": 0,
+  "unexplained_conflicts": 0,
+  "v20_vs_v19_totals": {
+   "MAS.MORTAR.BLACK|m3": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 12,
+     "held_high": "0.624406",
+     "held_high_open_n": 2,
+     "held_low": "0.618627",
+     "held_n": 18,
+     "released": "2.769667",
+     "released_n": 15
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 12,
+     "held_high": "0.005206",
+     "held_high_open_n": 2,
+     "held_low": "0",
+     "held_n": 17,
+     "released": "3.387982",
+     "released_n": 16
+    }
+   },
+   "MAS.UNITS.BLACK|pcs": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 12,
+     "held_high": "703.91125",
+     "held_high_open_n": 0,
+     "held_low": "699.01375",
+     "held_n": 14,
+     "released": "2571.27625",
+     "released_n": 7
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 12,
+     "held_high": "4.25",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 13,
+     "released": "3269.9375",
+     "released_n": 8
+    }
+   }
+  }
+ },
+ "released_quantities_changed": 0,
+ "rows": [
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 699.66125,
+    "held_low": 699.01375,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 698.66125
+   },
+   "beside": {
+    "cause": "F-T652-1: the D-1F-07 RC lintel face deducted from this host is 0.240 .. 0.2918 m2 (Checker re-measure 07:06: START available 0.259 < printed MIN 0.40, designer item D-1F-07 bearing), not the 0.32 m2 T-615 deducted; HELD on the bound until the designer fixes the bearing",
+    "envelope_with_D_1F_09": "699.01375 .. 703.91125",
+    "hand": "base = 58.2529 - 1.7 (other REQUIRED faces) - face - 0.34 (D-1F-09 HELD face, line at its low end); face = 0.036 .. 0.04377 m3 / 0.15 = 0.24 .. 0.2918 m2 -> base 55.9211 .. 55.9729 m2 x 12.5 / m2 (Q-80 A) = 699.01375 .. 699.66125",
+    "host": "L-a56a8add7812d1b52cb7",
+    "opening": "D-1F-07",
+    "rule": "R-T654-1 (c)",
+    "was": "RELEASED 698.66125 (T-615, face 0.32 m2)"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-652 VERIFIER 2026-11-09 11:29 (MERGED 2e80c03f): F-T652-1 (D-1F-07 face 0.24 .. 0.2918 vs 0.32 deducted) accepted as a Lead fix row; T-650 CHECKER RE-MEASURE 07:06: D-1F-07 0.15 x 0.20 x (0.80 + 0.40) = 0.036 .. 0.15 x 0.20 x (0.80 + 0.40 + 0.259) = 0.04377 m3, START available 0.259 < printed MIN 0.40, HELD BY NAME (designer item)"
+   },
+   "kind": "SET",
+   "line_id": "L-1e61a4aaeb00aa711dcd",
+   "op_id": "T-498|F-T652-1/units|L-1e61a4aaeb00aa711dcd",
+   "package": "T-498",
+   "row": "F-T652-1/units",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.6192,
+    "held_low": 0.618627,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.618315
+   },
+   "beside": {
+    "cause": "F-T652-1: the D-1F-07 RC lintel face deducted from this host is 0.240 .. 0.2918 m2 (Checker re-measure 07:06: START available 0.259 < printed MIN 0.40, designer item D-1F-07 bearing), not the 0.32 m2 T-615 deducted; HELD on the bound until the designer fixes the bearing",
+    "envelope_with_D_1F_09": "0.618627 .. 0.622961",
+    "hand": "base = 58.2529 - 1.7 (other REQUIRED faces) - face - 0.34 (D-1F-09 HELD face, line at its low end); face = 0.036 .. 0.04377 m3 / 0.15 = 0.24 .. 0.2918 m2 -> base 55.9211 .. 55.9729 m2 x 0.0110625 m3 / m2 (T-615) = 0.618627 .. 0.6192",
+    "host": "L-a56a8add7812d1b52cb7",
+    "opening": "D-1F-07",
+    "rule": "R-T654-1 (c)",
+    "was": "RELEASED 0.618315 (T-615, face 0.32 m2)"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-652 VERIFIER 2026-11-09 11:29 (MERGED 2e80c03f): F-T652-1 (D-1F-07 face 0.24 .. 0.2918 vs 0.32 deducted) accepted as a Lead fix row; T-650 CHECKER RE-MEASURE 07:06: D-1F-07 0.15 x 0.20 x (0.80 + 0.40) = 0.036 .. 0.15 x 0.20 x (0.80 + 0.40 + 0.259) = 0.04377 m3, START available 0.259 < printed MIN 0.40, HELD BY NAME (designer item)"
+   },
+   "kind": "SET",
+   "line_id": "L-866a6602ffa70d03f210",
+   "op_id": "T-498|F-T652-1/panel|L-866a6602ffa70d03f210",
+   "package": "T-498",
+   "row": "F-T652-1/panel",
+   "source": "T-498"
+  }
+ ],
+ "rule": "R-T654-1",
+ "rulings_v20": [],
+ "schema": "URBAN_T654_WIRING_MANIFEST_V20",
+ "sources_merged": {
+  "T-423": "62e18eed",
+  "T-563": "e04d99d9",
+  "T-652": "2e80c03f"
+ },
+ "task": "T-654",
+ "totals": {
+  "MAS.MORTAR.BLACK|m3": {
+   "v19": {
+    "excluded_n": 0,
+    "held_blank_n": 12,
+    "held_high": "0.005206",
+    "held_high_open_n": 2,
+    "held_low": "0",
+    "held_n": 17,
+    "released": "3.387982",
+    "released_n": 16
+   },
+   "v20": {
+    "excluded_n": 0,
+    "held_blank_n": 12,
+    "held_high": "0.624406",
+    "held_high_open_n": 2,
+    "held_low": "0.618627",
+    "held_n": 18,
+    "released": "2.769667",
+    "released_n": 15
+   }
+  },
+  "MAS.UNITS.BLACK|pcs": {
+   "v19": {
+    "excluded_n": 0,
+    "held_blank_n": 12,
+    "held_high": "4.25",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 13,
+    "released": "3269.9375",
+    "released_n": 8
+   },
+   "v20": {
+    "excluded_n": 0,
+    "held_blank_n": 12,
+    "held_high": "703.91125",
+    "held_high_open_n": 0,
+    "held_low": "699.01375",
+    "held_n": 14,
+    "released": "2571.27625",
+    "released_n": 7
+   }
+  }
+ }
+}
