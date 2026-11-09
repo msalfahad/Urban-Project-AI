@@ -93,7 +93,7 @@ PIECES = {
              "owner_manual_method": "room ceiling = room plan less what is not decor ceiling (the open dome piece over "
                                     "the room), each deduction named",
              "drawing_method": "the merged T-283 dome table: the open disc of each dome split over the floor pieces "
-                               "it covers ('ST7757 dxf.dxf' 1F-roof slab plan, dome circle), 4-decimal print"},
+                               "it covers (the structural drawing's 1F-roof slab plan, dome circle), 4-decimal print"},
     P_FACE: {"module": "engine/source/arch_v3060.py (a door hole moved to the face piece its contour segment lies "
                        "on; room total unchanged)",
              "policy": "OPENING_ON_ITS_FACE_PIECE_V1", "rule_id": "R-T388-1 b (R-T423-1 c)",
