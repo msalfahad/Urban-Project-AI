@@ -1,0 +1,1132 @@
+{
+ "schema": "T657_NECK_LEDGER_V1",
+ "candidate": "trial BOQ T-636 r4 per_line (candidate V3.0.58 line ids); NOT RELEASED, nothing wired",
+ "datums": {
+  "min_depth_m": "1.50",
+  "stack_m": "0.17",
+  "d_max_m": "2.50"
+ },
+ "note": "engine figures, bounds and bases only; no freelancer row or count",
+ "totals": {
+  "lines": 36,
+  "valued": 0,
+  "bounded_as_drawn": 32,
+  "lower_only": 4,
+  "family_low_m3": "9.723900",
+  "family_high_m3": null,
+  "family_high_blocked_by": [
+   "R-T657-2: raft depth left to the supplier; upper end open by its item; D-43 lift pit raft depth 'as per lift manufacturer' (ST p.14); D-63 section"
+  ],
+  "bounded_part": {
+   "lines": 32,
+   "low_m3": "8.772400",
+   "high_m3": "11.346000"
+  },
+  "lift_lower_only_m3": "0.951500",
+  "before_candidate_generic": {
+   "low_m3": "3.075000",
+   "high_m3": "15.375000",
+   "lines_with_range": 35,
+   "blank_lines": 1
+  }
+ },
+ "necks": [
+  {
+   "line_id": "L-314946394d849141dda2",
+   "element_id": "U-C:NECK:COL:SH10:C@226940,50955",
+   "mark": "C",
+   "position": "10A4",
+   "footing": "F10|F",
+   "footing_H_m": [
+    "0.50",
+    "0.30"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.780000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.267000",
+   "m3_high": "0.330000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:347 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.50 (F10|F, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.30 = 2.200000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-85df35f17a205f919aa6",
+   "element_id": "P-C:NECK:COL:SH10:C@195866,57040",
+   "mark": "C",
+   "position": "10A8",
+   "footing": "F",
+   "footing_H_m": [
+    "0.3"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.280000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.192000",
+   "m3_high": "0.330000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:34A: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.3 = 2.200000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": [
+    "TOP_TWO_READINGS"
+   ]
+  },
+  {
+   "line_id": "L-734ff1a78bbe6b7eb4c3",
+   "element_id": "P-C:NECK:COL:SH10:C@195972,51184",
+   "mark": "C",
+   "position": "10AB",
+   "footing": "F",
+   "footing_H_m": [
+    "0.3"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.280000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.192000",
+   "m3_high": "0.330000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:34D: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.3 = 2.200000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": [
+    "TOP_TWO_READINGS"
+   ]
+  },
+  {
+   "line_id": "L-53d0b6af1a801c3db58e",
+   "element_id": "P-C:NECK:COL:SH10:C@198052,57874",
+   "mark": "C",
+   "position": "10B4",
+   "footing": "F",
+   "footing_H_m": [
+    "0.3"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.280000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.192000",
+   "m3_high": "0.330000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:356: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.3 = 2.200000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": [
+    "TOP_TWO_READINGS"
+   ]
+  },
+  {
+   "line_id": "L-bd741a3faf2318dd8409",
+   "element_id": "P-C:NECK:COL:SH10:C@207257,51203",
+   "mark": "C",
+   "position": "10B7",
+   "footing": "F",
+   "footing_H_m": [
+    "0.3"
+   ],
+   "section_candidates_m2": [
+    "0.12",
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.980000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.237600",
+   "m3_high": "0.330000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.12 m2 x h 1.980000 = top +0.95 (GF column base +0.95 at GFRS:359 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.3 = 2.200000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": [
+    "SECTION_CANDIDATES",
+    "SECTION_RANGE_MIN_MAX"
+   ]
+  },
+  {
+   "line_id": "L-12f3d8b9375cac407bca",
+   "element_id": "P-C:NECK:COL:SH10:C1@213452,60528",
+   "mark": "C1",
+   "position": "1099",
+   "footing": "FF",
+   "footing_H_m": [
+    "0.55"
+   ],
+   "section_candidates_m2": [
+    "0.1",
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.730000",
+   "h_high_m": null,
+   "m3_low": "0.173000",
+   "m3_high": null,
+   "status": "HELD_LOWER_ONLY",
+   "low_basis": "min section 0.1 m2 x h 1.730000 = top +0.95 (GF column base +0.95 at GFRS:341 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.55 (FF, footing schedule; T-205)",
+   "high_basis": null,
+   "high_item": "R-T657-2: raft depth left to the supplier; upper end open by its item; D-43 lift pit raft depth 'as per lift manufacturer' (ST p.14); D-63 section",
+   "high_scenario_beside": null,
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": [
+    "NOTE1_ON_LIFT_RAFT",
+    "SECTION_CANDIDATES",
+    "SECTION_RANGE_MIN_MAX"
+   ]
+  },
+  {
+   "line_id": "L-bbad8cdb4d26986776a6",
+   "element_id": "U-C:NECK:COL:SH10:C10@224867,51226",
+   "mark": "C10",
+   "position": "10E8",
+   "footing": "F10|F",
+   "footing_H_m": [
+    "0.50",
+    "0.30"
+   ],
+   "section_candidates_m2": [
+    "0.21"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.780000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.373800",
+   "m3_high": "0.462000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.21 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:371 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.50 (F10|F, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.30 = 2.200000; x largest section 0.21 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.105000",
+    "0.525000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-b4c234c8a3873239f67f",
+   "element_id": "P-C:NECK:COL:SH10:C11@207698,54876",
+   "mark": "C11",
+   "position": "10BA",
+   "footing": "F13",
+   "footing_H_m": [
+    "0.5"
+   ],
+   "section_candidates_m2": [
+    "0.33"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.780000",
+   "h_high_m": "2.000000",
+   "m3_low": "0.587400",
+   "m3_high": "0.660000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.33 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:35C (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F13, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.5 = 2.000000; x largest section 0.33 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.165000",
+    "0.825000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-132cf60588a44f6af9d6",
+   "element_id": "P-C:NECK:COL:SH10:C11@208990,51494",
+   "mark": "C11",
+   "position": "10DD",
+   "footing": "F11",
+   "footing_H_m": [
+    "0.5"
+   ],
+   "section_candidates_m2": [
+    "0.33"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.780000",
+   "h_high_m": "2.000000",
+   "m3_low": "0.587400",
+   "m3_high": "0.660000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.33 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:37D (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F11, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.5 = 2.000000; x largest section 0.33 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.165000",
+    "0.825000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-3f7b9501a902579e7406",
+   "element_id": "P-C:NECK:COL:SH10:C2@209843,64560",
+   "mark": "C2",
+   "position": "1084",
+   "footing": "F2",
+   "footing_H_m": [
+    "0.35"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.930000",
+   "h_high_m": "2.150000",
+   "m3_low": "0.289500",
+   "m3_high": "0.322500",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.930000 = top +0.95 (GF column base +0.95 at GFRS:32C (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.35 (F2, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.35 = 2.150000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-5aec8a0055215ee5a711",
+   "element_id": "P-C:NECK:COL:SH10:C2@212578,64533",
+   "mark": "C2",
+   "position": "1087",
+   "footing": "F2",
+   "footing_H_m": [
+    "0.35"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.930000",
+   "h_high_m": "2.150000",
+   "m3_low": "0.289500",
+   "m3_high": "0.322500",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.930000 = top +0.95 (GF column base +0.95 at GFRS:32F (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.35 (F2, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.35 = 2.150000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-dd6d11415961b554e906",
+   "element_id": "P-C:NECK:COL:SH10:C2@214579,60524",
+   "mark": "C2",
+   "position": "1093",
+   "footing": "FF",
+   "footing_H_m": [
+    "0.55"
+   ],
+   "section_candidates_m2": [
+    "0.1",
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.730000",
+   "h_high_m": null,
+   "m3_low": "0.173000",
+   "m3_high": null,
+   "status": "HELD_LOWER_ONLY",
+   "low_basis": "min section 0.1 m2 x h 1.730000 = top +0.95 (GF column base +0.95 at GFRS:33B (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.55 (FF, footing schedule; T-205)",
+   "high_basis": null,
+   "high_item": "R-T657-2: raft depth left to the supplier; upper end open by its item; D-43 lift pit raft depth 'as per lift manufacturer' (ST p.14); D-63 section",
+   "high_scenario_beside": null,
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": [
+    "NOTE1_ON_LIFT_RAFT",
+    "SECTION_CANDIDATES",
+    "SECTION_RANGE_MIN_MAX"
+   ]
+  },
+  {
+   "line_id": "L-8eb74a02fcf5ae4465f8",
+   "element_id": "P-C:NECK:COL:SH10:C2@213395,59220",
+   "mark": "C2",
+   "position": "1096",
+   "footing": "FF",
+   "footing_H_m": [
+    "0.55"
+   ],
+   "section_candidates_m2": [
+    "0.1",
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.730000",
+   "h_high_m": null,
+   "m3_low": "0.173000",
+   "m3_high": null,
+   "status": "HELD_LOWER_ONLY",
+   "low_basis": "min section 0.1 m2 x h 1.730000 = top +0.95 (GF column base +0.95 at GFRS:33E (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.55 (FF, footing schedule; T-205)",
+   "high_basis": null,
+   "high_item": "R-T657-2: raft depth left to the supplier; upper end open by its item; D-43 lift pit raft depth 'as per lift manufacturer' (ST p.14); D-63 section",
+   "high_scenario_beside": null,
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": [
+    "NOTE1_ON_LIFT_RAFT",
+    "SECTION_CANDIDATES",
+    "SECTION_RANGE_MIN_MAX"
+   ]
+  },
+  {
+   "line_id": "L-48f2e06e5c946eb1e5a7",
+   "element_id": "P-C:NECK:COL:SH10:C3@226007,58025",
+   "mark": "C3",
+   "position": "10A0",
+   "footing": "F8",
+   "footing_H_m": [
+    "0.5"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.780000",
+   "h_high_m": "2.000000",
+   "m3_low": "0.267000",
+   "m3_high": "0.300000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:344 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F8, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.5 = 2.000000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-dd3c32e4340e7a823a6e",
+   "element_id": "P-C:NECK:COL:SH10:C3@201132,51210",
+   "mark": "C3",
+   "position": "10AE",
+   "footing": "F15",
+   "footing_H_m": [
+    "0.4"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.180000",
+   "h_high_m": "2.100000",
+   "m3_low": "0.177000",
+   "m3_high": "0.315000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.180000 = top +0.25 (annex member GFRS:350: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F15, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.4 = 2.100000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": [
+    "TOP_TWO_READINGS"
+   ]
+  },
+  {
+   "line_id": "L-4ec473f7c0c712919823",
+   "element_id": "P-C:NECK:COL:SH10:C3@199252,55820",
+   "mark": "C3",
+   "position": "10B1",
+   "footing": "F3",
+   "footing_H_m": [
+    "0.3"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.280000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.192000",
+   "m3_high": "0.330000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:353: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F3, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.3 = 2.200000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": [
+    "TOP_TWO_READINGS"
+   ]
+  },
+  {
+   "line_id": "L-f54b7b2acf11ebd2a585",
+   "element_id": "P-C:NECK:COL:SH10:C3@205523,52938",
+   "mark": "C3",
+   "position": "10C5",
+   "footing": "F3",
+   "footing_H_m": [
+    "0.3"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.280000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.192000",
+   "m3_high": "0.330000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.280000 = top +0.25 (GF column base +0.25 at GFRS:365 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F3, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.3 = 2.200000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-ae1bd9cb228d57594e46",
+   "element_id": "P-C:NECK:COL:SH10:C3@209914,60584",
+   "mark": "C3",
+   "position": "10CC",
+   "footing": "F12",
+   "footing_H_m": [
+    "0.7"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.580000",
+   "h_high_m": "1.800000",
+   "m3_low": "0.237000",
+   "m3_high": "0.270000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.580000 = top +0.95 (GF column base +0.95 at GFRS:36B (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.7 (F12, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.7 = 1.800000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-516989b817e0ccc7cb80",
+   "element_id": "P-C:NECK:COL:SH10:C3@217138,51213",
+   "mark": "C3",
+   "position": "10E4",
+   "footing": "F14",
+   "footing_H_m": [
+    "0.5"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.780000",
+   "h_high_m": "2.000000",
+   "m3_low": "0.267000",
+   "m3_high": "0.300000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:383 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F14, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.5 = 2.000000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-05a99150a85e9185ae48",
+   "element_id": "P-C:NECK:COL:SH10:C4@224310,64557",
+   "mark": "C4",
+   "position": "108D",
+   "footing": "F4",
+   "footing_H_m": [
+    "0.4"
+   ],
+   "section_candidates_m2": [
+    "0.125",
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.880000",
+   "h_high_m": "2.100000",
+   "m3_low": "0.235000",
+   "m3_high": "0.315000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.125 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:335 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F4, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.4 = 2.100000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": [
+    "SECTION_CANDIDATES",
+    "SECTION_RANGE_MIN_MAX"
+   ]
+  },
+  {
+   "line_id": "L-46f2b70254f074885dfc",
+   "element_id": "P-C:NECK:COL:SH10:C4@220308,64637",
+   "mark": "C4",
+   "position": "10D7",
+   "footing": "F4",
+   "footing_H_m": [
+    "0.4"
+   ],
+   "section_candidates_m2": [
+    "0.15"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.880000",
+   "h_high_m": "2.100000",
+   "m3_low": "0.282000",
+   "m3_high": "0.315000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.15 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:377 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F4, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.4 = 2.100000; x largest section 0.15 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.075000",
+    "0.375000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-5efd9ac69d4cfd9b9a6e",
+   "element_id": "P-C:NECK:COL:SH10:C5@216447,64629",
+   "mark": "C5",
+   "position": "108A",
+   "footing": "F5",
+   "footing_H_m": [
+    "0.4"
+   ],
+   "section_candidates_m2": [
+    "0.18"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.880000",
+   "h_high_m": "2.100000",
+   "m3_low": "0.338400",
+   "m3_high": "0.378000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.18 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:332 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F5, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.4 = 2.100000; x largest section 0.18 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.090000",
+    "0.450000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-c1e802184591eac927cf",
+   "element_id": "P-C:NECK:COL:SH10:C5@205273,54905",
+   "mark": "C5",
+   "position": "10BD",
+   "footing": "F13",
+   "footing_H_m": [
+    "0.5"
+   ],
+   "section_candidates_m2": [
+    "0.18"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.080000",
+   "h_high_m": "2.000000",
+   "m3_low": "0.194400",
+   "m3_high": "0.360000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.18 m2 x h 1.080000 = top +0.25 (GF column base +0.25 at GFRS:35F (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F13, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.5 = 2.000000; x largest section 0.18 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.090000",
+    "0.450000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-486cd9a0bf52e4b32abb",
+   "element_id": "P-C:NECK:COL:SH10:C5@220440,52886",
+   "mark": "C5",
+   "position": "10D3",
+   "footing": "F5",
+   "footing_H_m": [
+    "0.4"
+   ],
+   "section_candidates_m2": [
+    "0.18"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.880000",
+   "h_high_m": "2.100000",
+   "m3_low": "0.338400",
+   "m3_high": "0.378000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.18 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:374 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F5, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.4 = 2.100000; x largest section 0.18 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.090000",
+    "0.450000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-efe50185c0da4244e158",
+   "element_id": "P-C:NECK:COL:SH10:C6@209970,56575",
+   "mark": "C6",
+   "position": "10C2",
+   "footing": "F6",
+   "footing_H_m": [
+    "0.5"
+   ],
+   "section_candidates_m2": [
+    "0.21"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.780000",
+   "h_high_m": "2.000000",
+   "m3_low": "0.373800",
+   "m3_high": "0.420000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.21 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:362 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F6, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.5 = 2.000000; x largest section 0.21 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.105000",
+    "0.525000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-995eca94ba8dc09a028f",
+   "element_id": "P-C:NECK:COL:SH10:C7@209292,59069",
+   "mark": "C7",
+   "position": "10C8",
+   "footing": "F12",
+   "footing_H_m": [
+    "0.7"
+   ],
+   "section_candidates_m2": [
+    "0.24"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.580000",
+   "h_high_m": "1.800000",
+   "m3_low": "0.379200",
+   "m3_high": "0.432000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.24 m2 x h 1.580000 = top +0.95 (GF column base +0.95 at GFRS:368 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.7 (F12, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.7 = 1.800000; x largest section 0.24 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.120000",
+    "0.600000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-fc622ff340ac65a544e3",
+   "element_id": "P-C:NECK:COL:SH10:C8@224698,57859",
+   "mark": "C8",
+   "position": "10D0",
+   "footing": "F8",
+   "footing_H_m": [
+    "0.5"
+   ],
+   "section_candidates_m2": [
+    "0.27"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.780000",
+   "h_high_m": "2.000000",
+   "m3_low": "0.480600",
+   "m3_high": "0.540000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.27 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:36E (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F8, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.5 = 2.000000; x largest section 0.27 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.135000",
+    "0.675000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-15b8ad39d6b2250c9546",
+   "element_id": "P-C:NECK:COL:SH10:C8@217457,52784",
+   "mark": "C8",
+   "position": "10E0",
+   "footing": "F14",
+   "footing_H_m": [
+    "0.5"
+   ],
+   "section_candidates_m2": [
+    "0.24",
+    "0.27"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.780000",
+   "h_high_m": "2.000000",
+   "m3_low": "0.427200",
+   "m3_high": "0.540000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.24 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:380 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F14, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.5 = 2.000000; x largest section 0.27 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.135000",
+    "0.675000"
+   ],
+   "flags": [
+    "SECTION_CANDIDATES",
+    "SECTION_RANGE_MIN_MAX"
+   ]
+  },
+  {
+   "line_id": "L-953e87a3e9d0425d404e",
+   "element_id": "P-C:NECK:COL:SH10:C9@214557,59222",
+   "mark": "C9",
+   "position": "1090",
+   "footing": "FF",
+   "footing_H_m": [
+    "0.55"
+   ],
+   "section_candidates_m2": [
+    "0.25",
+    "0.3"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.730000",
+   "h_high_m": null,
+   "m3_low": "0.432500",
+   "m3_high": null,
+   "status": "HELD_LOWER_ONLY",
+   "low_basis": "min section 0.25 m2 x h 1.730000 = top +0.95 (GF column base +0.95 at GFRS:338 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.55 (FF, footing schedule; T-205)",
+   "high_basis": null,
+   "high_item": "R-T657-2: raft depth left to the supplier; upper end open by its item; D-43 lift pit raft depth 'as per lift manufacturer' (ST p.14); D-63 section",
+   "high_scenario_beside": null,
+   "candidate_range_generic_T167": [
+    "0.150000",
+    "0.750000"
+   ],
+   "flags": [
+    "NOTE1_ON_LIFT_RAFT",
+    "SECTION_CANDIDATES",
+    "SECTION_RANGE_MIN_MAX"
+   ]
+  },
+  {
+   "line_id": "L-b21cbf6560f613b39bf0",
+   "element_id": "P-C:NECK:COL:SH10:C9@220198,60706",
+   "mark": "C9",
+   "position": "10DA",
+   "footing": "F9",
+   "footing_H_m": [
+    "0.55"
+   ],
+   "section_candidates_m2": [
+    "0.3"
+   ],
+   "top_low_m": "0.950000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.730000",
+   "h_high_m": "1.950000",
+   "m3_low": "0.519000",
+   "m3_high": "0.585000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.3 m2 x h 1.730000 = top +0.95 (GF column base +0.95 at GFRS:37A (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.55 (F9, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.55 = 1.950000; x largest section 0.3 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.150000",
+    "0.750000"
+   ],
+   "flags": []
+  },
+  {
+   "line_id": "L-6a2040e0fe0bf7391b9c",
+   "element_id": "U-C:NECK:COL:SH10:CN@222091,55786",
+   "mark": "CN",
+   "position": "10EE",
+   "footing": "FN",
+   "footing_H_m": [
+    "0.3"
+   ],
+   "section_candidates_m2": [
+    "0.09"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.280000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.115200",
+   "m3_high": "0.198000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.3 = 2.200000; x largest section 0.09 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.045000",
+    "0.225000"
+   ],
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ]
+  },
+  {
+   "line_id": "L-34346cb438bffee6acec",
+   "element_id": "U-C:NECK:COL:SH10:CN@216858,57078",
+   "mark": "CN",
+   "position": "10F6",
+   "footing": "FN",
+   "footing_H_m": [
+    "0.3"
+   ],
+   "section_candidates_m2": [
+    "0.09"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.280000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.115200",
+   "m3_high": "0.198000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.3 = 2.200000; x largest section 0.09 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.045000",
+    "0.225000"
+   ],
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ]
+  },
+  {
+   "line_id": "L-c8c07db4ac0d54d89bbf",
+   "element_id": "U-C:NECK:COL:SH10:CN@225897,54910",
+   "mark": "CN",
+   "position": "10FE",
+   "footing": "FN",
+   "footing_H_m": [
+    "0.3"
+   ],
+   "section_candidates_m2": [
+    "0.09"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.280000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.115200",
+   "m3_high": "0.198000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.3 = 2.200000; x largest section 0.09 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.045000",
+    "0.225000"
+   ],
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ]
+  },
+  {
+   "line_id": "L-15d9da9b17fd373553f0",
+   "element_id": "U-C:NECK:COL:SH10:CN@223972,59262",
+   "mark": "CN",
+   "position": "17C5",
+   "footing": "F8",
+   "footing_H_m": [
+    "0.5"
+   ],
+   "section_candidates_m2": [
+    "0.09"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.080000",
+   "h_high_m": "2.000000",
+   "m3_low": "0.097200",
+   "m3_high": "0.180000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.09 m2 x h 1.080000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F8, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.5 = 2.000000; x largest section 0.09 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": null,
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ]
+  },
+  {
+   "line_id": "L-4ef35980fbb54366703d",
+   "element_id": "U-C:NECK:COL:SH10:CN@224210,63411",
+   "mark": "CN",
+   "position": "17C8",
+   "footing": "F4",
+   "footing_H_m": [
+    "0.4"
+   ],
+   "section_candidates_m2": [
+    "0.09"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.180000",
+   "h_high_m": "2.100000",
+   "m3_low": "0.106200",
+   "m3_high": "0.189000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.09 m2 x h 1.180000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F4, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.4 = 2.100000; x largest section 0.09 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.045000",
+    "0.225000"
+   ],
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ]
+  },
+  {
+   "line_id": "L-1a9e469651c32cce9b97",
+   "element_id": "U-C:NECK:COL:SH10:CN@222815,61757",
+   "mark": "CN",
+   "position": "180A",
+   "footing": "FN",
+   "footing_H_m": [
+    "0.3"
+   ],
+   "section_candidates_m2": [
+    "0.09"
+   ],
+   "top_low_m": "0.250000",
+   "footing_underside_highest_m": "-1.33",
+   "h_low_m": "1.280000",
+   "h_high_m": "2.200000",
+   "m3_low": "0.115200",
+   "m3_high": "0.198000",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "low_basis": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+   "high_basis": "ST p.13 'LESS THAN 2.5m' footing underside .. upper ground-beam line, one GB row drawn (R-T657-1): h <= 2.50 - H_min 0.3 = 2.200000; x largest section 0.09 m2",
+   "high_item": null,
+   "high_scenario_beside": "DESIGN_CHANGE_BESIDE: formation deeper than the single-row condition brings the ST p.13 second detail (lower ground-beam row, drawn on no plan) and needs engineering approval (Q-21 answer C); not in the drawn neck",
+   "candidate_range_generic_T167": [
+    "0.045000",
+    "0.225000"
+   ],
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ]
+  }
+ ]
+}
