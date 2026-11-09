@@ -74,6 +74,17 @@ no FIN.EXT.FINISH face line (NOT_IN_RELEASED). Totals FIN.EXT.FINISH m2 (18 line
 117.305 (D-2F-01 2.20 m door, Q-55 C); 1F parapet 53.550644 - 4.223108 + 3.977236 + 0.221319 + 0.427737 + 0.0536522 =
 54.00748 .. 59.290836 - 4.585300 + 3.977236 + 0.649056 + 0.6974786 = 60.029307.
 
+## 4b. Run of record (this session, inside the wrapper)
+
+Drive copies decoded by `agent_env.sh decode` into the private folder only (P7757.dxf sha256 ab54dd55, "ST7757 dxf"
+9f9d1179). `run research/agents_t167/v304_run.py` -> `run research/agents_t498/v3059_run.py`: V3_0_47 e86a53a8 .. 56
+4e25c54f, 57 25a8b406, 58 c9570e6c, **59 75331a76 (candidate of record, T-498 Gate B, reproduced)**. Then `run
+research/agents_t314/v3060_apply.py` on that V3_0_59: **V3_0_60 c57a0a42, 5,088 lines = 5,070 byte-identical
+(outside_rows_sha256 6e49b30b) + 3 CHANGED (the three storey lines, ids kept) + 15 ADDED + 0 removed**; every V3.0.10 ..
+V3.0.59 family check re-run on the result (A3059.integrate) passes; totals move only in FIN.EXT.FINISH|m2:
+'HELD (3 blank lines)' -> 'AT_LEAST 152.005 + HELD (14 lines: 13 bounded, 1 blank)'; 126 face rows, 38 holes, each once
+(check_faces). Per-line summary: out/summary_t314.json (ids, keys, states, quantities only).
+
 ## 4a. Against the freelancer (T-567 bridge, merged; no new reading)
 
 His net 1,469.9675 m2 (invoice row 25 = J93 1,502.84 - half of 65.745) vs these 18 lines 1,007.931 .. 1,085.613 m2:
