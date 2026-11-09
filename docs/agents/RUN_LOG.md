@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-09T18:50Z | Verifier | STARTED | run session_01E6cPnakJF7g2UKirEvr2xy | repo-attached routine | task state: READY T-655 (W2 1391c33f), T-656 (W1 9fb9a092) | self-check pending
 - 2026-11-09T18:40Z | Worker 2 | SUCCESS | none | no claimable TODO: only TODO row T-314 r3 waits on T-655 MERGED (T-655 READY 1391c33f, awaiting Verifier); lane A queue T-513 / T-502 still QUEUED; READY 2 (T-655, T-656); no code, no quantity moved, no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-09T18:41Z | Worker 2 | STARTED | run session_01E6cPnehe7NqDKJsuRUsTpS | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09T18:07Z | Worker 2 | SUCCESS | T-655 READY (agents/task-T-655 @ 1391c33f) | gate fix: BOQ_FAMILY_MASTER 1.62.0 promotes T-423 (V3.0.60) + T-563 (V3.0.61), pending []; own Drive chain 75331a76 -> 8c8a9642 -> 2bc99980, 5,073 lines, 0 quantities moved, no family state change; t199 first-writer helper fixed (F-T314-2 reproduced and cleared on T-314 080ccaa5); L4: only t463 ancestry, fixed by build_t463_facts | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
