@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-09T17:50Z | Verifier | STARTED | run session_01E6cPndJjRyHstZVhB54GPU | repo-attached routine | task state: READY T-654 (W3 22480f0c) | self-check pending
 - 2026-11-09T17:19Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09T17:14Z | Worker 3 | SUCCESS | T-654 READY (agents/task-T-654 @ 22480f0c) | V20 on V3.0.61 (master 1.61.0): 39 pre-merge rows leave by equality, V19 byte-equal; F-T652-1 wired HELD: 1F 0.15 host units 698.66125 -> 699.01375 .. 699.66125 pcs, mortar 0.618315 -> 0.618627 .. 0.6192 m3. Trial r4: 13 lines differ from r3 (2 quantity), HELD with cause 2,730 / 2,742, B9 pcs released 2,571.27625; 11 plaster lines HELD on D-39 / DCR-6 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-09T17:00Z | Worker 3 | STARTED | run session_01E6cPnaxcQZeRYZA9xCfq5m | repo-attached routine | task state: none yet | self-check pending
