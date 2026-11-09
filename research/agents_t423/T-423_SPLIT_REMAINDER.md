@@ -1,5 +1,38 @@
 # T-423: T-246 split remainder (b)-(d) as ARCH_TAKEOFF_V3.0.58 (integration package for Gate B)
 
+## r2 (worker 1, 2026-11-09): renumbered V3.0.58 -> V3.0.60 on the candidate of record V3.0.59
+
+Sections 1-6 below are r1 (V3.0.58 on V3.0.57); the pieces, rule R-T423-1 and inputs are unchanged in r2.
+
+- Renumber (merge-order rule: T-507 merged V3.0.58, T-498 merged V3.0.59 first): engine/source/arch_v3060.py
+  (METHOD ARCH_TAKEOFF_V3.0.60, EXTENDS arch_v3059, integrate re-runs A3059.integrate = every V3.0.10 .. V3.0.59 check;
+  inputs URBAN_V3060_INPUTS_V1); hub tools/urban_boq_m9.py: a V3.0.60 run IS a V3.0.59 run first (same line-stable
+  line), guard `--v3060-inputs` <-> method, the V3.0.60 branch nested in the V3.0.59 one, choice + help;
+  research/agents_t423/v3060_run.py wraps research/agents_t498/v3059_run.py (asserts V3_0_59 = 75331a76).
+- Checker r1 fixes: (1) r8_1 project token: the P_CEIL drawing_method now cites "the structural drawing" (no title
+  token); (2) T459_CANDIDATE_BINDING.json rebuilt by its tool (t459_census.py candidate --write); (3) t463 GIT_FACTS:
+  green without change (the r1 master 1.55.0 that named 87ef8718 is gone: 1.55.0 is T-507's).
+- Dropped (r1 files superseded by the renumber): build_master_1_55_0.py, t423_promotions_source.py,
+  t423_package_families.py, out/PROMOTIONS_SOURCE_1_55_0.json, out/T423_PACKAGE_FAMILIES.json,
+  out/LINE_INDEX_V3_0_57.json (byte-identical to research/agents_t507/out/), tests/.../test_family_master_1_55_0.py.
+- Drive chain (own, on the Drive copies; t167 v304_run then v3060_run, exit 0): V3_0_59 **75331a76** reproduced (= the
+  candidate of record) -> V3_0_60_BOQ_LINES.json **8c8a9642**, 5,073 lines: 5,051 SAME, 22 CHANGED_TEXT_ONLY
+  (14 FIN.MARBLE.THRESHOLD, 5 FIN.CEILING, 1 FIN.WALL.TILE, 1 FIN.PLASTER, 1 FIN.FLOOR.PORCELAIN = the r1 mix), fields
+  moved only calculation / deductions / material_state / measure_pair / notes; 0 moves in measured_net / gross / unit /
+  evidence_state / quantity / held; totals moved {}; split_remainder: 5 ceiling lists, 2 face moves, 15 measure pairs,
+  14 thresholds URBAN_METHOD; vs released V2.9 + route G: SAME_QUANTITY 576, QUANTITY_DIFFERS 1,016 (unchanged).
+- OPEN (why r2 is not READY): BOQ_FAMILY_MASTER with the pending V3.0.60 package. tools/family_master_candidate.py rule
+  r2 refuses a head carrying arch_v3060.py that the newest registry neither names as candidate nor lists pending, so
+  every test_checks_clean_on_head fails until it exists. The next free master is 1.60.0 on T-651's 1.59.0 (T-651
+  promotes T-498 / V3.0.59; CLAIMED by worker 3, pushed, not merged): build 1.60.0 = 1.59.0 + pending V3.0.60 + the
+  B3-01 / B3-04 / B4-01 / B4-03 / B5-01 text (r1 text), RULES_MANIFEST + m9_rules_manifest by the tool, its test; L4.
+- L4 on 2b8328df (stage, full tests/ to the end, one session): 87 FAILED, all explained: registry rule r2 above (every
+  test_family_master_* / t485 candidate check / t525 / t637 check-clean tests); t485 merged-pending (known base,
+  T-651); t374 x2 (known order-dependent baseline pair); t647 test_outputs_current and t649 training-villa rebuild:
+  fail only in the full session (Decimal digits differ), pass alone and with t637 / t647 / t648 / t649: research rules
+  modules set getcontext().prec = 40 at import (t543 / t559 / t574 / t578 / t602 / t618 / t645 / t646): a base
+  defect for the Lead, not caused by this package (it touches no Decimal code); not re-run on the base this run.
+
 Worker 1, 2026-11-04 23:24 .. 2026-11-05 00:50 UTC. Stream F / lane I. Development villa, not an accuracy claim.
 Drawings cited by Drive title only ('Alsenan chalet project': P7757.dxf from P7757_DXF_COMPRESSED.zip `ab54dd55`,
 'ST7757 dxf.dxf' `9f9d1179`). No quantity moves.
