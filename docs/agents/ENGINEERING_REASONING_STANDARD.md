@@ -69,7 +69,8 @@ BOQ, update SCOREBOARD v2 and the coverage report. The lessons are listed in sec
   review the reconciliation, find cross-trade consequences, decide integration readiness, challenge unsupported
   conclusions, escalate only genuine owner decisions (section 6 format).
 - WORKER 1 (structural): concrete, rebar, schedules, formwork, excavation, foundations, columns, beams, slabs, stairs,
-  pools, domes; detailed bar takeoff where bar details exist, never approximate steel rates.
+  pools, domes; detailed bar takeoff where bar details exist, never approximate steel rates. OWNER OVERRIDE 2026-11-09
+  (this BOQ only): HELD / unbounded members take rebar by the owner ratio rule (AGENT_BRIEF 'Rebar by ratio').
 - WORKER 2 (architectural): rooms, floors, wall finishes, plaster, paint, blockwork, openings, ceilings, stair finishes,
   waterproofing, doors, windows, facades; installed vs physical vs procurement always distinguished.
 - WORKER 3 (integration): confirm inputs, element ids, units, owner rule, dependencies, no double count across trades,
