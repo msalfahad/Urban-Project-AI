@@ -83,6 +83,7 @@ AUTHORED = ("owner_decisions/URBAN_RULES_1.5.0.json", "materials/URBAN_MATERIAL_
             "coverage/BOQ_FAMILY_MASTER_1.55.0.json",   # T-507: 1.54.0 + T-310 promoted (R-T485-1, census + line diff at V3.0.57) + the pending V3.0.58 package (B8-06 text: exposed-slab roof WP lines)
             "coverage/BOQ_FAMILY_MASTER_1.56.0.json",   # T-637: 1.55.0 + R-T637-1 (UNCODED codes to families, register codes NOT_A_BOQ_LINE, V11 trade-key crosswalk); no quantity or owner change; read by no method
             "coverage/BOQ_FAMILY_MASTER_1.57.0.json",   # T-525: 1.56.0 + T-507 promoted (R-T485-1, census + line diff at V3.0.58); no pending package; no quantity or owner change; read by no method
+            "coverage/BOQ_FAMILY_MASTER_1.58.0.json",   # T-498: 1.57.0 + pending ARCH_TAKEOFF_V3.0.59 (blockwork material lines) + B9-01 / B9-04 text + B9-04 capability NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED; no promotion, no quantity or owner change; read by no method
             "owner_decisions/URBAN_RULES_1.6.0.json",   # T-158: owner stair rule UP-STAIR-015 over 1.5.0; rule_store not yet
             "owner_decisions/URBAN_RULES_1.7.0.json",   # T-267: owner stair finish-level rule UP-STAIR-016 over 1.6.0; rule_store not yet
             "rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json",  # T-448: Company Rulebook (owner 2026-11-02); read by company_rulebook_v1 only
