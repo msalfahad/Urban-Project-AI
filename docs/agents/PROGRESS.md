@@ -1,5 +1,25 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-09 20:16 UTC (Lead). Previous version: 2026-11-09 16:17 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4
+single lines; no trade subtotal); released: 0. Candidate of record V3.0.61 (not released); no candidate quantity moved
+since 16:17.
+
+Since 9 Nov 16:17 (newest first; four checked and merged, none sent back):
+- Your 18:30 change of focus is on the board: concrete first. In the trial BOQ, concrete has 140 held lines (95 with a
+  drawn range 37.52 .. 73.23 m3, 45 with no range yet; never zero). Three measuring jobs started for the three workers
+  (column necks; columns, ground beams, straps and one footing; parapets, boundary wall, blinding, dome, pool and lift
+  pit), then the held beams, then wiring into the candidate. Steel by your ratio rule comes next: the ratios per element
+  type will be worked out from this villa's own counted bars and shown, labelled estimate. Exterior plaster waits
+  behind them (its first build is kept).
+- 10 Nov TRIAL BOQ r4 merged (paper, a day early): it carries the plaster-height step; held lines are shown as ranges
+  with a written cause (2,730 of 2,742).
+- The family-register check is green again; two small test faults fixed. The checker re-measured two more concrete
+  items himself: the outer ground-beam trench (exact) and the ground / first floor beam rows (4.58 / 5.31 m3, within
+  0.02 %): both verified.
+
+Previous section (2026-11-09 16:17):
 Last update: 2026-11-09 16:17 UTC (Lead). Previous version: 2026-11-09 12:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4

@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-09 20:16; owner change of focus 18:30 in force: concrete -> rebar by ratio -> masonry -> plaster / paint -> tiles -> waterproofing -> earthworks -> missing families, MEP last)
+
+- Candidate of record V3.0.61 / master 1.62.0 (T-655 bfea3449: t485 green); NOT RELEASED. 10 Nov trial BOQ r4 MERGED dfd7a2cf (non-candidate; 2,730 / 2,742 HELD lines with a cause; held shown as ranges).
+- Concrete (B10 m3, 140 HELD lines: 95 bounded 37.518976 .. 73.227539, 45 blank): pieces T-657 necks (W1), T-658 columns / ground beams / straps / footing (W3), T-659 small elements (W2) built in parallel from 20:19; T-660 beams (W1 next); wiring T-661 Gate B after the first piece merges. Rebar ratio calibration T-662 (W2 next). T-314 r3 exterior plaster queued after T-661.
+- Confidence: the 3 concrete pieces READY by 10 Nov 06:00 MEDIUM (each one worker run of about 2 h; designer items keep part of each HELD); first concrete wiring merged by 11 Nov MEDIUM; reconciled quantities + scorecard 12-13 Nov MEDIUM-LOW for concrete + rebar, LOW for the later trades.
+
 ## Status (Lead, 2026-11-09 16:17; owner delivery directive 12:40 in force)
 
 - Candidate of record V3.0.61 / master 1.61.0; NOT RELEASED. Gate B steps 3 (T-423 r3 62e18eed, text-only) and 4 (T-563 e04d99d9: FIN.PLASTER released 580.5819 -> 363.3738 m2, 4 lines HELD 262.018 .. 262.052 m2 on D-39) MERGED.

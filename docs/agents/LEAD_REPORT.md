@@ -1,5 +1,17 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-09 20:16 UTC
+
+Drive read OK (no file created in the Alsenan project folder since 16:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.61 / master 1.62.0 (NOT RELEASED); released V2.9 + route G unchanged; NO candidate quantity moved since 16:17 (every trade before = after).
+- Owner 18:30 change of focus APPLIED: concrete -> rebar by ratio -> masonry -> plaster / paint -> tiles -> WP -> earthworks -> missing families. Concrete baseline (trial BOQ r4, B10 m3): released 284.62006 m3 on 294 lines (62.027098 WIRED with a Checker binding, 18.979328 overlay, 203.613634 unverified); 140 HELD = 95 bounded 37.518976 .. 73.227539 + 45 blank (necks 36, columns 29, ground beams 29, beams 27, blinding 6, parapets 4, lift 2, straps 2, footing / dome / pool / boundary pad / wall 1 each). Rebar baseline B11: released 9,628.462205 kg detailed; 799 HELD blank + 900 bounded 15,130.87 .. OPEN.
+- New rows (each names its line ids, drawings, rules, fixture, Checker re-measure): T-657 necks (W1), T-658 columns + ground beams + straps + footing (W3), T-659 small elements (W2), T-660 beams (W1 next), T-662 rebar ratio calibration from this villa's counted members, ESTIMATE label, +3 .. 5 % as a range (W2 next), T-661 concrete Gate B + F-T655-1 helper (W3 after the first piece merges). T-314 r3 exterior plaster QUEUED after T-661 (stage kept, nothing abandoned).
+- MERGED since 16:17 (all WORKED, 0 REJECTED): T-654 trial BOQ r4 (10 Nov, held as ranges, 2,730 / 2,742 with cause); T-655 master 1.62.0 (t485 green); T-656 t627 Decimal context. Checker VERIFIED T-180 P15 ext GB trench plan and P16 B10 beam COUNT rows GF 4.576422 / 1F 5.306035 m3 (own +0.014 / +0.017 %).
+- Learned: PROPOSED (Lead process) an owner re-plan reaches the board within one Lead run AND, if the next worker slot is before it, as a one-line TODO note by the main chat: 4 empty slots 18:40-19:51 (W2, W3, W1, Checker) because the 18:30 re-plan had no rows. ADOPTED from 16:17: a rebased package promotes its merged predecessor (T-655 showed it); registry tests pick writers among governed files (t199 fixed, t328 / t284 in T-661).
+- Gate: lowest open gate 1 (concrete pieces). Next Checker light run: T-180 P17 footings (64.304 m3), then P18 ground slab.
+TEAM HEALTH: since 16:16 13 runs, all closed, 0 UNCLOSED; 4 MERGED, 0 REJECTED; 4 empty slots (correct: nothing claimable until this re-plan). All self-checks PASS (Lead too). READY 0.
+OWNER PACKAGE: none (no section 2.7 decision; designer items keep their lines HELD with drawn bounds).
+NEEDS FIXING: (1) The scheduled worker prompts still say 'never approximate steel rates'; the board / brief override them for this BOQ (main chat noted it cannot edit scheduled tasks): only you can align the prompts. (2) Scout paused since 27 Oct: no action unless you want it back.
+
 ## LEAD REPORT 2026-11-09 16:17 UTC
 
 Drive read OK (no file created in the Alsenan project folder since 12:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.61 / master 1.61.0 (NOT RELEASED); released V2.9 + route G unchanged.
@@ -26,21 +38,3 @@ Drive read OK (no file created in the Alsenan project folder since 08:00 UTC 9 N
 TEAM HEALTH: since 08:22 11 runs, all closed with a final line, 0 UNCLOSED; 3 MERGED, 0 REJECTED, 1 INCOMPLETE stage (T-423 r2, correct dependency stop, r3 READY 1h45 later); 1 correct no-claim (W2 10:40); all self-checks PASS; W3 11:05 hit an incomplete venv again (fixed by re-running setup). READY 1. queue check: see final line.
 OWNER PACKAGE: none today (no section 2.7 decision).
 NEEDS FIXING: (1) venv sometimes incomplete at first use (W3 11:05; setup rerun fixes it): watch only. (2) Scout paused since 27 Oct: no action unless you want it back.
-
-## LEAD REPORT 2026-11-09 08:20 UTC
-
-Drive read OK (no file created in the project folders since 04:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.59 / master 1.58.0 (NOT RELEASED); released V2.9 + route G unchanged. Gate B step 2 MERGED: the first quantities wired into the candidate since the 12:40 directive.
-- Blockwork materials B9 (pcs / m3 / kg, WIRED into the candidate; the Checker re-added all 9 valued lines by hand): black units 1,075.80 pcs; black-block mortar 1.269444 m3 PROVISIONAL (1:4, Q-78); AAC glue 43.596 kg + range 842.06025 .. 861.32025 kg; 65 lines HELD blank by name; freelancer no comparable row (RULE_DIFFERENCE). Before -> after: B9 material lines 0 -> 74 (4,999 other lines byte-identical). F-C-T498-1: 0.15 m hosts 178.571 m2 still HELD 'module not stated' though Q-80 is answered -> valued in V19 (T-652), expectation 2,232.14 pcs before the stated rounding rule.
-- Gate broken by that merge: t485 'a merged package never stays pending in the newest registry' FAILS on abc71ec6 (['T-498']; Lead reproduced) -> T-651 master 1.59.0 promotes V3.0.59, top of lane I, no quantity moves. Lesson PROPOSED: an integration package that merges must leave the registry promoted in the same merge (second time after T-507 / T-525).
-- Rebar B11 (kg, paper, trial BOQ r2): calculated 9,787.750205 -> 9,628.462205 (-1.63 %, 4 validated downgrades HELD, D-39); 17 lines 51.574073 kg HELD COUNT-CONVENTION GAP (A / A+1 bars, both stated, never 0). Freelancer NOT_COMPARABLE (typed lump).
-- Stairs B7 (paper): risers 1.96 -> 8.796036 m2, flights 0 -> 13.36392 lm; MS1-L tread / step downgrade PROPOSED (F-T645-1), not applied.
-- Lintels B9-02 (m3): Checker re-measured D-1F-07 (START bearing 0.259 < printed 0.40: HELD BY NAME 0.036 .. 0.04377 m3, designer item) and L-GF-01; low 0.991692 m3, high OPEN unchanged.
-- Statement / scorecard V12 (12-13 Nov input): VERIFIED rows 24 -> 52 (Checker own re-measure only), UNKNOWN 295 -> 155, lines UNKNOWN 17 -> 9; no quantity moved; F-C-T635-1 B10 beam COUNT rows 9.882457 m3 restate PARTIALLY VERIFIED.
-- Trial BOQ r2: HELD with committed cause 2,351 / 2,744 (was 2,314 / 2,750); 393 still without (finishes part waits on T-648 r2). r3 for 10 Nov in T-652.
-- Exterior plaster (T-314 stage, not checked): FIN.EXT.FINISH HELD blank -> 152.005 m2 point + 13 bounded lines, net 1,007.93 .. 1,085.61 vs freelancer 1,469.97 m2 (-31 .. -26 %, REFERENCE COMPARISON only).
-- Learned: PROPOSED (1) no process-global numeric state in research modules (T-648 Decimal prec 40 broke two committed rebuilds; Checker now greps getcontext / prec), (2) registry promotion travels with the merge (T-651), (3) Gate B order is a claim rule too: a later step may not hold the shared hub while an earlier step is unclaimed (T-314).
-- Gate: lowest open gate 0 (T-651). Next: T-651 -> T-423 r2 (Gate B 3) -> T-648 r2 -> T-652 trial BOQ r3 -> T-563 (4) -> T-314 r2 (5).
-TEAM HEALTH: since 04:19 11 runs, all closed with a final line (Verifier 05:50 INCOMPLETE correctly by the run lock), 1 run with no claim (W3 07:00, correct: hub held by T-314); 4 MERGED, 1 REJECTED (T-648; the Checker pushed the merge before reading the combined result and reverted it in 2 min, self-reported), 1 INCOMPLETE stage; all ran code, self-check PASS; no 'No module named pytest' reported since 04:19 and none in this Lead run. Process fault: W2 claimed T-314 out of the owner's Gate B order -> written into the T-314 row. queue check: 15 actionable rows, 0 flagged, 0 stall checks (after fixing 2 Lead-made rows).
-OWNER PACKAGE: none today (no section 2.7 decision).
-NEEDS FIXING: (1) venv incomplete at first use (watch: not seen this cycle). (2) Scout paused since 27 Oct: no action unless you want it back.
-
