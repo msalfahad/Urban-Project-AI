@@ -1,5 +1,5 @@
 {
- "base_v3_0_59": "75331a76",
+ "base_v3_0_61": "2bc99980",
  "identity": {
   "added": 15,
   "base_lines": 5073,
@@ -17,9 +17,9 @@
   },
   "outside_rows": 5070,
   "outside_rows_identical_to_base": 5070,
-  "outside_rows_sha256": "6e49b30b00fe19d58294906074bff4edcb4cc5f1468209d05385c30741006c12",
+  "outside_rows_sha256": "bc504d29c92aeac3c5921264575352472141d407f4154d99b7b373bc1b0b6591",
   "replaced": 3,
-  "v3_0_60_lines": 5088
+  "v3_0_62_lines": 5088
  },
  "log": {
   "added": 15,
@@ -750,7 +750,7 @@
     "lines": 3,
     "released": 0.0
    },
-   "v3_0_60": {
+   "v3_0_62": {
     "blocked_lines": 1,
     "bounded_lines": 13,
     "held_high": 933.607926,
@@ -768,7 +768,7 @@
     "text": "HELD (3 blank lines)",
     "valued_lines": 0
    },
-   "view_v3_0_60": {
+   "view_v3_0_62": {
     "blank_lines": 1,
     "bounded_lines": 13,
     "held_range": null,
@@ -780,5 +780,5 @@
    }
   }
  },
- "v3_0_60": "c57a0a42"
+ "v3_0_62": "6021be27"
 }

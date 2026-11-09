@@ -1,4 +1,15 @@
-# T-314: EXTERIOR PLASTER / SIGMA face rows into the FIN.EXT.FINISH lines (integration package ARCH_TAKEOFF_V3.0.60 on V3.0.59; method every villa)
+# T-314: EXTERIOR PLASTER / SIGMA face rows into the FIN.EXT.FINISH lines (integration package ARCH_TAKEOFF_V3.0.62 on V3.0.61; method every villa)
+
+**r2 (worker 2, 2026-11-09 14:40 UTC, run session_01E6cPnbCjDmb6iRBTWrrTfb): REBASE / RENUMBER, engineering unchanged.**
+T-423 r3 merged 62e18eed as ARCH_TAKEOFF_V3.0.60 / BOQ_FAMILY_MASTER 1.60.0, and T-563 (Gate B step 4, READY
+11978d32 on 62e18eed) builds V3.0.61 / 1.61.0 on it. This package therefore merges agents/task-T-563 and becomes
+**ARCH_TAKEOFF_V3.0.62 extending V3.0.61** (engine/source/arch_v3062.py = the r1 arch_v3060.py with the version names,
+base module A3061 and its check-key names changed only), hub --v3062-inputs (a V3.0.62 run IS a V3.0.61 run first,
+one line, hub line-stable), research/agents_t314/v3062_run.py wraps T-563's v3061_run (its asserts V3_0_59 75331a76,
+V3_0_60 8c8a9642 run), v3062_apply.py applies to V3_0_61 2bc99980, master **1.62.0** = 1.61.0 + pending V3.0.62
+(builder build_master_1_62_0.py, B4-04 / B4-07 text; no promotion). If T-563 is rejected or renumbered, this package
+rebases again (version allotted at merge). Sections 1-5 and 7 below are the r1 engineering, unchanged; r1 version names
+in them read V3.0.60 -> V3.0.62 and V3.0.59 -> V3.0.61. The r2 run of record is section 4c.
 
 Worker 2, claim 2026-11-09 06:43 UTC (run session_01E6cPnezLwZiiw89C3J26fj). Gate B integration package, fifth in the
 owner's Gate B order (the version number is allotted at merge: T-423 r2 / T-563 merging first renumber this package).
@@ -93,6 +104,32 @@ section 6) and t485 'T-498 still pending in the newest registry', which is RED O
 (T-498 merged while BOQ_FAMILY_MASTER 1.58.0 lists it pending: a promotion gate fix, the T-525 precedent). L4 started
 and stopped at 10 % (2 cores shared with the chain; no failure up to there): to be run to the end on the r2 head.
 freeze 0, codemap stale none.
+
+## 4c. r2 run of record (2026-11-09 15:27 UTC, inside the wrapper)
+
+Drive copies decoded by `agent_env.sh decode` into the private folder only (P7757.dxf sha256 ab54dd55, "ST7757 dxf"
+9f9d1179). `run research/agents_t167/v304_run.py` (exit 0) -> `run research/agents_t314/v3062_run.py` (exit 0), whose
+wrapped chain asserts **V3_0_59 75331a76 (candidate of record), V3_0_60 8c8a9642 (T-423 r3, merged), V3_0_61 2bc99980
+(T-563 READY)**, all reproduced. Hub path: V3_0_61 2bc99980 -> **V3_0_62 6021be27**, 5,088 lines = 5,070 SAME
+(outside_rows_sha256 bc504d29) + 3 CHANGED (the three storey lines, ids kept) + 15 ADDED + 0 removed; apply path
+(`v3062_apply.py` on the same V3_0_61): the same file byte for byte (6021be27). Totals move only in FIN.EXT.FINISH|m2:
+'HELD (3 blank lines)' -> 'AT_LEAST 152.005 + HELD (14 lines: 13 bounded, 1 blank)'; 126 face rows, 38 holes, each
+once. Every one of the 18 per-line figures in out/summary_t314.json equals the r1 figure of section 4 (only the version
+keys and the outside-rows sha moved: the base now carries the T-423 / T-563 lines). Engineering unchanged.
+
+Validation on eca66435: tests/t314_facade_faces 26 pass (15 r1 + 11 master 1.62.0); freeze 0; codemap stale none.
+L4 tests/ to the end (one session): 6 failed. Baseline / known (not this package): t485 stale_pending ['T-423'] (T-423
+merged 62e18eed while 1.60.0 / 1.61.0 list it pending: promotion row needed, F-T563-1), t374 pair (known), t647 / t649
+order-dependent Decimal (F-T648-2, fixed by T-653 READY, not yet merged). **NEW, caused by this package: F-T314-2**
+tests/t199_formwork_metalwork/test_family_master_1_25_0.py::test_1_25_0_every_written_item_code_belongs_to_one_family_full_strength:
+'FIN.EXT.FINISH' is owned (B4-07) but missing from the 1.25.0 written set. Cause (traced): `_written_1_25()` keeps the
+FIRST file (sorted engine/source, then the hub) that writes a code; engine/source/arch_v3062.py is now the first file
+spelling "FIN.EXT.FINISH" (before only tools/urban_boq_m9.py wrote it), and `_own_head()` then drops the code because
+its first writer is a module newer than 1.25.0, although the own-head hub still writes it. A test-helper attribution
+defect exposed by the first new engine module to write a code that only the hub wrote before; not a quantity defect.
+Proposed fix (outside this row's Files, for the Lead): attribute each code to its first writer among the own-head files
+(set the newer modules aside BEFORE the first-writer pick), normal case FIN.EXT.FINISH -> tools/urban_boq_m9.py, adverse
+case a code written ONLY by a newer module still set aside; never by spelling the literal so the scan misses it.
 
 ## 4a. Against the freelancer (T-567 bridge, merged; no new reading)
 
