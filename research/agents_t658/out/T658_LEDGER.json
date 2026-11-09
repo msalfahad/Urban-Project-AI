@@ -1,0 +1,966 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.61 / trial BOQ r4 (T-654); NOT RELEASED, nothing wired",
+ "findings": [
+  {
+   "id": "F-T658-1",
+   "what": "8 short ground-beam spans (0.789 .. 2.1 m) are carried as points at the 30x30 end while the 'less than 5m' 30x40 title also holds (D-34, DG-a31a0d7e audit range): restated 30x30 .. 30x40"
+  },
+  {
+   "id": "F-T658-2",
+   "what": "the 5.00 m span (ON_LIMIT, D-33 loaded) is carried as a point 0.9 (30x60): restated 30x40 .. 30x60; treated like the other D-33 spans, which carry the printed non-loaded sections as their bound; T-647 left the two landing-beam runs blank: the Checker to rule one D-33 treatment for all"
+  },
+  {
+   "id": "F-T658-3",
+   "what": "L-e24946df: the T-430 register holds a HOLD_RANGE 0.5964 .. 0.9036 that the candidate line does not carry (blank): wire the bound"
+  },
+  {
+   "id": "F-T658-4",
+   "what": "8 annex exterior ground beams: the literal +0.25 .. N.G. reading is a floor (R-T658-3), carried LOWER_ONLY; high stays D-35"
+  }
+ ],
+ "pins": {
+  "CENSUS_T426.json": "b297bb1402f53942",
+  "CORRECTION_REGISTER_CONCRETE_T449.json": "a15bb04b2109e29a",
+  "DEVELOPMENT-VILLA-T131.concrete_facts.json": "16a5273ac0b9103f",
+  "LINE_INDEX_V3_0_61.json": "10e5f116d30af67f",
+  "T572_HELD_BOUNDS.json": "a39e7b4b838e3590",
+  "TRIAL_BOQ_R4_T654.json": "9e032726257c4961"
+ },
+ "reads": {
+  "ARCH_SECTION_LEVELS": "arch sheet 10 section: main roof +13.90 (top of the roof band, 0.50 parapet above), annex roof +4.30; finished marks, no roof build-up printed (D-39, Q-54 answer B)",
+  "ST_COL_SCHEDULE": "ST 'Schedule of Columns' (FOUNDATION / GROUND FLOOR / 1st floor / 2nd floor & Top): C1 2F 20x50; C2 2F 20x50; C3 GF 25x50, 2F 20x50; C5 2F 20x50; C9 2F 20x70; C GF 20x50, 1F / 2F blank; CN FOUNDATION 30x30 only",
+  "ST_P13_GB_TITLES": "ST p.13 ground-beam sections (without concentrated load): 'Less then 2.5m length' 30x30, 'Less than 5m length' 30x40, 'More than 5m' 30x60; no precedence printed (D-34)"
+ },
+ "rows": [
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C2@247685,64087|2F",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED (R-T658-4 refuses a ceiling): D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-0ede77cfd0badc4c7d62",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.840000",
+   "before_low": "0.756000",
+   "element_id": "P-C:COL:SH12:C8@256160,53630|1F",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.840000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-1dc713c83bf62e525ff2",
+   "low": "0.756000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark - 9.65 base) ceiling",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C2@254644,61274|2F",
+   "flags": [],
+   "high": "0.425000",
+   "item": "D-39 main roof slab-top datum and build-up: low blank",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-26f6b6f2365c72e42291",
+   "low": null,
+   "status": "UPPER_ONLY"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.504000",
+   "before_low": "0.420000",
+   "element_id": "P-C:COL:SH12:C5@243102,55481|1F",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.504000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-291ba2ddf4bbe4f14cf7",
+   "low": "0.420000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark - 9.65 base) ceiling",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C2@251723,58368|2F",
+   "flags": [],
+   "high": "0.425000",
+   "item": "D-39 main roof slab-top datum and build-up: low blank",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-33a9b7728781fcba12e2",
+   "low": null,
+   "status": "UPPER_ONLY"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.450000",
+   "before_low": "0.360000",
+   "element_id": "P-C:COL:SH12:C@265272,52633|GF",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.450000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-43dae3d6dfec957b26a8",
+   "low": "0.360000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.840000",
+   "before_low": "0.756000",
+   "element_id": "P-C:COL:SH12:C9@259284,59442|1F",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.840000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-4aed92c117a7ab1c90ee",
+   "low": "0.756000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "1.012500",
+   "before_low": "0.900000",
+   "element_id": "P-C:COL:SH12:C8@256160,53630|GF",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "1.012500",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-4c4496579e5bfa20ae9f",
+   "low": "0.900000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-4: C9 2F 20x70 0.14 m2 x (13.90 finished mark - 9.65 base) ceiling",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C9@254644,59429|2F",
+   "flags": [],
+   "high": "0.595000",
+   "item": "D-39 main roof slab-top datum and build-up: low blank",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-53f223b06db14ac41d47",
+   "low": null,
+   "status": "UPPER_ONLY"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "HL:PLANTED_COLUMN:PC-2F:CONCRETE",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED (R-T658-4 refuses a ceiling): D-39: main roof slab-top datum and roof build-up not printed; section CONFLICT",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C3@241094,51256|GF",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED (R-T658-4 refuses a ceiling): Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-694a75c84dd6e4bb4491",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "1.050000",
+   "before_low": "0.756000",
+   "element_id": "P-C:COL:SH12:C9@254644,59429|1F",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "1.050000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-755eb56b55e86301b488",
+   "low": "0.756000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.630000",
+   "before_low": "0.420000",
+   "element_id": "P-C:COL:SH12:C5@259715,51786|1F",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.630000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-831f6fe3de133294bb8f",
+   "low": "0.420000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.840000",
+   "before_low": "0.672000",
+   "element_id": "P-C:COL:SH12:C7@247954,58915|1F",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.840000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-85809d3db52bb93dfe96",
+   "low": "0.672000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.562500",
+   "before_low": "0.450000",
+   "element_id": "P-C:COL:SH12:C3@265215,57750|GF",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.562500",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-8de64040a1c3ae6cf137",
+   "low": "0.450000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.525000",
+   "before_low": "0.420000",
+   "element_id": "P-C:COL:SH12:C4@264812,63850|1F",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.525000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-8f8ad257d9b2cb9e027f",
+   "low": "0.420000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark - 9.65 base) ceiling",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C2@252679,64225|2F",
+   "flags": [],
+   "high": "0.425000",
+   "item": "D-39 main roof slab-top datum and build-up: low blank",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-919a5749ef79759e01ca",
+   "low": null,
+   "status": "UPPER_ONLY"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.450000",
+   "before_low": "0.360000",
+   "element_id": "P-C:COL:SH12:C@247429,51302|GF",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.450000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-9cb26d86575a92694880",
+   "low": "0.360000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C@238150,57853|GF",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED (R-T658-4 refuses a ceiling): Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-9f5a647014bbf83359f9",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.735000",
+   "before_low": "0.504000",
+   "element_id": "P-C:COL:SH12:C6@250087,56100|1F",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.735000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-a87ea657a42a311cb851",
+   "low": "0.504000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C5@255627,63526|2F",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED (R-T658-4 refuses a ceiling): D-39: main roof slab-top datum and roof build-up not printed; section CONFLICT",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-bc01297b1c4a4c45a15f",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C@233893,56561|GF",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED (R-T658-4 refuses a ceiling): Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-c0b3340a906c2c7650f8",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C3@247476,61310|2F",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED (R-T658-4 refuses a ceiling): D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand; section CONFLICT",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-c10e2945d582b5a03126",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.630000",
+   "before_low": "0.420000",
+   "element_id": "P-C:COL:SH12:C5@255627,63526|1F",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.630000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-c677b628a776d3b87b02",
+   "low": "0.420000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.525000",
+   "before_low": "0.420000",
+   "element_id": "P-C:COL:SH12:C3@247476,61310|1F",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.525000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-cc702b8541c15fdfd98c",
+   "low": "0.420000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-4: C1 2F 20x50 0.10 m2 x (13.90 finished mark - 9.65 base) ceiling",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C1@251701,62344|2F",
+   "flags": [],
+   "high": "0.425000",
+   "item": "D-39 main roof slab-top datum and build-up: low blank",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "low": null,
+   "status": "UPPER_ONLY"
+  },
+  {
+   "basis": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+   "before_high": "0.525000",
+   "before_low": "0.420000",
+   "element_id": "P-C:COL:SH12:C4@259526,63482|1F",
+   "flags": [
+    "SECTION_CONFLICT_D-16_D-66"
+   ],
+   "high": "0.525000",
+   "item": null,
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-e112e2add2f8979a6c39",
+   "low": "0.420000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C@235241,51296|GF",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED (R-T658-4 refuses a ceiling): Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-e6c1c9a7feec10f64975",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "R-T658-4: C3 GF 25x50 (annex) 0.125 m2 x (4.30 finished mark - 0.25 base) ceiling",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:COL:SH12:C3@238374,54773|GF",
+   "flags": [],
+   "high": "0.506250",
+   "item": "Q-54 B / D-39 annex roof slab-top datum: low blank",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-fad18af6e7139a5e99d1",
+   "low": null,
+   "status": "UPPER_ONLY"
+  },
+  {
+   "basis": "UNCHANGED: overlay op FOOTING_S02_BOUND (T-595 R-T595-2)|T-595 R-T595-2|L-164ae9d338976be9e582: note R-T595-2 scenario-set bound: low LOWERED, high unchanged",
+   "before_high": "2.275000",
+   "before_low": "1.960000",
+   "element_id": "P-C:FTG:SH10:T652:10A5",
+   "flags": [],
+   "high": "2.275000",
+   "item": null,
+   "item_code": "STR.CONC.FOOTING",
+   "line_id": "L-164ae9d338976be9e582",
+   "low": "1.960000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-3: runs [2.4] m x 0.30 x (0.25 - 0.0) literal floor",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0035",
+   "flags": [
+    "D-35_ANNEX"
+   ],
+   "high": null,
+   "item": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-00465df980165c529476",
+   "low": "0.180000",
+   "status": "LOWER_ONLY"
+  },
+  {
+   "basis": "UNCHANGED: Checker downgrade DG-2ddc451c17d2b589 (APPLIED in the V3.0.57 index): Checker downgrade DG-2ddc451c17d2b589 UNSUPPORTED BASIS (ST7757.pdf p.13: ground-beam sections titled 'Less than 5m length' 30 x 40 and 'Less then 2.5m length' ",
+   "before_high": "0.291231",
+   "before_low": "0.218423",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0037.1",
+   "flags": [],
+   "high": "0.291231",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-0bb78accf8c0a0fbdbaf",
+   "low": "0.218423",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-1: span 1.25 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "before_high": "0.112500",
+   "before_low": "0.112500",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0034",
+   "flags": [
+    "TITLES_OVERLAP"
+   ],
+   "high": "0.150000",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-0c5ede7fd2c9e425aa8d",
+   "low": "0.112500",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED: Checker downgrade DG-2ddc451c17d2b589 (APPLIED in the V3.0.57 index): Checker downgrade DG-2ddc451c17d2b589 UNSUPPORTED BASIS (ST7757.pdf p.13: ground-beam sections titled 'Less than 5m length' 30 x 40 and 'Less then 2.5m length' ",
+   "before_high": "0.288000",
+   "before_low": "0.216000",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0007",
+   "flags": [],
+   "high": "0.288000",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-0e852cca42fb8b765c58",
+   "low": "0.216000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED: Checker downgrade DG-2ddc451c17d2b589 (APPLIED in the V3.0.57 index): Checker downgrade DG-2ddc451c17d2b589 UNSUPPORTED BASIS (ST7757.pdf p.13: ground-beam sections titled 'Less than 5m length' 30 x 40 and 'Less then 2.5m length' ",
+   "before_high": "0.294000",
+   "before_low": "0.220500",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0019",
+   "flags": [],
+   "high": "0.294000",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-1487bdda099006e0c4ba",
+   "low": "0.220500",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0022",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED: GB.EXTERIOR.DEPTH_BASIS.COURT HELD: not declared for this project (T-449 correction register (R-GB-EXT-DEPTH-1))",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-21795b350fbd09150c43",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "R-T658-3: runs [2.3] m x 0.30 x (0.25 - 0.0) literal floor",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0012.2",
+   "flags": [
+    "D-35_ANNEX"
+   ],
+   "high": null,
+   "item": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-3284f44000c02179ace7",
+   "low": "0.172500",
+   "status": "LOWER_ONLY"
+  },
+  {
+   "basis": "R-T658-3: runs [5.45, 4.25] m x 0.30 x (0.25 - 0.0) literal floor",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0015",
+   "flags": [
+    "D-35_ANNEX"
+   ],
+   "high": null,
+   "item": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-402dbe61d1c924144a3c",
+   "low": "0.727500",
+   "status": "LOWER_ONLY"
+  },
+  {
+   "basis": "R-T658-3: runs [6.0] m x 0.30 x (0.25 - 0.0) literal floor",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0016",
+   "flags": [
+    "D-35_ANNEX"
+   ],
+   "high": null,
+   "item": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-4783c6e18002c3a8a37e",
+   "low": "0.450000",
+   "status": "LOWER_ONLY"
+  },
+  {
+   "basis": "R-T658-2: span 5.0 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "before_high": "0.900000",
+   "before_low": "0.900000",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0010.3",
+   "flags": [
+    "ON_LIMIT",
+    "D-33_LOADED_SPAN"
+   ],
+   "high": "0.900000",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-5af89b9f1e5b90daf8f5",
+   "low": "0.600000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0002.1",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED: GB.EXTERIOR.DEPTH_BASIS.COURT HELD: not declared for this project (T-449 correction register (R-GB-EXT-DEPTH-1))",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-62243c74c430d383be86",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "R-T658-3: runs [1.2] m x 0.30 x (0.25 - 0.0) literal floor",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0012.1",
+   "flags": [
+    "D-35_ANNEX"
+   ],
+   "high": null,
+   "item": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-6bf14711798e5af93594",
+   "low": "0.090000",
+   "status": "LOWER_ONLY"
+  },
+  {
+   "basis": "R-T658-1: span 1.45 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "before_high": "0.130500",
+   "before_low": "0.130500",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0020",
+   "flags": [
+    "TITLES_OVERLAP"
+   ],
+   "high": "0.174000",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-81444e222487437e257e",
+   "low": "0.130500",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0023:7DC+7DD#1",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED: ground-beam run 7DC+7DD#1 carries a landing beam: ST p.13 prints sections only 'without concentrated load'; the loaded run's section is not printed (beside 0.4230 .. 0.64 m3, not adopted) (T-647 r2 structural hold census (merged a521da8a))",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-95a1f198cfe7f398d6ae",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "R-T658-1: span 0.789 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "before_high": "0.071008",
+   "before_low": "0.071008",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0038",
+   "flags": [
+    "TITLES_OVERLAP"
+   ],
+   "high": "0.094676",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-970bac563cbcd69e2a30",
+   "low": "0.071008",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0041",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED: GB.EXTERIOR.DEPTH_BASIS.COURT HELD: not declared for this project (T-449 correction register (R-GB-EXT-DEPTH-1))",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-a55bfa01b726ef11650c",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "R-T658-1: span 2.1 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "before_high": "0.189000",
+   "before_low": "0.189000",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0040",
+   "flags": [
+    "TITLES_OVERLAP",
+    "D-33_LOADED_SPAN"
+   ],
+   "high": "0.252000",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-a8c5c32c7a785c1e3f05",
+   "low": "0.189000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-3: runs [0.5] m x 0.30 x (0.25 - 0.0) literal floor",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0017.2",
+   "flags": [
+    "D-35_ANNEX"
+   ],
+   "high": null,
+   "item": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-b4a13a43967ee4765662",
+   "low": "0.037500",
+   "status": "LOWER_ONLY"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.1",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED: section not printed: blank, never 0 (T-449 correction register (R-GB-NECK-CUT-1))",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-be6708e07b40efa02779",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "UNCHANGED: Checker downgrade DG-2ddc451c17d2b589 (APPLIED in the V3.0.57 index): Checker downgrade DG-2ddc451c17d2b589 UNSUPPORTED BASIS (ST7757.pdf p.13: ground-beam sections titled 'Less than 5m length' 30 x 40 and 'Less then 2.5m length' ",
+   "before_high": "0.279000",
+   "before_low": "0.209250",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0025.1",
+   "flags": [],
+   "high": "0.279000",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-c0b7102a36344a0349f5",
+   "low": "0.209250",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0032:7E7+7E8#2",
+   "flags": [],
+   "high": null,
+   "item": "UNCHANGED: ground-beam run 7E7+7E8#2 carries a landing beam: ST p.13 prints sections only 'without concentrated load'; the loaded run's section is not printed (beside 0.4230 .. 0.64 m3, not adopted) (T-647 r2 structural hold census (merged a521da8a))",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-cfb4555cb26b39934bff",
+   "low": null,
+   "status": "HELD_BLANK"
+  },
+  {
+   "basis": "R-T658-1: span 1.5367 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "before_high": "0.138300",
+   "before_low": "0.138300",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.2",
+   "flags": [
+    "TITLES_OVERLAP",
+    "D-33_LOADED_SPAN"
+   ],
+   "high": "0.184399",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-d53e5eb08e2c6c668254",
+   "low": "0.138300",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-3: runs [5.8] m x 0.30 x (0.25 - 0.0) literal floor",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.2",
+   "flags": [
+    "D-35_ANNEX"
+   ],
+   "high": null,
+   "item": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-d8b98b143e293d30833b",
+   "low": "0.435000",
+   "status": "LOWER_ONLY"
+  },
+  {
+   "basis": "R-T658-3: runs [1.8063] m x 0.30 x (0.25 - 0.0) literal floor",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0042",
+   "flags": [
+    "D-35_ANNEX"
+   ],
+   "high": null,
+   "item": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-e16c98075f69532a3dc7",
+   "low": "0.135473",
+   "status": "LOWER_ONLY"
+  },
+  {
+   "basis": "R-T658-1: span 1.2 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "before_high": "0.108000",
+   "before_low": "0.108000",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0021",
+   "flags": [
+    "TITLES_OVERLAP"
+   ],
+   "high": "0.144000",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-e2134034441cb7db7bd7",
+   "low": "0.108000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-2 / R-GB-NECK-CUT-1: 0.3 x 0.4 x 4.97 (column 1EC face reading, 'less than 5 m') .. 0.3 x 0.6 x 5.02 (band end reading, 'more than 5 m') (T-430 register HOLD_RANGE; candidate line carries no bound)",
+   "before_high": null,
+   "before_low": null,
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.1",
+   "flags": [
+    "T430_RANGE_NOT_WIRED",
+    "D-33_LOADED_SPAN"
+   ],
+   "high": "0.903600",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-e24946df436cbc25fca6",
+   "low": "0.596400",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-1: span 1.2 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "before_high": "0.108000",
+   "before_low": "0.108000",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0030",
+   "flags": [
+    "TITLES_OVERLAP"
+   ],
+   "high": "0.144000",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-f0e25ad2cf73bf2a35ea",
+   "low": "0.108000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "R-T658-1: span 2.0732 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "before_high": "0.186592",
+   "before_low": "0.186592",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0039",
+   "flags": [
+    "TITLES_OVERLAP"
+   ],
+   "high": "0.248788",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-f24cf117a9ce1e875785",
+   "low": "0.186592",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED: candidate record V3.0.19 (T-311 extract): M4: boundary-wall columns 20 x 30 ('SEE ARCH PLAN', none drawn): count and positions: the band 5 runs 44.07 m x 0.20 x 0",
+   "before_high": "3.525600",
+   "before_low": "0.000000",
+   "element_id": "T254:GROUND_BEAMS:GROUND:BOUNDARY_GB_NG",
+   "flags": [
+    "EXISTENCE_OPEN"
+   ],
+   "high": "3.525600",
+   "item": null,
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-fb7a6431fede62e93fd5",
+   "low": "0.000000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED: T-572 HELD-bound component HL:STRAP_CONCRETE:SB1:IN_FOOTING:F10_F: BOUNDED: low SB1 end piece inside the F10 + F outline may be no separate solid (follows Q-31 C; T-233); high SB1 1.00 x 0.50 section over its drawn length inside the outline (T-231 / T-233)",
+   "before_high": "0.385000",
+   "before_low": "0.000000",
+   "element_id": "HL:STRAP_CONCRETE:SB1:IN_FOOTING:F10_F",
+   "flags": [
+    "EXISTENCE_OPEN"
+   ],
+   "high": "0.385000",
+   "item": null,
+   "item_code": "STR.CONC.STRAP",
+   "line_id": "L-abd65e1b745315dd17c2",
+   "low": "0.000000",
+   "status": "BOUNDED"
+  },
+  {
+   "basis": "UNCHANGED: T-572 HELD-bound component HL:STRAP_CONCRETE:SB3:IN_FOOTING:F3: BOUNDED: low SB3 0.50 x 0.40 soffit at the F3 top (T-230); high SB3 soffit at the F3 underside (D-15 strap soffit; T-230 / T-350)",
+   "before_high": "0.268300",
+   "before_low": "0.029500",
+   "element_id": "HL:STRAP_CONCRETE:SB3:IN_FOOTING:F3",
+   "flags": [],
+   "high": "0.268300",
+   "item": null,
+   "item_code": "STR.CONC.STRAP",
+   "line_id": "L-c823e0dbd81e30c66aa5",
+   "low": "0.029500",
+   "status": "BOUNDED"
+  }
+ ],
+ "schema": "T658_LEDGER_V1",
+ "totals": {
+  "STR.CONC.COLUMN": {
+   "before_bounded": 15,
+   "before_high": "10.119000",
+   "before_low": "8.034000",
+   "blank": 8,
+   "bounded": 15,
+   "bounded_high": "10.119000",
+   "bounded_low": "8.034000",
+   "lines": 29,
+   "lower_only": 0,
+   "lower_only_floor": "0.000000",
+   "total": null,
+   "upper_only": 6,
+   "upper_only_ceiling": "2.801250"
+  },
+  "STR.CONC.FOOTING": {
+   "before_bounded": 1,
+   "before_high": "2.275000",
+   "before_low": "1.960000",
+   "blank": 0,
+   "bounded": 1,
+   "bounded_high": "2.275000",
+   "bounded_low": "1.960000",
+   "lines": 1,
+   "lower_only": 0,
+   "lower_only_floor": "0.000000",
+   "total": null,
+   "upper_only": 0,
+   "upper_only_ceiling": "0.000000"
+  },
+  "STR.CONC.GROUND_BEAM": {
+   "before_bounded": 14,
+   "before_high": "6.621731",
+   "before_low": "2.808073",
+   "blank": 6,
+   "bounded": 15,
+   "bounded_high": "7.873294",
+   "bounded_low": "3.104473",
+   "lines": 29,
+   "lower_only": 8,
+   "lower_only_floor": "2.227973",
+   "total": null,
+   "upper_only": 0,
+   "upper_only_ceiling": "0.000000"
+  },
+  "STR.CONC.STRAP": {
+   "before_bounded": 2,
+   "before_high": "0.653300",
+   "before_low": "0.029500",
+   "blank": 0,
+   "bounded": 2,
+   "bounded_high": "0.653300",
+   "bounded_low": "0.029500",
+   "lines": 2,
+   "lower_only": 0,
+   "lower_only_floor": "0.000000",
+   "total": null,
+   "upper_only": 0,
+   "upper_only_ceiling": "0.000000"
+  }
+ }
+}
