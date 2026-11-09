@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-09 04:16; owner delivery directive 12:40 in force)
+
+- Merged since 00:15 (Gate A, non-candidate): T-646 roof layers / fence finishes 43 classed, T-525 registry gate fix (master 1.57.0, Gate B step 1 of the owner order), T-650 lintel payable form (60 / 60 RC cast m3), T-633 blockwork 39 UNKNOWN rows; REJECTED narrow T-647 (17 B11 rows on an unprinted count) -> r2.
+- Gate B: T-498 blockwork materials CLAIMED W3 03:01 (step 2); then T-423 r2 (W1 after T-498 READY) -> T-563 -> T-314; candidate V3.0.58 unchanged until T-498 passes.
+- 10 Nov milestone: trial BOQ r2 (T-649, W3 after T-498) with T-647 r2 / T-648 causes. Confidence: trial BOQ r2 by 10 Nov end MEDIUM (W3 must finish T-498 first); first wired Gate B package in the candidate by 10 Nov MEDIUM; 12-13 Nov statement V12 (T-635) MEDIUM-HIGH.
+
 ## Status (Lead, 2026-11-09 00:15; owner delivery directive 12:40 in force; PR #4 merged 21:15 8 Nov)
 
 - Merged and Checker-verified since 20:15 (all Gate A, non-candidate): T-637 r2 master 1.56.0, T-641 overlay V17, T-642 Checker fix rows, T-644 lintels classed (60), T-645 stair finishes (31), T-643 rebar on held concrete (4 downgrade records), T-636 THE 10 NOV TRIAL BOQ (5151 lines; 1559 released / 2750 HELD / 842 excluded; every unit re-added by the Checker for B10 / B11).

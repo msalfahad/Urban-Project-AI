@@ -1,57 +1,54 @@
 # LEAD STATE (at most 5 KB; the Lead rewrites it at the end of every run)
 
-Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log f136248f..`,
-`git -C .work/board log <board commit of this run>..`, `git log fd71bc30..` on main, RUN_LOG lines after 00:12Z 9 Nov,
+Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log 2f103248..`,
+`git -C .work/board log <board commit of this run>..`, `git log fd71bc30..` on main, RUN_LOG lines after 04:13Z 9 Nov,
 rows changed since), then rewrite.
 
 ## Last seen
-- engine: f136248f (T-643 / T-636 merges; before ebc5a76a T-645, cc7f9a48 T-644, 57620ab8 T-641, 1c7411a5 T-642,
-  deb7b86a T-637 r2); candidate of record ARCH_TAKEOFF_V3.0.58 / BOQ_FAMILY_MASTER 1.56.0; released V2.9 + route G.
-- main: fd71bc30 = PR #4 MERGED by the owner 21:15 8 Nov (OWNER SESSION note). Gate B OPEN.
-- board: this run's final commit (Lead 2026-11-09 00:1x)
-- last Lead run: 2026-11-09 00:12-00:3x UTC (run session_01E6cPncJiAfQsqR4SGuXYmt)
+- engine: 2f103248 (T-633 merge; before 2a2e28ca T-650, c7565fb9 T-525 master 1.57.0, af50c864 T-646); candidate of
+  record ARCH_TAKEOFF_V3.0.58 / BOQ_FAMILY_MASTER 1.57.0; released V2.9 + route G.
+- main: fd71bc30 (PR #4 merged by the owner 21:15 8 Nov). Gate B OPEN.
+- board: this run's final commit (Lead 2026-11-09 04:1x)
+- last Lead run: 2026-11-09 04:13-04:3x UTC (run session_01E6cPndfy8CYAfU6erUi3md)
 
 ## Governing
 - OWNER DIRECTIVE 2026-11-08 12:40 + OWNER SESSION 21:15: delivery first; no new investigation tasks (fix rows that
   wire or prove a quantity only); report only WIRED quantities and Checker-verified whole lines; Gate B one at a time
-  in the order T-525 -> T-498 -> T-423 r2 -> T-563 -> T-314 -> remaining V14 fix rows. UrbanProjectsManager untouched.
+  in the order T-525 (MERGED) -> T-498 -> T-423 r2 -> T-563 -> T-314 -> remaining V14 fix rows. UrbanProjectsManager untouched.
 
 ## Run health
-- Since 20:14: 11 runs, all closed, 0 empty; 7 merged, 0 rejected, READY 0.
-- venv 'No module named pytest' at first try W1 21:40, Verifier 23:04 / 23:59 (setup rebuilt): NEEDS FIXING note.
-- tests/t485 + t374 x2 red on the working branch = baseline (T-525 fixes t485).
+- Since 00:19: 10 runs closed, 0 empty; 4 merged, 1 rejected (T-647 narrow). W3 03:01 running at 04:16 (PENDING):
+  if no final line by the next Lead run (> 4 h since claim), report INCOMPLETE and return T-498 to TODO.
+- venv 'No module named pytest' at first use ~half of runs (setup rebuilds): NEEDS FIXING note each report.
 
-## Live rows (00:15)
-- READY: none.
-- TODO: S: T-423 r2 (FIRST, claimable, Gate B after T-498), T-647 (F-T636-1 structural 183), T-633; A: T-646 (FIRST),
-  T-650 (lintel payable form, F-T644-1 ruling), T-648 (F-T636-1 finishes 183), T-314 (Gate B 5th); I: T-525 (FIRST,
-  gate 0), T-498 (Gate B 2nd), T-649 (V18 + trial BOQ r2, F-T645-1 ruling, T-643 downgrades), T-635 (12-13 Nov), T-563.
+## Live rows (04:16)
+- READY: none. CLAIMED: T-498 (W3 03:01, Gate B step 2).
+- TODO: S: T-647 r2 (FIRST), T-423 r2 (after T-498 READY: file dependency); A: T-648 (FIRST), T-314 (after T-648;
+  Gate B 5th); I: T-649 (after T-498; scope extended 04:16), T-563 (after T-498), T-635 (after T-649).
 - QUEUED: W1 T-424, T-364, T-363, T-372; W2 T-513, T-502; W3 T-509, T-382, T-474.
-- IN PROGRESS: T-180 (P08 PARTIAL, P09 CLOSED; next P12..P14; T-597 trench). PAUSED: T-450 p2, T-451, T-472.
-- Lane order: S (worker 1): T-423, T-647, T-633, T-424, T-364, T-363, T-372; A (worker 2): T-646, T-650, T-648, T-314,
-  T-513, T-502; I (worker 3): T-525, T-498, T-649, T-635, T-563, T-509, T-382, T-474.
-- Next refill candidates (delivery only): B1 earthworks 15 HELD blank (T-509 / owner 2 Nov rules), B7-13 stair
-  formwork 20 HELD blank, B8 penetrations 17 pcs HELD blank, B6 shutters 3 m2, B3 thresholds 8 m2.
+- IN PROGRESS: T-180 (P12, P13, P14 CLOSED; next CLOSABLE line). PAUSED: T-450 p2, T-451, T-472.
+- Lane order: S (worker 1): T-647, T-423, T-424, T-364, T-363, T-372; A (worker 2): T-648, T-314, T-513, T-502;
+  I (worker 3): T-498, T-649, T-563, T-635, T-509, T-382, T-474.
+- TODO count 7 (< 8 on purpose: directive + one-at-a-time Gate B). Refill: remaining V14 fix rows once T-314 is
+  claimed; B8 penetrations 17 pcs HELD blank, B6 shutters, B3 thresholds only if T-648 leaves them without a quantity.
 
 ## Top 5 priorities
-1. Gate B in the owner's order: T-525 then T-498 (W3), T-423 r2 built in parallel (W1); Checker one at a time.
-2. Every HELD with a cause: T-647 / T-648 -> trial BOQ r2 in T-649 (W3 after T-498).
-3. 12-13 Nov: T-635 statement + scorecard V12 (after T-649); Q-34 raised then.
-4. Checker: T-525 first when READY; T-647 / T-650 (gate 1) never delayed more than 2 runs; T-180 light slots.
-5. When a package merges, promote its queued successor in the same run (T-563 after T-498; T-314 after T-563).
+1. Gate B: T-498 to the Checker first when READY; then T-423 r2 (W1) -> T-563 (W3) -> T-314 (W2).
+2. T-647 r2 (gate 1, never delayed more than 2 Checker runs) + T-648 -> trial BOQ r2 in T-649.
+3. Checker light slot: re-measure D-1F-07 and L-GF-01 (T-650) before T-649 wires R-T650-1.
+4. 12-13 Nov: T-635 statement + scorecard V12 (after T-649); Q-34 raised then.
+5. When a package merges, promote its successor in the same run.
 
 ## Rules decided (keep)
 - Shared files: packages of different streams build in parallel; second READY rebases on the first merged candidate;
   version allotted at merge. One candidate package per worker at a time.
 - Status word FIRST; 7-cell rows; NEVER a '|' inside a cell text; `board check` pulls first: commit before. Never write
-  'after T-xxx' for a Gate-B-order-only dependency of a claimable row (makes it WAITING).
-  Stamp 'Lead YYYY-MM-DD HH:MM per' from `date -u` (never a placeholder).
+  'after T-xxx' (or 'waits on') in history text unless it is a live dependency: queue_check reads the whole cell.
+  Stamp 'Lead YYYY-MM-DD HH:MM per' from `date -u`.
 - A Checker finding gets its fix row in the next Lead run.
-- Register 00:15: PRECAST LINTEL PAYABLE FORM RESTATED (printed RC schedule first, precast rule the rest). 20:15: ROOF
-  BUILD-UP LAYERS, REBAR-TO-CONCRETE BINDING. 16:15: BLOCKWORK MATERIALS, LIFT LANDING DOOR, SLAB EDGE STRIP.
-- Rulings 00:15: F-T644-1 (T-650), F-T645-1 (T-649: tread on held riser count released only on an independent edge census).
-- Lessons 00:15: T-643, T-637, T-614 ADOPTED; PROPOSED T-644 (schedule before company rule), T-645 (shared stair
-  inputs), T-636 (every HELD with a committed cause).
+- Register 04:16: LINTEL BEARING TOLERANCE (F-T650-3). 00:15: PRECAST LINTEL PAYABLE FORM RESTATED.
+- Rulings: F-T650-3 (04:16), F-T644-1 (T-650 MERGED, ADOPTED), F-T645-1 (T-649).
+- Lessons 04:16: T-644 ADOPTED; PROPOSED T-647 r1, F-T650-3, T-633, T-645, T-636.
 - F-C-T570-1, F-C-T593-1 (stair skirting; ORR-007 open with owner). F-C-T638-1 split faces stay CALCULATED.
 - Materials: FINISH V7, PLASTER V3; UPC-BLACK-BLOCK-001 1.1.0 MERGED (default reader stays 1.0.0).
 

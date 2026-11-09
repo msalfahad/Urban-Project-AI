@@ -1,5 +1,28 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-09 04:16 UTC (Lead). Previous version: 2026-11-09 00:15 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4
+single lines; no trade subtotal); released: 0. The candidate of record stays V3.0.58 (not released). Wiring has
+started in your order: the registry gate fix is merged; the blockwork materials package is being built now.
+
+Since 9 Nov 00:15 (newest first; four checked and merged, one sent back once; NO quantity wired into the candidate yet):
+- Registry gate fix merged: the family register now records the waterproofing base package as integrated (209.02 m2
+  and 186.78 m unchanged; the checker reproduced the whole drawing chain exactly). This was the first step of your
+  wiring order; the blockwork materials package (second) is being built and goes to the checker first when ready.
+- Lintels: the printed structural lintel schedule covers every block wall of this villa, so all 60 openings are cast
+  RC lintels (m3 with bars), not precast pieces; lintel concrete known so far at least 0.99 m3 (was 0.50), upper end
+  still open (held). Three lift-door ends read 0.399 m only because of a drawing rounding; the drawing prints 0.40 m.
+- Roof layers and fence finishes: 43 held lines classed; roof screed at least 10.63 m3, upper end open (thickness not
+  printed); insulation / protection layers printed nowhere (held); fence finishes held (no finish printed).
+- Blockwork: 39 statement rows with unknown evidence now have own values (231.67 m2 vs 231.67 m2 stated, difference
+  0.001 m2 within tolerance).
+- Structural held-line causes: sent back once: 17 reinforcement lines (51.57 kg) were called drawing-confirmed while
+  the drawing does not print their bar count; they are being reclassed as held with that cause.
+- Next: blockwork materials to the checker, then ceilings / sills, plaster heights, exterior plaster (one at a time);
+  trial BOQ r2 with tonight's results; every held line with its written cause; 12-13 Nov statement and scorecard.
+
+Previous section (2026-11-09 00:15):
 Last update: 2026-11-09 00:15 UTC (Lead). Previous version: 2026-11-08 20:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4
