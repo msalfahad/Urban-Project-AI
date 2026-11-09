@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-09T01:50Z | Verifier | STARTED | run session_01E6cPnyTyPzW1qH7ADg3nxm | repo-attached routine | task state: READY T-647 (W1 ec383e02) | self-check pending
 - 2026-11-09T01:32Z | Worker 1 | SUCCESS | T-647 READY agents/task-T-647 @ ec383e02 | 183/183 structural HELD lines of the trial BOQ now carry one sourced cause (B11 79 RFI-B-S10, 42 printed gaps, 17 degenerate bounds = fix rows 51.574 kg; B10 5 CN columns NA on ST p.9 (re-read AGREE), 8 designer/owner items; B9 26 D-39/D-35/gap + 19 dependencies); HELD census unchanged, nothing wired; lesson: test low == high before booking BOUNDED_EXPOSURE. T-423 r2 skipped (shares registry/manifest files with CLAIMED T-525) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-09T01:20Z | Worker 1 | STARTED | run session_01E6cPneFRnKomgv1mAM6CTN | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09 01:01 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
