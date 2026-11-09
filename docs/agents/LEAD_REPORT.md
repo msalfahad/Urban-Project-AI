@@ -1,5 +1,19 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-09 12:20 UTC
+
+Drive read OK (no file created in the Alsenan project folder since 08:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.59 / master 1.59.0 (NOT RELEASED); released V2.9 + route G unchanged; no candidate quantity moved since 08:20.
+- Registry (T-651 MERGED 26af97af): master 1.59.0 promotes V3.0.59 (B9-04 INTEGRATED); t485 green; Checker census AGREE (4,999 same + 74 added).
+- Trial BOQ r3 for 10 Nov (T-652 MERGED 2e80c03f, non-candidate): HELD with committed cause 2,351 / 2,744 -> 2,728 / 2,740 (12 left = register lines). B9 0.15 m black hosts (pcs, Q-80 ASSUMED - OWNER-APPROVED 12.5 / m2): 2,194.1375 pcs + HELD 0 .. 4.25; my 2,232.14 counted RC lintel faces as block: ENGINE_RIGHT (Checker own re-add). B9 totals re-added: pcs 3,269.9375, mortar 3.387982 m3, glue 20.061 kg + HELD 852.22 .. 885.60 kg. D-1F-07 lintel HELD 0.036 .. 0.04377 m3 (designer item). MS1-L tread 3.105 m2 / step 10.35 lm -> HELD (shared riser count, C-ST-4).
+- Finishes causes (T-648 r2 MERGED 57db7053): 198 -> 0 lines without cause; no quantity moved.
+- Gate B step 3 (T-423 r3 READY bdbbb8db): V3.0.60 / master 1.60.0, 22 lines text-only (14 thresholds URBAN_METHOD, 5 dome ceiling lists, D-1F-04 1.760 m2 tile/plaster face move, 1 porcelain strip); 0 m2 / m3 / kg moved; engine vs freelancer unchanged.
+- Worse / found: F-T648-2 global Decimal precision at import in 18 research modules + 1 m9 fixture -> t647 / t649 fail in full sessions (order-dependent) -> T-653 gate 0.
+- Learned: ADOPTED registry promotion travels with the merge; Gate B order is a claim order; every HELD line carries a committed cause. PROPOSED no process-global numeric state (test in T-653).
+- Gate: lowest open gate 0 (T-653). Next: T-423 r3 Checker -> T-563 (step 4, W3) -> T-314 r2 (step 5, W2 after T-653) -> trial BOQ r4 (T-654).
+TEAM HEALTH: since 08:22 11 runs, all closed with a final line, 0 UNCLOSED; 3 MERGED, 0 REJECTED, 1 INCOMPLETE stage (T-423 r2, correct dependency stop, r3 READY 1h45 later); 1 correct no-claim (W2 10:40); all self-checks PASS; W3 11:05 hit an incomplete venv again (fixed by re-running setup). READY 1. queue check: see final line.
+OWNER PACKAGE: none today (no section 2.7 decision).
+NEEDS FIXING: (1) venv sometimes incomplete at first use (W3 11:05; setup rerun fixes it): watch only. (2) Scout paused since 27 Oct: no action unless you want it back.
+
 ## LEAD REPORT 2026-11-09 08:20 UTC
 
 Drive read OK (no file created in the project folders since 04:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.59 / master 1.58.0 (NOT RELEASED); released V2.9 + route G unchanged. Gate B step 2 MERGED: the first quantities wired into the candidate since the 12:40 directive.
@@ -30,17 +44,3 @@ Drive read OK (no file created in the project folders since 00:00 UTC 9 Nov, no 
 TEAM HEALTH: since 00:19 10 runs closed + W3 03:01 running (scheduler PENDING), 0 empty, 4 MERGED, 1 REJECTED, READY 0; all ran code, self-check PASS; 'No module named pytest' at first use again 5 times (Verifier 03:43 / 04:01, W2 00:54 / 02:56, this Lead run), setup rebuilt it each time. queue check: 17 actionable rows, 0 flagged, 0 stall checks.
 OWNER PACKAGE: none today (F-T650-3 settled by the printed dimension chain; no section 2.7 decision).
 NEEDS FIXING: (1) venv incomplete at first use in about half of all runs ('No module named pytest' until setup re-runs): the main chat may want `status` to verify pytest imports before reporting prepared (agent code: not mine to change). (2) Scout paused since 27 Oct: no action unless you want it back.
-
-## LEAD REPORT 2026-11-09 00:15 UTC
-
-Drive read OK (no file created in the project folders since 20:00 UTC 8 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.56.0 (NOT RELEASED); NO quantity wired since 20:15; released V2.9 + route G unchanged. PR #4 MERGED by the owner 21:15 (main fd71bc30): Gate B opened this run in the owner's order.
-- 10 NOV TRIAL BOQ (T-636, MERGED 00:05, non-candidate): 5,151 lines, released 1,559 / HELD 2,750 / excluded 842; per trade and unit WIRED / OVERLAY / UNVERIFIED re-adds exact; Checker own re-add B11 9,787.750205 kg and B10 284.570060 m3 AGREE. No trade total (HELD remain, never 0). HELD with committed cause 2,314 / 2,750; 436 without (B11 138, B3 65, B13 58, B8 48, B7 44, B9 32, B6 14, B10 13, B4 10, B2 2) -> T-647 (S) / T-648 (A).
-- Rebar B11 (kg): 14 released column bar lines on HELD concrete 754.723: 10 KEEP 595.435 (length inputs printed independently), 4 downgrade records 159.288 (2F interval to undeclared roof, D-39) Checker-validated -> calculated 9,787.750 -> 9,628.462 kg when wired (-1.63 %); 208 unbound: 185 bound, 23 unresolved named. Freelancer: NOT_COMPARABLE (typed lump).
-- Concrete B10 (m3): Checker P02 / P04 findings closed: CB12 strip and GF B11 oblique end ENGINE_RIGHT (billed by T-229 terms, own 0.024375 / 0.686262), strip N of col 353 0.050 SET + HELD 0..0.025, BAND0049 B7 depth printed in block 47D -> 0.282743 DRAWING-CONFIRMED; 4 parapets HELD with cause. P08 / P09 slots: GF base +0.25 ENGINE_RIGHT 0.105 / 0.1925 m3.
-- Lintels B9-02 (pcs): 60 / 60 classed on measured jamb masonry: ESTABLISHED 13 pcs 21.5 lm, AT_MOST 37 pcs 60.6 lm, FLAGGED 19, HELD 4; freelancer has no lintel row (RULE_DIFFERENCE). Lead ruling F-T644-1: printed RC lintel schedule governs the openings it covers, owner precast rule the rest (resolution order) -> T-650; register restated.
-- Stair finishes B7: 31 / 31 classed; risers 1.96 -> 8.796036 m2 and flights 0 -> 13.36392 lm to wire (Checker re-measured D1 and MS2-L AGREE). Lead ruling F-T645-1 (tread on a held riser count) -> T-649.
-- Learned: ADOPTED T-643 (bar never more certain than its length inputs), T-637 (one work code per element and unit), T-614; PROPOSED: printed schedule before company rule (T-644), shared stair inputs (T-645), every HELD with a committed cause (T-636).
-- Gate: lowest open gate 0 (T-525). Next: T-525 -> T-498 Gate B (W3), T-423 r2 builds (W1), V18 + trial BOQ r2 (T-649), statement V12 for 12-13 Nov (T-635).
-TEAM HEALTH: since 20:14 11 runs, all closed, 0 empty, 7 MERGED, 0 REJECTED, READY 0; all ran code, self-check PASS; venv 'No module named pytest' on first try 3 times (W1 21:40, Verifier 23:04 / 23:59), setup rebuilt it each time. queue check: 21 actionable rows, 0 flagged, 0 stall checks.
-OWNER PACKAGE: none today (both rulings settled by the resolution order and answered rules; no section 2.7 decision).
-NEEDS FIXING: (1) the session venv is incomplete at first use in about half of today's runs ('No module named pytest' until setup re-runs): the main chat may want scripts/agent_env.sh status to verify pytest imports before reporting prepared (agent code: not mine to change). (2) Scout last run 27 Oct FAILED and is paused: no action unless you want it back.

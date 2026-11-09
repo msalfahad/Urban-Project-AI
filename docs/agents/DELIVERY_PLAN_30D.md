@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-09 12:20; owner delivery directive 12:40 in force)
+
+- Candidate of record V3.0.59 / master 1.59.0 (T-651 MERGED: registry promotes V3.0.59, t485 green again); NOT RELEASED.
+- 10 Nov trial BOQ r3 DELIVERED 9 Nov 11:29 (T-652 MERGED, non-candidate document on V3.0.59): HELD with a committed cause 2,728 / 2,740 (12 left = register lines); 0.15 m black blocks valued 2,194.1375 pcs + HELD 0 .. 4.25 (Q-80; Checker ENGINE_RIGHT); pinned to master 1.58.0 (F-C-T652-1) -> r4 on the newest master after steps 3-4 (T-654).
+- Gate B: step 3 T-423 r3 READY (V3.0.60 / master 1.60.0, text-only: 22 lines, no m2 / m3 / kg moves); step 4 T-563 W3 next (Checker after step 3 merges); step 5 T-314 r2 W2 after T-653 (gate 0 fix: global Decimal precision in 19 research files).
+- Confidence: step 3 merged by 10 Nov end HIGH (READY, 0 Checker runs waited); step 4 by 10 Nov end MEDIUM (one W3 build + one Checker run after step 3); 12-13 Nov statement V12 MERGED.
+
 ## Status (Lead, 2026-11-09 08:20; owner delivery directive 12:40 in force)
 
 - Candidate of record V3.0.59 (Gate B step 2, blockwork materials, MERGED 4c37ce2c): 74 material lines wired, every other line byte-identical; NOT RELEASED.

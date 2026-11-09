@@ -3,6 +3,14 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-09 12:20 (since 08:22)
+
+- T-648 r2 finishes causes: WORKED (local Decimal context, outputs byte-identical, 198 -> 0 lines without cause). F-T648-2 (same fault in 19 merged research files) -> T-653 W2 FIRST.
+- T-651 registry gate fix: WORKED (master 1.59.0 promotes V3.0.59; t485 green; census AGREE). Lesson ADOPTED: promotion travels with the merge.
+- T-652 V19 + trial BOQ r3: WORKED (HELD with cause 2,728 / 2,740; 0.15 m hosts 2,194.1375 pcs ENGINE_RIGHT vs Lead 2,232.14). F-C-T652-1 + F-T652-1 -> T-654 (r4 after T-563).
+- T-423 r2: PARTIAL (INCOMPLETE stage, correct: master 1.60.0 needed T-651 merged). Decision: r3 done the same day, READY 12:08, Checker next.
+- W2 10:40 no claim: correct refusal under the Gate B claim order; W2 now has T-653 first so its next run is not empty.
+
 ## Lead 2026-11-09 08:20 (since 04:19)
 
 - T-498 blockwork materials (Gate B step 2): WORKED (V3.0.59 4,999 same + 74 added; Checker own chain + 9 valued lines by hand AGREE). F-C-T498-1 stale cause on the 0.15 m hosts (Q-80 answered) -> T-652 values them from FR-T615. Merge left t485 red (T-498 pending in master 1.58.0) -> T-651 FIRST in lane I.

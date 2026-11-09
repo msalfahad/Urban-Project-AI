@@ -1,5 +1,26 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-09 12:20 UTC (Lead). Previous version: 2026-11-09 08:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4
+single lines; no trade subtotal); released: 0. Candidate of record V3.0.59 (not released) with the blockwork materials
+wired and now correctly recorded as integrated in the family register.
+
+Since 9 Nov 08:20 (newest first; three checked and merged, one handed in for checking, none sent back):
+- 10 Nov TRIAL BOQ r3 delivered (paper, a day early; checker re-added the changed lines by hand): every held line now
+  carries a written cause except 12 register lines (2,728 of 2,740). The 0.15 m black walls are valued under your
+  12.5 blocks per m2 answer: 2,194.14 blocks plus at most 4.25 held, not the 2,232 I expected (I had counted the
+  concrete lintel faces as block; the checker confirmed the engine is right).
+- The family register check is green again (blockwork materials recorded as integrated). No quantity moved by it.
+- Finishes held-line causes (198 lines) merged after the precision fix; the same fault sits in 19 older research
+  files and still disturbs two checks when everything runs together: a small fix task is first for the finishes worker.
+- Ceilings / sills / thresholds wiring (your step 3) is handed in for checking: 22 lines change only their wording
+  (thresholds, dome ceiling lists, one 1.76 m2 face moved between tile and plaster lines), no area, volume or weight
+  changes.
+- Next: step 3 checked; plaster heights (step 4); exterior plaster (step 5, first build 1,007.93 .. 1,085.61 m2 vs
+  freelancer 1,469.97 m2, reference only); trial BOQ r4 on the newest register after steps 3-4.
+
+Previous section (2026-11-09 08:20):
 Last update: 2026-11-09 08:20 UTC (Lead). Previous version: 2026-11-09 04:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4

@@ -6,52 +6,52 @@
   "last_run": "2026-11-09T04:32:05Z",
   "result": "ok",
   "working_on": "Daily update 9 Nov 04:32 UTC (scheduler SUCCEEDED); next 10 Nov 04:31 UTC",
-  "as_of": "2026-11-09T08:22:00Z"
+  "as_of": "2026-11-09T12:20:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-11-09T08:17:00Z",
+  "last_run": "2026-11-09T12:19:00Z",
   "result": "running",
-  "working_on": "Blockwork materials wired into the candidate (step 2 of your order); register fix task added first; ceilings / sills next in your order; trial BOQ r3 for 10 Nov queued",
-  "as_of": "2026-11-09T08:22:00Z"
+  "working_on": "Ceilings / sills wiring (step 3) queued first for the checker; precision fix task added for the finishes worker; plaster heights (step 4) next; trial BOQ r4 queued",
+  "as_of": "2026-11-09T12:20:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-09T07:28:00Z",
+  "last_run": "2026-11-09T11:22:00Z",
   "result": "ok",
-  "working_on": "07:28-07:39 statement and scorecard V12 for 12-13 Nov (merged); 05:21 17 bar lines held as count not printed (merged); next: ceilings / sills wiring (your order, step 3)",
-  "as_of": "2026-11-09T08:22:00Z"
+  "working_on": "11:22-12:09 ceilings / sills / thresholds wiring handed in for checking (text only, no quantity moves); 09:20 stage saved until the register fix merged; next: answer the checker",
+  "as_of": "2026-11-09T12:20:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-09T06:42:00Z",
-  "result": "incomplete",
-  "working_on": "06:42-07:58 exterior plaster wiring started (unfinished, saved); 04:40 finishes held-line causes sent back for a precision setting; next: that small fix, then exterior plaster in its turn",
-  "as_of": "2026-11-09T08:22:00Z"
+  "last_run": "2026-11-09T10:40:00Z",
+  "result": "ok",
+  "working_on": "10:40 nothing claimable (correct: your wiring order); 08:41 finishes causes fix (merged); next: precision fix in 19 research files, then exterior plaster (step 5)",
+  "as_of": "2026-11-09T12:20:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-11-09T06:59:31Z",
+  "last_run": "2026-11-09T11:05:00Z",
   "result": "ok",
-  "working_on": "07:00 nothing claimable (files held by exterior plaster); 05:01 wiring list V18 + trial BOQ r2 (merged); 03:01 blockwork materials (merged); next: register fix, then trial BOQ r3",
-  "as_of": "2026-11-09T08:22:00Z"
+  "working_on": "11:05 10 Nov trial BOQ r3 (merged); 09:00 register fix (merged); next: plaster heights (step 4), then trial BOQ r4",
+  "as_of": "2026-11-09T12:20:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-11-09T07:53:00Z",
+  "last_run": "2026-11-09T11:52:00Z",
   "result": "ok",
-  "working_on": "07:53 statement V12 merged; 06:53 bar-line rework and trial BOQ r2 merged, finishes causes sent back, two lintel ends re-measured; 04:53 blockwork materials merged (Gate B); READY 0",
-  "as_of": "2026-11-09T08:22:00Z"
+  "working_on": "11:52 nothing to check; 10:50 register fix and trial BOQ r3 merged; 08:51 finishes causes merged; READY 1 (ceilings / sills)",
+  "as_of": "2026-11-09T12:20:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,7 +60,7 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-11-09T08:22:00Z"
+  "as_of": "2026-11-09T12:20:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
@@ -69,6 +69,6 @@
   "last_run": "2026-11-09T00:54:15Z",
   "result": "ok",
   "working_on": "Refreshed 9 Nov 00:54 UTC (scheduler SUCCEEDED); next 9 Nov 12:54 UTC",
-  "as_of": "2026-11-09T08:22:00Z"
+  "as_of": "2026-11-09T12:20:00Z"
  }
 ]
