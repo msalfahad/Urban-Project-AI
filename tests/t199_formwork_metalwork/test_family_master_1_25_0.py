@@ -135,12 +135,17 @@ ANY_CODE = re.compile(r"\"([A-Z][A-Z0-9]*\.[A-Z0-9_.]*[A-Z0-9_])\"")       # any
 V3030 = ROOT / "engine/source/arch_v3030.py"
 
 
+def _scanned_texts(extra=None):
+    """(path, text) of every file the scans read, in scan order (T130._written_codes() order), + extra synthetic texts"""
+    files = [p for p in sorted((ROOT / "engine/source").rglob("*.py"))
+             if p.relative_to(ROOT).as_posix() not in T130.DECLARED_ONLY] + [ROOT / "tools/urban_boq_m9.py"]
+    return [(p.relative_to(ROOT).as_posix(), p.read_text(encoding="utf-8")) for p in files] + list((extra or {}).items())
+
+
 def _written_1_25(extra=None):
     """T130._written_codes() with the 1.25.0 prefixes: {code: first file that writes it}; extra = {path: text} adds
     synthetic module texts (adverse cases)"""
-    files = [p for p in sorted((ROOT / "engine/source").rglob("*.py"))
-             if p.relative_to(ROOT).as_posix() not in T130.DECLARED_ONLY] + [ROOT / "tools/urban_boq_m9.py"]
-    texts = [(p.relative_to(ROOT).as_posix(), p.read_text(encoding="utf-8")) for p in files] + list((extra or {}).items())
+    texts = _scanned_texts(extra)
     out = {}
     for path, text in texts:
         for c in CODE_1_25.findall(text):
@@ -158,9 +163,24 @@ def _newer_modules():
     return {m: v for m, v in FMC.newer_registry_modules(me, ROOT).items() if m not in mine}
 
 
-def _own_head(written):
-    newer = _newer_modules()
-    return {c: p for c, p in written.items() if p not in newer}
+def _own_head(written, extra=None, newer=None):
+    """the codes of `written` judged by 1.25.0, each with its first writer AMONG the own-head files (T-655, F-T314-2):
+    a code whose first writer is a newer module is NOT dropped when an own-head file also writes it (that file is
+    re-found in scan order); only a code written by newer modules alone is set aside for the newer registry. extra =
+    the synthetic texts the scan was given; newer = the newer-module set (default: _newer_modules())"""
+    newer = _newer_modules() if newer is None else newer
+    out, texts = {}, None
+    for c, p in written.items():
+        if p not in newer:
+            out[c] = p
+            continue
+        if texts is None:
+            texts = _scanned_texts(extra)
+        for path, text in texts:
+            if path not in newer and c in ANY_CODE.findall(text):
+                out[c] = path
+                break
+    return out
 
 
 def _own_head_hits(hits):
@@ -276,7 +296,7 @@ def test_adverse_a_met_code_no_family_owns_is_refused(docs):
     it: that is the gap r2 had)"""
     _, new = docs
     syn = {"engine/source/synthetic_met.py": 'L = {"item_code": "MET.NO_FAMILY_X", "unit": "lm"}\n'}
-    written = _own_head(_written_1_25(syn))
+    written = _own_head(_written_1_25(syn), extra=syn)
     assert T130._unowned_written(new, written) == {"MET.NO_FAMILY_X": "engine/source/synthetic_met.py"}
     assert "MET.NO_FAMILY_X" not in T130.CODE.findall(syn["engine/source/synthetic_met.py"])
 
@@ -292,3 +312,49 @@ def test_adverse_dropping_the_guard_rail_code_from_the_list_is_refused(docs):
 def test_adverse_a_new_unscanned_prefix_in_the_module_is_refused():
     text = V3030.read_text(encoding="utf-8") + '\nX = "XYZ.NEW_PREFIX_CODE"\n'
     assert _unscanned_prefix_codes(text) == ["XYZ.NEW_PREFIX_CODE"]
+
+
+# ------------------------------------------------------------------ T-655 (F-T314-2): first writer among own-head files
+def test_t655_normal_the_current_tree_keeps_every_own_head_code(docs):
+    """normal: on this tree every code an own-head file writes is kept, with that file's first writer in scan order"""
+    newer = _newer_modules()
+    for written in (_written_1_25(), T130._written_codes()):
+        kept = _own_head(written)
+        for c, p in written.items():
+            own_writers = [path for path, text in _scanned_texts() if path not in newer and c in ANY_CODE.findall(text)]
+            assert kept.get(c) == (own_writers[0] if own_writers else None), c
+
+
+def test_t655_adverse_a_newer_first_writer_no_longer_hides_an_own_head_code(docs, monkeypatch):
+    """adverse (the T-314 case): a NEWER module that sorts first writes a 1.25.0 code; the code is still checked, with
+    its first own-head writer; the pre-T-655 helper dropped it"""
+    _, new = docs
+    real = _written_1_25()
+    code, own_writer = "STR.FORMWORK", real["STR.FORMWORK"]
+    first = "engine/source/aaa_newer_synthetic.py"
+    syn = {first: f'L = {{"item_code": "{code}"}}\n'}
+    newer = dict(_newer_modules(), **{first: "9.99.0"})
+    written = {c: (first if c == code else p) for c, p in real.items()}          # the synthetic file sorts first
+    kept = _own_head(written, extra=syn, newer=newer)
+    assert kept[code] == own_writer and own_writer not in newer
+    assert code not in {c: p for c, p in written.items() if p not in newer}      # what the old helper did: dropped
+    # and the check still bites: with the family's code removed, the own-head writer is refused
+    bad = copy.deepcopy(new)
+    for f in bad["families"]:
+        if code in f["item_codes"]:
+            f["item_codes"] = [c for c in f["item_codes"] if c != code]
+    assert T130._unowned_written(bad, kept) == {code: own_writer}
+
+
+def test_t655_adverse_a_code_only_newer_modules_write_is_set_aside_and_an_own_head_one_still_fails(docs):
+    """adverse: a code written ONLY by a newer module is left to the newer registry; a code an own-head file writes
+    in no family still fails although a newer module writes it first"""
+    _, new = docs
+    newer_f, own_f = "engine/source/aaa_newer_synthetic.py", "engine/source/zzz_own_synthetic.py"
+    syn = {newer_f: 'A = "FIN.ONLY_NEWER_X"\nB = "FIN.NO_FAMILY_Y"\n', own_f: 'B = "FIN.NO_FAMILY_Y"\n'}
+    newer = dict(_newer_modules(), **{newer_f: "9.99.0"})
+    written = dict(_written_1_25(), **{"FIN.ONLY_NEWER_X": newer_f, "FIN.NO_FAMILY_Y": newer_f})
+    kept = _own_head(written, extra=syn, newer=newer)
+    assert "FIN.ONLY_NEWER_X" not in kept
+    assert kept["FIN.NO_FAMILY_Y"] == own_f
+    assert T130._unowned_written(new, kept) == {"FIN.NO_FAMILY_Y": own_f}
