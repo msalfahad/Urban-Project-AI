@@ -37,9 +37,40 @@ ENGINEERING_REASONING_STANDARD s.2-4 (no assumption; unresolved stays HELD, neve
 from __future__ import annotations
 
 import math
-from decimal import Decimal, getcontext
+import functools
+import inspect
+import types
+from decimal import Context, Decimal, localcontext
 
-getcontext().prec = 40
+# T-653 (F-T648-2): 40 digits are used only INSIDE this module's functions, through a local Decimal context; importing
+# this module never changes the process-global context (it used to set getcontext().prec = 40 at import, which changed
+# every later Decimal result in the same process). in_prec40() at the end of the module applies the local context.
+PREC = 40
+
+
+def ctx40():
+    """a local 40-digit Decimal context: `with ctx40(): ...`; the caller's context is restored on exit."""
+    return localcontext(Context(prec=PREC))
+
+
+def in_prec40(namespace: dict) -> None:
+    """run every plain function DEFINED in the module of `namespace` (its globals()) inside ctx40(); generator
+    functions, classes and names imported from other modules are left as they are. Marks each wrapper
+    `_t653_prec40 = True`. Called once, at the end of the module (here and in its builder)."""
+    mod = namespace["__name__"]
+    for name, fn in list(namespace.items()):
+        if (isinstance(fn, types.FunctionType) and fn.__module__ == mod and not getattr(fn, "_t653_prec40", False)
+                and not inspect.isgeneratorfunction(fn) and name not in ("ctx40", "in_prec40")):
+            namespace[name] = _wrap40(fn)
+
+
+def _wrap40(fn):
+    @functools.wraps(fn)
+    def run40(*args, **kwargs):
+        with ctx40():
+            return fn(*args, **kwargs)
+    run40._t653_prec40 = True
+    return run40
 
 HOSTS_WALL = ("FENCE", "WALL", "SILL_WINDOW")
 HOSTS_NONE = ("DOOR", "GATE", "OPEN_EDGE", "FLOOR_GLAZING")
@@ -234,3 +265,6 @@ def pieces_to_lm(nr, printed_piece_length=None, unit="m"):
     if n != n.to_integral_value() or n < 0:
         raise RuleError("a piece count is a whole number")
     return n * L(printed_piece_length, unit)
+
+
+in_prec40(globals())   # T-653: every function of this module runs in a local 40-digit context
