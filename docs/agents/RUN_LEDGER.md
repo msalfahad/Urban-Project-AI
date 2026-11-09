@@ -1322,3 +1322,74 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 11-08 03:22 | Worker 1 | SUCCESS | STARTED 03:22, final 03:42; T-614 READY 48e270b9 / Beam band x partial column census (R-T614-1 PROPOSED, research, unwired; 126 pairs, 193 |
 | 11-08 03:50 | Verifier | SUCCESS | STARTED 03:50, final 03:57; T-613 r2 MERGED, T-614 REJECTED r1 / GATE A PASS T-613 r2 (engine push d2de9f31): B11 t re-added by hand from  |
 | 11-08 04:13 | Lead | SUCCESS | STARTED 04:13, final 04:19; board / Since 00:18: T-616, T-600 r2 WORKED, T-613 merged r2 (status caps), T-614 r1 REJECTED -> r2 FIRST in S |
+
+## 2026-11-08 04:31 -> 2026-11-09 04:31 UTC (66 runs: 65 SUCCESS, 1 BLOCKED (Worker 3 05:00, automatic setup could not finish the venv; environment, nothing lost); 0 FAILED / INCOMPLETE)
+
+| Slot (UTC) | Agent | Result | Evidence |
+|---|---|---|---|
+| 11-08 04:40 | Worker 2 | SUCCESS | STARTED 04:40, final 04:55; T-618 READY (agents/task-T-618 @ d63dcd77) / Five finishes residuals: stair skirting 0.710951 lm and rails 0.226 lm are upper ends of HELD r |
+| 11-08 04:54 | Verifier | SUCCESS | STARTED 04:54, final 05:02; T-617 MERGED; T-180 P02 GF B7 / GATE A PASS T-617 (engine push 44ee93d5, CODEMAP-only conflict rebuilt): own ST7757 read B14/B7 20x75, B2 20 |
+| 11-08 05:00 | Worker 3 | BLOCKED | STARTED 05:00, final 05:01; none (lane I T-619 FIRST left TODO for the next run) / Environment, not engineering: automatic setup could not finish the venv (pip download |
+| 11-08 05:20 | Worker 1 | SUCCESS | STARTED 05:20, final 05:37; T-614 r2 READY (head 19d875c5) / Ledger billing now read from each run's own extent + value-matched named adds (R-T614-1 (g)); 28/30 ledger  |
+| 11-08 05:52 | Verifier | SUCCESS | STARTED 05:52, final 06:04; T-614 r2 MERGED, T-618 MERGED; T-180 P02 GF B7 east bay / GATE A PASS T-614 r2 (engine a7f1f3af): own ST7757 re-measure CB8 col2 east 0.0030 |
+| 11-08 06:40 | Worker 2 | SUCCESS | STARTED 06:40, final 07:05; T-621 READY 3e5fde59 / B3 floor tile line (ref 409.58 vs engine 387.09405 m2, diff 22.48595): 40 / 41 residual rows given their own drawn ar |
+| 11-08 06:52 | Verifier | SUCCESS | STARTED 06:52, final 06:58; none READY; T-180 P02 GF B7 + B26 / No Gate A/B, no merge, no candidate quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged). F- |
+| 11-08 06:59 | Worker 3 | SUCCESS | STARTED 06:59, final 07:10; T-619 READY 29c175b2 / Wiring manifest V14 on V3.0.58 copy after V2..V13: 5,129 lines, 0 STALE / 0 two-package / 0 unexplained; ARCH.PASSAGE |
+| 11-08 07:21 | Worker 1 | SUCCESS | STARTED 07:21, final 07:33; T-615 READY (agents/task-T-615 @ c455f8e5) / Q-80 applied as UPC-BLACK-BLOCK-001 1.1.0 (new rulebook 1.1.0, default reader unchanged): 15 x  |
+| 11-08 07:51 | Verifier | SUCCESS | STARTED 07:51, final 08:23; T-619 MERGED, T-621 MERGED (engine e8709e09), T-615 MERGED (engine b8265219); T-180 P02 GF B24 partial / GATE A PASS x3: V14 re-added by han |
+| 11-08 08:12 | Lead | SUCCESS | STARTED 08:12, final 08:19; board / Since 04:19: T-617, T-614 r2, T-618, T-619 WORKED, T-621 PARTIAL (40/41 floor-tile rows, 3 rooms Checker-VERIFIED; row 0 + open-plan |
+| 11-08 08:41 | Worker 2 | SUCCESS | STARTED 08:41, final 08:53; T-622 READY (84ff134f) / B4 wall tile: 47/47 UNKNOWN rows rebuilt from P7757 by handle, 42 DRAWING-CONFIRMED, 5 DIFFER: GF-14 line +0.086709 |
+| 11-08 08:50 | Verifier | SUCCESS | STARTED 08:50, final 08:55; none READY; T-180 P02 GF B24 ext + B22 / No Gate A/B, no merge, no candidate quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged |
+| 11-08 09:00 | Worker 3 | SUCCESS | STARTED 09:00, final 09:14; T-620 READY d952709b / Statement V11 + scorecard V11 (non-candidate): V10 byte-equal + 9 merged folds; B3 floor tile UNKNOWN 0/41 -> PV 3/41 |
+| 11-08 09:21 | Worker 1 | SUCCESS | STARTED 09:21, final 09:48; T-623 READY (agents/task-T-623 @ 4abb0f09) / B10 beams/columns 18 UNKNOWN rows re-measured from ST7757 raw handles: 15/16 measurable rows re |
+| 11-08 09:50 | Verifier | SUCCESS | STARTED 09:50, final 10:00; T-623 MERGED, T-620 MERGED, T-622 MERGED (engine push 31fe39db; CODEMAP-only conflicts rebuilt) / GATE A PASS x3, research only: no candidat |
+| 11-08 10:42 | Worker 2 | SUCCESS | STARTED 10:42, final 11:02; T-625 READY @05814508 / Row 0 GF round-stair footprint own 6.137684 m2 (arc sector 4.044824 + run 2.092860) vs engine 6.124412: +0.013272 (0 |
+| 11-08 10:52 | Verifier | SUCCESS | STARTED 10:52, final 10:59; none READY; T-180 slot P02 GF B17 + B27 / No merge, no quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged). Own ST7757 re-measu |
+| 11-08 11:00 | Worker 3 | SUCCESS | STARTED 11:00, final 11:14; T-629 READY (agents/task-T-629 @ e2149c13) / Manifest V15 on V3.0.58 overlay: T-615 0.15 m black units +2,194.1375 pcs and mortar +2.020393  |
+| 11-08 11:20 | Worker 1 | SUCCESS | STARTED 11:20, final 11:45; T-624 READY @60193f02 / Beam-end open items closed (research, unwired): CB4 r2 +0.01355 and B28/B26@C27, B27@C8 pieces ENGINE_RIGHT (inside  |
+| 11-08 11:50 | Verifier | SUCCESS | STARTED 11:50, final 12:01; T-624 MERGED (engine push 1e38add2); T-180 slot P02 GF B20 / GATE A PASS, research unwired: no candidate quantity change (V3.0.58 NOT RELEAS |
+| 11-08 12:12 | Lead | SUCCESS | STARTED 12:12, final 12:17; board / Since 08:19: T-615, T-620, T-622, T-623, T-624 WORKED (5 merged, 0 rejected), READY T-629 (first) + T-625; B10 beams when wired 66.4 |
+| 11-08 12:40 | Worker 2 | SUCCESS | STARTED 12:40, final 12:55; T-626 READY (agents/task-T-626 fd3bafd3) / B8 WP 24 rows: 23 DRAWING_CONFIRMED by handle (floor 18/18 own 85.575708 vs engine 85.57571 m2, 1 |
+| 11-08 12:51 | Verifier | SUCCESS | STARTED 12:51, final 13:01; T-629 MERGED, T-625 MERGED (engine push 47824e04); T-180 slot P02 GF B13 / GATE A PASS x2, research unwired: no candidate quantity change (V |
+| 11-08 13:00 | Worker 3 | SUCCESS | STARTED 13:00, final 13:11; T-630 READY (agents/task-T-630 @ 56521ae5) / 10 Nov E2E dry run on V3.0.58 + overlay V15: 5,141 lines (released 1,499 / HELD 2,801 / exclude |
+| 11-08 13:20 | Worker 1 | SUCCESS | STARTED 13:20, final 13:39; T-632 READY (agents/task-T-632 @ a3786221) / GF B20 upstand settled from the drawing: hatch 2B4, hidden top edge 55F and section A-A (view w |
+| 11-08 13:51 | Verifier | SUCCESS | STARTED 13:51, final 13:59; T-632 MERGED, T-630 MERGED, T-626 MERGED (engine push 74e52c34) / GATE A PASS x3, research unwired, no candidate quantity change (V3.0.58 NO |
+| 11-08 14:40 | Worker 2 | SUCCESS | STARTED 14:40, final 15:00; T-627 READY (agents/task-T-627 @ b3e7de48) / B12 opening m2: 22/22 UNKNOWN rows given own w x h from DXF dims / masonry jambs / bound DWF ou |
+| 11-08 14:50 | Verifier | SUCCESS | STARTED 14:50, final 14:54; none READY; T-180 slot P02 GF B21 + B29 / No merge, no quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged). Own ST7757: GF B21  |
+| 11-08 15:00 | Worker 3 | SUCCESS | STARTED 15:00, final 15:09; T-631 READY (agents/task-T-631 @ 86bdbdc2, non-candidate) / Manifest V16 on V15: B10 beam 66.392081..66.393376 -> 66.401795 m3 point (3 Chec |
+| 11-08 15:20 | Worker 1 | SUCCESS | STARTED 15:20, final 15:33; T-628 READY (agents/task-T-628 @ 14f53dcc) / B10 footing line (77.6305 vs 67.6945 m3, +9.936) and lift walls (2.4 vs 0) re-measured row by r |
+| 11-08 15:51 | Verifier | SUCCESS | STARTED 15:51, final 15:57; T-628 MERGED, T-631 MERGED, T-627 MERGED (engine push a7ee000d) / GATE A PASS x3, research unwired, no candidate quantity change (V3.0.58 NO |
+| 11-08 16:12 | Lead | SUCCESS | STARTED 16:12, final 16:19; board / Since 12:17: 8 merged (T-625/626/628/629/630/632 WORKED, T-627/631 PARTIAL), 0 rejected, READY 0, nothing wired (V3.0.58 NOT RELEASE |
+| 11-08 16:41 | Worker 2 | SUCCESS | STARTED 16:41, final 16:55; T-640 READY (agents/task-T-640 @ a36c7459) / 72/72 HELD-blank B4/B5 m2 lines classed with causes: 33 get bounded fix rows (87.234..138.540 m |
+| 11-08 16:50 | Verifier | SUCCESS | STARTED 16:50, final 17:04; T-640 MERGED (engine push 36f53264); F-T627-1 RULED; T-180 slot P02 GF B5 + B9 / GATE A PASS, research unwired, no candidate quantity change |
+| 11-08 17:00 | Worker 3 | SUCCESS | STARTED 17:00, final 17:23; T-637 READY (agents/task-T-637 1f6fda4e, integration package input for T-636) / BOQ_FAMILY_MASTER 1.56.0: every live overlay code now has a  |
+| 11-08 17:20 | Worker 1 | SUCCESS | STARTED 17:20, final 17:34; T-638 READY (agents/task-T-638 @ 465ccd25) / B10-13 formwork 370 HELD-blank lines classed: A_FIX 54 fix rows +33.127 m2 CALCULATED (4 GF col |
+| 11-08 17:51 | Verifier | SUCCESS | STARTED 17:51, final 18:32; T-638 MERGED (engine push 175443b8), T-637 REJECTED r1 narrow / T-638 GATE A PASS, research unwired, no candidate quantity change (V3.0.58 N |
+| 11-08 18:40 | Worker 2 | SUCCESS | STARTED 18:40, final 18:53; T-634 READY (head b9abbf9d) / B5 internal plaster / B6 internal paint: 31/31 UNKNOWN rows re-measured by handle on the DXF, 29 DRAWING-CONFI |
+| 11-08 18:51 | Verifier | SUCCESS | STARTED 18:51, final 18:59; none READY; T-180 slot P02 GF B3 + B4 / No merge, no quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged). Own ST7757: B4 5 runs |
+| 11-08 19:00 | Worker 3 | SUCCESS | STARTED 19:00, final 19:53; T-637 r2 / READY 20ce44b0: BOQ_FAMILY_MASTER 1.56.0 now registered in rules/RULES_MANIFEST.json by the manifest tool (T-507 way), clearing t |
+| 11-08 19:21 | Worker 1 | SUCCESS | STARTED 19:21, final 19:37; T-639 READY (agents/task-T-639 @ c8ae3b96) / B11-01 rebar 801 HELD-blank + 6 open-high lines all classed with a named cause: A 188 (concrete |
+| 11-08 19:51 | Verifier | SUCCESS | STARTED 19:51, final 20:04; T-639 MERGED, T-634 MERGED (engine push 52230429); T-180 slot P04 CLOSED / GATE A PASS x2, research unwired, no candidate quantity change (V |
+| 11-08 20:14 | Lead | SUCCESS | STARTED 20:14, final 20:19; board / Since 16:19: T-640, T-638, T-639, T-634 MERGED (WORKED), T-637 r1 REJECTED narrow -> r2 READY; nothing wired (V3.0.58 NOT RELEASED;  |
+| 11-08 20:41 | Worker 2 | SUCCESS | STARTED 20:41, final 20:57; T-644 READY 13304a83 / B9-02 precast lintel pieces, 60/60 openings classed on measured jamb masonry (59 re-read on P7757.dxf): ESTABLISHED 1 |
+| 11-08 20:51 | Verifier | SUCCESS | STARTED 20:51, final 21:45; T-637 r2 MERGED (engine push deb7b86a); T-180 slot P07 CLOSED / GATE A PASS: 1.56.0 registered in RULES_MANIFEST (own sha AGREE), L4 full su |
+| 11-08 21:01 | Worker 3 | SUCCESS | STARTED 21:01, final 21:13; T-641 READY (head c85f2036, integration package) / Manifest V17 on V16: 5,151 lines, 0 stale / 0 unexplained; bed follows finish (GF bed 109 |
+| 11-08 21:21 | Worker 1 | SUCCESS | STARTED 21:21, final 21:40; T-642 READY 576b8c83 / Checker P02/P04: CB12@664 strip already billed by T-229 term (own 0.024375 vs 0.024763) and B11 oblique end already i |
+| 11-08 21:50 | Verifier | SUCCESS | STARTED 21:50, final 22:11; T-642 MERGED 1c7411a5, T-641 MERGED 57620ab8, T-644 MERGED cc7f9a48; T-180 slot P08 PARTIAL / GATE A PASS x3, all research/unwired: NO candi |
+| 11-08 22:40 | Worker 2 | SUCCESS | STARTED 22:40, final 22:55; T-645 READY 82320858 / B7 stair finishes 31/31 classed: 10 A_DRAWN fix rows (risers 6.836036 m2 + flights 13.36392 lm, R = printed rise / go |
+| 11-08 22:57 | Verifier | SUCCESS | STARTED 22:57, final 23:04; T-645 MERGED ebc5a76a; T-180 slot P09 CLOSED / T-645 GATE A PASS (research, unwired): own P7757 re-measure D1 riser 0.667 m2 / flight 1.0419 |
+| 11-08 23:00 | Worker 3 | SUCCESS | STARTED 23:00, final 23:12; T-636 READY (agents/task-T-636 @ 3cc5ac92) / 10 Nov trial BOQ from V3.0.58 + overlay V17 by master 1.56.0: 5151 lines, 1559 released / 2750  |
+| 11-08 23:21 | Worker 1 | SUCCESS | STARTED 23:21, final 23:30; T-643 READY (agents/task-T-643 @ 49746e9f) / 14 released column main-bar lines on HELD concrete (754.723 kg): 10 KEEP 595.435 kg (section-co |
+| 11-08 23:52 | Verifier | SUCCESS | STARTED 23:52, final 23:59; T-636 MERGED 8e685b71, T-643 MERGED f136248f / GATE A PASS x2, research/unwired: NO candidate quantity change (V3.0.58 NOT RELEASED; V2.9 +  |
+| 11-09 00:12 | Lead | SUCCESS | STARTED 00:12, final 00:19; board / Since 20:19: 7 MERGED (T-637 r2, T-641, T-642, T-645, T-643 WORKED; T-644, T-636 PARTIAL), 0 rejected, READY 0; 10 Nov trial BOQ del |
+| 11-09 00:41 | Worker 2 | SUCCESS | STARTED 00:41, final 00:54; T-646 READY (agents/task-T-646 @ 5bba331b) / 43/43 B13 HELD-blank lines classed (R-T646-1): FIN.ROOF.SCREED 3 lines blank -> HELD AT_LEAST 1 |
+| 11-09 00:51 | Verifier | SUCCESS | STARTED 00:51, final 00:58; T-180 P12 CLOSED; T-646 MERGED af50c864 / P12: own ST p.7 read, both ring sections draw 2 side-bar levels x 1 bar per face ('2d14/20cm' = pe |
+| 11-09 01:01 | Worker 3 | SUCCESS | STARTED 01:01, final 02:28; T-525 READY / Registry gate fix: BOQ_FAMILY_MASTER_1.57.0 = 1.56.0 + T-507 promoted (merge c94b35c1) from a wrapper chain run on the Drive c |
+| 11-09 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 01:32; T-647 READY agents/task-T-647 @ ec383e02 / 183/183 structural HELD lines of the trial BOQ now carry one sourced cause (B11 79 RFI-B-S10, 42  |
+| 11-09 01:50 | Verifier | SUCCESS | STARTED 01:50, final 02:01; T-647 REJECTED; T-180 slot P13 CLOSED / T-647 Gate A FAIL f/h on 17 B11 fix rows only: 51.574 kg proposed DRAWING-CONFIRMED on a coincident  |
+| 11-09 02:42 | Worker 2 | SUCCESS | STARTED 02:42, final 02:56; T-650 READY (agents/task-T-650 @ cd66763f) / B9-02 lintel payable form: 60/60 openings RC cast m3 (printed ST p.13 schedule covers every blo |
+| 11-09 02:53 | Verifier | SUCCESS | STARTED 02:53, final 03:43; T-525 MERGED c7565fb9, T-650 MERGED 2a2e28ca / T-525 GATE A PASS: L4 full suite to the end 21,657 pass / 2 F = known t374 order-dependent pa |
+| 11-09 03:01 | Worker 3 | SUCCESS | STARTED 03:01, final 04:30; T-498 READY (integration package, agents/task-T-498 @ d037e3fb) / Blockwork materials V3.0.59 on V3.0.58: own chain c9570e6c -> 75331a76 (49 |
+| 11-09 03:22 | Worker 1 | SUCCESS | STARTED 03:22, final 03:33; T-633 READY agents/task-T-633 @ 5727df1f / B9 blockwork 39/39 UNKNOWN statement rows given own values (own DXF: 13 door widths both faces, 7 |
+| 11-09 03:51 | Verifier | SUCCESS | STARTED 03:51, final 04:01; T-633 MERGED 2f103248; T-180 P14 CLOSED / T-633 GATE A PASS (research, unwired): own re-measure rows 76 boundary (his 37.20 x 2.00 read; ST  |
+| 11-09 04:13 | Lead | SUCCESS | STARTED 04:13, final 04:19; board / Since 00:19: 4 MERGED (T-646, T-525 master 1.57.0 = Gate B step 1, T-650 lintels 60/60 RC cast, T-633 WORKED), T-647 REJECTED narrow |
