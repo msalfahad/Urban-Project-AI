@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-09T11:24Z | Worker 3 | SUCCESS | T-652 READY (agents/task-T-652 @ 1bc60307) | Manifest V19 on V3.0.59 (74 stage lines out of the overlay, V18 byte-equal) + trial BOQ r3: HELD with cause 2351/2744 -> 2728/2740 (12 left, register lines); D-1F-07 HELD 0.036..0.04377 m3, 5 CN EXCLUDED, threshold +0.150 m2, MS1-L tread 3.105 m2 / step 10.35 lm -> HELD; 0.15 m hosts 2194.1375 pcs + HELD 0..4.25 (Lead 2232.14 counts RC lintel faces as block). F-T652-1 (D-1F-07 face 0.24..0.2918 vs 0.32 m2) listed, not wired. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: first status/selfcheck hit an incomplete venv (pytest missing), fixed by re-running setup
 - 2026-11-09 11:22 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09 11:05 UTC | Worker 3 | STARTED | run session_01E6cPnaRxBFSsmM7MrNHLNQ | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09T10:50Z | Verifier | STARTED | run session_01E6cPnasV5cYmnQ41UGE1mM | repo-attached routine | task state: READY T-651 (W3 faee1b09) | self-check pending
