@@ -1,5 +1,36 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-09 08:20 UTC (Lead). Previous version: 2026-11-09 04:16 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4
+single lines; no trade subtotal); released: 0. FIRST QUANTITIES WIRED: the candidate of record is now V3.0.59 (not
+released), which adds the blockwork materials as their own lines beside the block walls.
+
+Since 9 Nov 04:16 (newest first; four checked and merged, one sent back once, one handed in unfinished):
+- Blockwork materials WIRED into the candidate (your wiring order, step 2; the checker reproduced the whole drawing
+  chain and re-added every valued line by hand): black blocks 1,075.80 pcs, black-block mortar 1.27 m3 (provisional),
+  white-block glue 43.60 kg firm plus 842.06 .. 861.32 kg as a range; 65 material lines held with their cause, never 0.
+  The freelancer has no comparable material line. The 0.15 m black walls (178.57 m2) still show 'module not stated'
+  although you answered it (12.5 blocks per m2): they are valued in the next wiring list (about 2,232 blocks before
+  rounding, re-derived there).
+- After that merge one automatic check (a merged package must be recorded as integrated in the family register) went
+  red because the register still lists it as pending; a small fix task is first in the integration lane. Nothing is
+  wrong with the quantities.
+- Trial BOQ r2 (paper, not wired): reinforcement calculated 9,787.75 -> 9,628.46 kg (four column bar groups held,
+  -1.63 %); stair risers 1.96 -> 8.80 m2 and flights 0 -> 13.36 m; held lines with a written cause 2,351 of 2,744.
+- Reinforcement held-line causes: the 17 lines (51.57 kg) are now held as 'bar count not printed' with both possible
+  counts stated, never 0.
+- 12-13 Nov statement and scorecard V12 ready: rows checked by the checker's own re-measure 24 -> 52, rows with
+  unknown evidence 295 -> 155; no quantity moved by it.
+- Finishes held-line causes (198 lines classed) were sent back once for a small software fault (a number-precision
+  setting that disturbed other checks); the result itself is unchanged.
+- Exterior plaster: a first build exists (exterior faces 1,007.93 .. 1,085.61 m2 net vs freelancer 1,469.97 m2,
+  -31 .. -26 %, compared face by face in an earlier bridge; a reference comparison, not a verification); it waits for its turn in your
+  order (after ceilings / sills and plaster heights).
+- Next: register fix, ceilings / sills (your step 3), the 10 Nov trial BOQ r3 with today's merges, plaster heights
+  (step 4), exterior plaster (step 5).
+
+Previous section (2026-11-09 04:16):
 Last update: 2026-11-09 04:16 UTC (Lead). Previous version: 2026-11-09 00:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4

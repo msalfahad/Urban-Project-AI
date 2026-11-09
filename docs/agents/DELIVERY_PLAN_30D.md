@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-09 08:20; owner delivery directive 12:40 in force)
+
+- Candidate of record V3.0.59 (Gate B step 2, blockwork materials, MERGED 4c37ce2c): 74 material lines wired, every other line byte-identical; NOT RELEASED.
+- Registry gate t485 red after that merge -> T-651 (master 1.59.0) first; then step 3 T-423 r2 (W1, claimable now), step 4 T-563, step 5 T-314 r2 (stage exists), one at a time.
+- 10 Nov: trial BOQ r3 (T-652, V19 overlay on V3.0.59: 0.15 m black blocks under Q-80, lintel re-measures, rebar count-gap lines, finishes causes when T-648 r2 merges). It will contain every trade B1-B13 with HELD lines by cause; it will NOT contain released trade totals, B12 MEP, or the steps 3-5 wiring if those packages are not merged by then.
+- 12-13 Nov: statement / scorecard V12 MERGED (VERIFIED rows 52); Q-34 raised then.
+
 ## Status (Lead, 2026-11-09 04:16; owner delivery directive 12:40 in force)
 
 - Merged since 00:15 (Gate A, non-candidate): T-646 roof layers / fence finishes 43 classed, T-525 registry gate fix (master 1.57.0, Gate B step 1 of the owner order), T-650 lintel payable form (60 / 60 RC cast m3), T-633 blockwork 39 UNKNOWN rows; REJECTED narrow T-647 (17 B11 rows on an unprinted count) -> r2.

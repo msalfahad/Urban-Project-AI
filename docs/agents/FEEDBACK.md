@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-09 08:20 (since 04:19)
+
+- T-498 blockwork materials (Gate B step 2): WORKED (V3.0.59 4,999 same + 74 added; Checker own chain + 9 valued lines by hand AGREE). F-C-T498-1 stale cause on the 0.15 m hosts (Q-80 answered) -> T-652 values them from FR-T615. Merge left t485 red (T-498 pending in master 1.58.0) -> T-651 FIRST in lane I.
+- T-647 r2 structural causes: WORKED (17 B11 lines HELD COUNT-CONVENTION GAP, 51.574073 kg bound, R-T647-1 (e)/(f) normal + adverse). Decision: into V19 (T-652).
+- T-649 V18 + trial BOQ r2: WORKED (Checker own re-add B11 9,628.462205 kg and B7 AGREE; HELD with cause 2,351 / 2,744). Decision: base of V19 + trial BOQ r3 (T-652).
+- T-635 statement V12 + scorecard V12: WORKED (VERIFIED rows 24 -> 52, UNKNOWN 295 -> 155; Checker hand re-add AGREE). F-C-T635-1 (B10 beams COUNT rows PARTIALLY VERIFIED) -> T-652 restates.
+- T-648 finishes causes: FAILED at the merge gate (global Decimal precision at import broke t647 / t649 rebuilds in one session). Decision: r2 W2 FIRST, local context, one-session run of the merged suites.
+- T-314 exterior plaster (Gate B 5th): PARTIAL (INCOMPLETE stage 37bc1c27; claimed ahead of the owner order and blocked T-423 r2 / T-563 on the m9 hub). Decision: TODO r2 after T-648 r2; Checker only after T-563 MERGED.
+- T-650 re-measure (Checker light slot): D-1F-07 HELD BY NAME 0.036 .. 0.04377 m3 (START bearing 0.259 < 0.40), L-GF-01 re-measured. Decision: into V19 (T-652).
+
 ## Lead 2026-11-09 04:15 (since 00:19)
 
 - T-646 B13 roof layers + fence finishes 43 HELD blank: WORKED (43 / 43 classed; screed AT_LEAST 10.628996 m3 .. OPEN; Checker own ROOF-430 screed and F-NORTH faces AGREE). Decision: rows into V18 (T-649).
