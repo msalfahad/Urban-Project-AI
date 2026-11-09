@@ -1,0 +1,1530 @@
+{
+ "base_move": {
+  "from": "V3.0.58 copy (4,999 lines)",
+  "lines_after_rebased_v18": 5152,
+  "overlay_adds_removed": 74,
+  "rebased_flagged_rows": 1,
+  "rule": "R-T652-1 (a): each removed ADD equal to its merged line; the V18 overlay re-applied on the V3.0.59 base is byte-equal to V18 on every line",
+  "stage_by_code": {
+   "MAS.GLUE.AAC": 17,
+   "MAS.MORTAR.BLACK": 20,
+   "MAS.UNITS.BLACK": 20,
+   "MAS.UNITS.WHITE": 17
+  },
+  "stage_lines": 74,
+  "to": "ARCH_TAKEOFF_V3.0.59 (T-498 Gate B MERGED 4c37ce2c: V3.0.58 4,999 lines + 74 material lines = 5,073)"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.59 (T-498 Gate B MERGED 4c37ce2c: V3.0.58 4,999 lines + 74 material lines = 5,073)",
+ "candidate_files_touched": 0,
+ "count_convention_gaps": {
+  "kg_A": "51.574073",
+  "kg_A_plus_1": "51.574073",
+  "lines": [
+   {
+    "bars": [
+     18,
+     19
+    ],
+    "index_bound": [
+     1.481,
+     1.481
+    ],
+    "kg": [
+     "1.481481",
+     "1.481481"
+    ],
+    "line_id": "L-10830d7336f146563db7"
+   },
+   {
+    "bars": [
+     18,
+     19
+    ],
+    "index_bound": [
+     4.827,
+     4.827
+    ],
+    "kg": [
+     "4.82716",
+     "4.82716"
+    ],
+    "line_id": "L-1fb436177adcab39b889"
+   },
+   {
+    "bars": [
+     18,
+     19
+    ],
+    "index_bound": [
+     2.889,
+     2.889
+    ],
+    "kg": [
+     "2.888889",
+     "2.888889"
+    ],
+    "line_id": "L-2a6409765e31bc8e5067"
+   },
+   {
+    "bars": [
+     22,
+     23
+    ],
+    "index_bound": [
+     1.086,
+     1.086
+    ],
+    "kg": [
+     "1.08642",
+     "1.08642"
+    ],
+    "line_id": "L-3dc3bd6711a18aa509f6"
+   },
+   {
+    "bars": [
+     24,
+     25
+    ],
+    "index_bound": [
+     2.272,
+     2.272
+    ],
+    "kg": [
+     "2.271605",
+     "2.271605"
+    ],
+    "line_id": "L-41632c5ca115d9f1c6c8"
+   },
+   {
+    "bars": [
+     12,
+     13
+    ],
+    "index_bound": [
+     1.765,
+     1.765
+    ],
+    "kg": [
+     "1.765432",
+     "1.765432"
+    ],
+    "line_id": "L-4daaaf798e7565c5e51c"
+   },
+   {
+    "bars": [
+     15,
+     16
+    ],
+    "index_bound": [
+     1.605,
+     1.605
+    ],
+    "kg": [
+     "1.604938",
+     "1.604938"
+    ],
+    "line_id": "L-58e6656eec7e335e0d34"
+   },
+   {
+    "bars": [
+     15,
+     16
+    ],
+    "index_bound": [
+     1.383,
+     1.383
+    ],
+    "kg": [
+     "1.382716",
+     "1.382716"
+    ],
+    "line_id": "L-6278bd88cd9fb0427185"
+   },
+   {
+    "bars": [
+     12,
+     13
+    ],
+    "index_bound": [
+     1.605,
+     1.605
+    ],
+    "kg": [
+     "1.604938",
+     "1.604938"
+    ],
+    "line_id": "L-69649b0dc191e246b065"
+   },
+   {
+    "bars": [
+     31,
+     32
+    ],
+    "index_bound": [
+     4.019,
+     4.019
+    ],
+    "kg": [
+     "4.018519",
+     "4.018519"
+    ],
+    "line_id": "L-803f01f36279b090c559"
+   },
+   {
+    "bars": [
+     15,
+     16
+    ],
+    "index_bound": [
+     1.383,
+     1.383
+    ],
+    "kg": [
+     "1.382716",
+     "1.382716"
+    ],
+    "line_id": "L-9436e97d80c812e80680"
+   },
+   {
+    "bars": [
+     35,
+     36
+    ],
+    "index_bound": [
+     7.951,
+     7.951
+    ],
+    "kg": [
+     "7.950617",
+     "7.950617"
+    ],
+    "line_id": "L-a257a6eaf8f711da24ad"
+   },
+   {
+    "bars": [
+     10,
+     11
+    ],
+    "index_bound": [
+     1.037,
+     1.037
+    ],
+    "kg": [
+     "1.037037",
+     "1.037037"
+    ],
+    "line_id": "L-b02b44864adb25c57e6d"
+   },
+   {
+    "bars": [
+     30,
+     31
+    ],
+    "index_bound": [
+     3.778,
+     3.778
+    ],
+    "kg": [
+     "3.777778",
+     "3.777778"
+    ],
+    "line_id": "L-bf020f67de170b6acac2"
+   },
+   {
+    "bars": [
+     18,
+     19
+    ],
+    "index_bound": [
+     1.481,
+     1.481
+    ],
+    "kg": [
+     "1.481481",
+     "1.481481"
+    ],
+    "line_id": "L-d538bfb721dae421cfa4"
+   },
+   {
+    "bars": [
+     31,
+     32
+    ],
+    "index_bound": [
+     4.975,
+     4.975
+    ],
+    "kg": [
+     "4.975309",
+     "4.975309"
+    ],
+    "line_id": "L-db3c3412074d0a8fdda1"
+   },
+   {
+    "bars": [
+     45,
+     46
+    ],
+    "index_bound": [
+     8.037,
+     8.037
+    ],
+    "kg": [
+     "8.037037",
+     "8.037037"
+    ],
+    "line_id": "L-e16871cb1073e4592478"
+   }
+  ],
+  "n": 17,
+  "rule": "HELD on the census bound (the index carries it at 3 dp); a bound, never summed into a released total, never 0"
+ },
+ "f_c_t498_1": {
+  "hosts": [
+   {
+    "answered_by": "Q-80 A (owner 2026-11-07: 40 x 20, 12.5 / m2)",
+    "candidate_text_retired": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed",
+    "contract_net_m2": "25.2727",
+    "element": "BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+    "faces": [],
+    "held_faces_m2": "0",
+    "host": "L-4054259959463edd70fb",
+    "mortar_line": "L-a8f0d0e9fff641c0fa8e",
+    "panel_mortar_m3": [
+     "0.279579",
+     "0.279579"
+    ],
+    "required_faces_m2": "0",
+    "units": [
+     "315.90875",
+     "315.90875"
+    ],
+    "units_line": "L-616b748b2c6051df27c9"
+   },
+   {
+    "answered_by": "Q-80 A (owner 2026-11-07: 40 x 20, 12.5 / m2)",
+    "candidate_text_retired": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed",
+    "contract_net_m2": "52.318",
+    "element": "BLOCKWORK:VERIFIED_BLACK",
+    "faces": [],
+    "held_faces_m2": "0",
+    "host": "L-73acd5a9d7e7cf6515c1",
+    "mortar_line": "L-2051ab0a71c27be038ae",
+    "panel_mortar_m3": [
+     "0.578768",
+     "0.578768"
+    ],
+    "required_faces_m2": "0",
+    "units": [
+     "653.975",
+     "653.975"
+    ],
+    "units_line": "L-06e9c6082a0625ad3821"
+   },
+   {
+    "answered_by": "Q-80 A (owner 2026-11-07: 40 x 20, 12.5 / m2)",
+    "candidate_text_retired": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed",
+    "contract_net_m2": "9.895",
+    "element": "BLOCKWORK:VERIFIED_BLACK",
+    "faces": [],
+    "held_faces_m2": "0",
+    "host": "L-87e0023741a8e2d98b21",
+    "mortar_line": "L-794c7232f398260c7afb",
+    "panel_mortar_m3": [
+     "0.109463",
+     "0.109463"
+    ],
+    "required_faces_m2": "0",
+    "units": [
+     "123.6875",
+     "123.6875"
+    ],
+    "units_line": "L-26c299b8e120e2ce6768"
+   },
+   {
+    "answered_by": "Q-80 A (owner 2026-11-07: 40 x 20, 12.5 / m2)",
+    "candidate_text_retired": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed",
+    "contract_net_m2": "58.2529",
+    "element": "BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "faces": [
+     "D-1F-02 0.36 (REQUIRED)",
+     "D-1F-03 0.36 (REQUIRED)",
+     "D-1F-04 0.32 (REQUIRED)",
+     "D-1F-07 0.32 (REQUIRED)",
+     "D-1F-08 0.34 (REQUIRED)",
+     "D-1F-10 0.32 (REQUIRED)",
+     "D-1F-09 0.34 (HELD_RANGE)"
+    ],
+    "held_faces_m2": "0.34",
+    "host": "L-a56a8add7812d1b52cb7",
+    "mortar_line": "L-866a6602ffa70d03f210",
+    "panel_mortar_m3": [
+     "0.618315",
+     "0.622076"
+    ],
+    "required_faces_m2": "2.02",
+    "units": [
+     "698.66125",
+     "702.91125"
+    ],
+    "units_line": "L-1e61a4aaeb00aa711dcd"
+   },
+   {
+    "answered_by": "Q-80 A (owner 2026-11-07: 40 x 20, 12.5 / m2)",
+    "candidate_text_retired": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed",
+    "contract_net_m2": "24.2374",
+    "element": "BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "faces": [
+     "D-GF-10 0.32 (REQUIRED)",
+     "D-GF-13 0.36 (REQUIRED)"
+    ],
+    "held_faces_m2": "0",
+    "host": "L-abf15bdf70ccf1e7b474",
+    "mortar_line": "L-8f163174139bcf80c7c7",
+    "panel_mortar_m3": [
+     "0.260604",
+     "0.260604"
+    ],
+    "required_faces_m2": "0.68",
+    "units": [
+     "294.4675",
+     "294.4675"
+    ],
+    "units_line": "L-1aa13ac06ca32ae43f02"
+   },
+   {
+    "answered_by": "Q-80 A (owner 2026-11-07: 40 x 20, 12.5 / m2)",
+    "candidate_text_retired": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed",
+    "contract_net_m2": "8.595",
+    "element": "BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+    "faces": [],
+    "held_faces_m2": "0",
+    "host": "L-adb393d6db51056d343b",
+    "mortar_line": "L-33fcd56ef1548206bb1c",
+    "panel_mortar_m3": [
+     "0.095082",
+     "0.095082"
+    ],
+    "required_faces_m2": "0",
+    "units": [
+     "107.4375",
+     "107.4375"
+    ],
+    "units_line": "L-fa0fae2380878a4f8428"
+   }
+  ],
+  "lead_expectation": "2,232.14 pcs = contract 178.571 m2 x 12.5 with no lintel face taken out",
+  "rule": "R-T498-1 (1) as merged (T-615 Checker AGREE): material base = contract net - REQUIRED RC lintel faces (concrete, Q-73: never laid block); a HELD face is a 0 .. face companion; units = base x 12.5 / m2 (UPC-BLACK-BLOCK-001 1.1.0, Q-80 A), unrounded (theoretical; whole units only at procurement = ceil(theoretical x (1 + sourced waste)), waste HELD); panel mortar = base x 0.0110625 m3 / m2",
+  "totals": {
+   "base_m2": "175.871",
+   "contract_m2": "178.571",
+   "low_m2": "175.531",
+   "panel_high": "1.945572",
+   "panel_low": "1.941811",
+   "units_high": "2198.3875",
+   "units_low": "2194.1375"
+  }
+ },
+ "inputs": {
+  "research/agents_t498/summary_t498.json": "47737dc2b80b3b656cb57b306b84c695bae3abaab2097c744993798ef9a46765",
+  "research/agents_t635/out/RECONCILED_STATEMENT_T635.json": "7820d46acf2507629bcf0d96379a7abb681fcfb8e7eed832dacc4447d06b2965",
+  "research/agents_t647/out/HELD_CAUSE_CENSUS_T647.json": "610c67b00aab02008db78c30f2056b685e3917a6135071c64b6affb5b3ef0d66",
+  "research/agents_t648/out/FINISH_HOLD_CAUSE_CENSUS_T648.json": "767d1d3a969a548cd78e144c9d89a191658922d181adf050d774a33df634fcc9",
+  "research/agents_t649/manifest_v18.py": "e8a24eb1e98414f67fa5f3725022ebeeb53bc0ae88c9616d2a6be45a0b2303b4",
+  "research/agents_t649/out/WIRING_MANIFEST_V18.json": "08a5d7ff83639c6eea97eb97f6f25cf7abdbe97ef7bb696a73a2a7f3d237eda8",
+  "research/agents_t650/out/T650_PAYABLE_FORM.json": "cd72b44596cc1b2840282ab56f1f6653a7b53b5601db2bb9f3f7bcb7eb0a1fb2"
+ },
+ "line_table": [
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.04377,
+    "held_low": 0.036,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "HELD",
+   "item": "STR.CONC.LINTEL",
+   "kind": "SET",
+   "line_id": "L-3111418b702ac80f0ade",
+   "package": "T-498",
+   "row": "R-T652-1/D-1F-07"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "HELD",
+   "item": "STR.CONC.LINTEL",
+   "kind": "TEXT_ONLY",
+   "line_id": "L-8f69c40749d579c14bf1",
+   "package": "LINTEL_RC_BOUNDS (T-650 R-T650-1)",
+   "row": "R-T652-1/L-GF-01"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 1.161,
+    "held_low": 0.378,
+    "measured_net": null
+   },
+   "evidence": "DRAWING-CONFIRMED",
+   "item": "STR.CONC.COLUMN",
+   "kind": "SET",
+   "line_id": "L-0d4cd54cb397f210d1fd",
+   "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+   "row": "FR-T647-1"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "DRAWING-CONFIRMED",
+   "item": "STR.CONC.COLUMN",
+   "kind": "SET",
+   "line_id": "L-1850e27801a200419510",
+   "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+   "row": "FR-T647-2"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "DRAWING-CONFIRMED",
+   "item": "STR.CONC.COLUMN",
+   "kind": "SET",
+   "line_id": "L-53a35abf19b1d8807f38",
+   "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+   "row": "FR-T647-3"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 1.161,
+    "held_low": 0.378,
+    "measured_net": null
+   },
+   "evidence": "DRAWING-CONFIRMED",
+   "item": "STR.CONC.COLUMN",
+   "kind": "SET",
+   "line_id": "L-d33f749864d96dd236f0",
+   "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+   "row": "FR-T647-4"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 1.161,
+    "held_low": 0.378,
+    "measured_net": null
+   },
+   "evidence": "DRAWING-CONFIRMED",
+   "item": "STR.CONC.COLUMN",
+   "kind": "SET",
+   "line_id": "L-de9383f76f000503e1d7",
+   "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+   "row": "FR-T647-5"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.15
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "DRAWING-CONFIRMED",
+   "item": "ARCH.THRESHOLD",
+   "kind": "SET",
+   "line_id": "L-868aee125705bb8d17f6",
+   "package": "THRESHOLD_STRIP_A_GF_01 (T-648 fix row)",
+   "row": "FR-T648-1"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 3.795,
+    "held_low": 3.105,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 3.105
+   },
+   "evidence": "HELD",
+   "item": "FIN.MARBLE.TREAD",
+   "kind": "SET",
+   "line_id": "L-151d92470a81dd1c450b",
+   "package": "CHECKER_DOWNGRADES_F_T645_1 (T-649 DGP-T649-*)",
+   "row": "DGP-T649-2543430910268708"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 12.65,
+    "held_low": 10.35,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 10.35
+   },
+   "evidence": "HELD",
+   "item": "FIN.STAIR.STEP_LM",
+   "kind": "SET",
+   "line_id": "L-d4d764ae7bb07b474b6f",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "DGP-T649-a20e51752f360854"
+  }
+ ],
+ "overlay": {
+  "flagged_rows": [
+   {
+    "beside": {
+     "conditional_range_beside_kg": [
+      63.82125,
+      71.62425
+     ]
+    },
+    "index": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET",
+    "line_id": "L-4ccc5dc26bd2472b03ad",
+    "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+    "package": "T-498",
+    "row": "HOST_FACES_V5",
+    "status": "NO_BEFORE"
+   }
+  ],
+  "lines": {
+   "after_v18": 5152,
+   "after_v19": 5152,
+   "base_v3_0_59": 5073
+  },
+  "order": [
+   {
+    "ops": 63,
+    "package": "T-498",
+    "status": {
+     "APPLIED": 62,
+     "NO_BEFORE": 1
+    }
+   },
+   {
+    "ops": 17,
+    "package": "T-423 r2",
+    "status": {
+     "APPLIED": 17
+    }
+   },
+   {
+    "ops": 25,
+    "package": "T-563",
+    "status": {
+     "APPLIED": 25
+    }
+   },
+   {
+    "ops": 0,
+    "package": "T-513",
+    "status": {}
+   },
+   {
+    "ops": 4,
+    "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 57,
+    "package": "RETURN_PAINT_FACES",
+    "status": {
+     "APPLIED": 57
+    }
+   },
+   {
+    "ops": 1,
+    "package": "PIER_RETURNS_EXT (with T-314)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "W17_Q76A",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 6,
+    "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 11,
+    "package": "F package (no board row)",
+    "status": {
+     "APPLIED": 11
+    }
+   },
+   {
+    "ops": 15,
+    "package": "RAILS_GUARDS (T-578)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 16,
+    "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+    "status": {
+     "APPLIED": 16
+    }
+   },
+   {
+    "ops": 5,
+    "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 44,
+    "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+    "status": {
+     "APPLIED": 44
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FOOTING_S02_BOUND (T-595 R-T595-2)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 3,
+    "package": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 1,
+    "package": "GATE_STEP_G01 (T-602 FR-T602-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FLOORLESS_FACES (T-606 FR-T606-1; absorbs V12 FR-T601-3 on the same line)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 6,
+    "package": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 9,
+    "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+    "status": {
+     "APPLIED": 9
+    }
+   },
+   {
+    "ops": 5,
+    "package": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 1,
+    "package": "LINTEL_CAUSES (T-616 FR-T616-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "WALL_TILE_PANTRY (T-622 FR-T622-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 1,
+    "package": "WALL_TILE_GF14 (T-622 FR-T622-2)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 4,
+    "package": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 8,
+    "package": "FLOOR_BED_FOLLOWS_FINISH (T-641 F-T631-1)",
+    "status": {
+     "APPLIED": 8
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FOOTING_BAND_RANGE (T-628 F-T628-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 58,
+    "package": "FORMWORK_HOLD_RELEASE (T-638 FR-T638-1 .. -54)",
+    "status": {
+     "APPLIED": 58
+    }
+   },
+   {
+    "ops": 6,
+    "package": "GF_COLUMN_MAIN_BARS (T-639 FR-T639-1 .. -6)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 6,
+    "package": "FINISH_HOLD_BOUNDS (T-640 FR-T640-n)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 3,
+    "package": "STRIP_COL353 (T-642 FR-T642-2 / FR-T642-4)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 4,
+    "package": "CHECKER_DOWNGRADES (T-643 DGP-T643-*)",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 16,
+    "package": "STAIR_FINISH_HOLD_RELEASE (T-645 FR-T645-n)",
+    "status": {
+     "APPLIED": 16
+    }
+   },
+   {
+    "ops": 3,
+    "package": "ROOF_SCREED_AT_LEAST (T-646 R-T646-1)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 3,
+    "package": "LINTEL_RC_BOUNDS (T-650 R-T650-1)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 5,
+    "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 1,
+    "package": "THRESHOLD_STRIP_A_GF_01 (T-648 fix row)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "CHECKER_DOWNGRADES_F_T645_1 (T-649 DGP-T649-*)",
+    "status": {
+     "APPLIED": 1
+    }
+   }
+  ],
+  "other_lines_changed_vs_v18_overlay": [],
+  "stale": 0,
+  "unexplained_conflicts": 0,
+  "v19_vs_v18_totals": {
+   "ARCH.THRESHOLD|m2": {
+    "after": {
+     "excluded_n": 10,
+     "held_blank_n": 7,
+     "held_high": "1.31",
+     "held_high_open_n": 0,
+     "held_low": "1.31",
+     "held_n": 13,
+     "released": "0.15",
+     "released_n": 1
+    },
+    "before": {
+     "excluded_n": 10,
+     "held_blank_n": 8,
+     "held_high": "1.31",
+     "held_high_open_n": 0,
+     "held_low": "1.31",
+     "held_n": 14,
+     "released": "0",
+     "released_n": 0
+    }
+   },
+   "FIN.MARBLE.TREAD|m2": {
+    "after": {
+     "excluded_n": 2,
+     "held_blank_n": 2,
+     "held_high": "12.719413",
+     "held_high_open_n": 0,
+     "held_low": "3.105",
+     "held_n": 6,
+     "released": "20.2644",
+     "released_n": 7
+    },
+    "before": {
+     "excluded_n": 2,
+     "held_blank_n": 2,
+     "held_high": "8.924413",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 5,
+     "released": "23.3694",
+     "released_n": 8
+    }
+   },
+   "FIN.STAIR.STEP_LM|lm": {
+    "after": {
+     "excluded_n": 5,
+     "held_blank_n": 0,
+     "held_high": "26.5",
+     "held_high_open_n": 1,
+     "held_low": "28.29005",
+     "held_n": 3,
+     "released": "68.7",
+     "released_n": 7
+    },
+    "before": {
+     "excluded_n": 5,
+     "held_blank_n": 0,
+     "held_high": "13.85",
+     "held_high_open_n": 1,
+     "held_low": "17.94005",
+     "held_n": 2,
+     "released": "79.05",
+     "released_n": 8
+    }
+   },
+   "STR.CONC.COLUMN|m3": {
+    "after": {
+     "excluded_n": 13,
+     "held_blank_n": 14,
+     "held_high": "10.119",
+     "held_high_open_n": 0,
+     "held_low": "8.034",
+     "held_n": 29,
+     "released": "19.7765",
+     "released_n": 30
+    },
+    "before": {
+     "excluded_n": 8,
+     "held_blank_n": 16,
+     "held_high": "13.602",
+     "held_high_open_n": 0,
+     "held_low": "9.168",
+     "held_n": 34,
+     "released": "19.7765",
+     "released_n": 30
+    }
+   },
+   "STR.CONC.LINTEL|m3": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 43,
+     "held_high": "1.422882",
+     "held_high_open_n": 1,
+     "held_low": "0.991692",
+     "held_n": 60,
+     "released": "0",
+     "released_n": 0
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 44,
+     "held_high": "1.379112",
+     "held_high_open_n": 1,
+     "held_low": "0.955692",
+     "held_n": 60,
+     "released": "0",
+     "released_n": 0
+    }
+   }
+  }
+ },
+ "released_quantities_changed": 0,
+ "remeasure": [
+  {
+   "kind": "SET",
+   "line": "L-3111418b702ac80f0ade",
+   "opening": "D-1F-07",
+   "package": "T-498",
+   "replaces": "T-498|R-T650-1/D-1F-07|L-3111418b702ac80f0ade"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line": "L-8f69c40749d579c14bf1",
+   "opening": "L-GF-01",
+   "package": "LINTEL_RC_BOUNDS (T-650 R-T650-1)",
+   "replaces": "LINTEL_RC_BOUNDS (T-650 R-T650-1)|R-T650-1/L-GF-01|L-8f69c40749d579c14bf1"
+  }
+ ],
+ "rows": [
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.04377,
+    "held_low": 0.036,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "cause": "FLAGGED_DEFICIT end(s) against the printed MIN 0.4 m: R-T524-1 range (part inside a column is column concrete; pier occupied once); connection is a designer item; Checker re-measured 2026-11-09 07:06: START 0.259 < printed MIN 0.40, HELD BY NAME (designer item)",
+    "hand": "0.15 x 0.20 x (0.80 + 0.40) = 0.036 .. 0.15 x 0.20 x (0.80 + 0.40 + 0.259) = 0.04377 m3",
+    "opening": "D-1F-07",
+    "rule": "R-T652-1 (b) / R-T524-1"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-650 CHECKER RE-MEASURE (Verifier 2026-11-09 07:06): D-1F-07 START available 0.259 < printed MIN 0.40 (FLAGGED_DEFICIT), END >= 0.40; 0.15 x 0.20 x (0.80 + 0.40) = 0.036 .. 0.15 x 0.20 x (0.80 + 0.40 + 0.259) = 0.04377 m3 AGREE, stays HELD BY NAME (designer item). L-GF-01: jamb to inner corner 0.40000 / 0.40000 m at full DXF precision (F-T650-3 bearing 0.40 at printed precision AGREE); RC beside only 0.20 x 0.20 x (1.00 + 2 x 0.40) = 0.072 m3; stays HELD by the register LIFT LANDING DOOR LINTEL (existence), never 0; 'Checker re-measure pending' LIFTED"
+   },
+   "kind": "SET",
+   "line_id": "L-3111418b702ac80f0ade",
+   "op_id": "T-498|R-T652-1/D-1F-07|L-3111418b702ac80f0ade",
+   "package": "T-498",
+   "row": "R-T652-1/D-1F-07",
+   "source": "T-498"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "cause": "existence HELD_REGISTER: register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2) (at most 1 lintel; the RC end check is beside only, never a quantity); Checker re-measured 2026-11-09 07:06 (bearing 0.40 at printed precision, F-T650-3); RC beside only 0.072 m3 (0.20 x 0.20 x 1.80), never a quantity",
+    "opening": "L-GF-01",
+    "rule": "R-T652-1 (b): the register holds existence"
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-650 CHECKER RE-MEASURE (Verifier 2026-11-09 07:06): D-1F-07 START available 0.259 < printed MIN 0.40 (FLAGGED_DEFICIT), END >= 0.40; 0.15 x 0.20 x (0.80 + 0.40) = 0.036 .. 0.15 x 0.20 x (0.80 + 0.40 + 0.259) = 0.04377 m3 AGREE, stays HELD BY NAME (designer item). L-GF-01: jamb to inner corner 0.40000 / 0.40000 m at full DXF precision (F-T650-3 bearing 0.40 at printed precision AGREE); RC beside only 0.20 x 0.20 x (1.00 + 2 x 0.40) = 0.072 m3; stays HELD by the register LIFT LANDING DOOR LINTEL (existence), never 0; 'Checker re-measure pending' LIFTED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-8f69c40749d579c14bf1",
+   "op_id": "LINTEL_RC_BOUNDS (T-650 R-T650-1)|R-T652-1/L-GF-01|L-8f69c40749d579c14bf1",
+   "package": "LINTEL_RC_BOUNDS (T-650 R-T650-1)",
+   "row": "R-T652-1/L-GF-01",
+   "source": "LINTEL_RC_BOUNDS (T-650 R-T650-1)"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 1.161,
+    "held_low": 0.378,
+    "measured_net": null
+   },
+   "beside": {
+    "basis": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
+    "rule": "R-T652-1 (c): a printed absence, not a value",
+    "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)"
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-647 VERIFIER 2026-11-09 06:56: GATE A PASS on r2; 17 lines HELD PRINTED_VALUE_GAP 'COUNT-CONVENTION GAP' 51.574073 kg at A and at A + 1 (a bound, not summed into any total); fix rows FR-T647-1 .. 5 (CN NA) only; CN x 5 ST p.9 AGREE"
+   },
+   "kind": "SET",
+   "line_id": "L-0d4cd54cb397f210d1fd",
+   "op_id": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)|FR-T647-1|L-0d4cd54cb397f210d1fd",
+   "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+   "row": "FR-T647-1",
+   "source": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "basis": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
+    "rule": "R-T652-1 (c): a printed absence, not a value",
+    "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)"
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-647 VERIFIER 2026-11-09 06:56: GATE A PASS on r2; 17 lines HELD PRINTED_VALUE_GAP 'COUNT-CONVENTION GAP' 51.574073 kg at A and at A + 1 (a bound, not summed into any total); fix rows FR-T647-1 .. 5 (CN NA) only; CN x 5 ST p.9 AGREE"
+   },
+   "kind": "SET",
+   "line_id": "L-1850e27801a200419510",
+   "op_id": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)|FR-T647-2|L-1850e27801a200419510",
+   "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+   "row": "FR-T647-2",
+   "source": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "basis": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
+    "rule": "R-T652-1 (c): a printed absence, not a value",
+    "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)"
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-647 VERIFIER 2026-11-09 06:56: GATE A PASS on r2; 17 lines HELD PRINTED_VALUE_GAP 'COUNT-CONVENTION GAP' 51.574073 kg at A and at A + 1 (a bound, not summed into any total); fix rows FR-T647-1 .. 5 (CN NA) only; CN x 5 ST p.9 AGREE"
+   },
+   "kind": "SET",
+   "line_id": "L-53a35abf19b1d8807f38",
+   "op_id": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)|FR-T647-3|L-53a35abf19b1d8807f38",
+   "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+   "row": "FR-T647-3",
+   "source": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 1.161,
+    "held_low": 0.378,
+    "measured_net": null
+   },
+   "beside": {
+    "basis": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
+    "rule": "R-T652-1 (c): a printed absence, not a value",
+    "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)"
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-647 VERIFIER 2026-11-09 06:56: GATE A PASS on r2; 17 lines HELD PRINTED_VALUE_GAP 'COUNT-CONVENTION GAP' 51.574073 kg at A and at A + 1 (a bound, not summed into any total); fix rows FR-T647-1 .. 5 (CN NA) only; CN x 5 ST p.9 AGREE"
+   },
+   "kind": "SET",
+   "line_id": "L-d33f749864d96dd236f0",
+   "op_id": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)|FR-T647-4|L-d33f749864d96dd236f0",
+   "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+   "row": "FR-T647-4",
+   "source": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 1.161,
+    "held_low": 0.378,
+    "measured_net": null
+   },
+   "beside": {
+    "basis": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
+    "rule": "R-T652-1 (c): a printed absence, not a value",
+    "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)"
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-647 VERIFIER 2026-11-09 06:56: GATE A PASS on r2; 17 lines HELD PRINTED_VALUE_GAP 'COUNT-CONVENTION GAP' 51.574073 kg at A and at A + 1 (a bound, not summed into any total); fix rows FR-T647-1 .. 5 (CN NA) only; CN x 5 ST p.9 AGREE"
+   },
+   "kind": "SET",
+   "line_id": "L-de9383f76f000503e1d7",
+   "op_id": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)|FR-T647-5|L-de9383f76f000503e1d7",
+   "package": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)",
+   "row": "FR-T647-5",
+   "source": "CN_NOT_APPLICABLE (T-647 FR-T647-1 .. -5)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.15
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "basis": "A-GF-01 arch opening OP-027: floor strip through the opening (the floor finish continues, UP-THR-001), 1.000 x 0.150 = 0.150 m2; T-340 FILL row (MERGED) states the same; the WP membrane edge at this opening (L-9592048116294937ab6f) stays HELD on its own line",
+    "hand": "1 x 0.15 = 0.15 m2",
+    "rule": "R-T649-1 (e): a census fix row enters as its merged source states it"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-648 VERIFIER 2026-11-09T09:00Z: Gate A PASS (r2); OWN RE-READ: FIX ROW L-868aee12 A-GF-01: P7757.dxf faces 1.000 m apart, 0.150 m deep, insert 'arch120' between: 1.000 x 0.150 = 0.150 m2 DRAWING-CONFIRMED AGREE (ENGINE_WRONG blank line)"
+   },
+   "kind": "SET",
+   "line_id": "L-868aee125705bb8d17f6",
+   "op_id": "THRESHOLD_STRIP_A_GF_01 (T-648 fix row)|FR-T648-1|L-868aee125705bb8d17f6",
+   "package": "THRESHOLD_STRIP_A_GF_01 (T-648 fix row)",
+   "row": "FR-T648-1",
+   "source": "THRESHOLD_STRIP_A_GF_01 (T-648 fix row)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 3.795,
+    "held_low": 3.105,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 3.105
+   },
+   "beside": {
+    "cause": "F-T645-1: MS1-L counts 9 goings on the architectural GF plan edges RFI-A04 / C-ST-4 disputes (ST p.4: 11 goings); downgrade-only, CHECKER-VALIDATED",
+    "downgrade_id": "DGP-T649-2543430910268708",
+    "rule": "R-T652-1 (d)"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-649 VERIFIER 2026-11-09 06:59: F-T645-1 RULED: DGP-T649-2543430910268708 (MS1-L tread 3.105 -> HELD 3.105 .. 3.795 m2) and DGP-T649-a20e51752f360854 (MS1-L step 10.35 -> HELD 10.35 .. 12.65 lm) CHECKER-VALIDATED (downgrade-only, owner 2026-10-24 23:57); the next manifest (V19) applies them"
+   },
+   "kind": "SET",
+   "line_id": "L-151d92470a81dd1c450b",
+   "op_id": "CHECKER_DOWNGRADES_F_T645_1 (T-649 DGP-T649-*)|DGP-T649-2543430910268708|L-151d92470a81dd1c450b",
+   "package": "CHECKER_DOWNGRADES_F_T645_1 (T-649 DGP-T649-*)",
+   "row": "DGP-T649-2543430910268708",
+   "source": "CHECKER_DOWNGRADES_F_T645_1 (T-649 DGP-T649-*)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 12.65,
+    "held_low": 10.35,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 10.35
+   },
+   "beside": {
+    "cause": "F-T645-1: MS1-L counts 9 goings on the architectural GF plan edges RFI-A04 / C-ST-4 disputes (ST p.4: 11 goings); downgrade-only, CHECKER-VALIDATED",
+    "downgrade_id": "DGP-T649-a20e51752f360854",
+    "rule": "R-T652-1 (d)"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-649 VERIFIER 2026-11-09 06:59: F-T645-1 RULED: DGP-T649-2543430910268708 (MS1-L tread 3.105 -> HELD 3.105 .. 3.795 m2) and DGP-T649-a20e51752f360854 (MS1-L step 10.35 -> HELD 10.35 .. 12.65 lm) CHECKER-VALIDATED (downgrade-only, owner 2026-10-24 23:57); the next manifest (V19) applies them"
+   },
+   "kind": "SET",
+   "line_id": "L-d4d764ae7bb07b474b6f",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|DGP-T649-a20e51752f360854|L-d4d764ae7bb07b474b6f",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "DGP-T649-a20e51752f360854",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  }
+ ],
+ "rule": "R-T652-1",
+ "schema": "URBAN_T652_WIRING_MANIFEST_V19",
+ "sources_merged": {
+  "T-498": "4c37ce2c",
+  "T-615": "T-615 MERGED (Verifier 2026-11-08T08:21Z)",
+  "T-635": "abc71ec6",
+  "T-647": "a521da8a",
+  "T-648": "57db7053",
+  "T-649": "89afbd85",
+  "T-650": "2a2e28ca"
+ },
+ "statement_only_ops": [
+  {
+   "delta_m3": "-4.576422",
+   "from": "CHECKER_VERIFIED",
+   "lines": 0,
+   "op": "STATEMENT_EVIDENCE_MOVE",
+   "row": "GF: COUNT",
+   "source": "F-C-T635-1 (Verifier, T-635)",
+   "to": "PARTIALLY VERIFIED",
+   "where": "sections_v12[1].rows[0]",
+   "why": "the T-545 verdict re-measured only B27 (4.1927 m3) and said PARTIALLY VERIFIED: a row-level stamp needs every component re-measured; no engine line moves"
+  },
+  {
+   "delta_m3": "-5.306035",
+   "from": "CHECKER_VERIFIED",
+   "lines": 0,
+   "op": "STATEMENT_EVIDENCE_MOVE",
+   "row": "1F: COUNT",
+   "source": "F-C-T635-1 (Verifier, T-635)",
+   "to": "PARTIALLY VERIFIED",
+   "where": "sections_v12[1].rows[10]",
+   "why": "the T-545 verdict re-measured only B27 (4.1927 m3) and said PARTIALLY VERIFIED: a row-level stamp needs every component re-measured; no engine line moves"
+  }
+ ],
+ "task": "T-652",
+ "totals": {
+  "ARCH.THRESHOLD|m2": {
+   "v18": {
+    "excluded_n": 10,
+    "held_blank_n": 8,
+    "held_high": "1.31",
+    "held_high_open_n": 0,
+    "held_low": "1.31",
+    "held_n": 14,
+    "released": "0",
+    "released_n": 0
+   },
+   "v19": {
+    "excluded_n": 10,
+    "held_blank_n": 7,
+    "held_high": "1.31",
+    "held_high_open_n": 0,
+    "held_low": "1.31",
+    "held_n": 13,
+    "released": "0.15",
+    "released_n": 1
+   }
+  },
+  "FIN.MARBLE.TREAD|m2": {
+   "v18": {
+    "excluded_n": 2,
+    "held_blank_n": 2,
+    "held_high": "8.924413",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 5,
+    "released": "23.3694",
+    "released_n": 8
+   },
+   "v19": {
+    "excluded_n": 2,
+    "held_blank_n": 2,
+    "held_high": "12.719413",
+    "held_high_open_n": 0,
+    "held_low": "3.105",
+    "held_n": 6,
+    "released": "20.2644",
+    "released_n": 7
+   }
+  },
+  "FIN.STAIR.STEP_LM|lm": {
+   "v18": {
+    "excluded_n": 5,
+    "held_blank_n": 0,
+    "held_high": "13.85",
+    "held_high_open_n": 1,
+    "held_low": "17.94005",
+    "held_n": 2,
+    "released": "79.05",
+    "released_n": 8
+   },
+   "v19": {
+    "excluded_n": 5,
+    "held_blank_n": 0,
+    "held_high": "26.5",
+    "held_high_open_n": 1,
+    "held_low": "28.29005",
+    "held_n": 3,
+    "released": "68.7",
+    "released_n": 7
+   }
+  },
+  "STR.CONC.COLUMN|m3": {
+   "v18": {
+    "excluded_n": 8,
+    "held_blank_n": 16,
+    "held_high": "13.602",
+    "held_high_open_n": 0,
+    "held_low": "9.168",
+    "held_n": 34,
+    "released": "19.7765",
+    "released_n": 30
+   },
+   "v19": {
+    "excluded_n": 13,
+    "held_blank_n": 14,
+    "held_high": "10.119",
+    "held_high_open_n": 0,
+    "held_low": "8.034",
+    "held_n": 29,
+    "released": "19.7765",
+    "released_n": 30
+   }
+  },
+  "STR.CONC.LINTEL|m3": {
+   "v18": {
+    "excluded_n": 0,
+    "held_blank_n": 44,
+    "held_high": "1.379112",
+    "held_high_open_n": 1,
+    "held_low": "0.955692",
+    "held_n": 60,
+    "released": "0",
+    "released_n": 0
+   },
+   "v19": {
+    "excluded_n": 0,
+    "held_blank_n": 43,
+    "held_high": "1.422882",
+    "held_high_open_n": 1,
+    "held_low": "0.991692",
+    "held_n": 60,
+    "released": "0",
+    "released_n": 0
+   }
+  }
+ }
+}
