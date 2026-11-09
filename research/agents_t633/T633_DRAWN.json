@@ -1,0 +1,559 @@
+{
+ "census_1f_windows": [
+  {
+   "jamb_handles": [
+    "C3F",
+    "C3B"
+   ],
+   "width": "0.500"
+  },
+  {
+   "jamb_handles": [
+    "CC4",
+    "CC3"
+   ],
+   "width": "0.600"
+  },
+  {
+   "jamb_handles": [
+    "CD1",
+    "CD0"
+   ],
+   "width": "0.600"
+  },
+  {
+   "jamb_handles": [
+    "CDE",
+    "CDD"
+   ],
+   "width": "0.600"
+  },
+  {
+   "jamb_handles": [
+    "CFA",
+    "CF9"
+   ],
+   "width": "0.600"
+  },
+  {
+   "jamb_handles": [
+    "D07",
+    "D06"
+   ],
+   "width": "0.600"
+  },
+  {
+   "jamb_handles": [
+    "CEB",
+    "CEA"
+   ],
+   "width": "1.000"
+  },
+  {
+   "jamb_handles": [
+    "C58",
+    "C5D"
+   ],
+   "width": "1.200"
+  },
+  {
+   "jamb_handles": [
+    "BCC",
+    "BC8"
+   ],
+   "width": "1.552"
+  },
+  {
+   "jamb_handles": [
+    "C9C",
+    "C98"
+   ],
+   "width": "1.552"
+  },
+  {
+   "jamb_handles": [
+    "D14",
+    "D10"
+   ],
+   "width": "1.552"
+  },
+  {
+   "jamb_handles": [
+    "C41",
+    "C46"
+   ],
+   "width": "2.450"
+  }
+ ],
+ "nw_twin": {
+  "pair_east": {
+   "jamb_handles": [
+    "2566",
+    "256A"
+   ],
+   "jamb_height": "2.161",
+   "width": "1.552",
+   "width_dim": "2E22",
+   "width_measured": "1.552",
+   "width_shown": "155"
+  },
+  "pair_west": {
+   "jamb_handles": [
+    "2889",
+    "288A"
+   ],
+   "jamb_height": "2.161",
+   "width": "1.552",
+   "width_dim": "2DE7",
+   "width_measured": "1.552",
+   "width_shown": "155"
+  }
+ },
+ "plan": {
+  "D-1F-02": {
+   "block": "D115",
+   "face_handles": [
+    "AF1",
+    "C1F",
+    "C20",
+    "C21"
+   ],
+   "faces": 2,
+   "floor": "1F",
+   "insert_handle": "C31",
+   "kind": "DOOR",
+   "plan_levels": [
+    {
+     "distance": "1.461",
+     "handle": "D18",
+     "level": "+5.50",
+     "side": "+"
+    }
+   ],
+   "width": "1.000"
+  },
+  "D-1F-03": {
+   "block": "D115",
+   "face_handles": [
+    "AE8",
+    "AE9",
+    "AEA",
+    "AEB"
+   ],
+   "faces": 2,
+   "floor": "1F",
+   "insert_handle": "C32",
+   "kind": "DOOR",
+   "plan_levels": [
+    {
+     "distance": "1.392",
+     "handle": "D18",
+     "level": "+5.50",
+     "side": "+"
+    }
+   ],
+   "width": "1.000"
+  },
+  "D-1F-04": {
+   "block": "D315",
+   "face_handles": [
+    "C1B",
+    "C1C",
+    "C1D",
+    "C1E"
+   ],
+   "faces": 2,
+   "floor": "1F",
+   "insert_handle": "C2E",
+   "kind": "DOOR",
+   "plan_levels": [],
+   "width": "0.800"
+  },
+  "D-1F-07": {
+   "block": "D315",
+   "face_handles": [
+    "B01",
+    "B02",
+    "B03",
+    "B04"
+   ],
+   "faces": 2,
+   "floor": "1F",
+   "insert_handle": "BEE",
+   "kind": "DOOR",
+   "plan_levels": [],
+   "width": "0.800"
+  },
+  "D-1F-08": {
+   "block": "D215",
+   "face_handles": [
+    "AD8",
+    "AD9",
+    "AFA",
+    "AFB"
+   ],
+   "faces": 2,
+   "floor": "1F",
+   "insert_handle": "C18",
+   "kind": "DOOR",
+   "plan_levels": [
+    {
+     "distance": "2.450",
+     "handle": "D16",
+     "level": "+5.50",
+     "side": "-"
+    }
+   ],
+   "width": "0.900"
+  },
+  "D-1F-09": {
+   "block": "D215",
+   "face_handles": [
+    "AF9",
+    "AFA",
+    "B1C",
+    "B1D"
+   ],
+   "faces": 2,
+   "floor": "1F",
+   "insert_handle": "BEF",
+   "kind": "DOOR",
+   "plan_levels": [
+    {
+     "distance": "2.126",
+     "handle": "D16",
+     "level": "+5.50",
+     "side": "-"
+    }
+   ],
+   "width": "0.900"
+  },
+  "D-1F-10": {
+   "block": "D315",
+   "face_handles": [
+    "C0D",
+    "C0E",
+    "C0F",
+    "C10"
+   ],
+   "faces": 2,
+   "floor": "1F",
+   "insert_handle": "C12",
+   "kind": "DOOR",
+   "plan_levels": [],
+   "width": "0.800"
+  },
+  "D-GF-03": {
+   "block": "d220",
+   "face_handles": [
+    "11D",
+    "11E",
+    "121",
+    "122"
+   ],
+   "faces": 2,
+   "floor": "GF",
+   "insert_handle": "1B5",
+   "kind": "DOOR",
+   "plan_levels": [
+    {
+     "distance": "1.119",
+     "handle": "403",
+     "level": "+0.30",
+     "side": "-"
+    }
+   ],
+   "width": "0.900"
+  },
+  "D-GF-06": {
+   "block": "D120",
+   "face_handles": [
+    "158",
+    "159",
+    "15A",
+    "15B"
+   ],
+   "faces": 2,
+   "floor": "GF",
+   "insert_handle": "33E",
+   "kind": "DOOR",
+   "plan_levels": [
+    {
+     "distance": "1.500",
+     "handle": "411",
+     "level": "+1.00",
+     "side": "-"
+    }
+   ],
+   "width": "1.000"
+  },
+  "D-GF-08": {
+   "block": "D120",
+   "face_handles": [
+    "20E",
+    "20F",
+    "21F",
+    "220"
+   ],
+   "faces": 2,
+   "floor": "GF",
+   "insert_handle": "2C7",
+   "kind": "DOOR",
+   "plan_levels": [
+    {
+     "distance": "1.338",
+     "handle": "413",
+     "level": "+1.00",
+     "side": "+"
+    },
+    {
+     "distance": "1.596",
+     "handle": "40F",
+     "level": "+1.00",
+     "side": "-"
+    }
+   ],
+   "width": "1.000"
+  },
+  "D-GF-09": {
+   "block": "D120",
+   "face_handles": [
+    "26E",
+    "26F",
+    "2B8",
+    "2B9"
+   ],
+   "faces": 2,
+   "floor": "GF",
+   "insert_handle": "3FF",
+   "kind": "DOOR",
+   "plan_levels": [
+    {
+     "distance": "0.912",
+     "handle": "4AC",
+     "level": "+0.30",
+     "side": "-"
+    }
+   ],
+   "width": "0.900"
+  },
+  "D-GF-10": {
+   "block": "D315",
+   "face_handles": [
+    "2AF",
+    "2B0",
+    "2B1",
+    "2B2"
+   ],
+   "faces": 2,
+   "floor": "GF",
+   "insert_handle": "339",
+   "kind": "DOOR",
+   "plan_levels": [
+    {
+     "distance": "2.210",
+     "handle": "4AC",
+     "level": "+0.30",
+     "side": "+"
+    },
+    {
+     "distance": "2.322",
+     "handle": "413",
+     "level": "+1.00",
+     "side": "-"
+    }
+   ],
+   "width": "0.797"
+  },
+  "D-GF-13": {
+   "block": "D115",
+   "face_handles": [
+    "2E1",
+    "2E2",
+    "2E3",
+    "2E4"
+   ],
+   "faces": 2,
+   "floor": "GF",
+   "insert_handle": "2F2",
+   "kind": "DOOR",
+   "plan_levels": [],
+   "width": "1.000"
+  },
+  "W13": {
+   "floor": "1F",
+   "jamb_handles": [
+    "C58",
+    "C5D"
+   ],
+   "kind": "WINDOW",
+   "printed_width_dims": [
+    {
+     "handle": "1126",
+     "measured": "1.200",
+     "shown": "120"
+    }
+   ],
+   "symbol_handles": [
+    "C5A",
+    "C5B",
+    "C5C"
+   ],
+   "width": "1.200"
+  },
+  "W14": {
+   "floor": "1F",
+   "jamb_handles": [
+    "C41",
+    "C46"
+   ],
+   "kind": "WINDOW",
+   "printed_width_dims": [
+    {
+     "handle": "1198",
+     "measured": "2.450",
+     "shown": "245"
+    }
+   ],
+   "symbol_handles": [
+    "C43",
+    "C44",
+    "C45"
+   ],
+   "width": "2.450"
+  },
+  "W15": {
+   "floor": "1F",
+   "jamb_handles": [
+    "BCC",
+    "BC8"
+   ],
+   "kind": "WINDOW",
+   "printed_width_dims": [
+    {
+     "handle": "1233",
+     "measured": "1.552",
+     "shown": "155"
+    }
+   ],
+   "symbol_handles": [
+    "BC3",
+    "BC4",
+    "BC5",
+    "BC6"
+   ],
+   "width": "1.552"
+  },
+  "W16": {
+   "floor": "1F",
+   "jamb_handles": [
+    "C9C",
+    "C98"
+   ],
+   "kind": "WINDOW",
+   "printed_width_dims": [
+    {
+     "handle": "11C3",
+     "measured": "1.552",
+     "shown": "155"
+    }
+   ],
+   "symbol_handles": [
+    "C93",
+    "C94",
+    "C95",
+    "C96"
+   ],
+   "width": "1.552"
+  },
+  "W18": {
+   "floor": "1F",
+   "jamb_handles": [
+    "C3F",
+    "C3B"
+   ],
+   "kind": "WINDOW",
+   "printed_width_dims": [
+    {
+     "handle": "11ED",
+     "measured": "0.500",
+     "shown": "50"
+    }
+   ],
+   "symbol_handles": [
+    "C36",
+    "C37",
+    "C38",
+    "C39"
+   ],
+   "width": "0.500"
+  },
+  "W24": {
+   "floor": "1F",
+   "jamb_handles": [
+    "D14",
+    "D10"
+   ],
+   "kind": "WINDOW",
+   "printed_width_dims": [],
+   "symbol_handles": [
+    "D0B",
+    "D0C",
+    "D0D",
+    "D0E"
+   ],
+   "width": "1.552"
+  },
+  "W25": {
+   "floor": "1F",
+   "jamb_handles": [
+    "CEB",
+    "CEA"
+   ],
+   "kind": "WINDOW",
+   "printed_width_dims": [],
+   "symbol_handles": [
+    "CE2",
+    "CE3",
+    "CE4",
+    "CE5"
+   ],
+   "width": "1.000"
+  }
+ },
+ "printed": {
+  "W13": {
+   "chain_inside_width_segment": true,
+   "height_dim": "2A9C",
+   "height_measured": "2.300",
+   "height_shown": "230",
+   "view": "SOUTH EAST ELEVATION",
+   "width_dim": "2C15",
+   "width_measured": "1.200",
+   "width_shown": "120"
+  },
+  "W14": {
+   "chain_inside_width_segment": true,
+   "height_dim": "2B47",
+   "height_measured": "1.599",
+   "height_shown": "160",
+   "view": "SOUTH EAST ELEVATION",
+   "width_dim": "2B9B",
+   "width_measured": "2.450",
+   "width_shown": "245"
+  },
+  "W18": {
+   "chain_inside_width_segment": true,
+   "height_dim": "2EFA",
+   "height_measured": "2.161",
+   "height_shown": "216",
+   "view": "NORTH WEST ELEVATION",
+   "width_dim": "2D8D",
+   "width_measured": "0.500",
+   "width_shown": "50"
+  }
+ },
+ "schema": "T633_DRAWN/1",
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf)",
+ "units": "m"
+}

@@ -1,5 +1,9 @@
 {
  "files": {
+  "conventions/URBAN_CONVENTIONS_1.0.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "bc71230de4adcd7f67f0b0c3e80a11cbc54fa4ed3bb6af09f3c77cecac6a4355"
+  },
   "coverage/BOQ_FAMILY_MASTER_1.0.0.json": {
    "kind": "AUTHORED",
    "sha256": "71acb9983343dfec7096e5778803f180bdcdf784e426dbefeb00c513a8e6c8f5"
@@ -198,7 +202,19 @@
   },
   "coverage/BOQ_FAMILY_MASTER_1.55.0.json": {
    "kind": "AUTHORED",
-   "sha256": "f8e5ece7cea742d68f4184981884b020ca3188bf41c99f5f3bb45140b0850d18"
+   "sha256": "22cb3ffc2a747ad3992508717c0840f926def6885f695d8de6e53700821d8c99"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.56.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "15b2402d1602ab3c4c2c115277485d8770833e442be5927629d460bb03bddc94"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.57.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "3d70238cedd206308aae64b94c6f892f5f7980e9d885532657a3c169e19812bf"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.58.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "b24726539d1351c0b5f656e3b1ac782f04e862cf50917b682198e7e699582255"
   },
   "coverage/BOQ_FAMILY_MASTER_1.6.0.json": {
    "kind": "AUTHORED",
@@ -257,6 +273,10 @@
   "rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json": {
    "kind": "AUTHORED",
    "sha256": "4e9c57cef33d32ede26bea4eaf3823e2dc3880d56708dd18ec5df3760b84c055"
+  },
+  "rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "da38d121eec33c00ff3c8b524ed022be6a66f5789fdd9a0cd37f216f84dcde35"
   }
  },
  "latest_owner_approved": "1.5.0",

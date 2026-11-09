@@ -1,0 +1,108 @@
+{
+ "rule": "R-T520-1 PERIMETER_JOINT_V1",
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (T-507 merged; MAS.BLOCK walls as V3.0.55 T-488)",
+ "kappa": 0.9262499999999998,
+ "joint_m": 0.01,
+ "factor_m3_per_m": {
+  "0.20": 0.0018524999999999998,
+  "0.15": 0.0013893749999999998
+ },
+ "computed_020": {
+  "walls": [
+   "GF-W01",
+   "1F-W02",
+   "1F-W03",
+   "1F-W09"
+  ],
+  "panel_m3": 1.269444,
+  "perimeter_m3": 0.098145,
+  "perimeter_high_m3": 0.098145,
+  "soffit_m3": 0.042367,
+  "vertical_m3": 0.055779,
+  "t498_stage_panel_m3": 1.269444,
+  "t498_stage_plus_perimeter_m3": 1.367589,
+  "pct_on_t498_stage": 7.731
+ },
+ "beside_015_held_module": {
+  "walls": 15,
+  "panel_m3": 1.97544,
+  "perimeter_figure_m3": 0.079138,
+  "perimeter_high_m3": 0.08989
+ },
+ "held_2f_d39": [
+  "2F-W08: 0.004168 - 0.000000 b_r m3 (figure, not a quantity)",
+  "2F-W01: 0.010448 - 0.001852 b_r m3 (figure, not a quantity)",
+  "2F-W05: 0.008966 - 0.001853 b_r m3 (figure, not a quantity)",
+  "2F-W06: 0.021452 - 0.003705 b_r m3 (figure, not a quantity)"
+ ],
+ "held_gf_w22_d27": [
+  "0.004140 .. 0.004144"
+ ],
+ "materials_perimeter_020": {
+  "cement_bags": 0.78516,
+  "sand_m3": 0.107959,
+  "source": "Q-78 A owner 2026-11-02: block-joint mortar 1:4, 8 bags 50 kg + 1.1 m3 loose sand per m3",
+  "producer_key": "B9-04 PERIMETER JOINT MORTAR (T-520) cement / sand: own key, never inside the T-453 / T-498 panel mortar key"
+ },
+ "gf_1f_20_walls": {
+  "panel_t367_m3": 3.387934,
+  "perimeter_figure_m3": 0.181423,
+  "perimeter_low_m3": 0.180867,
+  "perimeter_high_m3": 0.192179
+ },
+ "t367_2f_4_walls_panel_m3": 0.482178,
+ "t367_total_m3": 3.870113,
+ "checker_bound_by_wall_m3": {
+  "1F-W02": 0.0166,
+  "1F-W03": 0.0368,
+  "1F-W09": 0.0188,
+  "1F-W12": 0.005587,
+  "1F-W13": 0.007125,
+  "1F-W17": 0.002453,
+  "1F-W18": 0.024075,
+  "1F-W19": 0.0027,
+  "1F-W20": 0.015248,
+  "1F-W21": 0.002925,
+  "1F-W22": 0.007613,
+  "1F-W23": 0.02625,
+  "1F-W24": 0.002089,
+  "GF-W01": 0.09364,
+  "GF-W19": 0.003,
+  "GF-W21": 0.001489,
+  "GF-W22": 0.004331,
+  "GF-W28": 0.019541,
+  "GF-W29": 0.002025,
+  "GF-W33": 0.001931
+ },
+ "t355_black_junctions": {
+  "GF-W00": 3,
+  "GF-W01": 8,
+  "GF-W08": 3,
+  "GF-W09": 1,
+  "GF-W13": 2,
+  "GF-W14": 4,
+  "GF-W26": 1,
+  "GF-W28": 2,
+  "GF-W32": 1,
+  "1F-W02": 2,
+  "1F-W03": 4,
+  "1F-W07": 3,
+  "1F-W09": 1,
+  "1F-W14 + 1F-W15": 1,
+  "1F-W18": 3,
+  "1F-W20": 1,
+  "1F-W23": 2,
+  "2F-W00": 1,
+  "2F-W01": 1,
+  "2F-W05": 3,
+  "2F-W06": 4
+ },
+ "sha256_inputs": {
+  "research/agents_t274/T274_RUN_PIECES.csv": "c6d6a496e6beecacc057f7566f77c1fc7dc13395dfa341572e1e926b0eefe9f7",
+  "research/agents_t261/T261_SPLIT.csv": "204bc3b7838c87bd6d0a9a7bd564bc6442dad73be01215d7836a810bfebf0be6",
+  "research/agents_t516/out/JAMB_EVIDENCE_T516.csv": "efcc19996a5f4b1613c17cab1e87efb6d0b9f98b6870a73eeda445c2b7fb433c",
+  "research/agents_t506/out/MORTAR_RECONCILIATION_T506.csv": "585aeb5f3675d965d38669b1d809166ab13e13cb0a045f3345213e1158f1158f",
+  "research/agents_t520/out/END_CONDITIONS_T520.csv": "dd1efd7ab8c3ed9073db343a6acce25f88dbd2c53c524f22a4052372a61efb24",
+  "research/agents_t355/SHARMAT_T355.csv": "7b261f49a67cddda87065ccf97ac3c0165fca342fa986672cbc6d88e2091d6bf"
+ }
+}

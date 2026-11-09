@@ -1,0 +1,3027 @@
+{
+ "bindings": {
+  "FLOOR (T-455 tile)": {
+   "after_mismatch": [],
+   "before_stale": [],
+   "rows": 4
+  },
+  "T-563 (T-454 / T-489 plaster)": {
+   "after_mismatch": [],
+   "before_stale": [],
+   "rows": 132
+  }
+ },
+ "block_module_r_t533_1": {
+  "hosts": 6,
+  "not_held_blank": [],
+  "stage_lines_on_them": 12
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index 25a8b406, 4,994 lines, + the 5 T-507 roof WP lines = 4,999)",
+ "candidate_files_touched": 0,
+ "census_after": {
+  "C1": [
+   "2F-ST-ARRIVAL"
+  ],
+  "C2": 0,
+  "C3": {
+   "1F": [
+    0.0,
+    "COVERED"
+   ],
+   "2F": [
+    0.0,
+    "COVERED"
+   ],
+   "GF": [
+    0.000132,
+    "COVERED"
+   ]
+  },
+  "C4": 0,
+  "return_pairs_ok": true,
+  "rule": "R-T564-1 + R-T569-1 on the overlaid index"
+ },
+ "conflicts": [
+  {
+   "family": "MAS.MORTAR",
+   "fix_row": "T-498 step 6 (perimeter mortar) carries both lines apart",
+   "host": "1F-WALLS:walls t=0.20",
+   "lines": [
+    "L-298e323d027a4723652d",
+    "L-e74c15038f1e32dbefe0",
+    "NEW:MAS.MORTAR.BLACK:PERIMETER:L-10dd62f66ad05488e63b"
+   ],
+   "ruling": "B9-04 perimeter joint mortar is its own producer key beside the panel bed-joint mortar, never inside it (R-T520-1 / T-526 / T-532; V2 stream_S.perimeter_lines 'own key')",
+   "sources": [
+    "T-498",
+    "T-498:perimeter"
+   ],
+   "status": "EXPLAINED",
+   "unit": "m3"
+  },
+  {
+   "family": "MAS.MORTAR",
+   "fix_row": "T-498 step 6 (perimeter mortar) carries both lines apart",
+   "host": "GF-WALLS:walls t=0.20",
+   "lines": [
+    "L-1bacf0e3cec97219a455",
+    "L-a6e9b9d47f2b81204b1e",
+    "NEW:MAS.MORTAR.BLACK:PERIMETER:L-1c53fadb2f92d1f36d4e"
+   ],
+   "ruling": "B9-04 perimeter joint mortar is its own producer key beside the panel bed-joint mortar, never inside it (R-T520-1 / T-526 / T-532; V2 stream_S.perimeter_lines 'own key')",
+   "sources": [
+    "T-498",
+    "T-498:perimeter"
+   ],
+   "status": "EXPLAINED",
+   "unit": "m3"
+  }
+ ],
+ "flagged_rows": [
+  {
+   "beside": {
+    "conditional_range_beside_kg": [
+     63.82125,
+     71.62425
+    ]
+   },
+   "index": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "kind": "SET",
+   "line_id": "L-4ccc5dc26bd2472b03ad",
+   "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+   "package": "T-498",
+   "row": "HOST_FACES_V5",
+   "status": "NO_BEFORE"
+  }
+ ],
+ "inputs": {
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9c5f3d89c7fb1fa01365ddbf07b797002780a22016a7f5738",
+  "research/agents_t536/WIRING_MANIFEST_V2.json": "305c2cf0c712824ea3cd6ceaa7aee2781642deb0274d193554c846d49febacf3",
+  "research/agents_t538/WIRING_MANIFEST_V3.json": "8d524c53e952ba9128c33dbed6c9243f587925278605b8225315943a34eb0ab2",
+  "research/agents_t549/WIRING_MANIFEST_V4.json": "b0a8c6736122522e44690f9b49d2781eb1508cf8be3514f472cc169d5e5fc387",
+  "research/agents_t555/WIRING_MANIFEST_V5.json": "fbdfa500039b11e9c43edf901e468bf5693f11e5faa66575291b8c9ae7149636",
+  "research/agents_t558/WIRING_MANIFEST_V6.json": "b44b919e4ef749e7d283da6d080e1a806f590a9eba9ef474eeb833c23c78cfe9",
+  "research/agents_t564/WIRING_MANIFEST_V7.json": "72d2714cb46d190890e591a03b2db9531bcd5d9877a86161b25f80a68c2b8ed0",
+  "research/agents_t569/WIRING_MANIFEST_V8.json": "c71ecdc0eb11cba4e593ce31e3ec2d3bbad89d55fbc86a596f5b5890a474cf6b",
+  "research/agents_t580/in/T498_STAGE_ROWS.json": "bb5d2ea1ec9c1612f20d48b0960375dfd0d485f3aee465ab142215e67467cd52",
+  "tests/t530_wiring_manifest/manifest_t530.py": "a272ad885e56ce0d0b3de29ff2256005db0e292865d853d097b6ad8dca3d4a67"
+ },
+ "lines": {
+  "after": 5123,
+  "before": 4999
+ },
+ "order": [
+  {
+   "ops": 103,
+   "package": "T-498",
+   "status": {
+    "APPLIED": 102,
+    "NO_BEFORE": 1
+   }
+  },
+  {
+   "ops": 18,
+   "package": "T-423 r2",
+   "status": {
+    "APPLIED": 18
+   }
+  },
+  {
+   "ops": 22,
+   "package": "T-563",
+   "status": {
+    "APPLIED": 22
+   }
+  },
+  {
+   "ops": 0,
+   "package": "T-513",
+   "status": {}
+  },
+  {
+   "ops": 4,
+   "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+   "status": {
+    "APPLIED": 4
+   }
+  },
+  {
+   "ops": 30,
+   "package": "RETURN_PAINT_FACES",
+   "status": {
+    "APPLIED": 30
+   }
+  },
+  {
+   "ops": 1,
+   "package": "PIER_RETURNS_EXT (with T-314)",
+   "status": {
+    "APPLIED": 1
+   }
+  },
+  {
+   "ops": 2,
+   "package": "W17_Q76A",
+   "status": {
+    "APPLIED": 2
+   }
+  },
+  {
+   "ops": 6,
+   "package": "REBAR_OMISSION",
+   "status": {
+    "APPLIED": 6
+   }
+  },
+  {
+   "ops": 11,
+   "package": "F package (no board row)",
+   "status": {
+    "APPLIED": 11
+   }
+  }
+ ],
+ "released_quantities_changed": 0,
+ "rows": [
+  {
+   "kind": "ADD",
+   "line_id": "L-dc7b4e20a2f54668b179",
+   "op_id": "T-498|STAGE_74|L-dc7b4e20a2f54668b179",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-39a62186ff15c48d51d5",
+   "op_id": "T-498|STAGE_74|L-39a62186ff15c48d51d5",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-3594af8e0405355d51c4",
+   "op_id": "T-498|STAGE_74|L-3594af8e0405355d51c4",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-c9b56cb8453e5f67a334",
+   "op_id": "T-498|STAGE_74|L-c9b56cb8453e5f67a334",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-5a1884e686d7e019f8f4",
+   "op_id": "T-498|STAGE_74|L-5a1884e686d7e019f8f4",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-e74c15038f1e32dbefe0",
+   "op_id": "T-498|STAGE_74|L-e74c15038f1e32dbefe0",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-3cc4faec43ebf6301425",
+   "op_id": "T-498|STAGE_74|L-3cc4faec43ebf6301425",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-1bacf0e3cec97219a455",
+   "op_id": "T-498|STAGE_74|L-1bacf0e3cec97219a455",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-318e6311ab5e01c0fa3e",
+   "op_id": "T-498|STAGE_74|L-318e6311ab5e01c0fa3e",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-cdb8d54311c5c841528f",
+   "op_id": "T-498|STAGE_74|L-cdb8d54311c5c841528f",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-d6373b9f427e4b599a5d",
+   "op_id": "T-498|STAGE_74|L-d6373b9f427e4b599a5d",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-6d9df440e35bc7c5551c",
+   "op_id": "T-498|STAGE_74|L-6d9df440e35bc7c5551c",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-4b9a29d424ea40e0af8a",
+   "op_id": "T-498|STAGE_74|L-4b9a29d424ea40e0af8a",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-54ba4f569a7c37de7c4c",
+   "op_id": "T-498|STAGE_74|L-54ba4f569a7c37de7c4c",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-616b748b2c6051df27c9",
+   "op_id": "T-498|STAGE_74|L-616b748b2c6051df27c9",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-a8f0d0e9fff641c0fa8e",
+   "op_id": "T-498|STAGE_74|L-a8f0d0e9fff641c0fa8e",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-e812502cb3615c2b9a56",
+   "op_id": "T-498|STAGE_74|L-e812502cb3615c2b9a56",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-a6e9b9d47f2b81204b1e",
+   "op_id": "T-498|STAGE_74|L-a6e9b9d47f2b81204b1e",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-0e1c62793fcfd587bd78",
+   "op_id": "T-498|STAGE_74|L-0e1c62793fcfd587bd78",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-1a2a8192895b1cb3a201",
+   "op_id": "T-498|STAGE_74|L-1a2a8192895b1cb3a201",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-09e6af683b908bbd24dd",
+   "op_id": "T-498|STAGE_74|L-09e6af683b908bbd24dd",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-6444a86319689e07512c",
+   "op_id": "T-498|STAGE_74|L-6444a86319689e07512c",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-6989349aef1cd4fa0940",
+   "op_id": "T-498|STAGE_74|L-6989349aef1cd4fa0940",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-356dacfc4b7952007c7d",
+   "op_id": "T-498|STAGE_74|L-356dacfc4b7952007c7d",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-4b1429e0aedd15f625fd",
+   "op_id": "T-498|STAGE_74|L-4b1429e0aedd15f625fd",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-298e323d027a4723652d",
+   "op_id": "T-498|STAGE_74|L-298e323d027a4723652d",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-5adcc762eca024e4cd94",
+   "op_id": "T-498|STAGE_74|L-5adcc762eca024e4cd94",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-90c7f0aecafe7b4a51a1",
+   "op_id": "T-498|STAGE_74|L-90c7f0aecafe7b4a51a1",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-06e9c6082a0625ad3821",
+   "op_id": "T-498|STAGE_74|L-06e9c6082a0625ad3821",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-2051ab0a71c27be038ae",
+   "op_id": "T-498|STAGE_74|L-2051ab0a71c27be038ae",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-bd21b0ea1ce4e1c8dabd",
+   "op_id": "T-498|STAGE_74|L-bd21b0ea1ce4e1c8dabd",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-cf220ce7edefedd935b4",
+   "op_id": "T-498|STAGE_74|L-cf220ce7edefedd935b4",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-a951fbf0e4fdacf3308d",
+   "op_id": "T-498|STAGE_74|L-a951fbf0e4fdacf3308d",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-09c52c7b398d3218cc0e",
+   "op_id": "T-498|STAGE_74|L-09c52c7b398d3218cc0e",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-8075d1bd45ac1b2c5e77",
+   "op_id": "T-498|STAGE_74|L-8075d1bd45ac1b2c5e77",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-539af3a600dcf190cd01",
+   "op_id": "T-498|STAGE_74|L-539af3a600dcf190cd01",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-26c299b8e120e2ce6768",
+   "op_id": "T-498|STAGE_74|L-26c299b8e120e2ce6768",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-794c7232f398260c7afb",
+   "op_id": "T-498|STAGE_74|L-794c7232f398260c7afb",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-bd48d897f8f11b6377ef",
+   "op_id": "T-498|STAGE_74|L-bd48d897f8f11b6377ef",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-25ee426cc7cc99a0fdff",
+   "op_id": "T-498|STAGE_74|L-25ee426cc7cc99a0fdff",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-d14c6c9b738045c797ec",
+   "op_id": "T-498|STAGE_74|L-d14c6c9b738045c797ec",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-859f0937ec4a656a21f7",
+   "op_id": "T-498|STAGE_74|L-859f0937ec4a656a21f7",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-1e61a4aaeb00aa711dcd",
+   "op_id": "T-498|STAGE_74|L-1e61a4aaeb00aa711dcd",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-866a6602ffa70d03f210",
+   "op_id": "T-498|STAGE_74|L-866a6602ffa70d03f210",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-a9876502e10fb732bc6c",
+   "op_id": "T-498|STAGE_74|L-a9876502e10fb732bc6c",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-3cdc29f2fadd13ef35d4",
+   "op_id": "T-498|STAGE_74|L-3cdc29f2fadd13ef35d4",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-1aa13ac06ca32ae43f02",
+   "op_id": "T-498|STAGE_74|L-1aa13ac06ca32ae43f02",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-8f163174139bcf80c7c7",
+   "op_id": "T-498|STAGE_74|L-8f163174139bcf80c7c7",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-fa0fae2380878a4f8428",
+   "op_id": "T-498|STAGE_74|L-fa0fae2380878a4f8428",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-33fcd56ef1548206bb1c",
+   "op_id": "T-498|STAGE_74|L-33fcd56ef1548206bb1c",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-c7e5807d75a4b93bf229",
+   "op_id": "T-498|STAGE_74|L-c7e5807d75a4b93bf229",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-4631ba5deb8ca9a53491",
+   "op_id": "T-498|STAGE_74|L-4631ba5deb8ca9a53491",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-1023c410bd8c6ab7fade",
+   "op_id": "T-498|STAGE_74|L-1023c410bd8c6ab7fade",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-5245ce2427156823ff3b",
+   "op_id": "T-498|STAGE_74|L-5245ce2427156823ff3b",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-aa5532bb971eceac1b76",
+   "op_id": "T-498|STAGE_74|L-aa5532bb971eceac1b76",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-f78bc052b5ce391b2cac",
+   "op_id": "T-498|STAGE_74|L-f78bc052b5ce391b2cac",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-4ccc5dc26bd2472b03ad",
+   "op_id": "T-498|STAGE_74|L-4ccc5dc26bd2472b03ad",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-45b7623964da3bbafd91",
+   "op_id": "T-498|STAGE_74|L-45b7623964da3bbafd91",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-e5a117db55cf7c5caaab",
+   "op_id": "T-498|STAGE_74|L-e5a117db55cf7c5caaab",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-fdbe5743c95c05ae9c19",
+   "op_id": "T-498|STAGE_74|L-fdbe5743c95c05ae9c19",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-8e250abdcadfdbf33951",
+   "op_id": "T-498|STAGE_74|L-8e250abdcadfdbf33951",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-d4c62b9df1e162be5e8b",
+   "op_id": "T-498|STAGE_74|L-d4c62b9df1e162be5e8b",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-c76dd0d11a5776939008",
+   "op_id": "T-498|STAGE_74|L-c76dd0d11a5776939008",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-b765c24ac4b275c661bc",
+   "op_id": "T-498|STAGE_74|L-b765c24ac4b275c661bc",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-320814d3876198a0e9a1",
+   "op_id": "T-498|STAGE_74|L-320814d3876198a0e9a1",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-128f47fcdb032a1f2ddb",
+   "op_id": "T-498|STAGE_74|L-128f47fcdb032a1f2ddb",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-8971f07e8552cf3831c0",
+   "op_id": "T-498|STAGE_74|L-8971f07e8552cf3831c0",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-17cea41ab1b8f2bdb19e",
+   "op_id": "T-498|STAGE_74|L-17cea41ab1b8f2bdb19e",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-6b0bb35ba62fe484aa7e",
+   "op_id": "T-498|STAGE_74|L-6b0bb35ba62fe484aa7e",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-2ae0aac40cd54e372c68",
+   "op_id": "T-498|STAGE_74|L-2ae0aac40cd54e372c68",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-43f32c104c36f9bd85be",
+   "op_id": "T-498|STAGE_74|L-43f32c104c36f9bd85be",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-07e80def32e147b160ac",
+   "op_id": "T-498|STAGE_74|L-07e80def32e147b160ac",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-24d4696063cef72b0ddb",
+   "op_id": "T-498|STAGE_74|L-24d4696063cef72b0ddb",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "L-ee1c4e34adec6ee5813d",
+   "op_id": "T-498|STAGE_74|L-ee1c4e34adec6ee5813d",
+   "package": "T-498",
+   "row": "STAGE_74",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-6aa750fb944ad58ce960",
+   "op_id": "T-498|LINTEL_V3|L-6aa750fb944ad58ce960",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m3": [
+     0.042,
+     0.04914
+    ]
+   },
+   "kind": "SET",
+   "line_id": "L-8b978b48668cde0f1b0c",
+   "op_id": "T-498|LINTEL_V3|L-8b978b48668cde0f1b0c",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m3": [
+     0.036,
+     0.03837
+    ]
+   },
+   "kind": "SET",
+   "line_id": "L-183f52083e693bdf8671",
+   "op_id": "T-498|LINTEL_V3|L-183f52083e693bdf8671",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m3": [
+     0.036,
+     0.04377
+    ]
+   },
+   "kind": "SET",
+   "line_id": "L-3111418b702ac80f0ade",
+   "op_id": "T-498|LINTEL_V3|L-3111418b702ac80f0ade",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-10f18635f68cfd8cdd1d",
+   "op_id": "T-498|LINTEL_V3|L-10f18635f68cfd8cdd1d",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m3": [
+     0.036,
+     0.04377
+    ]
+   },
+   "kind": "SET",
+   "line_id": "L-befb0beb1707ef192326",
+   "op_id": "T-498|LINTEL_V3|L-befb0beb1707ef192326",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-a58aabc436c71d85bea3",
+   "op_id": "T-498|LINTEL_V3|L-a58aabc436c71d85bea3",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m3": [
+     0.036,
+     0.04347
+    ]
+   },
+   "kind": "SET",
+   "line_id": "L-a0518076a024ab1be082",
+   "op_id": "T-498|LINTEL_V3|L-a0518076a024ab1be082",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m3": [
+     0.056,
+     0.0616
+    ]
+   },
+   "kind": "SET",
+   "line_id": "L-7a73a338210ee7268b65",
+   "op_id": "T-498|LINTEL_V3|L-7a73a338210ee7268b65",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m3": [
+     0.036,
+     0.04359
+    ]
+   },
+   "kind": "SET",
+   "line_id": "L-7149ea268473ea337cd2",
+   "op_id": "T-498|LINTEL_V3|L-7149ea268473ea337cd2",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-093df4d00eb35db3a4c0",
+   "op_id": "T-498|LINTEL_V3|L-093df4d00eb35db3a4c0",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-3bdff145e1546ac48f8e",
+   "op_id": "T-498|LINTEL_V3|L-3bdff145e1546ac48f8e",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-31232f81202941d104c6",
+   "op_id": "T-498|LINTEL_V3|L-31232f81202941d104c6",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-fd9eabe1828ed735c43d",
+   "op_id": "T-498|LINTEL_V3|L-fd9eabe1828ed735c43d",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-55cfc2395aca2e0c69e3",
+   "op_id": "T-498|LINTEL_V3|L-55cfc2395aca2e0c69e3",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m3": [
+     0.034692,
+     0.034692
+    ]
+   },
+   "kind": "SET",
+   "line_id": "L-f8736409a6afa1424ea9",
+   "op_id": "T-498|LINTEL_V3|L-f8736409a6afa1424ea9",
+   "package": "T-498",
+   "row": "LINTEL_V3",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-4b9a29d424ea40e0af8a",
+   "op_id": "T-498|HOST_FACES_V5|L-4b9a29d424ea40e0af8a",
+   "package": "T-498",
+   "row": "HOST_FACES_V5",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-d14c6c9b738045c797ec",
+   "op_id": "T-498|HOST_FACES_V5|L-d14c6c9b738045c797ec",
+   "package": "T-498",
+   "row": "HOST_FACES_V5",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-6989349aef1cd4fa0940",
+   "op_id": "T-498|HOST_FACES_V5|L-6989349aef1cd4fa0940",
+   "package": "T-498",
+   "row": "HOST_FACES_V5",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-aa5532bb971eceac1b76",
+   "op_id": "T-498|HOST_FACES_V5|L-aa5532bb971eceac1b76",
+   "package": "T-498",
+   "row": "HOST_FACES_V5",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "conditional_range_beside_kg": [
+     63.82125,
+     71.62425
+    ]
+   },
+   "index": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "kind": "SET",
+   "line_id": "L-4ccc5dc26bd2472b03ad",
+   "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+   "package": "T-498",
+   "row": "HOST_FACES_V5",
+   "status": "NO_BEFORE"
+  },
+  {
+   "beside": {
+    "cement_bags": 0.314328,
+    "sand_m3": 0.04322
+   },
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-10dd62f66ad05488e63b",
+   "op_id": "T-498|PERIMETER_MORTAR|NEW:MAS.MORTAR.BLACK:PERIMETER:L-10dd62f66ad05488e63b",
+   "package": "T-498",
+   "row": "PERIMETER_MORTAR",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "cement_bags": 0.470832,
+    "sand_m3": 0.064739
+   },
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-1c53fadb2f92d1f36d4e",
+   "op_id": "T-498|PERIMETER_MORTAR|NEW:MAS.MORTAR.BLACK:PERIMETER:L-1c53fadb2f92d1f36d4e",
+   "package": "T-498",
+   "row": "PERIMETER_MORTAR",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:LINTEL_BARS:PRODUCED",
+   "op_id": "T-498|LINTEL_BARS_V3|NEW:STR.REBAR:LINTEL_BARS:PRODUCED",
+   "package": "T-498",
+   "row": "LINTEL_BARS_V3",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:LINTEL_BARS:FLAGGED",
+   "op_id": "T-498|LINTEL_BARS_V3|NEW:STR.REBAR:LINTEL_BARS:FLAGGED",
+   "package": "T-498",
+   "row": "LINTEL_BARS_V3",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "at_most_m3": 0.1312
+   },
+   "kind": "BESIDE",
+   "line_id": "L-53ef44d8c490d1341b93",
+   "op_id": "T-498|LINTEL_END_CEILINGS|L-53ef44d8c490d1341b93",
+   "package": "T-498",
+   "row": "LINTEL_END_CEILINGS",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "at_most_m3": 0.088
+   },
+   "kind": "BESIDE",
+   "line_id": "L-6057028f3f666538a007",
+   "op_id": "T-498|LINTEL_END_CEILINGS|L-6057028f3f666538a007",
+   "package": "T-498",
+   "row": "LINTEL_END_CEILINGS",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "at_most_m3": 0.09948
+   },
+   "kind": "BESIDE",
+   "line_id": "L-6692d02cd6cd25120300",
+   "op_id": "T-498|LINTEL_END_CEILINGS|L-6692d02cd6cd25120300",
+   "package": "T-498",
+   "row": "LINTEL_END_CEILINGS",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "at_most_m3": 0.2684
+   },
+   "kind": "BESIDE",
+   "line_id": "L-40e8c2597de12644e8e2",
+   "op_id": "T-498|LINTEL_END_CEILINGS|L-40e8c2597de12644e8e2",
+   "package": "T-498",
+   "row": "LINTEL_END_CEILINGS",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-3eba04f2458578e7dc19",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-3eba04f2458578e7dc19",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-a34d09209fb5aad3eb63",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-a34d09209fb5aad3eb63",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-eb3be58fc760b39f0e38",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-eb3be58fc760b39f0e38",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-fc116bb666b184740090",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-fc116bb666b184740090",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-07ce1d24164207cd06ca",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-07ce1d24164207cd06ca",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-0ca0f91144403e323c68",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-0ca0f91144403e323c68",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-1a229f1fead084efb881",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-1a229f1fead084efb881",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-3b166c2b5d136302f2dd",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-3b166c2b5d136302f2dd",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-709aba3ec07bb0f26319",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-709aba3ec07bb0f26319",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-791a94968230969c030f",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-791a94968230969c030f",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-8901e416cbce62854fbe",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-8901e416cbce62854fbe",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-92721c425ab3612bb035",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-92721c425ab3612bb035",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-a4909527ff598315be61",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-a4909527ff598315be61",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-bfdbdaa2d67a5c805f1e",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-bfdbdaa2d67a5c805f1e",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-c8b5c7f742b22388339e",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-c8b5c7f742b22388339e",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-cbf11d0c1befb0519e98",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-cbf11d0c1befb0519e98",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-ccb1182ae9409b432968",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-ccb1182ae9409b432968",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-f2d296f1fc5184419774",
+   "op_id": "T-423 r2|TEXT_ONLY_22|L-f2d296f1fc5184419774",
+   "package": "T-423 r2",
+   "row": "TEXT_ONLY_22",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-b152995525ed123ddac9",
+   "op_id": "T-563|PLASTER_HEIGHT_V1|L-b152995525ed123ddac9",
+   "package": "T-563",
+   "row": "PLASTER_HEIGHT_V1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-1ddc23d5657b4c4e4d0d",
+   "op_id": "T-563|PLASTER_HEIGHT_V1|L-1ddc23d5657b4c4e4d0d",
+   "package": "T-563",
+   "row": "PLASTER_HEIGHT_V1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-0d93f2209cd9bb827c0a",
+   "op_id": "T-563|PLASTER_HEIGHT_V1|L-0d93f2209cd9bb827c0a",
+   "package": "T-563",
+   "row": "PLASTER_HEIGHT_V1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-8cecb1d010d5aafbf25d",
+   "op_id": "T-563|PLASTER_HEIGHT_V1|L-8cecb1d010d5aafbf25d",
+   "package": "T-563",
+   "row": "PLASTER_HEIGHT_V1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-af9621f43bc316a871ea",
+   "op_id": "T-563|PLASTER_HEIGHT_V1|L-af9621f43bc316a871ea",
+   "package": "T-563",
+   "row": "PLASTER_HEIGHT_V1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-971f0bdaf68d7fd0966c",
+   "op_id": "T-563|PLASTER_HEIGHT_V1|L-971f0bdaf68d7fd0966c",
+   "package": "T-563",
+   "row": "PLASTER_HEIGHT_V1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-2ba8077ba9bb2e1ff0f6",
+   "op_id": "T-563|PLASTER_HEIGHT_V1|L-2ba8077ba9bb2e1ff0f6",
+   "package": "T-563",
+   "row": "PLASTER_HEIGHT_V1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-31db3c83552682d92ca3",
+   "op_id": "T-563|PLASTER_HEIGHT_V1|L-31db3c83552682d92ca3",
+   "package": "T-563",
+   "row": "PLASTER_HEIGHT_V1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-9b4a7bab033d677e2017",
+   "op_id": "T-563|PLASTER_HEIGHT_V1|L-9b4a7bab033d677e2017",
+   "package": "T-563",
+   "row": "PLASTER_HEIGHT_V1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-4ce74fc37a08d4bdf0d8",
+   "op_id": "T-563|PLASTER_HEIGHT_V1|L-4ce74fc37a08d4bdf0d8",
+   "package": "T-563",
+   "row": "PLASTER_HEIGHT_V1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-ae0cdd794cc5fdbe0c29",
+   "op_id": "T-563|PLASTER_HEIGHT_V1|L-ae0cdd794cc5fdbe0c29",
+   "package": "T-563",
+   "row": "PLASTER_HEIGHT_V1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-cdf7f5cd2789b67004f1",
+   "op_id": "T-563|PAINT_UNCHANGED|L-cdf7f5cd2789b67004f1",
+   "package": "T-563",
+   "row": "PAINT_UNCHANGED",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-d7d6d2f765489a95c408",
+   "op_id": "T-563|PAINT_UNCHANGED|L-d7d6d2f765489a95c408",
+   "package": "T-563",
+   "row": "PAINT_UNCHANGED",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-7f083d3e2c2702d14356",
+   "op_id": "T-563|PAINT_UNCHANGED|L-7f083d3e2c2702d14356",
+   "package": "T-563",
+   "row": "PAINT_UNCHANGED",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-c0ac22c964a42e7d71b1",
+   "op_id": "T-563|PAINT_UNCHANGED|L-c0ac22c964a42e7d71b1",
+   "package": "T-563",
+   "row": "PAINT_UNCHANGED",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-ade6f0567f690a869499",
+   "op_id": "T-563|PAINT_UNCHANGED|L-ade6f0567f690a869499",
+   "package": "T-563",
+   "row": "PAINT_UNCHANGED",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-d9f4ecdb6ef9a42d0220",
+   "op_id": "T-563|PAINT_UNCHANGED|L-d9f4ecdb6ef9a42d0220",
+   "package": "T-563",
+   "row": "PAINT_UNCHANGED",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-f53c1329983ad689b7ae",
+   "op_id": "T-563|PAINT_UNCHANGED|L-f53c1329983ad689b7ae",
+   "package": "T-563",
+   "row": "PAINT_UNCHANGED",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-349db74a70e1eecda2d2",
+   "op_id": "T-563|PAINT_UNCHANGED|L-349db74a70e1eecda2d2",
+   "package": "T-563",
+   "row": "PAINT_UNCHANGED",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-be48ea84285be20645af",
+   "op_id": "T-563|PAINT_UNCHANGED|L-be48ea84285be20645af",
+   "package": "T-563",
+   "row": "PAINT_UNCHANGED",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-5410f9045c80dd5933f0",
+   "op_id": "T-563|PAINT_UNCHANGED|L-5410f9045c80dd5933f0",
+   "package": "T-563",
+   "row": "PAINT_UNCHANGED",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "TEXT_ONLY",
+   "line_id": "L-c74cfb4e07bcc47bc5d6",
+   "op_id": "T-563|PAINT_UNCHANGED|L-c74cfb4e07bcc47bc5d6",
+   "package": "T-563",
+   "row": "PAINT_UNCHANGED",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "NEW:1F-RFFE7AF:0",
+   "op_id": "FLOOR_FINISH_COMPLETENESS_WIRING|F-T553-1|NEW:1F-RFFE7AF:0",
+   "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+   "row": "F-T553-1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "NEW:1F-RFFE7AF:1",
+   "op_id": "FLOOR_FINISH_COMPLETENESS_WIRING|F-T553-1|NEW:1F-RFFE7AF:1",
+   "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+   "row": "F-T553-1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "NEW:1F-RFFE7AF:2",
+   "op_id": "FLOOR_FINISH_COMPLETENESS_WIRING|F-T553-1|NEW:1F-RFFE7AF:2",
+   "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+   "row": "F-T553-1",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "RECODE",
+   "line_id": "L-83609efc5fdb5d38f059",
+   "op_id": "FLOOR_FINISH_COMPLETENESS_WIRING|F-T553-2|L-83609efc5fdb5d38f059",
+   "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+   "row": "F-T553-2",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-54b2eb0ad40cc47b9be5"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-004:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:1F-OPENING-OP-004:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.795
+    ],
+    "plaster_line": "L-a85b83a93486fdc400f8"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-005:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:1F-OPENING-OP-005:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.795
+    ],
+    "plaster_line": "L-5d309e25e8b180283606"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-006:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:1F-OPENING-OP-006:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     1.06
+    ],
+    "plaster_line": "L-f3590fade6406f912d2e"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-008:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:1F-OPENING-OP-008:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-f8a0d9bfc3e6a3f113b2"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-010:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:1F-OPENING-OP-010:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-537fc3896f24cf408fe6"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-018:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:1F-OPENING-OP-018:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-f38f6ecefecd7e617cac"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-019:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:1F-OPENING-OP-019:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.81
+    ],
+    "plaster_line": "L-0bc19199447147ca226a"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-020:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:1F-OPENING-OP-020:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.81
+    ],
+    "plaster_line": "L-f0668097e8d872925fdf"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-34f4545187c3c764d174"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.81
+    ],
+    "plaster_line": "L-ca7d121f07fd1a73536d"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:2F-OPENING-OP-001:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:2F-OPENING-OP-001:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-833ba74bab1404d1f6cc"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:2F-OPENING-OP-006:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:2F-OPENING-OP-006:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     1.06
+    ],
+    "plaster_line": "L-39497d7b7639a776f8f2"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:2F-OPENING-OP-007:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:2F-OPENING-OP-007:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     1.06
+    ],
+    "plaster_line": "L-9cf5a4b4db78cf57cf7f"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-005:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-OPENING-OP-005:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     1.08
+    ],
+    "plaster_line": "L-e11de0ecd42fcb0b5756"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-008:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-OPENING-OP-008:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     1.08
+    ],
+    "plaster_line": "L-1f443fe4e172a90ddd7c"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-010:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-OPENING-OP-010:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.81
+    ],
+    "plaster_line": "L-61825a3103a391956d70"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-012:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-OPENING-OP-012:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     1.06
+    ],
+    "plaster_line": "L-3c21b044ce980ec0ee75"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-013:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-OPENING-OP-013:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-7dcb2bab84655929f7e8"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-017:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-OPENING-OP-017:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-672329032e0d70329d5f"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-018:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-OPENING-OP-018:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     1.4
+    ],
+    "plaster_line": "L-2f94dca4dd5f2ec05822"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-021:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-OPENING-OP-021:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     1.08
+    ],
+    "plaster_line": "L-3ae66decd178e43c61e0"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-025:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-OPENING-OP-025:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-f4e9614350ce4659d186"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-026:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-OPENING-OP-026:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-6ebb9be39b8c4ff4693a"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-698dfa14c60ff86b5c60"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     0.78
+    ],
+    "plaster_line": "L-8a038e1ca7c2d73d5b13"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": null,
+    "plaster_line": "L-64cb94b4b8dc2cb17608"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": [
+     0.0,
+     1.2
+    ],
+    "plaster_line": "L-f4175f9915208dc5f9f7"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-009:door jambs and head",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-OPENING-OP-009:door jambs and head",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": null,
+    "plaster_line": "L-3e19506bd9e093dfb7be"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": null,
+    "plaster_line": "L-e70e7e48b4c15b4f5a21"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.PAINT:GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+   "op_id": "RETURN_PAINT_FACES|R-T569-1|NEW:FIN.PAINT:GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+   "package": "RETURN_PAINT_FACES",
+   "row": "R-T569-1",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "ledger": [
+     {
+      "bound_m2": [
+       0.0536522,
+       0.6974786
+      ],
+      "class": "PARAPET_OUTER",
+      "face_key": "1F/NW-5/SW-PIER-RETURNS/parapet",
+      "m2": null,
+      "status": "HELD"
+     },
+     {
+      "bound_m2": null,
+      "class": "STOREY",
+      "face_key": "1F/NW-5/SW-PIER-RETURNS/storey",
+      "m2": 2.2533924,
+      "status": "DRAWING-CONFIRMED"
+     }
+    ]
+   },
+   "kind": "LEDGER",
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "op_id": "PIER_RETURNS_EXT (with T-314)|R-T567-6|L-8bb83e16cc7b104ab88b",
+   "package": "PIER_RETURNS_EXT (with T-314)",
+   "row": "R-T567-6",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "RETIRE",
+   "line_id": "L-0392d37452e98050dd1b",
+   "op_id": "W17_Q76A|Q-76A|L-0392d37452e98050dd1b",
+   "package": "W17_Q76A",
+   "row": "Q-76A",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-ba28ba2da13f62445c9f",
+   "op_id": "W17_Q76A|Q-76A|L-ba28ba2da13f62445c9f",
+   "package": "W17_Q76A",
+   "row": "Q-76A",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "concrete_line": "L-d5401fa8986900c66c37"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:DG5:DOME-3:SHELL:REBAR",
+   "op_id": "REBAR_OMISSION|T-560|NEW:STR.REBAR:DG5:DOME-3:SHELL:REBAR",
+   "package": "REBAR_OMISSION",
+   "row": "T-560",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "concrete_line": "L-ab37afa17f2ac5b0efd1"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+   "op_id": "REBAR_OMISSION|T-560|NEW:STR.REBAR:HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+   "package": "REBAR_OMISSION",
+   "row": "T-560",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "concrete_line": "L-48b7d139bff681199543"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+   "op_id": "REBAR_OMISSION|T-560|NEW:STR.REBAR:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+   "package": "REBAR_OMISSION",
+   "row": "T-560",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "concrete_line": "L-8ea34765d16b54898140"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+   "op_id": "REBAR_OMISSION|T-560|NEW:STR.REBAR:HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+   "package": "REBAR_OMISSION",
+   "row": "T-560",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "concrete_line": "L-fffa895ed96b9d6a682c"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+   "op_id": "REBAR_OMISSION|T-560|NEW:STR.REBAR:HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+   "package": "REBAR_OMISSION",
+   "row": "T-560",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "concrete_line": "L-684fcad323adc0c8a267"
+   },
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:LIFT_PIT:WALLS:REBAR",
+   "op_id": "REBAR_OMISSION|T-560|NEW:STR.REBAR:LIFT_PIT:WALLS:REBAR",
+   "package": "REBAR_OMISSION",
+   "row": "T-560",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-1954878bb02c91139e1b",
+   "op_id": "F package (no board row)|T-522/T-529|L-1954878bb02c91139e1b",
+   "package": "F package (no board row)",
+   "row": "T-522/T-529",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-d7d1bf8c5991ccf69ea2",
+   "op_id": "F package (no board row)|T-522/T-529|L-d7d1bf8c5991ccf69ea2",
+   "package": "F package (no board row)",
+   "row": "T-522/T-529",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "SET",
+   "line_id": "L-2361d6ec13c952bd2ae3",
+   "op_id": "F package (no board row)|T-522/T-529|L-2361d6ec13c952bd2ae3",
+   "package": "F package (no board row)",
+   "row": "T-522/T-529",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "NEW:FIN.ROOF.SCREED:1F-POOLCOURT-550:falls_screed",
+   "op_id": "F package (no board row)|T-517|NEW:FIN.ROOF.SCREED:1F-POOLCOURT-550:falls_screed",
+   "package": "F package (no board row)",
+   "row": "T-517",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "NEW:FIN.ROOF.INSULATION:1F-POOLCOURT-550:insulation",
+   "op_id": "F package (no board row)|T-517|NEW:FIN.ROOF.INSULATION:1F-POOLCOURT-550:insulation",
+   "package": "F package (no board row)",
+   "row": "T-517",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "NEW:FIN.ROOF.PROTECTION:1F-POOLCOURT-550:protection",
+   "op_id": "F package (no board row)|T-517|NEW:FIN.ROOF.PROTECTION:1F-POOLCOURT-550:protection",
+   "package": "F package (no board row)",
+   "row": "T-517",
+   "status": "APPLIED"
+  },
+  {
+   "kind": "ADD",
+   "line_id": "NEW:FIN.ROOF.FINISH:1F-POOLCOURT-550:finish",
+   "op_id": "F package (no board row)|T-517|NEW:FIN.ROOF.FINISH:1F-POOLCOURT-550:finish",
+   "package": "F package (no board row)",
+   "row": "T-517",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": 0.639573
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.ROOF.SCREED:1F-POOLCOURT-550-LEDGE:falls_screed",
+   "op_id": "F package (no board row)|T-517|NEW:FIN.ROOF.SCREED:1F-POOLCOURT-550-LEDGE:falls_screed",
+   "package": "F package (no board row)",
+   "row": "T-517",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": 0.639573
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.ROOF.INSULATION:1F-POOLCOURT-550-LEDGE:insulation",
+   "op_id": "F package (no board row)|T-517|NEW:FIN.ROOF.INSULATION:1F-POOLCOURT-550-LEDGE:insulation",
+   "package": "F package (no board row)",
+   "row": "T-517",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": 0.639573
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.ROOF.PROTECTION:1F-POOLCOURT-550-LEDGE:protection",
+   "op_id": "F package (no board row)|T-517|NEW:FIN.ROOF.PROTECTION:1F-POOLCOURT-550-LEDGE:protection",
+   "package": "F package (no board row)",
+   "row": "T-517",
+   "status": "APPLIED"
+  },
+  {
+   "beside": {
+    "bound_m2": 0.639573
+   },
+   "kind": "ADD",
+   "line_id": "NEW:FIN.ROOF.FINISH:1F-POOLCOURT-550-LEDGE:finish",
+   "op_id": "F package (no board row)|T-517|NEW:FIN.ROOF.FINISH:1F-POOLCOURT-550-LEDGE:finish",
+   "package": "F package (no board row)",
+   "row": "T-517",
+   "status": "APPLIED"
+  }
+ ],
+ "rule": "R-T580-1",
+ "schema": "URBAN_T580_MANIFEST_OVERLAY",
+ "stage_extends": "ARCH_TAKEOFF_V3.0.57",
+ "stage_method": "ARCH_TAKEOFF_V3.0.58",
+ "stage_source": {
+  "branch": "agents/task-T-498",
+  "commit": "e3e2ebb5a4af5f8b5bfeb1bd2b517845531409eb",
+  "path": "research/agents_t498/summary_t498.json",
+  "sha256": "29eb31e52b5f78c9252e758fd8e18b9f247d1110aec4ddc95252f0890ee0ee24"
+ },
+ "steps": [
+  {
+   "applied": 102,
+   "ops": 103,
+   "package": "T-498",
+   "stale": 0,
+   "totals_changed": {
+    "MAS.GLUE.AAC|kg": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 12,
+      "held_high": "885.60468",
+      "held_high_open_n": 0,
+      "held_low": "852.22278",
+      "held_n": 16,
+      "released": "20.061",
+      "released_n": 1
+     },
+     "before": null
+    },
+    "MAS.MORTAR.BLACK|m3": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 18,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 18,
+      "released": "1.367589",
+      "released_n": 4
+     },
+     "before": null
+    },
+    "MAS.UNITS.BLACK|pcs": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 18,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 18,
+      "released": "1075.8",
+      "released_n": 2
+     },
+     "before": null
+    },
+    "MAS.UNITS.WHITE|pcs": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 17,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 17,
+      "released": "0",
+      "released_n": 0
+     },
+     "before": null
+    },
+    "STR.CONC.LINTEL|m3": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 54,
+      "held_high": "0.74642",
+      "held_high_open_n": 1,
+      "held_low": "0.502",
+      "held_n": 60,
+      "released": "0",
+      "released_n": 0
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 44,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 44,
+      "released": "1.016",
+      "released_n": 16
+     }
+    },
+    "STR.REBAR|kg": {
+     "after": {
+      "excluded_n": 577,
+      "held_blank_n": 799,
+      "held_high": "19646.877938",
+      "held_high_open_n": 2,
+      "held_low": "14341.312712",
+      "held_n": 1695,
+      "released": "9375.30576",
+      "released_n": 374
+     },
+     "before": {
+      "excluded_n": 577,
+      "held_blank_n": 799,
+      "held_high": "19646.877938",
+      "held_high_open_n": 0,
+      "held_low": "14278.249488",
+      "held_n": 1693,
+      "released": "9375.30576",
+      "released_n": 374
+     }
+    }
+   }
+  },
+  {
+   "applied": 18,
+   "ops": 18,
+   "package": "T-423 r2",
+   "stale": 0,
+   "totals_changed": {}
+  },
+  {
+   "applied": 22,
+   "ops": 22,
+   "package": "T-563",
+   "stale": 0,
+   "totals_changed": {
+    "FIN.PLASTER|m2": {
+     "after": {
+      "excluded_n": 13,
+      "held_blank_n": 10,
+      "held_high": "1006.77641",
+      "held_high_open_n": 0,
+      "held_low": "932.72581",
+      "held_n": 24,
+      "released": "363.3738",
+      "released_n": 38
+     },
+     "before": {
+      "excluded_n": 13,
+      "held_blank_n": 12,
+      "held_high": "544.0606",
+      "held_high_open_n": 0,
+      "held_low": "488.201",
+      "held_n": 20,
+      "released": "580.5819",
+      "released_n": 42
+     }
+    }
+   }
+  },
+  {
+   "applied": 0,
+   "ops": 0,
+   "package": "T-513",
+   "stale": 0,
+   "totals_changed": {}
+  },
+  {
+   "applied": 4,
+   "ops": 4,
+   "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+   "stale": 0,
+   "totals_changed": {
+    "FIN.FLOOR.BED.DRY|m2": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 0,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 0,
+      "released": "304.488472",
+      "released_n": 24
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 0,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 0,
+      "released": "301.518472",
+      "released_n": 23
+     }
+    },
+    "FIN.FLOOR.BED.DRY|m3": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 0,
+      "held_high": "12.179539",
+      "held_high_open_n": 0,
+      "held_low": "9.134654",
+      "held_n": 24,
+      "released": "0",
+      "released_n": 0
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 0,
+      "held_high": "12.060739",
+      "held_high_open_n": 0,
+      "held_low": "9.045554",
+      "held_n": 23,
+      "released": "0",
+      "released_n": 0
+     }
+    },
+    "FIN.FLOOR.FINISH_HELD|m2": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 0,
+      "held_high": "0.23",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 1,
+      "released": "9.0975",
+      "released_n": 3
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 0,
+      "held_high": "0.23",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 1,
+      "released": "6.1275",
+      "released_n": 2
+     }
+    },
+    "FIN.FLOOR.PORCELAIN|m2": {
+     "after": {
+      "excluded_n": 13,
+      "held_blank_n": 0,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 0,
+      "released": "295.390972",
+      "released_n": 21
+     },
+     "before": {
+      "excluded_n": 13,
+      "held_blank_n": 0,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 0,
+      "released": "305.020973",
+      "released_n": 22
+     }
+    },
+    "FIN.FLOOR.WET_TILE|m2": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 0,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 0,
+      "released": "85.575578",
+      "released_n": 21
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 0,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 0,
+      "released": "75.945577",
+      "released_n": 20
+     }
+    }
+   }
+  },
+  {
+   "applied": 30,
+   "ops": 30,
+   "package": "RETURN_PAINT_FACES",
+   "stale": 0,
+   "totals_changed": {
+    "FIN.PAINT|m2": {
+     "after": {
+      "excluded_n": 31,
+      "held_blank_n": 33,
+      "held_high": "542.8606",
+      "held_high_open_n": 0,
+      "held_low": "487.121",
+      "held_n": 40,
+      "released": "217.2081",
+      "released_n": 4
+     },
+     "before": {
+      "excluded_n": 31,
+      "held_blank_n": 3,
+      "held_high": "542.8606",
+      "held_high_open_n": 0,
+      "held_low": "487.121",
+      "held_n": 10,
+      "released": "217.2081",
+      "released_n": 4
+     }
+    }
+   }
+  },
+  {
+   "applied": 1,
+   "ops": 1,
+   "package": "PIER_RETURNS_EXT (with T-314)",
+   "stale": 0,
+   "totals_changed": {}
+  },
+  {
+   "applied": 2,
+   "ops": 2,
+   "package": "W17_Q76A",
+   "stale": 0,
+   "totals_changed": {
+    "ARCH.WINDOW|m2": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 1,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 1,
+      "released": "86.126",
+      "released_n": 3
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 1,
+      "held_high": "11.515",
+      "held_high_open_n": 0,
+      "held_low": "9.87",
+      "held_n": 2,
+      "released": "76.256",
+      "released_n": 3
+     }
+    }
+   }
+  },
+  {
+   "applied": 6,
+   "ops": 6,
+   "package": "REBAR_OMISSION",
+   "stale": 0,
+   "totals_changed": {
+    "STR.REBAR|kg": {
+     "after": {
+      "excluded_n": 577,
+      "held_blank_n": 805,
+      "held_high": "19646.877938",
+      "held_high_open_n": 2,
+      "held_low": "14341.312712",
+      "held_n": 1701,
+      "released": "9375.30576",
+      "released_n": 374
+     },
+     "before": {
+      "excluded_n": 577,
+      "held_blank_n": 799,
+      "held_high": "19646.877938",
+      "held_high_open_n": 2,
+      "held_low": "14341.312712",
+      "held_n": 1695,
+      "released": "9375.30576",
+      "released_n": 374
+     }
+    }
+   }
+  },
+  {
+   "applied": 11,
+   "ops": 11,
+   "package": "F package (no board row)",
+   "stale": 0,
+   "totals_changed": {
+    "FIN.ROOF.FINISH|m2": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 2,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 2,
+      "released": "206.738932",
+      "released_n": 4
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 1,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 1,
+      "released": "202.21976",
+      "released_n": 3
+     }
+    },
+    "FIN.ROOF.INSULATION|m2": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 6,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 6,
+      "released": "0",
+      "released_n": 0
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 4,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 4,
+      "released": "0",
+      "released_n": 0
+     }
+    },
+    "FIN.ROOF.PROTECTION|m2": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 6,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 6,
+      "released": "0",
+      "released_n": 0
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 4,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 4,
+      "released": "0",
+      "released_n": 0
+     }
+    },
+    "FIN.ROOF.SCREED|m3": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 6,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 6,
+      "released": "0",
+      "released_n": 0
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 4,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 4,
+      "released": "0",
+      "released_n": 0
+     }
+    },
+    "FIN.WP.ROOF_UPTURN|lm": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 1,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 1,
+      "released": "187.83416",
+      "released_n": 6
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 1,
+      "held_high": "4.028279",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 3,
+      "released": "186.782544",
+      "released_n": 4
+     }
+    },
+    "FIN.WP.ROOF|m2": {
+     "after": {
+      "excluded_n": 0,
+      "held_blank_n": 1,
+      "held_high": "0",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 1,
+      "released": "209.65844",
+      "released_n": 5
+     },
+     "before": {
+      "excluded_n": 0,
+      "held_blank_n": 1,
+      "held_high": "0.639573",
+      "held_high_open_n": 0,
+      "held_low": "0",
+      "held_n": 2,
+      "released": "209.018867",
+      "released_n": 4
+     }
+    }
+   }
+  }
+ ],
+ "t423_unaddressed": [
+  "5 FIN.CEILING dome-deduction lines (ids only in T-423's private integration ledger)",
+  "the D-1F-03 dry strip FIN.FLOOR.PORCELAIN line (id not printed)"
+ ],
+ "task": "T-580",
+ "totals_changed_overall": {
+  "ARCH.WINDOW|m2": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 1,
+    "released": "86.126",
+    "released_n": 3
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_high": "11.515",
+    "held_high_open_n": 0,
+    "held_low": "9.87",
+    "held_n": 2,
+    "released": "76.256",
+    "released_n": 3
+   }
+  },
+  "FIN.FLOOR.BED.DRY|m2": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 0,
+    "released": "304.488472",
+    "released_n": 24
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 0,
+    "released": "301.518472",
+    "released_n": 23
+   }
+  },
+  "FIN.FLOOR.BED.DRY|m3": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_high": "12.179539",
+    "held_high_open_n": 0,
+    "held_low": "9.134654",
+    "held_n": 24,
+    "released": "0",
+    "released_n": 0
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_high": "12.060739",
+    "held_high_open_n": 0,
+    "held_low": "9.045554",
+    "held_n": 23,
+    "released": "0",
+    "released_n": 0
+   }
+  },
+  "FIN.FLOOR.FINISH_HELD|m2": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_high": "0.23",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 1,
+    "released": "9.0975",
+    "released_n": 3
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_high": "0.23",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 1,
+    "released": "6.1275",
+    "released_n": 2
+   }
+  },
+  "FIN.FLOOR.PORCELAIN|m2": {
+   "after": {
+    "excluded_n": 13,
+    "held_blank_n": 0,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 0,
+    "released": "295.390972",
+    "released_n": 21
+   },
+   "before": {
+    "excluded_n": 13,
+    "held_blank_n": 0,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 0,
+    "released": "305.020973",
+    "released_n": 22
+   }
+  },
+  "FIN.FLOOR.WET_TILE|m2": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 0,
+    "released": "85.575578",
+    "released_n": 21
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 0,
+    "released": "75.945577",
+    "released_n": 20
+   }
+  },
+  "FIN.PAINT|m2": {
+   "after": {
+    "excluded_n": 31,
+    "held_blank_n": 33,
+    "held_high": "542.8606",
+    "held_high_open_n": 0,
+    "held_low": "487.121",
+    "held_n": 40,
+    "released": "217.2081",
+    "released_n": 4
+   },
+   "before": {
+    "excluded_n": 31,
+    "held_blank_n": 3,
+    "held_high": "542.8606",
+    "held_high_open_n": 0,
+    "held_low": "487.121",
+    "held_n": 10,
+    "released": "217.2081",
+    "released_n": 4
+   }
+  },
+  "FIN.PLASTER|m2": {
+   "after": {
+    "excluded_n": 13,
+    "held_blank_n": 10,
+    "held_high": "1006.77641",
+    "held_high_open_n": 0,
+    "held_low": "932.72581",
+    "held_n": 24,
+    "released": "363.3738",
+    "released_n": 38
+   },
+   "before": {
+    "excluded_n": 13,
+    "held_blank_n": 12,
+    "held_high": "544.0606",
+    "held_high_open_n": 0,
+    "held_low": "488.201",
+    "held_n": 20,
+    "released": "580.5819",
+    "released_n": 42
+   }
+  },
+  "FIN.ROOF.FINISH|m2": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 2,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 2,
+    "released": "206.738932",
+    "released_n": 4
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 1,
+    "released": "202.21976",
+    "released_n": 3
+   }
+  },
+  "FIN.ROOF.INSULATION|m2": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 6,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 6,
+    "released": "0",
+    "released_n": 0
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 4,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 4,
+    "released": "0",
+    "released_n": 0
+   }
+  },
+  "FIN.ROOF.PROTECTION|m2": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 6,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 6,
+    "released": "0",
+    "released_n": 0
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 4,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 4,
+    "released": "0",
+    "released_n": 0
+   }
+  },
+  "FIN.ROOF.SCREED|m3": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 6,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 6,
+    "released": "0",
+    "released_n": 0
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 4,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 4,
+    "released": "0",
+    "released_n": 0
+   }
+  },
+  "FIN.WP.ROOF_UPTURN|lm": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 1,
+    "released": "187.83416",
+    "released_n": 6
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_high": "4.028279",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 3,
+    "released": "186.782544",
+    "released_n": 4
+   }
+  },
+  "FIN.WP.ROOF|m2": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 1,
+    "released": "209.65844",
+    "released_n": 5
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_high": "0.639573",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 2,
+    "released": "209.018867",
+    "released_n": 4
+   }
+  },
+  "MAS.GLUE.AAC|kg": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 12,
+    "held_high": "885.60468",
+    "held_high_open_n": 0,
+    "held_low": "852.22278",
+    "held_n": 16,
+    "released": "20.061",
+    "released_n": 1
+   },
+   "before": null
+  },
+  "MAS.MORTAR.BLACK|m3": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 18,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 18,
+    "released": "1.367589",
+    "released_n": 4
+   },
+   "before": null
+  },
+  "MAS.UNITS.BLACK|pcs": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 18,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 18,
+    "released": "1075.8",
+    "released_n": 2
+   },
+   "before": null
+  },
+  "MAS.UNITS.WHITE|pcs": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 17,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 17,
+    "released": "0",
+    "released_n": 0
+   },
+   "before": null
+  },
+  "STR.CONC.LINTEL|m3": {
+   "after": {
+    "excluded_n": 0,
+    "held_blank_n": 54,
+    "held_high": "0.74642",
+    "held_high_open_n": 1,
+    "held_low": "0.502",
+    "held_n": 60,
+    "released": "0",
+    "released_n": 0
+   },
+   "before": {
+    "excluded_n": 0,
+    "held_blank_n": 44,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 44,
+    "released": "1.016",
+    "released_n": 16
+   }
+  },
+  "STR.REBAR|kg": {
+   "after": {
+    "excluded_n": 577,
+    "held_blank_n": 805,
+    "held_high": "19646.877938",
+    "held_high_open_n": 2,
+    "held_low": "14341.312712",
+    "held_n": 1701,
+    "released": "9375.30576",
+    "released_n": 374
+   },
+   "before": {
+    "excluded_n": 577,
+    "held_blank_n": 799,
+    "held_high": "19646.877938",
+    "held_high_open_n": 0,
+    "held_low": "14278.249488",
+    "held_n": 1693,
+    "released": "9375.30576",
+    "released_n": 374
+   }
+  }
+ },
+ "unexplained_conflicts": 0
+}

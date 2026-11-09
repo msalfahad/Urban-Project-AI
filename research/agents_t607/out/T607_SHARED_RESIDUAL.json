@@ -1,0 +1,888 @@
+{
+ "causes": [
+  {
+   "edges_in_governing_count": 0,
+   "his_cell": "MRB.B23 x MRB.C23",
+   "his_mechanism": "UNRESOLVED between R1 and R2 (his row has no breakdown; never chosen by fit, R-T434-1)",
+   "id": "C-T607-1",
+   "lm_his_basis": "8.4",
+   "named_readings": {
+    "R1 SECOND_READING": {
+     "drawing": "arch GF plan: 7 front + face pairs (layer 2, above the cut) in the east lane south of D1, coinciding after wall registration (<= 0.3 mm) with MS1-U fronts / faces on the 1F plan; same 0.300 rhythm as the 4 D1 fronts, so the lane reads as one 11-step flight",
+     "edges_repeated": [
+      "ST01-MS1U-N05",
+      "ST01-MS1U-N06",
+      "ST01-MS1U-N07",
+      "ST01-MS1U-N08",
+      "ST01-MS1U-N09",
+      "ST01-MS1U-N10",
+      "ST01-MS1U-N11"
+     ],
+     "pieces": 7
+    },
+    "R2 STOREY_ESTIMATE": {
+     "drawing": "printed levels +0.30 / +1.00 / +5.50 / +9.70 (handles in T607_DRAWN levels_printed); no edge exists for these pieces",
+     "pieces_by_storey": {
+      "1F->2F": 3,
+      "D1 lobby": 1,
+      "GF->1F": 3
+     },
+     "riser_mm": [
+      "150.0",
+      "155.0"
+     ]
+    }
+   },
+   "nr": 7,
+   "verdict": "ENGINE_RIGHT",
+   "why": "2 exact reproduction(s) (SECOND_READING_SET, STOREY_ESTIMATE), none physical; the extra pieces are not built under any reading; the reference's own mechanism is named, never chosen (R-T434-1)"
+  }
+ ],
+ "edges_per_pricing_line": {
+  "B7-05:ST01-D1-N04": 1,
+  "B7-05:ST01-MS1T-N05": 1,
+  "B7-05:ST01-MS1U-N12": 1,
+  "B7-05:ST01-MS2L-N12": 1,
+  "B7-05:ST01-MS2TR-N01": 1,
+  "B7-05:ST01-MS2U-N12": 1,
+  "L-0aa47300a16de572c967": 11,
+  "L-23651ecfef77992ec8d4": 11,
+  "L-60fc97c4306696c74c38": 11,
+  "L-d4d764ae7bb07b474b6f": 9,
+  "L-e085c168dee5fb19a7fb": 5,
+  "L-f20f8544a42807c0cfcf": 3
+ },
+ "governing": {
+  "edges": 56,
+  "risers_by_storey": {
+   "1F->2F": 25,
+   "D1 lobby": 4,
+   "GF->1F": 27
+  },
+  "source": "section A-A (Q-46 A), T-434 / T-598 MERGED",
+  "total": 56
+ },
+ "his": {
+  "ST-01": {
+   "cell": "MRB.B23 x MRB.C23",
+   "nr": "63",
+   "piece_m": "1.2"
+  },
+  "ST-01 side pieces": {
+   "cell": "MRB.B26",
+   "nr": "63"
+  },
+  "ST-02": {
+   "cell": "MRB.B30 x MRB.C30",
+   "nr": "28",
+   "piece_m": "1.2"
+  },
+  "ST-03": {
+   "cell": "MRB.B16 x MRB.C16",
+   "nr": "5",
+   "piece_m": "2.8"
+  }
+ },
+ "pins": {
+  "research/agents_t412/FLIGHT_TABLE_T412.csv": "20703ee293f0b39c",
+  "research/agents_t412/NOSING_TABLE_T412.csv": "9da81b33ec1b5f40",
+  "research/agents_t607/T607_DRAWN.json": "0906198e74db2cde",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json": "752c9f4e0c4546d0"
+ },
+ "released": "NOTHING RELEASED; no candidate, engine, rule or registry file changed (research ledger)",
+ "reproductions": {
+  "admissible": 1,
+  "extra": 7,
+  "second_reading_sets": [
+   {
+    "admissible": false,
+    "mechanism": "SECOND_READING_SET",
+    "parts": {
+     "1F fan below the cut (= MS1-T radials, + landing edge)": "+3 SECOND_READING",
+     "GF east lane, 7 pairs above the cut (= MS1-U N05..N11)": "+7 SECOND_READING",
+     "GF turn as the arch plans draw it (4 risers; T-434 REJECTED)": "-1 REJECTED_READING",
+     "floor edges MS1-U / MS2-U left out (on no plan; T-598 governed by A-A)": "-2 REJECTED_READING"
+    },
+    "physical": false
+   },
+   {
+    "admissible": false,
+    "mechanism": "SECOND_READING_SET",
+    "parts": {
+     "GF east lane, 7 pairs above the cut (= MS1-U N05..N11)": "+7 SECOND_READING",
+     "GF straight run as ST p.4 draws it (12 + 4; T-434 REJECTED)": "+1 REJECTED_READING",
+     "GF turn as the arch plans draw it (4 risers; T-434 REJECTED)": "-1 REJECTED_READING",
+     "Q-ST-11 2F diagonal riser (arch 2F1F / 2F20 + ST p.5 648)": "+1 PHYSICAL_OPEN",
+     "floor edges MS1-U / MS2-U left out (on no plan; T-598 governed by A-A)": "-1 REJECTED_READING"
+    },
+    "physical": true
+   },
+   {
+    "admissible": false,
+    "mechanism": "SECOND_READING_SET",
+    "parts": {
+     "GF east lane, 7 pairs above the cut (= MS1-U N05..N11)": "+7 SECOND_READING",
+     "GF straight run as ST p.4 draws it (12 + 4; T-434 REJECTED)": "+1 REJECTED_READING",
+     "GF turn as the arch plans draw it (4 risers; T-434 REJECTED)": "-1 REJECTED_READING"
+    },
+    "physical": false
+   },
+   {
+    "admissible": false,
+    "mechanism": "SECOND_READING_SET",
+    "parts": {
+     "GF east lane, 7 pairs above the cut (= MS1-U N05..N11)": "+7 SECOND_READING",
+     "GF straight run as ST p.4 draws it (12 + 4; T-434 REJECTED)": "+1 REJECTED_READING",
+     "Q-ST-11 2F diagonal riser (arch 2F1F / 2F20 + ST p.5 648)": "+1 PHYSICAL_OPEN",
+     "floor edges MS1-U / MS2-U left out (on no plan; T-598 governed by A-A)": "-2 REJECTED_READING"
+    },
+    "physical": true
+   },
+   {
+    "admissible": false,
+    "mechanism": "SECOND_READING_SET",
+    "parts": {
+     "GF east lane, 7 pairs above the cut (= MS1-U N05..N11)": "+7 SECOND_READING",
+     "GF straight run as ST p.4 draws it (12 + 4; T-434 REJECTED)": "+1 REJECTED_READING",
+     "floor edges MS1-U / MS2-U left out (on no plan; T-598 governed by A-A)": "-1 REJECTED_READING"
+    },
+    "physical": false
+   },
+   {
+    "admissible": false,
+    "mechanism": "SECOND_READING_SET",
+    "parts": {
+     "GF east lane, 7 pairs above the cut (= MS1-U N05..N11)": "+7 SECOND_READING",
+     "GF turn as the arch plans draw it (4 risers; T-434 REJECTED)": "-1 REJECTED_READING",
+     "Q-ST-11 2F diagonal riser (arch 2F1F / 2F20 + ST p.5 648)": "+1 PHYSICAL_OPEN"
+    },
+    "physical": true
+   },
+   {
+    "admissible": false,
+    "mechanism": "SECOND_READING_SET",
+    "parts": {
+     "GF east lane, 7 pairs above the cut (= MS1-U N05..N11)": "+7 SECOND_READING",
+     "Q-ST-11 2F diagonal riser (arch 2F1F / 2F20 + ST p.5 648)": "+1 PHYSICAL_OPEN",
+     "floor edges MS1-U / MS2-U left out (on no plan; T-598 governed by A-A)": "-1 REJECTED_READING"
+    },
+    "physical": true
+   },
+   {
+    "admissible": true,
+    "mechanism": "SECOND_READING_SET",
+    "parts": {
+     "GF east lane, 7 pairs above the cut (= MS1-U N05..N11)": "+7 SECOND_READING"
+    },
+    "physical": false
+   }
+  ],
+  "storey_estimate": [
+   {
+    "admissible": true,
+    "mechanism": "STOREY_ESTIMATE",
+    "per_storey": [
+     [
+      "D1 lobby",
+      5
+     ],
+     [
+      "GF->1F",
+      30
+     ],
+     [
+      "1F->2F",
+      28
+     ]
+    ],
+    "physical": false,
+    "riser_mm": [
+     "150.0",
+     "155.0"
+    ]
+   }
+  ],
+  "storey_estimate_on_his_other_stairs": {
+   "ST-02 (+1.00 -> +5.50, drawn 28)": [
+    {
+     "riser_mm": [
+      "161.0",
+      "166.5"
+     ]
+    }
+   ],
+   "ST-03 E1 (+0.15 -> +1.00, drawn 5)": [
+    {
+     "riser_mm": [
+      "170.0",
+      "200.0"
+     ]
+    }
+   ]
+  }
+ },
+ "rule": "R-T607-1",
+ "schema": "T607_SHARED_RESIDUAL_V1",
+ "shared": {
+  "also_feeds": "his MRB.B26 side pieces 63 = the same count (T-574/skirting-pieces ST-01 row, class RULE_DIFFERENCE 63 whole, UNIT): its count check text '52 .. 54 risers' (T-084) is superseded by the governing 56; the 7 there is C-T607-1, never a third residual",
+  "cause_id": "C-T607-1",
+  "his_cell": "MRB.B23 x MRB.C23",
+  "per_line": {
+   "T-584/stair-steps-lm": [
+    "8.4",
+    "lm"
+   ],
+   "T-584/stair-steps-nr": [
+    "7",
+    "nr"
+   ],
+   "T-598/nosing@V9 lm": [
+    "8.4",
+    "lm"
+   ],
+   "T-598/nosing@V9 nr": [
+    "7",
+    "nr"
+   ]
+  },
+  "refused": "summing C-T607-1 over the lines it feeds (16.8 lm / 14 nr)",
+  "total_once": [
+   7,
+   "8.4"
+  ]
+ },
+ "shared_edge_table": [
+  {
+   "claims": 1,
+   "edge": "ST01-D1-N01",
+   "family": "STEP",
+   "flight": "D1",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-f20f8544a42807c0cfcf",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-D1-N02",
+   "family": "STEP",
+   "flight": "D1",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-f20f8544a42807c0cfcf",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-D1-N03",
+   "family": "STEP",
+   "flight": "D1",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-f20f8544a42807c0cfcf",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-D1-N04",
+   "family": "NOSING",
+   "flight": "D1",
+   "kind": "FLOOR_EDGE",
+   "lm": "1.150000",
+   "priced_by": "B7-05:ST01-D1-N04",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1L-N01",
+   "family": "STEP",
+   "flight": "MS1-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-d4d764ae7bb07b474b6f",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1L-N02",
+   "family": "STEP",
+   "flight": "MS1-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-d4d764ae7bb07b474b6f",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1L-N03",
+   "family": "STEP",
+   "flight": "MS1-L",
+   "kind": "TREAD",
+   "lm": "1.100000",
+   "priced_by": "L-d4d764ae7bb07b474b6f",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1L-N04",
+   "family": "STEP",
+   "flight": "MS1-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-d4d764ae7bb07b474b6f",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1L-N05",
+   "family": "STEP",
+   "flight": "MS1-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-d4d764ae7bb07b474b6f",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1L-N06",
+   "family": "STEP",
+   "flight": "MS1-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-d4d764ae7bb07b474b6f",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1L-N07",
+   "family": "STEP",
+   "flight": "MS1-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-d4d764ae7bb07b474b6f",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1L-N08",
+   "family": "STEP",
+   "flight": "MS1-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-d4d764ae7bb07b474b6f",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1L-N09",
+   "family": "STEP",
+   "flight": "MS1-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-d4d764ae7bb07b474b6f",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1L-N10",
+   "family": "STEP",
+   "flight": "MS1-L",
+   "kind": "WINDER",
+   "lm": "1.150000",
+   "priced_by": "L-e085c168dee5fb19a7fb",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1T-N01",
+   "family": "STEP",
+   "flight": "MS1-T",
+   "kind": "WINDER",
+   "lm": null,
+   "priced_by": "L-e085c168dee5fb19a7fb",
+   "status": "HELD"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1T-N02",
+   "family": "STEP",
+   "flight": "MS1-T",
+   "kind": "WINDER",
+   "lm": null,
+   "priced_by": "L-e085c168dee5fb19a7fb",
+   "status": "HELD"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1T-N03",
+   "family": "STEP",
+   "flight": "MS1-T",
+   "kind": "WINDER",
+   "lm": null,
+   "priced_by": "L-e085c168dee5fb19a7fb",
+   "status": "HELD"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1T-N04",
+   "family": "STEP",
+   "flight": "MS1-T",
+   "kind": "WINDER",
+   "lm": null,
+   "priced_by": "L-e085c168dee5fb19a7fb",
+   "status": "HELD"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1T-N05",
+   "family": "NOSING",
+   "flight": "MS1-T",
+   "kind": "LANDING_EDGE",
+   "lm": null,
+   "priced_by": "B7-05:ST01-MS1T-N05",
+   "status": "HELD"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N01",
+   "family": "STEP",
+   "flight": "MS1-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-0aa47300a16de572c967",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N02",
+   "family": "STEP",
+   "flight": "MS1-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-0aa47300a16de572c967",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N03",
+   "family": "STEP",
+   "flight": "MS1-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-0aa47300a16de572c967",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N04",
+   "family": "STEP",
+   "flight": "MS1-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-0aa47300a16de572c967",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N05",
+   "family": "STEP",
+   "flight": "MS1-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-0aa47300a16de572c967",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N06",
+   "family": "STEP",
+   "flight": "MS1-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-0aa47300a16de572c967",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N07",
+   "family": "STEP",
+   "flight": "MS1-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-0aa47300a16de572c967",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N08",
+   "family": "STEP",
+   "flight": "MS1-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-0aa47300a16de572c967",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N09",
+   "family": "STEP",
+   "flight": "MS1-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-0aa47300a16de572c967",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N10",
+   "family": "STEP",
+   "flight": "MS1-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-0aa47300a16de572c967",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N11",
+   "family": "STEP",
+   "flight": "MS1-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-0aa47300a16de572c967",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS1U-N12",
+   "family": "NOSING",
+   "flight": "MS1-U",
+   "kind": "FLOOR_EDGE",
+   "lm": null,
+   "priced_by": "B7-05:ST01-MS1U-N12",
+   "status": "HELD"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N01",
+   "family": "STEP",
+   "flight": "MS2-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-23651ecfef77992ec8d4",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N02",
+   "family": "STEP",
+   "flight": "MS2-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-23651ecfef77992ec8d4",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N03",
+   "family": "STEP",
+   "flight": "MS2-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-23651ecfef77992ec8d4",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N04",
+   "family": "STEP",
+   "flight": "MS2-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-23651ecfef77992ec8d4",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N05",
+   "family": "STEP",
+   "flight": "MS2-L",
+   "kind": "TREAD",
+   "lm": "1.100000",
+   "priced_by": "L-23651ecfef77992ec8d4",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N06",
+   "family": "STEP",
+   "flight": "MS2-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-23651ecfef77992ec8d4",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N07",
+   "family": "STEP",
+   "flight": "MS2-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-23651ecfef77992ec8d4",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N08",
+   "family": "STEP",
+   "flight": "MS2-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-23651ecfef77992ec8d4",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N09",
+   "family": "STEP",
+   "flight": "MS2-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-23651ecfef77992ec8d4",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N10",
+   "family": "STEP",
+   "flight": "MS2-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-23651ecfef77992ec8d4",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N11",
+   "family": "STEP",
+   "flight": "MS2-L",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-23651ecfef77992ec8d4",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2L-N12",
+   "family": "NOSING",
+   "flight": "MS2-L",
+   "kind": "LANDING_EDGE",
+   "lm": "1.150000",
+   "priced_by": "B7-05:ST01-MS2L-N12",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2TR-N01",
+   "family": "NOSING",
+   "flight": "MS2-TR",
+   "kind": "LANDING_EDGE",
+   "lm": null,
+   "priced_by": "B7-05:ST01-MS2TR-N01",
+   "status": "HELD"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N01",
+   "family": "STEP",
+   "flight": "MS2-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-60fc97c4306696c74c38",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N02",
+   "family": "STEP",
+   "flight": "MS2-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-60fc97c4306696c74c38",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N03",
+   "family": "STEP",
+   "flight": "MS2-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-60fc97c4306696c74c38",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N04",
+   "family": "STEP",
+   "flight": "MS2-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-60fc97c4306696c74c38",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N05",
+   "family": "STEP",
+   "flight": "MS2-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-60fc97c4306696c74c38",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N06",
+   "family": "STEP",
+   "flight": "MS2-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-60fc97c4306696c74c38",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N07",
+   "family": "STEP",
+   "flight": "MS2-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-60fc97c4306696c74c38",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N08",
+   "family": "STEP",
+   "flight": "MS2-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-60fc97c4306696c74c38",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N09",
+   "family": "STEP",
+   "flight": "MS2-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-60fc97c4306696c74c38",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N10",
+   "family": "STEP",
+   "flight": "MS2-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-60fc97c4306696c74c38",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N11",
+   "family": "STEP",
+   "flight": "MS2-U",
+   "kind": "TREAD",
+   "lm": "1.150000",
+   "priced_by": "L-60fc97c4306696c74c38",
+   "status": "VALUED"
+  },
+  {
+   "claims": 1,
+   "edge": "ST01-MS2U-N12",
+   "family": "NOSING",
+   "flight": "MS2-U",
+   "kind": "FLOOR_EDGE",
+   "lm": null,
+   "priced_by": "B7-05:ST01-MS2U-N12",
+   "status": "HELD"
+  }
+ ],
+ "sign": "his - ours",
+ "structural_second_drawing": {
+  "ST_P4": {
+   "closing_face": 1,
+   "east_lane_MS1U": 12,
+   "turn_radials": 3,
+   "west_lane_MS1L": 12
+  },
+  "ST_P5": {
+   "closing_face": 1,
+   "diagonal_face": 1,
+   "east_lane_MS2U": 11,
+   "west_lane_MS2L": 12
+  }
+ },
+ "sweep": {
+  "classes": {
+   "CENSUS": 104,
+   "DUPLICATE": 2,
+   "NAMED_OPEN": 2,
+   "SECOND_READING": 45
+  },
+  "registration": {
+   "1F->2F": {
+    "coincident": 68,
+    "runner_up_votes": 36,
+    "votes": 134,
+    "wall_end_points": 158
+   },
+   "GF->1F": {
+    "coincident": 62,
+    "runner_up_votes": 40,
+    "votes": 128,
+    "wall_end_points": 188
+   }
+  },
+  "second_reading_groups": {
+   "1F:MS1-T": [
+    "ST01-MS1T-N01",
+    "ST01-MS1T-N02",
+    "ST01-MS1T-N03",
+    "ST01-MS1T-N05"
+   ],
+   "1F:MS2-TR": [
+    "ST01-MS2TR-N01"
+   ],
+   "2F:MS2-L": [
+    "ST01-MS2L-N01",
+    "ST01-MS2L-N02",
+    "ST01-MS2L-N03",
+    "ST01-MS2L-N04",
+    "ST01-MS2L-N05",
+    "ST01-MS2L-N06",
+    "ST01-MS2L-N07",
+    "ST01-MS2L-N08",
+    "ST01-MS2L-N09",
+    "ST01-MS2L-N10",
+    "ST01-MS2L-N11",
+    "ST01-MS2L-N12"
+   ],
+   "GF:MS1-U": [
+    "ST01-MS1U-N05",
+    "ST01-MS1U-N06",
+    "ST01-MS1U-N07",
+    "ST01-MS1U-N08",
+    "ST01-MS1U-N09",
+    "ST01-MS1U-N10",
+    "ST01-MS1U-N11"
+   ]
+  }
+ },
+ "task": "T-607"
+}

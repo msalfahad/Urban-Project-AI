@@ -1,0 +1,1437 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index 25a8b406, 4,994 lines, + the 5 T-507 roof WP lines = 4,999)",
+ "candidate_files_touched": 0,
+ "edge_census": {
+  "after_v9": {
+   "by_stair": {
+    "ST-01": {
+     "edges": 56,
+     "held": 8,
+     "nosing_line": 6,
+     "step_basis": 50
+    },
+    "ST-02": {
+     "edges": 28,
+     "held": 12,
+     "nosing_line": 2,
+     "step_basis": 26
+    },
+    "ST-03": {
+     "edges": 5,
+     "held": 0,
+     "nosing_line": 1,
+     "step_basis": 4
+    }
+   },
+   "doubles": {},
+   "edges": 89,
+   "orphans": []
+  },
+  "before_v9": {
+   "by_stair": {
+    "ST-01": {
+     "edges": 56,
+     "held": 8,
+     "nosing_line": 6,
+     "step_basis": 50
+    },
+    "ST-02": {
+     "edges": 28,
+     "held": 12,
+     "nosing_line": 2,
+     "step_basis": 26
+    },
+    "ST-03": {
+     "edges": 5,
+     "held": 0,
+     "nosing_line": 1,
+     "step_basis": 4
+    }
+   },
+   "doubles": {
+    "ST02-RSA-N01": [
+     "L-f145a2d130cba9450a24",
+     "L-57202d2823270429cd80"
+    ],
+    "ST02-RSA-N02": [
+     "L-f145a2d130cba9450a24",
+     "L-57202d2823270429cd80"
+    ],
+    "ST02-RSA-N03": [
+     "L-f145a2d130cba9450a24",
+     "L-57202d2823270429cd80"
+    ],
+    "ST02-RSA-N04": [
+     "L-f145a2d130cba9450a24",
+     "L-57202d2823270429cd80"
+    ],
+    "ST02-RSC-N01": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSC-N02": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSC-N03": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSC-N04": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSC-N05": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSC-N06": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSC-N07": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSC-N08": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSC-N09": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSC-N10": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSC-N11": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSC-N12": [
+     "L-95b9555dd144951b071e",
+     "L-3a3aabb15b187e33e3da"
+    ],
+    "ST02-RSS-N01": [
+     "L-59354cfe423b026db61a",
+     "L-c955f6b3a3abca48d562"
+    ],
+    "ST02-RSS-N02": [
+     "L-59354cfe423b026db61a",
+     "L-c955f6b3a3abca48d562"
+    ],
+    "ST02-RSS-N03": [
+     "L-59354cfe423b026db61a",
+     "L-c955f6b3a3abca48d562"
+    ],
+    "ST02-RSS-N04": [
+     "L-59354cfe423b026db61a",
+     "L-c955f6b3a3abca48d562"
+    ],
+    "ST02-RSS-N05": [
+     "L-59354cfe423b026db61a",
+     "L-c955f6b3a3abca48d562"
+    ],
+    "ST02-RSS-N06": [
+     "L-59354cfe423b026db61a",
+     "L-c955f6b3a3abca48d562"
+    ],
+    "ST02-RSS-N07": [
+     "L-59354cfe423b026db61a",
+     "L-c955f6b3a3abca48d562"
+    ],
+    "ST02-RSS-N08": [
+     "L-59354cfe423b026db61a",
+     "L-c955f6b3a3abca48d562"
+    ],
+    "ST02-RSS-N09": [
+     "L-59354cfe423b026db61a",
+     "L-c955f6b3a3abca48d562"
+    ],
+    "ST02-RSS-N10": [
+     "L-59354cfe423b026db61a",
+     "L-c955f6b3a3abca48d562"
+    ]
+   },
+   "edges": 89,
+   "orphans": [
+    "ST03-E1-N01",
+    "ST03-E1-N02",
+    "ST03-E1-N03",
+    "ST03-E1-N04"
+   ]
+  },
+  "rule": "R-T588-1 (d)",
+  "t578_one_source": {
+   "same": true,
+   "t412_confirmed_lm": "87.350000",
+   "t412_confirmed_n": 69,
+   "t412_held_n": 20,
+   "t578_held_n": 20,
+   "t578_ours_lm": "87.350000"
+  }
+ },
+ "inputs": {
+  "research/agents_t412/NOSING_TABLE_T412.csv": "9da81b33ec1b5f4093ccd191223acede3e85ac58b599337b94a28604d83ea34c",
+  "research/agents_t569/WIRING_MANIFEST_V8.json": "c71ecdc0eb11cba4e593ce31e3ec2d3bbad89d55fbc86a596f5b5890a474cf6b",
+  "research/agents_t578/out/T578_RAIL_NOSING_RECONCILE.json": "75172951bf95cfdd8a857a42c43521daa088a6a210cf95483d18c3fca3432158",
+  "research/agents_t580/out/OVERLAY_T580.json": "ef8f6ca2f163050ffab103008b6b4ec0a1c95b3961d69e974e30755b6e80fe7e",
+  "research/agents_t580/overlay.py": "1d181d11b40dba6dacb516085b007ce7d2b1003b167c1224d39eeccd03a951a7",
+  "research/agents_t580/t580_alsenan.py": "7ffa28c9b17ed2d4ff1ac68cc93ebdd648cfd9a7076f6468043ee8436522e334",
+  "research/agents_t583/out/T583_DOME_LIFT_COMPONENTS.json": "64d827202e4e87fbd457a4a6b9f07664656b07f7db820458c1d4c9d3f5d077aa",
+  "research/agents_t584/out/T584_STEPS.json": "242b8e0d3fdbf271b08b0f2bf1569ce21193f9b560603ee48ccdc8bf018a68b9"
+ },
+ "not_in_v9": {
+  "B7-05 nosing lines": "T-424 (QUEUED) adds them from T-412; V9 adds none (T-578 reads the same census, one source)",
+  "FR-T584-2": "external door steps: the line pays ONE length (F-C-T584-1); enters V10 after T-592"
+ },
+ "overlay": {
+  "conflicts": [
+   {
+    "family": "FIN.STAIR",
+    "fix_row": "none: two elements by the coverage census, no quantity shared",
+    "host": "1F-R78C367:flight 5",
+    "lines": [
+     "L-c6724654ee4ccdb0c508",
+     "L-e085c168dee5fb19a7fb"
+    ],
+    "ruling": "FIN.STAIR.FLIGHT (B7-01: sloping pitch length nosing to nosing, engine/source/arch_measure.py:930) and FIN.STAIR.STEP_LM (B7-06: commercial step per tread, UP-STAIR-008) are two elements of one flight (engine/source/coverage_census.py B7-01 vs B7-06); the same pair stands on every candidate flight; V9 writes only the step line",
+    "sources": [
+     "CANDIDATE",
+     "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+    ],
+    "status": "EXPLAINED",
+    "unit": "lm"
+   },
+   {
+    "family": "FIN.STAIR",
+    "fix_row": "none: two elements by the coverage census, no quantity shared",
+    "host": "GF-RC99C2A:flight 1",
+    "lines": [
+     "L-30009d8eb01996ec6399",
+     "L-95b9555dd144951b071e"
+    ],
+    "ruling": "FIN.STAIR.FLIGHT (B7-01: sloping pitch length nosing to nosing, engine/source/arch_measure.py:930) and FIN.STAIR.STEP_LM (B7-06: commercial step per tread, UP-STAIR-008) are two elements of one flight (engine/source/coverage_census.py B7-01 vs B7-06); the same pair stands on every candidate flight; V9 writes only the step line",
+    "sources": [
+     "CANDIDATE",
+     "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+    ],
+    "status": "EXPLAINED",
+    "unit": "lm"
+   },
+   {
+    "family": "MAS.MORTAR",
+    "fix_row": "T-498 step 6 (perimeter mortar) carries both lines apart",
+    "host": "1F-WALLS:walls t=0.20",
+    "lines": [
+     "L-298e323d027a4723652d",
+     "L-e74c15038f1e32dbefe0",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-10dd62f66ad05488e63b"
+    ],
+    "ruling": "B9-04 perimeter joint mortar is its own producer key beside the panel bed-joint mortar, never inside it (R-T520-1 / T-526 / T-532; V2 stream_S.perimeter_lines 'own key')",
+    "sources": [
+     "T-498",
+     "T-498:perimeter"
+    ],
+    "status": "EXPLAINED",
+    "unit": "m3"
+   },
+   {
+    "family": "MAS.MORTAR",
+    "fix_row": "T-498 step 6 (perimeter mortar) carries both lines apart",
+    "host": "GF-WALLS:walls t=0.20",
+    "lines": [
+     "L-1bacf0e3cec97219a455",
+     "L-a6e9b9d47f2b81204b1e",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-1c53fadb2f92d1f36d4e"
+    ],
+    "ruling": "B9-04 perimeter joint mortar is its own producer key beside the panel bed-joint mortar, never inside it (R-T520-1 / T-526 / T-532; V2 stream_S.perimeter_lines 'own key')",
+    "sources": [
+     "T-498",
+     "T-498:perimeter"
+    ],
+    "status": "EXPLAINED",
+    "unit": "m3"
+   }
+  ],
+  "flagged_rows": [
+   {
+    "beside": {
+     "conditional_range_beside_kg": [
+      63.82125,
+      71.62425
+     ]
+    },
+    "index": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET",
+    "line_id": "L-4ccc5dc26bd2472b03ad",
+    "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+    "package": "T-498",
+    "row": "HOST_FACES_V5",
+    "status": "NO_BEFORE"
+   }
+  ],
+  "lines": {
+   "after_v8": 5123,
+   "after_v9": 5124,
+   "base": 4999
+  },
+  "order": [
+   {
+    "ops": 103,
+    "package": "T-498",
+    "status": {
+     "APPLIED": 102,
+     "NO_BEFORE": 1
+    }
+   },
+   {
+    "ops": 18,
+    "package": "T-423 r2",
+    "status": {
+     "APPLIED": 18
+    }
+   },
+   {
+    "ops": 22,
+    "package": "T-563",
+    "status": {
+     "APPLIED": 22
+    }
+   },
+   {
+    "ops": 0,
+    "package": "T-513",
+    "status": {}
+   },
+   {
+    "ops": 4,
+    "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 30,
+    "package": "RETURN_PAINT_FACES",
+    "status": {
+     "APPLIED": 30
+    }
+   },
+   {
+    "ops": 1,
+    "package": "PIER_RETURNS_EXT (with T-314)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "W17_Q76A",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 6,
+    "package": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 11,
+    "package": "F package (no board row)",
+    "status": {
+     "APPLIED": 11
+    }
+   },
+   {
+    "ops": 15,
+    "package": "RAILS_GUARDS (T-578)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 15,
+    "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+    "status": {
+     "APPLIED": 15
+    }
+   }
+  ],
+  "other_lines_changed_vs_v8_overlay": [],
+  "stale": 0,
+  "two_package_lines": 0,
+  "unexplained_conflicts": 0,
+  "v9_vs_v8_totals": {
+   "FIN.RAILING|lm": {
+    "after": {
+     "excluded_n": 14,
+     "held_blank_n": 2,
+     "held_high": "1.875",
+     "held_high_open_n": 2,
+     "held_low": "1.118196",
+     "held_n": 5,
+     "released": "33.319174",
+     "released_n": 3
+    },
+    "before": {
+     "excluded_n": 14,
+     "held_blank_n": 5,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 5,
+     "released": "33.319174",
+     "released_n": 3
+    }
+   },
+   "FIN.STAIR.STEP_LM|lm": {
+    "after": {
+     "excluded_n": 5,
+     "held_blank_n": 0,
+     "held_high": "13.85",
+     "held_high_open_n": 1,
+     "held_low": "17.94005",
+     "held_n": 2,
+     "released": "79.05",
+     "released_n": 8
+    },
+    "before": {
+     "excluded_n": 2,
+     "held_blank_n": 2,
+     "held_high": "29.8964",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 5,
+     "released": "67.85",
+     "released_n": 7
+    }
+   },
+   "MET.RAILING.GUARD|lm": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 1,
+     "held_high": "7.5",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 2,
+     "released": "21.55",
+     "released_n": 4
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 2,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 2,
+     "released": "21.55",
+     "released_n": 4
+    }
+   },
+   "STR.REBAR|kg": {
+    "after": {
+     "excluded_n": 577,
+     "held_blank_n": 801,
+     "held_high": "19646.877938",
+     "held_high_open_n": 6,
+     "held_low": "15109.095712",
+     "held_n": 1701,
+     "released": "9375.30576",
+     "released_n": 374
+    },
+    "before": {
+     "excluded_n": 577,
+     "held_blank_n": 805,
+     "held_high": "19646.877938",
+     "held_high_open_n": 2,
+     "held_low": "14341.312712",
+     "held_n": 1701,
+     "released": "9375.30576",
+     "released_n": 374
+    }
+   }
+  }
+ },
+ "released_quantities_changed": 0,
+ "rows": [
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "concrete_line": "L-d5401fa8986900c66c37",
+    "missing": "no structural drawing of the third dome (unchanged from T-575)"
+   },
+   "class_after": "HELD",
+   "class_before": null,
+   "element_id": "DG5:DOME-3:SHELL:REBAR",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-583 VERIFIER 2026-11-07T04:05Z (e): shell / ring / lift-wall lows re-derived AGREE; lift-wall A and B lows VERIFIED, highs bounded, h HELD: PARTIALLY VERIFIED; F-C-T583-1 east-ring low strict, tighter reading +0.021771 t open"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:DG5:DOME-3:SHELL:REBAR",
+   "op_id": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:DG5:DOME-3:SHELL:REBAR",
+   "package": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "row": "T-583",
+   "source": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 122.518,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "F-C-T583-1": "strict low kept; the per-face reading of the side-bar label would add 21.771 kg",
+    "bounded_part_high_kg": 155.966,
+    "concrete_line": "L-ab37afa17f2ac5b0efd1",
+    "high_open_by_name": [
+     "RING_LINKS[DETAIL]",
+     "RING_LINK_HOOKS[DETAIL]",
+     "RING_MAIN_LAPS_AND_ANCHORAGE[DETAIL]",
+     "RING_SIDE[DETAIL]"
+    ]
+   },
+   "class_after": "AT_LEAST",
+   "class_before": null,
+   "element_id": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-583 VERIFIER 2026-11-07T04:05Z (e): shell / ring / lift-wall lows re-derived AGREE; lift-wall A and B lows VERIFIED, highs bounded, h HELD: PARTIALLY VERIFIED; F-C-T583-1 east-ring low strict, tighter reading +0.021771 t open"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+   "op_id": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+   "package": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "row": "T-583",
+   "source": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 63.897,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "bounded_part_high_kg": 158.208,
+    "concrete_line": "L-48b7d139bff681199543",
+    "high_open_by_name": [
+     "RING_LINKS[DETAIL]",
+     "RING_LINK_HOOKS[B4]",
+     "RING_LINK_HOOKS[DETAIL]",
+     "RING_MAIN_LAPS_AND_ANCHORAGE[B4]",
+     "RING_MAIN_LAPS_AND_ANCHORAGE[DETAIL]",
+     "RING_SIDE[DETAIL]"
+    ]
+   },
+   "class_after": "AT_LEAST",
+   "class_before": null,
+   "element_id": "HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-583 VERIFIER 2026-11-07T04:05Z (e): shell / ring / lift-wall lows re-derived AGREE; lift-wall A and B lows VERIFIED, highs bounded, h HELD: PARTIALLY VERIFIED; F-C-T583-1 east-ring low strict, tighter reading +0.021771 t open"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+   "op_id": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+   "package": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "row": "T-583",
+   "source": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 290.684,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "bounded_part_high_kg": 425.0,
+    "concrete_line": "L-8ea34765d16b54898140",
+    "high_open_by_name": [
+     "SHELL_ANCHORAGE_INTO_RING",
+     "SHELL_HOOP_LAPS"
+    ]
+   },
+   "class_after": "AT_LEAST",
+   "class_before": null,
+   "element_id": "HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-583 VERIFIER 2026-11-07T04:05Z (e): shell / ring / lift-wall lows re-derived AGREE; lift-wall A and B lows VERIFIED, highs bounded, h HELD: PARTIALLY VERIFIED; F-C-T583-1 east-ring low strict, tighter reading +0.021771 t open"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+   "op_id": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+   "package": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "row": "T-583",
+   "source": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 290.684,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "bounded_part_high_kg": 425.0,
+    "concrete_line": "L-fffa895ed96b9d6a682c",
+    "high_open_by_name": [
+     "SHELL_ANCHORAGE_INTO_RING",
+     "SHELL_HOOP_LAPS"
+    ]
+   },
+   "class_after": "AT_LEAST",
+   "class_before": null,
+   "element_id": "HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-583 VERIFIER 2026-11-07T04:05Z (e): shell / ring / lift-wall lows re-derived AGREE; lift-wall A and B lows VERIFIED, highs bounded, h HELD: PARTIALLY VERIFIED; F-C-T583-1 east-ring low strict, tighter reading +0.021771 t open"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+   "op_id": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+   "package": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "row": "T-583",
+   "source": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "concrete_line": "L-684fcad323adc0c8a267",
+    "kg(h) = A h + B": {
+     "A_kg_per_m": [
+      156.642,
+      212.859
+     ],
+     "B_kg": [
+      0.0,
+      123.221
+     ],
+     "h": "not printed (HELD)"
+    },
+    "missing": "pit depth / wall height h not printed on p.14: bars only as kg(h)"
+   },
+   "class_after": "HELD",
+   "class_before": null,
+   "element_id": "LIFT_PIT:WALLS:REBAR",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-583 VERIFIER 2026-11-07T04:05Z (e): shell / ring / lift-wall lows re-derived AGREE; lift-wall A and B lows VERIFIED, highs bounded, h HELD: PARTIALLY VERIFIED; F-C-T583-1 east-ring low strict, tighter reading +0.021771 t open"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:LIFT_PIT:WALLS:REBAR",
+   "op_id": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:LIFT_PIT:WALLS:REBAR",
+   "package": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "row": "T-583",
+   "source": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+   "unit": "kg"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 6.262
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD_ARCHIVE T-164 Checker verdict (f STATUS): RL-02 4.921 + RL-03 7.967 = 12.888 lm VERIFIED; RL-01 6.262, RL-05 16.324, RL-06 2.400, RL-08 1.042 DRAWING-CONFIRMED (not re-measured)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-b54ee211b5af50087b29",
+   "note": "roof / terrace guard measured by T-164 (no flight piece)",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 stated|L-b54ee211b5af50087b29",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 stated",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.921
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "VERIFIED",
+    "verdict_line": "BOARD_ARCHIVE T-164 Checker verdict (f STATUS): RL-02 4.921 + RL-03 7.967 = 12.888 lm VERIFIED; RL-01 6.262, RL-05 16.324, RL-06 2.400, RL-08 1.042 DRAWING-CONFIRMED (not re-measured)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-1ff5e79e1c11b3a04eed",
+   "note": "roof / terrace guard measured by T-164 (no flight piece)",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 stated|L-1ff5e79e1c11b3a04eed",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 stated",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 7.967
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "VERIFIED",
+    "verdict_line": "BOARD_ARCHIVE T-164 Checker verdict (f STATUS): RL-02 4.921 + RL-03 7.967 = 12.888 lm VERIFIED; RL-01 6.262, RL-05 16.324, RL-06 2.400, RL-08 1.042 DRAWING-CONFIRMED (not re-measured)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-b75c30fcd5e3b5607433",
+   "note": "roof / terrace guard measured by T-164 (no flight piece)",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 stated|L-b75c30fcd5e3b5607433",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 stated",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 7.5,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "RUN_LOG Verifier 2026-11-07T02:08Z: T-578 RL-07 15.953174 lm rise basis AGREE, his side not re-read, PARTIALLY VERIFIED (board T-578 MERGED f4409c96); T-587 verdict 05:54Z (f): RL-07 V, guards PV, RL-08 WP (WP = the cause attribution under decomposition A, not the line's length)"
+   },
+   "kind": "SET",
+   "line_id": "L-98aa5d0a6600631563cb",
+   "note": "GF roof strip sea edge: plan band 6.127 vs elevation 7.500 between piers; railing / glazing / parapet not established (T-164 / T-393): 0 .. the larger drawn extent",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 HELD bound|L-98aa5d0a6600631563cb",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 HELD bound",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 16.324
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD_ARCHIVE T-164 Checker verdict (f STATUS): RL-02 4.921 + RL-03 7.967 = 12.888 lm VERIFIED; RL-01 6.262, RL-05 16.324, RL-06 2.400, RL-08 1.042 DRAWING-CONFIRMED (not re-measured)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-62577112dc4c8cdb8640",
+   "note": "line rounding to 3 dp",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 stated|L-62577112dc4c8cdb8640",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 stated",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 2.4
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD_ARCHIVE T-164 Checker verdict (f STATUS): RL-02 4.921 + RL-03 7.967 = 12.888 lm VERIFIED; RL-01 6.262, RL-05 16.324, RL-06 2.400, RL-08 1.042 DRAWING-CONFIRMED (not re-measured)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-c9cd76a27a48bd353eea",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 stated|L-c9cd76a27a48bd353eea",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 stated",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 15.953174
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "VERIFIED",
+    "verdict_line": "RUN_LOG Verifier 2026-11-07T02:08Z: T-578 RL-07 15.953174 lm rise basis AGREE, his side not re-read, PARTIALLY VERIFIED (board T-578 MERGED f4409c96); T-587 verdict 05:54Z (f): RL-07 V, guards PV, RL-08 WP (WP = the cause attribution under decomposition A, not the line's length)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-ec87473cb7160d5f4ac2",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 stated|L-ec87473cb7160d5f4ac2",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 stated",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 0.856999,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "AT_LEAST",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "RUN_LOG Verifier 2026-11-07T02:08Z: T-578 RL-07 15.953174 lm rise basis AGREE, his side not re-read, PARTIALLY VERIFIED (board T-578 MERGED f4409c96); T-587 verdict 05:54Z (f): RL-07 V, guards PV, RL-08 WP (WP = the cause attribution under decomposition A, not the line's length)"
+   },
+   "kind": "SET",
+   "line_id": "L-be57e4fa144c4de18968",
+   "note": "rail drawn on both sides of the 5-winder turn (well band); profile over the 0.10 m well not drawn: at least the chord between its drawn ends, no upper bound",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 HELD bound|L-be57e4fa144c4de18968",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 HELD bound",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 0.261197,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "AT_LEAST",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "RUN_LOG Verifier 2026-11-07T02:08Z: T-578 RL-07 15.953174 lm rise basis AGREE, his side not re-read, PARTIALLY VERIFIED (board T-578 MERGED f4409c96); T-587 verdict 05:54Z (f): RL-07 V, guards PV, RL-08 WP (WP = the cause attribution under decomposition A, not the line's length)"
+   },
+   "kind": "SET",
+   "line_id": "L-1c899e8cc696d9c32490",
+   "note": "closing riser MS2-TR position against the turn not drawn: at least the chord",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 HELD bound|L-1c899e8cc696d9c32490",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 HELD bound",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.042
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD_ARCHIVE T-164 Checker verdict (f STATUS): RL-02 4.921 + RL-03 7.967 = 12.888 lm VERIFIED; RL-01 6.262, RL-05 16.324, RL-06 2.400, RL-08 1.042 DRAWING-CONFIRMED (not re-measured)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-7c65444302070a5f33e6",
+   "note": "line rounding to 3 dp",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 stated|L-7c65444302070a5f33e6",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 stated",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "RUN_LOG Verifier 2026-11-07T02:08Z: T-578 RL-07 15.953174 lm rise basis AGREE, his side not re-read, PARTIALLY VERIFIED (board T-578 MERGED f4409c96); T-587 verdict 05:54Z (f): RL-07 V, guards PV, RL-08 WP (WP = the cause attribution under decomposition A, not the line's length)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-665af3a256e864478b96",
+   "note": "no bound formed (0 .. open): stays HELD blank by name; ST-02 RS-C outer band: balustrade or string not established (designer RFI); band end differs between the plans (259.1 vs 270.4 deg), so no upper bound is formed",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 HELD by name|L-665af3a256e864478b96",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 HELD by name",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "RUN_LOG Verifier 2026-11-07T02:08Z: T-578 RL-07 15.953174 lm rise basis AGREE, his side not re-read, PARTIALLY VERIFIED (board T-578 MERGED f4409c96); T-587 verdict 05:54Z (f): RL-07 V, guards PV, RL-08 WP (WP = the cause attribution under decomposition A, not the line's length)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-78babf2c6da600cb800e",
+   "note": "no bound formed (0 .. open): stays HELD blank by name; street fence X railing: length not printed (never scaled), T-164",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 HELD by name|L-78babf2c6da600cb800e",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 HELD by name",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "RUN_LOG Verifier 2026-11-07T02:08Z: T-578 RL-07 15.953174 lm rise basis AGREE, his side not re-read, PARTIALLY VERIFIED (board T-578 MERGED f4409c96); T-587 verdict 05:54Z (f): RL-07 V, guards PV, RL-08 WP (WP = the cause attribution under decomposition A, not the line's length)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-ea254d77037e0fe64780",
+   "note": "no bound formed (0 .. open): stays HELD blank by name; ST-03 E1 entrance stair (0.85 m rise): no guard drawn on either side; extent not printed",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 HELD by name|L-ea254d77037e0fe64780",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 HELD by name",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "EXCLUDED",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "RUN_LOG Verifier 2026-11-07T02:08Z: T-578 RL-07 15.953174 lm rise basis AGREE, his side not re-read, PARTIALLY VERIFIED (board T-578 MERGED f4409c96); T-587 verdict 05:54Z (f): RL-07 V, guards PV, RL-08 WP (WP = the cause attribution under decomposition A, not the line's length)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-abd258e2201cef0b22d8",
+   "note": "UP-STAIR-013: no wall handrail drawn on any wall side of the 9 flights (T-476 scan)",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 stated|L-abd258e2201cef0b22d8",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 stated",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.875,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "RUN_LOG Verifier 2026-11-07T02:08Z: T-578 RL-07 15.953174 lm rise basis AGREE, his side not re-read, PARTIALLY VERIFIED (board T-578 MERGED f4409c96); T-587 verdict 05:54Z (f): RL-07 V, guards PV, RL-08 WP (WP = the cause attribution under decomposition A, not the line's length)"
+   },
+   "kind": "SET",
+   "line_id": "L-0129ba42e945a132bc36",
+   "note": "F-T476-1: 1.875 m (centreline plan) of layer-5 band beyond D1, no level change printed across it: rail or drafting edge UNKNOWN",
+   "op_id": "RAILS_GUARDS (T-578)|R-T578-1 HELD bound|L-0129ba42e945a132bc36",
+   "package": "RAILS_GUARDS (T-578)",
+   "row": "R-T578-1 HELD bound",
+   "source": "RAILS_GUARDS (T-578)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 11.2
+   },
+   "before": null,
+   "beside": {
+    "binds": [
+     "L-314c3ac6d45431b687c5",
+     "L-0afa7bd369ec489ebfc2"
+    ],
+    "fronts": [
+     "36E",
+     "36C",
+     "36A",
+     "30B"
+    ],
+    "material": "marble (OWNER_RULE_OUTDOOR_FLOORS)",
+    "not_a_step": [
+     "30A"
+    ],
+    "nr": 4
+   },
+   "class_after": "RELEASED",
+   "class_before": null,
+   "element_id": "GF-COURT#E1-STEPS",
+   "evidence": {
+    "status": "VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): E1 4 x 2.80 = 11.20 lm, nr 4, ENGINE_OMISSION CONFIRMED, VERIFIED; 30A landing nosing RULE_DIFFERENCE AGREED"
+   },
+   "item_code": "FIN.STAIR.STEP_LM",
+   "kind": "ADD",
+   "line_id": "NEW:FIN.STAIR.STEP_LM:GF-COURT#E1-STEPS",
+   "note": "NEW line 11.200 lm / 4 nr, DRAWING-CONFIRMED (4 fronts x 2.800, A06 2800), material marble (OWNER_RULE_OUTDOOR_FLOORS: outside stairs marble), bound to L-314c3ac6d45431b687c5 (tread) / L-0afa7bd369ec489ebfc2 (riser); 30A stays the landing edge (L-3dd82a576dce1beb4250, B7-05)",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-1|NEW:FIN.STAIR.STEP_LM:GF-COURT#E1-STEPS",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-1",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "unit": "lm"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 12.65
+   },
+   "beside": {
+    "flight": "MS1-U",
+    "nr": 11,
+    "stair": "ST-01"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-0aa47300a16de572c967",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-0aa47300a16de572c967",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "EXCLUDED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-1e88ac0d4ba0b4e8a950",
+   "note": "second reading of ST-01 MS2-L: stays EXCLUDED",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-1e88ac0d4ba0b4e8a950",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 12.65
+   },
+   "beside": {
+    "flight": "MS2-L",
+    "nr": 11,
+    "stair": "ST-01"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-23651ecfef77992ec8d4",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-23651ecfef77992ec8d4",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 13.7964,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-3a3aabb15b187e33e3da",
+   "note": "second reading of ST-02 RS-C (T-129 / T-429; T-584): the flight is owned by its own line; NOT_APPLICABLE_WITH_EVIDENCE, its HELD bound left the HELD sum",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-3a3aabb15b187e33e3da",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 4.6,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-57202d2823270429cd80",
+   "note": "second reading of ST-02 RS-A (T-129 / T-429; T-584): the flight is owned by its own line; NOT_APPLICABLE_WITH_EVIDENCE, its HELD bound left the HELD sum",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-57202d2823270429cd80",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 11.5
+   },
+   "beside": {
+    "flight": "RS-S",
+    "nr": 10,
+    "stair": "ST-02"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-59354cfe423b026db61a",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-59354cfe423b026db61a",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 12.65
+   },
+   "beside": {
+    "flight": "MS2-U",
+    "nr": 11,
+    "stair": "ST-01"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-60fc97c4306696c74c38",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-60fc97c4306696c74c38",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 13.85,
+    "held_low": 13.7964,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "flight": "RS-C",
+    "nr": 12,
+    "stair": "ST-02"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-95b9555dd144951b071e",
+   "note": "T-429 beside 13.7964; T-412 drawn radial fronts 13.85 (Q-50 A cond, RFI-S27)",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-95b9555dd144951b071e",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 11.5,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-c955f6b3a3abca48d562",
+   "note": "second reading of ST-02 RS-S (T-129 / T-429; T-584): the flight is owned by its own line; NOT_APPLICABLE_WITH_EVIDENCE, its HELD bound left the HELD sum",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-c955f6b3a3abca48d562",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 10.35
+   },
+   "beside": {
+    "flight": "MS1-L",
+    "nr": 9,
+    "stair": "ST-01"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-d4d764ae7bb07b474b6f",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-d4d764ae7bb07b474b6f",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 4.14365,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "flight": "MS1-T",
+    "nr": 5,
+    "stair": "ST-01"
+   },
+   "class_after": "AT_LEAST",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-e085c168dee5fb19a7fb",
+   "note": "T-429 / T-434: three drawn winder fronts 4.14365 beside, candidate reading 4.7815; governing count 5 winders (section A-A, Q-46 A), subdivision not drawn (C-ST-3)",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-e085c168dee5fb19a7fb",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.6
+   },
+   "beside": {
+    "flight": "RS-A",
+    "nr": 4,
+    "stair": "ST-02"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-f145a2d130cba9450a24",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-f145a2d130cba9450a24",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 3.45
+   },
+   "beside": {
+    "flight": "D1",
+    "nr": 3,
+    "stair": "ST-01"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-f20f8544a42807c0cfcf",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-f20f8544a42807c0cfcf",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "EXCLUDED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-584 VERIFIER 2026-11-07T04:05Z (e): ST-01 45 x 1.150 = 51.75, ST-02 14 x 1.150 = 16.10, causes re-summed; flight tread counts not re-measured (T-412 census): PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-fef9ec154deaec502498",
+   "note": "second reading of ST-02 RS-S: stays EXCLUDED",
+   "op_id": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)|FR-T584-3|L-fef9ec154deaec502498",
+   "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+   "row": "FR-T584-3",
+   "source": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+  }
+ ],
+ "rule": "R-T588-1",
+ "schema": "URBAN_T588_WIRING_MANIFEST_V9",
+ "supersedes": {
+  "V8 REBAR_OMISSION": "V9 REBAR_COMPONENTS (same 6 line ids, T-583 states)"
+ },
+ "task": "T-588"
+}

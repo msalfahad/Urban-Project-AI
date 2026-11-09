@@ -1,0 +1,1828 @@
+{
+ "family_lengths_mm": [
+  1150.0,
+  1258.652,
+  1626.346
+ ],
+ "levels_printed": {
+  "+0.30": [
+   "2449",
+   "401",
+   "403",
+   "405",
+   "4AC"
+  ],
+  "+1.00": [
+   "2885",
+   "40F",
+   "411",
+   "413",
+   "A74"
+  ],
+  "+5.50": [
+   "1251",
+   "2887",
+   "D16",
+   "D18",
+   "D1B",
+   "D1D"
+  ],
+  "+9.70": [
+   "134E",
+   "1350",
+   "1352"
+  ]
+ },
+ "plans": {
+  "1F": [
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N01",
+    "flight": "MS2-L",
+    "handle": "AC0",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N01",
+    "flight": "MS2-L",
+    "handle": "AC2",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N02",
+    "flight": "MS2-L",
+    "handle": "ABF",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N02",
+    "flight": "MS2-L",
+    "handle": "AC1",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N03",
+    "flight": "MS2-L",
+    "handle": "AB5",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N03",
+    "flight": "MS2-L",
+    "handle": "AB9",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N04",
+    "flight": "MS2-L",
+    "handle": "AB6",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N04",
+    "flight": "MS2-L",
+    "handle": "ABA",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N05",
+    "flight": "MS2-L",
+    "handle": "AB7",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N05",
+    "flight": "MS2-L",
+    "handle": "ABB",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N06",
+    "flight": "MS2-L",
+    "handle": "AB8",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N06",
+    "flight": "MS2-L",
+    "handle": "ABC",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N07",
+    "flight": "MS2-L",
+    "handle": "AAD",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N07",
+    "flight": "MS2-L",
+    "handle": "AB1",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N08",
+    "flight": "MS2-L",
+    "handle": "AAE",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N08",
+    "flight": "MS2-L",
+    "handle": "AB2",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N09",
+    "flight": "MS2-L",
+    "handle": "AB0",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N09",
+    "flight": "MS2-L",
+    "handle": "AB3",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N10",
+    "flight": "MS2-L",
+    "handle": "AAF",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N10",
+    "flight": "MS2-L",
+    "handle": "AB4",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N11",
+    "flight": "MS2-L",
+    "handle": "A98",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N11",
+    "flight": "MS2-L",
+    "handle": "A99",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N12",
+    "flight": "MS2-L",
+    "handle": "A97",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2L-N12",
+    "flight": "MS2-L",
+    "handle": "A9A",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N11",
+    "flight": "MS1-U",
+    "handle": "ABD",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N11",
+    "flight": "MS1-U",
+    "handle": "ABE",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N10",
+    "flight": "MS1-U",
+    "handle": "AA1",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N10",
+    "flight": "MS1-U",
+    "handle": "AAC",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N09",
+    "flight": "MS1-U",
+    "handle": "AA2",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N09",
+    "flight": "MS1-U",
+    "handle": "AAB",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N08",
+    "flight": "MS1-U",
+    "handle": "AA3",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N08",
+    "flight": "MS1-U",
+    "handle": "AAA",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N07",
+    "flight": "MS1-U",
+    "handle": "AA4",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N07",
+    "flight": "MS1-U",
+    "handle": "AA9",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N06",
+    "flight": "MS1-U",
+    "handle": "A9D",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N06",
+    "flight": "MS1-U",
+    "handle": "AA8",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N05",
+    "flight": "MS1-U",
+    "handle": "A9F",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N05",
+    "flight": "MS1-U",
+    "handle": "AA7",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N04",
+    "flight": "MS1-U",
+    "handle": "AA0",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N04",
+    "flight": "MS1-U",
+    "handle": "AA6",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N03",
+    "flight": "MS1-U",
+    "handle": "A9E",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N03",
+    "flight": "MS1-U",
+    "handle": "AA5",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N02",
+    "flight": "MS1-U",
+    "handle": "A94",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N02",
+    "flight": "MS1-U",
+    "handle": "A95",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N01",
+    "flight": "MS1-U",
+    "handle": "A93",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1U-N01",
+    "flight": "MS1-U",
+    "handle": "A92",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2TR-N01 (12B4, 2F)"
+    ],
+    "angle_deg": 90.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1T-N05",
+    "flight": "MS1-T",
+    "handle": "BE4",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "2C6",
+    "on_plan": "GF",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1T-N05 (49D, GF)"
+    ],
+    "angle_deg": 90.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2TR-N01",
+    "flight": "MS2-TR",
+    "handle": "BE5",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "12B5",
+    "on_plan": "2F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [],
+    "angle_deg": 114.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1T-N03",
+    "flight": "MS1-T",
+    "handle": "BE8",
+    "layer": "5",
+    "length_m": 1.258652,
+    "of_handle": "4A0",
+    "on_plan": "GF",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [],
+    "angle_deg": 114.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1T-N03",
+    "flight": "MS1-T",
+    "handle": "BE9",
+    "layer": "2",
+    "length_m": 1.258652,
+    "of_handle": "4A1",
+    "on_plan": "GF",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [],
+    "angle_deg": 135.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1T-N02",
+    "flight": "MS1-T",
+    "handle": "BE7",
+    "layer": "2",
+    "length_m": 1.626346,
+    "of_handle": "49F",
+    "on_plan": "GF",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [],
+    "angle_deg": 135.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1T-N02",
+    "flight": "MS1-T",
+    "handle": "BE6",
+    "layer": "5",
+    "length_m": 1.626346,
+    "of_handle": "49E",
+    "on_plan": "GF",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [],
+    "angle_deg": 156.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1T-N01",
+    "flight": "MS1-T",
+    "handle": "BEB",
+    "layer": "2",
+    "length_m": 1.258652,
+    "of_handle": "4A3",
+    "on_plan": "GF",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [],
+    "angle_deg": 156.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1T-N01",
+    "flight": "MS1-T",
+    "handle": "BEA",
+    "layer": "5",
+    "length_m": 1.258652,
+    "of_handle": "4A2",
+    "on_plan": "GF",
+    "residual_mm": 0.0
+   }
+  ],
+  "2F": [
+   {
+    "also_coincides": [
+     "ST01-MS1L-N05 (CA, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N07",
+    "flight": "MS2-L",
+    "handle": "1379",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AB1",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N06 (CB, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N08",
+    "flight": "MS2-L",
+    "handle": "137A",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AB2",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N07 (CC, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N09",
+    "flight": "MS2-L",
+    "handle": "137B",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AB3",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N08 (CD, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N10",
+    "flight": "MS2-L",
+    "handle": "137C",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AB4",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N11",
+    "flight": "MS2-L",
+    "handle": "1361",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "A99",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N10 (486, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N12",
+    "flight": "MS2-L",
+    "handle": "1362",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "A9A",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N01",
+    "flight": "MS2-L",
+    "handle": "1389",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AC2",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N02",
+    "flight": "MS2-L",
+    "handle": "1387",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "ABF",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N02",
+    "flight": "MS2-L",
+    "handle": "1388",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AC1",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N01 (DC, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N03",
+    "flight": "MS2-L",
+    "handle": "137D",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "AB5",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N01 (DE, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N03",
+    "flight": "MS2-L",
+    "handle": "1381",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AB9",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N02 (DD, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N04",
+    "flight": "MS2-L",
+    "handle": "137E",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "AB6",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N02 (DF, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N04",
+    "flight": "MS2-L",
+    "handle": "1382",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "ABA",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N03 (CE, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N05",
+    "flight": "MS2-L",
+    "handle": "137F",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "AB7",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N03 (D0, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N05",
+    "flight": "MS2-L",
+    "handle": "1383",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "ABB",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N04 (CF, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N06",
+    "flight": "MS2-L",
+    "handle": "1380",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "AB8",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N04 (D1, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N06",
+    "flight": "MS2-L",
+    "handle": "1384",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "ABC",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N05 (C6, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N07",
+    "flight": "MS2-L",
+    "handle": "1375",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "AAD",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N06 (C7, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N08",
+    "flight": "MS2-L",
+    "handle": "1376",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "AAE",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N07 (C9, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N09",
+    "flight": "MS2-L",
+    "handle": "1378",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "AB0",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N10",
+    "flight": "MS2-L",
+    "handle": "1377",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "AAF",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N09 (C5, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N11",
+    "flight": "MS2-L",
+    "handle": "1360",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "A98",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS1L-N10 (485, GF)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS2L-N12",
+    "flight": "MS2-L",
+    "handle": "135F",
+    "layer": "5",
+    "length_m": 1.15,
+    "of_handle": "A97",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N11",
+    "flight": "MS2-U",
+    "handle": "1385",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N11",
+    "flight": "MS2-U",
+    "handle": "1386",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N10",
+    "flight": "MS2-U",
+    "handle": "1369",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N10",
+    "flight": "MS2-U",
+    "handle": "1374",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N09",
+    "flight": "MS2-U",
+    "handle": "136A",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N09",
+    "flight": "MS2-U",
+    "handle": "1373",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N08",
+    "flight": "MS2-U",
+    "handle": "136B",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N08",
+    "flight": "MS2-U",
+    "handle": "1372",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N07",
+    "flight": "MS2-U",
+    "handle": "136C",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N07",
+    "flight": "MS2-U",
+    "handle": "1371",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N06",
+    "flight": "MS2-U",
+    "handle": "1365",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N06",
+    "flight": "MS2-U",
+    "handle": "1370",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N05",
+    "flight": "MS2-U",
+    "handle": "1367",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N05",
+    "flight": "MS2-U",
+    "handle": "136F",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N04",
+    "flight": "MS2-U",
+    "handle": "1368",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N04",
+    "flight": "MS2-U",
+    "handle": "136E",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N03",
+    "flight": "MS2-U",
+    "handle": "1366",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N03",
+    "flight": "MS2-U",
+    "handle": "136D",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N02",
+    "flight": "MS2-U",
+    "handle": "135D",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N02",
+    "flight": "MS2-U",
+    "handle": "135E",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N01",
+    "flight": "MS2-U",
+    "handle": "135C",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2U-N01",
+    "flight": "MS2-U",
+    "handle": "135B",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 45.0,
+    "cls": "NAMED_OPEN",
+    "handle": "2F1F",
+    "layer": "5",
+    "length_m": 1.626346,
+    "why": "Q-ST-11 2F diagonal front (T-598 s.5 item 3; one drawing; never added)"
+   },
+   {
+    "angle_deg": 45.0,
+    "cls": "NAMED_OPEN",
+    "handle": "2F20",
+    "layer": "2",
+    "length_m": 1.626346,
+    "why": "Q-ST-11 2F diagonal face (T-598 s.5 item 3; one drawing; never added)"
+   },
+   {
+    "angle_deg": 90.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2TR-N01",
+    "flight": "MS2-TR",
+    "handle": "12B4",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 90.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS2TR-N01",
+    "flight": "MS2-TR",
+    "handle": "12B5",
+    "layer": "2",
+    "length_m": 1.15
+   }
+  ],
+  "GF": [
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N05",
+    "flight": "MS1-L",
+    "handle": "CA",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N06",
+    "flight": "MS1-L",
+    "handle": "CB",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N07",
+    "flight": "MS1-L",
+    "handle": "CC",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N08",
+    "flight": "MS1-L",
+    "handle": "CD",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N10",
+    "flight": "MS1-L",
+    "handle": "486",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N01",
+    "flight": "MS1-L",
+    "handle": "DC",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N01",
+    "flight": "MS1-L",
+    "handle": "DE",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N02",
+    "flight": "MS1-L",
+    "handle": "DD",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N02",
+    "flight": "MS1-L",
+    "handle": "DF",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N03",
+    "flight": "MS1-L",
+    "handle": "CE",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N03",
+    "flight": "MS1-L",
+    "handle": "D0",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N04",
+    "flight": "MS1-L",
+    "handle": "CF",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N04",
+    "flight": "MS1-L",
+    "handle": "D1",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N05",
+    "flight": "MS1-L",
+    "handle": "C6",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N06",
+    "flight": "MS1-L",
+    "handle": "C7",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N07",
+    "flight": "MS1-L",
+    "handle": "C9",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N09",
+    "flight": "MS1-L",
+    "handle": "C5",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2L-N12 (A97, 1F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "DUPLICATE",
+    "edge": "ST01-MS1L-N10",
+    "flight": "MS1-L",
+    "handle": "C4",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "485",
+    "on_plan": "GF",
+    "residual_mm": 0.0
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1L-N10",
+    "flight": "MS1-L",
+    "handle": "485",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N11 (1385, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N11",
+    "flight": "MS1-U",
+    "handle": "497",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "ABD",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N11 (1386, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N11",
+    "flight": "MS1-U",
+    "handle": "498",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "ABE",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N10 (1369, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N10",
+    "flight": "MS1-U",
+    "handle": "48B",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AA1",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N10 (1374, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N10",
+    "flight": "MS1-U",
+    "handle": "496",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AAC",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N09 (136A, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N09",
+    "flight": "MS1-U",
+    "handle": "48C",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AA2",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N09 (1373, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N09",
+    "flight": "MS1-U",
+    "handle": "495",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AAB",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N08 (136B, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N08",
+    "flight": "MS1-U",
+    "handle": "48D",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AA3",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N08 (1372, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N08",
+    "flight": "MS1-U",
+    "handle": "494",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AAA",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N07 (136C, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N07",
+    "flight": "MS1-U",
+    "handle": "48E",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AA4",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N07 (1371, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N07",
+    "flight": "MS1-U",
+    "handle": "493",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AA9",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N06 (1365, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N06",
+    "flight": "MS1-U",
+    "handle": "487",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "A9D",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N06 (1370, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N06",
+    "flight": "MS1-U",
+    "handle": "492",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AA8",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N05 (1367, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N05",
+    "flight": "MS1-U",
+    "handle": "489",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "A9F",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2U-N05 (136F, 2F)"
+    ],
+    "angle_deg": 0.0,
+    "cls": "SECOND_READING",
+    "edge": "ST01-MS1U-N05",
+    "flight": "MS1-U",
+    "handle": "491",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "AA7",
+    "on_plan": "1F",
+    "residual_mm": 0.0
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-D1-N04",
+    "flight": "D1",
+    "handle": "48A",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-D1-N04",
+    "flight": "D1",
+    "handle": "490",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-D1-N03",
+    "flight": "D1",
+    "handle": "488",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-D1-N03",
+    "flight": "D1",
+    "handle": "48F",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-D1-N02",
+    "flight": "D1",
+    "handle": "483",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-D1-N02",
+    "flight": "D1",
+    "handle": "484",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-D1-N01",
+    "flight": "D1",
+    "handle": "482",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 0.0,
+    "cls": "CENSUS",
+    "edge": "ST01-D1-N01",
+    "flight": "D1",
+    "handle": "481",
+    "layer": "5",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 90.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1T-N05",
+    "flight": "MS1-T",
+    "handle": "2C6",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "also_coincides": [
+     "ST01-MS2TR-N01 (12B4, 2F)"
+    ],
+    "angle_deg": 90.0,
+    "cls": "DUPLICATE",
+    "edge": "ST01-MS1T-N05",
+    "flight": "MS1-T",
+    "handle": "49C",
+    "layer": "2",
+    "length_m": 1.15,
+    "of_handle": "2C6",
+    "on_plan": "GF",
+    "residual_mm": 0.0
+   },
+   {
+    "angle_deg": 90.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1T-N05",
+    "flight": "MS1-T",
+    "handle": "49D",
+    "layer": "2",
+    "length_m": 1.15
+   },
+   {
+    "angle_deg": 114.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1T-N03",
+    "flight": "MS1-T",
+    "handle": "4A0",
+    "layer": "2",
+    "length_m": 1.258652
+   },
+   {
+    "angle_deg": 114.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1T-N03",
+    "flight": "MS1-T",
+    "handle": "4A1",
+    "layer": "2",
+    "length_m": 1.258652
+   },
+   {
+    "angle_deg": 135.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1T-N02",
+    "flight": "MS1-T",
+    "handle": "49E",
+    "layer": "2",
+    "length_m": 1.626346
+   },
+   {
+    "angle_deg": 135.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1T-N02",
+    "flight": "MS1-T",
+    "handle": "49F",
+    "layer": "2",
+    "length_m": 1.626346
+   },
+   {
+    "angle_deg": 156.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1T-N01",
+    "flight": "MS1-T",
+    "handle": "4A2",
+    "layer": "2",
+    "length_m": 1.258652
+   },
+   {
+    "angle_deg": 156.0,
+    "cls": "CENSUS",
+    "edge": "ST01-MS1T-N01",
+    "flight": "MS1-T",
+    "handle": "4A3",
+    "layer": "2",
+    "length_m": 1.258652
+   }
+  ]
+ },
+ "registration": {
+  "1F->2F": {
+   "coincident": 68,
+   "runner_up_votes": 36,
+   "votes": 134,
+   "wall_end_points": 158
+  },
+  "GF->1F": {
+   "coincident": 62,
+   "runner_up_votes": 40,
+   "votes": 128,
+   "wall_end_points": 188
+  }
+ },
+ "schema": "T607_DRAWN_V1",
+ "source": "Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip (architectural DXF), read by handle; ST-01 census = research/agents_t412/NOSING_TABLE_T412.csv + T-598 12B4 / 12B5",
+ "structural": {
+  "ST_P4": {
+   "closing_face": {
+    "count": 1,
+    "handles": [
+     "2F3"
+    ],
+    "lengths_m": [
+     1.15
+    ]
+   },
+   "east_lane_MS1U": {
+    "count": 12,
+    "handles": [
+     "25B",
+     "25C",
+     "261",
+     "263",
+     "262",
+     "260",
+     "267",
+     "266",
+     "265",
+     "264",
+     "270",
+     "459"
+    ],
+    "lengths_m": [
+     1.15
+    ]
+   },
+   "other_stair_family_lines_in_window": [],
+   "turn_radials": {
+    "count": 3,
+    "handles": [
+     "2F6",
+     "2F4",
+     "2F5"
+    ],
+    "lengths_m": [
+     1.258652,
+     1.626346
+    ]
+   },
+   "west_lane_MS1L": {
+    "count": 12,
+    "handles": [
+     "45A",
+     "271",
+     "26C",
+     "26D",
+     "26E",
+     "26F",
+     "268",
+     "269",
+     "26A",
+     "26B",
+     "25D",
+     "25E"
+    ],
+    "lengths_m": [
+     1.15
+    ]
+   }
+  },
+  "ST_P5": {
+   "closing_face": {
+    "count": 1,
+    "handles": [
+     "5E2"
+    ],
+    "lengths_m": [
+     1.15
+    ]
+   },
+   "diagonal_face": {
+    "count": 1,
+    "handles": [
+     "648"
+    ],
+    "lengths_m": [
+     1.626346
+    ]
+   },
+   "diagonal_len_equal_arch": true,
+   "diagonal_vs_arch_2F20_mm": 0.0,
+   "east_lane_MS2U": {
+    "count": 11,
+    "handles": [
+     "62F",
+     "630",
+     "635",
+     "637",
+     "636",
+     "634",
+     "63B",
+     "63A",
+     "639",
+     "638",
+     "644"
+    ],
+    "lengths_m": [
+     1.15
+    ]
+   },
+   "other_stair_family_lines_in_window": [],
+   "west_lane_MS2L": {
+    "count": 12,
+    "handles": [
+     "646",
+     "645",
+     "640",
+     "641",
+     "642",
+     "643",
+     "63C",
+     "63D",
+     "63E",
+     "63F",
+     "631",
+     "632"
+    ],
+    "lengths_m": [
+     1.15
+    ]
+   }
+  }
+ },
+ "tolerances": {
+  "angle_deg": 0.5,
+  "length_mm": 3.0,
+  "position_mm": 2.0
+ }
+}

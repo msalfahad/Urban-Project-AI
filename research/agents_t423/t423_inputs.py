@@ -1,4 +1,4 @@
-"""T-423: the URBAN_V3058_INPUTS_V1 project inputs of ARCH_TAKEOFF_V3.0.58 (engine.source.arch_v3058), built ONLY from
+"""T-423: the URBAN_V3060_INPUTS_V1 project inputs of ARCH_TAKEOFF_V3.0.60 (engine.source.arch_v3060), built ONLY from
 Checker-merged files, each pinned by sha256 (an edited file stops the build). Read from those files: every line id,
 element, gross, net, dome piece and its print, every face / opening id and the pantry paint line; typed here are only
 the entry selection, the line states the candidate of record carries (asserted by the module's binding: a different
@@ -51,7 +51,7 @@ SOURCES = {
               "checker_run": "Checker Gate B (MERGED 3f8c7d03): acceptance adds O-T327-1 / O-T327-2 (Lead 2026-10-31 00:40)"},
 }
 # the line state the candidate of record carries on each listed ceiling line (V3.0.32 restated them; asserted by the
-# module's binding against the candidate, never a value): read on the V3.0.57 lines of this task's chain run
+# module's binding against the candidate, never a value): read on the V3.0.59 lines (r1: V3.0.57) of this task's chain run
 CEILING_STATE = "PROVISIONAL"
 # lines the ledger cannot close by id: set aside by name (T-246 s.4, the Lead's T-423 row)
 SET_ASIDE = {
@@ -107,7 +107,7 @@ def findings():
     return list(csv.DictReader(_pinned(T388).splitlines()))
 
 
-# T-388 F1 on the candidate of record (read on the V3.0.57 lines of this task's chain run; asserted by the binding):
+# T-388 F1 on the candidate of record (read on the V3.0.59 lines (r1: V3.0.57) of this task's chain run; asserted by the binding):
 # the valued tile / backing lines of 1F-02 carry the face record; the GF-02 / GF-03 / GF-10 / GF-11 lines are BLANK
 # (annex room height G2 HELD, no face record): nothing booked on a face there, named, not changed
 FACE_LINE_STATE = {"tile": ("FIN.WALL.TILE", "wall_tile_v3021", "1F-R8BDA49:wall_tile", "PROVISIONAL", 30.15, 27.9101),
@@ -174,7 +174,7 @@ def threshold_entries():
 def build(project_id=None, extra=()):
     ents = ceiling_entries() + face_entries()[0] + threshold_entries() + list(extra)
     used = {e["line_id"] for e in ents}
-    return {"schema": "URBAN_V3058_INPUTS_V1", "project_id": project_id,
+    return {"schema": "URBAN_V3060_INPUTS_V1", "project_id": project_id,
             "sources": [SOURCES[k] for k in sorted(SOURCES)],
             "set_aside": [{"line_id": k, "why": v} for k, v in SET_ASIDE.items() if k not in used],
             "entries": ents}

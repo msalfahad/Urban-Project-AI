@@ -1,0 +1,382 @@
+{
+ "b10_effect_m3": {
+  "checker_items_closed_no_change": [
+   "F-C-P04-1",
+   "GF B11 -0.003159",
+   "F-C-P02-13"
+  ],
+  "held_companion": [
+   0.0,
+   0.025
+  ],
+  "replaces_held_range": [
+   0.04,
+   0.12
+  ],
+  "set": 0.05
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.57 line index (= V3.0.58 for STR.CONC.BEAM / STR.CONC.PARAPET)",
+ "fix_rows": [
+  {
+   "change_m3": 0.0,
+   "id": "FR-T642-1",
+   "line_id": "L-076a6d9e6df46aef97d1",
+   "status": "NO_CHANGE (residual named)"
+  },
+  {
+   "change": "HELD 0.04 .. 0.12 -> SET 0.05 m3",
+   "change_m3": 0.05,
+   "companion": {
+    "cause": "strip depth B4 0.50 (its face entities) vs B7 0.75 (arc lead-in): no mark printed on the strip",
+    "element": "U-C:BEAMS:GF:BAND0030.2~T642_DEPTH_B4_B7",
+    "held_m3": [
+     0.0,
+     0.025
+    ]
+   },
+   "id": "FR-T642-2",
+   "line_id": "L-efd3f7806bf10b6a8e98",
+   "status": "SET (low end, B4 0.50)"
+  },
+  {
+   "change_m3": 0.0,
+   "id": "FR-T642-3",
+   "line_id": "L-b274a04546a58e0ecfdd",
+   "status": "NO_CHANGE (residual named)"
+  },
+  {
+   "change_m3": 0.0,
+   "id": "FR-T642-4",
+   "line_id": "L-5bc1baae70fcc325abea",
+   "status": "NO_CHANGE (depth source named)"
+  }
+ ],
+ "frames": {
+  "1F": "route G SH04 fixed on CB12 BAND0018.1 (5DF / 69D), checked on BAND0018.2 (664 / 676)",
+  "GF": "route G SH06 fixed on B4 BAND0030.1 (2B2 / 353), checked on B11 BAND0001 (28F / 428)"
+ },
+ "items": {
+  "a": {
+   "checker_view_m3": 0.024375,
+   "delta_own_minus_term_m3": -0.000388,
+   "drawn": {
+    "b6_crossing_square_m2": 0.0125,
+    "b6_faces": "6D2 / 6D3 end on the column face",
+    "beam_faces": "5DE / 5DF",
+    "beam_width_m": 0.25,
+    "column": "664",
+    "column_width_m": 0.2,
+    "depth_m": 0.75,
+    "face_5DF_runs_on_past_column": true,
+    "own_m3": 0.024375,
+    "projecting_strip_width_m": 0.05,
+    "strip_length_m": 0.9,
+    "strip_m2": 0.0325
+   },
+   "engine": {
+    "crossing_square_billed_by": {
+     "L-651a3d191bc4cb07cc1d": 0.0125
+    },
+    "crossing_square_depth_fix": "FR-T610-4 CB12 (L-076a6d9e6df46aef97d1) x B6 (L-651a3d191bc4cb07cc1d) -0.003125 m3 (MERGED T-610; not again)",
+    "decomposition_residual_m3": 1.2e-05,
+    "line_id": "L-076a6d9e6df46aef97d1",
+    "line_value_m3": 1.079463,
+    "named_terms_m3": {
+     "T-229 SUPPORT_CUT_BESIDE (gap 1F:BAND0018.1|BAND0018.2, column 664)": 0.024763
+    },
+    "other_lines_billing_strip_m2": {},
+    "rectangle_m3": 1.054688,
+    "run": "BM-1F-017#BAND0018.1",
+    "strip_in_slab_panel_m2": 0.0,
+    "strip_in_term_region_m2": 0.0325,
+    "t229_gap_record": {
+     "area_m2": 0.22584,
+     "beside_m2": 0.03301780800000002,
+     "edges_continuous": true,
+     "length_m": 0.8994,
+     "other_beam_share": 0.0573,
+     "short_m3": 0.024763356000000014,
+     "support_share": 0.7965,
+     "width_m": 0.2511
+    },
+    "t229_term_region_rebuilt_m2": 0.0325
+   },
+   "finding": "F-C-P04-1 CB12 0.25 wide over column 664 0.20 wide: west 0.05 strip 'billed by no line'",
+   "fix_row": {
+    "change_m3": 0.0,
+    "id": "FR-T642-1",
+    "line_id": "L-076a6d9e6df46aef97d1",
+    "status": "NO_CHANGE (residual named)"
+   },
+   "owners": [
+    "L-076a6d9e6df46aef97d1"
+   ],
+   "residual_cause": "T-229 gap fitted on the T-110 band plan (width 0.2511 / length 0.8994 / B6 share 0.0573 vs drawn 0.250 / 0.900 / 0.0125 m2): beside 0.033018 vs drawn 0.0325 m2 -> +0.000388 m3 in the line; within the R-T624-1 named-add tolerance 0.001 m3",
+   "state": "BILLED_ONCE",
+   "verdict": "ENGINE_RIGHT (BILLED_ONCE by the T-229 term in the CB12 run line); F-C-P04-1 not an omission: the Checker compared the band rectangle (5.625 m clear) and not the line value 1.079463"
+  },
+  "b": {
+   "drawn": {
+    "depths_allowed_by_the_drawing": {
+     "B4": 0.5,
+     "B7": 0.75
+    },
+    "faces": "2B2 / 2B3 (single LINE entities through column 353), closing line 484, CB6 north face 2AF / column 353 north side",
+    "length_m": 0.5,
+    "strip_m2": 0.1,
+    "width_m": 0.2
+   },
+   "engine": {
+    "line": {
+     "class": "HELD",
+     "element_id": "U-C:BEAMS:GF:BAND0030.2",
+     "held_high_m3": 0.12,
+     "held_low_m3": 0.04,
+     "held_range_reads_m": [
+      0.4,
+      1.2
+     ],
+     "line_id": "L-efd3f7806bf10b6a8e98",
+     "piece_drawn_m2": 0.1,
+     "route_g_mark": "B4",
+     "route_g_piece": [
+      "BAND0030.2"
+     ],
+     "route_g_state": "BOUND"
+    },
+    "lines_carrying_strip_m2": {
+     "L-efd3f7806bf10b6a8e98": 0.1
+    },
+    "strip_in_slab_panel_m2": 0.0,
+    "t229_B4_end_at_353": []
+   },
+   "finding": "F-C-P02-14 strip north of column 353 'in no band' (Checker HELD 0.040 .. 0.075 m3)",
+   "fix_row": {
+    "change": "HELD 0.04 .. 0.12 -> SET 0.05 m3",
+    "change_m3": 0.05,
+    "companion": {
+     "cause": "strip depth B4 0.50 (its face entities) vs B7 0.75 (arc lead-in): no mark printed on the strip",
+     "element": "U-C:BEAMS:GF:BAND0030.2~T642_DEPTH_B4_B7",
+     "held_m3": [
+      0.0,
+      0.025
+     ]
+    },
+    "id": "FR-T642-2",
+    "line_id": "L-efd3f7806bf10b6a8e98",
+    "status": "SET (low end, B4 0.50)"
+   },
+   "owners": [
+    "L-efd3f7806bf10b6a8e98"
+   ],
+   "state": "CARRIED_ONCE_AS_HELD (unbound route G piece)",
+   "value": {
+    "companion_high_m3": 0.025,
+    "companion_low_m3": 0.0,
+    "set_m3": 0.05
+   },
+   "value_state": "RANGE_LOW_SET",
+   "verdict": "NOT an omission: the strip is the unbound route G piece BAND0030.2, carried once by HELD line L-efd3f7806bf10b6a8e98 (range 0.04 .. 0.12 m3 = any W20 schedule depth 0.40 .. 1.20); the drawing narrows it to B4 0.50 (its faces) .. B7 0.75 (arc lead-in): R-T619-1 low end SET + companion"
+  },
+  "c": {
+   "delta_own_minus_band_rect_m3": 0.003152,
+   "delta_own_minus_line_m3": -0.000288,
+   "drawn": {
+    "edges_m": [
+     4.596099,
+     4.554065
+    ],
+    "faces": "28F / 428 from column 332 to oblique B13 face 427",
+    "own_m3": 0.686262,
+    "plan_m2": 0.915016,
+    "schedule": "SBT 1EDB B11 W 0.2 H 0.75",
+    "width_m": 0.2
+   },
+   "engine": {
+    "line_id": "L-b274a04546a58e0ecfdd",
+    "line_value_m3": 0.68655,
+    "named_terms_m3": {
+     "T-229 END_SHORT_OBLIQUE (GF:BAND0001 end 0, B13 face)": 0.00345
+    },
+    "rectangle_m3": 0.68311,
+    "run": "BM-GF-001#BAND0001",
+    "t229_end_record": {
+     "beyond_area_m2": 0.0046,
+     "beyond_side_t_m": [
+      0.0439,
+      0.0022
+     ],
+     "cls": "END_SHORT_OBLIQUE",
+     "short_m3": 0.00345,
+     "status": "BEAM_SHORT"
+    }
+   },
+   "finding": "GF B11 ENGINE_WRONG -0.003159 m3 (short edge at the oblique end, Verifier 2026-11-08 20:04)",
+   "fix_row": {
+    "change_m3": 0.0,
+    "id": "FR-T642-3",
+    "line_id": "L-b274a04546a58e0ecfdd",
+    "status": "NO_CHANGE (residual named)"
+   },
+   "residual_cause": "T-229 end region 0.0046 m2 (side stations 0.0439 / 0.0022 m on the fitted plan) vs drawn triangle w x (edge_a - edge_b) / 2; within the 0.001 m3 named-add tolerance",
+   "verdict": "ENGINE_RIGHT on the candidate line (the oblique end is billed by the T-229 term); the Checker's -0.003159 is against the route G rectangle 0.683110, which is not the line value"
+  },
+  "d": {
+   "delta_own_minus_line_m3": 0.0,
+   "drawn": {
+    "arcs": "29F / 2A0, sweep 90.0 deg",
+    "plan_m2": 0.376991,
+    "r_in_m": 1.1,
+    "r_out_m": 1.3,
+    "ring_width_m": 0.2
+   },
+   "engine": {
+    "line_id": "L-5bc1baae70fcc325abea",
+    "line_value_m3": 0.282743,
+    "mark": "B7",
+    "rectangle_or_ring_m3": 0.282743,
+    "run": "BM-GF-049#BAND0049"
+   },
+   "finding": "F-C-P02-13 BAND0049 annex NE corner arc: 'no mark printed', B7 0.75 depth unsourced",
+   "fix_row": {
+    "change_m3": 0.0,
+    "id": "FR-T642-4",
+    "line_id": "L-5bc1baae70fcc325abea",
+    "status": "NO_CHANGE (depth source named)"
+   },
+   "own_m3": 0.282743,
+   "printed_mark": {
+    "angle_on_arc_deg": 51.0,
+    "block": "b7",
+    "distance_to_B2_band_m": 1.279901,
+    "distance_to_CB6_face_m": 1.588318,
+    "distance_to_ring_m": 0.099493,
+    "height_m": 0.3,
+    "insert": "47D",
+    "layer": "S-TEXT",
+    "outside_outer_face_m": 0.099489,
+    "radius_of_label_m": 1.399489,
+    "text": "B7",
+    "text_handle": "482",
+    "text_vs_tangent_deg": 8.7,
+    "why_missed": "the label is TEXT 482 inside block 'b7' (INSERT 47D), not a model-space TEXT"
+   },
+   "schedule": "SBT 1EAF B7 W 0.2 H 0.75 (W = ring width)",
+   "verdict": "ENGINE_RIGHT, depth DRAWING-CONFIRMED (the arc's own printed B7 label); UNRESOLVED closes at 0.282743"
+  },
+  "e": {
+   "classed": "4 / 4 HELD_WITH_CAUSE (class B: a named cause; no drawn single figure exists while the material per run is HELD)",
+   "finding": "4 STR.CONC.PARAPET lines HELD blank with no cause in the T-630 table",
+   "lines": [
+    {
+     "bound_beside": {
+      "all_rc_printed_part_m3": [
+       2.7075,
+       2.7075
+      ],
+      "at_least_m3": 1.6245,
+      "plus_m3_per_m_b_edge": 5.415
+     },
+     "cause": "PARAPET_RC_MATERIAL: which printed detail governs each run (ST p.14 P1 brick on a 0.30 RC upstand with an RC cap 'AS PER ARC.', vs the architect's sections drawn cast concrete) is not keyed: designer item, owner Q-65 C, material HELD; + PARAPET_RC_B_EDGE: roof build-up depth at the edge (D-39) HELD; cap profile unprinted in the structural set",
+     "centreline_m": [
+      29.05,
+      29.05
+     ],
+     "class": "HELD_WITH_CAUSE",
+     "element_id": "2F_ROOF#PARAPET_RC",
+     "line_id": "L-030538dda6a32c601c4c",
+     "quantity": null,
+     "runs": 4,
+     "runs_with_held_geometry_or_height": [],
+     "trial_boq_text": "HELD — 2F_ROOF: material per run (Q-65 C) and edge build-up (D-39); at least 1.625 m3 RC in every printed alternative"
+    },
+    {
+     "bound_beside": {
+      "all_rc_printed_part_m3": [
+       2.998505,
+       3.018505
+      ],
+      "at_least_m3": 1.799103,
+      "plus_m3_per_m_b_edge": 6.03701
+     },
+     "cause": "PARAPET_RC_MATERIAL: which printed detail governs each run (ST p.14 P1 brick on a 0.30 RC upstand with an RC cap 'AS PER ARC.', vs the architect's sections drawn cast concrete) is not keyed: designer item, owner Q-65 C, material HELD; + PARAPET_RC_B_EDGE: roof build-up depth at the edge (D-39) HELD; cap profile unprinted in the structural set",
+     "centreline_m": [
+      29.98505,
+      30.18505
+     ],
+     "class": "HELD_WITH_CAUSE",
+     "element_id": "ANNEX_ROOF#PARAPET_RC",
+     "line_id": "L-1d419b64e8ca1af30fb4",
+     "quantity": null,
+     "runs": 7,
+     "runs_with_held_geometry_or_height": [
+      "SW-3"
+     ],
+     "trial_boq_text": "HELD — ANNEX_ROOF: material per run (Q-65 C) and edge build-up (D-39); at least 1.799 m3 RC in every printed alternative"
+    },
+    {
+     "bound_beside": {
+      "all_rc_printed_part_m3": [
+       10.478455,
+       11.53235
+      ],
+      "at_least_m3": 2.949453,
+      "plus_m3_per_m_b_edge": 9.84653
+     },
+     "cause": "PARAPET_RC_MATERIAL: which printed detail governs each run (ST p.14 P1 brick on a 0.30 RC upstand with an RC cap 'AS PER ARC.', vs the architect's sections drawn cast concrete) is not keyed: designer item, owner Q-65 C, material HELD; + PARAPET_RC_B_EDGE: roof build-up depth at the edge (D-39) HELD; cap profile unprinted in the structural set",
+     "centreline_m": [
+      49.15755,
+      49.23265
+     ],
+     "class": "HELD_WITH_CAUSE",
+     "element_id": "1F_ROOF#PARAPET_RC",
+     "line_id": "L-9a2c81164ec6499cc28c",
+     "quantity": null,
+     "runs": 11,
+     "runs_with_held_geometry_or_height": [
+      "NE-1",
+      "SW-1",
+      "SW-2"
+     ],
+     "trial_boq_text": "HELD — 1F_ROOF: material per run (Q-65 C) and edge build-up (D-39); at least 2.949 m3 RC in every printed alternative"
+    },
+    {
+     "bound_beside": {
+      "all_rc_printed_part_m3": [
+       2.796478,
+       2.83699
+      ],
+      "at_least_m3": 1.677887,
+      "plus_m3_per_m_b_edge": 5.67398
+     },
+     "cause": "PARAPET_RC_MATERIAL: which printed detail governs each run (ST p.14 P1 brick on a 0.30 RC upstand with an RC cap 'AS PER ARC.', vs the architect's sections drawn cast concrete) is not keyed: designer item, owner Q-65 C, material HELD; + PARAPET_RC_B_EDGE: roof build-up depth at the edge (D-39) HELD; cap profile unprinted in the structural set",
+     "centreline_m": [
+      27.96478,
+      28.3699
+     ],
+     "class": "HELD_WITH_CAUSE",
+     "element_id": "GF_TERRACE#PARAPET_RC",
+     "line_id": "L-b5ffc172a354375ca107",
+     "quantity": null,
+     "runs": 3,
+     "runs_with_held_geometry_or_height": [
+      "SW-9"
+     ],
+     "trial_boq_text": "HELD — GF_TERRACE: material per run (Q-65 C) and edge build-up (D-39); at least 1.678 m3 RC in every printed alternative"
+    }
+   ],
+   "note": "the bound is shown beside the blank line, never summed into B10 (UP-QTY-STATUS-001); owner manual method: no parapet concrete row (blockwork 1.00 / 1.80 / 1.00 m) - shown beside, never used",
+   "total_at_least_m3": 8.050943
+  }
+ },
+ "new_rule": null,
+ "rules_applied": [
+  "UP-CONC-JOINT-001",
+  "R-T610-1",
+  "R-T624-1",
+  "R-T619-1",
+  "UP-QTY-STATUS-001"
+ ],
+ "schema": "T642_FIX_ROWS_V1",
+ "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' (sha256 9f9d1179..)"
+}

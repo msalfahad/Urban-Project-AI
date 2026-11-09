@@ -1,0 +1,812 @@
+{
+ "door_findings": {
+  "D-2F-01": {
+   "note": "no outline bound in SW / NE / A-A / B-B; height stays Q-55 C"
+  },
+  "D-GF-05": {
+   "note": "no vector view binds it: its only coincident outline (SECTION A-A) belongs to W10 in the wall beyond (same-wall support of W09); height stays Q-55 C"
+  },
+  "D-GF-09": {
+   "frame_width_drawn": [
+    "1.001",
+    "1.001"
+   ],
+   "height_status": "ASSUMED_OWNER_APPROVED",
+   "note": "both vector views draw the D120 frame (1.00 m), not the 0.90 masonry opening, and put its head at different levels (SW +2.50 from the +0.15 court, NE +3.20 from +1.00): candidates only; the height stays Q-55 C (ASSUMED - OWNER-APPROVED)",
+   "plan_masonry_width": "0.90",
+   "views": [
+    {
+     "bottom_level": "0.999",
+     "bound": true,
+     "frame_only": true,
+     "head_level": "3.201",
+     "height": "2.201",
+     "sheet": "DWF NORTH EAST ELEVATION",
+     "status": "BOUND",
+     "view": "NORTH EAST ELEVATION",
+     "width": "1.001"
+    },
+    {
+     "bottom_level": "0.151",
+     "bound": true,
+     "frame_only": true,
+     "head_level": "2.500",
+     "height": "2.350",
+     "sheet": "DWF SOUTH WEST ELEVATION",
+     "status": "BOUND",
+     "view": "SOUTH WEST ELEVATION",
+     "width": "1.001"
+    }
+   ]
+  }
+ },
+ "drawn": "research/agents_t627/T627_DRAWN.json",
+ "governing": [
+  "Q-32 A (opening area)",
+  "Q-76 A (curved window 3.29 x 3.00)",
+  "Q-55 C (door 2.20 fallback)",
+  "Q-39 C (outer arc width)",
+  "UP-OPEN-SCHED-001",
+  "UP-DOOR-AREA-001",
+  "UP-ELEV-SCHED-001",
+  "UP-OPEN-GEOM-001 (T-201 vector geometry)",
+  "RFI re-review 2026-11-02 B-S18 (later-dated sheet governs)",
+  "R-T568-1 (row split)",
+  "ERS s.2 / s.3"
+ ],
+ "openings_own_vs_engine": [
+  {
+   "engine_area": "2.200",
+   "id": "D-2F-01",
+   "own_area": "2.200000"
+  },
+  {
+   "engine_area": "2.200",
+   "id": "D-GF-01",
+   "own_area": "2.200000"
+  },
+  {
+   "engine_area": "1.980",
+   "id": "D-GF-03",
+   "own_area": "1.980000"
+  },
+  {
+   "engine_area": "2.200",
+   "id": "D-GF-05",
+   "own_area": "2.200000"
+  },
+  {
+   "engine_area": "2.200",
+   "id": "D-GF-06",
+   "own_area": "2.200000"
+  },
+  {
+   "engine_area": "1.980",
+   "id": "D-GF-09",
+   "own_area": "1.980000"
+  },
+  {
+   "engine_area": "2.250",
+   "id": "W08",
+   "own_area": "2.250000"
+  },
+  {
+   "engine_area": "2.250",
+   "id": "W09",
+   "own_area": "2.250000"
+  },
+  {
+   "engine_area": "1.500",
+   "id": "W10",
+   "own_area": "1.500000"
+  },
+  {
+   "engine_area": "4.290",
+   "id": "W11",
+   "own_area": "4.290000"
+  },
+  {
+   "engine_area": "4.290",
+   "id": "W12",
+   "own_area": "4.290000"
+  },
+  {
+   "engine_area": "2.760",
+   "id": "W13",
+   "own_area": "2.760000"
+  },
+  {
+   "engine_area": "3.920",
+   "id": "W14",
+   "own_area": "3.920000"
+  },
+  {
+   "engine_area": "1.080",
+   "id": "W18",
+   "own_area": "1.080000"
+  },
+  {
+   "engine_area": "2.325",
+   "id": "W24",
+   "own_area": "2.325000"
+  },
+  {
+   "engine_area": "1.500",
+   "id": "W25",
+   "own_area": "1.500000"
+  },
+  {
+   "engine_area": "2.040",
+   "id": "W26",
+   "own_area": "2.040000"
+  },
+  {
+   "engine_area": "1.500",
+   "id": "W27",
+   "own_area": "1.500000"
+  },
+  {
+   "engine_area": "1.800",
+   "id": "W29",
+   "own_area": "1.800000"
+  }
+ ],
+ "rule": "R-T627-1",
+ "sections": {
+  "T-568/alu-doors-m2": {
+   "count": {
+    "ASSUMED_OWNER_APPROVED": 3,
+    "DRAWING_CONFIRMED": 5
+   },
+   "difference": "-0.76",
+   "engine_valued": "12.76",
+   "reference_total": "12.0",
+   "rows": [
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "0.200",
+     "diff": "0.000000",
+     "engine": {
+      "area": "2.200",
+      "basis": "Q55C",
+      "height": "2.2000",
+      "width": "1.00"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.200000",
+     "floor": "GF",
+     "his": "1 x 2.4",
+     "id": "D-GF-01",
+     "name": "GF D-GF-01 vs his 1 x 2.4 / height",
+     "own_area": "2.200000",
+     "own_height": "2.20",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF NORTH EAST ELEVATION",
+     "own_height_note": "head of the bound view(s) minus the printed floor level 0.30",
+     "own_width": "1.00",
+     "own_width_basis": "DRAWING_CONFIRMED: plan wall-face ends, both faces 10A / 10C / 138 / 139",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "0.200",
+     "diff": "0.000000",
+     "engine": {
+      "area": "2.200",
+      "basis": "Q55C",
+      "height": "2.2000",
+      "width": "1.00"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.200000",
+     "floor": "GF",
+     "his": "1 x 2.4",
+     "id": "D-GF-06",
+     "name": "GF D-GF-06 vs his 1 x 2.4 / height",
+     "own_area": "2.200000",
+     "own_height": "2.20",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF NORTH EAST ELEVATION",
+     "own_height_note": "head of the bound view(s) minus the printed floor level 1.00",
+     "own_width": "1.00",
+     "own_width_basis": "DRAWING_CONFIRMED: plan wall-face ends, both faces 158 / 159 / 15A / 15B",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.240",
+     "diff": "0.000000",
+     "engine": {
+      "area": "1.980",
+      "basis": "Q55C",
+      "height": "2.2000",
+      "width": "0.90"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.240000",
+     "floor": "GF",
+     "his": "1 x 2.4",
+     "id": "D-GF-03",
+     "name": "GF D-GF-03 vs his 1 x 2.4 / width",
+     "own_area": "1.980000",
+     "own_height": "2.20",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF NORTH EAST ELEVATION / DWF SOUTH WEST ELEVATION",
+     "own_height_note": "head of the bound view(s) minus the printed floor level 0.30",
+     "own_width": "0.90",
+     "own_width_basis": "DRAWING_CONFIRMED: plan wall-face ends, both faces 11D / 11E / 121 / 122",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "0.180",
+     "diff": "0.000000",
+     "engine": {
+      "area": "1.980",
+      "basis": "Q55C",
+      "height": "2.2000",
+      "width": "0.90"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.180000",
+     "floor": "GF",
+     "his": "1 x 2.4",
+     "id": "D-GF-03",
+     "name": "GF D-GF-03 vs his 1 x 2.4 / height",
+     "own_area": "1.980000",
+     "own_height": "2.20",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF NORTH EAST ELEVATION / DWF SOUTH WEST ELEVATION",
+     "own_height_note": "head of the bound view(s) minus the printed floor level 0.30",
+     "own_width": "0.90",
+     "own_width_basis": "DRAWING_CONFIRMED: plan wall-face ends, both faces 11D / 11E / 121 / 122",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.240",
+     "diff": "0.000000",
+     "engine": {
+      "area": "1.980",
+      "basis": "Q55C",
+      "height": "2.2000",
+      "width": "0.90"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.240000",
+     "floor": "GF",
+     "his": "1 x 2.4",
+     "id": "D-GF-09",
+     "name": "GF D-GF-09 vs his 1 x 2.4 / width",
+     "own_area": "1.980000",
+     "own_height": "2.20",
+     "own_height_basis": "ASSUMED_OWNER_APPROVED: owner Q-55 C (no printed door height)",
+     "own_height_note": "no bound view (frame-only or none)",
+     "own_width": "0.90",
+     "own_width_basis": "DRAWING_CONFIRMED: plan wall-face ends, both faces 26E / 26F / 2B8 / 2B9",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "0.180",
+     "diff": "0.000000",
+     "engine": {
+      "area": "1.980",
+      "basis": "Q55C",
+      "height": "2.2000",
+      "width": "0.90"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "ASSUMED_OWNER_APPROVED",
+     "expected": "0.180000",
+     "floor": "GF",
+     "his": "1 x 2.4",
+     "id": "D-GF-09",
+     "name": "GF D-GF-09 vs his 1 x 2.4 / height",
+     "own_area": "1.980000",
+     "own_height": "2.20",
+     "own_height_basis": "ASSUMED_OWNER_APPROVED: owner Q-55 C (no printed door height)",
+     "own_height_note": "no bound view (frame-only or none)",
+     "own_width": "0.90",
+     "own_width_basis": "DRAWING_CONFIRMED: plan wall-face ends, both faces 26E / 26F / 2B8 / 2B9",
+     "proposed_class": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "0.200",
+     "diff": "0.000000",
+     "engine": {
+      "area": "2.200",
+      "basis": "Q55C",
+      "height": "2.2000",
+      "width": "1.00"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "ASSUMED_OWNER_APPROVED",
+     "expected": "0.200000",
+     "floor": "2F",
+     "his": "1 x 2.4",
+     "id": "D-2F-01",
+     "name": "2F D-2F-01 vs his 1 x 2.4 / height",
+     "own_area": "2.200000",
+     "own_height": "2.20",
+     "own_height_basis": "ASSUMED_OWNER_APPROVED: owner Q-55 C (no printed door height)",
+     "own_height_note": "no bound view (frame-only or none)",
+     "own_width": "1.00",
+     "own_width_basis": "DRAWING_CONFIRMED: plan wall-face ends, both faces 1280 / 1281 / 1282 / 1283",
+     "proposed_class": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-2.200",
+     "diff": "0.000000",
+     "engine": {
+      "area": "2.200",
+      "basis": "Q55C",
+      "height": "2.2000",
+      "width": "1.00"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "ASSUMED_OWNER_APPROVED",
+     "expected": "-2.200000",
+     "floor": "GF",
+     "his": null,
+     "id": "D-GF-05",
+     "name": "GF D-GF-05 (no unit of his) / ours only",
+     "own_area": "2.200000",
+     "own_height": "2.20",
+     "own_height_basis": "ASSUMED_OWNER_APPROVED: owner Q-55 C (no printed door height)",
+     "own_height_note": "no bound view (frame-only or none)",
+     "own_width": "1.00",
+     "own_width_basis": "DRAWING_CONFIRMED: plan wall-face ends, both faces A2 / A3 / A4 / A5",
+     "proposed_class": "ENGINE_RIGHT"
+    }
+   ],
+   "split_proposed": {
+    "by_class": {
+     "ENGINE_RIGHT": "-1.140",
+     "RULE_DIFFERENCE": "0.380"
+    },
+    "by_evidence": {
+     "ASSUMED_OWNER_APPROVED": "-1.820",
+     "DRAWING_CONFIRMED": "1.060"
+    },
+    "total": "-0.760"
+   },
+   "split_statement": {
+    "by_class": {
+     "ENGINE_RIGHT": "-1.720",
+     "RULE_DIFFERENCE": "0.960"
+    },
+    "by_evidence": {
+     "ASSUMED_OWNER_APPROVED": "-1.820",
+     "DRAWING_CONFIRMED": "1.060"
+    },
+    "total": "-0.760"
+   }
+  },
+  "T-568/windows-m2": {
+   "count": {
+    "DRAWING_CONFIRMED": 14,
+    "HELD": 2
+   },
+   "difference": "40.644",
+   "engine_valued": "76.256",
+   "reference_total": "116.900",
+   "rows": [
+    {
+     "class": "HELD",
+     "delta": "27.219",
+     "engine": {
+      "area": null,
+      "basis": "HELD",
+      "height": null,
+      "width": "6.33"
+     },
+     "evidence": "HELD",
+     "expected": null,
+     "floor": "GF",
+     "his": "6.33 x 4.3",
+     "id": "W02",
+     "name": "GF W02 vs his 6.33 x 4.3 / ours HELD",
+     "own_height": null,
+     "own_height_basis": "HELD: None",
+     "own_width": "6.33",
+     "own_width_basis": "PRINTED: plan DIMENSION 8F1",
+     "proposed_class": "HELD",
+     "waits_on": "D-53 (designer): one 6.33 opening (drawings) or two (render); width 6.332 (printed 633, DIMENSION 8F1) and head 2.20 at the B-B cut (T-201) are drawn, the count is not settled"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.500",
+     "diff": "0.000000",
+     "engine": {
+      "area": "1.500",
+      "basis": "DRAWING_CONFIRMED",
+      "height": "1.5000",
+      "width": "1.00"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.500000",
+     "floor": "GF",
+     "his": "1 x 2",
+     "id": "W10",
+     "name": "GF W10 vs his 1 x 2 / height",
+     "own_area": "1.500000",
+     "own_height": "1.50",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF SECTION A-A",
+     "own_width": "1.00",
+     "own_width_basis": "DRAWING_CONFIRMED: plan masonry jambs 3D1 / 3D5",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.750",
+     "diff": "0.000000",
+     "engine": {
+      "area": "2.250",
+      "basis": "DRAWING_CONFIRMED",
+      "height": "1.5000",
+      "width": "1.50"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.750000",
+     "floor": "GF",
+     "his": "1.5 x 2",
+     "id": "W08",
+     "name": "GF W08 vs his 1.5 x 2 / height",
+     "own_area": "2.250000",
+     "own_height": "1.50",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF SOUTH WEST ELEVATION",
+     "own_width": "1.50",
+     "own_width_basis": "DRAWING_CONFIRMED: plan masonry jambs 3B7 / 3BB",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.390",
+     "diff": "0.000000",
+     "engine": {
+      "area": "4.290",
+      "basis": "DRAWING_CONFIRMED",
+      "height": "2.2000",
+      "width": "1.95"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "-0.390000",
+     "floor": "GF",
+     "his": "1.95 x 2",
+     "id": "W11",
+     "name": "GF W11 vs his 1.95 x 2 / height",
+     "own_area": "4.290000",
+     "own_height": "2.20",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF FENCE ELEVATION",
+     "own_width": "1.95",
+     "own_width_basis": "PRINTED: plan DIMENSION A3E",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.390",
+     "diff": "0.000000",
+     "engine": {
+      "area": "4.290",
+      "basis": "DRAWING_CONFIRMED",
+      "height": "2.2000",
+      "width": "1.95"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "-0.390000",
+     "floor": "GF",
+     "his": "1.95 x 2",
+     "id": "W12",
+     "name": "GF W12 vs his 1.95 x 2 / height",
+     "own_area": "4.290000",
+     "own_height": "2.20",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF FENCE ELEVATION",
+     "own_width": "1.95",
+     "own_width_basis": "PRINTED: plan DIMENSION A22",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.750",
+     "diff": "0.000000",
+     "engine": {
+      "area": "2.250",
+      "basis": "DRAWING_CONFIRMED",
+      "height": "1.5000",
+      "width": "1.50"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.750000",
+     "floor": "GF",
+     "his": "1.5 x 2",
+     "id": "W09",
+     "name": "GF W09 vs his 1.5 x 2 / height",
+     "own_area": "2.250000",
+     "own_height": "1.50",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF SECTION A-A",
+     "own_width": "1.50",
+     "own_width_basis": "DRAWING_CONFIRMED: plan masonry jambs 3C4 / 3C8",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.500",
+     "diff": "0.000000",
+     "engine": {
+      "area": "1.500",
+      "basis": "DRAWING_CONFIRMED",
+      "height": "1.5000",
+      "width": "1.00"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.500000",
+     "floor": "1F",
+     "his": "1 x 2",
+     "id": "W25",
+     "name": "1F W25 vs his 1 x 2 / height",
+     "own_area": "1.500000",
+     "own_height": "1.50",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF SOUTH WEST ELEVATION",
+     "own_width": "1.00",
+     "own_width_basis": "DRAWING_CONFIRMED: plan masonry jambs CEB / CEA",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.080",
+     "diff": "0.000000",
+     "engine": {
+      "area": "1.080",
+      "basis": "PRINTED",
+      "height": "2.1600",
+      "width": "0.50"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.080000",
+     "floor": "1F",
+     "his": "0.6 x 0.8",
+     "id": "W18",
+     "name": "1F W18 vs his 0.6 x 0.8 / width",
+     "own_area": "1.080000",
+     "own_height": "2.16",
+     "own_height_basis": "PRINTED: NORTH WEST ELEVATION DIMENSION 2EFA",
+     "own_width": "0.50",
+     "own_width_basis": "PRINTED: plan DIMENSION 11ED",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.680",
+     "diff": "0.000000",
+     "engine": {
+      "area": "1.080",
+      "basis": "PRINTED",
+      "height": "2.1600",
+      "width": "0.50"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "-0.680000",
+     "floor": "1F",
+     "his": "0.6 x 0.8",
+     "id": "W18",
+     "name": "1F W18 vs his 0.6 x 0.8 / height",
+     "own_area": "1.080000",
+     "own_height": "2.16",
+     "own_height_basis": "PRINTED: NORTH WEST ELEVATION DIMENSION 2EFA",
+     "own_width": "0.50",
+     "own_width_basis": "PRINTED: plan DIMENSION 11ED",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "HELD",
+     "delta": "9.45",
+     "engine": {
+      "area": null,
+      "basis": "HELD",
+      "height": null,
+      "width": "3.29"
+     },
+     "evidence": "HELD",
+     "expected": null,
+     "floor": "1F",
+     "his": "3.15 x 3",
+     "id": "W17",
+     "name": "1F W17 vs his 3.15 x 3 / ours HELD",
+     "own_height": "3.05",
+     "own_height_basis": "PRINTED: NORTH WEST ELEVATION DIMENSION 2E97",
+     "own_width": "2.69",
+     "own_width_basis": "PRINTED: NORTH WEST ELEVATION DIMENSION 2D53",
+     "proposed_class": "HELD",
+     "waits_on": "Gate B wiring of owner Q-76 A (F-T568-1): 3.29 x 3.00 = 9.870 m2; the candidate line is still HELD 9.870 .. 11.515; NW prints 305 from +5.50 (DIMENSION 2E97) and chord 269 (2D53)"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.775",
+     "diff": "0.000000",
+     "engine": {
+      "area": "2.325",
+      "basis": "DRAWING_CONFIRMED",
+      "height": "1.5000",
+      "width": "1.55"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.775000",
+     "floor": "1F",
+     "his": "1.55 x 2",
+     "id": "W24",
+     "name": "1F W24 vs his 1.55 x 2 / height",
+     "own_area": "2.325000",
+     "own_height": "1.50",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF NORTH EAST ELEVATION",
+     "own_width": "1.55",
+     "own_width_basis": "DRAWING_CONFIRMED: plan masonry jambs D14 / D10",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.980",
+     "diff": "0.000000",
+     "engine": {
+      "area": "3.920",
+      "basis": "PRINTED",
+      "height": "1.6000",
+      "width": "2.45"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.980000",
+     "floor": "1F",
+     "his": "2.45 x 2",
+     "id": "W14",
+     "name": "1F W14 vs his 2.45 x 2 / height",
+     "own_area": "3.920000",
+     "own_height": "1.60",
+     "own_height_basis": "PRINTED: SOUTH EAST ELEVATION DIMENSION 2B47",
+     "own_width": "2.45",
+     "own_width_basis": "PRINTED: plan DIMENSION 1198",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.360",
+     "diff": "0.000000",
+     "engine": {
+      "area": "2.760",
+      "basis": "PRINTED",
+      "height": "2.3000",
+      "width": "1.20"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "-0.360000",
+     "floor": "1F",
+     "his": "1.2 x 2",
+     "id": "W13",
+     "name": "1F W13 vs his 1.2 x 2 / height",
+     "own_area": "2.760000",
+     "own_height": "2.30",
+     "own_height_basis": "PRINTED: SOUTH EAST ELEVATION DIMENSION 2A9C",
+     "own_width": "1.20",
+     "own_width_basis": "PRINTED: plan DIMENSION 1126",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.500",
+     "diff": "0.000000",
+     "engine": {
+      "area": "1.500",
+      "basis": "DRAWING_CONFIRMED",
+      "height": "1.5000",
+      "width": "1.00"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.500000",
+     "floor": "2F",
+     "his": "1 x 2",
+     "id": "W27",
+     "name": "2F W27 vs his 1 x 2 / height",
+     "own_area": "1.500000",
+     "own_height": "1.50",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF SOUTH WEST ELEVATION",
+     "own_width": "1.00",
+     "own_width_basis": "DRAWING_CONFIRMED: plan masonry jambs 134B / 134A",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.360",
+     "diff": "0.000000",
+     "engine": {
+      "area": "2.040",
+      "basis": "Q32A",
+      "height": "1.7000",
+      "width": "1.20"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.360000",
+     "floor": "2F",
+     "his": "1.2 x 2",
+     "id": "W26",
+     "name": "2F W26 vs his 1.2 x 2 / height",
+     "own_area": "2.040000",
+     "own_height": "1.70",
+     "own_height_basis": "PRINTED: SOUTH EAST ELEVATION DIMENSION 2AB8",
+     "own_width": "1.20",
+     "own_width_basis": "PRINTED: plan DIMENSION 149D",
+     "proposed_class": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.600",
+     "diff": "0.000000",
+     "engine": {
+      "area": "1.800",
+      "basis": "DRAWING_CONFIRMED",
+      "height": "1.5000",
+      "width": "1.20"
+     },
+     "engine_minus_own": "0.000000",
+     "evidence": "DRAWING_CONFIRMED",
+     "expected": "0.600000",
+     "floor": "2F",
+     "his": "1.2 x 2",
+     "id": "W29",
+     "name": "2F W29 vs his 1.2 x 2 / height",
+     "own_area": "1.800000",
+     "own_height": "1.50",
+     "own_height_basis": "DRAWING_CONFIRMED: DWF SOUTH WEST ELEVATION",
+     "own_width": "1.20",
+     "own_width_basis": "DRAWING_CONFIRMED: plan masonry jambs 1330 / 132F",
+     "proposed_class": "ENGINE_RIGHT"
+    }
+   ],
+   "split_proposed": {
+    "by_class": {
+     "ENGINE_RIGHT": "3.975",
+     "HELD": "36.669"
+    },
+    "by_evidence": {
+     "DRAWING_CONFIRMED": "3.975",
+     "HELD": "36.669"
+    },
+    "total": "40.644"
+   },
+   "split_statement": {
+    "by_class": {
+     "ENGINE_RIGHT": "3.975",
+     "HELD": "36.669"
+    },
+    "by_evidence": {
+     "DRAWING_CONFIRMED": "3.975",
+     "HELD": "36.669"
+    },
+    "total": "40.644"
+   }
+  }
+ },
+ "statement": {
+  "file": "research/agents_t620/out/RECONCILED_STATEMENT_T620.json",
+  "sections": [
+   "T-568/windows-m2",
+   "T-568/alu-doors-m2"
+  ],
+  "sha256": "db5f7bceb8b6b44b1d9f87c40e83022cdd1123789e4e3be81fe43e9bad298e69"
+ },
+ "task": "T-627"
+}

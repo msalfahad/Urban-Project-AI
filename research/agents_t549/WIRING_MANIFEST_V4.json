@@ -1,0 +1,1027 @@
+{
+ "accessories": {
+  "candidate_lines_moved": 0,
+  "candidate_lines_with_these_codes": [],
+  "proposed_lines": [
+   {
+    "code": "MAS.TIE.SHARMAT",
+    "family": "B9-06 (proposed, missing category)",
+    "quantity_v2": {
+     "held_junctions": 104,
+     "measured_nr": 151
+    },
+    "status": "PROPOSED: measured part ASSUMED — OWNER-APPROVED (Q-77, Q-75 0.20 m module); 0.15 m and white walls HELD (R-T533-1 / Q-60); SPECIFICATION HELD (material, size, embedment, fixing; structural consultant RFI, never a design approval)",
+    "unit": "pcs"
+   },
+   {
+    "code": "MAS.MESH.BED_JOINT",
+    "family": "B9-07 (proposed, missing category)",
+    "quantity_v2": {
+     "held_015_walls": 25,
+     "measured_net_m": 175.4844
+    },
+    "status": "PROPOSED: 0.20 m black walls ASSUMED — OWNER-APPROVED; 0.15 m black walls HELD (R-T533-1); white HELD (Q-60); lap / waste procurement, apart",
+    "unit": "m.l"
+   },
+   {
+    "code": "MAS.MESH.JOINT",
+    "family": "B9-03 (existing family, NOT_IMPLEMENTED)",
+    "quantity_v2": {
+     "by_class_after": {
+      "A": {
+       "drawing_band_m": 227.6229,
+       "held_end_sides": 6,
+       "owner_band_m": 119.9
+      },
+      "B": {
+       "drawing_band_m": 122.1228,
+       "held_end_sides": 4,
+       "owner_band_m": 77.95
+      },
+      "C": {
+       "drawing_band_m": 233.8939,
+       "held_end_sides": 2,
+       "owner_band_m": 233.8939
+      },
+      "MIXED": {
+       "drawing_band_m": 181.6879,
+       "held_end_sides": 1,
+       "owner_band_m": 94.05
+      },
+      "UNKNOWN": {
+       "drawing_band_m": 37.2185,
+       "held_end_sides": 1,
+       "owner_band_m": 26.8
+      }
+     }
+    },
+    "status": "PROPOSED: owner band and drawing-derived band both shown, neither chosen (Q-77); class D excluded",
+    "unit": "m.l"
+   }
+  ],
+  "rule": "R-T539-1 COLUMN_END_ACCESSORY_LEDGER_V2",
+  "source": [
+   {
+    "checker": "Verifier 2026-11-06T00:05Z GATE A PASS a-h: accessory ledgers V2 on END_CENSUS_V3; ties on 0.15 m walls HELD (R-T533-1)",
+    "merge": "9b754fad",
+    "task": "T-539"
+   }
+  ],
+  "v3": {
+   "mesh_drawing_ml": 44.1,
+   "mesh_owner_ml": 40.9,
+   "state": "NO LINE: still no tie / crack-mesh line in V3.0.58 or the T-498 stage; the ends are now wireable without raising (T-532); ledger versions and the line family are T-539",
+   "ties_nr": 30.0
+  },
+  "v4_end_strip_ml": 0.0,
+  "v4_end_ties": {
+   "held_015_by_name": [
+    "1F-W23",
+    "2F-W08"
+   ],
+   "held_015_s_a_beside_nr": 12,
+   "measured_ends": [
+    "1F-W09 e0 6",
+    "2F-W00 e1 6",
+    "2F-W01 e0 6"
+   ],
+   "measured_nr": 18,
+   "why": "12 of the T-526 +30 were counted on the 0.20 m course over 0.15 m walls (R-T533-1)"
+  },
+  "v4_end_vjoint_mesh": {
+   "drawing_ml_classed": 44.2,
+   "drawing_ml_raw": 44.1,
+   "owner_ml": 40.9,
+   "residual_ml": 0.1,
+   "why": "GF-W16 end 0 exterior Sigma side one band 3.75 (classed as R-T355-4) vs raw 3.65; neither band chosen (Q-77)"
+  }
+ },
+ "block_module": {
+  "candidate_lines_moved": 0,
+  "contract_m2": 178.571,
+  "excluded_walls": {
+   "2F-W08": "D-39 2F storey (T-488), own HELD",
+   "GF-W22": "D-27 area conflict on its parent (T-488), own HELD"
+  },
+  "host_lines": [
+   {
+    "contract_m2": 25.2727,
+    "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+    "host_line": "L-4054259959463edd70fb",
+    "materials": "units / panel mortar / cement / sand HELD blank by name (R-T533-1); the MAS.BLOCK contract line itself stays RELEASED, unchanged",
+    "walls": [
+     "1F-W18",
+     "1F-W24"
+    ]
+   },
+   {
+    "contract_m2": 52.318,
+    "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+    "host_line": "L-73acd5a9d7e7cf6515c1",
+    "materials": "units / panel mortar / cement / sand HELD blank by name (R-T533-1); the MAS.BLOCK contract line itself stays RELEASED, unchanged",
+    "walls": [
+     "1F-W20",
+     "1F-W21",
+     "1F-W22"
+    ]
+   },
+   {
+    "contract_m2": 9.895,
+    "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+    "host_line": "L-87e0023741a8e2d98b21",
+    "materials": "units / panel mortar / cement / sand HELD blank by name (R-T533-1); the MAS.BLOCK contract line itself stays RELEASED, unchanged",
+    "walls": [
+     "GF-W21",
+     "GF-W33"
+    ]
+   },
+   {
+    "contract_m2": 58.2529,
+    "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "host_line": "L-a56a8add7812d1b52cb7",
+    "materials": "units / panel mortar / cement / sand HELD blank by name (R-T533-1); the MAS.BLOCK contract line itself stays RELEASED, unchanged",
+    "walls": [
+     "1F-W12",
+     "1F-W13",
+     "1F-W17",
+     "1F-W19",
+     "1F-W23"
+    ]
+   },
+   {
+    "contract_m2": 24.2374,
+    "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "host_line": "L-abf15bdf70ccf1e7b474",
+    "materials": "units / panel mortar / cement / sand HELD blank by name (R-T533-1); the MAS.BLOCK contract line itself stays RELEASED, unchanged",
+    "walls": [
+     "GF-W28",
+     "GF-W29"
+    ]
+   },
+   {
+    "contract_m2": 8.595,
+    "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+    "host_line": "L-adb393d6db51056d343b",
+    "materials": "units / panel mortar / cement / sand HELD blank by name (R-T533-1); the MAS.BLOCK contract line itself stays RELEASED, unchanged",
+    "walls": [
+     "GF-W19"
+    ]
+   }
+  ],
+  "missing_datum": "installed face module of the 0.15 m black (cement) block: unit length x height and the joint it is laid with (block schedule, project specification 04220, or the supplier's datasheet / sales record)",
+  "result": "HELD",
+  "rule": "R-T533-1 BLOCK_MODULE_BY_THICKNESS_V1",
+  "scenario_rule": "S-A / S-B / S-C are beside only; none is a source (never the 0.20 m module)",
+  "scenarios_beside": {
+   "S-A": {
+    "units_per_m2": "12.500000"
+   },
+   "S-B": {
+    "units_per_m2": "11.614402"
+   },
+   "S-C": {
+    "units_per_m2": "10.000000"
+   }
+  },
+  "source": [
+   {
+    "checker": "Verifier 2026-11-05T22:12Z GATE A PASS a-h: 0.15 m black-block module HELD after the source census (drawings / spec 04220 / Q-75 / supplier / Bayt Al-Omr); scenarios beside only",
+    "merge": "93aba0d6",
+    "task": "T-533"
+   }
+  ],
+  "stage_material_lines": "every T-498 stage MAS.UNITS.BLACK / MAS.MORTAR.BLACK line on these 6 hosts must stay HELD by name with the R-T533-1 datum; a stage figure at 12.5 / m2 (the 0.20 m module) on any of them is refused (see stage_check)",
+  "t523_bindings": "units_nr / laying_material on the 6 hosts are HELD in T-523 with the same datum: consistent, not stale (one STALE_NET read on L-adb393d6, carried from V2)",
+  "walls": 15
+ },
+ "blockwork_consistency": {
+  "by_cause": {
+   "ENGINE_RIGHT": "41.0512800",
+   "HELD": "587.284451",
+   "RULE_DIFFERENCE": "65.148635",
+   "TOLERANCE": "-2.01930050",
+   "UNRESOLVED": "101.43193450"
+  },
+  "candidate_lines_moved": 0,
+  "engine_valued_m2": 467.7925,
+  "freelancer_m2": 1260.6895,
+  "gap_m2": 792.897,
+  "held_lines": 15,
+  "source": [
+   {
+    "checker": "Verifier 2026-11-06T02:20Z merged: B9 blockwork vs the freelancer by component, no ENGINE_WRONG",
+    "merge": "8e93e987",
+    "task": "T-543"
+   }
+  ],
+  "state": "consistent with V3.0.58: no line moves; MAS.BLOCK is the host of the S package materials, its contract lines never move by materials wiring (R-T453-5)"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (T-507 c94b35c1: V3.0.57 line index 25a8b406, 4,994 lines byte-identical, + 5 FIN.WP.ROOF / ROOF_UPTURN lines = 4,999)",
+ "candidate_files_touched": 0,
+ "candidate_lines_moved_v3_to_v4": 0,
+ "coverage": {
+  "covered": [
+   "T-533",
+   "T-534",
+   "T-537",
+   "T-539",
+   "T-541",
+   "T-542",
+   "T-543",
+   "T-548"
+  ],
+  "first_parent_merges": 8,
+  "range": [
+   "9c160d22",
+   "3f3b580c"
+  ]
+ },
+ "findings": [
+  "F-T549-1: T-541 / T-548 value the roof WP at the F package's expected after (V2), 0.639573 m2 / 1.051616 lm over V3.0.58 on 3 lines still HELD; their rows hold only after F steps 1-2",
+  "F-T549-2: V2 expected after of the two staged glue hosts and of the AAC glue group are stale (T-537 r2): the 1F host is HELD blank (AT_MOST 451.60893 kg), the group AT_LEAST 17.643906 .. 18.16227 bags",
+  "F-T549-3: V3 'ties +30 nr' is 18 measured + 12 HELD by name (0.15 m module, R-T533-1): a package wiring the V3 figure would release 12 ties on a module of another thickness",
+  "F-T542-1 carried: GF hall / lobby floor-bed rows stale on the mix (range of both mixes or HELD on the mix)"
+ ],
+ "floor_bed_mix": {
+  "finding": "F-T542-1",
+  "rows": [
+   {
+    "area_m2": 4.805,
+    "floor_bed_line": "L-3e451bfc3e11473a2cec",
+    "if_marble_landing_1_3": {
+     "cement_bags": 1.38038,
+     "mortar_m3": 0.14415,
+     "sand_m3": 0.14379
+    },
+    "key": "GF-HALL",
+    "now_1_4": {
+     "cement_bags": [
+      1.1532,
+      1.5376
+     ],
+     "mortar_m3": [
+      0.14415,
+      0.1922
+     ],
+     "sand_m3": [
+      0.158565,
+      0.21142
+     ]
+    },
+    "state": "STALE_ON_MIX: the finish is HELD (RFI-B-A12), so the 1:4 dry-floor mix is not established; the wiring carries a range covering both mixes or HELD on the mix (named, not chosen here)",
+    "t500_row": "L-bff6fe38b9392a8fcad6"
+   },
+   {
+    "area_m2": 1.3225,
+    "floor_bed_line": "L-faa974d23d90547f0b5b",
+    "if_marble_landing_1_3": {
+     "cement_bags": 0.379928,
+     "mortar_m3": 0.039675,
+     "sand_m3": 0.039576
+    },
+    "key": "GF-LOBBY",
+    "now_1_4": {
+     "cement_bags": [
+      0.3174,
+      0.4232
+     ],
+     "mortar_m3": [
+      0.039675,
+      0.0529
+     ],
+     "sand_m3": [
+      0.043643,
+      0.05819
+     ]
+    },
+    "state": "STALE_ON_MIX: the finish is HELD (RFI-B-A12), so the 1:4 dry-floor mix is not established; the wiring carries a range covering both mixes or HELD on the mix (named, not chosen here)",
+    "t500_row": "L-b87fd07d7fc055529b3d"
+   }
+  ],
+  "sand_1_3_m3": 0.183366,
+  "sand_1_4_low_m3": 0.202208,
+  "sand_below_1_4_low_m3": 0.018842,
+  "source": [
+   {
+    "checker": "Verifier 2026-11-06T02:24Z merged: stair bed classes beyond the treads (risers, landings)",
+    "merge": "3f3b580c",
+    "task": "T-542"
+   }
+  ]
+ },
+ "host_faces": {
+  "bindings_stale": [
+   "T-453|L-2fdc0f971a94348ec855|glue_bags_25kg_net",
+   "T-453|L-2fdc0f971a94348ec855|glue_kg",
+   "T-453|L-a3f88ecda2402f67c500|glue_bags_25kg_net",
+   "T-453|L-a3f88ecda2402f67c500|glue_kg"
+  ],
+  "glue_group": {
+   "v2_expected_after": {
+    "at_least": [
+     35.387755,
+     36.226627
+    ],
+    "status": "HELD",
+    "to_buy_at_least": [
+     36,
+     37
+    ]
+   },
+   "v4_expected_after": {
+    "at_least": [
+     17.643906,
+     18.16227
+    ],
+    "status": "HELD",
+    "to_buy_at_least": [
+     18,
+     19
+    ]
+   },
+   "why": "the known part shrinks because the 1F host becomes OPEN (HELD blank), not because less glue is needed"
+  },
+  "hosts": [
+   {
+    "cause": "R-T498-2 r2: faces D x [L_lo, L_hi], L_hi by measured ceilings; a min-bearing 'max' opens the face (F-T537-1)",
+    "contract_net_m2": 101.976,
+    "host_line_id": "L-2fdc0f971a94348ec855",
+    "kg_per_m2": 4.5,
+    "stale": true,
+    "t498_stage_line": "L-4b9a29d424ea40e0af8a",
+    "v2_expected_after": {
+     "bags_25kg_range": [
+      17.730925,
+      18.064357
+     ],
+     "kg_range": [
+      443.27313,
+      451.60893
+     ],
+     "state": "BOUNDED_EXPOSURE (range by name)"
+    },
+    "v4_expected_after": {
+     "bags_25kg_net": {
+      "at_most_beside": 18.064357,
+      "range": null,
+      "state": "HELD",
+      "unit": "bags_25kg_net",
+      "value": null,
+      "why": "an open lintel face: the material is HELD blank by name, its upper end beside (AT_MOST)"
+     },
+     "base_m2": [
+      null,
+      100.35754
+     ],
+     "glue_kg": {
+      "at_most_beside": 451.60893,
+      "range": null,
+      "state": "HELD",
+      "unit": "kg",
+      "value": null,
+      "why": "an open lintel face: the material is HELD blank by name, its upper end beside (AT_MOST)"
+     }
+    }
+   },
+   {
+    "cause": "R-T498-2 r2: faces D x [L_lo, L_hi], L_hi by measured ceilings; a min-bearing 'max' opens the face (F-T537-1)",
+    "contract_net_m2": 5.59,
+    "host_line_id": "L-a3f88ecda2402f67c500",
+    "kg_per_m2": 4.5,
+    "stale": true,
+    "t498_stage_line": "L-d14c6c9b738045c797ec",
+    "v2_expected_after": {
+     "bags_25kg_range": [
+      0.95076,
+      0.9558
+     ],
+     "kg_range": [
+      23.769,
+      23.895
+     ],
+     "state": "BOUNDED_EXPOSURE (range by name)"
+    },
+    "v4_expected_after": {
+     "bags_25kg_net": {
+      "range": [
+       0.937836,
+       0.9558
+      ],
+      "state": "BOUNDED_EXPOSURE",
+      "unit": "bags_25kg_net",
+      "value": null
+     },
+     "base_m2": [
+      5.2102,
+      5.31
+     ],
+     "glue_kg": {
+      "range": [
+       23.4459,
+       23.895
+      ],
+      "state": "BOUNDED_EXPOSURE",
+      "unit": "kg",
+      "value": null
+     }
+    }
+   }
+  ],
+  "rule": "R-T498-2 1.0.0 r2",
+  "source": [
+   {
+    "checker": "Verifier 2026-11-06T00:05Z r2 GATE A PASS a-h: ranged lintel host faces; HELD_BY_NAME L_hi by measured ceilings; F-T537-1 low end of the 1F host has no proven basis",
+    "merge": "ac3c77b2",
+    "task": "T-537"
+   }
+  ]
+ },
+ "inputs": {
+  "research/agents_t500/out/TILE_BED_MORTAR_T500.csv": "d7306d4a776cefa0ba5e16a1050156cfb64eb13f4e6d336cdef325603a7cbcff",
+  "research/agents_t533/out/SUMMARY_T533.json": "dbbd3c9a2cd06abbe1b15748887669082a573450be96d9bea82e6c13a8c9ef53",
+  "research/agents_t533/out/WALLS_015_T533.csv": "8b515887a85ec6f89476e7cb78357532b21581a8ba464f128e6a80dd0c8ee93d",
+  "research/agents_t534/out/T534_STAIR_BED_RECONCILE.json": "a79bb0f45544b2f31e961ccd193c6234782495057a22f8f1dcd5dc2719fbee4a",
+  "research/agents_t537/t537_apply.py": "5863aa937eb2754d95493e88c636cd9e80644843cc44dbbd1d8c5f3e791330bf",
+  "research/agents_t538/WIRING_MANIFEST_V3.json": "8d524c53e952ba9128c33dbed6c9243f587925278605b8225315943a34eb0ab2",
+  "research/agents_t539/out/LINE_FAMILIES_T539.json": "adf22fad1022085a274d45c01e0e9e6c26efdbbe9f24ee4269b50d54706c499f",
+  "research/agents_t539/out/SUMMARY_T539.json": "dc3e292a8f1a6a2e902c1814bd685b92fe7ac3c4fb9948cd4c5c3c75d3718ecf",
+  "research/agents_t541/out/T541_ROOF_WP_RECONCILE.json": "4f7c76ddde1a21a970eb68f3ea27c56e8df442096f8daf22b3cf085253e310fc",
+  "research/agents_t542/out/T542_STAIR_BED_CLASSES.json": "d9d1bad4fcd67d128faccde03ed74447e7322ccdadce58fb379e9242d4786ffc",
+  "research/agents_t543/out/T543_BLOCKWORK_RECONCILE.json": "a4cfcdeb01aab26e38b543fa73c89c2999b54cbad85916d9fe6023aa0af4f721",
+  "research/agents_t548/out/RECONCILED_STATEMENT_T548.json": "2a3cf50b1a002338fb898d3b38fde140dcc16ed8eff7b716fbe6032202483180"
+ },
+ "no_wiring": {
+  "T-541": "reconciliation vs the freelancer: moves no line; consistency with V2 / the candidate checked (F-T549-1)",
+  "T-543": "reconciliation vs the freelancer: moves no line; engine figures equal the candidate MAS.BLOCK lines",
+  "T-548": "statement builder: moves no line; re-run after each package (its roof rows hold after F steps 1-2)"
+ },
+ "not_sources": {
+  "T-498": "agents/task-T-498 @ e3e2ebb5 stage (BLOCKED on the wrapper allow-list): line ids and states only, no figure read"
+ },
+ "packages": {
+  "F package (V7 stair bed; no board row yet)": {
+   "blocked_by": "wrapper allow-list; F-T518-2 for the stair procurement; the Lead names the row",
+   "needs": [
+    "stair_bed (T-534)",
+    "stair_beyond (T-542)",
+    "floor_bed_mix (F-T542-1)",
+    "roof_consistency (F-T549-1)"
+   ],
+   "order": [
+    "1 T-522 window run + ledge pieces",
+    "2 T-529 ledge exposure (the T-541 / T-548 roof rows hold from here)",
+    "3 T-517 build-up lines",
+    "4 FINISH V6 reader only",
+    "5 V7 on the 11 released stair lines AT_LEAST 35.4313 m2 (T-534 merged); procurement HELD until F-T518-2",
+    "6 each T-542 part lifts V7 when its own line is released / added (T-502 landings, B7-03 risers)",
+    "7 floor-bed materials: GF hall / lobby mix with the material hold"
+   ]
+  },
+  "T-363 (B9 masonry accessories)": {
+   "blocked_by": "T-498 (the host material lines first) and the family registry rows for B9-06 / B9-07",
+   "needs": [
+    "accessories (T-539)"
+   ],
+   "order": [
+    "1 add MAS.TIE.SHARMAT (B9-06 proposed) 151 measured + 104 junctions HELD",
+    "2 add MAS.MESH.BED_JOINT (B9-07 proposed) 175.4844 m.l, 0.15 m / white walls HELD",
+    "3 MAS.MESH.JOINT (B9-03) per class, owner and drawing bands both shown (Q-77)"
+   ]
+  },
+  "T-372 (B9-04 masonry joints)": {
+   "blocked_by": "T-363",
+   "needs": [
+    "block_module (T-533): 0.15 m panel / perimeter mortar HELD"
+   ],
+   "order": [
+    "after T-363 (worker 1 order); superseded or narrowed by T-506's verdict (Lead 2026-11-04)"
+   ]
+  },
+  "T-498 (S package, stream S)": {
+   "blocked_by": "wrapper allow-list (T-498 / T-525)",
+   "needs": [
+    "stair_bed: none",
+    "host_faces (T-537 r2) at step 5",
+    "block_module (T-533) at steps 2 and 7",
+    "groups at step 7 with the V4 glue group"
+   ],
+   "order": [
+    "1 T-525",
+    "2 T-498 stage (74 material lines; 0.15 m black units / mortar stay HELD, R-T533-1)",
+    "3 the 60 lintel bindings (F-T530-1)",
+    "4 lintel lines (V3 basis, T-527)",
+    "5 host faces by R-T498-2 r2 (T-537): GF L-d14c6c9b [23.4459, 23.895] kg, 1F L-4b9a29d4 HELD blank, AT_MOST 451.60893 kg beside",
+    "6 perimeter mortar (T-520 = T-526 = T-532)",
+    "7 groups (R-T523-1): AAC glue AT_LEAST 17.643906 .. 18.16227 bags HELD (V2 said 35.387755 .. 36.226627)",
+    "8 lintel bars: two HELD AT_LEAST lines (V3, T-531)"
+   ]
+  },
+  "T-513 (BAND_GAP_CLASSES_V1, stream F)": {
+   "blocked_by": "wrapper allow-list",
+   "needs": [
+    "none of the V4 pieces moves a band-gap line"
+   ],
+   "order": [
+    "unchanged"
+   ]
+  }
+ },
+ "pieces_new": {
+  "T-533": {
+   "gate": "A",
+   "merge": "93aba0d6",
+   "rules": [
+    "R-T533-1"
+   ],
+   "verdict": "Verifier 2026-11-05T22:12Z GATE A PASS a-h: 0.15 m black-block module HELD after the source census (drawings / spec 04220 / Q-75 / supplier / Bayt Al-Omr); scenarios beside only"
+  },
+  "T-534": {
+   "gate": "A",
+   "merge": "3c772b79",
+   "rules": [
+    "R-T534-1",
+    "R-T534-2",
+    "R-T534-3"
+   ],
+   "verdict": "Verifier 2026-11-05T18:05Z GATE A PASS (stands at the 22:05Z merge): Q-53 39.485 -> candidate 35.4313 m2 reconciled by cause, residual 0"
+  },
+  "T-537": {
+   "gate": "A",
+   "merge": "ac3c77b2",
+   "rules": [
+    "R-T498-2"
+   ],
+   "verdict": "Verifier 2026-11-06T00:05Z r2 GATE A PASS a-h: ranged lintel host faces; HELD_BY_NAME L_hi by measured ceilings; F-T537-1 low end of the 1F host has no proven basis"
+  },
+  "T-539": {
+   "gate": "A",
+   "merge": "9b754fad",
+   "rules": [
+    "R-T539-1"
+   ],
+   "verdict": "Verifier 2026-11-06T00:05Z GATE A PASS a-h: accessory ledgers V2 on END_CENSUS_V3; ties on 0.15 m walls HELD (R-T533-1)"
+  },
+  "T-541": {
+   "gate": "A",
+   "merge": "322c1409",
+   "rules": [
+    "R-T541-1"
+   ],
+   "verdict": "Verifier 2026-11-05T23:00Z merged: roof WP vs the freelancer by signed component, no ENGINE_WRONG; residuals +0.523 m2 / +11.893 lm UNRESOLVED"
+  },
+  "T-542": {
+   "gate": "A",
+   "merge": "3f3b580c",
+   "rules": [
+    "R-T542-1",
+    "R-T542-2",
+    "R-T542-3"
+   ],
+   "verdict": "Verifier 2026-11-06T02:24Z merged: stair bed classes beyond the treads (risers, landings)"
+  },
+  "T-543": {
+   "gate": "A",
+   "merge": "8e93e987",
+   "rules": [
+    "R-T543-1"
+   ],
+   "verdict": "Verifier 2026-11-06T02:20Z merged: B9 blockwork vs the freelancer by component, no ENGINE_WRONG"
+  },
+  "T-548": {
+   "gate": "A",
+   "merge": "42ae2e5f",
+   "rules": [
+    "R-T548-1"
+   ],
+   "verdict": "Verifier 2026-11-06T02:22Z merged: reconciled-quantities statement builder (reads T-541 / T-534)"
+  }
+ },
+ "released_quantities_changed": 0,
+ "roof_consistency": {
+  "candidate_lines_moved": 0,
+  "finding": "F-T549-1",
+  "membrane": {
+   "candidate_v3_0_58_released": 209.018867,
+   "difference": 0.639573,
+   "lines_valued_only_after_wiring": [
+    {
+     "candidate": "HELD 0 .. 0.639573",
+     "line_id": "L-2361d6ec13c952bd2ae3",
+     "v2_after": 0.639573
+    }
+   ],
+   "t541_engine": 209.65844
+  },
+  "source": [
+   {
+    "checker": "Verifier 2026-11-05T23:00Z merged: roof WP vs the freelancer by signed component, no ENGINE_WRONG; residuals +0.523 m2 / +11.893 lm UNRESOLVED",
+    "merge": "322c1409",
+    "task": "T-541"
+   },
+   {
+    "checker": "Verifier 2026-11-06T02:22Z merged: reconciled-quantities statement builder (reads T-541 / T-534)",
+    "merge": "42ae2e5f",
+    "task": "T-548"
+   }
+  ],
+  "state": "the T-541 / T-548 roof rows hold on the candidate only after F package steps 1-2 (T-522 / T-529) wire the ledge membrane and the two upturns; until then their 'engine valued' is the expected after, not V3.0.58",
+  "t548_absent_lines": {
+   "T-534/stair-bed": [],
+   "T-541/membrane": [
+    "L-eff54f96bfcfcf175d58",
+    "L-2361d6ec13c952bd2ae3"
+   ],
+   "T-541/upturn": [
+    "L-cf8d5ed40b0d546427d6",
+    "L-1954878bb02c91139e1b",
+    "L-d7d1bf8c5991ccf69ea2"
+   ]
+  },
+  "upturn": {
+   "candidate_v3_0_58_released": 186.782544,
+   "difference": 1.051616,
+   "lines_valued_only_after_wiring": [
+    {
+     "candidate": "HELD 0 .. 0.500002",
+     "line_id": "L-1954878bb02c91139e1b",
+     "v2_after": 0.500002
+    },
+    {
+     "candidate": "HELD 0 .. 3.528277",
+     "line_id": "L-d7d1bf8c5991ccf69ea2",
+     "v2_after": 0.551614
+    }
+   ],
+   "t541_engine": 187.83416
+  }
+ },
+ "rule": "R-T549-1 MANIFEST COVERAGE (every villa; provenance F-C-T536-1 / T-538, T-549): a wiring manifest names its range (previous manifest base, this base] on the first-parent line; every 'Merge agents/task-T-<n>' in it is a source with that merge commit or a declared NO_WIRING piece with its reason; a merged piece missing from the manifest, a source outside the range or with another merge commit is refused. The range is pinned: a later merge belongs to the next manifest and never turns this one red.",
+ "schema": "URBAN_T549_WIRING_MANIFEST_V4",
+ "stair_bed": {
+  "after": {
+   "source": "T-534",
+   "state": "AT_LEAST",
+   "value_m2": 35.4313
+  },
+  "area_m2": 35.4313,
+  "before_v3": {
+   "state": "HELD_BY_NAME",
+   "value_m2": null,
+   "why": "T-534 (stair bed area) not merged"
+  },
+  "evidence_status": "AT_LEAST (20 HELD + 3 EXCLUDED stair-bed lines named, never 0)",
+  "held_or_excluded_lines": {
+   "EXCLUDED": 3,
+   "HELD": 20,
+   "ids": [
+    "L-07e0855f961a839c1277",
+    "L-099fe9fcfa5667fb8b99",
+    "L-0ec429f1783f1f15e700",
+    "L-0f060e9951c28c4cf074",
+    "L-12f56cbfe750f8b30c41",
+    "L-16e0c6682725260f28e7",
+    "L-1983e89d8b619eade1db",
+    "L-1e36bc3c0893eeeb9c58",
+    "L-24792292e996c57c52d9",
+    "L-2efa4a4f4cc2aad9a2f2",
+    "L-5d2be30dd8d2ffeacc42",
+    "L-5d338389185d72a6fb16",
+    "L-6cf11c2d30387d0942b9",
+    "L-79beb9688604887c59c5",
+    "L-7adf1ccd0c407b61221a",
+    "L-820baecf7f726b4d8f1e",
+    "L-8938aa3b25bf605e4b9d",
+    "L-913cda8eb6d73f6e28cc",
+    "L-b4660de0ddd98ad0ffc2",
+    "L-ea55ed317bc4de89aec1",
+    "L-ecc450d6cc865617f8f6",
+    "L-f24a09f1b4117814e4c8",
+    "L-fa534ec5f9dc14947899"
+   ]
+  },
+  "lines": [
+   "L-07f00d5b0c4e1924aaf5",
+   "L-0afa7bd369ec489ebfc2",
+   "L-151d92470a81dd1c450b",
+   "L-1dac5d9b574d7608d80d",
+   "L-314c3ac6d45431b687c5",
+   "L-3dd82a576dce1beb4250",
+   "L-65806b4d02d476603bc5",
+   "L-8011889d84788553a6b1",
+   "L-89c84fdd4964dec8a323",
+   "L-a4aeb32035d11684f1a2",
+   "L-e1eb8b9a7cb92508ccc9"
+  ],
+  "source": [
+   {
+    "checker": "Verifier 2026-11-05T18:05Z GATE A PASS (stands at the 22:05Z merge): Q-53 39.485 -> candidate 35.4313 m2 reconciled by cause, residual 0",
+    "merge": "3c772b79",
+    "task": "T-534"
+   }
+  ],
+  "v7_on_it": {
+   "cement_bags_installed": 10.178704,
+   "mortar_m3": 1.062939,
+   "procurement": "HELD: F-T518-2 (stair-bed loss scope) still open; the 10.62939 bags allowance and the V7 + Q-45 5 % figure are never stacked",
+   "sand_m3_installed": 1.06028
+  }
+ },
+ "stair_beyond": {
+  "area_m2": 20.92611,
+  "landings": 4,
+  "never_by_total": "the V7 bed reaches 56.3586 m2 only line by line; no total is wired",
+  "parts": [
+   {
+    "bed_m2": 1.571667,
+    "before": {
+     "class": "HELD",
+     "value": null
+    },
+    "key": "MS1-L",
+    "lift_when": "its HELD riser line is released (B7-03, T-412 counts)",
+    "line_id": "L-ecc450d6cc865617f8f6",
+    "status": "ASSUMED - OWNER-APPROVED (riser in the stair bed scope)",
+    "surface": "RISER",
+    "v7_cement_bags": 0.451508,
+    "v7_mortar_m3": 0.04715,
+    "v7_sand_m3": 0.047032
+   },
+   {
+    "bed_m2": 1.886,
+    "before": {
+     "class": "HELD",
+     "value": null
+    },
+    "key": "MS1-U",
+    "lift_when": "its HELD riser line is released (B7-03, T-412 counts)",
+    "line_id": "L-07e0855f961a839c1277",
+    "status": "ASSUMED - OWNER-APPROVED (riser in the stair bed scope)",
+    "surface": "RISER",
+    "v7_cement_bags": 0.54181,
+    "v7_mortar_m3": 0.05658,
+    "v7_sand_m3": 0.056439
+   },
+   {
+    "bed_m2": 1.9044,
+    "before": {
+     "class": "HELD",
+     "value": null
+    },
+    "key": "MS2-L",
+    "lift_when": "its HELD riser line is released (B7-03, T-412 counts)",
+    "line_id": "L-0f060e9951c28c4cf074",
+    "status": "ASSUMED - OWNER-APPROVED (riser in the stair bed scope)",
+    "surface": "RISER",
+    "v7_cement_bags": 0.547096,
+    "v7_mortar_m3": 0.057132,
+    "v7_sand_m3": 0.056989
+   },
+   {
+    "bed_m2": 1.9044,
+    "before": {
+     "class": "HELD",
+     "value": null
+    },
+    "key": "MS2-U",
+    "lift_when": "its HELD riser line is released (B7-03, T-412 counts)",
+    "line_id": "L-12f56cbfe750f8b30c41",
+    "status": "ASSUMED - OWNER-APPROVED (riser in the stair bed scope)",
+    "surface": "RISER",
+    "v7_cement_bags": 0.547096,
+    "v7_mortar_m3": 0.057132,
+    "v7_sand_m3": 0.056989
+   },
+   {
+    "bed_m2": 0.667,
+    "before": {
+     "class": "HELD",
+     "value": null
+    },
+    "key": "D1",
+    "lift_when": "its HELD riser line is released (B7-03, T-412 counts)",
+    "line_id": "L-8938aa3b25bf605e4b9d",
+    "status": "ASSUMED - OWNER-APPROVED (riser in the stair bed scope)",
+    "surface": "RISER",
+    "v7_cement_bags": 0.191616,
+    "v7_mortar_m3": 0.02001,
+    "v7_sand_m3": 0.01996
+   },
+   {
+    "bed_m2": 1.653536,
+    "before": {
+     "class": "HELD",
+     "value": null
+    },
+    "key": "RS-S",
+    "lift_when": "its HELD riser line is released (B7-03, T-412 counts)",
+    "line_id": "L-099fe9fcfa5667fb8b99",
+    "status": "ASSUMED - OWNER-APPROVED (riser in the stair bed scope)",
+    "surface": "RISER",
+    "v7_cement_bags": 0.475027,
+    "v7_mortar_m3": 0.049606,
+    "v7_sand_m3": 0.049482
+   },
+   {
+    "bed_m2": 0.751607,
+    "before": {
+     "class": "HELD",
+     "value": null
+    },
+    "key": "RS-A",
+    "lift_when": "its HELD riser line is released (B7-03, T-412 counts)",
+    "line_id": "L-16e0c6682725260f28e7",
+    "status": "ASSUMED - OWNER-APPROVED (riser in the stair bed scope)",
+    "surface": "RISER",
+    "v7_cement_bags": 0.21592,
+    "v7_mortar_m3": 0.022548,
+    "v7_sand_m3": 0.022492
+   },
+   {
+    "bed_m2": 1.4375,
+    "before": {
+     "class": "NO_LINE",
+     "value": null
+    },
+    "key": "MS1-LD",
+    "lift_when": "its landing line is added (T-502, T-493 F-1 .. F-4)",
+    "line_id": null,
+    "status": "ASSUMED - OWNER-APPROVED (landing in the stair bed scope)",
+    "surface": "LANDING",
+    "v7_cement_bags": 0.412965,
+    "v7_mortar_m3": 0.043125,
+    "v7_sand_m3": 0.043017
+   },
+   {
+    "bed_m2": 2.9325,
+    "before": {
+     "class": "NO_LINE",
+     "value": null
+    },
+    "key": "MS2-LD",
+    "lift_when": "its landing line is added (T-502, T-493 F-1 .. F-4)",
+    "line_id": null,
+    "status": "ASSUMED - OWNER-APPROVED (landing in the stair bed scope)",
+    "surface": "LANDING",
+    "v7_cement_bags": 0.842449,
+    "v7_mortar_m3": 0.087975,
+    "v7_sand_m3": 0.087755
+   },
+   {
+    "bed_m2": 4.865,
+    "before": {
+     "class": "NO_LINE",
+     "value": null
+    },
+    "key": "2F-ARR",
+    "lift_when": "its landing line is added (T-502, T-493 F-1 .. F-4)",
+    "line_id": null,
+    "status": "ASSUMED - OWNER-APPROVED (landing in the stair bed scope)",
+    "surface": "LANDING",
+    "v7_cement_bags": 1.397617,
+    "v7_mortar_m3": 0.14595,
+    "v7_sand_m3": 0.145585
+   },
+   {
+    "bed_m2": 1.3525,
+    "before": {
+     "class": "NO_LINE",
+     "value": null
+    },
+    "key": "RS-LD",
+    "lift_when": "its landing line is added (T-502, T-493 F-1 .. F-4)",
+    "line_id": null,
+    "status": "ASSUMED - OWNER-APPROVED (landing in the stair bed scope)",
+    "surface": "LANDING",
+    "v7_cement_bags": 0.388546,
+    "v7_mortar_m3": 0.040575,
+    "v7_sand_m3": 0.040474
+   }
+  ],
+  "risers": 7,
+  "rule": "R-T542-1 .. 3",
+  "source": [
+   {
+    "checker": "Verifier 2026-11-06T02:24Z merged: stair bed classes beyond the treads (risers, landings)",
+    "merge": "3f3b580c",
+    "task": "T-542"
+   }
+  ],
+  "tolerance_not_wired": {
+   "candidate_lines_m2": 35.4313,
+   "difference_m2": 0.0012,
+   "rule": "the V7 wire is on the candidate line nets; T-542's printed-dimension total carries the 0.0012 polygon TOLERANCE and never replaces them",
+   "t542_in_wire_m2": 35.4325
+  }
+ },
+ "supersedes": "T-538 WIRING_MANIFEST_V3.json (V3; every V3 / V2 statement carried unless listed in v3_to_v4)",
+ "task": "T-549",
+ "v3_to_v4": [
+  {
+   "cause": "T-534 merged",
+   "v3": {
+    "state": "HELD_BY_NAME",
+    "value_m2": null,
+    "why": "T-534 (stair bed area) not merged"
+   },
+   "v4": {
+    "source": "T-534",
+    "state": "AT_LEAST",
+    "value_m2": 35.4313
+   },
+   "what": "stair bed area (V7)"
+  },
+  {
+   "cause": "T-537 r2 R-T498-2",
+   "v3": {
+    "bags_25kg_range": [
+     17.730925,
+     18.064357
+    ],
+    "kg_range": [
+     443.27313,
+     451.60893
+    ],
+    "state": "BOUNDED_EXPOSURE (range by name)"
+   },
+   "v4": {
+    "at_most_beside": 451.60893,
+    "range": null,
+    "state": "HELD",
+    "unit": "kg",
+    "value": null,
+    "why": "an open lintel face: the material is HELD blank by name, its upper end beside (AT_MOST)"
+   },
+   "what": "host glue L-4b9a29d424ea40e0af8a (stage)"
+  },
+  {
+   "cause": "T-537 r2 R-T498-2",
+   "v3": {
+    "bags_25kg_range": [
+     0.95076,
+     0.9558
+    ],
+    "kg_range": [
+     23.769,
+     23.895
+    ],
+    "state": "BOUNDED_EXPOSURE (range by name)"
+   },
+   "v4": {
+    "range": [
+     23.4459,
+     23.895
+    ],
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "kg",
+    "value": null
+   },
+   "what": "host glue L-d14c6c9b738045c797ec (stage)"
+  },
+  {
+   "cause": "T-537 r2",
+   "v3": {
+    "at_least": [
+     35.387755,
+     36.226627
+    ],
+    "status": "HELD",
+    "to_buy_at_least": [
+     36,
+     37
+    ]
+   },
+   "v4": {
+    "at_least": [
+     17.643906,
+     18.16227
+    ],
+    "status": "HELD",
+    "to_buy_at_least": [
+     18,
+     19
+    ]
+   },
+   "what": "AAC glue group"
+  },
+  {
+   "cause": "T-539 R-T539-1 (+ R-T533-1)",
+   "v3": {
+    "mesh_drawing_ml": 44.1,
+    "mesh_owner_ml": 40.9,
+    "state": "NO LINE: still no tie / crack-mesh line in V3.0.58 or the T-498 stage; the ends are now wireable without raising (T-532); ledger versions and the line family are T-539",
+    "ties_nr": 30.0
+   },
+   "v4": {
+    "mesh_drawing_ml": 44.2,
+    "mesh_owner_ml": 40.9,
+    "strip_ml": 0.0,
+    "ties_held_by_name": [
+     "1F-W23",
+     "2F-W08"
+    ],
+    "ties_measured_nr": 18
+   },
+   "what": "column-end ties / mesh"
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "rule": "R-T533-1 BLOCK_MODULE_BY_THICKNESS_V1",
+ "task": "T-533",
+ "walls": 15,
+ "excluded": {
+  "GF-W22": "D-27 area conflict on its parent (T-488), own HELD",
+  "2F-W08": "D-39 2F storey (T-488), own HELD"
+ },
+ "result": "HELD",
+ "missing_datum": "installed face module of the 0.15 m black (cement) block: unit length x height and the joint it is laid with (block schedule, project specification 04220, or the supplier's datasheet / sales record)",
+ "rulebook_not_given": [
+  "the 15 cm black block installed module (block schedule / supplier)"
+ ],
+ "contract_m2": 178.571,
+ "material_base_m2": 175.871,
+ "material_base_low_m2": 175.531,
+ "lintel_faces_m2": 2.7,
+ "panel_t367_m3_pinned": 1.97544,
+ "s_a_reproduces_t520": {
+  "panel_contract_m3": "1.975442",
+  "perimeter_figure_m3": "0.079138",
+  "perimeter_high_m3": "0.089890"
+ },
+ "scenarios": {
+  "S-A": {
+   "units_per_m2": "12.500000",
+   "units_nr_material_base": "2194.14 .. 2198.39",
+   "panel_m3_material_base": "1.941812 .. 1.945573",
+   "perimeter_m3_figure": "0.079138",
+   "perimeter_m3_high": "0.089890"
+  },
+  "S-B": {
+   "units_per_m2": "11.614402",
+   "units_nr_material_base": "2038.69 .. 2042.64",
+   "panel_m3_material_base": "1.865399 .. 1.869012",
+   "perimeter_m3_figure": "0.079389",
+   "perimeter_m3_high": "0.090176"
+  },
+  "S-C": {
+   "units_per_m2": "10.000000",
+   "units_nr_material_base": "1755.31 .. 1758.71",
+   "panel_m3_material_base": "1.685098 .. 1.688362",
+   "perimeter_m3_figure": "0.079972",
+   "perimeter_m3_high": "0.090839"
+  }
+ },
+ "sources_searched": [
+  {
+   "level": "1 drawings",
+   "source": "architectural plans / sections / notes, structural notes p.1 note 2, p.8 notes 18-20",
+   "finding": "no block product, size, joint or mix printed (T-091 printed-notes census, T-107, T-143, T-176)",
+   "verdict": "SILENT"
+  },
+  {
+   "level": "2 specification",
+   "source": "Kuwait General Specification 1990, section 04220 (Drive Engineering Sources / 01 Kuwait References)",
+   "finding": "re-read 2026-11-05: read_file_content stops inside 02230 (TOC lists 04220); the 11.8 MB file is over the connector's download limit (T-489 refusal text 'File too large for download, over limit of 10 MB')",
+   "verdict": "NOT READABLE"
+  },
+  {
+   "level": "3 owner rule",
+   "source": "Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001 1.0.0",
+   "finding": "physical 40 x 19 x 19 (the 20 cm block); 12.5 per m2 only where the installed module is confirmed 40 x 20; rulebook not_given: 'the 15 cm black block installed module'",
+   "verdict": "0.20 ONLY"
+  },
+  {
+   "level": "3 owner data",
+   "source": "CLARIFICATIONS_SUPPLIER_2026-10-23.md row 1",
+   "finding": "the 15 / 20 cm dimensions are the open question itself (DRAFT list, no answer recorded)",
+   "verdict": "OPEN"
+  },
+  {
+   "level": "4 reference",
+   "source": "Bayt Al-Omr, Kuwait Society of Engineers 2023 (Drive 01 Kuwait References), full text",
+   "finding": "black cement block named (solid units advised at least for the first two courses); no unit size",
+   "verdict": "NO SIZE"
+  },
+  {
+   "level": "6 interpretation",
+   "source": "owner's stored takeoff notes (quantity-takeoff-rules s.2.1)",
+   "finding": "'39 x 19 + 1 cm = 40 x 20 ... for 15 cm and 20 cm' is not labelled CONFIRMED; when the same text was put to the owner (Q-75 option A) the answer named the 40 x 19 x 19 block only",
+   "verdict": "NOT A SOURCE"
+  }
+ ],
+ "mix_source": "UPC-BLACK-MORTAR-001 1.0.0 (Q-78 A owner 2026-11-02): 1:4, 8 bags 50 kg + 1.1 m3 loose sand per m3",
+ "sha256_inputs": {
+  "research/agents_t520/out/PERIMETER_BY_WALL_T520.csv": "fb5ac4abe455bf5efa8a352ad68cf57defb609c3fac54437a92e94842e3622d1",
+  "research/agents_t506/out/MORTAR_RECONCILIATION_T506.csv": "585aeb5f3675d965d38669b1d809166ab13e13cb0a045f3345213e1158f1158f",
+  "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json": "4e9c57cef33d32ede26bea4eaf3823e2dc3880d56708dd18ec5df3760b84c055"
+ }
+}

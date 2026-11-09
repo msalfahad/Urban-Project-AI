@@ -1,0 +1,836 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (floor tile lines = V3.0.57 index)",
+ "freelancer_dry": "337.57",
+ "freelancer_wet": "72.01",
+ "index_sha256": "fed5141ea31bfdd9c5f3d89c7fb1fa01365ddbf07b797002780a22016a7f5738",
+ "missing_floor_lines": [
+  {
+   "area": 2.97,
+   "element": "1F-RFFE7AF",
+   "space_line": "L-390e3b9f1ce6e01d4d15"
+  }
+ ],
+ "outdoor": {
+  "freelancer_yard_m2": "151.8",
+  "held": [
+   [
+    "L-1c51d1e7a3b65243382a",
+    "GF-COURT#POOL-DECK",
+    6.548912,
+    6.548912
+   ],
+   [
+    "L-dd6e372825ce06d45bdd",
+    "GF-COURT#PORCH",
+    10.6785,
+    10.6785
+   ]
+  ],
+  "lines": [
+   [
+    "L-1c51d1e7a3b65243382a",
+    "EXT.FLOOR.OUTDOOR",
+    "GF-COURT#POOL-DECK",
+    null
+   ],
+   [
+    "L-57084fa9d3d0a37212fd",
+    "EXT.PAVING.INTERLOCK",
+    "GF-COURT#WEST-OPEN",
+    119.5416
+   ],
+   [
+    "L-ab44fbc79bed353bde99",
+    "EXT.FLOOR.PORCELAIN",
+    "GF-COURT#NORTH-WALK",
+    21.0142
+   ],
+   [
+    "L-dd6e372825ce06d45bdd",
+    "EXT.FLOOR.OUTDOOR",
+    "GF-COURT#PORCH",
+    null
+   ]
+  ],
+  "porcelain_tile": [
+   [
+    "L-ab44fbc79bed353bde99",
+    "GF-COURT#NORTH-WALK",
+    21.0142
+   ]
+  ],
+  "valued_m2": "140.5558"
+ },
+ "rule": "R-T553-1",
+ "schema": "URBAN_T553_FLOOR_TILE_RECONCILE_V1",
+ "table": {
+  "by_cause": {
+   "ENGINE_RIGHT": "-0.797732",
+   "ENGINE_WRONG": "-2.970",
+   "HELD": "-9.705",
+   "RULE_DIFFERENCE": "-15.941912",
+   "TOLERANCE": "0.028416",
+   "UNRESOLVED": "6.900278"
+  },
+  "by_size": {
+   "TILE_SIZE_NOT_GIVEN": {
+    "delta": "-22.485950",
+    "engine": "387.094050",
+    "freelancer": "409.58"
+   }
+  },
+  "class_moves": [
+   {
+    "engine": "WET (Q-37 A)",
+    "freelancer": "DRY row 13",
+    "m2": "13.454868",
+    "room": "GF open room: dining / reception / saloon / entrance zone / open pantry (his reception + dining and entrance rows)",
+    "what": "GF open pantry"
+   },
+   {
+    "engine": "DRY code FIN.FLOOR.PORCELAIN (its bed, membrane, threshold are WET)",
+    "finding": "F-T553-2",
+    "freelancer": "WET row 48",
+    "m2": "9.630001",
+    "room": "GF kitchen (floor line coded FIN.FLOOR.PORCELAIN)",
+    "what": "GF kitchen"
+   }
+  ],
+  "class_split_engine": {
+   "DRY": "305.020973",
+   "FINISH_HELD": "6.1275",
+   "WET": "75.945577"
+  },
+  "class_split_freelancer": {
+   "DRY": "337.57",
+   "WET": "72.01"
+  },
+  "engine_total": "387.094050",
+  "freelancer_total": "409.58",
+  "gap_engine_minus_freelancer": "-22.485950",
+  "gap_pct_of_freelancer": "-5.49",
+  "held_lines": [
+   {
+    "bound": [
+     0.0,
+     0.23
+    ],
+    "line_id": "L-a788de4672b1f0d2e6c1",
+    "note": "",
+    "room": "GF stair room: hall at +1.00 and back-door lobby at +0.30 (material HELD: porcelain or landing marble)"
+   }
+  ],
+  "rows": [
+   {
+    "components": [
+     {
+      "basis": "UP-CER-001 (stair footprint out of the tile) + UP-STAIR-005; T-341 / T-345: face 126.927696 - treads 8.194412 + under-stair floor 2.07 kept",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-6.124412",
+      "name": "round-stair footprint below the cut (treads are B7 marble)",
+      "owned_by": "L-6485382cd3b6f09c192c",
+      "qty": "6.124412"
+     },
+     {
+      "basis": "UP-ELEV-005 / T-413 + T-421 s.2 (B6-07 owns it; 0 .. 0.200 more HELD by position)",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.300",
+      "name": "lift landing threshold, certain floor part 1.000 x 0.300",
+      "owned_by": "L-c32effca1d7eae7f36f8",
+      "qty": "0.300"
+     },
+     {
+      "basis": "designer D-48 (planter or floor); T-427 s.2 drawn ends 310 / 30F; bound: 0 .. +9.101 m2 of tile",
+      "cause": "HELD",
+      "delta": "-9.101",
+      "name": "garden band x 6.80 .. 13.82, 7.02 x 1.30 - column notch 0.025",
+      "owned_by": "L-5431fa278fbb44816a08",
+      "qty": "9.101"
+     },
+     {
+      "basis": "D-48 with the band (T-427 s.2)",
+      "cause": "HELD",
+      "delta": "-0.604",
+      "name": "garden band curb strip 3.02 x 0.20",
+      "owned_by": "L-554a525edce9a9235bee",
+      "qty": "0.604"
+     },
+     {
+      "basis": "T-427 s.2-3: not floor; his rows re-add to the gross outline (T-147 147.90)",
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.880",
+      "name": "wall 2.65 x 0.20 + columns 0.80 x 0.25 + 0.60 x 0.25 inside his gross outline",
+      "qty": "0.880"
+     },
+     {
+      "basis": "T-427 s.3: own polygonization 147.658 vs his 147.96; 0.1901 lobby-mouth strip (RFI-B-A10 (c)) would leave 0.1122; his rows carry no dimensions",
+      "cause": "UNRESOLVED",
+      "delta": "-0.302303",
+      "name": "his two rows above the drawn outline",
+      "qty": "0.302303"
+     }
+    ],
+    "delta": "-17.311715",
+    "engine": "130.648285",
+    "engine_class": "DRY/WET",
+    "freelancer": "147.96",
+    "freelancer_class": "DRY",
+    "note": "pantry floor 13.454868 m2 is WET tile in the engine (Q-37 A) and inside his dry reception row: CLASS MOVE, no area effect (both tile it); T-286 closure 13.500 - 0.045 column - 0.000132 CAD",
+    "room": "GF open room: dining / reception / saloon / entrance zone / open pantry (his reception + dining and entrance rows)",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-153 s.3 + own DXF read (DIMENSIONs 4000 / 6300); his 24.84 has no derivation",
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.100332",
+      "name": "printed 4.00 x 6.30 - (1.21 - pi 1.21 / 4) = 24.9403 (DXF dims 568 / 57F re-read this run)",
+      "qty": "0.100332"
+     }
+    ],
+    "delta": "0.100332",
+    "engine": "24.940332",
+    "engine_class": "DRY",
+    "freelancer": "24.84",
+    "freelancer_class": "DRY",
+    "note": "",
+    "room": "GF dewaneya 400 x 630 less the R1.10 corner",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "two drawing routes within 0.0074 m2 (T-153 / T-147); north face 4.82 printed (DIMENSION 890), 4.00 printed (7B0); his 16.66 typed, no dimensions",
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.11036",
+      "name": "drawn room face (V2.9 face 16.5496; T-147 own region 16.557)",
+      "qty": "0.11036"
+     }
+    ],
+    "delta": "-0.11036",
+    "engine": "16.54964",
+    "engine_class": "DRY",
+    "freelancer": "16.66",
+    "freelancer_class": "DRY",
+    "note": "",
+    "room": "GF master bed room",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "printed 1.75 x 4.50 (DIMENSIONs 53A / 5C9)",
+      "cause": "TOLERANCE",
+      "delta": "0.005",
+      "name": "his 7.875 truncated to 2 dp",
+      "qty": "0.005"
+     }
+    ],
+    "delta": "0.005",
+    "engine": "7.875",
+    "engine_class": "DRY",
+    "freelancer": "7.87",
+    "freelancer_class": "DRY",
+    "note": "",
+    "room": "GF driver room 175 x 450",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-418 / T-421 (4.805 + 1.3225, DRAWING-CONFIRMED); T-427 s.3 / T-490: his 6.20 main-stair landing (marble sheet) has no breakdown; a match by figure is refused",
+      "cause": "UNRESOLVED",
+      "delta": "6.1275",
+      "name": "stair-room floor parts in none of his floor rows",
+      "qty": "6.1275"
+     }
+    ],
+    "delta": "6.1275",
+    "engine": "6.1275",
+    "engine_class": "FINISH_HELD",
+    "freelancer": null,
+    "freelancer_class": null,
+    "note": "GF-ST-CN HELD 0 .. 0.23 outside both totals",
+    "room": "GF stair room: hall at +1.00 and back-door lobby at +0.30 (material HELD: porcelain or landing marble)",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "UP-THR-001 dry / T-240 / T-218 s.2 (one strip, one line); he measures rooms to the wall face",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.35",
+      "name": "porcelain strips in door openings between dry rooms",
+      "qty": "0.35"
+     }
+    ],
+    "delta": "0.35",
+    "engine": "0.35",
+    "engine_class": "DRY",
+    "freelancer": null,
+    "freelancer_class": null,
+    "note": "",
+    "room": "GF doorway strips OP-010 (0.20) + OP-012 (0.15)",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "Q-66 B + UP-STAIR-005; printed 2.50 x 1.95 = 4.875 + 0.0475 (T-240 / T-269)",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-4.9225",
+      "name": "main-stair arrival +5.50 (marble, own line)",
+      "owned_by": "L-8011889d84788553a6b1",
+      "qty": "4.9225"
+     },
+     {
+      "basis": "UP-ELEV-005 / T-421 s.2",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.300",
+      "name": "lift landing threshold, certain floor part",
+      "owned_by": "L-9840d1da235dd7583427",
+      "qty": "0.300"
+     },
+     {
+      "basis": "T-345 s.6 / T-269: hand range 38.588 .. 38.990, his single row not split",
+      "cause": "UNRESOLVED",
+      "delta": "-0.326464",
+      "name": "his unsplit row vs porcelain 33.711036 + arrival 4.9225",
+      "qty": "0.326464"
+     }
+    ],
+    "delta": "-5.548964",
+    "engine": "33.411036",
+    "engine_class": "DRY",
+    "freelancer": "38.96",
+    "freelancer_class": "DRY",
+    "note": "",
+    "room": "1F living / open stair hall",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-218 s.3: room to the curved face 15.062 + strip 0.195 + lobby 3.761; drawn 15.062, rectangle 16.80, 3.45 x 4.00 + lobby 17.58 all tried; his row typed",
+      "cause": "UNRESOLVED",
+      "delta": "1.726545",
+      "name": "no reading reproduces his 17.29",
+      "qty": "1.726545"
+     }
+    ],
+    "delta": "1.726545",
+    "engine": "19.016545",
+    "engine_class": "DRY",
+    "freelancer": "17.29",
+    "freelancer_class": "DRY",
+    "note": "",
+    "room": "1F curved east bed room with its lobby (his 'bed room 1')",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-223 / T-240 (area VERIFIED 2.970, DRY, material HELD); R-T553-1 (g) join; his 19.46 = 16.340 + 2.970 + 0.150 and his perimeter 21.40 match exactly (T-218 two-key pairing)",
+      "cause": "ENGINE_WRONG",
+      "delta": "-2.970",
+      "name": "dressing 1.65 x 1.80 has NO floor tile line (only ARCH.SPACE L-390e3b9f 2.970)",
+      "qty": "2.970"
+     }
+    ],
+    "delta": "-2.97",
+    "engine": "16.49",
+    "engine_class": "DRY",
+    "freelancer": "19.46",
+    "freelancer_class": "DRY",
+    "note": "",
+    "room": "1F bed room 380 x 430 + dressing 165 x 180 + arch strip OP-011 (his 'bed room 2')",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-218 s.3: printed 5.00 x 3.65 = 18.25 less the drawn notch; a column is not floor",
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.034999",
+      "name": "drawn column notch 0.035",
+      "qty": "0.034999"
+     }
+    ],
+    "delta": "-0.034999",
+    "engine": "18.215001",
+    "engine_class": "DRY",
+    "freelancer": "18.25",
+    "freelancer_class": "DRY",
+    "note": "",
+    "room": "1F bed room 500 x 365",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-153 / T-218 s.3",
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.05",
+      "name": "printed 4.25 x 4.50 = 19.125 less drawn column notches 0.075 vs his typed 19.00",
+      "qty": "0.05"
+     }
+    ],
+    "delta": "0.05",
+    "engine": "19.05",
+    "engine_class": "DRY",
+    "freelancer": "19",
+    "freelancer_class": "DRY",
+    "note": "",
+    "room": "1F west bed room 425 x 450",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "UP-THR-001 dry / T-218 s.2",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.57",
+      "name": "porcelain strips in dry door openings",
+      "qty": "0.57"
+     }
+    ],
+    "delta": "0.570",
+    "engine": "0.570",
+    "engine_class": "DRY",
+    "freelancer": null,
+    "freelancer_class": null,
+    "note": "",
+    "room": "1F doorway strips OP-005 / OP-006 (0.135 each), OP-020, D-1F-03 (0.15 each)",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-147 s.6 / T-153: printed 300 x 645; 0.000001 polygon",
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.229999",
+      "name": "printed 3.00 x 6.45 = 19.350 vs his typed 19.58",
+      "qty": "0.229999"
+     }
+    ],
+    "delta": "-0.229999",
+    "engine": "19.350001",
+    "engine_class": "DRY",
+    "freelancer": "19.58",
+    "freelancer_class": "DRY",
+    "note": "",
+    "room": "2F maid room 300 x 645",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "Q-70 A (condition met, T-129) + UP-STAIR-005; held inside the 2F landing line (T-490 F-1)",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-4.875",
+      "name": "main-stair arrival +9.70, printed 2.50 x 1.95 (marble)",
+      "owned_by": "L-5d2be30dd8d2ffeacc42",
+      "qty": "4.875"
+     },
+     {
+      "basis": "UP-ELEV-005 / T-421 s.2",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.300",
+      "name": "lift landing threshold, certain floor part",
+      "owned_by": "L-eba7ac43f3fce9bbd0b5",
+      "qty": "0.300"
+     },
+     {
+      "basis": "T-427 / T-153: (4.50 - 2.50) x 1.25 = 2.500 gross; 1.400 of wall inside the printed 450 x 195; his row has no dimensions",
+      "cause": "UNRESOLVED",
+      "delta": "-0.325",
+      "name": "his 7.70 vs the printed 450 x 195 lobby",
+      "qty": "0.325"
+     }
+    ],
+    "delta": "-5.5",
+    "engine": "2.2",
+    "engine_class": "DRY",
+    "freelancer": "7.7",
+    "freelancer_class": "DRY",
+    "note": "",
+    "room": "2F lobby beyond the stair width (his 'corridor')",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "UP-THR-001 dry / T-218 s.2",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.18",
+      "name": "porcelain strip 0.90 x 0.20",
+      "qty": "0.18"
+     }
+    ],
+    "delta": "0.18",
+    "engine": "0.18",
+    "engine_class": "DRY",
+    "freelancer": null,
+    "freelancer_class": null,
+    "note": "",
+    "room": "2F doorway strip OP-007 (stair room / maid room)",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "TOLERANCE",
+      "delta": "0.000695",
+      "name": "2-dp rounding",
+      "qty": "0.000695"
+     }
+    ],
+    "delta": "0.000695",
+    "engine": "4.730695",
+    "engine_class": "WET",
+    "freelancer": "4.73",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "GF lobby wash (2 basins)",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.220",
+      "name": "passage reveal 0.20 x 1.10 taken into his room (threshold piece, not floor)",
+      "qty": "0.220"
+     },
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "TOLERANCE",
+      "delta": "0.005",
+      "name": "his 1.705 truncated",
+      "qty": "0.005"
+     }
+    ],
+    "delta": "-0.215",
+    "engine": "1.485",
+    "engine_class": "WET",
+    "freelancer": "1.7",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "GF basin space by the stair",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.017683",
+      "name": "diagonal-wall corner out of 2.10 x 2.00",
+      "qty": "0.017683"
+     }
+    ],
+    "delta": "0.017683",
+    "engine": "3.717683",
+    "engine_class": "WET",
+    "freelancer": "3.7",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "GF master bath",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.06761",
+      "name": "wedge room by shoelace on the drawn faces",
+      "qty": "0.06761"
+     }
+    ],
+    "delta": "0.06761",
+    "engine": "2.36761",
+    "engine_class": "WET",
+    "freelancer": "2.3",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "GF core W.C. 245 x 167 (wedge)",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "TOLERANCE",
+      "delta": "0.005221",
+      "name": "2-dp truncation",
+      "qty": "0.005221"
+     }
+    ],
+    "delta": "0.005221",
+    "engine": "2.675221",
+    "engine_class": "WET",
+    "freelancer": "2.67",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "GF core W.C. 289 x 167 (wedge)",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "TOLERANCE",
+      "delta": "0.0025",
+      "name": "2-dp truncation",
+      "qty": "0.0025"
+     }
+    ],
+    "delta": "0.0025",
+    "engine": "2.3625",
+    "engine_class": "WET",
+    "freelancer": "2.36",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "GF stair-core W.C. 175 x 135",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.080001",
+      "name": "printed 300 x 270 + 105 x 150 less two drawn piers 0.045",
+      "qty": "0.080001"
+     }
+    ],
+    "delta": "0.080001",
+    "engine": "9.630001",
+    "engine_class": "DRY",
+    "freelancer": "9.55",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "GF kitchen (floor line coded FIN.FLOOR.PORCELAIN)",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [],
+    "delta": "0.00",
+    "engine": "1.95",
+    "engine_class": "WET",
+    "freelancer": "1.95",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "GF driver W.C.",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "TOLERANCE",
+      "delta": "0.005",
+      "name": "2-dp truncation",
+      "qty": "0.005"
+     }
+    ],
+    "delta": "0.005",
+    "engine": "3.375",
+    "engine_class": "WET",
+    "freelancer": "3.37",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "GF W.C. by the reception room",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.0175",
+      "name": "column corner out of the printed 150 x 210",
+      "qty": "0.0175"
+     }
+    ],
+    "delta": "-0.0175",
+    "engine": "3.1325",
+    "engine_class": "WET",
+    "freelancer": "3.15",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "GF wash by the reception room",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "TOLERANCE",
+      "delta": "0.005",
+      "name": "2-dp truncation",
+      "qty": "0.005"
+     }
+    ],
+    "delta": "0.005",
+    "engine": "4.725",
+    "engine_class": "WET",
+    "freelancer": "4.72",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "1F east bath 210 x 225",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.0225",
+      "name": "drawn jamb 0.45 x 0.05 out of 2.00 x 1.80",
+      "qty": "0.0225"
+     }
+    ],
+    "delta": "-0.0225",
+    "engine": "3.5775",
+    "engine_class": "WET",
+    "freelancer": "3.6",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "1F bath by the laundry",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.056",
+      "name": "printed 180 x 147 against his 1.80 x 1.44",
+      "qty": "0.056"
+     }
+    ],
+    "delta": "0.056",
+    "engine": "2.646",
+    "engine_class": "WET",
+    "freelancer": "2.59",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "1F W.C. by the laundry",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.0225",
+      "name": "printed 245 x 205",
+      "qty": "0.0225"
+     }
+    ],
+    "delta": "0.0225",
+    "engine": "5.0225",
+    "engine_class": "WET",
+    "freelancer": "5",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "1F west bath A 245 x 205",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.0225",
+      "name": "printed 245 x 205",
+      "qty": "0.0225"
+     }
+    ],
+    "delta": "0.0225",
+    "engine": "5.0225",
+    "engine_class": "WET",
+    "freelancer": "5",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "1F west bath B 245 x 205",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.151",
+      "name": "printed 347 x 300 / 185 with the W.C. corner, his typed 10.00",
+      "qty": "0.151"
+     }
+    ],
+    "delta": "0.151",
+    "engine": "10.151",
+    "engine_class": "WET",
+    "freelancer": "10",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "1F laundry",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   },
+   {
+    "components": [
+     {
+      "basis": "T-074 hand table (MERGED; printed sizes) as restated in T-546",
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.07",
+      "name": "printed 185 against his 1.875",
+      "qty": "0.07"
+     }
+    ],
+    "delta": "-0.07",
+    "engine": "5.55",
+    "engine_class": "WET",
+    "freelancer": "5.62",
+    "freelancer_class": "WET",
+    "note": "",
+    "room": "2F roof-floor W.C. 300 x 185",
+    "size": "TILE_SIZE_NOT_GIVEN",
+    "state": "VALUED"
+   }
+  ]
+ }
+}

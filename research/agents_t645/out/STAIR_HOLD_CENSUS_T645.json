@@ -1,0 +1,1079 @@
+{
+ "bounded_by_code": {
+  "FIN.MARBLE.RISER": {
+   "high": "3.7904",
+   "low": "3.310533",
+   "n": 2,
+   "open_n": 0
+  },
+  "FIN.STAIR.FLIGHT": {
+   "high": "OPEN",
+   "low": "6.527061",
+   "n": 2,
+   "open_n": 1
+  },
+  "FIN.STAIR.SOFFIT": {
+   "high": "OPEN",
+   "low": "24.929753",
+   "n": 2,
+   "open_n": 2
+  }
+ },
+ "counts": {
+  "bounded_rows": 6,
+  "by_class": {
+   "A_CARRIED": 9,
+   "A_DRAWN": 10,
+   "B_HELD": 6,
+   "C_OPEN": 6
+  },
+  "carried": 9,
+  "fix_rows": 16,
+  "lines": 31,
+  "released_rows": 10,
+  "stay_held_blank": 6
+ },
+ "flights": {
+  "D1": {
+   "R": "0.175",
+   "goings": 3,
+   "risers": 4,
+   "widths_lm": "4.6"
+  },
+  "MS1-L": {
+   "R": "0.166667",
+   "goings": 9,
+   "risers": 10,
+   "widths_lm": "11.45"
+  },
+  "MS1-U": {
+   "R": "0.166667",
+   "goings": 11,
+   "risers": 12,
+   "widths_lm": "13.8"
+  },
+  "MS2-L": {
+   "R": "0.168",
+   "goings": 11,
+   "risers": 12,
+   "widths_lm": "13.75"
+  },
+  "MS2-U": {
+   "R": "0.168",
+   "goings": 10,
+   "risers": 12,
+   "widths_lm": "12.65"
+  },
+  "RS-A": {
+   "R": "0.160714",
+   "goings": 4,
+   "risers": 5,
+   "widths_lm": "5.75"
+  },
+  "RS-S": {
+   "R": "0.160714",
+   "goings": 10,
+   "risers": 11,
+   "widths_lm": "12.5"
+  }
+ },
+ "going_m": "0.3",
+ "inputs": {
+  "research/agents_t281/summary.json": "8cce8bfc55b4c1a0",
+  "research/agents_t412/CANDIDATE_BINDING_T412.json": "7ca6e9691c8a6e51",
+  "research/agents_t412/NOSING_TABLE_T412.csv": "9da81b33ec1b5f40",
+  "research/agents_t425/FLIGHT_TABLE_T425.csv": "e24334102a09a343",
+  "research/agents_t630/out/E2E_BOQ_DRY_RUN_T630.json": "e5dde7867c8fe6ad"
+ },
+ "lines": [
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: half landing +3.50 and 1F FFL +5.50 printed; 12 risers section A-A (Q-46 A, T-184); 12th front = ST p.4 459 (1.150); its position lies in the B20 head clash (Q-46 RFI), which moves no riser area (width = the lane 1.150, height R)",
+   "class": "A_DRAWN",
+   "element_id": "1F-R78C367:flight 3",
+   "engine_flight": "SITE-a95bf979baf4cfae:F3",
+   "family": "B7-03",
+   "fix": {
+    "after": {
+     "class": "RELEASED",
+     "evidence": "DRAWING-CONFIRMED",
+     "measured_net": "1.886"
+    },
+    "basis": "12 risers x (R 0.166667 - t 0.030) over drawn widths sum 13.8 = 1.886 m2 (method of the released E1 riser line L-0afa7bd369ec489ebfc2)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "MS1-U",
+   "handles": "arch 1F A92 .. ABE 11 fronts 1.150, 10 goings 0.300; ST p.4 east lane 459 .. 25B 12 lines 1.150 at 0.300 (3.300): 459 is the 12th (1F floor) edge",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-07e0855f961a839c1277",
+   "sources": [
+    "OWNER_RULE_STAIRS_2026-10-24 s.1 / s.4 (S-4 (8), S-9)",
+    "UP-STAIR-003 / UP-STAIR-006 (t 0.030)",
+    "Q-46 A",
+    "research/agents_t412/NOSING_TABLE_T412.csv (T-412 MERGED f9c80501, Checker 21 / 89 re-measured)",
+    "research/agents_t425 (T-425 MERGED 6f159091)",
+    "half landing +3.50 and 1F FFL +5.50 printed; 12 risers section A-A (Q-46 A, T-184)"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)",
+   "class": "A_DRAWN",
+   "element_id": "GF-RC99C2A:flight 2",
+   "engine_flight": "SITE-735e111dcf9b22c8:F2",
+   "family": "B7-03",
+   "fix": {
+    "after": {
+     "class": "RELEASED",
+     "evidence": "ASSUMED - OWNER-APPROVED",
+     "measured_net": "1.633929"
+    },
+    "basis": "11 risers x (R 0.160714 - t 0.030) over drawn widths sum 12.5 = 1.633929 m2 (method of the released E1 riser line L-0afa7bd369ec489ebfc2)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "RS-S",
+   "handles": "arch 1F B43 .. B4D 11 fronts 1.150, 10 goings 0.300; riser faces B55 / B54 / B53 inside column 300E over 0.050 (B4A / B49 / B48 notched; Checker F-C-T412-1: 300E, not 2FD2)",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-099fe9fcfa5667fb8b99",
+   "sources": [
+    "OWNER_RULE_STAIRS_2026-10-24 s.1 / s.4 (S-4 (8), S-9)",
+    "UP-STAIR-003 / UP-STAIR-006 (t 0.030)",
+    "Q-46 A",
+    "research/agents_t412/NOSING_TABLE_T412.csv (T-412 MERGED f9c80501, Checker 21 / 89 re-measured)",
+    "research/agents_t425 (T-425 MERGED 6f159091)",
+    "GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: 1F FFL +5.50 and 2F FFL +9.70 printed; 12 + 1 (MS2-TR) + 12 risers section A-A (Q-46 A, T-184); landing levels +7.516 / +7.684 are not printed and are not used",
+   "class": "A_DRAWN",
+   "element_id": "1F-R78C367:flight 2",
+   "engine_flight": "SITE-a95bf979baf4cfae:F2",
+   "family": "B7-03",
+   "fix": {
+    "after": {
+     "class": "RELEASED",
+     "evidence": "DRAWING-CONFIRMED",
+     "measured_net": "1.8975"
+    },
+    "basis": "12 risers x (R 0.168 - t 0.030) over drawn widths sum 13.75 = 1.8975 m2 (method of the released E1 riser line L-0afa7bd369ec489ebfc2)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "MS2-L",
+   "handles": "arch 1F AC0 .. A97 12 fronts 1.150, 11 goings 0.300; riser face ABB inside column 3005 over 0.050 (AB7 notched)",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-0f060e9951c28c4cf074",
+   "sources": [
+    "OWNER_RULE_STAIRS_2026-10-24 s.1 / s.4 (S-4 (8), S-9)",
+    "UP-STAIR-003 / UP-STAIR-006 (t 0.030)",
+    "Q-46 A",
+    "research/agents_t412/NOSING_TABLE_T412.csv (T-412 MERGED f9c80501, Checker 21 / 89 re-measured)",
+    "research/agents_t425 (T-425 MERGED 6f159091)",
+    "1F FFL +5.50 and 2F FFL +9.70 printed; 12 + 1 (MS2-TR) + 12 risers section A-A (Q-46 A, T-184); landing levels +7.516 / +7.684 are not printed and are not used"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "MS2-U: the 12th riser's front (2F floor edge) and the 11th going are drawn on no sheet (arch 2F 11 fronts, ST p.5 11 lines; T-412 N12 HELD, T-429 T429_LAST_GOING; head clash B23, Q-46 RFI) - stays HELD; bounded by the drawn readings",
+   "class": "C_OPEN",
+   "element_id": "2F-R4D1B62:flight 2",
+   "engine_flight": "SITE-d7254c68fd33723d:F2",
+   "family": "B7-03",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.9044",
+     "held_low": "1.7457",
+     "measured_net": null
+    },
+    "basis": "low 11 drawn fronts 12.65 lm, high 12 fronts 13.8 lm, x (R 0.168 - 0.030)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "MS2-U",
+   "handles": "arch 2F 135B .. 1386 11 fronts 1.150, 10 goings 0.300; ST p.5 east lane 644 .. 62F 11 lines: the 12th edge and the 11th going are drawn on no sheet",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-12f56cbfe750f8b30c41",
+   "sources": [
+    "research/agents_t412/NOSING_TABLE_T412.csv ST01-MS2U-N12",
+    "engine/source/arch_v3039.py T429_LAST_GOING",
+    "Q-46 RFI (head clash)"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)",
+   "class": "A_DRAWN",
+   "element_id": "GF-RC99C2A:flight 4",
+   "engine_flight": "SITE-735e111dcf9b22c8:F4",
+   "family": "B7-03",
+   "fix": {
+    "after": {
+     "class": "RELEASED",
+     "evidence": "ASSUMED - OWNER-APPROVED",
+     "measured_net": "0.751607"
+    },
+    "basis": "5 risers x (R 0.160714 - t 0.030) over drawn widths sum 5.75 = 0.751607 m2 (method of the released E1 riser line L-0afa7bd369ec489ebfc2)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "RS-A",
+   "handles": "arch 1F B59 / B5A / B5B / B5C / D22 5 fronts 1.150, 4 goings 0.300",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-16e0c6682725260f28e7",
+   "sources": [
+    "OWNER_RULE_STAIRS_2026-10-24 s.1 / s.4 (S-4 (8), S-9)",
+    "UP-STAIR-003 / UP-STAIR-006 (t 0.030)",
+    "Q-46 A",
+    "research/agents_t412/NOSING_TABLE_T412.csv (T-412 MERGED f9c80501, Checker 21 / 89 re-measured)",
+    "research/agents_t425 (T-425 MERGED 6f159091)",
+    "GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "carrier": "L-913cda8eb6d73f6e28cc",
+   "cause": "RS-C seen through the void from 1F (SEEN_THROUGH, BOUNDED_EXPOSURE); the carrier GF F1 is itself HELD: the FIN.MARBLE.RISER quantity of this flight is carried by L-913cda8eb6d73f6e28cc (one flight, one valued line; R-T429-1)",
+   "class": "A_CARRIED",
+   "element_id": "1F-R78C367:flight 1",
+   "engine_flight": "SITE-a95bf979baf4cfae:F1",
+   "family": "B7-03",
+   "flight": "RS-C",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-1e36bc3c0893eeeb9c58",
+   "sources": [
+    "research/agents_t425/BINDING_T425.json",
+    "engine/source/arch_v3039.py R-T429-1"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "carrier": "L-099fe9fcfa5667fb8b99",
+   "cause": "RS-S read on the 1F plan (BOUNDED_EXPOSURE reading); the carrier is the GF F2 reading corrected to the drawn 10 treads (T-425 / T-429): the FIN.MARBLE.RISER quantity of this flight is carried by L-099fe9fcfa5667fb8b99 (one flight, one valued line; R-T429-1)",
+   "class": "A_CARRIED",
+   "element_id": "1F-R78C367:flight 4",
+   "engine_flight": "SITE-a95bf979baf4cfae:F4",
+   "family": "B7-03",
+   "flight": "RS-S",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-24792292e996c57c52d9",
+   "sources": [
+    "research/agents_t425/BINDING_T425.json",
+    "engine/source/arch_v3039.py R-T429-1"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "carrier": "L-099fe9fcfa5667fb8b99",
+   "cause": "RS-S partial reading FOLDED into GF F2 (T-425 / T-429): the FIN.MARBLE.RISER quantity of this flight is carried by L-099fe9fcfa5667fb8b99 (one flight, one valued line; R-T429-1)",
+   "class": "A_CARRIED",
+   "element_id": "GF-RC99C2A:flight 3",
+   "engine_flight": "SITE-735e111dcf9b22c8:F3",
+   "family": "B7-03",
+   "flight": "RS-S",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-2efa4a4f4cc2aad9a2f2",
+   "sources": [
+    "research/agents_t425/BINDING_T425.json",
+    "engine/source/arch_v3039.py R-T429-1"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "MS1-T winder turn seen from 1F: section A-A governs 5 winders, every plan draws a 4-riser fan: the winder subdivision is not drawn (D-67, WINDER_SUBDIVISION_NOT_DRAWN; OWNER_RULE_STAIRS S-9: never generated, no walking line) - beside: 5 risers (count DRAWING-CONFIRMED, A-A) of R 0.166667; winder fronts of the drawn 4-riser fan 4.144 lm (T-412) do not subdivide 5",
+   "class": "B_HELD",
+   "element_id": "1F-R78C367:flight 5",
+   "engine_flight": "SITE-a95bf979baf4cfae:F5",
+   "family": "B7-03",
+   "flight": "MS1-T",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-820baecf7f726b4d8f1e",
+   "sources": [
+    "DESIGNER_CLARIFICATIONS D-67",
+    "research/agents_t434 (T-434 MERGED a6b325b3)",
+    "OWNER_RULE_STAIRS_2026-10-24 s.4 S-9"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: +0.30 (ST p.3, section A-A) and GF FFL +1.00 printed; 4 riser lines on the GF plan (T-184 ST-01b, T-412)",
+   "class": "A_DRAWN",
+   "element_id": "GF-R31F8AE:flight 2",
+   "engine_flight": "SITE-3759f2457b22cb4a:F2",
+   "family": "B7-03",
+   "fix": {
+    "after": {
+     "class": "RELEASED",
+     "evidence": "DRAWING-CONFIRMED",
+     "measured_net": "0.667"
+    },
+    "basis": "4 risers x (R 0.175 - t 0.030) over drawn widths sum 4.6 = 0.667 m2 (method of the released E1 riser line L-0afa7bd369ec489ebfc2)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "D1",
+   "handles": "arch GF 481 / 484 / 48F / 490 4 fronts 1.150, 3 goings 0.300",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-8938aa3b25bf605e4b9d",
+   "sources": [
+    "OWNER_RULE_STAIRS_2026-10-24 s.1 / s.4 (S-4 (8), S-9)",
+    "UP-STAIR-003 / UP-STAIR-006 (t 0.030)",
+    "Q-46 A",
+    "research/agents_t412/NOSING_TABLE_T412.csv (T-412 MERGED f9c80501, Checker 21 / 89 re-measured)",
+    "research/agents_t425 (T-425 MERGED 6f159091)",
+    "+0.30 (ST p.3, section A-A) and GF FFL +1.00 printed; 4 riser lines on the GF plan (T-184 ST-01b, T-412)"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "RS-C curved flight of the round stair: owner Q-50 A cond holds the curved part (no section; RFI-A03 / RFI-S27); a curved going or walking line is never generated (S-9) - beside: 12 radial fronts 13.850 lm (T-412) x (R 0.160714 - 0.030) = 1.810393 m2, illustrative only",
+   "class": "B_HELD",
+   "element_id": "GF-RC99C2A:flight 1",
+   "engine_flight": "SITE-735e111dcf9b22c8:F1",
+   "family": "B7-03",
+   "flight": "RS-C",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-913cda8eb6d73f6e28cc",
+   "sources": [
+    "OWNER_QUESTIONS_ANSWERED Q-50 A cond",
+    "research/agents_t415 (T-415 MERGED 8c8372a4)",
+    "research/agents_t412/NOSING_TABLE_T412.csv RS-C",
+    "rfi/A_PRIORITY_RFI.md RFI-A03"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "C-ST-4 / RFI-A04 (open, architect + structural): MS1-L riser count and landing edge: architectural GF plan 10 fronts over 2.700 (DC .. 486; with section A-A 10 + 5, Q-46 A, T-434) vs ST p.4 12 straight lines over 3.300 (45A .. 25E); owner 2026-10-22 18:00: MS1-L HELD on the riser-count conflict - stays HELD; bounded by the drawn readings",
+   "class": "C_OPEN",
+   "element_id": "GF-R31F8AE:flight 1",
+   "engine_flight": "SITE-3759f2457b22cb4a:F1",
+   "family": "B7-03",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.886",
+     "held_low": "1.564833",
+     "measured_net": null
+    },
+    "basis": "low 10 drawn fronts 11.45 lm, high 12 fronts 13.8 lm, x (R 0.166667 - 0.030)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "MS1-L",
+   "handles": "arch GF DC .. 486: 10 fronts 1.150 (C8 drawn 0.575 to the cut, its companion CD 1.150), 9 goings 0.300; riser faces D0 inside column 2FBD over 0.050 (CE notched; CF / D1 not); ST p.4 45A .. 25E 12 lines 1.150 over 3.300 (the other reading)",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-ecc450d6cc865617f8f6",
+   "sources": [
+    "CLARIFICATIONS_CONSULTANT_2026-10-23 row 5 C-ST-4",
+    "rfi/A_PRIORITY_RFI.md RFI-A04",
+    "OWNER_SESSION_CHANGES 2026-10-22 18:00",
+    "research/agents_t434 (T-434)"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "carrier": "L-16e0c6682725260f28e7",
+   "cause": "RS-A read on the 1F plan; the carrier is GF F4 corrected to the drawn 4 treads (T-425 / T-438): the FIN.MARBLE.RISER quantity of this flight is carried by L-16e0c6682725260f28e7 (one flight, one valued line; R-T429-1)",
+   "class": "A_CARRIED",
+   "element_id": "1F-R78C367:flight 6",
+   "engine_flight": "SITE-a95bf979baf4cfae:F6",
+   "family": "B7-03",
+   "flight": "RS-A",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-f24a09f1b4117814e4c8",
+   "sources": [
+    "research/agents_t425/BINDING_T425.json",
+    "engine/source/arch_v3039.py R-T429-1"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "MS1-T winder turn seen from 1F: section A-A governs 5 winders, every plan draws a 4-riser fan: the winder subdivision is not drawn (D-67, WINDER_SUBDIVISION_NOT_DRAWN; OWNER_RULE_STAIRS S-9: never generated, no walking line) - beside: drawn 4-riser fan region 1.495 m2 (engine reading, T-425; T-281 plan 1.495)",
+   "class": "B_HELD",
+   "element_id": "1F-R78C367:flight 5",
+   "engine_flight": "SITE-a95bf979baf4cfae:F5",
+   "family": "B7-02",
+   "flight": "MS1-T",
+   "item_code": "FIN.MARBLE.TREAD",
+   "line_id": "L-b4660de0ddd98ad0ffc2",
+   "sources": [
+    "DESIGNER_CLARIFICATIONS D-67",
+    "research/agents_t434 (T-434 MERGED a6b325b3)",
+    "OWNER_RULE_STAIRS_2026-10-24 s.4 S-9"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "RS-C curved flight of the round stair: owner Q-50 A cond holds the curved part (no section; RFI-A03 / RFI-S27); a curved going or walking line is never generated (S-9) - beside: engine 4.094413 m2; drawn region 4.443096 m2 (T-415)",
+   "class": "B_HELD",
+   "element_id": "GF-RC99C2A:flight 1",
+   "engine_flight": "SITE-735e111dcf9b22c8:F1",
+   "family": "B7-02",
+   "flight": "RS-C",
+   "item_code": "FIN.MARBLE.TREAD",
+   "line_id": "L-fa534ec5f9dc14947899",
+   "sources": [
+    "OWNER_QUESTIONS_ANSWERED Q-50 A cond",
+    "research/agents_t415 (T-415 MERGED 8c8372a4)",
+    "research/agents_t412/NOSING_TABLE_T412.csv RS-C",
+    "rfi/A_PRIORITY_RFI.md RFI-A03"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "carrier": "L-a08d67ca292ab16ef9c3",
+   "cause": "MS2-L read again on the 2F plan through the opening (DOUBLE_COUNT, T-425 confirmed; no flight leaves 2F, T-184 R-STAIR-CONT-1): the FIN.STAIR.FLIGHT quantity of this flight is carried by L-a08d67ca292ab16ef9c3 (one flight, one valued line; R-T429-1)",
+   "class": "A_CARRIED",
+   "element_id": "2F-R4D1B62:flight 1",
+   "engine_flight": "SITE-d7254c68fd33723d:F1",
+   "family": "B7-01",
+   "flight": "MS2-L",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-0c2df36a42803126d3b9",
+   "sources": [
+    "research/agents_t425/BINDING_T425.json",
+    "engine/source/arch_v3039.py R-T429-1"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "carrier": "L-509c6af3d162ae145108",
+   "cause": "RS-S read on the 1F plan (BOUNDED_EXPOSURE reading); the carrier is the GF F2 reading corrected to the drawn 10 treads (T-425 / T-429): the FIN.STAIR.FLIGHT quantity of this flight is carried by L-509c6af3d162ae145108 (one flight, one valued line; R-T429-1)",
+   "class": "A_CARRIED",
+   "element_id": "1F-R78C367:flight 4",
+   "engine_flight": "SITE-a95bf979baf4cfae:F4",
+   "family": "B7-01",
+   "flight": "RS-S",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-23e0ff3c4f454647b2b5",
+   "sources": [
+    "research/agents_t425/BINDING_T425.json",
+    "engine/source/arch_v3039.py R-T429-1"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "carrier": "L-30009d8eb01996ec6399",
+   "cause": "RS-C seen through the void from 1F (SEEN_THROUGH, BOUNDED_EXPOSURE); the carrier GF F1 is itself HELD: the FIN.STAIR.FLIGHT quantity of this flight is carried by L-30009d8eb01996ec6399 (one flight, one valued line; R-T429-1)",
+   "class": "A_CARRIED",
+   "element_id": "1F-R78C367:flight 1",
+   "engine_flight": "SITE-a95bf979baf4cfae:F1",
+   "family": "B7-01",
+   "flight": "RS-C",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-256e8ae3e15334092b5d",
+   "sources": [
+    "research/agents_t425/BINDING_T425.json",
+    "engine/source/arch_v3039.py R-T429-1"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "RS-C curved flight of the round stair: owner Q-50 A cond holds the curved part (no section; RFI-A03 / RFI-S27); a curved going or walking line is never generated (S-9) - beside: none: the engine's mid-radius walking line is an assumed offset (S-9)",
+   "class": "B_HELD",
+   "element_id": "GF-RC99C2A:flight 1",
+   "engine_flight": "SITE-735e111dcf9b22c8:F1",
+   "family": "B7-01",
+   "flight": "RS-C",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-30009d8eb01996ec6399",
+   "sources": [
+    "OWNER_QUESTIONS_ANSWERED Q-50 A cond",
+    "research/agents_t415 (T-415 MERGED 8c8372a4)",
+    "research/agents_t412/NOSING_TABLE_T412.csv RS-C",
+    "rfi/A_PRIORITY_RFI.md RFI-A03"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)",
+   "class": "A_DRAWN",
+   "element_id": "GF-RC99C2A:flight 4",
+   "engine_flight": "SITE-735e111dcf9b22c8:F4",
+   "family": "B7-01",
+   "fix": {
+    "after": {
+     "class": "RELEASED",
+     "evidence": "ASSUMED - OWNER-APPROVED",
+     "measured_net": "1.361347"
+    },
+    "basis": "4 drawn goings x hypot(0.300, R 0.160714) = 1.361347 lm (pitch line nosing to nosing, arch_measure FIN.STAIR.FLIGHT method)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "RS-A",
+   "handles": "arch 1F B59 / B5A / B5B / B5C / D22 5 fronts 1.150, 4 goings 0.300",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-406aae9a9854e015c45e",
+   "sources": [
+    "OWNER_RULE_STAIRS_2026-10-24 s.1 / s.4 (S-4 (8), S-9)",
+    "UP-STAIR-003 / UP-STAIR-006 (t 0.030)",
+    "Q-46 A",
+    "research/agents_t412/NOSING_TABLE_T412.csv (T-412 MERGED f9c80501, Checker 21 / 89 re-measured)",
+    "research/agents_t425 (T-425 MERGED 6f159091)",
+    "GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "carrier": "L-406aae9a9854e015c45e",
+   "cause": "RS-A read on the 1F plan; the carrier is GF F4 corrected to the drawn 4 treads (T-425 / T-438): the FIN.STAIR.FLIGHT quantity of this flight is carried by L-406aae9a9854e015c45e (one flight, one valued line; R-T429-1)",
+   "class": "A_CARRIED",
+   "element_id": "1F-R78C367:flight 6",
+   "engine_flight": "SITE-a95bf979baf4cfae:F6",
+   "family": "B7-01",
+   "flight": "RS-A",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-437643d5f8553a89a0cd",
+   "sources": [
+    "research/agents_t425/BINDING_T425.json",
+    "engine/source/arch_v3039.py R-T429-1"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "MS2-U: the 12th riser's front (2F floor edge) and the 11th going are drawn on no sheet (arch 2F 11 fronts, ST p.5 11 lines; T-412 N12 HELD, T-429 T429_LAST_GOING; head clash B23, Q-46 RFI) - stays HELD; bounded by the drawn readings",
+   "class": "C_OPEN",
+   "element_id": "2F-R4D1B62:flight 2",
+   "engine_flight": "SITE-d7254c68fd33723d:F2",
+   "family": "B7-01",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": "3.438372",
+     "measured_net": null
+    },
+    "basis": "low 10 drawn goings, high OPEN (the last going is drawn on no sheet), x hypot(0.300, R 0.168)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "MS2-U",
+   "handles": "arch 2F 135B .. 1386 11 fronts 1.150, 10 goings 0.300; ST p.5 east lane 644 .. 62F 11 lines: the 12th edge and the 11th going are drawn on no sheet",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-48bb13e2f1c94d852a03",
+   "sources": [
+    "research/agents_t412/NOSING_TABLE_T412.csv ST01-MS2U-N12",
+    "engine/source/arch_v3039.py T429_LAST_GOING",
+    "Q-46 RFI (head clash)"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)",
+   "class": "A_DRAWN",
+   "element_id": "GF-RC99C2A:flight 2",
+   "engine_flight": "SITE-735e111dcf9b22c8:F2",
+   "family": "B7-01",
+   "fix": {
+    "after": {
+     "class": "RELEASED",
+     "evidence": "ASSUMED - OWNER-APPROVED",
+     "measured_net": "3.403367"
+    },
+    "basis": "10 drawn goings x hypot(0.300, R 0.160714) = 3.403367 lm (pitch line nosing to nosing, arch_measure FIN.STAIR.FLIGHT method)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "RS-S",
+   "handles": "arch 1F B43 .. B4D 11 fronts 1.150, 10 goings 0.300; riser faces B55 / B54 / B53 inside column 300E over 0.050 (B4A / B49 / B48 notched; Checker F-C-T412-1: 300E, not 2FD2)",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-509c6af3d162ae145108",
+   "sources": [
+    "OWNER_RULE_STAIRS_2026-10-24 s.1 / s.4 (S-4 (8), S-9)",
+    "UP-STAIR-003 / UP-STAIR-006 (t 0.030)",
+    "Q-46 A",
+    "research/agents_t412/NOSING_TABLE_T412.csv (T-412 MERGED f9c80501, Checker 21 / 89 re-measured)",
+    "research/agents_t425 (T-425 MERGED 6f159091)",
+    "GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: half landing +3.50 and 1F FFL +5.50 printed; 12 risers section A-A (Q-46 A, T-184); 12th front = ST p.4 459 (1.150); its position lies in the B20 head clash (Q-46 RFI), which moves no riser area (width = the lane 1.150, height R)",
+   "class": "A_DRAWN",
+   "element_id": "1F-R78C367:flight 3",
+   "engine_flight": "SITE-a95bf979baf4cfae:F3",
+   "family": "B7-01",
+   "fix": {
+    "after": {
+     "class": "RELEASED",
+     "evidence": "DRAWING-CONFIRMED",
+     "measured_net": "3.775064"
+    },
+    "basis": "11 drawn goings x hypot(0.300, R 0.166667) = 3.775064 lm (pitch line nosing to nosing, arch_measure FIN.STAIR.FLIGHT method)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "MS1-U",
+   "handles": "arch 1F A92 .. ABE 11 fronts 1.150, 10 goings 0.300; ST p.4 east lane 459 .. 25B 12 lines 1.150 at 0.300 (3.300): 459 is the 12th (1F floor) edge",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-54eb280b9f7bf5eda65f",
+   "sources": [
+    "OWNER_RULE_STAIRS_2026-10-24 s.1 / s.4 (S-4 (8), S-9)",
+    "UP-STAIR-003 / UP-STAIR-006 (t 0.030)",
+    "Q-46 A",
+    "research/agents_t412/NOSING_TABLE_T412.csv (T-412 MERGED f9c80501, Checker 21 / 89 re-measured)",
+    "research/agents_t425 (T-425 MERGED 6f159091)",
+    "half landing +3.50 and 1F FFL +5.50 printed; 12 risers section A-A (Q-46 A, T-184)"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: 1F FFL +5.50 and 2F FFL +9.70 printed; 12 + 1 (MS2-TR) + 12 risers section A-A (Q-46 A, T-184); landing levels +7.516 / +7.684 are not printed and are not used",
+   "class": "A_DRAWN",
+   "element_id": "1F-R78C367:flight 2",
+   "engine_flight": "SITE-a95bf979baf4cfae:F2",
+   "family": "B7-01",
+   "fix": {
+    "after": {
+     "class": "RELEASED",
+     "evidence": "DRAWING-CONFIRMED",
+     "measured_net": "3.782209"
+    },
+    "basis": "11 drawn goings x hypot(0.300, R 0.168) = 3.782209 lm (pitch line nosing to nosing, arch_measure FIN.STAIR.FLIGHT method)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "MS2-L",
+   "handles": "arch 1F AC0 .. A97 12 fronts 1.150, 11 goings 0.300; riser face ABB inside column 3005 over 0.050 (AB7 notched)",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-a08d67ca292ab16ef9c3",
+   "sources": [
+    "OWNER_RULE_STAIRS_2026-10-24 s.1 / s.4 (S-4 (8), S-9)",
+    "UP-STAIR-003 / UP-STAIR-006 (t 0.030)",
+    "Q-46 A",
+    "research/agents_t412/NOSING_TABLE_T412.csv (T-412 MERGED f9c80501, Checker 21 / 89 re-measured)",
+    "research/agents_t425 (T-425 MERGED 6f159091)",
+    "1F FFL +5.50 and 2F FFL +9.70 printed; 12 + 1 (MS2-TR) + 12 risers section A-A (Q-46 A, T-184); landing levels +7.516 / +7.684 are not printed and are not used"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "C-ST-4 / RFI-A04 (open, architect + structural): MS1-L riser count and landing edge: architectural GF plan 10 fronts over 2.700 (DC .. 486; with section A-A 10 + 5, Q-46 A, T-434) vs ST p.4 12 straight lines over 3.300 (45A .. 25E); owner 2026-10-22 18:00: MS1-L HELD on the riser-count conflict - stays HELD; bounded by the drawn readings",
+   "class": "C_OPEN",
+   "element_id": "GF-R31F8AE:flight 1",
+   "engine_flight": "SITE-3759f2457b22cb4a:F1",
+   "family": "B7-01",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "3.775064",
+     "held_low": "3.088689",
+     "measured_net": null
+    },
+    "basis": "low 9 drawn goings, high 11 goings, x hypot(0.300, R 0.166667)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "MS1-L",
+   "handles": "arch GF DC .. 486: 10 fronts 1.150 (C8 drawn 0.575 to the cut, its companion CD 1.150), 9 goings 0.300; riser faces D0 inside column 2FBD over 0.050 (CE notched; CF / D1 not); ST p.4 45A .. 25E 12 lines 1.150 over 3.300 (the other reading)",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-a1a0ab49818d4b9621b5",
+   "sources": [
+    "CLARIFICATIONS_CONSULTANT_2026-10-23 row 5 C-ST-4",
+    "rfi/A_PRIORITY_RFI.md RFI-A04",
+    "OWNER_SESSION_CHANGES 2026-10-22 18:00",
+    "research/agents_t434 (T-434)"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "MS1-T winder turn seen from 1F: section A-A governs 5 winders, every plan draws a 4-riser fan: the winder subdivision is not drawn (D-67, WINDER_SUBDIVISION_NOT_DRAWN; OWNER_RULE_STAIRS S-9: never generated, no walking line) - beside: none: a winder pitch line needs a walking line, never assumed (S-9)",
+   "class": "B_HELD",
+   "element_id": "1F-R78C367:flight 5",
+   "engine_flight": "SITE-a95bf979baf4cfae:F5",
+   "family": "B7-01",
+   "flight": "MS1-T",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-c6724654ee4ccdb0c508",
+   "sources": [
+    "DESIGNER_CLARIFICATIONS D-67",
+    "research/agents_t434 (T-434 MERGED a6b325b3)",
+    "OWNER_RULE_STAIRS_2026-10-24 s.4 S-9"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: +0.30 (ST p.3, section A-A) and GF FFL +1.00 printed; 4 riser lines on the GF plan (T-184 ST-01b, T-412)",
+   "class": "A_DRAWN",
+   "element_id": "GF-R31F8AE:flight 2",
+   "engine_flight": "SITE-3759f2457b22cb4a:F2",
+   "family": "B7-01",
+   "fix": {
+    "after": {
+     "class": "RELEASED",
+     "evidence": "DRAWING-CONFIRMED",
+     "measured_net": "1.041933"
+    },
+    "basis": "3 drawn goings x hypot(0.300, R 0.175) = 1.041933 lm (pitch line nosing to nosing, arch_measure FIN.STAIR.FLIGHT method)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "flight": "D1",
+   "handles": "arch GF 481 / 484 / 48F / 490 4 fronts 1.150, 3 goings 0.300",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-cccf54f717124cd750b3",
+   "sources": [
+    "OWNER_RULE_STAIRS_2026-10-24 s.1 / s.4 (S-4 (8), S-9)",
+    "UP-STAIR-003 / UP-STAIR-006 (t 0.030)",
+    "Q-46 A",
+    "research/agents_t412/NOSING_TABLE_T412.csv (T-412 MERGED f9c80501, Checker 21 / 89 re-measured)",
+    "research/agents_t425 (T-425 MERGED 6f159091)",
+    "+0.30 (ST p.3, section A-A) and GF FFL +1.00 printed; 4 riser lines on the GF plan (T-184 ST-01b, T-412)"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "carrier": "L-509c6af3d162ae145108",
+   "cause": "RS-S partial reading FOLDED into GF F2 (T-425 / T-429): the FIN.STAIR.FLIGHT quantity of this flight is carried by L-509c6af3d162ae145108 (one flight, one valued line; R-T429-1)",
+   "class": "A_CARRIED",
+   "element_id": "GF-RC99C2A:flight 3",
+   "engine_flight": "SITE-735e111dcf9b22c8:F3",
+   "family": "B7-01",
+   "flight": "RS-S",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-d827589991777fe63819",
+   "sources": [
+    "research/agents_t425/BINDING_T425.json",
+    "engine/source/arch_v3039.py R-T429-1"
+   ],
+   "unit": "lm"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "ST-01 soffit: T-281 measured rows (method O 17.197803 / D 17.243246 m2 true) + MS1-L in either reading (C-ST-4: O 3.677828 .. 4.501478, D 3.225561 .. 4.049212) are present in every reading; the high end is OPEN: MS1-T warped soffit and MS2-TR junction not drawn (D-67 / C-ST-3, plan 1.500 m2 HELD), column 691 exposure HELD (D-16), method O vs D a RULE_DIFFERENCE (no owner soffit rule), finish type of a stair soffit not printed",
+   "class": "C_OPEN",
+   "element_id": "STAIR:ST-01:soffit",
+   "family": "B7-15",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": "20.468807",
+     "measured_net": null
+    },
+    "basis": "low = min over methods of the pieces present in every reading: D 20.468807, O 20.875631; high OPEN",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "item_code": "FIN.STAIR.SOFFIT",
+   "line_id": "L-1fcec3328ccd0ea243d4",
+   "sources": [
+    "research/agents_t281/summary.json (T-281 MERGED 40518c58)",
+    "engine/source/arch_v3032.py STAIR_SOFFIT_T281"
+   ],
+   "unit": "m2"
+  },
+  {
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "cause": "ST-02 soffit: T-281 measured rows method O 4.460946 / D 4.905788 m2 true; the high end is OPEN: RS-C helicoid soffit not drawn (plan 4.443156 m2, Q-50 A cond / C-ST-3), sub-pieces under the 'B3 (With Stair)' band and the CA member HELD (Q-61 C, T-258), unknown pairs 0.596481 m2 plan; method O vs D a RULE_DIFFERENCE; finish type not printed",
+   "class": "C_OPEN",
+   "element_id": "STAIR:ST-02:soffit",
+   "family": "B7-15",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": "4.460946",
+     "measured_net": null
+    },
+    "basis": "low = min over methods of the pieces present in every reading: D 4.905788, O 4.460946; high OPEN",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET"
+   },
+   "item_code": "FIN.STAIR.SOFFIT",
+   "line_id": "L-c77e3887f7e348b1461d",
+   "sources": [
+    "research/agents_t281/summary.json (T-281 MERGED 40518c58)",
+    "engine/source/arch_v3032.py STAIR_SOFFIT_T281"
+   ],
+   "unit": "m2"
+  }
+ ],
+ "own_read": {
+  "D1": "arch GF 481 / 484 / 48F / 490 4 fronts 1.150, 3 goings 0.300",
+  "MS1-L": "arch GF DC .. 486: 10 fronts 1.150 (C8 drawn 0.575 to the cut, its companion CD 1.150), 9 goings 0.300; riser faces D0 inside column 2FBD over 0.050 (CE notched; CF / D1 not); ST p.4 45A .. 25E 12 lines 1.150 over 3.300 (the other reading)",
+  "MS1-U": "arch 1F A92 .. ABE 11 fronts 1.150, 10 goings 0.300; ST p.4 east lane 459 .. 25B 12 lines 1.150 at 0.300 (3.300): 459 is the 12th (1F floor) edge",
+  "MS2-L": "arch 1F AC0 .. A97 12 fronts 1.150, 11 goings 0.300; riser face ABB inside column 3005 over 0.050 (AB7 notched)",
+  "MS2-U": "arch 2F 135B .. 1386 11 fronts 1.150, 10 goings 0.300; ST p.5 east lane 644 .. 62F 11 lines: the 12th edge and the 11th going are drawn on no sheet",
+  "RS-A": "arch 1F B59 / B5A / B5B / B5C / D22 5 fronts 1.150, 4 goings 0.300",
+  "RS-S": "arch 1F B43 .. B4D 11 fronts 1.150, 10 goings 0.300; riser faces B55 / B54 / B53 inside column 300E over 0.050 (B4A / B49 / B48 notched; Checker F-C-T412-1: 300E, not 2FD2)"
+ },
+ "released_by_code": {
+  "FIN.MARBLE.RISER": "6.836036",
+  "FIN.STAIR.FLIGHT": "13.36392"
+ },
+ "rule": "R-T645-1",
+ "schema": "URBAN_T645_STAIR_FINISH_HOLD_CENSUS_V1",
+ "scope": "B7 FIN.STAIR.FLIGHT / FIN.MARBLE.RISER / FIN.MARBLE.TREAD / FIN.STAIR.SOFFIT HELD-blank lines (T-630 per_line: class HELD, no bound)",
+ "task": "T-645",
+ "tread_t_m": "0.03"
+}

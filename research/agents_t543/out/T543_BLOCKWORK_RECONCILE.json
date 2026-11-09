@@ -1,0 +1,501 @@
+{
+ "by_cause": {
+  "ENGINE_RIGHT": "41.0512800",
+  "HELD": "587.284451",
+  "RULE_DIFFERENCE": "65.148635",
+  "TOLERANCE": "-2.01930050",
+  "UNRESOLVED": "101.43193450"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58",
+ "engine_held_lines": [
+  {
+   "element_id": "GF-WALLS:walls t=0.15",
+   "line_id": "L-0d9b9e89bb6455da475d"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.15",
+   "line_id": "L-246f3c09de4c6b90efe5"
+  },
+  {
+   "element_id": "GF-WALLS:walls t=0.20",
+   "line_id": "L-4165954ce4871eda30cc"
+  },
+  {
+   "element_id": "1F-WALLS:walls t=0.20",
+   "line_id": "L-5ffa7157a2fe483dd008"
+  },
+  {
+   "element_id": "HOUSE_BELOW_NG:MAIN_S",
+   "line_id": "L-7503af7cc1eea4e6735d"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "line_id": "L-76a4d8e50423fb02b914"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "line_id": "L-9056ebed77701b50abfc"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "line_id": "L-a6eedf5e4adec6d07618"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.20",
+   "line_id": "L-afe984a62285e133ec2f"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "line_id": "L-bbb82de298fecbafa11d"
+  },
+  {
+   "element_id": "1F-WALLS:walls t=0.15",
+   "line_id": "L-c22e309433e7b671cf2d"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "line_id": "L-e1e06ec149b44d4f6f8a"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "line_id": "L-e90c9dd5ca08ffb64728"
+  },
+  {
+   "element_id": "HOUSE_BELOW_NG:ANNEX_S",
+   "line_id": "L-ee857398614d817e6917"
+  },
+  {
+   "element_id": "GF-WALLS:walls t=0.40",
+   "line_id": "L-ff06449b7f61f19c418d"
+  }
+ ],
+ "engine_only_held_beside": [
+  {
+   "engine_status": "HELD",
+   "line_id": "L-7503af7cc1eea4e6735d",
+   "name": "HOUSE_BELOW_NG:MAIN_S",
+   "note": "HELD blank; below-ground masonry (T-407), not in his sheet"
+  },
+  {
+   "engine_status": "HELD",
+   "line_id": "L-ee857398614d817e6917",
+   "name": "HOUSE_BELOW_NG:ANNEX_S",
+   "note": "HELD blank; below-ground masonry (T-407), not in his sheet"
+  }
+ ],
+ "engine_valued_total": "467.7925",
+ "freelancer_printed": {
+  "15cm": "617.25",
+  "20cm": "83.64",
+  "external": "559.80",
+  "grand": "1260.69"
+ },
+ "freelancer_total": "1260.6895",
+ "gap": "792.8970",
+ "method": "R-T543-1",
+ "rows": [
+  {
+   "cause": "SPLIT",
+   "decomposition": {
+    "G_eng": "483.386",
+    "H_eng": "3.819210",
+    "H_his": "3.838211",
+    "L_eng": "126.567",
+    "L_held": "6.275",
+    "L_his": "134.28",
+    "O_eng": "42.660",
+    "engine_valued_m2": "159.2369",
+    "floor": "GF",
+    "gap": "307.7181",
+    "his_net_m2": "466.9550",
+    "rows": [
+     {
+      "basis": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+      "cause": "HELD",
+      "delta": "12.921",
+      "name": "HELD walls: CB2 width conflict (D-27)",
+      "walls": [
+       "GF-W22"
+      ]
+     },
+     {
+      "basis": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+      "cause": "HELD",
+      "delta": "130.745",
+      "name": "HELD walls: annex storey datum (Q-54 B / D-39)",
+      "walls": [
+       "GF-W00",
+       "GF-W02",
+       "GF-W04",
+       "GF-W06",
+       "GF-W17",
+       "GF-W18",
+       "GF-W23",
+       "GF-W24",
+       "GF-W25",
+       "GF-W27",
+       "GF-W35"
+      ]
+     },
+     {
+      "basis": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+      "cause": "HELD",
+      "delta": "8.2725",
+      "name": "HELD walls: held increment of a part-valued wall (member depth / shaft piece / dome ring)",
+      "walls": [
+       "GF-W10"
+      ]
+     },
+     {
+      "basis": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+      "cause": "HELD",
+      "delta": "41.807",
+      "name": "HELD walls: held opening",
+      "walls": [
+       "GF-W15",
+       "GF-W26"
+      ]
+     },
+     {
+      "basis": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+      "cause": "HELD",
+      "delta": "41.171",
+      "name": "HELD walls: lift tie beam size (ST p.8 n.19)",
+      "walls": [
+       "GF-W08",
+       "GF-W09",
+       "GF-W13",
+       "GF-W14"
+      ]
+     },
+     {
+      "basis": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+      "cause": "HELD",
+      "delta": "46.693",
+      "name": "HELD walls: sunken-panel drop d (D-41)",
+      "walls": [
+       "GF-W12",
+       "GF-W16",
+       "GF-W20",
+       "GF-W31",
+       "GF-W32",
+       "GF-W34"
+      ]
+     },
+     {
+      "basis": "same walls, two merged versions",
+      "cause": "TOLERANCE",
+      "delta": "-0.1204",
+      "name": "version drift of valued walls (V2 figure - V3.0.58 value)",
+      "walls": []
+     },
+     {
+      "basis": "held length 6.275 m x H_eng 3.819210 m",
+      "cause": "HELD",
+      "delta": "23.965545",
+      "name": "HELD length with no height (held pieces / length-only walls) x engine mean height",
+      "walls": [
+       "GF-H01",
+       "GF-H02",
+       "GF-W03",
+       "GF-W30",
+       "GF-W36",
+       "GF-W37"
+      ]
+     },
+     {
+      "basis": "(L_eng 126.567 + held 6.275) m x (H_his 3.838211 - H_eng 3.819210) m",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "2.524107",
+      "name": "height convention: his flat storey heights vs the engine's clear height under each member",
+      "walls": []
+     },
+     {
+      "basis": "his 48.4400 - engine 42.660 m2",
+      "cause": "UNRESOLVED",
+      "delta": "-5.7800",
+      "name": "openings census: his deductions vs the engine's (both deduct every opening, Q-73)",
+      "walls": []
+     },
+     {
+      "basis": "(L_his 134.28 - 126.567 - 6.275) m x 3.838211 = 5.519348 m2 expected",
+      "cause": "UNRESOLVED",
+      "delta": "5.519348",
+      "name": "RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding",
+      "walls": []
+     }
+    ]
+   },
+   "difference_m2": "307.7181",
+   "engine_status": "PARTIAL (valued walls; the others in the split)",
+   "engine_valued_m2": "159.2369",
+   "his_basis": "his external + 15 cm + 20 cm wall rows: L 134.28 m, H 3.838211 m",
+   "his_m2": "466.9550",
+   "name": "GF storey walls (net of openings)",
+   "note": "",
+   "source": "LINE_INDEX_V3_0_57 (V3.0.58 MAS.BLOCK lines byte-identical, R-T507-1 (e)); REGISTER_V4_EXPORT (T-288) + T-488 changes; BLOCKWORK_WALL_REGISTER_V2 (T-228) carried figure, not a quantity"
+  },
+  {
+   "cause": "SPLIT",
+   "decomposition": {
+    "G_eng": "395.819",
+    "H_eng": "3.731185",
+    "H_his": "3.668934",
+    "L_eng": "106.084",
+    "L_held": "11.162",
+    "L_his": "120.31",
+    "O_eng": "41.851",
+    "engine_valued_m2": "308.5556",
+    "floor": "1F",
+    "gap": "82.5039",
+    "his_net_m2": "391.0595",
+    "rows": [
+     {
+      "basis": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+      "cause": "HELD",
+      "delta": "2.2693",
+      "name": "HELD walls: held increment of a part-valued wall (member depth / shaft piece / dome ring)",
+      "walls": [
+       "1F-W04",
+       "1F-W10",
+       "1F-W13",
+       "1F-W17",
+       "1F-W24"
+      ]
+     },
+     {
+      "basis": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+      "cause": "HELD",
+      "delta": "45.914",
+      "name": "HELD walls: held opening",
+      "walls": [
+       "1F-W07",
+       "1F-W14 + 1F-W15",
+       "1F-W16"
+      ]
+     },
+     {
+      "basis": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+      "cause": "HELD",
+      "delta": "-0.872",
+      "name": "HELD walls: no member drawn above / no band",
+      "walls": [
+       "1F-W11"
+      ]
+     },
+     {
+      "basis": "same walls, two merged versions",
+      "cause": "TOLERANCE",
+      "delta": "-1.8989",
+      "name": "version drift of valued walls (V2 figure - V3.0.58 value)",
+      "walls": []
+     },
+     {
+      "basis": "held length 11.162 m x H_eng 3.731185 m",
+      "cause": "HELD",
+      "delta": "41.647484",
+      "name": "HELD length with no height (held pieces / length-only walls) x engine mean height",
+      "walls": []
+     },
+     {
+      "basis": "(L_eng 106.084 + held 11.162) m x (H_his 3.668934 - H_eng 3.731185) m",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-7.298599",
+      "name": "height convention: his flat storey heights vs the engine's clear height under each member",
+      "walls": []
+     },
+     {
+      "basis": "his 50.3500 - engine 41.851 m2",
+      "cause": "UNRESOLVED",
+      "delta": "-8.4990",
+      "name": "openings census: his deductions vs the engine's (both deduct every opening, Q-73)",
+      "walls": []
+     },
+     {
+      "basis": "(L_his 120.31 - 106.084 - 11.162) m x 3.668934 = 11.241615 m2 expected",
+      "cause": "UNRESOLVED",
+      "delta": "11.241615",
+      "name": "RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding",
+      "walls": []
+     }
+    ]
+   },
+   "difference_m2": "82.5039",
+   "engine_status": "PARTIAL (valued walls; the others in the split)",
+   "engine_valued_m2": "308.5556",
+   "his_basis": "his external + 15 cm + 20 cm wall rows: L 120.31 m, H 3.668934 m",
+   "his_m2": "391.0595",
+   "name": "1F storey walls (net of openings)",
+   "note": "",
+   "source": "LINE_INDEX_V3_0_57 (V3.0.58 MAS.BLOCK lines byte-identical, R-T507-1 (e)); REGISTER_V4_EXPORT (T-288) + T-488 changes; BLOCKWORK_WALL_REGISTER_V2 (T-228) carried figure, not a quantity"
+  },
+  {
+   "cause": "SPLIT",
+   "decomposition": {
+    "G_eng": "123.226",
+    "H_eng": "3.634664",
+    "H_his": "3.521611",
+    "L_eng": "33.903",
+    "L_held": "5.697",
+    "L_his": "39.10",
+    "O_eng": "11.595",
+    "engine_valued_m2": "0",
+    "floor": "2F",
+    "gap": "123.9350",
+    "his_net_m2": "123.9350",
+    "rows": [
+     {
+      "basis": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+      "cause": "HELD",
+      "delta": "6.840",
+      "name": "HELD walls: held opening",
+      "walls": [
+       "2F-W00"
+      ]
+     },
+     {
+      "basis": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+      "cause": "HELD",
+      "delta": "104.791",
+      "name": "HELD walls: roof datum b_r (D-39), 2F at the b_r = 0.05 what-if",
+      "walls": [
+       "2F-W01",
+       "2F-W02",
+       "2F-W03",
+       "2F-W04",
+       "2F-W05",
+       "2F-W06",
+       "2F-W07",
+       "2F-W08"
+      ]
+     },
+     {
+      "basis": "same walls, two merged versions",
+      "cause": "TOLERANCE",
+      "delta": "0",
+      "name": "version drift of valued walls (V2 figure - V3.0.58 value)",
+      "walls": []
+     },
+     {
+      "basis": "held length 5.697 m x H_eng 3.634664 m",
+      "cause": "HELD",
+      "delta": "20.706679",
+      "name": "HELD length with no height (held pieces / length-only walls) x engine mean height",
+      "walls": []
+     },
+     {
+      "basis": "(L_eng 33.903 + held 5.697) m x (H_his 3.521611 - H_eng 3.634664) m",
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-4.476873",
+      "name": "height convention: his flat storey heights vs the engine's clear height under each member",
+      "walls": []
+     },
+     {
+      "basis": "his 13.7600 - engine 11.595 m2",
+      "cause": "UNRESOLVED",
+      "delta": "-2.1650",
+      "name": "openings census: his deductions vs the engine's (both deduct every opening, Q-73)",
+      "walls": []
+     },
+     {
+      "basis": "(L_his 39.10 - 33.903 - 5.697) m x 3.521611 = -1.760806 m2 expected",
+      "cause": "UNRESOLVED",
+      "delta": "-1.760806",
+      "name": "RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding",
+      "walls": []
+     }
+    ]
+   },
+   "difference_m2": "123.9350",
+   "engine_status": "HELD (all walls, D-39)",
+   "engine_valued_m2": null,
+   "his_basis": "his external + 15 cm + 20 cm wall rows: L 39.10 m, H 3.521611 m",
+   "his_m2": "123.9350",
+   "name": "2F storey walls (net of openings)",
+   "note": "",
+   "source": "LINE_INDEX_V3_0_57 (V3.0.58 MAS.BLOCK lines byte-identical, R-T507-1 (e)); REGISTER_V4_EXPORT (T-288) + T-488 changes; BLOCKWORK_WALL_REGISTER_V2 (T-228) carried figure, not a quantity"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "decomposition": null,
+   "difference_m2": "74.40",
+   "engine_status": "booked in EXT.FENCE.* (not MAS.BLOCK)",
+   "engine_valued_m2": null,
+   "his_basis": "one row, length x 2.00, no opening",
+   "his_m2": "74.40",
+   "name": "boundary wall (his 15 cm section)",
+   "note": "family placement; the quantity is compared under the fence family, not here",
+   "source": "LINE_INDEX_V3_0_57 (V3.0.58 MAS.BLOCK lines byte-identical, R-T507-1 (e)): EXT.FENCE.WALL F-STREET 14.84 + F-NORTH 83.1305 valued, F-SEA / F-LOWER HELD"
+  },
+  {
+   "cause": "SPLIT",
+   "decomposition": {
+    "centreline_hi_m": "136.83760",
+    "face_above_finish_hi_m2": "101.46422250",
+    "rows": [
+     {
+      "basis": "V3_0_23_RUNS_T319 + T-488 PARAPET_RUN: sum of 25 runs [0, c x (h - 0.30)]",
+      "cause": "HELD",
+      "delta": "60.412943",
+      "name": "parapet face above the RC upstand: block ALTERNATIVE (material HELD, Q-65 C designer), upper end",
+      "walls": []
+     },
+     {
+      "basis": "ST7757.pdf p.14 P1 parapet detail: RC upstand 0.30 above the slab (T-319 / T-482 own reads); centreline 136.83760 m x 0.30",
+      "cause": "ENGINE_RIGHT",
+      "delta": "41.0512800",
+      "name": "RC upstand 0.30 m above the slab on every run (concrete, STR.CONC.PARAPET; never masonry)",
+      "walls": []
+     },
+     {
+      "basis": "face above finish - block alternative - RC upstand",
+      "cause": "TOLERANCE",
+      "delta": "-5.0E-7",
+      "name": "print rounding of the stored block alternatives (6 dp)",
+      "walls": []
+     },
+     {
+      "basis": "engine runs above finish 101.46422250 m2 on 136.83760 m centreline; b_edge x 136.83760 m stays HELD",
+      "cause": "UNRESOLVED",
+      "delta": "71.46577750",
+      "name": "RESIDUAL: parapet height below the finished roof (b_edge, HELD D-39) + length census",
+      "walls": []
+     }
+    ]
+   },
+   "difference_m2": "172.93",
+   "engine_status": "STR.CONC.PARAPET HELD BLANK x 4; block alternative records [0, x]",
+   "engine_valued_m2": null,
+   "his_basis": "three rows at 1.00 / 1.80 / 1.00 m, total length 138.65 m",
+   "his_m2": "172.93",
+   "name": "parapets (his 15 cm section: three rows)",
+   "note": "his unlabelled 29.80 m row = 2 x (8.100 + 6.800), the +13.90 roof's outer parapet faces (T-541 handles): a parapet, not a wall",
+   "source": "V3_0_23_RUNS_T319 + T-488 PARAPET_RUN"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "decomposition": null,
+   "difference_m2": "41.25",
+   "engine_status": "no masonry element identified",
+   "engine_valued_m2": null,
+   "his_basis": "one row 7.50 x 5.50, no opening",
+   "his_m2": "41.25",
+   "name": "1F 'projections' row (his external section)",
+   "note": "physical element not identified this run (facade feature on the 1F elevation?)",
+   "source": "freelancer row; no engine element (MAS.BLOCK carries none)"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "decomposition": null,
+   "difference_m2": "-9.8400",
+   "engine_status": "engine deducts openings inside each wall",
+   "engine_valued_m2": null,
+   "his_basis": "4 openings deducted in his 20 cm section, floor not printed",
+   "his_m2": "-9.8400",
+   "name": "his 20 cm openings with no floor",
+   "note": "belongs to one of the three storey rows",
+   "source": "freelancer section deduction"
+  }
+ ],
+ "unit": "m2"
+}

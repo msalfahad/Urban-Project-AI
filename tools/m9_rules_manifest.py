@@ -80,11 +80,16 @@ AUTHORED = ("owner_decisions/URBAN_RULES_1.5.0.json", "materials/URBAN_MATERIAL_
             "coverage/BOQ_FAMILY_MASTER_1.52.0.json",   # T-488: 1.51.0 + T-480 promoted (R-T485-1, census + line diff at V3.0.54) + the pending V3.0.55 package (B9-01 / B10-12 evidence and text); no owner change; read by no method
             "coverage/BOQ_FAMILY_MASTER_1.53.0.json",   # T-508: 1.52.0 + T-488 promoted (R-T485-1, census + line diff at V3.0.55) + the pending V3.0.56 package (B3-06 / B7-07 / B7-08 text; B7-07 / B7-08 item codes); no owner change; read by no method
             "coverage/BOQ_FAMILY_MASTER_1.54.0.json",   # T-310 r7: 1.53.0 + T-508 promoted (R-T485-1, census + line diff at V3.0.56) + the pending V3.0.57 package (B8-01 / B8-02 / B8-03 / B8-09 text; B8-09 owns the two pool layer codes); no owner change; read by no method
-            "coverage/BOQ_FAMILY_MASTER_1.55.0.json",   # T-423: 1.54.0 + T-310 promoted (R-T485-1, census + line diff at V3.0.57) + the pending V3.0.58 package (B3-01 / B3-04 / B4-01 / B4-03 / B5-01 text); no owner change; read by no method
+            "coverage/BOQ_FAMILY_MASTER_1.55.0.json",   # T-507: 1.54.0 + T-310 promoted (R-T485-1, census + line diff at V3.0.57) + the pending V3.0.58 package (B8-06 text: exposed-slab roof WP lines)
+            "coverage/BOQ_FAMILY_MASTER_1.56.0.json",   # T-637: 1.55.0 + R-T637-1 (UNCODED codes to families, register codes NOT_A_BOQ_LINE, V11 trade-key crosswalk); no quantity or owner change; read by no method
+            "coverage/BOQ_FAMILY_MASTER_1.57.0.json",   # T-525: 1.56.0 + T-507 promoted (R-T485-1, census + line diff at V3.0.58); no pending package; no quantity or owner change; read by no method
+            "coverage/BOQ_FAMILY_MASTER_1.58.0.json",   # T-498: 1.57.0 + pending ARCH_TAKEOFF_V3.0.59 (blockwork material lines) + B9-01 / B9-04 text + B9-04 capability NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED; no promotion, no quantity or owner change; read by no method
             "owner_decisions/URBAN_RULES_1.6.0.json",   # T-158: owner stair rule UP-STAIR-015 over 1.5.0; rule_store not yet
             "owner_decisions/URBAN_RULES_1.7.0.json",   # T-267: owner stair finish-level rule UP-STAIR-016 over 1.6.0; rule_store not yet
             "rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json",  # T-448: Company Rulebook (owner 2026-11-02); read by company_rulebook_v1 only
-            "owner_decisions/URBAN_RULES_1.8.0.json")  # T-461: UP-GEN-003 1.2.0 (Q-73 A) + UP-STAIR-017 (Q-53 C) over 1.7.0; rule_store_v2 only
+            "owner_decisions/URBAN_RULES_1.8.0.json",  # T-461: UP-GEN-003 1.2.0 (Q-73 A) + UP-STAIR-017 (Q-53 C) over 1.7.0; rule_store_v2 only
+            "conventions/URBAN_CONVENTIONS_1.0.0.json",  # T-599: UP-CONC-JOINT-001 LEAD_ADOPTED (Q-62 A delegated); read by no method
+            "rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json")  # T-615: 1.0.0 + UPC-BLACK-BLOCK-001 1.1.0 (Q-80: 0.15 m module 40 x 20); read by research/agents_t615 only
 REFERENCED = tuple(f"engine/profiles/URBAN_M{m}_GENERIC_CONVENTIONS_V{v}.json"
                    for m, v in ((2, 1), (3, 2), (4, 3), (5, 4), (7, 5), (8, 6)))
 

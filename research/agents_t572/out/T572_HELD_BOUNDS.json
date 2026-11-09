@@ -1,0 +1,2221 @@
+{
+ "schema": "T572_HELD_BOUNDS_V1",
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELEASED",
+ "note": "engine figures, bounds, bases and items only; no row, dimension or count of the freelancer (his family totals as already tracked by T-551 / T-565; measured-set sums only)",
+ "datums": {
+  "min_depth_m": "1.50",
+  "stack_m": "0.17",
+  "top_annex_m": "0.25",
+  "eg_m": "0.00"
+ },
+ "s01_neck_join_check_m3": "5.154000",
+ "families": {
+  "B10 COLUMN": {
+   "valued": "19.776500",
+   "held_components": 29,
+   "not_present_proposed": 5,
+   "bounded_both": 15,
+   "low_stated": 15,
+   "high_stated": 15,
+   "family_low": null,
+   "family_high": null,
+   "bounded_part_low": "8.034000",
+   "bounded_part_high": "10.119000",
+   "low_blocked_by": [
+    "D-39: main roof slab-top datum and roof build-up not printed",
+    "D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand",
+    "D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand; section CONFLICT",
+    "D-39: main roof slab-top datum and roof build-up not printed; section CONFLICT",
+    "Q-54B / D-39: annex roof slab-top datum not printed",
+    "Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT"
+   ],
+   "high_blocked_by": [
+    "D-39: main roof slab-top datum and roof build-up not printed",
+    "D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand",
+    "D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand; section CONFLICT",
+    "D-39: main roof slab-top datum and roof build-up not printed; section CONFLICT",
+    "Q-54B / D-39: annex roof slab-top datum not printed",
+    "Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT"
+   ],
+   "kinds": {
+    "BOUNDED": 15,
+    "UNBOUNDED": 14,
+    "NOT_PRESENT_PROPOSED": 5
+   }
+  },
+  "B10 NECK": {
+   "valued": "0.000000",
+   "held_components": 36,
+   "not_present_proposed": 0,
+   "bounded_both": 0,
+   "low_stated": 36,
+   "high_stated": 0,
+   "family_low": "9.723900",
+   "family_high": null,
+   "bounded_part_low": "9.723900",
+   "bounded_part_high": null,
+   "low_blocked_by": [],
+   "high_blocked_by": [
+    "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+    "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum); D-43 lift pit depth; D-63 section"
+   ],
+   "kinds": {
+    "LOWER_ONLY": 36
+   }
+  },
+  "B10 LIFT": {
+   "valued": "0.000000",
+   "held_components": 2,
+   "not_present_proposed": 0,
+   "bounded_both": 0,
+   "low_stated": 1,
+   "high_stated": 0,
+   "family_low": null,
+   "family_high": null,
+   "bounded_part_low": "1.903000",
+   "bounded_part_high": null,
+   "low_blocked_by": [
+    "D-43 tie-beam section not printed (ST p.8 note 19)"
+   ],
+   "high_blocked_by": [
+    "D-43 pit depth 'as per lift manufacturer' (ST p.14)",
+    "D-43 tie-beam section not printed (ST p.8 note 19)"
+   ],
+   "kinds": {
+    "LOWER_ONLY": 1,
+    "UNBOUNDED": 1
+   }
+  },
+  "B10 FOOTING LINE": {
+   "valued": "67.694500",
+   "held_components": 5,
+   "not_present_proposed": 0,
+   "bounded_both": 4,
+   "low_stated": 4,
+   "high_stated": 4,
+   "family_low": null,
+   "family_high": null,
+   "bounded_part_low": "7.844500",
+   "bounded_part_high": "13.961300",
+   "low_blocked_by": [
+    "pad count / spacing of the boundary-wall pads not printed (ST p.14; Q-28 A, T-478)"
+   ],
+   "high_blocked_by": [
+    "pad count / spacing of the boundary-wall pads not printed (ST p.14; Q-28 A, T-478)"
+   ],
+   "kinds": {
+    "BOUNDED": 4,
+    "UNBOUNDED": 1
+   }
+  },
+  "B10 BLINDING (plain)": {
+   "valued": "12.734438",
+   "held_components": 6,
+   "not_present_proposed": 0,
+   "bounded_both": 5,
+   "low_stated": 5,
+   "high_stated": 5,
+   "family_low": null,
+   "family_high": null,
+   "bounded_part_low": "7.640374",
+   "bounded_part_high": "13.466198",
+   "low_blocked_by": [
+    "pad count not printed (Q-28 A, T-478)"
+   ],
+   "high_blocked_by": [
+    "pad count not printed (Q-28 A, T-478)"
+   ],
+   "kinds": {
+    "BOUNDED": 5,
+    "UNBOUNDED": 1
+   }
+  },
+  "B1-02 EXCAVATION": {
+   "valued": "225.941333",
+   "held_components": 10,
+   "not_present_proposed": 0,
+   "bounded_both": 1,
+   "low_stated": 5,
+   "high_stated": 1,
+   "family_low": null,
+   "family_high": null,
+   "bounded_part_low": "38.644269",
+   "bounded_part_high": "1.176467",
+   "low_blocked_by": [
+    "D-15 strap soffit (footprint 7.889 m2 drawn, depth not)",
+    "D-33 loaded ground-beam sections",
+    "D-34 / D-33 interior and D-35 exterior ground-beam sections",
+    "boundary-wall foundation depth not printed (Q-28 A provisional)",
+    "no court ground-beam section printed (T-350)"
+   ],
+   "high_blocked_by": [
+    "D-15 strap soffit (footprint 7.889 m2 drawn, depth not)",
+    "D-33 loaded ground-beam sections",
+    "D-34 / D-33 interior and D-35 exterior ground-beam sections",
+    "D-40 wet-zone build-up",
+    "D-43 pit floor 'as per lift manufacturer' (ST p.14)",
+    "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum); Q-31 C",
+    "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum); no plan draws the row",
+    "boundary-wall foundation depth not printed (Q-28 A provisional)",
+    "no court ground-beam section printed (T-350)"
+   ],
+   "kinds": {
+    "BOUNDED": 1,
+    "LOWER_ONLY": 4,
+    "UNBOUNDED": 5
+   }
+  },
+  "B1-03 BACKFILL": {
+   "valued": "0.000000",
+   "held_components": 7,
+   "not_present_proposed": 0,
+   "bounded_both": 0,
+   "low_stated": 3,
+   "high_stated": 0,
+   "family_low": null,
+   "family_high": null,
+   "bounded_part_low": "99.645011",
+   "bounded_part_high": null,
+   "low_blocked_by": [
+    "D-43 lift pit depth",
+    "Q-31 C outline and the C10 / C necks; formation (Q-21 C)",
+    "Z2 extent, D-40 wet-floor build-up, D-33 / D-34",
+    "as their excavation zones: D-33 / D-34 / D-35 / D-15 / Q-28 A"
+   ],
+   "high_blocked_by": [
+    "D-43 lift pit depth",
+    "OQ-13 working space",
+    "OQ-13 working space; blinding projection",
+    "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum); working space OQ-13",
+    "Q-31 C outline and the C10 / C necks; formation (Q-21 C)",
+    "Z2 extent, D-40 wet-floor build-up, D-33 / D-34",
+    "as their excavation zones: D-33 / D-34 / D-35 / D-15 / Q-28 A"
+   ],
+   "kinds": {
+    "LOWER_ONLY": 3,
+    "UNBOUNDED": 4
+   }
+  },
+  "B1-04 DISPOSAL": {
+   "valued": "0.000000",
+   "held_components": 1,
+   "not_present_proposed": 0,
+   "bounded_both": 0,
+   "low_stated": 0,
+   "high_stated": 0,
+   "family_low": null,
+   "family_high": null,
+   "bounded_part_low": null,
+   "bounded_part_high": null,
+   "low_blocked_by": [
+    "in-situ / compacted dry densities not sourced; Z2 draw; excavation and backfill held"
+   ],
+   "high_blocked_by": [
+    "in-situ / compacted dry densities not sourced; Z2 draw; excavation and backfill held"
+   ],
+   "kinds": {
+    "UNBOUNDED": 1
+   }
+  }
+ },
+ "beside_his": {
+  "B10 NECK": {
+   "his_m3": "8.805000",
+   "engine_drawn_lower_all36_m3": "9.723900",
+   "candidate_generic_range_m3": [
+    "3.075000",
+    "15.375000"
+   ]
+  },
+  "B10 LIFT pit walls": {
+   "his_held_share_m3": "1.650000",
+   "engine_drawn_lower_m3": "1.903000",
+   "class": "BELOW_DRAWN_LOWER"
+  },
+  "F10 + F": {
+   "his_m3": "1.960",
+   "engine": [
+    "2.176000",
+    "2.275000"
+   ],
+   "class": "BELOW_DRAWN_LOWER"
+  },
+  "boundary band": {
+   "his_m3": "8.604",
+   "engine": [
+    "5.639000",
+    "11.033000"
+   ],
+   "class": "WITHIN"
+  },
+  "B1 earthworks": {
+   "his": "NO_ROW (T-565: 0 hits in 885 rows)",
+   "pct": null
+  },
+  "blinding": {
+   "his_m3": "47.055000",
+   "class": "NOT_LIKE_FOR_LIKE (one plate over the plot, T-478 RULE_DIFFERENCE)",
+   "pct": null
+  }
+ },
+ "components": [
+  {
+   "element_id": "HL:PLANTED_COLUMN:PC-2F:CONCRETE",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-39: main roof slab-top datum and roof build-up not printed; section CONFLICT",
+   "high_item": "D-39: main roof slab-top datum and roof build-up not printed; section CONFLICT",
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "storey": "2F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C1@251701,62344|2F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-39: main roof slab-top datum and roof build-up not printed",
+   "high_item": "D-39: main roof slab-top datum and roof build-up not printed",
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "storey": "2F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C2@247685,64087|2F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand",
+   "high_item": "D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand",
+   "line_id": "L-0ede77cfd0badc4c7d62",
+   "storey": "2F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C2@251723,58368|2F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-39: main roof slab-top datum and roof build-up not printed",
+   "high_item": "D-39: main roof slab-top datum and roof build-up not printed",
+   "line_id": "L-33a9b7728781fcba12e2",
+   "storey": "2F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C2@252679,64225|2F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-39: main roof slab-top datum and roof build-up not printed",
+   "high_item": "D-39: main roof slab-top datum and roof build-up not printed",
+   "line_id": "L-919a5749ef79759e01ca",
+   "storey": "2F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C2@254644,61274|2F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-39: main roof slab-top datum and roof build-up not printed",
+   "high_item": "D-39: main roof slab-top datum and roof build-up not printed",
+   "line_id": "L-26f6b6f2365c72e42291",
+   "storey": "2F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C3@238374,54773|GF",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "Q-54B / D-39: annex roof slab-top datum not printed",
+   "high_item": "Q-54B / D-39: annex roof slab-top datum not printed",
+   "line_id": "L-fad18af6e7139a5e99d1",
+   "storey": "GF"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C3@241094,51256|GF",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "high_item": "Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "line_id": "L-694a75c84dd6e4bb4491",
+   "storey": "GF"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C3@247476,61310|1F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.420000",
+   "high": "0.525000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-cc702b8541c15fdfd98c",
+   "storey": "1F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C3@247476,61310|2F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand; section CONFLICT",
+   "high_item": "D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand; section CONFLICT",
+   "line_id": "L-c10e2945d582b5a03126",
+   "storey": "2F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C3@265215,57750|GF",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.450000",
+   "high": "0.562500",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-8de64040a1c3ae6cf137",
+   "storey": "GF"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C4@259526,63482|1F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.420000",
+   "high": "0.525000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-e112e2add2f8979a6c39",
+   "storey": "1F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C4@264812,63850|1F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.420000",
+   "high": "0.525000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-8f8ad257d9b2cb9e027f",
+   "storey": "1F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C5@243102,55481|1F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.420000",
+   "high": "0.504000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-291ba2ddf4bbe4f14cf7",
+   "storey": "1F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C5@255627,63526|1F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.420000",
+   "high": "0.630000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-c677b628a776d3b87b02",
+   "storey": "1F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C5@255627,63526|2F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-39: main roof slab-top datum and roof build-up not printed; section CONFLICT",
+   "high_item": "D-39: main roof slab-top datum and roof build-up not printed; section CONFLICT",
+   "line_id": "L-bc01297b1c4a4c45a15f",
+   "storey": "2F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C5@259715,51786|1F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.420000",
+   "high": "0.630000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-831f6fe3de133294bb8f",
+   "storey": "1F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C6@250087,56100|1F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.504000",
+   "high": "0.735000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-a87ea657a42a311cb851",
+   "storey": "1F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C7@247954,58915|1F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.672000",
+   "high": "0.840000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-85809d3db52bb93dfe96",
+   "storey": "1F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C8@256160,53630|1F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.756000",
+   "high": "0.840000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-1dc713c83bf62e525ff2",
+   "storey": "1F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C8@256160,53630|GF",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.900000",
+   "high": "1.012500",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-4c4496579e5bfa20ae9f",
+   "storey": "GF"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C9@254644,59429|1F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.756000",
+   "high": "1.050000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-755eb56b55e86301b488",
+   "storey": "1F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C9@254644,59429|2F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-39: main roof slab-top datum and roof build-up not printed",
+   "high_item": "D-39: main roof slab-top datum and roof build-up not printed",
+   "line_id": "L-53f223b06db14ac41d47",
+   "storey": "2F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C9@259284,59442|1F",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.756000",
+   "high": "0.840000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-4aed92c117a7ab1c90ee",
+   "storey": "1F"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C@233893,56561|GF",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "high_item": "Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "line_id": "L-c0b3340a906c2c7650f8",
+   "storey": "GF"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C@235241,51296|GF",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "high_item": "Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "line_id": "L-e6c1c9a7feec10f64975",
+   "storey": "GF"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C@238150,57853|GF",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "high_item": "Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+   "line_id": "L-9f5a647014bbf83359f9",
+   "storey": "GF"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C@247429,51302|GF",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.360000",
+   "high": "0.450000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-9cb26d86575a92694880",
+   "storey": "GF"
+  },
+  {
+   "element_id": "P-C:COL:SH12:C@265272,52633|GF",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.360000",
+   "high": "0.450000",
+   "low_basis": "R-COL-SECTION-CONFLICT-1: smaller of the two printed / drawn sections x the drawn storey height (T-394, T-217, T-566)",
+   "high_basis": "larger printed section x the same height (D-16 / D-63 section CONFLICT)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-43dae3d6dfec957b26a8",
+   "storey": "GF"
+  },
+  {
+   "element_id": "U-C:COL:SH12:CN@257027,56053",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [
+    "CANDIDATE_EXPOSURE_NOT_A_BOUND"
+   ],
+   "candidate_range_not_drawn": [
+    "0.378000",
+    "1.161000"
+   ],
+   "kind": "NOT_PRESENT_PROPOSED",
+   "low": null,
+   "high": null,
+   "basis": "column schedule CN row: FOUNDATION 30 x 30 only, GF / 1F / 2F struck (printed; T-075, T-042): the plan symbol is the CN neck (no column above)",
+   "line_id": "L-0d4cd54cb397f210d1fd",
+   "storey": null
+  },
+  {
+   "element_id": "U-C:COL:SH12:CN@261568,56053",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [
+    "CANDIDATE_EXPOSURE_NOT_A_BOUND"
+   ],
+   "candidate_range_not_drawn": [
+    "0.378000",
+    "1.161000"
+   ],
+   "kind": "NOT_PRESENT_PROPOSED",
+   "low": null,
+   "high": null,
+   "basis": "column schedule CN row: FOUNDATION 30 x 30 only, GF / 1F / 2F struck (printed; T-075, T-042): the plan symbol is the CN neck (no column above)",
+   "line_id": "L-de9383f76f000503e1d7",
+   "storey": null
+  },
+  {
+   "element_id": "U-C:COL:SH12:CN@262379,59868",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "NOT_PRESENT_PROPOSED",
+   "low": null,
+   "high": null,
+   "basis": "column schedule CN row: FOUNDATION 30 x 30 only, GF / 1F / 2F struck (printed; T-075, T-042): the plan symbol is the CN neck (no column above)",
+   "line_id": "L-53a35abf19b1d8807f38",
+   "storey": null
+  },
+  {
+   "element_id": "U-C:COL:SH12:CN@262935,63411",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [
+    "CANDIDATE_EXPOSURE_NOT_A_BOUND"
+   ],
+   "candidate_range_not_drawn": [
+    "0.378000",
+    "1.161000"
+   ],
+   "kind": "NOT_PRESENT_PROPOSED",
+   "low": null,
+   "high": null,
+   "basis": "column schedule CN row: FOUNDATION 30 x 30 only, GF / 1F / 2F struck (printed; T-075, T-042): the plan symbol is the CN neck (no column above)",
+   "line_id": "L-d33f749864d96dd236f0",
+   "storey": null
+  },
+  {
+   "element_id": "U-C:COL:SH12:CN@265215,56248",
+   "family": "B10 COLUMN",
+   "unit": "m3",
+   "flags": [],
+   "kind": "NOT_PRESENT_PROPOSED",
+   "low": null,
+   "high": null,
+   "basis": "column schedule CN row: FOUNDATION 30 x 30 only, GF / 1F / 2F struck (printed; T-075, T-042): the plan symbol is the CN neck (no column above)",
+   "line_id": "L-1850e27801a200419510",
+   "storey": null
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C11@207698,54876",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.165000",
+    "0.825000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.587400",
+   "high": null,
+   "low_basis": "min section 0.33 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:35C (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F13, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-b4c234c8a3873239f67f",
+   "mark": "C11",
+   "position": "10BA",
+   "footing": "F13",
+   "h_low_m": "1.780000",
+   "section_candidates_m2": [
+    "0.33"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C11@208990,51494",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.165000",
+    "0.825000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.587400",
+   "high": null,
+   "low_basis": "min section 0.33 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:37D (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F11, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-132cf60588a44f6af9d6",
+   "mark": "C11",
+   "position": "10DD",
+   "footing": "F11",
+   "h_low_m": "1.780000",
+   "section_candidates_m2": [
+    "0.33"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C1@213452,60528",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "NOTE1_ON_LIFT_RAFT",
+    "SECTION_CANDIDATES"
+   ],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.173000",
+   "high": null,
+   "low_basis": "min section 0.1 m2 x h 1.730000 = top +0.95 (GF column base +0.95 at GFRS:341 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.55 (FF, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum); D-43 lift pit depth; D-63 section",
+   "line_id": "L-12f3d8b9375cac407bca",
+   "mark": "C1",
+   "position": "1099",
+   "footing": "FF",
+   "h_low_m": "1.730000",
+   "section_candidates_m2": [
+    "0.1",
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C2@209843,64560",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.289500",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.930000 = top +0.95 (GF column base +0.95 at GFRS:32C (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.35 (F2, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-3f7b9501a902579e7406",
+   "mark": "C2",
+   "position": "1084",
+   "footing": "F2",
+   "h_low_m": "1.930000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C2@212578,64533",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.289500",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.930000 = top +0.95 (GF column base +0.95 at GFRS:32F (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.35 (F2, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-5aec8a0055215ee5a711",
+   "mark": "C2",
+   "position": "1087",
+   "footing": "F2",
+   "h_low_m": "1.930000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C2@213395,59220",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "NOTE1_ON_LIFT_RAFT",
+    "SECTION_CANDIDATES"
+   ],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.173000",
+   "high": null,
+   "low_basis": "min section 0.1 m2 x h 1.730000 = top +0.95 (GF column base +0.95 at GFRS:33E (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.55 (FF, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum); D-43 lift pit depth; D-63 section",
+   "line_id": "L-8eb74a02fcf5ae4465f8",
+   "mark": "C2",
+   "position": "1096",
+   "footing": "FF",
+   "h_low_m": "1.730000",
+   "section_candidates_m2": [
+    "0.1",
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C2@214579,60524",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "NOTE1_ON_LIFT_RAFT",
+    "SECTION_CANDIDATES"
+   ],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.173000",
+   "high": null,
+   "low_basis": "min section 0.1 m2 x h 1.730000 = top +0.95 (GF column base +0.95 at GFRS:33B (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.55 (FF, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum); D-43 lift pit depth; D-63 section",
+   "line_id": "L-dd6d11415961b554e906",
+   "mark": "C2",
+   "position": "1093",
+   "footing": "FF",
+   "h_low_m": "1.730000",
+   "section_candidates_m2": [
+    "0.1",
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C3@199252,55820",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "TOP_TWO_READINGS"
+   ],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.192000",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:353: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F3, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-4ec473f7c0c712919823",
+   "mark": "C3",
+   "position": "10B1",
+   "footing": "F3",
+   "h_low_m": "1.280000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C3@201132,51210",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "TOP_TWO_READINGS"
+   ],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.177000",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.180000 = top +0.25 (annex member GFRS:350: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F15, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-dd3c32e4340e7a823a6e",
+   "mark": "C3",
+   "position": "10AE",
+   "footing": "F15",
+   "h_low_m": "1.180000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C3@205523,52938",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.192000",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.280000 = top +0.25 (GF column base +0.25 at GFRS:365 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F3, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-f54b7b2acf11ebd2a585",
+   "mark": "C3",
+   "position": "10C5",
+   "footing": "F3",
+   "h_low_m": "1.280000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C3@209914,60584",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.237000",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.580000 = top +0.95 (GF column base +0.95 at GFRS:36B (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.7 (F12, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-ae1bd9cb228d57594e46",
+   "mark": "C3",
+   "position": "10CC",
+   "footing": "F12",
+   "h_low_m": "1.580000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C3@217138,51213",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.267000",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:383 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F14, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-516989b817e0ccc7cb80",
+   "mark": "C3",
+   "position": "10E4",
+   "footing": "F14",
+   "h_low_m": "1.780000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C3@226007,58025",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.267000",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:344 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F8, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-48f2e06e5c946eb1e5a7",
+   "mark": "C3",
+   "position": "10A0",
+   "footing": "F8",
+   "h_low_m": "1.780000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C4@220308,64637",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.282000",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:377 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F4, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-46f2b70254f074885dfc",
+   "mark": "C4",
+   "position": "10D7",
+   "footing": "F4",
+   "h_low_m": "1.880000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C4@224310,64557",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "SECTION_CANDIDATES"
+   ],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.235000",
+   "high": null,
+   "low_basis": "min section 0.125 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:335 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F4, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-05a99150a85e9185ae48",
+   "mark": "C4",
+   "position": "108D",
+   "footing": "F4",
+   "h_low_m": "1.880000",
+   "section_candidates_m2": [
+    "0.125",
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C5@205273,54905",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.090000",
+    "0.450000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.194400",
+   "high": null,
+   "low_basis": "min section 0.18 m2 x h 1.080000 = top +0.25 (GF column base +0.25 at GFRS:35F (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F13, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-c1e802184591eac927cf",
+   "mark": "C5",
+   "position": "10BD",
+   "footing": "F13",
+   "h_low_m": "1.080000",
+   "section_candidates_m2": [
+    "0.18"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C5@216447,64629",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.090000",
+    "0.450000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.338400",
+   "high": null,
+   "low_basis": "min section 0.18 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:332 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F5, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-5efd9ac69d4cfd9b9a6e",
+   "mark": "C5",
+   "position": "108A",
+   "footing": "F5",
+   "h_low_m": "1.880000",
+   "section_candidates_m2": [
+    "0.18"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C5@220440,52886",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.090000",
+    "0.450000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.338400",
+   "high": null,
+   "low_basis": "min section 0.18 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:374 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F5, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-486cd9a0bf52e4b32abb",
+   "mark": "C5",
+   "position": "10D3",
+   "footing": "F5",
+   "h_low_m": "1.880000",
+   "section_candidates_m2": [
+    "0.18"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C6@209970,56575",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.105000",
+    "0.525000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.373800",
+   "high": null,
+   "low_basis": "min section 0.21 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:362 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F6, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-efe50185c0da4244e158",
+   "mark": "C6",
+   "position": "10C2",
+   "footing": "F6",
+   "h_low_m": "1.780000",
+   "section_candidates_m2": [
+    "0.21"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C7@209292,59069",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.120000",
+    "0.600000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.379200",
+   "high": null,
+   "low_basis": "min section 0.24 m2 x h 1.580000 = top +0.95 (GF column base +0.95 at GFRS:368 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.7 (F12, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-995eca94ba8dc09a028f",
+   "mark": "C7",
+   "position": "10C8",
+   "footing": "F12",
+   "h_low_m": "1.580000",
+   "section_candidates_m2": [
+    "0.24"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C8@217457,52784",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "SECTION_CANDIDATES"
+   ],
+   "candidate_range_not_drawn": [
+    "0.135000",
+    "0.675000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.427200",
+   "high": null,
+   "low_basis": "min section 0.24 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:380 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F14, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-15b8ad39d6b2250c9546",
+   "mark": "C8",
+   "position": "10E0",
+   "footing": "F14",
+   "h_low_m": "1.780000",
+   "section_candidates_m2": [
+    "0.24",
+    "0.27"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C8@224698,57859",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.135000",
+    "0.675000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.480600",
+   "high": null,
+   "low_basis": "min section 0.27 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:36E (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F8, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-fc622ff340ac65a544e3",
+   "mark": "C8",
+   "position": "10D0",
+   "footing": "F8",
+   "h_low_m": "1.780000",
+   "section_candidates_m2": [
+    "0.27"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C9@214557,59222",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "NOTE1_ON_LIFT_RAFT",
+    "SECTION_CANDIDATES"
+   ],
+   "candidate_range_not_drawn": [
+    "0.150000",
+    "0.750000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.432500",
+   "high": null,
+   "low_basis": "min section 0.25 m2 x h 1.730000 = top +0.95 (GF column base +0.95 at GFRS:338 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.55 (FF, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum); D-43 lift pit depth; D-63 section",
+   "line_id": "L-953e87a3e9d0425d404e",
+   "mark": "C9",
+   "position": "1090",
+   "footing": "FF",
+   "h_low_m": "1.730000",
+   "section_candidates_m2": [
+    "0.25",
+    "0.3"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C9@220198,60706",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.150000",
+    "0.750000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.519000",
+   "high": null,
+   "low_basis": "min section 0.3 m2 x h 1.730000 = top +0.95 (GF column base +0.95 at GFRS:37A (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.55 (F9, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-b21cbf6560f613b39bf0",
+   "mark": "C9",
+   "position": "10DA",
+   "footing": "F9",
+   "h_low_m": "1.730000",
+   "section_candidates_m2": [
+    "0.3"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C@195866,57040",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "TOP_TWO_READINGS"
+   ],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.192000",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:34A: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-85df35f17a205f919aa6",
+   "mark": "C",
+   "position": "10A8",
+   "footing": "F",
+   "h_low_m": "1.280000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C@195972,51184",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "TOP_TWO_READINGS"
+   ],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.192000",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:34D: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-734ff1a78bbe6b7eb4c3",
+   "mark": "C",
+   "position": "10AB",
+   "footing": "F",
+   "h_low_m": "1.280000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C@198052,57874",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "TOP_TWO_READINGS"
+   ],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.192000",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:356: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-53d0b6af1a801c3db58e",
+   "mark": "C",
+   "position": "10B4",
+   "footing": "F",
+   "h_low_m": "1.280000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "P-C:NECK:COL:SH10:C@207257,51203",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "SECTION_CANDIDATES"
+   ],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.237600",
+   "high": null,
+   "low_basis": "min section 0.12 m2 x h 1.980000 = top +0.95 (GF column base +0.95 at GFRS:359 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-bd741a3faf2318dd8409",
+   "mark": "C",
+   "position": "10B7",
+   "footing": "F",
+   "h_low_m": "1.980000",
+   "section_candidates_m2": [
+    "0.12",
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "U-C:NECK:COL:SH10:C10@224867,51226",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.105000",
+    "0.525000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.373800",
+   "high": null,
+   "low_basis": "min section 0.21 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:371 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.50 (F10|F, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-bbad8cdb4d26986776a6",
+   "mark": "C10",
+   "position": "10E8",
+   "footing": "F10|F",
+   "h_low_m": "1.780000",
+   "section_candidates_m2": [
+    "0.21"
+   ]
+  },
+  {
+   "element_id": "U-C:NECK:COL:SH10:C@226940,50955",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [],
+   "candidate_range_not_drawn": [
+    "0.075000",
+    "0.375000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.267000",
+   "high": null,
+   "low_basis": "min section 0.15 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:347 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.50 (F10|F, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-314946394d849141dda2",
+   "mark": "C",
+   "position": "10A4",
+   "footing": "F10|F",
+   "h_low_m": "1.780000",
+   "section_candidates_m2": [
+    "0.15"
+   ]
+  },
+  {
+   "element_id": "U-C:NECK:COL:SH10:CN@216858,57078",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ],
+   "candidate_range_not_drawn": [
+    "0.045000",
+    "0.225000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.115200",
+   "high": null,
+   "low_basis": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-34346cb438bffee6acec",
+   "mark": "CN",
+   "position": "10F6",
+   "footing": "FN",
+   "h_low_m": "1.280000",
+   "section_candidates_m2": [
+    "0.09"
+   ]
+  },
+  {
+   "element_id": "U-C:NECK:COL:SH10:CN@222091,55786",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ],
+   "candidate_range_not_drawn": [
+    "0.045000",
+    "0.225000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.115200",
+   "high": null,
+   "low_basis": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-6a2040e0fe0bf7391b9c",
+   "mark": "CN",
+   "position": "10EE",
+   "footing": "FN",
+   "h_low_m": "1.280000",
+   "section_candidates_m2": [
+    "0.09"
+   ]
+  },
+  {
+   "element_id": "U-C:NECK:COL:SH10:CN@222815,61757",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ],
+   "candidate_range_not_drawn": [
+    "0.045000",
+    "0.225000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.115200",
+   "high": null,
+   "low_basis": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-1a9e469651c32cce9b97",
+   "mark": "CN",
+   "position": "180A",
+   "footing": "FN",
+   "h_low_m": "1.280000",
+   "section_candidates_m2": [
+    "0.09"
+   ]
+  },
+  {
+   "element_id": "U-C:NECK:COL:SH10:CN@223972,59262",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.097200",
+   "high": null,
+   "low_basis": "min section 0.09 m2 x h 1.080000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F8, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-15d9da9b17fd373553f0",
+   "mark": "CN",
+   "position": "17C5",
+   "footing": "F8",
+   "h_low_m": "1.080000",
+   "section_candidates_m2": [
+    "0.09"
+   ]
+  },
+  {
+   "element_id": "U-C:NECK:COL:SH10:CN@224210,63411",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ],
+   "candidate_range_not_drawn": [
+    "0.045000",
+    "0.225000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.106200",
+   "high": null,
+   "low_basis": "min section 0.09 m2 x h 1.180000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F4, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-4ef35980fbb54366703d",
+   "mark": "CN",
+   "position": "17C8",
+   "footing": "F4",
+   "h_low_m": "1.180000",
+   "section_candidates_m2": [
+    "0.09"
+   ]
+  },
+  {
+   "element_id": "U-C:NECK:COL:SH10:CN@225897,54910",
+   "family": "B10 NECK",
+   "unit": "m3",
+   "flags": [
+    "TOP_LOWEST_DRAWN"
+   ],
+   "candidate_range_not_drawn": [
+    "0.045000",
+    "0.225000"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "0.115200",
+   "high": null,
+   "low_basis": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum)",
+   "line_id": "L-c8c07db4ac0d54d89bbf",
+   "mark": "CN",
+   "position": "10FE",
+   "footing": "FN",
+   "h_low_m": "1.280000",
+   "section_candidates_m2": [
+    "0.09"
+   ]
+  },
+  {
+   "element_id": "LIFT_PIT:WALLS",
+   "family": "B10 LIFT",
+   "unit": "m3",
+   "flags": [
+    "NOTE1_ON_LIFT_RAFT"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "1.903000",
+   "high": null,
+   "low_basis": "net ring 1.10 m2 (R-T394-6) x h 1.730000 = GF top +0.95 (lift GF columns' base, T-394) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - FF raft H 0.55",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "D-43 pit depth 'as per lift manufacturer' (ST p.14)",
+   "line_id": "L-684fcad323adc0c8a267"
+  },
+  {
+   "element_id": "LIFT_TIE_BEAM:GF",
+   "family": "B10 LIFT",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-43 tie-beam section not printed (ST p.8 note 19)",
+   "high_item": "D-43 tie-beam section not printed (ST p.8 note 19)",
+   "line_id": "L-5ae06fda7d729d54c033"
+  },
+  {
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTING:FTG:SH10:T652:10A5",
+   "family": "B10 BLINDING (plain)",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.435000",
+   "high": "0.590000",
+   "low_basis": "T-233 / T-478: 0.10 under the F10 + F readings A / B, 10 cm past each face",
+   "high_basis": "T-233 / T-478: 0.10 under the F10 + F readings A / B, 10 cm past each face",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-080c97f5f6a92452cd04"
+  },
+  {
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BEYOND_PLOT_LINE",
+   "family": "B10 BLINDING (plain)",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.000000",
+   "high": "0.189000",
+   "low_basis": "D-14: projection beyond the plot line may not be built (0) .. full 10 cm (T-100)",
+   "high_basis": "D-14: projection beyond the plot line may not be built (0) .. full 10 cm (T-100)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-10032bf9a60368473a7b"
+  },
+  {
+   "element_id": "P-C:FTG:SH10:T652:10A5",
+   "family": "B10 FOOTING LINE",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "2.176000",
+   "high": "2.275000",
+   "low_basis": "T-233 reading A: F10 2.80 x 1.40 x 0.50 + F 0.90 x 0.80 x 0.30 as scheduled rows",
+   "high_basis": "T-233 reading B: the one drawn outline 1B1B at the deepest tagged depth 0.50",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-164ae9d338976be9e582"
+  },
+  {
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_LIFT_RAFT_FF",
+   "family": "B10 BLINDING (plain)",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "2.256000",
+   "high": "2.352000",
+   "low_basis": "T-478: 0.10 under the FF raft, projection readings",
+   "high_basis": "T-478: 0.10 under the FF raft, projection readings",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-16b95607fc88cda3844a"
+  },
+  {
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_STRAP",
+   "family": "B10 BLINDING (plain)",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.000000",
+   "high": "0.912684",
+   "low_basis": "D-15: p.13 prints no blinding under straps (0) .. 0.10 under the 3 straps (T-100 / T-350)",
+   "high_basis": "D-15: p.13 prints no blinding under straps (0) .. 0.10 under the 3 straps (T-100 / T-350)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-35382b18e2e362df3ae6"
+  },
+  {
+   "element_id": "P-C:SCOPE:BOUNDARY_WALL:FOUNDATION:CC-9fd936ab60:BEAM",
+   "family": "B10 FOOTING LINE",
+   "unit": "m3",
+   "flags": [
+    "LINE_POINT_7.2204_IS_Q-28A_READING"
+   ],
+   "candidate_range_not_drawn": [
+    "7.220400",
+    "7.220400"
+   ],
+   "kind": "BOUNDED",
+   "low": "5.639000",
+   "high": "11.033000",
+   "low_basis": "T-065 / T-233: band 0.20 x 0.40 (E4), 70.49 m free of footings = 5.639",
+   "high_basis": "T-065 / T-233: band 0.20 x 0.60 (E3) over the closed 91.94 m = 11.033 gross (8.459 net of the 21.45 m inside 9 footing outlines, which the pads own)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-6290a9f3d93f38cd46d6"
+  },
+  {
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_GROUND_BEAM",
+   "family": "B10 BLINDING (plain)",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "4.949374",
+   "high": "9.422514",
+   "low_basis": "T-478: 0.10 under the ground beams, plan-distinct of the pit layer; D-33 / D-35 sections",
+   "high_basis": "T-478: 0.10 under the ground beams, plan-distinct of the pit layer; D-33 / D-35 sections",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-7a5214a334ea3559fa2d"
+  },
+  {
+   "element_id": "HL:STRAP_CONCRETE:SB1:IN_FOOTING:F10_F",
+   "family": "B10 FOOTING LINE",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.000000",
+   "high": "0.385000",
+   "low_basis": "SB1 end piece inside the F10 + F outline may be no separate solid (follows Q-31 C; T-233)",
+   "high_basis": "SB1 1.00 x 0.50 section over its drawn length inside the outline (T-231 / T-233)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-abd65e1b745315dd17c2"
+  },
+  {
+   "element_id": "HL:STRAP_CONCRETE:SB3:IN_FOOTING:F3",
+   "family": "B10 FOOTING LINE",
+   "unit": "m3",
+   "flags": [],
+   "kind": "BOUNDED",
+   "low": "0.029500",
+   "high": "0.268300",
+   "low_basis": "SB3 0.50 x 0.40 soffit at the F3 top (T-230)",
+   "high_basis": "SB3 soffit at the F3 underside (D-15 strap soffit; T-230 / T-350)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-c823e0dbd81e30c66aa5"
+  },
+  {
+   "element_id": "FENCE:BAND:PADS",
+   "family": "B10 FOOTING LINE",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "pad count / spacing of the boundary-wall pads not printed (ST p.14; Q-28 A, T-478)",
+   "high_item": "pad count / spacing of the boundary-wall pads not printed (ST p.14; Q-28 A, T-478)",
+   "line_id": "L-cda8f41522dc6f42b3d6"
+  },
+  {
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BOUNDARY_WALL_BASE",
+   "family": "B10 BLINDING (plain)",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "pad count not printed (Q-28 A, T-478)",
+   "high_item": "pad count not printed (Q-28 A, T-478)",
+   "line_id": "L-d0313e5d204e2758996a"
+  },
+  {
+   "element_id": "EW-T350:B1-03:Z1-PIT-FF",
+   "family": "B1-03 BACKFILL",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-43 lift pit depth",
+   "high_item": "D-43 lift pit depth",
+   "line_id": "L-2b8f1ae2ec46cd74552f"
+  },
+  {
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-BOUNDARY",
+   "family": "B1-02 EXCAVATION",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "boundary-wall foundation depth not printed (Q-28 A provisional)",
+   "high_item": "boundary-wall foundation depth not printed (Q-28 A provisional)",
+   "line_id": "L-313384fed48301ae02d2"
+  },
+  {
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-EXT-GB-MAIN",
+   "family": "B1-02 EXCAVATION",
+   "unit": "m3",
+   "flags": [
+    "WORKING_SPACE_EXCLUDED"
+   ],
+   "kind": "BOUNDED",
+   "low": "1.069269",
+   "high": "1.176467",
+   "low_basis": "neat blinding cut L 55.99 x 0.50 x 0.10 less run ends dug with the pits, upper reading (T-350 r2 / T-497 ownership)",
+   "high_basis": "same, lower in-pit reading (T-350 r2 / T-497)",
+   "low_item": null,
+   "high_item": null,
+   "line_id": "L-438a4abd3adc0475d0bd"
+  },
+  {
+   "element_id": "EW-T350:B1-02:Z1-LOWER-GB-ROW",
+   "family": "B1-02 EXCAVATION",
+   "unit": "m3",
+   "flags": [],
+   "kind": "LOWER_ONLY",
+   "low": "0.000000",
+   "high": null,
+   "low_basis": "p.13 two-beam detail only when GB top - footing underside > 2.50; at the printed minimum 0.95 + 1.33 = 2.28 (not required)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum); no plan draws the row",
+   "line_id": "L-4445d5e20d1805f12402"
+  },
+  {
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-ANNEX",
+   "family": "B1-02 EXCAVATION",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-34 / D-33 interior and D-35 exterior ground-beam sections",
+   "high_item": "D-34 / D-33 interior and D-35 exterior ground-beam sections",
+   "line_id": "L-54baa058d6ccd9a38314"
+  },
+  {
+   "element_id": "EW-T350:B1-03:Z1-TRENCH-EXT-GB-MAIN",
+   "family": "B1-03 BACKFILL",
+   "unit": "m3",
+   "flags": [],
+   "kind": "LOWER_ONLY",
+   "low": "0.000000",
+   "high": null,
+   "low_basis": "neat cut filled by the blinding, calculated 0.000 (T-350 r2)",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "OQ-13 working space",
+   "line_id": "L-6471367d85bdf361f9e7"
+  },
+  {
+   "element_id": "EW-T350:B1-04:ALL",
+   "family": "B1-04 DISPOSAL",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "in-situ / compacted dry densities not sourced; Z2 draw; excavation and backfill held",
+   "high_item": "in-situ / compacted dry densities not sourced; Z2 draw; excavation and backfill held",
+   "line_id": "L-78d7c8a989ab34527a1c"
+  },
+  {
+   "element_id": "EW-T350:B1-03:Z1-OTHER-TRENCHES",
+   "family": "B1-03 BACKFILL",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "as their excavation zones: D-33 / D-34 / D-35 / D-15 / Q-28 A",
+   "high_item": "as their excavation zones: D-33 / D-34 / D-35 / D-15 / Q-28 A",
+   "line_id": "L-89b8e6beaea55fc0e4c9"
+  },
+  {
+   "element_id": "EW-T350:B1-03:Z1-POOL",
+   "family": "B1-03 BACKFILL",
+   "unit": "m3",
+   "flags": [],
+   "kind": "LOWER_ONLY",
+   "low": "0.000000",
+   "high": null,
+   "low_basis": "neat envelope part calculated 0.000 (T-350 r2): backfill only in the working space / blinding projection",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "OQ-13 working space; blinding projection",
+   "line_id": "L-91abe286a34e874e8ab2"
+  },
+  {
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-INT-GB-MAIN-ZERO",
+   "family": "B1-02 EXCAVATION",
+   "unit": "m3",
+   "flags": [],
+   "kind": "LOWER_ONLY",
+   "low": "0.000000",
+   "high": null,
+   "low_basis": "13 runs wholly above EG while the wet build-up b_wet <= 0.30 (T-350 / T-214 / T-221): may be no excavation",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "D-40 wet-zone build-up",
+   "line_id": "L-952a18b10db99c4eb1d3"
+  },
+  {
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-STRAPS",
+   "family": "B1-02 EXCAVATION",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-15 strap soffit (footprint 7.889 m2 drawn, depth not)",
+   "high_item": "D-15 strap soffit (footprint 7.889 m2 drawn, depth not)",
+   "line_id": "L-a5844c9318406eccedde"
+  },
+  {
+   "element_id": "EW-T350:B1-03:Z1-PITS-24",
+   "family": "B1-03 BACKFILL",
+   "unit": "m3",
+   "flags": [
+    "S01_RANGE_BESIDE_OWNER_ESTIMATED"
+   ],
+   "candidate_range_not_drawn": [
+    "119.963335",
+    "128.643547"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "99.645011",
+   "high": null,
+   "low_basis": "printed-minimum excavation 186.974333 (T-565) - verified buried 71.925255 - 29 necks below EG at formation -1.50 4.327800 - C8 conflict 0.224100 - strap ends 0.179618 - ground-beam solids deepest reading 10.672549",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum); working space OQ-13",
+   "line_id": "L-a6af7c610a8adce59df3"
+  },
+  {
+   "element_id": "EW-T350:B1-03:Z1-PIT-F10F",
+   "family": "B1-03 BACKFILL",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "Q-31 C outline and the C10 / C necks; formation (Q-21 C)",
+   "high_item": "Q-31 C outline and the C10 / C necks; formation (Q-21 C)",
+   "line_id": "L-afa1a6f9e01eb47c56e4"
+  },
+  {
+   "element_id": "EW-T350:B1-02:Z1-PIT-FF",
+   "family": "B1-02 EXCAVATION",
+   "unit": "m3",
+   "flags": [
+    "NOTE1_ON_LIFT_RAFT"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "31.050000",
+   "high": null,
+   "low_basis": "FF raft plan 20.700 m2 DRAWING-CONFIRMED (T-350) x 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357))",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "D-43 pit floor 'as per lift manufacturer' (ST p.14)",
+   "line_id": "L-b4ebff00041d90e03eca"
+  },
+  {
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-INT-GB-MAIN-D33",
+   "family": "B1-02 EXCAVATION",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "D-33 loaded ground-beam sections",
+   "high_item": "D-33 loaded ground-beam sections",
+   "line_id": "L-b97f95d2784d456e0743"
+  },
+  {
+   "element_id": "EW-T350:B1-02:Z1-PIT-F10F",
+   "family": "B1-02 EXCAVATION",
+   "unit": "m3",
+   "flags": [
+    "S01_RANGE_BESIDE_OWNER_ESTIMATED"
+   ],
+   "candidate_range_not_drawn": [
+    "7.264500",
+    "8.391750"
+   ],
+   "kind": "LOWER_ONLY",
+   "low": "6.525000",
+   "high": null,
+   "low_basis": "smallest S02 in-plot plan 4.350 m2 (F10 alone; T-350 r2) x 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357))",
+   "high_basis": null,
+   "low_item": null,
+   "high_item": "Q-21 C / T-042 B4: formation below the printed 1.50 minimum not printed (no maximum); Q-31 C",
+   "line_id": "L-ce0132c7212e42e306a5"
+  },
+  {
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-COURT",
+   "family": "B1-02 EXCAVATION",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "no court ground-beam section printed (T-350)",
+   "high_item": "no court ground-beam section printed (T-350)",
+   "line_id": "L-d9185fb243fd3b7130e9"
+  },
+  {
+   "element_id": "EW-T350:B1-03:Z2",
+   "family": "B1-03 BACKFILL",
+   "unit": "m3",
+   "flags": [],
+   "kind": "UNBOUNDED",
+   "low": null,
+   "high": null,
+   "low_basis": null,
+   "high_basis": null,
+   "low_item": "Z2 extent, D-40 wet-floor build-up, D-33 / D-34",
+   "high_item": "Z2 extent, D-40 wet-floor build-up, D-33 / D-34",
+   "line_id": "L-eac006402d3035da007b"
+  }
+ ],
+ "measured_set": {
+  "columns_GF": {
+   "engine": "12.705000",
+   "his": "11.531250",
+   "diff": "1.173750",
+   "pct": "10.18",
+   "marks": 9,
+   "split_m3": {
+    "COUNT": "-1.031250",
+    "JOINT_HEAD": "1.883750",
+    "GLOBAL_DEPTH": "0.066250",
+    "BASE": "0.105000",
+    "HEIGHT_OPEN": "0.150000"
+   }
+  },
+  "columns_1F": {
+   "engine": "3.108000",
+   "his": "2.553000",
+   "diff": "0.555000",
+   "pct": "21.74",
+   "marks": 4,
+   "split_m3": {
+    "JOINT_HEAD": "0.385000",
+    "GLOBAL_DEPTH": "0.095000",
+    "HEIGHT_OPEN": "0.075000"
+   }
+  },
+  "footing_pads_and_straps": {
+   "engine": "67.694500",
+   "his": "67.066500",
+   "diff": "0.628000",
+   "pct": "0.94",
+   "marks": 18
+  },
+  "necks_on_his_count": {
+   "engine_drawn_lower_m3": "8.869500",
+   "his_m3": "8.805000",
+   "his_minus_engine_lower_m3": "-0.064500",
+   "his_count": 34,
+   "marks": 13,
+   "marks_his_below_drawn_lower": 8,
+   "class": "BELOW_DRAWN_LOWER"
+  }
+ }
+}

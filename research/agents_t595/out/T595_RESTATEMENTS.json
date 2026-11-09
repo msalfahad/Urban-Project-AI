@@ -1,0 +1,815 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (unchanged; nothing wired, valued or released)",
+ "footing": {
+  "beside_his": {
+   "class": "WITHIN",
+   "engine": [
+    "1.960000",
+    "2.275000"
+   ],
+   "his_m3": "1.960",
+   "t572_class": "BELOW_DRAWN_LOWER"
+  },
+  "component": {
+   "element_id": "P-C:FTG:SH10:T652:10A5",
+   "family": "B10 FOOTING LINE",
+   "flags": [],
+   "high": "2.275000",
+   "high_basis": "R-T595-2: max = S02-3 drawn outline 3.25 x 1.40 x 0.50 (T-233 reading B)",
+   "high_item": null,
+   "kind": "BOUNDED",
+   "line_id": "L-164ae9d338976be9e582",
+   "low": "1.960000",
+   "low_basis": "R-T595-2: min of the owner-accepted S02 scenarios = S02-1 F10 alone 2.80 x 1.40 x 0.50 (owner 2026-11-02 RFI re-review (4))",
+   "low_item": null,
+   "scenarios": {
+    "S02-1 F10 alone": "1.960000",
+    "S02-2 F10 + F": "2.176000",
+    "S02-3 drawn outline": "2.275000"
+   },
+   "status_label": "ESTIMATED range, owner PROVISIONAL; never VERIFIED (owner 2026-11-02)",
+   "t572_high": "2.275000",
+   "t572_low": "2.176000",
+   "unit": "m3"
+  },
+  "family_t572": {
+   "bounded_both": 4,
+   "bounded_part_high": "13.961300",
+   "bounded_part_low": "7.844500",
+   "family_high": null,
+   "family_low": null,
+   "held_components": 5,
+   "high_blocked_by": [
+    "pad count / spacing of the boundary-wall pads not printed (ST p.14; Q-28 A, T-478)"
+   ],
+   "high_stated": 4,
+   "kinds": {
+    "BOUNDED": 4,
+    "UNBOUNDED": 1
+   },
+   "low_blocked_by": [
+    "pad count / spacing of the boundary-wall pads not printed (ST p.14; Q-28 A, T-478)"
+   ],
+   "low_stated": 4,
+   "not_present_proposed": 0,
+   "valued": "67.694500"
+  },
+  "family_v2": {
+   "bounded_both": 4,
+   "bounded_part_high": "13.961300",
+   "bounded_part_low": "7.628500",
+   "family_high": null,
+   "family_low": null,
+   "held_components": 5,
+   "high_blocked_by": [
+    "pad count / spacing of the boundary-wall pads not printed (ST p.14; Q-28 A, T-478)"
+   ],
+   "high_stated": 4,
+   "low_blocked_by": [
+    "pad count / spacing of the boundary-wall pads not printed (ST p.14; Q-28 A, T-478)"
+   ],
+   "low_stated": 4,
+   "not_present_proposed": 0,
+   "valued": "67.694500"
+  },
+  "other_families_same_element": {
+   "EW-T350:B1-02:Z1-PIT-F10F": {
+    "family": "B1-02 EXCAVATION",
+    "high": null,
+    "high_basis": null,
+    "low": "6.525000",
+    "low_basis": "smallest S02 in-plot plan 4.350 m2 (F10 alone; T-350 r2) x 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357))",
+    "low_item": null
+   },
+   "EW-T350:B1-03:Z1-PIT-F10F": {
+    "family": "B1-03 BACKFILL",
+    "high": null,
+    "high_basis": null,
+    "low": null,
+    "low_basis": null,
+    "low_item": "Q-31 C outline and the C10 / C necks; formation (Q-21 C)"
+   },
+   "HL:STRAP_CONCRETE:SB1:IN_FOOTING:F10_F": {
+    "family": "B10 FOOTING LINE",
+    "high": "0.385000",
+    "high_basis": "SB1 1.00 x 0.50 section over its drawn length inside the outline (T-231 / T-233)",
+    "low": "0.000000",
+    "low_basis": "SB1 end piece inside the F10 + F outline may be no separate solid (follows Q-31 C; T-233)",
+    "low_item": null
+   },
+   "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTING:FTG:SH10:T652:10A5": {
+    "family": "B10 BLINDING (plain)",
+    "high": "0.590000",
+    "high_basis": "T-233 / T-478: 0.10 under the F10 + F readings A / B, 10 cm past each face",
+    "low": "0.435000",
+    "low_basis": "T-233 / T-478: 0.10 under the F10 + F readings A / B, 10 cm past each face",
+    "low_item": null
+   }
+  },
+  "scenario_consistency": {
+   "SB1 in footing": "0 (existence open) .. 0.385: unchanged",
+   "backfill B1-03 PIT-F10F": "UNBOUNDED (Q-31 C, Q-21 C): unchanged",
+   "blinding 10A5": "low 0.435 = 4.350 m2 x 0.10 (the same S02-1 in-plot plan); high 0.590 under the T-233 readings: per-scenario split not measured here (SCENARIO_SPLIT_OPEN)",
+   "concrete (this row)": "low = S02-1 F10 alone, high = S02-3 drawn outline",
+   "excavation B1-02 PIT-F10F": "low already the S02-1 in-plot plan 4.350 m2 x 1.50 (T-572); high HELD",
+   "reinforcement / formwork": "not in T-572; per-scenario split open (T-560 / T-474 owners)"
+  },
+  "t572_component": {
+   "element_id": "P-C:FTG:SH10:T652:10A5",
+   "family": "B10 FOOTING LINE",
+   "flags": [],
+   "high": "2.275000",
+   "high_basis": "T-233 reading B: the one drawn outline 1B1B at the deepest tagged depth 0.50",
+   "high_item": null,
+   "kind": "BOUNDED",
+   "line_id": "L-164ae9d338976be9e582",
+   "low": "2.176000",
+   "low_basis": "T-233 reading A: F10 2.80 x 1.40 x 0.50 + F 0.90 x 0.80 x 0.30 as scheduled rows",
+   "low_item": null,
+   "unit": "m3"
+  },
+  "t572_low_was_strict": false,
+  "version": "T572_HELD_BOUNDS_V2 (F10 + F component only) on T572_HELD_BOUNDS_V1"
+ },
+ "freelancer": {
+  "F10 + F": "his 1.960 m3 (T-551 family total): now AT the low, class WITHIN; no %",
+  "rebar": "TYPED_LUMP 44.19 t (T-560): NOT_COMPARABLE, no %"
+ },
+ "rebar": {
+  "rows": [
+   {
+    "concrete_line": "L-d5401fa8986900c66c37",
+    "missing": "no structural drawing of the third dome (unchanged from T-575)",
+    "row_id": "DG5:DOME-3:SHELL:REBAR",
+    "status": "HELD_BLANK",
+    "t_high": null,
+    "t_low": null,
+    "unit": "t",
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V1 (T-583, unchanged)"
+   },
+   {
+    "concrete_line": "L-ab37afa17f2ac5b0efd1",
+    "depth_floor_m": 0.1,
+    "high_excluding": [
+     "RING_LINKS[DETAIL]",
+     "RING_LINK_HOOKS[DETAIL]",
+     "RING_MAIN_LAPS_AND_ANCHORAGE[DETAIL]",
+     "RING_SIDE[DETAIL]"
+    ],
+    "low_reading": "DETAIL",
+    "note": "row low = the smaller reading low (B4 vs DETAIL are conflicting sources, R-T575-5): strict",
+    "readings": [
+     {
+      "groups": [
+       {
+        "group": "RING_MAINS[DETAIL] (T-575, unchanged)",
+        "kg_high": 155.9664714157895,
+        "kg_low": 96.63827367962976,
+        "status": "HELD_RANGE",
+        "t": [
+         0.096638,
+         0.155966
+        ]
+       },
+       {
+        "count": [
+         50,
+         117
+        ],
+        "group": "RING_LINKS[DETAIL]",
+        "kg_high": null,
+        "kg_low": 4.108641975308642,
+        "path_m": [
+         0.208,
+         null
+        ],
+        "status": "HELD_HIGH",
+        "t": [
+         0.004109,
+         null
+        ],
+        "why": "count: drawn in-bay segments [1.6205, 1.7343, 1.7343, 1.6205] m, each ceil(L/s) - 1 (R-T583-1) .. closed circle 14.5210 m ceil(C/s); path floor = link round the widest layer in contact + stacked top / bottom bars; ring depth not printed on p.7 (deferred to the architectural set): link path high HELD; hooks separate"
+       },
+       {
+        "group": "RING_LINK_HOOKS[DETAIL]",
+        "kg_high": null,
+        "kg_low": 0.0,
+        "status": "HELD_HIGH",
+        "t": [
+         0.0,
+         null
+        ],
+        "why": "hook extension / bend diameter printed nowhere (G-T371-0): HELD"
+       },
+       {
+        "group": "RING_SIDE[DETAIL]",
+        "kg_high": null,
+        "kg_low": 43.54276239358031,
+        "population": {
+         "faces": 2,
+         "levels": 2,
+         "n": 4,
+         "status": "DRAWN"
+        },
+        "status": "HELD_HIGH",
+        "t": [
+         0.043543,
+         null
+        ],
+        "t583_kg_low": 21.771381196790156,
+        "why": "R-T595-1: 4 d14 drawn (2 levels x 2 faces, own read ST p.7) over the in-bay length 8.9974 m; T-583 counted 2 (one face, F-C-T583-1); further rows at the printed spacing over the unprinted ring depth: HELD"
+       },
+       {
+        "group": "RING_MAIN_LAPS_AND_ANCHORAGE[DETAIL]",
+        "joints_at_least": 0,
+        "joints_closed_circle_reading": 12,
+        "kg_high": null,
+        "kg_low": 0.0,
+        "scenario": {
+         "d_multiple": 60,
+         "in_bound": false,
+         "joints": 12,
+         "kg": 22.062222222222225,
+         "label": "OWNER_PROPOSAL_SCENARIO",
+         "source": "OWNER_RULE_REBAR_2026-10-24 s.2 (proposal: beams / slabs 60 d, columns / ordinary walls 40 d)",
+         "t": 0.022062
+        },
+        "status": "HELD_HIGH",
+        "t": [
+         0.0,
+         null
+        ],
+        "why": "in-bay reading: segments < 12 m, 0 joints certain, ends anchor into the framing members (no anchorage drawn: HELD); closed-circle reading: >= 2 joints per bar; no lap printed for ring bars: length HELD"
+       }
+      ],
+      "high_status": "HELD_HIGH",
+      "reading": "DETAIL",
+      "t583_t_low": 0.122518,
+      "t_high_bounded_part": 0.155966,
+      "t_low": 0.14429
+     }
+    ],
+    "row_id": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+    "status": "HELD_RANGE_HIGH_OPEN",
+    "t583_t_low": 0.122518,
+    "t_high_bounded_part": 0.155966,
+    "t_low": 0.14429,
+    "unit": "t",
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V2 (R-T595-1)"
+   },
+   {
+    "concrete_line": "L-48b7d139bff681199543",
+    "depth_floor_m": 0.1,
+    "high_excluding": [
+     "RING_LINKS[DETAIL]",
+     "RING_LINK_HOOKS[B4]",
+     "RING_LINK_HOOKS[DETAIL]",
+     "RING_MAIN_LAPS_AND_ANCHORAGE[B4]",
+     "RING_MAIN_LAPS_AND_ANCHORAGE[DETAIL]",
+     "RING_SIDE[DETAIL]"
+    ],
+    "low_reading": "B4",
+    "note": "row low = the smaller reading low (B4 vs DETAIL are conflicting sources, R-T575-5): strict",
+    "readings": [
+     {
+      "groups": [
+       {
+        "group": "RING_MAINS[DETAIL] (T-575, unchanged)",
+        "kg_high": 155.9664714157895,
+        "kg_low": 81.12013013333343,
+        "status": "HELD_RANGE",
+        "t": [
+         0.08112,
+         0.155966
+        ]
+       },
+       {
+        "count": [
+         44,
+         117
+        ],
+        "group": "RING_LINKS[DETAIL]",
+        "kg_high": null,
+        "kg_low": 3.615604938271605,
+        "path_m": [
+         0.208,
+         null
+        ],
+        "status": "HELD_HIGH",
+        "t": [
+         0.003616,
+         null
+        ],
+        "why": "count: drawn in-bay segments [1.2939, 1.5171, 1.5171, 1.2939] m, each ceil(L/s) - 1 (R-T583-1) .. closed circle 14.5210 m ceil(C/s); path floor = link round the widest layer in contact + stacked top / bottom bars; ring depth not printed on p.7 (deferred to the architectural set): link path high HELD; hooks separate"
+       },
+       {
+        "group": "RING_LINK_HOOKS[DETAIL]",
+        "kg_high": null,
+        "kg_low": 0.0,
+        "status": "HELD_HIGH",
+        "t": [
+         0.0,
+         null
+        ],
+        "why": "hook extension / bend diameter printed nowhere (G-T371-0): HELD"
+       },
+       {
+        "group": "RING_SIDE[DETAIL]",
+        "kg_high": null,
+        "kg_low": 36.55067932444449,
+        "population": {
+         "faces": 2,
+         "levels": 2,
+         "n": 4,
+         "status": "DRAWN"
+        },
+        "status": "HELD_HIGH",
+        "t": [
+         0.036551,
+         null
+        ],
+        "t583_kg_low": 18.275339662222244,
+        "why": "R-T595-1: 4 d14 drawn (2 levels x 2 faces, own read ST p.7) over the in-bay length 7.5526 m; T-583 counted 2 (one face, F-C-T583-1); further rows at the printed spacing over the unprinted ring depth: HELD"
+       },
+       {
+        "group": "RING_MAIN_LAPS_AND_ANCHORAGE[DETAIL]",
+        "joints_at_least": 0,
+        "joints_closed_circle_reading": 12,
+        "kg_high": null,
+        "kg_low": 0.0,
+        "scenario": {
+         "d_multiple": 60,
+         "in_bound": false,
+         "joints": 12,
+         "kg": 22.062222222222225,
+         "label": "OWNER_PROPOSAL_SCENARIO",
+         "source": "OWNER_RULE_REBAR_2026-10-24 s.2 (proposal: beams / slabs 60 d, columns / ordinary walls 40 d)",
+         "t": 0.022062
+        },
+        "status": "HELD_HIGH",
+        "t": [
+         0.0,
+         null
+        ],
+        "why": "in-bay reading: segments < 12 m, 0 joints certain, ends anchor into the framing members (no anchorage drawn: HELD); closed-circle reading: >= 2 joints per bar; no lap printed for ring bars: length HELD"
+       }
+      ],
+      "high_status": "HELD_HIGH",
+      "reading": "DETAIL",
+      "t583_t_low": 0.103011,
+      "t_high_bounded_part": 0.155966,
+      "t_low": 0.121286
+     },
+     {
+      "groups": [
+       {
+        "group": "RING_MAINS[B4] (T-575, unchanged)",
+        "kg_high": 117.60230488362978,
+        "kg_low": 61.166442951111186,
+        "status": "HELD_RANGE",
+        "t": [
+         0.061166,
+         0.117602
+        ]
+       },
+       {
+        "count": [
+         32,
+         88
+        ],
+        "group": "RING_LINKS[B4]",
+        "kg_high": 40.60602469135803,
+        "kg_low": 2.730666666666667,
+        "path_m": [
+         0.216,
+         1.168
+        ],
+        "status": "HELD_RANGE",
+        "t": [
+         0.002731,
+         0.040606
+        ],
+        "why": "count: drawn in-bay segments [1.2939, 1.5171, 1.5171, 1.2939] m, each ceil(L/s) - 1 (R-T583-1) .. closed circle 14.5210 m ceil(C/s); path floor = link round the widest layer in contact + stacked top / bottom bars; 88 links on the closed circle x path 1.168 m (0.20 x 0.50, printed minimum cover 0.025 as the longest admissible path, R-T583-3); hooks separate"
+       },
+       {
+        "group": "RING_LINK_HOOKS[B4]",
+        "kg_high": null,
+        "kg_low": 0.0,
+        "status": "HELD_HIGH",
+        "t": [
+         0.0,
+         null
+        ],
+        "why": "hook extension / bend diameter printed nowhere (G-T371-0): HELD"
+       },
+       {
+        "group": "RING_SIDE[B4]",
+        "kg_high": 0.0,
+        "kg_low": 0.0,
+        "status": "VALUE",
+        "t": [
+         0.0,
+         0.0
+        ],
+        "why": "B4 schedule row prints no side bars; p.8 note 21 adds side bars only above its printed beam depth, which the 0.50 depth does not exceed: 0 by the drawings"
+       },
+       {
+        "group": "RING_MAIN_LAPS_AND_ANCHORAGE[B4]",
+        "joints_at_least": 0,
+        "joints_closed_circle_reading": 12,
+        "kg_high": null,
+        "kg_low": 0.0,
+        "scenario": {
+         "d_multiple": 60,
+         "in_bound": false,
+         "joints": 12,
+         "kg": 14.696296296296296,
+         "label": "OWNER_PROPOSAL_SCENARIO",
+         "source": "OWNER_RULE_REBAR_2026-10-24 s.2 (proposal: beams / slabs 60 d, columns / ordinary walls 40 d)",
+         "t": 0.014696
+        },
+        "status": "HELD_HIGH",
+        "t": [
+         0.0,
+         null
+        ],
+        "why": "in-bay reading: segments < 12 m, 0 joints certain, ends anchor into the framing members (no anchorage drawn: HELD); closed-circle reading: >= 2 joints per bar; no lap printed for ring bars: length HELD"
+       }
+      ],
+      "high_status": "HELD_HIGH",
+      "reading": "B4",
+      "t583_t_low": 0.063897,
+      "t_high_bounded_part": 0.158208,
+      "t_low": 0.063897
+     }
+    ],
+    "row_id": "HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+    "status": "HELD_RANGE_HIGH_OPEN",
+    "t583_t_low": 0.063897,
+    "t_high_bounded_part": 0.158208,
+    "t_low": 0.063897,
+    "unit": "t",
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V2 (R-T595-1)"
+   },
+   {
+    "concrete_line": "L-8ea34765d16b54898140",
+    "cover_note": "p.8 note 22 names columns, beams and slabs; a shell is not named: the T-575 bar-sphere bounds (cover >= 0) are kept; if the note governed the shell the bar sphere would narrow to R_in + 0.031 .. R_out - 0.031 (not applied)",
+    "groups": [
+     {
+      "group": "SHELL_MAINS (T-575, unchanged)",
+      "kg_high": 425.0001686609619,
+      "kg_low": 287.993949698492,
+      "status": "HELD_RANGE",
+      "t": [
+       0.287994,
+       0.425
+      ],
+      "why": "hoops + meridians as merged (R-T575-1 .. 3)"
+     },
+     {
+      "bars_at_springing": [
+       89,
+       93
+      ],
+      "group": "SHELL_ANCHORAGE_INTO_RING",
+      "kg_high": null,
+      "kg_low": 2.689777777777778,
+      "leg_floor_m": 0.034,
+      "status": "HELD_HIGH",
+      "t": [
+       0.00269,
+       null
+      ],
+      "why": "p.7 ring section draws each shell bar down through the ring past the top and bottom layers with a foot along the bottom: floor = the leg crossing the stacked top + bottom bars (d16 + d18), foot >= 0 (R-T583-5); high = ring depth less cover + foot: ring depth not printed on p.7 (deferred to the architectural set) -> HELD"
+     },
+     {
+      "group": "SHELL_MERIDIONAL_JOINTS",
+      "joints": 0,
+      "kg_high": 0.0,
+      "kg_low": 0.0,
+      "status": "VALUE",
+      "t": [
+       0.0,
+       0.0
+      ],
+      "why": "longest meridian 3.1652 m + leg < 12 m stock: no joint certain or needed (R-T583-4); value 0 is computed, not a missing item"
+     },
+     {
+      "d_mm": 12,
+      "group": "SHELL_HOOP_LAPS",
+      "joint_readings": [
+       {
+        "hoops": 21,
+        "hoops_over_stock": 5,
+        "joints": 26,
+        "offset": 0.0,
+        "rho": 2.141289
+       },
+       {
+        "hoops": 20,
+        "hoops_over_stock": 4,
+        "joints": 24,
+        "offset": 0.075,
+        "rho": 2.141289
+       },
+       {
+        "hoops": 22,
+        "hoops_over_stock": 6,
+        "joints": 28,
+        "offset": 0.0,
+        "rho": 2.229289
+       },
+       {
+        "hoops": 21,
+        "hoops_over_stock": 6,
+        "joints": 27,
+        "offset": 0.075,
+        "rho": 2.229289
+       }
+      ],
+      "joints_at_least": 24,
+      "kg_high": null,
+      "kg_low": 0.0,
+      "scenario": {
+       "d_multiple": 60,
+       "in_bound": false,
+       "joints": 24,
+       "kg": 15.36,
+       "label": "OWNER_PROPOSAL_SCENARIO",
+       "lap_m": 0.72,
+       "source": "OWNER_RULE_REBAR_2026-10-24 s.2 (proposal: beams / slabs 60 d, columns / ordinary walls 40 d)"
+      },
+      "status": "HELD_HIGH",
+      "t": [
+       0.0,
+       null
+      ],
+      "why": "every hoop is a closed loop: >= 1 joint each, >= 2 where longer than 12 m; no lap length printed for shell bars (the slab temperature-bar lap detail does not name the dome): length HELD, low 0 (coupler or unknown overlap), high HELD"
+     }
+    ],
+    "high_excluding": [
+     "SHELL_ANCHORAGE_INTO_RING",
+     "SHELL_HOOP_LAPS"
+    ],
+    "row_id": "HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+    "status": "HELD_RANGE_HIGH_OPEN",
+    "t575": {
+     "t_high": 0.425,
+     "t_low": 0.287994
+    },
+    "t_high_bounded_part": 0.425,
+    "t_low": 0.290684,
+    "unit": "t",
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V1 (T-583, unchanged)"
+   },
+   {
+    "concrete_line": "L-fffa895ed96b9d6a682c",
+    "cover_note": "p.8 note 22 names columns, beams and slabs; a shell is not named: the T-575 bar-sphere bounds (cover >= 0) are kept; if the note governed the shell the bar sphere would narrow to R_in + 0.031 .. R_out - 0.031 (not applied)",
+    "groups": [
+     {
+      "group": "SHELL_MAINS (T-575, unchanged)",
+      "kg_high": 425.0001686609619,
+      "kg_low": 287.993949698492,
+      "status": "HELD_RANGE",
+      "t": [
+       0.287994,
+       0.425
+      ],
+      "why": "hoops + meridians as merged (R-T575-1 .. 3)"
+     },
+     {
+      "bars_at_springing": [
+       89,
+       93
+      ],
+      "group": "SHELL_ANCHORAGE_INTO_RING",
+      "kg_high": null,
+      "kg_low": 2.689777777777778,
+      "leg_floor_m": 0.034,
+      "status": "HELD_HIGH",
+      "t": [
+       0.00269,
+       null
+      ],
+      "why": "p.7 ring section draws each shell bar down through the ring past the top and bottom layers with a foot along the bottom: floor = the leg crossing the stacked top + bottom bars (d16 + d18), foot >= 0 (R-T583-5); high = ring depth less cover + foot: ring depth not printed on p.7 (deferred to the architectural set) -> HELD"
+     },
+     {
+      "group": "SHELL_MERIDIONAL_JOINTS",
+      "joints": 0,
+      "kg_high": 0.0,
+      "kg_low": 0.0,
+      "status": "VALUE",
+      "t": [
+       0.0,
+       0.0
+      ],
+      "why": "longest meridian 3.1652 m + leg < 12 m stock: no joint certain or needed (R-T583-4); value 0 is computed, not a missing item"
+     },
+     {
+      "d_mm": 12,
+      "group": "SHELL_HOOP_LAPS",
+      "joint_readings": [
+       {
+        "hoops": 21,
+        "hoops_over_stock": 5,
+        "joints": 26,
+        "offset": 0.0,
+        "rho": 2.141289
+       },
+       {
+        "hoops": 20,
+        "hoops_over_stock": 4,
+        "joints": 24,
+        "offset": 0.075,
+        "rho": 2.141289
+       },
+       {
+        "hoops": 22,
+        "hoops_over_stock": 6,
+        "joints": 28,
+        "offset": 0.0,
+        "rho": 2.229289
+       },
+       {
+        "hoops": 21,
+        "hoops_over_stock": 6,
+        "joints": 27,
+        "offset": 0.075,
+        "rho": 2.229289
+       }
+      ],
+      "joints_at_least": 24,
+      "kg_high": null,
+      "kg_low": 0.0,
+      "scenario": {
+       "d_multiple": 60,
+       "in_bound": false,
+       "joints": 24,
+       "kg": 15.36,
+       "label": "OWNER_PROPOSAL_SCENARIO",
+       "lap_m": 0.72,
+       "source": "OWNER_RULE_REBAR_2026-10-24 s.2 (proposal: beams / slabs 60 d, columns / ordinary walls 40 d)"
+      },
+      "status": "HELD_HIGH",
+      "t": [
+       0.0,
+       null
+      ],
+      "why": "every hoop is a closed loop: >= 1 joint each, >= 2 where longer than 12 m; no lap length printed for shell bars (the slab temperature-bar lap detail does not name the dome): length HELD, low 0 (coupler or unknown overlap), high HELD"
+     }
+    ],
+    "high_excluding": [
+     "SHELL_ANCHORAGE_INTO_RING",
+     "SHELL_HOOP_LAPS"
+    ],
+    "row_id": "HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+    "status": "HELD_RANGE_HIGH_OPEN",
+    "t575": {
+     "t_high": 0.425,
+     "t_low": 0.287994
+    },
+    "t_high_bounded_part": 0.425,
+    "t_low": 0.290684,
+    "unit": "t",
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V1 (T-583, unchanged)"
+   },
+   {
+    "concrete_line": "L-684fcad323adc0c8a267",
+    "formula": {
+     "A_t_per_m": [
+      0.156642,
+      0.212859
+     ],
+     "B_t": [
+      0.0,
+      0.123221
+     ],
+     "checker_floor_reading_n": 62,
+     "embed_into_raft_m": [
+      0.0,
+      0.55
+     ],
+     "horizontal_run_per_row_m": [
+      11.0,
+      16.8
+     ],
+     "kg(h)": "A x h + B",
+     "n_vertical": [
+      62,
+      78
+     ],
+     "n_vertical_per_face": {
+      "E": [
+       4,
+       5,
+       6
+      ],
+      "N": [
+       10,
+       11,
+       12
+      ],
+      "S": [
+       10,
+       11,
+       12
+      ],
+      "W": [
+       7,
+       8,
+       9
+      ]
+     },
+     "t575": {
+      "A_t_per_m": [
+       0.169284,
+       0.200217
+      ],
+      "B_t": [
+       0.009778,
+       0.101057
+      ],
+      "n_vertical": 70
+     },
+     "top_U_leg_per_bar_m": [
+      0.0,
+      0.092
+     ]
+    },
+    "groups": [
+     {
+      "count": [
+       62,
+       78
+      ],
+      "d_mm": 16,
+      "group": "WALL_VERTICAL",
+      "status": "HELD_BLANK",
+      "why": "per face ceil(L/s) - 1 .. ceil(L/s) + 1 (R-T583-1) on N 1.80 / S 1.80 / W 1.20 / E 0.70 m; length h + raft leg (drawn to the bottom mat, 0 .. raft depth 0.55) + top U leg"
+     },
+     {
+      "d_mm": 12,
+      "group": "WALL_HORIZONTAL",
+      "status": "HELD_BLANK",
+      "why": "rows ceil(6h) - 1 .. ceil(6h) + 1 (R-T583-2), run per row 11.0 (stop at columns) .. 16.8 m"
+     },
+     {
+      "d_mm": 12,
+      "group": "WALL_TOP_BARS",
+      "n": 2,
+      "status": "HELD_BLANK",
+      "why": "in B"
+     },
+     {
+      "group": "WALL_LAPS",
+      "joints_at_least": 0,
+      "status": "HELD_HIGH",
+      "why": "verticals: no joint while h <= 11.358 m (one 12 m bar holds h + leg + U); horizontals: stop-at-column reading has 0 joints (segments <= 1.80 m), run-through reading 1 closing joint per row per face; no lap printed for wall bars: length HELD"
+     },
+     {
+      "group": "WALL_STARTER_DEVELOPMENT_OBSERVATION",
+      "status": "DESIGNER_ITEM",
+      "why": "if the verticals are read as starters, p.8 note 9 asks >= 1.12 m (tension) / 0.64 m (compression) for d16, more than the 0.55 raft the straight drawn leg can occupy; no foot bend is drawn: listed for the designer (RFI-B-S21 family), no quantity taken"
+     }
+    ],
+    "missing": "pit depth / wall height h not printed on p.14: bars only as kg(h)",
+    "row_id": "LIFT_PIT:WALLS:REBAR",
+    "status": "HELD_BLANK",
+    "strict_low_check": {
+     "checker_low_A": 0.156642,
+     "restated_low_A": 0.156642,
+     "strict": true,
+     "t575_low_A": 0.169284
+    },
+    "t_high": null,
+    "t_low": null,
+    "unit": "t",
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V1 (T-583, unchanged)"
+   }
+  ],
+  "totals": {
+   "bounded_low_rows": 4,
+   "high_status": "HELD_HIGH (laps, hooks, anchorage, ring depth by name)",
+   "rows": 6,
+   "t583_t_low": 0.767783,
+   "t_high": null,
+   "t_high_bounded_part": 1.164174,
+   "t_low": 0.789555,
+   "valued_t": 0.0
+  },
+  "version": "DOME_LIFT_REBAR_COMPONENTS_V2 on T-583 V1"
+ },
+ "ring_side_drawn": {
+  "d_mm": 14,
+  "faces": 2,
+  "label_n": 2,
+  "levels": 2,
+  "src": "ST p.7 DETAIL OF DOME, both ring cuts: 2 + 2 dots on the two vertical faces at two levels; leader '2 d14/20cm' through the lower level"
+ },
+ "rules": [
+  "R-T595-1 SIDE-BAR POPULATION FROM THE DRAWN SECTION",
+  "R-T595-2 SCENARIO-SET BOUND"
+ ],
+ "schema": "URBAN_T595_RESTATEMENTS_V1",
+ "task": "T-595"
+}

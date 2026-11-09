@@ -1,0 +1,554 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELEASED; statement V11 T-620",
+ "fix_rows": [
+  {
+   "corrected_engine_bounded": [
+    "75.539200",
+    "81.655600"
+   ],
+   "corrected_row_note": "his share INSIDE the drawing range 5.639200 .. 11.032800; 0.145200 above the owner's provisional A 8.458800 (Q-28)",
+   "id": "F-T628-1",
+   "row": "footing line: HELD boundary band (his row vs the held line bound 7.2204: his share ABOVE; Q-28 A range)",
+   "section": "T-551/footing-line",
+   "statement_engine_bounded": [
+    "77.1204",
+    "77.8432"
+   ],
+   "why": "the statement quotes the held band line's 7.2204 (60.17 m: one plot side lost, T-065 / T-356), a bound the downgrade record marks UNSUPPORTED BASIS; class HELD and the line blank are unchanged; low end NOT ESTABLISHED by the pad split (T-356 R-T356-4)"
+  }
+ ],
+ "lines": {
+  "T-551/footing-line": {
+   "beside_zero_components": {
+    "SB1 in F10 + F": {
+     "agree_high": true,
+     "column_pieces_m2": {
+      "10E8": "0.035000"
+     },
+     "diff_cause": "drawing precision of the strap face end points (0.0001 m order)",
+     "held_line": "L-abd65e1b745315dd17c2",
+     "held_line_bound_m3": [
+      "0.000000",
+      "0.385000"
+     ],
+     "high_diff_m3": "0.000018",
+     "net_m2": "0.770036",
+     "note": "the column outline owns its plan; low end 0 (level of strap vs F10 + F not printed, HELD with the outline, Q-31 C)",
+     "outline": "1B1B",
+     "own_high_m3": "0.385018",
+     "piece_m2": "0.805036"
+    },
+    "SB3 in F3": "not re-measured: level model of T-230 (one straight strap, one level), held 0.0295 .. 0.2683 cited"
+   },
+   "engine_m3": "67.6945",
+   "rows": [
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "evidence": {
+      "cause": "two drawn F3 outlines, each tag bound inside its outline; the reference counts one",
+      "drawn_count": 2,
+      "outlines": [
+       "166B",
+       "166C"
+      ],
+      "own_m3": "1.344000",
+      "schedule": "F3 1.60 x 1.40 x 0.30 (insert 1CA0)",
+      "tags": [
+       "168E",
+       "168F"
+      ]
+     },
+     "name": "footing line: COUNT F3 (two drawn outlines both tagged F3)",
+     "own_delta": "-0.672000",
+     "row": 0,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.672",
+     "status": "RE-MEASURED"
+    },
+    {
+     "class": "HELD",
+     "drift": "0.000000",
+     "evidence": {
+      "held_bound_m3": [
+       "2.176000",
+       "2.275000"
+      ],
+      "held_line": "L-164ae9d338976be9e582",
+      "labels": [
+       "F",
+       "F10"
+      ],
+      "open_at": "S.B1 faces 1689 / 1B1C (0.70 m gap)",
+      "outline": "1B1B",
+      "outline_m2": "4.550000",
+      "reading_A_schedule_rows_m3": "2.176000",
+      "reading_B_outline_deepest_m3": "2.275000",
+      "reference_position": "BELOW",
+      "register": "ELEMENT_REGISTER footing F10-type CONFLICT (kept CONFLICT)",
+      "tags": [
+       "10A5",
+       "168B"
+      ]
+     },
+     "name": "footing line: HELD F10 + F outline (his F10 row alone; engine bound 2.176 .. 2.275, his share BELOW)",
+     "own_delta": "1.960000",
+     "row": 1,
+     "statement_class": "HELD",
+     "statement_delta": "1.96",
+     "status": "HELD"
+    },
+    {
+     "class": "HELD",
+     "drift": "0.000000",
+     "evidence": {
+      "band_m2": "18.388000",
+      "centre_line_m": "91.940000",
+      "crossed_outlines": [
+       "1100",
+       "1668",
+       "1669",
+       "166A",
+       "1B07",
+       "1B1A",
+       "1B1B",
+       "1B24",
+       "1B2A"
+      ],
+      "crossings": "levels of band and footings not printed at the 9 crossings: overlap HELD by name (Q-28), never deducted silently (R-T628-2)",
+      "downgrade": "DG-6dd9f1caba1ca77d UNSUPPORTED BASIS",
+      "faces": [
+       "1658",
+       "1659"
+      ],
+      "free_m": "70.490000",
+      "held_line": "L-6290a9f3d93f38cd46d6",
+      "held_line_bound_m3": "7.220400",
+      "inside_footings_m": "21.450000",
+      "inside_footings_m2": "4.290000",
+      "owner_provisional_A_m3": "8.458800",
+      "quoted_bound": {
+       "basis": "drawing range T-356 R-T356-3 re-measured: free length x 0.20 x 0.40 .. centre line x 0.20 x 0.60 (typical A-A 20 x 40 vs schedule B.W 20 x 60, Q-28 / RFI-S03)",
+       "bound": [
+        "5.639200",
+        "11.032800"
+       ],
+       "replaced": "7.220400"
+      },
+      "reference_minus_A_m3": "0.145200",
+      "reference_position": "INSIDE"
+     },
+     "name": "footing line: HELD boundary band (his row vs the held line bound 7.2204: his share ABOVE; Q-28 A range)",
+     "own_delta": "8.604000",
+     "row": 2,
+     "statement_class": "HELD",
+     "statement_delta": "8.604",
+     "status": "HELD"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "evidence": {
+      "notch_m2": "0.140000",
+      "notch_m3": "0.042000",
+      "notch_owner": [
+       "180F"
+      ],
+      "notched": "180C",
+      "outlines": [
+       "10F0",
+       "10F8",
+       "1100",
+       "180C"
+      ],
+      "own_FN_m3": "1.158000",
+      "owner_mark": "F9",
+      "schedule": "FN 1.00 x 1.00 x 0.30 (insert 1CF8)"
+     },
+     "name": "footing line: OVERLAP FN notch 0.40 x 0.35 x 0.30 owned by F9 (his FN rows bill it again)",
+     "own_delta": "0.042000",
+     "row": 3,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "0.042",
+     "status": "RE-MEASURED"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000054",
+     "evidence": {
+      "engine_line_rounding_m3": "-0.000054",
+      "engine_straps_m3": "3.390500",
+      "own_straps_m3": "3.390446",
+      "straps": {
+       "SB1": {
+        "clear_axis_m": "4.550000",
+        "drawn_width_m": "0.700000",
+        "faces": [
+         "1689",
+         "1B1C"
+        ],
+        "joins": [
+         "1B1B",
+         "1B24"
+        ],
+        "own_m3": "1.592500",
+        "schedule_inserts": [
+         "1FB0"
+        ],
+        "schedule_rows": 1,
+        "section_m": [
+         "0.7",
+         "0.5"
+        ],
+        "selected": "1FB0"
+       },
+       "SB2": {
+        "clear_axis_m": "2.292707",
+        "drawn_width_m": "0.997081",
+        "faces": [
+         "1B08",
+         "1B09"
+        ],
+        "joins": [
+         "1B07",
+         "1B19"
+        ],
+        "own_m3": "1.146354",
+        "schedule_inserts": [
+         "1FBB",
+         "2ABA"
+        ],
+        "schedule_rows": 2,
+        "section_m": [
+         "1.0",
+         "0.5"
+        ],
+        "selected": "2ABA"
+       },
+       "SB3": {
+        "clear_axis_m": "3.257962",
+        "drawn_width_m": "0.504659",
+        "faces": [
+         "1B26",
+         "1B27"
+        ],
+        "joins": [
+         "166B",
+         "1B2A"
+        ],
+        "own_m3": "0.651592",
+        "schedule_inserts": [
+         "2B06"
+        ],
+        "schedule_rows": 1,
+        "section_m": [
+         "0.5",
+         "0.4"
+        ],
+        "selected": "2B06"
+       }
+      }
+     },
+     "name": "footing line: LENGTH SB2 -0.0036 / SB3 +0.0016 (drawn 2.2927 / 3.2580 m vs his rounded)",
+     "own_delta": "0.002054",
+     "row": 4,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "0.002",
+     "status": "RE-MEASURED"
+    }
+   ],
+   "split": {
+    "COUNT F3 (two drawn outlines)": [
+     "ENGINE_RIGHT",
+     "-0.672000"
+    ],
+    "ENGINE LENGTH PRECISION straps (T-231 axis lengths and the line at 4 dp)": [
+     "TOLERANCE",
+     "-0.000054"
+    ],
+    "HELD F10 + F outline (Q-31 C)": [
+     "HELD",
+     "1.960000"
+    ],
+    "HELD boundary band (Q-28 A provisional)": [
+     "HELD",
+     "8.604000"
+    ],
+    "LENGTH straps clear axis": [
+     "ENGINE_RIGHT",
+     "0.002054"
+    ],
+    "OVERLAP FN notch owned by F9": [
+     "ENGINE_RIGHT",
+     "0.042000"
+    ]
+   },
+   "statement_delta_m3": "9.936"
+  },
+  "T-551/lift-walls": {
+   "engine_m3": "0",
+   "rows": [
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "evidence": {
+      "column_outlines_in_ring": [
+       "1090",
+       "1093",
+       "1096",
+       "1099"
+      ],
+      "column_pieces_m2": "0.500000",
+      "gross_ring_m2": "1.600000",
+      "owner": "lift necks / columns (R-T394-6); the reference neck rows carry the same four marks",
+      "pieces_by_column_m2": {
+       "1090": "0.200000",
+       "1093": "0.100000",
+       "1096": "0.100000",
+       "1099": "0.100000"
+      },
+      "pit_outline": "10EB",
+      "shaft_outline": "10EA"
+     },
+     "name": "lift pit walls: SCOPE_DOUBLE (four column pieces in his ring, also in his neck rows)",
+     "own_delta": "0.750000",
+     "row": 0,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "0.75",
+     "status": "RE-MEASURED"
+    },
+    {
+     "class": "HELD",
+     "drift": "0.000000",
+     "evidence": {
+      "height": "not printed on the foundation plan or any pit section of ST7757 (D-43); the reference uses one uniform height, not a printed pit depth",
+      "held_line": "L-684fcad323adc0c8a267",
+      "held_line_bound": [
+       null,
+       null
+      ],
+      "net_ring_m2": "1.100000"
+     },
+     "name": "lift pit walls: HELD (net ring 1.10 m2 x his depth)",
+     "own_delta": "1.650000",
+     "row": 1,
+     "statement_class": "HELD",
+     "statement_delta": "1.65",
+     "status": "HELD"
+    }
+   ],
+   "split": {
+    "HELD net ring x height (D-43)": [
+     "HELD",
+     "1.650000"
+    ],
+    "SCOPE_DOUBLE column pieces": [
+     "ENGINE_RIGHT",
+     "0.750000"
+    ]
+   },
+   "statement_delta_m3": "2.4"
+  }
+ },
+ "note": "own re-measure (worker 1); statuses for the Checker: RE-MEASURED rows DRAWING-CONFIRMED (worker), HELD rows HELD by name; no quantity of any candidate moved",
+ "outline_count": 26,
+ "overlapping_outline_pairs": 0,
+ "pads": {
+  "F": {
+   "m3": "0.864000",
+   "notch_m2": {},
+   "outlines": [
+    "1667",
+    "1668",
+    "1669",
+    "166A"
+   ],
+   "schedule": "F 0.90 x 0.80 x 0.30 (insert 1C79)",
+   "status": {
+    "1667": "FULL",
+    "1668": "FULL",
+    "1669": "FULL",
+    "166A": "FULL"
+   }
+  },
+  "F11": {
+   "m3": "2.625000",
+   "notch_m2": {},
+   "outlines": [
+    "1B07"
+   ],
+   "schedule": "F11 3.50 x 1.50 x 0.50 (insert 1CED)",
+   "status": {
+    "1B07": "FULL"
+   }
+  },
+  "F12": {
+   "m3": "9.856000",
+   "notch_m2": {},
+   "outlines": [
+    "1ABF"
+   ],
+   "schedule": "F12 4.40 x 3.20 x 0.70 (insert 2A5E)",
+   "status": {
+    "1ABF": "FULL"
+   }
+  },
+  "F13": {
+   "m3": "5.160000",
+   "notch_m2": {},
+   "outlines": [
+    "1ADB"
+   ],
+   "schedule": "F13 4.30 x 2.40 x 0.50 (insert 2A98)",
+   "status": {
+    "1ADB": "FULL"
+   }
+  },
+  "F14": {
+   "m3": "6.270000",
+   "notch_m2": {},
+   "outlines": [
+    "1B1A"
+   ],
+   "schedule": "F14 3.80 x 3.30 x 0.50 (insert 2AD5)",
+   "status": {
+    "1B1A": "FULL"
+   }
+  },
+  "F15": {
+   "m3": "0.720000",
+   "notch_m2": {},
+   "outlines": [
+    "1B2A"
+   ],
+   "schedule": "F15 1.80 x 1.00 x 0.40 (insert 2B13)",
+   "status": {
+    "1B2A": "FULL"
+   }
+  },
+  "F2": {
+   "m3": "2.261000",
+   "notch_m2": {},
+   "outlines": [
+    "165C",
+    "1663"
+   ],
+   "schedule": "F2 1.90 x 1.70 x 0.35 (insert 1C95)",
+   "status": {
+    "165C": "FULL",
+    "1663": "FULL"
+   }
+  },
+  "F3": {
+   "m3": "1.344000",
+   "notch_m2": {},
+   "outlines": [
+    "166B",
+    "166C"
+   ],
+   "schedule": "F3 1.60 x 1.40 x 0.30 (insert 1CA0)",
+   "status": {
+    "166B": "FULL",
+    "166C": "FULL"
+   }
+  },
+  "F4": {
+   "m3": "3.520000",
+   "notch_m2": {},
+   "outlines": [
+    "1665",
+    "1666"
+   ],
+   "schedule": "F4 2.20 x 2.00 x 0.40 (insert 1CAB)",
+   "status": {
+    "1665": "FULL",
+    "1666": "FULL"
+   }
+  },
+  "F5": {
+   "m3": "4.032000",
+   "notch_m2": {},
+   "outlines": [
+    "1664",
+    "166D"
+   ],
+   "schedule": "F5 2.40 x 2.10 x 0.40 (insert 1CB6)",
+   "status": {
+    "1664": "FULL",
+    "166D": "FULL"
+   }
+  },
+  "F6": {
+   "m3": "2.860000",
+   "notch_m2": {},
+   "outlines": [
+    "1B19"
+   ],
+   "schedule": "F6 2.60 x 2.20 x 0.50 (insert 1CC1)",
+   "status": {
+    "1B19": "FULL"
+   }
+  },
+  "F8": {
+   "m3": "7.200000",
+   "notch_m2": {},
+   "outlines": [
+    "1B24"
+   ],
+   "schedule": "F8 4.00 x 3.60 x 0.50 (insert 2AF6)",
+   "status": {
+    "1B24": "FULL"
+   }
+  },
+  "F9": {
+   "m3": "5.049000",
+   "notch_m2": {},
+   "outlines": [
+    "180F"
+   ],
+   "schedule": "F9 3.40 x 2.70 x 0.55 (insert 1CD7)",
+   "status": {
+    "180F": "FULL"
+   }
+  },
+  "FF": {
+   "m3": "11.385000",
+   "notch_m2": {},
+   "outlines": [
+    "1B2B"
+   ],
+   "schedule": "FF 4.60 x 4.50 x 0.55 (insert 2B1E)",
+   "status": {
+    "1B2B": "FULL"
+   }
+  },
+  "FN": {
+   "m3": "1.158000",
+   "notch_m2": {
+    "180C": "0.140000"
+   },
+   "outlines": [
+    "10F0",
+    "10F8",
+    "1100",
+    "180C"
+   ],
+   "schedule": "FN 1.00 x 1.00 x 0.30 (insert 1CF8)",
+   "status": {
+    "10F0": "FULL",
+    "10F8": "FULL",
+    "1100": "FULL",
+    "180C": "NOTCHED"
+   }
+  }
+ },
+ "pads_total_m3": "64.304000",
+ "rule": "R-T628-1..5",
+ "schema": "T628_FOOTING_LIFT_ROWS_V1",
+ "source": {
+  "drawing": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'",
+  "frame": "FOUNDATION PLAN (plot polyline 1658 +/- 3 m)",
+  "reference": "freelancer concrete + rebar workbook, footings and walls + columns sheets (private)",
+  "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ }
+}

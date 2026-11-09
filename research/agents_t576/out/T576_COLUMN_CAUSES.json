@@ -1,0 +1,2370 @@
+{
+ "schema": "T576_COLUMN_CAUSES_V1",
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELEASED",
+ "note": "engine figures and terms in m3; his storey totals on the measured set only; no row, dimension or count of his",
+ "readings": [
+  {
+   "reading": {
+    "10AE": "C",
+    "10E0": "C7"
+   },
+   "columns": {
+    "GF": {
+     "marks_all": [
+      {
+       "mark": "C",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 6,
+        "registered_members": 6,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "0.375000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-2.250000"
+        }
+       ]
+      },
+      {
+       "mark": "C1",
+       "engine_m3": "0.450000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 1,
+        "registered_members": 1,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.375000"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C10",
+       "engine_m3": "0.787500",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.148750"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.017500"
+        }
+       ]
+      },
+      {
+       "mark": "C11",
+       "engine_m3": "2.475000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "1.031250"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.467500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.055000"
+        }
+       ]
+      },
+      {
+       "mark": "C2",
+       "engine_m3": "1.800000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 4,
+        "registered_members": 4,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.750000"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.205000"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.095000"
+        }
+       ]
+      },
+      {
+       "mark": "C3",
+       "engine_m3": "1.775000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.937500"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.206250"
+        },
+        {
+         "term": "BASE",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.087500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C4",
+       "engine_m3": "1.125000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.187500"
+        }
+       ]
+      },
+      {
+       "mark": "C5",
+       "engine_m3": "2.130000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.337500"
+        },
+        {
+         "term": "BASE",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.105000"
+        }
+       ]
+      },
+      {
+       "mark": "C6",
+       "engine_m3": "0.787500",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.087500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.043750"
+        }
+       ]
+      },
+      {
+       "mark": "C7",
+       "engine_m3": "0.900000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.150000",
+         "note": "at D_low 0.75 (BM-GF-043, printed); D_ctrl open on framing member BM-GF-058 (unlabelled, HELD); controlling depth changes: BM-GF-058 depth not printed: lower end",
+         "member": "GFRS:368"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "GFRS:368",
+         "open_below": true
+        },
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "0.750000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.750000"
+        }
+       ]
+      },
+      {
+       "mark": "C8",
+       "engine_m3": "1.012500",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 1,
+        "registered_members": 1,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "-0.843750"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.191250"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.022500"
+        }
+       ]
+      },
+      {
+       "mark": "C9",
+       "engine_m3": "2.250000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.937500"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.375000"
+        }
+       ]
+      }
+     ],
+     "measured_set": {
+      "marks": [
+       "C1",
+       "C10",
+       "C11",
+       "C2",
+       "C4",
+       "C5",
+       "C6",
+       "C8",
+       "C9"
+      ],
+      "engine_m3": "12.817500",
+      "his_m3": "12.468750",
+      "diff_m3": "0.348750",
+      "pct": "2.80",
+      "by_class_m3": {
+       "ENGINE_RIGHT": "-0.882500",
+       "RULE_DIFFERENCE": "2.075000",
+       "CONFLICT_BOUNDED": "-0.843750"
+      },
+      "net_of_rule_difference_m3": "-1.726250",
+      "net_of_rule_difference_pct": "-13.84",
+      "open_counter_terms": []
+     },
+     "his_head_depth_m": "0.750000",
+     "storey_term_m3": "0.000000",
+     "storey_interval_m": "4.50"
+    },
+    "1F": {
+     "marks_all": [
+      {
+       "mark": "C1",
+       "engine_m3": "0.420000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C2",
+       "engine_m3": "1.680000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.205000"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.095000"
+        }
+       ]
+      },
+      {
+       "mark": "C3",
+       "engine_m3": "0.420000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.050000",
+         "note": "at D_low 0.50 (BM-1F-003; BM-1F-031, printed); D_ctrl open on framing member BM-1F-031 (CB10, CONFLICT width only), BM-1F-034 (unlabelled, HELD); controlling depth changes: BM-1F-034 depth not printed: lower end",
+         "member": "FFRS:68B"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.025000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:68B",
+         "open_below": true
+        },
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.345000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.345000"
+        }
+       ]
+      },
+      {
+       "mark": "C4",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.690000"
+        }
+       ]
+      },
+      {
+       "mark": "C5",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.035000"
+        }
+       ]
+      },
+      {
+       "mark": "C6",
+       "engine_m3": "0",
+       "in_measured_set": false,
+       "terms": []
+      },
+      {
+       "mark": "C7",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.104000"
+        }
+       ]
+      },
+      {
+       "mark": "C8",
+       "engine_m3": "0.756000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.135000",
+         "note": "at D_low 0.75 (BM-1F-017, printed); D_ctrl open on framing member BM-1F-037 (unlabelled rounded box outside CB12, HELD); controlling depth changes: BM-1F-037 depth not printed: lower end",
+         "member": "FFRS:664"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:664",
+         "open_below": true
+        }
+       ]
+      },
+      {
+       "mark": "C9",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.690000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.380000"
+        }
+       ]
+      },
+      {
+       "mark": "P.C 20x50",
+       "engine_m3": "0.420000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000",
+         "note": "at D_low 0.75 (BM-1F-017; BM-1F-023, printed); D_ctrl open on planted on B26 (p.4 leader \"P.C 20x50 8%%c16\"): lower end",
+         "member": "FFRS:69D"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:69D",
+         "open_below": true
+        }
+       ]
+      },
+      {
+       "mark": "P.C 20x70",
+       "engine_m3": "0.588000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.105000"
+        }
+       ]
+      }
+     ],
+     "measured_set": {
+      "marks": [
+       "C1",
+       "C2",
+       "C8",
+       "P.C 20x50",
+       "P.C 20x70"
+      ],
+      "engine_m3": "3.864000",
+      "his_m3": "3.174000",
+      "diff_m3": "0.690000",
+      "pct": "21.74",
+      "by_class_m3": {
+       "RULE_DIFFERENCE": "0.595000",
+       "ENGINE_RIGHT": "0.095000"
+      },
+      "net_of_rule_difference_m3": "0.095000",
+      "net_of_rule_difference_pct": "2.99",
+      "open_counter_terms": [
+       {
+        "member": "FFRS:664",
+        "m3_upper": "0.000000"
+       },
+       {
+        "member": "FFRS:69D",
+        "m3_upper": "0.000000"
+       }
+      ]
+     },
+     "his_head_depth_m": "0.750000",
+     "storey_term_m3": "0.000000",
+     "storey_interval_m": "4.20"
+    },
+    "planted_1F_outlines_not_on_a_position": 2
+   }
+  },
+  {
+   "reading": {
+    "10AE": "C",
+    "10E0": "C8"
+   },
+   "columns": {
+    "GF": {
+     "marks_all": [
+      {
+       "mark": "C",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 6,
+        "registered_members": 6,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "0.375000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-2.250000"
+        }
+       ]
+      },
+      {
+       "mark": "C1",
+       "engine_m3": "0.450000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 1,
+        "registered_members": 1,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.375000"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C10",
+       "engine_m3": "0.787500",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.148750"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.017500"
+        }
+       ]
+      },
+      {
+       "mark": "C11",
+       "engine_m3": "2.475000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "1.031250"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.467500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.055000"
+        }
+       ]
+      },
+      {
+       "mark": "C2",
+       "engine_m3": "1.800000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 4,
+        "registered_members": 4,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.750000"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.205000"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.095000"
+        }
+       ]
+      },
+      {
+       "mark": "C3",
+       "engine_m3": "1.775000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.937500"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.206250"
+        },
+        {
+         "term": "BASE",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.087500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C4",
+       "engine_m3": "1.125000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.187500"
+        }
+       ]
+      },
+      {
+       "mark": "C5",
+       "engine_m3": "2.130000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.337500"
+        },
+        {
+         "term": "BASE",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.105000"
+        }
+       ]
+      },
+      {
+       "mark": "C6",
+       "engine_m3": "0.787500",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.087500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.043750"
+        }
+       ]
+      },
+      {
+       "mark": "C7",
+       "engine_m3": "0.900000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.150000",
+         "note": "at D_low 0.75 (BM-GF-043, printed); D_ctrl open on framing member BM-GF-058 (unlabelled, HELD); controlling depth changes: BM-GF-058 depth not printed: lower end",
+         "member": "GFRS:368"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "GFRS:368",
+         "open_below": true
+        }
+       ]
+      },
+      {
+       "mark": "C8",
+       "engine_m3": "1.012500",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.843750"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.191250"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.022500"
+        }
+       ]
+      },
+      {
+       "mark": "C9",
+       "engine_m3": "2.250000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.937500"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.375000"
+        }
+       ]
+      }
+     ],
+     "measured_set": {
+      "marks": [
+       "C1",
+       "C10",
+       "C11",
+       "C2",
+       "C4",
+       "C5",
+       "C6",
+       "C7",
+       "C9"
+      ],
+      "engine_m3": "12.705000",
+      "his_m3": "11.531250",
+      "diff_m3": "1.173750",
+      "pct": "10.18",
+      "by_class_m3": {
+       "ENGINE_RIGHT": "-0.860000",
+       "RULE_DIFFERENCE": "2.033750"
+      },
+      "net_of_rule_difference_m3": "-0.860000",
+      "net_of_rule_difference_pct": "-7.46",
+      "open_counter_terms": [
+       {
+        "member": "GFRS:368",
+        "m3_upper": "0.000000"
+       }
+      ]
+     },
+     "his_head_depth_m": "0.750000",
+     "storey_term_m3": "0.000000",
+     "storey_interval_m": "4.50"
+    },
+    "1F": {
+     "marks_all": [
+      {
+       "mark": "C1",
+       "engine_m3": "0.420000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C2",
+       "engine_m3": "1.680000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.205000"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.095000"
+        }
+       ]
+      },
+      {
+       "mark": "C3",
+       "engine_m3": "0.420000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.050000",
+         "note": "at D_low 0.50 (BM-1F-003; BM-1F-031, printed); D_ctrl open on framing member BM-1F-031 (CB10, CONFLICT width only), BM-1F-034 (unlabelled, HELD); controlling depth changes: BM-1F-034 depth not printed: lower end",
+         "member": "FFRS:68B"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.025000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:68B",
+         "open_below": true
+        },
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.345000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.345000"
+        }
+       ]
+      },
+      {
+       "mark": "C4",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.690000"
+        }
+       ]
+      },
+      {
+       "mark": "C5",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.035000"
+        }
+       ]
+      },
+      {
+       "mark": "C6",
+       "engine_m3": "0",
+       "in_measured_set": false,
+       "terms": []
+      },
+      {
+       "mark": "C7",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 1,
+        "registered_members": 1,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "-0.552000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.552000"
+        }
+       ]
+      },
+      {
+       "mark": "C8",
+       "engine_m3": "0.756000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.135000",
+         "note": "at D_low 0.75 (BM-1F-017, printed); D_ctrl open on framing member BM-1F-037 (unlabelled rounded box outside CB12, HELD); controlling depth changes: BM-1F-037 depth not printed: lower end",
+         "member": "FFRS:664"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:664",
+         "open_below": true
+        },
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "0.621000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.621000"
+        }
+       ]
+      },
+      {
+       "mark": "C9",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.690000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.380000"
+        }
+       ]
+      },
+      {
+       "mark": "P.C 20x50",
+       "engine_m3": "0.420000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000",
+         "note": "at D_low 0.75 (BM-1F-017; BM-1F-023, printed); D_ctrl open on planted on B26 (p.4 leader \"P.C 20x50 8%%c16\"): lower end",
+         "member": "FFRS:69D"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:69D",
+         "open_below": true
+        }
+       ]
+      },
+      {
+       "mark": "P.C 20x70",
+       "engine_m3": "0.588000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.105000"
+        }
+       ]
+      }
+     ],
+     "measured_set": {
+      "marks": [
+       "C1",
+       "C2",
+       "P.C 20x50",
+       "P.C 20x70"
+      ],
+      "engine_m3": "3.108000",
+      "his_m3": "2.553000",
+      "diff_m3": "0.555000",
+      "pct": "21.74",
+      "by_class_m3": {
+       "RULE_DIFFERENCE": "0.460000",
+       "ENGINE_RIGHT": "0.095000"
+      },
+      "net_of_rule_difference_m3": "0.095000",
+      "net_of_rule_difference_pct": "3.72",
+      "open_counter_terms": [
+       {
+        "member": "FFRS:69D",
+        "m3_upper": "0.000000"
+       }
+      ]
+     },
+     "his_head_depth_m": "0.750000",
+     "storey_term_m3": "0.000000",
+     "storey_interval_m": "4.20"
+    },
+    "planted_1F_outlines_not_on_a_position": 2
+   }
+  },
+  {
+   "reading": {
+    "10AE": "C3",
+    "10E0": "C7"
+   },
+   "columns": {
+    "GF": {
+     "marks_all": [
+      {
+       "mark": "C",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.875000"
+        }
+       ]
+      },
+      {
+       "mark": "C1",
+       "engine_m3": "0.450000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 1,
+        "registered_members": 1,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.375000"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C10",
+       "engine_m3": "0.787500",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.148750"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.017500"
+        }
+       ]
+      },
+      {
+       "mark": "C11",
+       "engine_m3": "2.475000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "1.031250"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.467500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.055000"
+        }
+       ]
+      },
+      {
+       "mark": "C2",
+       "engine_m3": "1.800000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 4,
+        "registered_members": 4,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.750000"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.205000"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.095000"
+        }
+       ]
+      },
+      {
+       "mark": "C3",
+       "engine_m3": "1.775000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 6,
+        "registered_members": 6,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "0.468750"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.406250"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.206250"
+        },
+        {
+         "term": "BASE",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.087500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C4",
+       "engine_m3": "1.125000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.187500"
+        }
+       ]
+      },
+      {
+       "mark": "C5",
+       "engine_m3": "2.130000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.337500"
+        },
+        {
+         "term": "BASE",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.105000"
+        }
+       ]
+      },
+      {
+       "mark": "C6",
+       "engine_m3": "0.787500",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.087500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.043750"
+        }
+       ]
+      },
+      {
+       "mark": "C7",
+       "engine_m3": "0.900000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.150000",
+         "note": "at D_low 0.75 (BM-GF-043, printed); D_ctrl open on framing member BM-GF-058 (unlabelled, HELD); controlling depth changes: BM-GF-058 depth not printed: lower end",
+         "member": "GFRS:368"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "GFRS:368",
+         "open_below": true
+        },
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "0.750000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.750000"
+        }
+       ]
+      },
+      {
+       "mark": "C8",
+       "engine_m3": "1.012500",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 1,
+        "registered_members": 1,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "-0.843750"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.191250"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.022500"
+        }
+       ]
+      },
+      {
+       "mark": "C9",
+       "engine_m3": "2.250000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.937500"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.375000"
+        }
+       ]
+      }
+     ],
+     "measured_set": {
+      "marks": [
+       "C1",
+       "C10",
+       "C11",
+       "C2",
+       "C4",
+       "C5",
+       "C6",
+       "C8",
+       "C9"
+      ],
+      "engine_m3": "12.817500",
+      "his_m3": "12.468750",
+      "diff_m3": "0.348750",
+      "pct": "2.80",
+      "by_class_m3": {
+       "ENGINE_RIGHT": "-0.882500",
+       "RULE_DIFFERENCE": "2.075000",
+       "CONFLICT_BOUNDED": "-0.843750"
+      },
+      "net_of_rule_difference_m3": "-1.726250",
+      "net_of_rule_difference_pct": "-13.84",
+      "open_counter_terms": []
+     },
+     "his_head_depth_m": "0.750000",
+     "storey_term_m3": "0.000000",
+     "storey_interval_m": "4.50"
+    },
+    "1F": {
+     "marks_all": [
+      {
+       "mark": "C1",
+       "engine_m3": "0.420000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C2",
+       "engine_m3": "1.680000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.205000"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.095000"
+        }
+       ]
+      },
+      {
+       "mark": "C3",
+       "engine_m3": "0.420000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.050000",
+         "note": "at D_low 0.50 (BM-1F-003; BM-1F-031, printed); D_ctrl open on framing member BM-1F-031 (CB10, CONFLICT width only), BM-1F-034 (unlabelled, HELD); controlling depth changes: BM-1F-034 depth not printed: lower end",
+         "member": "FFRS:68B"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.025000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:68B",
+         "open_below": true
+        },
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.345000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.345000"
+        }
+       ]
+      },
+      {
+       "mark": "C4",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.690000"
+        }
+       ]
+      },
+      {
+       "mark": "C5",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.035000"
+        }
+       ]
+      },
+      {
+       "mark": "C6",
+       "engine_m3": "0",
+       "in_measured_set": false,
+       "terms": []
+      },
+      {
+       "mark": "C7",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.104000"
+        }
+       ]
+      },
+      {
+       "mark": "C8",
+       "engine_m3": "0.756000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.135000",
+         "note": "at D_low 0.75 (BM-1F-017, printed); D_ctrl open on framing member BM-1F-037 (unlabelled rounded box outside CB12, HELD); controlling depth changes: BM-1F-037 depth not printed: lower end",
+         "member": "FFRS:664"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:664",
+         "open_below": true
+        }
+       ]
+      },
+      {
+       "mark": "C9",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.690000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.380000"
+        }
+       ]
+      },
+      {
+       "mark": "P.C 20x50",
+       "engine_m3": "0.420000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000",
+         "note": "at D_low 0.75 (BM-1F-017; BM-1F-023, printed); D_ctrl open on planted on B26 (p.4 leader \"P.C 20x50 8%%c16\"): lower end",
+         "member": "FFRS:69D"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:69D",
+         "open_below": true
+        }
+       ]
+      },
+      {
+       "mark": "P.C 20x70",
+       "engine_m3": "0.588000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.105000"
+        }
+       ]
+      }
+     ],
+     "measured_set": {
+      "marks": [
+       "C1",
+       "C2",
+       "C8",
+       "P.C 20x50",
+       "P.C 20x70"
+      ],
+      "engine_m3": "3.864000",
+      "his_m3": "3.174000",
+      "diff_m3": "0.690000",
+      "pct": "21.74",
+      "by_class_m3": {
+       "RULE_DIFFERENCE": "0.595000",
+       "ENGINE_RIGHT": "0.095000"
+      },
+      "net_of_rule_difference_m3": "0.095000",
+      "net_of_rule_difference_pct": "2.99",
+      "open_counter_terms": [
+       {
+        "member": "FFRS:664",
+        "m3_upper": "0.000000"
+       },
+       {
+        "member": "FFRS:69D",
+        "m3_upper": "0.000000"
+       }
+      ]
+     },
+     "his_head_depth_m": "0.750000",
+     "storey_term_m3": "0.000000",
+     "storey_interval_m": "4.20"
+    },
+    "planted_1F_outlines_not_on_a_position": 2
+   }
+  },
+  {
+   "reading": {
+    "10AE": "C3",
+    "10E0": "C8"
+   },
+   "columns": {
+    "GF": {
+     "marks_all": [
+      {
+       "mark": "C",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.875000"
+        }
+       ]
+      },
+      {
+       "mark": "C1",
+       "engine_m3": "0.450000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 1,
+        "registered_members": 1,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.375000"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C10",
+       "engine_m3": "0.787500",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.148750"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.017500"
+        }
+       ]
+      },
+      {
+       "mark": "C11",
+       "engine_m3": "2.475000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "1.031250"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.467500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.055000"
+        }
+       ]
+      },
+      {
+       "mark": "C2",
+       "engine_m3": "1.800000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 4,
+        "registered_members": 4,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.750000"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.205000"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.095000"
+        }
+       ]
+      },
+      {
+       "mark": "C3",
+       "engine_m3": "1.775000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 6,
+        "registered_members": 6,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "0.468750"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.406250"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.206250"
+        },
+        {
+         "term": "BASE",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.087500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C4",
+       "engine_m3": "1.125000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.187500"
+        }
+       ]
+      },
+      {
+       "mark": "C5",
+       "engine_m3": "2.130000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.337500"
+        },
+        {
+         "term": "BASE",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.105000"
+        }
+       ]
+      },
+      {
+       "mark": "C6",
+       "engine_m3": "0.787500",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.087500"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.043750"
+        }
+       ]
+      },
+      {
+       "mark": "C7",
+       "engine_m3": "0.900000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.150000",
+         "note": "at D_low 0.75 (BM-GF-043, printed); D_ctrl open on framing member BM-GF-058 (unlabelled, HELD); controlling depth changes: BM-GF-058 depth not printed: lower end",
+         "member": "GFRS:368"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "GFRS:368",
+         "open_below": true
+        }
+       ]
+      },
+      {
+       "mark": "C8",
+       "engine_m3": "1.012500",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.843750"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.191250"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.022500"
+        }
+       ]
+      },
+      {
+       "mark": "C9",
+       "engine_m3": "2.250000",
+       "in_measured_set": true,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.937500"
+        },
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.375000"
+        }
+       ]
+      }
+     ],
+     "measured_set": {
+      "marks": [
+       "C1",
+       "C10",
+       "C11",
+       "C2",
+       "C4",
+       "C5",
+       "C6",
+       "C7",
+       "C9"
+      ],
+      "engine_m3": "12.705000",
+      "his_m3": "11.531250",
+      "diff_m3": "1.173750",
+      "pct": "10.18",
+      "by_class_m3": {
+       "ENGINE_RIGHT": "-0.860000",
+       "RULE_DIFFERENCE": "2.033750"
+      },
+      "net_of_rule_difference_m3": "-0.860000",
+      "net_of_rule_difference_pct": "-7.46",
+      "open_counter_terms": [
+       {
+        "member": "GFRS:368",
+        "m3_upper": "0.000000"
+       }
+      ]
+     },
+     "his_head_depth_m": "0.750000",
+     "storey_term_m3": "0.000000",
+     "storey_interval_m": "4.50"
+    },
+    "1F": {
+     "marks_all": [
+      {
+       "mark": "C1",
+       "engine_m3": "0.420000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000"
+        }
+       ]
+      },
+      {
+       "mark": "C2",
+       "engine_m3": "1.680000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.205000"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.095000"
+        }
+       ]
+      },
+      {
+       "mark": "C3",
+       "engine_m3": "0.420000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.050000",
+         "note": "at D_low 0.50 (BM-1F-003; BM-1F-031, printed); D_ctrl open on framing member BM-1F-031 (CB10, CONFLICT width only), BM-1F-034 (unlabelled, HELD); controlling depth changes: BM-1F-034 depth not printed: lower end",
+         "member": "FFRS:68B"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.025000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:68B",
+         "open_below": true
+        },
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "-0.345000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.345000"
+        }
+       ]
+      },
+      {
+       "mark": "C4",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.690000"
+        }
+       ]
+      },
+      {
+       "mark": "C5",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "terms": [
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.035000"
+        }
+       ]
+      },
+      {
+       "mark": "C6",
+       "engine_m3": "0",
+       "in_measured_set": false,
+       "terms": []
+      },
+      {
+       "mark": "C7",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 1,
+        "registered_members": 1,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": true,
+        "his_storey_rows_below_drawn": false
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "-0.552000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.552000"
+        }
+       ]
+      },
+      {
+       "mark": "C8",
+       "engine_m3": "0.756000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.135000",
+         "note": "at D_low 0.75 (BM-1F-017, printed); D_ctrl open on framing member BM-1F-037 (unlabelled rounded box outside CB12, HELD); controlling depth changes: BM-1F-037 depth not printed: lower end",
+         "member": "FFRS:664"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:664",
+         "open_below": true
+        },
+        {
+         "term": "COUNT",
+         "class": "CONFLICT_BOUNDED",
+         "m3": "0.621000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-0.621000"
+        }
+       ]
+      },
+      {
+       "mark": "C9",
+       "engine_m3": "0.000000",
+       "in_measured_set": false,
+       "count_evidence": {
+        "drawn_own_members": 2,
+        "registered_members": 2,
+        "his_storey_rows_exceed_his_neck_rows_of_mark": false,
+        "his_storey_rows_below_drawn": true
+       },
+       "terms": [
+        {
+         "term": "COUNT",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.690000"
+        },
+        {
+         "term": "HELD",
+         "class": "HELD",
+         "m3": "-1.380000"
+        }
+       ]
+      },
+      {
+       "mark": "P.C 20x50",
+       "engine_m3": "0.420000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.075000",
+         "note": "at D_low 0.75 (BM-1F-017; BM-1F-023, printed); D_ctrl open on planted on B26 (p.4 leader \"P.C 20x50 8%%c16\"): lower end",
+         "member": "FFRS:69D"
+        },
+        {
+         "term": "GLOBAL_DEPTH",
+         "class": "ENGINE_RIGHT",
+         "m3": "0.000000",
+         "note": "upper end; lower open (<= this) by the unprinted framing depth",
+         "member": "FFRS:69D",
+         "open_below": true
+        }
+       ]
+      },
+      {
+       "mark": "P.C 20x70",
+       "engine_m3": "0.588000",
+       "in_measured_set": true,
+       "terms": [
+        {
+         "term": "JOINT_HEAD",
+         "class": "RULE_DIFFERENCE",
+         "m3": "0.105000"
+        }
+       ]
+      }
+     ],
+     "measured_set": {
+      "marks": [
+       "C1",
+       "C2",
+       "P.C 20x50",
+       "P.C 20x70"
+      ],
+      "engine_m3": "3.108000",
+      "his_m3": "2.553000",
+      "diff_m3": "0.555000",
+      "pct": "21.74",
+      "by_class_m3": {
+       "RULE_DIFFERENCE": "0.460000",
+       "ENGINE_RIGHT": "0.095000"
+      },
+      "net_of_rule_difference_m3": "0.095000",
+      "net_of_rule_difference_pct": "3.72",
+      "open_counter_terms": [
+       {
+        "member": "FFRS:69D",
+        "m3_upper": "0.000000"
+       }
+      ]
+     },
+     "his_head_depth_m": "0.750000",
+     "storey_term_m3": "0.000000",
+     "storey_interval_m": "4.20"
+    },
+    "planted_1F_outlines_not_on_a_position": 2
+   }
+  }
+ ],
+ "beam_gf_b7": {
+  "mark": "GF B7",
+  "mark_residual_m3": "-0.354452",
+  "t545_split_m3": {
+   "THROUGH_SUPPORT": "-0.234000",
+   "UNTRACED": "-0.120452"
+  },
+  "his_longer_by_m": "2.363013",
+  "allowance_t545_m": "1.550000",
+  "t545_reclass_check": "BEYOND_ALLOWANCE",
+  "allowance_complete_m": "3.550000",
+  "missing_end_records": [],
+  "result": {
+   "class": "THROUGH_SUPPORT",
+   "THROUGH_SUPPORT_m3": "-0.354452",
+   "UNTRACED_m3": "0.000000",
+   "verdict": "RULE_DIFFERENCE (THROUGH_SUPPORT: his B7 lengths run into the carriers that close the curved pieces; the engine bills each crossing once, the carrier owns it)"
+  },
+  "ring_equivalent_length_m": "3.332030",
+  "sensitivity_ring_carriers": {
+   "CB1 ends only": {
+    "allowance_m": "2.250000",
+    "class": "BEYOND_ALLOWANCE",
+    "untraced_m3": "-0.015452"
+   },
+   "CB1 + B8 ends": {
+    "allowance_m": "2.650000",
+    "class": "THROUGH_SUPPORT",
+    "untraced_m3": "0.000000"
+   },
+   "CB1 + B17 ends": {
+    "allowance_m": "3.150000",
+    "class": "THROUGH_SUPPORT",
+    "untraced_m3": "0.000000"
+   }
+  },
+  "not_apportioned": "his two B7 rows carry no location: the excess is inside the drawn allowance, not bound to a crossing; GF-112 (held) and the outer-face arc reading are listed beside",
+  "pieces": [
+   {
+    "piece": "GF:BAND0025.1 (straight)",
+    "L_m": "1.2",
+    "source": "T-229 ends 33E / 341 (COLUMN_BELOW)",
+    "ends": [
+     {
+      "kind": "COLUMN",
+      "member": "33E",
+      "width_m": "0.5"
+     },
+     {
+      "kind": "COLUMN",
+      "member": "341",
+      "width_m": "0.5"
+     }
+    ]
+   },
+   {
+    "piece": "GF:BAND0006 (straight, face 437)",
+    "L_m": "1.7",
+    "source": "T-229 ends BAND0003 / BAND0041.2 (BEAM)",
+    "ends": [
+     {
+      "kind": "CARRIER",
+      "member": "B8 BAND0003",
+      "width_m": "0.2"
+     },
+     {
+      "kind": "CARRIER",
+      "member": "CB1 BAND0041.2",
+      "width_m": "0.35"
+     }
+    ]
+   },
+   {
+    "piece": "GF:BAND0049 (quarter arc R 1.10 / 1.30)",
+    "L_m": "1.884953",
+    "source": "no T-229 end record (curved); drawn: end 0 deg closed by line 484 against the HELD unlabelled piece GF-112 (BM-GF-062, 0.20 x 0.50, D-04) in line with B4 up to column 353; end 90 deg collinear with B2 BAND0027 (same faces, mark boundary)",
+    "ends": [
+     {
+      "kind": "COLLINEAR_OTHER_MARK",
+      "member": "B2 BAND0027",
+      "width_m": "0"
+     },
+     {
+      "kind": "COLLINEAR_OTHER_MARK",
+      "member": "GF-112 (held, unlabelled; beside, never in the allowance)",
+      "width_m": "0"
+     }
+    ],
+    "beside": [
+     {
+      "member": "GF-112",
+      "length_m": "0.5",
+      "status": "HELD D-04"
+     },
+     {
+      "member": "outer-face arc 29F",
+      "length_m": "0.157080",
+      "status": "CURVE_FACE reading (R 1.30 vs 1.20)"
+     }
+    ]
+   },
+   {
+    "piece": "RING-B7 NW arc (2EE)",
+    "L_m": null,
+    "source": "T-252 r2 ring outline; T-392 s.1",
+    "ends": [
+     {
+      "kind": "SAME_MARK",
+      "member": "B7 face 437",
+      "width_m": "0"
+     },
+     {
+      "kind": "CARRIER",
+      "member": "B8 face 46D (BAND0003)",
+      "width_m": "0.2"
+     }
+    ]
+   },
+   {
+    "piece": "RING-B7 SW arc (2EF)",
+    "L_m": null,
+    "source": "T-252 r2 ring outline; T-392 s.1",
+    "ends": [
+     {
+      "kind": "CARRIER",
+      "member": "B8 face 46D (BAND0003)",
+      "width_m": "0.2"
+     },
+     {
+      "kind": "CARRIER",
+      "member": "B17 face 42D (BAND0044.1)",
+      "width_m": "0.45"
+     }
+    ]
+   },
+   {
+    "piece": "RING-B7 SE arc (312)",
+    "L_m": null,
+    "source": "T-252 r2 ring outline; T-392 s.1",
+    "ends": [
+     {
+      "kind": "CARRIER",
+      "member": "B17 face 42D (BAND0044.1)",
+      "width_m": "0.45"
+     },
+     {
+      "kind": "CARRIER",
+      "member": "CB1 face 2A9 (BAND0041.2)",
+      "width_m": "0.35"
+     }
+    ]
+   },
+   {
+    "piece": "RING-B7 NE arc (313)",
+    "L_m": null,
+    "source": "T-252 r2 ring outline; T-392 s.1",
+    "ends": [
+     {
+      "kind": "CARRIER",
+      "member": "CB1 face 2A9 (BAND0041.2)",
+      "width_m": "0.35"
+     },
+     {
+      "kind": "SAME_MARK",
+      "member": "B7 face 437",
+      "width_m": "0"
+     }
+    ]
+   }
+  ]
+ }
+}

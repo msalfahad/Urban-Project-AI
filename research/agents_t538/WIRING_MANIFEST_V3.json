@@ -1,0 +1,2343 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (T-507 c94b35c1: V3.0.57 line index 25a8b406, 4,994 lines byte-identical, + 5 FIN.WP.ROOF / ROOF_UPTURN lines = 4,999)",
+ "candidate_files_touched": 0,
+ "candidate_lines_moved_v2_to_v3": 0,
+ "end_census_v3": {
+  "candidate_lines_moved": 0,
+  "end_junctions_by_class": {
+   "BEAM-END_COLUMN": 11,
+   "BEAM-PARTIAL_COLUMN": 1,
+   "FACE-END_COLUMN": 1
+  },
+  "interior_listed_by_class": {
+   "BEAM-COLUMN": 57,
+   "COLUMN-BEAM": 52,
+   "COLUMN-FACE": 5,
+   "COLUMN-NONE": 1,
+   "FACE-COLUMN": 3
+  },
+  "interior_vs_t355": {
+   "RUN NOT IN LEDGER": 1,
+   "YES": 117
+  },
+  "perimeter_1F_W09": {
+   "after_m3": 0.010355,
+   "host_line": "L-10dd62f66ad05488e63b",
+   "perimeter_line": "NEW (S package assigns)",
+   "state": "UNCHANGED V2 -> V3 (T-532 re-reads the same end: one write)"
+  },
+  "rule": "R-T532-1 COLUMN_END_CENSUS_V3: junctions read on the ledger's own piece kinds by plan role (BEAM / FACE / NONE / BLOCK = masonry, COLUMN / ST_COLUMN = concrete, any other kind HELD by name); end classes from R-T526-1 unchanged",
+  "set_equal_to_t526": {
+   "held_n": 1,
+   "listed_n": 12
+  },
+  "source": [
+   {
+    "checker": "Verifier 2026-11-05T19:55Z GATE A PASS a-h: 12 + 1 ends set-equal to T-526, 117 / 117 interior junctions AGREE; F-C-T532-1 sub-5 mm slivers (GF-W10 end 1, 1F-W09 piece 1)",
+    "merge": "ba9eba77",
+    "task": "T-532"
+   }
+  ],
+  "ties_and_mesh": {
+   "d_mesh_drawing_ml": 44.1,
+   "d_mesh_owner_ml": 40.9,
+   "d_ties_nr": 30.0,
+   "state": "NO LINE: still no tie / crack-mesh line in V3.0.58 or the T-498 stage; the ends are now wireable without raising (T-532); ledger versions and the line family are T-539"
+  }
+ },
+ "findings": [
+  "F-C-T536-1 closed: the t536 unmerged-source case runs on a synthetic repository (T-538)",
+  "F-C-T532-1 closed as a check: R-T538-1 (head from the adjacent full piece or HELD); see sliver_check",
+  "F-T538-1: no candidate STR.REBAR line carries lintel bars: the S package ADDS two HELD AT_LEAST lines (PRODUCED / FLAGGED), never one summed value",
+  "F-T538-2: ties +30 nr / mesh +40.90 m.l (owner band) / +44.10 (drawing band) still no line (T-539)"
+ ],
+ "inputs": {
+  "research/agents_t274/T274_RUN_PIECES.csv": "c6d6a496e6beecacc057f7566f77c1fc7dc13395dfa341572e1e926b0eefe9f7",
+  "research/agents_t520/out/SUMMARY_T520.json": "273bce55b773450c0f635f26688b4677756787ac771827d369e0c7f79012f4f0",
+  "research/agents_t531/out/LINTEL_BARS_T531.json": "6950e5f9aa4f0a43c3b8fb5851151a0b276fdde49a84dd00baafc72b4a3b6d4c",
+  "research/agents_t532/out/JUNCTIONS_V3_T532.csv": "7482a49d886f41be31648513080745ed6c24f9578d2ac7a0d231b66004971c95",
+  "research/agents_t532/out/KIND_MAP_T532.csv": "e4f681cd5478f0c028d7666dab7663a754eb9f161fcac29e3bf5f8eb5ddf9574",
+  "research/agents_t532/out/SUMMARY_T532.json": "c275647f5b3dfbea881f61604c3b06c8a1a5d4686dfe3165d2ed800a3f74719d",
+  "research/agents_t535/out/SAND_PROCUREMENT_T535.json": "68fa293171b77af6924e134211b89946cf75aad02ffe902bc03151310d850d90",
+  "research/agents_t536/WIRING_MANIFEST_V2.json": "305c2cf0c712824ea3cd6ceaa7aee2781642deb0274d193554c846d49febacf3",
+  "research/agents_t540/out/SAND_LOAD_DENSITY_T540.json": "1062cf41a769eb7465e753065587ced3399716429e01ba6fcdcd52be2ead3527"
+ },
+ "lintel_bars": {
+  "added_lines": [
+   {
+    "after": {
+     "ceiling_held_on": [
+      "D-2F-01"
+     ],
+     "class": "HELD",
+     "held_high": null,
+     "held_low": 38.761728,
+     "held_parts": [
+      "B1 BEND_END",
+      "B1 BEND_START",
+      "B1 EXTENSION_END",
+      "B1 EXTENSION_START",
+      "B1 LAPS",
+      "S1 LINKS",
+      "T1 BEND_END",
+      "T1 BEND_START",
+      "T1 EXTENSION_END",
+      "T1 EXTENSION_START",
+      "T1 LAPS"
+     ],
+     "links_count_lo_beside": 65,
+     "state": "AT_LEAST",
+     "straight_ceiling_kg_beside": 85.080148,
+     "value": null
+    },
+    "before": null,
+    "element_id": "LINTEL_BARS:PRODUCED",
+    "evidence_status": "DRAWING-CONFIRMED span (ST7757 p.13 schedule); extensions / bends / laps / links HELD (no cover, bend, hook or first-link printed: designer RFI)",
+    "item_code": "STR.REBAR",
+    "line_id": "NEW:STR.REBAR:LINTEL_BARS:PRODUCED",
+    "lintel_lines": [
+     "L-6aa750fb944ad58ce960",
+     "L-10f18635f68cfd8cdd1d",
+     "L-a58aabc436c71d85bea3",
+     "L-31232f81202941d104c6",
+     "L-fd9eabe1828ed735c43d",
+     "L-55cfc2395aca2e0c69e3"
+    ],
+    "lintels": [
+     "D-1F-02",
+     "D-1F-08",
+     "D-2F-01",
+     "D-GF-13",
+     "W14",
+     "W15"
+    ],
+    "owner_trade": "B9-02 RC lintel reinforcement (STR.REBAR)",
+    "rules": [
+     "R-T531-1",
+     "R-T515-1"
+    ],
+    "source": [
+     {
+      "checker": "Verifier 2026-11-05T18:05Z GATE A PASS a-h (own re-measure ST7757); freelancer lintel bars UNRESOLVED (no row); RFI lintel cover / bend / anchorage stands",
+      "merge": "d9051cce",
+      "task": "T-531"
+     }
+    ],
+    "unit": "kg"
+   },
+   {
+    "after": {
+     "ceiling_held_on": [
+      "D-GF-12"
+     ],
+     "class": "HELD",
+     "held_high": null,
+     "held_low": 24.301496,
+     "held_parts": [
+      "B1 BEND_END",
+      "B1 BEND_START",
+      "B1 EXTENSION_END",
+      "B1 EXTENSION_START",
+      "B1 LAPS",
+      "S1 LINKS",
+      "T1 BEND_END",
+      "T1 BEND_START",
+      "T1 EXTENSION_END",
+      "T1 EXTENSION_START",
+      "T1 LAPS"
+     ],
+     "links_count_lo_beside": 59,
+     "state": "AT_LEAST",
+     "straight_ceiling_kg_beside": 69.534578,
+     "value": null
+    },
+    "before": null,
+    "element_id": "LINTEL_BARS:FLAGGED",
+    "evidence_status": "DRAWING-CONFIRMED span (ST7757 p.13 schedule); extensions / bends / laps / links HELD (no cover, bend, hook or first-link printed: designer RFI)",
+    "item_code": "STR.REBAR",
+    "line_id": "NEW:STR.REBAR:LINTEL_BARS:FLAGGED",
+    "lintel_lines": [
+     "L-8b978b48668cde0f1b0c",
+     "L-183f52083e693bdf8671",
+     "L-3111418b702ac80f0ade",
+     "L-befb0beb1707ef192326",
+     "L-a0518076a024ab1be082",
+     "L-7a73a338210ee7268b65",
+     "L-7149ea268473ea337cd2",
+     "L-093df4d00eb35db3a4c0",
+     "L-3bdff145e1546ac48f8e",
+     "L-f8736409a6afa1424ea9"
+    ],
+    "lintels": [
+     "D-1F-03",
+     "D-1F-04",
+     "D-1F-07",
+     "D-1F-10",
+     "D-2F-03",
+     "D-GF-06",
+     "D-GF-10",
+     "D-GF-11",
+     "D-GF-12",
+     "W18"
+    ],
+    "owner_trade": "B9-02 RC lintel reinforcement (STR.REBAR)",
+    "rules": [
+     "R-T531-1",
+     "R-T515-1"
+    ],
+    "source": [
+     {
+      "checker": "Verifier 2026-11-05T18:05Z GATE A PASS a-h (own re-measure ST7757); freelancer lintel bars UNRESOLVED (no row); RFI lintel cover / bend / anchorage stands",
+      "merge": "d9051cce",
+      "task": "T-531"
+     }
+    ],
+    "unit": "kg"
+   }
+  ],
+  "candidate_lines_carrying_lintel_bars": [],
+  "code_view": {
+   "STR.REBAR held_lines_added": 2,
+   "STR.REBAR lines_added": 2,
+   "STR.REBAR released_change_kg": 0.0
+  },
+  "freelancer": {
+   "verdict": "UNRESOLVED",
+   "why": "the freelancer RC workbook has one project rebar total and no lintel row: no element figure to compare"
+  },
+  "never_summed": "two parts, each AT_LEAST: no single line value while any part is HELD (T-531 line note)",
+  "rule": "R-T531-1",
+  "t515_to_t531": {
+   "cause": [
+    {
+     "cause": "span strip inside the column outline is not the lintel's own span",
+     "delta_kg": -0.098504,
+     "lintel": "W18"
+    }
+   ],
+   "delta_kg": -0.098504,
+   "t515_at_least_kg": 63.161728,
+   "t531_at_least_kg": 63.063225
+  }
+ },
+ "not_sources": {
+  "T-498": "agents/task-T-498 @ e3e2ebb5 stage (BLOCKED on the wrapper allow-list): line ids only, no figure read",
+  "T-534": "READY f97634e0 (Gate A PASS 18:05, merge-blocked by F-C-T536-1 until T-538): not a source in this tree",
+  "T-537": "TODO r2 (R-T498-2 ranged host faces, REJECTED 19:56 on one binding): not a source"
+ },
+ "pieces_new": {
+  "T-531": {
+   "gate": "A",
+   "merge": "d9051cce",
+   "rules": [
+    "R-T531-1"
+   ],
+   "verdict": "Verifier 2026-11-05T18:05Z GATE A PASS a-h (own re-measure ST7757); freelancer lintel bars UNRESOLVED (no row); RFI lintel cover / bend / anchorage stands"
+  },
+  "T-532": {
+   "gate": "A",
+   "merge": "ba9eba77",
+   "rules": [
+    "R-T532-1"
+   ],
+   "verdict": "Verifier 2026-11-05T19:55Z GATE A PASS a-h: 12 + 1 ends set-equal to T-526, 117 / 117 interior junctions AGREE; F-C-T532-1 sub-5 mm slivers (GF-W10 end 1, 1F-W09 piece 1)"
+  },
+  "T-535": {
+   "gate": "A",
+   "merge": "c4a34358",
+   "rules": [
+    "R-T535-1",
+    "R-T535-2",
+    "R-T535-3",
+    "R-T535-4"
+   ],
+   "verdict": "Verifier 2026-11-05T19:00Z GATE A PASS a-h: sand unit loose m3, pack / density HELD; FX-535 hand-checked"
+  },
+  "T-536": {
+   "gate": "A",
+   "merge": "5953b91f",
+   "rules": [],
+   "verdict": "Verifier 2026-11-05T18:05Z GATE A PASS a-h: WIRING MANIFEST V2; F-C-T536-1 (fixed by T-538)"
+  },
+  "T-540": {
+   "gate": "A",
+   "merge": "509deaf7",
+   "rules": [
+    "R-T540-1",
+    "R-T540-2",
+    "R-T540-3",
+    "R-T540-4"
+   ],
+   "verdict": "Verifier 2026-11-05T21:05Z GATE A PASS: sand load size and bulk density both HELD"
+  }
+ },
+ "released_quantities_changed": 0,
+ "sand": {
+  "binding_group": {
+   "after_t535_at_least_m3": [
+    17.746996,
+    23.44904
+   ],
+   "allowance_beside": "PRELIMINARY PURCHASING allowance (UP-STAIR-017 / Q-53: about 10 bags + 1.00 m3 per m3), a separate layer: never the theoretical quantity, never summed into procurement or the to-buy",
+   "before_t523_at_least_m3": [
+    17.588682,
+    23.290726
+   ],
+   "cause": [
+    {
+     "after_m3": [
+      1.113294,
+      1.113294
+     ],
+     "before_m3": [
+      1.062939,
+      1.062939
+     ],
+     "rule": "R-T535-2 (rounded-rate allowance is a layer, never procurement)",
+     "what": "stair bed members: procurement = V7 installed x (1 + Q-45 5 %)"
+    },
+    {
+     "rule": "R-T535-1 / R-T523-1",
+     "what": "T-520 perimeter joint key joins the group (own key, absent from T-523)"
+    }
+   ],
+   "delta_m3": [
+    0.158314,
+    0.158314
+   ],
+   "key": "SAND_LOOSE",
+   "members": 250,
+   "open_members": 194,
+   "status": "HELD",
+   "unit": "m3 loose (the volume the owner per-m3 rates give)",
+   "villa": "TRAINING_VILLA"
+  },
+  "candidate_lines_moved": 0,
+  "candidate_sand_lines": [],
+  "loads": "HELD: SAND_LOAD_SIZE_NOT_SOURCED",
+  "source": [
+   {
+    "checker": "Verifier 2026-11-05T19:00Z GATE A PASS a-h: sand unit loose m3, pack / density HELD; FX-535 hand-checked",
+    "merge": "c4a34358",
+    "task": "T-535"
+   },
+   {
+    "checker": "Verifier 2026-11-05T21:05Z GATE A PASS: sand load size and bulk density both HELD",
+    "merge": "509deaf7",
+    "task": "T-540"
+   }
+  ],
+  "state": "NO LINE: sand is a material-group key (T-523 binding), not a candidate line; the group stays AT_LEAST / HELD (194 open members); to-buy loads and tonnes HELD (pack / density unsourced)",
+  "tonnes": "HELD: SAND_BULK_DENSITY_NOT_SOURCED"
+ },
+ "schema": "URBAN_T538_WIRING_MANIFEST_V3",
+ "sliver_check": {
+  "by_state": {
+   "FROM_ADJACENT_CHANGED": 4,
+   "FROM_ADJACENT_SAME": 53,
+   "HELD": 0,
+   "OWN": 73
+  },
+  "checker_5mm_vs_joint": {
+   "classified_differently": 0,
+   "rows": [],
+   "threshold_m": 0.005
+  },
+  "joint_m": 0.01,
+  "junctions_listed": 130,
+  "quantity_effect": "none: no wired or proposed figure in this manifest uses a junction head; the head is the input the T-539 tie / mesh ledgers and the S package read",
+  "rule": "R-T538-1 (every villa; provenance F-C-T532-1, T-538): a masonry piece of a run census shorter than one bed / perimeter joint (j, the joint the perimeter ledger uses: R-T520-1, owner provisional 10 mm where no drawing prints one) holds no block unit, so it carries no joint head of its own. The head of a junction on such a piece is the head of the nearest full masonry piece of the same run on the far side from the column (walking only across masonry slivers); if a concrete piece or the run end comes first, the head is HELD by name. Never a guessed or default head; a sliver head is refused.",
+  "sliver_junctions": [
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.5",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B4",
+     "member_id": "BM-1F-003",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.000611,
+    "run": "1F|WB-FL0002-FL0003",
+    "sliver": {
+     "len_m": 0.000611,
+     "own_fields": {
+      "depth_m": "0.5",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B4",
+      "member_id": "BM-1F-003",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W06"
+   },
+   {
+    "at": "piece 3/4",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.5",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B4",
+     "member_id": "BM-1F-003",
+     "slab_t_m": null
+    },
+    "masonry_piece": 3,
+    "piece": 2,
+    "piece_len_m": 0.00102,
+    "run": "1F|WB-FL0002-FL0003",
+    "sliver": {
+     "len_m": 0.00102,
+     "own_fields": {
+      "depth_m": "0.5",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B4",
+      "member_id": "BM-1F-003",
+      "slab_t_m": null
+     },
+     "piece": 3
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W06"
+   },
+   {
+    "at": "piece 4/5",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB11",
+     "member_id": "BM-1F-023",
+     "slab_t_m": null
+    },
+    "masonry_piece": 5,
+    "piece": 6,
+    "piece_len_m": 0.00088,
+    "run": "1F|WB-FL0002-FL0003",
+    "sliver": {
+     "len_m": 0.00088,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB11",
+      "member_id": "BM-1F-023",
+      "slab_t_m": null
+     },
+     "piece": 5
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W06"
+   },
+   {
+    "at": "piece 9/10",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB11",
+     "member_id": "BM-1F-023",
+     "slab_t_m": null
+    },
+    "masonry_piece": 10,
+    "piece": 11,
+    "piece_len_m": 0.001011,
+    "run": "1F|WB-FL0002-FL0003",
+    "sliver": {
+     "len_m": 0.001011,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB11",
+      "member_id": "BM-1F-023",
+      "slab_t_m": null
+     },
+     "piece": 10
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W06"
+   },
+   {
+    "at": "piece 2/3",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B7",
+     "member_id": "BM-1F-007",
+     "slab_t_m": null
+    },
+    "masonry_piece": 2,
+    "piece": 1,
+    "piece_len_m": 0.000139,
+    "run": "1F|WB-FL0016-FL0018",
+    "sliver": {
+     "len_m": 0.000139,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B7",
+      "member_id": "BM-1F-007",
+      "slab_t_m": null
+     },
+     "piece": 2
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W07"
+   },
+   {
+    "at": "piece 1/2",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B23",
+     "member_id": "BM-1F-026",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 0,
+    "piece_len_m": 0.000589,
+    "run": "1F|WB-FL0020-FL0021",
+    "sliver": {
+     "len_m": 0.000589,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B23",
+      "member_id": "BM-1F-026",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W08"
+   },
+   {
+    "at": "piece 2/3",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B23",
+     "member_id": "BM-1F-026",
+     "slab_t_m": null
+    },
+    "masonry_piece": 3,
+    "piece": 4,
+    "piece_len_m": 3.4e-05,
+    "run": "1F|WB-FL0020-FL0021",
+    "sliver": {
+     "len_m": 3.4e-05,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B23",
+      "member_id": "BM-1F-026",
+      "slab_t_m": null
+     },
+     "piece": 3
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W08"
+   },
+   {
+    "at": "piece 1/2",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B1",
+     "member_id": "BM-1F-013",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 0,
+    "piece_len_m": 0.000189,
+    "run": "1F|WB-FL0024-FL0025",
+    "sliver": {
+     "len_m": 0.000189,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B1",
+      "member_id": "BM-1F-013",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W09"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B3",
+     "member_id": "BM-1F-001",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.000511,
+    "run": "1F|WB-FL0030-FL0031",
+    "sliver": {
+     "len_m": 0.000511,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B3",
+      "member_id": "BM-1F-001",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W10"
+   },
+   {
+    "at": "piece 3/4",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B3",
+     "member_id": "BM-1F-001",
+     "slab_t_m": null
+    },
+    "masonry_piece": 3,
+    "piece": 2,
+    "piece_len_m": 0.000889,
+    "run": "1F|WB-FL0030-FL0031",
+    "sliver": {
+     "len_m": 0.000889,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B3",
+      "member_id": "BM-1F-001",
+      "slab_t_m": null
+     },
+     "piece": 3
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W10"
+   },
+   {
+    "at": "piece 6/7",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.5",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB9",
+     "member_id": "BM-1F-002",
+     "slab_t_m": null
+    },
+    "masonry_piece": 6,
+    "piece": 5,
+    "piece_len_m": 0.000389,
+    "run": "1F|WB-FL0030-FL0031",
+    "sliver": {
+     "len_m": 0.000389,
+     "own_fields": {
+      "depth_m": "0.5",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB9",
+      "member_id": "BM-1F-002",
+      "slab_t_m": null
+     },
+     "piece": 6
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W10"
+   },
+   {
+    "at": "piece 9/10",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.5",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB9",
+     "member_id": "BM-1F-002",
+     "slab_t_m": null
+    },
+    "masonry_piece": 9,
+    "piece": 8,
+    "piece_len_m": 0.000789,
+    "run": "1F|WB-FL0030-FL0031",
+    "sliver": {
+     "len_m": 0.000789,
+     "own_fields": {
+      "depth_m": "0.5",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB9",
+      "member_id": "BM-1F-002",
+      "slab_t_m": null
+     },
+     "piece": 9
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W10"
+   },
+   {
+    "at": "piece 12/13",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.5",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB9",
+     "member_id": "BM-1F-002",
+     "slab_t_m": null
+    },
+    "masonry_piece": 12,
+    "piece": 11,
+    "piece_len_m": 0.000289,
+    "run": "1F|WB-FL0030-FL0031",
+    "sliver": {
+     "len_m": 0.000289,
+     "own_fields": {
+      "depth_m": "0.5",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB9",
+      "member_id": "BM-1F-002",
+      "slab_t_m": null
+     },
+     "piece": 12
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W10"
+   },
+   {
+    "at": "piece 1/2",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB12",
+     "member_id": "BM-1F-017",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 0,
+    "piece_len_m": 0.000356,
+    "run": "1F|WB-FL0041-FL0042#2",
+    "sliver": {
+     "len_m": 0.000356,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB12",
+      "member_id": "BM-1F-017",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W01"
+   },
+   {
+    "at": "piece 6/7",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.5",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B5",
+     "member_id": "BM-1F-015",
+     "slab_t_m": null
+    },
+    "masonry_piece": 6,
+    "piece": 5,
+    "piece_len_m": 0.000356,
+    "run": "1F|WB-FL0046-FL0047",
+    "sliver": {
+     "len_m": 0.000356,
+     "own_fields": {
+      "depth_m": "0.5",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B5",
+      "member_id": "BM-1F-015",
+      "slab_t_m": null
+     },
+     "piece": 6
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W18"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B1",
+     "member_id": "BM-1F-008",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.000544,
+    "run": "1F|WB-FL0059-FL0061",
+    "sliver": {
+     "len_m": 0.000544,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B1",
+      "member_id": "BM-1F-008",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W02"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B7",
+     "member_id": "BM-1F-012",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.000444,
+    "run": "1F|WB-FL0068-FL0070",
+    "sliver": {
+     "len_m": 0.000444,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B7",
+      "member_id": "BM-1F-012",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W03"
+   },
+   {
+    "at": "piece 3/4",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B2",
+     "member_id": "BM-1F-011",
+     "slab_t_m": null
+    },
+    "masonry_piece": 4,
+    "piece": 5,
+    "piece_len_m": 0.000444,
+    "run": "1F|WB-FL0068-FL0070",
+    "sliver": {
+     "len_m": 0.000444,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B2",
+      "member_id": "BM-1F-011",
+      "slab_t_m": null
+     },
+     "piece": 4
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W03"
+   },
+   {
+    "at": "piece 1/2",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.5",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB13",
+     "member_id": "BM-1F-022",
+     "slab_t_m": null
+    },
+    "masonry_piece": 2,
+    "piece": 3,
+    "piece_len_m": 4.4e-05,
+    "run": "1F|WB-FL0074-FL0075",
+    "sliver": {
+     "len_m": 4.4e-05,
+     "own_fields": {
+      "depth_m": "0.5",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB13",
+      "member_id": "BM-1F-022",
+      "slab_t_m": null
+     },
+     "piece": 2
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W23"
+   },
+   {
+    "at": "piece 2/3",
+    "class": "COLUMN-FACE",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B2",
+     "member_id": "BM-1F-006",
+     "slab_t_m": null
+    },
+    "masonry_piece": 3,
+    "piece": 4,
+    "piece_len_m": 0.000444,
+    "run": "1F|WB-FL0074-FL0076",
+    "sliver": {
+     "len_m": 0.000444,
+     "own_fields": {
+      "depth_m": null,
+      "face_cls": "STAIR",
+      "face_id": "1F-016",
+      "kind": "FACE",
+      "mark": null,
+      "member_id": null,
+      "slab_t_m": null
+     },
+     "piece": 3
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_CHANGED",
+    "wall": "1F-W04"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": null,
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB10",
+     "member_id": "BM-1F-031",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 4.4e-05,
+    "run": "1F|WB-FL0082-FL0083",
+    "sliver": {
+     "len_m": 4.4e-05,
+     "own_fields": {
+      "depth_m": null,
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB10",
+      "member_id": "BM-1F-031",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "1F-W05"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B2",
+     "member_id": "BM-2F-008",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.000517,
+    "run": "2F|WB-FL0004-FL0005",
+    "sliver": {
+     "len_m": 0.000517,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B2",
+      "member_id": "BM-2F-008",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "2F-W00"
+   },
+   {
+    "at": "end 0",
+    "class": "BEAM-END_COLUMN",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B1",
+     "member_id": "BM-2F-014",
+     "slab_t_m": null
+    },
+    "masonry_piece": 0,
+    "piece": 1,
+    "piece_len_m": 0.000417,
+    "run": "2F|WB-FL0006-FL0007",
+    "sliver": {
+     "len_m": 0.000417,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B1",
+      "member_id": "BM-2F-014",
+      "slab_t_m": null
+     },
+     "piece": 0
+    },
+    "source": "V3_END",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "2F-W01"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B3",
+     "member_id": "BM-2F-001",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.000517,
+    "run": "2F|WB-FL0010-FL0011",
+    "sliver": {
+     "len_m": 0.000517,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B3",
+      "member_id": "BM-2F-001",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "2F-W02"
+   },
+   {
+    "at": "piece 3/4",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B3",
+     "member_id": "BM-2F-001",
+     "slab_t_m": null
+    },
+    "masonry_piece": 3,
+    "piece": 2,
+    "piece_len_m": 8.3e-05,
+    "run": "2F|WB-FL0010-FL0011",
+    "sliver": {
+     "len_m": 8.3e-05,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B3",
+      "member_id": "BM-2F-001",
+      "slab_t_m": null
+     },
+     "piece": 3
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "2F-W02"
+   },
+   {
+    "at": "piece 4/5",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B8",
+     "member_id": "BM-2F-002",
+     "slab_t_m": null
+    },
+    "masonry_piece": 5,
+    "piece": 6,
+    "piece_len_m": 0.000317,
+    "run": "2F|WB-FL0010-FL0011",
+    "sliver": {
+     "len_m": 0.000317,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B8",
+      "member_id": "BM-2F-002",
+      "slab_t_m": null
+     },
+     "piece": 5
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "2F-W02"
+   },
+   {
+    "at": "piece 7/8",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": null,
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "(none)",
+     "member_id": "BM-2F-015",
+     "slab_t_m": null
+    },
+    "masonry_piece": 8,
+    "piece": 9,
+    "piece_len_m": 0.000367,
+    "run": "2F|WB-FL0010-FL0011",
+    "sliver": {
+     "len_m": 0.000367,
+     "own_fields": {
+      "depth_m": null,
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "(none)",
+      "member_id": "BM-2F-015",
+      "slab_t_m": null
+     },
+     "piece": 8
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "2F-W02"
+   },
+   {
+    "at": "piece 1/2",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": null,
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "(none)",
+     "member_id": "BM-2F-017",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 0,
+    "piece_len_m": 0.000256,
+    "run": "2F|WB-FL0024-FL0026",
+    "sliver": {
+     "len_m": 0.000256,
+     "own_fields": {
+      "depth_m": null,
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "(none)",
+      "member_id": "BM-2F-017",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "2F-W05"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B1",
+     "member_id": "BM-2F-013",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.000244,
+    "run": "2F|WB-FL0031-FL0032",
+    "sliver": {
+     "len_m": 0.000244,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B1",
+      "member_id": "BM-2F-013",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "2F-W06"
+   },
+   {
+    "at": "piece 5/6",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B3",
+     "member_id": "BM-2F-012",
+     "slab_t_m": null
+    },
+    "masonry_piece": 5,
+    "piece": 4,
+    "piece_len_m": 0.000556,
+    "run": "2F|WB-FL0031-FL0032",
+    "sliver": {
+     "len_m": 0.000556,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B3",
+      "member_id": "BM-2F-012",
+      "slab_t_m": null
+     },
+     "piece": 5
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "2F-W06"
+   },
+   {
+    "at": "piece 1/2",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": null,
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "(none)",
+     "member_id": "BM-2F-016",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 0,
+    "piece_len_m": 5.6e-05,
+    "run": "2F|WB-FL0035-FL0036",
+    "sliver": {
+     "len_m": 5.6e-05,
+     "own_fields": {
+      "depth_m": null,
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "(none)",
+      "member_id": "BM-2F-016",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "2F-W07"
+   },
+   {
+    "at": "piece 4/5",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "1.2",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B15",
+     "member_id": "BM-2F-007",
+     "slab_t_m": null
+    },
+    "masonry_piece": 4,
+    "piece": 3,
+    "piece_len_m": 0.000656,
+    "run": "2F|WB-FL0035-FL0036",
+    "sliver": {
+     "len_m": 0.000656,
+     "own_fields": {
+      "depth_m": "1.2",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B15",
+      "member_id": "BM-2F-007",
+      "slab_t_m": null
+     },
+     "piece": 4
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "2F-W07"
+   },
+   {
+    "at": "piece 3/4",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB8",
+     "member_id": "BM-GF-041",
+     "slab_t_m": null
+    },
+    "masonry_piece": 4,
+    "piece": 5,
+    "piece_len_m": 0.000905,
+    "run": "GF|WB-FL0001-FL0002#2",
+    "sliver": {
+     "len_m": 0.000905,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB8",
+      "member_id": "BM-GF-041",
+      "slab_t_m": null
+     },
+     "piece": 4
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W01"
+   },
+   {
+    "at": "piece 6/7",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB8",
+     "member_id": "BM-GF-041",
+     "slab_t_m": null
+    },
+    "masonry_piece": 6,
+    "piece": 5,
+    "piece_len_m": 0.001295,
+    "run": "GF|WB-FL0001-FL0002#2",
+    "sliver": {
+     "len_m": 0.001295,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB8",
+      "member_id": "BM-GF-041",
+      "slab_t_m": null
+     },
+     "piece": 6
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W01"
+   },
+   {
+    "at": "piece 7/8",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB8",
+     "member_id": "BM-GF-041",
+     "slab_t_m": null
+    },
+    "masonry_piece": 8,
+    "piece": 9,
+    "piece_len_m": 0.000171,
+    "run": "GF|WB-FL0001-FL0002#2",
+    "sliver": {
+     "len_m": 0.000171,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB8",
+      "member_id": "BM-GF-041",
+      "slab_t_m": null
+     },
+     "piece": 8
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W01"
+   },
+   {
+    "at": "piece 10/11",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB8",
+     "member_id": "BM-GF-041",
+     "slab_t_m": null
+    },
+    "masonry_piece": 10,
+    "piece": 9,
+    "piece_len_m": 0.000529,
+    "run": "GF|WB-FL0001-FL0002#2",
+    "sliver": {
+     "len_m": 0.000529,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB8",
+      "member_id": "BM-GF-041",
+      "slab_t_m": null
+     },
+     "piece": 10
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W01"
+   },
+   {
+    "at": "piece 11/12",
+    "class": "COLUMN-NONE",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B1",
+     "member_id": "BM-GF-014",
+     "slab_t_m": null
+    },
+    "masonry_piece": 12,
+    "piece": 14,
+    "piece_len_m": 0.002599,
+    "run": "GF|WB-FL0001-FL0002#2",
+    "sliver": {
+     "len_m": 0.002599,
+     "own_fields": {
+      "depth_m": null,
+      "face_cls": null,
+      "face_id": null,
+      "kind": "NONE",
+      "mark": null,
+      "member_id": null,
+      "slab_t_m": null
+     },
+     "piece": 12
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_CHANGED",
+    "wall": "GF-W01"
+   },
+   {
+    "at": "end 0",
+    "class": "BEAM-END_COLUMN",
+    "head": {
+     "depth_m": null,
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB3 and B3 (With Stair)",
+     "member_id": "BM-GF-057",
+     "slab_t_m": null
+    },
+    "masonry_piece": 0,
+    "piece": 1,
+    "piece_len_m": 5.5e-05,
+    "run": "GF|WB-FL0007-FL0008#2",
+    "sliver": {
+     "len_m": 5.5e-05,
+     "own_fields": {
+      "depth_m": null,
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB3 and B3 (With Stair)",
+      "member_id": "BM-GF-057",
+      "slab_t_m": null
+     },
+     "piece": 0
+    },
+    "source": "V3_END",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W03"
+   },
+   {
+    "at": "end 1",
+    "class": "BEAM-END_COLUMN",
+    "head": {
+     "depth_m": null,
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB3 and B3 (With Stair)",
+     "member_id": "BM-GF-057",
+     "slab_t_m": null
+    },
+    "masonry_piece": 2,
+    "piece": 1,
+    "piece_len_m": 0.000495,
+    "run": "GF|WB-FL0007-FL0008#2",
+    "sliver": {
+     "len_m": 0.000495,
+     "own_fields": {
+      "depth_m": null,
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB3 and B3 (With Stair)",
+      "member_id": "BM-GF-057",
+      "slab_t_m": null
+     },
+     "piece": 2
+    },
+    "source": "V3_END",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W03"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB6",
+     "member_id": "BM-GF-030",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.000305,
+    "run": "GF|WB-FL0017-FL0018#1",
+    "sliver": {
+     "len_m": 0.000305,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB6",
+      "member_id": "BM-GF-030",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W04"
+   },
+   {
+    "at": "piece 3/4",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB6",
+     "member_id": "BM-GF-030",
+     "slab_t_m": null
+    },
+    "masonry_piece": 3,
+    "piece": 2,
+    "piece_len_m": 0.001895,
+    "run": "GF|WB-FL0017-FL0018#1",
+    "sliver": {
+     "len_m": 0.001895,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB6",
+      "member_id": "BM-GF-030",
+      "slab_t_m": null
+     },
+     "piece": 3
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W04"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B1",
+     "member_id": "BM-GF-033",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.000105,
+    "run": "GF|WB-FL0023-FL0024",
+    "sliver": {
+     "len_m": 0.000105,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B1",
+      "member_id": "BM-GF-033",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W07"
+   },
+   {
+    "at": "piece 1/2",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B14",
+     "member_id": "BM-GF-022",
+     "slab_t_m": null
+    },
+    "masonry_piece": 2,
+    "piece": 3,
+    "piece_len_m": 5e-06,
+    "run": "GF|WB-FL0025-FL0026",
+    "sliver": {
+     "len_m": 5e-06,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B14",
+      "member_id": "BM-GF-022",
+      "slab_t_m": null
+     },
+     "piece": 2
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W08"
+   },
+   {
+    "at": "piece 4/5",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B14",
+     "member_id": "BM-GF-022",
+     "slab_t_m": null
+    },
+    "masonry_piece": 4,
+    "piece": 3,
+    "piece_len_m": 0.000895,
+    "run": "GF|WB-FL0025-FL0026",
+    "sliver": {
+     "len_m": 0.000895,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B14",
+      "member_id": "BM-GF-022",
+      "slab_t_m": null
+     },
+     "piece": 4
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W08"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B20",
+     "member_id": "BM-GF-043",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.000105,
+    "run": "GF|WB-FL0028-FL0029",
+    "sliver": {
+     "len_m": 0.000105,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B20",
+      "member_id": "BM-GF-043",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": ""
+   },
+   {
+    "at": "piece 1/2",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B1",
+     "member_id": "BM-GF-027",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 0,
+    "piece_len_m": 0.001095,
+    "run": "GF|WB-FL0032-FL0033",
+    "sliver": {
+     "len_m": 0.001095,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B1",
+      "member_id": "BM-GF-027",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W09"
+   },
+   {
+    "at": "piece 2/3",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B3",
+     "member_id": "BM-GF-015",
+     "slab_t_m": null
+    },
+    "masonry_piece": 2,
+    "piece": 1,
+    "piece_len_m": 0.000295,
+    "run": "GF|WB-FL0041-FL0042",
+    "sliver": {
+     "len_m": 0.000295,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B3",
+      "member_id": "BM-GF-015",
+      "slab_t_m": null
+     },
+     "piece": 2
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W10"
+   },
+   {
+    "at": "piece 5/6",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.5",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB2",
+     "member_id": "BM-GF-055",
+     "slab_t_m": null
+    },
+    "masonry_piece": 5,
+    "piece": 4,
+    "piece_len_m": 0.000995,
+    "run": "GF|WB-FL0041-FL0042",
+    "sliver": {
+     "len_m": 0.000995,
+     "own_fields": {
+      "depth_m": "0.5",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB2",
+      "member_id": "BM-GF-055",
+      "slab_t_m": null
+     },
+     "piece": 5
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W10"
+   },
+   {
+    "at": "piece 8/9",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.5",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB2",
+     "member_id": "BM-GF-055",
+     "slab_t_m": null
+    },
+    "masonry_piece": 8,
+    "piece": 7,
+    "piece_len_m": 0.000495,
+    "run": "GF|WB-FL0041-FL0042",
+    "sliver": {
+     "len_m": 0.000495,
+     "own_fields": {
+      "depth_m": "0.5",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB2",
+      "member_id": "BM-GF-055",
+      "slab_t_m": null
+     },
+     "piece": 8
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W10"
+   },
+   {
+    "at": "end 1",
+    "class": "FACE-END_COLUMN",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B24",
+     "member_id": "BM-GF-046",
+     "slab_t_m": null
+    },
+    "masonry_piece": 11,
+    "piece": 10,
+    "piece_len_m": 0.001695,
+    "run": "GF|WB-FL0041-FL0042",
+    "sliver": {
+     "len_m": 0.001695,
+     "own_fields": {
+      "depth_m": null,
+      "face_cls": "BEAM",
+      "face_id": "GF-011",
+      "kind": "FACE",
+      "mark": null,
+      "member_id": null,
+      "slab_t_m": null
+     },
+     "piece": 11
+    },
+    "source": "V3_END",
+    "state": "FROM_ADJACENT_CHANGED",
+    "wall": "GF-W10"
+   },
+   {
+    "at": "piece 2/3",
+    "class": "BEAM-COLUMN",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB1",
+     "member_id": "BM-GF-042",
+     "slab_t_m": null
+    },
+    "masonry_piece": 2,
+    "piece": 1,
+    "piece_len_m": 0.001456,
+    "run": "GF|WB-FL0055-FL0056",
+    "sliver": {
+     "len_m": 0.001456,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB1",
+      "member_id": "BM-GF-042",
+      "slab_t_m": null
+     },
+     "piece": 2
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W11"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B1",
+     "member_id": "BM-GF-023",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.000844,
+    "run": "GF|WB-FL0068-FL0069",
+    "sliver": {
+     "len_m": 0.000844,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B1",
+      "member_id": "BM-GF-023",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W13"
+   },
+   {
+    "at": "piece 2/3",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B2",
+     "member_id": "BM-GF-025",
+     "slab_t_m": null
+    },
+    "masonry_piece": 3,
+    "piece": 4,
+    "piece_len_m": 0.000544,
+    "run": "GF|WB-FL0076-FL0077",
+    "sliver": {
+     "len_m": 0.000544,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B2",
+      "member_id": "BM-GF-025",
+      "slab_t_m": null
+     },
+     "piece": 3
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W14"
+   },
+   {
+    "at": "piece 0/1",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.5",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "CB4",
+     "member_id": "BM-GF-021",
+     "slab_t_m": null
+    },
+    "masonry_piece": 1,
+    "piece": 2,
+    "piece_len_m": 0.001044,
+    "run": "GF|WB-FL0078-FL0079",
+    "sliver": {
+     "len_m": 0.001044,
+     "own_fields": {
+      "depth_m": "0.5",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB4",
+      "member_id": "BM-GF-021",
+      "slab_t_m": null
+     },
+     "piece": 1
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W15"
+   },
+   {
+    "at": "piece 7/8",
+    "class": "COLUMN-BEAM",
+    "head": {
+     "depth_m": "0.4",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B2",
+     "member_id": "BM-GF-020",
+     "slab_t_m": null
+    },
+    "masonry_piece": 8,
+    "piece": 9,
+    "piece_len_m": 0.000844,
+    "run": "GF|WB-FL0078-FL0079",
+    "sliver": {
+     "len_m": 0.000844,
+     "own_fields": {
+      "depth_m": "0.4",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B2",
+      "member_id": "BM-GF-020",
+      "slab_t_m": null
+     },
+     "piece": 8
+    },
+    "source": "V3_INTERIOR",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W15"
+   },
+   {
+    "at": "end 0",
+    "class": "BEAM-END_COLUMN",
+    "head": {
+     "depth_m": null,
+     "face_cls": "SLAB",
+     "face_id": "GF-137",
+     "kind": "FACE",
+     "mark": null,
+     "member_id": null,
+     "slab_t_m": "0.16"
+    },
+    "masonry_piece": 0,
+    "piece": 1,
+    "piece_len_m": 0.000713,
+    "run": "GF|WB-FL0092-FL0093",
+    "sliver": {
+     "len_m": 0.000713,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "CB7",
+      "member_id": "BM-GF-013",
+      "slab_t_m": null
+     },
+     "piece": 0
+    },
+    "source": "V3_END",
+    "state": "FROM_ADJACENT_CHANGED",
+    "wall": "GF-W25"
+   },
+   {
+    "at": "end 0",
+    "class": "BEAM-END_COLUMN",
+    "head": {
+     "depth_m": "0.75",
+     "face_cls": null,
+     "face_id": null,
+     "kind": "BEAM",
+     "mark": "B9",
+     "member_id": "BM-GF-029",
+     "slab_t_m": null
+    },
+    "masonry_piece": 0,
+    "piece": 1,
+    "piece_len_m": 0.001344,
+    "run": "GF|WB-FL0097-FL0098",
+    "sliver": {
+     "len_m": 0.001344,
+     "own_fields": {
+      "depth_m": "0.75",
+      "face_cls": null,
+      "face_id": null,
+      "kind": "BEAM",
+      "mark": "B9",
+      "member_id": "BM-GF-029",
+      "slab_t_m": null
+     },
+     "piece": 0
+    },
+    "source": "V3_END",
+    "state": "FROM_ADJACENT_SAME",
+    "wall": "GF-W18"
+   }
+  ]
+ },
+ "stair_bed_area": {
+  "area_m2": 35.4313,
+  "lines": [
+   "L-07f00d5b0c4e1924aaf5",
+   "L-0afa7bd369ec489ebfc2",
+   "L-151d92470a81dd1c450b",
+   "L-1dac5d9b574d7608d80d",
+   "L-314c3ac6d45431b687c5",
+   "L-3dd82a576dce1beb4250",
+   "L-65806b4d02d476603bc5",
+   "L-8011889d84788553a6b1",
+   "L-89c84fdd4964dec8a323",
+   "L-a4aeb32035d11684f1a2",
+   "L-e1eb8b9a7cb92508ccc9"
+  ],
+  "lines_by_code": {
+   "FIN.MARBLE.LANDING": 2,
+   "FIN.MARBLE.RISER": 1,
+   "FIN.MARBLE.TREAD": 8
+  },
+  "once_t534_merges": {
+   "source": "T-534",
+   "state": "AT_LEAST",
+   "value_m2": 35.4313
+  },
+  "rule": "the manifest states both branches; it never reads the live merge state of a READY piece (F-C-T536-1)",
+  "state": "HELD BY NAME in this tree: T-534 is not a source (READY f97634e0)",
+  "t534_gate_a": "Verifier 2026-11-05T18:05Z GATE A PASS: Q-53 39.485 -> 35.4313 m2 reconciled, residual 0 (RULE_DIFFERENCE scope + ENGINE_RIGHT); riser bed Q-45 B PROVISIONAL",
+  "until_then": {
+   "state": "HELD_BY_NAME",
+   "value_m2": null,
+   "why": "T-534 (stair bed area) not merged"
+  },
+  "v7_on_it": {
+   "cement_bags": 10.178704,
+   "mortar_m3": 1.062939,
+   "sand_m3": 1.06028,
+   "wiring_after": [
+    "T-534 Gate A (area)",
+    "F-T518-2 ruling (stair-bed loss scope)",
+    "V7 replaces STAIR_BED_V1 as the one producer of the 11 keys (R-T523-4)"
+   ]
+  }
+ },
+ "supersedes": "T-536 WIRING_MANIFEST_V2.json (V2; every V2 line move carried unchanged)",
+ "task": "T-538",
+ "v2_line_moves_carried": 31,
+ "v2_to_v3": [
+  {
+   "after": {
+    "ceiling_held_on": [
+     "D-2F-01"
+    ],
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 38.761728,
+    "held_parts": [
+     "B1 BEND_END",
+     "B1 BEND_START",
+     "B1 EXTENSION_END",
+     "B1 EXTENSION_START",
+     "B1 LAPS",
+     "S1 LINKS",
+     "T1 BEND_END",
+     "T1 BEND_START",
+     "T1 EXTENSION_END",
+     "T1 EXTENSION_START",
+     "T1 LAPS"
+    ],
+    "links_count_lo_beside": 65,
+    "state": "AT_LEAST",
+    "straight_ceiling_kg_beside": 85.080148,
+    "value": null
+   },
+   "cause": "T-531 R-T531-1",
+   "change": "ADDED (proposed, HELD AT_LEAST)",
+   "line_id": "NEW:STR.REBAR:LINTEL_BARS:PRODUCED"
+  },
+  {
+   "after": {
+    "ceiling_held_on": [
+     "D-GF-12"
+    ],
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 24.301496,
+    "held_parts": [
+     "B1 BEND_END",
+     "B1 BEND_START",
+     "B1 EXTENSION_END",
+     "B1 EXTENSION_START",
+     "B1 LAPS",
+     "S1 LINKS",
+     "T1 BEND_END",
+     "T1 BEND_START",
+     "T1 EXTENSION_END",
+     "T1 EXTENSION_START",
+     "T1 LAPS"
+    ],
+    "links_count_lo_beside": 59,
+    "state": "AT_LEAST",
+    "straight_ceiling_kg_beside": 69.534578,
+    "value": null
+   },
+   "cause": "T-531 R-T531-1",
+   "change": "ADDED (proposed, HELD AT_LEAST)",
+   "line_id": "NEW:STR.REBAR:LINTEL_BARS:FLAGGED"
+  }
+ ]
+}

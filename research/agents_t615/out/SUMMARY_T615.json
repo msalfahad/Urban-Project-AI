@@ -1,0 +1,251 @@
+{
+ "task": "T-615",
+ "rule": "UPC-BLACK-BLOCK-001 1.1.0 (supersedes 1.0.0)",
+ "rulebook": {
+  "file": "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json",
+  "version": "1.1.0",
+  "supersedes": "1.0.0",
+  "changed_records": [
+   "UPC-BLACK-BLOCK-001"
+  ],
+  "default_reader": "engine/source/company_rulebook_v1.py stays on 1.0.0"
+ },
+ "module_015": {
+  "face_m": [
+   0.39,
+   0.19
+  ],
+  "joint_m": 0.01,
+  "installed_m": [
+   0.4,
+   0.2
+  ],
+  "units_per_m2": 12.5,
+  "status": "ASSUMED - OWNER-APPROVED",
+  "citation": "UPC-BLACK-BLOCK-001 1.1.0 params.confirmed_modules_m['0.15'] = [0.4, 0.2] (Q-80, owner 2026-11-07); 10 mm joint owner 2026-10-29",
+  "register_entry_citation": "UPC-BLACK-BLOCK-001 1.1.0 (Q-75 (owner 2026-11-02 answer: 40 x 19 x 19 sold as 40 x 20 x 20, installed module, 12.5 per m2 only for a confirmed 40 x 20 module, waste separate)); 10 mm joint owner 2026-10-29"
+ },
+ "walls": 15,
+ "excluded": {
+  "GF-W22": "D-27 area conflict on its parent (T-488), own HELD",
+  "2F-W08": "D-39 2F storey (T-488), own HELD"
+ },
+ "area_m2": {
+  "contract": 178.571,
+  "material_base": 175.871,
+  "material_base_low": 175.531
+ },
+ "units_nr": {
+  "theoretical": 2198.3875,
+  "low": 2194.1375,
+  "procurement": "HELD: waste not sourced (UPC-BLACK-BLOCK-001 'waste separate, evidence-based')",
+  "rounding": "theoretical count kept unrounded (rulebook method; company_rulebook_v1 rounds to 1e-9); whole units only at procurement = ceil(theoretical x (1 + sourced waste))",
+  "board_2198_75": "the board's 2,198.75 = 175.9 (rounded area) x 12.5; on the unrounded material base 175.871 m2 it is 2198.3875 (-0.3625 nr = rounding of the area only)"
+ },
+ "panel_mortar_m3": {
+  "material_base": 1.945573,
+  "low": 1.941812,
+  "contract_basis": 1.975442,
+  "t367_pinned_contract": 1.97544
+ },
+ "perimeter_mortar_m3": {
+  "low": 0.078582,
+  "figure": 0.079138,
+  "high": 0.08989,
+  "range_cause": "R-T520-1: a block-to-block junction is butt-jointed or bonded (drawings print no junction detail) and dome-opening pieces HELD by name"
+ },
+ "cement_bags_50kg": {
+  "low": 16.1631,
+  "figure": 16.1977,
+  "high": 16.2837,
+  "rounding": "up at the purchasing group (the whole black-block mortar line), not here",
+  "waste": "HELD (not sourced)"
+ },
+ "sand_m3_loose": {
+  "low": 2.222433,
+  "figure": 2.227182,
+  "high": 2.239009
+ },
+ "ties_pcs": {
+  "end_restated": 12,
+  "end_walls": [
+   "1F-W23",
+   "2F-W08"
+  ],
+  "interior_restated": 49,
+  "interior_junctions": 8,
+  "ledger_measured_before": 151,
+  "ledger_measured_after": 212,
+  "still_held_junctions": 94,
+  "still_held_by_cause": {
+   "WHITE (AAC) block, thin-bed adhesive": 69,
+   "annex datum (Q-54 B)": 4,
+   "block top beside the column not established": 9,
+   "column meets 0.0195 m of the 0.150 m thickness": 1,
+   "lift tie beam size (ST p.8 n.19)": 11
+  },
+  "d39_2f_w08_tie_range": [
+   6,
+   6
+  ]
+ },
+ "bed_joint_strip_ml": {
+  "restated": 367.9895,
+  "walls": 25,
+  "ledger_measured_before": 175.4844,
+  "ledger_measured_after": 543.4739
+ },
+ "reproduces": {
+  "t533_s_a_units": "2194.14 .. 2198.39",
+  "t533_s_a_panel": "1.941812 .. 1.945573",
+  "t533_s_a_perimeter": [
+   "0.079138",
+   "0.089890"
+  ],
+  "t533_s_a_panel_contract": "1.975442"
+ },
+ "drawing_search": [
+  {
+   "drawing": "ST7757 dxf.dxf",
+   "handle": "B8",
+   "layer": "S-NOTE",
+   "kind": "general note (Arabic)",
+   "finding": "names black (cement) block walls built from foundation level at the neighbour-side perimeter; prints no block size, face, thickness or joint",
+   "verdict": "NO FACE PRINTED"
+  },
+  {
+   "drawing": "ST7757 dxf.dxf",
+   "handle": "7D",
+   "layer": "S-NOTE",
+   "kind": "general note (Arabic)",
+   "finding": "slab thickness 16 cm unless stated otherwise (a slab, not a block)",
+   "verdict": "NOT A BLOCK"
+  },
+  {
+   "drawing": "ST7757 dxf.dxf",
+   "handle": "7FD",
+   "layer": "S-HAT.BAT",
+   "kind": "HATCH AR-B816C, scale 15",
+   "finding": "U-shaped strip 200 mm wide (boundary 31.370 x 8.300 m, 8 vertices) on the ground-level column plan: a 0.20 m black-block wall in plan (the B8 neighbour-side walls); the AutoCAD library pattern draws a 240 x 120 mm cell at scale 15 (graphic, not a unit size)",
+   "verdict": "0.20 m WALL, NO FACE"
+  },
+  {
+   "drawing": "ST7757 dxf.dxf",
+   "handle": "7FB",
+   "layer": "S-HAT.BAT",
+   "kind": "HATCH AR-B816C, scale 15",
+   "finding": "strip 200 x 1,150 mm on the same plan",
+   "verdict": "0.20 m WALL, NO FACE"
+  },
+  {
+   "drawing": "ST7757 dxf.dxf",
+   "handle": "80F",
+   "layer": "S-HAT.BAT",
+   "kind": "HATCH AR-B816, scale 15",
+   "finding": "strip 1,200 x 200 mm on the same plan",
+   "verdict": "0.20 m WALL, NO FACE"
+  },
+  {
+   "drawing": "ST7757 dxf.dxf",
+   "handle": "537",
+   "layer": "-",
+   "kind": "INSERT of block '816'",
+   "finding": "block '816' holds one slab-reinforcement label (8 bars of 16 mm per m), not a masonry unit",
+   "verdict": "NOT A BLOCK"
+  },
+  {
+   "drawing": "P7757 DXF (architectural)",
+   "handle": "-",
+   "layer": "all 19 layers",
+   "kind": "texts, hatches (NET / ANGLE / LINE / AR-PARQ1 / SOLID), 47 block names",
+   "finding": "no block product, size, face or joint text; no masonry hatch; '15.00' / '+0.15' are dimensions and levels",
+   "verdict": "SILENT"
+  },
+  {
+   "drawing": "ST7757.pdf, sanitary-7757.pdf",
+   "handle": "-",
+   "layer": "-",
+   "kind": "PDF text layer",
+   "finding": "no text layer beyond sheet dates and the sheet number (prints of the CAD sheets)",
+   "verdict": "SILENT"
+  }
+ ],
+ "drawing_result": "no drawing prints a 15 cm (or any) black-block face; the only masonry statements are the B8 note (black block, no size) and three AR-B816 hatches on 0.20 m strips: nothing differs from 40 x 20, so nothing is reported against Q-80 and the rule is applied as answered",
+ "not_searched": "architectural PDF sheets (Drive 'Alsenan chalet project', Alsenan_Architectural_P7757_Pages_* and p7757_arch_sheet03/04/09/10): prints of the architectural DXF searched above, not re-read in this run",
+ "freelancer": "prices blockwork in m2 only (T-176): no units, mortar, ties or strip to compare; verdict UNRESOLVED (no comparison possible)",
+ "fix_rows": [
+  {
+   "id": "FR-T615-1",
+   "family": "B9-01 blockwork 0.15 m black (units)",
+   "unit": "nr",
+   "was": "HELD (T-533)",
+   "now": "2194.14 .. 2198.39 theoretical",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "basis": "UPC-BLACK-BLOCK-001 1.1.0 x T-506 material base; procurement HELD (waste)"
+  },
+  {
+   "id": "FR-T615-2",
+   "family": "B9-04 joint mortar, panel, 0.15 m walls",
+   "unit": "m3",
+   "was": "HELD (T-533)",
+   "now": "1.941812 .. 1.945573",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "basis": "R-T533-1 identity on 40 x 20 / 39 x 19 x 0.15"
+  },
+  {
+   "id": "FR-T615-3",
+   "family": "B9-04 joint mortar, perimeter, 0.15 m walls",
+   "unit": "m3",
+   "was": "HELD (T-520 / T-533)",
+   "now": "0.078582 .. 0.089890 (figure 0.079138)",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "basis": "R-T520-1 re-run on the register module"
+  },
+  {
+   "id": "FR-T615-4",
+   "family": "B9-04 mortar materials, 0.15 m walls",
+   "unit": "bags 50 kg / m3 loose sand",
+   "was": "HELD",
+   "now": "cement 16.16 .. 16.28; sand 2.222 .. 2.239",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "basis": "UPC-BLACK-MORTAR-001 (8 bags + 1.1 m3 per m3); waste HELD"
+  },
+  {
+   "id": "FR-T615-5",
+   "family": "B9-06 MAS.TIE.SHARMAT (proposed)",
+   "unit": "pcs",
+   "was": "151 measured + 0.15 m junctions HELD",
+   "now": "+12 end + 49 interior = 212 measured",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "basis": "T-539 V2 re-run on the 1.1.0 register (= T-355 PRIMARY course, asserted)"
+  },
+  {
+   "id": "FR-T615-6",
+   "family": "B9-07 MAS.MESH.BED_JOINT (proposed)",
+   "unit": "m.l",
+   "was": "175.4844 measured + 25 0.15 m walls HELD",
+   "now": "+367.9895 = 543.4739 measured",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "basis": "T-539 V2 re-run on the 1.1.0 register"
+  },
+  {
+   "id": "FR-T615-7",
+   "family": "drawing check (Q-80 condition)",
+   "unit": "-",
+   "was": "-",
+   "now": "no 15 cm block face printed on any drawing searched; nothing to report against Q-80",
+   "status": "DRAWING-CONFIRMED (silence)",
+   "basis": "DRAWING_SEARCH in SUMMARY_T615.json"
+  }
+ ],
+ "sha256_inputs": {
+  "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json": "da38d121eec33c00ff3c8b524ed022be6a66f5789fdd9a0cd37f216f84dcde35",
+  "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json": "4e9c57cef33d32ede26bea4eaf3823e2dc3880d56708dd18ec5df3760b84c055",
+  "research/agents_t520/out/PERIMETER_BY_WALL_T520.csv": "fb5ac4abe455bf5efa8a352ad68cf57defb609c3fac54437a92e94842e3622d1",
+  "research/agents_t506/out/MORTAR_RECONCILIATION_T506.csv": "585aeb5f3675d965d38669b1d809166ab13e13cb0a045f3345213e1158f1158f",
+  "research/agents_t533/out/SUMMARY_T533.json": "dbbd3c9a2cd06abbe1b15748887669082a573450be96d9bea82e6c13a8c9ef53",
+  "research/agents_t539/out/TIES_V2_T539.csv": "cd38dce2f47c6db4dc5f95fefbd9b46f3517e19beb8e74f0c16210481d1163b4",
+  "research/agents_t539/out/STRIP_V2_T539.csv": "f5068f580ddde7731c760c440ec4211a2991f2617a912a64f485f6963cc7643d",
+  "research/agents_t539/out/SUMMARY_T539.json": "dc3e292a8f1a6a2e902c1814bd685b92fe7ac3c4fb9948cd4c5c3c75d3718ecf"
+ }
+}

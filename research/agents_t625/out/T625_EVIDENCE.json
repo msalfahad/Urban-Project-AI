@@ -1,0 +1,834 @@
+{
+ "carried_rows": [
+  {
+   "boundary": "GF-OPEN.full",
+   "boundary_status": "DRAWING_CONFIRMED (every open side named, R-T625-1)",
+   "class": "UNRESOLVED",
+   "delta": "9.101",
+   "row": 2,
+   "t621_evidence": "DRAWING_CONFIRMED"
+  },
+  {
+   "boundary": "GF-OPEN.full",
+   "boundary_status": "DRAWING_CONFIRMED (every open side named, R-T625-1)",
+   "class": "UNRESOLVED",
+   "delta": "0.604",
+   "row": 3,
+   "t621_evidence": "DRAWING_CONFIRMED"
+  },
+  {
+   "boundary": "GF-OPEN.full",
+   "boundary_status": "DRAWING_CONFIRMED (every open side named, R-T625-1)",
+   "class": "ENGINE_RIGHT",
+   "delta": "0.88",
+   "row": 4,
+   "t621_evidence": "DRAWING_CONFIRMED"
+  },
+  {
+   "boundary": "GF-OPEN.full",
+   "boundary_status": "DRAWING_CONFIRMED (every open side named, R-T625-1)",
+   "class": "UNRESOLVED",
+   "delta": "0.302303",
+   "row": 5,
+   "t621_evidence": "DRAWING_CONFIRMED"
+  },
+  {
+   "boundary": "GF-OPEN.full",
+   "boundary_status": "DRAWING_CONFIRMED (every open side named, R-T625-1)",
+   "class": "UNRESOLVED",
+   "delta": "-6.1275",
+   "row": 9,
+   "t621_evidence": "DRAWING_CONFIRMED"
+  },
+  {
+   "boundary": "1F-LIV.floor_printed",
+   "boundary_status": "DRAWING_CONFIRMED (every open side named, R-T625-1)",
+   "class": "RULE_DIFFERENCE",
+   "delta": "4.9225",
+   "row": 11,
+   "t621_evidence": "DRAWING_CONFIRMED"
+  },
+  {
+   "boundary": "1F-LIV.floor_printed",
+   "boundary_status": "DRAWING_CONFIRMED (every open side named, R-T625-1)",
+   "class": "RULE_DIFFERENCE",
+   "delta": "0.3",
+   "row": 12,
+   "t621_evidence": "DRAWING_CONFIRMED"
+  },
+  {
+   "boundary": "1F-LIV.floor_printed",
+   "boundary_status": "DRAWING_CONFIRMED (every open side named, R-T625-1)",
+   "class": "UNRESOLVED",
+   "delta": "0.326464",
+   "row": 13,
+   "t621_evidence": "DRAWING_CONFIRMED"
+  }
+ ],
+ "drawn": "research/agents_t625/T625_DRAWN.json",
+ "first_floor_readings": {
+  "east_lane_boundary": {
+   "difference": "0.4025",
+   "governs": "PRINTED edge (10DF end, ST7757 459 on it at 0.0 mm): the 0.4025 beyond it is the 12th tread 0.345 (stair, marble) + the landing nosing band 0.0575 (arrival marble piece, T-240), never porcelain",
+   "last_drawn_nosing": "38.988",
+   "printed_edge": "38.5855"
+  },
+  "engine_minus_restated": "-0.009464",
+  "engine_minus_restated_split": {
+   "arrival_rule_piece": "0.0475",
+   "residual": "0.000536",
+   "rs_a_band": "-0.0575"
+  },
+  "restated_floor_at_550": "38.6430",
+  "rs_a_arrival_band": {
+   "area": "0.0575",
+   "class_proposal": "ENGINE_WRONG -0.0575 m2 (engine short): the landing nosing band in front of the top riser D24 (L2, ST 315 on it) up to nosing D22 (L5) is floor of the +5.50 living (R-T269 riser convention, as the east lane's 0.0575); in neither the printed reading nor the engine porcelain 33.711036; condition: no ST-02 stair line carries it",
+   "handles": [
+    "D24",
+    "D22"
+   ],
+   "st_riser_315_offset_mm": "0.0"
+  },
+  "slab_edge_margin": {
+   "bound_m2": "0.376",
+   "class_proposal": "UNRESOLVED 0 .. 0.376 m2, not added: the structural slab edge (ST 2D2 / 2CF) lies 0.05 beyond the architectural void lines B74 / B75; the architectural line bounds the finish; the printed 1265 (1.25 = 0.05 + 1.15 + 0.05) makes the 0.05 west of B75 the round-stair flight's string; a void-edge / balustrade detail closes it",
+   "east_len_to_band_top": "1.6",
+   "east_offset": "0.05",
+   "handles": {
+    "arch": [
+     "B74",
+     "B75",
+     "D24"
+    ],
+    "st": [
+     "2D2",
+     "2CF"
+    ]
+   },
+   "north_len": "5.87",
+   "north_offset": "0.05"
+  }
+ },
+ "governing": [
+  "R-T606-1 (outline geometry)",
+  "R-T612-1 (gross with interior solids)",
+  "R-T621-1 (row evidence)",
+  "R-T269 riser convention (arrival nosing band)",
+  "UP-CER-001 (stair footprint out of the tile)",
+  "UP-STAIR-005 (treads are marble)",
+  "UP-THR-001 (door strips)",
+  "OWNER_RULE_STAIRS_2026-10-24",
+  "ERS s.2 / s.3"
+ ],
+ "outlines": {
+  "1F-LIV.floor_drawn": {
+   "column_notch_at_boundary": "0.0025",
+   "columns_inside": [],
+   "columns_notched": [
+    "3008"
+   ],
+   "difference": "0.0",
+   "level_marks": [
+    "D15",
+    "D17"
+   ],
+   "levels": [
+    "+5.50"
+   ],
+   "metres_by_class": {
+    "DOOR_ON_FACE": "4.7",
+    "PRINTED_DIMENSION": "0.10",
+    "PRINTED_LINE": "14.77",
+    "WALL": "24.270000"
+   },
+   "open_sides": [
+    {
+     "by": [
+      "BEF"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "AF9",
+     "length": "0.9",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "C18"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "AF9",
+     "length": "0.9",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "C1A"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "AFE",
+     "length": "0.9",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "B9B"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "AFE",
+     "length": "1.0",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "ABE"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "ABE",
+     "length": "1.15",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "A8F"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "A8F",
+     "length": "0.35",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "10DF"
+     ],
+     "class": "PRINTED_DIMENSION",
+     "edge": "AC0",
+     "length": "0.05",
+     "status": "PRINTED_ONLY"
+    },
+    {
+     "by": [
+      "AC4"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "AC0",
+     "length": "0.1",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "10DF"
+     ],
+     "class": "PRINTED_DIMENSION",
+     "edge": "AC0",
+     "length": "0.05",
+     "status": "PRINTED_ONLY"
+    },
+    {
+     "by": [
+      "AC0"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "AC0",
+     "length": "1.15",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "C31"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "C21",
+     "length": "1.0",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "C32"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "AEB",
+     "length": "1.0",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "B74"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "B74",
+     "length": "5.87",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "B75"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "B75",
+     "length": "1.6",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "D24"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "D24",
+     "length": "1.15",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "AF5"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "AF5",
+     "length": "2.4",
+     "status": "DRAWING_CONFIRMED"
+    }
+   ],
+   "own_exact_net": "38.988",
+   "perimeter": "43.840000",
+   "printed_checks_all_agree": true,
+   "printed_edge_checks": {},
+   "route2": {
+    "area": "38.988",
+    "method": "R-T606-1 (T-606 tool, 0.5 deg flattening, column notches)",
+    "notch_m2": "-0.0025"
+   },
+   "route2_minus_own": "0.000",
+   "status": "AGREES",
+   "t621_measure": "38.988"
+  },
+  "1F-LIV.floor_printed": {
+   "column_notch_at_boundary": "0.0025",
+   "columns_inside": [],
+   "columns_notched": [
+    "3008"
+   ],
+   "difference": "0.0",
+   "level_marks": [
+    "D15",
+    "D17"
+   ],
+   "levels": [
+    "+5.50"
+   ],
+   "metres_by_class": {
+    "DOOR_ON_FACE": "4.7",
+    "PRINTED_DIMENSION": "1.25",
+    "PRINTED_LINE": "13.27",
+    "WALL": "23.920000"
+   },
+   "open_sides": [
+    {
+     "by": [
+      "BEF"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "AF9",
+     "length": "0.9",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "C18"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "AF9",
+     "length": "0.9",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "C1A"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "AFE",
+     "length": "0.9",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "B9B"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "AFE",
+     "length": "1.0",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "10DF"
+     ],
+     "class": "PRINTED_DIMENSION",
+     "edge": "AC0",
+     "length": "1.15",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "10DF"
+     ],
+     "class": "PRINTED_DIMENSION",
+     "edge": "AC0",
+     "length": "0.05",
+     "status": "PRINTED_ONLY"
+    },
+    {
+     "by": [
+      "AC4"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "AC0",
+     "length": "0.1",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "10DF"
+     ],
+     "class": "PRINTED_DIMENSION",
+     "edge": "AC0",
+     "length": "0.05",
+     "status": "PRINTED_ONLY"
+    },
+    {
+     "by": [
+      "AC0"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "AC0",
+     "length": "1.15",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "C31"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "C21",
+     "length": "1.0",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "C32"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "AEB",
+     "length": "1.0",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "B74"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "B74",
+     "length": "5.87",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "B75"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "B75",
+     "length": "1.6",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "D24"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "D24",
+     "length": "1.15",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "AF5"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "AF5",
+     "length": "2.4",
+     "status": "DRAWING_CONFIRMED"
+    }
+   ],
+   "own_exact_net": "38.5855",
+   "perimeter": "43.140000",
+   "printed_checks_all_agree": true,
+   "printed_edge_checks": {
+    "AC0": {
+     "diff": "0.0",
+     "dims": [
+      "+D25"
+     ],
+     "edge": "2.5",
+     "printed": "2.5"
+    },
+    "AEB": {
+     "diff": "0.0",
+     "dims": [
+      "+FF1",
+      "+E56"
+     ],
+     "edge": "3.8",
+     "printed": "3.8"
+    },
+    "AEC": {
+     "diff": "-0.0",
+     "dims": [
+      "+105A"
+     ],
+     "edge": "3.65",
+     "printed": "3.65"
+    },
+    "AF7": {
+     "diff": "0.0",
+     "dims": [
+      "+EC5",
+      "-1042"
+     ],
+     "edge": "1.15",
+     "printed": "1.15"
+    },
+    "AFE": {
+     "diff": "-0.0",
+     "dims": [
+      "+1071",
+      "+DAA"
+     ],
+     "edge": "3.67",
+     "printed": "3.67"
+    },
+    "B16": {
+     "diff": "0.0",
+     "dims": [
+      "+10DF",
+      "-1042"
+     ],
+     "edge": "0.7",
+     "printed": "0.7"
+    },
+    "B68": {
+     "diff": "0.0",
+     "dims": [
+      "+DE9"
+     ],
+     "edge": "5.2",
+     "printed": "5.2"
+    },
+    "B74": {
+     "diff": "0.0",
+     "dims": [
+      "+F34"
+     ],
+     "edge": "5.87",
+     "printed": "5.87"
+    },
+    "C21": {
+     "diff": "0.0",
+     "dims": [
+      "+10DF"
+     ],
+     "edge": "1.95",
+     "printed": "1.95"
+    }
+   },
+   "route2": {
+    "area": "38.5855",
+    "method": "R-T606-1 (T-606 tool, 0.5 deg flattening, column notches)",
+    "notch_m2": "-0.0025"
+   },
+   "route2_minus_own": "0.0000",
+   "status": "AGREES",
+   "t621_measure": "38.5855"
+  },
+  "GF-OPEN.full": {
+   "column_notch_at_boundary": "0.289964",
+   "columns_inside": [
+    "2FC6",
+    "2FD2"
+   ],
+   "columns_notched": [
+    "2F8A",
+    "2FAE",
+    "2FB4",
+    "2FC0",
+    "2FC3",
+    "2FCF",
+    "2FD5"
+   ],
+   "difference": "-0.000026",
+   "level_marks": [
+    "40E",
+    "410",
+    "A73"
+   ],
+   "levels": [
+    "+1.00"
+   ],
+   "metres_by_class": {
+    "DOOR_ON_FACE": "5.0",
+    "PRINTED_DIMENSION": "0",
+    "PRINTED_LINE": "2.255652",
+    "WALL": "48.050548"
+   },
+   "open_sides": [
+    {
+     "by": [
+      "2F2"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "2E4",
+     "length": "1.0",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "2DC"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "2E4",
+     "length": "1.255652",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "22B"
+     ],
+     "class": "PRINTED_LINE",
+     "edge": "20F",
+     "length": "1.0",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "2C7"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "20F",
+     "length": "1.0",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "281"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "AB",
+     "length": "2.0",
+     "status": "DRAWING_CONFIRMED"
+    },
+    {
+     "by": [
+      "33E"
+     ],
+     "class": "DOOR_ON_FACE",
+     "edge": "158",
+     "length": "1.0",
+     "status": "DRAWING_CONFIRMED"
+    }
+   ],
+   "own_exact_net": "147.657691",
+   "perimeter": "55.306200",
+   "printed_checks_all_agree": true,
+   "printed_edge_checks": {
+    "104": {
+     "diff": "0.0",
+     "dims": [
+      "+5F9",
+      "+5D5"
+     ],
+     "edge": "18.97",
+     "printed": "18.97"
+    },
+    "158": {
+     "diff": "0.0",
+     "dims": [
+      "+5D5"
+     ],
+     "edge": "3.0",
+     "printed": "3.0"
+    },
+    "222": {
+     "diff": "-0.0",
+     "dims": [
+      "+5ED",
+      "-6AD"
+     ],
+     "edge": "1.05",
+     "printed": "1.05"
+    },
+    "AB": {
+     "diff": "-0.0",
+     "dims": [
+      "+6AD",
+      "-5E1"
+     ],
+     "edge": "3.4",
+     "printed": "3.4"
+    },
+    "AE": {
+     "diff": "0.0",
+     "dims": [
+      "+5E1"
+     ],
+     "edge": "4.5",
+     "printed": "4.5"
+    },
+    "B5": {
+     "diff": "-0.0",
+     "dims": [
+      "+4E9"
+     ],
+     "edge": "7.5",
+     "printed": "7.5"
+    },
+    "E0": {
+     "diff": "0.0",
+     "dims": [
+      "+939"
+     ],
+     "edge": "2.0",
+     "printed": "2.0"
+    }
+   },
+   "route2": {
+    "area": "147.657717",
+    "method": "R-T612-1 gross (T-612 tool, 0.5 deg flattening)"
+   },
+   "route2_minus_own": "0.000026",
+   "status": "AGREES",
+   "t621_measure": "147.657717"
+  }
+ },
+ "row0": {
+  "F1": "4.044824",
+  "F2": "2.09286",
+  "beside": {
+   "curtail of the first step (arc 258 to the inner tread arc 239; printed 963 ends on it)": "0.157787",
+   "inner string band, curve (23F / 239), net of the curtail": "0.092854",
+   "inner string band, run (22C / 22E to the cut)": "0.092454",
+   "outer string band, curve (23D / 23E), inside the face (north of A8)": "0.208535"
+  },
+  "beside_total": "0.551630",
+  "cause": "the engine's tread union flattens the curved band into chords through the nosing points (chord loss 0.012453) and its quads leave 0.000838; CAD -0.000019 (run outer edge A7 vs the outer arc end, 0.05 mm)",
+  "class_proposal": {
+   "curtail": "ENGINE_WRONG 0.157787 m2: the first step's curtail is drawn (L5 arc 258) and printed (963 ends on it, 0.0 mm): a tread, not porcelain; also absent from the F1 tread marble line (4.094413): marble trade to check",
+   "quantity": "ENGINE_WRONG 0.013272 m2 (chord flattening of a drawn arc band): own 6.137684 governs",
+   "row": "RULE_DIFFERENCE kept (UP-CER-001: the footprint is out of the tile; UP-STAIR-005 treads marble)",
+   "strings": "UNRESOLVED 0 .. 0.393843 m2: 0.05 bands drawn beside the tread edges (L5) are stair structure or cladding; ST-02 structure undrawn (Q-50 / T-269 designer item); not floor finish by drawing, not added"
+  },
+  "difference": "0.013272",
+  "difference_split": {
+   "cad_arc_end_vs_A7": "-0.000019",
+   "chord_loss": "0.012453",
+   "engine_quads_vs_chord_route": "0.000838"
+  },
+  "effect_if_adopted": "GF porcelain L-7625f35c -0.013272 (band) -0.157787 (curtail) m2; row 0 amount 6.124412 -> 6.295471 m2",
+  "engine_split_reproduced": {
+   "F1_chord_plus_strip": "4.095250",
+   "F2_from_22F_net": "2.03",
+   "engine_F1_F2": [
+    "4.094412",
+    "2.03"
+   ]
+  },
+  "kind": "PIECE",
+  "nosing_steps_deg": [
+   "7.791"
+  ],
+  "own": "6.137684",
+  "parts": {
+   "F1 curved tread band (arcs 239 / 23D, nosing 256 to the arc ends)": {
+    "area": "4.044824",
+    "handles": [
+     "239",
+     "23D",
+     "256"
+    ],
+    "role": "BAND"
+   },
+   "F2 straight run (22E / A7, arc end to the cut 13C, less column 2FD2)": {
+    "area": "2.09286",
+    "handles": [
+     "22E",
+     "A7",
+     "13C",
+     "2FD2"
+    ],
+    "role": "BAND"
+   },
+   "curtail of the first step (arc 258 to the inner tread arc 239; printed 963 ends on it)": {
+    "area": "0.157787",
+    "handles": [
+     "258",
+     "239",
+     "963"
+    ],
+    "role": "BESIDE"
+   },
+   "inner string band, curve (23F / 239), net of the curtail": {
+    "area": "0.092854",
+    "handles": [
+     "23F",
+     "239",
+     "258"
+    ],
+    "role": "BESIDE"
+   },
+   "inner string band, run (22C / 22E to the cut)": {
+    "area": "0.092454",
+    "handles": [
+     "22C",
+     "22E",
+     "13C"
+    ],
+    "role": "BESIDE"
+   },
+   "outer string band, curve (23D / 23E), inside the face (north of A8)": {
+    "area": "0.208535",
+    "handles": [
+     "23D",
+     "23E",
+     "A8"
+    ],
+    "role": "BESIDE"
+   }
+  },
+  "printed": {
+   "955_band_plus_string": "1.2",
+   "963_end_on_curtail_arc_mm": "0.0",
+   "963_end_on_first_nosing_outer_end_mm": "0.0",
+   "963_first_step": "1.518726",
+   "drawn_band_plus_string": "1.2",
+   "first_nosing_outer_r": "2.780511"
+  },
+  "radii": [
+   "1.580511",
+   "2.730511"
+  ],
+  "row": 0,
+  "status": "DIFFERS",
+  "sweep_deg": "93.491946",
+  "t621_class": "RULE_DIFFERENCE",
+  "t621_delta": "6.124412"
+ },
+ "row13_with_rs_a_band": {
+  "class": "UNRESOLVED kept",
+  "his_minus_engine": "0.326464",
+  "if_band_adopted": "0.268964"
+ },
+ "rows_measured": "41 / 41 (row 0 own area this run; T-621 40 / 41)",
+ "rule": "R-T625-1",
+ "schema": "T625_EVIDENCE_V1",
+ "st_frame_residual_mm": "0.0",
+ "t621": {
+  "path": "research/agents_t621/out/T621_ROW_EVIDENCE.json",
+  "sha256": "6bb6a8af06130559809cc700dcd15c6c03019927cc452dc9a1db88054eb3c36d"
+ }
+}

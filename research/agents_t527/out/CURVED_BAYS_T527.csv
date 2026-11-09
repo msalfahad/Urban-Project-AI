@@ -1,0 +1,2 @@
+storey,band,wall_t_m,status,chord_from_m,chord_to_m,r_in_m,r_out_m,window_arcs,face_minus_cross_m,face_plus_cross_m,drawn_open_from_m,drawn_open_to_m,chord_from_minus_drawn_m,drawn_to_minus_chord_m,face_minus_line_end_mm,face_plus_line_end_mm,why
+1F,WB-FL0041-FL0042,0.2,DRAWN,7.470800,10.729200,1.9350,2.1350,4,7.570294;10.629706,7.748704;10.451296,7.5703,10.6297,-0.0995,-0.0995,0.0;0.0,none;none,

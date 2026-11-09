@@ -1,5 +1,6 @@
-"""ARCH_TAKEOFF_V3.0.58 (T-423, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.57
-(engine.source.arch_v30, arch_v301 .. arch_v3057), extended with the T-246 split remainder (b)-(d): four record /
+"""ARCH_TAKEOFF_V3.0.60 (T-423 r2, stream F; staged as V3.0.58 in r1, renumbered after T-507 / T-498 merged
+V3.0.58 / V3.0.59 first, merge-order rule): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.59
+(engine.source.arch_v30, arch_v301 .. arch_v3059), extended with the T-246 split remainder (b)-(d): four record /
 state pieces from Checker-merged ledgers. NO measured_net, range or total moves (asserted line by line and by code):
 
   CEILING_LIST   a FIN.CEILING line whose net is its gross less a HELD dome position over the room (T-284 restated the
@@ -28,9 +29,9 @@ never moves the room total; (d) a NOT_APPLICABLE line carries no figure and name
 (e) one physical item has one material_state; (f) a line's alternative measures are fields equal to its formula, never
 a second billable quantity; (g) nothing else moves.
 
-Nothing else moves: every V3.0.57 line not named by the inputs is byte-identical (asserted); every code total
-(A304.code_totals) is unchanged (asserted). Files: V3_0_58_BOQ_LINES.json / .csv, V3_0_58_INTEGRATION_LEDGER.json /
-.csv, V3_0_58_DIFF.csv, V3_0_58_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
+Nothing else moves: every V3.0.59 line not named by the inputs is byte-identical (asserted); every code total
+(A304.code_totals) is unchanged (asserted). Files: V3_0_60_BOQ_LINES.json / .csv, V3_0_60_INTEGRATION_LEDGER.json /
+.csv, V3_0_60_DIFF.csv, V3_0_60_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
 """
 
 from __future__ import annotations
@@ -48,21 +49,21 @@ from engine.source import arch_v3030 as A3030
 from engine.source import arch_v3031 as A3031
 from engine.source import arch_v3036 as A3036
 from engine.source import arch_v3043 as A3043
-from engine.source import arch_v3057 as A3057
+from engine.source import arch_v3059 as A3059
 
 DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: re-books checker-merged ledgers and line states; adds no value
-METHOD = "ARCH_TAKEOFF_V3.0.58"
-EXTENDS = A3057.METHOD
+METHOD = "ARCH_TAKEOFF_V3.0.60"
+EXTENDS = A3059.METHOD
 CANDIDATE = A30.METHOD
-POLICY_ID = "URBAN_BOQ_T423_ARCH_V3_0_58"
-INPUTS_SCHEMA = "URBAN_V3058_INPUTS_V1"
-LEDGER_SCHEMA = "URBAN_V3058_INTEGRATION_LEDGER_V1"
+POLICY_ID = "URBAN_BOQ_T423_ARCH_V3_0_60"
+INPUTS_SCHEMA = "URBAN_V3060_INPUTS_V1"
+LEDGER_SCHEMA = "URBAN_V3060_INTEGRATION_LEDGER_V1"
 ROLLBACK = A30.ROLLBACK
 InputsError = A3031.InputsError
 _r = A3018._r
 _fmt = A3030._fmt
 RULE_ID, RULE_VERSION = "R-T423-1", "T-423"
-REC_KEY = "split_remainder_v3058"
+REC_KEY = "split_remainder_v3060"
 P_CEIL, P_FACE, P_NA, P_THR = "CEILING_LIST", "FACE_PIECE", "PAINT_NA", "THRESHOLD_FIELDS"
 ACTIONS = ("LIST_CEILING", "MOVE_FACE_DEDUCTION", "NOT_APPLICABLE", "MATERIAL_STATE", "MEASURE_PAIR")
 PIECE_OF = {"LIST_CEILING": P_CEIL, "MOVE_FACE_DEDUCTION": P_FACE, "NOT_APPLICABLE": P_NA,
@@ -85,7 +86,7 @@ LINE_ID_RE = re.compile(r"^L-[0-9a-f]{20}$")
 MEASURE_RE = re.compile(r"= ([0-9]+(?:\.[0-9]+)?) m2 \(([0-9]+(?:\.[0-9]+)?) m\.l, ([0-9]+) pcs?\)")
 
 PIECES = {
-    P_CEIL: {"module": "engine/source/arch_v3058.py (a ceiling line restated by a HELD dome position gets that dome "
+    P_CEIL: {"module": "engine/source/arch_v3060.py (a ceiling line restated by a HELD dome position gets that dome "
                        "piece as its listed deduction by id)",
              "policy": "CEILING_DOME_LIST_V1", "rule_id": "R-T246-1 + R-T284-1 (R-T423-1 a, b)",
              "owner_rules": ["Q-44 A (dome positions HELD: designer DCR-4)", "UP-QTY-STATUS-001 (held is blank)"],
@@ -93,7 +94,7 @@ PIECES = {
                                     "the room), each deduction named",
              "drawing_method": "the merged T-283 dome table: the open disc of each dome split over the floor pieces "
                                "it covers ('ST7757 dxf.dxf' 1F-roof slab plan, dome circle), 4-decimal print"},
-    P_FACE: {"module": "engine/source/arch_v3058.py (a door hole moved to the face piece its contour segment lies "
+    P_FACE: {"module": "engine/source/arch_v3060.py (a door hole moved to the face piece its contour segment lies "
                        "on; room total unchanged)",
              "policy": "OPENING_ON_ITS_FACE_PIECE_V1", "rule_id": "R-T388-1 b (R-T423-1 c)",
              "owner_rules": ["UP-FIN-WALL-001 (wet room tiled full height)", "Q-55 C (door head 2.20 where none is "
@@ -101,7 +102,7 @@ PIECES = {
              "owner_manual_method": "each face = length x owner height less the openings that lie on it",
              "drawing_method": "the merged T-388 face table (T-250 walk: the straight face's drawn line carries no "
                                "door, door_m 0; the room walks the doorway as its own OFF:DOORWAY piece)"},
-    P_NA: {"module": "engine/source/arch_v3058.py (a paint line of a fully wall-tiled room: NOT_APPLICABLE, no "
+    P_NA: {"module": "engine/source/arch_v3060.py (a paint line of a fully wall-tiled room: NOT_APPLICABLE, no "
                      "figure, the carrying tile line named)",
            "policy": "PAINT_ON_FULL_TILE_NA_V1", "rule_id": "UP-FIN-PAINT-001 (R-T388-1 d, R-T423-1 d)",
            "owner_rules": ["UP-FIN-PAINT-001 (no paint where the wall is tiled)", "Q-37 A (pantry wet)",
@@ -109,7 +110,7 @@ PIECES = {
            "owner_manual_method": "paint only on the plastered faces that are not tiled; a fully tiled room has none",
            "drawing_method": "the merged T-388 face table: every pantry face tiled to the coat top (tile top = "
                              "backing top 3.65 on every determinate face)"},
-    P_THR: {"module": "engine/source/arch_v3058.py (one material_state per threshold item; m2 / m.l / pcs as line "
+    P_THR: {"module": "engine/source/arch_v3060.py (one material_state per threshold item; m2 / m.l / pcs as line "
                       "fields equal to the formula)",
             "policy": "THRESHOLD_FIELDS_V1", "rule_id": "R-T327-1 + O-T327-1 / O-T327-2 (R-T423-1 e, f)",
             "owner_rules": ["Q-55 C (wet-door marble threshold: owner rule, an Urban method)", "Q-68 C",
@@ -117,7 +118,7 @@ PIECES = {
             "owner_manual_method": "threshold = clear width x wall thickness (m2), the width (m.l), 1 pc",
             "drawing_method": "the merged T-327 strips (T-325 ledger: clear width and wall thickness by opening)"},
 }
-WAITING = dict(A3057.WAITING)
+WAITING = dict(A3059.WAITING)
 WAITING.update({
     "T423_GF_CEILING_LIST": "GF open-plan ceiling (V3.0.32 restated 110.922696 -> 101.137092 m2): its 9.785604 m2 gap is "
                             "explained only through still-held stair-zone / no-ceiling pieces that do not close by id "
@@ -201,7 +202,7 @@ def _entry(e, srcs):
 
 
 def load_inputs(doc, project_id=None):
-    """URBAN_V3058_INPUTS_V1 -> the validated doc.
+    """URBAN_V3060_INPUTS_V1 -> the validated doc.
     {"schema", "project_id", "sources": [{"task", "file", "sha256", "merge_commit", "checker_run"}],
      "set_aside": [{"line_id", "why"}],
      "entries": [{"action" (ACTIONS), "line_id", "source_tasks", "expect" {item_code, element_id, unit,
@@ -422,7 +423,7 @@ def changes_for(doc, prev):
     if not doc:
         return [], {"piece": "T423", "state": "NO_PROJECT_INPUT"}
     if any(((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY) for ln in prev):
-        raise InputsError("the candidate already carries V3.0.58 records (applied once)")
+        raise InputsError("the candidate already carries V3.0.60 records (applied once)")
     by = {ln["line_id"]: ln for ln in prev}
     for lid in doc["_aside"]:
         if lid not in by:
@@ -469,7 +470,7 @@ def changes_for(doc, prev):
 
 # ================================================================================================ checks
 def check_split_remainder(lines, before=None):
-    """on finished lines: every V3.0.58 ceiling list closes (TOL); every NOT_APPLICABLE paint line carries no figure
+    """on finished lines: every V3.0.60 ceiling list closes (TOL); every NOT_APPLICABLE paint line carries no figure
     and its carrying line is a valued tile line; every measure pair equals its formula; one material_state per
     threshold code; with `before`, no quantity of a changed line moved. -> summary."""
     by = {ln["line_id"]: ln for ln in lines}
@@ -524,8 +525,8 @@ def check_split_remainder(lines, before=None):
 
 # ================================================================================================ integrate / write
 def integrate(prev, changes, for_lead=()):
-    """-> (V3.0.58 lines, identity). Changed lines replace their candidate line in place; every other candidate line
-    is byte-identical (asserted); the earlier versions' checks re-run on the result (the V3.0.57 set)."""
+    """-> (V3.0.60 lines, identity). Changed lines replace their candidate line in place; every other candidate line
+    is byte-identical (asserted); the earlier versions' checks re-run on the result (the V3.0.59 set)."""
     sid = {ln["line_id"]: i for i, ln in enumerate(prev)}
     out = list(prev)
     repl = set()
@@ -539,10 +540,10 @@ def integrate(prev, changes, for_lead=()):
             raise ValueError(f"{METHOD}: a changed line is not a candidate line or changes twice")
         out[i] = a
         repl.add(a["line_id"])
-    _o, i57 = A3057.integrate(out, [], for_lead)     # every V3.0.10 .. V3.0.57 family check, re-run on these lines
-    ident = {"base_lines": len(prev), "v3_0_58_lines": len(out), "v3_0_58_rows": len(changes), "replaced": len(repl),
-             "added": 0, "checks_v3_0_57": {k: v for k, v in i57.items() if k not in (
-                 "base_lines", "v3_0_57_lines", "v3_0_57_rows", "replaced", "added", "outside_rows",
+    _o, i59 = A3059.integrate(out, [], for_lead)     # every V3.0.10 .. V3.0.59 family check, re-run on these lines
+    ident = {"base_lines": len(prev), "v3_0_60_lines": len(out), "v3_0_60_rows": len(changes), "replaced": len(repl),
+             "added": 0, "checks_v3_0_59": {k: v for k, v in i59.items() if k not in (
+                 "base_lines", "v3_0_59_lines", "v3_0_59_rows", "replaced", "added", "outside_rows",
                  "outside_rows_identical_to_base", "outside_rows_sha256")},
              "split_remainder": check_split_remainder(out, prev)}
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
@@ -571,7 +572,7 @@ def ledger_rows(changes, released_lines=None):
                      "line_id": ref["line_id"], "item_code": ref["item_code"], "floor": loc.get("floor"),
                      "room_id": loc.get("room_id"), "element_id": loc.get("element_id"), "unit": ref["unit"],
                      "before_released_v2_9": b29, "before_base": A30._qty(c.get("before")),
-                     "after_v3_0_58": A30._qty(ref), "evidence_status": c.get("evidence_status"),
+                     "after_v3_0_60": A30._qty(ref), "evidence_status": c.get("evidence_status"),
                      "still_held": c.get("held"), "release_status": "NOT RELEASED",
                      "material_state": [c["before"]["material_state"], ref["material_state"]],
                      "deductions_after": ref.get("deductions"), "measure_pair": ref.get("measure_pair"),
@@ -583,9 +584,9 @@ def ledger_rows(changes, released_lines=None):
 
 
 LEDGER_CSV = ("version", "piece", "action", "change", "line_id", "item_code", "floor", "room_id", "element_id", "unit",
-              "v2_9", "base", "v3_0_58", "material_state", "evidence_status", "still_held", "verification")
+              "v2_9", "base", "v3_0_60", "material_state", "evidence_status", "still_held", "verification")
 DIFF_CSV = ("line_id", "item_code", "floor", "element_id", "unit", "vs_base", "vs_released_v2_9", "v2_9", "base",
-            "v3_0_58")
+            "v3_0_60")
 
 
 def ledger_csv(rows):
@@ -595,7 +596,7 @@ def ledger_csv(rows):
                        "line_id": r["line_id"], "item_code": r["item_code"], "floor": r.get("floor") or "",
                        "room_id": r.get("room_id") or "", "element_id": r.get("element_id") or "", "unit": r["unit"],
                        "v2_9": q(r.get("before_released_v2_9")), "base": q(r.get("before_base")),
-                       "v3_0_58": q(r.get("after_v3_0_58")), "material_state": " -> ".join(r["material_state"]),
+                       "v3_0_60": q(r.get("after_v3_0_60")), "material_state": " -> ".join(r["material_state"]),
                        "evidence_status": r["evidence_status"],
                        "still_held": "; ".join(x["what"] for x in r.get("still_held") or ())[:300],
                        "verification": f"{r['verification'].get('task')} "
@@ -618,12 +619,12 @@ def diff_rows(prev, new, released_lines=None):
         out.append({"line_id": ln["line_id"], "item_code": ln["item_code"], "floor": ln["location"].get("floor"),
                     "element_id": ln["location"].get("element_id"), "unit": ln["unit"], "vs_base": vs,
                     "vs_released_v2_9": vs29, "v2_9": A302._q(A30._qty(r)) if r else "",
-                    "base": A302._q(A30._qty(o)) if o else "", "v3_0_58": A302._q(A30._qty(ln))})
+                    "base": A302._q(A30._qty(o)) if o else "", "v3_0_60": A302._q(A30._qty(ln))})
     return out
 
 
 def write(out, prev, changes, log, released_lines=None, for_lead=()):
-    """the V3_0_58_* files beside the base candidate's files. -> (file names, identity, ledger)."""
+    """the V3_0_60_* files beside the base candidate's files. -> (file names, identity, ledger)."""
     from pathlib import Path
     from engine.source import boq_line as BL
     out = Path(out)
@@ -643,9 +644,9 @@ def write(out, prev, changes, log, released_lines=None, for_lead=()):
             dsum["vs_released_v2_9"][d["vs_released_v2_9"]] += 1
     ident = dict(ident, diff=dsum)
     t0, t1 = A304.code_totals(prev), A304.code_totals(new)
-    moved = {k: {"base": t0.get(k), "v3_0_58": t1.get(k)} for k in sorted(set(t0) | set(t1)) if t0.get(k) != t1.get(k)}
+    moved = {k: {"base": t0.get(k), "v3_0_60": t1.get(k)} for k in sorted(set(t0) | set(t1)) if t0.get(k) != t1.get(k)}
     for k, v in moved.items():      # a NOT_APPLICABLE paint line leaves the blocked count only; no figure moves
-        b0, b1 = dict(v["base"] or {}), dict(v["v3_0_58"] or {})
+        b0, b1 = dict(v["base"] or {}), dict(v["v3_0_60"] or {})
         dl = b0.pop("lines", 0) - b1.pop("lines", 0)
         db = b0.pop("blocked_lines", 0) - b1.pop("blocked_lines", 0)
         if k.split("|")[0] != PAINT or b0 != b1 or dl != db or db < 0:
@@ -657,12 +658,12 @@ def write(out, prev, changes, log, released_lines=None, for_lead=()):
            "base_method": A30.BASE_METHOD, "released_method": A30.RELEASED_METHOD, "released_default": False,
            "rollback": ROLLBACK, "identity": ident, "pieces": PIECES, "piece_logs": [log],
            "totals_moved_by_code": moved, "waiting_pieces": WAITING}
-    files = {"V3_0_58_BOQ_LINES.json": BL.dumps(new),
-             "V3_0_58_BOQ_LINES.csv": A30._lines_csv(new),
-             "V3_0_58_INTEGRATION_LEDGER.json": A30._j(led),
-             "V3_0_58_INTEGRATION_LEDGER.csv": ledger_csv(rows),
-             "V3_0_58_DIFF.csv": A305._csv(diff, DIFF_CSV),
-             "V3_0_58_RUN.json": A30._j(run)}
+    files = {"V3_0_60_BOQ_LINES.json": BL.dumps(new),
+             "V3_0_60_BOQ_LINES.csv": A30._lines_csv(new),
+             "V3_0_60_INTEGRATION_LEDGER.json": A30._j(led),
+             "V3_0_60_INTEGRATION_LEDGER.csv": ledger_csv(rows),
+             "V3_0_60_DIFF.csv": A305._csv(diff, DIFF_CSV),
+             "V3_0_60_RUN.json": A30._j(run)}
     for name, text in files.items():
         (out / name).write_text(text, encoding="utf-8")
     return sorted(files), ident, led

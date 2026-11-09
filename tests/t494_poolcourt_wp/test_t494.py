@@ -139,11 +139,13 @@ def test_adverse_rotation_mirror_units(angle, mirror, unit):
 
 def test_rule_module_is_unwired_and_stdlib_only():
     src = (ROOT / "engine" / "source" / "wp_applicability_rules_v1.py").read_text()
-    assert W.DEFAULT_GUARD_CLASS == "UNWIRED_PRODUCER" and W.UPTURN_H_M == 0.20
+    # T-507: wired into ARCH_TAKEOFF_V3.0.58 (a GUARD_HOST that re-runs the V3.0.6 guard), so the class moved from
+    # UNWIRED_PRODUCER to GUARDED_VIA_V3.0.6 (T-212 P2), and the one engine reader is that method, exactly
+    assert W.DEFAULT_GUARD_CLASS == "GUARDED_VIA_V3.0.6" and W.UPTURN_H_M == 0.20
     assert "import shapely" not in src and "import ezdxf" not in src
     hits = [p for p in (ROOT / "engine").rglob("*.py") if "wp_applicability_rules_v1" in p.read_text(errors="ignore")
             and p.name != "wp_applicability_rules_v1.py"]
-    assert hits == []                                                       # wired into no method
+    assert [p.name for p in hits] == ["arch_v3058.py"]                      # wired into V3.0.58 only (T-507)
 
 
 # ---- development villa (private drawing at run time) ------------------------------------------------------------------

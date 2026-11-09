@@ -1,0 +1,205 @@
+{
+ "changed_rows": [
+  {
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "item": "LAYING_MATERIAL",
+   "line_id": "L-9056ebed77701b50abfc",
+   "material": null,
+   "material_type": "WHITE",
+   "net_before": 25.885,
+   "net_now": null,
+   "status_now": "HELD",
+   "t453_r2_v3_0_45": 89.3375,
+   "v3_0_56": "HELD"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "item": "BLOCK_COUNT",
+   "line_id": "L-a6eedf5e4adec6d07618",
+   "material": null,
+   "material_type": "BLACK",
+   "net_before": 3.8,
+   "net_now": null,
+   "status_now": "HELD",
+   "t453_r2_v3_0_45": [
+    43.25,
+    47.5
+   ],
+   "v3_0_56": "HELD"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "item": "LAYING_MATERIAL",
+   "line_id": "L-a6eedf5e4adec6d07618",
+   "material": null,
+   "material_type": "BLACK",
+   "net_before": 3.8,
+   "net_now": null,
+   "status_now": "HELD",
+   "t453_r2_v3_0_45": [
+    0.051035,
+    0.05605
+   ],
+   "v3_0_56": "HELD"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "item": "BLOCK_COUNT",
+   "line_id": "L-76a4d8e50423fb02b914",
+   "material": null,
+   "material_type": "BLACK",
+   "net_before": 21.66,
+   "net_now": null,
+   "status_now": "HELD",
+   "t453_r2_v3_0_45": 270.75,
+   "v3_0_56": "HELD"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "item": "LAYING_MATERIAL",
+   "line_id": "L-76a4d8e50423fb02b914",
+   "material": null,
+   "material_type": "BLACK",
+   "net_before": 21.66,
+   "net_now": null,
+   "status_now": "HELD",
+   "t453_r2_v3_0_45": 0.319485,
+   "v3_0_56": "HELD"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "item": "LAYING_MATERIAL",
+   "line_id": "L-bbb82de298fecbafa11d",
+   "material": null,
+   "material_type": "WHITE",
+   "net_before": 15.9165,
+   "net_now": null,
+   "status_now": "HELD",
+   "t453_r2_v3_0_45": [
+    65.14425,
+    71.62425
+   ],
+   "v3_0_56": "HELD"
+  },
+  {
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "item": "LAYING_MATERIAL",
+   "line_id": "L-e90c9dd5ca08ffb64728",
+   "material": null,
+   "material_type": "WHITE",
+   "net_before": 21.476,
+   "net_now": null,
+   "status_now": "HELD",
+   "t453_r2_v3_0_45": 96.642,
+   "v3_0_56": "HELD"
+  }
+ ],
+ "held_walls_carried_held": [
+  {
+   "carried_m2_v3054": 6.84,
+   "wall_id": "2F-W01",
+   "why": "T-488 HELD"
+  },
+  {
+   "carried_m2_v3054": 9.6915,
+   "wall_id": "2F-W02",
+   "why": "T-488 HELD"
+  },
+  {
+   "carried_m2_v3054": 25.885,
+   "wall_id": "2F-W03",
+   "why": "T-488 HELD"
+  },
+  {
+   "carried_m2_v3054": 21.476,
+   "wall_id": "2F-W04",
+   "why": "T-488 HELD"
+  },
+  {
+   "carried_m2_v3054": 3.8,
+   "wall_id": "2F-W05",
+   "why": "T-488 HELD"
+  },
+  {
+   "carried_m2_v3054": 14.82,
+   "wall_id": "2F-W06",
+   "why": "T-488 HELD"
+  },
+  {
+   "carried_m2_v3054": 6.225,
+   "wall_id": "2F-W07",
+   "why": "T-488 HELD"
+  },
+  {
+   "carried_m2_v3054": 9.64,
+   "wall_id": "2F-W08",
+   "why": "T-488 HELD"
+  },
+  {
+   "carried_m2_v3054": 12.9311,
+   "wall_id": "GF-W22",
+   "why": "T-488 HELD"
+  }
+ ],
+ "totals_now": {
+  "black_0_20": {
+   "VERIFIED-NET": {
+    "lines": 2,
+    "m2": 86.064,
+    "theoretical_blocks": 1075.8
+   }
+  },
+  "glue": {
+   "PROVISIONAL-NET": {
+    "bags_25kg_net": 0.9414,
+    "kg": 23.535,
+    "m2": 5.23
+   },
+   "RANGE-NET": {
+    "bags_25kg_net_range": [
+     33.68241,
+     34.45281
+    ],
+    "kg_range": [
+     842.06025,
+     861.32025
+    ],
+    "lines": [
+     "L-2fdc0f971a94348ec855",
+     "L-541cf7210e52db0498bb",
+     "L-b7b4d784fbe7fdbebe84"
+    ],
+    "m2_range": [
+     187.1245,
+     191.4045
+    ]
+   },
+   "VERIFIED-NET": {
+    "bags_25kg_net": 0.80244,
+    "kg": 20.061,
+    "m2": 4.458
+   }
+  },
+  "mortar": {
+   "black_0_20_provisional_net": {
+    "cement_bags": 10.155552,
+    "lines": 2,
+    "m3": 1.269444,
+    "sand_m3_loose": 1.396388
+   },
+   "held_lines": [
+    "L-a56a8add7812d1b52cb7",
+    "L-4054259959463edd70fb",
+    "L-73acd5a9d7e7cf6515c1",
+    "L-abf15bdf70ccf1e7b474",
+    "L-adb393d6db51056d343b",
+    "L-87e0023741a8e2d98b21"
+   ],
+   "label": "PROVISIONAL-NET",
+   "on": "material base (R-T453-5)",
+   "procurement": "HELD",
+   "range_net": {}
+  }
+ },
+ "unchanged_rows": 45
+}

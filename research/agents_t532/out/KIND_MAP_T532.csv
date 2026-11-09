@@ -1,0 +1,8 @@
+kind,plan_role,masonry_head,source
+BLOCK,MASONRY,as the ledger states,end_census_v2 / T-317 / T-355 piece kind (merged)
+COLUMN,CONCRETE,-,t274_geom.py: mid-point inside an architectural column outline (acols)
+ST_COLUMN,CONCRETE,-,"t274_geom.py: mid-point inside a structural column outline (stcols), via ST_COLUMN"
+BEAM,MASONRY,"beam soffit (storey - printed depth), HELD when the depth is not printed",t274_geom.py: mid-point inside a route G beam band; build_t274.exact_pieces h = basis - depth; t317_alsenan.run_pieces -> BLOCK under BEAM
+FACE,MASONRY,"slab soffit when face_cls SLAB with a printed t, else HELD","t274_geom.py: mid-point inside a structural slab-plan face, no band, no column outline; build_t274.exact_pieces; t317_alsenan.run_pieces -> BLOCK under SLAB / HELD"
+NONE,MASONRY,HELD (nothing with a printed soffit is drawn over it),"t274_geom.py: mid-point inside no outline, band or face; build_t274 HELD height; t317_alsenan.run_pieces -> BLOCK, top None"
+<any other>,UNKNOWN,-,not mapped: every boundary it takes part in is HELD by name

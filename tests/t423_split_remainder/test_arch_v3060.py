@@ -1,4 +1,4 @@
-"""T-423: ARCH_TAKEOFF_V3.0.58 (the T-246 split remainder) on the hand-calculated NON-Alsenan villa V423 (own
+"""T-423: ARCH_TAKEOFF_V3.0.60 (the T-246 split remainder) on the hand-calculated NON-Alsenan villa V423 (own
 figures, no drawing):
 
   Bedroom R1 plan 4.000 x 5.000 = 20.000 m2 gross; a dome D-N (HELD) covers 3.0000 m2 of it -> decor 17.000 m2.
@@ -30,7 +30,7 @@ sys.path.insert(0, str(ROOT))
 
 from engine.source import arch_v30 as A30  # noqa: E402
 from engine.source import arch_v304 as A304  # noqa: E402
-from engine.source import arch_v3058 as A  # noqa: E402
+from engine.source import arch_v3060 as A  # noqa: E402
 from engine.source import boq_line as BL  # noqa: E402
 
 PID, REV = "V423-SYNTHETIC", "e" * 64
@@ -172,7 +172,7 @@ def test_no_quantity_and_no_total_moves():
 def test_write_files(tmp_path):
     prev, ch, log = run()
     names, ident, led = A.write(tmp_path, prev, ch, log)
-    assert "V3_0_58_BOQ_LINES.json" in names and len(led["rows"]) == 5
+    assert "V3_0_60_BOQ_LINES.json" in names and len(led["rows"]) == 5
     assert ident["diff"]["vs_base"] == {"SAME": 4, "CHANGED_TEXT_ONLY": 4, "CHANGED": 1}   # K1 paint: state only
 
 
