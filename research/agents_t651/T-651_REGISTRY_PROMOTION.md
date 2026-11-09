@@ -57,6 +57,21 @@ Freelancer: blockwork in m2 only; no unit / mortar / glue row: RULE_DIFFERENCE, 
   that field has never been restated by a promotion. Left byte-identical (the row's diff scope); a restatement is its
   own registry row if wanted.
 
+## Validation (task head)
+
+Targeted: tests/t651 (16) + t485 + t525 + t498 + t637 PASS (t485 stale-pending guard green: was ['T-498']). Freeze 0
+differing; codemap check clean; build_master --check equal, 0 problems; manifest check []. L4: every test folder and
+root test file, run in two halves (odd / even folders, 2 CPUs): FAILED only the t374 baseline pair
+(test_development_villa_schedule_reproduces_the_committed_record, test_schedule_built_on_the_v2_copy_equals_the_committed_schedule)
+plus t647::test_outputs_current and t649::test_training_villa_is_the_committed_rebuild, which are ORDER-DEPENDENT and
+not this change: both pass alone on this head, and `pytest tests/t645 tests/t646 tests/t647/test_t647.py
+tests/t649_manifest_v18/test_t649.py` fails the same two on the BASE engine tree 57db7053 (no T-651 file).
+
+- F-T651-3 (test hygiene, for the Lead): research/agents_t645/t645_rules.py (and ~18 other research rule modules)
+  set the GLOBAL decimal precision at import; t647 / t649 compare Decimal text, so they fail whenever t645 runs before
+  them in the same process without t646 re-setting it (the serial alphabetical order hides it). Same class as the
+  T-648 r2 local-context fix; a fix row would give each rule module a local Decimal context.
+
 Lessons row (proposed, ERS s.7): "a Gate B merge that adds a pending package to the newest registry is followed in the
 same Verifier slot by its promotion version (or the merge carries it), so t485 never goes red on the working branch
 (every villa; T-525, T-651)".
