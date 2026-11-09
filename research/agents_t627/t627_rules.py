@@ -27,8 +27,43 @@ opening area and refuses the other two.
 """
 from __future__ import annotations
 
+import functools
+import inspect
+import types
 from datetime import date
-from decimal import Decimal
+from decimal import Context, Decimal, localcontext
+
+# T-656 (F-T653-1): this rule and its builder compute in their OWN local 40-digit Decimal context (the T-653 pattern).
+# Before T-656 they ran at 40 digits only because importing t568 (before T-653) raised the process-global precision;
+# after T-653 they ran at whatever the caller had (28 by default, and an adverse prec 6 failed). Importing this module
+# never changes the process-global context; in_prec40() at the end of the module applies the local context.
+PREC = 40
+
+
+def ctx40():
+    """a local 40-digit Decimal context: `with ctx40(): ...`; the caller's context is restored on exit."""
+    return localcontext(Context(prec=PREC))
+
+
+def in_prec40(namespace: dict) -> None:
+    """run every plain function DEFINED in the module of `namespace` (its globals()) inside ctx40(); generator
+    functions, classes and names imported from other modules are left as they are. Marks each wrapper
+    `_t653_prec40 = True`. Called once, at the end of the module (here and in its builder)."""
+    mod = namespace["__name__"]
+    for name, fn in list(namespace.items()):
+        if (isinstance(fn, types.FunctionType) and fn.__module__ == mod and not getattr(fn, "_t653_prec40", False)
+                and not inspect.isgeneratorfunction(fn) and name not in ("ctx40", "in_prec40", "_wrap40")):
+            namespace[name] = _wrap40(fn)
+
+
+def _wrap40(fn):
+    @functools.wraps(fn)
+    def run40(*args, **kwargs):
+        with ctx40():
+            return fn(*args, **kwargs)
+    run40._t653_prec40 = True
+    return run40
+
 
 D = Decimal
 Z = D("0")
@@ -163,3 +198,6 @@ def split_exact(rows: list[dict], total) -> dict:
         raise RuleError("class / evidence split does not re-add")
     return {"total": str(tot), "by_class": {k: str(v) for k, v in sorted(by_cls.items())},
             "by_evidence": {k: str(v) for k, v in sorted(by_ev.items())}}
+
+
+in_prec40(globals())   # T-656: every function of this module runs in a local 40-digit context

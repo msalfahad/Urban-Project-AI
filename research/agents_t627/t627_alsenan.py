@@ -229,3 +229,8 @@ def render_md(d: dict) -> str:
     for k, v in d["door_findings"].items():
         L.append(f"- {k}: {v['note']}")
     return "\n".join(L) + "\n"
+
+
+# T-656 (F-T653-1): this builder's functions run in the same local 40-digit context as its rules; before T-656 they
+# ran at 40 only through t568's old import side effect (removed by T-653), then at the caller's precision.
+R.in_prec40(globals())
