@@ -216,9 +216,21 @@
    "kind": "AUTHORED",
    "sha256": "b24726539d1351c0b5f656e3b1ac782f04e862cf50917b682198e7e699582255"
   },
+  "coverage/BOQ_FAMILY_MASTER_1.59.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "4efada683ab4363d80c4f9194c39e1c0c9c6acafa61fad609503f8c3ad578057"
+  },
   "coverage/BOQ_FAMILY_MASTER_1.6.0.json": {
    "kind": "AUTHORED",
    "sha256": "6ab8a72a488f2b40baab01c3380224d2ecbe31703f9861e2eef6ba2e950defe6"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.60.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "8eea413c74e6d6489f9bbd1538a9a20273664ed350acf8e01c79ce7b686fa2de"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.61.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "70477decd8fce64882d68cfe196e8df495de7ec069b821df7d4d6eaec0ff2f5f"
   },
   "coverage/BOQ_FAMILY_MASTER_1.7.0.json": {
    "kind": "AUTHORED",
