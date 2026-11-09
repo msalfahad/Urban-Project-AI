@@ -1,0 +1,2545 @@
+{
+ "rule": "R-T650-1",
+ "version": "1.0.0",
+ "ruling": "register PRECAST LINTEL PAYABLE FORM RESTATED (Lead 2026-11-09 00:15, F-T644-1)",
+ "inputs": {
+  "t644_sha16": "705568360c5f6958",
+  "jamb_evidence_t644_sha16": "8b72cfb16ad6fcf8",
+  "lintels_t453_sha16": "8f9e515f9b95f8cf",
+  "schedule_sha16": "5d5baf166700d1d5"
+ },
+ "min_bearing_m": 0.4,
+ "schedule": {
+  "source": "ST7757 p.13 LINTEL SCHEDULE",
+  "scope": [
+   "WHITE",
+   "BLACK"
+  ],
+  "scope_basis": "printed note 'B-WIDTH OF THE BLOCK WALL': block walls, no block type excluded (R-T519-1)",
+  "bands": [
+   {
+    "row": "L1",
+    "lo_cm": 0,
+    "hi_cm": 100,
+    "d_cm": 20
+   },
+   {
+    "row": "L2",
+    "lo_cm": 101,
+    "hi_cm": 200,
+    "d_cm": 20
+   },
+   {
+    "row": "L3",
+    "lo_cm": 201,
+    "hi_cm": 300,
+    "d_cm": 30
+   },
+   {
+    "row": "L4",
+    "lo_cm": 301,
+    "hi_cm": 500,
+    "d_cm": 40
+   },
+   {
+    "row": "L5",
+    "lo_cm": 501,
+    "hi_cm": 750,
+    "d_cm": 55
+   }
+  ]
+ },
+ "per_opening": {
+  "A-1F-01": {
+   "id": "A-1F-01",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 1.5,
+   "line_id": "L-4a12b89454e48ac510dc",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-4a12b89454e48ac510dc (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    2.3,
+    0.65
+   ],
+   "state": "BOUNDED",
+   "low_m3": 0.054,
+   "high_m3": 0.1185,
+   "why": "BEARING_OK both ends: cast to length, L in [w + 2 x 0.4, w + a_s + a_e]",
+   "change": "NEW_BOUND"
+  },
+  "A-GF-01": {
+   "id": "A-GF-01",
+   "storey": "GF",
+   "block_type": "BLACK",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.5,
+   "line_id": "L-b729bd6381f216153df8",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-b729bd6381f216153df8 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    null,
+    0.5
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-1F-01": {
+   "id": "D-1F-01",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-2c1c49db7cd7b16c6206",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-2c1c49db7cd7b16c6206 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    1.372,
+    2.427
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-1F-02": {
+   "id": "D-1F-02",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 1.5,
+   "line_id": "L-6aa750fb944ad58ce960",
+   "line_class_now": "HELD",
+   "line_low_now": 0.054,
+   "line_high_now": 0.13197,
+   "owner_line": "STR.CONC.LINTEL L-6aa750fb944ad58ce960 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    2.274,
+    1.125
+   ],
+   "state": "BOUNDED",
+   "low_m3": 0.054,
+   "high_m3": 0.13197,
+   "why": "BEARING_OK both ends: cast to length, L in [w + 2 x 0.4, w + a_s + a_e]",
+   "change": "UNCHANGED"
+  },
+  "D-1F-03": {
+   "id": "D-1F-03",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 1.5,
+   "line_id": "L-8b978b48668cde0f1b0c",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-8b978b48668cde0f1b0c (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.238,
+    2.711
+   ],
+   "state": "HELD_BY_NAME",
+   "low_m3": 0.042,
+   "high_m3": 0.04914,
+   "pair": null,
+   "why": "FLAGGED_DEFICIT end(s) against the printed MIN 0.4 m: R-T524-1 range (part inside a column is column concrete; pier occupied once); connection is a designer item",
+   "change": "NEW_BOUND"
+  },
+  "D-1F-04": {
+   "id": "D-1F-04",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-183f52083e693bdf8671",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-183f52083e693bdf8671 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.079,
+    2.12
+   ],
+   "state": "HELD_BY_NAME",
+   "low_m3": 0.036,
+   "high_m3": 0.03837,
+   "pair": null,
+   "why": "FLAGGED_DEFICIT end(s) against the printed MIN 0.4 m: R-T524-1 range (part inside a column is column concrete; pier occupied once); connection is a designer item",
+   "change": "NEW_BOUND"
+  },
+  "D-1F-05": {
+   "id": "D-1F-05",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-a7b8b292503ae1bf6c77",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-a7b8b292503ae1bf6c77 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    0.284,
+    0.385
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-1F-06": {
+   "id": "D-1F-06",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-9ec762c0bd529b924f33",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-9ec762c0bd529b924f33 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    0.746,
+    0.073
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-1F-07": {
+   "id": "D-1F-07",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-3111418b702ac80f0ade",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-3111418b702ac80f0ade (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.259,
+    1.09
+   ],
+   "state": "HELD_BY_NAME",
+   "low_m3": 0.036,
+   "high_m3": 0.04377,
+   "pair": null,
+   "why": "FLAGGED_DEFICIT end(s) against the printed MIN 0.4 m: R-T524-1 range (part inside a column is column concrete; pier occupied once); connection is a designer item",
+   "change": "NEW_BOUND"
+  },
+  "D-1F-08": {
+   "id": "D-1F-08",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-10f18635f68cfd8cdd1d",
+   "line_class_now": "HELD",
+   "line_low_now": 0.051,
+   "line_high_now": 0.14208,
+   "owner_line": "STR.CONC.LINTEL L-10f18635f68cfd8cdd1d (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    2.992,
+    0.844
+   ],
+   "state": "BOUNDED",
+   "low_m3": 0.051,
+   "high_m3": 0.14208,
+   "why": "BEARING_OK both ends: cast to length, L in [w + 2 x 0.4, w + a_s + a_e]",
+   "change": "UNCHANGED"
+  },
+  "D-1F-09": {
+   "id": "D-1F-09",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-961608860fcb38c106af",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-961608860fcb38c106af (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.444,
+    2.862
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is IN_HELD_PIECE in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-1F-10": {
+   "id": "D-1F-10",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-befb0beb1707ef192326",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-befb0beb1707ef192326 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    1.34,
+    0.259
+   ],
+   "state": "HELD_BY_NAME",
+   "low_m3": 0.036,
+   "high_m3": 0.04377,
+   "pair": null,
+   "why": "FLAGGED_DEFICIT end(s) against the printed MIN 0.4 m: R-T524-1 range (part inside a column is column concrete; pier occupied once); connection is a designer item",
+   "change": "NEW_BOUND"
+  },
+  "D-2F-01": {
+   "id": "D-2F-01",
+   "storey": "2F",
+   "block_type": "WHITE",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 1.5,
+   "line_id": "L-a58aabc436c71d85bea3",
+   "line_class_now": "HELD",
+   "line_low_now": 0.054,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-a58aabc436c71d85bea3 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.615,
+    null
+   ],
+   "state": "BOUNDED",
+   "low_m3": 0.054,
+   "high_m3": null,
+   "why": "BEARING_OK both ends: cast to length, L in [w + 2 x 0.4, w + a_s + a_e] (an end search capped: high OPEN)",
+   "change": "UNCHANGED"
+  },
+  "D-2F-02": {
+   "id": "D-2F-02",
+   "storey": "2F",
+   "block_type": "BLACK",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-1c0e7646345156fcd0cb",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-1c0e7646345156fcd0cb (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    0.251,
+    0.248
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is IN_HELD_PIECE in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-2F-03": {
+   "id": "D-2F-03",
+   "storey": "2F",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-a0518076a024ab1be082",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-a0518076a024ab1be082 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.249,
+    2.15
+   ],
+   "state": "HELD_BY_NAME",
+   "low_m3": 0.036,
+   "high_m3": 0.04347,
+   "pair": null,
+   "why": "FLAGGED_DEFICIT end(s) against the printed MIN 0.4 m: R-T524-1 range (part inside a column is column concrete; pier occupied once); connection is a designer item",
+   "change": "NEW_BOUND"
+  },
+  "D-GF-01": {
+   "id": "D-GF-01",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.5,
+   "line_id": "L-1a07849115af938b4a72",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-1a07849115af938b4a72 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.267,
+    1.232
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-GF-02": {
+   "id": "D-GF-02",
+   "storey": "GF",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-71998da6340be871d0af",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-71998da6340be871d0af (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.223,
+    0.776
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-GF-03": {
+   "id": "D-GF-03",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_SHARED_PIER",
+   "precast_piece_beside_m": null,
+   "line_id": "L-a7848a35fb4329e09d10",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-a7848a35fb4329e09d10 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.15,
+    0.85
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-GF-04": {
+   "id": "D-GF-04",
+   "storey": "GF",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-274b112580029084b80e",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-274b112580029084b80e (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.629,
+    null
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-GF-05": {
+   "id": "D-GF-05",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.5,
+   "line_id": "L-df32d6f42a824be21d3f",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-df32d6f42a824be21d3f (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    0.3,
+    0.2
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-GF-06": {
+   "id": "D-GF-06",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-7a73a338210ee7268b65",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-7a73a338210ee7268b65 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    0.759,
+    0.14
+   ],
+   "state": "HELD_BY_NAME",
+   "low_m3": 0.056,
+   "high_m3": 0.0616,
+   "pair": null,
+   "why": "FLAGGED_DEFICIT end(s) against the printed MIN 0.4 m: R-T524-1 range (part inside a column is column concrete; pier occupied once); connection is a designer item",
+   "change": "NEW_BOUND"
+  },
+  "D-GF-07": {
+   "id": "D-GF-07",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 2.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 2.5,
+   "line_id": "L-fd68db051119ea0266ee",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-fd68db051119ea0266ee (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.299,
+    2.1
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is HELD in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-GF-08": {
+   "id": "D-GF-08",
+   "storey": "GF",
+   "block_type": "BLACK",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-0d5e2e3ac4167df90d6d",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-0d5e2e3ac4167df90d6d (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    1.6,
+    0.099
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-GF-09": {
+   "id": "D-GF-09",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": null,
+   "width_bound_m": [
+    0.9,
+    1.0
+   ],
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-072bc37c5486905a9d21",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-072bc37c5486905a9d21 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    1.453,
+    0.146
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is IN_HELD_PIECE in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 ; width UNRESOLVED R-T581-1 1.1.0 (frame drawn over masonry) (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "D-GF-10": {
+   "id": "D-GF-10",
+   "storey": "GF",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-7149ea268473ea337cd2",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-7149ea268473ea337cd2 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.253,
+    0.65
+   ],
+   "state": "HELD_BY_NAME",
+   "low_m3": 0.036,
+   "high_m3": 0.04359,
+   "pair": null,
+   "why": "FLAGGED_DEFICIT end(s) against the printed MIN 0.4 m: R-T524-1 range (part inside a column is column concrete; pier occupied once); connection is a designer item",
+   "change": "NEW_BOUND"
+  },
+  "D-GF-11": {
+   "id": "D-GF-11",
+   "storey": "GF",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_SHARED_PIER",
+   "precast_piece_beside_m": null,
+   "line_id": "L-093df4d00eb35db3a4c0",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-093df4d00eb35db3a4c0 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    0.827,
+    0.238
+   ],
+   "state": "HELD_BY_NAME",
+   "low_m3": null,
+   "high_m3": null,
+   "pair": "D-GF-11+D-GF-12",
+   "why": "FLAGGED_DEFICIT end(s) against the printed MIN 0.4 m: R-T524-1 range (part inside a column is column concrete; pier occupied once); connection is a designer item",
+   "change": "NEW_BOUND (pair, R-T524-1)"
+  },
+  "D-GF-12": {
+   "id": "D-GF-12",
+   "storey": "GF",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_SHARED_PIER",
+   "precast_piece_beside_m": null,
+   "line_id": "L-3bdff145e1546ac48f8e",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-3bdff145e1546ac48f8e (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "HELD"
+   ],
+   "end_hi_m": [
+    0.238,
+    null
+   ],
+   "state": "HELD_BY_NAME",
+   "low_m3": null,
+   "high_m3": null,
+   "pair": "D-GF-11+D-GF-12",
+   "why": "FLAGGED_DEFICIT end(s) against the printed MIN 0.4 m: R-T524-1 range (part inside a column is column concrete; pier occupied once); connection is a designer item",
+   "change": "NEW_BOUND (pair, R-T524-1)"
+  },
+  "D-GF-13": {
+   "id": "D-GF-13",
+   "storey": "GF",
+   "block_type": "BLACK",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 1.5,
+   "line_id": "L-31232f81202941d104c6",
+   "line_class_now": "HELD",
+   "line_low_now": 0.054,
+   "line_high_now": 0.11289,
+   "owner_line": "STR.CONC.LINTEL L-31232f81202941d104c6 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    1.503,
+    1.26
+   ],
+   "state": "BOUNDED",
+   "low_m3": 0.054,
+   "high_m3": 0.11289,
+   "why": "BEARING_OK both ends: cast to length, L in [w + 2 x 0.4, w + a_s + a_e]",
+   "change": "UNCHANGED"
+  },
+  "D-GF-14": {
+   "id": "D-GF-14",
+   "storey": "GF",
+   "block_type": "BLACK",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "HELD_ENDS",
+   "precast_piece_beside_m": null,
+   "line_id": "L-17953d7882899d43473f",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-17953d7882899d43473f (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "no jamb evidence (never 0)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "L-1F-01": {
+   "id": "L-1F-01",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD_REGISTER",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "HELD_REGISTER",
+   "precast_piece_beside_m": null,
+   "line_id": "L-a500f10eedbd63a147ab",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-a500f10eedbd63a147ab (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.399,
+    0.4
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD_REGISTER: register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2) (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "L-2F-01": {
+   "id": "L-2F-01",
+   "storey": "2F",
+   "block_type": "BLACK",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD_REGISTER",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "HELD_REGISTER",
+   "precast_piece_beside_m": null,
+   "line_id": "L-fd8aaedc3457d6648f18",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-fd8aaedc3457d6648f18 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.399,
+    0.4
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD_REGISTER: register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2) (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "L-GF-01": {
+   "id": "L-GF-01",
+   "storey": "GF",
+   "block_type": "BLACK",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD_REGISTER",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "HELD_REGISTER",
+   "precast_piece_beside_m": null,
+   "line_id": "L-8f69c40749d579c14bf1",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-8f69c40749d579c14bf1 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    0.4,
+    0.399
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD_REGISTER: register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2) (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "P-1F-01": {
+   "id": "P-1F-01",
+   "storey": "1F",
+   "block_type": "BLACK",
+   "width_m": 1.3,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 2.5,
+   "line_id": "L-2efe48097978cae5fc99",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-2efe48097978cae5fc99 (B9-02)",
+   "pcs": null,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.449,
+    2.265
+   ],
+   "state": "BOUNDED",
+   "low_m3": 0.063,
+   "high_m3": 0.12042,
+   "why": "BEARING_OK both ends: cast to length, L in [w + 2 x 0.4, w + a_s + a_e]",
+   "change": "NEW_BOUND"
+  },
+  "P-GF-01": {
+   "id": "P-GF-01",
+   "storey": "GF",
+   "block_type": "BLACK",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers BLACK walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-d887eecf51c121831336",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-d887eecf51c121831336 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.0,
+    1.8
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W01": {
+   "id": "W01",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 1.2,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.5,
+   "line_id": "L-3af715c6e83364208ad0",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-3af715c6e83364208ad0 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.749,
+    0.75
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W04": {
+   "id": "W04",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_SHARED_PIER",
+   "precast_piece_beside_m": null,
+   "line_id": "L-1313767d897f06ef95b6",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-1313767d897f06ef95b6 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    1.3,
+    0.15
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W05": {
+   "id": "W05",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-441ae5fe85351347aff0",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-441ae5fe85351347aff0 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.375,
+    1.895
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W06": {
+   "id": "W06",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-f269fabb74f505755492",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-f269fabb74f505755492 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    1.895,
+    0.0
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W07": {
+   "id": "W07",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-ed7aadd01d9daa9559a9",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-ed7aadd01d9daa9559a9 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.4,
+    2.349
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W08": {
+   "id": "W08",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 1.5,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 2.5,
+   "line_id": "L-7f9eb7cced8df33202a5",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-7f9eb7cced8df33202a5 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.85,
+    0.549
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W09": {
+   "id": "W09",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 1.5,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 2.5,
+   "line_id": "L-786344670c0002b31478",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-786344670c0002b31478 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    1.05,
+    0.8
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W10": {
+   "id": "W10",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-882717b0c35a87e363ef",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-882717b0c35a87e363ef (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.099,
+    1.05
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W11": {
+   "id": "W11",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 1.95,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 2.5,
+   "line_id": "L-c1e57b06555adcf8edf7",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-c1e57b06555adcf8edf7 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.632,
+    1.145
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W12": {
+   "id": "W12",
+   "storey": "GF",
+   "block_type": "WHITE",
+   "width_m": 1.95,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 2.5,
+   "line_id": "L-e39175199fc6edc4db86",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-e39175199fc6edc4db86 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    1.145,
+    0.412
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W13": {
+   "id": "W13",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 1.2,
+   "width_bound_m": null,
+   "existence": "FLAGGED_HEAD_ROOM",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "FLAGGED_HEAD_ROOM",
+   "precast_piece_beside_m": null,
+   "line_id": "L-47882fa3a0d9cdcc122e",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-47882fa3a0d9cdcc122e (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.749,
+    0.75
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence FLAGGED_HEAD_ROOM: the head leaves room for the lintel under some pieces only (or only without the floor bed): which piece is over the opening is not read (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W14": {
+   "id": "W14",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 2.45,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L3 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L3"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 3.0,
+   "line_id": "L-fd9eabe1828ed735c43d",
+   "line_class_now": "HELD",
+   "line_low_now": 0.195,
+   "line_high_now": 0.246,
+   "owner_line": "STR.CONC.LINTEL L-fd9eabe1828ed735c43d (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.3,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.618,
+    1.032
+   ],
+   "state": "BOUNDED",
+   "low_m3": 0.195,
+   "high_m3": 0.246,
+   "why": "BEARING_OK both ends: cast to length, L in [w + 2 x 0.4, w + a_s + a_e]",
+   "change": "UNCHANGED"
+  },
+  "W15": {
+   "id": "W15",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 1.55,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "PIECE",
+   "precast_piece_beside_m": 2.5,
+   "line_id": "L-55cfc2395aca2e0c69e3",
+   "line_class_now": "HELD",
+   "line_low_now": 0.094,
+   "line_high_now": 0.11348,
+   "owner_line": "STR.CONC.LINTEL L-55cfc2395aca2e0c69e3 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.794,
+    0.493
+   ],
+   "state": "BOUNDED",
+   "low_m3": 0.094,
+   "high_m3": 0.11348,
+   "why": "BEARING_OK both ends: cast to length, L in [w + 2 x 0.4, w + a_s + a_e]",
+   "change": "UNCHANGED"
+  },
+  "W16": {
+   "id": "W16",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 1.55,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 2.5,
+   "line_id": "L-53ef44d8c490d1341b93",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-53ef44d8c490d1341b93 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.493,
+    1.232
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W18": {
+   "id": "W18",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 0.5,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-f8736409a6afa1424ea9",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-f8736409a6afa1424ea9 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.0,
+    0.577
+   ],
+   "state": "HELD_BY_NAME",
+   "low_m3": 0.034692,
+   "high_m3": 0.034692,
+   "pair": null,
+   "why": "FLAGGED_DEFICIT end(s) against the printed MIN 0.4 m: R-T524-1 range (part inside a column is column concrete; pier occupied once); connection is a designer item",
+   "change": "NEW_BOUND"
+  },
+  "W19": {
+   "id": "W19",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-6057028f3f666538a007",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-6057028f3f666538a007 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.724,
+    0.875
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W20": {
+   "id": "W20",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-6692d02cd6cd25120300",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-6692d02cd6cd25120300 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.875,
+    1.011
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W21": {
+   "id": "W21",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-dd5b41a7af885e96f797",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-dd5b41a7af885e96f797 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.374,
+    1.895
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W22": {
+   "id": "W22",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-f68444edf483bc1d87d4",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-f68444edf483bc1d87d4 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    1.895,
+    0.0
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W23": {
+   "id": "W23",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-bf76c17309c92605e174",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-bf76c17309c92605e174 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.399,
+    2.35
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W24": {
+   "id": "W24",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 1.55,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 2.5,
+   "line_id": "L-40e8c2597de12644e8e2",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-40e8c2597de12644e8e2 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.937,
+    null
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W25": {
+   "id": "W25",
+   "storey": "1F",
+   "block_type": "WHITE",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-bf88bf6f5efaa0ae5bdc",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-bf88bf6f5efaa0ae5bdc (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    1.399,
+    0.1
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W26": {
+   "id": "W26",
+   "storey": "2F",
+   "block_type": "WHITE",
+   "width_m": 1.2,
+   "width_bound_m": null,
+   "existence": "FLAGGED_HEAD_ROOM",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "FLAGGED_HEAD_ROOM",
+   "precast_piece_beside_m": null,
+   "line_id": "L-b699ce0da6b29b888435",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-b699ce0da6b29b888435 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.749,
+    0.75
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence FLAGGED_HEAD_ROOM: the head leaves room for the lintel under some pieces only (or only without the floor bed): which piece is over the opening is not read (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W27": {
+   "id": "W27",
+   "storey": "2F",
+   "block_type": "WHITE",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-f892163c0602656f7e57",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-f892163c0602656f7e57 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    1.399,
+    0.1
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W28": {
+   "id": "W28",
+   "storey": "2F",
+   "block_type": "WHITE",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L1 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L1"
+   ],
+   "precast_cls_beside": "PIECE_IF_BUILT",
+   "precast_piece_beside_m": 1.2,
+   "line_id": "L-005334b6998987164a5d",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-005334b6998987164a5d (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "FLAGGED_DEFICIT",
+    "BOUNDED"
+   ],
+   "end_hi_m": [
+    0.374,
+    1.295
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  },
+  "W29": {
+   "id": "W29",
+   "storey": "2F",
+   "block_type": "WHITE",
+   "width_m": 1.2,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "form": "RC_CAST_M3",
+   "form_why": "printed ST7757 p.13 LINTEL SCHEDULE row L2 covers WHITE walls and this width: drawings before company rules (AGENT_BRIEF resolution order; register PRECAST LINTEL PAYABLE FORM RESTATED): RC lintel cast to length, m3 + bars on STR.CONC.LINTEL",
+   "schedule_rows": [
+    "L2"
+   ],
+   "precast_cls_beside": "FLAGGED_NO_BEARING",
+   "precast_piece_beside_m": null,
+   "line_id": "L-aca2db3c2b29719328c7",
+   "line_class_now": "HELD",
+   "line_low_now": null,
+   "line_high_now": null,
+   "owner_line": "STR.CONC.LINTEL L-aca2db3c2b29719328c7 (B9-02)",
+   "pcs": null,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "end_states": [
+    "BOUNDED",
+    "FLAGGED_DEFICIT"
+   ],
+   "end_hi_m": [
+    1.295,
+    0.0
+   ],
+   "state": "HELD",
+   "low_m3": null,
+   "high_m3": null,
+   "why": "existence HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel (at most 1 lintel; the RC end check is beside only, never a quantity)",
+   "change": "CAUSE_RESTATED (still HELD blank)"
+  }
+ },
+ "pairs": {
+  "D-GF-11+D-GF-12": {
+   "ids": [
+    "D-GF-11",
+    "D-GF-12"
+   ],
+   "low_m3": 0.06,
+   "high_m3": 0.07914,
+   "pier_m": 0.238
+  }
+ },
+ "summary": {
+  "openings": 60,
+  "forms": {
+   "RC_CAST_M3": 60,
+   "PRECAST_PCS": 0,
+   "STRUCTURAL_LINE": 0,
+   "SYSTEM_HELD": 0
+  },
+  "forms_ids": {
+   "RC_CAST_M3": [
+    "A-1F-01",
+    "A-GF-01",
+    "D-1F-01",
+    "D-1F-02",
+    "D-1F-03",
+    "D-1F-04",
+    "D-1F-05",
+    "D-1F-06",
+    "D-1F-07",
+    "D-1F-08",
+    "D-1F-09",
+    "D-1F-10",
+    "D-2F-01",
+    "D-2F-02",
+    "D-2F-03",
+    "D-GF-01",
+    "D-GF-02",
+    "D-GF-03",
+    "D-GF-04",
+    "D-GF-05",
+    "D-GF-06",
+    "D-GF-07",
+    "D-GF-08",
+    "D-GF-09",
+    "D-GF-10",
+    "D-GF-11",
+    "D-GF-12",
+    "D-GF-13",
+    "D-GF-14",
+    "L-1F-01",
+    "L-2F-01",
+    "L-GF-01",
+    "P-1F-01",
+    "P-GF-01",
+    "W01",
+    "W04",
+    "W05",
+    "W06",
+    "W07",
+    "W08",
+    "W09",
+    "W10",
+    "W11",
+    "W12",
+    "W13",
+    "W14",
+    "W15",
+    "W16",
+    "W18",
+    "W19",
+    "W20",
+    "W21",
+    "W22",
+    "W23",
+    "W24",
+    "W25",
+    "W26",
+    "W27",
+    "W28",
+    "W29"
+   ],
+   "PRECAST_PCS": [],
+   "STRUCTURAL_LINE": [],
+   "SYSTEM_HELD": []
+  },
+  "rc_states": {
+   "BOUNDED": 8,
+   "HELD_BY_NAME": 10,
+   "HELD": 42
+  },
+  "rc_state_ids": {
+   "BOUNDED": [
+    "A-1F-01",
+    "D-1F-02",
+    "D-1F-08",
+    "D-2F-01",
+    "D-GF-13",
+    "P-1F-01",
+    "W14",
+    "W15"
+   ],
+   "HELD_BY_NAME": [
+    "D-1F-03",
+    "D-1F-04",
+    "D-1F-07",
+    "D-1F-10",
+    "D-2F-03",
+    "D-GF-06",
+    "D-GF-10",
+    "D-GF-11",
+    "D-GF-12",
+    "W18"
+   ],
+   "HELD": [
+    "A-GF-01",
+    "D-1F-01",
+    "D-1F-05",
+    "D-1F-06",
+    "D-1F-09",
+    "D-2F-02",
+    "D-GF-01",
+    "D-GF-02",
+    "D-GF-03",
+    "D-GF-04",
+    "D-GF-05",
+    "D-GF-07",
+    "D-GF-08",
+    "D-GF-09",
+    "D-GF-14",
+    "L-1F-01",
+    "L-2F-01",
+    "L-GF-01",
+    "P-GF-01",
+    "W01",
+    "W04",
+    "W05",
+    "W06",
+    "W07",
+    "W08",
+    "W09",
+    "W10",
+    "W11",
+    "W12",
+    "W13",
+    "W16",
+    "W19",
+    "W20",
+    "W21",
+    "W22",
+    "W23",
+    "W24",
+    "W25",
+    "W26",
+    "W27",
+    "W28",
+    "W29"
+   ]
+  },
+  "m3_bounded_set": {
+   "low_m3": 0.991692,
+   "high_m3": null,
+   "high_known_part_m3": 1.422882,
+   "high_open_on": [
+    "D-2F-01"
+   ],
+   "note": "re-added once (D-GF-11 / D-GF-12 as one pair); HELD blank lines are not in it and are never 0; nothing here is released or VERIFIED"
+  },
+  "pcs_governing": {
+   "label": "NOT_APPLICABLE (no opening has the precast payable form on this villa; not a zero count)",
+   "openings": []
+  },
+  "both_pcs_and_m3": []
+ },
+ "control_t519": [
+  {
+   "id": "D-1F-02",
+   "t519_state": "PRODUCED",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "BOUNDED",
+   "agree": true
+  },
+  {
+   "id": "D-1F-03",
+   "t519_state": "HELD",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "HELD_BY_NAME",
+   "agree": true
+  },
+  {
+   "id": "D-1F-04",
+   "t519_state": "HELD",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "HELD_BY_NAME",
+   "agree": true
+  },
+  {
+   "id": "D-1F-07",
+   "t519_state": "HELD",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "HELD_BY_NAME",
+   "agree": true
+  },
+  {
+   "id": "D-1F-08",
+   "t519_state": "PRODUCED",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "BOUNDED",
+   "agree": true
+  },
+  {
+   "id": "D-1F-10",
+   "t519_state": "HELD",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "HELD_BY_NAME",
+   "agree": true
+  },
+  {
+   "id": "D-2F-01",
+   "t519_state": "PRODUCED",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "BOUNDED",
+   "agree": true
+  },
+  {
+   "id": "D-2F-03",
+   "t519_state": "HELD",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "HELD_BY_NAME",
+   "agree": true
+  },
+  {
+   "id": "D-GF-06",
+   "t519_state": "HELD",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "HELD_BY_NAME",
+   "agree": true
+  },
+  {
+   "id": "D-GF-10",
+   "t519_state": "HELD",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "HELD_BY_NAME",
+   "agree": true
+  },
+  {
+   "id": "D-GF-11",
+   "t519_state": "HELD",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "HELD_BY_NAME",
+   "agree": true
+  },
+  {
+   "id": "D-GF-12",
+   "t519_state": "HELD",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "HELD_BY_NAME",
+   "agree": true
+  },
+  {
+   "id": "D-GF-13",
+   "t519_state": "PRODUCED",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "BOUNDED",
+   "agree": true
+  },
+  {
+   "id": "W14",
+   "t519_state": "PRODUCED",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "BOUNDED",
+   "agree": true
+  },
+  {
+   "id": "W15",
+   "t519_state": "PRODUCED",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "BOUNDED",
+   "agree": true
+  },
+  {
+   "id": "W18",
+   "t519_state": "HELD",
+   "t519_system": "PROJECT_RC",
+   "t650_state": "HELD_BY_NAME",
+   "agree": true
+  }
+ ],
+ "t524_conservation": {
+  "low_m3": 0.372692,
+  "high_m3": 0.437542,
+  "t524": [
+   0.372692,
+   0.437542
+  ]
+ },
+ "outside_the_60": {
+  "W17": "register CURVED-BAND OPENING HEAD: curved band, chord sagitta 0.711 m > 0 (T-616): no straight stock piece; head owned by the structural line carrying the band (FLAGGED, never a piece)"
+ },
+ "precast_beside": {
+  "label": "owner precast method BESIDE (R-T644-1 at 0.15 m): not payable on this villa; substitution reference only; Q-60 gives a precast alternative to WHITE walls only",
+  "t644_established_nr": 13,
+  "t644_at_most_nr": 37,
+  "white_wall_pieces": {
+   "D-2F-01": 1.5,
+   "D-GF-01": 1.5,
+   "D-GF-05": 1.5,
+   "D-GF-07": 2.5,
+   "W01": 1.5,
+   "W05": 1.2,
+   "W07": 1.2,
+   "W08": 2.5,
+   "W09": 2.5,
+   "W11": 2.5,
+   "W12": 2.5,
+   "W14": 3.0,
+   "W15": 2.5,
+   "W16": 2.5,
+   "W19": 1.2,
+   "W20": 1.2,
+   "W21": 1.2,
+   "W23": 1.2,
+   "W24": 2.5,
+   "W28": 1.2
+  }
+ }
+}
