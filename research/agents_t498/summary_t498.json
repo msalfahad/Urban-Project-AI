@@ -9,20 +9,21 @@
   "V3_0_55": "a498fc61",
   "V3_0_56": "4e25c54f",
   "V3_0_57": "25a8b406",
-  "V3_0_58": "436f1e78"
+  "V3_0_58": "c9570e6c",
+  "V3_0_59": "75331a76"
  },
  "drawings": {
   "plan": "training-villa Drive folder / P7757_DXF_COMPRESSED.zip -> P7757.dxf sha256 ab54dd55",
   "structural": "training-villa Drive folder / ST7757 dxf.dxf sha256 9f9d1179"
  },
- "extends": "ARCH_TAKEOFF_V3.0.57",
+ "extends": "ARCH_TAKEOFF_V3.0.58",
  "identity": {
   "added": 74,
-  "base_lines": 4994,
+  "base_lines": 4999,
   "diff": {
    "vs_base": {
     "ADDED": 74,
-    "SAME": 4994
+    "SAME": 4999
    }
   },
   "materials": {
@@ -30,13 +31,13 @@
    "material_lines": 74,
    "producers": 74
   },
-  "outside_rows": 4994,
-  "outside_rows_identical_to_base": 4994,
-  "outside_rows_sha256": "2675a8ad6341318923c230a2674bba9958f38deeaa14b8a395e87faf19f8f3f7",
+  "outside_rows": 4999,
+  "outside_rows_identical_to_base": 4999,
+  "outside_rows_sha256": "77afad6dc7d22c170d0fe1728d6b123f4657998715d3e01c2c0b17433c8c56d2",
   "replaced": 0,
-  "v3_0_58_lines": 5068
+  "v3_0_59_lines": 5073
  },
- "method": "ARCH_TAKEOFF_V3.0.58",
+ "method": "ARCH_TAKEOFF_V3.0.59",
  "rows": [
   {
    "after": {
@@ -2374,46 +2375,90 @@
  "totals_moved_by_code": {
   "MAS.GLUE.AAC|kg": {
    "base": null,
-   "v3_0_58": {
+   "v3_0_59": {
     "blocked_lines": 12,
     "bounded_lines": 3,
     "held_high": 861.32025,
     "held_low": 842.06025,
     "lines": 17,
     "released": 43.596
+   },
+   "view_base": null,
+   "view_v3_0_59": {
+    "blank_lines": 12,
+    "bounded_lines": 3,
+    "held_range": null,
+    "lines": 17,
+    "released": 43.596,
+    "status": "PARTIAL",
+    "text": "AT_LEAST 43.596 + HELD (15 lines: 3 bounded, 12 blank)",
+    "valued_lines": 2
    }
   },
   "MAS.MORTAR.BLACK|m3": {
    "base": null,
-   "v3_0_58": {
+   "v3_0_59": {
     "blocked_lines": 18,
     "bounded_lines": 0,
     "held_high": 0.0,
     "held_low": 0.0,
     "lines": 20,
     "released": 1.269444
+   },
+   "view_base": null,
+   "view_v3_0_59": {
+    "blank_lines": 18,
+    "bounded_lines": 0,
+    "held_range": null,
+    "lines": 20,
+    "released": 1.269444,
+    "status": "PARTIAL",
+    "text": "AT_LEAST 1.269444 + HELD (18 lines: 0 bounded, 18 blank)",
+    "valued_lines": 2
    }
   },
   "MAS.UNITS.BLACK|pcs": {
    "base": null,
-   "v3_0_58": {
+   "v3_0_59": {
     "blocked_lines": 18,
     "bounded_lines": 0,
     "held_high": 0.0,
     "held_low": 0.0,
     "lines": 20,
     "released": 1075.8
+   },
+   "view_base": null,
+   "view_v3_0_59": {
+    "blank_lines": 18,
+    "bounded_lines": 0,
+    "held_range": null,
+    "lines": 20,
+    "released": 1075.8,
+    "status": "PARTIAL",
+    "text": "AT_LEAST 1075.8 + HELD (18 lines: 0 bounded, 18 blank)",
+    "valued_lines": 2
    }
   },
   "MAS.UNITS.WHITE|pcs": {
    "base": null,
-   "v3_0_58": {
+   "v3_0_59": {
     "blocked_lines": 17,
     "bounded_lines": 0,
     "held_high": 0.0,
     "held_low": 0.0,
     "lines": 17,
     "released": 0.0
+   },
+   "view_base": null,
+   "view_v3_0_59": {
+    "blank_lines": 17,
+    "bounded_lines": 0,
+    "held_range": null,
+    "lines": 17,
+    "released": null,
+    "status": "HELD",
+    "text": "HELD (17 blank lines)",
+    "valued_lines": 0
    }
   }
  }

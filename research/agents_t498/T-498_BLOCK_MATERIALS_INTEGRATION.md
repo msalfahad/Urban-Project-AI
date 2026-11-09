@@ -1,4 +1,4 @@
-# T-498 blockwork MATERIALS wiring: integration package ARCH_TAKEOFF_V3.0.58 (stream S; method every villa)
+# T-498 blockwork MATERIALS wiring: integration package ARCH_TAKEOFF_V3.0.59 on V3.0.58 (stream S; method every villa; r4 = section 8)
 
 Worker 3, 2026-11-04 (claim 21:00 UTC; r2 resumed 23:03 UTC). Gate B integration package on the candidate of record
 ARCH_TAKEOFF_V3.0.57 (T-310 r7, merge 87ef8718; 25a8b406).
@@ -149,3 +149,71 @@ board commit read), out/T498_PACKAGE_FAMILIES.json chain (57, 58), rules/coverag
 (build_master_1_56_0.py) + its RULES_MANIFEST / m9_rules_manifest entries, research/agents_t463/GIT_FACTS.json
 (build_t463_facts.py), summary_t498.json, then L4. Until 1.56.0 exists, t130 / t199 / t485 / t507 registry tests are
 red on this branch (codes MAS.UNITS.* / B9-04 written while the governing registry is 1.55.0): expected, not a defect.
+
+## 8. r4: run of record on V3.0.58, registry 1.58.0, integration package (worker 3, 2026-11-09)
+
+**Identity.** ARCH_TAKEOFF_V3.0.59 extends V3.0.58 (T-507, merge c94b35c1); base 4,999 lines (4,994 + the 5 T-507
+roof WP lines). Branch merged with agents/task-T-525 (= working branch af50c864 + BOQ_FAMILY_MASTER_1.57.0, READY at
+claim, Verifier on it): T-525 already promotes T-507, so this package carries NO promotion (r3's
+t498_package_families / t498_promotions_source and their output are removed).
+
+**Own chain (this session, inside the wrapper).** Drive copies decoded by `agent_env.sh decode` into the private folder
+only (P7757.dxf sha256 ab54dd55, ST7757 dxf 9f9d1179). `run research/agents_t167/v304_run.py` -> `run
+research/agents_t498/v3059_run.py`: V3_0_47 e86a53a8, 48 33a81c53, 50 d40c4ec5, 51 c0b6d664, 53 36863f6c, 54 c85c4630,
+55 a498fc61, 56 4e25c54f, 57 25a8b406, **58 c9570e6c (candidate of record, asserted)** -> **V3_0_59 75331a76, 5,073
+lines = 4,999 byte-identical (outside_rows_sha256 77afad6d) + 74 added + 0 replaced / changed**. Independent path:
+`v3059_apply.py` on the hub's V3_0_58 gives the same 75331a76 (masonry / lintel lines = the indexed 88). This closes
+F-T580-2 / T-582 s.2 (expected 5,073: met). summary_t498.json regenerated from this run.
+
+**Per BOQ line, before (V3.0.58) -> after (V3.0.59)** (every line is NEW: before = no line; V2.9 + route G: NOT_IN_RELEASED
+on all 74). Base = released MAS.BLOCK net of the same candidate (drawing-derived) minus REQUIRED RC lintel faces;
+rate = owner rule (manual method):
+
+| line (floor, host class) | contract net m2 | - lintel faces | material base | rule | after | status (WC s.5) |
+|---|---|---|---|---|---|---|
+| UNITS.BLACK GF 0.20 VERIFIED_BLACK | 62.164 | 0 | 62.164 | x 12.5 (Q-75) | 777.05 pcs | base VERIFIED host, rate OWNER-CONFIRMED |
+| UNITS.BLACK 1F 0.20 VERIFIED_BLACK | 23.9 | 0 | 23.9 | x 12.5 | 298.75 pcs | same |
+| MORTAR.BLACK GF 0.20 | 62.164 | 0 | 62.164 | x 0.01475 (1:4 Q-78; 10 mm joint) | 0.916919 m3 | ASSUMED - OWNER-APPROVED (joint owner-provisional) |
+| MORTAR.BLACK 1F 0.20 | 23.9 | 0 | 23.9 | x 0.01475 | 0.352525 m3 | same |
+| GLUE.AAC GF 0.20 VERIFIED_WHITE | 4.458 | 0 | 4.458 | x 4.5 (owner 2 Nov) | 20.061 kg | base VERIFIED host, rate OWNER-CONFIRMED |
+| GLUE.AAC GF 0.20 OWNER_APPROVED_WHITE | 5.59 | 0.36 (D-GF-06) | 5.23 | x 4.5 | 23.535 kg | ASSUMED - OWNER-APPROVED (host class) |
+| GLUE.AAC 1F VERIFIED_WHITE | 101.976 | 1.705 | 98.771 .. 100.271 | x 4.5 | 444.4695 .. 451.2195 kg | HELD bounded (lintel face HELD) |
+| GLUE.AAC GF DRAWING_CONFIRMED_WHITE | 44.2975 | 0 | 43.1175 .. 44.2975 | x 4.5 | 194.02875 .. 199.33875 kg | HELD bounded |
+| GLUE.AAC 1F DRAWING_CONFIRMED_WHITE | 46.836 | 0 | 45.236 .. 46.836 | x 4.5 | 203.562 .. 210.762 kg | HELD bounded |
+| 18 + 18 + 12 + 17 lines on held hosts / 0.15 m / white units | - | - | - | - | blank by name | HELD (never 0) |
+
+Re-add by hand: units 777.05 + 298.75 = **1,075.80 pcs**; mortar 0.916919 + 0.352525 = **1.269444 m3** (x 8 = 10.155552
+bags, x 1.1 = 1.396388 m3 sand beside); glue point 20.061 + 23.535 = **43.596 kg**, range 444.4695 + 194.02875 + 203.562
+= **842.06025** .. 451.2195 + 199.33875 + 210.762 = **861.32025 kg** (never added to the point). Engine totals view:
+'AT_LEAST 1075.8 + HELD (18)', 'AT_LEAST 1.269444 + HELD (18)', 'AT_LEAST 43.596 + HELD (15: 3 bounded, 12 blank)',
+MAS.UNITS.WHITE 'HELD (17 blank)'. Identical to r1 .. r3 figures (no upstream package moved a MAS.BLOCK /
+STR.CONC.LINTEL line since V3.0.56).
+
+**Diffs.** vs previous V3.0 (V3.0.58 c9570e6c): ADDED 74, SAME 4,999, CHANGED 0. vs released V2.9 + route G: the 74 are
+NOT_IN_RELEASED (no material line there); every other line's comparison is V3.0.58's. Freelancer: blockwork in m2
+only, no comparable unit / mortar / glue row: RULE_DIFFERENCE, no %.
+
+**Registry BOQ_FAMILY_MASTER_1.58.0** (research/agents_t498/build_master_1_58_0.py; 1.57.0 never edited): pending
+ARCH_TAKEOFF_V3.0.59 (task commit 441bb043, the commit adding arch_v3059.py); B9-01 / B9-04 evidence, opt-in reader,
+missing and note; B9-04 capability NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (RAISED; name_terms and the stale 'no
+method emits' evidence leave; the dated 1.56.0 T-637 line stays as history); counts NOT_IMPLEMENTED 10 -> 9,
+IMPLEMENTED_NOT_INTEGRATED 26 -> 27. The four item codes were already owned since 1.56.0 (T-637): asserted, not moved.
+Candidate of record, census (V3.0.58, 4,999 lines), candidate_packages, every candidate block, released configuration
+and every T-637 field byte-identical (tests/t498_block_materials/test_family_master_1_58_0.py, 2 adverse cases).
+RULES_MANIFEST entry by the manifest tool (write_manifest.py); GIT_FACTS refreshed by build_t463_facts.
+
+**Not in this package; chain AFTER it (before = this package's after; R1 one package per line).** The overlay rows on
+these lines and their hosts recorded by T-580 / T-582 / T-629, each with its own Checker verdict: V2 lintel class per
+line (16 STR.CONC.LINTEL: 6 AT_LEAST low 0.502 m3, 10 HELD; released 1.016 -> 0 m3), V5 host faces (5), perimeter
+joint mortar keys (R-T520-1, own producer beside: overlay mortar 1.367589 = 1.269444 + 0.039291 + 0.058854), lintel
+bars (2), lintel end ceilings (4), and V15 FR-T615-1 / -2 / -3 (0.15 m black hosts under Q-80: 6 unit + 6 mortar lines
+here blank -> valued, 6 perimeter keys + 6 companions; overlay units 3,269.9375 pcs, mortar 3.387982 m3).
+**F-T498-4 (cross-trade, for the Lead / Checker):** when the V2 lintel classes are wired (T-582: no released lintel),
+R-T498-1 (1) turns every face bound to a now-HELD lintel from a deduction into a named range 0 .. face; today the
+valued black / white lines deduct 0 or a face bound to a lintel that V3.0.58 still releases (1F VW 1.705 m2 already a
+range; GF OA W 0.36 m2 D-GF-06 = a T-582 HELD lintel). The successor package must re-run materials_for on its own
+lintel lines, never carry these figures (GF OA W point 23.535 kg becomes 23.535 .. 25.155 kg).
+
+**Missing / held.** 0.15 m black units / mortar (this stage; Q-80 rows after), AAC face (white units 17 blank),
+breakage / waste (no source), 2F roof datum D-39 (8 walls), GF-W22 CONFLICT D-27, 10 mm joint owner-provisional,
+cross-trade cement / sand total (T-511).
