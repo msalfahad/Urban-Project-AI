@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-09T16:52Z | Verifier | STARTED | run session_01E6cPndxGQcBpZjnj2sAfBn | repo-attached routine | task state: none READY (T-655, T-654 TODO) | self-check pending
 - 2026-11-09T16:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09 16:20 UTC | Lead | SUCCESS | board | Since 12:23: 3 MERGED (T-423 r3 step 3 text-only; T-653 Decimal gate fix; T-563 step 4: candidate V3.0.61 FIN.PLASTER released 580.5819 -> 363.3738 m2, 4 lines HELD 262.018..262.052 on D-39), 0 REJECTED; t485 red (V3.0.60/61 pending in master 1.61.0) + F-T314-2 -> T-655 W2 FIRST gate 0; T-654 trial BOQ r4 TODO W3 FIRST; F-T653-1 -> T-656 W1; T-314 r3 after T-655 (master 1.63.0); lessons 1 ADOPTED / 2 PROPOSED; V2.9 + route G unchanged; Drive OK, no photos; no owner package; queue check: 13 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-09 16:16 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
