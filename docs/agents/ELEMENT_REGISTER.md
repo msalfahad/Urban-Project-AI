@@ -46,6 +46,16 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- POOL BLINDING / FOOTING F4 / PIT LAYER (Lead 2026-11-10 12:20; T-667 MERGED b89ea23f, wired in T-668): OWNER TRADE
+  concrete B10 (new STR.CONC blinding line, HELD >= 0.915529 m3), netted against the VERIFIED pit layer (2.695761 m2);
+  F4 under the pool stays owned by its footing / blinding lines; the pool blinding line takes no F4 area. One element once.
+- JUNCTION SQUARES / GB CORNER SQUARE (Lead 2026-11-10 12:20; R-T666-1, R-T669-1): a column owns its full section to
+  slab top; a square with no column belongs to the run drawn across it (the stopping run does not own it). Wired V3.0.64.
+- LINTEL CONCRETE vs MASONRY FACE vs BEARING BED (Lead 2026-11-10 12:20; T-670 verdict, F-C-T669-2, F-T372-2): OWNER
+  TRADE of the lintel's concrete = STR.CONC.LINTEL (B9-02, 44 HELD blank lines, T-673); masonry deducts only the lintel
+  FACE from block area (T-670: face x 0.15 = lintel m3, counted once in B9-02); the lintel bearing bed mortar belongs to
+  B9-04 mortar (T-372 / T-675), never to the lintel concrete. Stair concrete B7-12 (5 HELD) owned by STR.CONC.STAIR.
+
 - EXTERNAL DOOR STEP, PAYABLE LENGTH (Lead 2026-11-07 08:15; T-592 MERGED 80da26a0, Checker own DXF read AGREE): CLOSED.
   The line pays ONE length: the stone in the wall gap between masonry faces (= the T-325 threshold strip basis):
   house 3.800 lm nr 4, riser 0.570 m2 (D-GF-09 riser 0.15 DRAWING-CONFIRMED), VERIFIED research quantity, not wired.
