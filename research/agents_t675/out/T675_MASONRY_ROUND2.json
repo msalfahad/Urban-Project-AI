@@ -1,0 +1,1394 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.63",
+ "factor_015_m3_per_m": 0.001389375,
+ "part_a": [
+  {
+   "after": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "arch_check": "P7757 architectural DXF: no wall hatch, no block legend and no block-type text on any layer (hatches only S-COL.BON SOLID and floor patterns); section B-B draws nothing below the +-0.00 ground line: silent, no contrary evidence",
+   "before": "HELD blank",
+   "code": "MAS.GLUE.AAC",
+   "evidence": "ST7757.pdf p.1 (COLUMN & AXIS PLAN) note 2: the neighbour-side exterior ground beams are cast over and under BLACK block built from the foundation level",
+   "host": "HOUSE_BELOW_NG:MAIN_S",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "material_line_id": "L-a951fbf0e4fdacf3308d",
+   "proposal": "retire in the wiring row with this evidence in the same diff (never 0, never valued): the host is black block, no AAC unit or glue is laid",
+   "unit": "kg",
+   "verdict": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "after": "HELD blank",
+   "arch_check": "P7757 architectural DXF: no wall hatch, no block legend and no block-type text on any layer (hatches only S-COL.BON SOLID and floor patterns); section B-B draws nothing below the +-0.00 ground line: silent, no contrary evidence",
+   "before": "HELD blank",
+   "beside_conditional": {
+    "AT_LEAST_m3": 0.125991,
+    "condition": "net AT_LEAST 11.389 m2 x 0.07375 t: one 0.15 m leaf at least (0.20 m leaf beside); collar joint of a two-leaf build not included; PROVISIONAL (10 mm joint, owner 2026-10-29)",
+    "if_one_020_leaf_m3": 0.167988
+   },
+   "cause": "black block below the main-house neighbour-side ground beams (MAIN_S, 16.270 m net axis): printed by ST p.1 note 2, but no section prints its thickness or bottom level: height only h >= 0.70 m (gross AT_LEAST 13.4897, net AT_LEAST 11.389 m2), no upper bound: HELD; leaf build / thickness not printed (T-407 s.7 item 4: 0.20 band vs 0.30 beam)",
+   "code": "MAS.MORTAR.BLACK",
+   "evidence": "ST7757.pdf p.1 (COLUMN & AXIS PLAN) note 2: the neighbour-side exterior ground beams are cast over and under BLACK block built from the foundation level",
+   "host": "HOUSE_BELOW_NG:MAIN_S",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "material_line_id": "L-cf220ce7edefedd935b4",
+   "unit": "m3",
+   "verdict": "KEEP"
+  },
+  {
+   "after": "HELD blank",
+   "arch_check": "P7757 architectural DXF: no wall hatch, no block legend and no block-type text on any layer (hatches only S-COL.BON SOLID and floor patterns); section B-B draws nothing below the +-0.00 ground line: silent, no contrary evidence",
+   "before": "HELD blank",
+   "beside_conditional": {
+    "AT_LEAST_pcs": 142.3625,
+    "condition": "net AT_LEAST 11.389 m2 x 12.5 / m2: at least one leaf of 0.15 or 0.20 m black block on the 40 x 20 module (Q-75 / Q-80 A); a two-leaf build only adds"
+   },
+   "cause": "black block below the main-house neighbour-side ground beams (MAIN_S, 16.270 m net axis): printed by ST p.1 note 2, but no section prints its thickness or bottom level: height only h >= 0.70 m (gross AT_LEAST 13.4897, net AT_LEAST 11.389 m2), no upper bound: HELD; leaf build / thickness not printed (T-407 s.7 item 4: 0.20 band vs 0.30 beam)",
+   "code": "MAS.UNITS.BLACK",
+   "evidence": "ST7757.pdf p.1 (COLUMN & AXIS PLAN) note 2: the neighbour-side exterior ground beams are cast over and under BLACK block built from the foundation level",
+   "host": "HOUSE_BELOW_NG:MAIN_S",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "material_line_id": "L-bd21b0ea1ce4e1c8dabd",
+   "unit": "pcs",
+   "verdict": "KEEP"
+  },
+  {
+   "after": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "arch_check": "P7757 architectural DXF: no wall hatch, no block legend and no block-type text on any layer (hatches only S-COL.BON SOLID and floor patterns); section B-B draws nothing below the +-0.00 ground line: silent, no contrary evidence",
+   "before": "HELD blank",
+   "code": "MAS.UNITS.WHITE",
+   "evidence": "ST7757.pdf p.1 (COLUMN & AXIS PLAN) note 2: the neighbour-side exterior ground beams are cast over and under BLACK block built from the foundation level",
+   "host": "HOUSE_BELOW_NG:MAIN_S",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "material_line_id": "L-09c52c7b398d3218cc0e",
+   "proposal": "retire in the wiring row with this evidence in the same diff (never 0, never valued): the host is black block, no AAC unit or glue is laid",
+   "unit": "pcs",
+   "verdict": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "after": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "arch_check": "as MAIN_S",
+   "before": "HELD blank",
+   "code": "MAS.GLUE.AAC",
+   "evidence": "ST7757.pdf p.1 note 2 (as MAIN_S: the annex south run is on the neighbour side)",
+   "host": "HOUSE_BELOW_NG:ANNEX_S",
+   "host_line_id": "L-ee857398614d817e6917",
+   "material_line_id": "L-6b0bb35ba62fe484aa7e",
+   "proposal": "retire in the wiring row with this evidence in the same diff (never 0, never valued): the host is black block, no AAC unit or glue is laid",
+   "unit": "kg",
+   "verdict": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "after": "HELD blank",
+   "arch_check": "as MAIN_S",
+   "before": "HELD blank",
+   "beside_conditional": {
+    "none": "no bound: annex beam soffit CONFLICT (D-35, RFI-S09); reading L (net 7.000 m2 -> 87.5 pcs) shown in T-407, not adopted"
+   },
+   "cause": "black block below the annex neighbour-side ground beams (ANNEX_S, 10.000 m net axis): the annex exterior ground-beam soffit is a CONFLICT (levels reading L vs the printed section), so the masonry height has no bound; leaf build / thickness not printed (T-407 s.7 item 4: 0.20 band vs 0.30 beam)",
+   "code": "MAS.MORTAR.BLACK",
+   "evidence": "ST7757.pdf p.1 note 2 (as MAIN_S: the annex south run is on the neighbour side)",
+   "host": "HOUSE_BELOW_NG:ANNEX_S",
+   "host_line_id": "L-ee857398614d817e6917",
+   "material_line_id": "L-17cea41ab1b8f2bdb19e",
+   "unit": "m3",
+   "verdict": "KEEP"
+  },
+  {
+   "after": "HELD blank",
+   "arch_check": "as MAIN_S",
+   "before": "HELD blank",
+   "beside_conditional": {
+    "none": "no bound: annex beam soffit CONFLICT (D-35, RFI-S09); reading L (net 7.000 m2 -> 87.5 pcs) shown in T-407, not adopted"
+   },
+   "cause": "black block below the annex neighbour-side ground beams (ANNEX_S, 10.000 m net axis): the annex exterior ground-beam soffit is a CONFLICT (levels reading L vs the printed section), so the masonry height has no bound; leaf build / thickness not printed (T-407 s.7 item 4: 0.20 band vs 0.30 beam)",
+   "code": "MAS.UNITS.BLACK",
+   "evidence": "ST7757.pdf p.1 note 2 (as MAIN_S: the annex south run is on the neighbour side)",
+   "host": "HOUSE_BELOW_NG:ANNEX_S",
+   "host_line_id": "L-ee857398614d817e6917",
+   "material_line_id": "L-8971f07e8552cf3831c0",
+   "unit": "pcs",
+   "verdict": "KEEP"
+  },
+  {
+   "after": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "arch_check": "as MAIN_S",
+   "before": "HELD blank",
+   "code": "MAS.UNITS.WHITE",
+   "evidence": "ST7757.pdf p.1 note 2 (as MAIN_S: the annex south run is on the neighbour side)",
+   "host": "HOUSE_BELOW_NG:ANNEX_S",
+   "host_line_id": "L-ee857398614d817e6917",
+   "material_line_id": "L-2ae0aac40cd54e372c68",
+   "proposal": "retire in the wiring row with this evidence in the same diff (never 0, never valued): the host is black block, no AAC unit or glue is laid",
+   "unit": "pcs",
+   "verdict": "NOT_APPLICABLE_WITH_EVIDENCE"
+  }
+ ],
+ "part_b": {
+  "bands": [
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "D-1F-03: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meets the lintel end in this course band); dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "run end | D-1F-03 lintel bearing not established",
+    "ends": "OU",
+    "high": 0.000278,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     0.0,
+     0.0885
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W12"
+   },
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "D-1F-03: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meets the lintel end in this course band); dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "D-1F-03 lintel bearing not established | run end",
+    "ends": "UO",
+    "high": 0.000278,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     1.0885,
+     3.725
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W12"
+   },
+   {
+    "band_m": [
+     0.0,
+     2.2
+    ],
+    "cause": "ends FU: a free end (F) and one unknown stop carry at most one joint-bearing end, the module already credits one: increment 0 under every reading (R-T675-3)",
+    "cause_class": "NO INCREMENT",
+    "end_ids": "D-1F-08 | east ring west crossing",
+    "ends": "FU",
+    "high": 0.0,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     3.8178,
+     4.2763
+    ],
+    "verdict": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "wall_id": "1F-W13"
+   },
+   {
+    "band_m": [
+     0.0,
+     2.2
+    ],
+    "cause": "dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "east ring east crossing | run end",
+    "ends": "UO",
+    "high": 0.003057,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     7.7515,
+     8.225
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W13"
+   },
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "D-1F-08 lintel | east ring west crossing",
+    "ends": "CU",
+    "high": 0.000278,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     4.2178,
+     4.2763
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W13"
+   },
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "east ring east crossing | run end",
+    "ends": "UO",
+    "high": 0.000278,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     7.7515,
+     8.225
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W13"
+   },
+   {
+    "band_m": [
+     2.4,
+     3.45
+    ],
+    "cause": "dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "run end | east ring west crossing",
+    "ends": "OU",
+    "high": 0.001459,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     0.0,
+     4.2763
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W13"
+   },
+   {
+    "band_m": [
+     2.4,
+     3.45
+    ],
+    "cause": "dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "east ring east crossing | run end",
+    "ends": "UO",
+    "high": 0.001459,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     7.7515,
+     8.225
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W13"
+   },
+   {
+    "band_m": [
+     3.45,
+     3.8
+    ],
+    "cause": "dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "member over B25 BM-1F-027 | east ring west crossing",
+    "ends": "CU",
+    "high": 0.000486,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     3.8028,
+     4.2763
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W13"
+   },
+   {
+    "band_m": [
+     3.45,
+     3.8
+    ],
+    "cause": "dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "east ring east crossing | member over CB12 BM-1F-017",
+    "ends": "UC",
+    "high": 0.000486,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     7.7515,
+     8.175
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W13"
+   },
+   {
+    "band_m": [
+     3.8,
+     4.04
+    ],
+    "cause": "dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "member over B25 BM-1F-027 | east ring west crossing",
+    "ends": "CU",
+    "high": 0.000333,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     3.8028,
+     4.2763
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W13"
+   },
+   {
+    "band_m": [
+     3.8,
+     4.04
+    ],
+    "cause": "dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "east ring east crossing | member over CB12 BM-1F-017",
+    "ends": "UC",
+    "high": 0.000333,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     7.7515,
+     8.175
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W13"
+   },
+   {
+    "band_m": [
+     0.0,
+     2.2
+    ],
+    "cause": "ends UF: a free end (F) and one unknown stop carry at most one joint-bearing end, the module already credits one: increment 0 under every reading (R-T675-3)",
+    "cause_class": "NO INCREMENT",
+    "end_ids": "east ring sliver | D-1F-10",
+    "ends": "UF",
+    "high": 0.0,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     0.4645,
+     1.1907
+    ],
+    "verdict": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "wall_id": "1F-W17"
+   },
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "D-1F-10: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meets the lintel end in this course band); dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "east ring sliver | D-1F-10 lintel bearing not established",
+    "ends": "UU",
+    "high": 0.000278,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     0.4645,
+     1.1907
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W17"
+   },
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "D-1F-10: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meets the lintel end in this course band); dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "D-1F-10 lintel bearing not established | run end",
+    "ends": "UO",
+    "high": 0.000278,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     1.9907,
+     2.1
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W17"
+   },
+   {
+    "band_m": [
+     2.4,
+     3.7
+    ],
+    "cause": "dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "east ring sliver | run end",
+    "ends": "UO",
+    "high": 0.001806,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     0.4645,
+     2.1
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W17"
+   },
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "D-1F-07: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meets the lintel end in this course band); dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "run end | D-1F-07 lintel bearing not established",
+    "ends": "OU",
+    "high": 0.000278,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     0.0,
+     0.1093
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W19"
+   },
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "D-1F-07: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meets the lintel end in this course band); dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "D-1F-07 lintel bearing not established | run end",
+    "ends": "UO",
+    "high": 0.000278,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     0.9093,
+     1.8
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W19"
+   },
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "D-1F-04: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meets the lintel end in this course band); dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "run end | D-1F-04 lintel bearing not established",
+    "ends": "CU",
+    "high": 0.000278,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     0.0,
+     0.0798
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W23"
+   },
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "D-1F-04: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meets the lintel end in this course band); dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "D-1F-04 lintel bearing not established | column",
+    "ends": "UC",
+    "high": 0.000278,
+    "host_line_id": "L-a56a8add7812d1b52cb7",
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "segment_m": [
+     0.8798,
+     3.0
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W23"
+   },
+   {
+    "band_m": [
+     0.0,
+     3.7
+    ],
+    "cause": "dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "run end | west dome opening 1F-073",
+    "ends": "OU",
+    "high": 0.005141,
+    "host_line_id": "L-4054259959463edd70fb",
+    "low": 0.0,
+    "mortar_line_id": "L-a8f0d0e9fff641c0fa8e",
+    "segment_m": [
+     0.0,
+     1.3923
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "1F-W24"
+   },
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "D-GF-10: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meets the lintel end in this course band); dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "run end | D-GF-10 lintel bearing not established",
+    "ends": "OU",
+    "high": 0.000278,
+    "host_line_id": "L-abf15bdf70ccf1e7b474",
+    "low": 0.0,
+    "mortar_line_id": "L-8f163174139bcf80c7c7",
+    "segment_m": [
+     0.0,
+     0.05
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "GF-W29"
+   },
+   {
+    "band_m": [
+     2.2,
+     2.4
+    ],
+    "cause": "D-GF-10: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meets the lintel end in this course band); dome opening piece: top of wall / ring position not drawn (T-227 / T-261)",
+    "cause_class": "DESIGNER ITEM",
+    "end_ids": "D-GF-10 lintel bearing not established | run end",
+    "ends": "UO",
+    "high": 0.000278,
+    "host_line_id": "L-abf15bdf70ccf1e7b474",
+    "low": 0.0,
+    "mortar_line_id": "L-8f163174139bcf80c7c7",
+    "segment_m": [
+     0.85,
+     1.35
+    ],
+    "verdict": "HELD bounded",
+    "wall_id": "GF-W29"
+   }
+  ],
+  "hosts": [
+   {
+    "companion_proposed": [
+     0.0,
+     0.021449
+    ],
+    "envelope": [
+     0.028344,
+     0.049793
+    ],
+    "held_bands": 18,
+    "held_bands_high": 0.012199,
+    "held_pieces": 5,
+    "held_pieces_high": 0.005473,
+    "high_drawn_t372": 0.032121,
+    "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "low": 0.028344,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "open_in_v20": true,
+    "walls": [
+     "1F-W12",
+     "1F-W13",
+     "1F-W17",
+     "1F-W19",
+     "1F-W23"
+    ]
+   },
+   {
+    "companion_proposed": [
+     0.0,
+     0.012697
+    ],
+    "envelope": [
+     0.014744,
+     0.027441
+    ],
+    "held_bands": 1,
+    "held_bands_high": 0.005141,
+    "held_pieces": 1,
+    "held_pieces_high": 0.00147,
+    "high_drawn_t372": 0.02083,
+    "host": "1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+    "low": 0.014744,
+    "mortar_line_id": "L-a8f0d0e9fff641c0fa8e",
+    "open_in_v20": true,
+    "walls": [
+     "1F-W18",
+     "1F-W24"
+    ]
+   },
+   {
+    "companion_proposed": [
+     0.0,
+     0.001167
+    ],
+    "envelope": [
+     0.018729,
+     0.019896
+    ],
+    "held_bands": 0,
+    "held_bands_high": 0.0,
+    "held_pieces": 0,
+    "held_pieces_high": 0.0,
+    "high_drawn_t372": 0.019896,
+    "host": "1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+    "low": 0.018729,
+    "mortar_line_id": "L-2051ab0a71c27be038ae",
+    "open_in_v20": false,
+    "walls": [
+     "1F-W20",
+     "1F-W21",
+     "1F-W22"
+    ]
+   },
+   {
+    "companion_proposed": [
+     0.0,
+     0.0
+    ],
+    "envelope": [
+     0.039291,
+     0.039291
+    ],
+    "held_bands": 0,
+    "held_bands_high": 0.0,
+    "held_pieces": 0,
+    "held_pieces_high": 0.0,
+    "high_drawn_t372": 0.039291,
+    "host": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+    "low": 0.039291,
+    "mortar_line_id": "L-e74c15038f1e32dbefe0",
+    "open_in_v20": false,
+    "walls": [
+     "1F-W02",
+     "1F-W03",
+     "1F-W09"
+    ]
+   },
+   {
+    "companion_proposed": [
+     0.0,
+     0.000834
+    ],
+    "envelope": [
+     0.010361,
+     0.011195
+    ],
+    "held_bands": 2,
+    "held_bands_high": 0.000556,
+    "held_pieces": 0,
+    "held_pieces_high": 0.0,
+    "high_drawn_t372": 0.010639,
+    "host": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "low": 0.010361,
+    "mortar_line_id": "L-8f163174139bcf80c7c7",
+    "open_in_v20": false,
+    "walls": [
+     "GF-W28",
+     "GF-W29"
+    ]
+   },
+   {
+    "companion_proposed": [
+     0.0,
+     0.0
+    ],
+    "envelope": [
+     0.003237,
+     0.003237
+    ],
+    "held_bands": 0,
+    "held_bands_high": 0.0,
+    "held_pieces": 0,
+    "held_pieces_high": 0.0,
+    "high_drawn_t372": 0.003237,
+    "host": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+    "low": 0.003237,
+    "mortar_line_id": "L-33fcd56ef1548206bb1c",
+    "open_in_v20": false,
+    "walls": [
+     "GF-W19"
+    ]
+   },
+   {
+    "companion_proposed": [
+     0.0,
+     0.0
+    ],
+    "envelope": [
+     0.003167,
+     0.003167
+    ],
+    "held_bands": 0,
+    "held_bands_high": 0.0,
+    "held_pieces": 0,
+    "held_pieces_high": 0.0,
+    "high_drawn_t372": 0.003167,
+    "host": "GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+    "low": 0.003167,
+    "mortar_line_id": "L-794c7232f398260c7afb",
+    "open_in_v20": false,
+    "walls": [
+     "GF-W21",
+     "GF-W33"
+    ]
+   },
+   {
+    "companion_proposed": [
+     0.0,
+     0.0
+    ],
+    "envelope": [
+     0.058854,
+     0.058854
+    ],
+    "held_bands": 0,
+    "held_bands_high": 0.0,
+    "held_pieces": 0,
+    "held_pieces_high": 0.0,
+    "high_drawn_t372": 0.058854,
+    "host": "GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+    "low": 0.058854,
+    "mortar_line_id": "L-1bacf0e3cec97219a455",
+    "open_in_v20": false,
+    "walls": [
+     "GF-W01"
+    ]
+   }
+  ],
+  "lintel_bed": [
+   {
+    "bearing_m": [
+     0.8,
+     0.8
+    ],
+    "ends": [
+     {
+      "available_6dp_m": 2.274845,
+      "high": 0.4,
+      "low": 0.4,
+      "side": "START",
+      "state": "EXACT",
+      "stopper": "COLUMN",
+      "was": [
+       0.4,
+       0.4
+      ],
+      "why": "available >= bearing"
+     },
+     {
+      "available_6dp_m": 1.125155,
+      "high": 0.4,
+      "low": 0.4,
+      "side": "END",
+      "state": "EXACT",
+      "stopper": "COLUMN",
+      "was": [
+       0.4,
+       0.4
+      ],
+      "why": "available >= bearing"
+     }
+    ],
+    "high": 0.001111,
+    "lintel_line_id": "L-6aa750fb944ad58ce960",
+    "low": 0.001111,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "opening_id": "D-1F-02",
+    "state": "EXACT",
+    "was": [
+     0.001111,
+     0.001111
+    ]
+   },
+   {
+    "bearing_m": [
+     0.4,
+     0.63852
+    ],
+    "ends": [
+     {
+      "available_6dp_m": 0.23852,
+      "high": 0.23852,
+      "low": 0.0,
+      "side": "START",
+      "state": "RANGE",
+      "stopper": "END_OF_MASONRY",
+      "was": [
+       0.0,
+       0.4
+      ],
+      "why": "FLAGGED_DEFICIT end (END_OF_MASONRY, drawn available 0.238520 m < 0.40 m printed bearing): no block beyond the stopper on the lintel line"
+     },
+     {
+      "available_6dp_m": 2.71148,
+      "high": 0.4,
+      "low": 0.4,
+      "side": "END",
+      "state": "EXACT",
+      "stopper": "END_OF_MASONRY",
+      "was": [
+       0.4,
+       0.4
+      ],
+      "why": "available >= bearing"
+     }
+    ],
+    "high": 0.000887,
+    "lintel_line_id": "L-8b978b48668cde0f1b0c",
+    "low": 0.000556,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "opening_id": "D-1F-03",
+    "state": "RANGE",
+    "was": [
+     0.000556,
+     0.001111
+    ]
+   },
+   {
+    "bearing_m": [
+     0.4,
+     0.4798
+    ],
+    "ends": [
+     {
+      "available_6dp_m": 0.0798,
+      "high": 0.0798,
+      "low": 0.0,
+      "side": "START",
+      "state": "RANGE",
+      "stopper": "COLUMN",
+      "was": [
+       0.0,
+       0.079
+      ],
+      "why": "FLAGGED_DEFICIT end (COLUMN, drawn available 0.079800 m < 0.40 m printed bearing): no block beyond the stopper on the lintel line"
+     },
+     {
+      "available_6dp_m": 2.120155,
+      "high": 0.4,
+      "low": 0.4,
+      "side": "END",
+      "state": "EXACT",
+      "stopper": "COLUMN",
+      "was": [
+       0.4,
+       0.4
+      ],
+      "why": "available >= bearing"
+     }
+    ],
+    "high": 0.000667,
+    "lintel_line_id": "L-183f52083e693bdf8671",
+    "low": 0.000556,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "opening_id": "D-1F-04",
+    "state": "RANGE",
+    "was": [
+     0.000556,
+     0.000666
+    ]
+   },
+   {
+    "bearing_m": [
+     0.4,
+     0.6593
+    ],
+    "ends": [
+     {
+      "available_6dp_m": 0.2593,
+      "high": 0.2593,
+      "low": 0.0,
+      "side": "START",
+      "state": "RANGE",
+      "stopper": "END_OF_MASONRY",
+      "was": [
+       0.0,
+       0.4
+      ],
+      "why": "FLAGGED_DEFICIT end (END_OF_MASONRY, drawn available 0.259300 m < 0.40 m printed bearing): no block beyond the stopper on the lintel line"
+     },
+     {
+      "available_6dp_m": 1.0907,
+      "high": 0.4,
+      "low": 0.4,
+      "side": "END",
+      "state": "EXACT",
+      "stopper": "END_OF_MASONRY",
+      "was": [
+       0.4,
+       0.4
+      ],
+      "why": "available >= bearing"
+     }
+    ],
+    "high": 0.000916,
+    "lintel_line_id": "L-3111418b702ac80f0ade",
+    "low": 0.000556,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "opening_id": "D-1F-07",
+    "state": "RANGE",
+    "was": [
+     0.000556,
+     0.001111
+    ]
+   },
+   {
+    "bearing_m": [
+     0.8,
+     0.8
+    ],
+    "ends": [
+     {
+      "available_6dp_m": 2.9928,
+      "high": 0.4,
+      "low": 0.4,
+      "side": "START",
+      "state": "EXACT",
+      "stopper": "END_OF_MASONRY",
+      "was": [
+       0.4,
+       0.4
+      ],
+      "why": "available >= bearing"
+     },
+     {
+      "available_6dp_m": 0.8445,
+      "high": 0.4,
+      "low": 0.4,
+      "side": "END",
+      "state": "EXACT",
+      "stopper": "OPENING",
+      "was": [
+       0.4,
+       0.4
+      ],
+      "why": "available >= bearing"
+     }
+    ],
+    "high": 0.001111,
+    "lintel_line_id": "L-10f18635f68cfd8cdd1d",
+    "low": 0.001111,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "opening_id": "D-1F-08",
+    "state": "EXACT",
+    "was": [
+     0.001111,
+     0.001111
+    ]
+   },
+   {
+    "bearing_m": [
+     0.4,
+     0.6593
+    ],
+    "ends": [
+     {
+      "available_6dp_m": 1.3407,
+      "high": 0.4,
+      "low": 0.4,
+      "side": "START",
+      "state": "EXACT",
+      "stopper": "END_OF_MASONRY",
+      "was": [
+       0.4,
+       0.4
+      ],
+      "why": "available >= bearing"
+     },
+     {
+      "available_6dp_m": 0.2593,
+      "high": 0.2593,
+      "low": 0.0,
+      "side": "END",
+      "state": "RANGE",
+      "stopper": "END_OF_MASONRY",
+      "was": [
+       0.0,
+       0.4
+      ],
+      "why": "FLAGGED_DEFICIT end (END_OF_MASONRY, drawn available 0.259300 m < 0.40 m printed bearing): no block beyond the stopper on the lintel line"
+     }
+    ],
+    "high": 0.000916,
+    "lintel_line_id": "L-befb0beb1707ef192326",
+    "low": 0.000556,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "opening_id": "D-1F-10",
+    "state": "RANGE",
+    "was": [
+     0.000556,
+     0.001111
+    ]
+   },
+   {
+    "cause": "DESIGNER ITEM / candidate: the lintel itself is HELD_RANGE (face 0 .. 0.34 m2, T-582 class, inside the held dome piece of 1F-W13 / W17); if built, its bed lies on at most 2 x 0.40 m of block (printed bearing): 0 .. 0.80 f; jamb availability on its END side not read (T-527 lists only D-1F-08 END, 0.8445 m to it)",
+    "high": 0.001111,
+    "low": 0.0,
+    "mortar_line_id": "L-866a6602ffa70d03f210",
+    "opening_id": "D-1F-09",
+    "state": "HELD",
+    "was": [
+     null,
+     null
+    ]
+   },
+   {
+    "bearing_m": [
+     0.4,
+     0.653
+    ],
+    "ends": [
+     {
+      "available_6dp_m": 0.253,
+      "high": 0.253,
+      "low": 0.0,
+      "side": "START",
+      "state": "RANGE",
+      "stopper": "END_OF_MASONRY",
+      "was": [
+       0.0,
+       0.4
+      ],
+      "why": "FLAGGED_DEFICIT end (END_OF_MASONRY, drawn available 0.253000 m < 0.40 m printed bearing): no block beyond the stopper on the lintel line"
+     },
+     {
+      "available_6dp_m": 0.65,
+      "high": 0.4,
+      "low": 0.4,
+      "side": "END",
+      "state": "EXACT",
+      "stopper": "END_OF_MASONRY",
+      "was": [
+       0.4,
+       0.4
+      ],
+      "why": "available >= bearing"
+     }
+    ],
+    "high": 0.000907,
+    "lintel_line_id": "L-7149ea268473ea337cd2",
+    "low": 0.000556,
+    "mortar_line_id": "L-8f163174139bcf80c7c7",
+    "opening_id": "D-GF-10",
+    "state": "RANGE",
+    "was": [
+     0.000556,
+     0.001111
+    ]
+   },
+   {
+    "bearing_m": [
+     0.8,
+     0.8
+    ],
+    "ends": [
+     {
+      "available_6dp_m": 1.5034,
+      "high": 0.4,
+      "low": 0.4,
+      "side": "START",
+      "state": "EXACT",
+      "stopper": "END_OF_MASONRY",
+      "was": [
+       0.4,
+       0.4
+      ],
+      "why": "available >= bearing"
+     },
+     {
+      "available_6dp_m": 1.260948,
+      "high": 0.4,
+      "low": 0.4,
+      "side": "END",
+      "state": "EXACT",
+      "stopper": "COLUMN",
+      "was": [
+       0.4,
+       0.4
+      ],
+      "why": "available >= bearing"
+     }
+    ],
+    "high": 0.001111,
+    "lintel_line_id": "L-31232f81202941d104c6",
+    "low": 0.001111,
+    "mortar_line_id": "L-8f163174139bcf80c7c7",
+    "opening_id": "D-GF-13",
+    "state": "EXACT",
+    "was": [
+     0.001111,
+     0.001111
+    ]
+   }
+  ],
+  "pieces": [
+   {
+    "cause": "dome opening piece: top of wall not drawn (T-227 / T-261, designer)",
+    "high": 0.000403,
+    "length_m": 0.2903,
+    "low": 0.0,
+    "piece": "east ring west crossing",
+    "wall_id": "1F-W13"
+   },
+   {
+    "cause": "dome opening piece: top of wall not drawn (T-227 / T-261, designer)",
+    "high": 0.004022,
+    "length_m": 2.8947,
+    "low": 0.0,
+    "piece": "east dome opening 1F-077",
+    "wall_id": "1F-W13"
+   },
+   {
+    "cause": "dome opening piece: top of wall not drawn (T-227 / T-261, designer)",
+    "high": 0.000403,
+    "length_m": 0.2903,
+    "low": 0.0,
+    "piece": "east ring east crossing",
+    "wall_id": "1F-W13"
+   },
+   {
+    "cause": "dome opening piece: top of wall not drawn (T-227 / T-261, designer)",
+    "high": 0.000641,
+    "length_m": 0.4616,
+    "low": 0.0,
+    "piece": "east dome opening 1F-077",
+    "wall_id": "1F-W17"
+   },
+   {
+    "cause": "dome opening piece: top of wall not drawn (T-227 / T-261, designer)",
+    "high": 4e-06,
+    "length_m": 0.0029,
+    "low": 0.0,
+    "piece": "east ring sliver",
+    "wall_id": "1F-W17"
+   },
+   {
+    "cause": "dome opening piece: top of wall not drawn (T-227 / T-261, designer)",
+    "high": 0.00147,
+    "length_m": 1.0577,
+    "low": 0.0,
+    "piece": "west dome opening 1F-073",
+    "wall_id": "1F-W24"
+   }
+  ],
+  "v20_companions": {
+   "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE": [
+    0.0,
+    null
+   ],
+   "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK#FR-T615-3:RANGE": [
+    0.0,
+    null
+   ],
+   "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK#FR-T615-3:RANGE": [
+    0.0,
+    0.001167
+   ],
+   "NEW:MAS.MORTAR.BLACK:GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE": [
+    0.0,
+    0.000278
+   ]
+  }
+ },
+ "part_c": [
+  {
+   "basis": "thickness DRAWING-CONFIRMED (face lines 0.200 m apart on the wall layer; the P7757 DXF has no wall hatch on any layer); colour BLACK (ST p.1 note 2 neighbour-side walls / host element id VERIFIED_BLACK); host area VERIFIED; module 40 x 20 OWNER CONFIRMED (Q-75); 10 mm joint ASSUMED - OWNER-APPROVED (owner 2026-10-29): weakest = ASSUMED - OWNER-APPROVED, line PROVISIONAL, never VERIFIED (T-520 Checker re-measured 2 / 4 walls)",
+   "host": "GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "host_line_id": "L-1c53fadb2f92d1f36d4e",
+   "perimeter_line": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-1c53fadb2f92d1f36d4e",
+   "proposed_stamp": "ASSUMED - OWNER-APPROVED",
+   "staged_m3": 0.058854,
+   "walls": [
+    {
+     "census": "WB-FL0001-FL0002",
+     "face_sources": 11,
+     "offsets_mm": [
+      -100.0,
+      100.0
+     ],
+     "read": "re-read this run from the pickle",
+     "thickness_m": 0.2,
+     "wall_id": "GF-W01"
+    }
+   ],
+   "was": "UNKNOWN (T-580 op PERIMETER_MORTAR carries no evidence stamp; e2e_dry_run.py)"
+  },
+  {
+   "basis": "thickness DRAWING-CONFIRMED (face lines 0.200 m apart on the wall layer; the P7757 DXF has no wall hatch on any layer); colour BLACK (ST p.1 note 2 neighbour-side walls / host element id VERIFIED_BLACK); host area VERIFIED; module 40 x 20 OWNER CONFIRMED (Q-75); 10 mm joint ASSUMED - OWNER-APPROVED (owner 2026-10-29): weakest = ASSUMED - OWNER-APPROVED, line PROVISIONAL, never VERIFIED (T-520 Checker re-measured 2 / 4 walls)",
+   "host": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "host_line_id": "L-10dd62f66ad05488e63b",
+   "perimeter_line": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-10dd62f66ad05488e63b",
+   "proposed_stamp": "ASSUMED - OWNER-APPROVED",
+   "staged_m3": 0.039291,
+   "walls": [
+    {
+     "census": "WB-FL0059-FL0061",
+     "face_sources": 2,
+     "offsets_mm": [
+      -100.0,
+      100.0
+     ],
+     "read": "re-read this run from the pickle",
+     "thickness_m": 0.2,
+     "wall_id": "1F-W02"
+    },
+    {
+     "census": "WB-FL0068-FL0070",
+     "face_sources": 3,
+     "offsets_mm": [
+      -100.0,
+      100.0
+     ],
+     "read": "re-read this run from the pickle",
+     "thickness_m": 0.2,
+     "wall_id": "1F-W03"
+    },
+    {
+     "census": "WB-FL0024-FL0025",
+     "face_sources": 2,
+     "offsets_mm": [
+      -100.0,
+      100.0
+     ],
+     "read": "re-read this run from the pickle",
+     "thickness_m": 0.2,
+     "wall_id": "1F-W09"
+    }
+   ],
+   "was": "UNKNOWN (T-580 op PERIMETER_MORTAR carries no evidence stamp; e2e_dry_run.py)"
+  }
+ ],
+ "pinned": {
+  "research/agents_t520/out/JUNCTIONS_T520.csv": "b2e5f1864cc2d9ed91cef2c2f4cf4b35f571f45e33496a0ba9621be809a500e0",
+  "research/agents_t520/out/PERIMETER_BY_WALL_T520.csv": "fb5ac4abe455bf5efa8a352ad68cf57defb609c3fac54437a92e94842e3622d1",
+  "research/agents_t527/out/JAMB_EVIDENCE_V3_T527.csv": "7ac6e6b93d2a4ac9e7dab3ff0db70d988a256a972b8bb7fb8a139360a43c2ee2",
+  "research/agents_t654/out/TRIAL_BOQ_R4_T654.json": "9e032726257c4961972bd7fd8de2620a3f7e2adc1f32a78802764a5289e91733",
+  "research/agents_t665/out/LINE_INDEX_V3_0_63.json": "cd062bfe777af2393228f31893b71ae7032c8d0e6c1bcbe41b0194e36a8fe8d8",
+  "research/agents_t670/out/T670_MATERIALS.json": "4c58a226a7d3f17f56a4ffaa72229f08bbf4982ef8e52179ce9270c3ae3eb467"
+ },
+ "rules": [
+  "R-T675-1",
+  "R-T675-2",
+  "R-T675-3"
+ ],
+ "task": "T-675",
+ "totals": {
+  "gf_w22_beside": {
+   "bound": [
+    0.00414,
+    0.004144
+   ],
+   "cause": "GF-W22 CONFLICT [12.9311, 12.9439] m2 on its parent (D-27, T-488): not on a part line"
+  },
+  "held_bands": {
+   "after": {
+    "NOT_APPLICABLE_WITH_EVIDENCE": 2,
+    "held_bounded": 21,
+    "high": 0.017896
+   },
+   "was": {
+    "count": 23,
+    "high": 0.017896
+   }
+  },
+  "held_piece_soffits": {
+   "high": 0.006943,
+   "pieces": 6
+  },
+  "lintel_bed_m3": {
+   "D-1F-09_beside": [
+    0.0,
+    0.001111
+   ],
+   "after_8_lintels": [
+    0.006113,
+    0.007628
+   ],
+   "after_bearing_m": [
+    4.4,
+    5.48992
+   ],
+   "sum_of_rounded_rows": [
+    0.006113,
+    0.007626
+   ],
+   "was": [
+    0.006113,
+    0.008443
+   ]
+  },
+  "materials_a": {
+   "MAS.GLUE.AAC": {
+    "after": {
+     "NOT_APPLICABLE_WITH_EVIDENCE": 2,
+     "blank": 10,
+     "bounded": 3,
+     "held": 13
+    },
+    "before": {
+     "blank": 12,
+     "bounded": 3,
+     "held": 15
+    }
+   },
+   "MAS.MORTAR.BLACK": {
+    "after": {
+     "NOT_APPLICABLE_WITH_EVIDENCE": 0,
+     "blank": 18,
+     "bounded": 0,
+     "held": 18
+    },
+    "before": {
+     "blank": 18,
+     "bounded": 0,
+     "held": 18
+    }
+   },
+   "MAS.UNITS.BLACK": {
+    "after": {
+     "NOT_APPLICABLE_WITH_EVIDENCE": 0,
+     "blank": 18,
+     "bounded": 0,
+     "held": 18
+    },
+    "before": {
+     "blank": 18,
+     "bounded": 0,
+     "held": 18
+    }
+   },
+   "MAS.UNITS.WHITE": {
+    "after": {
+     "NOT_APPLICABLE_WITH_EVIDENCE": 2,
+     "blank": 15,
+     "bounded": 0,
+     "held": 15
+    },
+    "before": {
+     "blank": 17,
+     "bounded": 0,
+     "held": 17
+    }
+   }
+  }
+ }
+}
