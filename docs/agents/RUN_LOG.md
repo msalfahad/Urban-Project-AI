@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10 13:26 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10T13:00Z | Worker 3 | STARTED | run session_01E6cPnbrsekqqKxxYqDwrr4 | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10 12:56 UTC | Worker 2 | SUCCESS | T-675 READY (agents/task-T-675 @ e3707868) | masonry round 2 on V3.0.63 (= V3.0.64 for MAS.*): MAIN_S/ANNEX_S BLACK by ST p.1 note 2 -> 4 AAC lines N/A with evidence; lintel bed 0.006113..0.008443 -> 0.006113..0.007628 m3 (deficit end bounded by drawn masonry), D-1F-09 0..0.001111; 23 bands -> 2 no-increment + 21 bounded 0..0.017896 m3, piece soffits 0..0.006943, V20 companions now bounded; 0.20 m faces 0.200 own read, stamp ASSUMED - OWNER-APPROVED | self-check PASS codemap / PASS t061 / PASS freeze; problem: Drive connector saved binaries raw, re-encoded to base64 in scratch before 'decode' (no refusal)
 - 2026-11-10T12:56Z | Verifier | INCOMPLETE | none (overlap guard: run session_01E6cPnecfxZDKcNpWkto31r active since 2026-11-10T11:50Z, no final line) | no check, no merge, no quantity change | self-check not run; problem: overlap SUCCESS line refused: 'AGENT_ENV FAIL: run lock NOLOCK: a SUCCESS final line is refused; write the final line INCOMPLETE (lock NOLOCK) and end'
