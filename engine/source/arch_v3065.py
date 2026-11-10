@@ -509,12 +509,15 @@ def integrate(prev, changes, for_lead=()):
     out = out + adds
     if len({ln["line_id"] for ln in out}) != len(out):
         raise ValueError(f"{METHOD}: a BOQ line id appears twice")
-    _o, i64 = A3064.integrate(out, [], for_lead)     # every V3.0.10 .. V3.0.64 family check, re-run on these lines
+    # every V3.0.10 .. V3.0.63 family check, re-run on these lines, then the V3.0.64 state check on them WITHOUT a
+    # `before` (A3064.integrate(out, []) would pass these lines as their own base and refuse its own V3.0.64 added
+    # line as 'already a candidate line': the V3.0.64 line is in the base by now, by design)
+    _o, i63 = A3063.integrate(out, [], for_lead)
+    i64 = {"checks_v3_0_63": {k: v for k, v in i63.items() if k not in (
+        "base_lines", "v3_0_63_lines", "v3_0_63_rows", "replaced", "added", "outside_rows",
+        "outside_rows_identical_to_base", "outside_rows_sha256")}, "concrete": A3064.check_concrete(out)}
     ident = {"base_lines": len(prev), "v3_0_65_lines": len(out), "v3_0_65_rows": len(changes), "replaced": len(repl),
-             "added": len(adds), "checks_v3_0_64": {k: v for k, v in i64.items() if k not in (
-                 "base_lines", "v3_0_64_lines", "v3_0_64_rows", "replaced", "added", "outside_rows",
-                 "outside_rows_identical_to_base", "outside_rows_sha256")},
-             "concrete": check_concrete(out, prev)}
+             "added": len(adds), "checks_v3_0_64": i64, "concrete": check_concrete(out, prev)}
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
     if len(pids) != 1:
         raise ValueError(f"{METHOD}: {len(pids)} project identities in the lines")

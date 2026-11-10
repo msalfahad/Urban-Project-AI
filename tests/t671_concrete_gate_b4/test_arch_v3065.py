@@ -290,3 +290,31 @@ def test_struck_row_is_never_zero_and_no_lower_end_stays_open():
                  after={"low": 0.0, "high": 0.50625})
     with pytest.raises(A.InputsError, match="outside 0"):
         run(doc(es))
+
+
+def test_base_carrying_an_earlier_added_line_integrates():
+    """regression (own chain run, 2026-11-10): the V3.0.64 base carries a line V3.0.64 ADDED; re-running the earlier
+    checks must not take these lines as their own base (A3064.integrate(out, []) refuses its own added line as
+    'already a candidate line'); the earlier state check still runs on it"""
+    from engine.source import arch_v3064 as A64
+    pit = _ln("STR.CONC.BLINDING", "PIT", "MEASURED", net=3.0)
+    prev0 = copy.deepcopy(LN) + [pit]
+    d64 = {"schema": A64.INPUTS_SCHEMA, "project_id": PID, "sources": [_src("T-P")], "entries": [
+        {"action": "ADD_LOWER_ONLY", "key": "POOL", "source_tasks": ["T-P"], "template_line": pit["line_id"],
+         "add": {"item_code": "STR.CONC.BLINDING", "unit": "m3", "element_id": "POOL:BLINDING", "floor": None,
+                 "physical_element": "pool blinding"},
+         "basis": "x", "why_held": "x", "question": "x", "beside": {"kind": "AT_LEAST_M3", "value": 1.0, "basis": "x"},
+         "netted_against": [{"line_id": pit["line_id"], "item_code": "STR.CONC.BLINDING", "class": "RELEASED",
+                             "value": 3.0, "overlap_m2": 2.0, "why": "one layer"}]}]}
+    ch64, _ = A64.changes_for(A64.load_inputs(d64, PID), prev0)
+    base = A64.integrate(prev0, ch64)[0]
+    with pytest.raises(ValueError, match="already a candidate line"):
+        A64.integrate(base, [])                        # why V3.0.65 does not re-run it this way
+    prev, ch, _ = run(prev=copy.deepcopy(base))
+    new, ident = A.integrate(prev, ch)
+    assert ident["checks_v3_0_64"]["concrete"]["ADD_LOWER_ONLY"] == 1 and ident["added"] == 1
+    t = copy.deepcopy(new)
+    p = _by(t, "POOL:BLINDING")
+    p["evidence_state"], p["measured_net"], p["gross"] = "MEASURED", 1.0, 1.0
+    with pytest.raises(ValueError, match="not in its state"):
+        A64.check_concrete(t)                          # the earlier state check still governs its line
