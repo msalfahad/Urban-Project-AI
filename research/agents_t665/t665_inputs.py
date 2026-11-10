@@ -35,7 +35,8 @@ if str(ROOT) not in sys.path:
 T658 = ROOT / "research/agents_t658/out/T658_LEDGER.json"
 T595 = ROOT / "research/agents_t595/out/T595_RESTATEMENTS.json"
 INDEX = ROOT / "research/agents_t661/out/LINE_INDEX_V3_0_62.json"
-PINS = {T658: "6c4d96731f79ebb2a11e7d2d15ff93f0ac0a14d8a87779518fac26471a61e94d",
+DGS = ROOT / "research/agents_t469/DOWNGRADES_SNAPSHOT.json"
+PINS = {DGS: "817326399e5b9ffff1d727b9599dff46d1f917c930e759c37e1d5721f0f85766",T658: "6c4d96731f79ebb2a11e7d2d15ff93f0ac0a14d8a87779518fac26471a61e94d",
         T595: "80d32d7051ee9926201b252d761d20ca1c4609465eb992a67583cbbeb1567964",
         INDEX: "858eba3baca2e19450c8b78888ced615e8e68b34f0486717c1dd71e6b35a93df"}
 SOURCES = {
@@ -76,7 +77,7 @@ def _load():
     for p, s in PINS.items():
         if _sha(p) != s:
             raise SystemExit(f"{p.relative_to(ROOT)}: sha256 {_sha(p)[:8]} is not the pinned {s[:8]} (edited file)")
-    return tuple(json.loads(p.read_text(encoding="utf-8")) for p in (T658, T595, INDEX))
+    return tuple(json.loads(p.read_text(encoding="utf-8")) for p in (T658, T595, INDEX, DGS))
 
 
 def _f(x):
@@ -120,12 +121,43 @@ def _column_datums(r):
                                                f"a valid upper bound on either base)"}]
 
 
-def _row(r, ix):
+def _applied(index, dgs):
+    """{line_id: downgrade record} of the Checker downgrades the V3.0.62 index marks APPLIED (they hold released
+    candidate lines at export; the index carries those lines as HELD at their record range)"""
+    ok = {d["downgrade_id"] for d in index["downgrades"] if d.get("status") == "APPLIED"}
+    out = {}
+    for d in dgs["downgrades"] if isinstance(dgs, dict) else dgs:
+        if d["downgrade_id"] in ok:
+            for i in d["line_ids"]:
+                out[i] = d
+    return out
+
+
+def _dg(d):
+    return {"downgrade_id": d["downgrade_id"], "verdict_commit": d["checker"]["verdict_commit"],
+            "checker_run": f"{d['checker']['routine']} {d['checker']['run_token']} ({d['time']})",
+            "file": "research/agents_t469/DOWNGRADES_SNAPSHOT.json", "sha256": PINS[DGS],
+            "line_ids": list(d["line_ids"]), "line_content_sha256": d["line_content_sha256"],
+            "engine_qty": d["engine_qty"], "reason": d["reason"][:300]}
+
+
+def _row(r, ix, dg=None):
     lo, hi = _f(r["low"]), _f(r["high"])
     st = r["status"]
     e = {"line_id": r["line_id"], "source_tasks": ["T-658"], "member": _member(r), "expect": _expect(ix)}
     if r["line_id"] == FOOTING_LINE:
         return None                                           # wired from T-595 below
+    if dg is not None:
+        # a released candidate line held at export by an APPLIED Checker downgrade: materialised (R-T665-1 (g))
+        if r["item_code"] != "STR.CONC.GROUND_BEAM" or ix["class"] != "HELD" or ix["held_low"] is None:
+            raise SystemExit(f"{r['line_id']}: downgrade {dg['downgrade_id']} on a line the index does not hold bounded")
+        e["expect"] = dict(e["expect"], **{"class": "RELEASED"})
+        e["downgrade"] = _dg(dg)
+        if st == "BOUNDED" and _same(lo, hi, ix):
+            return dict(e, action="BOUND", after={"low": lo, "high": hi}, basis=r["basis"][:900],
+                        why_held="UNCHANGED range (T-658); the Checker downgrade that holds this line at export is "
+                                 "materialised in the line, because its neighbours under the same downgrade change",
+                        question=_gb_question(r), flags=r["flags"])
     if st in ("BOUNDED", "HELD_BLANK") and _same(lo, hi, ix):
         return dict(e, action="CONFIRM", basis=(r["basis"] or r["item"] or "")[:600])
     if st == "BOUNDED":
@@ -165,13 +197,14 @@ def _footing(t595, ix):
 
 
 def build(project_id=None):
-    t658, t595, index = _load()
+    t658, t595, index, dgs = _load()
     if index["candidate_version"] != "ARCH_TAKEOFF_V3.0.62":
         raise SystemExit(f"index is {index['candidate_version']}")
     ix = {ln["line_id"]: ln for ln in index["lines"]}
+    held_by = _applied(index, dgs)
     ents = []
     for r in t658["rows"]:
-        e = _row(r, ix[r["line_id"]])
+        e = _row(r, ix[r["line_id"]], held_by.get(r["line_id"]))
         if e is not None:
             ents.append(e)
     ents.append(_footing(t595, ix[FOOTING_LINE]))

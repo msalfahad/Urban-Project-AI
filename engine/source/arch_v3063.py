@@ -26,7 +26,10 @@ high; a held line is never 0 and never gains a value without (c); (d) a bound th
 replacement (blank with the measure beside, lower only or upper only) and stays in the record with its reason; (e)
 every line not named, and every CONFIRM line, is byte-identical (asserted); only STR.CONC.*|m3 code totals move, each
 by exactly the restatement (asserted); (f) an UPPER_ONLY ceiling names every datum it rests on and whether it is
-printed text or an approved datum.
+printed text or an approved datum; (g) a RELEASED line is restated only when an APPLIED Checker downgrade already
+holds it at export (its content binding current on this candidate, its engine_qty re-added), only to HELD, and every
+line that downgrade names is restated in the same run (a downgrade is materialised whole: a line left behind would be
+released by the change of its neighbours' content); the downgrade is kept in the line's record.
 Files: V3_0_63_BOQ_LINES.json / .csv, V3_0_63_INTEGRATION_LEDGER.json / .csv, V3_0_63_DIFF.csv, V3_0_63_RUN.json.
 Nothing here names a project, a sheet, a layer or a coordinate.
 """
@@ -158,7 +161,17 @@ def _entry(e, srcs):
     if x["class"] not in CLASSES:
         raise InputsError(f"{w}: class {x['class']}")
     if x["class"] == "RELEASED":
-        raise InputsError(f"{w}: a released line is not restated by this version (held concrete lines only)")
+        # only a line an APPLIED Checker downgrade already holds at export: the restatement materialises that
+        # downgrade in the line (released -> held, never the other way) and names it (R-T665-1 (g))
+        if a not in BLANK_ACTIONS + ("BOUND",):
+            raise InputsError(f"{w}: a released line is restated only to HELD, under its applied Checker downgrade")
+        dg = e.get("downgrade") or {}
+        _need(dg, ("downgrade_id", "verdict_commit", "file", "sha256", "line_ids", "line_content_sha256",
+                   "engine_qty"), f"{w} downgrade")
+        if not str(dg["downgrade_id"]).startswith("DG-") or e["line_id"] not in dg["line_ids"]:
+            raise InputsError(f"{w}: the downgrade {dg.get('downgrade_id')} does not name this line")
+    elif e.get("downgrade"):
+        raise InputsError(f"{w}: a downgrade record belongs to a released line it holds")
     af = e.get("after") or {}
     if a == "BOUND":
         lo, hi = _num(af.get("low"), f"{w} low"), _num(af.get("high"), f"{w} high")
@@ -217,6 +230,16 @@ def load_inputs(doc, project_id=None):
         if e["line_id"] in seen:
             raise InputsError(f"{e['line_id']}: named twice (one line, one restatement)")
         seen.add(e["line_id"])
+    dgs = {}
+    for e in ents:
+        if e.get("downgrade"):
+            dgs.setdefault(e["downgrade"]["downgrade_id"], set(e["downgrade"]["line_ids"]))
+    for did, ids in sorted(dgs.items()):
+        named = {e["line_id"] for e in ents if (e.get("downgrade") or {}).get("downgrade_id") == did}
+        if named != ids:
+            raise InputsError(f"{did}: a Checker downgrade is materialised whole or not at all ({len(named)} of "
+                              f"{len(ids)} of its lines named): a line left behind would leave the record stale and "
+                              f"be released by the change of its neighbours")
     return dict(doc, _sources=srcs, _entries=ents)
 
 
@@ -237,6 +260,15 @@ def _range(ln):
     return (float(lo), float(hi)) if isinstance(lo, (int, float)) and isinstance(hi, (int, float)) else None
 
 
+def _view_range(ln):
+    """the range a held line (or a downgraded released line) carries in its record, as the census reads it"""
+    b = ln.get("bounded_range")
+    if not isinstance(b, dict):
+        return None
+    lo, hi = b.get("low"), b.get("high")
+    return (float(lo), float(hi)) if isinstance(lo, (int, float)) and isinstance(hi, (int, float)) else None
+
+
 def _assert_bound(b, e):
     x = e["expect"]
     w = f"{e['action']} {e['line_id']}"
@@ -245,8 +277,10 @@ def _assert_bound(b, e):
     loc = b.get("location") or {}
     ok = (b["item_code"] == x["item_code"] and loc.get("element_id") == x["element_id"] and b["unit"] == x["unit"]
           and line_class(b) == x["class"])
+    if ok and x["class"] == "RELEASED":
+        ok = b.get("measured_net") is not None and bool(e.get("downgrade"))
     if ok:
-        r = _range(b)
+        r = _view_range(b)
         if x.get("low") is None:
             ok = r is None and x.get("high") is None
         else:
@@ -254,11 +288,12 @@ def _assert_bound(b, e):
     if not ok:
         raise InputsError(f"{w}: {b['item_code']} {loc.get('element_id')} {b['evidence_state']} range {_range(b)} is "
                           f"not the ledger's {x} (stale binding: re-read)")
-    if e["action"] in BLANK_ACTIONS and _range(b) is not None:
+    r = _view_range(b)
+    if e["action"] in BLANK_ACTIONS and r is not None:
         sa = e.get("set_aside") or {}
-        if not sa.get("why") or sa.get("low") is None or abs(sa["low"] - _range(b)[0]) > BIND_TOL or \
-                abs(sa["high"] - _range(b)[1]) > BIND_TOL:
-            raise InputsError(f"{w}: the bound {_range(b)} leaves the line: its set_aside record must state it and why")
+        if not sa.get("why") or sa.get("low") is None or abs(sa["low"] - r[0]) > BIND_TOL or \
+                abs(sa["high"] - r[1]) > BIND_TOL:
+            raise InputsError(f"{w}: the bound {r} leaves the line: its set_aside record must state it and why")
 
 
 def _fin(ln):
@@ -311,10 +346,37 @@ def _restate(b, e, srcs):
     inp = ln["calculation"]["inputs"] = dict(ln["calculation"].get("inputs") or {})
     inp[REC_KEY] = _rec(srcs, action=a, member=e["member"], was=was, after=after, basis=e["basis"],
                         why_held=(e.get("why_held") or "")[:600], beside=e.get("beside"),
-                        set_aside=e.get("set_aside"), remeasure=e.get("remeasure"),
+                        set_aside=e.get("set_aside"), remeasure=e.get("remeasure"), downgrade=e.get("downgrade"),
                         freelancer_beside=e.get("freelancer_beside"))
     A305._note(ln, f"{METHOD}: {head[:200]} (was {A302._q(A30._qty(b))}); NOT RELEASED")
     return _fin(ln)
+
+
+def _content_sha(lines):
+    """the T-294 line-content binding of a Checker record: sha256 of boq_line.dumps of its own lines by line id"""
+    from engine.source import boq_line as BL
+    return hashlib.sha256(BL.dumps(sorted(lines, key=lambda ln: ln["line_id"])).encode("utf-8")).hexdigest()
+
+
+def assert_downgrades(doc, prev):
+    """every Checker downgrade an entry materialises is APPLIED on this candidate: its own lines are all here,
+    byte-identical to what it bound (content sha) and their released quantities add to its engine_qty. -> ids"""
+    by = {ln["line_id"]: ln for ln in prev}
+    seen = {}
+    for e in doc["_entries"]:
+        dg = e.get("downgrade")
+        if dg and dg["downgrade_id"] not in seen:
+            own = [by.get(i) for i in dg["line_ids"]]
+            if any(x is None for x in own):
+                raise InputsError(f"{dg['downgrade_id']}: a line it names is not in the candidate (not applied)")
+            if _content_sha(own) != dg["line_content_sha256"]:
+                raise InputsError(f"{dg['downgrade_id']}: its lines changed since the Checker bound them (stale, not "
+                                  f"applied): the released lines are not held by it")
+            q = sum(float(x.get("measured_net") or 0.0) for x in own)
+            if abs(q - float(dg["engine_qty"])) > TOT_TOL:
+                raise InputsError(f"{dg['downgrade_id']}: released {q} is not its engine_qty {dg['engine_qty']}")
+            seen[dg["downgrade_id"]] = {"lines": len(own), "engine_qty": _r(q)}
+    return seen
 
 
 def changes_for(doc, prev):
@@ -327,7 +389,7 @@ def changes_for(doc, prev):
     S = doc["_sources"]
     changes = []
     log = {"piece": "T665", "state": "RUN", "sources": doc["sources"], "by_action": {}, "lines": 0,
-           "confirmed": []}
+           "confirmed": [], "downgrades_materialised": assert_downgrades(doc, prev)}
     for e in doc["_entries"]:
         b = by.get(e["line_id"])
         _assert_bound(b, e)

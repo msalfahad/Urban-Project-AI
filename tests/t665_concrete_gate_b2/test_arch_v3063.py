@@ -20,7 +20,11 @@ Code totals (m3): GROUND_BEAM held 1.194592 .. 1.194592 (3 bounded, 2 blocked) -
 Adverse: an upper-only line without its AT_MOST figure, without / with a bad datum kind, an AT_MOST figure on a
 blank or lower-only line, an upper-only line with a figure, an upper-only line retiring a bound with no set-aside,
 a mm slip, the V3.0.62 adverse set on the new module (stale, HELD as 0, CONFIRM with an after, applied twice),
-reordered villa (same result)."""
+reordered villa (same result).
+Downgrade (R-T665-1 (g)): D1 / D2 released 0.144 / 0.12 m3, held at export by one applied Checker downgrade
+(engine_qty 0.264): both restated in the run (D1 0.108 .. 0.144 materialised, D2 AT_LEAST 0.09), released -0.264;
+adverse: half the downgrade, stale content, engine_qty that does not re-add, a released line with no downgrade, a
+released line valued, a downgrade on a held line, a downgrade that does not name the line."""
 from __future__ import annotations
 
 import copy
@@ -267,3 +271,80 @@ def test_adverse_applied_twice_and_tampered_state():
     c1["evidence_state"], c1["measured_net"], c1["gross"] = "MEASURED", 0.425, 0.425
     with pytest.raises(ValueError, match="not in its state"):
         A.check_concrete(t)
+
+
+# ------------------------------------------------------------------------------------------------ downgrade (g)
+def _dg_villa():
+    """D1 / D2 ground beams RELEASED PROVISIONAL 0.144 / 0.12 with record ranges 0.108 .. 0.144 / 0.09 .. 0.12, held at
+    export by ONE applied Checker downgrade DG-V665 (engine_qty 0.264). T-658-style ledger: D1 restated 0.108 .. 0.144
+    unchanged (materialised), D2 a loaded run: AT_LEAST 0.30 x 1.00 x 0.30 = 0.09 beside, blank."""
+    d1 = _ln("STR.CONC.GROUND_BEAM", "D1", "PROVISIONAL", net=0.144)
+    d1["bounded_range"] = {"low": 0.108, "high": 0.144, "basis": "titles"}
+    d2 = _ln("STR.CONC.GROUND_BEAM", "D2", "PROVISIONAL", net=0.12)
+    d2["bounded_range"] = {"low": 0.09, "high": 0.12, "basis": "titles"}
+    d1, d2 = BL.validate(d1), BL.validate(d2)
+    lines = copy.deepcopy(LN) + [d1, d2]
+    dg = {"downgrade_id": "DG-V665", "verdict_commit": "abcd1234", "checker_run": "Verifier synthetic",
+          "file": "research/v665/DG.json", "sha256": "d" * 64, "line_ids": sorted([d1["line_id"], d2["line_id"]]),
+          "line_content_sha256": A._content_sha([d1, d2]), "engine_qty": 0.264}
+    x = {"item_code": "STR.CONC.GROUND_BEAM", "unit": "m3", "class": "RELEASED"}
+    es = entries() + [
+        {"action": "BOUND", "line_id": d1["line_id"], "source_tasks": ["T-G"], "member": "ground beam D1",
+         "expect": dict(x, element_id="D1", low=0.108, high=0.144), "after": {"low": 0.108, "high": 0.144},
+         "basis": "unchanged titles range", "why_held": "D-34", "question": "D-34", "downgrade": dict(dg)},
+        {"action": "LOWER_ONLY", "line_id": d2["line_id"], "source_tasks": ["T-G"], "member": "loaded run D2",
+         "expect": dict(x, element_id="D2", low=0.09, high=0.12), "after": {}, "basis": "1.00 x 0.30 x 0.30 floor",
+         "why_held": "D-33", "question": "D-33", "downgrade": dict(dg),
+         "beside": {"kind": "AT_LEAST_M3", "value": 0.09, "basis": "1.00 x 0.30 x 0.30"},
+         "set_aside": {"low": 0.09, "high": 0.12, "why": "unloaded titles are a floor"}}]
+    return lines, es, dg
+
+
+def test_downgrade_materialised_whole():
+    lines, es, dg = _dg_villa()
+    prev, ch, log = run(doc(es), lines)
+    assert log["downgrades_materialised"] == {"DG-V665": {"lines": 2, "engine_qty": 0.264}}
+    new, ident = A.integrate(prev, ch)
+    d1, d2 = _by(new, "D1"), _by(new, "D2")
+    assert d1["evidence_state"] == "BOUNDED_EXPOSURE" and d1["measured_net"] is None
+    assert d2["evidence_state"] == "BLOCKED_RFI" and d2["measured_net"] is None
+    assert d1["calculation"]["inputs"][A.REC_KEY]["downgrade"]["downgrade_id"] == "DG-V665"
+    assert d1["calculation"]["inputs"][A.REC_KEY]["was"]["class"] == "RELEASED"
+    t0, t1 = A304.code_totals(prev), A304.code_totals(new)
+    g0, g1 = t0["STR.CONC.GROUND_BEAM|m3"], t1["STR.CONC.GROUND_BEAM|m3"]
+    assert round(g0["released"] - g1["released"], 6) == 0.264        # released -> held, never the other way
+    assert round(g1["held_low"], 6) == round(0.303 + 0.108, 6) and round(g1["held_high"], 6) == round(0.404 + 0.144, 6)
+    A.check_totals(t0, t1, ch)
+
+
+@pytest.mark.parametrize("how,msg", [
+    ("partial", "materialised whole"),
+    ("stale", "stale, not"),
+    ("qty", "engine_qty"),
+    ("no_dg", "missing downgrade_id"),
+    ("value", "only to HELD"),
+    ("dg_on_held", "belongs to a released line"),
+    ("other_line", "does not name this line"),
+])
+def test_adverse_downgrade(how, msg):
+    lines, es, dg = _dg_villa()
+    if how == "partial":
+        es = es[:-1]
+    elif how == "stale":
+        for e in es[-2:]:
+            e["downgrade"]["line_content_sha256"] = "0" * 64
+    elif how == "qty":
+        for e in es[-2:]:
+            e["downgrade"]["engine_qty"] = 0.3
+    elif how == "no_dg":
+        es[-1].pop("downgrade")
+        es = es[:-2] + [es[-1]]
+    elif how == "value":
+        es[-2] = {k: v for k, v in es[-2].items() if k not in ("why_held", "question")}
+        es[-2].update(action="VALUE", after={"value": 0.144}, remeasure="x")
+    elif how == "dg_on_held":
+        es[0]["downgrade"] = dict(dg)
+    elif how == "other_line":
+        es[-1]["downgrade"] = dict(dg, line_ids=[es[-2]["line_id"]])
+    with pytest.raises(A.InputsError, match=msg):
+        run(doc(es), lines)
