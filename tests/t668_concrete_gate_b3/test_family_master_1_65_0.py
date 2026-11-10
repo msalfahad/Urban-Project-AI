@@ -1,5 +1,5 @@
 """T-668: rules/coverage/BOQ_FAMILY_MASTER_1.65.0.json = 1.64.0 (T-665) + the ARCH_TAKEOFF_V3.0.64 package (T-668) +
-the B10-01 / B10-07 / B10-11 text. On the task branch the package is PENDING (candidate of record V3.0.63, census and candidate
+the B10-01 / B10-04 / B10-07 / B10-11 text. On the task branch the package is PENDING (candidate of record V3.0.63, census and candidate
 blocks unchanged); in the merge the Verifier promotes it with --promote (candidate of record V3.0.64, the package in
 candidate_packages with its merge commit and verdict, no pending package). Either state: the file equals its builder
 and checks clean. Adverse: a base with a pending package, another candidate of record, a family naming the pending
@@ -26,7 +26,7 @@ import build_master_1_43_0 as B43  # noqa: E402
 
 OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.64.0.json"
 NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.65.0.json"
-FAMS = {"B10-01", "B10-07", "B10-11"}
+FAMS = {"B10-01", "B10-04", "B10-07", "B10-11"}
 TEXT = {"evidence", "opt_in_readers", "missing", "note"}
 MOVED_TOP_PENDING = {"version", "supersedes", "source", "pending_packages", "families"}
 
@@ -71,7 +71,7 @@ def test_only_the_named_top_fields_move_while_pending(docs):
     assert new["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.63"
 
 
-def test_only_the_three_families_text_moves(docs):
+def test_only_the_four_families_text_moves(docs):
     old, new = docs
     ob, nb = {f["code"]: f for f in old["families"]}, {f["code"]: f for f in new["families"]}
     assert list(nb) == list(ob)
@@ -95,7 +95,7 @@ def test_pending_package(docs):
     assert [(x["task"], x["method_version"], x["module"], x["status"]) for x in q] == [
         ("T-668", A.METHOD, "engine/source/arch_v3064.py", FMC.PENDING_STATUS)]
     assert "merge_commit" not in q[0] and FMC.SHA40.match(q[0]["task_commit"])
-    assert q[0]["integrates"] == ["T-666", "T-659", "T-667"]
+    assert q[0]["integrates"] == ["T-666", "T-659", "T-667", "T-669"]
 
 
 def test_adverse_builder_refuses_a_base_with_a_pending_package(docs, monkeypatch, tmp_path):

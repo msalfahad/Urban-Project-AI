@@ -12,7 +12,7 @@
   },
   "ARCH_TAKEOFF_V3.0.64": {
    "lines": 5074,
-   "lines_sha256": "e51c6d83e0c408ac0bfd891de5ce8db9ba6d7214e37f6c747956269293472171",
+   "lines_sha256": "d227173a2f20f934e4d3ea18e9ac9d36eb9274737232048af83af66ff5dbcae2",
    "previous": "ARCH_TAKEOFF_V3.0.63",
    "item_codes": {
     "STR.CONC.BEAM": {
@@ -32,6 +32,12 @@
      "removed": 0,
      "changed": 1,
      "record": 0
+    },
+    "STR.CONC.GROUND_BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
     }
    },
    "families": {
@@ -61,10 +67,12 @@
     }
    },
    "apart": [],
-   "record_families": [],
+   "record_families": [
+    "B10-04"
+   ],
    "record_apart": [],
    "touched": 7,
-   "record_only": 0
+   "record_only": 1
   }
  }
 }

@@ -334,10 +334,21 @@
    "before_low": 0.0,
    "beside": 0.0,
    "lines": 1
+  },
+  "STR.CONC.GROUND_BEAM LOWER_ONLY": {
+   "after_high": 0.0,
+   "after_low": 0.0,
+   "after_value": 0.0,
+   "before_high": 0.0,
+   "before_low": 0.0,
+   "beside": 0.1125,
+   "lines": 1
   }
  },
  "confirmed_unchanged": [
+  "L-3284f44000c02179ace7",
   "L-33a9b7728781fcba12e2",
+  "L-402dbe61d1c924144a3c",
   "L-53f223b06db14ac41d47",
   "L-b62a7065645589011141",
   "L-c10e2945d582b5a03126"
@@ -349,16 +360,17 @@
    "ADD_LOWER_ONLY": 1,
    "BOUND": 6,
    "HELD_BLANK": 0,
-   "LOWER_ONLY": 0,
+   "LOWER_ONLY": 1,
    "UPPER_ONLY": 0,
    "VALUE": 0
   },
-  "confirmed": 4,
+  "confirmed": 6,
   "diff": {
    "vs_base": {
     "ADDED": 1,
     "CHANGED": 6,
-    "SAME": 5067
+    "CHANGED_TEXT_ONLY": 1,
+    "SAME": 5066
    },
    "vs_released_v2_9": {
     "NOT_IN_RELEASED": 3482,
@@ -366,9 +378,9 @@
     "SAME_QUANTITY": 552
    }
   },
-  "outside_rows": 5067,
-  "outside_rows_identical_to_base": 5067,
-  "replaced": 6
+  "outside_rows": 5066,
+  "outside_rows_identical_to_base": 5066,
+  "replaced": 7
  },
  "lines": {
   "V3_0_63": 5073,
@@ -376,7 +388,7 @@
  },
  "lines_sha256": {
   "V3_0_63": "09ec4c1ac012982d372b2b5251ad07570d5f2a895af0f2a02bcdfc9d3480a9a1",
-  "V3_0_64": "e51c6d83e0c408ac0bfd891de5ce8db9ba6d7214e37f6c747956269293472171"
+  "V3_0_64": "d227173a2f20f934e4d3ea18e9ac9d36eb9274737232048af83af66ff5dbcae2"
  },
  "method": "ARCH_TAKEOFF_V3.0.64",
  "released_default": false,
@@ -714,6 +726,53 @@
     "value": null
    },
    "vs_base": "ADDED"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "1.500000 x 0.30 x 0.25 (R-T669-1: owns the annex SE corner square)",
+    "kind": "AT_LEAST_M3",
+    "value": 0.1125
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "exposures_beside": [],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-6bf14711798e5af93594",
+   "member": "ground beam BAND0012.1 (annex exterior, run #1)",
+   "netted_against": null,
+   "set_aside": null,
+   "squares": [
+    {
+     "area_m2": 0.09,
+     "junction": "annex SE G.B corner",
+     "owner": "L-6bf14711798e5af93594",
+     "owner_kind": "PIECE",
+     "owner_line": "L-6bf14711798e5af93594",
+     "square": "annex SE corner"
+    }
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.135
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
   }
  ],
  "schema": "T668_SUMMARY_V1",
@@ -919,9 +978,9 @@
   "T661_T642_COMPANION": "the T-642 GF BAND0030.2 depth companion (0 .. 0.025 m3) is a trial-BOQ overlay line, not a candidate line: it enters with the T-642 split wiring, not as an add here",
   "T665_COURT_BEAMS": "3 court ground beams (no printed section) and 1 neck-cut 0.10 m sliver (D-35 ownership) stay HELD blank as the T-658 ledger states (CONFIRM)",
   "T665_FOOTING_SCENARIO": "the F10 + F footing line keeps 2.176 .. 2.275 m3: it carries the V3.0.11 multi-tag conflict record whose guard is 'the range IS the readings'; the T-595 owner scenario 'F10 alone' 1.960 is a third reading that record does not carry; how an owner-approved scenario enters a conflict record is a separate lane I row (never a picked end)",
-  "T668_F_T665_1_CORNER_SQUARE": "F-T665-1 (annex SE ground-beam corner square) is T-669 (lane S, not merged when this package was built): its line keeps its V3.0.63 state",
   "T668_POOL_BEYOND_PLOT": "the pool's own blinding strip beyond the plot line (0.037 m3) is beside the new line under D-14, not in any line (existence open)",
   "T668_POOL_STEPS": "pool steps stay HELD blank (no step drawn or dimensioned: designer item); confirmed, not valued (the freelancer's 0.228 m3 is his size, RULE_DIFFERENCE)",
+  "T668_ROOF_COLUMN_LOWER_ENDS": "T-669 (b) (R-T669-2: the 2F roof-column lower ends from the W26 apex + slab thickness) is not this row's: the upper-only column lines keep their V3.0.63 state; a lane I row wires them",
   "V6_CONVENTIONS": "lines resting on unprinted generic route G conventions (not profile values: e.g. ground-beam length basis, exterior build-up, stair riser / waist) are outside this audit (T-044 bucket C)",
   "WALL_FINISH_HELD_HEADS": "the room-face openings whose head / sill is still not printed (lift landing doors, W02, W11 / W12 sills, A-GF-01 / A-1F-01, the GF-11 / ST-GF doorless opening): the lines stay BOUNDED; the roof datum DCR-6 / annex G2 rooms stay without a figure",
   "WALL_TILE_HELD_HEIGHTS": "wall-tile lines whose owner height is not established (annex rooms: G2 / Q-54 B / D-39; rooms with an undrawn level: T-088): the lines stay BLANK, never 0",

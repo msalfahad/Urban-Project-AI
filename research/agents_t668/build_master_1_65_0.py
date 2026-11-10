@@ -1,6 +1,6 @@
 """T-668: build rules/coverage/BOQ_FAMILY_MASTER_1.65.0.json = 1.64.0 (T-665, merged; never edited)
   + the ARCH_TAKEOFF_V3.0.64 package (T-668, CONCRETE_GATE_B_V3; tools/family_master_candidate.py rule r3) and the
-    B10-01 (STR.CONC.BLINDING) / B10-07 (STR.CONC.BEAM) / B10-11 (STR.CONC.BOUNDARY_WALL) text of the families whose lines it
+    B10-01 (STR.CONC.BLINDING) / B10-04 (STR.CONC.GROUND_BEAM) / B10-07 (STR.CONC.BEAM) / B10-11 (STR.CONC.BOUNDARY_WALL) text of the families whose lines it
     restates or adds to (one new pool blinding line).
 
 Two modes, ONE version number (the ADOPTED lesson: a merged integration package leaves the registry promoted in the
@@ -48,17 +48,20 @@ INDEX = HERE / "out/LINE_INDEX_V3_0_64.json"
 OLD_CAND, CAND, AS_OF = "ARCH_TAKEOFF_V3.0.63", "ARCH_TAKEOFF_V3.0.64", "T-668"
 DIFF_SPAN = "V3.0.63 .. V3.0.64"
 WHO = "T-668"
-FAMS = ("B10-01", "B10-07", "B10-11")
+FAMS = ("B10-01", "B10-04", "B10-07", "B10-11")
 PENDING = {
     "task": "T-668", "method_version": CAND, "module": MOD, "status": FMC.PENDING_STATUS,
-    "integrates": ["T-666", "T-659", "T-667"], "tests": ["tests/t668_concrete_gate_b3"],
-    "changes_families_by_item_code": ["STR.CONC.BEAM", "STR.CONC.BLINDING", "STR.CONC.BOUNDARY_WALL"],
+    "integrates": ["T-666", "T-659", "T-667", "T-669"], "tests": ["tests/t668_concrete_gate_b3"],
+    "changes_families_by_item_code": ["STR.CONC.BEAM", "STR.CONC.BLINDING", "STR.CONC.BOUNDARY_WALL",
+                                      "STR.CONC.GROUND_BEAM"],
     "note": "T-668 (research/agents_t668/T-668_CONCRETE_GATE_B3.md): CONCRETE_GATE_B_V3 from the merged T-666 / T-659 / "
             "T-667 ledgers: 5 unlabelled beam pieces restated to their drawn edge lengths with one owner per junction "
             "square and the open depth exposures beside; the boundary band's released 7.2204 point (Checker downgrade "
             "DG-6dd9f1caba1ca77d, materialised) restated to the drawn bound 5.6392 .. 11.0328, drawn under every "
             "building stretch at a disjoint level; ONE NEW line: the pool blinding HELD lower only (AT_LEAST 0.915529 "
-            "beside, netted against the pit layer); 3 columns and the pool steps confirmed; every other line "
+            "beside, netted against the pit layer); the annex SE ground-beam corner square (T-669, F-T665-1) owned by "
+            "BAND0012.1, its AT_LEAST floor 0.090 -> 0.1125; 3 columns, 2 ground beams and the pool steps confirmed; "
+            "every other line "
             "byte-identical; the Gate B integration package",
 }
 PROPOSED = ("1.65.0 (T-668): restated by the ARCH_TAKEOFF_V3.0.64 package (Gate B): held concrete lines from the merged "
@@ -68,6 +71,8 @@ MISS = {
     "B10-01": ("in the opt-in candidate V3.0.64: pool blinding (ST p.7 '10cm PLAIN CONCRETE') added as its own line, "
                "HELD lower only: AT_LEAST 0.915529 m3 (grown base in plot net of the VERIFIED pit layer x 0.10), "
                "projection beyond the wrap and the founding levels under the pool open (C4 / C6, R-T667)"),
+    "B10-04": ("in the opt-in candidate V3.0.64: the annex SE corner square owned by run #1 BAND0012.1 (R-T669-1), "
+               "its lower-only floor 1.50 x 0.30 x 0.25 = 0.1125 m3 beside (D-35 high open)"),
     "B10-07": ("in the opt-in candidate V3.0.64: 5 unlabelled pieces at the drawn edge length, one owner per junction "
                "square (R-T666-1), depth 0.40 .. 1.20 open (Q-61 C(4)); exposures 0 .. 0.014 / 0 .. 0.0405 beside"),
     "B10-11": ("in the opt-in candidate V3.0.64: boundary band HELD 5.6392 .. 11.0328 (section / founding level, Q-28); "
@@ -94,9 +99,9 @@ def build_pending(task_commit):
     new["version"] = VERSION
     new["supersedes"] = (f"{old['version']} (kept unchanged on disk; every released-configuration field, every T-637 "
                          f"field, the candidate of record {OLD_CAND}, its census and every family's candidate block "
-                         "copied unchanged; B10-01 / B10-07 / B10-11 text for the V3.0.64 package)")
+                         "copied unchanged; B10-01 / B10-04 / B10-07 / B10-11 text for the V3.0.64 package)")
     new["source"] = (old["source"] + f" | {VERSION} (T-668): {old['version']} + ARCH_TAKEOFF_V3.0.64 (rule r3; "
-                     "promoted in the merge by --promote) + the blinding / beam / boundary-wall families it names; no quantity, "
+                     "promoted in the merge by --promote) + the blinding / ground-beam / beam / boundary-wall families it names; no quantity, "
                      "capability or owner change")
     new["pending_packages"] = [dict(PENDING, task_commit=task_commit)]
     fams = {f["code"]: f for f in new["families"]}
