@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10T02:51Z | Verifier | STARTED | run session_01E6cPneBNhhGma2XBX2LNRV | repo-attached routine | task state: READY T-661 (W3 integration package 6d40475f) | self-check pending
 - 2026-11-10 02:40 UTC | Worker 2 | SUCCESS | none | No claimable TODO row on the board (all open rows are QUEUED behind the T-661 concrete / T-664 rebar Gate B hub, or READY / CLAIMED by others); no BOQ quantity changed this run. | self-check: codemap check PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-11-10 02:40 UTC | Worker 2 | STARTED | run session_01E6cPnb61tjZz6p44Xs7PkA | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10 02:16 UTC | Worker 3 | SUCCESS | T-661 READY (integration package, agents/task-T-661 @ 6d40475f) | ARCH_TAKEOFF_V3.0.62 wires the merged T-657 / T-659 / T-660 ledgers: V3_0_61 2bc99980 -> V3_0_62 56207c79, 54 lines restated, 5,019 byte-identical; NECK held 3.075..15.375 -> 8.7724..11.346 m3 + 4 lift necks blank (>= 0.9515 beside); BEAM released +0.549624 m3 (Checker re-measure), held 8.372829..13.77951 -> 6.023085..8.507278, 12 strips blank with plan 8.7464 m2. Not wired: boundary band (Checker T-659 cross-trade residual), T-642 companion; T-658 r2 merged 02:10, restaged next round. Master 1.63.0 pending, --promote in the merge. | self-check codemap PASS, pytest t061 PASS, freeze PASS; L4 on ea7724b2: only t459 binding (rebuilt by its tool, PASS); problem: none
