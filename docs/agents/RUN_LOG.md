@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10T20:50Z | Verifier | STARTED | run session_01E6cPnaRiY2jHAxwWz1CBtQ | repo-attached routine | task state: READY T-681 (W2 tiles/adhesive HELD census, gate e owed) | self-check pending
 - 2026-11-10T20:42Z | Worker 2 | STARTED | run session_01E6cPncsPwQtJ8xGyQZKCqa | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10 20:19 UTC | Lead | SUCCESS | board | 4 MERGED since 16:21 (T-677 Gate B V3.0.66 published 11d94e99, T-678, T-679, T-680), 0 REJECTED, all runs closed, T-681 READY (Checker gate e owed); new T-682 last concrete Gate B (W3, before T-672 masonry), T-683 concrete statement r2 + F-T679-1..3, T-684 MS2 1F NW corner winders vs landing (W1), T-685 waterproofing census, T-686 plaster / paint r3 (W2), T-687 plaster / paint Gate B QUEUED after T-672; 2 register rulings, 3 lessons PROPOSED; Q-81 still blocks ratio wiring; Drive OK, no photos; queue check: 18 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-10 20:13 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
