@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10T07:00Z | Worker 3 | STARTED | run session_01E6cPncbYwbvQhwCbJB2bYC | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10T06:53Z | Verifier | STARTED | run session_01E6cPncgxNYck8DvS6tWyTP | repo-attached routine | task state: READY T-665 (W3 integration package V3.0.63) | self-check pending
 - 2026-11-10T06:42Z | Worker 3 | SUCCESS | T-665 READY (integration package V3.0.63 @ 1909669a) | B10 Gate B round 2: T-658 r2 wired, V3_0_62 56207c79 -> V3_0_63 09ec4c1a, 30 lines changed, 5,043 byte-identical. Ground beams released 26.857 -> 23.761 m3 (13 lines held only at export by Checker downgrades DG-a31a0d7e / DG-2ddc451c now HELD in the line, each downgrade materialised whole), bounded 0 -> 1.173 .. 1.571 m3 (8), 16 lower-only >= 5.070 m3; 6 roof columns upper-only <= 2.801 m3. F10+F footing (T-595 1.960 .. 2.275) NOT wired: V3.0.11 conflict guard (range = readings), needs a lane I rule row. Learned: bind to the raw candidate line, not the export view. | self-check: codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-10T06:41Z | Worker 2 | SUCCESS | none | No claimable TODO row on the board (open rows: QUEUED T-314/363/364/372/382/424/502/509/513, T-661 READY publish-only, T-664 BLOCKED-OWNER Q-81, T-665 CLAIMED worker 3, T-180 checker); no quantity changed this run. | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
