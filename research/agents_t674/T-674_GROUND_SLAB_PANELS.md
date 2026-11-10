@@ -46,6 +46,12 @@ two drawn beam strips the P18 read counted as slab, 0.023670 + 0.049634 m3, plus
 the beam, 0.009000 m3 = 0.082304 m3; the last 0.000111 m3 is the arc flattening P18 itself named, +0.000998 m2 on one
 AGREE panel, and +0.0001 m2 here).
 
+Own read of all 26 cells (same noded partition): the other 21 lines equal their own face to 0.0001 m2 (the 0.1556
+triangle, the stair-zone panel 8.3723 included); the held cell c1089bdb spans 14 own faces (T-391 F1, unchanged). The
+route-G sheet has a second JUNCTION_GAP face, SITE-5a8e5ad3 0.0571 m2: it lies inside a drawn beam strip (own face
+0.8077 m2, equivalent width 0.281 m, the rest of it the engine's BEAM_STRIP SITE-5554e673 0.7505 m2), so it takes no
+slab area; R-T674-3 changes nothing there.
+
 Second check (the issued print, ST7757.pdf page 3 at 500 dpi, own view): the oblique beam is two parallel lines framing
 from the west beam to the south beam, the inner line stopping just short of the south beam; the lift box (hatched ring,
 C1 / C2 / C2 / C9) with the oblique beam starting at its north-east C2 and the panel below it running to the ring face;
