@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10T11:50Z | Verifier | STARTED | run session_01E6cPnecfxZDKcNpWkto31r | repo-attached routine | task state: READY T-668 (W3 integration package V3.0.64) | self-check pending
 - 2026-11-10 11:20 UTC | Worker 1 | SUCCESS | none | No claimable TODO row on the board (board @ d62a9611: 217 MERGED, 8 QUEUED, 3 PAUSED, 1 READY, 1 IN PROGRESS, T-664 BLOCKED-OWNER Q-81); nothing claimed, no quantity changed. | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-11-10 11:20 UTC | Worker 1 | STARTED | run session_01E6cPnazpNAhEfHdGmg9kJH | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10T11:12Z | Worker 3 | SUCCESS | T-668 READY (integration package, agents/task-T-668 @ 7c969d87) | V3.0.64 on V3_0_63 09ec4c1a -> d227173a: 5 beam pieces held 0.626256..1.878768 -> 0.6264..1.8792 m3 (drawn lengths, one owner per junction square); band released 7.2204 (Checker downgrade materialised) -> HELD 5.6392..11.0328 (freelancer 8.604 inside); NEW pool blinding line HELD >= 0.915529 m3 (netted vs pit layer); annex corner floor 0.09 -> 0.1125. F-T668-1: T-669 ledger owner id is not a candidate id (bound by census row). L4 da64ad9b 22286 pass 0 F. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
