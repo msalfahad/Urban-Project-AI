@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 75 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2540 | pytest suites, one folder per round. |
+| `tests/` | 2541 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -464,7 +464,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3060.py` | 679 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.60 (T-423 r2, stream F; staged as V3.0.58 in r1, renumbered after T-507 / T-498 merged |
 | `arch_v3061.py` | 520 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.61 (T-563, lane I, PLASTER_HEIGHT_V1_WIRING of the T-558 WIRING MANIFEST V6): the SAME opt-in BOQ |
 | `arch_v3062.py` | 559 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.62 (T-661, lane I, CONCRETE GATE B integration package): the SAME opt-in BOQ candidate as |
-| `arch_v3063.py` | 577 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.63 (T-665, lane I, CONCRETE GATE B ROUND 2 integration package): the SAME opt-in BOQ candidate |
+| `arch_v3063.py` | 639 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.63 (T-665, lane I, CONCRETE GATE B ROUND 2 integration package): the SAME opt-in BOQ candidate |
 | `arch_v307.py` | 751 | HIGH | 21 | ARCH_TAKEOFF_V3.0.7 (T-193): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.6 (engine.source.arch_v30, |
 | `arch_v308.py` | 680 | MEDIUM | 8 | ARCH_TAKEOFF_V3.0.8 (T-231): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.7 (engine.source.arch_v30, |
 | `arch_v309.py` | 591 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.9 (T-211, package V3.0.9a): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.8 |
@@ -1638,7 +1638,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t661_concrete_gate_b/` | 2 |
 | `tests/t662_rebar_ratio/` | 1 |
 | `tests/t663_rebar_ratio_wiring/` | 1 |
-| `tests/t665_concrete_gate_b2/` | 2 |
+| `tests/t665_concrete_gate_b2/` | 3 |
 | `tests/t667_pool_blinding/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |

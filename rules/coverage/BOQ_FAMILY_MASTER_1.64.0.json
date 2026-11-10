@@ -4338,7 +4338,7 @@
     "commit cd34bd0 (T-126 ROUTE_G_SCOPE_V1, verifier run 46): engine/source/route_g_scope_v1.py:321 FOOTING_HELD_OR_IN_CONFLICT: the same footing is HELD under owner Q-31 C (its blinding follows it) while the released route releases it at the larger type; read only by the opt-in ARCH_TAKEOFF_V3.0.1 (merge 967d6d5, blinding lines only), not by the released configuration: an unwired verified correction",
     "commit 9671133 (T-060 CONCRETE_LEDGER_V2, verifier merge): engine/source/concrete_ledger_v2.py:296 _band(): the footing / boundary-wall edge band (owner Q-28) stays HELD until its member type is identified with sheet evidence (:53 MEMBER_TYPES, owner Q-12); read by no method: an unwired verified correction",
     "commit 8774071 (T-058 strip guard): footing strip pieces read by no method",
-    "engine/source/arch_v3063.py:320 changes_for(): BOUND / VALUE / HELD_BLANK / LOWER_ONLY / UPPER_ONLY / CONFIRM by line id, stale bindings refused; engine/source/arch_v3063.py:407 check_concrete(); engine/source/arch_v3063.py:381 check_totals(); tests/t665_concrete_gate_b2/test_arch_v3063.py:157 (villa V665 by hand)"
+    "engine/source/arch_v3063.py:382 changes_for(): BOUND / VALUE / HELD_BLANK / LOWER_ONLY / UPPER_ONLY / CONFIRM by line id, stale bindings refused; engine/source/arch_v3063.py:469 check_concrete(); engine/source/arch_v3063.py:443 check_totals(); tests/t665_concrete_gate_b2/test_arch_v3063.py:161 (villa V665 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.FOOTING",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0.1 route G scope piece (blinding of the conflict footing HELD) | ARCH_TAKEOFF_V3.0.63 (engine/source/arch_v3063.py, opt-in candidate; Gate B package T-665)",
@@ -4456,7 +4456,7 @@
     "commit 6ab7719 (T-141 GROUND_SYSTEM_SPANS_V2, verifier 2026-10-21 18:40 UTC): engine/source/ground_system_spans_v2.py:343 split_ground_beams() / :507 measure_straps(): spans re-measured (145/7CA 1.900 m, 109/7CB 4.400 + 4.400 + 2.700 m), read by no method",
     "engine/source/arch_v3040.py:397 changes_for(): a band crossed by a founded neck split into its runs (SPLIT_VALUED / SPLIT_HELD), picked range ends and unprinted sections HELD (HOLD_RANGE / HOLD_BLANK); engine/source/arch_v3040.py:461 check_runs(): valued run = b x printed D x run length, held blank with its range, no run twice; tests/t430_gb_run_section_integration/test_arch_v3040.py:106 test_hand_figures_k430() (K430 by hand)",
     "engine/source/arch_v3043.py:345 changes_for(): one HELD BLANK earthworks line per Checker-verified FILL zone (bound, held items, bound buried lines beside), held-range fixes of named buried concrete lines; engine/source/arch_v3043.py:424 check_earthworks(): every earthworks line held blank, each zone once, bound lines in the candidate, a re-ranged line keeps state / rfi / id; tests/t350_earthworks_integration/test_arch_v3043.py:103 (E350 by hand)",
-    "engine/source/arch_v3063.py:320 changes_for(): BOUND / VALUE / HELD_BLANK / LOWER_ONLY / UPPER_ONLY / CONFIRM by line id, stale bindings refused; engine/source/arch_v3063.py:407 check_concrete(); engine/source/arch_v3063.py:381 check_totals(); tests/t665_concrete_gate_b2/test_arch_v3063.py:157 (villa V665 by hand)"
+    "engine/source/arch_v3063.py:382 changes_for(): BOUND / VALUE / HELD_BLANK / LOWER_ONLY / UPPER_ONLY / CONFIRM by line id, stale bindings refused; engine/source/arch_v3063.py:469 check_concrete(); engine/source/arch_v3063.py:443 check_totals(); tests/t665_concrete_gate_b2/test_arch_v3063.py:161 (villa V665 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.STRAP, STR.CONC.GROUND_BEAM",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0 strap piece (merged b1a6d6d) | ARCH_TAKEOFF_V3.0.40 (engine/source/arch_v3040.py, opt-in candidate; pending Gate B, T-430) | ARCH_TAKEOFF_V3.0.43 (engine/source/arch_v3043.py, opt-in candidate; pending Gate B, T-350) | ARCH_TAKEOFF_V3.0.63 (engine/source/arch_v3063.py, opt-in candidate; Gate B package T-665)",
@@ -4595,7 +4595,7 @@
     "commit b87f4d6 (T-075 column schedule text rows), 8ceeeb2 (T-064 project data file), cd34bd0 (T-126 engine/source/route_g_scope_v1.py:161 column_scope()): read by no released method",
     "commit 967d6d5 (T-133 ARCH_TAKEOFF_V3.0.1, verifier 2026-10-21 17:40 UTC): engine/source/arch_v301.py:141 scope_changes(): columns above the necks 36.714 -> 34.446 m3, 5 undrawn pieces NOT_APPLICABLE_WITH_EVIDENCE (2.268 m3, re-confirmed by the verifier on the structural drawing); opt-in; verifier defect D1: the committed runner omits --profile",
     "engine/source/arch_v3042.py:401 changes_for(): a held slab cell valued at its re-measured panels x T (shaft / ring beside with their owners), a stair-zone panel added as one ground-slab line, cause texts re-named with every figure kept; engine/source/arch_v3042.py:483 check_slab(): slab line = panels x T, no panel in two lines, one line per cell, no live held-bound record on a valued cell, a re-texted line moves no figure; tests/t442_ground_slab_integration/test_arch_v3042.py:111 test_hand_figures_g442() (G442 by hand)",
-    "engine/source/arch_v3063.py:320 changes_for(): BOUND / VALUE / HELD_BLANK / LOWER_ONLY / UPPER_ONLY / CONFIRM by line id, stale bindings refused; engine/source/arch_v3063.py:407 check_concrete(); engine/source/arch_v3063.py:381 check_totals(); tests/t665_concrete_gate_b2/test_arch_v3063.py:157 (villa V665 by hand)"
+    "engine/source/arch_v3063.py:382 changes_for(): BOUND / VALUE / HELD_BLANK / LOWER_ONLY / UPPER_ONLY / CONFIRM by line id, stale bindings refused; engine/source/arch_v3063.py:469 check_concrete(); engine/source/arch_v3063.py:443 check_totals(); tests/t665_concrete_gate_b2/test_arch_v3063.py:161 (villa V665 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.COLUMN",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0.1 route G scope piece (merge 967d6d5) | ARCH_TAKEOFF_V3.0.42 (engine/source/arch_v3042.py, opt-in candidate; pending Gate B, T-442) | ARCH_TAKEOFF_V3.0.63 (engine/source/arch_v3063.py, opt-in candidate; Gate B package T-665)",
@@ -7807,7 +7807,7 @@
     "STR.CONC.GROUND_BEAM"
    ],
    "note": "T-665 (research/agents_t665/T-665_CONCRETE_GATE_B2.md): CONCRETE_GATE_B_V2 from the merged T-658 r2 ledger and the T-595 footing bound: 29 ground beams (6 bounds restated by the titles that hold / drawn outline area, 16 lower only with the AT_LEAST floor beside, 7 confirmed), 29 columns (6 upper only with the AT_MOST ceiling and its datums beside, 23 confirmed), 2 straps confirmed, the F10 + F footing at the owner scenario set 1.960 .. 2.275 m3 (R-T595-2); every other line byte-identical; the Gate B integration package",
-   "task_commit": "fbdbd7f067cbd8112c98c5944d72890045b9a30d"
+   "task_commit": "2362a65af48fa8db820d390d8fbe76356e213bbd"
   }
  ],
  "not_a_boq_line_codes": {
