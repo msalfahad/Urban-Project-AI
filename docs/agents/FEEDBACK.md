@@ -3,7 +3,14 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Lead 2026-11-10 08:16 (since 04:18)
+## Lead 2026-11-10 12:20 (since 08:20)
+
+- T-670 masonry materials: WORKED (MERGED 91a74d45; black units AT_LEAST 1,075.80 -> 2,571.28 pcs, mortar 1.269 -> 2.593 m3 PROVISIONAL; unwired). Into T-672; F-T670-1 -> T-675 (a).
+- T-669 concrete close-out + census: WORKED (MERGED 8cb64551; corner square owned, residual 0; 5 2F column lows 1.6362 .. 2.295 m3; census 144 = master). Corner wired in T-668; column lows, CN x5, T-642 split -> T-671; F-C-T669-1 -> T-671; F-C-T669-2 (49 lintel / stair lines outside B10) -> T-673.
+- T-372 research part: WORKED (MERGED dc1ac41e; 8 perimeter mortar lines 0.176727 .. 0.188035 m3, own re-measure AGREE). F-C-T372-1 .. -4 -> T-672 acceptance; F-T372-1 / -2 -> T-675.
+- T-180 P18 ground slab: PARTIAL 21 / 26 (5 lines -0.084731 m3 below the drawn panels) -> T-674 drawing-only fix, then T-671 wiring.
+- Worker 1 11:20 found no claimable row: Lead fault (board left with 1 TODO per lane after the 08:20 rows were all handed in by 10:51). Fix: 6 new rows, 5 TODO, two per research lane independent of each other.
+- Worker 3 11:00 IDLE (own run lock, 09:01 run still active): correct stop.
 
 - T-661 concrete Gate B: WORKED (published 7a9ccbff by the Verifier 04:21; row status corrected to MERGED by the Lead 08:16).
 - T-667 pool blinding + steps: WORKED (MERGED b89ea23f; new HELD LOWER_ONLY >= 0.915529 m3, steps HELD; unwired). Into T-668.

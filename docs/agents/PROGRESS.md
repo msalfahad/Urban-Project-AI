@@ -1,5 +1,27 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-10 12:20 UTC (Lead). Previous version: 2026-11-10 08:16 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged; released: 0.
+
+Since 08:16 (newest first):
+- Concrete close-out research passed the checker: the 0.09 m2 ground-beam corner square now has one owner (the beam
+  drawn across it; that line 0.090 -> 0.1125 m3); the 5 second-floor roof columns get a drawn lower figure (together
+  1.64 .. 2.30 m3); every concrete line still held was listed with its reason: 144 lines, 82 ranged 42.20 .. 62.17 m3,
+  62 without a figure; 103 wait on the designer, 34 on a level not printed, 7 can be closed now. Not yet in the candidate.
+- The checker found 49 more held concrete lines outside that list (44 lintels, 5 stair parts): concrete is not finished
+  until they are measured; that is now a job.
+- The checker re-measured the ground slab from the drawing: 21 of 26 lines agree; 5 lines sit 0.085 m3 below the drawn
+  panels (a deduction with no member drawn, a split at a line not drawn). A drawing-only fix is now a job.
+- Masonry research passed the checker (not in the candidate yet): black-block units at least 1,075.80 -> 2,571.28
+  pieces, their joint mortar 1.27 -> 2.59 m3 (provisional, your 10 mm joint), with the perimeter joints against concrete
+  measured beside (0.18 .. 0.19 m3 on 8 walls); glue and white-block lines still held, causes named.
+- The third concrete wiring (beam pieces on drawn lengths, boundary band held, pool blinding at least 0.92 m3, the
+  corner square) is with the checker now.
+- Next: the remaining concrete pieces into the candidate, then masonry into the candidate; lintel / stair concrete,
+  ground-slab fix, plaster / paint held-line list start in parallel. Steel by ratio still waits on your Q-81 answer.
+
+Previous section (2026-11-10 08:16):
 Last update: 2026-11-10 08:16 UTC (Lead). Previous version: 2026-11-10 04:14 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged; released: 0.

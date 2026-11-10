@@ -1,3 +1,15 @@
+## LEAD REPORT 2026-11-10 00:16 UTC
+
+Drive read OK (no file created in the Alsenan project folder since 20:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.61 / master 1.62.0 (NOT RELEASED); released V2.9 + route G unchanged; NO candidate quantity moved since 9 Nov 16:17 (every trade before = after).
+- CONCRETE (B10 m3, research ledgers MERGED, UNWIRED): necks 36 lines 3.075 .. 15.375 -> 32 bounded 8.7724 .. 11.3460 + 4 lift >= 0.9515 (5 re-measured AGREE); small elements 16 lines: 6 bounded 13.279574 .. 24.498998 (band 5.6392 .. 11.0328), pool blinding MISSING found; beams 27 lines: 22 bounded 8.332829 .. 13.684510 + 5 blank -> 1 VALUE 0.549624 + 14 bounded 5.983085 .. 8.412278 + 12 blank (plan 8.746 m2, no drawn depth), 5 / 5 AGREE. Into the candidate by T-661 (worker 3, 00:59).
+- WORSE / FOUND: T-658 r1 (columns, ground beams, straps, footing; 61 lines) REJECTED: two oblique GB spans measured on the short edge, high bound below the drawn member (BAND0038 0.094676 vs drawn 0.123978 m3, -24 %; BAND0039 -1.6 %); D-33 landing runs given a high from unloaded titles. r2 worker 1 FIRST with the exact fault. Lessons row PROPOSED (bound = drawn outline area x title, never one edge).
+- REBAR by ratio (B11 kg, T-662 MERGED, UNWIRED): kg/m3 BEAM 147.8 .. 175.9 (n 44), FOOTING 68.7 .. 71.1 (n 1, weak), GROUND SLAB 61.7 (n 24); ESTIMATE 2,204 .. 2,909 kg beside detailed 9,628.462 kg (kept apart). Checker conditions before wiring -> T-663 (worker 2): cited book range, footing strength, laps not twice, binding gaps; T-664 Gate B after. 219 PARTIAL members get no ratio (Checker agrees); 74 members of 6 types have no calibration -> Q-81.
+- Masonry: T-372 re-scoped to the F-T367-1 perimeter joints only (bed / head mortar already wired by T-498 / T-506).
+- Freelancer reference only: rebar 44.19 t lump vs engine 9.63 t detailed + 2.20 .. 2.91 t ESTIMATE + HELD (RULE_DIFFERENCE / UNRESOLVED). Gate: lowest open gate 1 (concrete).
+TEAM HEALTH: since 20:18 13 runs, all closed, 0 UNCLOSED; 4 MERGED, 1 REJECTED; 1 INCOMPLETE (W3 21:00, commit refused '[Sensitive-Source Provenance]'; raw reads now kept in .work/private, re-run published 23:10). All self-checks PASS (Lead too). READY 0. Two board rows had a '|' inside a cell (repaired).
+OWNER PACKAGE: (1) Q-81 rebar ratio for ground beam, neck, column, slab, stair, pool wall (full text in OWNER_QUESTIONS.md Open): A = your kg/m3 per type (recommended), B = approve the book ranges T-663 will cite; until then 74 members' steel stays HELD, never 0.
+NEEDS FIXING: (1) Worker prompts still say 'never approximate steel' (board / brief override them for this BOQ): only you can align them. (2) Scout paused since 27 Oct: no action unless you want it back.
+
 ## LEAD REPORT 2026-11-09 20:16 UTC
 
 Drive read OK (no file created in the Alsenan project folder since 16:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.61 / master 1.62.0 (NOT RELEASED); released V2.9 + route G unchanged; NO candidate quantity moved since 16:17 (every trade before = after).
