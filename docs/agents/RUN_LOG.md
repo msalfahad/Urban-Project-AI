@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10T01:51Z | Verifier | STARTED | run session_01E6cPndsApMedqivUHb6mQm | repo-attached routine | task state: READY T-658 r2 (W1 1cdf7553), T-663 (W2 dadc8182) | self-check pending
 - 2026-11-10T01:34Z | Worker 1 | SUCCESS | T-658 r2 READY (agents/task-T-658 @ 1cdf7553) | B10-04 ground beams: oblique runs now on drawn plan area (R-T658-7): BAND0038 0.093040..0.130678, BAND0039 0.196120..0.261493 m3 (both bound the Checker's outlines); 8 D-33 loaded runs LOWER_ONLY (R-T658-8) floor 2.841866 m3, no high; GB 14 bnd 2.808073..6.621731 -> 9 bnd 1.173410..5.096771 + 16 LOWER_ONLY 5.069839 + 4 blank; columns unchanged, +13.90/+4.30 re-read AGREE, +9.65/+0.25 are approved datums not printed text. No owner question. Drive read OK. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none (Drive PDFs arrive raw, not base64: decode wrapper cannot take them, read in place outside the worktrees)
 - 2026-11-10T01:21Z | Worker 1 | STARTED | run session_01E6cPnd5UTTQrq7yQaTnbRa | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10 01:04 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
