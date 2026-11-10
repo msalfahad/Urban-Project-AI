@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-10 04:14; owner change of focus 2026-11-09 18:30 in force)
+
+- Published candidate of record still V3.0.61 / master 1.62.0 (origin head b09d6ed4); NOT RELEASED. T-661 (V3.0.62, 54 B10 lines) GATE B PASS 03:43 but not published: Checker re-publishes 6d40475f (05:49 run at the latest; the 04:49 run meets the 02:51 lock). T-658 r2 and T-663 MERGED (research). 10 Nov end-to-end milestone: trial BOQ r4 (paper) is the delivered form; concrete wiring lands on 10 Nov, rebar ratio does not.
+- Next: T-665 concrete round 2 (T-658 r2, worker 3 04:59), T-666 junction / boundary-band ownership (worker 1 05:19), T-667 pool blinding (worker 2 04:39). T-664 ratio wiring BLOCKED-OWNER Q-81 (0 of 28 rows have a cited range).
+- Confidence: T-661 published by 10 Nov 06:00 HIGH; T-665 merged by 10 Nov 12:00 MEDIUM; T-664 wired by 11 Nov LOW (owner answer needed); 12-13 Nov reconciliation + scorecard MEDIUM-LOW for concrete, LOW for rebar ratio, masonry and later trades.
+
 ## Status (Lead, 2026-11-10 00:16; owner change of focus 2026-11-09 18:30 in force)
 
 - Candidate of record V3.0.61 / master 1.62.0; NOT RELEASED; no candidate quantity moved since 9 Nov 16:17. Trial BOQ r4 (10 Nov milestone, paper) stands: 2,730 / 2,742 HELD lines with a cause, held shown as ranges.

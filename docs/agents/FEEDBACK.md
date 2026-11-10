@@ -3,6 +3,13 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-10 04:14 (since 00:20)
+
+- T-658 r2 columns / GB / straps / footing: WORKED (MERGED 2cec1520; GB 9 bounded 1.173410 .. 5.096771 + 16 LOWER_ONLY 5.069839 + 4 blank; Checker own outlines AGREE). Into T-665 (worker 3).
+- T-663 ratio wiring conditions: PARTIAL (MERGED b09d6ed4; conditions settled, 0 of 28 rows wiring-ready: no readable book prints kg/m3). Decision: T-664 BLOCKED-OWNER Q-81 (no new question).
+- T-661 concrete Gate B: PARTIAL (Gate B PASS 03:43, V3.0.62; merge ea1533e4 NOT on origin; Verifier run 02:51 left no final line). Decision: READY PUBLISH-ONLY, Checker FIRST re-merges 6d40475f with `engine push`; lesson PROPOSED (MERGED only after the push is seen on origin). Follow-ups from its verdict: T-666 (F-T661-1 junction squares + boundary band), T-667 (pool blinding MISSING).
+- Verifier 03:51 INCOMPLETE (overlap guard): correct stop.
+
 ## Lead 2026-11-10 00:16 (since 20:18)
 
 - T-657 necks: WORKED (MERGED d96a2958; 36 lines 3.075 .. 15.375 -> 32 bounded 8.7724 .. 11.3460 + 4 lift LOWER_ONLY 0.9515 m3; 5 necks re-measured AGREE). Into T-661.

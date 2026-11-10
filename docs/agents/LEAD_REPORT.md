@@ -1,5 +1,16 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-10 04:14 UTC
+
+Drive read OK (no file created in the Alsenan project folder since 00:00 UTC 10 Nov, no photo task). Training villa: PUBLISHED candidate of record still ARCH_TAKEOFF_V3.0.61 / master 1.62.0 (origin head b09d6ed4; NOT RELEASED); released V2.9 + route G unchanged; no published candidate quantity moved.
+- INCIDENT (process, no data lost): T-661 concrete Gate B PASSED 03:43 (V3.0.62: 54 B10 lines; NECK held 3.075 .. 15.375 -> 8.7724 .. 11.3460 m3 + 4 lift >= 0.9515; BEAM released +0.549624 m3, held 8.372829 .. 13.779510 -> 6.023085 .. 8.507278, 12 blank), but its merge ea1533e4 never reached origin and the Verifier run (02:51) left no final line; the board said MERGED and the scoreboard was restated for V3.0.62. Row reset to READY PUBLISH-ONLY: Checker re-merges the unchanged 6d40475f with `engine push` (05:49 run at the latest). Lesson PROPOSED (ERS s.7, Checker process): MERGED and a scoreboard restatement only after `engine push` succeeded and `ls-remote` shows the sha; regression: board check flags a MERGED row whose sha is not on the engine branch.
+- CONCRETE (B10 m3): T-658 r2 MERGED 2cec1520 (research): ground beams 14 bnd 2.808073 .. 6.621731 -> 9 bnd 1.173410 .. 5.096771 + 16 LOWER_ONLY floor 5.069839 (loaded by a framing beam: no honest high) + 4 blank; oblique beams now on drawn outline (Checker own outlines AGREE). Into the candidate by T-665 (worker 3).
+- REBAR by ratio (B11 kg): T-663 MERGED b09d6ed4: conditions settled (laps 0 kg in 69 calibration members, beam ends are anchorage; 4 footings PARTIAL, FOOTING n = 1), but 0 of 28 ratio rows wiring-ready: no Drive book prints kg/m3. T-664 BLOCKED-OWNER Q-81. ESTIMATE 2,204 .. 2,909 kg unchanged beside 9,628.462 kg detailed.
+- New: T-666 (F-T661-1 junction squares, residual <= 0.048 m3; boundary band under plot-line stretches, no double count with building G.B), T-667 pool blinding MISSING (10 cm, ST p.7) + pool steps HELD. Freelancer reference only (unchanged). Lowest open gate 1 (concrete). 10 Nov end-to-end milestone: delivered as trial BOQ r4 (paper); concrete lands today, rebar ratio does not.
+TEAM HEALTH: since 00:20 12 runs; 1 UNCLOSED (Verifier 02:51 = INCOMPLETE: no final line, merge unpublished); 1 INCOMPLETE correct overlap stop (Verifier 03:51); 2 MERGED (T-658 r2, T-663) + 1 Gate B PASS unpublished; 0 REJECTED; 3 empty worker slots (nothing claimable behind the hub: three TODO rows added). Self-checks PASS where run (Lead too). READY 1.
+OWNER PACKAGE: (1) Q-81 still open (full text in OWNER_QUESTIONS.md Open): it now blocks ALL ratio wiring, not only the 6 uncalibrated types, because the 'checked against common ranges' step has no source: A = your kg/m3 per type (recommended), B = approve ranges you name. Until then that steel stays HELD, never 0.
+NEEDS FIXING: (1) Worker prompts still say 'never approximate steel' (board / brief override for this BOQ): only you can align them. (2) Scout paused since 27 Oct.
+
 ## LEAD REPORT 2026-11-10 00:16 UTC
 
 Drive read OK (no file created in the Alsenan project folder since 20:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.61 / master 1.62.0 (NOT RELEASED); released V2.9 + route G unchanged; NO candidate quantity moved since 9 Nov 16:17 (every trade before = after).
@@ -23,16 +34,3 @@ Drive read OK (no file created in the Alsenan project folder since 16:00 UTC 9 N
 TEAM HEALTH: since 16:16 13 runs, all closed, 0 UNCLOSED; 4 MERGED, 0 REJECTED; 4 empty slots (correct: nothing claimable until this re-plan). All self-checks PASS (Lead too). READY 0.
 OWNER PACKAGE: none (no section 2.7 decision; designer items keep their lines HELD with drawn bounds).
 NEEDS FIXING: (1) The scheduled worker prompts still say 'never approximate steel rates'; the board / brief override them for this BOQ (main chat noted it cannot edit scheduled tasks): only you can align the prompts. (2) Scout paused since 27 Oct: no action unless you want it back.
-
-## LEAD REPORT 2026-11-09 16:17 UTC
-
-Drive read OK (no file created in the Alsenan project folder since 12:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.61 / master 1.61.0 (NOT RELEASED); released V2.9 + route G unchanged.
-- Gate B step 4 MERGED (T-563 e04d99d9): plaster height to the slab / roof soffit (Q-72) wired into the 11 dry FIN.PLASTER lines. Released FIN.PLASTER 580.5819 -> 363.3738 m2 (-217.2081 m2, -37.4 %): 4 lines move from released to HELD 262.018 .. 262.052 m2 (+20.6 % on their old 217.21) because the roof build-up is not printed (D-39 / DCR-6, designer item, held never 0); 11 lines bound 840.646 .. 895.896 m2. FIN.PAINT 76 lines byte-identical. Checker own re-measure 1F-01 face 17.70 m AGREE 0.00; 4 / 11 rooms PARTIALLY VERIFIED, 0 new whole lines VERIFIED. Freelancer flat 3.60 / 3.40 / 3.50 m = RULE_DIFFERENCE (Q-72).
-- Gate B step 3 MERGED (T-423 r3 62e18eed): 22 lines text-only (thresholds, dome ceiling lists, D-1F-04 1.760 m2 face move); 0 m2 / m3 / kg moved.
-- Gate-0 fix MERGED (T-653 db8898c1): no process-global Decimal precision in 17 research modules; L4 21,843 pass 0 F. Lesson ADOPTED.
-- Worse / found: t485 RED on the working branch since 14:31 (T-423 and T-563 pending in master 1.61.0; second time after T-498). New t199 helper false failure blocks T-314 (F-T314-2). Both -> T-655 gate 0, worker 2 first; T-314 r3 (step 5, exterior plaster 1,007.93 .. 1,085.61 m2 vs freelancer 1,469.97 m2, -31 .. -26 %, reference only) right after.
-- Learned: PROPOSED a package rebased on a merged predecessor promotes it in its own master; registry tests pick writers among the files they govern.
-- 10 Nov: trial BOQ r4 (T-654, worker 3 first at 17:00) on the newest master, carrying steps 3-4. Gate: lowest open gate 0 (T-655, T-656).
-TEAM HEALTH: since 12:23 12 runs, all closed, 0 UNCLOSED; 3 MERGED, 0 REJECTED; 1 INCOMPLETE stage (T-314 r2, correct stop on a new failure, saved); 2 correct overlap-guard INCOMPLETE (Checker); 3 empty worker runs (W1 13:28 / 15:23, W3 15:01: no claimable row under the one-at-a-time Gate B order; all three lanes now have a TODO). All self-checks PASS. READY 0.
-OWNER PACKAGE: none today (no section 2.7 decision).
-NEEDS FIXING: (1) Scout paused since 27 Oct: no action unless you want it back. (2) venv incomplete at first use seen twice today: watch only.

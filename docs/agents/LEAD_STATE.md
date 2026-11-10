@@ -1,51 +1,53 @@
 # LEAD STATE (at most 5 KB; the Lead rewrites it at the end of every run)
 
-Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log 169a4df2..`,
-`git -C .work/board log <board commit of this run>..`, `git log fd71bc30..` on main, RUN_LOG lines after 00:16Z 10 Nov,
-rows changed since), then rewrite.
+Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log b09d6ed4..`,
+`git -C .work/board log <board commit of this run>..`, `git log fd71bc30..` on main, RUN_LOG lines after 04:14Z 10 Nov,
+rows changed since), then rewrite. FIRST check `git -C .work/engine ls-remote origin` holds the T-661 merge.
 
 ## Last seen
-- engine: 169a4df2 (T-662 merge; before 9c91709f T-660, d96a2958 T-657, 907ace46 T-659); candidate of record
-  ARCH_TAKEOFF_V3.0.61 / BOQ_FAMILY_MASTER 1.62.0; released V2.9 + route G.
-- main: fd71bc30. Gate B OPEN.
-- board: this run's final commit (Lead 2026-11-10 00:1x)
-- last Lead run: 2026-11-10 00:15-00:2x UTC (session_01E6cPndy5miudu2FdvQfWaF)
+- engine origin head: b09d6ed4 (T-663 merge; before 2cec1520 T-658 r2, 169a4df2 T-662). PUBLISHED candidate of record
+  ARCH_TAKEOFF_V3.0.61 / master 1.62.0; released V2.9 + route G.
+- T-661 (V3.0.62 / master 1.63.0) GATE B PASS 03:43 but merge ea1533e4 + promotion ff93c61e NOT on origin (Verifier
+  02:51 run left no final line; lock until 04:50). Row = READY PUBLISH-ONLY; scoreboard 03:48 section describes
+  V3.0.62 prematurely (Checker restates after publish).
+- main: fd71bc30. Gate B OPEN. Last Lead run: 2026-11-10 04:14 UTC (session_01E6cPnci5MAFPeQHAUuMPvt).
 
 ## Governing
 - OWNER DECISION 2026-11-09 18:30: concrete -> rebar by ratio -> masonry -> plaster / paint -> tiles -> WP ->
-  earthworks -> 38 missing families (MEP last). 11-08 12:40 delivery directive still in force (wire / prove only;
-  Gate B one at a time); UPM untouched. No OWNER_SESSION_CHANGES row after 18:30.
+  earthworks -> 38 missing families (MEP last). 11-08 12:40 directive (wire / prove only; Gate B one at a time); UPM
+  untouched. No OWNER_SESSION_CHANGES row after 18:30.
 
-## Baseline for "before / after" (trial BOQ r4, candidate V3.0.61) - unchanged this run
+## Baseline for "before / after" (trial BOQ r4, candidate V3.0.61) - unchanged on origin
 - B10 m3: released 284.62006 on 294 lines; HELD 140 = 95 bounded 37.518976 .. 73.227539 + 45 blank.
-- B11 kg: released 9,628.462205 detailed; HELD 799 blank + 900 bounded 15,130.867712 .. OPEN.
-- Research (merged, unwired): necks 32 bnd 8.7724 .. 11.3460 + 4 lift >= 0.9515; small 6 bnd 13.279574 .. 24.498998;
-  beams 1 value 0.549624 + 14 bnd 5.983085 .. 8.412278 + 12 blank; ratio ESTIMATE 2,204.24 .. 2,909.02 kg.
+- After T-661 publishes (V3.0.62): NECK 32 bnd 8.7724 .. 11.3460 + 4 blank (>= 0.9515); BEAM released +0.549624,
+  held 6.023085 .. 8.507278 + 12 blank.
+- B11 kg: released 9,628.462205 detailed; HELD 799 blank + 900 bounded 15,130.867712 .. OPEN; ratio ESTIMATE
+  2,204.24 .. 2,909.02 kg unwired (0 of 28 rows wiring-ready, Q-81).
+- T-658 r2 (merged research): GB 9 bnd 1.173410 .. 5.096771 + 16 LOWER_ONLY 5.069839 + 4 blank.
 
-## Live rows (00:16)
-- READY: none. CLAIMED: none.
-- TODO: S: T-658 r2 (W1 FIRST, exact fault in row); A: T-663 rebar ratio wiring conditions (W2 FIRST);
-  I: T-661 concrete Gate B (W3 FIRST; T-657/659/660 now, T-658 r2 only after it merges).
-- QUEUED: T-664 ratio Gate B (W3 after T-661 + T-663); T-372 (re-scoped: F-T367-1 perimeter joints only), T-363,
-  T-424 (W1); T-314 r3, T-364, T-513, T-502 (W2); T-382, T-509 (W3).
-- IN PROGRESS: T-180 (P17 footings after T-661, then P18 ground slab). PAUSED: T-450 p2, T-451, T-472.
-- LANE ORDER: S (worker 1): T-658, T-372, T-363, T-424; A (worker 2): T-663, T-314, T-364, T-513, T-502;
-  I (worker 3): T-661, T-664, T-382, T-509. Queue check 14 actionable, 0 flagged, 0 stall.
+## Live rows (04:14)
+- READY: T-661 PUBLISH-ONLY (Checker FIRST). CLAIMED: none.
+- TODO: S: T-666 (W1 FIRST: F-T661-1 junction squares + boundary band); A: T-667 (W2 FIRST: pool blinding);
+  I: T-665 (W3 FIRST: T-658 r2 into the candidate; may base on agents/task-T-661 @ 6d40475f).
+- BLOCKED-OWNER: T-664 (Q-81). QUEUED: T-372, T-363, T-424 (W1); T-314 r3, T-364, T-513, T-502 (W2); T-382, T-509 (W3).
+- IN PROGRESS: T-180 (P17 footings once T-661 is published, then P18). PAUSED: T-450 p2, T-451, T-472.
+- LANE ORDER: S (worker 1): T-666, T-372, T-363, T-424; A (worker 2): T-667, T-314, T-364, T-513, T-502;
+  I (worker 3): T-661, T-665, T-664, T-382, T-509. Queue check 15 actionable, 0 flagged, 0 stall.
 
 ## Top 5 priorities
-1. T-661 READY and merged; report B10 m3 before / after.
-2. T-658 r2 (gate 1; never delayed more than 2 Checker runs), then restaged into the concrete package.
-3. T-663 then T-664 (rebar ratio wired as ESTIMATE, separate subtotal).
-4. Q-81 answer -> ratio for 6 types (new row when answered). PARTIAL members: blank groups HELD (no ratio).
-5. Masonry after rebar: T-372 (perimeter joints), T-363; then T-314 r3. 12-13 Nov reconciliation + scorecard.
+1. T-661 published on origin (verify sha with ls-remote); scoreboard restated; report B10 before / after.
+2. T-665 concrete round 2 READY + Gate B (one hub package at a time).
+3. T-666 (gate 1; never delayed more than 2 Checker runs), T-667; then boundary band wiring.
+4. Q-81 answer -> T-664 (ratio Gate B). Until then masonry may take the hub after T-665: T-372, T-363, T-314 r3.
+5. 12-13 Nov reconciliation + scorecard.
 
 ## Rules decided (keep)
-- Board check reads the note line containing the literal 'LANE ORDER:'. Status word FIRST; 7 cells; NEVER a '|' inside
-  a cell (Checker verdicts T-660 / T-662 had one: repaired 00:16). `board check` pulls first: commit before.
-- Shared hub: one Gate B package at a time; second rebases on the first merged candidate; a rebased package promotes its
-  merged predecessor. A Checker finding gets its fix row in the next Lead run.
-- F-T662-1 ACCEPTED: no ratio on a member with a detailed count (never both ways). Lessons PROPOSED 00:16: a held bound
-  of a linear member = drawn outline area x title (adopt when T-658 r2 merges).
+- Board check reads the newest Lead note line containing 'LANE ORDER:'; a status cell with 'after T-nnn' reads as
+  WAITING. Status word FIRST; 7 cells; NEVER a '|' inside a cell. `board check` pulls first: commit before.
+- Shared hub: one Gate B package at a time; the next may be BUILT on a Gate-B-passed task head, checked only after the
+  predecessor is published. A Checker finding gets its fix row in the next Lead run.
+- PROPOSED 04:14: MERGED / scoreboard restatement only after `engine push` success and the sha seen on origin.
+- F-T662-1 ACCEPTED (never both ways). F-T661-1 lesson PROPOSED (near face unless junction owned by no other line).
 - F-C-T570-1, F-C-T593-1 (stair skirting; ORR-007 open). F-C-T638-1 split faces stay CALCULATED.
 - Materials: FINISH V7, PLASTER V3; UPC-BLACK-BLOCK-001 1.1.0 (Q-80). FIN.PLASTER released 363.3738 m2.
 
@@ -54,6 +56,6 @@ rows changed since), then rewrite.
   DOME-3 bars, lift-wall height, F-T583-1, F-T589-2, MS1-T winders, C-ST-4) keep lines HELD, never block integration.
 
 ## Open owner items
-- Q-81 (rebar ratio, 6 types; pushed 00:16). ORR-007 stair skirting payable form. Worker prompts 'never approximate
-  steel' (owner to align). Freelancer floors / rails workbooks + 1990 spec (coming); privacy switch; PyMuPDF review after
+- Q-81 (rebar ratio; now blocks all ratio wiring). ORR-007 stair skirting payable form. Worker prompts 'never
+  approximate steel'. Freelancer floors / rails workbooks + 1990 spec (coming); privacy switch; PyMuPDF review after
   10 Nov; Q-34 2F top roof at the 12-13 Nov milestone; token plan Stage 2 after 10 Nov; Scout paused.

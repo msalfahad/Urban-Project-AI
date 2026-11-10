@@ -1,5 +1,25 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-10 04:14 UTC (Lead). Previous version: 2026-11-10 00:16 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged; released: 0.
+
+Since 00:16 (newest first):
+- The checker passed the concrete wiring into the candidate (column necks 32 ranges 8.77 .. 11.35 m3 + 4 lift necks at
+  least 0.95; one beam valued 0.55 m3, 14 beams ranged 6.02 .. 8.51 m3, 12 still held for want of a drawn depth), but
+  its merge never reached the shared branch: the published candidate is still the previous one. Nothing was lost; the
+  checker re-publishes it at its next free run (05:49 UTC at the latest). Until then no concrete number has moved.
+- The columns / ground beams redo passed: sloping beams now on their drawn area; 9 ground beams ranged 1.17 .. 5.10 m3,
+  16 carrying a concentrated load have only a floor of 5.07 m3 (no honest upper figure), 4 still held. It goes into the
+  candidate next.
+- Steel by ratio: the checks are done, but none of the 28 estimate rows can be wired: your rule says the ratio is
+  checked against common ranges, and no book on your Drive prints a kg/m3 range. Your answer to Q-81 (your figures, or
+  approve the ranges) is the only way forward; until then that steel stays held, never zero.
+- Two gaps from the checker became jobs: who owns each corner square where beams cross, and whether the boundary band
+  runs under the stretches where the house stands on the plot line (no double count); and the pool's 10 cm blinding,
+  found missing.
+
+Previous section (2026-11-10 00:16):
 Last update: 2026-11-10 00:16 UTC (Lead). Previous version: 2026-11-09 20:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4
