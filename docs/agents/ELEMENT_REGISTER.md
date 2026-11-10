@@ -46,6 +46,9 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- STAIR MS2 1F NORTH-WEST CORNER SQUARE (1.15 m) (Lead 2026-11-10 20:20; Checker F-V680-1 in the T-680 verdict): ELEMENT UNRESOLVED between drawn winders (three radiating lines on the visible layer of the 1F plan, the GF MS1-T pattern) and the T-184 flat half-landing. OWNER TRADE: structure (lane S) owns the element definition and its concrete (STR.CONC.STAIR waist / steps / landing); finishes lines (B7 treads / risers / nosing T-424, skirting MS2-LD T-681, shaft plaster / paint T-680) take the element as defined and move in the package that wires T-684, never on their own. Owner stair rule S-9 applies (only drawn winders, none generated). Investigation: T-684. Until then every dependent line keeps its current status; none is VERIFIED on the corner.
+- LINTEL CONCRETE: CAST RC (ST p.13) vs OWNER PRECAST PIECES (Lead 2026-11-10 20:20; T-677 Gate B, Checker own read of ST p.13): this villa's structural drawing prints cast RC lintels (MIN 40 cm bearing each side, D 20 up to 200 cm openings): the drawing governs the concrete m3 lines (STR.CONC.LINTEL); the owner precast rule 2026-11-02 stays BESIDE as the piece list (nr), never replacing the drawing and never counted twice. Bearing: the printed 40 cm governs on this villa (it satisfies the owner minimum of 15 cm each side; drawings first in the resolution order).
+
 - GROUND SLAB vs OBLIQUE GROUND BEAM END TRIANGLES (Lead 2026-11-10 16:25; T-674 MERGED bb4ec90b, Checker 16:00): OWNER
   TRADE concrete, GB line BAND0038 (L-970bac56): the two 0.090 m2 triangles between the drawn oblique beam faces and the
   square-cut band are beam (a beam does not stop short of its carrier, C1 strip ownership); the slab line L-69527cb9

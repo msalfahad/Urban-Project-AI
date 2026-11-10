@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-10 20:20 (since 16:25)
+
+- T-677 concrete Gate B round 5: WORKED (MERGED 8a28bce5, V3.0.66 published 11d94e99; 5,054 byte-identical, 21 changed, 1 added; one slab / BAND0038 double count removed). Closed.
+- T-678 concrete open items: WORKED (MERGED f8515d4b; 9 of 22 OPEN BOUND bounded, 778 = PC-2F 0.1824 .. 0.350 m3, C3 low 0.41175). Wiring -> T-682 with F-V678-1 / -2 as acceptance.
+- T-679 concrete statement: WORKED (MERGED 4c6726ce; V3.0.65 totals reproduced to the last digit). F-T679-1..3 -> T-683 (restated on V3.0.66). Handoff over 600 characters (flag only).
+- T-680 plaster / paint round 2: WORKED (MERGED 707c624e). F-T680-1 -> T-686; Checker F-V680-1 (1F NW winder pattern vs T-184 landing) -> T-684 + register entry.
+- T-681 tiles census: READY, Checker PARTIAL (a-d PASS; gate e 2-room re-measure owed because the run went to T-677 Gate B). No worker rework; Checker first slot.
+- Worker 1 19:21 found no claimable row (W3 took T-679 while the hub was in review, W1 had T-678 done): Lead fault, the second lane S row was the one W3 takes. Fix: T-683 and T-684 both lane S plus T-682 in lane I, so W3 has its own row first.
+
 ## Lead 2026-11-10 16:25 (since 12:20)
 
 - T-668 concrete Gate B round 3: WORKED (MERGED 033b52b9, V3.0.64 published; 5,066 lines byte-identical). Closed.
