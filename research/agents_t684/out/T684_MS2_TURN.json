@@ -1,0 +1,525 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.66 (line index of T-677)",
+ "element": {
+  "cross_trade_owner": "structure (lane S): element definition and STR.CONC.STAIR MS2-LD / MS2-TR; finishes take it as a STAIR_LANDING (B7-04 marble, T-493 2.9325 m2) and never re-decide it",
+  "definition": "FLAT west part of the split-level half landing MS2-LD at +7.516 (scaled), reached by the 12th riser of MS2-L; one closing riser MS2-TR on the drawn line x +0.10 east of the corner up to the east part +7.684; NOT winders",
+  "f1_turn": {
+   "element": "LANDING_SPLIT",
+   "lines_are": "SEEN_BELOW",
+   "reasons": [
+    "riser budget: (H 4.200 - 24 x 0.1680) / 0.1680 = 1.000 -> 1",
+    "6 radiating line(s) from the inner corner (['HIDDEN', 'VISIBLE'])",
+    "the radiating lines coincide line for line with the lower storey's turn through an open zone: SEEN_BELOW (counted once on the lower storey)",
+    "section: 1 riser(s) drawn in the turn zone"
+   ],
+   "status": "DRAWN",
+   "turn_risers": 1
+  },
+  "gf_turn": {
+   "element": "WINDERS",
+   "lines_are": "WINDERS",
+   "reasons": [
+    "riser budget: (H 4.500 - 22 x 0.1667) / 0.1667 = 5.000 -> 5",
+    "6 radiating line(s) from the inner corner (['HIDDEN'])",
+    "section: 5 riser(s) drawn in the turn zone"
+   ],
+   "status": "DRAWN",
+   "turn_risers": 5
+  },
+  "id": "ST-01 MS2 1F north-west corner square (1.15 x 1.15 clear, 1.25 x 1.20 to the closing riser)",
+  "radiating_lines_on_1F": "SEEN_BELOW: the GF MS1-T winders seen through the open shaft (counted once, on GF)"
+ },
+ "lines": [
+  {
+   "after": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 1.033445,
+    "unit": "m3"
+   },
+   "before": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 1.033445,
+    "unit": "m3"
+   },
+   "change": "NONE",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_L",
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-67e4b0485135f84acc46",
+   "src": "T-184",
+   "what": "MS2-L flight (steps + waist)",
+   "why": "flat landing confirmed: the T-184 model (landing plate T 16, closing riser) stands"
+  },
+  {
+   "after": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 0.4696,
+    "unit": "m3"
+   },
+   "before": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 0.4696,
+    "unit": "m3"
+   },
+   "change": "NONE",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_LD",
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-2416e65f053a14199cfc",
+   "src": "T-184",
+   "what": "MS2-LD half landing incl. the NW square (west part +7.516)",
+   "why": "flat landing confirmed: the T-184 model (landing plate T 16, closing riser) stands"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "m3"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "m3"
+   },
+   "change": "NONE",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_TR",
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-659243ed9fc2831c3ae8",
+   "src": "T-184",
+   "what": "MS2-TR closing riser +7.516 -> +7.684",
+   "why": "flat landing confirmed: the T-184 model (landing plate T 16, closing riser) stands"
+  },
+  {
+   "after": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 1.001373,
+    "unit": "m3"
+   },
+   "before": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 1.001373,
+    "unit": "m3"
+   },
+   "change": "NONE",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_U",
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-bb0e57b1948175a3d5b8",
+   "src": "T-184",
+   "what": "MS2-U flight",
+   "why": "flat landing confirmed: the T-184 model (landing plate T 16, closing riser) stands"
+  },
+  {
+   "after": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 2.935,
+    "unit": "m2"
+   },
+   "before": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 2.935,
+    "unit": "m2"
+   },
+   "change": "NONE",
+   "element_id": "FW:L-2416e65f053a14199cfc:FACES:CALCULATED:-:G",
+   "item_code": "STR.FORMWORK.STAIR",
+   "line_id": "L-ae22b2cd730370bcc8b0",
+   "src": "formwork",
+   "what": "MS2-LD soffit / sides (FW:L-2416e65f...)",
+   "why": "flat landing soffit confirmed"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "m2"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "m2"
+   },
+   "change": "NONE",
+   "element_id": "FW:L-2416e65f053a14199cfc:SIDE:HELD:-:G",
+   "item_code": "STR.FORMWORK.STAIR",
+   "line_id": "L-f93c7248b948b757aefb",
+   "src": "formwork",
+   "what": "MS2-LD soffit / sides (FW:L-2416e65f...)",
+   "why": "flat landing soffit confirmed"
+  },
+  {
+   "after": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 3.795,
+    "unit": "m2"
+   },
+   "before": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 3.795,
+    "unit": "m2"
+   },
+   "change": "NONE",
+   "element_id": "1F-R78C367:flight 2",
+   "item_code": "FIN.MARBLE.TREAD",
+   "line_id": "L-65806b4d02d476603bc5",
+   "src": "T-412 / T-425",
+   "what": "1F flight 2 = MS2-L treads",
+   "why": "tread counts by flight unchanged (MS2-L 11 + landing; no winder tread on 1F -> 2F)"
+  },
+  {
+   "after": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 12.65,
+    "unit": "lm"
+   },
+   "before": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 12.65,
+    "unit": "lm"
+   },
+   "change": "NONE",
+   "element_id": "1F-R78C367:flight 2",
+   "item_code": "FIN.STAIR.STEP_LM",
+   "line_id": "L-23651ecfef77992ec8d4",
+   "src": "T-412 / T-425",
+   "what": "1F flight 2 = MS2-L step lm",
+   "why": "as treads"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "m2"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "m2"
+   },
+   "change": "NONE",
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.MARBLE.TREAD",
+   "line_id": "L-b4660de0ddd98ad0ffc2",
+   "src": "T-429",
+   "what": "1F flight 5 = MS1-T winders SEEN_THROUGH (GF element)",
+   "why": "tread counts by flight unchanged (MS2-L 11 + landing; no winder tread on 1F -> 2F)"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "change": "NONE",
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.STAIR.STEP_LM",
+   "line_id": "L-e085c168dee5fb19a7fb",
+   "src": "T-429",
+   "what": "1F flight 5 step lm (MS1-T seen through)",
+   "why": "as treads"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "m2"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "m2"
+   },
+   "change": "NONE",
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-820baecf7f726b4d8f1e",
+   "src": "T-429",
+   "what": "1F flight 5 risers (MS1-T seen through)",
+   "why": "MS1-T risers stay HELD on the GF element (S-9 / Q-51 / C-ST-3), never counted on MS2"
+  },
+  {
+   "after": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 3.7,
+    "unit": "lm"
+   },
+   "before": {
+    "cls": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 3.7,
+    "unit": "lm"
+   },
+   "change": "NONE",
+   "element_id": "STAIR-SKIRT:MS2-LD:landing",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-b442a00bf07405eaaa93",
+   "src": "T-508 / T-681",
+   "what": "MS2-LD landing skirting",
+   "why": "landing skirting runs at a flat +7.516 / +7.684 (no stepped profile in the NW square)"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "change": "NONE",
+   "element_id": "STAIR-SKIRT:MS2-LD.W25",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-760bfa8dd00061361695",
+   "src": "T-681",
+   "what": "MS2-LD.W25 (N 1.400 .. 2.400)",
+   "why": "landing skirting runs at a flat +7.516 / +7.684 (no stepped profile in the NW square)"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "change": "NONE",
+   "element_id": "STAIR-SKIRT:MS2-LD.W13",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-33f2018c987f782d1c91",
+   "src": "T-681",
+   "what": "MS2-LD.W13 (W 1.050 .. 1.200)",
+   "why": "landing skirting runs at a flat +7.516 / +7.684 (no stepped profile in the NW square)"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "change": "NONE",
+   "element_id": "STAIR-SKIRT:MS2-TR.N",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-76de75ce9a315998be99",
+   "src": "T-508",
+   "what": "MS2-TR.N (closing riser on the N wall)",
+   "why": "closing-riser profile on the N wall at the drawn riser line; height not printed"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "change": "NONE",
+   "element_id": "STAIR-SKIRT:MS2-TR.N",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-5021b820dba41f631dde",
+   "src": "T-508",
+   "what": "MS2-TR.N",
+   "why": "as sloped"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": null,
+    "low": null,
+    "net": null,
+    "unit": "lm"
+   },
+   "change": "NONE",
+   "element_id": "RAIL:RL-07:ST-01:T-MS2-LD",
+   "item_code": "FIN.RAILING",
+   "line_id": "L-1c899e8cc696d9c32490",
+   "src": "T-421",
+   "what": "RL-07 at MS2-LD",
+   "why": "unchanged (railing held on its own causes)"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": "46.564",
+    "low": "45.317",
+    "net": null,
+    "unit": "m2"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": "46.564",
+    "low": "45.317",
+    "net": null,
+    "unit": "m2"
+   },
+   "change": "NONE",
+   "element_id": "HL:WALL_FINISH:ST_1F:PLASTER",
+   "item_code": "T-680 plaster",
+   "line_id": "L-0eac839f9132da7bd116",
+   "src": "T-680",
+   "what": "ST-01 shaft 1F band (T-680 research bound, unwired)",
+   "why": "the N face contact over the NW square stays FLAT at +7.516 (no stepped winder profile): the 0.1 .. 0.2 m2 per finish raised by F-V680-1 does not arise"
+  },
+  {
+   "after": {
+    "cls": "HELD",
+    "high": "46.564",
+    "low": "45.317",
+    "net": null,
+    "unit": "m2"
+   },
+   "before": {
+    "cls": "HELD",
+    "high": "46.564",
+    "low": "45.317",
+    "net": null,
+    "unit": "m2"
+   },
+   "change": "NONE",
+   "element_id": "HL:WALL_FINISH:ST_1F:PAINT",
+   "item_code": "T-680 paint",
+   "line_id": "L-2ab93d5029a4b7cc4dca",
+   "src": "T-680",
+   "what": "ST-01 shaft 1F band (T-680 research bound, unwired)",
+   "why": "the N face contact over the NW square stays FLAT at +7.516 (no stepped winder profile): the 0.1 .. 0.2 m2 per finish raised by F-V680-1 does not arise"
+  }
+ ],
+ "proposals": [
+  {
+   "after": "1.150 lm DRAWING-CONFIRMED (proposed for the B7-05 package, T-424): the closing-riser nosing is drawn on the 1F AND 2F plans, x +0.10 east of the NW inner corner over the full 1.15 m square (layer 5), its riser face 0.05 further east (layer 2; uphill east = NE quarter +7.684), the structural split at the same line on ST p.5 (T-493 5E2)",
+   "before": "HELD blank 'position not drawn' (T-412 census)",
+   "delta": 1.15,
+   "item": "B7-05 nosing MS2-TR",
+   "unit": "lm"
+  },
+  {
+   "after": "HELD blank (unchanged): the riser line is drawn but the two landing levels +7.516 / +7.684 are scaled, not printed, and the soffit under the step is not drawn",
+   "before": "HELD blank",
+   "delta": null,
+   "item": "STR.CONC.STAIR MS2-TR",
+   "unit": "m3"
+  }
+ ],
+ "readings": {
+  "corroboration": [
+   "2F plan (looks down on the MS2 north strip): NO radiating line in the NW square; the 1.15 m closing-riser line at +0.10 east of the corner (layer 5) with its 0.05 twin (layer 2) only",
+   "ST p.5 (1F roof slab, carries MS2): NO radiating line in the NW square (probe: 3 non-orthogonal pieces in the north zone, none in NW: a 45 deg pair in the NE half and two column outlines)",
+   "ST p.4 (GF roof slab, carries MS1, the sheet that also draws the round stair): the 3 radiating lines (156 / 135 / 114 deg, 1.259 / 1.626 / 1.259 m) at the same corner",
+   "layer logic: the GF plan draws its own winders on the HIDDEN layer (above the GF cut); the 1F plan draws the same lines on the VISIBLE layer (below the 1F cut): the plan convention for an object seen below",
+   "T-425 / T-429 (MERGED) already bound the engine's 1F 'flight 5' (4-tread RADIAL, width 1.247) to MS1-T with role SEEN_THROUGH; this run re-derives it independently and closes F-V680-1 on it"
+  ],
+  "open_below_1F_NW": "the 1F plan draws no floor, landing or slab in the NW square between the 1F cut and the GF turn: the 1F arrival landing (1.95 x 2.50) is at the SOUTH end; the NW square on 1F is open down to the GF winders (T-173 shaft model: the NW floor is the GF one, +0.30 / +1.00)",
+  "storeys": {
+   "1F": {
+    "flights": {
+     "MS2-L": 12,
+     "MS2-U": 12
+    },
+    "height_m": 4.2,
+    "riser_m": 0.168,
+    "section_turn_risers": 1,
+    "src": "A-A: printed 420; cut flight MS2-U 12 risers, MS2-L seen beyond 12, risers 0.168 (scaled ~40 px of 237 px/m at 600 dpi); the north 1.20 m zone draws NO riser line: only the west quarter's slab edge seen one riser below the cut NE landing (the closing riser)"
+   },
+   "GF": {
+    "flights": {
+     "MS1-L": 10,
+     "MS1-U": 12
+    },
+    "height_m": 4.5,
+    "riser_m": 0.16666666666666666,
+    "section_turn_risers": 5,
+    "src": "A-A: 4 dashed + 1 solid riser in the north 1.20 m zone between +2.667 and +3.50 (0.833 m); T-111 / T-184 counts; levels +1.00 / +5.50 printed"
+   }
+  }
+ },
+ "released_change_m3": 0,
+ "schema": "T684_MS2_TURN_V1",
+ "verdict": {
+  "F_V680_1": "CLOSED, no quantity change: the T-184 / T-173 / T-680 flat-landing model is ENGINE_RIGHT on three independent drawn facts (riser budget, section A-A, the 2F plan and ST p.5)",
+  "freelancer": "no freelancer line keys the NW square separately (his '2 landings' 6.20 m2 row, T-493: UNRESOLVED, no breakdown); not used as evidence"
+ }
+}
