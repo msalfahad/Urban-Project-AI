@@ -138,8 +138,13 @@ run's V3_0_62_INTEGRATION_LEDGER).
   byte; on V3_0_62 -> `out/LINE_INDEX_V3_0_62.json`, 5,073 lines, issues {}, complete map.
 - `t661_package_families.py` (T-483 attribute unchanged, chain 61 -> 62): B10-03 STR.CONC.NECK 36 changed; B10-07
   STR.CONC.BEAM 13 changed + 5 record-only; nothing added or removed.
-- Tests: `tests/t661_concrete_gate_b` (hand villa V661 + adverse, master 1.63.0), the chain's own test folders and the
-  full suite (L4) on the package head: see the handoff.
+- Tests: `tests/t661_concrete_gate_b` (hand villa V661 + adverse, master 1.63.0) PASS. L4: every test folder and root
+  test file (865) on ea7724b2 in two halves (odd / even): the only failure was t459
+  test_candidate_binding_rebuilds (the new module adds its 'later_steps_tokens' entry) -> T459_CANDIDATE_BINDING.json
+  rebuilt by its own tool (arch_v3062.py: no lap token, later_steps_touching []), t459 PASS on the final head; private
+  inputs absent: 168 test phases skipped by the conftest (known, not new). Targeted re-run on the final head: t661, t485,
+  t655, t563, t459, t328, t284, t199, t657, t659, t660 PASS; freeze 0 differing; codemap stale none; build_master
+  --check equal, 0 problems; RULES_MANIFEST check [].
 
 ## 6. Registry: BOQ_FAMILY_MASTER_1.63.0 (pending now, promoted IN the merge)
 
