@@ -1,0 +1,692 @@
+{
+ "annex_C3": {
+  "after_hi_m3": "0.506250",
+  "after_lo_m3": "0.411750",
+  "basis": "0.125 x (annex slab top >= 3.544 (R-T678-2: W08 drawn head +2.80 - 0.006 under CB6 20x75) - base 0.25 APPROVED) .. (4.30 - 0.25)",
+  "before": "AT_MOST 0.50625, low open by name",
+  "follow_up": "the same height bound 3.294 .. 4.05 m applies to the 4 other GF annex column lines (L-694a75c8, L-c0b3340a, L-e6c1c9a7, L-9f5a6470) once D-66 settles their section",
+  "height_m": [
+   "3.294000",
+   "4.050000"
+  ],
+  "line": "L-fad18af6"
+ },
+ "annex_slab_top": {
+  "finished_ceiling": "4.30",
+  "governing": "W08",
+  "heads": [
+   {
+    "beam_depth": "0.75",
+    "head_abs": "2.800",
+    "id": "W04",
+    "status": "DRAWING-CONFIRMED",
+    "tol": "0.019"
+   },
+   {
+    "beam_depth": "0.75",
+    "head_abs": "2.800",
+    "id": "W08",
+    "status": "DRAWING-CONFIRMED",
+    "tol": "0.006"
+   }
+  ],
+  "plane_reads": {
+   "deeper_beams": "the only GFRS beams deeper than 0.75 are B26 / B27 0.85, which carry PC-1F-B / PC-1F-A at +5.45 (T-220): main roof plane, not the annex plane",
+   "texts": "annex part (beams CB6 / CB7 / B9 / B4 / CB5 / B2 / B1): no level text, no 'T nn' slab thickness, no step text; only beam marks, bar notes, 'AS PER SCH.', section marks"
+  },
+  "rule": "R-T678-2",
+  "s_lo": "3.544000"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.65",
+ "counts": {
+  "measurable_now": 9,
+  "open_bound_after": 13,
+  "open_bound_before": 22
+ },
+ "lintel_totals_m3": {
+  "high": null,
+  "high_of_closed_lines": "0.554224",
+  "lines": 9,
+  "low": "0.520000",
+  "open_high_lines": [
+   "D-1F-06",
+   "D-GF-04"
+  ]
+ },
+ "lintels": [
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-b729bd6381f216153df8",
+   "low_m3": null,
+   "member": "lintel A-GF-01 (GF, BLACK, w 1.0, L1 0.15 x 0.2)",
+   "missing_datum": "the A-GF-01 crown level (with the annex bound c_lo 2.744 above +0.30 under B4: REQUIRED if crown <= 2.484 above FFL) and its width",
+   "opening": "A-GF-01",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "why": "arched head: crown level printed nowhere, drawn arch not dimensioned (T-238 SOURCE-SUPPORTED); width not drawn; a curved head is never a straight-lintel m3 (R-T673-3)"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-2c1c49db7cd7b16c6206",
+   "low_m3": null,
+   "member": "lintel D-1F-01 (1F, BLACK, w 0.8, L1 0.15 x 0.2)",
+   "missing_datum": "dome ring soffit over 1F-W11 (T-227, designer)",
+   "opening": "D-1F-01",
+   "owner_manual": "1.20 m precast (0.8 + 2 x 0.15 = 1.10)",
+   "why": "door in the held part of 1F-W11 under the dome opening ring 1F-073 (nothing with a printed soffit; closable pieces 0.12 + 0.12 m cannot hold a 0.80 m door)"
+  },
+  {
+   "after": "HELD bounded (existence REQUIRED, quantity a range)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "MEASURABLE NOW",
+   "clear": [
+    "3.450000",
+    "4.040000"
+   ],
+   "convention": "MIN_BEARING",
+   "detail": {
+    "c": "min over every T-274 exact piece of the host",
+    "pieces": "B7 BM-1F-007 (h 0.75) 1.8000 m h 3.45 | B19 BM-1F-025 (h 0.75) 0.1090 m h 3.45 | B19 BM-1F-025 (h 0.75) 0.7092 m h 3.45 | B19 BM-1F-025 (h 0.75) 0.0069 m h 3.45 | slab 1F-063 (t 0.16) 0.5948 m h 4.04"
+   },
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     "",
+     "0.285000"
+    ],
+    [
+     "END",
+     "END_OF_MASONRY",
+     "",
+     "0.385000"
+    ]
+   ],
+   "existence": "REQUIRED (spare 0.990000 m)",
+   "ffl": "1F +5.50",
+   "head": [
+    "2.20",
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "high_m3": "0.062800",
+   "line_id": "L-a7b8b292503ae1bf6c77",
+   "low_m3": "0.036000",
+   "member": "lintel D-1F-05 (1F, BLACK, w 0.9, L1 0.2 x 0.2)",
+   "missing_datum": null,
+   "opening": "D-1F-05",
+   "owner_manual": "1.20 m precast (0.9 + 2 x 0.15 = 1.20)",
+   "why": "masonry above the head under the lowest soffit bound (head ASSUMED - OWNER-APPROVED)"
+  },
+  {
+   "after": "HELD bounded (existence REQUIRED, quantity a range)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "MEASURABLE NOW",
+   "clear": [
+    "3.700000",
+    "4.040000"
+   ],
+   "convention": "MIN_BEARING (one end OPEN)",
+   "detail": {
+    "c": "min over every T-274 exact piece of the host",
+    "pieces": "slab 1F-023 (t 0.16) 3.0000 m h 4.04 | B6 BM-1F-030 (h 0.5) 0.2000 m h 3.7 | slab 1F-020 (t 0.16) 2.2200 m h 4.04"
+   },
+   "ends": [
+    [
+     "START",
+     "END_OF_MASONRY",
+     "",
+     "0.746700"
+    ],
+    [
+     "END",
+     "OPENING",
+     "WB-FL0027-FL0028:CROSSING_THROUGH_BOTH",
+     "0.073300"
+    ]
+   ],
+   "existence": "REQUIRED (spare 1.240000 m)",
+   "ffl": "1F +5.50",
+   "head": [
+    "2.20",
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "high_m3": null,
+   "line_id": "L-9ec762c0bd529b924f33",
+   "low_m3": "0.036000",
+   "member": "lintel D-1F-06 (1F, BLACK, w 0.8, L1 0.15 x 0.2)",
+   "missing_datum": null,
+   "opening": "D-1F-06",
+   "owner_manual": "1.20 m precast (0.8 + 2 x 0.15 = 1.10)",
+   "why": "masonry above the head under the lowest soffit bound (head ASSUMED - OWNER-APPROVED)"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-961608860fcb38c106af",
+   "low_m3": null,
+   "member": "lintel D-1F-09 (1F, BLACK, w 0.9, L1 0.15 x 0.2)",
+   "missing_datum": "T-227 (designer)",
+   "opening": "D-1F-09",
+   "owner_manual": "1.20 m precast (0.9 + 2 x 0.15 = 1.20)",
+   "why": "D-1F-09 lies wholly inside the east dome opening 1F-077: top of wall not drawn"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-1c0e7646345156fcd0cb",
+   "low_m3": null,
+   "member": "lintel D-2F-02 (2F, BLACK, w 0.9, L1 0.2 x 0.2)",
+   "missing_datum": "BM-2F-017 depth: REQUIRED for any depth <= 0.52 m on the drawn 2F slab-top bound (12.68 - 9.70 - D >= 2.20 + 0.20 + 0.06); above that the D-39 slab top decides",
+   "opening": "D-2F-02",
+   "owner_manual": "1.20 m precast (0.9 + 2 x 0.15 = 1.20)",
+   "why": "IN_HELD_PIECE under BM-2F-017 (unlabelled, depth not printed, D-04 / Q-61 C(4))"
+  },
+  {
+   "after": "HELD bounded (existence REQUIRED, quantity a range)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "MEASURABLE NOW",
+   "clear": [
+    "2.844000",
+    "3.600000"
+   ],
+   "convention": "MIN_BEARING",
+   "detail": {
+    "c": "min soffit bound 3.144000 - FFL 0.30 (R-T678-2; slab pieces at D_max 0.75)",
+    "members": [
+     [
+      "B2",
+      "0.40"
+     ]
+    ],
+    "s_lo": "3.544000"
+   },
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     "",
+     "0.267900"
+    ],
+    [
+     "END",
+     "COLUMN",
+     "",
+     "1.232100"
+    ]
+   ],
+   "existence": "REQUIRED (spare 0.384000 m)",
+   "ffl": "dewaneya +0.30 PRINTED / open court +0.15: worst (higher) +0.30",
+   "head": [
+    "2.20",
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "high_m3": "0.066716",
+   "line_id": "L-1a07849115af938b4a72",
+   "low_m3": "0.056000",
+   "member": "lintel D-GF-01 (GF, WHITE, w 1.0, L1 0.2 x 0.2)",
+   "missing_datum": null,
+   "opening": "D-GF-01",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "why": "masonry above the head under the lowest soffit bound (head ASSUMED - OWNER-APPROVED)"
+  },
+  {
+   "after": "HELD bounded (existence REQUIRED, quantity a range)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "MEASURABLE NOW",
+   "clear": [
+    "2.494000",
+    "3.500000"
+   ],
+   "convention": "MIN_BEARING",
+   "detail": {
+    "c": "min soffit bound 2.794000 - FFL 0.30 (R-T678-2; slab pieces at D_max 0.75)",
+    "members": [
+     [
+      "B4",
+      "0.50"
+     ],
+     [
+      "slab GF-137",
+      null
+     ]
+    ],
+    "s_lo": "3.544000"
+   },
+   "ends": [
+    [
+     "START",
+     "END_OF_MASONRY",
+     "",
+     "0.223615"
+    ],
+    [
+     "END",
+     "END_OF_MASONRY",
+     "",
+     "0.776385"
+    ]
+   ],
+   "existence": "REQUIRED (spare 0.034000 m)",
+   "ffl": "wash / W.C. by the dewaneya +0.30 (T-088 DERIVED, no step drawn)",
+   "head": [
+    "2.20",
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "high_m3": "0.042708",
+   "line_id": "L-71998da6340be871d0af",
+   "low_m3": "0.036000",
+   "member": "lintel D-GF-02 (GF, BLACK, w 0.8, L1 0.15 x 0.2)",
+   "missing_datum": null,
+   "opening": "D-GF-02",
+   "owner_manual": "1.20 m precast (0.8 + 2 x 0.15 = 1.10)",
+   "why": "masonry above the head under the lowest soffit bound (head ASSUMED - OWNER-APPROVED)"
+  },
+  {
+   "after": "HELD bounded (existence REQUIRED, quantity a range)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "MEASURABLE NOW",
+   "clear": [
+    "2.494000",
+    "3.250000"
+   ],
+   "convention": "MIN_BEARING",
+   "detail": {
+    "c": "min soffit bound 2.794000 - FFL 0.30 (R-T678-2; slab pieces at D_max 0.75)",
+    "members": [
+     [
+      "CB6",
+      "0.75"
+     ]
+    ],
+    "s_lo": "3.544000"
+   },
+   "ends": [
+    [
+     "START",
+     "OPENING",
+     "W04",
+     "0.150000"
+    ],
+    [
+     "END",
+     "OPENING",
+     "W08",
+     "0.850000"
+    ]
+   ],
+   "existence": "REQUIRED (spare 0.034000 m)",
+   "ffl": "driver room +0.30 PRINTED / court +0.15: worst +0.30",
+   "head": [
+    "2.20",
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "high_m3": "0.058000",
+   "line_id": "L-a7848a35fb4329e09d10",
+   "low_m3": "0.052000",
+   "member": "lintel D-GF-03 (GF, WHITE, w 0.9, L1 0.2 x 0.2)",
+   "missing_datum": null,
+   "opening": "D-GF-03",
+   "owner_manual": "1.20 m precast (0.9 + 2 x 0.15 = 1.20)",
+   "why": "masonry above the head under the lowest soffit bound (head ASSUMED - OWNER-APPROVED)"
+  },
+  {
+   "after": "HELD bounded (existence REQUIRED, quantity a range)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "MEASURABLE NOW",
+   "clear": [
+    "2.494000",
+    "4.000000"
+   ],
+   "convention": "CEILING",
+   "detail": {
+    "c": "min soffit bound 2.794000 - FFL 0.30 (R-T678-2; slab pieces at D_max 0.75)",
+    "members": [
+     [
+      "slab GF-139",
+      null
+     ]
+    ],
+    "s_lo": "3.544000"
+   },
+   "ends": [
+    [
+     "START",
+     "END_OF_MASONRY",
+     "",
+     "0.629700"
+    ],
+    [
+     "END",
+     "SEARCH_LIMIT",
+     "",
+     "3.000000"
+    ]
+   ],
+   "existence": "REQUIRED (spare 0.034000 m)",
+   "ffl": "driver room +0.30 PRINTED / driver W.C. +0.30 DERIVED",
+   "head": [
+    "2.20",
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "high_m3": null,
+   "line_id": "L-274b112580029084b80e",
+   "low_m3": "0.048000",
+   "member": "lintel D-GF-04 (GF, BLACK, w 0.8, L1 0.15 x 0.2)",
+   "missing_datum": null,
+   "opening": "D-GF-04",
+   "owner_manual": "1.20 m precast (0.8 + 2 x 0.15 = 1.10)",
+   "why": "masonry above the head under the lowest soffit bound (head ASSUMED - OWNER-APPROVED)"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-df32d6f42a824be21d3f",
+   "low_m3": null,
+   "member": "lintel D-GF-05 (GF, WHITE, w 1.0, L1 0.2 x 0.2)",
+   "missing_datum": "side-passage FFL (REQUIRED if <= +0.30: CB7 bound c_lo 2.494, spare 0.034) and the START jamb stopper",
+   "opening": "D-GF-05",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "why": "floor of the side passage on the other side (Q-67 passage) printed nowhere; START stopper WB-FL0001-FL0002:NOT_WALL not recorded"
+  },
+  {
+   "after": "HELD bounded (existence REQUIRED, quantity a range)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "MEASURABLE NOW",
+   "clear": [
+    "3.750000",
+    "4.100000"
+   ],
+   "convention": "MIN_BEARING",
+   "detail": {
+    "c": "min over every T-274 exact piece of the host",
+    "pieces": "CB4 BM-GF-021 (h 0.5) 0.0010 m h 4.0 | CB4 BM-GF-021 (h 0.5) 3.1988 m h 4.0 | B20 BM-GF-043 (h 0.75) 0.3998 m h 3.75 | B1 BM-GF-019 (h 0.4) 0.8012 m h 4.1 | B2 BM-GF-020 (h 0.4) 2.6992 m h 4.1"
+   },
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     "",
+     "0.300000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     "",
+     "2.100000"
+    ]
+   ],
+   "existence": "REQUIRED (spare 0.990000 m)",
+   "ffl": "GF main +1.00 (dining / entrance landing +1.00)",
+   "head": [
+    "2.50",
+    "PRINTED"
+   ],
+   "high_m3": "0.108000",
+   "line_id": "L-fd68db051119ea0266ee",
+   "low_m3": "0.096000",
+   "member": "lintel D-GF-07 (GF, WHITE, w 2.0, L2 0.2 x 0.2)",
+   "missing_datum": null,
+   "opening": "D-GF-07",
+   "owner_manual": "2.50 m precast (2.0 + 2 x 0.15 = 2.30)",
+   "why": "masonry above the head under the lowest soffit bound"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-0d5e2e3ac4167df90d6d",
+   "low_m3": null,
+   "member": "lintel D-GF-08 (GF, BLACK, w 1.0, L1 0.2 x 0.2)",
+   "missing_datum": "the lift tie beam depth and level (D-43)",
+   "opening": "D-GF-08",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "why": "printed note ST p.8 n.19 calls for an unsized lift tie beam over GF-W08"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-17953d7882899d43473f",
+   "low_m3": null,
+   "member": "lintel D-GF-14 (GF, BLACK, w 0.8, L1 0.15 x 0.2)",
+   "missing_datum": "the GF-W30 run (band) and its jamb evidence",
+   "opening": "D-GF-14",
+   "owner_manual": "1.20 m precast (0.8 + 2 x 0.15 = 1.10)",
+   "why": "host GF-W30 has no drawn wall piece (no band / member in the T-274 run geometry) and no T-644 jamb row"
+  },
+  {
+   "after": "HELD bounded (existence REQUIRED, quantity a range)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "MEASURABLE NOW",
+   "clear": [
+    "3.750000",
+    "4.100000"
+   ],
+   "convention": "CEILING",
+   "detail": {
+    "c": "min over every T-274 exact piece of the host",
+    "pieces": "CB4 BM-GF-021 (h 0.5) 0.0010 m h 4.0 | CB4 BM-GF-021 (h 0.5) 3.1988 m h 4.0 | B20 BM-GF-043 (h 0.75) 0.3998 m h 3.75 | B1 BM-GF-019 (h 0.4) 0.8012 m h 4.1 | B2 BM-GF-020 (h 0.4) 2.6992 m h 4.1"
+   },
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     "",
+     "0.750000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     "",
+     "0.750000"
+    ]
+   ],
+   "existence": "REQUIRED (spare 0.490000 m)",
+   "ffl": "GF main +1.00 (stair hall)",
+   "head": [
+    "3.00",
+    "PRINTED"
+   ],
+   "high_m3": "0.108000",
+   "line_id": "L-3af715c6e83364208ad0",
+   "low_m3": "0.080000",
+   "member": "lintel W01 (GF, WHITE, w 1.2, L2 0.2 x 0.2)",
+   "missing_datum": null,
+   "opening": "W01",
+   "owner_manual": "1.50 m precast (1.2 + 2 x 0.15 = 1.50)",
+   "why": "masonry above the head under the lowest soffit bound"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-1313767d897f06ef95b6",
+   "low_m3": null,
+   "member": "lintel W04 (GF, WHITE, w 0.6, L1 0.2 x 0.2)",
+   "missing_datum": "annex roof slab top (Q-54 B / D-39)",
+   "opening": "W04",
+   "owner_manual": "1.20 m precast (0.6 + 2 x 0.15 = 0.90)",
+   "why": "CB6 sits over the drawn head (+2.80): lintel needed only if the annex slab top >= +3.829 (2.80 + 0.019 + 0.20 + 0.06 + 0.75); bound today 3.544 .. 4.30"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-7f9eb7cced8df33202a5",
+   "low_m3": null,
+   "member": "lintel W08 (GF, WHITE, w 1.5, L2 0.2 x 0.2)",
+   "missing_datum": "annex roof slab top (Q-54 B / D-39)",
+   "opening": "W08",
+   "owner_manual": "2.50 m precast (1.5 + 2 x 0.15 = 1.80)",
+   "why": "as W04: threshold +3.816 (2.80 + 0.006 + 0.20 + 0.06 + 0.75)"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-c1e57b06555adcf8edf7",
+   "low_m3": null,
+   "member": "lintel W11 (GF, WHITE, w 1.95, L2 0.2 x 0.2)",
+   "missing_datum": "W11 sill level (REQUIRED if head <= 2.234 above +0.30 under B9 0.75)",
+   "opening": "W11",
+   "owner_manual": "2.50 m precast (1.95 + 2 x 0.15 = 2.25)",
+   "why": "no drawn head (T-201 FENCE: edges not the opening's; T-207 height 2.20 DRAWING-CONFIRMED, sill HELD)"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-e39175199fc6edc4db86",
+   "low_m3": null,
+   "member": "lintel W12 (GF, WHITE, w 1.95, L2 0.2 x 0.2)",
+   "missing_datum": "W12 sill level (as W11)",
+   "opening": "W12",
+   "owner_manual": "2.50 m precast (1.95 + 2 x 0.15 = 2.25)",
+   "why": "as W11"
+  },
+  {
+   "after": "HELD bounded (existence REQUIRED, quantity a range)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "MEASURABLE NOW",
+   "clear": [
+    "3.800000",
+    "3.800000"
+   ],
+   "convention": "CEILING",
+   "detail": {
+    "beams": [
+     "B2"
+    ],
+    "c": "4.20 storey - the beam over the opening's own extent (T-449 piece 3.80)",
+    "extent": [
+     "2.150000",
+     "3.350000"
+    ],
+    "over": [
+     [
+      "1.400444",
+      "4.100000",
+      "BEAM",
+      "0.4"
+     ]
+    ]
+   },
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     "",
+     "0.750000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     "",
+     "0.750000"
+    ]
+   ],
+   "existence": "REQUIRED (spare 0.240000 m)",
+   "ffl": "1F +5.50",
+   "head": [
+    "3.30",
+    "PRINTED"
+   ],
+   "high_m3": "0.108000",
+   "line_id": "L-47882fa3a0d9cdcc122e",
+   "low_m3": "0.080000",
+   "member": "lintel W13 (1F, WHITE, w 1.2, L2 0.2 x 0.2)",
+   "missing_datum": null,
+   "opening": "W13",
+   "owner_manual": "1.50 m precast (1.2 + 2 x 0.15 = 1.50)",
+   "why": "masonry above the head under the lowest soffit bound"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-bf88bf6f5efaa0ae5bdc",
+   "low_m3": null,
+   "member": "lintel W25 (1F, WHITE, w 1.0, L1 0.2 x 0.2)",
+   "missing_datum": "the 1F stair-shaft landing member level / depth over W25",
+   "opening": "W25",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "why": "in the stair-shaft piece SF B3 (With Stair): landing member over W25 at 'about +7.6', not printed (R-T228-3 F3)"
+  },
+  {
+   "after": "HELD blank (OPEN BOUND, missing datum named)",
+   "before": "HELD blank (T-673 OPEN BOUND)",
+   "cause": "OPEN BOUND",
+   "existence": "HELD",
+   "high_m3": null,
+   "line_id": "L-f892163c0602656f7e57",
+   "low_m3": null,
+   "member": "lintel W27 (2F, WHITE, w 1.0, L1 0.2 x 0.2)",
+   "missing_datum": "the 2F stair-shaft member level / depth over W27",
+   "opening": "W27",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "why": "in the stair-shaft piece SF B3 (SL-1): no floor member at +9.70 printed on the shaft line (R-T228-3 F4)"
+  }
+ ],
+ "outline_778": {
+  "after": "HELD bounded",
+  "basis": "section CONFLICT 0.08 (drawn 20x40) .. 0.10 (text 'P.C 20x50') x base +9.65 (B19 top = 1F roof slab top, T-214 / T-220) to the B7 soffit (B7 20x75 billed through it, owns the joint): slab top 12.68 (R-T669-2, same plate) .. 13.90 (R-T658-4 ceiling)",
+  "before": "HELD blank (V3.0.65)",
+  "element_id": "HL:PLANTED_COLUMN:PC-2F:CONCRETE",
+  "height_m": [
+   "2.280000",
+   "3.500000"
+  ],
+  "hi_m3": "0.350000",
+  "lo_m3": "0.182400",
+  "owner_line": "L-541c7e565bb93ecdb78b",
+  "reads": {
+   "beam_through": "B7 edges 39A (x 0.200) / 39B (x 0.000) run y -1.782 .. 5.018 through the outline (B7 0.20 wide = the column width)",
+   "diagonal": "776 S-COL.BON",
+   "hatch": "777 S-COL.HAT (SOLID: the column's own storey)",
+   "inside_2F_roof_outline": "x 7.900 .. 8.100 of the layer-1 outline -0.075 .. 8.100 (from column 40F SW corner): east face ON the slab edge; y -4.518 .. -4.118 inside -6.3 .. 0.5",
+   "layer": "S-COL.BON",
+   "size_m": [
+    0.2,
+    0.4
+   ],
+   "start_below": "FFRS 77B 0.20 x 0.40 (hatch 77A ANSI35 = starts here), text 77C 'P.C 20x50', 77D '8%%C16', on B19 (edges 6B1 / 6B2); GFRS: no outline at the position (no GF / 1F column under it)"
+  },
+  "verdict": "MEMBER: planted column PC-2F (T-220 COL-2F-59), NOT 'owned by no line'"
+ },
+ "rules": [
+  "R-T678-1 1.0.0",
+  "R-T678-2 1.0.0",
+  "R-T678-3 1.0.0"
+ ],
+ "task": "T-678"
+}
