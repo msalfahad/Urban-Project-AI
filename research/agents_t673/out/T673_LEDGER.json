@@ -1,0 +1,1077 @@
+{
+ "by_cause": {
+  "DESIGNER ITEM": 10,
+  "MEASURABLE NOW": 17,
+  "OPEN BOUND": 22
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.64",
+ "count": {
+  "lintel": 44,
+  "stair": 5,
+  "total": 49
+ },
+ "lintels": [
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T650-1 BOUNDED (T-650 MERGED 2a2e28ca; Checker 07:06 arithmetic AGREE, A-1F-01 width engine-read only)",
+   "existence": "REQUIRED (T-616)",
+   "fix": "wire the T-650 bound (lane I, T-671 / V19)",
+   "high_m3": "0.118500",
+   "line_id": "L-4a12b89454e48ac510dc",
+   "low_m3": "0.054000",
+   "member": "lintel A-1F-01 (1F, BLACK, w 1.0, L1 0.15 x 0.2)",
+   "opening": "A-1F-01",
+   "status": "HELD bounded (lo = MIN-BEARING lower bound), never VERIFIED here"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "arched opening head",
+   "existence": "HELD",
+   "fix": "host GF-W26 fill HELD; arch drawn not dimensioned (T-238 SOURCE-SUPPORTED pending check)",
+   "high_m3": null,
+   "line_id": "L-b729bd6381f216153df8",
+   "low_m3": null,
+   "member": "lintel A-GF-01 (GF, BLACK, w 1.0, L1 0.15 x 0.2)",
+   "opening": "A-GF-01",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W26 (HELD): opening HELD in the merged fill, masonry above the head not established; no printed or drawn head"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-2c1c49db7cd7b16c6206",
+   "low_m3": null,
+   "member": "lintel D-1F-01 (1F, BLACK, w 0.8, L1 0.15 x 0.2)",
+   "opening": "D-1F-01",
+   "status": "HELD blank, never 0",
+   "why": "host 1F-W11 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-a7b8b292503ae1bf6c77",
+   "low_m3": null,
+   "member": "lintel D-1F-05 (1F, BLACK, w 0.9, L1 0.2 x 0.2)",
+   "opening": "D-1F-05",
+   "status": "HELD blank, never 0",
+   "why": "host 1F-W07 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-9ec762c0bd529b924f33",
+   "low_m3": null,
+   "member": "lintel D-1F-06 (1F, BLACK, w 0.8, L1 0.15 x 0.2)",
+   "opening": "D-1F-06",
+   "status": "HELD blank, never 0",
+   "why": "host 1F-W16 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-961608860fcb38c106af",
+   "low_m3": null,
+   "member": "lintel D-1F-09 (1F, BLACK, w 0.9, L1 0.15 x 0.2)",
+   "opening": "D-1F-09",
+   "status": "HELD blank, never 0",
+   "why": "host 1F-W13 (ESTABLISHED PART + HELD): opening IN_HELD_PIECE in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-1c0e7646345156fcd0cb",
+   "low_m3": null,
+   "member": "lintel D-2F-02 (2F, BLACK, w 0.9, L1 0.2 x 0.2)",
+   "opening": "D-2F-02",
+   "status": "HELD blank, never 0",
+   "why": "host 2F-W05 (ESTABLISHED PART + HELD): opening IN_HELD_PIECE in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-1a07849115af938b4a72",
+   "low_m3": null,
+   "member": "lintel D-GF-01 (GF, WHITE, w 1.0, L1 0.2 x 0.2)",
+   "opening": "D-GF-01",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W06 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-71998da6340be871d0af",
+   "low_m3": null,
+   "member": "lintel D-GF-02 (GF, BLACK, w 0.8, L1 0.15 x 0.2)",
+   "opening": "D-GF-02",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W27 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-a7848a35fb4329e09d10",
+   "low_m3": null,
+   "member": "lintel D-GF-03 (GF, WHITE, w 0.9, L1 0.2 x 0.2)",
+   "opening": "D-GF-03",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W04 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-274b112580029084b80e",
+   "low_m3": null,
+   "member": "lintel D-GF-04 (GF, BLACK, w 0.8, L1 0.15 x 0.2)",
+   "opening": "D-GF-04",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W24 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-df32d6f42a824be21d3f",
+   "low_m3": null,
+   "member": "lintel D-GF-05 (GF, WHITE, w 1.0, L1 0.2 x 0.2)",
+   "opening": "D-GF-05",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W17 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-fd68db051119ea0266ee",
+   "low_m3": null,
+   "member": "lintel D-GF-07 (GF, WHITE, w 2.0, L2 0.2 x 0.2)",
+   "opening": "D-GF-07",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W15 (HELD): opening HELD in the merged fill, masonry above the head not established; head 2.50 PRINTED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-0d5e2e3ac4167df90d6d",
+   "low_m3": null,
+   "member": "lintel D-GF-08 (GF, BLACK, w 1.0, L1 0.2 x 0.2)",
+   "opening": "D-GF-08",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W08 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "DESIGNER ITEM",
+   "cause_ref": "D-GF-09 (T-581 DRAWING CONFLICT: D120 1.00 frame in a 0.90 gap)",
+   "existence": "HELD",
+   "fix": "opening width conflict + IN_HELD_PIECE in the fill",
+   "high_m3": null,
+   "line_id": "L-072bc37c5486905a9d21",
+   "low_m3": null,
+   "member": "lintel D-GF-09 (GF, WHITE, w None, L1 0.2 x 0.2)",
+   "opening": "D-GF-09",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W10 (ESTABLISHED PART + HELD): opening IN_HELD_PIECE in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-17953d7882899d43473f",
+   "low_m3": null,
+   "member": "lintel D-GF-14 (GF, BLACK, w 0.8, L1 0.15 x 0.2)",
+   "opening": "D-GF-14",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W30 (HELD): opening HELD in the merged fill, masonry above the head not established; head 2.20 ASSUMED"
+  },
+  {
+   "cause": "DESIGNER ITEM",
+   "cause_ref": "D-45 / register LIFT LANDING DOOR LINTEL",
+   "existence": "HELD",
+   "fix": "as L-GF-01",
+   "high_m3": null,
+   "line_id": "L-a500f10eedbd63a147ab",
+   "low_m3": null,
+   "member": "lintel L-1F-01 (1F, BLACK, w 1.0, L1 0.2 x 0.2)",
+   "opening": "L-1F-01",
+   "status": "HELD blank, never 0",
+   "why": "host 1F-W07 (HELD): opening HELD in the merged fill, masonry above the head not established; no printed or drawn head"
+  },
+  {
+   "cause": "DESIGNER ITEM",
+   "cause_ref": "D-45 / register LIFT LANDING DOOR LINTEL",
+   "existence": "HELD",
+   "fix": "as L-GF-01",
+   "high_m3": null,
+   "line_id": "L-fd8aaedc3457d6648f18",
+   "low_m3": null,
+   "member": "lintel L-2F-01 (2F, BLACK, w 1.0, L1 0.2 x 0.2)",
+   "opening": "L-2F-01",
+   "status": "HELD blank, never 0",
+   "why": "host 2F-W00 (HELD): opening HELD in the merged fill, masonry above the head not established; no printed or drawn head"
+  },
+  {
+   "cause": "DESIGNER ITEM",
+   "cause_ref": "D-45 / register LIFT LANDING DOOR LINTEL",
+   "existence": "HELD",
+   "fix": "lift landing door head not printed (shaft wall vs masonry, head vs soffit); host fill HELD",
+   "high_m3": null,
+   "line_id": "L-8f69c40749d579c14bf1",
+   "low_m3": null,
+   "member": "lintel L-GF-01 (GF, BLACK, w 1.0, L1 0.2 x 0.2)",
+   "opening": "L-GF-01",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W08 (HELD): opening HELD in the merged fill, masonry above the head not established; no printed or drawn head"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T650-1 BOUNDED (T-650 MERGED 2a2e28ca; Checker 07:06 arithmetic AGREE, A-1F-01 width engine-read only)",
+   "existence": "REQUIRED (T-616)",
+   "fix": "wire the T-650 bound (lane I, T-671 / V19)",
+   "high_m3": "0.120420",
+   "line_id": "L-2efe48097978cae5fc99",
+   "low_m3": "0.063000",
+   "member": "lintel P-1F-01 (1F, BLACK, w 1.3, L2 0.15 x 0.2)",
+   "opening": "P-1F-01",
+   "status": "HELD bounded (lo = MIN-BEARING lower bound), never VERIFIED here"
+  },
+  {
+   "cause": "DESIGNER ITEM",
+   "cause_ref": "D-45",
+   "existence": "HELD",
+   "fix": "head drawn on no sheet (T-207 re-check); host GF-W14 HELD in the fill",
+   "high_m3": null,
+   "line_id": "L-d887eecf51c121831336",
+   "low_m3": null,
+   "member": "lintel P-GF-01 (GF, BLACK, w 0.9, L1 0.2 x 0.2)",
+   "opening": "P-GF-01",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W14 (HELD): opening HELD in the merged fill, masonry above the head not established; no printed or drawn head"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-3af715c6e83364208ad0",
+   "low_m3": null,
+   "member": "lintel W01 (GF, WHITE, w 1.2, L2 0.2 x 0.2)",
+   "opening": "W01",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W15 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; head 2.00 PRINTED"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-1313767d897f06ef95b6",
+   "low_m3": null,
+   "member": "lintel W04 (GF, WHITE, w 0.6, L1 0.2 x 0.2)",
+   "opening": "W04",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W04 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; T-201 SW drawn head (tol 0.019)"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "MIN_BEARING",
+   "ends": [
+    {
+     "a": "0.375",
+     "a6": "0.375000",
+     "ceiling": "0.375",
+     "pier": null,
+     "side": "START",
+     "state": "FLAGGED_DEFICIT"
+    },
+    {
+     "a": "1.495",
+     "a6": "1.495000",
+     "ceiling": "1.495",
+     "pier": [
+      "W06",
+      "MIN_BEARING"
+     ],
+     "side": "END",
+     "state": "BOUNDED"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.984000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.055000",
+   "length_m": [
+    "1.000000",
+    "1.375000"
+   ],
+   "line_id": "L-441ae5fe85351347aff0",
+   "low_m3": "0.040000",
+   "member": "lintel W05 (GF, WHITE, w 0.6, L1 0.2 x 0.2)",
+   "opening": "W05",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 absolute head +3.50 on the host run datum +1.00 (T-143)); pieces [3.75, 4.0]"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "MIN_BEARING",
+   "ends": [
+    {
+     "a": "1.495",
+     "a6": "1.495000",
+     "ceiling": "1.495",
+     "pier": [
+      "W05",
+      "MIN_BEARING"
+     ],
+     "side": "START",
+     "state": "BOUNDED"
+    },
+    {
+     "a": "0.000",
+     "a6": "0.000000",
+     "ceiling": "0.000",
+     "pier": null,
+     "side": "END",
+     "state": "FLAGGED_DEFICIT"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.984000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.040000",
+   "length_m": [
+    "1.000000",
+    "1.000000"
+   ],
+   "line_id": "L-f269fabb74f505755492",
+   "low_m3": "0.040000",
+   "member": "lintel W06 (GF, WHITE, w 0.6, L1 0.2 x 0.2)",
+   "opening": "W06",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 SW drawn head (tol 0.006)); pieces [3.75, 4.0]"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "CEILING",
+   "ends": [
+    {
+     "a": "0.400",
+     "a6": "0.400000",
+     "ceiling": "0.400",
+     "pier": null,
+     "side": "START",
+     "state": "BOUNDED"
+    },
+    {
+     "a": "2.350",
+     "a6": "2.350000",
+     "ceiling": "2.350",
+     "pier": null,
+     "side": "END",
+     "state": "BOUNDED"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.984000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.134000",
+   "length_m": [
+    "1.400000",
+    "3.350000"
+   ],
+   "line_id": "L-ed7aadd01d9daa9559a9",
+   "low_m3": "0.056000",
+   "member": "lintel W07 (GF, WHITE, w 0.6, L1 0.2 x 0.2)",
+   "opening": "W07",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 SW drawn head (tol 0.006)); pieces [3.75, 4.0]"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-7f9eb7cced8df33202a5",
+   "low_m3": null,
+   "member": "lintel W08 (GF, WHITE, w 1.5, L2 0.2 x 0.2)",
+   "opening": "W08",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W04 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; T-201 SW drawn head (tol 0.006)"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "CEILING",
+   "ends": [
+    {
+     "a": "0.650",
+     "a6": "0.650000",
+     "ceiling": "0.650",
+     "pier": [
+      "W10",
+      "MIN_BEARING"
+     ],
+     "side": "START",
+     "state": "BOUNDED"
+    },
+    {
+     "a": "0.800",
+     "a6": "0.800000",
+     "ceiling": "0.800",
+     "pier": null,
+     "side": "END",
+     "state": "BOUNDED"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.984000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.118000",
+   "length_m": [
+    "2.300000",
+    "2.950000"
+   ],
+   "line_id": "L-786344670c0002b31478",
+   "low_m3": "0.092000",
+   "member": "lintel W09 (GF, WHITE, w 1.5, L2 0.2 x 0.2)",
+   "opening": "W09",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 A-A drawn head (tol 0.006)); pieces [3.75, 4.0, 4.34]"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "MIN_BEARING",
+   "ends": [
+    {
+     "a": "0.100",
+     "a6": "0.100000",
+     "ceiling": "0.100",
+     "pier": null,
+     "side": "START",
+     "state": "FLAGGED_DEFICIT"
+    },
+    {
+     "a": "1.050",
+     "a6": "1.050000",
+     "ceiling": "1.050",
+     "pier": [
+      "W09",
+      "CEILING"
+     ],
+     "side": "END",
+     "state": "BOUNDED"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.984000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.060000",
+   "length_m": [
+    "1.400000",
+    "1.500000"
+   ],
+   "line_id": "L-882717b0c35a87e363ef",
+   "low_m3": "0.056000",
+   "member": "lintel W10 (GF, WHITE, w 1.0, L1 0.2 x 0.2)",
+   "opening": "W10",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 A-A drawn head (tol 0.006)); pieces [3.75, 4.0, 4.34]"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "head level not established",
+   "existence": "HELD",
+   "fix": "sill datum (T-207: height 2.20 DRAWING-CONFIRMED, sill / head level HELD) and host GF-W18 fill",
+   "high_m3": null,
+   "line_id": "L-c1e57b06555adcf8edf7",
+   "low_m3": null,
+   "member": "lintel W11 (GF, WHITE, w 1.95, L2 0.2 x 0.2)",
+   "opening": "W11",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W18 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; no printed or drawn head"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "head level not established",
+   "existence": "HELD",
+   "fix": "as W11",
+   "high_m3": null,
+   "line_id": "L-e39175199fc6edc4db86",
+   "low_m3": null,
+   "member": "lintel W12 (GF, WHITE, w 1.95, L2 0.2 x 0.2)",
+   "opening": "W12",
+   "status": "HELD blank, never 0",
+   "why": "host GF-W18 (HELD): opening ON_HELD_WALL in the merged fill, masonry above the head not established; no printed or drawn head"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "printed head 3.30: HELD_BY_NAME under the lower piece",
+   "existence": "HELD_BY_NAME",
+   "fix": "which 1F roof beam piece is over W13 (pieces 3.45 / 3.80 on 1F-W04): read it on the ST 1F roof slab plan, then R-T673-1",
+   "high_m3": null,
+   "line_id": "L-47882fa3a0d9cdcc122e",
+   "low_m3": null,
+   "member": "lintel W13 (1F, WHITE, w 1.2, L2 0.2 x 0.2)",
+   "opening": "W13",
+   "status": "HELD blank, never 0",
+   "why": "the decision flips inside the read tolerance or holds under some pieces only; head 3.30..3.30 (census r3 printed head); pieces [3.45, 3.8]"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "MIN_BEARING",
+   "ends": [
+    {
+     "a": "0.093",
+     "a6": "0.093300",
+     "ceiling": "0.094",
+     "pier": [
+      "W15",
+      "RELEASED"
+     ],
+     "side": "START",
+     "state": "FLAGGED_DEFICIT"
+    },
+    {
+     "a": "1.232",
+     "a6": "1.232200",
+     "ceiling": "1.233",
+     "pier": null,
+     "side": "END",
+     "state": "BOUNDED"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.088000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.081732",
+   "length_m": [
+    "1.950000",
+    "2.043300"
+   ],
+   "line_id": "L-53ef44d8c490d1341b93",
+   "low_m3": "0.078000",
+   "member": "lintel W16 (1F, WHITE, w 1.55, L2 0.2 x 0.2)",
+   "opening": "W16",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 3.000..3.101 (own P7757.dxf NW frame read this run (band crown 3.101) + T-238 opening crown 3.000); pieces [3.45]"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "CEILING",
+   "ends": [
+    {
+     "a": "0.725",
+     "a6": "0.725000",
+     "ceiling": "0.725",
+     "pier": null,
+     "side": "START",
+     "state": "BOUNDED"
+    },
+    {
+     "a": "0.875",
+     "a6": "0.875000",
+     "ceiling": "0.875",
+     "pier": [
+      "W20",
+      "CEILING"
+     ],
+     "side": "END",
+     "state": "BOUNDED"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.665000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.069000",
+   "length_m": [
+    "1.400000",
+    "1.725000"
+   ],
+   "line_id": "L-6057028f3f666538a007",
+   "low_m3": "0.056000",
+   "member": "lintel W19 (1F, WHITE, w 0.6, L1 0.2 x 0.2)",
+   "opening": "W19",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 NE drawn head (tol 0.025)); pieces [3.45, 3.7]"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "CEILING",
+   "ends": [
+    {
+     "a": "0.875",
+     "a6": "0.875000",
+     "ceiling": "0.875",
+     "pier": [
+      "W19",
+      "CEILING"
+     ],
+     "side": "START",
+     "state": "BOUNDED"
+    },
+    {
+     "a": "1.012",
+     "a6": "1.011731",
+     "ceiling": "1.012",
+     "pier": null,
+     "side": "END",
+     "state": "BOUNDED"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.671000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.080480",
+   "length_m": [
+    "1.400000",
+    "2.012000"
+   ],
+   "line_id": "L-6692d02cd6cd25120300",
+   "low_m3": "0.056000",
+   "member": "lintel W20 (1F, WHITE, w 0.6, L1 0.2 x 0.2)",
+   "opening": "W20",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 NE drawn head (tol 0.019)); pieces [3.45, 3.7]"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "MIN_BEARING",
+   "ends": [
+    {
+     "a": "0.375",
+     "a6": "0.375000",
+     "ceiling": "0.375",
+     "pier": null,
+     "side": "START",
+     "state": "FLAGGED_DEFICIT"
+    },
+    {
+     "a": "1.495",
+     "a6": "1.495000",
+     "ceiling": "1.495",
+     "pier": [
+      "W22",
+      "MIN_BEARING"
+     ],
+     "side": "END",
+     "state": "BOUNDED"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.927000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.055000",
+   "length_m": [
+    "1.000000",
+    "1.375000"
+   ],
+   "line_id": "L-dd5b41a7af885e96f797",
+   "low_m3": "0.040000",
+   "member": "lintel W21 (1F, WHITE, w 0.6, L1 0.2 x 0.2)",
+   "opening": "W21",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 SW drawn head (tol 0.013)); pieces [3.7]"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "MIN_BEARING",
+   "ends": [
+    {
+     "a": "1.495",
+     "a6": "1.495000",
+     "ceiling": "1.495",
+     "pier": [
+      "W21",
+      "MIN_BEARING"
+     ],
+     "side": "START",
+     "state": "BOUNDED"
+    },
+    {
+     "a": "0.000",
+     "a6": "0.000000",
+     "ceiling": "0.000",
+     "pier": null,
+     "side": "END",
+     "state": "FLAGGED_DEFICIT"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.927000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.040000",
+   "length_m": [
+    "1.000000",
+    "1.000000"
+   ],
+   "line_id": "L-f68444edf483bc1d87d4",
+   "low_m3": "0.040000",
+   "member": "lintel W22 (1F, WHITE, w 0.6, L1 0.2 x 0.2)",
+   "opening": "W22",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 SW drawn head (tol 0.013)); pieces [3.7]"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "CEILING",
+   "ends": [
+    {
+     "a": "0.400",
+     "a6": "0.400000",
+     "ceiling": "0.400",
+     "pier": null,
+     "side": "START",
+     "state": "BOUNDED"
+    },
+    {
+     "a": "2.350",
+     "a6": "2.350000",
+     "ceiling": "2.350",
+     "pier": null,
+     "side": "END",
+     "state": "BOUNDED"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.927000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.134000",
+   "length_m": [
+    "1.400000",
+    "3.350000"
+   ],
+   "line_id": "L-bf76c17309c92605e174",
+   "low_m3": "0.056000",
+   "member": "lintel W23 (1F, WHITE, w 0.6, L1 0.2 x 0.2)",
+   "opening": "W23",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 SW drawn head (tol 0.013)); pieces [3.7]"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "CEILING",
+   "ends": [
+    {
+     "a": "0.937",
+     "a6": "0.937069",
+     "ceiling": "0.938",
+     "pier": null,
+     "side": "START",
+     "state": "BOUNDED"
+    },
+    {
+     "a": "4.219",
+     "a6": "4.218800",
+     "ceiling": "4.219",
+     "pier": null,
+     "side": "END",
+     "state": "BOUNDED"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.658000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.268280",
+   "length_m": [
+    "2.350000",
+    "6.707000"
+   ],
+   "line_id": "L-40e8c2597de12644e8e2",
+   "low_m3": "0.094000",
+   "member": "lintel W24 (1F, WHITE, w 1.55, L2 0.2 x 0.2)",
+   "opening": "W24",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 NE drawn head (tol 0.032)); pieces [3.45, 3.7]"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-bf88bf6f5efaa0ae5bdc",
+   "low_m3": null,
+   "member": "lintel W25 (1F, WHITE, w 1.0, L1 0.2 x 0.2)",
+   "opening": "W25",
+   "status": "HELD blank, never 0",
+   "why": "host 1F-W10 (ESTABLISHED PART + HELD): opening IN_HELD_PIECE in the merged fill, masonry above the head not established; T-201 SW drawn head (tol 0.006)"
+  },
+  {
+   "cause": "DESIGNER ITEM",
+   "cause_ref": "D-39 (2F roof datum / build-up)",
+   "existence": "HELD_BY_NAME",
+   "fix": "printed head 2.80 under the single 3.00 piece: margin 0.20 = D exactly, fails only with the 0.06 bed; the stair-roof structural top and build-up are D-39",
+   "high_m3": null,
+   "line_id": "L-b699ce0da6b29b888435",
+   "low_m3": null,
+   "member": "lintel W26 (2F, WHITE, w 1.2, L2 0.2 x 0.2)",
+   "opening": "W26",
+   "status": "HELD blank, never 0",
+   "why": "the decision flips inside the read tolerance or holds under some pieces only; head 2.80..2.80 (census r3 printed head); pieces [3.0]"
+  },
+  {
+   "cause": "OPEN BOUND",
+   "cause_ref": "host masonry over the head not established in the merged fill",
+   "existence": "HELD",
+   "fix": "close the host wall in the fill (lane A blockwork closure); then R-T673-1 on its head",
+   "high_m3": null,
+   "line_id": "L-f892163c0602656f7e57",
+   "low_m3": null,
+   "member": "lintel W27 (2F, WHITE, w 1.0, L1 0.2 x 0.2)",
+   "opening": "W27",
+   "status": "HELD blank, never 0",
+   "why": "host 2F-W02 (ESTABLISHED PART + HELD): opening IN_HELD_PIECE in the merged fill, masonry above the head not established; T-201 SW drawn head (tol 0.013)"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "MIN_BEARING",
+   "ends": [
+    {
+     "a": "0.375",
+     "a6": "0.375000",
+     "ceiling": "0.375",
+     "pier": null,
+     "side": "START",
+     "state": "FLAGGED_DEFICIT"
+    },
+    {
+     "a": "0.895",
+     "a6": "0.895000",
+     "ceiling": "0.895",
+     "pier": [
+      "W29",
+      "MIN_BEARING"
+     ],
+     "side": "END",
+     "state": "BOUNDED"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.677000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.055000",
+   "length_m": [
+    "1.000000",
+    "1.375000"
+   ],
+   "line_id": "L-005334b6998987164a5d",
+   "low_m3": "0.040000",
+   "member": "lintel W28 (2F, WHITE, w 0.6, L1 0.2 x 0.2)",
+   "opening": "W28",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 SW drawn head (tol 0.013)); pieces [3.45]"
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "R-T673-1 existence on the merged drawn head (T-201 / T-238) + R-T673-3 range on the T-644 jamb evidence",
+   "convention": "MIN_BEARING",
+   "ends": [
+    {
+     "a": "0.895",
+     "a6": "0.895000",
+     "ceiling": "0.895",
+     "pier": [
+      "W28",
+      "MIN_BEARING"
+     ],
+     "side": "START",
+     "state": "BOUNDED"
+    },
+    {
+     "a": "0.000",
+     "a6": "0.000000",
+     "ceiling": "0.000",
+     "pier": null,
+     "side": "END",
+     "state": "FLAGGED_DEFICIT"
+    }
+   ],
+   "existence": "REQUIRED (spare 0.671000 m)",
+   "fix": "wire (lane I) after the Checker's Gate A",
+   "high_m3": "0.064000",
+   "length_m": [
+    "1.600000",
+    "1.600000"
+   ],
+   "line_id": "L-aca2db3c2b29719328c7",
+   "low_m3": "0.064000",
+   "member": "lintel W29 (2F, WHITE, w 1.2, L2 0.2 x 0.2)",
+   "opening": "W29",
+   "status": "HELD bounded (existence DRAWING-CONFIRMED from a drawn head; quantity a range)",
+   "why": "masonry above the head under every piece within the read tolerance; head 2.500..2.500 (T-201 SW drawn head (tol 0.019)); pieces [3.45]"
+  }
+ ],
+ "own_reads": {
+  "W16": {
+   "basis": "own P7757.dxf NW frame read this run (band crown 3.101) + T-238 opening crown 3.000",
+   "head_hi": "3.101",
+   "head_lo": "3.000",
+   "tol": "0.001"
+  }
+ },
+ "pier_remainders": [
+  {
+   "hi_m3": "0.003000",
+   "lo_m3": "0.000000",
+   "pair": [
+    "W19",
+    "W20"
+   ],
+   "pier_m": "0.875000",
+   "why": "R-T673-3 / R-T544-1 (4): pier remainder p - 2 x 0.40, once in the family high"
+  }
+ ],
+ "rules": [
+  "R-T673-1 1.0.0",
+  "R-T673-2 1.0.0",
+  "R-T673-3 1.0.0"
+ ],
+ "stairs": [
+  {
+   "cause": "DESIGNER ITEM",
+   "cause_ref": "C-ST-4 / RFI-A04 (MS1-L: arch 10 fronts vs ST p.4 12; owner 2026-10-22 'MS1-L HELD'), D-67 / C-ST-3 (winder, turn soffit not drawn)",
+   "element_id": "P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS",
+   "fix": "designer answer on the MS1-L riser count and a winder / turn-slab detail",
+   "high_m3": "1.434413",
+   "line_id": "L-7863355dfcb68a681d2d",
+   "low_m3": "1.213429",
+   "member": "ST-01 GF -> 1F remainder (MS1-L + MS1-T + turn slab)",
+   "note": "bounded but not releasable: a CONFLICT / HELD component (owner: never label the staircase system VERIFIED)",
+   "parts": [
+    "ST01-MS1-L",
+    "ST01-MS1-T",
+    "ST01-MS1-T-SLAB"
+   ]
+  },
+  {
+   "cause": "DESIGNER ITEM",
+   "cause_ref": "C-ST-3 (junction section of the two plates 0.168 apart not drawn)",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_TR",
+   "fix": "a section through the MS2 half-landing junction",
+   "high_m3": null,
+   "line_id": "L-659243ed9fc2831c3ae8",
+   "low_m3": null,
+   "member": "ST-01 MS2 turn riser between the two half landings",
+   "note": "blank, never 0",
+   "parts": [
+    "ST01-MS2-TR"
+   ]
+  },
+  {
+   "cause": "DESIGNER ITEM",
+   "cause_ref": "D-08 / owner Q-50 / Q-51 (curved parts HELD), C-ST-3; CA level not stated (0 .. 0.09)",
+   "element_id": "P-C:STAIRS:GROUND:SITE-4df8fcd99d130701",
+   "fix": "a section / detail of the curved flight",
+   "high_m3": null,
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "low_m3": null,
+   "member": "ST-02 round stair remainder (12 curved treads, helicoid soffit, CA junction, 2CC)",
+   "note": "blank, never 0",
+   "parts": [
+    "ST02-RS-C",
+    "ST02-RS-C-SOFFIT",
+    "ST02-CA",
+    "ST02-2CC"
+   ]
+  },
+  {
+   "cause": "DESIGNER ITEM",
+   "cause_ref": "S-9 (waist thickness / support not printed)",
+   "element_id": "DG5:ST-01:LOBBY",
+   "fix": "the D1 waist / support detail",
+   "high_m3": null,
+   "line_id": "L-821032bc04a0b0d02133",
+   "low_m3": null,
+   "member": "ST-01b lobby D1 waist / support",
+   "note": "blank, never 0",
+   "parts": [
+    "ST01b-D1-WAIST"
+   ]
+  },
+  {
+   "cause": "MEASURABLE NOW",
+   "cause_ref": "steps: T-258 ST03-E1-STEPS DRAWING-CONFIRMED (5 riser lines ST p.3 / arch GF / B-B); waist S-9; riser 0.170 confirmation D-56 (beside)",
+   "element_id": "P-C:SCOPE:STAIRS:GROUND:CC-5ab1872c70:FLIGHTS",
+   "fix": "split like ST-01b (V3.0.18 D1 steps): a part line 0.355017 m3 DRAWING-CONFIRMED + the waist remainder blank",
+   "hand": "5 x 1/2 x 0.30 x 0.17 x 2.80 = 0.357000 - arrival wedge in the ground-slab face 0.001983 (T-192) = 0.355017",
+   "high_m3": null,
+   "line_id": "L-061e18cf35a4b6b33d68",
+   "low_m3": "0.355017",
+   "member": "ST-03 entrance flight E1 (steps part measurable; waist HELD)",
+   "note": "the line stays HELD for the waist; the steps part is the new closable line (lane I)",
+   "parts": [
+    "ST03-E1-STEPS (0.355017)",
+    "ST03-E1-WAIST (HELD)"
+   ]
+  }
+ ],
+ "task": "T-673",
+ "totals_m3": {
+  "lintel_held_blank": {
+   "lines": 28,
+   "note": "blank, never 0; at most 1 lintel each",
+   "value": null
+  },
+  "lintel_measurable_now": {
+   "high": "1.496412",
+   "lines": 16,
+   "low": "0.925000",
+   "of_which_new_by_R_T673_1": 14
+  },
+  "stair_bounded_held": {
+   "high": "1.434413",
+   "line": "L-7863355dfcb68a681d2d",
+   "low": "1.213429"
+  },
+  "stair_held_blank": {
+   "lines": 3,
+   "value": null
+  },
+  "stair_measurable_now_part": {
+   "high": null,
+   "lines": 1,
+   "low": "0.355017"
+  }
+ },
+ "w05_datum": {
+  "head_level": "3.500",
+  "host_datum": "1.00",
+  "worst_datum": "0.30"
+ }
+}
