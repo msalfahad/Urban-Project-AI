@@ -1,7 +1,7 @@
 """T-665: build rules/coverage/BOQ_FAMILY_MASTER_1.64.0.json = 1.63.0 (T-661, merged; never edited)
   + the ARCH_TAKEOFF_V3.0.63 package (T-665, CONCRETE_GATE_B_V2; tools/family_master_candidate.py rule r3) and the
-    B10-02 (STR.CONC.FOOTING) / B10-04 (STR.CONC.GROUND_BEAM, STR.CONC.STRAP) / B10-06 (STR.CONC.COLUMN) text of the
-    families whose lines it restates.
+    B10-04 (STR.CONC.GROUND_BEAM, STR.CONC.STRAP) / B10-06 (STR.CONC.COLUMN) text of the families whose lines it
+    restates (B10-02 footing: stated, not wired).
 
 Two modes, ONE version number (the ADOPTED lesson: a merged integration package leaves the registry promoted in the
 same merge, F-C-T563-1 / T-651 / T-655 / T-661):
@@ -48,26 +48,27 @@ INDEX = HERE / "out/LINE_INDEX_V3_0_63.json"
 OLD_CAND, CAND, AS_OF = "ARCH_TAKEOFF_V3.0.62", "ARCH_TAKEOFF_V3.0.63", "T-665"
 DIFF_SPAN = "V3.0.62 .. V3.0.63"
 WHO = "T-665"
-FAMS = ("B10-02", "B10-04", "B10-06")
+FAMS = ("B10-04", "B10-06")
 PENDING = {
     "task": "T-665", "method_version": CAND, "module": MOD, "status": FMC.PENDING_STATUS,
-    "integrates": ["T-658", "T-595"], "tests": ["tests/t665_concrete_gate_b2"],
-    "changes_families_by_item_code": ["STR.CONC.COLUMN", "STR.CONC.FOOTING", "STR.CONC.GROUND_BEAM"],
-    "note": "T-665 (research/agents_t665/T-665_CONCRETE_GATE_B2.md): CONCRETE_GATE_B_V2 from the merged T-658 r2 ledger "
-            "and the T-595 footing bound: 29 ground beams (6 bounds restated by the titles that hold / drawn outline "
-            "area, 16 lower only with the AT_LEAST floor beside, 7 confirmed), 29 columns (6 upper only with the AT_MOST "
-            "ceiling and its datums beside, 23 confirmed), 2 straps confirmed, the F10 + F footing at the owner "
-            "scenario set 1.960 .. 2.275 m3 (R-T595-2); every other line byte-identical; the Gate B integration package",
+    "integrates": ["T-658"], "tests": ["tests/t665_concrete_gate_b2"],
+    "changes_families_by_item_code": ["STR.CONC.COLUMN", "STR.CONC.GROUND_BEAM"],
+    "note": "T-665 (research/agents_t665/T-665_CONCRETE_GATE_B2.md): CONCRETE_GATE_B_V2 from the merged T-658 r2 ledger: "
+            "29 ground beams (6 bounds restated by the titles that hold / drawn outline area, 2 under the same Checker "
+            "downgrade materialised at their range, 16 lower only with the AT_LEAST floor beside, 5 confirmed; the 13 "
+            "released lines of DG-a31a0d7e / DG-2ddc451c held in the line), 29 columns (6 upper only with the AT_MOST "
+            "ceiling and its datums beside, 23 confirmed), 2 straps confirmed; the F10 + F footing scenario bound "
+            "(T-595) stated, not wired (V3.0.11 conflict record); every other line byte-identical; the Gate B "
+            "integration package",
 }
 PROPOSED = ("1.64.0 (T-665): restated by the ARCH_TAKEOFF_V3.0.63 package (Gate B): held concrete lines member by "
             "member from the merged ledgers; the released capability of V2.9 + route G is unchanged")
 OPT_IN = "ARCH_TAKEOFF_V3.0.63 (engine/source/arch_v3063.py, opt-in candidate; Gate B package T-665)"
 MISS = {
-    "B10-02": ("in the opt-in candidate V3.0.63: the F10 + F footing at the owner scenario set 1.960 .. 2.275 m3 "
-               "(R-T595-2, owner PROVISIONAL), never a picked scenario"),
     "B10-04": ("in the opt-in candidate V3.0.63: ground beams by the drawn outline area x the titles that hold "
                "(R-T658-1 / -7); runs carrying a landing beam lower only (D-33, R-T658-8); annex exterior beams lower "
-               "only (D-35, R-T658-3); 3 court beams and 1 sliver blank"),
+               "only (D-35, R-T658-3); 13 released lines held at export by Checker downgrades DG-a31a0d7e / DG-2ddc451c "
+               "now HELD in the line; 3 court beams and 1 sliver blank"),
     "B10-06": ("in the opt-in candidate V3.0.63: 6 roof-storey columns blank with an AT_MOST ceiling beside (printed "
                "finished mark - approved structural datum, D-39 / Q-54 B, R-T658-4); 8 blank, 15 bounded unchanged"),
 }
@@ -92,9 +93,9 @@ def build_pending(task_commit):
     new["version"] = VERSION
     new["supersedes"] = (f"{old['version']} (kept unchanged on disk; every released-configuration field, every T-637 "
                          f"field, the candidate of record {OLD_CAND}, its census and every family's candidate block "
-                         "copied unchanged; B10-02 / B10-04 / B10-06 text for the V3.0.63 package)")
+                         "copied unchanged; B10-04 / B10-06 text for the V3.0.63 package)")
     new["source"] = (old["source"] + f" | {VERSION} (T-665): {old['version']} + ARCH_TAKEOFF_V3.0.63 (rule r3; "
-                     "promoted in the merge by --promote) + the footing / ground-beam / column families it names; no quantity, "
+                     "promoted in the merge by --promote) + the ground-beam / column families it names; no quantity, "
                      "capability or owner change")
     new["pending_packages"] = [dict(PENDING, task_commit=task_commit)]
     fams = {f["code"]: f for f in new["families"]}

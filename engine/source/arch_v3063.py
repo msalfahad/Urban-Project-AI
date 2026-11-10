@@ -1,7 +1,7 @@
 """ARCH_TAKEOFF_V3.0.63 (T-665, lane I, CONCRETE GATE B ROUND 2 integration package): the SAME opt-in BOQ candidate
 as ARCH_TAKEOFF_V3.0 .. V3.0.62 (engine.source.arch_v30, arch_v301 .. arch_v3062), extended with ONE piece built from
 Checker-merged member ledgers of the B10 concrete families (STR.CONC.*, m3) not wired by V3.0.62: the columns, ground
-beams / straps and the footing scenario bound:
+beams / straps (the footing scenario bound is named, not wired):
 
   CONC_LEDGER   each named HELD concrete line is restated member by member as its merged ledger states it, one of:
                   BOUND       a new drawn bound low .. high (BOUNDED_EXPOSURE), the old range kept in the record;
@@ -83,12 +83,11 @@ LINE_ID_RE = re.compile(r"^L-[0-9a-f]{20}$")
 
 PIECES = {
     P_CL: {"module": "engine/source/arch_v3063.py (HELD B10 column / ground-beam / footing lines restated member by "
-                     "member from the Checker-merged ledgers: drawn bounds, lower only, upper only, the owner-approved "
-                     "footing scenario bound; nothing else moves)",
-           "policy": "CONCRETE_GATE_B_V2", "rule_id": "R-T658-1..8 + R-T595-2 (R-T665-1)",
+                     "member from the Checker-merged ledgers: drawn bounds, lower only, upper only, applied Checker "
+                     "downgrades materialised; nothing else moves)",
+           "policy": "CONCRETE_GATE_B_V2", "rule_id": "R-T658-1..8 (R-T665-1)",
            "owner_rules": ["Q-21 C (no change of founding level without engineering approval)",
                            "Q-74 (strap pieces inside a footing outline)", "Q-54 B (annex roof marks)",
-                           "owner 2026-11-02 RFI re-review (4) (F10 + F footing scenario set, R-T595-2)",
                            "UP-QTY-STATUS-001 (held is blank, never 0)", "ERS s.2-5 (drawn element first)"],
            "owner_manual_method": "ground beams at one section per run (30x40 / 30x60 by the freelancer's reading), the "
                                   "short-edge span x 0.30 on an oblique band; columns storey height x schedule section "
@@ -97,8 +96,8 @@ PIECES = {
                              "that hold (R-T658-1 / -7); a run carrying a landing beam = a floor only (R-T658-8, D-33); "
                              "annex exterior beams = the literal +0.25 .. N.G. floor (R-T658-3, D-35); columns = "
                              "schedule section x (printed finished mark - approved structural datum) as a ceiling only "
-                             "where the slab-top datum is unprinted (R-T658-4, D-39); the F10 + F footing = the T-595 "
-                             "scenario-set bound (R-T595-2)"},
+                             "where the slab-top datum is unprinted (R-T658-4, D-39); ground beams an applied Checker "
+                             "downgrade holds at export are materialised HELD (R-T665-1 (g))"},
 }
 WAITING = {k: v for k, v in A3062.WAITING.items() if k != "T661_T658_COLUMNS_GROUND_BEAMS"}   # wired here
 WAITING.update({
@@ -107,6 +106,10 @@ WAITING.update({
                                "(lane S): their lines keep their V3.0.62 state here",
     "T665_POOL_BLINDING_WIRING": "pool blinding is measured by T-667 (MERGED, research, unwired): a NEW B10 line "
                                  "enters with its own Gate B row, not here",
+    "T665_FOOTING_SCENARIO": "the F10 + F footing line keeps 2.176 .. 2.275 m3: it carries the V3.0.11 multi-tag "
+                             "conflict record whose guard is 'the range IS the readings'; the T-595 owner scenario "
+                             "'F10 alone' 1.960 is a third reading that record does not carry; how an owner-approved "
+                             "scenario enters a conflict record is a separate lane I row (never a picked end)",
     "T665_COURT_BEAMS": "3 court ground beams (no printed section) and 1 neck-cut 0.10 m sliver (D-35 ownership) stay "
                         "HELD blank as the T-658 ledger states (CONFIRM)",
 })

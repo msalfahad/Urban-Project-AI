@@ -7,8 +7,8 @@ Checker-merged files, each pinned by sha256 (an edited file stops the build):
   research/agents_t595/out/T595_RESTATEMENTS.json   T-595 (MERGED 568ce15e, Verifier 2026-11-07T09:56Z Gate A PASS):
       the F10 + F footing line's scenario-set bound 1.960 .. 2.275 m3 (R-T595-2, owner 2026-11-02 RFI re-review (4)).
       The T-658 ledger states this line 'UNCHANGED' because its 'before' was read on the trial-BOQ r4 overlay, which
-      already carries the T-595 bound; the CANDIDATE still carries the T-572 bound 2.176 .. 2.275. The line is wired
-      from T-595 (its source), with T-658 as the ledger that restates it (lesson T-661: bind to the candidate);
+      already carries the T-595 bound; the CANDIDATE still carries 2.176 .. 2.275 under the V3.0.11 conflict record.
+      Stated and reconciled here, NOT wired (NOT_WIRED_FOOTING);
   research/agents_t661/out/LINE_INDEX_V3_0_62.json  T-661 (Gate B PASS, MERGED ea1533e4, published 7a9ccbff): the class
       and held range each line carries on the candidate V3.0.62 (the binding; asserted again on the live run).
 
@@ -66,6 +66,12 @@ Q_FTG = "R-T595-2 / owner 2026-11-02 RFI re-review (4): whether F10 and F act as
 WHY_SET_ASIDE = {"D-33": "a run carrying a landing / framing beam: the unloaded ST p.13 titles are a floor, never a high "
                          "(R-T658-8, D-33; Checker T-658 r2 (h) ACCEPTED)",
                  "TITLES": "the old point sat at one end of the titles that hold (R-T658-1)"}
+NOT_WIRED_FOOTING = (
+    "T665_FOOTING_SCENARIO: the F10 + F line carries the V3.0.11 multi-tag conflict record (readings ROWS_SEPARATELY "
+    "2.176 / OUTLINE_AT_DEEPEST_DEPTH 2.275; its guard: the range IS the readings). The T-595 owner scenario S02-1 'F10 "
+    "alone' 1.960 is a THIRD reading that record does not carry; wiring 1.960 .. 2.275 would break that guard or rewrite "
+    "an earlier version's record. The line keeps 2.176 .. 2.275 here (never a picked end); a rule for how an "
+    "owner-approved scenario enters a conflict record is a separate lane I row")
 COL_RE = re.compile(r"\((\d+\.\d+) finished mark.*?- (\d+\.\d+) base, APPROVED structural datum")
 
 
@@ -207,10 +213,13 @@ def build(project_id=None):
         e = _row(r, ix[r["line_id"]], held_by.get(r["line_id"]))
         if e is not None:
             ents.append(e)
-    ents.append(_footing(t595, ix[FOOTING_LINE]))
-    _assert_ledger_totals(ents, t658)
+    f = _footing(t595, ix[FOOTING_LINE])                     # stated, NOT wired (see NOT_WIRED_FOOTING)
+    _assert_ledger_totals(ents + [f], t658)
     return {"schema": SCHEMA, "project_id": project_id, "sources": list(SOURCES.values()), "entries": ents,
-            "not_wired": [], "index_sha256": PINS[INDEX]}
+            "not_wired": [{"line_id": FOOTING_LINE, "task": "T-595 / T-658", "why": NOT_WIRED_FOOTING,
+                           "ledger_bound": f["after"], "candidate_bound": {"low": f["expect"]["low"],
+                                                                           "high": f["expect"]["high"]}}],
+            "index_sha256": PINS[INDEX]}
 
 
 def _assert_ledger_totals(ents, t658):
