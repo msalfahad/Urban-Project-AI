@@ -1,0 +1,97 @@
+{
+ "court_pair": {
+  "ends_on_arc_158": [
+   "177",
+   "7CD"
+  ],
+  "engine_strip_face_m2": 0.492189,
+  "split_on": "layer-1 lines 177 / 7CD (beam band BAND0008.2, GB line L-d53e5eb08e2c6c668254 HELD)"
+ },
+ "drawing_sha8": "9f9d1179",
+ "five_lines": {
+  "candidate_m3": 2.14132,
+  "corrected_m3": 2.143747,
+  "delta_m3": 0.002427
+ },
+ "junction_gap_faces_m2": [
+  0.057118,
+  0.825412
+ ],
+ "lines": {
+  "L-1031c9be9aaae364fef4": {
+   "candidate_m3": 1.090505,
+   "cell": "SITE-d74f3fe29b88467a",
+   "corrected_m2": 10.905052,
+   "corrected_m3": 1.090505,
+   "delta_m3": 0.0,
+   "engine_gross_m2": 10.905052,
+   "members": [],
+   "own_face_m2": 10.905146,
+   "own_minus_engine_m2": 9.4e-05
+  },
+  "L-5e881fd31885949d4e66": {
+   "candidate_m3": 0.20502,
+   "cell": "SITE-0caa2bd2c0478041",
+   "corrected_m2": 2.050202,
+   "corrected_m3": 0.20502,
+   "delta_m3": 0.0,
+   "engine_gross_m2": 2.050202,
+   "members": [],
+   "own_face_m2": 2.050238,
+   "own_minus_engine_m2": 3.6e-05
+  },
+  "L-69527cb9affdad474268": {
+   "candidate_m3": 0.359768,
+   "cell": "SITE-49a7dae5c139aebb",
+   "corrected_m2": 3.507683,
+   "corrected_m3": 0.350768,
+   "deduction_m2": 0.236694,
+   "delta_m3": -0.009,
+   "engine_gross_m2": 3.834377,
+   "face_181_gap_to_180D_m": 0.0781,
+   "member_line": "L-970bac563cbcd69e2a30 (P-C:GROUND_BEAMS:GROUND:BAND0038, HELD)",
+   "members": [
+    {
+     "area_m2": 0.236694,
+     "drawn_faces": [
+      "D2:384:0",
+      "D2:385:0"
+     ],
+     "kind": "BAND",
+     "member": "BAND0038"
+    }
+   ],
+   "own_face_m2": 3.834377,
+   "strip_to_carriers_m2": 0.326694
+  },
+  "L-8b681fdaa3b3910b2b7b": {
+   "candidate_m3": 0.261557,
+   "cell": "SITE-3f7728a83b30ec14",
+   "corrected_m2": 2.72116,
+   "corrected_m3": 0.272116,
+   "delta_m3": 0.010559,
+   "engine_gross_m2": 2.615573,
+   "junction_returned_m2": 0.105587,
+   "members": [],
+   "own_face_m2": 2.72116,
+   "support": "S-BW ring 7C2 outer face + S-COL.BON 1EF"
+  },
+  "L-f192ff5f4962efa8d08f": {
+   "candidate_m3": 0.22447,
+   "cell": "SITE-c1b4b440fb6ecf4c",
+   "corrected_m2": 2.25338,
+   "corrected_m3": 0.225338,
+   "delta_m3": 0.000868,
+   "engine_gross_m2": 2.244696,
+   "junction_returned_m2": 0.008684,
+   "members": [],
+   "own_face_m2": 2.25338,
+   "support": "S-BW ring 7C2 outer face + S-COL.BON 1EF"
+  }
+ },
+ "noded_line_ends_on_arcs": 2,
+ "own_faces": 181,
+ "own_network_m2": 289.1092,
+ "schema": "T674_SUMMARY_V1",
+ "t_m": 0.1
+}
