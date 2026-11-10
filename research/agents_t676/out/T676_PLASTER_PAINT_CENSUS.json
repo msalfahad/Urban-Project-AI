@@ -1,0 +1,1918 @@
+{
+ "by_class": {
+  "DESIGNER_ITEM": 20,
+  "MEASURABLE_NOW": 1,
+  "OPEN_BOUND": 6,
+  "OWNER_DECISION_HOLD": 6,
+  "OWNER_OPEN": 16,
+  "PRINTED_VALUE_GAP": 2,
+  "QUEUED_ROW": 6
+ },
+ "by_queued_row": {
+  "T-314": 7,
+  "none": 50
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.64",
+ "conversion": "Q-53 C dry 1.33, cement 1,440 kg/m3, 50 kg bag; mix Q-79 (plaster 1:4, render 1:4, spatter 1:2); thickness PLASTER_MATERIALS_TABLE_V1 (KSE 'Bayt Al-Omr' 2023, ESTIMATED)",
+ "count": 57,
+ "entries": [
+  {
+   "also": "measured face by face in T-305 / T-337 / T-348 r2 / T-567; spatter dash under it: T-364",
+   "cause": "register line beside the work line (REGISTER_BESIDE_WORK, F-T630-3 pattern): the storey's facade m2 is the same face set as FIN.EXT.FINISH of that storey, measured once in the merged T-305 / T-337 / T-348 r2 / T-567 face ledgers and wired as face rows by T-314 (QUEUED, owner Gate B order item 2); an own figure here would count the faces twice",
+   "class": "QUEUED_ROW",
+   "element_id": "1F-FACADE:facade",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "ARCH.FACADE",
+   "line_id": "L-43527ae4e8ec75c56636",
+   "materials": null,
+   "measured_net": null,
+   "queued_row": "T-314",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "measured face by face in T-305 / T-337 / T-348 r2 / T-567; spatter dash under it: T-364",
+   "cause": "register line beside the work line (REGISTER_BESIDE_WORK, F-T630-3 pattern): the storey's facade m2 is the same face set as FIN.EXT.FINISH of that storey, measured once in the merged T-305 / T-337 / T-348 r2 / T-567 face ledgers and wired as face rows by T-314 (QUEUED, owner Gate B order item 2); an own figure here would count the faces twice",
+   "class": "QUEUED_ROW",
+   "element_id": "2F-FACADE:facade",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "ARCH.FACADE",
+   "line_id": "L-348c4d8d32f3f6d35fe5",
+   "materials": null,
+   "measured_net": null,
+   "queued_row": "T-314",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "measured face by face in T-305 / T-337 / T-348 r2 / T-567; spatter dash under it: T-364",
+   "cause": "register line beside the work line (REGISTER_BESIDE_WORK, F-T630-3 pattern): the storey's facade m2 is the same face set as FIN.EXT.FINISH of that storey, measured once in the merged T-305 / T-337 / T-348 r2 / T-567 face ledgers and wired as face rows by T-314 (QUEUED, owner Gate B order item 2); an own figure here would count the faces twice",
+   "class": "QUEUED_ROW",
+   "element_id": "GF-FACADE:facade",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "ARCH.FACADE",
+   "line_id": "L-cc7dc0a51f3319a99482",
+   "materials": null,
+   "measured_net": null,
+   "queued_row": "T-314",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "external ground level not printed; T-314 carries plinth faces only after T-311 names their owner trade",
+   "cause": "plinth below the lowest F.F.L.: the external ground level is not printed (no site / external works plan, D-62); his planes start at +1.00 (owner Q-07 B, T-567 RULE_DIFFERENCE -31.5245 m2); the plinth faces stay their own line until the ground level is issued",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-62",
+   "element_id": "GF-FACADE:facade below F.F.L. (plinth)",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "ARCH.FACADE",
+   "line_id": "L-c0e9a4c62171de1f369b",
+   "materials": null,
+   "measured_net": null,
+   "queued_row": "T-314",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PAINT: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (face height not printed / element HELD)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-LOWER:FACE:OUTSIDE:PAINT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-1c6a9f23a2f8320764a0",
+   "materials": null,
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PAINT: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (face height not printed / element HELD)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-LOWER:FACE:PLOT:PAINT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-8c90675aafd8738b1e26",
+   "materials": null,
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PAINT: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-NORTH:FACE:OUTSIDE:PAINT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-1e9a80dbea82741116cf",
+   "materials": null,
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PAINT: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-NORTH:FACE:PLOT:PAINT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-bac8095037312e3e90f4",
+   "materials": null,
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PAINT: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (face height not printed / element HELD)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-SEA:FACE:OUTSIDE:PAINT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-0a2fbaa46f6a6b23323e",
+   "materials": null,
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PAINT: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (face height not printed / element HELD)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-SEA:FACE:PLOT:PAINT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-2246f2ea8b345ac80584",
+   "materials": null,
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PAINT: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (top profile drawn, not dimensioned (R-T404-4))",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-STREET:FACE:OUTSIDE:PAINT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-8502adc8f55776e67a28",
+   "materials": null,
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PAINT: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (top profile drawn, not dimensioned (R-T404-4))",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-STREET:FACE:PLOT:PAINT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-4465d1e72082b5678e4a",
+   "materials": null,
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PLASTER: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (face height not printed / element HELD)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-LOWER:FACE:OUTSIDE:PLASTER",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-52d8589716c7724358ca",
+   "materials": {
+    "coat_class": "CLASS_NOT_ESTABLISHED",
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "coat class not established (T-489 CLASS_NOT_ESTABLISHED)"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PLASTER: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (face height not printed / element HELD)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-LOWER:FACE:PLOT:PLASTER",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-e802015729d4df311c0c",
+   "materials": {
+    "coat_class": "CLASS_NOT_ESTABLISHED",
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "coat class not established (T-489 CLASS_NOT_ESTABLISHED)"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PLASTER: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-NORTH:FACE:OUTSIDE:PLASTER",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-b1c2e0b93312e521d699",
+   "materials": {
+    "coat_class": "CLASS_NOT_ESTABLISHED",
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "coat class not established (T-489 CLASS_NOT_ESTABLISHED)"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PLASTER: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-NORTH:FACE:PLOT:PLASTER",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-36726588eba347a4c783",
+   "materials": {
+    "coat_class": "CLASS_NOT_ESTABLISHED",
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "coat class not established (T-489 CLASS_NOT_ESTABLISHED)"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PLASTER: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (face height not printed / element HELD)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-SEA:FACE:OUTSIDE:PLASTER",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-639e70724813476c31d3",
+   "materials": {
+    "coat_class": "CLASS_NOT_ESTABLISHED",
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "coat class not established (T-489 CLASS_NOT_ESTABLISHED)"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PLASTER: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (face height not printed / element HELD)",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-SEA:FACE:PLOT:PLASTER",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-b7cf09f5c8966460da56",
+   "materials": {
+    "coat_class": "CLASS_NOT_ESTABLISHED",
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "coat class not established (T-489 CLASS_NOT_ESTABLISHED)"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PLASTER: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (top profile drawn, not dimensioned (R-T404-4))",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-STREET:FACE:OUTSIDE:PLASTER",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-eb19e5f5365e81dcedeb",
+   "materials": {
+    "coat_class": "CLASS_NOT_ESTABLISHED",
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "coat class not established (T-489 CLASS_NOT_ESTABLISHED)"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-62 (no finishes schedule); face itself HELD (T-646)",
+   "cause": "PLASTER: finish scope of the site wall OPEN with the owner: OWNER_NOTES_SIGMA_2026-10-21 item 3 'boundary wall ... in Sigma: not answered yet' (which faces, which system, the top); fence p.12 section / elevation / plan print no finish, coping or render line (T-404 own read, Checker Gate A AGREE); own DXF census this run: 675 texts, 0 build-up / finish notes (T-321 / T-517 the same); section A-A roof band a constant drafting band (T-214 / T-221); no finishes schedule or specification issued (D-62, RFI-B-A12); the house plaster + Sigma method is NOT carried to a site wall (R-T404-5); and the face itself is HELD (top profile drawn, not dimensioned (R-T404-4))",
+   "class": "OWNER_OPEN",
+   "element_id": "FENCE:F-STREET:FACE:PLOT:PLASTER",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-e46d3f1324eb8625cbdc",
+   "materials": {
+    "coat_class": "CLASS_NOT_ESTABLISHED",
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "coat class not established (T-489 CLASS_NOT_ESTABLISHED)"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "OWNER_NOTES_SIGMA_2026-10-21 item 3",
+   "queued_row": "none",
+   "source": "T-646 roof / fence hold census (merged af50c864)",
+   "unit": "m2"
+  },
+  {
+   "also": "measured face by face in T-305 / T-337 / T-348 r2 / T-567; spatter dash under it: T-364",
+   "cause": "the storey's exterior render / Sigma area is measured face by face in the merged ledgers (T-305: GF 387.285 .. 420.770 HELD on W02 / D-GF-07, 1F 234.526, 2F 132.205 in line; restated by T-337 / T-348 r2 / T-567: gross 1,166.4517846 .. 1,185.4079770 m2 incl. parapets) and is wired by T-314 (QUEUED, owner Gate B order item 2), which REPLACES this blank line by face rows; a T-640 row on the same line would collide (overlay R1)",
+   "class": "QUEUED_ROW",
+   "element_id": "1F-FACADE:facade",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.EXT.FINISH",
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "materials": {
+    "coat_class": null,
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "no T-489 host row: the face rows come with T-314"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "T-314",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "measured face by face in T-305 / T-337 / T-348 r2 / T-567; spatter dash under it: T-364",
+   "cause": "the storey's exterior render / Sigma area is measured face by face in the merged ledgers (T-305: GF 387.285 .. 420.770 HELD on W02 / D-GF-07, 1F 234.526, 2F 132.205 in line; restated by T-337 / T-348 r2 / T-567: gross 1,166.4517846 .. 1,185.4079770 m2 incl. parapets) and is wired by T-314 (QUEUED, owner Gate B order item 2), which REPLACES this blank line by face rows; a T-640 row on the same line would collide (overlay R1)",
+   "class": "QUEUED_ROW",
+   "element_id": "2F-FACADE:facade",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.EXT.FINISH",
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "materials": {
+    "coat_class": null,
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "no T-489 host row: the face rows come with T-314"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "T-314",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "measured face by face in T-305 / T-337 / T-348 r2 / T-567; spatter dash under it: T-364",
+   "cause": "the storey's exterior render / Sigma area is measured face by face in the merged ledgers (T-305: GF 387.285 .. 420.770 HELD on W02 / D-GF-07, 1F 234.526, 2F 132.205 in line; restated by T-337 / T-348 r2 / T-567: gross 1,166.4517846 .. 1,185.4079770 m2 incl. parapets) and is wired by T-314 (QUEUED, owner Gate B order item 2), which REPLACES this blank line by face rows; a T-640 row on the same line would collide (overlay R1)",
+   "class": "QUEUED_ROW",
+   "element_id": "GF-FACADE:facade",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.EXT.FINISH",
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "materials": {
+    "coat_class": null,
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "no T-489 host row: the face rows come with T-314"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "T-314",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "T-561 / T-617 head bounds",
+   "cause": "room 1F_10 paint: one or more opening heights printed on no sheet (window schedule D-45; lift landing door / saloon glazing heights, T-561) keep the net a bound",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-45",
+   "element_id": "HL:WALL_FINISH:1F_10:PAINT",
+   "held_high": "52.29",
+   "held_low": "48.94",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-f53c1329983ad689b7ae",
+   "materials": null,
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "also": "T-561 / T-617 head bounds",
+   "cause": "room 1F_11 paint: one or more opening heights printed on no sheet (window schedule D-45; lift landing door / saloon glazing heights, T-561) keep the net a bound",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-45",
+   "element_id": "HL:WALL_FINISH:1F_11:PAINT",
+   "held_high": "61.7177",
+   "held_low": "61.4626",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-349db74a70e1eecda2d2",
+   "materials": null,
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "also": "T-561 / T-617 head bounds",
+   "cause": "room 1F_13 paint: one or more opening heights printed on no sheet (window schedule D-45; lift landing door / saloon glazing heights, T-561) keep the net a bound; T-617 head bounds row (low after 111.0177)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-45",
+   "element_id": "HL:WALL_FINISH:1F_13:PAINT",
+   "held_high": "114.3677",
+   "held_low": "111.0177",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-be48ea84285be20645af",
+   "materials": null,
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "also": "T-561 / T-617 head bounds",
+   "cause": "room 2F_01 paint: one or more opening heights printed on no sheet (window schedule D-45; lift landing door / saloon glazing heights, T-561) keep the net a bound; T-617 head bounds row (low after 22.6502)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-45",
+   "element_id": "HL:WALL_FINISH:2F_01:PAINT",
+   "held_high": "26.0002",
+   "held_low": "22.6502",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-c74cfb4e07bcc47bc5d6",
+   "materials": null,
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-06 / D-17 / D-39",
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum; owner 3.15 m shown beside as OWNER MANUAL METHOD - PROVISIONAL",
+   "class": "OWNER_DECISION_HOLD",
+   "element_id": "HL:WALL_FINISH:GF_01:PAINT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PAINT",
+   "line_id": "L-cdf7f5cd2789b67004f1",
+   "materials": null,
+   "measured_net": null,
+   "owner_ref": "Q-54 B",
+   "queued_row": "none",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-06 / D-17 / D-39",
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum; owner 3.15 m shown beside as OWNER MANUAL METHOD - PROVISIONAL",
+   "class": "OWNER_DECISION_HOLD",
+   "element_id": "HL:WALL_FINISH:GF_04:PAINT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PAINT",
+   "line_id": "L-d7d6d2f765489a95c408",
+   "materials": null,
+   "measured_net": null,
+   "owner_ref": "Q-54 B",
+   "queued_row": "none",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "T-561 / T-617 head bounds",
+   "cause": "room GF_08 paint: one or more opening heights printed on no sheet (window schedule D-45; lift landing door / saloon glazing heights, T-561) keep the net a bound; T-617 head bounds row (low after 152.0505)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-45",
+   "element_id": "HL:WALL_FINISH:GF_08:PAINT",
+   "held_high": "178.805",
+   "held_low": "152.0505",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-c0ac22c964a42e7d71b1",
+   "materials": null,
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "also": "Q-72 full exposed height; open: floor build-up b 0 .. 0.10, winder / beam-end contacts, W27 / window heads (T-173)",
+   "cause": "stair-shaft ST_1F faces: floor build-up b 0 .. 0.10 and the held contacts / openings (winder turn, beam ends at the stair head, two window heads, a doorless passage head) bound the net (T-173 s.1)",
+   "class": "OPEN_BOUND",
+   "element_id": "HL:WALL_FINISH:ST_1F:PAINT",
+   "held_high": "47.67",
+   "held_low": "42.48",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-2ab93d5029a4b7cc4dca",
+   "materials": null,
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "also": "Q-72 full exposed height; open: floor build-up b 0 .. 0.10, winder / beam-end contacts, W27 / window heads (T-173)",
+   "cause": "2F stair-shaft band above +9.70: held only for the Checker's T-173 corrections (D-T173-1 roof panel T 18, roof B3 downstand contact), both now applied; the band keeps its held items (W27 head / sill, B20 / B23 ends, roof build-up b 0 .. 0.10) as the range, like the ST_GF / ST_1F lines of the same shaft",
+   "class": "OPEN_BOUND",
+   "element_id": "HL:WALL_FINISH:ST_2F:PAINT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PAINT",
+   "line_id": "L-5a7a5c6f070ec7142ca5",
+   "materials": null,
+   "measured_net": null,
+   "merged_bound": {
+    "high": "47.932",
+    "low": "42.722",
+    "note": "the candidate line is BLANK; the bound lives in the merged overlay only",
+    "source": "overlay FR-T640-28 (T-640, merged 36f53264)"
+   },
+   "queued_row": "none",
+   "source": "overlay op FINISH_HOLD_BOUNDS (T-640 FR-T640-n)|FR-T640-28|L-5a7a5c6f070ec7142ca5",
+   "unit": "m2"
+  },
+  {
+   "also": "Q-72 full exposed height; open: floor build-up b 0 .. 0.10, winder / beam-end contacts, W27 / window heads (T-173)",
+   "cause": "stair-shaft ST_GF faces: floor build-up b 0 .. 0.10 and the held contacts / openings (winder turn, beam ends at the stair head, two window heads, a doorless passage head) bound the net (T-173 s.1)",
+   "class": "OPEN_BOUND",
+   "element_id": "HL:WALL_FINISH:ST_GF:PAINT",
+   "held_high": "62.01",
+   "held_low": "48.52",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-145bd2394f2907558243",
+   "materials": null,
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "also": "CORRECTION of the stale cause: the 1F plan DOES draw it (own DXF read P7757, 1F frame: the one 1F arch120 block, 1000 x 150; wall faces 150 mm apart stop at -500 / +500 of the insert = 1000 clear; T-175 1F-W16 width 1.000 / wall 0.150 DRAWING-CONFIRMED: AGREE); only the arch height / rise is printed nowhere (same as A-GF-01): stays HELD",
+   "cause": "arch A-1F-01 is drawn on no plan, elevation or section (T-313: UNKNOWN): width, height and wall thickness not established",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-45",
+   "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-64cb94b4b8dc2cb17608",
+   "materials": {
+    "coat_class": "CLASS_NOT_ESTABLISHED",
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "coat class not established (T-489 CLASS_NOT_ESTABLISHED)"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "candidate cause JAMB_HEIGHT_CLASS_PENDING closed by the drawing (one D200 main entrance)",
+   "cause": "JAMB_HEIGHT_CLASS_PENDING (UP-DOOR-HGT-001): door OP-009 is a main-entrance candidate - 2.20 m (external aluminium) or 2",
+   "class": "MEASURABLE_NOW",
+   "element_id": "GF-OPENING-OP-009:door jambs and head",
+   "fix": {
+    "note": "2 x 0.20 x 2.20 + 0.20 x 1.00 = 0.88 + 0.20 = 1.08 m2; the bound 1.08 .. 1.20 closes to its low end: the high end assumed the main-entrance height 2.50 for a door that is not the main entrance",
+    "owner_ref": "Q-55 C",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "terms": {
+     "height": [
+      "2.20",
+      "Q-55 C fallback (no sheet prints D-GF-01; not the 2.00 x 2.50 main entrance)"
+     ],
+     "thickness": [
+      "0.20",
+      "own DXF read P7757 GF: SW-1 wall faces 200 mm apart (T-108 0.20 AGREE)"
+     ],
+     "width": [
+      "1.00",
+      "own DXF read P7757 GF: wall stops 0 / 1000 at the D120 insert (T-194 1.0 AGREE)"
+     ]
+    },
+    "value": "1.08",
+    "wired": false
+   },
+   "held_high": "1.2",
+   "held_low": "1.08",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f4175f9915208dc5f9f7",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "0.165473",
+       "0.165473"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "0.022982",
+       "0.022982"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.19 (T-311 extract)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-06 / D-17 / D-39",
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "OWNER_DECISION_HOLD",
+   "element_id": "GF-R8496F0:plaster",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-2211463bba5eeb2e4282",
+   "materials": {
+    "coat_class": "WET_WALL_RENDER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "LEVELLING_RENDER (1:4)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "host area blank (HELD by name)"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "Q-54 B",
+   "queued_row": "none",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-06 / D-17 / D-39",
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "OWNER_DECISION_HOLD",
+   "element_id": "GF-RA3AD49:plaster",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-595181aa140e7efb2ac7",
+   "materials": {
+    "coat_class": "WET_WALL_RENDER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "LEVELLING_RENDER (1:4)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "host area blank (HELD by name)"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "Q-54 B",
+   "queued_row": "none",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-06 / D-17 / D-39",
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "OWNER_DECISION_HOLD",
+   "element_id": "GF-RB62B55:plaster",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f43782d52f32b53a6f1e",
+   "materials": {
+    "coat_class": "WET_WALL_RENDER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "LEVELLING_RENDER (1:4)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "host area blank (HELD by name)"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "Q-54 B",
+   "queued_row": "none",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "T-088 / T-173 C-SH-2: no floor edge or level drawn",
+   "cause": "room floor level +0.30 or +1.00 not drawn (T-088; T-173 C-SH-2: the floor under the stair-core rooms has no edge or level); both the plaster band (floor -> 1F slab soffit, Q-72) and the tile band start from it",
+   "class": "PRINTED_VALUE_GAP",
+   "element_id": "GF-RD36087:plaster",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-a636dabcd4bc7e59169a",
+   "materials": {
+    "coat_class": "WET_WALL_RENDER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "LEVELLING_RENDER (1:4)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "host area blank (HELD by name)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "T-088 / T-173 C-SH-2: no floor edge or level drawn",
+   "cause": "room floor level +0.30 or +1.00 not drawn (T-088; T-173 C-SH-2: the floor under the stair-core rooms has no edge or level); both the plaster band (floor -> 1F slab soffit, Q-72) and the tile band start from it",
+   "class": "PRINTED_VALUE_GAP",
+   "element_id": "GF-RDF7D28:plaster",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-3f7fb1b37e68e6d6c7b7",
+   "materials": {
+    "coat_class": "WET_WALL_RENDER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "LEVELLING_RENDER (1:4)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "host area blank (HELD by name)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "plan terms 1.000 x 0.150 DRAWING-CONFIRMED (T-648 own read); spring / rise not printed",
+   "cause": "arch A-GF-01 through-wall reveal: candidate 2 x 0.150 x 2.200 + 0.150 x developed 1.223795 = 0.843569 m2 is SOURCE-SUPPORTED PENDING INDEPENDENT CHECK; the arch spring / rise is not printed (D-45), so the outline (R-T326-2) is not settled",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-45",
+   "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-3e19506bd9e093dfb7be",
+   "materials": {
+    "coat_class": "CLASS_NOT_ESTABLISHED",
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "coat class not established (T-489 CLASS_NOT_ESTABLISHED)"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "T-313 UNRESOLVED gate width / wall",
+   "cause": "gate D-GF-15: width / wall thickness not established (T-313 UNRESOLVED; D-53 entrance family)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-53",
+   "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-e70e7e48b4c15b4f5a21",
+   "materials": {
+    "coat_class": "CLASS_NOT_ESTABLISHED",
+    "rows": {
+     "ALL COATS": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "coat class not established (T-489 CLASS_NOT_ESTABLISHED)"
+     },
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "D-06 / D-17 / D-39",
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "OWNER_DECISION_HOLD",
+   "element_id": "GF-RFAD3C4:plaster",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f179fc08a266294ad4a4",
+   "materials": {
+    "coat_class": "WET_WALL_RENDER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "LEVELLING_RENDER (1:4)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "host area blank (HELD by name)"
+     }
+    }
+   },
+   "measured_net": null,
+   "owner_ref": "Q-54 B",
+   "queued_row": "none",
+   "source": "T-640 finish hold census (merged 36f53264)",
+   "unit": "m2"
+  },
+  {
+   "also": "value at the drawn-section scenario, ESTIMATED (T-563 V3.0.61)",
+   "cause": "HELD: HELD on the roof build-up over 17.70 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-39",
+   "element_id": "HL:WALL_FINISH:1F_01:PLASTER",
+   "held_high": "62.607",
+   "held_low": "62.573",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-af9621f43bc316a871ea",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "9.587185",
+       "9.592394"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "1.331553",
+       "1.332277"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.61 (T-563 Gate B, merged e04d99d9)",
+   "unit": "m2"
+  },
+  {
+   "also": "value at the drawn-section scenario, ESTIMATED (T-563 V3.0.61)",
+   "cause": "HELD: HELD on the roof build-up over 17.40 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-39",
+   "element_id": "HL:WALL_FINISH:1F_04:PLASTER",
+   "held_high": "63.141",
+   "held_low": "63.141",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-971f0bdaf68d7fd0966c",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "9.674211",
+       "9.674211"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "1.34364",
+       "1.34364"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.61 (T-563 Gate B, merged e04d99d9)",
+   "unit": "m2"
+  },
+  {
+   "also": "value at the drawn-section scenario, ESTIMATED (T-563 V3.0.61)",
+   "cause": "HELD: HELD on the roof build-up over 9.558 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 6.642 lm at H 3.99 DRAWING-CONFIRMED height (T-214 b, slab 0.16); BOUNDED by openings without an established height and / or beam-end counts; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-39",
+   "element_id": "HL:WALL_FINISH:1F_10:PLASTER",
+   "held_high": "62.05",
+   "held_low": "58.026",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-2ba8077ba9bb2e1ff0f6",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "8.890512",
+       "9.507053"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "1.234793",
+       "1.320424"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.61 (T-563 Gate B, merged e04d99d9)",
+   "unit": "m2"
+  },
+  {
+   "also": "value at the drawn-section scenario, ESTIMATED (T-563 V3.0.61)",
+   "cause": "HELD: HELD on the roof build-up over 22.1490 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-39",
+   "element_id": "HL:WALL_FINISH:1F_11:PLASTER",
+   "held_high": "80.19841",
+   "held_low": "74.77651",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-31db3c83552682d92ca3",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "11.456958",
+       "12.28768"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "1.591244",
+       "1.706622"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.61 (T-563 Gate B, merged e04d99d9)",
+   "unit": "m2"
+  },
+  {
+   "also": "value at the drawn-section scenario, ESTIMATED (T-563 V3.0.61)",
+   "cause": "HELD: HELD on the roof build-up over 22.4865 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 16.9635 lm at H 3.99 DRAWING-CONFIRMED height (T-214 b, slab 0.16); BOUNDED by openings without an established height and / or beam-end counts; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-39",
+   "element_id": "HL:WALL_FINISH:1F_13:PLASTER",
+   "held_high": "139.6155",
+   "held_low": "135.6255",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-9b4a7bab033d677e2017",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "20.779997",
+       "21.391328"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "2.886111",
+       "2.971018"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.61 (T-563 Gate B, merged e04d99d9)",
+   "unit": "m2"
+  },
+  {
+   "also": "value at the drawn-section scenario, ESTIMATED (T-563 V3.0.61)",
+   "cause": "HELD: HELD on the roof build-up over 9.0090 lm (ROOF-1390 (+13.90, Q-34); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-39",
+   "element_id": "HL:WALL_FINISH:2F_01:PLASTER",
+   "held_high": "31.76591",
+   "held_low": "27.35991",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-ae0cdd794cc5fdbe0c29",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "4.191976",
+       "4.867046"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "0.582219",
+       "0.675979"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.61 (T-563 Gate B, merged e04d99d9)",
+   "unit": "m2"
+  },
+  {
+   "also": "value at the drawn-section scenario, ESTIMATED (T-563 V3.0.61)",
+   "cause": "HELD: HELD on the roof build-up over 18.90 lm (ROOF-1390 (+13.90, Q-34); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-39",
+   "element_id": "HL:WALL_FINISH:2F_03:PLASTER",
+   "held_high": "69.775",
+   "held_low": "69.775",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-4ce74fc37a08d4bdf0d8",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "10.690646",
+       "10.690646"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "1.484812",
+       "1.484812"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.61 (T-563 Gate B, merged e04d99d9)",
+   "unit": "m2"
+  },
+  {
+   "also": "value at the drawn-section scenario, ESTIMATED (T-563 V3.0.61)",
+   "cause": "HELD: HELD on the roof build-up over 20.1270 lm (ROOF-430 (+4.30); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-39",
+   "element_id": "HL:WALL_FINISH:GF_01:PLASTER",
+   "held_high": "65.25433",
+   "held_low": "61.46433",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-b152995525ed123ddac9",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "9.417319",
+       "9.998007"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "1.307961",
+       "1.388612"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.61 (T-563 Gate B, merged e04d99d9)",
+   "unit": "m2"
+  },
+  {
+   "also": "value at the drawn-section scenario, ESTIMATED (T-563 V3.0.61)",
+   "cause": "HELD: HELD on the roof build-up over 12.50 lm (ROOF-430 (+4.30); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-39",
+   "element_id": "HL:WALL_FINISH:GF_04:PLASTER",
+   "held_high": "43.155",
+   "held_low": "43.155",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-1ddc23d5657b4c4e4d0d",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "6.612036",
+       "6.612036"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "0.918338",
+       "0.918338"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.61 (T-563 Gate B, merged e04d99d9)",
+   "unit": "m2"
+  },
+  {
+   "also": "value at the drawn-section scenario, ESTIMATED (T-563 V3.0.61)",
+   "cause": "HELD: HELD on the roof build-up over 32.44468 lm (TERRACE-550 (+5.50 finished); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 20.74332 lm at H 4.29 DRAWING-CONFIRMED height (T-214 b, slab 0.16); BOUNDED by openings without an established height and / or beam-end counts; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-39",
+   "element_id": "HL:WALL_FINISH:GF_08:PLASTER",
+   "held_high": "211.80527",
+   "held_low": "178.22057",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-8cecb1d010d5aafbf25d",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "27.306243",
+       "32.451956"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "3.792534",
+       "4.507216"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.61 (T-563 Gate B, merged e04d99d9)",
+   "unit": "m2"
+  },
+  {
+   "also": "value at the drawn-section scenario, ESTIMATED (T-563 V3.0.61)",
+   "cause": "HELD: HELD on the roof build-up over 3.23055 lm (TERRACE-550 (+5.50 finished); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 18.30645 lm at H 4.29 DRAWING-CONFIRMED height (T-214 b, slab 0.16); RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-39",
+   "element_id": "HL:WALL_FINISH:GF_15:PLASTER",
+   "held_high": "66.52899",
+   "held_low": "66.52899",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-0d93f2209cd9bb827c0a",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "10.193306",
+       "10.193306"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "1.415737",
+       "1.415737"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.61 (T-563 Gate B, merged e04d99d9)",
+   "unit": "m2"
+  },
+  {
+   "also": "Q-72 full exposed height; open: floor build-up b 0 .. 0.10, winder / beam-end contacts, W27 / window heads (T-173)",
+   "cause": "shaft faces: floor build-up b 0 .. 0.10 and the held contacts / openings (winder turn, beam ends at the stair head, two",
+   "class": "OPEN_BOUND",
+   "element_id": "HL:WALL_FINISH:ST_1F:PLASTER",
+   "held_high": "47.67",
+   "held_low": "42.48",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-0eac839f9132da7bd116",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "6.508616",
+       "7.303807"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "0.903974",
+       "1.014418"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.19 (T-311 extract)",
+   "unit": "m2"
+  },
+  {
+   "also": "Q-72 full exposed height; open: floor build-up b 0 .. 0.10, winder / beam-end contacts, W27 / window heads (T-173)",
+   "cause": "2F stair-shaft band above +9.70: held only for the Checker's T-173 corrections (D-T173-1 roof panel T 18, roof B3 downstand contact), both now applied; the band keeps its held items (W27 head / sill, B20 / B23 ends, roof build-up b 0 .. 0.10) as the range, like the ST_GF / ST_1F lines of the same shaft",
+   "class": "OPEN_BOUND",
+   "element_id": "HL:WALL_FINISH:ST_2F:PLASTER",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-418121a4b223cb4e8646",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD (no water : cement ratio printed or owner-given)",
+      "why": "host area blank (HELD by name)"
+     }
+    }
+   },
+   "measured_net": null,
+   "merged_bound": {
+    "high": "49.872",
+    "low": "44.512",
+    "note": "the candidate line is BLANK; the bound lives in the merged overlay only",
+    "source": "overlay FR-T640-29 (T-640, merged 36f53264)"
+   },
+   "queued_row": "none",
+   "source": "overlay op FINISH_HOLD_BOUNDS (T-640 FR-T640-n)|FR-T640-29|L-418121a4b223cb4e8646",
+   "unit": "m2"
+  },
+  {
+   "also": "Q-72 full exposed height; open: floor build-up b 0 .. 0.10, winder / beam-end contacts, W27 / window heads (T-173)",
+   "cause": "shaft faces: floor build-up b 0 .. 0.10 and the held contacts / openings (winder turn, beam ends at the stair head, two",
+   "class": "OPEN_BOUND",
+   "element_id": "HL:WALL_FINISH:ST_GF:PLASTER",
+   "held_high": "62.01",
+   "held_low": "48.52",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-95f2c45c2eccaaeccb08",
+   "materials": {
+    "coat_class": "DRY_WALL_PLASTER",
+    "rows": {
+     "BOND_COAT spatter dash (1:2)": {
+      "cement_bags": null,
+      "sand_m3": null,
+      "status": "HELD",
+      "water": "HELD",
+      "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+     },
+     "WALL_PLASTER (1:4)": {
+      "cement_bags": [
+       "7.43404",
+       "9.500924"
+      ],
+      "per_m2": {
+       "cement_bags": "0.153216",
+       "sand_m3": "0.02128"
+      },
+      "sand_m3": [
+       "1.032506",
+       "1.319573"
+      ],
+      "status": "HELD_BOUND",
+      "water": "HELD (no water : cement ratio printed or owner-given)"
+     }
+    }
+   },
+   "measured_net": null,
+   "queued_row": "none",
+   "source": "candidate record V3.0.19 (T-311 extract)",
+   "unit": "m2"
+  }
+ ],
+ "fix_rows": [
+  {
+   "before": [
+    "1.08",
+    "1.2"
+   ],
+   "element_id": "GF-OPENING-OP-009:door jambs and head",
+   "line_id": "L-f4175f9915208dc5f9f7",
+   "note": "2 x 0.20 x 2.20 + 0.20 x 1.00 = 0.88 + 0.20 = 1.08 m2; the bound 1.08 .. 1.20 closes to its low end: the high end assumed the main-entrance height 2.50 for a door that is not the main entrance",
+   "owner_ref": "Q-55 C",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "terms": {
+    "height": [
+     "2.20",
+     "Q-55 C fallback (no sheet prints D-GF-01; not the 2.00 x 2.50 main entrance)"
+    ],
+    "thickness": [
+     "0.20",
+     "own DXF read P7757 GF: SW-1 wall faces 200 mm apart (T-108 0.20 AGREE)"
+    ],
+    "width": [
+     "1.00",
+     "own DXF read P7757 GF: wall stops 0 / 1000 at the D120 insert (T-194 1.0 AGREE)"
+    ]
+   },
+   "value": "1.08",
+   "wired": false
+  }
+ ],
+ "inputs": {
+  "candidate_line_index": "4403697305f428b11c754e95af5258207d7ce3663fe7de1d687b5e2e5d879548",
+  "t489_mix_csv": "31b6895782bd306a3564f7a43e1c9a6a7bbbd2ecedc5bc518b3164f85022f6be",
+  "trial_r4": "9e032726257c4961972bd7fd8de2620a3f7e2adc1f32a78802764a5289e91733"
+ },
+ "materials_totals": {
+  "EXT.FENCE.PLASTER|ALL COATS": {
+   "bounded": 0,
+   "cement_bags": null,
+   "held_blank": 8,
+   "hosts": 8,
+   "sand_m3": null
+  },
+  "EXT.FENCE.PLASTER|BOND_COAT spatter dash (1:2)": {
+   "bounded": 0,
+   "cement_bags": null,
+   "held_blank": 8,
+   "hosts": 8,
+   "sand_m3": null
+  },
+  "FIN.EXT.FINISH|ALL COATS": {
+   "bounded": 0,
+   "cement_bags": null,
+   "held_blank": 3,
+   "hosts": 3,
+   "sand_m3": null
+  },
+  "FIN.EXT.FINISH|BOND_COAT spatter dash (1:2)": {
+   "bounded": 0,
+   "cement_bags": null,
+   "held_blank": 3,
+   "hosts": 3,
+   "sand_m3": null
+  },
+  "FIN.PLASTER|ALL COATS": {
+   "bounded": 0,
+   "cement_bags": null,
+   "held_blank": 3,
+   "hosts": 3,
+   "sand_m3": null
+  },
+  "FIN.PLASTER|BOND_COAT spatter dash (1:2)": {
+   "bounded": 0,
+   "cement_bags": null,
+   "held_blank": 24,
+   "hosts": 24,
+   "sand_m3": null
+  },
+  "FIN.PLASTER|LEVELLING_RENDER (1:4)": {
+   "bounded": 0,
+   "cement_bags": null,
+   "held_blank": 6,
+   "hosts": 6,
+   "sand_m3": null
+  },
+  "FIN.PLASTER|WALL_PLASTER (1:4)": {
+   "bounded": 14,
+   "cement_bags": [
+    "142.908518",
+    "154.235867"
+   ],
+   "held_blank": 1,
+   "hosts": 15,
+   "sand_m3": [
+    "19.848404",
+    "21.421648"
+   ]
+  }
+ },
+ "merged_bound_only": [
+  {
+   "high": "47.932",
+   "line_id": "L-5a7a5c6f070ec7142ca5",
+   "low": "42.722",
+   "note": "the candidate line is BLANK; the bound lives in the merged overlay only",
+   "source": "overlay FR-T640-28 (T-640, merged 36f53264)"
+  },
+  {
+   "high": "49.872",
+   "line_id": "L-418121a4b223cb4e8646",
+   "low": "44.512",
+   "note": "the candidate line is BLANK; the bound lives in the merged overlay only",
+   "source": "overlay FR-T640-29 (T-640, merged 36f53264)"
+  }
+ ],
+ "rules": [
+  "R-T676-1",
+  "R-T676-2",
+  "R-T676-3"
+ ],
+ "schema": "URBAN_T676_PLASTER_PAINT_CENSUS_V1",
+ "task": "T-676",
+ "thickness_from_t489": {
+  "LEVELLING_RENDER": [
+   "0.015",
+   "MINIMUM"
+  ],
+  "WALL_PLASTER": [
+   "0.02",
+   "EXACT"
+  ]
+ },
+ "totals_m2": {
+  "ARCH.FACADE|m2": {
+   "blank": 4,
+   "bounded": 0,
+   "by_class": {
+    "DESIGNER_ITEM": 1,
+    "QUEUED_ROW": 3
+   },
+   "fix_rows": 0,
+   "high": null,
+   "lines": 4,
+   "low": null,
+   "note": "no bounded line: 4 blank lines HELD by name (never 0)"
+  },
+  "EXT.FENCE.PAINT|m2": {
+   "blank": 8,
+   "bounded": 0,
+   "by_class": {
+    "OWNER_OPEN": 8
+   },
+   "fix_rows": 0,
+   "high": null,
+   "lines": 8,
+   "low": null,
+   "note": "no bounded line: 8 blank lines HELD by name (never 0)"
+  },
+  "EXT.FENCE.PLASTER|m2": {
+   "blank": 8,
+   "bounded": 0,
+   "by_class": {
+    "OWNER_OPEN": 8
+   },
+   "fix_rows": 0,
+   "high": null,
+   "lines": 8,
+   "low": null,
+   "note": "no bounded line: 8 blank lines HELD by name (never 0)"
+  },
+  "FIN.EXT.FINISH|m2": {
+   "blank": 3,
+   "bounded": 0,
+   "by_class": {
+    "QUEUED_ROW": 3
+   },
+   "fix_rows": 0,
+   "high": null,
+   "lines": 3,
+   "low": null,
+   "note": "no bounded line: 3 blank lines HELD by name (never 0)"
+  },
+  "FIN.PAINT|m2": {
+   "blank": 3,
+   "bounded": 7,
+   "by_class": {
+    "DESIGNER_ITEM": 5,
+    "OPEN_BOUND": 3,
+    "OWNER_DECISION_HOLD": 2
+   },
+   "fix_rows": 0,
+   "high": "542.8606",
+   "lines": 10,
+   "low": "487.121",
+   "note": "7 bounded lines sum 487.121 .. 542.8606; 3 blank lines HELD by name (not in the sum, never 0)"
+  },
+  "FIN.PLASTER|m2": {
+   "blank": 10,
+   "bounded": 14,
+   "by_class": {
+    "DESIGNER_ITEM": 14,
+    "MEASURABLE_NOW": 1,
+    "OPEN_BOUND": 3,
+    "OWNER_DECISION_HOLD": 4,
+    "PRINTED_VALUE_GAP": 2
+   },
+   "fix_rows": 1,
+   "high": "1006.77641",
+   "lines": 24,
+   "low": "932.72581",
+   "note": "14 bounded lines sum 932.72581 .. 1006.77641; 10 blank lines HELD by name (not in the sum, never 0)"
+  }
+ }
+}
