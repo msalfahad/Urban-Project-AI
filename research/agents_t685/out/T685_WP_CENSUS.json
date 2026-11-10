@@ -1,0 +1,1275 @@
+{
+ "by_class": {
+  "DESIGNER_ITEM": 29,
+  "MEASURABLE_NOW": 4,
+  "MEASURED_NOT_WIRED": 3,
+  "NO_PHYSICAL_ELEMENT": 1,
+  "OPEN_BOUND": 18,
+  "OWNER_OPEN": 3
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.66",
+ "count": 58,
+ "element_totals": {
+  "DOOR_THRESHOLD": {
+   "m2": {
+    "excluded_n": 2,
+    "held_blank_n": 3,
+    "held_bounded_n": 11,
+    "held_high": "1.819408",
+    "held_low": "0.000000",
+    "kind": "INSTALLED",
+    "released": "1.930379",
+    "released_n": 14
+   },
+   "pcs": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_bounded_n": 0,
+    "held_high": null,
+    "held_low": null,
+    "kind": "INSTALLED",
+    "released": "14.000000",
+    "released_n": 14
+   }
+  },
+  "POOL": {
+   "m2": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_bounded_n": 0,
+    "held_high": null,
+    "held_low": null,
+    "kind": "INSTALLED",
+    "released": "29.582355",
+    "released_n": 1
+   },
+   "m3": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_bounded_n": 0,
+    "held_high": null,
+    "held_low": null,
+    "kind": "INSTALLED",
+    "released": "1.524503",
+    "released_n": 1
+   }
+  },
+  "PROCUREMENT_ROLLS": {
+   "pcs": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_bounded_n": 0,
+    "held_high": null,
+    "held_low": null,
+    "kind": "PROCUREMENT",
+    "released": "52.000000",
+    "released_n": 21
+   }
+  },
+  "ROOF_FLAT": {
+   "m2": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_bounded_n": 1,
+    "held_high": "0.639573",
+    "held_low": "0.000000",
+    "kind": "INSTALLED",
+    "released": "209.018867",
+    "released_n": 4
+   }
+  },
+  "ROOF_UPTURN": {
+   "lm": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_bounded_n": 2,
+    "held_high": "4.028279",
+    "held_low": "0.000000",
+    "kind": "INSTALLED",
+    "released": "186.782544",
+    "released_n": 4
+   }
+  },
+  "SUBSTRUCTURE": {
+   "item": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_bounded_n": 0,
+    "held_high": null,
+    "held_low": null,
+    "kind": "PROCUREMENT",
+    "released": "0.000000",
+    "released_n": 0
+   },
+   "m2": {
+    "excluded_n": 0,
+    "held_blank_n": 9,
+    "held_bounded_n": 0,
+    "held_high": null,
+    "held_low": null,
+    "kind": "INSTALLED",
+    "released": "360.028200",
+    "released_n": 6
+   },
+   "m3": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_bounded_n": 0,
+    "held_high": null,
+    "held_low": null,
+    "kind": "INSTALLED",
+    "released": "6.527500",
+    "released_n": 2
+   }
+  },
+  "WET_FLOOR": {
+   "m2": {
+    "excluded_n": 0,
+    "held_blank_n": 0,
+    "held_bounded_n": 0,
+    "held_high": null,
+    "held_low": null,
+    "kind": "INSTALLED",
+    "released": "85.575710",
+    "released_n": 18
+   }
+  },
+  "WET_FLOOR_PENETRATION": {
+   "pcs": {
+    "excluded_n": 0,
+    "held_blank_n": 17,
+    "held_bounded_n": 0,
+    "held_high": null,
+    "held_low": null,
+    "kind": "INSTALLED",
+    "released": "0.000000",
+    "released_n": 0
+   }
+  },
+  "WET_MEMBRANE_EDGE": {
+   "lm": {
+    "excluded_n": 3,
+    "held_blank_n": 0,
+    "held_bounded_n": 4,
+    "held_high": "3.160363",
+    "held_low": "0.000000",
+    "kind": "INSTALLED",
+    "released": "0.000000",
+    "released_n": 0
+   }
+  },
+  "WET_WALL_UPTURN": {
+   "m2": {
+    "excluded_n": 0,
+    "held_blank_n": 1,
+    "held_bounded_n": 0,
+    "held_high": null,
+    "held_low": null,
+    "kind": "INSTALLED",
+    "released": "25.214585",
+    "released_n": 17
+   }
+  }
+ },
+ "entries": [
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "1F-R26FA0D:doorway transition OP-008",
+   "held_high": "0.180000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-689197a4778b786de143",
+   "line_id": "L-689197a4778b786de143",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "1F-R26FA0D:doorway transition OP-010",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-bec3b3df8ec830a46447",
+   "line_id": "L-bec3b3df8ec830a46447",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "1F-R48AA46:doorway transition OP-004",
+   "held_high": "0.160000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-aed6f48195f99648c3f3",
+   "line_id": "L-aed6f48195f99648c3f3",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "1F-R48CDA5:doorway transition OP-018",
+   "held_high": "0.160000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-dfc4e74604047cb21407",
+   "line_id": "L-dfc4e74604047cb21407",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "1F-R8BDA49:doorway transition CLOSURE|D2:3118|D2:417@D2:3118:0",
+   "held_high": "0.160000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-07b084a5187a64634108",
+   "line_id": "L-07b084a5187a64634108",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "1F-RED23B8:doorway transition OP-019",
+   "held_high": "0.160000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-19f6405a5e60a99c29f7",
+   "line_id": "L-19f6405a5e60a99c29f7",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "2F-RE83BED:doorway transition OP-006",
+   "held_high": "0.160000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-b5a04e7c058346b6f734",
+   "line_id": "L-b5a04e7c058346b6f734",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "GF-RA3AD49:doorway transition OP-025",
+   "held_high": "0.200000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-b46013c737051e5441fe",
+   "line_id": "L-b46013c737051e5441fe",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "GF-RB28769:doorway transition OP-018",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-65194e5d4497f0882024",
+   "line_id": "L-65194e5d4497f0882024",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door (room-side twin replaced by the door row, T-336)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "GF-RB62B55:doorway transition CLOSURE|D2:495|D2:417@D2:495:0",
+   "held_high": "0.160000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-1c36054a8cadc0726e65",
+   "line_id": "L-1c36054a8cadc0726e65",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door (room-side twin replaced by the door row, T-336)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "GF-RD36087:doorway transition CLOSURE|D2:825|D2:417@D2:825:0",
+   "held_high": "0.159408",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-77a630d7e60ca6c404ba",
+   "line_id": "L-77a630d7e60ca6c404ba",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "GF-RD6F891:doorway transition CLOSURE|D2:820:0|D2:820:0",
+   "held_high": "0.160000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-20400ca6dc38abb30c33",
+   "line_id": "L-20400ca6dc38abb30c33",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "GF-RF38DAF:doorway transition OP-017",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-19908ce0b9a2bcadff80",
+   "line_id": "L-19908ce0b9a2bcadff80",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "doorway WP transition: one per physical door, built by DETAIL, never door width x 0.20 (owner Q-35 C, UP-WP-DOOR-001); the detail is printed on no sheet, so its m2 stays blank (T-310 policy V3); the count line carries the door",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-35 C / UP-WP-DOOR-001: transition detail printed on no sheet",
+   "element": "DOOR_THRESHOLD",
+   "element_id": "GF-RFAD3C4:doorway transition OP-026",
+   "held_high": "0.160000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "L-b4a23dc5fc953bc5a163",
+   "line_id": "L-b4a23dc5fc953bc5a163",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "membrane rolls to buy on the 2F top roof: a procurement count from the roof cutting plan (Q-49 / Q-58 A conditional); the 2F top roof is PARKED by the owner (Q-34: held, raised again at the 12-13 Nov milestone; no top-roof plan D-62), so its rolls stay HELD with it (T-646 ROOF-1390 R_ZONE_HELD)",
+   "class": "OWNER_OPEN",
+   "element": "PROCUREMENT_ROLLS",
+   "element_id": "2F-ROOF-TOP:wp_rolls_to_buy",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "key": "L-90b40877c8c3da54ba1b",
+   "line_id": "L-90b40877c8c3da54ba1b",
+   "owner_ref": "Q-34 PARKED (raised at the 12-13 Nov milestone)",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room 1F-07: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/1F-07/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "1F-R26FA0D:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "laundry: one 'FD\u00f84\"' piped to 'SS\u00f84\" F\\A-T/B'",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-9971bd68a5150abebe0a",
+   "line_id": "L-9971bd68a5150abebe0a",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room 1F-02: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/1F-02/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "1F-R48AA46:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "west bath pair: the two cells print 1 ('FD\u00f84\"') and 2 ('FD\u00f83\"' + 'FD\u00f84\"') drains; which cell is 'upper' / 'lower' is not mapped on this sheet, so each takes AT LEAST 1 (pair AT LEAST 3)",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-3e6dbcb5614746978a87",
+   "line_id": "L-3e6dbcb5614746978a87",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room 1F-12: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/1F-12/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "1F-R48CDA5:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "east bath (shower, W.C., basin): one 'FD\u00f84\"'",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-a5f885a2f86ee05d5b8b",
+   "line_id": "L-a5f885a2f86ee05d5b8b",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room 1F-08: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/1F-08/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "1F-R52AC05:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "W.C. (narrow cell east of the laundry): one 'FD\u00f84\"'",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-fb8f6c4b9b3044505557",
+   "line_id": "L-fb8f6c4b9b3044505557",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room 1F-03: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/1F-03/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "1F-R8BDA49:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "west bath pair: see 1F-02 (each cell AT LEAST 1; pair AT LEAST 3)",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-2253a7ed9e80ac00c728",
+   "line_id": "L-2253a7ed9e80ac00c728",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room 1F-09: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/1F-09/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "1F-RED23B8:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "bath by the laundry (shower, W.C., basin): one 'FD\u00f84\"'",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-2af93ddb70a431b92800",
+   "line_id": "L-2af93ddb70a431b92800",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room 2F-02: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/2F-02/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "2F-RE83BED:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "W.C. by the stair: one 'FD\u00f84\"' beside 'SS\u00f84\" T/B'",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-faa7232880f13c1e4a99",
+   "line_id": "L-faa7232880f13c1e4a99",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room GF-02: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/GF-02/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "GF-R8496F0:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "dewaneya wash: one 'FD\u00f83\"' between the two basins (basin wastes in red to it)",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-6375385673176b8b2c9c",
+   "line_id": "L-6375385673176b8b2c9c",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room GF-06: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/GF-06/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "GF-RA3AD49:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "kitchen: one 'FD\u00f84\"'",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-229e7bf9e837e1d838bd",
+   "line_id": "L-229e7bf9e837e1d838bd",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room GF-13: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/GF-13/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "GF-RB28769:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "core wedge W.C.: one 'FD\u00f84\"' (each wedge carries exactly one)",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-bcda623f9ad89eba41db",
+   "line_id": "L-bcda623f9ad89eba41db",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room GF-03: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/GF-03/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "GF-RB62B55:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "dewaneya W.C.: one 'FD\u00f84\"'; the W.C. pan has its own drain line (counted beside, not in the floor)",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-f650522e7882dddccdfa",
+   "line_id": "L-f650522e7882dddccdfa",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room GF-11: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/GF-11/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "GF-RD36087:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "basin space (west column, lower cell): one 'FD\u00f83\"'",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-a4bbc2efdb8425554344",
+   "line_id": "L-a4bbc2efdb8425554344",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room GF-16: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/GF-16/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "GF-RD6F891:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "master bath (shower tray, W.C., basin): one 'FD\u00f84\"'",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-20dfb3cd1232128b3cb6",
+   "line_id": "L-20dfb3cd1232128b3cb6",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room GF-14: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/GF-14/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "GF-RDBD4F9:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "wash lobby, 2 basins: one 'FD\u00f83\"'",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-0db07ac89503dd3f5980",
+   "line_id": "L-0db07ac89503dd3f5980",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room GF-10: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/GF-10/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "GF-RDF7D28:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "W.C. by the stair (west column of the core, upper cell: W.C. + basin): one 'FD\u00f84\"'",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-657bff4f4cc8e417bc6c",
+   "line_id": "L-657bff4f4cc8e417bc6c",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room GF-12: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/GF-12/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "GF-RF38DAF:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "core wedge W.C.: one 'FD\u00f84\"' (each wedge carries exactly one: the A / B naming does not move it)",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-5f41701522d675c37b10",
+   "line_id": "L-5f41701522d675c37b10",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "floor penetrations of wet room GF-05: the drain / pipe count per wet room is not tabled and no wet-room detail is issued (T-336 piece FIN.WP.PENETRATION[pcs]/GF-05/FLOOR_PENETRATIONS: 'drain / pipe count not tabled: HELD'); what a penetration piece is (drain only, or every pipe through the membrane) has no printed detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "element_id": "GF-RFAD3C4:wp_penetrations",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "driver W.C. (under the kitchen): one 'FD\u00f84\"'; W.C. pan drawn (beside, not counted)",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "L-345e907e572a363fb615",
+   "line_id": "L-345e907e572a363fb615",
+   "note": "drain bodies printed on sanitary-7757 sheet 1; what else counts waits on a detail",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "pcs"
+  },
+  {
+   "cause": "candidate line HELD; the merged piece's value lives in the overlay (trial R4 op) only",
+   "class": "MEASURED_NOT_WIRED",
+   "element": "ROOF_FLAT",
+   "element_id": "1F-POOLCOURT-550-LEDGE:wp_membrane",
+   "fix": {
+    "origin": "overlay op",
+    "source": "T-529 R-WP-APPL-EXPOSED-2b (MERGED 5f775ba6): ledge 0.639573 m2 MEASURED, EXPOSED",
+    "status": "MEASURED",
+    "value": "0.639573"
+   },
+   "held_high": "0.639573",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.ROOF",
+   "key": "L-2361d6ec13c952bd2ae3",
+   "line_id": "L-2361d6ec13c952bd2ae3",
+   "source": null,
+   "unit": "m2"
+  },
+  {
+   "cause": "ROOF_NOT_DRAWN_ON_ANY_PLAN (UP-WP-ROOF-001, owner Q-34 parked: held, no number, never 0): storey 2F (level 9.7) is the u",
+   "class": "OWNER_OPEN",
+   "element": "ROOF_FLAT",
+   "element_id": "2F-ROOF-TOP:wp_membrane",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.ROOF",
+   "key": "L-3e8fe55da71851816dd4",
+   "line_id": "L-3e8fe55da71851816dd4",
+   "owner_ref": "Q-34 PARKED (raised at the 12-13 Nov milestone)",
+   "source": "candidate record V3.0.19 (T-311 extract)",
+   "unit": "m2"
+  },
+  {
+   "cause": "candidate line HELD; the merged piece's value lives in the overlay (trial R4 op) only",
+   "class": "MEASURED_NOT_WIRED",
+   "element": "ROOF_UPTURN",
+   "element_id": "1F-POOLCOURT-550-LEDGE:wp_upturn",
+   "fix": {
+    "origin": "overlay op",
+    "source": "T-522 / T-529 (MERGED 4777890b / 5f775ba6): ledge wall-end upturn 0.551614 lm; the 2.976663 lm glazing transition has no m2 / lm line (beside)",
+    "status": "MEASURED",
+    "value": "0.551614"
+   },
+   "held_high": "3.528277",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "key": "L-d7d1bf8c5991ccf69ea2",
+   "line_id": "L-d7d1bf8c5991ccf69ea2",
+   "source": null,
+   "unit": "lm"
+  },
+  {
+   "cause": "candidate line HELD; the merged piece's value lives in the overlay (trial R4 op) only",
+   "class": "MEASURED_NOT_WIRED",
+   "element": "ROOF_UPTURN",
+   "element_id": "1F-POOLCOURT-550:wp_upturn window_face",
+   "fix": {
+    "origin": "overlay op",
+    "source": "T-522 (MERGED 4777890b): window run upturn 0.500002 lm, sill '84' printed >= 0.20",
+    "status": "MEASURED",
+    "value": "0.500002"
+   },
+   "held_high": "0.500002",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "key": "L-1954878bb02c91139e1b",
+   "line_id": "L-1954878bb02c91139e1b",
+   "source": null,
+   "unit": "lm"
+  },
+  {
+   "cause": "ROOF_NOT_DRAWN_ON_ANY_PLAN (UP-WP-ROOF-001, owner Q-34 parked: held, no number, never 0): storey 2F (level 9.7) is the u",
+   "class": "OWNER_OPEN",
+   "element": "ROOF_UPTURN",
+   "element_id": "2F-ROOF-TOP:wp_upturn",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "key": "L-aac1f35e08f85b643692",
+   "line_id": "L-aac1f35e08f85b643692",
+   "owner_ref": "Q-34 PARKED (raised at the 12-13 Nov milestone)",
+   "source": "candidate record V3.0.19 (T-311 extract)",
+   "unit": "lm"
+  },
+  {
+   "cause": "membrane edge on the open side GF-02:ARCH_TO_DEWANEYA: where the membrane stops at a leafless opening / open side is printed on no detail (Q-37 A fixes the threshold line only for the pantry); bound 0 .. the opening width beside (T-336 rule 3)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-37 A fixes the pantry only; edge detail printed on no sheet",
+   "element": "WET_MEMBRANE_EDGE",
+   "element_id": "GF-R8496F0:termination passage OP-027",
+   "held_high": "1.000000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.TERMINATION",
+   "key": "L-9592048116294937ab6f",
+   "line_id": "L-9592048116294937ab6f",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "lm"
+  },
+  {
+   "cause": "engine 'termination other' on the GF core W.C. diagonal face: T-128 r3 reads that face as WALL, so no membrane edge exists there (T-303 finding 5); register-only, held by name, never valued",
+   "class": "NO_PHYSICAL_ELEMENT",
+   "element": "WET_MEMBRANE_EDGE",
+   "element_id": "GF-RB28769:termination other",
+   "held_high": "0.004711",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.TERMINATION",
+   "key": "L-f78da96a7d31f7b72068",
+   "line_id": "L-f78da96a7d31f7b72068",
+   "note": "propose EXCLUDED with evidence T-128 r3 / T-303 f5 (the face is WALL); not changed here",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "lm"
+  },
+  {
+   "cause": "membrane edge on the open side GF-11:DOORWAY_P-GF-01: where the membrane stops at a leafless opening / open side is printed on no detail (Q-37 A fixes the threshold line only for the pantry); bound 0 .. the opening width beside (T-336 rule 3)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-37 A fixes the pantry only; edge detail printed on no sheet",
+   "element": "WET_MEMBRANE_EDGE",
+   "element_id": "GF-RD36087:termination passage OP-020",
+   "held_high": "0.900000",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.TERMINATION",
+   "key": "L-c57860d79f54a4c1c4b3",
+   "line_id": "L-c57860d79f54a4c1c4b3",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "lm"
+  },
+  {
+   "cause": "membrane edge on the open side GF-14:OPEN_SIDE_STAIR_HALL: where the membrane stops at a leafless opening / open side is printed on no detail (Q-37 A fixes the threshold line only for the pantry); bound 0 .. the opening width beside (T-336 rule 3)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-37 A fixes the pantry only; edge detail printed on no sheet",
+   "element": "WET_MEMBRANE_EDGE",
+   "element_id": "GF-RDBD4F9:termination zone_line ZONE|D2:731:0|0",
+   "held_high": "1.255652",
+   "held_low": "0.000000",
+   "item_code": "FIN.WP.TERMINATION",
+   "key": "L-a4df8fc50fbab4bef48f",
+   "line_id": "L-a4df8fc50fbab4bef48f",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "lm"
+  },
+  {
+   "cause": "GF pantry upturn: walls round the printed box less the 1.00 door and the 4.49 m open side; the closure of the open side and the wall heights are not printed (T-286; T-336 piece FIN.WP.WALL_UPTURN[m2]/GF-07/WALLS)",
+   "class": "MEASURABLE_NOW",
+   "element": "WET_WALL_UPTURN",
+   "element_id": "GF-RC99C2A:wp_wall_upturn:wet_zone",
+   "fix": {
+    "detail": {
+     "doors_lm": "1.000000",
+     "held_terms": [
+      "W10 sill not printed: 1.000000 m excluded in the low, included in the high",
+      "W09 sill not printed: 1.500000 m excluded in the low, included in the high"
+     ],
+     "high_lm": "9.500000",
+     "high_m2": "1.900000",
+     "low_lm": "7.000000",
+     "low_m2": "1.400000",
+     "sources": {
+      "column": "2FAE S-COL.BON 1.100 x 0.250 at x -0.200 .. 0.900, y 4.450 .. 4.700: 0.050 proud of 158 over 0.900; the boundary steps round it orthogonally, so the wall run length is unchanged (4.45 + 0.90 + 0.05 + 2.10 + 3.00 = 10.50 = 4.50 + 3.00 + 3.00)",
+      "doors": [
+       "D120 insert 33E, rot 180 (gap between 158 and 159)"
+      ],
+      "sills": "W09 / W10 HELD: designer D-45 (opening heights printed on no sheet; T-175)",
+      "walls": [
+       "west:B0",
+       "west:AF",
+       "west:AE",
+       "north:158",
+       "north:159",
+       "south:A6"
+      ],
+      "windows": [
+       "W10",
+       "W09"
+      ]
+     },
+     "status": "OPEN_BOUND",
+     "upturn_h": "0.200000",
+     "wall_runs_lm": "10.500000"
+    },
+    "high": "1.900000",
+    "low": "1.400000",
+    "status": "OPEN_BOUND",
+    "value": null
+   },
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "key": "L-8090ff20f2b547d1bc96",
+   "line_id": "L-8090ff20f2b547d1bc96",
+   "note": "the wall heights in the old cause do not enter a 0.20 m upturn; the open side is the Q-37 A threshold line (no upturn); the only open term is the two window sills (D-45)",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "HELD (blank in the BOQ): boundary ground beam, straps and the lower boundary beam: their own details print no coating (note scope, designer item; ERS s.3)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "boundary details print no coating (designer item)",
+   "element": "SUBSTRUCTURE",
+   "element_id": "WPF:BOUNDARY_GB_AND_STRAPS",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "key": "L-4f4e4c930e33ed6dafa3",
+   "line_id": "L-4f4e4c930e33ed6dafa3",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "HELD (blank in the BOQ): 118 traced ground-beam faces, 244.2827 m, HELD by name in LEDGER_T276.csv (DEPTH_HELD 103, PANEL_HELD 10, PANEL_SPLIT_LEVEL 5): DEPTH_HELD the beam depth is not established (designer item), PANEL_HELD GS-12 / GS-16 not established as slab on fill, PANEL_SPLIT_LEVEL GS-08 two slab levels; never 0, never estimated",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "beam depth / slab-on-fill not established (designer item)",
+   "element": "SUBSTRUCTURE",
+   "element_id": "WPF:BURIED_GROUND_BEAM_FACES_HELD",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "key": "L-eba4599c26b0d24de873",
+   "line_id": "L-eba4599c26b0d24de873",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "HELD (blank in the BOQ): footing tops outside the necks: the coating is drawn on the right p.13 detail only; the founding level selects the detail (Q-21 C); C8 10E0 neck section CONFLICT; 1B1B two tags",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-21 C: founding level selects the p.13 detail (designer)",
+   "element": "SUBSTRUCTURE",
+   "element_id": "WPF:FOOTING_TOPS_OUTSIDE_NECKS",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "key": "L-12aca7f853626262bd07",
+   "line_id": "L-12aca7f853626262bd07",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "HELD (blank in the BOQ): 66 column-neck faces in the beam zone, 33.3488 m, HELD on the neck height (formation, Q-21 C); the necks DC deduction (neck faces against ground-beam concrete, 13 necks DRAWING-CONFIRMED, 19 held, 4 lift necks owned by the lift pit T-219) is HELD with them: never 0, never netted into another line",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-21 C: neck height on the formation (designer)",
+   "element": "SUBSTRUCTURE",
+   "element_id": "WPF:NECK_FACES",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "key": "L-84a874dedb35cbe2bafb",
+   "line_id": "L-84a874dedb35cbe2bafb",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "HELD (blank in the BOQ): F10 / F outline 1B1B carries two schedule tags (F + F10): readings 'outline' 4.55 and 'rows separately' 4.64 m2, never one picked (Q-31 C; designer item)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-31 C: F10 / F outline 1B1B two readings, designer item",
+   "element": "SUBSTRUCTURE",
+   "element_id": "WPF:FOOTING_UNDERLAY_MEMBRANE_1B1B",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "WP.FOUNDATION.FOOTING_MEMBRANE",
+   "key": "L-f7da4df288b4e006c0e7",
+   "line_id": "L-f7da4df288b4e006c0e7",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "HELD (blank in the BOQ): F10 / F outline 1B1B carries two schedule tags (F + F10): readings 'outline' 4.55 and 'rows separately' 4.64 m2, never one picked (Q-31 C; designer item)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-31 C: F10 / F outline 1B1B two readings, designer item",
+   "element": "SUBSTRUCTURE",
+   "element_id": "WPF:FOOTING_PROTECTION_SCREED_1B1B",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+   "key": "L-46cee803214ff2d964fa",
+   "line_id": "L-46cee803214ff2d964fa",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "HELD (blank in the BOQ): F10 / F outline 1B1B carries two schedule tags (F + F10): readings 'outline' 4.55 and 'rows separately' 4.64 m2, never one picked (Q-31 C; designer item)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-31 C: F10 / F outline 1B1B two readings, designer item",
+   "element": "SUBSTRUCTURE",
+   "element_id": "WPF:FOOTING_PROTECTION_SCREED_1B1B",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+   "key": "L-79bc828150bbfe63ce8e",
+   "line_id": "L-79bc828150bbfe63ce8e",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m3"
+  },
+  {
+   "cause": "HELD (blank in the BOQ): governing footing detail not selected: p.13 right detail (upper ground beam to footing < 2.5 m) 'Two layers liquid water proofing' on perimeter x H, left detail (> 2.5 m) sheet membrane down the sides to the blinding perimeter x (H + 0.07); the founding level decides (Q-21 C; designer); 1B1B depth not established (two tags)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "Q-21 C: founding level selects the p.13 detail (designer)",
+   "element": "SUBSTRUCTURE",
+   "element_id": "WPF:FOOTING_SIDE_FACES",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "WP.FOUNDATION.FOOTING_SIDES",
+   "key": "L-13b1d3c202bc08fb65c2",
+   "line_id": "L-13b1d3c202bc08fb65c2",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "lift pit walls: HELD (blank in the BOQ): pit height not printed ('as per lift manufacturer'): wall parts HELD, never 0 (D-43)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-43 pit height 'as per lift manufacturer'",
+   "element": "SUBSTRUCTURE",
+   "element_id": "WPF:LIFT_PIT_BOARD_WALLS",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
+   "key": "L-f0aadf70513eb21d5671",
+   "line_id": "L-f0aadf70513eb21d5671",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "lift pit walls: HELD (blank in the BOQ): pit height not printed ('as per lift manufacturer'): wall parts HELD, never 0 (D-43)",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "D-43 pit height 'as per lift manufacturer'",
+   "element": "SUBSTRUCTURE",
+   "element_id": "WPF:LIFT_PIT_MEMBRANE_WALLS",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+   "key": "L-302b401eff698289c54e",
+   "line_id": "L-302b401eff698289c54e",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "m2"
+  },
+  {
+   "cause": "HELD (blank in the BOQ): PRODUCT_NOT_PRINTED: membrane / liquid product, thickness-to-product, laps and coats not printed: rolls / coats only for a printed product (UP-WP-MAT-001; UP-WP-001 / -002 / -005 / UP-WP-LAY-001 for a printed sheet membrane); designer item",
+   "class": "DESIGNER_ITEM",
+   "designer_ref": "UP-WP-MAT-001: product / thickness / laps / coats printed on no sheet",
+   "element": "SUBSTRUCTURE",
+   "element_id": "WPF:FOUNDATION_WP_PROCUREMENT",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "WP.FOUNDATION.PROCUREMENT",
+   "key": "L-d2488bbb7103c8cd2980",
+   "line_id": "L-d2488bbb7103c8cd2980",
+   "source": "T-648 r2 finishes hold census (merged 57db7053)",
+   "unit": "item"
+  },
+  {
+   "cause": "T-336 ADD_ROW (DRAWING-CONFIRMED 0.200, merged c4246877); T-310 left it out ('insert not bound')",
+   "class": "MEASURABLE_NOW",
+   "element": "DOOR_THRESHOLD",
+   "fix": {
+    "agrees_with": "T-336 0.200000",
+    "status": "DRAWING-CONFIRMED",
+    "terms": "door gap 1.000000 (D120 insert 33E, rot 180 (gap between 158 and 159)) x wall 0.200000 (158 / 15A faces 0.200 apart (15A at y 4.700))",
+    "value": "0.200000"
+   },
+   "item_code": "FIN.WP.DOORWAY",
+   "key": "MISSING:FIN.WP.DOORWAY[m2]/DOOR:D-GF-07-PANTRY/THRESHOLD_FLOOR",
+   "unit": "m2"
+  },
+  {
+   "cause": "T-336 ADD_ROW 1 (one physical door, Q-35 C); no candidate line",
+   "class": "MEASURABLE_NOW",
+   "element": "DOOR_THRESHOLD",
+   "fix": {
+    "agrees_with": "T-336 1",
+    "status": "DRAWING-CONFIRMED",
+    "terms": "one door: D120 insert 33E, rot 180 (gap between 158 and 159)",
+    "value": "1"
+   },
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "key": "MISSING:FIN.WP.DOORWAY_TRANSITION_NR[pcs]/DOOR:D-GF-07-PANTRY/TRANSITION",
+   "unit": "pcs"
+  },
+  {
+   "cause": "Q-35 C / UP-WP-DOOR-001: built by detail, detail printed on no sheet (as the 14 candidate lines)",
+   "class": "DESIGNER_ITEM",
+   "element": "DOOR_THRESHOLD",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "key": "MISSING:FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-07-PANTRY/TRANSITION",
+   "unit": "m2"
+  },
+  {
+   "cause": "T-336 ADD_ROW HELD; Q-37 A (owner) fixes the membrane to the printed box with the open side as a threshold line, so the edge length is the drawn open side",
+   "class": "MEASURABLE_NOW",
+   "element": "WET_MEMBRANE_EDGE",
+   "fix": {
+    "owner_ref": "Q-37 A",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "terms": "east side B3 0.000 .. 4.000 + AD 4.000 .. 4.500, layer 5, no wall drawn; = DIMENSION 5E1 4500; the candidate cause text says 4.49 (residual 0.010 m, engine polygon rounding, not a drawn length)",
+    "value": "4.500000"
+   },
+   "item_code": "FIN.WP.TERMINATION",
+   "key": "MISSING:FIN.WP.TERMINATION[lm]/GF-07:OPEN_SIDE_DINING/MEMBRANE_EDGE",
+   "unit": "lm"
+  },
+  {
+   "cause": "T-336 ADD_ROW HELD; drainage plan prints the drain: AT LEAST that count (UP-WP-004 1.1.0 'counted from the drawings'); other pipes need the wet-room detail",
+   "class": "OPEN_BOUND",
+   "element": "WET_FLOOR_PENETRATION",
+   "fix": {
+    "at_least": 1,
+    "status": "OPEN_BOUND",
+    "terms": "one 'FD\u00f83\"' in the pantry box, piped west through the wall to the CO \u00f84\" (Q-37 names the same FD); 'SS\u00f84\" F\\A H/L' is a stack from above at high level: no floor penetration",
+    "value": null
+   },
+   "item_code": "FIN.WP.PENETRATION",
+   "key": "MISSING:FIN.WP.PENETRATION[pcs]/GF-07/FLOOR_PENETRATIONS",
+   "unit": "pcs"
+  }
+ ],
+ "excluded": 5,
+ "excluded_lines": [
+  {
+   "element_id": "1F-R48CDA5:termination glazing D2:3126:0",
+   "item_code": "FIN.WP.TERMINATION",
+   "line_id": "L-0a7238edb9989d99d37a",
+   "why": "EXCLUDED in the candidate with evidence (T-310: duplicate door side / window sill above the upturn); not HELD, listed for completeness"
+  },
+  {
+   "element_id": "1F-R48CDA5:termination glazing D2:3123:0",
+   "item_code": "FIN.WP.TERMINATION",
+   "line_id": "L-1ef59757a75524c397d7",
+   "why": "EXCLUDED in the candidate with evidence (T-310: duplicate door side / window sill above the upturn); not HELD, listed for completeness"
+  },
+  {
+   "element_id": "1F-R48CDA5:termination glazing D2:3133:0",
+   "item_code": "FIN.WP.TERMINATION",
+   "line_id": "L-8fb80f626889e06f6f97",
+   "why": "EXCLUDED in the candidate with evidence (T-310: duplicate door side / window sill above the upturn); not HELD, listed for completeness"
+  },
+  {
+   "element_id": "GF-R8496F0:doorway transition CLOSURE|D2:495|D2:417@D2:495:0",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-b60811f60f8fdc9a4447",
+   "why": "EXCLUDED in the candidate with evidence (T-310: duplicate door side / window sill above the upturn); not HELD, listed for completeness"
+  },
+  {
+   "element_id": "GF-RDF7D28:doorway transition CLOSURE|D2:825|D2:417@D2:825:0",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-e0c34550b13267b4e0f7",
+   "why": "EXCLUDED in the candidate with evidence (T-310: duplicate door side / window sill above the upturn); not HELD, listed for completeness"
+  }
+ ],
+ "families_without_lines": [
+  {
+   "family": "B8-04",
+   "item": "Shower floor and tanking",
+   "state": "NO LINE BY RULE",
+   "why": "UP-WP-004 1.0.0 (library, in force): a shower takes the wet-room floor + 0.20 upturn, so its floor is inside FIN.WP.FLOOR; higher shower-wall tanking is 'proposed, not in force' (RULES_INDEX): no line until an owner rule or a printed detail says so"
+  },
+  {
+   "family": "B8-07",
+   "item": "Terraces / balconies / planters",
+   "state": "NO LINE (absence established)",
+   "why": "T-486 (MERGED e8ee22f0, ENGINE_RIGHT): the 2F terrace is inside FIN.WP.ROOF, ROOF-430 / strip carried; no planter is drawn on the plans read"
+  }
+ ],
+ "filter": "item_code starts with 'FIN.WP.' or 'WP.' (EXT.POOL.WATER_FACE is the pool tile face: not WP)",
+ "fix_rows_effect": {
+  "DOOR_THRESHOLD|m2": {
+   "at_least": 0,
+   "bound_high": "0.000000",
+   "bound_low": "0.000000",
+   "lines": 1,
+   "measured": "0.200000"
+  },
+  "DOOR_THRESHOLD|pcs": {
+   "at_least": 0,
+   "bound_high": "0.000000",
+   "bound_low": "0.000000",
+   "lines": 1,
+   "measured": "1.000000"
+  },
+  "ROOF_FLAT|m2": {
+   "at_least": 0,
+   "bound_high": "0.000000",
+   "bound_low": "0.000000",
+   "lines": 1,
+   "measured": "0.639573"
+  },
+  "ROOF_UPTURN|lm": {
+   "at_least": 0,
+   "bound_high": "0.000000",
+   "bound_low": "0.000000",
+   "lines": 2,
+   "measured": "1.051616"
+  },
+  "WET_FLOOR_PENETRATION|pcs": {
+   "at_least": 18,
+   "bound_high": "0.000000",
+   "bound_low": "0.000000",
+   "lines": 18,
+   "measured": "0.000000"
+  },
+  "WET_MEMBRANE_EDGE|lm": {
+   "at_least": 0,
+   "bound_high": "0.000000",
+   "bound_low": "0.000000",
+   "lines": 1,
+   "measured": "4.500000"
+  },
+  "WET_WALL_UPTURN|m2": {
+   "at_least": 0,
+   "bound_high": "1.900000",
+   "bound_low": "1.400000",
+   "lines": 1,
+   "measured": "0.000000"
+  }
+ },
+ "held": 53,
+ "inputs": {
+  "candidate": "02065c41e79dd9df0873cd351e13801c809ca6fa1e62e8a04196af4af13724a7",
+  "t336_pieces": "8a4f3ab75af755b7146940e3eb5cd374095f1471b2e2d4efffc59caaf93c203f",
+  "trial_r4": "9e032726257c4961972bd7fd8de2620a3f7e2adc1f32a78802764a5289e91733"
+ },
+ "lines_in_scope": 160,
+ "missing": 5,
+ "rules": [
+  "R-T685-1",
+  "R-T685-2",
+  "R-T685-3"
+ ],
+ "schema": "URBAN_T685_WP_CENSUS_V1",
+ "systems": {
+  "POOL": {
+   "status": "HELD",
+   "system": null,
+   "why": "membrane system / product printed on no sheet"
+  },
+  "ROOF_FLAT / ROOF_UPTURN": {
+   "status": "HELD",
+   "system": null,
+   "why": "membrane system / product printed on no sheet"
+  },
+  "SUBSTRUCTURE": {
+   "note": "p.13 footing details print two systems (right 'Two layers liquid water proofing', left sheet membrane); which one governs is Q-21 C (founding level, designer); no product printed",
+   "status": "HELD",
+   "system": null,
+   "why": "membrane system / product printed on no sheet"
+  },
+  "WET_FLOOR / WET_WALL_UPTURN": {
+   "status": "HELD",
+   "system": null,
+   "why": "membrane system / product printed on no sheet"
+  }
+ },
+ "task": "T-685"
+}
