@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-10 00:16; owner change of focus 2026-11-09 18:30 in force)
+
+- Candidate of record V3.0.61 / master 1.62.0; NOT RELEASED; no candidate quantity moved since 9 Nov 16:17. Trial BOQ r4 (10 Nov milestone, paper) stands: 2,730 / 2,742 HELD lines with a cause, held shown as ranges.
+- Concrete research ledgers MERGED 21:56 - 23:57 (T-657 necks, T-659 small elements, T-660 beams), UNWIRED; T-658 columns / GB REJECTED r1 -> r2 worker 1 (01:19 slot). Wiring T-661 Gate B -> worker 3 (00:59 slot). Rebar ratio: T-662 calibration MERGED (ESTIMATE 2,204 .. 2,909 kg beside detailed 9,628 kg); T-663 wiring conditions (worker 2, 00:39 / 02:39), then T-664 Gate B; 6 types wait on owner Q-81.
+- Confidence: T-661 READY by 10 Nov 03:00 MEDIUM, merged by 10 Nov 06:00 MEDIUM; T-658 r2 merged by 10 Nov 06:00 MEDIUM; T-664 rebar ratio wired by 11 Nov MEDIUM-LOW (T-663 first, then the hub); 12-13 Nov reconciliation + scorecard MEDIUM-LOW for concrete / rebar, LOW for masonry and later trades (they queue behind the one hub).
+
 ## Status (Lead, 2026-11-09 20:16; owner change of focus 18:30 in force: concrete -> rebar by ratio -> masonry -> plaster / paint -> tiles -> waterproofing -> earthworks -> missing families, MEP last)
 
 - Candidate of record V3.0.61 / master 1.62.0 (T-655 bfea3449: t485 green); NOT RELEASED. 10 Nov trial BOQ r4 MERGED dfd7a2cf (non-candidate; 2,730 / 2,742 HELD lines with a cause; held shown as ranges).

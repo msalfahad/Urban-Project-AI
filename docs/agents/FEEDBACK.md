@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-10 00:16 (since 20:18)
+
+- T-657 necks: WORKED (MERGED d96a2958; 36 lines 3.075 .. 15.375 -> 32 bounded 8.7724 .. 11.3460 + 4 lift LOWER_ONLY 0.9515 m3; 5 necks re-measured AGREE). Into T-661.
+- T-659 small elements: WORKED (MERGED 907ace46; 6 bounded 13.279574 .. 24.498998 m3, band 5.6392 .. 11.0328; pool blinding MISSING found). Into T-661; pool blinding row after the hub.
+- T-660 beams: WORKED (MERGED 9c91709f; 1 value 0.549624 + 14 bounded 5.983085 .. 8.412278 + 12 blank with plan 8.746 m2; 5 / 5 re-measures AGREE). Into T-661.
+- T-662 rebar ratio calibration: PARTIAL (MERGED 169a4df2 as research; ESTIMATE 2,204 .. 2,909 kg; Checker named 3 wiring conditions; 6 types uncalibrated). Decision: T-663 (worker 2) clears the conditions; T-664 wires; owner Q-81 for the 6 types.
+- T-658 r1 columns / GB / straps / footing: FAILED Gate A (oblique spans on the short edge; D-33 runs given a high from unloaded titles). Decision: r2 worker 1 FIRST with the exact fault; lessons row PROPOSED.
+- W3 21:00 INCOMPLETE (commit refused '[Sensitive-Source Provenance]'): cause fixed by keeping raw drawing reads in .work/private; the re-run published at 23:10. No further action.
+
 ## Lead 2026-11-09 16:17 (since 12:23)
 
 - T-423 r3 Gate B step 3: WORKED (MERGED 62e18eed, 22 lines text-only, 0 quantity moves). Left T-423 pending in the newest master (t485 red) -> T-655.

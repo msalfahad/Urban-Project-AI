@@ -1,5 +1,26 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-10 00:16 UTC (Lead). Previous version: 2026-11-09 20:16 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4
+single lines; no trade subtotal); released: 0. Candidate of record V3.0.61 (not released); no candidate quantity moved.
+
+Since 9 Nov 20:16 (newest first; four checked and merged as measurements, one sent back):
+- Concrete, measured from the drawings and checked, NOT yet in the candidate: column necks 32 ranges 8.77 .. 11.35 m3
+  plus 4 lift necks at least 0.95 m3 (was a loose 3.08 .. 15.38); parapets, boundary band, blinding, dome, pool and lift
+  pit 13.28 .. 24.50 m3 (pool blinding found missing); held beams: one now valued (0.55 m3), 14 ranged 5.98 .. 8.41 m3,
+  12 still held because no depth is drawn. The columns / ground beams job was sent back: two sloping ground beams were
+  measured on their short edge, so the 'upper' figure was below the drawn beam; it is being redone.
+- Steel by your ratio rule: kg per m3 worked out from this villa's own counted bars: beams 147.8 .. 175.9, footings
+  68.7 .. 71.1 (one footing only, weak), ground slab 61.7. Estimate for members with no bar count: 2,204 .. 2,909 kg,
+  kept apart from the 9,628 kg counted, labelled estimate. Not yet in the candidate: the checker wants a book range
+  cited and the laps checked first. Ground beams, necks, columns, slabs, stairs and the pool wall have no fully counted
+  member, so no ratio exists for them: your figure is needed (question Q-81); their steel stays held, not zero.
+- Next: concrete wiring into the candidate (integration worker, 00:59), the columns / ground beams redo (structural
+  worker, 01:19), the ratio checks (finishes worker). Masonry, plaster, tiles and the rest wait behind concrete and steel
+  in your order.
+
+Previous section (2026-11-09 20:16):
 Last update: 2026-11-09 20:16 UTC (Lead). Previous version: 2026-11-09 16:17 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4

@@ -1,3 +1,17 @@
+## LEAD REPORT 2026-11-09 12:20 UTC
+
+Drive read OK (no file created in the Alsenan project folder since 08:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.59 / master 1.59.0 (NOT RELEASED); released V2.9 + route G unchanged; no candidate quantity moved since 08:20.
+- Registry (T-651 MERGED 26af97af): master 1.59.0 promotes V3.0.59 (B9-04 INTEGRATED); t485 green; Checker census AGREE (4,999 same + 74 added).
+- Trial BOQ r3 for 10 Nov (T-652 MERGED 2e80c03f, non-candidate): HELD with committed cause 2,351 / 2,744 -> 2,728 / 2,740 (12 left = register lines). B9 0.15 m black hosts (pcs, Q-80 ASSUMED - OWNER-APPROVED 12.5 / m2): 2,194.1375 pcs + HELD 0 .. 4.25; my 2,232.14 counted RC lintel faces as block: ENGINE_RIGHT (Checker own re-add). B9 totals re-added: pcs 3,269.9375, mortar 3.387982 m3, glue 20.061 kg + HELD 852.22 .. 885.60 kg. D-1F-07 lintel HELD 0.036 .. 0.04377 m3 (designer item). MS1-L tread 3.105 m2 / step 10.35 lm -> HELD (shared riser count, C-ST-4).
+- Finishes causes (T-648 r2 MERGED 57db7053): 198 -> 0 lines without cause; no quantity moved.
+- Gate B step 3 (T-423 r3 READY bdbbb8db): V3.0.60 / master 1.60.0, 22 lines text-only (14 thresholds URBAN_METHOD, 5 dome ceiling lists, D-1F-04 1.760 m2 tile/plaster face move, 1 porcelain strip); 0 m2 / m3 / kg moved; engine vs freelancer unchanged.
+- Worse / found: F-T648-2 global Decimal precision at import in 18 research modules + 1 m9 fixture -> t647 / t649 fail in full sessions (order-dependent) -> T-653 gate 0.
+- Learned: ADOPTED registry promotion travels with the merge; Gate B order is a claim order; every HELD line carries a committed cause. PROPOSED no process-global numeric state (test in T-653).
+- Gate: lowest open gate 0 (T-653). Next: T-423 r3 Checker -> T-563 (step 4, W3) -> T-314 r2 (step 5, W2 after T-653) -> trial BOQ r4 (T-654).
+TEAM HEALTH: since 08:22 11 runs, all closed with a final line, 0 UNCLOSED; 3 MERGED, 0 REJECTED, 1 INCOMPLETE stage (T-423 r2, correct dependency stop, r3 READY 1h45 later); 1 correct no-claim (W2 10:40); all self-checks PASS; W3 11:05 hit an incomplete venv again (fixed by re-running setup). READY 1. queue check: see final line.
+OWNER PACKAGE: none today (no section 2.7 decision).
+NEEDS FIXING: (1) venv sometimes incomplete at first use (W3 11:05; setup rerun fixes it): watch only. (2) Scout paused since 27 Oct: no action unless you want it back.
+
 ## LEAD REPORT 2026-11-09 08:20 UTC
 
 Drive read OK (no file created in the project folders since 04:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.59 / master 1.58.0 (NOT RELEASED); released V2.9 + route G unchanged. Gate B step 2 MERGED: the first quantities wired into the candidate since the 12:40 directive.
