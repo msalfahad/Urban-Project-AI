@@ -1,5 +1,23 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-10 08:16 UTC (Lead). Previous version: 2026-11-10 04:14 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged; released: 0.
+
+Since 04:14 (newest first):
+- Two concrete wirings are now in the candidate and published (checked by the checker from the drawings, line by line):
+  column necks now ranged 8.77 .. 11.35 m3 (32) + 4 lift necks at least 0.95; one beam valued 0.55 m3, the held beams
+  ranged; ground beams: 13 lines the checker had already held at export are now held in the candidate itself (released
+  ground-beam concrete 26.86 -> 23.76 m3; the BOQ you see does not move), 8 ranged 1.17 .. 1.57 m3, 16 with only a floor
+  of 5.07 m3; 6 roof columns carry only an upper figure 2.80 m3. Not released; nothing shown as verified.
+- The corner squares where beams cross are now each owned by one line (nothing lost, nothing counted twice), and the
+  boundary band was checked under the stretches where the house stands on the plot line: no double count, stays held.
+- The pool's 10 cm blinding is measured as a new line (at least 0.92 m3, held until its level is drawn); pool steps held.
+- Next: these two go into the candidate; one last concrete job closes a 0.09 m2 corner square owned by no line, gives the
+  6 roof columns a lower figure, and lists every concrete line still held with its reason. Masonry starts (blocks,
+  mortar, glue lines still held). Steel by ratio still waits on your Q-81 answer; that steel stays held, never zero.
+
+Previous section (2026-11-10 04:14):
 Last update: 2026-11-10 04:14 UTC (Lead). Previous version: 2026-11-10 00:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged; released: 0.

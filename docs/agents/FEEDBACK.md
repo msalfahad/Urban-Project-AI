@@ -3,6 +3,14 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-10 08:16 (since 04:18)
+
+- T-661 concrete Gate B: WORKED (published 7a9ccbff by the Verifier 04:21; row status corrected to MERGED by the Lead 08:16).
+- T-667 pool blinding + steps: WORKED (MERGED b89ea23f; new HELD LOWER_ONLY >= 0.915529 m3, steps HELD; unwired). Into T-668.
+- T-666 junction squares + boundary band: WORKED (MERGED 06e2e736; residual 0, band no double count, stays HELD; unwired). Into T-668.
+- T-665 concrete round 2: WORKED (MERGED 12acd3d4, published b5df949c, V3.0.63). F-T665-1 corner square -> T-669 (a); F10 third reading not wired: no row (D-43 designer item, no released quantity moves).
+- Verifier 07:51 INCOMPLETE (overlap guard): correct stop. Lesson PROPOSED 04:14 (MERGED only after engine push + ls-remote) was applied by the Verifier at 08:05: ADOPTED.
+
 ## Lead 2026-11-10 04:14 (since 00:20)
 
 - T-658 r2 columns / GB / straps / footing: WORKED (MERGED 2cec1520; GB 9 bounded 1.173410 .. 5.096771 + 16 LOWER_ONLY 5.069839 + 4 blank; Checker own outlines AGREE). Into T-665 (worker 3).

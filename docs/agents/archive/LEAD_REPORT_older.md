@@ -1,3 +1,15 @@
+## LEAD REPORT 2026-11-09 20:16 UTC
+
+Drive read OK (no file created in the Alsenan project folder since 16:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.61 / master 1.62.0 (NOT RELEASED); released V2.9 + route G unchanged; NO candidate quantity moved since 16:17 (every trade before = after).
+- Owner 18:30 change of focus APPLIED: concrete -> rebar by ratio -> masonry -> plaster / paint -> tiles -> WP -> earthworks -> missing families. Concrete baseline (trial BOQ r4, B10 m3): released 284.62006 m3 on 294 lines (62.027098 WIRED with a Checker binding, 18.979328 overlay, 203.613634 unverified); 140 HELD = 95 bounded 37.518976 .. 73.227539 + 45 blank (necks 36, columns 29, ground beams 29, beams 27, blinding 6, parapets 4, lift 2, straps 2, footing / dome / pool / boundary pad / wall 1 each). Rebar baseline B11: released 9,628.462205 kg detailed; 799 HELD blank + 900 bounded 15,130.87 .. OPEN.
+- New rows (each names its line ids, drawings, rules, fixture, Checker re-measure): T-657 necks (W1), T-658 columns + ground beams + straps + footing (W3), T-659 small elements (W2), T-660 beams (W1 next), T-662 rebar ratio calibration from this villa's counted members, ESTIMATE label, +3 .. 5 % as a range (W2 next), T-661 concrete Gate B + F-T655-1 helper (W3 after the first piece merges). T-314 r3 exterior plaster QUEUED after T-661 (stage kept, nothing abandoned).
+- MERGED since 16:17 (all WORKED, 0 REJECTED): T-654 trial BOQ r4 (10 Nov, held as ranges, 2,730 / 2,742 with cause); T-655 master 1.62.0 (t485 green); T-656 t627 Decimal context. Checker VERIFIED T-180 P15 ext GB trench plan and P16 B10 beam COUNT rows GF 4.576422 / 1F 5.306035 m3 (own +0.014 / +0.017 %).
+- Learned: PROPOSED (Lead process) an owner re-plan reaches the board within one Lead run AND, if the next worker slot is before it, as a one-line TODO note by the main chat: 4 empty slots 18:40-19:51 (W2, W3, W1, Checker) because the 18:30 re-plan had no rows. ADOPTED from 16:17: a rebased package promotes its merged predecessor (T-655 showed it); registry tests pick writers among governed files (t199 fixed, t328 / t284 in T-661).
+- Gate: lowest open gate 1 (concrete pieces). Next Checker light run: T-180 P17 footings (64.304 m3), then P18 ground slab.
+TEAM HEALTH: since 16:16 13 runs, all closed, 0 UNCLOSED; 4 MERGED, 0 REJECTED; 4 empty slots (correct: nothing claimable until this re-plan). All self-checks PASS (Lead too). READY 0.
+OWNER PACKAGE: none (no section 2.7 decision; designer items keep their lines HELD with drawn bounds).
+NEEDS FIXING: (1) The scheduled worker prompts still say 'never approximate steel rates'; the board / brief override them for this BOQ (main chat noted it cannot edit scheduled tasks): only you can align the prompts. (2) Scout paused since 27 Oct: no action unless you want it back.
+
 ## LEAD REPORT 2026-11-09 16:17 UTC
 
 Drive read OK (no file created in the Alsenan project folder since 12:00 UTC 9 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.61 / master 1.61.0 (NOT RELEASED); released V2.9 + route G unchanged.
