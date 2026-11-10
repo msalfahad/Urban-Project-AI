@@ -54,17 +54,14 @@ rows changed since), then rewrite. Check every MERGED claim with `git merge-base
 - MERGED / scoreboard restatement only after `engine push` success and the sha seen on origin (ADOPTED).
 - Lane S needs two rows W1 can take even when W3 takes one (W1 empty at 11:20, 15:23, 19:21); give W3 its own lane I
   TODO first.
-- Lessons PROPOSED: one owner per junction square; bind to the raw candidate line; census scoped by trade code; corner
-  square to the run drawn across; own re-measure noded before charging the engine (T-674); oblique-end triangles to
-  the member, both lines in one diff (T-674); lintel concrete form follows the drawing's detail, precast pieces beside
+- Lessons PROPOSED (older ones in LEAD_REPORT archive): lintel concrete form follows the drawing's detail, precast pieces beside
   (T-677); every check needs a bounded state (T-677); census reconciles by line id, not count (F-T679-1).
 - F-C-T570-1, F-C-T593-1 (stair skirting; ORR-007 open). F-C-T638-1 split faces stay CALCULATED.
 - Materials: FINISH V7, PLASTER V3; UPC-BLACK-BLOCK-001 1.1.0 (Q-80). FIN.PLASTER released 363.3738 m2.
 - Register rulings 20:20: MS2 1F NW corner (lane S owns, T-684); cast RC lintels per ST p.13, precast pieces beside.
 
 ## Blockers
-- Designer items (D-16 / D-63, D-GF-09, D-27, D-33, D-35, D-39, D-43, D-44, D-45, D-48, D-53 W02, D-02, D-1F-07,
-  DOME-3 bars, lift-wall height, F-T583-1, F-T589-2, MS1-T winders, C-ST-4) keep lines HELD, never block integration.
+- Designer items (D-xx list in the previous LEAD_STATE / board) keep lines HELD, never block integration.
 
 ## Open owner items
 - Q-81 (rebar ratio). ORR-007 stair skirting payable form. Worker prompts 'never approximate steel'. Freelancer floors /
