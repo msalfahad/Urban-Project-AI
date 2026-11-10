@@ -44,10 +44,21 @@ def docs():
     return (json.loads(OLD.read_text(encoding="utf-8")), json.loads(NEW.read_text(encoding="utf-8")))
 
 
-def _written_1_26(extra=None):
+def _scanned_texts(extra=None):
+    """(path, text) of every file the written-code scan reads, in scan order (T130._written_codes() order), + extra
+    synthetic texts (T-661, F-T655-1)"""
     files = [p for p in sorted((ROOT / "engine/source").rglob("*.py"))
              if p.relative_to(ROOT).as_posix() not in T130.DECLARED_ONLY] + [ROOT / "tools/urban_boq_m9.py"]
-    texts = [(p.relative_to(ROOT).as_posix(), p.read_text(encoding="utf-8")) for p in files] + list((extra or {}).items())
+    return [(p.relative_to(ROOT).as_posix(), p.read_text(encoding="utf-8")) for p in files] + list((extra or {}).items())
+
+
+def _v30x_texts(extra=None):
+    """(path, text) of every engine/source/arch_v30*.py module in scan order, + extra synthetic texts (T-661)"""
+    return [(p.relative_to(ROOT).as_posix(), p.read_text(encoding="utf-8")) for p in MODULES] + list((extra or {}).items())
+
+
+def _written_1_26(extra=None):
+    texts = _scanned_texts(extra)
     out = {}
     for path, text in texts:
         for c in CODE_1_26.findall(text):
@@ -57,7 +68,7 @@ def _written_1_26(extra=None):
 
 def _v30x_literals(extra=None):
     """{literal: first V3.0.x module}: every UPPER.UPPER string of every engine/source/arch_v30*.py module"""
-    texts = [(p.relative_to(ROOT).as_posix(), p.read_text(encoding="utf-8")) for p in MODULES] + list((extra or {}).items())
+    texts = _v30x_texts(extra)
     out = {}
     for path, text in texts:
         for c in ANY_CODE.findall(text):
@@ -75,9 +86,25 @@ def _newer_modules():
     return {m: v for m, v in FMC.newer_registry_modules(me, ROOT).items() if m not in mine}
 
 
-def _own_head(written):
-    newer = _newer_modules()
-    return {c: p for c, p in written.items() if p not in newer}
+def _own_head(written, extra=None, newer=None, texts=_scanned_texts):
+    """the codes of `written` judged by 1.26.0, each with its first writer AMONG the own-head files (T-661, F-T655-1; the
+    T-655 fix of the t199 helper): a code whose first writer is a newer module is NOT dropped when an own-head file
+    also writes it (that file is re-found in the same scan's order); only a code written by newer modules alone is set
+    aside for the newer registry. extra = the synthetic texts the scan was given; newer = the newer-module set
+    (default: _newer_modules()); texts = the scan the codes came from (_scanned_texts, or _v30x_texts for literals)"""
+    newer = _newer_modules() if newer is None else newer
+    out, scan = {}, None
+    for c, p in written.items():
+        if p not in newer:
+            out[c] = p
+            continue
+        if scan is None:
+            scan = texts(extra)
+        for path, text in scan:
+            if path not in newer and c in ANY_CODE.findall(text):
+                out[c] = path
+                break
+    return out
 
 
 def test_1_26_0_equals_its_builder_and_copies_1_25_0(docs):
@@ -171,7 +198,7 @@ def test_every_written_code_belongs_to_one_family_with_every_v30x_prefix(docs):
 def test_every_literal_of_every_v30x_module_is_owned_or_listed_apart(docs):
     _, new = docs
     own, apart = T130._owners(new), new["item_codes_without_family"]
-    lits = _own_head(_v30x_literals())
+    lits = _own_head(_v30x_literals(), texts=_v30x_texts)
     assert {c: p for c, p in lits.items() if c not in own and c not in apart} == {}
     assert {c.split(".")[0] for c in lits} <= set(SCAN_1_26)               # the scan covers every prefix found
     for c in ("FLOOR.INTERNAL", "FLOOR.OUTDOOR", "WATERPROOFING.FOUNDATION", "EXT.POOL.WATER_FACE"):
@@ -205,7 +232,7 @@ def test_1_26_0_governs_and_the_1_1_0_era_exempts_its_moves(docs):
 def test_adverse_a_code_under_an_unscanned_prefix_is_refused(docs):
     _, new = docs
     syn = {"engine/source/arch_v30_synthetic.py": 'X = {"item_code": "XYZ.NEW_PREFIX_CODE"}\n'}
-    lits = _own_head(_v30x_literals(syn))
+    lits = _own_head(_v30x_literals(syn), extra=syn, texts=_v30x_texts)
     own, apart = T130._owners(new), new["item_codes_without_family"]
     assert {c: p for c, p in lits.items() if c not in own and c not in apart} == {
         "XYZ.NEW_PREFIX_CODE": "engine/source/arch_v30_synthetic.py"}
@@ -215,7 +242,7 @@ def test_adverse_a_code_under_an_unscanned_prefix_is_refused(docs):
 def test_adverse_an_ext_or_wp_code_no_family_owns_is_refused(docs):
     _, new = docs
     syn = {"engine/source/synthetic_ext.py": 'A = "EXT.NO_FAMILY_X"\nB = "WP.FOUNDATION.NO_FAMILY_Y"\n'}
-    assert T130._unowned_written(new, _own_head(_written_1_26(syn))) == {"EXT.NO_FAMILY_X": "engine/source/synthetic_ext.py",
+    assert T130._unowned_written(new, _own_head(_written_1_26(syn), extra=syn)) == {"EXT.NO_FAMILY_X": "engine/source/synthetic_ext.py",
                                                               "WP.FOUNDATION.NO_FAMILY_Y": "engine/source/synthetic_ext.py"}
     assert "EXT.NO_FAMILY_X" not in T130.CODE.findall(syn["engine/source/synthetic_ext.py"])   # 1.1.0 scan misses it
 
@@ -237,3 +264,51 @@ def test_adverse_dropping_the_guard_code_from_b13_08_is_refused(docs):
         if f["code"] == "B13-08":
             f["item_codes"] = []
     assert T130._unowned_written(bad, _own_head(_written_1_26())) == {"MET.RAILING.GUARD": "engine/source/arch_v3030.py"}
+
+
+# ------------------------------------------------------------------ T-661 (F-T655-1): first writer among own-head files
+def test_t661_normal_the_current_tree_keeps_every_own_head_code(docs):
+    """normal: on this tree every code an own-head file writes is kept, with that file's first writer in scan order
+    (both scans: the written-code scan and the V3.0.x literal scan)"""
+    newer = _newer_modules()
+    for written, texts in ((_written_1_26(), _scanned_texts), (T130._written_codes(), _scanned_texts),
+                           (_v30x_literals(), _v30x_texts)):
+        kept = _own_head(written, texts=texts)
+        for c in written:
+            own_writers = [path for path, text in texts() if path not in newer and c in ANY_CODE.findall(text)]
+            assert kept.get(c) == (own_writers[0] if own_writers else None), c
+
+
+def test_t661_adverse_a_newer_first_writer_no_longer_hides_an_own_head_code(docs):
+    """adverse (the T-661 case): a NEWER module that sorts first writes a code an own-head module writes too; the code
+    is still checked with its first own-head writer (the pre-T-661 helper dropped it), and the check still bites"""
+    _, new = docs
+    real = _written_1_26()
+    code = "STR.FORMWORK"
+    own_writer = real[code]
+    first = "engine/source/aaa_newer_synthetic.py"
+    syn = {first: f'L = {{"item_code": "{code}"}}\n'}
+    newer = dict(_newer_modules(), **{first: "9.99.0"})
+    written = {c: (first if c == code else p) for c, p in real.items()}
+    kept = _own_head(written, extra=syn, newer=newer)
+    assert kept[code] == own_writer and own_writer not in newer
+    assert code not in {c: p for c, p in written.items() if p not in newer}      # what the old helper did: dropped
+    bad = copy.deepcopy(new)
+    for f in bad["families"]:
+        if code in f["item_codes"]:
+            f["item_codes"] = [c for c in f["item_codes"] if c != code]
+    assert T130._unowned_written(bad, kept) == {code: own_writer}
+
+
+def test_t661_adverse_a_code_only_newer_modules_write_is_set_aside_and_an_own_head_one_still_fails(docs):
+    """adverse: a code written ONLY by a newer module is left to the newer registry; a code an own-head file writes in
+    no family still fails although a newer module writes it first"""
+    _, new = docs
+    newer_f, own_f = "engine/source/aaa_newer_synthetic.py", "engine/source/zzz_own_synthetic.py"
+    syn = {newer_f: 'A = "FIN.ONLY_NEWER_X"\nB = "FIN.NO_FAMILY_Y"\n', own_f: 'B = "FIN.NO_FAMILY_Y"\n'}
+    newer = dict(_newer_modules(), **{newer_f: "9.99.0"})
+    written = dict(_written_1_26(), **{"FIN.ONLY_NEWER_X": newer_f, "FIN.NO_FAMILY_Y": newer_f})
+    kept = _own_head(written, extra=syn, newer=newer)
+    assert "FIN.ONLY_NEWER_X" not in kept
+    assert kept["FIN.NO_FAMILY_Y"] == own_f
+    assert T130._unowned_written(new, kept) == {"FIN.NO_FAMILY_Y": own_f}
