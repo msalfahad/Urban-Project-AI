@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10T21:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10T21:12Z | Verifier | SUCCESS | T-681 GATE A PASS MERGED ebd8a77d (engine push + ls-remote ebd8a77d; CODEMAP-only conflict, maps rebuilt, stale none, freeze 0); SCOREBOARD v2 restated on V3.0.66 | T-681 gate e own DXF: shaft N face 2.500, W25 1.400..2.400 = 1.000, W13 1.050..2.250, 12 risers; SE chain from the +0.15 mark insert -> W13 +6.50/+8.80: MS2-LD.W25 skirting 1.000 lm and MS2-L.W2 treads +6.844..+7.516 NOT_APPLICABLE AGREE (research, unwired, no candidate quantity change). V3.0.66 ranges: only CONC.GROUND moves, released 45.399 -> 45.401 m3, at least -37.97 % (open); Verified share CONCRETE 1 / 8 unchanged; no CLOSABLE NOW line (T-180 slot not used); no owner question; Drive read OK | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: Drive zip arrived as raw binary, re-encoded to base64 in the scratchpad before 'decode'
 - 2026-11-10T20:50Z | Verifier | STARTED | run session_01E6cPnaRiY2jHAxwWz1CBtQ | repo-attached routine | task state: READY T-681 (W2 tiles/adhesive HELD census, gate e owed) | self-check pending
 - 2026-11-10T20:42Z | Worker 2 | STARTED | run session_01E6cPncsPwQtJ8xGyQZKCqa | repo-attached routine | task state: none yet | self-check pending
