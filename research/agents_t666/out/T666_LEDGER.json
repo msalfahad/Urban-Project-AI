@@ -1,0 +1,286 @@
+{
+ "F_T661_1": {
+  "checker_far_face_reading": "the lengths 1.400 / 1.400 / 3.100 are right, but the square they own is at the outer end; the square at the crossing band lies inside the column, which owns it to the slab top (UP-CONC-JOINT-001)",
+  "checker_near_face_lengths": "1.200 / 1.200 / 0.930 / 2.900 would leave the south squares of BAND0008.1 / BAND0011.1, the NE corner of BAND0001.3 and the SW corner of BAND0006.1 in NO line (4 x 0.016 .. 0.048 m3): refused (never in neither)",
+  "residual_m3": "0.000 from ownership; length term to the drawn edges +0.000144 / +0.000432"
+ },
+ "band": {
+  "T659_bound": [
+   "5.639200",
+   "11.032800"
+  ],
+  "after": [
+   "5.639200",
+   "11.032800"
+  ],
+  "before_V3_0_62": [
+   7.2204,
+   7.2204
+  ],
+  "continues_under_building_stretches": true,
+  "element": "P-C:SCOPE:BOUNDARY_WALL:FOUNDATION:CC-9fd936ab60:BEAM",
+  "line_id": "L-6290a9f3d93f38cd46d6",
+  "owned_once": "the band line bills the foundation-level prism, the G.B lines bill the N.G.-level prisms (title depths, R-T658-1 / 3 / 8); no 3-D intersection: nothing removed, nothing counted twice",
+  "reads": "FOUNDATION PLAN (ST p.2): closed S-BOUN pair 1658 / 1659 (0.20, centre line 91.94) with ONE ANSI37 hatch 1657 over the whole ring: the band is drawn on all four sides, including under the three stretches where the building stands on the plot line; GROUND BEAMS PLAN (ST p.3): the building's 0.30 exterior G.B (F8 / 7D4, FC / 7D0, 136 / 7D5, FD / 7E0) on the same plot line; the N.G.-level boundary pieces 7FE / 7FC / 810 abut the building G.B ends (no overlap)",
+  "shared_centre_line_m": "43.60",
+  "shared_free_m": "25.02",
+  "status": "HELD_BOUNDED_AS_DRAWN",
+  "stretches": [
+   {
+    "band_centre_line_m": "10.43",
+    "deduction_m3": "0",
+    "evidence": "ST p.1 note 2: exterior ground beams on the neighbour side cast above AND below black brick built up from foundation level",
+    "free_m": "8.10",
+    "inside_footings_m": "2.33",
+    "ownership": "OWNED_ONCE_EACH",
+    "relation": "DISJOINT",
+    "stretch": "side 1 lower neighbour, G.B F8 / 7D4"
+   },
+   {
+    "band_centre_line_m": "18.77",
+    "deduction_m3": "0",
+    "evidence": "ST p.1 note 2 (as above)",
+    "free_m": "8.17",
+    "inside_footings_m": "10.60",
+    "ownership": "OWNED_ONCE_EACH",
+    "relation": "DISJOINT",
+    "stretch": "side 1 lower neighbour, G.B FC / 7D0"
+   },
+   {
+    "band_centre_line_m": "6.60",
+    "deduction_m3": "0",
+    "evidence": "ST p.13 'Ground Beams for exterior walls': G.B from the GF slab level to the outer normal ground level ('FOLLOW ARCH.', D-35) on 10 cm blinding; ST p.14 A-A: lower beam at the base, brick 'AS PER EXCAVATION DEPTH BELOW N.G. LEVEL' between; no note names what fills the street side (masonry, not concrete)",
+    "free_m": "5.20",
+    "inside_footings_m": "1.40",
+    "ownership": "OWNED_ONCE_EACH",
+    "relation": "DISJOINT",
+    "stretch": "street lower, G.B 136 / 7D5"
+   },
+   {
+    "band_centre_line_m": "7.80",
+    "deduction_m3": "0",
+    "evidence": "as the street stretch",
+    "free_m": "3.55",
+    "inside_footings_m": "4.25",
+    "ownership": "OWNED_ONCE_EACH",
+    "relation": "DISJOINT",
+    "stretch": "sea lower, G.B FD / 7E0"
+   }
+  ],
+  "wiring_note": "V3.0.62 still carries the single reading 7.2204 (T661_BOUNDARY_BAND not wired); the bound to wire is the T-659 one, unchanged by T-666"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.62 (NOT RELEASED)",
+ "pieces": [
+  {
+   "after": [
+    "0.112000",
+    "0.336000"
+   ],
+   "all_near_face_length_m": "1.20",
+   "before_V3_0_62": [
+    0.111944,
+    0.335832
+   ],
+   "delta_m3": [
+    "0.000056",
+    "0.000168"
+   ],
+   "edges": "399 / 39C",
+   "element": "2F BAND0008.1",
+   "exposures_beside": [],
+   "length_term": "route G face-to-face length replaced by the drawn edge length (exact on the DXF)",
+   "line_id": "L-dc8cbfc119d006ff3927",
+   "owned_length_m": "1.40",
+   "reads": "edges 399 / 39C start on the south outer line 392 (the south band's inner-face line is drawn in two pieces 394 / 395 that stop at the piece's edges); column 418 (0.20 x 0.70) from y 1.40; crossing band 398 / 3A2 (y 1.40 .. 1.60) lies inside column 418; south band lines BAND0004 (B1) / BAND0005 (B2) measured 1.80 / 3.00 m between the piece's faces and the next faces (route G net plan)",
+   "squares": [
+    {
+     "area_m2": "0.0400",
+     "owner": "L-dc8cbfc119d006ff3927",
+     "owner_kind": "PIECE",
+     "square": "south band zone"
+    },
+    {
+     "area_m2": "0.0400",
+     "owner": "418 -> L-53f223b06db14ac41d47 (C9 2F, HELD)",
+     "owner_kind": "COLUMN",
+     "square": "crossing band 398 / 3A2"
+    }
+   ],
+   "status": "HELD_BOUNDED_AS_DRAWN"
+  },
+  {
+   "after": [
+    "0.112000",
+    "0.336000"
+   ],
+   "all_near_face_length_m": "1.20",
+   "before_V3_0_62": [
+    0.111944,
+    0.335832
+   ],
+   "delta_m3": [
+    "0.000056",
+    "0.000168"
+   ],
+   "edges": "3A1 / 39E",
+   "element": "2F BAND0011.1",
+   "exposures_beside": [],
+   "length_term": "route G face-to-face length replaced by the drawn edge length (exact on the DXF)",
+   "line_id": "L-7c3edce23ec8faa3d674",
+   "owned_length_m": "1.40",
+   "reads": "edges 3A1 / 39E start on the outer line 392 (south band inner-face lines 393 / 394 stop at them); column 41E (0.20 x 0.50) from y 1.40; crossing band 398 (y 1.40 .. 1.60) ends inside column 41E",
+   "squares": [
+    {
+     "area_m2": "0.0400",
+     "owner": "L-7c3edce23ec8faa3d674",
+     "owner_kind": "PIECE",
+     "square": "south band zone"
+    },
+    {
+     "area_m2": "0.0400",
+     "owner": "41E -> L-33a9b7728781fcba12e2 (C2 2F, HELD)",
+     "owner_kind": "COLUMN",
+     "square": "crossing band 398 / 3A2"
+    }
+   ],
+   "status": "HELD_BOUNDED_AS_DRAWN"
+  },
+  {
+   "after": [
+    "0.248000",
+    "0.744000"
+   ],
+   "all_near_face_length_m": "2.90",
+   "before_V3_0_62": [
+    0.247976,
+    0.743928
+   ],
+   "delta_m3": [
+    "0.000024",
+    "0.000072"
+   ],
+   "edges": "397 / 3AD",
+   "element": "2F BAND0006.1",
+   "exposures_beside": [],
+   "length_term": "route G face-to-face length replaced by the drawn edge length (exact on the DXF)",
+   "line_id": "L-d62d2fcf3d0023ad1ad1",
+   "owned_length_m": "3.10",
+   "reads": "west band edges 397 / 3AD start on the outer line 392 (south band inner-face line 393 starts at 3AD: the SW corner square is drawn inside the west band); column 424 (0.25 x 0.50) from y 3.10; crossing band 772 / 773 (y 3.10 .. 3.30) starts at the column's east face",
+   "squares": [
+    {
+     "area_m2": "0.0400",
+     "owner": "L-d62d2fcf3d0023ad1ad1",
+     "owner_kind": "PIECE",
+     "square": "SW corner"
+    },
+    {
+     "area_m2": "0.0400",
+     "owner": "424 -> L-c10e2945d582b5a03126 (C3 2F, HELD)",
+     "owner_kind": "COLUMN",
+     "square": "crossing band 772 / 773"
+    }
+   ],
+   "status": "HELD_BOUNDED_AS_DRAWN"
+  },
+  {
+   "after": [
+    "0.090400",
+    "0.271200"
+   ],
+   "all_near_face_length_m": "0.93",
+   "before_V3_0_62": [
+    0.090376,
+    0.271128
+   ],
+   "delta_m3": [
+    "0.000024",
+    "0.000072"
+   ],
+   "edges": "38D / 38E",
+   "element": "2F BAND0001.3",
+   "exposures_beside": [
+    {
+     "m3": [
+      "0",
+      "0.014000"
+     ],
+     "what": "GAP below the piece soffit at the NE corner if the abutting member (0.75 deep) continues to the outer face"
+    }
+   ],
+   "length_term": "route G face-to-face length replaced by the drawn edge length (exact on the DXF)",
+   "line_id": "L-8d031491396379f0cbb1",
+   "owned_length_m": "1.13",
+   "reads": "north band edges 38D / 38E run from column 415's east face to the east outer line 39A (1.13); the east band's inner face 39B stops at 38E and BAND0009 (B7 20x75) is measured 6.60 = outer south line to 38E: the NE corner square is drawn inside the north band and billed by no other line",
+   "squares": [
+    {
+     "area_m2": "0.0400",
+     "owner": "L-8d031491396379f0cbb1",
+     "owner_kind": "PIECE",
+     "square": "NE corner"
+    }
+   ],
+   "status": "HELD_BOUNDED_AS_DRAWN"
+  },
+  {
+   "after": [
+    "0.064000",
+    "0.192000"
+   ],
+   "all_near_face_length_m": "0.80",
+   "before_V3_0_62": [
+    0.064016,
+    0.192048
+   ],
+   "delta_m3": [
+    "-0.000016",
+    "-0.000048"
+   ],
+   "edges": "5C6 / 5E3",
+   "element": "1F BAND0005.1",
+   "exposures_beside": [
+    {
+     "m3": [
+      "0",
+      "0.040500"
+     ],
+     "what": "piece below the through member's soffit (0.75) inside its footprint, only if the piece is deeper than it"
+    }
+   ],
+   "length_term": "route G face-to-face length replaced by the drawn edge length (exact on the DXF)",
+   "line_id": "L-f83c4a469845c7e14dfa",
+   "owned_length_m": "0.80",
+   "reads": "edges 5C6 / 5E3 start on B23's north face 5E1; B23 (5E4 / 5E1, 0.45) runs through; its east span BAND0031.2 (B23 45x75, 3.30 m between column 68E and column 67F faces) covers the square; column 691 (0.25 x 0.50) from y 0.80",
+   "squares": [
+    {
+     "area_m2": "0.0900",
+     "owner": "BAND0031.2 (B23 45x75, RELEASED)",
+     "owner_kind": "THROUGH",
+     "square": "B23 crossing"
+    }
+   ],
+   "status": "HELD_BOUNDED_AS_DRAWN"
+  }
+ ],
+ "pieces_totals": {
+  "after": [
+   "0.626400",
+   "1.879200"
+  ],
+  "before": [
+   "0.626256",
+   "1.878768"
+  ],
+  "delta": [
+   "0.000144",
+   "0.000432"
+  ]
+ },
+ "rules": [
+  "R-T666-1",
+  "R-T666-2",
+  "UP-CONC-JOINT-001",
+  "R-CONC-OWN-1 (proposed)",
+  "R-T660-2"
+ ],
+ "schema": "T666_LEDGER_V1"
+}
