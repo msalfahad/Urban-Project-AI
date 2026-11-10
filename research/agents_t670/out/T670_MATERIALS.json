@@ -1,0 +1,2780 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.63",
+ "cross_check_t615": [
+  {
+   "code": "MAS.MORTAR.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "line_level": [
+    0.618315,
+    0.622076
+   ],
+   "material_line_id": "L-866a6602ffa70d03f210",
+   "residual": [
+    -1e-06,
+    -2e-06
+   ],
+   "t615_wall_level": [
+    0.618316,
+    0.622078
+   ],
+   "t615_walls": [
+    "1F-W12",
+    "1F-W13",
+    "1F-W17",
+    "1F-W19",
+    "1F-W23"
+   ]
+  },
+  {
+   "code": "MAS.UNITS.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "line_level": [
+    698.66125,
+    702.91125
+   ],
+   "material_line_id": "L-1e61a4aaeb00aa711dcd",
+   "residual": [
+    5e-05,
+    5e-05
+   ],
+   "t615_wall_level": [
+    698.6612,
+    702.9112
+   ],
+   "t615_walls": [
+    "1F-W12",
+    "1F-W13",
+    "1F-W17",
+    "1F-W19",
+    "1F-W23"
+   ]
+  },
+  {
+   "code": "MAS.MORTAR.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "line_level": [
+    0.279579,
+    0.279579
+   ],
+   "material_line_id": "L-a8f0d0e9fff641c0fa8e",
+   "residual": [
+    0.0,
+    0.0
+   ],
+   "t615_wall_level": [
+    0.279579,
+    0.279579
+   ],
+   "t615_walls": [
+    "1F-W18",
+    "1F-W24"
+   ]
+  },
+  {
+   "code": "MAS.UNITS.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "line_level": [
+    315.90875,
+    315.90875
+   ],
+   "material_line_id": "L-616b748b2c6051df27c9",
+   "residual": [
+    5e-05,
+    5e-05
+   ],
+   "t615_wall_level": [
+    315.9087,
+    315.9087
+   ],
+   "t615_walls": [
+    "1F-W18",
+    "1F-W24"
+   ]
+  },
+  {
+   "code": "MAS.MORTAR.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "line_level": [
+    0.578768,
+    0.578768
+   ],
+   "material_line_id": "L-2051ab0a71c27be038ae",
+   "residual": [
+    0.0,
+    0.0
+   ],
+   "t615_wall_level": [
+    0.578768,
+    0.578768
+   ],
+   "t615_walls": [
+    "1F-W20",
+    "1F-W21",
+    "1F-W22"
+   ]
+  },
+  {
+   "code": "MAS.UNITS.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "line_level": [
+    653.975,
+    653.975
+   ],
+   "material_line_id": "L-06e9c6082a0625ad3821",
+   "residual": [
+    0.0,
+    0.0
+   ],
+   "t615_wall_level": [
+    653.975,
+    653.975
+   ],
+   "t615_walls": [
+    "1F-W20",
+    "1F-W21",
+    "1F-W22"
+   ]
+  },
+  {
+   "code": "MAS.MORTAR.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "line_level": [
+    0.260604,
+    0.260604
+   ],
+   "material_line_id": "L-8f163174139bcf80c7c7",
+   "residual": [
+    0.0,
+    0.0
+   ],
+   "t615_wall_level": [
+    0.260604,
+    0.260604
+   ],
+   "t615_walls": [
+    "GF-W28",
+    "GF-W29"
+   ]
+  },
+  {
+   "code": "MAS.UNITS.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "line_level": [
+    294.4675,
+    294.4675
+   ],
+   "material_line_id": "L-1aa13ac06ca32ae43f02",
+   "residual": [
+    0.0,
+    0.0
+   ],
+   "t615_wall_level": [
+    294.4675,
+    294.4675
+   ],
+   "t615_walls": [
+    "GF-W28",
+    "GF-W29"
+   ]
+  },
+  {
+   "code": "MAS.MORTAR.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "line_level": [
+    0.095082,
+    0.095082
+   ],
+   "material_line_id": "L-33fcd56ef1548206bb1c",
+   "residual": [
+    0.0,
+    0.0
+   ],
+   "t615_wall_level": [
+    0.095082,
+    0.095082
+   ],
+   "t615_walls": [
+    "GF-W19"
+   ]
+  },
+  {
+   "code": "MAS.UNITS.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "line_level": [
+    107.4375,
+    107.4375
+   ],
+   "material_line_id": "L-fa0fae2380878a4f8428",
+   "residual": [
+    0.0,
+    0.0
+   ],
+   "t615_wall_level": [
+    107.4375,
+    107.4375
+   ],
+   "t615_walls": [
+    "GF-W19"
+   ]
+  },
+  {
+   "code": "MAS.MORTAR.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "line_level": [
+    0.109463,
+    0.109463
+   ],
+   "material_line_id": "L-794c7232f398260c7afb",
+   "residual": [
+    0.0,
+    0.0
+   ],
+   "t615_wall_level": [
+    0.109463,
+    0.109463
+   ],
+   "t615_walls": [
+    "GF-W21",
+    "GF-W33"
+   ]
+  },
+  {
+   "code": "MAS.UNITS.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "line_level": [
+    123.6875,
+    123.6875
+   ],
+   "material_line_id": "L-26c299b8e120e2ce6768",
+   "residual": [
+    0.0,
+    0.0
+   ],
+   "t615_wall_level": [
+    123.6875,
+    123.6875
+   ],
+   "t615_walls": [
+    "GF-W21",
+    "GF-W33"
+   ]
+  }
+ ],
+ "index_lines_sha256": "09ec4c1ac012982d372b2b5251ad07570d5f2a895af0f2a02bcdfc9d3480a9a1",
+ "joint": {
+  "joint_mm": 10,
+  "module_m": [
+   0.4,
+   0.2
+  ],
+  "source": "research/agents_t367/MORTAR_BY_LINE_T367.csv (merged T-367; geometry re-derived by T-506 R-T506-1: 0.07375 t m3/m2)",
+  "status": "OWNER-PROVISIONAL (T-367 MASONRY_JOINT_MORTAR_V1, owner 2026-10-29: 10 mm bed and head joints)",
+  "unit_m": [
+   0.39,
+   0.19
+  ]
+ },
+ "lintel_face_check": [
+  {
+   "face_m2": 0.36,
+   "face_x_t_m3": 0.054,
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "lintel_line_id": "L-6aa750fb944ad58ce960",
+   "opening_id": "D-1F-02",
+   "t_m": 0.15
+  },
+  {
+   "face_m2": 0.36,
+   "face_x_t_m3": 0.054,
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "lintel_line_id": "L-8b978b48668cde0f1b0c",
+   "opening_id": "D-1F-03",
+   "t_m": 0.15
+  },
+  {
+   "face_m2": 0.32,
+   "face_x_t_m3": 0.048,
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "lintel_line_id": "L-183f52083e693bdf8671",
+   "opening_id": "D-1F-04",
+   "t_m": 0.15
+  },
+  {
+   "face_m2": 0.32,
+   "face_x_t_m3": 0.048,
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "lintel_line_id": "L-3111418b702ac80f0ade",
+   "opening_id": "D-1F-07",
+   "t_m": 0.15
+  },
+  {
+   "face_m2": 0.34,
+   "face_x_t_m3": 0.051,
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "lintel_line_id": "L-10f18635f68cfd8cdd1d",
+   "opening_id": "D-1F-08",
+   "t_m": 0.15
+  },
+  {
+   "face_m2": 0.32,
+   "face_x_t_m3": 0.048,
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "lintel_line_id": "L-befb0beb1707ef192326",
+   "opening_id": "D-1F-10",
+   "t_m": 0.15
+  },
+  {
+   "face_m2": 0.975,
+   "face_x_t_m3": 0.195,
+   "host": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "lintel_line_id": "L-fd9eabe1828ed735c43d",
+   "opening_id": "W14",
+   "t_m": 0.2
+  },
+  {
+   "face_m2": 0.47,
+   "face_x_t_m3": 0.094,
+   "host": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "lintel_line_id": "L-55cfc2395aca2e0c69e3",
+   "opening_id": "W15",
+   "t_m": 0.2
+  },
+  {
+   "face_m2": 0.26,
+   "face_x_t_m3": 0.052,
+   "host": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "lintel_line_id": "L-f8736409a6afa1424ea9",
+   "opening_id": "W18",
+   "t_m": 0.2
+  },
+  {
+   "face_m2": 0.32,
+   "face_x_t_m3": 0.048,
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "lintel_line_id": "L-7149ea268473ea337cd2",
+   "opening_id": "D-GF-10",
+   "t_m": 0.15
+  },
+  {
+   "face_m2": 0.36,
+   "face_x_t_m3": 0.054,
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "lintel_line_id": "L-31232f81202941d104c6",
+   "opening_id": "D-GF-13",
+   "t_m": 0.15
+  },
+  {
+   "face_m2": 0.36,
+   "face_x_t_m3": 0.072,
+   "host": "GF-WALLS:walls t=0.20#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "lintel_line_id": "L-7a73a338210ee7268b65",
+   "opening_id": "D-GF-06",
+   "t_m": 0.2
+  }
+ ],
+ "pinned": {
+  "research/agents_t615/out/WALLS_015_T615.csv": "4811f105711ad7112cef72c4de7bf186b8122b123fbea58170b1ec2b382e12e0",
+  "research/agents_t654/out/TRIAL_BOQ_R4_T654.json": "9e032726257c4961972bd7fd8de2620a3f7e2adc1f32a78802764a5289e91733",
+  "research/agents_t665/out/LINE_INDEX_V3_0_63.json": "cd062bfe777af2393228f31893b71ae7032c8d0e6c1bcbe41b0194e36a8fe8d8",
+  "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json": "da38d121eec33c00ff3c8b524ed022be6a66f5789fdd9a0cd37f216f84dcde35"
+ },
+ "rows": [
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "1F-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-c22e309433e7b671cf2d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-8e250abdcadfdbf33951",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "1F-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-c22e309433e7b671cf2d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-fdbe5743c95c05ae9c19",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "1F-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-c22e309433e7b671cf2d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-e5a117db55cf7c5caaab",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "1F-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-c22e309433e7b671cf2d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-d4c62b9df1e162be5e8b",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "RANGE",
+    [
+     0.618315,
+     0.622076
+    ]
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-a56a8add7812d1b52cb7",
+   "host_net_m2": 58.2529,
+   "lintels": [
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-6aa750fb944ad58ce960",
+     "opening_id": "D-1F-02"
+    },
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-8b978b48668cde0f1b0c",
+     "opening_id": "D-1F-03"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-183f52083e693bdf8671",
+     "opening_id": "D-1F-04"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-3111418b702ac80f0ade",
+     "opening_id": "D-1F-07"
+    },
+    {
+     "face_m2": 0.34,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-10f18635f68cfd8cdd1d",
+     "opening_id": "D-1F-08"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-befb0beb1707ef192326",
+     "opening_id": "D-1F-10"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.34,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-961608860fcb38c106af",
+     "opening_id": "D-1F-09"
+    }
+   ],
+   "material_base_m2": 56.2329,
+   "material_base_range_m2": [
+    55.8929,
+    56.2329
+   ],
+   "material_line_id": "L-866a6602ffa70d03f210",
+   "sensitivity_F_T498_4": {
+    "if_no_lintel_released": [
+     0.618315,
+     0.644422
+    ],
+    "required_faces_m2": 2.02
+   },
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "RANGE",
+    [
+     698.66125,
+     702.91125
+    ]
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.UNITS.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-a56a8add7812d1b52cb7",
+   "host_net_m2": 58.2529,
+   "lintels": [
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-6aa750fb944ad58ce960",
+     "opening_id": "D-1F-02"
+    },
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-8b978b48668cde0f1b0c",
+     "opening_id": "D-1F-03"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-183f52083e693bdf8671",
+     "opening_id": "D-1F-04"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-3111418b702ac80f0ade",
+     "opening_id": "D-1F-07"
+    },
+    {
+     "face_m2": 0.34,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-10f18635f68cfd8cdd1d",
+     "opening_id": "D-1F-08"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-befb0beb1707ef192326",
+     "opening_id": "D-1F-10"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.34,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-961608860fcb38c106af",
+     "opening_id": "D-1F-09"
+    }
+   ],
+   "material_base_m2": 56.2329,
+   "material_base_range_m2": [
+    55.8929,
+    56.2329
+   ],
+   "material_line_id": "L-1e61a4aaeb00aa711dcd",
+   "sensitivity_F_T498_4": {
+    "if_no_lintel_released": [
+     698.66125,
+     728.16125
+    ],
+    "required_faces_m2": 2.02
+   },
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "VALUE",
+    0.279579
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-4054259959463edd70fb",
+   "host_net_m2": 25.2727,
+   "lintels": [],
+   "material_base_m2": 25.2727,
+   "material_base_range_m2": null,
+   "material_line_id": "L-a8f0d0e9fff641c0fa8e",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "VALUE",
+    315.90875
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.UNITS.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-4054259959463edd70fb",
+   "host_net_m2": 25.2727,
+   "lintels": [],
+   "material_base_m2": 25.2727,
+   "material_base_range_m2": null,
+   "material_line_id": "L-616b748b2c6051df27c9",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "VALUE",
+    0.578768
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-73acd5a9d7e7cf6515c1",
+   "host_net_m2": 52.318,
+   "lintels": [],
+   "material_base_m2": 52.318,
+   "material_base_range_m2": null,
+   "material_line_id": "L-2051ab0a71c27be038ae",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "VALUE",
+    653.975
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.UNITS.BLACK",
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-73acd5a9d7e7cf6515c1",
+   "host_net_m2": 52.318,
+   "lintels": [],
+   "material_base_m2": 52.318,
+   "material_base_range_m2": null,
+   "material_line_id": "L-06e9c6082a0625ad3821",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "1F-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-5ffa7157a2fe483dd008",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-5adcc762eca024e4cd94",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "1F-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-5ffa7157a2fe483dd008",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-298e323d027a4723652d",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "1F-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-5ffa7157a2fe483dd008",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-4b1429e0aedd15f625fd",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "1F-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-5ffa7157a2fe483dd008",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-90c7f0aecafe7b4a51a1",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "RANGE",
+    [
+     203.562,
+     210.762
+    ]
+   ],
+   "before": [
+    "RANGE",
+    [
+     203.562,
+     210.762
+    ]
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "host_class": "RELEASED",
+   "host_line_id": "L-b7b4d784fbe7fdbebe84",
+   "host_net_m2": 46.836,
+   "lintels": [
+    {
+     "face_m2": null,
+     "face_max_m2": 0.4,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-47882fa3a0d9cdcc122e",
+     "opening_id": "W13"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-dd5b41a7af885e96f797",
+     "opening_id": "W21"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-f68444edf483bc1d87d4",
+     "opening_id": "W22"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-bf76c17309c92605e174",
+     "opening_id": "W23"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.36,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-bf88bf6f5efaa0ae5bdc",
+     "opening_id": "W25"
+    }
+   ],
+   "material_base_m2": 46.836,
+   "material_base_range_m2": [
+    45.236,
+    46.836
+   ],
+   "material_line_id": "L-aa5532bb971eceac1b76",
+   "sensitivity_F_T498_4": {
+    "if_no_lintel_released": [
+     203.562,
+     210.762
+    ],
+    "required_faces_m2": 0.0
+   },
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": {
+    "60x20": [
+     376.9667,
+     390.3
+    ],
+    "62.5x25": [
+     289.5104,
+     299.7504
+    ]
+   },
+   "cause": "AAC face not selected by the project; no company AAC count rule",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "host_class": "RELEASED",
+   "host_line_id": "L-b7b4d784fbe7fdbebe84",
+   "host_net_m2": 46.836,
+   "lintels": [
+    {
+     "face_m2": null,
+     "face_max_m2": 0.4,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-47882fa3a0d9cdcc122e",
+     "opening_id": "W13"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-dd5b41a7af885e96f797",
+     "opening_id": "W21"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-f68444edf483bc1d87d4",
+     "opening_id": "W22"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-bf76c17309c92605e174",
+     "opening_id": "W23"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.36,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-bf88bf6f5efaa0ae5bdc",
+     "opening_id": "W25"
+    }
+   ],
+   "material_base_m2": 46.836,
+   "material_base_range_m2": [
+    45.236,
+    46.836
+   ],
+   "material_line_id": "L-f78bc052b5ce391b2cac",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "VALUE",
+    0.352525
+   ],
+   "before": [
+    "VALUE",
+    0.352525
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-10dd62f66ad05488e63b",
+   "host_net_m2": 23.9,
+   "lintels": [],
+   "material_base_m2": 23.9,
+   "material_base_range_m2": null,
+   "material_line_id": "L-e74c15038f1e32dbefe0",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "VALUE",
+    298.75
+   ],
+   "before": [
+    "VALUE",
+    298.75
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-10dd62f66ad05488e63b",
+   "host_net_m2": 23.9,
+   "lintels": [],
+   "material_base_m2": 23.9,
+   "material_base_range_m2": null,
+   "material_line_id": "L-5a1884e686d7e019f8f4",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "RANGE",
+    [
+     444.4695,
+     451.2195
+    ]
+   ],
+   "before": [
+    "RANGE",
+    [
+     444.4695,
+     451.2195
+    ]
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "host_class": "RELEASED",
+   "host_line_id": "L-2fdc0f971a94348ec855",
+   "host_net_m2": 101.976,
+   "lintels": [
+    {
+     "face_m2": 0.975,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-fd9eabe1828ed735c43d",
+     "opening_id": "W14"
+    },
+    {
+     "face_m2": 0.47,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-55cfc2395aca2e0c69e3",
+     "opening_id": "W15"
+    },
+    {
+     "face_m2": 0.26,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-f8736409a6afa1424ea9",
+     "opening_id": "W18"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.47,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-53ef44d8c490d1341b93",
+     "opening_id": "W16"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-6057028f3f666538a007",
+     "opening_id": "W19"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-6692d02cd6cd25120300",
+     "opening_id": "W20"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.47,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-40e8c2597de12644e8e2",
+     "opening_id": "W24"
+    }
+   ],
+   "material_base_m2": 100.271,
+   "material_base_range_m2": [
+    98.771,
+    100.271
+   ],
+   "material_line_id": "L-4b9a29d424ea40e0af8a",
+   "sensitivity_F_T498_4": {
+    "if_no_lintel_released": [
+     444.4695,
+     458.892
+    ],
+    "required_faces_m2": 1.705
+   },
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": {
+    "60x20": [
+     823.0916,
+     835.5916
+    ],
+    "62.5x25": [
+     632.1344,
+     641.7344
+    ]
+   },
+   "cause": "AAC face not selected by the project; no company AAC count rule",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "host_class": "RELEASED",
+   "host_line_id": "L-2fdc0f971a94348ec855",
+   "host_net_m2": 101.976,
+   "lintels": [
+    {
+     "face_m2": 0.975,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-fd9eabe1828ed735c43d",
+     "opening_id": "W14"
+    },
+    {
+     "face_m2": 0.47,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-55cfc2395aca2e0c69e3",
+     "opening_id": "W15"
+    },
+    {
+     "face_m2": 0.26,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-f8736409a6afa1424ea9",
+     "opening_id": "W18"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.47,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-53ef44d8c490d1341b93",
+     "opening_id": "W16"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-6057028f3f666538a007",
+     "opening_id": "W19"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-6692d02cd6cd25120300",
+     "opening_id": "W20"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.47,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-40e8c2597de12644e8e2",
+     "opening_id": "W24"
+    }
+   ],
+   "material_base_m2": 100.271,
+   "material_base_range_m2": [
+    98.771,
+    100.271
+   ],
+   "material_line_id": "L-54ba4f569a7c37de7c4c",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "2F-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-246f3c09de4c6b90efe5",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-d6373b9f427e4b599a5d",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "2F-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-246f3c09de4c6b90efe5",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-cdb8d54311c5c841528f",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "2F-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-246f3c09de4c6b90efe5",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-318e6311ab5e01c0fa3e",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "2F-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-246f3c09de4c6b90efe5",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-6d9df440e35bc7c5551c",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "host_class": "HELD",
+   "host_line_id": "L-e1e06ec149b44d4f6f8a",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-b765c24ac4b275c661bc",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "host_class": "HELD",
+   "host_line_id": "L-e1e06ec149b44d4f6f8a",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-c76dd0d11a5776939008",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "host_class": "HELD",
+   "host_line_id": "L-9056ebed77701b50abfc",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-bd48d897f8f11b6377ef",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "host_class": "HELD",
+   "host_line_id": "L-9056ebed77701b50abfc",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-25ee426cc7cc99a0fdff",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "2F-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-afe984a62285e133ec2f",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-1023c410bd8c6ab7fade",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "2F-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-afe984a62285e133ec2f",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-4631ba5deb8ca9a53491",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "2F-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-afe984a62285e133ec2f",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-c7e5807d75a4b93bf229",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "2F-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-afe984a62285e133ec2f",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-5245ce2427156823ff3b",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "host_class": "HELD",
+   "host_line_id": "L-a6eedf5e4adec6d07618",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-3cdc29f2fadd13ef35d4",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "host_class": "HELD",
+   "host_line_id": "L-a6eedf5e4adec6d07618",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-a9876502e10fb732bc6c",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "host_class": "HELD",
+   "host_line_id": "L-bbb82de298fecbafa11d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-4ccc5dc26bd2472b03ad",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "host_class": "HELD",
+   "host_line_id": "L-bbb82de298fecbafa11d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-45b7623964da3bbafd91",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.20#BLOCKWORK:VERIFIED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "HELD",
+   "host_line_id": "L-76a4d8e50423fb02b914",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-539af3a600dcf190cd01",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.20#BLOCKWORK:VERIFIED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "HELD",
+   "host_line_id": "L-76a4d8e50423fb02b914",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-8075d1bd45ac1b2c5e77",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.20#BLOCKWORK:VERIFIED_WHITE): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "host_class": "HELD",
+   "host_line_id": "L-e90c9dd5ca08ffb64728",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-320814d3876198a0e9a1",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "2F block walls (t=0.20#BLOCKWORK:VERIFIED_WHITE): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r m2 on the valued set, not adopted",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "host_class": "HELD",
+   "host_line_id": "L-e90c9dd5ca08ffb64728",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-128f47fcdb032a1f2ddb",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "GF-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-0d9b9e89bb6455da475d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-3594af8e0405355d51c4",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "GF-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-0d9b9e89bb6455da475d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-39a62186ff15c48d51d5",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "GF-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-0d9b9e89bb6455da475d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-dc7b4e20a2f54668b179",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "GF-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-0d9b9e89bb6455da475d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-c9b56cb8453e5f67a334",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "VALUE",
+    0.260604
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-abf15bdf70ccf1e7b474",
+   "host_net_m2": 24.2374,
+   "lintels": [
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-7149ea268473ea337cd2",
+     "opening_id": "D-GF-10"
+    },
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-31232f81202941d104c6",
+     "opening_id": "D-GF-13"
+    }
+   ],
+   "material_base_m2": 23.5574,
+   "material_base_range_m2": null,
+   "material_line_id": "L-8f163174139bcf80c7c7",
+   "sensitivity_F_T498_4": {
+    "if_no_lintel_released": [
+     0.260604,
+     0.268127
+    ],
+    "required_faces_m2": 0.68
+   },
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "VALUE",
+    294.4675
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.UNITS.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-abf15bdf70ccf1e7b474",
+   "host_net_m2": 24.2374,
+   "lintels": [
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-7149ea268473ea337cd2",
+     "opening_id": "D-GF-10"
+    },
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-31232f81202941d104c6",
+     "opening_id": "D-GF-13"
+    }
+   ],
+   "material_base_m2": 23.5574,
+   "material_base_range_m2": null,
+   "material_line_id": "L-1aa13ac06ca32ae43f02",
+   "sensitivity_F_T498_4": {
+    "if_no_lintel_released": [
+     294.4675,
+     302.9675
+    ],
+    "required_faces_m2": 0.68
+   },
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "VALUE",
+    0.095082
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-adb393d6db51056d343b",
+   "host_net_m2": 8.595,
+   "lintels": [],
+   "material_base_m2": 8.595,
+   "material_base_range_m2": null,
+   "material_line_id": "L-33fcd56ef1548206bb1c",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "VALUE",
+    107.4375
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.UNITS.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-adb393d6db51056d343b",
+   "host_net_m2": 8.595,
+   "lintels": [],
+   "material_base_m2": 8.595,
+   "material_base_range_m2": null,
+   "material_line_id": "L-fa0fae2380878a4f8428",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "VALUE",
+    0.109463
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-87e0023741a8e2d98b21",
+   "host_net_m2": 9.895,
+   "lintels": [],
+   "material_base_m2": 9.895,
+   "material_base_range_m2": null,
+   "material_line_id": "L-794c7232f398260c7afb",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "VALUE",
+    123.6875
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": true,
+   "code": "MAS.UNITS.BLACK",
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-87e0023741a8e2d98b21",
+   "host_net_m2": 9.895,
+   "lintels": [],
+   "material_base_m2": 9.895,
+   "material_base_range_m2": null,
+   "material_line_id": "L-26c299b8e120e2ce6768",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "GF-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-4165954ce4871eda30cc",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-0e1c62793fcfd587bd78",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "GF-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-4165954ce4871eda30cc",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-a6e9b9d47f2b81204b1e",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "GF-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-4165954ce4871eda30cc",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-e812502cb3615c2b9a56",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "GF-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-4165954ce4871eda30cc",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-1a2a8192895b1cb3a201",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "VALUE",
+    23.535
+   ],
+   "before": [
+    "VALUE",
+    23.535
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "GF-WALLS:walls t=0.20#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "host_class": "RELEASED",
+   "host_line_id": "L-a3f88ecda2402f67c500",
+   "host_net_m2": 5.59,
+   "lintels": [
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-7a73a338210ee7268b65",
+     "opening_id": "D-GF-06"
+    }
+   ],
+   "material_base_m2": 5.23,
+   "material_base_range_m2": null,
+   "material_line_id": "L-d14c6c9b738045c797ec",
+   "sensitivity_F_T498_4": {
+    "if_no_lintel_released": [
+     23.535,
+     25.155
+    ],
+    "required_faces_m2": 0.36
+   },
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": {
+    "60x20": [
+     43.5833,
+     43.5833
+    ],
+    "62.5x25": [
+     33.472,
+     33.472
+    ]
+   },
+   "cause": "AAC face not selected by the project; no company AAC count rule",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "GF-WALLS:walls t=0.20#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "host_class": "RELEASED",
+   "host_line_id": "L-a3f88ecda2402f67c500",
+   "host_net_m2": 5.59,
+   "lintels": [
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-7a73a338210ee7268b65",
+     "opening_id": "D-GF-06"
+    }
+   ],
+   "material_base_m2": 5.23,
+   "material_base_range_m2": null,
+   "material_line_id": "L-859f0937ec4a656a21f7",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "RANGE",
+    [
+     194.02875,
+     199.33875
+    ]
+   ],
+   "before": [
+    "RANGE",
+    [
+     194.02875,
+     199.33875
+    ]
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "host_class": "RELEASED",
+   "host_line_id": "L-541cf7210e52db0498bb",
+   "host_net_m2": 44.2975,
+   "lintels": [
+    {
+     "face_m2": null,
+     "face_max_m2": 0.34,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-072bc37c5486905a9d21",
+     "opening_id": "D-GF-09"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-441ae5fe85351347aff0",
+     "opening_id": "W05"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-f269fabb74f505755492",
+     "opening_id": "W06"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-ed7aadd01d9daa9559a9",
+     "opening_id": "W07"
+    }
+   ],
+   "material_base_m2": 44.2975,
+   "material_base_range_m2": [
+    43.1175,
+    44.2975
+   ],
+   "material_line_id": "L-6989349aef1cd4fa0940",
+   "sensitivity_F_T498_4": {
+    "if_no_lintel_released": [
+     194.02875,
+     199.33875
+    ],
+    "required_faces_m2": 0.0
+   },
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": {
+    "60x20": [
+     359.3125,
+     369.1458
+    ],
+    "62.5x25": [
+     275.952,
+     283.504
+    ]
+   },
+   "cause": "AAC face not selected by the project; no company AAC count rule",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "host_class": "RELEASED",
+   "host_line_id": "L-541cf7210e52db0498bb",
+   "host_net_m2": 44.2975,
+   "lintels": [
+    {
+     "face_m2": null,
+     "face_max_m2": 0.34,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-072bc37c5486905a9d21",
+     "opening_id": "D-GF-09"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-441ae5fe85351347aff0",
+     "opening_id": "W05"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-f269fabb74f505755492",
+     "opening_id": "W06"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-ed7aadd01d9daa9559a9",
+     "opening_id": "W07"
+    }
+   ],
+   "material_base_m2": 44.2975,
+   "material_base_range_m2": [
+    43.1175,
+    44.2975
+   ],
+   "material_line_id": "L-356dacfc4b7952007c7d",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "VALUE",
+    0.916919
+   ],
+   "before": [
+    "VALUE",
+    0.916919
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-1c53fadb2f92d1f36d4e",
+   "host_net_m2": 62.164,
+   "lintels": [],
+   "material_base_m2": 62.164,
+   "material_base_range_m2": null,
+   "material_line_id": "L-1bacf0e3cec97219a455",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "VALUE",
+    777.05
+   ],
+   "before": [
+    "VALUE",
+    777.05
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-1c53fadb2f92d1f36d4e",
+   "host_net_m2": 62.164,
+   "lintels": [],
+   "material_base_m2": 62.164,
+   "material_base_range_m2": null,
+   "material_line_id": "L-3cc4faec43ebf6301425",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "VALUE",
+    20.061
+   ],
+   "before": [
+    "VALUE",
+    20.061
+   ],
+   "beside_aac_units": null,
+   "cause": null,
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "host_class": "RELEASED",
+   "host_line_id": "L-4e304f59db838d5fc7ec",
+   "host_net_m2": 4.458,
+   "lintels": [],
+   "material_base_m2": 4.458,
+   "material_base_range_m2": null,
+   "material_line_id": "L-09e6af683b908bbd24dd",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": {
+    "60x20": [
+     37.15,
+     37.15
+    ],
+    "62.5x25": [
+     28.5312,
+     28.5312
+    ]
+   },
+   "cause": "AAC face not selected by the project; no company AAC count rule",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "host_class": "RELEASED",
+   "host_line_id": "L-4e304f59db838d5fc7ec",
+   "host_net_m2": 4.458,
+   "lintels": [],
+   "material_base_m2": 4.458,
+   "material_base_range_m2": null,
+   "material_line_id": "L-6444a86319689e07512c",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.40 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "GF-WALLS:walls t=0.40",
+   "host_class": "HELD",
+   "host_line_id": "L-ff06449b7f61f19c418d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-24d4696063cef72b0ddb",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.40 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "GF-WALLS:walls t=0.40",
+   "host_class": "HELD",
+   "host_line_id": "L-ff06449b7f61f19c418d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-07e80def32e147b160ac",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.40 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "GF-WALLS:walls t=0.40",
+   "host_class": "HELD",
+   "host_line_id": "L-ff06449b7f61f19c418d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-43f32c104c36f9bd85be",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.40 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "GF-WALLS:walls t=0.40",
+   "host_class": "HELD",
+   "host_line_id": "L-ff06449b7f61f19c418d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-ee1c4e34adec6ee5813d",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "black block below the annex neighbour-side ground beams (ANNEX_S, 10.000 m net axis): the annex exterior ground-beam soffit is a CONFLICT (levels reading L vs the printed section), so the masonry height has no bound",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "HOUSE_BELOW_NG:ANNEX_S",
+   "host_class": "HELD",
+   "host_line_id": "L-ee857398614d817e6917",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-6b0bb35ba62fe484aa7e",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "black block below the annex neighbour-side ground beams (ANNEX_S, 10.000 m net axis): the annex exterior ground-beam soffit is a CONFLICT (levels reading L vs the printed section), so the masonry height has no bound",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "HOUSE_BELOW_NG:ANNEX_S",
+   "host_class": "HELD",
+   "host_line_id": "L-ee857398614d817e6917",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-17cea41ab1b8f2bdb19e",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "black block below the annex neighbour-side ground beams (ANNEX_S, 10.000 m net axis): the annex exterior ground-beam soffit is a CONFLICT (levels reading L vs the printed section), so the masonry height has no bound",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "HOUSE_BELOW_NG:ANNEX_S",
+   "host_class": "HELD",
+   "host_line_id": "L-ee857398614d817e6917",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-8971f07e8552cf3831c0",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "black block below the annex neighbour-side ground beams (ANNEX_S, 10.000 m net axis): the annex exterior ground-beam soffit is a CONFLICT (levels reading L vs the printed section), so the masonry height has no bound",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "HOUSE_BELOW_NG:ANNEX_S",
+   "host_class": "HELD",
+   "host_line_id": "L-ee857398614d817e6917",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-2ae0aac40cd54e372c68",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "black block below the main-house neighbour-side ground beams (MAIN_S, 16.270 m net axis): printed by ST p.1 note 2, but no section prints its thickness or bottom level: height only h >= 0.70 m (gross AT_LEAST 13.4897, net AT_LEAST 11.389 m2), no upper bound: HELD",
+   "changed": false,
+   "code": "MAS.GLUE.AAC",
+   "host": "HOUSE_BELOW_NG:MAIN_S",
+   "host_class": "HELD",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-a951fbf0e4fdacf3308d",
+   "sensitivity_F_T498_4": null,
+   "unit": "kg"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "black block below the main-house neighbour-side ground beams (MAIN_S, 16.270 m net axis): printed by ST p.1 note 2, but no section prints its thickness or bottom level: height only h >= 0.70 m (gross AT_LEAST 13.4897, net AT_LEAST 11.389 m2), no upper bound: HELD",
+   "changed": false,
+   "code": "MAS.MORTAR.BLACK",
+   "host": "HOUSE_BELOW_NG:MAIN_S",
+   "host_class": "HELD",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-cf220ce7edefedd935b4",
+   "sensitivity_F_T498_4": null,
+   "unit": "m3"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "black block below the main-house neighbour-side ground beams (MAIN_S, 16.270 m net axis): printed by ST p.1 note 2, but no section prints its thickness or bottom level: height only h >= 0.70 m (gross AT_LEAST 13.4897, net AT_LEAST 11.389 m2), no upper bound: HELD",
+   "changed": false,
+   "code": "MAS.UNITS.BLACK",
+   "host": "HOUSE_BELOW_NG:MAIN_S",
+   "host_class": "HELD",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-bd21b0ea1ce4e1c8dabd",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  },
+  {
+   "after": [
+    "HELD",
+    null
+   ],
+   "before": [
+    "HELD",
+    null
+   ],
+   "beside_aac_units": null,
+   "cause": "black block below the main-house neighbour-side ground beams (MAIN_S, 16.270 m net axis): printed by ST p.1 note 2, but no section prints its thickness or bottom level: height only h >= 0.70 m (gross AT_LEAST 13.4897, net AT_LEAST 11.389 m2), no upper bound: HELD",
+   "changed": false,
+   "code": "MAS.UNITS.WHITE",
+   "host": "HOUSE_BELOW_NG:MAIN_S",
+   "host_class": "HELD",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "host_net_m2": null,
+   "lintels": null,
+   "material_base_m2": null,
+   "material_base_range_m2": null,
+   "material_line_id": "L-09c52c7b398d3218cc0e",
+   "sensitivity_F_T498_4": null,
+   "unit": "pcs"
+  }
+ ],
+ "rule": "R-T670-1 (PROPOSED)",
+ "rulebook_after": "1.1.0",
+ "rulebook_before": "1.0.0",
+ "task": "T-670",
+ "totals_after": {
+  "MAS.GLUE.AAC": {
+   "blank_n": 12,
+   "lines": 17,
+   "range": [
+    842.06025,
+    861.32025
+   ],
+   "range_n": 3,
+   "unit": "kg",
+   "valued": 43.596,
+   "valued_n": 2
+  },
+  "MAS.MORTAR.BLACK": {
+   "blank_n": 12,
+   "lines": 20,
+   "range": [
+    0.618315,
+    0.622076
+   ],
+   "range_n": 1,
+   "unit": "m3",
+   "valued": 2.59294,
+   "valued_n": 7
+  },
+  "MAS.UNITS.BLACK": {
+   "blank_n": 12,
+   "lines": 20,
+   "range": [
+    698.66125,
+    702.91125
+   ],
+   "range_n": 1,
+   "unit": "pcs",
+   "valued": 2571.27625,
+   "valued_n": 7
+  },
+  "MAS.UNITS.WHITE": {
+   "blank_n": 17,
+   "lines": 17,
+   "range": [
+    0.0,
+    0.0
+   ],
+   "range_n": 0,
+   "unit": "pcs",
+   "valued": 0.0,
+   "valued_n": 0
+  }
+ },
+ "totals_before": {
+  "MAS.GLUE.AAC": {
+   "blank_n": 12,
+   "lines": 17,
+   "range": [
+    842.06025,
+    861.32025
+   ],
+   "range_n": 3,
+   "unit": "kg",
+   "valued": 43.596,
+   "valued_n": 2
+  },
+  "MAS.MORTAR.BLACK": {
+   "blank_n": 18,
+   "lines": 20,
+   "range": [
+    0.0,
+    0.0
+   ],
+   "range_n": 0,
+   "unit": "m3",
+   "valued": 1.269444,
+   "valued_n": 2
+  },
+  "MAS.UNITS.BLACK": {
+   "blank_n": 18,
+   "lines": 20,
+   "range": [
+    0.0,
+    0.0
+   ],
+   "range_n": 0,
+   "unit": "pcs",
+   "valued": 1075.8,
+   "valued_n": 2
+  },
+  "MAS.UNITS.WHITE": {
+   "blank_n": 17,
+   "lines": 17,
+   "range": [
+    0.0,
+    0.0
+   ],
+   "range_n": 0,
+   "unit": "pcs",
+   "valued": 0.0,
+   "valued_n": 0
+  }
+ }
+}
