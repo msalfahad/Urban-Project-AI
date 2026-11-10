@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10T22:50Z | Verifier | STARTED | run session_01E6cPneArwhotBugg69oeFL | repo-attached routine | task state: none READY (T-682 CLAIMED W3, T-686 CLAIMED W2) | self-check pending
 - 2026-11-10T22:41Z | Worker 2 | STARTED | run session_01E6cPndxTa47FQ4jrY9gxi2 | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10T21:58Z | Verifier | SUCCESS | T-683 GATE A PASS MERGED 85c1d7aa; T-685 GATE A PASS MERGED 904cdff0 (CODEMAP-only conflict, maps rebuilt; engine push + ls-remote 904cdff0) | T-683 own: STR.CONC 597 = rel 317 291.476251 m3 / bounded 101 42.014281..66.193191 / blank 89 / excl 90 AGREE; own workbook read: beam cover SUM(I60:I78) skips the 0.128 m3 row I59 (freelancer arithmetic), slab ref-engine GF +0.050478 / 1F -0.556333 / 2F +0.0431 AGREE (UNRESOLVED). T-685 own: WP 160 = 102/53/5 AGREE; pantry DXF upturn 1.40..1.90 m2, edge 4.500 lm, threshold 0.200 m2 + 1 AGREE; main roof hatch 2F21 union 114.989708 m2 vs T-321 114.985 AGREE, F-V685-1 released 115.832 vs band 115.656..115.814 (<1 %). Research only: no quantity change; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-10T21:50Z | Verifier | STARTED | run session_01E6cPncWrAamdaSg4vMbadj | repo-attached routine | task state: READY T-683 (W1 concrete statement r2), T-685 (W2 waterproofing census) | self-check pending
