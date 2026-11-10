@@ -1,0 +1,4187 @@
+{
+ "schema": "URBAN_T663_RATIO_WIRING_V1",
+ "rules": [
+  "R-T663-1",
+  "R-T663-2",
+  "R-T663-3",
+  "R-T663-4"
+ ],
+ "task": "T-663",
+ "candidate": "ARCH_TAKEOFF_V3.0.61 + WIRING MANIFEST V20 (trial BOQ r4, T-654)",
+ "released": "NOTHING RELEASED; research, unwired; no candidate / engine / rule-version / knowledge / registry file changed; R-T662-1 used as it is",
+ "pins": {
+  "research/agents_t366/ALSENAN_LAP_AUTHORITY_INPUT.json": "5231307b3a9f611e",
+  "research/agents_t149/T149_BEAMS.csv": "31740b20a42813fc",
+  "research/urban_engine_m2_generalization/05_REINFORCEMENT_COMPLETENESS_89.csv": "7889dd08a8016b10",
+  "research/agents_t662/out/T662_REBAR_RATIO.json": "ac44f8a568887b85"
+ },
+ "condition_1_range_check": {
+  "by_type": {
+   "FOOTING": {
+    "status": "NOT_CHECKED_NO_CITED_SOURCE",
+    "ratio": [
+     "68.680658",
+     "71.140741"
+    ],
+    "sources_searched": [
+     "Kuwait Society of Engineers home-building guide 2023 (Arabic, 2.6 MB)",
+     "reinforced-concrete design summary to the 2020 code (Arabic, 5.2 MB)",
+     "code summary, site-supervision, finishes, construction-mistakes and project-management books",
+     "ACI 318-2025, ACI 318-2014 Arabic, IBC 2009 / 2018 / 2021, IPC 2006",
+     "QCS 2014, Dubai Building Code, Saudi codes, Egyptian code update",
+     "folder listing",
+     "'kg/m3' + 'reinforcement'; 'كجم/م3'; 'steel per cubic meter'"
+    ]
+   },
+   "BEAM": {
+    "status": "NOT_CHECKED_NO_CITED_SOURCE",
+    "ratio": [
+     "147.788330",
+     "175.869052"
+    ],
+    "sources_searched": [
+     "Kuwait Society of Engineers home-building guide 2023 (Arabic, 2.6 MB)",
+     "reinforced-concrete design summary to the 2020 code (Arabic, 5.2 MB)",
+     "code summary, site-supervision, finishes, construction-mistakes and project-management books",
+     "ACI 318-2025, ACI 318-2014 Arabic, IBC 2009 / 2018 / 2021, IPC 2006",
+     "QCS 2014, Dubai Building Code, Saudi codes, Egyptian code update",
+     "folder listing",
+     "'kg/m3' + 'reinforcement'; 'كجم/م3'; 'steel per cubic meter'"
+    ]
+   },
+   "GROUND_SLAB": {
+    "status": "NOT_CHECKED_NO_CITED_SOURCE",
+    "ratio": [
+     "61.728392",
+     "61.728392"
+    ],
+    "sources_searched": [
+     "Kuwait Society of Engineers home-building guide 2023 (Arabic, 2.6 MB)",
+     "reinforced-concrete design summary to the 2020 code (Arabic, 5.2 MB)",
+     "code summary, site-supervision, finishes, construction-mistakes and project-management books",
+     "ACI 318-2025, ACI 318-2014 Arabic, IBC 2009 / 2018 / 2021, IPC 2006",
+     "QCS 2014, Dubai Building Code, Saudi codes, Egyptian code update",
+     "folder listing",
+     "'kg/m3' + 'reinforcement'; 'كجم/م3'; 'steel per cubic meter'"
+    ]
+   }
+  },
+  "sources_searched": [
+   {
+    "folder": "Engineering Sources - Urban Projects / 01 Kuwait References",
+    "title": "Kuwait Society of Engineers home-building guide 2023 (Arabic, 2.6 MB)",
+    "result": "read in full through the connector: contract templates and MEP clauses; no reinforcement kg/m3 table"
+   },
+   {
+    "folder": "Engineering Sources - Urban Projects / 02 Construction Books",
+    "title": "reinforced-concrete design summary to the 2020 code (Arabic, 5.2 MB)",
+    "result": "connector text is glyph-encoded (unreadable): SOURCE NOT READ"
+   },
+   {
+    "folder": "Engineering Sources - Urban Projects / 02 Construction Books",
+    "title": "code summary, site-supervision, finishes, construction-mistakes and project-management books",
+    "result": "over the connector size limit (7.6 .. 82 MB): SOURCE NOT READ"
+   },
+   {
+    "folder": "Engineering Sources - Urban Projects / 03 International Codes",
+    "title": "ACI 318-2025, ACI 318-2014 Arabic, IBC 2009 / 2018 / 2021, IPC 2006",
+    "result": "over the connector size limit (9.7 .. 45 MB): SOURCE NOT READ; design codes print minimum / maximum reinforcement percentages, not estimating kg/m3 per element type"
+   },
+   {
+    "folder": "Engineering Sources - Urban Projects / 04 Regional Codes",
+    "title": "QCS 2014, Dubai Building Code, Saudi codes, Egyptian code update",
+    "result": "over the connector size limit or not a quantity reference: SOURCE NOT READ"
+   },
+   {
+    "folder": "Urban Projects - Kuwait Engineering References (1rr88a1t...)",
+    "title": "folder listing",
+    "result": "no file listed under this folder id by the connector"
+   },
+   {
+    "folder": "Drive full-text search",
+    "title": "'kg/m3' + 'reinforcement'; 'كجم/م3'; 'steel per cubic meter'",
+    "result": "hits only in code books (units of other quantities) and project notes; no estimating ratio table"
+   }
+  ],
+  "finding": "no Drive engineering book that the connector can read prints a kg/m3 range per element type; owner question Q-81 alternative B (cited book ranges) has no source today"
+ },
+ "condition_2_footing_partial": {
+  "reading": {
+   "printed": {},
+   "evidence": [
+    "ST p.9 footing schedule: F12, F13, F14 and FF carry a closed cage symbol in REMARKS and TOP / BOT rows (n ø14/m TOP, n ø14 or ø16/m BOT); no leg length, no bar-shape code",
+    "ST p.13 typical isolated footing (both variants): 'Boxed bars' drawn as an inverted U whose legs run down to the bottom mesh; no leg dimension",
+    "ST p.14 lift footing (FF): closed cage, depth 'AS PER SCHEDULE' (H 55 cm on p.9); no leg dimension, no cover",
+    "ST p.8 note 22: cover NOT LESS THAN 7 cm against soil (a minimum: a leg <= H - 2 x 7 cm is an upper bound only; no lower bound is printed)"
+   ],
+   "decision": "R-T663-3: TOP_END_LEGS stay HELD blank by name; the four footings stay PARTIAL (no ratio, no calibration); FOOTING calibration stays n = 1 (F8, WEAK)"
+  },
+  "members": [
+   {
+    "member": "FOOTING:SH10:F12:67454a",
+    "mark": "F12",
+    "blank_groups": [
+     "TOP_END_LEGS"
+    ],
+    "state_after": "PARTIAL",
+    "held_by_name": [
+     "TOP_END_LEGS"
+    ],
+    "m3": "9.856000",
+    "whole_member_ratio_NOT_APPLIED": [
+     "697.224062",
+     "736.221300"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F13:6b1a4d",
+    "mark": "F13",
+    "blank_groups": [
+     "TOP_END_LEGS"
+    ],
+    "state_after": "PARTIAL",
+    "held_by_name": [
+     "TOP_END_LEGS"
+    ],
+    "m3": "5.160000",
+    "whole_member_ratio_NOT_APPLIED": [
+     "365.023961",
+     "385.440535"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:FF:8e679c",
+    "mark": "FF",
+    "blank_groups": [
+     "TOP_END_LEGS"
+    ],
+    "state_after": "PARTIAL",
+    "held_by_name": [
+     "TOP_END_LEGS"
+    ],
+    "m3": "11.385000",
+    "whole_member_ratio_NOT_APPLIED": [
+     "805.387170",
+     "850.434203"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F14:73a8e9",
+    "mark": "F14",
+    "blank_groups": [
+     "TOP_END_LEGS"
+    ],
+    "state_after": "PARTIAL",
+    "held_by_name": [
+     "TOP_END_LEGS"
+    ],
+    "m3": "6.270000",
+    "whole_member_ratio_NOT_APPLIED": [
+     "443.546557",
+     "468.355068"
+    ]
+   }
+  ],
+  "footing_calibration_n": 1
+ },
+ "condition_3_laps": {
+  "by_type": {
+   "BEAM": {
+    "members": 44,
+    "passing": 44,
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg_kept": [
+     "381.928000",
+     "668.367000"
+    ],
+    "laps_ok": true
+   },
+   "FOOTING": {
+    "members": 1,
+    "passing": 1,
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg_kept": [
+     "0.000000",
+     "0.000000"
+    ],
+    "laps_ok": true
+   },
+   "GROUND_SLAB": {
+    "members": 24,
+    "passing": 24,
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg_kept": [
+     "0.000000",
+     "0.000000"
+    ],
+    "laps_ok": true
+   }
+  },
+  "members": [
+   {
+    "member": "BEAM:BM-GF-025",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "7.775000",
+     "13.606000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "24.000000",
+     "24.711000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-2F-001",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "26.172000",
+     "26.567000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-c1b4b440fb6ecf4c",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "13.856148",
+     "13.856148"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-010",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "10.558000",
+     "11.094000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-2F-013",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "7.881000",
+     "8.593000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-033",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "6.240000",
+     "6.753000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-021",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "16.107000",
+     "28.187000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "60.923000",
+     "61.642000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-2F-008",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "15.550000",
+     "27.212000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "42.666000",
+     "43.535000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-012",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "7.881000",
+     "8.593000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-004",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "41.038000",
+     "41.749000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-014",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "44.867000",
+     "45.531000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-2F-010",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "31.407000",
+     "31.802000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-034",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "8.538000",
+     "9.013000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-009",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "37.381000",
+     "38.095000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-031",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "8.834000",
+     "15.460000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "20.361000",
+     "21.705000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-01e75a66f002baa9",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "37.037262",
+     "37.037262"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-005",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "11.494000",
+     "12.087000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-008",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "4.597000",
+     "5.308000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-2F-012",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "28.267000",
+     "28.978000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-020",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "16.107000",
+     "28.187000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "64.968000",
+     "65.875000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-018",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "16.107000",
+     "28.187000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "60.923000",
+     "61.642000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-2F-005",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "11.823000",
+     "12.297000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-017",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "31.633000",
+     "32.418000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-015",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "13.227000",
+     "23.147000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "43.862000",
+     "44.408000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-014",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "7.519000",
+     "7.965000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-008",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "16.737000",
+     "17.412000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-f22fd4467ee5a144",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "19.243827",
+     "19.243827"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-2F-009",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "6.568000",
+     "6.963000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-024",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "30.884000",
+     "31.397000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-4bb22fd85925adb0",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "12.731481",
+     "12.731481"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-032",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "48.697000",
+     "49.313000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-011",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "49.244000",
+     "49.718000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-016",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "13.227000",
+     "23.147000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "61.218000",
+     "62.118000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-020",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "7.775000",
+     "13.606000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "24.000000",
+     "24.711000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-2F-004",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "7.775000",
+     "13.606000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "22.222000",
+     "22.617000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-0caa2bd2c0478041",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "12.655566",
+     "12.655566"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-016",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "13.227000",
+     "23.147000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "44.723000",
+     "45.549000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-7fae2795d77272cb",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "8.888889",
+     "8.888889"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-003",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "41.712000",
+     "42.248000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-002",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "9.654000",
+     "10.121000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-cd1f57cc06b2f5af",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "151.265432",
+     "151.265432"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-019",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "5.254000",
+     "5.728000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-011",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "7.775000",
+     "13.606000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "24.000000",
+     "24.711000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-dddf2004a2525169",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "20.092593",
+     "20.092593"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-659735106ca717bc",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "42.469136",
+     "42.469136"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-010",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "21.667000",
+     "22.198000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "FOOTING:SH10:F8:624706",
+    "type": "FOOTING",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "494.500741",
+     "512.213333"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-019",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "16.107000",
+     "28.187000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "65.711000",
+     "66.464000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-006",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "7.775000",
+     "13.606000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "24.000000",
+     "24.711000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-77b8830f567fb93d",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "91.932870",
+     "91.932870"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-2F-006",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "7.775000",
+     "13.606000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "26.666000",
+     "27.061000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-b1e0844b87508d13",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "10.518711",
+     "10.518711"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-d74f3fe29b88467a",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "67.315135",
+     "67.315135"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-e4c2bd9d98ce6a72",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "141.761717",
+     "141.761717"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-009",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "7.775000",
+     "13.606000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "26.666000",
+     "27.061000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-720fbae909da79f9",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "42.345679",
+     "42.345679"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-007",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "34.548000",
+     "35.022000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-67b20a045d91a15c",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "25.802469",
+     "25.802469"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-1F-004",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "9.798000",
+     "17.146000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "47.055000",
+     "47.624000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-b8f67954c29b4613",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "91.932870",
+     "91.932870"
+    ],
+    "passes": true
+   },
+   {
+    "member": "BEAM:BM-GF-023",
+    "type": "BEAM",
+    "splice_need": "NOT_REQUIRED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "4.417000",
+     "7.730000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "4.597000",
+     "5.308000"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-5922f7d38ef95d0f",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "16.558642",
+     "16.558642"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-3f7728a83b30ec14",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "16.145509",
+     "16.145509"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-2870ca7b6a82bfa0",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "7.037037",
+     "7.037037"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-49a7dae5c139aebb",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "22.207919",
+     "22.207919"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-997c65af642cbd7e",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "0.960634",
+     "0.960634"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-c26e93b649f5066b",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "50.148148",
+     "50.148148"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-f98829c44e7af78b",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "71.666667",
+     "71.666667"
+    ],
+    "passes": true
+   },
+   {
+    "member": "GROUND_SLAB:SITE-2d53359453ef2573",
+    "type": "GROUND_SLAB",
+    "splice_need": "NOT_ESTABLISHED",
+    "lap_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "anchorage_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "end_unresolved_kg": [
+     "0.000000",
+     "0.000000"
+    ],
+    "bar_kg": [
+     "89.665419",
+     "89.665419"
+    ],
+    "passes": true
+   }
+  ],
+  "beam_sensitivity_not_applied": {
+   "what": "BEAM ratio if the end-anchorage groups were left out (NOT applied: anchorage of a simple-beam bar is installed bar inside the support, not a lap)",
+   "ratio": [
+    "113.636461",
+    "116.103907"
+   ]
+  },
+  "ground_slab_proof": {
+   "ratio_low": "61.728392",
+   "bare_mesh_kg_per_m3_at_0_10_m": "61.728395",
+   "note": "ratio = 2 x 5 bars/m x 0.617284 kg/m (d10) / 0.10 m slab: the bare mesh, no lap kg inside"
+  },
+  "populations": {
+   "BEAM-SIMPLE-MAIN": "NOT_REQUIRED",
+   "CB-BOTTOM": "DRAWN_OVERLAP",
+   "FTG-BOTTOM": "NOT_REQUIRED",
+   "FTG-TOP": "NOT_REQUIRED",
+   "GROUND-SLAB-MESH": "NOT_ESTABLISHED"
+  }
+ },
+ "condition_4_binding": {
+  "summary": {
+   "BEAM|NOT_BOUND": 15,
+   "GROUND_BEAM|BOUND": 8,
+   "GROUND_BEAM|NOT_BOUND": 63,
+   "OTHER|NOT_BOUND": 8,
+   "POOL_TANK_WALL|NOT_BOUND": 2,
+   "SLAB|NOT_BOUND": 65,
+   "STAIR|BOUND": 2,
+   "STAIR|NOT_BOUND": 12
+  },
+  "members": [
+   {
+    "member": "BEAM:BM-GF-039",
+    "type": "BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7D0-FC-4",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "STAIR:ST-01:GF-STRIP",
+    "type": "STAIR",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part ST-01:GF-STRIP (composite or absent concrete part)"
+   },
+   {
+    "member": "SLAB:2F-011",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-169",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-184-7CF-3",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0010.1",
+    "reason": "(c) GROUND_BEAMS:GROUND:BAND0010.1 is also named by ['GROUND_SYSTEM:GSO-184-7CF-1']: shared band, never split by guess"
+   },
+   {
+    "member": "BEAM:BM-GF-027",
+    "type": "BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "BEAM:BM-1F-007",
+    "type": "BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "SLAB:1F-088",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-139",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-126",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-098",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-142-7D8-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-141-7DA-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "STAIR:ST-01:MS2-U",
+    "type": "STAIR",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": true,
+    "concrete_id": "HL:STAIR_CONCRETE:ST-01:MS2_U",
+    "line_id": "L-bb0e57b1948175a3d5b8",
+    "grade": "ID_ONLY",
+    "reason": "(a)-(c) the same stair part id in both hand ledgers (separator '-' / '_' normalised), one live line; (d) no second m3 measure for the steel row: binding by id only",
+    "concrete_state": "RELEASED",
+    "m3": [
+     "1.001373",
+     "1.001373"
+    ],
+    "ratio_after_binding": "PARTIAL_HELD"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-145-7CA-2",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0005.1",
+    "reason": "(c) GROUND_BEAMS:GROUND:BAND0005.1 is also named by ['GROUND_SYSTEM:GSO-145-7CA-1']: shared band, never split by guess"
+   },
+   {
+    "member": "SLAB:GF-105",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "BEAM:BM-2F-003",
+    "type": "BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-17D-7E4-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": true,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0029",
+    "line_id": "L-bf5eb56348883cb2776d",
+    "reason": "(a)-(d) pass: register 0.512640 vs line 0.512675 m3",
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.512675",
+     "0.512675"
+    ],
+    "ratio_after_binding": "RATIO_HELD"
+   },
+   {
+    "member": "SLAB:1F-020",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7D0-FC-3",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:1F-086",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "POOL_TANK_WALL:POOL:R1",
+    "type": "POOL_TANK_WALL",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) pool bar rows R1 / R2 each mix wall and floor bars; the pool concrete is split WALLS / BASE: no one-to-one id"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7E7-7E8-2",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": true,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0032",
+    "line_id": "L-0e30aadba2eebc6c3ede",
+    "reason": "(a)-(d) pass: register 0.423000 vs line 0.423000 m3",
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.423000",
+     "0.423000"
+    ],
+    "ratio_after_binding": "RATIO_HELD"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-170-7C3-2",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:GF-027",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "STAIR:ST-03:E1",
+    "type": "STAIR",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part ST-03:E1 (composite or absent concrete part)"
+   },
+   {
+    "member": "BEAM:BM-GF-050",
+    "type": "BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "STAIR:ST-01:MS1-U",
+    "type": "STAIR",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part ST-01:MS1-U (composite or absent concrete part)"
+   },
+   {
+    "member": "SLAB:GF-128",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-077",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-10A-7C9-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:GF-141",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:2F-047",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "POOL_TANK_WALL:POOL:R2",
+    "type": "POOL_TANK_WALL",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) pool bar rows R1 / R2 each mix wall and floor bars; the pool concrete is split WALLS / BASE: no one-to-one id"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7E9-7EA-1",
+    "type": "GROUND_BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-170-7C3-3",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-13F-7D3-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": true,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0014",
+    "line_id": "L-760f6c369aa655adc84d",
+    "reason": "(a)-(d) pass: register 0.516000 vs line 0.516000 m3",
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.516000",
+     "0.516000"
+    ],
+    "ratio_after_binding": "RATIO_HELD"
+   },
+   {
+    "member": "SLAB:1F-025",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:2F-016",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-170-7C3-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-114-115-7DF-2",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7E0-FD-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0026.1",
+    "reason": "(d) two measures disagree: register 1.039500 vs line 1.881000 m3"
+   },
+   {
+    "member": "SLAB:GF-124",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7D4-F8-2",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-17E-17F-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0037.1",
+    "reason": "(d) two measures disagree: register 0.296040 vs line 0.218423 .. 0.291231 m3"
+   },
+   {
+    "member": "SLAB:1F-091",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-052",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "BEAM:BM-GF-051",
+    "type": "BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "SLAB:2F-045",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-015",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:1F-023",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-15E-15F-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0036.1",
+    "reason": "(d) two measures disagree: register 0.360000 vs line 0.324000 m3"
+   },
+   {
+    "member": "SLAB:1F-096",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:1F-063",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-145-7CA-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0005.1",
+    "reason": "(c) GROUND_BEAMS:GROUND:BAND0005.1 is also named by ['GROUND_SYSTEM:GSO-145-7CA-2']: shared band, never split by guess"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-A-157-158-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(b) GROUND_BEAMS:GROUND:BAND0044: 0 candidate ids / not exactly one live line"
+   },
+   {
+    "member": "STAIR:ST-01:MS1-L",
+    "type": "STAIR",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part ST-01:MS1-L (composite or absent concrete part)"
+   },
+   {
+    "member": "SLAB:GF-020",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-016",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-036",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:2F-033",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:1F-018",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-018",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-140-7D7-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": true,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0018",
+    "line_id": "L-3e7ea87496653eb75704",
+    "reason": "(a)-(d) pass: register 0.516000 vs line 0.516000 m3",
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.516000",
+     "0.516000"
+    ],
+    "ratio_after_binding": "RATIO_HELD"
+   },
+   {
+    "member": "STAIR:ST-02:RS-A",
+    "type": "STAIR",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part ST-02:RS-A (composite or absent concrete part)"
+   },
+   {
+    "member": "SLAB:1F-094",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:SB1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "BEAM:BM-1F-013",
+    "type": "BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-107-7CE-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-16F-7FF-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "BEAM:BM-1F-028",
+    "type": "BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "STAIR:ST-02:RS-S",
+    "type": "STAIR",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part ST-02:RS-S (composite or absent concrete part)"
+   },
+   {
+    "member": "SLAB:GF-079",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-135",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-032",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "BEAM:BM-GF-038",
+    "type": "BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-180D-180E-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0040",
+    "reason": "(d) two measures disagree: register 0.567000 vs line 0.189000 .. 0.189000 m3"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-137-138-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-184-7CF-2",
+    "type": "GROUND_BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "STAIR:ST-01:MS2-L",
+    "type": "STAIR",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": true,
+    "concrete_id": "HL:STAIR_CONCRETE:ST-01:MS2_L",
+    "line_id": "L-67e4b0485135f84acc46",
+    "grade": "ID_ONLY",
+    "reason": "(a)-(c) the same stair part id in both hand ledgers (separator '-' / '_' normalised), one live line; (d) no second m3 measure for the steel row: binding by id only",
+    "concrete_state": "RELEASED",
+    "m3": [
+     "1.033445",
+     "1.033445"
+    ],
+    "ratio_after_binding": "PARTIAL_HELD"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7E7-7E8-1",
+    "type": "GROUND_BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:GF-039",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:SB2",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7E0-FD-2",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:1F-084",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-081",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:1F-073/c1",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:1F-041",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-101",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:through column 20B (7D4-F8)",
+    "type": "GROUND_BEAM",
+    "state": "FULL",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:GF-173",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-134",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-176",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "STAIR:ST-01:1F-STRIP",
+    "type": "STAIR",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part ST-01:1F-STRIP (composite or absent concrete part)"
+   },
+   {
+    "member": "SLAB:1F-065",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:through column 1E0 (170-7C3)",
+    "type": "GROUND_BEAM",
+    "state": "FULL",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-10B-7D1-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0012.1",
+    "reason": "(d) concrete line HELD blank: no second measure"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-1811-1812-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0041",
+    "reason": "(d) concrete line HELD blank: no second measure"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-A-139-13A-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:GF-078",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:2F-025",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:SB3",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7D0-FC-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:GF",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-176-7E6-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": true,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0031",
+    "line_id": "L-151a282bcf2d5324a618",
+    "reason": "(a)-(d) pass: register 0.450000 vs line 0.450000 m3",
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.450000",
+     "0.450000"
+    ],
+    "ratio_after_binding": "RATIO_HELD"
+   },
+   {
+    "member": "BEAM:BM-GF-022",
+    "type": "BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "BEAM:BM-GF-060",
+    "type": "BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-10B-7D1-2",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-17C-7E3-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-178-7DB-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0022",
+    "reason": "(d) concrete line HELD blank: no second measure"
+   },
+   {
+    "member": "SLAB:1F-090",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-185-7C7-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:GF-137",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-17B-7E5-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:GF-172",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-13D-7D2-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7DC-7DD-2",
+    "type": "GROUND_BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:through column 251 (7D0-FC)",
+    "type": "GROUND_BEAM",
+    "state": "FULL",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:1F-073/c0",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-13E-7D6-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0017.1",
+    "reason": "(d) two measures disagree: register 0.918000 vs line 0.516000 m3"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-109-7CB-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0006.1",
+    "reason": "(d) two measures disagree: register 2.565000 vs line 0.528000 m3"
+   },
+   {
+    "member": "GROUND_SYSTEM:through column 1E4 (170-7C3)",
+    "type": "GROUND_BEAM",
+    "state": "FULL",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-180-181-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": true,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0038",
+    "line_id": "L-970bac563cbcd69e2a30",
+    "reason": "(a)-(d) pass: register 0.071010 vs line 0.071008 .. 0.071008 m3",
+    "concrete_state": "HELD_BOUNDED",
+    "m3": [
+     "0.071008",
+     "0.071008"
+    ],
+    "ratio_after_binding": "RATIO_HELD"
+   },
+   {
+    "member": "SLAB:1F-076/c1",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:through column 249 (7D0-FC)",
+    "type": "GROUND_BEAM",
+    "state": "FULL",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:2F-013",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:1F-062",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-136-7D5-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0016",
+    "reason": "(d) concrete line HELD blank: no second measure"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-109-7CB-2",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7D4-F8-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7E1-7E2-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": true,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0027",
+    "line_id": "L-7afad512258c1bad8519",
+    "reason": "(a)-(d) pass: register 1.209600 vs line 1.209600 m3",
+    "concrete_state": "RELEASED",
+    "m3": [
+     "1.209600",
+     "1.209600"
+    ],
+    "ratio_after_binding": "RATIO_HELD"
+   },
+   {
+    "member": "STAIR:ST-01b:D1",
+    "type": "STAIR",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part ST-01b:D1 (composite or absent concrete part)"
+   },
+   {
+    "member": "BEAM:BM-GF-015",
+    "type": "BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-15C-7CC-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:GF-146",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:GF-059",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:band 170-7C3 continuous run",
+    "type": "GROUND_BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7D0-FC-2",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-15D-7C8-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "BEAM:BM-2F-014",
+    "type": "BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-114-115-7DF-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0025.1",
+    "reason": "(d) two measures disagree: register 0.708750 vs line 0.209250 .. 0.279000 m3"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-182-183-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0039",
+    "reason": "(d) two measures disagree: register 0.248760 vs line 0.186592 .. 0.186592 m3"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-184-7CF-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0010.1",
+    "reason": "(c) GROUND_BEAMS:GROUND:BAND0010.1 is also named by ['GROUND_SYSTEM:GSO-184-7CF-3']: shared band, never split by guess"
+   },
+   {
+    "member": "SLAB:GF-061",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:1F-076/c0",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-13C-7D9-1",
+    "type": "GROUND_BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "BEAM:BM-GF-052",
+    "type": "BEAM",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-177-7CD-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.1",
+    "reason": "(c) GROUND_BEAMS:GROUND:BAND0008.1 is also named by ['GROUND_SYSTEM:GSO-177-7CD-2']: shared band, never split by guess"
+   },
+   {
+    "member": "SLAB:1F-057",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:through column 255 (7D0-FC)",
+    "type": "GROUND_BEAM",
+    "state": "FULL",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:1F-060",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-7DC-7DD-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(b) GROUND_BEAMS:GROUND:BAND0023.1: 0 candidate ids / not exactly one live line"
+   },
+   {
+    "member": "STAIR:ST-01:MS1-T",
+    "type": "STAIR",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part ST-01:MS1-T (composite or absent concrete part)"
+   },
+   {
+    "member": "STAIR:ST-02:RS-LD",
+    "type": "STAIR",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part ST-02:RS-LD (composite or absent concrete part)"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-175-7DE-1",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": true,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0024",
+    "line_id": "L-4129e781d6133b963bf7",
+    "reason": "(a)-(d) pass: register 0.450000 vs line 0.450000 m3",
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.450000",
+     "0.450000"
+    ],
+    "ratio_after_binding": "RATIO_HELD"
+   },
+   {
+    "member": "SLAB:GF-076",
+    "type": "SLAB",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:GSO-177-7CD-2",
+    "type": "GROUND_BEAM",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "concrete_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.1",
+    "reason": "(c) GROUND_BEAMS:GROUND:BAND0008.1 is also named by ['GROUND_SYSTEM:GSO-177-7CD-1']: shared band, never split by guess"
+   },
+   {
+    "member": "SLAB:2F",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "BEAM:BM-1F-039",
+    "type": "BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) T-110 register / HL:BEAM_LEDGER give no live line; the M2 beam register uses other ids"
+   },
+   {
+    "member": "GROUND_SYSTEM:through column 241 (170-7C3)",
+    "type": "GROUND_BEAM",
+    "state": "FULL",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "SLAB:GF-034",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "GROUND_SYSTEM:band 7D0-FC continuous run",
+    "type": "GROUND_BEAM",
+    "state": "BOUNDED",
+    "route_T662": "DETAILED",
+    "bound": false,
+    "reason": "(a) no committed register row names a concrete component of the member"
+   },
+   {
+    "member": "STAIR:ST-02:RS-C",
+    "type": "STAIR",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part ST-02:RS-C (composite or absent concrete part)"
+   },
+   {
+    "member": "SLAB:1F-092",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "SLAB:1F",
+    "type": "SLAB",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(a) no committed register maps a slab steel panel (T-139 panel id) to a route G slab site line"
+   },
+   {
+    "member": "STAIR:TANK:2F",
+    "type": "STAIR",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "(b) 0 HL:STAIR_CONCRETE lines for part TANK:2F (composite or absent concrete part)"
+   },
+   {
+    "member": "OTHER:DG5:DOME-3:SHELL:REBAR",
+    "type": "OTHER",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "type outside the owner's ratio list (dome shell / ring, lintel bars)"
+   },
+   {
+    "member": "OTHER:HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+    "type": "OTHER",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "type outside the owner's ratio list (dome shell / ring, lintel bars)"
+   },
+   {
+    "member": "OTHER:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+    "type": "OTHER",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "type outside the owner's ratio list (dome shell / ring, lintel bars)"
+   },
+   {
+    "member": "OTHER:HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+    "type": "OTHER",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "type outside the owner's ratio list (dome shell / ring, lintel bars)"
+   },
+   {
+    "member": "OTHER:HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+    "type": "OTHER",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "type outside the owner's ratio list (dome shell / ring, lintel bars)"
+   },
+   {
+    "member": "OTHER:LIFT_PIT:WALLS:REBAR",
+    "type": "OTHER",
+    "state": "NONE",
+    "route_T662": "RATIO_HELD",
+    "bound": false,
+    "reason": "type outside the owner's ratio list (dome shell / ring, lintel bars)"
+   },
+   {
+    "member": "OTHER:LINTEL_BARS:FLAGGED",
+    "type": "OTHER",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "type outside the owner's ratio list (dome shell / ring, lintel bars)"
+   },
+   {
+    "member": "OTHER:LINTEL_BARS:PRODUCED",
+    "type": "OTHER",
+    "state": "PARTIAL",
+    "route_T662": "PARTIAL_HELD",
+    "bound": false,
+    "reason": "type outside the owner's ratio list (dome shell / ring, lintel bars)"
+   }
+  ]
+ },
+ "gate_b_ratio_table": {
+  "rows": [
+   {
+    "member": "FOOTING:SH10:F5:04f491",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-4d689805e55dca54f7cf"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "2.016000",
+     "2.016000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "142.614013",
+     "150.590721"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-00fbbdf4ad454311231c",
+     "L-2deb22f16d6a72007cde",
+     "L-9743395b41f23545cb69"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F2:3919bf",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-a244493709ce2e0d23da"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "1.130500",
+     "1.130500"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "79.972788",
+     "84.445838"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-0355a8c80c59e2cf55d5",
+     "L-5c79d4b2d31e1ad1e668",
+     "L-bbec301164cabd703903"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F11:109682",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-5d3e72daa69dc769ca5e"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "2.625000",
+     "2.625000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "185.695329",
+     "196.081667"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-051b0cbef708cb567bd2",
+     "L-442f451441f54ad6a99b",
+     "L-5957becf8de2591ec109"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F4:ab0b66",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-1f0b37d3309ac5bb4c07"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "1.760000",
+     "1.760000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "124.504297",
+     "131.468089"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-05e4a7b454924f5be7a0",
+     "L-2aa25654f7c75e5db1d6",
+     "L-fd1555721223e52523d5"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F4:142c12",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-cc381dfe7b49cb758166"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "1.760000",
+     "1.760000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "124.504297",
+     "131.468089"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-07abd597d23b404e1d02",
+     "L-f5629f916a963e3e2d0f",
+     "L-f8117e2a6d3b3f3bc1c7"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:FN:cf72aa",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-f6af8a29e2c1b5fdcfd0"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.300000",
+     "0.300000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "21.222323",
+     "22.409333"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-088b45c9873d688d6f52",
+     "L-59d83da1a6c9e4c7b289",
+     "L-75b6059a924d25d986df"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F:88b429",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-057ca0aa9960e83c2ce3"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.216000",
+     "0.216000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "15.280073",
+     "16.134720"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-1c78440a3b292c1bd74f",
+     "L-2ac8b46c7b13a676c6c5",
+     "L-8f6bf5c6ed4090e37b25"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:FN:0e0098",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-d2c75eb10451e4dd1db5"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.258000",
+     "0.258000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "18.251198",
+     "19.272027"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-21f19e29f49fc842e388",
+     "L-609be86288001f89bf86",
+     "L-8bd0334a5cd7438ebc07"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F9:3192fb",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-35da88665bf36b89a8fc"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "5.049000",
+     "5.049000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "357.171702",
+     "377.149081"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-26bb0cbf2f5139012587",
+     "L-41dbf9832c6975c88d01",
+     "L-8e643df3573359880004"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F3:38c592",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-a753af083197621c2ea4"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.672000",
+     "0.672000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "47.538004",
+     "50.196907"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-2aefb17ea04a356025b1",
+     "L-563e929e1d46e8fc82bc",
+     "L-c8fb3ba1fa73f030bcd9"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F3:b6c1c9",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-3403073af4f952e49df1"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.672000",
+     "0.672000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "47.538004",
+     "50.196907"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-2e9f42cd1fe33881bf9e",
+     "L-a10f5df7dfdae7546a7b",
+     "L-b34c4421032afbc52a1c"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F:878832",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-5146145453fda384253d"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.216000",
+     "0.216000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "15.280073",
+     "16.134720"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-30a75768bff1eca80ba6",
+     "L-8aaf6eec641dc95f40e6",
+     "L-9846765d37c07a3f1fbd"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:FN:b61882",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-dec7d97d6a15bedee772"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.300000",
+     "0.300000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "21.222323",
+     "22.409333"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-3e3b0347ab941f66de75",
+     "L-59b250be1a19df95642e",
+     "L-ad31fe8e5a3057feadd4"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:T652:10A5",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-164ae9d338976be9e582"
+    ],
+    "concrete_state": "HELD_BOUNDED",
+    "m3": [
+     "1.960000",
+     "2.275000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "138.652512",
+     "169.937445"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-3f2cfc1d95f03b54f256"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F5:f1403e",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-01830823b3fe396ad418"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "2.016000",
+     "2.016000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "142.614013",
+     "150.590721"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-431be773722b25fd5732",
+     "L-c913a420a2e7965eca4d",
+     "L-dc64a341c71d602ccd92"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F:767bc7",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-222e42d97ea28ca69931"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.216000",
+     "0.216000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "15.280073",
+     "16.134720"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-46467b7f9b3bd3f5cac9",
+     "L-537d7f905671fd153135",
+     "L-78a773563b98004def1e"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F15:932498",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-1b7eaa73e9a5e911054d"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.720000",
+     "0.720000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "50.933576",
+     "53.782400"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-47d15b75ac564b3fea5f",
+     "L-bbe6f9f9c1a914bf3d51",
+     "L-d48e100073b0362d6e01"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F:0ce993",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-92617ae61830c3cdce52"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.216000",
+     "0.216000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "15.280073",
+     "16.134720"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-50e9e05ae52676ecf7e1",
+     "L-a8cd9aee86f286e92901",
+     "L-c85e79f574783cc3c91e"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F2:277c2f",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-2bae08911f281f31553f"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "1.130500",
+     "1.130500"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "79.972788",
+     "84.445838"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-730e09029fdab4addb2f",
+     "L-9eba6fcc6987af2aaa7d",
+     "L-c91c2b0a3aebc5ce149f"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:F6:cf553f",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-bd8e800cb07a297b25d7"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "2.860000",
+     "2.860000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "202.319482",
+     "213.635645"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-7b256278e76e2ba02e39",
+     "L-c919d773ac98b00928b1",
+     "L-f8b57463eaa5524cf8f9"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "BEAM:BM-1F-033",
+    "type": "BEAM",
+    "concrete_lines": [
+     "L-54e397fe7b1485b2e8fe",
+     "L-67f3d325019e618328eb"
+    ],
+    "concrete_state": "HELD_BOUNDED",
+    "m3": [
+     "0.282000",
+     "0.846000"
+    ],
+    "ratio_kg_per_m3": [
+     "147.788330",
+     "175.869052"
+    ],
+    "kg_estimate": [
+     "42.926598",
+     "156.224479"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-95cebc9452725677a21a",
+     "L-b5cdf17b92a4e5ef70bf"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE"
+    ]
+   },
+   {
+    "member": "BEAM:BM-1F-029",
+    "type": "BEAM",
+    "concrete_lines": [
+     "L-28396d852c7ae317a153"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.120000",
+     "0.120000"
+    ],
+    "ratio_kg_per_m3": [
+     "147.788330",
+     "175.869052"
+    ],
+    "kg_estimate": [
+     "18.266638",
+     "22.159501"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-99dccb17e3be65d12ae5"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE"
+    ]
+   },
+   {
+    "member": "BEAM:BM-1F-035",
+    "type": "BEAM",
+    "concrete_lines": [
+     "L-bb49e831f053bd30a6ce"
+    ],
+    "concrete_state": "HELD_BOUNDED",
+    "m3": [
+     "0.135000",
+     "0.202500"
+    ],
+    "ratio_kg_per_m3": [
+     "147.788330",
+     "175.869052"
+    ],
+    "kg_estimate": [
+     "20.549967",
+     "37.394157"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-a2275d8785ce46372ee5"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE"
+    ]
+   },
+   {
+    "member": "BEAM:BM-GF-053",
+    "type": "BEAM",
+    "concrete_lines": [
+     "L-18a6faa46b46d2c35db8"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.120000",
+     "0.120000"
+    ],
+    "ratio_kg_per_m3": [
+     "147.788330",
+     "175.869052"
+    ],
+    "kg_estimate": [
+     "18.266638",
+     "22.159501"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-af2245654efab6948741"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE"
+    ]
+   },
+   {
+    "member": "BEAM:BM-1F-036",
+    "type": "BEAM",
+    "concrete_lines": [
+     "L-56d278bedc8dda2837a9"
+    ],
+    "concrete_state": "HELD_BOUNDED",
+    "m3": [
+     "0.676000",
+     "1.015000"
+    ],
+    "ratio_kg_per_m3": [
+     "147.788330",
+     "175.869052"
+    ],
+    "kg_estimate": [
+     "102.902058",
+     "187.432442"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-b805ad2897454bfd5f67"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE"
+    ]
+   },
+   {
+    "member": "FOOTING:SH10:FN:8f5b19",
+    "type": "FOOTING",
+    "concrete_lines": [
+     "L-7d8bf3e464a8406bfcb4"
+    ],
+    "concrete_state": "RELEASED",
+    "m3": [
+     "0.300000",
+     "0.300000"
+    ],
+    "ratio_kg_per_m3": [
+     "68.680658",
+     "71.140741"
+    ],
+    "kg_estimate": [
+     "21.222323",
+     "22.409333"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-c1700d1192e27c4d69e8",
+     "L-e672220d63f32c6d79c2",
+     "L-f81cd4eb42d5f41bbd2a"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE",
+     "(2) calibration n = 1 < 3 (WEAK)"
+    ]
+   },
+   {
+    "member": "BEAM:BM-1F-034",
+    "type": "BEAM",
+    "concrete_lines": [
+     "L-a9d5e7dc22013e24d691"
+    ],
+    "concrete_state": "HELD_BOUNDED",
+    "m3": [
+     "0.600000",
+     "1.800000"
+    ],
+    "ratio_kg_per_m3": [
+     "147.788330",
+     "175.869052"
+    ],
+    "kg_estimate": [
+     "91.333188",
+     "332.392508"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-cf569e52c2c15fc761d5"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE"
+    ]
+   },
+   {
+    "member": "BEAM:BM-GF-058",
+    "type": "BEAM",
+    "concrete_lines": [
+     "L-331d4bbef719a7f0bbca",
+     "L-634cefe5e8a7fb458e16"
+    ],
+    "concrete_state": "HELD_BOUNDED",
+    "m3": [
+     "0.282000",
+     "0.846000"
+    ],
+    "ratio_kg_per_m3": [
+     "147.788330",
+     "175.869052"
+    ],
+    "kg_estimate": [
+     "42.926598",
+     "156.224479"
+    ],
+    "includes": "+3 .. 5 % laps and offcuts (low x 1.03, high x 1.05)",
+    "label": "ESTIMATE - owner-approved ratio",
+    "bar_lines_replaced": [
+     "L-cff502b9ac550f1fb419",
+     "L-ee6175f2a699fad87d1e"
+    ],
+    "wiring_ready": false,
+    "blockers": [
+     "(1) range check NOT_CHECKED_NO_CITED_SOURCE"
+    ]
+   }
+  ],
+  "rows_n": 28,
+  "wiring_ready_n": 0,
+  "by_type": {
+   "BEAM": {
+    "members": 7,
+    "kg": [
+     "337.171685",
+     "913.987067"
+    ]
+   },
+   "FOOTING": {
+    "members": 21,
+    "kg": [
+     "1867.069264",
+     "1995.028254"
+    ]
+   }
+  },
+  "total_kg": [
+   "2204.240949",
+   "2909.015321"
+  ],
+  "released_detailed_kg_unchanged": "9628.462205"
+ }
+}
