@@ -21,8 +21,10 @@ fallback is labelled ASSUMED - OWNER-APPROVED with its source and a re-run trigg
 spare), never silently DRAWING-CONFIRMED; (s) a bound transferred over a slab plane carries the plane record and is
 refused when that record is not ONE_PLANE with every drawn section step outside the plane; (t) the V3.0.66 lintel
 check (R-T677-1 (q)) governs the lintel lines V3.0.66 restated or added, this version's lintel check governs the lines
-it restates, the V3.0.53 check every other lintel line; one lintel line per opening across all three; (u) released
-m3 does not move in this version (no VALUE, no REVALUE action is accepted).
+it restates, the V3.0.53 check every other lintel line; one lintel line per opening across all three; a lintel line
+is restated only from a V3.0.53 BLANK record, HELD or FLAGGED (FLAGGED = 'room under some pieces only, which piece is
+over the opening not read': a position-resolved soffit bound answers it), never from a REQUIRED (valued) one;
+(u) released m3 does not move in this version (no VALUE, no REVALUE action is accepted).
 Files: V3_0_67_BOQ_LINES.json / .csv, V3_0_67_INTEGRATION_LEDGER.json / .csv, V3_0_67_DIFF.csv, V3_0_67_RUN.json.
 Nothing here names a project, a sheet, a layer or a coordinate.
 """
@@ -66,6 +68,7 @@ TOT_TOL, BIND_TOL = A3063.TOT_TOL, A3063.BIND_TOL
 OA = "ASSUMED - OWNER-APPROVED"
 EXISTENCE_STATUS = ("DRAWING-CONFIRMED", OA)          # WORKFLOW_CONTROLS s.5 (existence of the member)
 PLANE_RULE = "R-T682-1"
+BLANK_DECISIONS = ("HELD", "FLAGGED")                 # the R-T487-1 blank lintel states (V3.0.53); REQUIRED is valued
 line_class = A3063.line_class
 
 PIECES = {
@@ -240,9 +243,9 @@ def _restate(b, e, srcs):
     sup = _supersede(inp, b["item_code"])
     if b["item_code"] == LINTEL_CODE:
         lr = sup.get(LINTEL_KEY) or {}
-        if lr.get("decision") != "HELD" or not lr.get("opening_id"):
-            raise InputsError(f"{a} {b['line_id']}: a lintel line is restated only from its V3.0.53 HELD record "
-                              f"(found {lr.get('decision')!r})")
+        if lr.get("decision") not in BLANK_DECISIONS or not lr.get("opening_id"):
+            raise InputsError(f"{a} {b['line_id']}: a lintel line is restated only from its V3.0.53 blank record "
+                              f"(HELD / FLAGGED), never a REQUIRED one (found {lr.get('decision')!r})")
         if A3066.REC_KEY in sup:
             raise InputsError(f"{a} {b['line_id']}: a lintel line V3.0.66 restated is not restated again here")
     inp[REC_KEY] = _rec(srcs, action=a, member=e["member"], was=was, after=after, basis=e["basis"],
@@ -367,7 +370,7 @@ def _governed(ln):
 
 
 def check_lintels(lines):
-    """R-T682-2 (t): a lintel line this version restated keeps its V3.0.53 HELD record under `superseded` only;
+    """R-T682-2 (t): a lintel line this version restated keeps its V3.0.53 blank record under `superseded` only;
     one lintel line per opening across the V3.0.53 / V3.0.66 / V3.0.67 records. -> summary"""
     ops, out = {}, {"restated_v3_0_67": 0, "other": 0}
     for ln in lines:
@@ -377,9 +380,9 @@ def check_lintels(lines):
         rec = inp.get(REC_KEY)
         if rec:
             lr = (rec.get("superseded") or {}).get(LINTEL_KEY) or {}
-            if inp.get(LINTEL_KEY) or lr.get("decision") != "HELD":
-                raise ValueError(f"{METHOD}: {ln['line_id']}: a restated lintel line keeps its V3.0.53 HELD record "
-                                 f"under superseded only")
+            if inp.get(LINTEL_KEY) or lr.get("decision") not in BLANK_DECISIONS:
+                raise ValueError(f"{METHOD}: {ln['line_id']}: a restated lintel line keeps its V3.0.53 blank record "
+                                 f"(HELD / FLAGGED) under superseded only")
             o = lr.get("opening_id")
             out["restated_v3_0_67"] += 1
         else:

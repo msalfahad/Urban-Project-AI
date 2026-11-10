@@ -36,8 +36,10 @@ import t682_rules as R82  # noqa: E402
 
 T678 = ROOT / "research/agents_t678/out/T678_LEDGER.json"
 INDEX = ROOT / "research/agents_t677/out/LINE_INDEX_V3_0_66.json"
+S677 = ROOT / "research/agents_t677/summary_t677.json"      # the V3.0.66 code totals of the T-677 run of record
 PINS = {T678: "3c1319c5b6ceabde30273d0fcca91b1f19c06c797a5bf54dd44c95a5c89c1ebd",
-        INDEX: "02065c41e79dd9df0873cd351e13801c809ca6fa1e62e8a04196af4af13724a7"}
+        INDEX: "02065c41e79dd9df0873cd351e13801c809ca6fa1e62e8a04196af4af13724a7",
+        S677: "7e157722e74149e1b714adeb3bb44739a0e29b19d8532149906f357263eada41"}
 CHECKER = ("Verifier 2026-11-10T17:58Z (Gate A PASS, run session_01E6cPneYaQmLCCbd4QPBgBq: own ST dxf re-measure: "
            "778 = PC-2F member (0.20x0.40 SFRS solid, FFRS ANSI35 + 'P.C 20x50', GFRS none) AGREE 0.1824 .. 0.350; "
            "schedule depths B2 / B6 / B7 / B19 / B20 / CB6 / CB7 AGREE; hand calc D-GF-07 0.096 .. 0.108, D-GF-03 "
@@ -73,7 +75,7 @@ def _load():
     for p, s in PINS.items():
         if _sha(p) != s:
             raise SystemExit(f"{p.relative_to(ROOT)}: sha256 {_sha(p)[:8]} is not the pinned {s[:8]} (edited file)")
-    return tuple(json.loads(p.read_text(encoding="utf-8")) for p in (T678, INDEX))
+    return tuple(json.loads(p.read_text(encoding="utf-8")) for p in (T678, INDEX, S677))
 
 
 def _d(x):
@@ -223,7 +225,7 @@ def _c3(c, ix, plane):
 
 
 def build(project_id=None):
-    led, index = _load()
+    led, index, s677 = _load()
     if index["candidate_version"] != "ARCH_TAKEOFF_V3.0.66":
         raise SystemExit(f"index is {index['candidate_version']}")
     ix = {ln["line_id"]: ln for ln in index["lines"]}
@@ -242,7 +244,7 @@ def build(project_id=None):
         raise SystemExit("open-high lines")
     ents = lint + [_pc2f(led["outline_778"], ix), _c3(led["annex_C3"], ix, plane)]
     return {"schema": SCHEMA, "project_id": project_id, "sources": list(SOURCES.values()), "entries": ents,
-            "index_sha256": PINS[INDEX],
+            "index_sha256": PINS[INDEX], "expect_totals": expect_totals(s677, ents),
             "not_wired": [
                 {"what": "13 STR.CONC.LINTEL lines OPEN BOUND by the T-678 census", "task": "T-678",
                  "why": "each names its missing datum: they keep their V3.0.66 state (blank, never 0)"},
@@ -252,13 +254,31 @@ def build(project_id=None):
                  "why": "their section waits for D-66 (follow-up named by T-678, not a ledger quantity)"}]}
 
 
+def expect_totals(s677, ents):
+    """the V3.0.66 code totals (T-677 run of record) + this restatement, by hand: released unchanged; a BOUND line
+    adds its range and leaves the blank count; a LOWER_ONLY line stays blank."""
+    if s677["method"] != "ARCH_TAKEOFF_V3.0.66":
+        raise SystemExit(f"summary is {s677['method']}")
+    out = {}
+    for code in sorted({e["expect"]["item_code"] for e in ents}):
+        t = s677["b10_code_totals"][f"{code}|m3"]["v3_0_66"]
+        b = [e for e in ents if e["expect"]["item_code"] == code and e["action"] == "BOUND"]
+        out[f"{code}|m3"] = {
+            "released": t["released"], "lines": t["lines"], "bounded_lines": t["bounded_lines"] + len(b),
+            "blocked_lines": t["blocked_lines"] - len(b),
+            "held_low": float(_d(t["held_low"]) + sum(_d(str(e["after"]["low"])) for e in b)),
+            "held_high": float(_d(t["held_high"]) + sum(_d(str(e["after"]["high"])) for e in b))}
+    return out
+
+
 def summary(doc):
     from collections import Counter
     c = Counter((e["expect"]["item_code"], e["action"]) for e in doc["entries"])
     return {"entries": len(doc["entries"]), "by_code_action": {f"{k[0]} {k[1]}": v for k, v in sorted(c.items())},
             "assumed_owner_approved": [(e["member"].split(" ")[1], e["assumption"]["trigger_m"])
                                        for e in doc["entries"] if e.get("assumption")],
-            "plane": sum(1 for e in doc["entries"] if e.get("plane")), "not_wired": doc["not_wired"]}
+            "plane": sum(1 for e in doc["entries"] if e.get("plane")), "expect_totals": doc["expect_totals"],
+            "not_wired": doc["not_wired"]}
 
 
 if __name__ == "__main__":

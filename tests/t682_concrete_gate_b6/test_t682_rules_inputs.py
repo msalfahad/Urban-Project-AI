@@ -85,6 +85,11 @@ def test_build_on_committed_ledger():
     assert cols[L.PC2F]["after"] == {"low": 0.1824, "high": 0.35}
     assert cols[L.C3]["after"] == {"low": 0.41175, "high": 0.50625} and cols[L.C3]["plane"]["s_lo_m"] == 3.544
     assert all(e["expect"]["low"] is None and e["expect"]["class"] == "HELD" for e in d["entries"])
+    x = d["expect_totals"]                                   # V3.0.66 (T-677 run of record) + this package, by hand
+    assert x["STR.CONC.LINTEL|m3"] == {"released": 1.016, "lines": 61, "bounded_lines": 24, "blocked_lines": 21,
+                                       "held_low": 1.361, "held_high": 2.050636}
+    assert x["STR.CONC.COLUMN|m3"] == {"released": 19.7765, "lines": 59, "bounded_lines": 22, "blocked_lines": 7,
+                                       "held_low": 10.26435, "held_high": 13.27025}
     txt = json.dumps(d)
     assert "@" not in txt.replace(json.dumps(cols[L.C3]["expect"]["element_id"])[1:-1], "")   # no new coordinate
 

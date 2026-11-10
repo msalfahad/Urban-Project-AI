@@ -271,8 +271,23 @@ def test_stale_binding_and_v66_line_refused():
     l9 = _by(prev, "LINTEL:L9")
     l9["evidence_state"], l9["bounded_range"] = "BLOCKED_RFI", None       # a blank line V3.0.66 restated
     es[0]["expect"] = _x("LINTEL:L9", "STR.CONC.LINTEL")
-    with pytest.raises(A.InputsError, match="V3.0.53 HELD record"):
+    with pytest.raises(A.InputsError, match="V3.0.53 blank record"):
         run(doc(es), prev)
+
+
+def test_flagged_source_record_restated_required_refused():
+    """a V3.0.53 FLAGGED blank record (room under some pieces only) is restated like a HELD one; a REQUIRED (valued)
+    record never is"""
+    prev = copy.deepcopy(LN)
+    _by(prev, "LINTEL:W1")["calculation"]["inputs"]["lintel_v3053"]["decision"] = "FLAGGED"
+    p, ch, _ = run(prev=prev)
+    new, ident = A.integrate(p, ch)
+    w1 = _by(new, "LINTEL:W1")["calculation"]["inputs"][A.REC_KEY]["superseded"]["lintel_v3053"]
+    assert w1["decision"] == "FLAGGED" and ident["lintels"]["restated_v3_0_67"] == 3
+    prev = copy.deepcopy(LN)
+    _by(prev, "LINTEL:W1")["calculation"]["inputs"]["lintel_v3053"]["decision"] = "REQUIRED"
+    with pytest.raises(A.InputsError, match="never a REQUIRED one"):
+        run(prev=prev)
 
 
 def test_applied_twice_and_named_twice():
