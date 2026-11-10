@@ -18,7 +18,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 5453 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 5458 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 77 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
@@ -465,8 +465,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3061.py` | 520 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.61 (T-563, lane I, PLASTER_HEIGHT_V1_WIRING of the T-558 WIRING MANIFEST V6): the SAME opt-in BOQ |
 | `arch_v3062.py` | 559 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.62 (T-661, lane I, CONCRETE GATE B integration package): the SAME opt-in BOQ candidate as |
 | `arch_v3063.py` | 642 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.63 (T-665, lane I, CONCRETE GATE B ROUND 2 integration package): the SAME opt-in BOQ candidate |
-| `arch_v3064.py` | 618 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.64 (T-668, lane I, CONCRETE GATE B ROUND 3 integration package): the SAME opt-in BOQ candidate |
-| `arch_v3065.py` | 644 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.65 (T-671, lane I, CONCRETE GATE B ROUND 4 integration package): the SAME opt-in BOQ candidate |
+| `arch_v3064.py` | 618 | MEDIUM | 6 | ARCH_TAKEOFF_V3.0.64 (T-668, lane I, CONCRETE GATE B ROUND 3 integration package): the SAME opt-in BOQ candidate |
+| `arch_v3065.py` | 647 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.65 (T-671, lane I, CONCRETE GATE B ROUND 4 integration package): the SAME opt-in BOQ candidate |
 | `arch_v307.py` | 751 | HIGH | 21 | ARCH_TAKEOFF_V3.0.7 (T-193): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.6 (engine.source.arch_v30, |
 | `arch_v308.py` | 680 | MEDIUM | 8 | ARCH_TAKEOFF_V3.0.8 (T-231): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.7 (engine.source.arch_v30, |
 | `arch_v309.py` | 591 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.9 (T-211, package V3.0.9a): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.8 |
@@ -2308,7 +2308,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t668/` | 12 |
 | `research/agents_t669/` | 6 |
 | `research/agents_t670/` | 4 |
-| `research/agents_t671/` | 6 |
+| `research/agents_t671/` | 11 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
