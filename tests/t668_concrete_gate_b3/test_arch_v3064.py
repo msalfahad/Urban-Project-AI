@@ -282,3 +282,42 @@ def test_adverse_applied_twice_and_tampered_added_line():
         A.check_concrete(t)
     with pytest.raises(ValueError, match="already a candidate line"):
         A.check_concrete(new, new)
+
+
+def test_lower_only_floor_with_its_corner_square():
+    """a blank lower-only ground beam G9 (AT_LEAST 1.20 x 0.30 x 0.25 = 0.09) that the drawing shows owns the corner
+    square: floor 1.50 x 0.30 x 0.25 = 0.1125 beside, still blank; its neighbour G10 meets the square, owns nothing"""
+    g9, g10 = _ln("STR.CONC.GROUND_BEAM", "G9", "BLOCKED_RFI"), _ln("STR.CONC.GROUND_BEAM", "G10", "BLOCKED_RFI")
+    prev = copy.deepcopy(LN) + [g9, g10]
+    assert round(1.50 * 0.30 * 0.25, 6) == 0.1125
+    sq = {"square": "corner", "owner": g9["line_id"], "owner_kind": "PIECE", "owner_line": g9["line_id"],
+          "junction": "annex corner"}
+    es = entries() + [
+        {"action": "LOWER_ONLY", "line_id": g9["line_id"], "source_tasks": ["T-J"], "member": "ground beam G9",
+         "expect": _x("G9", "STR.CONC.GROUND_BEAM", None), "after": {}, "basis": "1.50 x 0.30 x 0.25",
+         "why_held": "D-35", "question": "D-35", "squares": [sq],
+         "beside": {"kind": "AT_LEAST_M3", "value": 0.1125, "basis": "1.50 x 0.30 x 0.25"}},
+        {"action": "CONFIRM", "line_id": g10["line_id"], "source_tasks": ["T-J"], "member": "ground beam G10",
+         "expect": _x("G10", "STR.CONC.GROUND_BEAM", None), "basis": "meets the square, owns nothing"}]
+    ch, log = A.changes_for(A.load_inputs(doc(es), PID), prev)
+    new, ident = A.integrate(prev, ch)
+    g = _by(new, "G9")
+    assert g["evidence_state"] == "BLOCKED_RFI" and g["measured_net"] is None and g["bounded_range"] is None
+    rec = g["calculation"]["inputs"][A.REC_KEY]
+    assert rec["beside"]["value"] == 0.1125 and rec["squares"][0]["owner_line"] == g9["line_id"]
+    assert A30.line_sha(_by(new, "G10")) == A30.line_sha(g10)
+    t0, t1 = A304.code_totals(prev), A304.code_totals(new)
+    assert t0["STR.CONC.GROUND_BEAM|m3"] == t1["STR.CONC.GROUND_BEAM|m3"]    # a floor is beside, never a total
+    # adverse: the neighbour also claims the same corner square
+    es[-1] = dict(es[-2], line_id=g10["line_id"], member="ground beam G10", expect=_x("G10", "STR.CONC.GROUND_BEAM",
+                  None), squares=[dict(sq, owner=g10["line_id"], owner_line=g10["line_id"])])
+    with pytest.raises(A.InputsError, match="claimed by two owners"):
+        A.changes_for(A.load_inputs(doc(es), PID), prev)
+    # adverse: squares on an upper-only ceiling
+    es = entries()
+    es[1] = {"action": "UPPER_ONLY", "line_id": ID["K1"], "source_tasks": ["T-J"], "member": "column K1",
+             "expect": _x("K1", "STR.CONC.COLUMN", None), "after": {}, "basis": "x", "why_held": "x", "question": "x",
+             "beside": {"kind": "AT_MOST_M3", "value": 0.4, "basis": "x", "datums": [{"kind": "PRINTED", "what": "x"}]},
+             "squares": [sq]}
+    with pytest.raises(A.InputsError, match="junction squares go with"):
+        A.load_inputs(doc(es), PID)

@@ -12,6 +12,9 @@ Checker-merged files, each pinned by sha256 (an edited file stops the build):
       HELD blank;
   research/agents_t665/out/LINE_INDEX_V3_0_63.json  T-665 (Gate B PASS, MERGED 12acd3d4): the class and range each
       line carries on the candidate V3.0.63 (the binding; asserted again on the live run);
+  research/agents_t669/out/T669_LEDGER.json   T-669 (MERGED 8cb64551, Verifier 2026-11-10 09:56Z Gate A PASS, own
+      DXF re-read of the corner): F-T665-1, the annex SE ground-beam corner square owned by run #1 BAND0012.1 (its
+      AT_LEAST floor 0.090 -> 0.1125 m3); its roof-column part (b) is not this row's and is not wired;
   research/agents_t469/DOWNGRADES_SNAPSHOT.json  the Checker downgrade DG-6dd9f1caba1ca77d (APPLIED on V3.0.63) that
       holds the RELEASED band point 7.2204 at export: materialised whole (one line) by the restatement (R-T665-1 (g)).
 
@@ -40,7 +43,9 @@ T659 = ROOT / "research/agents_t659/out/T659_LEDGER.json"
 T667 = ROOT / "research/agents_t667/out/T667_LEDGER.json"
 INDEX = ROOT / "research/agents_t665/out/LINE_INDEX_V3_0_63.json"
 DGS = ROOT / "research/agents_t469/DOWNGRADES_SNAPSHOT.json"
-PINS = {T666: "99a906c2d2dd1804d6996d961396a4b5d5e59c9ed03d6d8829b2f98e0374a720",
+T669 = ROOT / "research/agents_t669/out/T669_LEDGER.json"
+PINS = {T669: "e3f2dd96b133de85ee2bae7b9bb2667dce6a478bcf3e707746f9851ec828ef3a",
+        T666: "99a906c2d2dd1804d6996d961396a4b5d5e59c9ed03d6d8829b2f98e0374a720",
         T659: "50e51242f4c39bc74ec34f370db67e50297c6bcc18c1038dc3fdeb20797a743f",
         T667: "4adfc23d76b7be32f5da98cbda5db7822c9b8b7dc3ed75dea91d92a50b6309b9",
         INDEX: "cd062bfe777af2393228f31893b71ae7032c8d0e6c1bcbe41b0194e36a8fe8d8",
@@ -62,6 +67,11 @@ SOURCES = {
               "checker_run": "Verifier 2026-11-10 05:05 (Gate A PASS: own pool outline 10.935562 m2, grown in plot "
                              "11.851050 AGREE; pit-layer share own 2.696261 vs 2.695761 m2, F-C-T667-1 residual "
                              "0.00005 m3 named; steps HELD blank AGREE; 6 HELD blinding lines untouched)"},
+    "T-669": {"task": "T-669", "file": "research/agents_t669/out/T669_LEDGER.json", "sha256": PINS[T669],
+              "merge_commit": "8cb64551ce8b27223a9fa9c5fd20f67974d3609a",
+              "checker_run": "Verifier 2026-11-10 09:56Z (Gate A PASS: own ST7757 dxf entities on the annex SE corner "
+                             "square: 10B and 7D1 reach F8, 7D4 ends on 7D1, no column: the square is in run #1 "
+                             "BAND0012.1, 1.50 x 0.30 x 0.25 = 0.1125 m3, residual 0 AGREE)"},
 }
 SCHEMA = "URBAN_V3064_INPUTS_V1"
 BAND = "L-6290a9f3d93f38cd46d6"
@@ -78,6 +88,10 @@ Q_BAND = ("Q-28: the boundary band section (B.W 20x60, ST p.10, vs typical G.B 2
 Q_POOL = ("C4 / C6: the pool blinding projection beyond the printed 5 + 5 cm wrap is drawn, not dimensioned (ST p.7 "
           "N.I.S.); the founding levels of the footings under the pool vs the pool formation are not printed: one "
           "blinding layer or two (designer)")
+CORNER = "L-6bf14711798e5af93594"            # P-C:GROUND_BEAMS:GROUND:BAND0012.1 (the census row's full id)
+CORNER_NEIGHBOURS = ("L-3284f44000c02179ace7", "L-402dbe61d1c924144a3c")   # BAND0012.2 / BAND0015, unchanged
+Q_D35 = ("D-35: the annex exterior ground-beam depth: the literal +0.25 .. N.G. reading cannot hold the printed "
+         "exterior section (designer)")
 Q_STEPS = "no pool step drawn or dimensioned on the pool detail, plan or section: designer item (access to the water)"
 
 
@@ -89,7 +103,7 @@ def _load():
     for p, s in PINS.items():
         if _sha(p) != s:
             raise SystemExit(f"{p.relative_to(ROOT)}: sha256 {_sha(p)[:8]} is not the pinned {s[:8]} (edited file)")
-    return tuple(json.loads(p.read_text(encoding="utf-8")) for p in (T666, T659, T667, INDEX, DGS))
+    return tuple(json.loads(p.read_text(encoding="utf-8")) for p in (T666, T659, T667, INDEX, DGS, T669))
 
 
 def _f(x):
@@ -229,8 +243,44 @@ def _column(col, lid, ix):
                      f"R-T666-1); its line stays as the candidate carries it"}
 
 
+def _corner(t669, ix):
+    """F-T665-1 (T-669 (a), R-T669-1): the annex SE corner square belongs to run #1 BAND0012.1: its AT_LEAST floor
+    1.20 -> 1.50 m x 0.30 x 0.25. The ledger's owner id (a_corner_square.owner.line_id) is not a candidate id (its
+    8-character prefix and member agree with the candidate line; F-T668-1): the line is bound by the census row's id."""
+    a = t669["a_corner_square"]
+    row = next(r for r in t669["c_census"]["rows"] if r["line_id"] == CORNER)
+    own = a["owner"]
+    if own["line_id"][:10] != CORNER[:10] or not ix[CORNER]["element_id"].endswith(own["member"].split(" ")[-1]):
+        raise SystemExit(f"corner owner {own} is not the candidate line {CORNER} {ix[CORNER]['element_id']}")
+    lo0, lo = _f(a["floor_m3"]["before_V3_0_63"]), _f(a["floor_m3"]["after"])
+    if _f(row["beside"]["AT_LEAST_M3"]) != lo0 or _f(row["beside_after_T669"]["AT_LEAST_M3"]) != lo:
+        raise SystemExit("corner: ledger floor and census row disagree")
+    span = _f(a["span_m"][1])
+    if abs(span * 0.30 * 0.25 - lo) > 1e-9 or abs(_f(a["span_m"][0]) * 0.30 * 0.25 - lo0) > 1e-9:
+        raise SystemExit("corner: floor is not span x 0.30 x 0.25")
+    if ix[CORNER]["class"] != "HELD" or ix[CORNER]["held_low"] is not None:
+        raise SystemExit(f"corner: {ix[CORNER]}")
+    return {"action": "LOWER_ONLY", "line_id": CORNER, "source_tasks": ["T-669"],
+            "member": "ground beam BAND0012.1 (annex exterior, run #1)", "expect": _expect(ix[CORNER]), "after": {},
+            "basis": (f"run #1 {a['owner']['run']}: drawn span {a['span_m'][1]} m to the outer corner (was "
+                      f"{a['span_m'][0]}) x 0.30 x 0.25 literal floor; {a['why']}")[:900],
+            "why_held": "D-35 annex exterior depth: the high end is open (R-T658-3); only the literal floor is drawn",
+            "question": Q_D35,
+            "beside": {"kind": "AT_LEAST_M3", "value": lo,
+                       "basis": f"{a['span_m'][1]} x 0.30 x 0.25 (R-T669-1: owns the annex SE corner square)"},
+            "squares": [{"square": "annex SE corner", "owner": CORNER, "owner_kind": "PIECE", "owner_line": CORNER,
+                         "junction": "annex SE G.B corner", "area_m2": 0.09}]}
+
+
+def _neighbour(lid, ix):
+    if ix["class"] != "HELD" or ix["held_low"] is not None:
+        raise SystemExit(f"corner neighbour {lid}: {ix}")
+    return {"action": "CONFIRM", "line_id": lid, "source_tasks": ["T-669"], "member": f"ground beam {ix['element_id']}",
+            "expect": _expect(ix), "basis": "meets the annex SE corner square without owning it (T-669 (a)): unchanged"}
+
+
 def build(project_id=None):
-    t666, t659, t667, index, dgs = _load()
+    t666, t659, t667, index, dgs, t669 = _load()
     if index["candidate_version"] != "ARCH_TAKEOFF_V3.0.63":
         raise SystemExit(f"index is {index['candidate_version']}")
     ix = {ln["line_id"]: ln for ln in index["lines"]}
@@ -243,13 +293,16 @@ def build(project_id=None):
     ents.append(_pool(t667, ix))
     ents.append(_steps(t667, ix[STEPS]))
     ents += [_column(c, lid, ix[lid]) for c, lid in sorted(COLUMNS.items())]
+    ents.append(_corner(t669, ix))
+    ents += [_neighbour(lid, ix[lid]) for lid in CORNER_NEIGHBOURS]
     if ix[B23_1F]["class"] != "RELEASED" or ix[B23_1F]["item_code"] != "STR.CONC.BEAM":
         raise SystemExit(f"B23 1F span {ix[B23_1F]}")
     _assert_ledger_totals(ents, t666)
     return {"schema": SCHEMA, "project_id": project_id, "sources": list(SOURCES.values()), "entries": ents,
             "index_sha256": PINS[INDEX],
-            "not_wired": [{"what": "F-T665-1 annex SE ground-beam corner square", "task": "T-669",
-                           "why": "not merged when this package was built: its line keeps its V3.0.63 state"}]}
+            "not_wired": [{"what": "T-669 (b) roof-column lower ends (5 2F columns 1.6362 .. 2.295 m3, R-T669-2)",
+                           "task": "T-669", "why": "outside this row (junction / band / pool / corner square): the 6 "
+                           "upper-only column lines keep their V3.0.63 state; a lane I row wires them"}]}
 
 
 def _assert_ledger_totals(ents, t666):

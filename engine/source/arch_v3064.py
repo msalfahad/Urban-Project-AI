@@ -1,13 +1,15 @@
 """ARCH_TAKEOFF_V3.0.64 (T-668, lane I, CONCRETE GATE B ROUND 3 integration package): the SAME opt-in BOQ candidate
 as ARCH_TAKEOFF_V3.0 .. V3.0.63 (engine.source.arch_v30, arch_v301 .. arch_v3063), extended with ONE piece built from
 Checker-merged research ledgers of the B10 concrete families (STR.CONC.*, m3) not wired by V3.0.63: junction-square
-ownership of five beam pieces, the boundary band under the building stretches and the pool blinding:
+ownership of five beam pieces and of the annex ground-beam corner, the boundary band under the building stretches and
+the pool blinding:
 
   CONC_LEDGER   a named concrete line is restated as its merged ledger states it, with the V3.0.63 actions and
                 states unchanged (BOUND, VALUE, HELD_BLANK, LOWER_ONLY, UPPER_ONLY, CONFIRM; engine.source.arch_v3063,
                 R-T665-1 (a) .. (g) re-used as written); a BOUND may carry the exposures a drawn junction leaves
-                open BESIDE it (each 0 .. x m3, named, never in the range) and the owner of every junction square
-                it touches (one owner per square, R-T666-1);
+                open BESIDE it (each 0 .. x m3, named, never in the range); a BOUND, a LOWER_ONLY floor or a
+                CONFIRM may name the owner of every junction square it touches (one owner per square, R-T666-1 /
+                R-T669-1);
   CONC_ADD      a printed concrete element carried by NO candidate line becomes ONE new line (new in V3.0.64):
                   ADD_LOWER_ONLY  HELD blank (BLOCKED_RFI) with the drawn AT_LEAST m3 figure beside, never a range,
                                   never 0; the line names every candidate line whose plan it shares and the shared
@@ -92,8 +94,9 @@ PIECES = {
 WAITING = {k: v for k, v in A3063.WAITING.items()
            if k not in ("T665_JUNCTION_OWNERSHIP", "T665_POOL_BLINDING_WIRING")}          # wired here
 WAITING.update({
-    "T668_F_T665_1_CORNER_SQUARE": "F-T665-1 (annex SE ground-beam corner square) is T-669 (lane S, not merged when "
-                                   "this package was built): its line keeps its V3.0.63 state",
+    "T668_ROOF_COLUMN_LOWER_ENDS": "T-669 (b) (R-T669-2: the 2F roof-column lower ends from the W26 apex + slab "
+                                   "thickness) is not this row's: the upper-only column lines keep their V3.0.63 "
+                                   "state; a lane I row wires them",
     "T668_POOL_STEPS": "pool steps stay HELD blank (no step drawn or dimensioned: designer item); confirmed, not "
                        "valued (the freelancer's 0.228 m3 is his size, RULE_DIFFERENCE)",
     "T668_POOL_BEYOND_PLOT": "the pool's own blinding strip beyond the plot line (0.037 m3) is beside the new line "
@@ -175,8 +178,10 @@ def load_inputs(doc, project_id=None):
             continue
         e = A3063._entry(x, srcs)
         w = f"{e['action']} {e['line_id']}"
-        if (e.get("exposures_beside") or e.get("squares")) and e["action"] not in ("BOUND", "CONFIRM"):
-            raise InputsError(f"{w}: exposures / squares go with a bound (or a confirmed line)")
+        if e.get("exposures_beside") and e["action"] != "BOUND":
+            raise InputsError(f"{w}: exposures beside go with a bound")
+        if e.get("squares") and e["action"] not in ("BOUND", "LOWER_ONLY", "CONFIRM"):
+            raise InputsError(f"{w}: junction squares go with a bound, a lower-only floor or a confirmed line")
         e["exposures_beside"] = _exposures(e, w)
         top = (e.get("after") or {}).get("high")
         if top is not None and any(x["high"] > top for x in e["exposures_beside"]):

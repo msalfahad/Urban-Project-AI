@@ -32,7 +32,8 @@ def test_entries_and_actions(doc):
     c = Counter((e.get("expect", e.get("add"))["item_code"], e["action"]) for e in doc["entries"])
     assert c == {("STR.CONC.BEAM", "BOUND"): 5, ("STR.CONC.BOUNDARY_WALL", "BOUND"): 1,
                  ("STR.CONC.BLINDING", "ADD_LOWER_ONLY"): 1, ("STR.CONC.POOL", "CONFIRM"): 1,
-                 ("STR.CONC.COLUMN", "CONFIRM"): 3}
+                 ("STR.CONC.COLUMN", "CONFIRM"): 3, ("STR.CONC.GROUND_BEAM", "LOWER_ONLY"): 1,
+                 ("STR.CONC.GROUND_BEAM", "CONFIRM"): 2}
     A.load_inputs(json.loads(json.dumps(doc)), "P")
 
 
@@ -53,7 +54,7 @@ def test_pieces_by_hand(doc):
 
 
 def test_band_downgrade_materialised(doc):
-    b = next(e for e in doc["entries"] if e["line_id"] == I.BAND)
+    b = next(e for e in doc["entries"] if e.get("line_id") == I.BAND)
     assert b["expect"]["class"] == "RELEASED" and (b["expect"]["low"], b["expect"]["high"]) == (7.2204, 7.2204)
     assert (b["after"]["low"], b["after"]["high"]) == (5.6392, 11.0328)
     assert round(70.49 * 0.2 * 0.4, 6) == 5.6392 and round(91.94 * 0.2 * 0.6, 6) == 11.0328
@@ -70,6 +71,13 @@ def test_pool_blinding_add(doc):
     assert any(x["m3"] == "0.037000" for x in p["beside_also"])          # beyond the plot (D-14), not in the line
 
 
+def test_corner_square_t669(doc):
+    c = next(e for e in doc["entries"] if e.get("line_id") == I.CORNER)
+    assert c["action"] == "LOWER_ONLY" and c["beside"]["value"] == 0.1125 == round(1.50 * 0.30 * 0.25, 6)
+    assert c["squares"][0]["owner_line"] == I.CORNER and c["expect"]["element_id"].endswith("BAND0012.1")
+    assert {e.get("line_id") for e in doc["entries"] if e["action"] == "CONFIRM"} >= set(I.CORNER_NEIGHBOURS)
+
+
 def test_adverse_edited_pinned_file(monkeypatch):
     monkeypatch.setitem(I.PINS, I.T667, "0" * 64)
     with pytest.raises(SystemExit, match="edited file"):
@@ -80,11 +88,11 @@ def test_adverse_band_point_moved(monkeypatch):
     real = I._load
 
     def fake():
-        t666, t659, t667, index, dgs = real()
+        t666, t659, t667, index, dgs, t669 = real()
         for ln in index["lines"]:
             if ln["line_id"] == I.BAND:
                 ln["held_low"] = ln["held_high"] = 7.0
-        return t666, t659, t667, index, dgs
+        return t666, t659, t667, index, dgs, t669
     monkeypatch.setattr(I, "_load", fake)
     with pytest.raises(SystemExit, match="downgraded point"):
         I.build("P")
