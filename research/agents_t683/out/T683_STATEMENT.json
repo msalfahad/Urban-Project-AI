@@ -1,0 +1,4548 @@
+{
+ "schema": "URBAN_T683_CONCRETE_STATEMENT_V1",
+ "task": "T-683",
+ "rules": [
+  "R-T679-1 1.0.0 (research/agents_t679/t679_rules.py, unchanged)",
+  "R-T683-1 / -2 / -3 1.0.0 (research/agents_t683/t683_rules.py)"
+ ],
+ "not_claimed": "development villa; not an accuracy claim; nothing released (the released default V2.9 + route G is unchanged); no quantity changed; the reference is never a quantity and agreement is never proof",
+ "candidate": {
+  "version": "ARCH_TAKEOFF_V3.0.66",
+  "index": "research/agents_t677/out/LINE_INDEX_V3_0_66.json",
+  "index_sha256": "02065c41e79dd9df0873cd351e13801c809ca6fa1e62e8a04196af4af13724a7",
+  "lines_sha256": "c411617d8aac6157aa751defa80f8cc8a22b9bfc94e3631fbbf227d0517b59ea",
+  "master": "rules/coverage/BOQ_FAMILY_MASTER_1.67.0.json",
+  "master_census_agrees": 14
+ },
+ "inputs_sha256": {
+  "tests/alsenan/T001B_KEY_MAP.json": "ba6e54d53620a01b29020821785d0ebc30e9bf6cc3dfead3c53da57b6aa70177",
+  "tests/alsenan/registers_b1/BENCHMARK_NORMALISED.json": "959a8eeb67e3129a3ead75851ef17651dcd005acfc6d6b34add936477fabe613",
+  "research/agents_t669/out/T669_LEDGER.json": "e3f2dd96b133de85ee2bae7b9bb2667dce6a478bcf3e707746f9851ec828ef3a",
+  "research/agents_t673/out/T673_LEDGER.json": "fc0939bf1b1c6f524726015710c3dcdb271f353f5a2a8a475132c0d93023b410",
+  "research/agents_t678/out/T678_LEDGER.json": "3c1319c5b6ceabde30273d0fcca91b1f19c06c797a5bf54dd44c95a5c89c1ebd",
+  "research/agents_t635/out/SCORECARD_T635.json": "dea5363c408df53ae616e8f1ef592f1367a5a3b2c9130083a218cebc32659266",
+  "research/agents_t683/out/T683_REFERENCE_ARITH.json": "96170cf3089ab4f5d9762ee5a183c43db9cf8211f39fbd0021aae28db0627012",
+  "research/agents_t668/summary_t668.json": "5d0f1898c504a61408a41328f577200f42c6b9e566497e498dc731a7029db9f0",
+  "research/agents_t671/summary_t671.json": "cf1d0baeadfeb3e53f6d413fbf27a79f9fed25784260549f8f16ede03eb35fff",
+  "research/agents_t677/summary_t677.json": "7e157722e74149e1b714adeb3bb44739a0e29b19d8532149906f357263eada41"
+ },
+ "trade_total": {
+  "lines": 597,
+  "released": {
+   "lines": 317,
+   "m3": "291.476251"
+  },
+  "held_bounded": {
+   "lines": 101,
+   "low": "42.014281",
+   "high": "66.193191",
+   "by_cause": {
+    "DESIGNER ITEM": 68,
+    "OPEN BOUND": 33,
+    "MEASURABLE NOW": 0
+   }
+  },
+  "held_blank": {
+   "lines": 89,
+   "high": "OPEN",
+   "by_cause": {
+    "DESIGNER ITEM": 64,
+    "OPEN BOUND": 14,
+    "MEASURABLE NOW": 11
+   }
+  },
+  "excluded": {
+   "lines": 90
+  },
+  "engine_range": [
+   "333.490532",
+   "OPEN"
+  ],
+  "verified_share": {
+   "whole": "62 / 507",
+   "whole_m3": "60.280155",
+   "component": "1 / 507",
+   "component_m3": "1.746943"
+  }
+ },
+ "families": {
+  "B7-12": {
+   "lines": 12,
+   "released": {
+    "lines": 6,
+    "m3": "5.368881"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 5,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 5,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 1
+   },
+   "engine_range": [
+    "5.368881",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 11",
+    "whole_m3": "0",
+    "component": "0 / 11",
+    "component_m3": "0"
+   },
+   "item": "Stair concrete"
+  },
+  "B9-02": {
+   "lines": 61,
+   "released": {
+    "lines": 16,
+    "m3": "1.016"
+   },
+   "held_bounded": {
+    "lines": 17,
+    "low": "0.925",
+    "high": "1.496412",
+    "by_cause": {
+     "DESIGNER ITEM": 17,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 28,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 6,
+     "OPEN BOUND": 13,
+     "MEASURABLE NOW": 9
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "1.941",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 61",
+    "whole_m3": "0",
+    "component": "0 / 61",
+    "component_m3": "0"
+   },
+   "item": "Lintels"
+  },
+  "B10-01": {
+   "lines": 8,
+   "released": {
+    "lines": 1,
+    "m3": "12.734438"
+   },
+   "held_bounded": {
+    "lines": 5,
+    "low": "7.640374",
+    "high": "13.466198",
+    "by_cause": {
+     "DESIGNER ITEM": 4,
+     "OPEN BOUND": 1,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 2,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 2,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "20.374812",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 8",
+    "whole_m3": "0",
+    "component": "0 / 8",
+    "component_m3": "0"
+   },
+   "item": "Blinding"
+  },
+  "B10-02": {
+   "lines": 26,
+   "released": {
+    "lines": 25,
+    "m3": "64.3040"
+   },
+   "held_bounded": {
+    "lines": 1,
+    "low": "2.176",
+    "high": "2.275",
+    "by_cause": {
+     "DESIGNER ITEM": 1,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 0,
+    "high": null,
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "66.4800",
+    "66.5790"
+   ],
+   "verified_share": {
+    "whole": "0 / 26",
+    "whole_m3": "0",
+    "component": "0 / 26",
+    "component_m3": "0"
+   },
+   "item": "Isolated / combined footings"
+  },
+  "B10-03": {
+   "lines": 36,
+   "released": {
+    "lines": 0,
+    "m3": "0"
+   },
+   "held_bounded": {
+    "lines": 32,
+    "low": "8.7724",
+    "high": "11.3460",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 32,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 4,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 4,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "8.7724",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 36",
+    "whole_m3": "0",
+    "component": "0 / 36",
+    "component_m3": "0"
+   },
+   "item": "Necks"
+  },
+  "B10-04": {
+   "lines": 71,
+   "released": {
+    "lines": 35,
+    "m3": "27.151055"
+   },
+   "held_bounded": {
+    "lines": 11,
+    "low": "1.207878",
+    "high": "5.750071",
+    "by_cause": {
+     "DESIGNER ITEM": 11,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 20,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 19,
+     "OPEN BOUND": 1,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 5
+   },
+   "engine_range": [
+    "28.358933",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 66",
+    "whole_m3": "0",
+    "component": "1 / 66",
+    "component_m3": "1.746943"
+   },
+   "item": "Strap / ground beams"
+  },
+  "B10-05": {
+   "lines": 26,
+   "released": {
+    "lines": 26,
+    "m3": "21.640885"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 0,
+    "high": null,
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "21.640885",
+    "21.640885"
+   ],
+   "verified_share": {
+    "whole": "0 / 26",
+    "whole_m3": "0",
+    "component": "0 / 26",
+    "component_m3": "0"
+   },
+   "item": "Ground slab"
+  },
+  "B10-06": {
+   "lines": 72,
+   "released": {
+    "lines": 30,
+    "m3": "19.7765"
+   },
+   "held_bounded": {
+    "lines": 20,
+    "low": "9.6702",
+    "high": "12.4140",
+    "by_cause": {
+     "DESIGNER ITEM": 20,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 9,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 7,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 2
+    }
+   },
+   "excluded": {
+    "lines": 13
+   },
+   "engine_range": [
+    "29.4467",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 59",
+    "whole_m3": "0",
+    "component": "0 / 59",
+    "component_m3": "0"
+   },
+   "item": "Columns"
+  },
+  "B10-07": {
+   "lines": 192,
+   "released": {
+    "lines": 112,
+    "m3": "66.920678"
+   },
+   "held_bounded": {
+    "lines": 14,
+    "low": "5.983229",
+    "high": "8.412710",
+    "by_cause": {
+     "DESIGNER ITEM": 14,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 12,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 12,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 54
+   },
+   "engine_range": [
+    "72.903907",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 138",
+    "whole_m3": "0",
+    "component": "0 / 138",
+    "component_m3": "0"
+   },
+   "item": "Beams"
+  },
+  "B10-08": {
+   "lines": 75,
+   "released": {
+    "lines": 62,
+    "m3": "60.280155"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 0,
+    "high": null,
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 13
+   },
+   "engine_range": [
+    "60.280155",
+    "60.280155"
+   ],
+   "verified_share": {
+    "whole": "62 / 62",
+    "whole_m3": "60.280155",
+    "component": "0 / 62",
+    "component_m3": "0"
+   },
+   "item": "Suspended slabs"
+  },
+  "B10-09": {
+   "lines": 5,
+   "released": {
+    "lines": 2,
+    "m3": "5.081362"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 1,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 1,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 2
+   },
+   "engine_range": [
+    "5.081362",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 3",
+    "whole_m3": "0",
+    "component": "0 / 3",
+    "component_m3": "0"
+   },
+   "item": "Domes / rings"
+  },
+  "B10-10": {
+   "lines": 7,
+   "released": {
+    "lines": 2,
+    "m3": "7.202297"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 3,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 3,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 2
+   },
+   "engine_range": [
+    "7.202297",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 5",
+    "whole_m3": "0",
+    "component": "0 / 5",
+    "component_m3": "0"
+   },
+   "item": "Pool / tank / lift pit / pump room"
+  },
+  "B10-11": {
+   "lines": 2,
+   "released": {
+    "lines": 0,
+    "m3": "0"
+   },
+   "held_bounded": {
+    "lines": 1,
+    "low": "5.6392",
+    "high": "11.0328",
+    "by_cause": {
+     "DESIGNER ITEM": 1,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 1,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 1,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "5.6392",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 2",
+    "whole_m3": "0",
+    "component": "0 / 2",
+    "component_m3": "0"
+   },
+   "item": "Boundary wall concrete"
+  },
+  "B10-12": {
+   "lines": 4,
+   "released": {
+    "lines": 0,
+    "m3": "0"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 4,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 4,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "0",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 4",
+    "whole_m3": "0",
+    "component": "0 / 4",
+    "component_m3": "0"
+   },
+   "item": "RC parapets"
+  }
+ },
+ "item_codes": {
+  "STR.CONC.GROUND_BEAM": {
+   "lines": 61,
+   "released": {
+    "lines": 32,
+    "m3": "23.760555"
+   },
+   "held_bounded": {
+    "lines": 9,
+    "low": "1.178378",
+    "high": "5.096771",
+    "by_cause": {
+     "DESIGNER ITEM": 9,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 20,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 19,
+     "OPEN BOUND": 1,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "24.938933",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 61",
+    "whole_m3": "0",
+    "component": "1 / 61",
+    "component_m3": "1.746943"
+   }
+  },
+  "STR.CONC.DOME": {
+   "lines": 5,
+   "released": {
+    "lines": 2,
+    "m3": "5.081362"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 1,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 1,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 2
+   },
+   "engine_range": [
+    "5.081362",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 3",
+    "whole_m3": "0",
+    "component": "0 / 3",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.LINTEL": {
+   "lines": 61,
+   "released": {
+    "lines": 16,
+    "m3": "1.016"
+   },
+   "held_bounded": {
+    "lines": 17,
+    "low": "0.925",
+    "high": "1.496412",
+    "by_cause": {
+     "DESIGNER ITEM": 17,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 28,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 6,
+     "OPEN BOUND": 13,
+     "MEASURABLE NOW": 9
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "1.941",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 61",
+    "whole_m3": "0",
+    "component": "0 / 61",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.BEAM": {
+   "lines": 192,
+   "released": {
+    "lines": 112,
+    "m3": "66.920678"
+   },
+   "held_bounded": {
+    "lines": 14,
+    "low": "5.983229",
+    "high": "8.412710",
+    "by_cause": {
+     "DESIGNER ITEM": 14,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 12,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 12,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 54
+   },
+   "engine_range": [
+    "72.903907",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 138",
+    "whole_m3": "0",
+    "component": "0 / 138",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.SLAB": {
+   "lines": 75,
+   "released": {
+    "lines": 62,
+    "m3": "60.280155"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 0,
+    "high": null,
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 13
+   },
+   "engine_range": [
+    "60.280155",
+    "60.280155"
+   ],
+   "verified_share": {
+    "whole": "62 / 62",
+    "whole_m3": "60.280155",
+    "component": "0 / 62",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.COLUMN": {
+   "lines": 72,
+   "released": {
+    "lines": 30,
+    "m3": "19.7765"
+   },
+   "held_bounded": {
+    "lines": 20,
+    "low": "9.6702",
+    "high": "12.4140",
+    "by_cause": {
+     "DESIGNER ITEM": 20,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 9,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 7,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 2
+    }
+   },
+   "excluded": {
+    "lines": 13
+   },
+   "engine_range": [
+    "29.4467",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 59",
+    "whole_m3": "0",
+    "component": "0 / 59",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.FOOTING": {
+   "lines": 26,
+   "released": {
+    "lines": 25,
+    "m3": "64.3040"
+   },
+   "held_bounded": {
+    "lines": 1,
+    "low": "2.176",
+    "high": "2.275",
+    "by_cause": {
+     "DESIGNER ITEM": 1,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 0,
+    "high": null,
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "66.4800",
+    "66.5790"
+   ],
+   "verified_share": {
+    "whole": "0 / 26",
+    "whole_m3": "0",
+    "component": "0 / 26",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.GROUND_SLAB": {
+   "lines": 26,
+   "released": {
+    "lines": 26,
+    "m3": "21.640885"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 0,
+    "high": null,
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "21.640885",
+    "21.640885"
+   ],
+   "verified_share": {
+    "whole": "0 / 26",
+    "whole_m3": "0",
+    "component": "0 / 26",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.PARAPET": {
+   "lines": 4,
+   "released": {
+    "lines": 0,
+    "m3": "0"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 4,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 4,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "0",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 4",
+    "whole_m3": "0",
+    "component": "0 / 4",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.STAIR": {
+   "lines": 12,
+   "released": {
+    "lines": 6,
+    "m3": "5.368881"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 5,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 5,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 1
+   },
+   "engine_range": [
+    "5.368881",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 11",
+    "whole_m3": "0",
+    "component": "0 / 11",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.NECK": {
+   "lines": 36,
+   "released": {
+    "lines": 0,
+    "m3": "0"
+   },
+   "held_bounded": {
+    "lines": 32,
+    "low": "8.7724",
+    "high": "11.3460",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 32,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 4,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 4,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "8.7724",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 36",
+    "whole_m3": "0",
+    "component": "0 / 36",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.BLINDING": {
+   "lines": 8,
+   "released": {
+    "lines": 1,
+    "m3": "12.734438"
+   },
+   "held_bounded": {
+    "lines": 5,
+    "low": "7.640374",
+    "high": "13.466198",
+    "by_cause": {
+     "DESIGNER ITEM": 4,
+     "OPEN BOUND": 1,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 2,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 2,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "20.374812",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 8",
+    "whole_m3": "0",
+    "component": "0 / 8",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.POOL": {
+   "lines": 5,
+   "released": {
+    "lines": 2,
+    "m3": "7.202297"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 1,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 1,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 2
+   },
+   "engine_range": [
+    "7.202297",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 3",
+    "whole_m3": "0",
+    "component": "0 / 3",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.STRAP": {
+   "lines": 10,
+   "released": {
+    "lines": 3,
+    "m3": "3.3905"
+   },
+   "held_bounded": {
+    "lines": 2,
+    "low": "0.0295",
+    "high": "0.6533",
+    "by_cause": {
+     "DESIGNER ITEM": 2,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 0,
+    "high": null,
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 5
+   },
+   "engine_range": [
+    "3.4200",
+    "4.0438"
+   ],
+   "verified_share": {
+    "whole": "0 / 5",
+    "whole_m3": "0",
+    "component": "0 / 5",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.LIFT": {
+   "lines": 2,
+   "released": {
+    "lines": 0,
+    "m3": "0"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 2,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 2,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "0",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 2",
+    "whole_m3": "0",
+    "component": "0 / 2",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.BOUNDARY_WALL": {
+   "lines": 1,
+   "released": {
+    "lines": 0,
+    "m3": "0"
+   },
+   "held_bounded": {
+    "lines": 1,
+    "low": "5.6392",
+    "high": "11.0328",
+    "by_cause": {
+     "DESIGNER ITEM": 1,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 0,
+    "high": null,
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "5.6392",
+    "11.0328"
+   ],
+   "verified_share": {
+    "whole": "0 / 1",
+    "whole_m3": "0",
+    "component": "0 / 1",
+    "component_m3": "0"
+   }
+  },
+  "STR.CONC.BOUNDARY_PAD": {
+   "lines": 1,
+   "released": {
+    "lines": 0,
+    "m3": "0"
+   },
+   "held_bounded": {
+    "lines": 0,
+    "low": "0",
+    "high": "0",
+    "by_cause": {
+     "DESIGNER ITEM": 0,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "held_blank": {
+    "lines": 1,
+    "high": "OPEN",
+    "by_cause": {
+     "DESIGNER ITEM": 1,
+     "OPEN BOUND": 0,
+     "MEASURABLE NOW": 0
+    }
+   },
+   "excluded": {
+    "lines": 0
+   },
+   "engine_range": [
+    "0",
+    "OPEN"
+   ],
+   "verified_share": {
+    "whole": "0 / 1",
+    "whole_m3": "0",
+    "component": "0 / 1",
+    "component_m3": "0"
+   }
+  }
+ },
+ "stale_classes_restated": [
+  {
+   "line_id": "L-005334b6998987164a5d",
+   "element_id": "LINTEL:W28",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W28: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-061e18cf35a4b6b33d68",
+   "element_id": "P-C:SCOPE:STAIRS:GROUND:CC-5ab1872c70:FLIGHTS",
+   "wired_by": "T-677 LOWER_ONLY",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "ST-03 E1 waist slab not drawn (S-9); the steps part AT_LEAST 0.355017 is beside (T-677 LOWER_ONLY, T-258 DRAWING-CONFIRMED risers)"
+  },
+  {
+   "line_id": "L-2efe48097978cae5fc99",
+   "element_id": "LINTEL:P-1F-01",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel P-1F-01 (T-650 bound): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-40e8c2597de12644e8e2",
+   "element_id": "LINTEL:W24",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W24: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-441ae5fe85351347aff0",
+   "element_id": "LINTEL:W05",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W05: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-4a12b89454e48ac510dc",
+   "element_id": "LINTEL:A-1F-01",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel A-1F-01 (T-650 bound): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-53ef44d8c490d1341b93",
+   "element_id": "LINTEL:W16",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W16: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-6057028f3f666538a007",
+   "element_id": "LINTEL:W19",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W19 (pier side 0.40): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-6290a9f3d93f38cd46d6",
+   "element_id": "P-C:SCOPE:BOUNDARY_WALL:FOUNDATION:CC-9fd936ab60:BEAM",
+   "wired_by": "T-668 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-669 census (V3.0.63)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "boundary band 5.6392 .. 11.0328 wired by T-668: section B.W 20x60 vs typical 20x40 (designer RFI, Q-28; owner provisional A 8.4588 beside, not a released value) and band founding level 'AS PER EXCAVATION DEPTH' not printed"
+  },
+  {
+   "line_id": "L-6692d02cd6cd25120300",
+   "element_id": "LINTEL:W20",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W20 (pier side 0.40): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-786344670c0002b31478",
+   "element_id": "LINTEL:W09",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W09: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-7d90a0feed2537221f16",
+   "element_id": "LINTEL:W19+W20:PIER_REMAINDER",
+   "wired_by": "T-677 ADD_SHARED",
+   "class_before": null,
+   "source_before": "none (line added)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "W19 / W20 pier remainder 0 .. 0.2 x 0.2 x (0.875 - 2 x 0.40) = 0.003: which of the two lintels runs over the 0.075 m is not drawn (owned once, never inside either high; T-677 s.1 ADD_SHARED, ends T-516 RFI)"
+  },
+  {
+   "line_id": "L-882717b0c35a87e363ef",
+   "element_id": "LINTEL:W10",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W10 (START 0.100 deficit at a column): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-aca2db3c2b29719328c7",
+   "element_id": "LINTEL:W29",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W29 (low = high): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-bf76c17309c92605e174",
+   "element_id": "LINTEL:W23",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W23: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-dd5b41a7af885e96f797",
+   "element_id": "LINTEL:W21",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W21: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-ed7aadd01d9daa9559a9",
+   "element_id": "LINTEL:W07",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W07: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-f269fabb74f505755492",
+   "element_id": "LINTEL:W06",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W06 (low = high: deficit end 0.000): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  },
+  {
+   "line_id": "L-f68444edf483bc1d87d4",
+   "element_id": "LINTEL:W22",
+   "wired_by": "T-677 BOUND",
+   "class_before": "MEASURABLE NOW",
+   "source_before": "T-673 census (V3.0.64)",
+   "class_after": "DESIGNER ITEM",
+   "residual": "lintel W22 (low = high): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')"
+  }
+ ],
+ "floors_beside": {
+  "rule": "R-T683-1 (e): AT_LEAST values of blank lines, never in the bounded low or the engine range",
+  "lines": [
+   {
+    "line_id": "L-061e18cf35a4b6b33d68",
+    "at_least": "0.355017",
+    "source": "T-677 LOWER_ONLY",
+    "basis": "ST-03 E1 steps part DRAWING-CONFIRMED (5 drawn risers, T-258): 5 x 1/2 x 0.30 x 0.17 x 2.80 = 0.357000 - arrival wedge in the ground-slab face 0.001983 (T-192) = 0.355017"
+   },
+   {
+    "line_id": "L-6bf14711798e5af93594",
+    "at_least": "0.1125",
+    "source": "T-668 LOWER_ONLY",
+    "basis": "1.500000 x 0.30 x 0.25 (R-T669-1: owns the annex SE corner square)"
+   },
+   {
+    "line_id": "L-893c3db13b14dc38625e",
+    "at_least": "0.915529",
+    "source": "T-668 ADD_LOWER_ONLY",
+    "basis": "11.851050 m2 own layer in plot - 2.695761 m2 shared with the VERIFIED pit layer = 9.155289 m2 x 0.100000 m (Q-26 A flat floor)"
+   }
+  ],
+  "sum_at_least": "1.383046"
+ },
+ "f_t679_1_census_rows": [
+  {
+   "line_id": "L-893c3db13b14dc38625e",
+   "element": "pool blinding",
+   "state_v3_0_66": "HELD blank; AT_LEAST 0.915529 m3 beside (T-668 ADD_LOWER_ONLY: (11.851050 - 2.695761) x 0.10)",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "C4 projection beyond the 0.10 wrap drawn, not dimensioned; C6 founding levels of F8 / F4 / FN vs pool formation -1.50 not printed (one blinding layer or two) - T-667 s.2 designer list",
+   "wiring": "already wired (T-668, V3.0.64) as a floor; nothing left to wire. Closes only on the designer answer to C4 / C6, then a lane S re-measure row + a lane I row. No owner question (ERS 2.7: a designer item, both items already on the designer list)"
+  },
+  {
+   "line_id": "L-bef35462630d4b76596f",
+   "element": "beam BAND0030.2 depth companion",
+   "state_v3_0_66": "HELD bounded 0 .. 0.025 m3 (T-671 ADD_COMPANION: 0.100 x (0.75 - 0.50))",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "no beam mark printed on the strip: depth B4 0.50 (released part 0.05) vs B7 0.75 (FR-T642-2, T-642)",
+   "wiring": "already wired (T-671, V3.0.65); closes on the designer mark for the strip. No owner question (designer item)"
+  }
+ ],
+ "held_lines": [
+  {
+   "family": "B10-01",
+   "line_id": "L-080c97f5f6a92452cd04",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTING:FTG:SH10:T652:10A5",
+   "bound": [
+    "0.435",
+    "0.59"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "Q-31 C (F10 + F readings A / B)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-01",
+   "line_id": "L-10032bf9a60368473a7b",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BEYOND_PLOT_LINE",
+   "bound": [
+    "0.0",
+    "0.189"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-14 (blinding beyond the plot line)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-01",
+   "line_id": "L-16b95607fc88cda3844a",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_LIFT_RAFT_FF",
+   "bound": [
+    "2.256",
+    "2.352"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "FF lift-raft blinding projection drawn, not dimensioned (ST p.14)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-01",
+   "line_id": "L-35382b18e2e362df3ae6",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_STRAP",
+   "bound": [
+    "0.0",
+    "0.912684"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-15 (blinding under straps)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-01",
+   "line_id": "L-7a5214a334ea3559fa2d",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_GROUND_BEAM",
+   "bound": [
+    "4.949374",
+    "9.422514"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-33 / D-35 (ground-beam sections under the blinding)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-01",
+   "line_id": "L-893c3db13b14dc38625e",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "P-C:PLAIN_CONCRETE:POOL:BLINDING_UNDER_POOL_BASE",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "pool blinding HELD LOWER_ONLY >= 0.915529 (T-667 MERGED; wired T-668 ADD_LOWER_ONLY): projection beyond the wrap drawn, not dimensioned (C4) and F8 / F4 / FN founding vs pool formation -1.50 not printed (C6), both on the designer lists (T-667 s.2)",
+   "cause_source": "T-667 / T-668 (classed by T-679 from the merged text; no census row)"
+  },
+  {
+   "family": "B10-01",
+   "line_id": "L-d0313e5d204e2758996a",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BOUNDARY_WALL_BASE",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "Q-28 (pad count; pad blinding projections not dimensioned)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-02",
+   "line_id": "L-164ae9d338976be9e582",
+   "item_code": "STR.CONC.FOOTING",
+   "element_id": "P-C:FTG:SH10:T652:10A5",
+   "bound": [
+    "2.176",
+    "2.275"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "Q-31 C readings under the V3.0.11 conflict record (F10 + F); T-595 third reading named WAITING",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-05a99150a85e9185ae48",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C4@224310,64557",
+   "bound": [
+    "0.235",
+    "0.315"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-12f3d8b9375cac407bca",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C1@213452,60528",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-43 / D-63 (lift raft depth, lift necks)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-132cf60588a44f6af9d6",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C11@208990,51494",
+   "bound": [
+    "0.5874",
+    "0.66"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-15b8ad39d6b2250c9546",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C8@217457,52784",
+   "bound": [
+    "0.4272",
+    "0.54"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-15d9da9b17fd373553f0",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@223972,59262",
+   "bound": [
+    "0.0972",
+    "0.18"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-1a9e469651c32cce9b97",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@222815,61757",
+   "bound": [
+    "0.1152",
+    "0.198"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-314946394d849141dda2",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:C@226940,50955",
+   "bound": [
+    "0.267",
+    "0.33"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-34346cb438bffee6acec",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@216858,57078",
+   "bound": [
+    "0.1152",
+    "0.198"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-3f7b9501a902579e7406",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C2@209843,64560",
+   "bound": [
+    "0.2895",
+    "0.3225"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-46f2b70254f074885dfc",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C4@220308,64637",
+   "bound": [
+    "0.282",
+    "0.315"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-486cd9a0bf52e4b32abb",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C5@220440,52886",
+   "bound": [
+    "0.3384",
+    "0.378"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-48f2e06e5c946eb1e5a7",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@226007,58025",
+   "bound": [
+    "0.267",
+    "0.3"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-4ec473f7c0c712919823",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@199252,55820",
+   "bound": [
+    "0.192",
+    "0.33"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-4ef35980fbb54366703d",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@224210,63411",
+   "bound": [
+    "0.1062",
+    "0.189"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-516989b817e0ccc7cb80",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@217138,51213",
+   "bound": [
+    "0.267",
+    "0.3"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-53d0b6af1a801c3db58e",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@198052,57874",
+   "bound": [
+    "0.192",
+    "0.33"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-5aec8a0055215ee5a711",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C2@212578,64533",
+   "bound": [
+    "0.2895",
+    "0.3225"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-5efd9ac69d4cfd9b9a6e",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C5@216447,64629",
+   "bound": [
+    "0.3384",
+    "0.378"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-6a2040e0fe0bf7391b9c",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@222091,55786",
+   "bound": [
+    "0.1152",
+    "0.198"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-734ff1a78bbe6b7eb4c3",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@195972,51184",
+   "bound": [
+    "0.192",
+    "0.33"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-85df35f17a205f919aa6",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@195866,57040",
+   "bound": [
+    "0.192",
+    "0.33"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-8eb74a02fcf5ae4465f8",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C2@213395,59220",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-43 / D-63 (lift raft depth, lift necks)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-953e87a3e9d0425d404e",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C9@214557,59222",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-43 / D-63 (lift raft depth, lift necks)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-995eca94ba8dc09a028f",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C7@209292,59069",
+   "bound": [
+    "0.3792",
+    "0.432"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-ae1bd9cb228d57594e46",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@209914,60584",
+   "bound": [
+    "0.237",
+    "0.27"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-b21cbf6560f613b39bf0",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C9@220198,60706",
+   "bound": [
+    "0.519",
+    "0.585"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-b4c234c8a3873239f67f",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C11@207698,54876",
+   "bound": [
+    "0.5874",
+    "0.66"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-bbad8cdb4d26986776a6",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:C10@224867,51226",
+   "bound": [
+    "0.3738",
+    "0.462"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-bd741a3faf2318dd8409",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@207257,51203",
+   "bound": [
+    "0.2376",
+    "0.33"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-c1e802184591eac927cf",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C5@205273,54905",
+   "bound": [
+    "0.1944",
+    "0.36"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-c8c07db4ac0d54d89bbf",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@225897,54910",
+   "bound": [
+    "0.1152",
+    "0.198"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-dd3c32e4340e7a823a6e",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@201132,51210",
+   "bound": [
+    "0.177",
+    "0.315"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-dd6d11415961b554e906",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C2@214579,60524",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-43 / D-63 (lift raft depth, lift necks)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-efe50185c0da4244e158",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C6@209970,56575",
+   "bound": [
+    "0.3738",
+    "0.42"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-f54b7b2acf11ebd2a585",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@205523,52938",
+   "bound": [
+    "0.192",
+    "0.33"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-03",
+   "line_id": "L-fc622ff340ac65a544e3",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C8@224698,57859",
+   "bound": [
+    "0.4806",
+    "0.54"
+   ],
+   "cause_class": "OPEN BOUND",
+   "cause": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-00465df980165c529476",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0035",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-35",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-0bb78accf8c0a0fbdbaf",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0037.1",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-33",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-0c5ede7fd2c9e425aa8d",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0034",
+   "bound": [
+    "0.1125",
+    "0.15"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-34 (title precedence, 30x30 .. 30x40)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-0e852cca42fb8b765c58",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0007",
+   "bound": [
+    "0.216",
+    "0.288"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-34 (title precedence, 30x30 .. 30x40)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-1487bdda099006e0c4ba",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0019",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-33",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-21795b350fbd09150c43",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0022",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-35 (court G.B depth basis; court structural top / ground level unprinted)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-3284f44000c02179ace7",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0012.2",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-35",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-402dbe61d1c924144a3c",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0015",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-35",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-4783c6e18002c3a8a37e",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0016",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-35",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-5af89b9f1e5b90daf8f5",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0010.3",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-33",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-62243c74c430d383be86",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0002.1",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-35 (court G.B depth basis; court structural top / ground level unprinted)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-6bf14711798e5af93594",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0012.1",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-35",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-81444e222487437e257e",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0020",
+   "bound": [
+    "0.1305",
+    "0.174"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-34 (title precedence, 30x30 .. 30x40)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-95a1f198cfe7f398d6ae",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0023:7DC+7DD#1",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-33",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-970bac563cbcd69e2a30",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0038",
+   "bound": [
+    "0.098008",
+    "0.130678"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-34 (title precedence, 30x30 .. 30x40)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-a55bfa01b726ef11650c",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0041",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-35 (court G.B depth basis; court structural top / ground level unprinted)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-a8c5c32c7a785c1e3f05",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0040",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-33",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-b4a13a43967ee4765662",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0017.2",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-35",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-be6708e07b40efa02779",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.1",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "neck-cut sliver section not printed (R-GB-NECK-CUT-1)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-c0b7102a36344a0349f5",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0025.1",
+   "bound": [
+    "0.20925",
+    "0.279"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-34 (title precedence, 30x30 .. 30x40)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-cfb4555cb26b39934bff",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0032:7E7+7E8#2",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-33",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-d53e5eb08e2c6c668254",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.2",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-33",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-d8b98b143e293d30833b",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.2",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-35",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-e16c98075f69532a3dc7",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0042",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-35",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-e2134034441cb7db7bd7",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0021",
+   "bound": [
+    "0.108",
+    "0.144"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-34 (title precedence, 30x30 .. 30x40)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-e24946df436cbc25fca6",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.1",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-33",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-f0e25ad2cf73bf2a35ea",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0030",
+   "bound": [
+    "0.108",
+    "0.144"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-34 (title precedence, 30x30 .. 30x40)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-f24cf117a9ce1e875785",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0039",
+   "bound": [
+    "0.19612",
+    "0.261493"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-34 (title precedence, 30x30 .. 30x40)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-fb7a6431fede62e93fd5",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "T254:GROUND_BEAMS:GROUND:BOUNDARY_GB_NG",
+   "bound": [
+    "0.0",
+    "3.5256"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "Q-28 (RFI)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-abd65e1b745315dd17c2",
+   "item_code": "STR.CONC.STRAP",
+   "element_id": "HL:STRAP_CONCRETE:SB1:IN_FOOTING:F10_F",
+   "bound": [
+    "0.0",
+    "0.385"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "Q-31 C (SB1 end inside F10 + F)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-04",
+   "line_id": "L-c823e0dbd81e30c66aa5",
+   "item_code": "STR.CONC.STRAP",
+   "element_id": "HL:STRAP_CONCRETE:SB3:IN_FOOTING:F3",
+   "bound": [
+    "0.0295",
+    "0.2683"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-15 (strap soffit)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-0ede77cfd0badc4c7d62",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C2@247685,64087|2F",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39 / D-44",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-1dc713c83bf62e525ff2",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C8@256160,53630|1F",
+   "bound": [
+    "0.756",
+    "0.84"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-26f6b6f2365c72e42291",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C2@254644,61274|2F",
+   "bound": [
+    "0.303",
+    "0.425"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-291ba2ddf4bbe4f14cf7",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@243102,55481|1F",
+   "bound": [
+    "0.42",
+    "0.504"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-33a9b7728781fcba12e2",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C2@251723,58368|2F",
+   "bound": [
+    "0.303",
+    "0.425"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-43dae3d6dfec957b26a8",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@265272,52633|GF",
+   "bound": [
+    "0.36",
+    "0.45"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-4aed92c117a7ab1c90ee",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C9@259284,59442|1F",
+   "bound": [
+    "0.756",
+    "0.84"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-4c4496579e5bfa20ae9f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C8@256160,53630|GF",
+   "bound": [
+    "0.9",
+    "1.0125"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-53f223b06db14ac41d47",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C9@254644,59429|2F",
+   "bound": [
+    "0.4242",
+    "0.595"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "HL:PLANTED_COLUMN:PC-2F:CONCRETE",
+   "bound": null,
+   "cause_class": "MEASURABLE NOW",
+   "cause": "T-678 outline_778: bounded in research, wiring pending (lane I)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-694a75c84dd6e4bb4491",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@241094,51256|GF",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39 / Q-54B / D-66",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-755eb56b55e86301b488",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C9@254644,59429|1F",
+   "bound": [
+    "0.756",
+    "1.05"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-831f6fe3de133294bb8f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@259715,51786|1F",
+   "bound": [
+    "0.42",
+    "0.63"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-85809d3db52bb93dfe96",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C7@247954,58915|1F",
+   "bound": [
+    "0.672",
+    "0.84"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-8de64040a1c3ae6cf137",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@265215,57750|GF",
+   "bound": [
+    "0.45",
+    "0.5625"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-8f8ad257d9b2cb9e027f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C4@264812,63850|1F",
+   "bound": [
+    "0.42",
+    "0.525"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-919a5749ef79759e01ca",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C2@252679,64225|2F",
+   "bound": [
+    "0.303",
+    "0.425"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-9cb26d86575a92694880",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@247429,51302|GF",
+   "bound": [
+    "0.36",
+    "0.45"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-9f5a647014bbf83359f9",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@238150,57853|GF",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39 / Q-54B / D-66",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-a87ea657a42a311cb851",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C6@250087,56100|1F",
+   "bound": [
+    "0.504",
+    "0.735"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-bc01297b1c4a4c45a15f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@255627,63526|2F",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39 / D-66",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-c0b3340a906c2c7650f8",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@233893,56561|GF",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39 / Q-54B / D-66",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-c10e2945d582b5a03126",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@247476,61310|2F",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39 / D-44 / D-66",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-c677b628a776d3b87b02",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@255627,63526|1F",
+   "bound": [
+    "0.42",
+    "0.63"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-cc702b8541c15fdfd98c",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@247476,61310|1F",
+   "bound": [
+    "0.42",
+    "0.525"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C1@251701,62344|2F",
+   "bound": [
+    "0.303",
+    "0.425"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-e112e2add2f8979a6c39",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C4@259526,63482|1F",
+   "bound": [
+    "0.42",
+    "0.525"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-66 (schedule vs drawn outline CONFLICT, held member by member)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-e6c1c9a7feec10f64975",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@235241,51296|GF",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39 / Q-54B / D-66",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-06",
+   "line_id": "L-fad18af6e7139a5e99d1",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@238374,54773|GF",
+   "bound": null,
+   "cause_class": "MEASURABLE NOW",
+   "cause": "T-678 annex_C3: bounded in research, wiring pending (lane I)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-17c4238c0ef76656d06e",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-019#2F-031",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-26 (PROJECTION)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-1fd49f3e7c5a7dd19d4d",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-056#BAND0042",
+   "bound": [
+    "2.262872",
+    "2.545691"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-27 (WIDTH)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-2c7b0b1e1a439d9ffd1e",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.1",
+   "bound": [
+    "0.347",
+    "0.4338"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-27 (WIDTH)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-331d4bbef719a7f0bbca",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.2",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-05/D-26 (PROJECTION)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-377cb988b2271c2e2e4d",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-038",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-26 (PROJECTION)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-39ca5340879eafc35355",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-030#BAND0009",
+   "bound": [
+    "0.44255",
+    "0.55323"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-27 (WIDTH)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-43e804ba4a4c07529fd5",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.2",
+   "bound": [
+    "0.4563",
+    "0.5475"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-02 (WIDTH)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-50667f69855b6d588011",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.1",
+   "bound": [
+    "0.2875",
+    "0.345"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-02 (WIDTH)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-54e397fe7b1485b2e8fe",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.2",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-05/D-26 (PROJECTION)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-56d278bedc8dda2837a9",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-036#BAND0025",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-05/D-26 (PROJECTION)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-60f09eece6568b15f6ce",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.2",
+   "bound": [
+    "0.335",
+    "0.4188"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-27 (WIDTH)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-634cefe5e8a7fb458e16",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.1",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-05/D-26 (PROJECTION)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-67f3d325019e618328eb",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.1",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-05/D-26 (PROJECTION)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-7c3edce23ec8faa3d674",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:2F:BAND0011.1",
+   "bound": [
+    "0.112",
+    "0.336"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-04 (UNLABELLED)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-88ccf8d4505411deb9e5",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-057#BAND0019.2",
+   "bound": [
+    "0.212",
+    "0.3975"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-03 (TWO_MARKS)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-8d031491396379f0cbb1",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-015#BAND0001.3",
+   "bound": [
+    "0.0904",
+    "0.2712"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-04 (UNLABELLED)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-9e4895663f76d7f03ac9",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-054#BAND0008",
+   "bound": [
+    "1.013607",
+    "1.266989"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-27 (WIDTH)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-a9d5e7dc22013e24d691",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:1F:BAND0014",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-05/D-26 (PROJECTION)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-ab37afa17f2ac5b0efd1",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-28 (RING)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-aba59a2157a48a69e2fb",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-061",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-26 (PROJECTION)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-bb49e831f053bd30a6ce",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:1F:BAND0023",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-05/D-26 (PROJECTION)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-bef35462630d4b76596f",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:GF:BAND0030.2~T642_DEPTH_B4_B7",
+   "bound": [
+    "0.0",
+    "0.025"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "BAND0030.2 depth companion 0 .. 0.025: strip depth B4 0.50 vs B7 0.75, no mark printed on the strip (T-642 FR-T642-2; wired T-671 ADD_COMPANION)",
+   "cause_source": "T-642 / T-671 (classed by T-679 from the merged text; no census row)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-d62d2fcf3d0023ad1ad1",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:2F:BAND0006.1",
+   "bound": [
+    "0.248",
+    "0.744"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-04 (UNLABELLED)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-dc8cbfc119d006ff3927",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:2F:BAND0008.1",
+   "bound": [
+    "0.112",
+    "0.336"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-04 (UNLABELLED)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-f83c4a469845c7e14dfa",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:1F:BAND0005.1",
+   "bound": [
+    "0.064",
+    "0.192"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-04 (UNLABELLED)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-07",
+   "line_id": "L-fbb65dfd2a66a16714ac",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-037",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-26 (PROJECTION)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-09",
+   "line_id": "L-d5401fa8986900c66c37",
+   "item_code": "STR.CONC.DOME",
+   "element_id": "DG5:DOME-3:SHELL",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "consultant 2026-10-24 G3 (upper-roof dome: no structural detail)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-10",
+   "line_id": "L-5ae06fda7d729d54c033",
+   "item_code": "STR.CONC.LIFT",
+   "element_id": "LIFT_TIE_BEAM:GF",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-43 (lift tie beam section not printed)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-10",
+   "line_id": "L-684fcad323adc0c8a267",
+   "item_code": "STR.CONC.LIFT",
+   "element_id": "LIFT_PIT:WALLS",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-43 (lift pit depth 'as per manufacturer')",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-10",
+   "line_id": "L-b62a7065645589011141",
+   "item_code": "STR.CONC.POOL",
+   "element_id": "HL:POOL_CONCRETE:POOL-1:STEPS",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "consultant 2026-10-23 row 3 / P-2 (pool steps not drawn)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-11",
+   "line_id": "L-cda8f41522dc6f42b3d6",
+   "item_code": "STR.CONC.BOUNDARY_PAD",
+   "element_id": "FENCE:BAND:PADS",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "Q-28 (boundary columns 'SEE ARCH PLAN', none drawn: pad count)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-11",
+   "line_id": "L-6290a9f3d93f38cd46d6",
+   "item_code": "STR.CONC.BOUNDARY_WALL",
+   "element_id": "P-C:SCOPE:BOUNDARY_WALL:FOUNDATION:CC-9fd936ab60:BEAM",
+   "bound": [
+    "5.6392",
+    "11.0328"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "boundary band 5.6392 .. 11.0328 wired by T-668: section B.W 20x60 vs typical 20x40 (designer RFI, Q-28; owner provisional A 8.4588 beside, not a released value) and band founding level 'AS PER EXCAVATION DEPTH' not printed",
+   "cause_source": "T-683 from the T-669 census row ('wire in T-668; then Q-28 keeps it bounded') + Q-28"
+  },
+  {
+   "family": "B10-12",
+   "line_id": "L-030538dda6a32c601c4c",
+   "item_code": "STR.CONC.PARAPET",
+   "element_id": "2F_ROOF#PARAPET_RC",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "Q-65 C + D-39 (parapet material above the upstand; roof build-up)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-12",
+   "line_id": "L-1d419b64e8ca1af30fb4",
+   "item_code": "STR.CONC.PARAPET",
+   "element_id": "ANNEX_ROOF#PARAPET_RC",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "Q-65 C + D-39 (parapet material above the upstand; roof build-up)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-12",
+   "line_id": "L-9a2c81164ec6499cc28c",
+   "item_code": "STR.CONC.PARAPET",
+   "element_id": "1F_ROOF#PARAPET_RC",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "Q-65 C + D-39 (parapet material above the upstand; roof build-up)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B10-12",
+   "line_id": "L-b5ffc172a354375ca107",
+   "item_code": "STR.CONC.PARAPET",
+   "element_id": "GF_TERRACE#PARAPET_RC",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "Q-65 C + D-39 (parapet material above the upstand; roof build-up)",
+   "cause_source": "T-669 census (V3.0.63)"
+  },
+  {
+   "family": "B7-12",
+   "line_id": "L-061e18cf35a4b6b33d68",
+   "item_code": "STR.CONC.STAIR",
+   "element_id": "P-C:SCOPE:STAIRS:GROUND:CC-5ab1872c70:FLIGHTS",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "ST-03 E1 waist slab not drawn (S-9); the steps part AT_LEAST 0.355017 is beside (T-677 LOWER_ONLY, T-258 DRAWING-CONFIRMED risers)",
+   "cause_source": "T-683 from T-673 stairs row + T-677 s.1 (the split was wired as a floor beside)"
+  },
+  {
+   "family": "B7-12",
+   "line_id": "L-659243ed9fc2831c3ae8",
+   "item_code": "STR.CONC.STAIR",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_TR",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "C-ST-3 (junction section of the two plates 0.168 apart not drawn)",
+   "cause_source": "T-673 census (V3.0.64)"
+  },
+  {
+   "family": "B7-12",
+   "line_id": "L-7863355dfcb68a681d2d",
+   "item_code": "STR.CONC.STAIR",
+   "element_id": "P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "C-ST-4 / RFI-A04 (MS1-L: arch 10 fronts vs ST p.4 12; owner 2026-10-22 'MS1-L HELD'), D-67 / C-ST-3 (winder, turn soffit not drawn)",
+   "cause_source": "T-673 census (V3.0.64)"
+  },
+  {
+   "family": "B7-12",
+   "line_id": "L-821032bc04a0b0d02133",
+   "item_code": "STR.CONC.STAIR",
+   "element_id": "DG5:ST-01:LOBBY",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "S-9 (waist thickness / support not printed)",
+   "cause_source": "T-673 census (V3.0.64)"
+  },
+  {
+   "family": "B7-12",
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "item_code": "STR.CONC.STAIR",
+   "element_id": "P-C:STAIRS:GROUND:SITE-4df8fcd99d130701",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-08 / owner Q-50 / Q-51 (curved parts HELD), C-ST-3; CA level not stated (0 .. 0.09)",
+   "cause_source": "T-673 census (V3.0.64)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-005334b6998987164a5d",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W28",
+   "bound": [
+    "0.04",
+    "0.055"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W28: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-072bc37c5486905a9d21",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-09",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-GF-09 (T-581 DRAWING CONFLICT: D120 1.00 frame in a 0.90 gap)",
+   "cause_source": "T-673 census (V3.0.64)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-0d5e2e3ac4167df90d6d",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-08",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "the lift tie beam depth and level (D-43)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-1313767d897f06ef95b6",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W04",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "annex roof slab top (Q-54 B / D-39)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-17953d7882899d43473f",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-14",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "the GF-W30 run (band) and its jamb evidence",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-1a07849115af938b4a72",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-01",
+   "bound": null,
+   "cause_class": "MEASURABLE NOW",
+   "cause": "HELD bounded (existence REQUIRED, quantity a range)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-1c0e7646345156fcd0cb",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-2F-02",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "BM-2F-017 depth: REQUIRED for any depth <= 0.52 m on the drawn 2F slab-top bound (12.68 - 9.70 - D >= 2.20 + 0.20 + 0.06); above that the D-39 slab top decides",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-274b112580029084b80e",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-04",
+   "bound": null,
+   "cause_class": "MEASURABLE NOW",
+   "cause": "HELD bounded (existence REQUIRED, quantity a range)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-2c1c49db7cd7b16c6206",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-1F-01",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "dome ring soffit over 1F-W11 (T-227, designer)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-2efe48097978cae5fc99",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:P-1F-01",
+   "bound": [
+    "0.063",
+    "0.12042"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel P-1F-01 (T-650 bound): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-3af715c6e83364208ad0",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W01",
+   "bound": null,
+   "cause_class": "MEASURABLE NOW",
+   "cause": "HELD bounded (existence REQUIRED, quantity a range)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-40e8c2597de12644e8e2",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W24",
+   "bound": [
+    "0.094",
+    "0.26828"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W24: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-441ae5fe85351347aff0",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W05",
+   "bound": [
+    "0.04",
+    "0.055"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W05: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-47882fa3a0d9cdcc122e",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W13",
+   "bound": null,
+   "cause_class": "MEASURABLE NOW",
+   "cause": "HELD bounded (existence REQUIRED, quantity a range)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-4a12b89454e48ac510dc",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:A-1F-01",
+   "bound": [
+    "0.054",
+    "0.1185"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel A-1F-01 (T-650 bound): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-53ef44d8c490d1341b93",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W16",
+   "bound": [
+    "0.078",
+    "0.081732"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W16: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-6057028f3f666538a007",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W19",
+   "bound": [
+    "0.056",
+    "0.069"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W19 (pier side 0.40): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-6692d02cd6cd25120300",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W20",
+   "bound": [
+    "0.056",
+    "0.08048"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W20 (pier side 0.40): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-71998da6340be871d0af",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-02",
+   "bound": null,
+   "cause_class": "MEASURABLE NOW",
+   "cause": "HELD bounded (existence REQUIRED, quantity a range)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-786344670c0002b31478",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W09",
+   "bound": [
+    "0.092",
+    "0.118"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W09: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-7d90a0feed2537221f16",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W19+W20:PIER_REMAINDER",
+   "bound": [
+    "0.0",
+    "0.003"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "W19 / W20 pier remainder 0 .. 0.2 x 0.2 x (0.875 - 2 x 0.40) = 0.003: which of the two lintels runs over the 0.075 m is not drawn (owned once, never inside either high; T-677 s.1 ADD_SHARED, ends T-516 RFI)",
+   "cause_source": "T-683 from T-677 s.1 / s.3 (line added by T-677; no census row could exist)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-7f9eb7cced8df33202a5",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W08",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "annex roof slab top (Q-54 B / D-39)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-882717b0c35a87e363ef",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W10",
+   "bound": [
+    "0.056",
+    "0.06"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W10 (START 0.100 deficit at a column): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-8f69c40749d579c14bf1",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:L-GF-01",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-45 / register LIFT LANDING DOOR LINTEL",
+   "cause_source": "T-673 census (V3.0.64)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-961608860fcb38c106af",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-1F-09",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "T-227 (designer)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-9ec762c0bd529b924f33",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-1F-06",
+   "bound": null,
+   "cause_class": "MEASURABLE NOW",
+   "cause": "HELD bounded (existence REQUIRED, quantity a range)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-a500f10eedbd63a147ab",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:L-1F-01",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-45 / register LIFT LANDING DOOR LINTEL",
+   "cause_source": "T-673 census (V3.0.64)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-a7848a35fb4329e09d10",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-03",
+   "bound": null,
+   "cause_class": "MEASURABLE NOW",
+   "cause": "HELD bounded (existence REQUIRED, quantity a range)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-a7b8b292503ae1bf6c77",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-1F-05",
+   "bound": null,
+   "cause_class": "MEASURABLE NOW",
+   "cause": "HELD bounded (existence REQUIRED, quantity a range)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-aca2db3c2b29719328c7",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W29",
+   "bound": [
+    "0.064",
+    "0.064"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W29 (low = high): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-b699ce0da6b29b888435",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W26",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39 (2F roof datum / build-up)",
+   "cause_source": "T-673 census (V3.0.64)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-b729bd6381f216153df8",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:A-GF-01",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "the A-GF-01 crown level (with the annex bound c_lo 2.744 above +0.30 under B4: REQUIRED if crown <= 2.484 above FFL) and its width",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-bf76c17309c92605e174",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W23",
+   "bound": [
+    "0.056",
+    "0.134"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W23: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-bf88bf6f5efaa0ae5bdc",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W25",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "the 1F stair-shaft landing member level / depth over W25",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-c1e57b06555adcf8edf7",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W11",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "W11 sill level (REQUIRED if head <= 2.234 above +0.30 under B9 0.75)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-d887eecf51c121831336",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:P-GF-01",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-45",
+   "cause_source": "T-673 census (V3.0.64)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-dd5b41a7af885e96f797",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W21",
+   "bound": [
+    "0.04",
+    "0.055"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W21: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-df32d6f42a824be21d3f",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-05",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "side-passage FFL (REQUIRED if <= +0.30: CB7 bound c_lo 2.494, spare 0.034) and the START jamb stopper",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-e39175199fc6edc4db86",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W12",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "W12 sill level (as W11)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-ed7aadd01d9daa9559a9",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W07",
+   "bound": [
+    "0.056",
+    "0.134"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W07: bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-f269fabb74f505755492",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W06",
+   "bound": [
+    "0.04",
+    "0.04"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W06 (low = high: deficit end 0.000): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-f68444edf483bc1d87d4",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W22",
+   "bound": [
+    "0.04",
+    "0.04"
+   ],
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel W22 (low = high): bound wired by T-677 (R-T673-1 / -3, DRAWING-CONFIRMED bounds): low = opening + 0.40 bearing each side, high = the drawn jamb ceilings; the length actually cast between them and the end connection at a column / cross wall are not printed (T-516 RFI), heads drawn not printed (N09 'not to scale')",
+   "cause_source": "T-683 restatement of T-673 s.3 + T-677 s.3 (MEASURABLE NOW = 'wire it', done in V3.0.66)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-f892163c0602656f7e57",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W27",
+   "bound": null,
+   "cause_class": "OPEN BOUND",
+   "cause": "the 2F stair-shaft member level / depth over W27",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-fd68db051119ea0266ee",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-07",
+   "bound": null,
+   "cause_class": "MEASURABLE NOW",
+   "cause": "HELD bounded (existence REQUIRED, quantity a range)",
+   "cause_source": "T-678 (V3.0.65, merged f8515d4b, unwired)"
+  },
+  {
+   "family": "B9-02",
+   "line_id": "L-fd8aaedc3457d6648f18",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:L-2F-01",
+   "bound": null,
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-45 / register LIFT LANDING DOOR LINTEL",
+   "cause_source": "T-673 census (V3.0.64)"
+  }
+ ],
+ "measurable_now_still_held": [
+  {
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "element_id": "HL:PLANTED_COLUMN:PC-2F:CONCRETE",
+   "wiring_row": "T-682 (CLAIMED worker 3, lane I)"
+  },
+  {
+   "line_id": "L-fad18af6e7139a5e99d1",
+   "element_id": "P-C:COL:SH12:C3@238374,54773|GF",
+   "wiring_row": "T-682 (CLAIMED worker 3, lane I)"
+  },
+  {
+   "line_id": "L-1a07849115af938b4a72",
+   "element_id": "LINTEL:D-GF-01",
+   "wiring_row": "T-682 (CLAIMED worker 3, lane I)"
+  },
+  {
+   "line_id": "L-274b112580029084b80e",
+   "element_id": "LINTEL:D-GF-04",
+   "wiring_row": "T-682 (CLAIMED worker 3, lane I)"
+  },
+  {
+   "line_id": "L-3af715c6e83364208ad0",
+   "element_id": "LINTEL:W01",
+   "wiring_row": "T-682 (CLAIMED worker 3, lane I)"
+  },
+  {
+   "line_id": "L-47882fa3a0d9cdcc122e",
+   "element_id": "LINTEL:W13",
+   "wiring_row": "T-682 (CLAIMED worker 3, lane I)"
+  },
+  {
+   "line_id": "L-71998da6340be871d0af",
+   "element_id": "LINTEL:D-GF-02",
+   "wiring_row": "T-682 (CLAIMED worker 3, lane I)"
+  },
+  {
+   "line_id": "L-9ec762c0bd529b924f33",
+   "element_id": "LINTEL:D-1F-06",
+   "wiring_row": "T-682 (CLAIMED worker 3, lane I)"
+  },
+  {
+   "line_id": "L-a7848a35fb4329e09d10",
+   "element_id": "LINTEL:D-GF-03",
+   "wiring_row": "T-682 (CLAIMED worker 3, lane I)"
+  },
+  {
+   "line_id": "L-a7b8b292503ae1bf6c77",
+   "element_id": "LINTEL:D-1F-05",
+   "wiring_row": "T-682 (CLAIMED worker 3, lane I)"
+  },
+  {
+   "line_id": "L-fd68db051119ea0266ee",
+   "element_id": "LINTEL:D-GF-07",
+   "wiring_row": "T-682 (CLAIMED worker 3, lane I)"
+  }
+ ],
+ "reference_apart": {
+  "rule": "difference = reference - engine released; % only where the key holds no HELD line (R-T613-1 (g)); causes quoted from the merged scorecard V12 sections, scored on its own candidate (not re-classed)",
+  "keys": [
+   {
+    "key": "CONC.BLINDING",
+    "reference_id": "RC:ورقة1:15",
+    "item_codes": [
+     "STR.CONC.BLINDING"
+    ],
+    "item_codes_present": [
+     "STR.CONC.BLINDING"
+    ],
+    "reference": "47.05500000000001",
+    "engine": {
+     "lines": 8,
+     "released": {
+      "lines": 1,
+      "m3": "12.734438"
+     },
+     "held_bounded": {
+      "lines": 5,
+      "low": "7.640374",
+      "high": "13.466198",
+      "by_cause": {
+       "DESIGNER ITEM": 4,
+       "OPEN BOUND": 1,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "held_blank": {
+      "lines": 2,
+      "high": "OPEN",
+      "by_cause": {
+       "DESIGNER ITEM": 2,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "excluded": {
+      "lines": 0
+     },
+     "engine_range": [
+      "20.374812",
+      "OPEN"
+     ],
+     "verified_share": {
+      "whole": "0 / 8",
+      "whole_m3": "0",
+      "component": "0 / 8",
+      "component_m3": "0"
+     }
+    },
+    "difference_ref_minus_released": "34.32056200000001",
+    "pct_of_reference": null,
+    "pct_note": "suppressed: 7 HELD line(s) in the key (R-T613-1 (g)); the difference is released-only and is NOT a verdict",
+    "causes_from_merged_verdicts": [
+     {
+      "section_id": "T-551/blinding",
+      "scored_in": "URBAN_T635_RECONCILED_STATEMENT_V12 sha256 7820d46acf25 (section level sections)",
+      "reference_total": "47.055",
+      "engine_valued": "12.734438",
+      "by_class": {
+       "ENGINE_RIGHT": "0",
+       "ENGINE_WRONG": "0",
+       "RULE_DIFFERENCE": "0",
+       "HELD": "34.320562",
+       "TOLERANCE": "0",
+       "UNRESOLVED": "0"
+      },
+      "status_count": {
+       "VERIFIED": 0,
+       "PARTIALLY VERIFIED": 0,
+       "DRAWING-CONFIRMED": 0,
+       "HELD": 1,
+       "UNKNOWN": 0
+      }
+     }
+    ]
+   },
+   {
+    "key": "CONC.FOOTING",
+    "reference_id": "RC:ورقة1:17",
+    "item_codes": [
+     "STR.CONC.FOOTING",
+     "STR.CONC.STRAP",
+     "STR.CONC.BOUNDARY_WALL"
+    ],
+    "item_codes_present": [
+     "STR.CONC.FOOTING",
+     "STR.CONC.STRAP",
+     "STR.CONC.BOUNDARY_WALL"
+    ],
+    "reference": "77.63050000000001",
+    "engine": {
+     "lines": 37,
+     "released": {
+      "lines": 28,
+      "m3": "67.6945"
+     },
+     "held_bounded": {
+      "lines": 4,
+      "low": "7.8447",
+      "high": "13.9611",
+      "by_cause": {
+       "DESIGNER ITEM": 4,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "held_blank": {
+      "lines": 0,
+      "high": null,
+      "by_cause": {
+       "DESIGNER ITEM": 0,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "excluded": {
+      "lines": 5
+     },
+     "engine_range": [
+      "75.5392",
+      "81.6556"
+     ],
+     "verified_share": {
+      "whole": "0 / 32",
+      "whole_m3": "0",
+      "component": "0 / 32",
+      "component_m3": "0"
+     }
+    },
+    "difference_ref_minus_released": "9.93600000000001",
+    "pct_of_reference": null,
+    "pct_note": "suppressed: 4 HELD line(s) in the key (R-T613-1 (g)); the difference is released-only and is NOT a verdict",
+    "causes_from_merged_verdicts": [
+     {
+      "section_id": "T-551/footing-line@V12",
+      "scored_in": "URBAN_T635_RECONCILED_STATEMENT_V12 sha256 7820d46acf25 (section level sections_v12)",
+      "reference_total": "77.6305",
+      "engine_valued": "67.6945",
+      "by_class": {
+       "ENGINE_RIGHT": "-0.628",
+       "ENGINE_WRONG": "0",
+       "RULE_DIFFERENCE": "0",
+       "HELD": "10.564",
+       "TOLERANCE": "0",
+       "UNRESOLVED": "0"
+      },
+      "status_count": {
+       "VERIFIED": 0,
+       "PARTIALLY VERIFIED": 0,
+       "DRAWING-CONFIRMED": 3,
+       "HELD": 2,
+       "UNKNOWN": 0
+      }
+     }
+    ]
+   },
+   {
+    "key": "CONC.GROUND",
+    "reference_id": "RC:ورقة1:18",
+    "item_codes": [
+     "STR.CONC.GROUND_BEAM",
+     "STR.CONC.GROUND_SLAB"
+    ],
+    "item_codes_present": [
+     "STR.CONC.GROUND_BEAM",
+     "STR.CONC.GROUND_SLAB"
+    ],
+    "reference": "75.09",
+    "engine": {
+     "lines": 87,
+     "released": {
+      "lines": 58,
+      "m3": "45.401440"
+     },
+     "held_bounded": {
+      "lines": 9,
+      "low": "1.178378",
+      "high": "5.096771",
+      "by_cause": {
+       "DESIGNER ITEM": 9,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "held_blank": {
+      "lines": 20,
+      "high": "OPEN",
+      "by_cause": {
+       "DESIGNER ITEM": 19,
+       "OPEN BOUND": 1,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "excluded": {
+      "lines": 0
+     },
+     "engine_range": [
+      "46.579818",
+      "OPEN"
+     ],
+     "verified_share": {
+      "whole": "0 / 87",
+      "whole_m3": "0",
+      "component": "1 / 87",
+      "component_m3": "1.746943"
+     }
+    },
+    "difference_ref_minus_released": "29.688560",
+    "pct_of_reference": null,
+    "pct_note": "suppressed: 29 HELD line(s) in the key (R-T613-1 (g)); the difference is released-only and is NOT a verdict",
+    "causes_from_merged_verdicts": "UNRESOLVED: no merged reconciliation section for this key (scorecard V12 has none); nothing classed here"
+   },
+   {
+    "key": "CONC.COLUMN",
+    "reference_id": "RC:ورقة1:19",
+    "item_codes": [
+     "STR.CONC.NECK",
+     "STR.CONC.COLUMN"
+    ],
+    "item_codes_present": [
+     "STR.CONC.NECK",
+     "STR.CONC.COLUMN"
+    ],
+    "reference": "39.7515",
+    "engine": {
+     "lines": 108,
+     "released": {
+      "lines": 30,
+      "m3": "19.7765"
+     },
+     "held_bounded": {
+      "lines": 52,
+      "low": "18.4426",
+      "high": "23.7600",
+      "by_cause": {
+       "DESIGNER ITEM": 20,
+       "OPEN BOUND": 32,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "held_blank": {
+      "lines": 13,
+      "high": "OPEN",
+      "by_cause": {
+       "DESIGNER ITEM": 11,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 2
+      }
+     },
+     "excluded": {
+      "lines": 13
+     },
+     "engine_range": [
+      "38.2191",
+      "OPEN"
+     ],
+     "verified_share": {
+      "whole": "0 / 95",
+      "whole_m3": "0",
+      "component": "0 / 95",
+      "component_m3": "0"
+     }
+    },
+    "difference_ref_minus_released": "19.9750",
+    "pct_of_reference": null,
+    "pct_note": "suppressed: 65 HELD line(s) in the key (R-T613-1 (g)); the difference is released-only and is NOT a verdict",
+    "causes_from_merged_verdicts": [
+     {
+      "section_id": "T-551/columns@V12",
+      "scored_in": "URBAN_T635_RECONCILED_STATEMENT_V12 sha256 7820d46acf25 (section level sections_v12)",
+      "reference_total": "28.5465",
+      "engine_valued": "19.7765",
+      "by_class": {
+       "ENGINE_RIGHT": "1.52200",
+       "ENGINE_WRONG": "0",
+       "RULE_DIFFERENCE": "-2.66625",
+       "HELD": "10.34925",
+       "TOLERANCE": "0",
+       "UNRESOLVED": "-0.435"
+      },
+      "status_count": {
+       "VERIFIED": 10,
+       "PARTIALLY VERIFIED": 0,
+       "DRAWING-CONFIRMED": 3,
+       "HELD": 6,
+       "UNKNOWN": 0
+      }
+     },
+     {
+      "section_id": "T-551/necks",
+      "scored_in": "URBAN_T635_RECONCILED_STATEMENT_V12 sha256 7820d46acf25 (section level sections)",
+      "reference_total": "8.805",
+      "engine_valued": "0",
+      "by_class": {
+       "ENGINE_RIGHT": "0",
+       "ENGINE_WRONG": "0",
+       "RULE_DIFFERENCE": "0",
+       "HELD": "8.805",
+       "TOLERANCE": "0",
+       "UNRESOLVED": "0"
+      },
+      "status_count": {
+       "VERIFIED": 0,
+       "PARTIALLY VERIFIED": 0,
+       "DRAWING-CONFIRMED": 0,
+       "HELD": 1,
+       "UNKNOWN": 0
+      }
+     },
+     {
+      "section_id": "T-551/lift-walls@V12",
+      "scored_in": "URBAN_T635_RECONCILED_STATEMENT_V12 sha256 7820d46acf25 (section level sections_v12)",
+      "reference_total": "2.4",
+      "engine_valued": "0",
+      "by_class": {
+       "ENGINE_RIGHT": "0.75",
+       "ENGINE_WRONG": "0",
+       "RULE_DIFFERENCE": "0",
+       "HELD": "1.65",
+       "TOLERANCE": "0",
+       "UNRESOLVED": "0"
+      },
+      "status_count": {
+       "VERIFIED": 0,
+       "PARTIALLY VERIFIED": 1,
+       "DRAWING-CONFIRMED": 0,
+       "HELD": 1,
+       "UNKNOWN": 0
+      }
+     }
+    ]
+   },
+   {
+    "key": "CONC.BEAM",
+    "reference_id": "RC:ورقة1:20",
+    "item_codes": [
+     "STR.CONC.BEAM"
+    ],
+    "item_codes_present": [
+     "STR.CONC.BEAM"
+    ],
+    "reference": "65.965875",
+    "engine": {
+     "lines": 192,
+     "released": {
+      "lines": 112,
+      "m3": "66.920678"
+     },
+     "held_bounded": {
+      "lines": 14,
+      "low": "5.983229",
+      "high": "8.412710",
+      "by_cause": {
+       "DESIGNER ITEM": 14,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "held_blank": {
+      "lines": 12,
+      "high": "OPEN",
+      "by_cause": {
+       "DESIGNER ITEM": 12,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "excluded": {
+      "lines": 54
+     },
+     "engine_range": [
+      "72.903907",
+      "OPEN"
+     ],
+     "verified_share": {
+      "whole": "0 / 138",
+      "whole_m3": "0",
+      "component": "0 / 138",
+      "component_m3": "0"
+     }
+    },
+    "difference_ref_minus_released": "-0.954803",
+    "pct_of_reference": null,
+    "pct_note": "suppressed: 26 HELD line(s) in the key (R-T613-1 (g)); the difference is released-only and is NOT a verdict",
+    "causes_from_merged_verdicts": [
+     {
+      "section_id": "T-545/beams@V12",
+      "scored_in": "URBAN_T635_RECONCILED_STATEMENT_V12 sha256 7820d46acf25 (section level sections_v12)",
+      "reference_total": "66.093875",
+      "engine_valued": "66.321054",
+      "by_class": {
+       "ENGINE_RIGHT": "-12.639125",
+       "ENGINE_WRONG": "0",
+       "RULE_DIFFERENCE": "2.66625",
+       "HELD": "7.376418",
+       "TOLERANCE": "0",
+       "UNRESOLVED": "2.369278"
+      },
+      "status_count": {
+       "VERIFIED": 8,
+       "PARTIALLY VERIFIED": 4,
+       "DRAWING-CONFIRMED": 7,
+       "HELD": 3,
+       "UNKNOWN": 2
+      }
+     }
+    ]
+   },
+   {
+    "key": "CONC.SLAB",
+    "reference_id": "RC:ورقة1:21",
+    "item_codes": [
+     "STR.CONC.SLAB"
+    ],
+    "item_codes_present": [
+     "STR.CONC.SLAB"
+    ],
+    "reference": "59.81739999999999",
+    "engine": {
+     "lines": 75,
+     "released": {
+      "lines": 62,
+      "m3": "60.280155"
+     },
+     "held_bounded": {
+      "lines": 0,
+      "low": "0",
+      "high": "0",
+      "by_cause": {
+       "DESIGNER ITEM": 0,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "held_blank": {
+      "lines": 0,
+      "high": null,
+      "by_cause": {
+       "DESIGNER ITEM": 0,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "excluded": {
+      "lines": 13
+     },
+     "engine_range": [
+      "60.280155",
+      "60.280155"
+     ],
+     "verified_share": {
+      "whole": "62 / 62",
+      "whole_m3": "60.280155",
+      "component": "0 / 62",
+      "component_m3": "0"
+     }
+    },
+    "difference_ref_minus_released": "-0.46275500000001",
+    "pct_of_reference": "-0.77",
+    "pct_note": "difference / reference, released-only; NOT a verdict, agreement is never proof",
+    "causes_from_merged_verdicts": "UNRESOLVED: no merged reconciliation section for this key (scorecard V12 has none); nothing classed here"
+   },
+   {
+    "key": "CONC.STAIR_DOME",
+    "reference_id": "RC:ورقة1:22",
+    "item_codes": [
+     "STR.CONC.STAIR",
+     "STR.CONC.DOME"
+    ],
+    "item_codes_present": [
+     "STR.CONC.STAIR",
+     "STR.CONC.DOME"
+    ],
+    "reference": "21.8328",
+    "engine": {
+     "lines": 17,
+     "released": {
+      "lines": 8,
+      "m3": "10.450243"
+     },
+     "held_bounded": {
+      "lines": 0,
+      "low": "0",
+      "high": "0",
+      "by_cause": {
+       "DESIGNER ITEM": 0,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "held_blank": {
+      "lines": 6,
+      "high": "OPEN",
+      "by_cause": {
+       "DESIGNER ITEM": 6,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "excluded": {
+      "lines": 3
+     },
+     "engine_range": [
+      "10.450243",
+      "OPEN"
+     ],
+     "verified_share": {
+      "whole": "0 / 14",
+      "whole_m3": "0",
+      "component": "0 / 14",
+      "component_m3": "0"
+     }
+    },
+    "difference_ref_minus_released": "11.382557",
+    "pct_of_reference": null,
+    "pct_note": "suppressed: 6 HELD line(s) in the key (R-T613-1 (g)); the difference is released-only and is NOT a verdict",
+    "causes_from_merged_verdicts": "UNRESOLVED: no merged reconciliation section for this key (scorecard V12 has none); nothing classed here"
+   },
+   {
+    "key": "CONC.POOL",
+    "reference_id": "RC:ورقة1:23",
+    "item_codes": [
+     "STR.CONC.POOL"
+    ],
+    "item_codes_present": [
+     "STR.CONC.POOL"
+    ],
+    "reference": "12.348",
+    "engine": {
+     "lines": 5,
+     "released": {
+      "lines": 2,
+      "m3": "7.202297"
+     },
+     "held_bounded": {
+      "lines": 0,
+      "low": "0",
+      "high": "0",
+      "by_cause": {
+       "DESIGNER ITEM": 0,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "held_blank": {
+      "lines": 1,
+      "high": "OPEN",
+      "by_cause": {
+       "DESIGNER ITEM": 1,
+       "OPEN BOUND": 0,
+       "MEASURABLE NOW": 0
+      }
+     },
+     "excluded": {
+      "lines": 2
+     },
+     "engine_range": [
+      "7.202297",
+      "OPEN"
+     ],
+     "verified_share": {
+      "whole": "0 / 3",
+      "whole_m3": "0",
+      "component": "0 / 3",
+      "component_m3": "0"
+     }
+    },
+    "difference_ref_minus_released": "5.145703",
+    "pct_of_reference": null,
+    "pct_note": "suppressed: 1 HELD line(s) in the key (R-T613-1 (g)); the difference is released-only and is NOT a verdict",
+    "causes_from_merged_verdicts": "UNRESOLVED: no merged reconciliation section for this key (scorecard V12 has none); nothing classed here"
+   }
+  ],
+  "not_keyed_item_codes": [
+   "STR.CONC.LINTEL",
+   "STR.CONC.PARAPET",
+   "STR.CONC.LIFT",
+   "STR.CONC.BOUNDARY_PAD"
+  ],
+  "column_bridge": {
+   "key": "CONC.COLUMN",
+   "reference": "39.7515",
+   "components": [
+    {
+     "component": "lift pit walls (his 'walls' sub-total: ring 8 x 0.20 x 1.50)",
+     "reference": "2.4",
+     "engine_scope": {
+      "item_codes": [
+       "STR.CONC.LIFT"
+      ],
+      "element_ids": [
+       "LIFT_PIT:WALLS"
+      ]
+     },
+     "engine": {
+      "lines": 1,
+      "released": {
+       "lines": 0,
+       "m3": "0"
+      },
+      "held_bounded": {
+       "lines": 0,
+       "low": "0",
+       "high": "0",
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "held_blank": {
+       "lines": 1,
+       "high": "OPEN",
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "excluded": {
+       "lines": 0
+      },
+      "engine_range": [
+       "0",
+       "OPEN"
+      ],
+      "verified_share": {
+       "whole": "0 / 1",
+       "whole_m3": "0",
+       "component": "0 / 1",
+       "component_m3": "0"
+      }
+     },
+     "difference_ref_minus_released": "2.4",
+     "status": "HELD inside: not agreement",
+     "pct_of_reference": null,
+     "note": "T-628 L0 / L1 (Checker RE-MEASURED): ring 1.600 m2 = net 1.100 (pit wall, this line, HELD D-43: pit depth 'as per lift manufacturer') + 0.500 of four column pieces the engine NECK lines own (his neck rows carry them too: SCOPE_DOUBLE 0.75 ENGINE_RIGHT); 1.65 = 1.10 x his 1.50 HELD"
+    },
+    {
+     "component": "necks (his neck sub-total)",
+     "reference": "8.805",
+     "engine_scope": {
+      "item_codes": [
+       "STR.CONC.NECK"
+      ],
+      "element_ids": null
+     },
+     "engine": {
+      "lines": 36,
+      "released": {
+       "lines": 0,
+       "m3": "0"
+      },
+      "held_bounded": {
+       "lines": 32,
+       "low": "8.7724",
+       "high": "11.3460",
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "held_blank": {
+       "lines": 4,
+       "high": "OPEN",
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "excluded": {
+       "lines": 0
+      },
+      "engine_range": [
+       "8.7724",
+       "OPEN"
+      ],
+      "verified_share": {
+       "whole": "0 / 36",
+       "whole_m3": "0",
+       "component": "0 / 36",
+       "component_m3": "0"
+      }
+     },
+     "difference_ref_minus_released": "8.805",
+     "status": "HELD inside: not agreement",
+     "pct_of_reference": null,
+     "note": "T-551 necks: HELD 8.805 (36 lines; his share inside the engine bound on every line his rows carry)"
+    },
+    {
+     "component": "columns GF + 1F + 2F (his three storey sub-totals 17.4375 + 7.728 + 3.381)",
+     "reference": "28.5465",
+     "engine_scope": {
+      "item_codes": [
+       "STR.CONC.COLUMN"
+      ],
+      "element_ids": null
+     },
+     "engine": {
+      "lines": 72,
+      "released": {
+       "lines": 30,
+       "m3": "19.7765"
+      },
+      "held_bounded": {
+       "lines": 20,
+       "low": "9.6702",
+       "high": "12.4140",
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "held_blank": {
+       "lines": 9,
+       "high": "OPEN",
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "excluded": {
+       "lines": 13
+      },
+      "engine_range": [
+       "29.4467",
+       "OPEN"
+      ],
+      "verified_share": {
+       "whole": "0 / 59",
+       "whole_m3": "0",
+       "component": "0 / 59",
+       "component_m3": "0"
+      }
+     },
+     "difference_ref_minus_released": "8.7700",
+     "status": "HELD inside: not agreement",
+     "pct_of_reference": null,
+     "note": "T-551/columns@V12 class split quoted below (ENGINE_RIGHT 1.522, RULE_DIFFERENCE -2.66625, HELD 10.34925, UNRESOLVED -0.435)"
+    }
+   ],
+   "claimed_lines": 109
+  },
+  "column_bridge_not_comparable": [
+   {
+    "line_id": "L-5ae06fda7d729d54c033",
+    "item_code": "STR.CONC.LIFT",
+    "element_id": "LIFT_TIE_BEAM:GF",
+    "cls": "HELD"
+   }
+  ],
+  "beam_arithmetic": {
+   "cover_total": "65.965875",
+   "his_row_sum": "66.093875",
+   "cover_minus_rows": "-0.128000",
+   "cause": "his 1F sub-total sums its range from the SECOND 1F row: the first 1F row (0.20 x 0.40 x 1.60 = 0.128 m3) is in his 1F carry-forward cell but not in the 1F sub-total the cover total adds (R-T683-3 OMITTED_ROW); every other row of the eight keyed concrete cover totals is reached exactly once (own audit of all eight chains)",
+   "reproduces": "T-545 'his rows sum to 66.093875' (T-545 s.1, BM-ARITH) reproduced from an own read of the workbook formulas, not from the T-545 output",
+   "engine_released": "66.920678",
+   "cover_minus_released": "-0.954803",
+   "rows_minus_released": "-0.826803",
+   "class_": "REFERENCE ARITHMETIC: no engine verdict, no quantity moved; the cover total stays the keyed value; % stays suppressed (26 HELD beam lines)"
+  },
+  "key_map_proposal": {
+   "status": "PROPOSED, not applied (R-T683-2 (d)): a key-map version is a Lead / lane I decision",
+   "change": "CONC.COLUMN answers STR.CONC.NECK + STR.CONC.COLUMN + STR.CONC.LIFT element LIFT_PIT:WALLS only; STR.CONC.LIFT element LIFT_TIE_BEAM:GF stays not keyed (no row of his on any sheet, T-545 s.2)",
+   "needs": "element-level key scope in tools/alsenan_keymap.py / alsenan_scoreboard.py (today item-code level: keying the whole STR.CONC.LIFT code would put the tie beam into the column key)",
+   "effect_today": "none on the numbers: both STR.CONC.LIFT lines are HELD blank, the key's % is already suppressed; the scope of the key becomes like for like"
+  }
+ }
+}

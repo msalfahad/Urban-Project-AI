@@ -1,0 +1,105 @@
+{
+ "schema": "URBAN_T683_REFERENCE_ARITH_V1",
+ "rule": "R-T683-3 1.0.0",
+ "source": "Drive 'Alsenan chalet project', concrete + rebar workbook (private copy; numbers only)",
+ "keys": {
+  "CONC.BLINDING": {
+   "reference_id": "RC:ورقة1:15",
+   "sheet_index": 1,
+   "cover_cell": "I11",
+   "cover_value": "47.055000",
+   "item_rows": 0,
+   "findings": [],
+   "arithmetic": null,
+   "verdict": "NO SLIP: every item row reached once"
+  },
+  "CONC.FOOTING": {
+   "reference_id": "RC:ورقة1:17",
+   "sheet_index": 1,
+   "cover_cell": "I33",
+   "cover_value": "77.630500",
+   "item_rows": 20,
+   "findings": [],
+   "arithmetic": null,
+   "verdict": "NO SLIP: every item row reached once"
+  },
+  "CONC.GROUND": {
+   "reference_id": "RC:ورقة1:18",
+   "sheet_index": 2,
+   "cover_cell": "I16",
+   "cover_value": "75.090000",
+   "item_rows": 4,
+   "findings": [],
+   "arithmetic": null,
+   "verdict": "NO SLIP: every item row reached once"
+  },
+  "CONC.COLUMN": {
+   "reference_id": "RC:ورقة1:19",
+   "sheet_index": 3,
+   "cover_cell": "B74",
+   "cover_value": "39.751500",
+   "item_rows": 42,
+   "findings": [],
+   "arithmetic": null,
+   "verdict": "NO SLIP: every item row reached once"
+  },
+  "CONC.BEAM": {
+   "reference_id": "RC:ورقة1:20",
+   "sheet_index": 4,
+   "cover_cell": "I100",
+   "cover_value": "65.965875",
+   "item_rows": 67,
+   "findings": [
+    {
+     "kind": "OMITTED_ROW",
+     "row": 59,
+     "value": 0.12800000000000003
+    }
+   ],
+   "arithmetic": {
+    "cover_total": "65.965875",
+    "row_sum": "66.093875",
+    "cover_minus_rows": "-0.128000",
+    "explained_by": [
+     {
+      "kind": "OMITTED_ROW",
+      "row": 59,
+      "value": 0.12800000000000003
+     }
+    ],
+    "class_": "REFERENCE ARITHMETIC (no engine verdict, no quantity moved)"
+   },
+   "verdict": "REFERENCE ARITHMETIC: see findings (no engine verdict)"
+  },
+  "CONC.SLAB": {
+   "reference_id": "RC:ورقة1:21",
+   "sheet_index": 5,
+   "cover_cell": "I27",
+   "cover_value": "59.817400",
+   "item_rows": 4,
+   "findings": [],
+   "arithmetic": null,
+   "verdict": "NO SLIP: every item row reached once"
+  },
+  "CONC.STAIR_DOME": {
+   "reference_id": "RC:ورقة1:22",
+   "sheet_index": 6,
+   "cover_cell": "B25",
+   "cover_value": "21.832800",
+   "item_rows": 5,
+   "findings": [],
+   "arithmetic": null,
+   "verdict": "NO SLIP: every item row reached once"
+  },
+  "CONC.POOL": {
+   "reference_id": "RC:ورقة1:23",
+   "sheet_index": 7,
+   "cover_cell": "B19",
+   "cover_value": "12.348000",
+   "item_rows": 5,
+   "findings": [],
+   "arithmetic": null,
+   "verdict": "NO SLIP: every item row reached once"
+  }
+ }
+}
