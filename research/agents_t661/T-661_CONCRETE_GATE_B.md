@@ -13,7 +13,7 @@ frozen file changes. Development villa, not an accuracy claim. ERS s.2-5, WORKFL
 | T-659 small B10 ledger (`research/agents_t659/out/T659_LEDGER.json`, sha 50e51242) | 907ace46 | Verifier 2026-11-09T21:54Z Gate A PASS | 16 | 15 CONFIRM, 1 not wired |
 | T-655 line index V3.0.61 (`research/agents_t655/out/LINE_INDEX_V3_0_61.json`, sha 10e5f116) | bfea3449 | (binding only) | 5,073 | reproduced byte for byte by this run |
 
-T-658 r2 (columns / ground beams / footing) is NOT in this package: it is restaged here only after it is MERGED.
+T-658 r2 (columns / ground beams / footing) is NOT in this package: it MERGED (2cec1520, Verifier 2026-11-10T02:10Z) after this package's run of record; the branch carries that merge (base merged at fe7f5392, targeted tests pass) and T-658 is restaged into this same package as its next round (V3.0.62 extended, one package).
 
 **Not wired, named (never 0):**
 - `L-6290a9f3` STR.CONC.BOUNDARY_WALL band: the T-659 drawn bound 5.6392 .. 11.0328 m3 is NOT wired. The Checker's T-659
