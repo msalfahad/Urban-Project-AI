@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-10 16:25 (since 12:20)
+
+- T-668 concrete Gate B round 3: WORKED (MERGED 033b52b9, V3.0.64 published; 5,066 lines byte-identical). Closed.
+- T-671 concrete Gate B round 4: WORKED (MERGED 271ba60f, V3.0.65 published; COLUMN held 9.168 .. 13.602 -> 9.6702 .. 12.414 m3, 5 CN not applicable with evidence). Outline 778 UNRESOLVED -> T-678 (b); annex C3 low -> T-678 (c).
+- T-673 concrete outside B10: WORKED (MERGED 15d03afc; census 49 = index; 16 lintels 0.925 .. 1.496412 m3 + ST-03 steps 0.355017 m3, Checker 3 / 17 re-measured). Wiring -> T-677; 22 OPEN BOUND -> T-678 (a).
+- T-674 ground slab: WORKED (MERGED bb4ec90b; 5 lines 2.141320 -> 2.143747 m3; P18's -0.084731 was mostly own-read artefacts). Wiring with BAND0038 -> T-677; P18 closable after it.
+- T-675 masonry round 2: WORKED (MERGED e0984b13; MAIN_S / ANNEX_S black by ST p.1 note 2). Added to T-672 scope.
+- T-676 plaster / paint census: WORKED (MERGED cffefa0c; 57 HELD classed, OP-009 reveal 1.08 m2). F-T676-1 -> T-680; OP-009 to the plaster Gate B after T-672.
+- Worker 1 15:23 found no claimable row (T-674 taken by Worker 3): Lead fault again, one row per research lane. Fix: two independent TODO rows per research lane (T-678 / T-679, T-680 / T-681), stated as 'independent' so the board check does not read them as WAITING.
+
 ## Lead 2026-11-10 12:20 (since 08:20)
 
 - T-670 masonry materials: WORKED (MERGED 91a74d45; black units AT_LEAST 1,075.80 -> 2,571.28 pcs, mortar 1.269 -> 2.593 m3 PROVISIONAL; unwired). Into T-672; F-T670-1 -> T-675 (a).

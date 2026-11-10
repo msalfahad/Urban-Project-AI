@@ -46,6 +46,10 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- GROUND SLAB vs OBLIQUE GROUND BEAM END TRIANGLES (Lead 2026-11-10 16:25; T-674 MERGED bb4ec90b, Checker 16:00): OWNER
+  TRADE concrete, GB line BAND0038 (L-970bac56): the two 0.090 m2 triangles between the drawn oblique beam faces and the
+  square-cut band are beam (a beam does not stop short of its carrier, C1 strip ownership); the slab line L-69527cb9
+  takes the strip to the carriers only. Wire both lines in one diff or neither (T-677). One element once.
 - POOL BLINDING / FOOTING F4 / PIT LAYER (Lead 2026-11-10 12:20; T-667 MERGED b89ea23f, wired in T-668): OWNER TRADE
   concrete B10 (new STR.CONC blinding line, HELD >= 0.915529 m3), netted against the VERIFIED pit layer (2.695761 m2);
   F4 under the pool stays owned by its footing / blinding lines; the pool blinding line takes no F4 area. One element once.

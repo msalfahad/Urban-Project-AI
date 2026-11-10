@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-10 16:25; owner change of focus 2026-11-09 18:30 in force)
+
+- Candidate of record V3.0.65 / master 1.66.0 (origin cffefa0c; NOT RELEASED). Since 12:20 MERGED: T-668 Gate B (V3.0.64, 033b52b9), T-671 Gate B (V3.0.65, 271ba60f), research T-673 (15d03afc), T-675 (e0984b13), T-674 (bb4ec90b), T-676 (cffefa0c). 0 REJECTED. READY 0.
+- Next: T-677 concrete round 5 (worker 3: T-673 lintels / steps + T-674 slab), then T-672 masonry round 1 (+ T-675); T-678 concrete open items and T-679 concrete reconciliation statement (worker 1); T-680 plaster / paint round 2 and T-681 tiles census (worker 2). T-664 BLOCKED-OWNER Q-81.
+- Confidence: T-677 merged by 11 Nov 04:00 MEDIUM-HIGH; 12-13 Nov concrete reconciliation + scorecard MEDIUM-HIGH (T-679 builds it); masonry wiring (T-672) by 11 Nov 12:00 MEDIUM; M3 architectural ledger 11 Nov NOT MET on its date (masonry / plaster / tiles not yet in the candidate; by the owner's concrete-first order); rebar ratio LOW (owner answer).
+
 ## Status (Lead, 2026-11-10 12:20; owner change of focus 2026-11-09 18:30 in force)
 
 - Candidate of record V3.0.63 / master 1.64.0 (origin dc1ac41e; NOT RELEASED). Since 08:16 MERGED (research, unwired, Gate A): T-670 masonry materials (91a74d45), T-669 concrete close-out + census (8cb64551), T-372 perimeter joint mortar (dc1ac41e). 0 REJECTED. T-668 (V3.0.64) READY, Gate B in review since 11:50.

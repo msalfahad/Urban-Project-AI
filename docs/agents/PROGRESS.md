@@ -1,5 +1,27 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-10 16:25 UTC (Lead). Previous version: 2026-11-10 12:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged; released: 0.
+
+Since 12:20 (newest first):
+- Two more concrete wirings are in the candidate and published (checked line by line by the checker from the drawings):
+  beam pieces on drawn lengths, the boundary band held 5.64 .. 11.03 m3 (your freelancer's 8.60 lies inside), the pool
+  blinding at least 0.92 m3, the corner square 0.1125 m3; then the 5 second-floor roof columns ranged 1.64 .. 2.30 m3,
+  5 columns struck out on the schedule set aside as not applicable with the evidence (never zero), one small strip
+  valued 0.05 m3. Held column concrete now 9.67 .. 12.41 m3 (was 9.17 .. 13.60).
+- Lintel and stair concrete outside the main list (49 lines) measured where the drawings allow: 16 lintels ranged
+  0.93 .. 1.50 m3 in all, stair steps 0.355 m3; 33 lines keep a named reason. Not yet in the candidate.
+- The ground-slab difference the checker found (0.085 m3) was mostly a reading artefact; the real fault is +0.0024 m3,
+  and two small triangles move from the slab to the oblique ground beam. Not yet in the candidate.
+- Masonry round 2 and the plaster / paint held-line list passed the checker: the neighbour-side walls are black block
+  (so 4 glue / white-block lines go), 57 held plaster / paint lines each carry a reason (plaster ranged 933 .. 1,007 m2,
+  paint 487 .. 543 m2), one door reveal fixed to 1.08 m2. Not yet in the candidate.
+- Next: the last concrete wiring (lintels, stair steps, ground slab), then masonry into the candidate; the concrete
+  reconciliation statement for 12-13 Nov; plaster / paint round 2 and a tiles held-line list. The 11 Nov architectural
+  milestone will not be met on its date (your concrete-first order). Steel by ratio still waits on your Q-81 answer.
+
+Previous section (2026-11-10 12:20):
 Last update: 2026-11-10 12:20 UTC (Lead). Previous version: 2026-11-10 08:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged; released: 0.
