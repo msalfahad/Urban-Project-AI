@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10 08:48 UTC | Worker 2 | SUCCESS | T-670 READY (agents/task-T-670) | Held B9 masonry materials restated on V3.0.63 via the merged V3.0.59 producer + rulebook 1.1.0 (Q-80): black units AT_LEAST 1,075.80 -> 2,571.28 pcs + range 698.66..702.91, mortar 1.269444 -> 2.59294 m3 + range; blank 18 -> 12 each, glue/AAC units unchanged with named causes (15 held hosts, AAC face); T-615 cross-check residual <=5e-05; F-T670-1 MAIN_S/ANNEX_S carry AAC lines though black | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-10 08:41 UTC | Worker 2 | STARTED | run session_01E6cPnf8mwsjemW4Lqzpfuz | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10 08:20 UTC | Lead | SUCCESS | board | V3.0.62 + V3.0.63 published (GB released 26.857 -> 23.761 m3, 13 export-held lines now held in the line; 0 REJECTED, 4 MERGED); new T-668 concrete round 3 (W3), T-669 concrete close-out + HELD census (W1), T-670 masonry material HELD lines (W2), T-372 TODO; T-661 row corrected to MERGED; Q-81 still blocks ratio wiring; queue check: 14 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-10 08:16 UTC | Lead | STARTED | run session_01E6cPnbB7yYqasMjyHHQxuP | repo-attached routine | task state: board | report pending
