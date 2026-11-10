@@ -2,11 +2,11 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
-## SCOREBOARD v2 2026-11-10 17:05 UTC
+## SCOREBOARD v2 2026-11-10 17:03 UTC
 
 FULL RESTATEMENT on the candidate of record ARCH_TAKEOFF_V3.0.65 (NOT RELEASED; lines sha 38af7909; T-671 Gate B PASS, merge 271ba60f) beside the released V2.9 + route G (unchanged). Verifier run session_01E6cPne2m28nR3xpe7rBSKd, lock checker, after T-680 GATE A PASS MERGED 707c624e (research, UNWIRED: moves no candidate line). BASIS, stated plainly: tools/alsenan_scoreboard.py / alsenan_keymap.py NOT re-run this run (the V3.0.65 BOQ_LINES.json exists only as the output of the full private Drive chain research/agents_t671/v3065_run.py, not reproduced this run). The candidate cells below are computed by the Checker's own script from the committed, sha-pinned line index research/agents_t671/out/LINE_INDEX_V3_0_65.json (5,075 lines: RELEASED 1,493, HELD 2,743, EXCLUDED 839; class as the index states it, downgrades applied there; inputs sha lines 38af7909) with the key map tests/alsenan/T001C_KEY_MAP.json item codes, same unit only (never converted): released = sum of measured_net of RELEASED lines; held = low .. high of HELD lines with a bound; UNKNOWN = HELD lines without a bound (never 0, never summed). Freelancer reference quantities = the same reference rows the tool scored (T-469 section below; reference data unchanged). Compared = a reference line every same-unit answer of which is RELEASED. The released-method rows (A) are the tool's 2026-10-28 20:50 cells, carried because the released method has not changed. FLOOR_AREA is a typed key (scored by tools/alsenan_keymap.py only): not restated this run. Drive read OK this run.
 
-### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can close from the existing drawings alone; Checker classification restated 2026-11-10 17:05 on V3.0.65)
+### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can close from the existing drawings alone; Checker classification restated 2026-11-10 17:03 on V3.0.65; T-180 slot not used this run: no line CLOSABLE NOW (P18 waits T-677, CLAIMED W3 17:01))
 
 | Rank | Reference line | Unit | Class | What blocks it (named item) | Own-measured so far |
 |---|---|---|---|---|---|
