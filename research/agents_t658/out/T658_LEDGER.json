@@ -7,15 +7,23 @@
   },
   {
    "id": "F-T658-2",
-   "what": "the 5.00 m span (ON_LIMIT, D-33 loaded) is carried as a point 0.9 (30x60): restated 30x40 .. 30x60; treated like the other D-33 spans, which carry the printed non-loaded sections as their bound; T-647 left the two landing-beam runs blank: the Checker to rule one D-33 treatment for all"
+   "what": "r2 (D-33 ruling): every run carrying a landing beam is LOWER_ONLY, low = drawn area x the least title that holds, high not established: BAND0010.3 (5.00 m ON_LIMIT, point 0.9 -> floor 0.6), BAND0008.1, BAND0008.2, BAND0040, the two T-430 landing runs (blank -> floor 0.4230 each) and, by the same census tee, BAND0037.1 (182+183 lands) and BAND0019 (141+7DA lands)"
   },
   {
    "id": "F-T658-3",
-   "what": "L-e24946df: the T-430 register holds a HOLD_RANGE 0.5964 .. 0.9036 that the candidate line does not carry (blank): wire the bound"
+   "what": "L-e24946df: the T-430 register holds 0.5964 .. 0.9036 that the candidate line does not carry (blank): r2 carries the 0.5964 floor (4.97 m reading x 30x40) LOWER_ONLY under D-33"
   },
   {
    "id": "F-T658-4",
    "what": "8 annex exterior ground beams: the literal +0.25 .. N.G. reading is a floor (R-T658-3), carried LOWER_ONLY; high stays D-35"
+  },
+  {
+   "id": "F-T658-5",
+   "what": "r2 (Checker r1 defect e): an oblique band measured on its short edge understates its plan area; 4 runs are not rectangles: BAND0038 (45 deg; edge 181 drawn open 0.078 m short of face 180D: two outline readings 0.310134 / 0.326694 m2), BAND0039 (0.653733 m2, the corner piece between faces 7C8 / 7C3 owned once, 0.021280 m2), BAND0037.1 (0.807695 m2, column 1EF netted), BAND0008.2 (ends on the curved band's outer face R 2.55: 0.492189 m2); every other run of the 61 is orthogonal (drawn area = span x 0.30, 7 controls measured) or an annex arc carried on its centreline (exact for an annulus)"
+  },
+  {
+   "id": "F-T658-6",
+   "what": "r2 column marks re-read from the drawings: +13.90 / +4.30 AGREE; the bases +9.65 / +0.25 are APPROVED datums, not printed text (the sets print finished +9.70 / +0.30): ceilings kept, provenance stated"
   }
  ],
  "pins": {
@@ -24,10 +32,12 @@
   "DEVELOPMENT-VILLA-T131.concrete_facts.json": "16a5273ac0b9103f",
   "LINE_INDEX_V3_0_61.json": "10e5f116d30af67f",
   "T572_HELD_BOUNDS.json": "a39e7b4b838e3590",
+  "T658_BAND_AREAS.json": "e9e3871a9ae7a50b",
   "TRIAL_BOQ_R4_T654.json": "9e032726257c4961"
  },
  "reads": {
   "ARCH_SECTION_LEVELS": "arch sheet 10 section: main roof +13.90 (top of the roof band, 0.50 parapet above), annex roof +4.30; finished marks, no roof build-up printed (D-39, Q-54 answer B)",
+  "R2_MARKS_REREAD": "re-read 2026-11-10 from the drawings (not the facts file): arch sheet 10 SECTION A-A prints +/-0.00, +1.00, +5.50, +9.70, +13.90 (storeys 450 / 420 / 420, parapet 50, total 1440); arch sheet 9 NORTH EAST ELEVATION prints the annex +0.30 floor, +4.30 roof (storey 400); the ST dxf LEVEL layer prints +0.15 / +0.30 / +1.00 (GF plan) and +9.70 (twice, SFRS sheet). +13.90 and +4.30 AGREE. +9.65 and +0.25 are NOT printed as text on either set: they are the APPROVED structural datums of the facts register (DESIGNER 2026-10-24 / -25), = printed finished level - 0.05 (9.70, 0.30) and consistent with the printed storeys (13.90 - 9.65 = 4.20 + 0.05; 4.30 - 0.25 = 4.00 + 0.05)",
   "ST_COL_SCHEDULE": "ST 'Schedule of Columns' (FOUNDATION / GROUND FLOOR / 1st floor / 2nd floor & Top): C1 2F 20x50; C2 2F 20x50; C3 GF 25x50, 2F 20x50; C5 2F 20x50; C9 2F 20x70; C GF 20x50, 1F / 2F blank; CN FOUNDATION 30x30 only",
   "ST_P13_GB_TITLES": "ST p.13 ground-beam sections (without concentrated load): 'Less then 2.5m length' 30x30, 'Less than 5m length' 30x40, 'More than 5m' 30x60; no precedence printed (D-34)"
  },
@@ -61,7 +71,7 @@
    "status": "BOUNDED"
   },
   {
-   "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark - 9.65 base) ceiling",
+   "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
    "before_high": null,
    "before_low": null,
    "element_id": "P-C:COL:SH12:C2@254644,61274|2F",
@@ -89,7 +99,7 @@
    "status": "BOUNDED"
   },
   {
-   "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark - 9.65 base) ceiling",
+   "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
    "before_high": null,
    "before_low": null,
    "element_id": "P-C:COL:SH12:C2@251723,58368|2F",
@@ -147,7 +157,7 @@
    "status": "BOUNDED"
   },
   {
-   "basis": "R-T658-4: C9 2F 20x70 0.14 m2 x (13.90 finished mark - 9.65 base) ceiling",
+   "basis": "R-T658-4: C9 2F 20x70 0.14 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
    "before_high": null,
    "before_low": null,
    "element_id": "P-C:COL:SH12:C9@254644,59429|2F",
@@ -261,7 +271,7 @@
    "status": "BOUNDED"
   },
   {
-   "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark - 9.65 base) ceiling",
+   "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
    "before_high": null,
    "before_low": null,
    "element_id": "P-C:COL:SH12:C2@252679,64225|2F",
@@ -386,7 +396,7 @@
    "status": "BOUNDED"
   },
   {
-   "basis": "R-T658-4: C1 2F 20x50 0.10 m2 x (13.90 finished mark - 9.65 base) ceiling",
+   "basis": "R-T658-4: C1 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
    "before_high": null,
    "before_low": null,
    "element_id": "P-C:COL:SH12:C1@251701,62344|2F",
@@ -427,7 +437,7 @@
    "status": "HELD_BLANK"
   },
   {
-   "basis": "R-T658-4: C3 GF 25x50 (annex) 0.125 m2 x (4.30 finished mark - 0.25 base) ceiling",
+   "basis": "R-T658-4: C3 GF 25x50 (annex) 0.125 m2 x (4.30 finished mark, printed and re-read r2 - 0.25 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
    "before_high": null,
    "before_low": null,
    "element_id": "P-C:COL:SH12:C3@238374,54773|GF",
@@ -468,17 +478,21 @@
    "status": "LOWER_ONLY"
   },
   {
-   "basis": "UNCHANGED: Checker downgrade DG-2ddc451c17d2b589 (APPLIED in the V3.0.57 index): Checker downgrade DG-2ddc451c17d2b589 UNSUPPORTED BASIS (ST7757.pdf p.13: ground-beam sections titled 'Less than 5m length' 30 x 40 and 'Less then 2.5m length' ",
+   "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 2.4269 m, area 0.807695 m2",
    "before_high": "0.291231",
    "before_low": "0.218423",
    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0037.1",
-   "flags": [],
-   "high": "0.291231",
-   "item": null,
+   "flags": [
+    "D-33_LOADED_SPAN",
+    "R-T658-8",
+    "AREA_NOT_RECTANGLE"
+   ],
+   "high": null,
+   "item": "D-33 run carrying a landing beam (182+183 lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings",
    "item_code": "STR.CONC.GROUND_BEAM",
    "line_id": "L-0bb78accf8c0a0fbdbaf",
-   "low": "0.218423",
-   "status": "BOUNDED"
+   "low": "0.242309",
+   "status": "LOWER_ONLY"
   },
   {
    "basis": "R-T658-1: span 1.25 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
@@ -509,17 +523,20 @@
    "status": "BOUNDED"
   },
   {
-   "basis": "UNCHANGED: Checker downgrade DG-2ddc451c17d2b589 (APPLIED in the V3.0.57 index): Checker downgrade DG-2ddc451c17d2b589 UNSUPPORTED BASIS (ST7757.pdf p.13: ground-beam sections titled 'Less than 5m length' 30 x 40 and 'Less then 2.5m length' ",
+   "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 2.45 m, area 0.735 m2",
    "before_high": "0.294000",
    "before_low": "0.220500",
    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0019",
-   "flags": [],
-   "high": "0.294000",
-   "item": null,
+   "flags": [
+    "D-33_LOADED_SPAN",
+    "R-T658-8"
+   ],
+   "high": null,
+   "item": "D-33 run carrying a landing beam (141+7DA lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings",
    "item_code": "STR.CONC.GROUND_BEAM",
    "line_id": "L-1487bdda099006e0c4ba",
    "low": "0.220500",
-   "status": "BOUNDED"
+   "status": "LOWER_ONLY"
   },
   {
    "basis": "",
@@ -580,20 +597,20 @@
    "status": "LOWER_ONLY"
   },
   {
-   "basis": "R-T658-2: span 5.0 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 5.0 m, area 1.5 m2",
    "before_high": "0.900000",
    "before_low": "0.900000",
    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0010.3",
    "flags": [
-    "ON_LIMIT",
-    "D-33_LOADED_SPAN"
+    "D-33_LOADED_SPAN",
+    "R-T658-8"
    ],
-   "high": "0.900000",
-   "item": null,
+   "high": null,
+   "item": "D-33 run carrying a landing beam (7E7+7E8 lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings",
    "item_code": "STR.CONC.GROUND_BEAM",
    "line_id": "L-5af89b9f1e5b90daf8f5",
    "low": "0.600000",
-   "status": "BOUNDED"
+   "status": "LOWER_ONLY"
   },
   {
    "basis": "",
@@ -639,31 +656,37 @@
    "status": "BOUNDED"
   },
   {
-   "basis": "",
+   "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 3.525 m, area 1.0575 m2",
    "before_high": null,
    "before_low": null,
    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0023:7DC+7DD#1",
-   "flags": [],
+   "flags": [
+    "D-33_LOADED_SPAN",
+    "R-T658-8"
+   ],
    "high": null,
-   "item": "UNCHANGED: ground-beam run 7DC+7DD#1 carries a landing beam: ST p.13 prints sections only 'without concentrated load'; the loaded run's section is not printed (beside 0.4230 .. 0.64 m3, not adopted) (T-647 r2 structural hold census (merged a521da8a))",
+   "item": "D-33 run carrying a landing beam (7E1+7E2 lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings",
    "item_code": "STR.CONC.GROUND_BEAM",
    "line_id": "L-95a1f198cfe7f398d6ae",
-   "low": null,
-   "status": "HELD_BLANK"
+   "low": "0.423000",
+   "status": "LOWER_ONLY"
   },
   {
-   "basis": "R-T658-1: span 0.789 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "basis": "R-T658-7: drawn plan area x the titles that hold; area 0.310134 m2 (edges [0.788981, 1.278577] m), span 0.789 m; area 0.326694 m2 (edges [0.788981, 1.388981] m), span 0.789 m",
    "before_high": "0.071008",
    "before_low": "0.071008",
    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0038",
    "flags": [
-    "TITLES_OVERLAP"
+    "OUTLINE_READINGS",
+    "TITLES_OVERLAP",
+    "R-T658-7",
+    "AREA_NOT_RECTANGLE"
    ],
-   "high": "0.094676",
+   "high": "0.130678",
    "item": null,
    "item_code": "STR.CONC.GROUND_BEAM",
    "line_id": "L-970bac563cbcd69e2a30",
-   "low": "0.071008",
+   "low": "0.093040",
    "status": "BOUNDED"
   },
   {
@@ -680,20 +703,20 @@
    "status": "HELD_BLANK"
   },
   {
-   "basis": "R-T658-1: span 2.1 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 2.1 m, area 0.63 m2",
    "before_high": "0.189000",
    "before_low": "0.189000",
    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0040",
    "flags": [
-    "TITLES_OVERLAP",
-    "D-33_LOADED_SPAN"
+    "D-33_LOADED_SPAN",
+    "R-T658-8"
    ],
-   "high": "0.252000",
-   "item": null,
+   "high": null,
+   "item": "D-33 run carrying a landing beam (180+181 lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings",
    "item_code": "STR.CONC.GROUND_BEAM",
    "line_id": "L-a8c5c32c7a785c1e3f05",
    "low": "0.189000",
-   "status": "BOUNDED"
+   "status": "LOWER_ONLY"
   },
   {
    "basis": "R-T658-3: runs [0.5] m x 0.30 x (0.25 - 0.0) literal floor",
@@ -737,33 +760,37 @@
    "status": "BOUNDED"
   },
   {
-   "basis": "",
+   "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 3.525 m, area 1.0575 m2",
    "before_high": null,
    "before_low": null,
    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0032:7E7+7E8#2",
-   "flags": [],
+   "flags": [
+    "D-33_LOADED_SPAN",
+    "R-T658-8"
+   ],
    "high": null,
-   "item": "UNCHANGED: ground-beam run 7E7+7E8#2 carries a landing beam: ST p.13 prints sections only 'without concentrated load'; the loaded run's section is not printed (beside 0.4230 .. 0.64 m3, not adopted) (T-647 r2 structural hold census (merged a521da8a))",
+   "item": "D-33 run carrying a landing beam (114+115+7DF lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings",
    "item_code": "STR.CONC.GROUND_BEAM",
    "line_id": "L-cfb4555cb26b39934bff",
-   "low": null,
-   "status": "HELD_BLANK"
+   "low": "0.423000",
+   "status": "LOWER_ONLY"
   },
   {
-   "basis": "R-T658-1: span 1.5367 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 1.5367 m, area 0.492189 m2",
    "before_high": "0.138300",
    "before_low": "0.138300",
    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.2",
    "flags": [
-    "TITLES_OVERLAP",
-    "D-33_LOADED_SPAN"
+    "D-33_LOADED_SPAN",
+    "R-T658-8",
+    "AREA_NOT_RECTANGLE"
    ],
-   "high": "0.184399",
-   "item": null,
+   "high": null,
+   "item": "D-33 run carrying a landing beam (7E7+7E8 lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings",
    "item_code": "STR.CONC.GROUND_BEAM",
    "line_id": "L-d53e5eb08e2c6c668254",
-   "low": "0.138300",
-   "status": "BOUNDED"
+   "low": "0.147657",
+   "status": "LOWER_ONLY"
   },
   {
    "basis": "R-T658-3: runs [5.8] m x 0.30 x (0.25 - 0.0) literal floor",
@@ -811,20 +838,20 @@
    "status": "BOUNDED"
   },
   {
-   "basis": "R-T658-2 / R-GB-NECK-CUT-1: 0.3 x 0.4 x 4.97 (column 1EC face reading, 'less than 5 m') .. 0.3 x 0.6 x 5.02 (band end reading, 'more than 5 m') (T-430 register HOLD_RANGE; candidate line carries no bound)",
+   "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 5.02 m, area 1.506 m2; span 4.97 m, area 1.491 m2",
    "before_high": null,
    "before_low": null,
    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.1",
    "flags": [
-    "T430_RANGE_NOT_WIRED",
-    "D-33_LOADED_SPAN"
+    "D-33_LOADED_SPAN",
+    "R-T658-8"
    ],
-   "high": "0.903600",
-   "item": null,
+   "high": null,
+   "item": "D-33 run carrying a landing beam (175+7DE / 176+7E6 / 7DC+7DD lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings",
    "item_code": "STR.CONC.GROUND_BEAM",
    "line_id": "L-e24946df436cbc25fca6",
    "low": "0.596400",
-   "status": "BOUNDED"
+   "status": "LOWER_ONLY"
   },
   {
    "basis": "R-T658-1: span 1.2 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
@@ -842,18 +869,20 @@
    "status": "BOUNDED"
   },
   {
-   "basis": "R-T658-1: span 2.0732 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+   "basis": "R-T658-7: drawn plan area x the titles that hold; area 0.653733 m2 (edges [2.143112, 2.073244] m), span 2.0732 m",
    "before_high": "0.186592",
    "before_low": "0.186592",
    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0039",
    "flags": [
-    "TITLES_OVERLAP"
+    "TITLES_OVERLAP",
+    "R-T658-7",
+    "AREA_NOT_RECTANGLE"
    ],
-   "high": "0.248788",
+   "high": "0.261493",
    "item": null,
    "item_code": "STR.CONC.GROUND_BEAM",
    "line_id": "L-f24cf117a9ce1e875785",
-   "low": "0.186592",
+   "low": "0.196120",
    "status": "BOUNDED"
   },
   {
@@ -936,13 +965,13 @@
    "before_bounded": 14,
    "before_high": "6.621731",
    "before_low": "2.808073",
-   "blank": 6,
-   "bounded": 15,
-   "bounded_high": "7.873294",
-   "bounded_low": "3.104473",
+   "blank": 4,
+   "bounded": 9,
+   "bounded_high": "5.096771",
+   "bounded_low": "1.173410",
    "lines": 29,
-   "lower_only": 8,
-   "lower_only_floor": "2.227973",
+   "lower_only": 16,
+   "lower_only_floor": "5.069839",
    "total": null,
    "upper_only": 0,
    "upper_only_ceiling": "0.000000"
