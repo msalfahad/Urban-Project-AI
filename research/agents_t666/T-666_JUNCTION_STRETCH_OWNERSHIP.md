@@ -45,6 +45,15 @@ So the bounds stand (to the drawn length); the square each piece owns is at its 
 named beside two lines and never added: 0 .. 0.014 (NE corner below the piece soffit) and 0 .. 0.0405 (1F piece below
 B23) - both close with the piece depth (D-04).
 
+Floor check by hand (2F roof, the same plan; route G extents from `agents_t110/BEAM_MEMBER_REGISTER.csv`, column
+outlines 40F / 412 / 415 / 418 / 41B / 41E / 421 / 424 from the DXF): every band crossing / corner has
+exactly one owner under R-T666-1. Of the 38 line ends of the 19 lines, 12 meet a junction square: 5 inside a column
+(40F NW corner, 412, and the crossing squares in 418 / 41E / 424), 3 in a through span (B8 over BAND0008.3's north
+end, B7 BAND0009 at BAND0007.2's east end and at the SE corner), 4 kept by the pieces above (SW, NE, the two south
+squares); every other end stops at a column face. GAP 0, DOUBLE 0 apart from the known
+T-220 item (B7 billed through the planted column 778, owned by B7 there). Not committed as code (hand census for the
+Checker).
+
 ## 3. (b) Boundary band L-6290a9f3 on the building stretches
 
 - FOUNDATION PLAN (ST p.2): closed S-BOUN pair 1658 / 1659 (0.20, centre line 91.94) with ONE ANSI37 hatch 1657 over
