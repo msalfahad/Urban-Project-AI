@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10T13:55Z | Verifier | STARTED | run session_01E6cPneJTqxSgACrB8dHgik | repo-attached routine | task state: READY T-673 (W1 lintel census), T-675 (W2 masonry round 2) | self-check pending
 - 2026-11-10 13:41 UTC | Worker 1 | SUCCESS | T-673 | Census of the 49 HELD blank STR.CONC lines outside B10 (V3.0.64): MEASURABLE NOW 17 / DESIGNER 10 / OPEN BOUND 22, count = index. 14 lintels sat HELD although merged T-201/T-238 drawn heads exist: R-T673-1 makes them REQUIRED; 16 lintel lines 0.925..1.496412 m3 + ST-03 steps 0.355017 m3 part (waist S-9 HELD); research only, READY ed2f1b9c. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-10 13:26 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10T13:00Z | Worker 3 | STARTED | run session_01E6cPnbrsekqqKxxYqDwrr4 | repo-attached routine | task state: none yet | self-check pending
