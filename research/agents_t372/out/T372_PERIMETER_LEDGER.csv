@@ -1,0 +1,21 @@
+mortar_line_id,host,host_class,panel_after_t670,perimeter_state,low_m3,figure_m3,high_m3,pct_of_panel,walls,beside_held,held_cause
+L-fdbe5743c95c05ae9c19,1F-WALLS:walls t=0.15,HELD,"[""HELD"", null]",HELD,,,,null,,,BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor
+L-866a6602ffa70d03f210,1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK,RELEASED,"[""RANGE"", [0.618315, 0.622076]]",RANGE,0.028344,0.028622,0.032121,"[4.56, 5.19]",1F-W12 1F-W13 1F-W17 1F-W19 1F-W23,,
+L-a8f0d0e9fff641c0fa8e,1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK,RELEASED,"[""VALUE"", 0.279579]",RANGE,0.014744,0.014744,0.02083,"[5.27, 7.45]",1F-W18 1F-W24,,
+L-2051ab0a71c27be038ae,1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK,RELEASED,"[""VALUE"", 0.578768]",RANGE,0.018729,0.018729,0.019896,"[3.24, 3.44]",1F-W20 1F-W21 1F-W22,,
+L-298e323d027a4723652d,1F-WALLS:walls t=0.20,HELD,"[""HELD"", null]",HELD,,,,null,,,BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor
+L-e74c15038f1e32dbefe0,1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK,RELEASED,"[""VALUE"", 0.352525]",VALUE,0.039291,0.039291,0.039291,"[11.15, 11.15]",1F-W02 1F-W03 1F-W09,,
+L-cdb8d54311c5c841528f,2F-WALLS:walls t=0.15,HELD,"[""HELD"", null]",HELD,,,,null,,,BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor
+L-b765c24ac4b275c661bc,2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK,HELD,"[""HELD"", null]",HELD,,,,null,,2F-W08,"2F block walls (t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not print"
+L-4631ba5deb8ca9a53491,2F-WALLS:walls t=0.20,HELD,"[""HELD"", null]",HELD,,,,null,,,BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor
+L-3cdc29f2fadd13ef35d4,2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK,HELD,"[""HELD"", null]",HELD,,,,null,,2F-W05,"2F block walls (t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (sec"
+L-539af3a600dcf190cd01,2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK,HELD,"[""HELD"", null]",HELD,,,,null,,2F-W01 2F-W06,"2F block walls (t=0.20#BLOCKWORK:VERIFIED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A "
+L-39a62186ff15c48d51d5,GF-WALLS:walls t=0.15,HELD,"[""HELD"", null]",HELD,,,,null,,,BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor
+L-8f163174139bcf80c7c7,GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK,RELEASED,"[""VALUE"", 0.260604]",RANGE,0.010361,0.010639,0.010639,"[3.98, 4.08]",GF-W28 GF-W29,,
+L-33fcd56ef1548206bb1c,GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK,RELEASED,"[""VALUE"", 0.095082]",VALUE,0.003237,0.003237,0.003237,"[3.4, 3.4]",GF-W19,GF-W22,
+L-794c7232f398260c7afb,GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK,RELEASED,"[""VALUE"", 0.109463]",VALUE,0.003167,0.003167,0.003167,"[2.89, 2.89]",GF-W21 GF-W33,,
+L-a6e9b9d47f2b81204b1e,GF-WALLS:walls t=0.20,HELD,"[""HELD"", null]",HELD,,,,null,,,BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor
+L-1bacf0e3cec97219a455,GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK,RELEASED,"[""VALUE"", 0.916919]",VALUE,0.058854,0.058854,0.058854,"[6.42, 6.42]",GF-W01,,
+L-07e80def32e147b160ac,GF-WALLS:walls t=0.40,HELD,"[""HELD"", null]",HELD,,,,null,,,BLOCK_WALL_NOT_ESTABLISHED (walls t=0.40 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor
+L-17cea41ab1b8f2bdb19e,HOUSE_BELOW_NG:ANNEX_S,HELD,"[""HELD"", null]",HELD,,,,null,,,"black block below the annex neighbour-side ground beams (ANNEX_S, 10.000 m net axis): the annex exterior ground-beam soffit is a CONFLICT (levels reading L vs t"
+L-cf220ce7edefedd935b4,HOUSE_BELOW_NG:MAIN_S,HELD,"[""HELD"", null]",HELD,,,,null,,,"black block below the main-house neighbour-side ground beams (MAIN_S, 16.270 m net axis): printed by ST p.1 note 2, but no section prints its thickness or botto"

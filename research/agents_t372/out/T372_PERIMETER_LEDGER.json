@@ -1,0 +1,1779 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.63",
+ "factor_m3_per_m": {
+  "0.15": 0.00138937,
+  "0.2": 0.0018525
+ },
+ "index_check": {
+  "lines_checked": 20,
+  "mismatches": 0
+ },
+ "joint": {
+  "joint_mm": 10,
+  "module_m": [
+   0.4,
+   0.2
+  ],
+  "source": "research/agents_t367/MORTAR_BY_LINE_T367.csv (merged T-367; geometry re-derived by T-506 R-T506-1: 0.07375 t m3/m2)",
+  "status": "OWNER-PROVISIONAL (T-367 MASONRY_JOINT_MORTAR_V1, owner 2026-10-29: 10 mm bed and head joints)",
+  "unit_m": [
+   0.39,
+   0.19
+  ]
+ },
+ "lines": [
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "held_junctions": [],
+   "host": "1F-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-c22e309433e7b671cf2d",
+   "materials": null,
+   "mortar_line_id": "L-fdbe5743c95c05ae9c19",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 20,
+   "held_cause": null,
+   "held_junctions": [
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "run end | D-1F-03 lintel bearing not established",
+     "wall_id": "1F-W12"
+    },
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "D-1F-03 lintel bearing not established | run end",
+     "wall_id": "1F-W12"
+    },
+    {
+     "band_m": [
+      0.0,
+      2.2
+     ],
+     "bound_m3": [
+      0.0,
+      0.0
+     ],
+     "ends": "D-1F-08 | east ring west crossing",
+     "wall_id": "1F-W13"
+    },
+    {
+     "band_m": [
+      0.0,
+      2.2
+     ],
+     "bound_m3": [
+      0.0,
+      0.003057
+     ],
+     "ends": "east ring east crossing | run end",
+     "wall_id": "1F-W13"
+    },
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "D-1F-08 lintel | east ring west crossing",
+     "wall_id": "1F-W13"
+    },
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "east ring east crossing | run end",
+     "wall_id": "1F-W13"
+    },
+    {
+     "band_m": [
+      2.4,
+      3.45
+     ],
+     "bound_m3": [
+      0.0,
+      0.001459
+     ],
+     "ends": "run end | east ring west crossing",
+     "wall_id": "1F-W13"
+    },
+    {
+     "band_m": [
+      2.4,
+      3.45
+     ],
+     "bound_m3": [
+      0.0,
+      0.001459
+     ],
+     "ends": "east ring east crossing | run end",
+     "wall_id": "1F-W13"
+    },
+    {
+     "band_m": [
+      3.45,
+      3.8
+     ],
+     "bound_m3": [
+      0.0,
+      0.000486
+     ],
+     "ends": "member over B25 BM-1F-027 | east ring west crossing",
+     "wall_id": "1F-W13"
+    },
+    {
+     "band_m": [
+      3.45,
+      3.8
+     ],
+     "bound_m3": [
+      0.0,
+      0.000486
+     ],
+     "ends": "east ring east crossing | member over CB12 BM-1F-017",
+     "wall_id": "1F-W13"
+    },
+    {
+     "band_m": [
+      3.8,
+      4.04
+     ],
+     "bound_m3": [
+      0.0,
+      0.000333
+     ],
+     "ends": "member over B25 BM-1F-027 | east ring west crossing",
+     "wall_id": "1F-W13"
+    },
+    {
+     "band_m": [
+      3.8,
+      4.04
+     ],
+     "bound_m3": [
+      0.0,
+      0.000333
+     ],
+     "ends": "east ring east crossing | member over CB12 BM-1F-017",
+     "wall_id": "1F-W13"
+    },
+    {
+     "band_m": [
+      0.0,
+      2.2
+     ],
+     "bound_m3": [
+      0.0,
+      0.0
+     ],
+     "ends": "east ring sliver | D-1F-10",
+     "wall_id": "1F-W17"
+    },
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "east ring sliver | D-1F-10 lintel bearing not established",
+     "wall_id": "1F-W17"
+    },
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "D-1F-10 lintel bearing not established | run end",
+     "wall_id": "1F-W17"
+    },
+    {
+     "band_m": [
+      2.4,
+      3.7
+     ],
+     "bound_m3": [
+      0.0,
+      0.001806
+     ],
+     "ends": "east ring sliver | run end",
+     "wall_id": "1F-W17"
+    },
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "run end | D-1F-07 lintel bearing not established",
+     "wall_id": "1F-W19"
+    },
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "D-1F-07 lintel bearing not established | run end",
+     "wall_id": "1F-W19"
+    },
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "run end | D-1F-04 lintel bearing not established",
+     "wall_id": "1F-W23"
+    },
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "D-1F-04 lintel bearing not established | column",
+     "wall_id": "1F-W23"
+    }
+   ],
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-a56a8add7812d1b52cb7",
+   "materials": {
+    "cement_bags_50kg": [
+     0.2268,
+     0.257
+    ],
+    "producer_key": "B9-04 PERIMETER JOINT MORTAR (R-T520-1 / R-T372-1)",
+    "rounding": "bags only at the purchasing group; waste HELD (not sourced)",
+    "sand_m3_loose": [
+     0.031178,
+     0.035333
+    ]
+   },
+   "mortar_line_id": "L-866a6602ffa70d03f210",
+   "open_high_named_pieces": [
+    "1F-W13",
+    "1F-W17"
+   ],
+   "panel_after_t670": [
+    "RANGE",
+    [
+     0.618315,
+     0.622076
+    ]
+   ],
+   "pct_of_panel": [
+    4.56,
+    5.19
+   ],
+   "perimeter_figure_m3": 0.028622,
+   "perimeter_high_m3": 0.032121,
+   "perimeter_low_m3": 0.028344,
+   "perimeter_range_part_m3": 0.003777,
+   "perimeter_state": "RANGE",
+   "wall_status": [
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "walls": [
+    "1F-W12",
+    "1F-W13",
+    "1F-W17",
+    "1F-W19",
+    "1F-W23"
+   ]
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 1,
+   "held_cause": null,
+   "held_junctions": [
+    {
+     "band_m": [
+      0.0,
+      3.7
+     ],
+     "bound_m3": [
+      0.0,
+      0.005141
+     ],
+     "ends": "run end | west dome opening 1F-073",
+     "wall_id": "1F-W24"
+    }
+   ],
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-4054259959463edd70fb",
+   "materials": {
+    "cement_bags_50kg": [
+     0.118,
+     0.1666
+    ],
+    "producer_key": "B9-04 PERIMETER JOINT MORTAR (R-T520-1 / R-T372-1)",
+    "rounding": "bags only at the purchasing group; waste HELD (not sourced)",
+    "sand_m3_loose": [
+     0.016218,
+     0.022913
+    ]
+   },
+   "mortar_line_id": "L-a8f0d0e9fff641c0fa8e",
+   "open_high_named_pieces": [
+    "1F-W24"
+   ],
+   "panel_after_t670": [
+    "VALUE",
+    0.279579
+   ],
+   "pct_of_panel": [
+    5.27,
+    7.45
+   ],
+   "perimeter_figure_m3": 0.014744,
+   "perimeter_high_m3": 0.02083,
+   "perimeter_low_m3": 0.014744,
+   "perimeter_range_part_m3": 0.006086,
+   "perimeter_state": "RANGE",
+   "wall_status": [
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "walls": [
+    "1F-W18",
+    "1F-W24"
+   ]
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": null,
+   "held_junctions": [],
+   "host": "1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-73acd5a9d7e7cf6515c1",
+   "materials": {
+    "cement_bags_50kg": [
+     0.1498,
+     0.1592
+    ],
+    "producer_key": "B9-04 PERIMETER JOINT MORTAR (R-T520-1 / R-T372-1)",
+    "rounding": "bags only at the purchasing group; waste HELD (not sourced)",
+    "sand_m3_loose": [
+     0.020602,
+     0.021886
+    ]
+   },
+   "mortar_line_id": "L-2051ab0a71c27be038ae",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "VALUE",
+    0.578768
+   ],
+   "pct_of_panel": [
+    3.24,
+    3.44
+   ],
+   "perimeter_figure_m3": 0.018729,
+   "perimeter_high_m3": 0.019896,
+   "perimeter_low_m3": 0.018729,
+   "perimeter_range_part_m3": 0.001167,
+   "perimeter_state": "RANGE",
+   "wall_status": [
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "walls": [
+    "1F-W20",
+    "1F-W21",
+    "1F-W22"
+   ]
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "held_junctions": [],
+   "host": "1F-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-5ffa7157a2fe483dd008",
+   "materials": null,
+   "mortar_line_id": "L-298e323d027a4723652d",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": null,
+   "held_junctions": [],
+   "host": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-10dd62f66ad05488e63b",
+   "materials": {
+    "cement_bags_50kg": [
+     0.3143,
+     0.3143
+    ],
+    "producer_key": "B9-04 PERIMETER JOINT MORTAR (R-T520-1 / R-T372-1)",
+    "rounding": "bags only at the purchasing group; waste HELD (not sourced)",
+    "sand_m3_loose": [
+     0.04322,
+     0.04322
+    ]
+   },
+   "mortar_line_id": "L-e74c15038f1e32dbefe0",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "VALUE",
+    0.352525
+   ],
+   "pct_of_panel": [
+    11.15,
+    11.15
+   ],
+   "perimeter_figure_m3": 0.039291,
+   "perimeter_high_m3": 0.039291,
+   "perimeter_low_m3": 0.039291,
+   "perimeter_range_part_m3": 0.0,
+   "perimeter_state": "VALUE",
+   "wall_status": [
+    "COMPUTED"
+   ],
+   "walls": [
+    "1F-W02",
+    "1F-W03",
+    "1F-W09"
+   ]
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "held_junctions": [],
+   "host": "2F-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-246f3c09de4c6b90efe5",
+   "materials": null,
+   "mortar_line_id": "L-cdb8d54311c5c841528f",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  },
+  {
+   "beside_held": [
+    {
+     "expression": "0.004168 - 0.000000 b_r m3 (figure, not a quantity)",
+     "figure_beside": [
+      0.004168,
+      0.006183
+     ],
+     "wall_id": "2F-W08",
+     "why": "2F storey 4.25 - b_r: roof-plate structural level not printed (D-39, T-488)"
+    }
+   ],
+   "held_bands_named": 0,
+   "held_cause": "2F block walls (t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5",
+   "held_junctions": [],
+   "host": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "host_class": "HELD",
+   "host_line_id": "L-e1e06ec149b44d4f6f8a",
+   "materials": null,
+   "mortar_line_id": "L-b765c24ac4b275c661bc",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "held_junctions": [],
+   "host": "2F-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-afe984a62285e133ec2f",
+   "materials": null,
+   "mortar_line_id": "L-4631ba5deb8ca9a53491",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  },
+  {
+   "beside_held": [
+    {
+     "expression": "0.008966 - 0.001853 b_r m3 (figure, not a quantity)",
+     "figure_beside": [
+      0.008966,
+      0.008966
+     ],
+     "wall_id": "2F-W05",
+     "why": "2F storey 4.25 - b_r: roof-plate structural level not printed (D-39, T-488)"
+    }
+   ],
+   "held_bands_named": 0,
+   "held_cause": "2F block walls (t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 1",
+   "held_junctions": [],
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "host_class": "HELD",
+   "host_line_id": "L-a6eedf5e4adec6d07618",
+   "materials": null,
+   "mortar_line_id": "L-3cdc29f2fadd13ef35d4",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  },
+  {
+   "beside_held": [
+    {
+     "expression": "0.010448 - 0.001852 b_r m3 (figure, not a quantity)",
+     "figure_beside": [
+      0.010448,
+      0.010448
+     ],
+     "wall_id": "2F-W01",
+     "why": "2F storey 4.25 - b_r: roof-plate structural level not printed (D-39, T-488)"
+    },
+    {
+     "expression": "0.021452 - 0.003705 b_r m3 (figure, not a quantity)",
+     "figure_beside": [
+      0.021452,
+      0.021452
+     ],
+     "wall_id": "2F-W06",
+     "why": "2F storey 4.25 - b_r: roof-plate structural level not printed (D-39, T-488)"
+    }
+   ],
+   "held_bands_named": 0,
+   "held_cause": "2F block walls (t=0.20#BLOCKWORK:VERIFIED_BLACK): wall height to the main-roof beam soffit needs the roof slab datum / beam depth b_r, not printed (section A-A +13.90 is a finished level): HELD ON ROOF DATUM (D-39); U = 53.5225 - 14.925 b_r",
+   "held_junctions": [],
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "HELD",
+   "host_line_id": "L-76a4d8e50423fb02b914",
+   "materials": null,
+   "mortar_line_id": "L-539af3a600dcf190cd01",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.15 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "held_junctions": [],
+   "host": "GF-WALLS:walls t=0.15",
+   "host_class": "HELD",
+   "host_line_id": "L-0d9b9e89bb6455da475d",
+   "materials": null,
+   "mortar_line_id": "L-39a62186ff15c48d51d5",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 2,
+   "held_cause": null,
+   "held_junctions": [
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "run end | D-GF-10 lintel bearing not established",
+     "wall_id": "GF-W29"
+    },
+    {
+     "band_m": [
+      2.2,
+      2.4
+     ],
+     "bound_m3": [
+      0.0,
+      0.000278
+     ],
+     "ends": "D-GF-10 lintel bearing not established | run end",
+     "wall_id": "GF-W29"
+    }
+   ],
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-abf15bdf70ccf1e7b474",
+   "materials": {
+    "cement_bags_50kg": [
+     0.0829,
+     0.0851
+    ],
+    "producer_key": "B9-04 PERIMETER JOINT MORTAR (R-T520-1 / R-T372-1)",
+    "rounding": "bags only at the purchasing group; waste HELD (not sourced)",
+    "sand_m3_loose": [
+     0.011397,
+     0.011703
+    ]
+   },
+   "mortar_line_id": "L-8f163174139bcf80c7c7",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "VALUE",
+    0.260604
+   ],
+   "pct_of_panel": [
+    3.98,
+    4.08
+   ],
+   "perimeter_figure_m3": 0.010639,
+   "perimeter_high_m3": 0.010639,
+   "perimeter_low_m3": 0.010361,
+   "perimeter_range_part_m3": 0.000278,
+   "perimeter_state": "RANGE",
+   "wall_status": [
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "walls": [
+    "GF-W28",
+    "GF-W29"
+   ]
+  },
+  {
+   "beside_held": [
+    {
+     "expression": "",
+     "figure_beside": [
+      0.00414,
+      0.004144
+     ],
+     "wall_id": "GF-W22",
+     "why": "GF-W22 CONFLICT [12.9311, 12.9439] m2 on its parent (D-27, T-488): not on a part line"
+    }
+   ],
+   "held_bands_named": 0,
+   "held_cause": null,
+   "held_junctions": [],
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-adb393d6db51056d343b",
+   "materials": {
+    "cement_bags_50kg": [
+     0.0259,
+     0.0259
+    ],
+    "producer_key": "B9-04 PERIMETER JOINT MORTAR (R-T520-1 / R-T372-1)",
+    "rounding": "bags only at the purchasing group; waste HELD (not sourced)",
+    "sand_m3_loose": [
+     0.003561,
+     0.003561
+    ]
+   },
+   "mortar_line_id": "L-33fcd56ef1548206bb1c",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "VALUE",
+    0.095082
+   ],
+   "pct_of_panel": [
+    3.4,
+    3.4
+   ],
+   "perimeter_figure_m3": 0.003237,
+   "perimeter_high_m3": 0.003237,
+   "perimeter_low_m3": 0.003237,
+   "perimeter_range_part_m3": 0.0,
+   "perimeter_state": "VALUE",
+   "wall_status": [
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "walls": [
+    "GF-W19"
+   ]
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": null,
+   "held_junctions": [],
+   "host": "GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-87e0023741a8e2d98b21",
+   "materials": {
+    "cement_bags_50kg": [
+     0.0253,
+     0.0253
+    ],
+    "producer_key": "B9-04 PERIMETER JOINT MORTAR (R-T520-1 / R-T372-1)",
+    "rounding": "bags only at the purchasing group; waste HELD (not sourced)",
+    "sand_m3_loose": [
+     0.003484,
+     0.003484
+    ]
+   },
+   "mortar_line_id": "L-794c7232f398260c7afb",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "VALUE",
+    0.109463
+   ],
+   "pct_of_panel": [
+    2.89,
+    2.89
+   ],
+   "perimeter_figure_m3": 0.003167,
+   "perimeter_high_m3": 0.003167,
+   "perimeter_low_m3": 0.003167,
+   "perimeter_range_part_m3": 0.0,
+   "perimeter_state": "VALUE",
+   "wall_status": [
+    "ASSUMED - OWNER-APPROVED"
+   ],
+   "walls": [
+    "GF-W21",
+    "GF-W33"
+   ]
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "held_junctions": [],
+   "host": "GF-WALLS:walls t=0.20",
+   "host_class": "HELD",
+   "host_line_id": "L-4165954ce4871eda30cc",
+   "materials": null,
+   "mortar_line_id": "L-a6e9b9d47f2b81204b1e",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": null,
+   "held_junctions": [],
+   "host": "GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "host_class": "RELEASED",
+   "host_line_id": "L-1c53fadb2f92d1f36d4e",
+   "materials": {
+    "cement_bags_50kg": [
+     0.4708,
+     0.4708
+    ],
+    "producer_key": "B9-04 PERIMETER JOINT MORTAR (R-T520-1 / R-T372-1)",
+    "rounding": "bags only at the purchasing group; waste HELD (not sourced)",
+    "sand_m3_loose": [
+     0.064739,
+     0.064739
+    ]
+   },
+   "mortar_line_id": "L-1bacf0e3cec97219a455",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "VALUE",
+    0.916919
+   ],
+   "pct_of_panel": [
+    6.42,
+    6.42
+   ],
+   "perimeter_figure_m3": 0.058854,
+   "perimeter_high_m3": 0.058854,
+   "perimeter_low_m3": 0.058854,
+   "perimeter_range_part_m3": 0.0,
+   "perimeter_state": "VALUE",
+   "wall_status": [
+    "COMPUTED"
+   ],
+   "walls": [
+    "GF-W01"
+   ]
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.40 m): the wall panel (MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor",
+   "held_junctions": [],
+   "host": "GF-WALLS:walls t=0.40",
+   "host_class": "HELD",
+   "host_line_id": "L-ff06449b7f61f19c418d",
+   "materials": null,
+   "mortar_line_id": "L-07e80def32e147b160ac",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": "black block below the annex neighbour-side ground beams (ANNEX_S, 10.000 m net axis): the annex exterior ground-beam soffit is a CONFLICT (levels reading L vs the printed section), so the masonry height has no bound",
+   "held_junctions": [],
+   "host": "HOUSE_BELOW_NG:ANNEX_S",
+   "host_class": "HELD",
+   "host_line_id": "L-ee857398614d817e6917",
+   "materials": null,
+   "mortar_line_id": "L-17cea41ab1b8f2bdb19e",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  },
+  {
+   "beside_held": [],
+   "held_bands_named": 0,
+   "held_cause": "black block below the main-house neighbour-side ground beams (MAIN_S, 16.270 m net axis): printed by ST p.1 note 2, but no section prints its thickness or bottom level: height only h >= 0.70 m (gross AT_LEAST 13.4897, net AT_LEAST 11.389 m2",
+   "held_junctions": [],
+   "host": "HOUSE_BELOW_NG:MAIN_S",
+   "host_class": "HELD",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "materials": null,
+   "mortar_line_id": "L-cf220ce7edefedd935b4",
+   "open_high_named_pieces": [],
+   "panel_after_t670": [
+    "HELD",
+    null
+   ],
+   "pct_of_panel": null,
+   "perimeter_figure_m3": null,
+   "perimeter_high_m3": null,
+   "perimeter_low_m3": null,
+   "perimeter_range_part_m3": null,
+   "perimeter_state": "HELD",
+   "wall_status": [],
+   "walls": []
+  }
+ ],
+ "lintel_bearing_bed": [
+  {
+   "bearing_high_m": 0.8,
+   "bearing_low_m": 0.8,
+   "ends": [
+    {
+     "high": 0.4,
+     "low": 0.4,
+     "side": "START",
+     "state": "EXACT",
+     "why": "available >= bearing"
+    },
+    {
+     "high": 0.4,
+     "low": 0.4,
+     "side": "END",
+     "state": "EXACT",
+     "why": "available >= bearing"
+    }
+   ],
+   "face_m2": 0.36,
+   "high": 0.001111,
+   "line_id": "L-866a6602ffa70d03f210",
+   "lintel_line_id": "L-6aa750fb944ad58ce960",
+   "low": 0.001111,
+   "opening_id": "D-1F-02",
+   "state": "EXACT"
+  },
+  {
+   "bearing_high_m": 0.8,
+   "bearing_low_m": 0.4,
+   "ends": [
+    {
+     "high": 0.4,
+     "low": 0.0,
+     "side": "START",
+     "state": "RANGE",
+     "why": "FLAGGED_DEFICIT end (END_OF_MASONRY, 0.238 m)"
+    },
+    {
+     "high": 0.4,
+     "low": 0.4,
+     "side": "END",
+     "state": "EXACT",
+     "why": "available >= bearing"
+    }
+   ],
+   "face_m2": 0.36,
+   "high": 0.001111,
+   "line_id": "L-866a6602ffa70d03f210",
+   "lintel_line_id": "L-8b978b48668cde0f1b0c",
+   "low": 0.000556,
+   "opening_id": "D-1F-03",
+   "state": "RANGE"
+  },
+  {
+   "bearing_high_m": 0.479,
+   "bearing_low_m": 0.4,
+   "ends": [
+    {
+     "high": 0.079,
+     "low": 0.0,
+     "side": "START",
+     "state": "RANGE",
+     "why": "FLAGGED_DEFICIT end (COLUMN, 0.079 m)"
+    },
+    {
+     "high": 0.4,
+     "low": 0.4,
+     "side": "END",
+     "state": "EXACT",
+     "why": "available >= bearing"
+    }
+   ],
+   "face_m2": 0.32,
+   "high": 0.000666,
+   "line_id": "L-866a6602ffa70d03f210",
+   "lintel_line_id": "L-183f52083e693bdf8671",
+   "low": 0.000556,
+   "opening_id": "D-1F-04",
+   "state": "RANGE"
+  },
+  {
+   "bearing_high_m": 0.8,
+   "bearing_low_m": 0.4,
+   "ends": [
+    {
+     "high": 0.4,
+     "low": 0.0,
+     "side": "START",
+     "state": "RANGE",
+     "why": "FLAGGED_DEFICIT end (END_OF_MASONRY, 0.259 m)"
+    },
+    {
+     "high": 0.4,
+     "low": 0.4,
+     "side": "END",
+     "state": "EXACT",
+     "why": "available >= bearing"
+    }
+   ],
+   "face_m2": 0.32,
+   "high": 0.001111,
+   "line_id": "L-866a6602ffa70d03f210",
+   "lintel_line_id": "L-3111418b702ac80f0ade",
+   "low": 0.000556,
+   "opening_id": "D-1F-07",
+   "state": "RANGE"
+  },
+  {
+   "bearing_high_m": 0.8,
+   "bearing_low_m": 0.8,
+   "ends": [
+    {
+     "high": 0.4,
+     "low": 0.4,
+     "side": "START",
+     "state": "EXACT",
+     "why": "available >= bearing"
+    },
+    {
+     "high": 0.4,
+     "low": 0.4,
+     "side": "END",
+     "state": "EXACT",
+     "why": "available >= bearing"
+    }
+   ],
+   "face_m2": 0.34,
+   "high": 0.001111,
+   "line_id": "L-866a6602ffa70d03f210",
+   "lintel_line_id": "L-10f18635f68cfd8cdd1d",
+   "low": 0.001111,
+   "opening_id": "D-1F-08",
+   "state": "EXACT"
+  },
+  {
+   "bearing_high_m": 0.8,
+   "bearing_low_m": 0.4,
+   "ends": [
+    {
+     "high": 0.4,
+     "low": 0.4,
+     "side": "START",
+     "state": "EXACT",
+     "why": "available >= bearing"
+    },
+    {
+     "high": 0.4,
+     "low": 0.0,
+     "side": "END",
+     "state": "RANGE",
+     "why": "FLAGGED_DEFICIT end (END_OF_MASONRY, 0.259 m)"
+    }
+   ],
+   "face_m2": 0.32,
+   "high": 0.001111,
+   "line_id": "L-866a6602ffa70d03f210",
+   "lintel_line_id": "L-befb0beb1707ef192326",
+   "low": 0.000556,
+   "opening_id": "D-1F-10",
+   "state": "RANGE"
+  },
+  {
+   "high": null,
+   "line_id": "L-866a6602ffa70d03f210",
+   "low": null,
+   "opening_id": "D-1F-09",
+   "state": "HELD",
+   "why": "lintel HELD_RANGE in the candidate (face not fixed)"
+  },
+  {
+   "bearing_high_m": 0.8,
+   "bearing_low_m": 0.4,
+   "ends": [
+    {
+     "high": 0.4,
+     "low": 0.0,
+     "side": "START",
+     "state": "RANGE",
+     "why": "FLAGGED_DEFICIT end (END_OF_MASONRY, 0.253 m)"
+    },
+    {
+     "high": 0.4,
+     "low": 0.4,
+     "side": "END",
+     "state": "EXACT",
+     "why": "available >= bearing"
+    }
+   ],
+   "face_m2": 0.32,
+   "high": 0.001111,
+   "line_id": "L-8f163174139bcf80c7c7",
+   "lintel_line_id": "L-7149ea268473ea337cd2",
+   "low": 0.000556,
+   "opening_id": "D-GF-10",
+   "state": "RANGE"
+  },
+  {
+   "bearing_high_m": 0.8,
+   "bearing_low_m": 0.8,
+   "ends": [
+    {
+     "high": 0.4,
+     "low": 0.4,
+     "side": "START",
+     "state": "EXACT",
+     "why": "available >= bearing"
+    },
+    {
+     "high": 0.4,
+     "low": 0.4,
+     "side": "END",
+     "state": "EXACT",
+     "why": "available >= bearing"
+    }
+   ],
+   "face_m2": 0.36,
+   "high": 0.001111,
+   "line_id": "L-8f163174139bcf80c7c7",
+   "lintel_line_id": "L-31232f81202941d104c6",
+   "low": 0.001111,
+   "opening_id": "D-GF-13",
+   "state": "EXACT"
+  }
+ ],
+ "own_arithmetic": [
+  {
+   "carried_high": 0.003237,
+   "carried_low": 0.003237,
+   "d_high": 0.0,
+   "d_low": 0.0,
+   "own_exact": 0.003237,
+   "own_high": 0.003237,
+   "wall_id": "GF-W19"
+  },
+  {
+   "carried_high": 0.001379,
+   "carried_low": 0.001379,
+   "d_high": 1e-06,
+   "d_low": 1e-06,
+   "own_exact": 0.00138,
+   "own_high": 0.00138,
+   "wall_id": "GF-W21"
+  },
+  {
+   "carried_high": 0.004144,
+   "carried_low": 0.00414,
+   "d_high": -4e-06,
+   "d_low": -0.0,
+   "own_exact": 0.00414,
+   "own_high": 0.00414,
+   "wall_id": "GF-W22"
+  },
+  {
+   "carried_high": 0.008763,
+   "carried_low": 0.008485,
+   "d_high": 0.0,
+   "d_low": 0.000278,
+   "own_exact": 0.008763,
+   "own_high": 0.008763,
+   "wall_id": "GF-W28"
+  },
+  {
+   "carried_high": 0.001876,
+   "carried_low": 0.001876,
+   "d_high": -0.0,
+   "d_low": -0.0,
+   "own_exact": 0.001876,
+   "own_high": 0.001876,
+   "wall_id": "GF-W29"
+  },
+  {
+   "carried_high": 0.001788,
+   "carried_low": 0.001788,
+   "d_high": 0.0,
+   "d_low": 0.0,
+   "own_exact": 0.001788,
+   "own_high": 0.001788,
+   "wall_id": "GF-W33"
+  },
+  {
+   "carried_high": 0.058854,
+   "carried_low": 0.058854,
+   "d_high": -0.0,
+   "d_low": -0.0,
+   "own_exact": 0.058854,
+   "own_high": 0.058854,
+   "wall_id": "GF-W01"
+  },
+  {
+   "carried_high": 0.005175,
+   "carried_low": 0.005175,
+   "d_high": 0.0,
+   "d_low": 0.0,
+   "own_exact": 0.005175,
+   "own_high": 0.005175,
+   "wall_id": "1F-W12"
+  },
+  {
+   "carried_high": 0.008016,
+   "carried_low": 0.006919,
+   "d_high": 0.0,
+   "d_low": -0.0,
+   "own_exact": 0.006919,
+   "own_high": 0.008016,
+   "wall_id": "1F-W13"
+  },
+  {
+   "carried_high": 0.003203,
+   "carried_low": 0.002731,
+   "d_high": 0.0,
+   "d_low": -0.0,
+   "own_exact": 0.002731,
+   "own_high": 0.003203,
+   "wall_id": "1F-W17"
+  },
+  {
+   "carried_high": 0.018423,
+   "carried_low": 0.01281,
+   "d_high": 0.0,
+   "d_low": 0.0,
+   "own_exact": 0.01281,
+   "own_high": 0.018423,
+   "wall_id": "1F-W18"
+  },
+  {
+   "carried_high": 0.002973,
+   "carried_low": 0.002501,
+   "d_high": 0.0,
+   "d_low": -0.0,
+   "own_exact": 0.002501,
+   "own_high": 0.002973,
+   "wall_id": "1F-W19"
+  },
+  {
+   "carried_high": 0.00933,
+   "carried_low": 0.00851,
+   "d_high": -0.0,
+   "d_low": -0.0,
+   "own_exact": 0.00851,
+   "own_high": 0.00933,
+   "wall_id": "1F-W20"
+  },
+  {
+   "carried_high": 0.002709,
+   "carried_low": 0.002709,
+   "d_high": 0.0,
+   "d_low": 0.0,
+   "own_exact": 0.002709,
+   "own_high": 0.002709,
+   "wall_id": "1F-W21"
+  },
+  {
+   "carried_high": 0.007857,
+   "carried_low": 0.00751,
+   "d_high": -0.0,
+   "d_low": -0.0,
+   "own_exact": 0.00751,
+   "own_high": 0.007857,
+   "wall_id": "1F-W22"
+  },
+  {
+   "carried_high": 0.012754,
+   "carried_low": 0.011018,
+   "d_high": 0.0,
+   "d_low": 0.000278,
+   "own_exact": 0.011296,
+   "own_high": 0.012754,
+   "wall_id": "1F-W23"
+  },
+  {
+   "carried_high": 0.002407,
+   "carried_low": 0.001934,
+   "d_high": -0.0,
+   "d_low": 0.0,
+   "own_exact": 0.001934,
+   "own_high": 0.002407,
+   "wall_id": "1F-W24"
+  },
+  {
+   "carried_high": 0.008318,
+   "carried_low": 0.008318,
+   "d_high": -0.0,
+   "d_low": -0.0,
+   "own_exact": 0.008318,
+   "own_high": 0.008318,
+   "wall_id": "1F-W02"
+  },
+  {
+   "carried_high": 0.020618,
+   "carried_low": 0.020618,
+   "d_high": 0.0,
+   "d_low": 0.0,
+   "own_exact": 0.020618,
+   "own_high": 0.020618,
+   "wall_id": "1F-W03"
+  },
+  {
+   "carried_high": 0.010355,
+   "carried_low": 0.010355,
+   "d_high": 0.0,
+   "d_low": 0.0,
+   "own_exact": 0.010355,
+   "own_high": 0.010355,
+   "wall_id": "1F-W09"
+  }
+ ],
+ "pinned": {
+  "research/agents_t520/out/JUNCTIONS_T520.csv": "b2e5f1864cc2d9ed91cef2c2f4cf4b35f571f45e33496a0ba9621be809a500e0",
+  "research/agents_t520/out/PERIMETER_BY_WALL_T520.csv": "fb5ac4abe455bf5efa8a352ad68cf57defb609c3fac54437a92e94842e3622d1",
+  "research/agents_t527/out/JAMB_EVIDENCE_V3_T527.csv": "7ac6e6b93d2a4ac9e7dab3ff0db70d988a256a972b8bb7fb8a139360a43c2ee2",
+  "research/agents_t615/out/WALLS_015_T615.csv": "4811f105711ad7112cef72c4de7bf186b8122b123fbea58170b1ec2b382e12e0",
+  "research/agents_t654/out/TRIAL_BOQ_R4_T654.json": "9e032726257c4961972bd7fd8de2620a3f7e2adc1f32a78802764a5289e91733",
+  "research/agents_t665/out/LINE_INDEX_V3_0_63.json": "cd062bfe777af2393228f31893b71ae7032c8d0e6c1bcbe41b0194e36a8fe8d8",
+  "research/agents_t670/out/T670_MATERIALS.json": "4c58a226a7d3f17f56a4ffaa72229f08bbf4982ef8e52179ce9270c3ae3eb467",
+  "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json": "da38d121eec33c00ff3c8b524ed022be6a66f5789fdd9a0cd37f216f84dcde35"
+ },
+ "rule": "R-T372-1 (PROPOSED)",
+ "rulebook": "1.1.0",
+ "t615_equals_t520": [
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.003237,
+    0.003237,
+    0.003237
+   ],
+   "t615": [
+    0.003237,
+    0.003237,
+    0.003237
+   ],
+   "wall_id": "GF-W19"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.001379,
+    0.001379,
+    0.001379
+   ],
+   "t615": [
+    0.001379,
+    0.001379,
+    0.001379
+   ],
+   "wall_id": "GF-W21"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.008485,
+    0.008763,
+    0.008763
+   ],
+   "t615": [
+    0.008485,
+    0.008763,
+    0.008763
+   ],
+   "wall_id": "GF-W28"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.001876,
+    0.001876,
+    0.001876
+   ],
+   "t615": [
+    0.001876,
+    0.001876,
+    0.001876
+   ],
+   "wall_id": "GF-W29"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.001788,
+    0.001788,
+    0.001788
+   ],
+   "t615": [
+    0.001788,
+    0.001788,
+    0.001788
+   ],
+   "wall_id": "GF-W33"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.005175,
+    0.005175,
+    0.005175
+   ],
+   "t615": [
+    0.005175,
+    0.005175,
+    0.005175
+   ],
+   "wall_id": "1F-W12"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.006919,
+    0.006919,
+    0.008016
+   ],
+   "t615": [
+    0.006919,
+    0.006919,
+    0.008016
+   ],
+   "wall_id": "1F-W13"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.002731,
+    0.002731,
+    0.003203
+   ],
+   "t615": [
+    0.002731,
+    0.002731,
+    0.003203
+   ],
+   "wall_id": "1F-W17"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.01281,
+    0.01281,
+    0.018423
+   ],
+   "t615": [
+    0.01281,
+    0.01281,
+    0.018423
+   ],
+   "wall_id": "1F-W18"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.002501,
+    0.002501,
+    0.002973
+   ],
+   "t615": [
+    0.002501,
+    0.002501,
+    0.002973
+   ],
+   "wall_id": "1F-W19"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.00851,
+    0.00851,
+    0.00933
+   ],
+   "t615": [
+    0.00851,
+    0.00851,
+    0.00933
+   ],
+   "wall_id": "1F-W20"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.002709,
+    0.002709,
+    0.002709
+   ],
+   "t615": [
+    0.002709,
+    0.002709,
+    0.002709
+   ],
+   "wall_id": "1F-W21"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.00751,
+    0.00751,
+    0.007857
+   ],
+   "t615": [
+    0.00751,
+    0.00751,
+    0.007857
+   ],
+   "wall_id": "1F-W22"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.011018,
+    0.011296,
+    0.012754
+   ],
+   "t615": [
+    0.011018,
+    0.011296,
+    0.012754
+   ],
+   "wall_id": "1F-W23"
+  },
+  {
+   "max_diff": 0.0,
+   "t520": [
+    0.001934,
+    0.001934,
+    0.002407
+   ],
+   "t615": [
+    0.001934,
+    0.001934,
+    0.002407
+   ],
+   "wall_id": "1F-W24"
+  }
+ ],
+ "task": "T-372",
+ "totals": {
+  "by_t": {
+   "0.15": {
+    "high": 0.08989,
+    "lines": 6,
+    "low": 0.078582
+   },
+   "0.20": {
+    "high": 0.098145,
+    "lines": 2,
+    "low": 0.098145
+   }
+  },
+  "figure": 0.177283,
+  "held_junction_bands_beside": {
+   "bands": 23,
+   "high": 0.017896,
+   "low": 0.0
+  },
+  "high": 0.188035,
+  "lines_held": 12,
+  "lines_valued": 8,
+  "lintel_bearing_bed_beside": {
+   "held": 1,
+   "high": 0.008443,
+   "lintels": 8,
+   "low": 0.006113
+  },
+  "low": 0.176727,
+  "materials": {
+   "cement_bags_50kg": [
+    1.4138,
+    1.5043
+   ],
+   "producer_key": "B9-04 PERIMETER JOINT MORTAR (R-T520-1 / R-T372-1)",
+   "rounding": "bags only at the purchasing group; waste HELD (not sourced)",
+   "sand_m3_loose": [
+    0.1944,
+    0.206839
+   ]
+  },
+  "panel_t670_valued": [
+   3.211255,
+   3.215016
+  ]
+ },
+ "trial_r4_reconcile": [
+  {
+   "host_line_id": "L-a56a8add7812d1b52cb7",
+   "ledger_low": 0.028344,
+   "ledger_open_named": [
+    "1F-W13",
+    "1F-W17"
+   ],
+   "ledger_range_part": 0.003777,
+   "mortar_line_id": "L-866a6602ffa70d03f210",
+   "residual_low": 0.0,
+   "trial_companion_high": null,
+   "trial_evidence": "ASSUMED — OWNER-APPROVED",
+   "trial_line": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-a56a8add7812d1b52cb7",
+   "trial_low": 0.028344
+  },
+  {
+   "host_line_id": "L-4054259959463edd70fb",
+   "ledger_low": 0.014744,
+   "ledger_open_named": [
+    "1F-W24"
+   ],
+   "ledger_range_part": 0.006086,
+   "mortar_line_id": "L-a8f0d0e9fff641c0fa8e",
+   "residual_low": 0.0,
+   "trial_companion_high": null,
+   "trial_evidence": "ASSUMED — OWNER-APPROVED",
+   "trial_line": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-4054259959463edd70fb",
+   "trial_low": 0.014744
+  },
+  {
+   "host_line_id": "L-73acd5a9d7e7cf6515c1",
+   "ledger_low": 0.018729,
+   "ledger_open_named": [],
+   "ledger_range_part": 0.001167,
+   "mortar_line_id": "L-2051ab0a71c27be038ae",
+   "residual_low": 0.0,
+   "trial_companion_high": 0.001167,
+   "trial_evidence": "ASSUMED — OWNER-APPROVED",
+   "trial_line": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-73acd5a9d7e7cf6515c1",
+   "trial_low": 0.018729
+  },
+  {
+   "host_line_id": "L-10dd62f66ad05488e63b",
+   "ledger_low": 0.039291,
+   "ledger_open_named": [],
+   "ledger_range_part": 0.0,
+   "mortar_line_id": "L-e74c15038f1e32dbefe0",
+   "residual_low": 0.0,
+   "trial_companion_high": null,
+   "trial_evidence": "UNKNOWN",
+   "trial_line": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-10dd62f66ad05488e63b",
+   "trial_low": 0.039291
+  },
+  {
+   "host_line_id": "L-abf15bdf70ccf1e7b474",
+   "ledger_low": 0.010361,
+   "ledger_open_named": [],
+   "ledger_range_part": 0.000278,
+   "mortar_line_id": "L-8f163174139bcf80c7c7",
+   "residual_low": 0.0,
+   "trial_companion_high": 0.000278,
+   "trial_evidence": "ASSUMED — OWNER-APPROVED",
+   "trial_line": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-abf15bdf70ccf1e7b474",
+   "trial_low": 0.010361
+  },
+  {
+   "host_line_id": "L-adb393d6db51056d343b",
+   "ledger_low": 0.003237,
+   "ledger_open_named": [],
+   "ledger_range_part": 0.0,
+   "mortar_line_id": "L-33fcd56ef1548206bb1c",
+   "residual_low": 0.0,
+   "trial_companion_high": null,
+   "trial_evidence": "ASSUMED — OWNER-APPROVED",
+   "trial_line": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-adb393d6db51056d343b",
+   "trial_low": 0.003237
+  },
+  {
+   "host_line_id": "L-87e0023741a8e2d98b21",
+   "ledger_low": 0.003167,
+   "ledger_open_named": [],
+   "ledger_range_part": 0.0,
+   "mortar_line_id": "L-794c7232f398260c7afb",
+   "residual_low": 0.0,
+   "trial_companion_high": null,
+   "trial_evidence": "ASSUMED — OWNER-APPROVED",
+   "trial_line": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-87e0023741a8e2d98b21",
+   "trial_low": 0.003167
+  },
+  {
+   "host_line_id": "L-1c53fadb2f92d1f36d4e",
+   "ledger_low": 0.058854,
+   "ledger_open_named": [],
+   "ledger_range_part": 0.0,
+   "mortar_line_id": "L-1bacf0e3cec97219a455",
+   "residual_low": 0.0,
+   "trial_companion_high": null,
+   "trial_evidence": "UNKNOWN",
+   "trial_line": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-1c53fadb2f92d1f36d4e",
+   "trial_low": 0.058854
+  }
+ ]
+}
