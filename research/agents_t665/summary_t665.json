@@ -1,0 +1,1720 @@
+{
+ "b10_code_totals": {
+  "STR.CONC.BEAM|m3": {
+   "v3_0_62": {
+    "blocked_lines": 12,
+    "bounded_lines": 14,
+    "held_high": 8.507278,
+    "held_low": 6.023085,
+    "lines": 137,
+    "released": 66.870678
+   },
+   "v3_0_63": {
+    "blocked_lines": 12,
+    "bounded_lines": 14,
+    "held_high": 8.507278,
+    "held_low": 6.023085,
+    "lines": 137,
+    "released": 66.870678
+   }
+  },
+  "STR.CONC.BLINDING|m3": {
+   "v3_0_62": {
+    "blocked_lines": 1,
+    "bounded_lines": 5,
+    "held_high": 13.466198,
+    "held_low": 7.640374,
+    "lines": 7,
+    "released": 12.734438
+   },
+   "v3_0_63": {
+    "blocked_lines": 1,
+    "bounded_lines": 5,
+    "held_high": 13.466198,
+    "held_low": 7.640374,
+    "lines": 7,
+    "released": 12.734438
+   }
+  },
+  "STR.CONC.BOUNDARY_PAD|m3": {
+   "v3_0_62": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 0.0
+   },
+   "v3_0_63": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 0.0
+   }
+  },
+  "STR.CONC.BOUNDARY_WALL|m3": {
+   "v3_0_62": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 7.2204
+   },
+   "v3_0_63": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 7.2204
+   }
+  },
+  "STR.CONC.COLUMN|m3": {
+   "v3_0_62": {
+    "blocked_lines": 16,
+    "bounded_lines": 18,
+    "held_high": 13.602,
+    "held_low": 9.168,
+    "lines": 64,
+    "released": 19.7765
+   },
+   "v3_0_63": {
+    "blocked_lines": 16,
+    "bounded_lines": 18,
+    "held_high": 13.602,
+    "held_low": 9.168,
+    "lines": 64,
+    "released": 19.7765
+   }
+  },
+  "STR.CONC.DOME|m3": {
+   "v3_0_62": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 5.081362
+   },
+   "v3_0_63": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 5.081362
+   }
+  },
+  "STR.CONC.FOOTING|m3": {
+   "v3_0_62": {
+    "blocked_lines": 0,
+    "bounded_lines": 1,
+    "held_high": 2.275,
+    "held_low": 2.176,
+    "lines": 26,
+    "released": 64.304
+   },
+   "v3_0_63": {
+    "blocked_lines": 0,
+    "bounded_lines": 1,
+    "held_high": 2.275,
+    "held_low": 2.176,
+    "lines": 26,
+    "released": 64.304
+   }
+  },
+  "STR.CONC.GROUND_BEAM|m3": {
+   "v3_0_62": {
+    "blocked_lines": 16,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 61,
+    "released": 26.856686
+   },
+   "v3_0_63": {
+    "blocked_lines": 21,
+    "bounded_lines": 8,
+    "held_high": 1.571171,
+    "held_low": 1.17341,
+    "lines": 61,
+    "released": 23.760555
+   }
+  },
+  "STR.CONC.GROUND_SLAB|m3": {
+   "v3_0_62": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 26,
+    "released": 21.638458
+   },
+   "v3_0_63": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 26,
+    "released": 21.638458
+   }
+  },
+  "STR.CONC.LIFT|m3": {
+   "v3_0_62": {
+    "blocked_lines": 2,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 0.0
+   },
+   "v3_0_63": {
+    "blocked_lines": 2,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 0.0
+   }
+  },
+  "STR.CONC.LINTEL|m3": {
+   "v3_0_62": {
+    "blocked_lines": 44,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 60,
+    "released": 1.016
+   },
+   "v3_0_63": {
+    "blocked_lines": 44,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 60,
+    "released": 1.016
+   }
+  },
+  "STR.CONC.NECK|m3": {
+   "v3_0_62": {
+    "blocked_lines": 4,
+    "bounded_lines": 32,
+    "held_high": 11.346,
+    "held_low": 8.7724,
+    "lines": 36,
+    "released": 0.0
+   },
+   "v3_0_63": {
+    "blocked_lines": 4,
+    "bounded_lines": 32,
+    "held_high": 11.346,
+    "held_low": 8.7724,
+    "lines": 36,
+    "released": 0.0
+   }
+  },
+  "STR.CONC.PARAPET|m3": {
+   "v3_0_62": {
+    "blocked_lines": 4,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 0.0
+   },
+   "v3_0_63": {
+    "blocked_lines": 4,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 0.0
+   }
+  },
+  "STR.CONC.POOL|m3": {
+   "v3_0_62": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 7.202297
+   },
+   "v3_0_63": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 7.202297
+   }
+  },
+  "STR.CONC.SLAB|m3": {
+   "v3_0_62": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 62,
+    "released": 60.280155
+   },
+   "v3_0_63": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 62,
+    "released": 60.280155
+   }
+  },
+  "STR.CONC.STAIR|m3": {
+   "v3_0_62": {
+    "blocked_lines": 5,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 11,
+    "released": 5.368881
+   },
+   "v3_0_63": {
+    "blocked_lines": 5,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 11,
+    "released": 5.368881
+   }
+  },
+  "STR.CONC.STRAP|m3": {
+   "v3_0_62": {
+    "blocked_lines": 0,
+    "bounded_lines": 2,
+    "held_high": 0.6533,
+    "held_low": 0.0295,
+    "lines": 5,
+    "released": 3.3905
+   },
+   "v3_0_63": {
+    "blocked_lines": 0,
+    "bounded_lines": 2,
+    "held_high": 0.6533,
+    "held_low": 0.0295,
+    "lines": 5,
+    "released": 3.3905
+   }
+  }
+ },
+ "by_code_action": {
+  "STR.CONC.COLUMN UPPER_ONLY": {
+   "after_high": 0.0,
+   "after_low": 0.0,
+   "after_value": 0.0,
+   "before_high": 0.0,
+   "before_low": 0.0,
+   "beside": 2.80125,
+   "lines": 6
+  },
+  "STR.CONC.GROUND_BEAM BOUND": {
+   "after_high": 1.571171,
+   "after_low": 1.17341,
+   "after_value": 0.0,
+   "before_high": 0.0,
+   "before_low": 0.0,
+   "beside": 0.0,
+   "lines": 8
+  },
+  "STR.CONC.GROUND_BEAM LOWER_ONLY": {
+   "after_high": 0.0,
+   "after_low": 0.0,
+   "after_value": 0.0,
+   "before_high": 0.0,
+   "before_low": 0.0,
+   "beside": 5.069839,
+   "lines": 16
+  }
+ },
+ "confirmed_unchanged": [
+  "L-0ede77cfd0badc4c7d62",
+  "L-1dc713c83bf62e525ff2",
+  "L-21795b350fbd09150c43",
+  "L-291ba2ddf4bbe4f14cf7",
+  "L-43dae3d6dfec957b26a8",
+  "L-4aed92c117a7ab1c90ee",
+  "L-4c4496579e5bfa20ae9f",
+  "L-541c7e565bb93ecdb78b",
+  "L-62243c74c430d383be86",
+  "L-694a75c84dd6e4bb4491",
+  "L-755eb56b55e86301b488",
+  "L-831f6fe3de133294bb8f",
+  "L-85809d3db52bb93dfe96",
+  "L-8de64040a1c3ae6cf137",
+  "L-8f8ad257d9b2cb9e027f",
+  "L-9cb26d86575a92694880",
+  "L-9f5a647014bbf83359f9",
+  "L-a55bfa01b726ef11650c",
+  "L-a87ea657a42a311cb851",
+  "L-abd65e1b745315dd17c2",
+  "L-bc01297b1c4a4c45a15f",
+  "L-be6708e07b40efa02779",
+  "L-c0b3340a906c2c7650f8",
+  "L-c10e2945d582b5a03126",
+  "L-c677b628a776d3b87b02",
+  "L-c823e0dbd81e30c66aa5",
+  "L-cc702b8541c15fdfd98c",
+  "L-e112e2add2f8979a6c39",
+  "L-e6c1c9a7feec10f64975",
+  "L-fb7a6431fede62e93fd5"
+ ],
+ "extends": "ARCH_TAKEOFF_V3.0.62",
+ "identity": {
+  "added": 0,
+  "concrete": {
+   "BOUND": 8,
+   "HELD_BLANK": 0,
+   "LOWER_ONLY": 16,
+   "UPPER_ONLY": 6,
+   "VALUE": 0
+  },
+  "confirmed": 30,
+  "diff": {
+   "vs_base": {
+    "CHANGED": 13,
+    "CHANGED_TEXT_ONLY": 17,
+    "SAME": 5043
+   },
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3481,
+    "QUANTITY_DIFFERS": 1043,
+    "SAME_QUANTITY": 549
+   }
+  },
+  "outside_rows": 5043,
+  "outside_rows_identical_to_base": 5043,
+  "replaced": 30
+ },
+ "lines": {
+  "V3_0_62": 5073,
+  "V3_0_63": 5073
+ },
+ "lines_sha256": {
+  "V3_0_62": "56207c79b03dc5b19bb1236688d1e63bef567750972f13b8a095ab301e8b1a2d",
+  "V3_0_63": "09ec4c1ac012982d372b2b5251ad07570d5f2a895af0f2a02bcdfc9d3480a9a1"
+ },
+ "method": "ARCH_TAKEOFF_V3.0.63",
+ "released_default": false,
+ "rows": [
+  {
+   "action": "UPPER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "datums": [
+     {
+      "kind": "PRINTED",
+      "what": "+13.90 finished mark (arch sheet 10 section / sheet 9 elevation, re-read r2, Checker AGREE)"
+     },
+     {
+      "kind": "APPROVED_DATUM",
+      "what": "+9.65 structural base = printed finished level - 0.05 (facts register DESIGNER datum, NOT printed text; Checker: the ceiling stays a valid upper bound on either base)"
+     }
+    ],
+    "kind": "AT_MOST_M3",
+    "value": 0.425
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-26f6b6f2365c72e42291",
+   "member": "column P-C:COL:SH12:C2@254644,61274|2F",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "UPPER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "datums": [
+     {
+      "kind": "PRINTED",
+      "what": "+13.90 finished mark (arch sheet 10 section / sheet 9 elevation, re-read r2, Checker AGREE)"
+     },
+     {
+      "kind": "APPROVED_DATUM",
+      "what": "+9.65 structural base = printed finished level - 0.05 (facts register DESIGNER datum, NOT printed text; Checker: the ceiling stays a valid upper bound on either base)"
+     }
+    ],
+    "kind": "AT_MOST_M3",
+    "value": 0.425
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-33a9b7728781fcba12e2",
+   "member": "column P-C:COL:SH12:C2@251723,58368|2F",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "UPPER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-4: C9 2F 20x70 0.14 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "datums": [
+     {
+      "kind": "PRINTED",
+      "what": "+13.90 finished mark (arch sheet 10 section / sheet 9 elevation, re-read r2, Checker AGREE)"
+     },
+     {
+      "kind": "APPROVED_DATUM",
+      "what": "+9.65 structural base = printed finished level - 0.05 (facts register DESIGNER datum, NOT printed text; Checker: the ceiling stays a valid upper bound on either base)"
+     }
+    ],
+    "kind": "AT_MOST_M3",
+    "value": 0.595
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-53f223b06db14ac41d47",
+   "member": "column P-C:COL:SH12:C9@254644,59429|2F",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.588
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "UPPER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "datums": [
+     {
+      "kind": "PRINTED",
+      "what": "+13.90 finished mark (arch sheet 10 section / sheet 9 elevation, re-read r2, Checker AGREE)"
+     },
+     {
+      "kind": "APPROVED_DATUM",
+      "what": "+9.65 structural base = printed finished level - 0.05 (facts register DESIGNER datum, NOT printed text; Checker: the ceiling stays a valid upper bound on either base)"
+     }
+    ],
+    "kind": "AT_MOST_M3",
+    "value": 0.425
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-919a5749ef79759e01ca",
+   "member": "column P-C:COL:SH12:C2@252679,64225|2F",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "UPPER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-4: C1 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "datums": [
+     {
+      "kind": "PRINTED",
+      "what": "+13.90 finished mark (arch sheet 10 section / sheet 9 elevation, re-read r2, Checker AGREE)"
+     },
+     {
+      "kind": "APPROVED_DATUM",
+      "what": "+9.65 structural base = printed finished level - 0.05 (facts register DESIGNER datum, NOT printed text; Checker: the ceiling stays a valid upper bound on either base)"
+     }
+    ],
+    "kind": "AT_MOST_M3",
+    "value": 0.425
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "member": "column P-C:COL:SH12:C1@251701,62344|2F",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "UPPER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-4: C3 GF 25x50 (annex) 0.125 m2 x (4.30 finished mark, printed and re-read r2 - 0.25 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "datums": [
+     {
+      "kind": "PRINTED",
+      "what": "+4.30 finished mark (arch sheet 10 section / sheet 9 elevation, re-read r2, Checker AGREE)"
+     },
+     {
+      "kind": "APPROVED_DATUM",
+      "what": "+0.25 structural base = printed finished level - 0.05 (facts register DESIGNER datum, NOT printed text; Checker: the ceiling stays a valid upper bound on either base)"
+     }
+    ],
+    "kind": "AT_MOST_M3",
+    "value": 0.50625
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-fad18af6e7139a5e99d1",
+   "member": "column P-C:COL:SH12:C3@238374,54773|GF",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.5625
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-3: runs [2.4] m x 0.30 x (0.25 - 0.0) literal floor",
+    "kind": "AT_LEAST_M3",
+    "value": 0.18
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-00465df980165c529476",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0035",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.336
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.291231
+   },
+   "beside": {
+    "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 2.4269 m, area 0.807695 m2",
+    "kind": "AT_LEAST_M3",
+    "value": 0.242309
+   },
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-0bb78accf8c0a0fbdbaf",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0037.1",
+   "set_aside": {
+    "high": 0.291231,
+    "low": 0.218423,
+    "why": "a run carrying a landing / framing beam: the unloaded ST p.13 titles are a floor, never a high (R-T658-8, D-33; Checker T-658 r2 (h) ACCEPTED)"
+   },
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.291231
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "BOUND",
+   "after": {
+    "high": 0.15,
+    "low": 0.1125,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.1125
+   },
+   "beside": null,
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-0c5ede7fd2c9e425aa8d",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0034",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.1125
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "BOUND",
+   "after": {
+    "high": 0.288,
+    "low": 0.216,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.288
+   },
+   "beside": null,
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-0e852cca42fb8b765c58",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0007",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.288
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.294
+   },
+   "beside": {
+    "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 2.45 m, area 0.735 m2",
+    "kind": "AT_LEAST_M3",
+    "value": 0.2205
+   },
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-1487bdda099006e0c4ba",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0019",
+   "set_aside": {
+    "high": 0.294,
+    "low": 0.2205,
+    "why": "a run carrying a landing / framing beam: the unloaded ST p.13 titles are a floor, never a high (R-T658-8, D-33; Checker T-658 r2 (h) ACCEPTED)"
+   },
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.294
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-3: runs [2.3] m x 0.30 x (0.25 - 0.0) literal floor",
+    "kind": "AT_LEAST_M3",
+    "value": 0.1725
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-3284f44000c02179ace7",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0012.2",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.276
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-3: runs [5.45, 4.25] m x 0.30 x (0.25 - 0.0) literal floor",
+    "kind": "AT_LEAST_M3",
+    "value": 0.7275
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-402dbe61d1c924144a3c",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0015",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.8234
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-3: runs [6.0] m x 0.30 x (0.25 - 0.0) literal floor",
+    "kind": "AT_LEAST_M3",
+    "value": 0.45
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-4783c6e18002c3a8a37e",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0016",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.152
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.9
+   },
+   "beside": {
+    "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 5.0 m, area 1.5 m2",
+    "kind": "AT_LEAST_M3",
+    "value": 0.6
+   },
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-5af89b9f1e5b90daf8f5",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0010.3",
+   "set_aside": {
+    "high": 0.9,
+    "low": 0.9,
+    "why": "a run carrying a landing / framing beam: the unloaded ST p.13 titles are a floor, never a high (R-T658-8, D-33; Checker T-658 r2 (h) ACCEPTED)"
+   },
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.9
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-3: runs [1.2] m x 0.30 x (0.25 - 0.0) literal floor",
+    "kind": "AT_LEAST_M3",
+    "value": 0.09
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-6bf14711798e5af93594",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0012.1",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.135
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "BOUND",
+   "after": {
+    "high": 0.174,
+    "low": 0.1305,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.1305
+   },
+   "beside": null,
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-81444e222487437e257e",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0020",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.1305
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 3.525 m, area 1.0575 m2",
+    "kind": "AT_LEAST_M3",
+    "value": 0.423
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-95a1f198cfe7f398d6ae",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0023:7DC+7DD#1",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "BOUND",
+   "after": {
+    "high": 0.130678,
+    "low": 0.09304,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.071008
+   },
+   "beside": null,
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-970bac563cbcd69e2a30",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0038",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.071008
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.189
+   },
+   "beside": {
+    "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 2.1 m, area 0.63 m2",
+    "kind": "AT_LEAST_M3",
+    "value": 0.189
+   },
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-a8c5c32c7a785c1e3f05",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0040",
+   "set_aside": {
+    "high": 0.189,
+    "low": 0.189,
+    "why": "a run carrying a landing / framing beam: the unloaded ST p.13 titles are a floor, never a high (R-T658-8, D-33; Checker T-658 r2 (h) ACCEPTED)"
+   },
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.189
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-3: runs [0.5] m x 0.30 x (0.25 - 0.0) literal floor",
+    "kind": "AT_LEAST_M3",
+    "value": 0.0375
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-b4a13a43967ee4765662",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0017.2",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.045
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "BOUND",
+   "after": {
+    "high": 0.279,
+    "low": 0.20925,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.279
+   },
+   "beside": null,
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-c0b7102a36344a0349f5",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0025.1",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.279
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 3.525 m, area 1.0575 m2",
+    "kind": "AT_LEAST_M3",
+    "value": 0.423
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-cfb4555cb26b39934bff",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0032:7E7+7E8#2",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.1383
+   },
+   "beside": {
+    "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 1.5367 m, area 0.492189 m2",
+    "kind": "AT_LEAST_M3",
+    "value": 0.147657
+   },
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-d53e5eb08e2c6c668254",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0008.2",
+   "set_aside": {
+    "high": 0.1383,
+    "low": 0.1383,
+    "why": "a run carrying a landing / framing beam: the unloaded ST p.13 titles are a floor, never a high (R-T658-8, D-33; Checker T-658 r2 (h) ACCEPTED)"
+   },
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.1383
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-3: runs [5.8] m x 0.30 x (0.25 - 0.0) literal floor",
+    "kind": "AT_LEAST_M3",
+    "value": 0.435
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-d8b98b143e293d30833b",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0013.2",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.044
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-3: runs [1.8063] m x 0.30 x (0.25 - 0.0) literal floor",
+    "kind": "AT_LEAST_M3",
+    "value": 0.135473
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-e16c98075f69532a3dc7",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0042",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.162577
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "BOUND",
+   "after": {
+    "high": 0.144,
+    "low": 0.108,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.108
+   },
+   "beside": null,
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-e2134034441cb7db7bd7",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0021",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.108
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "LOWER_ONLY",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": {
+    "basis": "R-T658-8: least of drawn plan area x least title depth over the readings span 5.02 m, area 1.506 m2; span 4.97 m, area 1.491 m2",
+    "kind": "AT_LEAST_M3",
+    "value": 0.5964
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-e24946df436cbc25fca6",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0008.1",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.9036
+   },
+   "vs_base": "CHANGED_TEXT_ONLY"
+  },
+  {
+   "action": "BOUND",
+   "after": {
+    "high": 0.144,
+    "low": 0.108,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.108
+   },
+   "beside": null,
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-f0e25ad2cf73bf2a35ea",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0030",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.108
+   },
+   "vs_base": "CHANGED"
+  },
+  {
+   "action": "BOUND",
+   "after": {
+    "high": 0.261493,
+    "low": 0.19612,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.186592
+   },
+   "beside": null,
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-f24cf117a9ce1e875785",
+   "member": "ground beam P-C:GROUND_BEAMS:GROUND:BAND0039",
+   "set_aside": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.186592
+   },
+   "vs_base": "CHANGED"
+  }
+ ],
+ "schema": "T665_SUMMARY_V1",
+ "totals_moved": [
+  "STR.CONC.GROUND_BEAM|m3"
+ ],
+ "waiting": {
+  "ANNEX_EXTERIOR_DEPTH": "annex exterior ground beams: CONFLICT (literal 'FOLLOW ARCH.' 0.25 m vs the printed exterior section; designer D-35)",
+  "ARCHED_SET_THRESHOLDS": "A-GF-01 threshold strip (arch outline HELD, D-45; T-377 held set) and W17 sills (curved, T-302) stay BLANK by name; W03 floor glazing strips are carried by the V3.0.28 held reveal lines",
+  "ARCHED_WINDOW_W17_OWNER_ITEM": "owner item Q-76 (the curved arched window's crown: opening arch vs archivolt): HELD as a range, never the larger end",
+  "B4_02_PRINTED_BAND": "a villa whose drawings print a kitchen band, or whose kitchen opens onto a dry open plan (UP-WET-001 precondition fails): a real B4-02 band line (R-T351-1 / -3); not reached on the development villa (no band printed, every zone room wet)",
+  "BASE_OUTSIDE_ANY_ENGINE_ROOM": "wall base of a tiled room on no engine room boundary (no line carries it): reported per record (base_not_in_any_line_lm when the inputs give it), never added",
+  "BEAMS_AT_PLANTED_COLUMNS": "the carrying beams cut at the planted columns by route G (short under the column) are T-229's (merged, rule proposal R-BEAM-CONT-1); their lines are NOT changed here",
+  "BEAM_FORMWORK_AND_STEEL_OF_CHANGED_RUNS": "formwork and bar steel of the beam runs whose concrete changed here (trapezoid ends, the drawn void ring, the continuous runs) are later packages (formwork T-199, bar steel T-009); their lines are not changed here",
+  "BEAM_HELD_DESIGNER_ITEMS": "the beam runs held by designer items D-02 / D-27 (width CONFLICT), D-04 (unlabelled spans), D-05 / D-26 (projection strips and boxes) stay HELD as ranges (or with no value where no depth is printed) until the designer answers; never 0",
+  "BEAM_JOINT_HEAD_T395": "T-394 P3 joint + head 3.774 m3 and the T-395 beam result: not in this version",
+  "BELOW_NG_COATING": "coating of the boundary masonry faces below N.G.: no note on ST p.14; HELD with the masonry height (T-404); the G.B faces are T-263's",
+  "BLINDING_PLOT_LINE_CLIP": "the blinding projection beyond the plot line (designer item D-14) is held by its own item: the conflict range is stated before that clip, as for every other footing's blinding in the candidate; the in-plot figure of the outline reading is information",
+  "BLOCKWORK_DROP_D": "the walls under the six sunken panels (D-41): U - L x d per wall, never evaluated, until the drop d is printed / answered",
+  "BLOCKWORK_HELD_WALLS": "the walls still HELD (no member drawn over them, held strips, annex datum Q-54 B, unlabelled bands D-04 / Q-61 C(4)): BLANK on their parent lines by name",
+  "BLOCKWORK_PROCUREMENT": "block units and mortar from the net areas: PROVISIONAL (T-176, supplier dimensions), not a line in this version",
+  "BOUNDARY_BLINDING": "blinding under the boundary pads (0.117 .. 0.135 m3 per pad, T-403) and under the lower beam between pads (not drawn): with the pad count (M4)",
+  "BOUNDARY_COLUMNS": "boundary ground beam: HELD on the boundary column count / positions (M4: 'SEE ARCH PLAN', none drawn); the band figure in V3_0_17_SCENARIOS.json only",
+  "CEILING_BOARD_TYPE": "ceiling board type per room (gypsum / moisture-resistant): not in a plan (Q-52 C, Q-57 A mod (2)): the area lines are PROVISIONAL, material BY_SPEC",
+  "CEILING_COVES_EDGES": "coves / cornices (no detail drawn), opening edges, bulkhead edges on CONFLICT / HELD beams, the drawing-derived bulkhead candidate (D-40): HELD by name in each room line's record",
+  "COLUMN_SECTION_D16_D63": "15 column sections printed-vs-drawn CONFLICT (D-16, D-63, column-band item): BOUNDED ranges until the designer answers",
+  "CORNERS_AND_EXTERNAL_FACES": "T-172 corners / parapet arrises (m.l, external) belong with the external plaster package; never converted to m2 and not wired here",
+  "COURT_SECTION": "court ground beams: HELD (no printed section for outside ground on both sides; GS-16 architect)",
+  "DOME_DRUMS": "DOME-A / DOME-B drums: a named omission (no candidate line, no number): drum material / thickness not printed (G3-b); Lead 2026-10-25 14:15",
+  "DOME_INTRADOS_DCR4": "dome intrados finish: what closes the opening (designer DCR-4): one BLANK line per dome, the disc and the S0 intrados beside",
+  "DOME_RING_DRUM_TOWER": "S0 dome rings (plan band vs detail ring, depth not printed), drums (material, thickness not printed) and the upper-roof dome (no structural detail) stay HELD",
+  "DOOR_HEADS_PRINTED": "door heights stay Q-55 C 2.20 ASSUMED - OWNER-APPROVED where no sheet prints a head; a door line is whole-line VERIFIED only on measured heights (none printed for the settled doors)",
+  "DOWNGRADE_DGP_T373_LAP": "the Checker-issued note-9 lap downgrade record (verdicts/V3.0.28/DOWNGRADES.json) was not issued when T-327 was built: not applied here",
+  "EXTERNAL_THRESHOLD_MATERIAL": "the six external-entrance thresholds: area kept in their bounded lines, material by specification (HELD)",
+  "FACE_CROSSWALK": "T-237 (room face -> block wall, heights and opening ids across trades): the faces it corrects enter as a change-log row in the next V3.0.x slot",
+  "FENCE_COLUMNS_M4": "boundary columns 20 x 30 'SEE ARCH PLAN': none drawn in any fence band (count M4): the block net (0.795 m2 per column above N.G.), the upper G.B net (0.024 m3 per joint) and the masonry net below N.G. stay HELD",
+  "FENCE_FINISH_LAYERS": "no finish printed on p.12 and OWNER_NOTES_SIGMA item 3 unanswered: every plaster / paint layer HELD at most its face (never the house system by default, R-T404-5)",
+  "FENCE_LOWER_050_BAND": "the p.12 lower '50' band: block or concrete plinth (18.485 m2 block / 3.697 m3 concrete on north + street): designer fact; the block net stays HELD at most the plane",
+  "FENCE_STREET_PROFILE": "street fence dip with X railing and the rounded gate-end top, undimensioned: the street faces / top / stop-end HELD at most / at least",
+  "FLOOR_LANDING_MARBLE_LINE": "T-122: the marble line of an arrival landing split out of a porcelain face under Q-66 B (printed vs drawn area, RULE_DIFFERENCE named) is the marble trade's wiring piece; it reads the split-out space line's area once",
+  "FLOOR_LINE_WHOLE_VERIFICATION": "the whole floor-area line becomes VERIFIED only when every piece is checker-verified and nothing in its scope is HELD: Gate B of this package re-measures the pieces it moves; the held pieces it names stay held",
+  "FLOOR_MATERIAL_UNTYPED_FACES": "the finish material of a face entered by ENTER_FLOOR stays HELD until a material rule binds its class (the DRY class rests on the absence of fixtures and the drainage-plan read); never borrowed from the neighbouring room",
+  "FLOOR_PANTRY_DOORWAY_ZONE": "the pantry's doorway-zone piece (about 1.10 m2 inside the printed 4.50 x 3.00 box, an RFI line in the candidate) stays as carried: held stays held; its wet class applies when its own RFI closes",
+  "FLOOR_PANTRY_PART_RECHECK": "T-240 WP2 moves the pantry part of the open dining / living face to the wet line on the engine face geometry clipped to the printed pantry box (closure in the inputs); the Checker's figure of that part differs and is re-measured at WP4",
+  "FLOOR_UNDER_STAIR_BELOW_CUT": "the floor under round-stair flights drawn below the cut on the lowest storey stays HELD (area kept) until a section or structural detail of that stair fixes where its soffit leaves the floor (designer item proposed by T-269)",
+  "FORMWORK_HELD_FACES": "faces held in the ledger (joint faces, sunken-panel edges, stair wall / member sides, parapet RC faces with no line, lift-pit walls D-43, SPLIT_UNRESOLVED pieces, the F8 / pool conflict, the pool back face Q-28): BLANK by name",
+  "FORMWORK_OQ10": "below-ground footing / ground-beam / strap / pool faces: FORMED or EARTH_CAST (owner question OQ-10 open): both readings beside a BLANK line, never summed, never chosen",
+  "GS_HELD_CELL_T042": "ground-slab cell with the lift-shaft corner columns read as free columns (T-042): HELD, bound 0 .. its own slab panels",
+  "HIDDEN_BAND_Q52C": "the wall band above the decor underside (0 .. 53.851 m2, T-335): HELD (Q-52 C), in no line",
+  "HOUSE_SOUTH_GB_BLOCK": "block under the house south G.B 29.97 m (T-403 s.8, T-407): house masonry, not the fence family (register ruling 2026-10-31 20:20)",
+  "KITCHEN_ANNEX_HEIGHT_G2": "kitchen GF-06 zone HELD with its carrier and backing lines (annex owner height, G2 / Q-54 B, D-39)",
+  "LIFT_PIT_DEPTH_D43": "lift pit depth: 'as per lift manufacturer' (ST p.14, designer D-43): the pit-wall line is HELD blank, plan ring net beside; pit base slab / membrane are not this line (T-353)",
+  "LINE_STATE_FOR_LEAD": "lines whose state word itself may be wrong (valued but should be HELD, or the reverse) are never fixed by a text change: listed in the inputs' for_lead with the reason",
+  "LOWER_BAND_SPLIT_DG": "the lower boundary band line carries the Checker line-content downgrade (T-356 band): its split by owner class (fence 3.3976 .. 5.2884 / pool 0.24 .. 0.42 / house 2.0016 .. 5.3244 m3, T-403) waits for a Checker re-issue of that downgrade on the split lines; bound here, never a second line",
+  "MAIN_ENTRANCE_D53": "the main entrance stays HELD (render single leaf vs plan / elevation double; designer D-53)",
+  "MASONRY_ACCESSORIES": "mesh strip, sharmat ties, plaster joint mesh: separate optional items (owner 2026-10-29), T-363 after T-362",
+  "MISSING_CATEGORIES": "formwork and railings / balustrades / shutters (T-199, V3.0.8), plaster and paint (T-211, V3.0.9)",
+  "MULTI_TAG_OUTLINE_DESIGNER_ANSWER": "the designer's answer to the two-tag outline (one combined footing, or the schedule rows separately): until then the footing and its blinding stay HELD as the range of both readings (owner Q-31 C)",
+  "NECK_STEEL": "column steel in the necks (foundation band): no checker-verified ledger yet; route G lines kept",
+  "OPENING_DEDUCTIONS_IN_FINISH_LINES": "the masonry / plaster / paint deductions of the same opening ids are wired by their own packages (T-237 crosswalk, T-244); not changed here",
+  "OPENING_INVENTORY_ENGINE_FREE": "T-249: the opening list is the checker-merged census (seeded from the engine's own list and corrected by drawing reads); an opening both missed is not excluded until the tag-based inventory replaces the seed",
+  "OPENING_LEDGER_FIX": "T-238 (merged opening ledgers read an arched opening to its surround band): until it merges the two arched windows are deducted here as a HELD range (true outline .. band rectangle)",
+  "OUTDOOR_FLOOR_MATERIAL": "the finish of the covered porch and of the pool deck (owner: undecided): their lines keep the drawn area as a held range on the material-blank outdoor item until he names it",
+  "OUTDOOR_SKIRTING": "the court skirting / upstands of the outdoor faces: not a floor line, not in this version",
+  "OUTDOOR_THRESHOLDS": "six outdoor openings with a printed 0.15 m level change and no step drawn (proposal P-3): not a floor piece of this face, not in this version",
+  "PANTRY_FACE_REWALK_F_T351_1": "pantry tiled faces 10.500 m own vector reading (T-351, Checker re-measured) vs the per-face walk 10.491 m of the tile / backing lines (+0.0328 m2, +0.10 %): named residual, not applied; needs a face-by-face re-walk binding the six walk pieces to the drawn handles before a line moves",
+  "PARAPET_BLOCK_ALTERNATIVE": "parapet blockwork 0 .. 60.5965 m2 (Q-65 C material HELD): in no masonry line, exclusive with its RC twin (T-319), never 0",
+  "PARAPET_FORMWORK": "the formed faces of the RC reading: the formwork family carries them",
+  "PARAPET_RC_B_EDGE": "the roof build-up depth at each parapet (D-39): it sets the upstand lower bound max(u, b_edge + margin) and the open part of the upper bound",
+  "PARAPET_RC_MATERIAL": "which parapet detail governs which run (RC upstand under block, or RC throughout): a designer item under owner Q-65 C; until then every STR.CONC.PARAPET line stays BLANK with its bound",
+  "PARAPET_REBAR": "reinforcement of the upstand / RC parapet: type unkeyed, no rebar change before an approved stage",
+  "POOL_BAR_POPULATIONS": "pool wall / base bar populations (T-191, R1 / R2 from the verified structure) are a later V3.0.x package; the pool line group stays PARTIALLY VERIFIED until they and the steps are resolved",
+  "POOL_STEEL_GEOMETRY": "pool steel (T-166 R1 / R2) held blocked: its bar lengths rest on a 1.15 m wall height that the checker-merged T-183 r2 replaced by 1.20 m to the structure line; re-derivation needed",
+  "POOL_WATER_FACE_FINISH": "the pool water-face finish (no sheet and no Urban rule names it): BLANK with its surface bound until the owner / designer specifies it",
+  "PVC_WIDTH_REVIEW": "the PVC doors held on width (leaf vs closure readings) stay HELD until a checker ruling",
+  "Q-71": "footing steel per-metre / spacing count: held A .. B until the owner answers",
+  "Q-74": "strap length basis: strap steel held over the readings until the owner answers",
+  "RAILINGS_HELD": "RL-04 GF sea strip (plan vs elevation; neither metalwork nor the parapet chain carries a figure), RL-07 ST-01 inner balustrade (winder and half-landing turns not dimensioned), RL-09 ST-02 outer band (guard or string UNKNOWN), RL-10 fence railing (length not printed), RL-11 ST-03 entrance guard (none drawn): BLANK by name",
+  "REVEAL_FINISH": "the finish of the reveal faces (plaster / paint / cladding): URBAN-REVEAL-FINISH-METHOD v1 candidate, WIN-REVEAL owner decision queued; the faces carry area only",
+  "REVEAL_HELD_FACES": "curved openings (W03, W17), W02 outside jambs (height HELD), gate D-GF-15, arches A-GF-01 (D-45) / A-1F-01 (not drawn): BLANK by name",
+  "ROOF_DATUM": "2F and annex column tops: HELD (only finished roof levels printed; D-39, Q-54 B, D-44)",
+  "ROOF_FINISH_MATERIAL": "roof / terrace finish material (no tile / paving type printed; no owner rule for roofs): the area lines are MEASURED, the material BY_SPEC",
+  "ROOF_INSULATION_PROTECTION": "roof insulation and protection layers: printed nowhere and no owner rule (scope UNKNOWN, designer D-39): one BLANK line per roof, never 0",
+  "ROOF_SCREED_T0": "the screed-to-falls volume of every roof: t0 (the screed thickness at the outlet) is unprinted (designer D-39); one m3 line per roof BLANK with its basis area and the falls model beside",
+  "ROOF_TOP_Q34": "the top roof (owner Q-34): every layer BLANK; drawing-derived area beside, never released",
+  "SEARCH_RECORD": "DG-2 (documents searched) is recorded, not holding: route G lines cite one source document (T-186 s.3: a line-format gap, not a defect per line); a documents_searched field is needed",
+  "SHUTTER_AREA": "shutter m2 and material: no owner rule sets the basis (panel / leaf / opening): HELD",
+  "SILL_MATERIAL": "the external window sill material (23 sills + 2 floor-level strips over air): no specification printed, no owner rule (consultant item A13): area kept, material UNKNOWN",
+  "SLAB_END_LEGS": "the up-turn leg of the curtailed bottom bar and the hook-down leg of the top anchor at edge beams (drawn on p.15, not dimensioned): designer item, BLANK by name",
+  "SLAB_END_UNDRAWN_CLASSES": "bar ends at sunken-panel level steps (D-41), composite / irregular supports and opening edges: no detail draws them, BLANK by name",
+  "SLAB_FACES": "slab faces released only with slab evidence (T-146), after this candidate",
+  "SLAB_NO_PROFILE_TAG_SPREAD": "the released route's spread of a panel tag to untagged panels of a sheet is a released / no-profile rule fix (R-SLAB-T-1, a new rule version); the candidate's profile already gives untagged panels the general note thickness",
+  "SLAB_TB_PANELS": "the (T&B) tank panels' top lines: p.15 note 3 'where top reinf. differs between adjacent spans use larger reinf.' (F-T316-03): BLANK",
+  "SLAB_TOP_EXTENSION_50PCT": "p.15 dashed 'extend 50 % of top reinf. into adjacent slab where possible' at edge beams with concrete beyond: UNRESOLVED, BLANK",
+  "SLAB_TOP_EXTENT_DOCUMENTS": "top-bar extent: plan note 2 'one third of the span' vs p.15 (0.30 max L / 0.25 L1): two printed documents, carried as a bound until the designer answers",
+  "SOFFIT_READER": "the five soffit areas enter as typed DRAWING-VERIFIED records (owner Q-17 A); a generic reader of slabs over outside air from the drawing is not built yet",
+  "ST03_STEPS": "ST-03 steps 0.355017 m3 DRAWING-CONFIRMED are named on the held ST-03 line (T-289 row ST03), not released as their own line in this package",
+  "STAIR_GF_1F_LEDGER": "ST-01 GF -> 1F, ST-01b, ST-02, ST-03 hand-ledger lines (T-184 / T-192): the route G stair lines of those storeys stay route lines (held by the guard where a convention is used); replacing them by the ledger is a later V3.0.x package",
+  "STAIR_HELD_PIECES": "MS1-L CONFLICT (C-ST-4), MS1-T / turn slab / MS2-TR (C-ST-3 / G2-a / G2-c), D1 / RS-C / E1 waists (G2-w), RS-C curved part (Q-50 / Q-51), CA level, 2CC (UNKNOWN): HELD blank",
+  "STAIR_SOFFIT_T281": "stair soffit finish per stair: T-281 ledger not verified whole; method O vs D; curved / winder rows HELD: one BLANK line per stair, the merged figures beside",
+  "STRAP_FOOTING_OWNERSHIP": "T-230 decides every strap / tie-beam end intersection; until it merges the SB3 / F3 excess depth and the strap inside the open two-footing outline stay HELD here",
+  "STRAP_STEEL_FORMWORK_EXCAVATION": "strap bars at the axis run, side formwork and excavation (T-174 ledger) are a later package (bar / formwork / earthworks lines, T-199 for formwork)",
+  "T-102": "BEAM_SECTION_CUT_BINDING (two section-cut spans): rides with the T-105 beam ledger",
+  "T-105": "CONCRETE_LEDGER_V3 beams and STAIR_CONCRETE_V1 on the route G beam / stair lines: not wired here",
+  "T-111": "main stair 4.920 m3 owner basis / 4.746 drawn, entrance and round stair HELD on a missing drawing, slab under the winders 0.230 .. 0.250 m3 HELD: hand ledger only",
+  "T-122": "1F landing to stair marble once, 1F living porcelain range 33.594 .. 33.711 m2 (owner Q-66 B): hand ledger only; a piece that reads the landing outline from the drawing is still needed",
+  "T-129": "2F arrival 4.875 m2 marble and 2.500 m2 porcelain in front of the stair (owner Q-70 A cond): hand ledger only; same wiring piece as T-122",
+  "T-135": "STAIR_FLIGHT_ONCE_V1 (tread marble / step lm counted once): needs the slab-above evidence from the structural drawing; the reader of the T-135 research run names sheet titles and layers of one project",
+  "T-146": "slab faces released only with slab evidence (after T-139 MERGED): same candidate, next extension",
+  "T246_CEILING_V3032": "6 FIN.CEILING lines restated by V3.0.32 (T-284 ceiling fill) close only through their still_held items (dome positions, stair zones): their list needs the T-284 ledger rows by id (follow-up row), left as in V3.0.35",
+  "T246_SKIRTING_RELEASE": "T-296 readings SKIRTED (W04 / W14 / W24 / W29: sill above the floor, the base continues; +5.802 lm of threshold credit) and NOT_SKIRTED (W15 / W16 floor glazing) are listed with their physical flag; the quantity change waits a lane I quantity package (not listing)",
+  "T246_T388_T327": "T-388 F1 (deductions on the OFF:DOORWAY face piece) / F3 (pantry paint NOT_APPLICABLE) and T-327 O-1 / O-2 (threshold material_state, measure_pair fields) are not in this package",
+  "T310_DOORWAY_SEGMENTS": "doorway upturn segments (door width x 0.20) HELD in every wet room while the project's doorway detail (coverage inside the floor piece or a separate return) is not printed (UP-WP-003 1.1.0): beside the upturn line, never billed twice, never 0",
+  "T310_PANTRY_DOOR": "the pantry's own door (D120 1.00): threshold, transition and transition number MISSING since T-303 (insert not bound to a candidate door id): a separate binding piece",
+  "T310_PANTRY_OPEN_SIDE": "the pantry's open side to the dining (4.49 m): termination line MISSING (T-303), floor drain count not tabled: separate pieces",
+  "T310_POOL_FUNCTION": "pool membrane function (waterproofing or thermal insulation, S8.2) and product: HELD by name",
+  "T310_POOL_UPSTAND": "pool membrane / screed on the 0.15 upstand faces above the deck (C9): HELD beside the pool lines with their bound 0 .. 1.349668 m2 / 0 .. 0.068072 m3",
+  "T310_THRESHOLDS": "GF master bath and 1F west lower bath threshold lines (closure-derived, T-303 finding 2) UNRESOLVED: unchanged",
+  "T310_TRANSITION_DETAIL": "every doorway transition m2 line stays bounded or HELD: the transition detail is not printed (T-303); the per-door keying is done, the figure is not",
+  "T350R4_BEAM_SECTIONS": "D-33 / D-35 ground-beam sections (designer items): the width 8.650212 m3 of the pits backfill range; C8 mark conflict 0.030 m3 (drawn 0.24 vs schedule 0.27 m2)",
+  "T350R4_BEYOND_PLOT": "the parts of pit / trench / pool plans beyond the plot line (S06 / D-14): HELD by name",
+  "T350R4_DISPOSAL": "B1-04 disposal: in-situ dry density, placement target density, suitable share, loose densities and the Z2 draw all HELD (owner 18:00 (3)); the line stays HELD BLANK",
+  "T350R4_LIFT_PIT": "Z1-PIT-FF lift raft and pit: pit depth 'as per lift manufacturer', not printed: HELD",
+  "T350R4_LOWER_GB_ROW": "Z1-LOWER-GB-ROW: not required under S01 (2.45 m < 2.50 m), REQUIRED at +0.10 m (2.55 m): the scenario flips it, the line stays HELD BLANK",
+  "T350R4_POOL_CONFLICT": "F-T350R2-2 CONFLICT: F8 / F4 / FN pit chains inside the pool envelope under the pool formation 0.458211 m3: owned by neither line until the designer settles the pit-to-pool interface; named on the pits excavation line",
+  "T350R4_TRENCHES": "the annex, court, strap, boundary, interior D-33 and ZERO trench zones and Z2: S01 does not settle their open dimension: V3.0.43 lines unchanged",
+  "T350R4_WORKING_SPACE": "working space round pits and trenches: not printed, no documented method (OQ-13 / RFI S1): HELD by name on every excavation and backfill line, never 0",
+  "T350_B1_01_SITE_CLEARANCE": "NOT IN DRAWN SCOPE (T-357 MERGED 90135e91: no site plan, no clearance note in the issued set, sheet by sheet): no line; the coverage registry says so",
+  "T350_DOWNGRADE_RECORDS": "DGP-T356-BAND (L-6290a9f3) and DGP-T356-GB-D34 (9 GB lines) live as the Checker's downgrade-only records outside the lines (owner 2026-10-24 23:57); this version reads them (the bound lists name the lines) and edits no m3 of those lines",
+  "T350_NECK_END_RANGE": "T-356 F-T347-4 neck-end ranges of L-0e852cca (15C+7CC: low 0.216 -> 0.207) and L-0bb78acc (17E+17F: high 0.291231 -> 0.295391 m3): since V3.0.40 both lines are VALUED and named by the downgrade proposal DGP-T430-GB-D34-SHORT (audit 0.864171 .. 1.152231 m3, 4 lines): the corrected ends belong in that Checker record's audit range, not in a line; no line moves here (T-356: lengths not re-measured by the Checker)",
+  "T350_PITS_BOUND_N_T347_1": "the pits AT_LEAST bound subtracts the F8 n envelope n beyond-plot strip 0.067873 m2 twice (0.1018 m3 low; still a valid lower bound): add it back once when D-14 / F-T320-05 resolve (Checker N-T347-1)",
+  "T350_S01_ESTIMATED": "RFI re-review 2026-11-02 S01 ESTIMATED (founding level = the printed 1.50 m minimum below the existing plot level, +-0.10 m sensitivity): not applied; the owner's Checker condition (5) and 'the Checker verifies each basis before any line uses it' hold it until T-180 clears it; even then the working space (OQ-13) keeps the excavation lines held. Scenario beside: pits at d = 0 equal the AT_LEAST bound, +-0.10 m moves them +-12.923 m3",
+  "T350_S05_SB3": "RFI re-review S05 (SB3 concrete invariant to top / bottom alignment): Checker condition (2) open; the SB3-in-F3 line keeps the merged T-230 / T-233 held range, no value",
+  "T419_ANNEX_S_D35": "ANNEX_S: annex beam soffit CONFLICT (D-35, RFI-S09): no bound (reading L 7.000 m2 shown in T-407, not adopted)",
+  "T419_E_W_EXISTENCE": "MAIN_E_SEA (6.600 m net) and ANNEX_W_STREET (6.000 m net): band drawn, nothing printed between: existence UNKNOWN (designer item 3): register items by name, NO line",
+  "T419_LIFT_DOOR_HEAD": "whether the tie (soffit +4.00) heads the GF lift door or a separate lintel is needed is OPEN until the door height is known (lintel owner)",
+  "T419_MAIN_S_FORMATION": "house below-ground masonry MAIN_S: formation level under the neighbour-side beams, band blinding and block thickness unprinted (designer items 1, 2, 4 of T-407 s.7)",
+  "T419_TIE_CLASH": "tie vs GF roof ring beams: separate members only while d < 0.75 - build-up (S / W), < 0.40 + the slab - build-up (E / N): OPEN by name (no structural slab level printed)",
+  "T419_TIE_SECTION": "lift tie beam section b x d printed nowhere (D-43, RFI-B-S14): concrete, forms and bars stay HELD BLANK; the GF block lines L-4165954c / L-4423d85b / L-63fa7862 keep their tie hold (paired: they take the displaced face once, never a second concrete quantity)",
+  "T420_ADHESIVE": "tile adhesive (Q-45: up to 3 mm, 20 kg / 5 m2 per bag) is its own item, not in the bed; procurement (cement bags, sand, waste) stays the finish_materials_table view (T-086)",
+  "T420_TILE_THICKNESS": "the tile / stone thickness is printed nowhere (designer item D-40): the drawn bed stays HELD inside 0 .. b; the owner Q-45 range is the line's range",
+  "T420_WET_LEVELS": "wet-room and sunken-panel levels printed nowhere (D-40 / D-41): no drawing bound for any wet bed; the owner range stands alone",
+  "T421_GF_STAIR_HALL_FINISH": "the GF stair-room floor parts (hall +1.00, back lobby +0.30): area a quantity, finish HELD by name (porcelain if a floor, marble if a landing, UP-STAIR-005; no printed landing depth, no finish schedule): designer / finish-schedule list",
+  "T421_GF_STAIR_STRIP": "the 0.200 strip north of the GF stair divider: two unread lines, HELD 0 .. its area",
+  "T421_LIFT_2F_RIGHT_BAND": "2F landing: 0.400 m of face before the internal corner (the 0.50 default does not fit): right band HELD 0 .. 0.400 (architect detail)",
+  "T421_LIFT_DOOR_HEIGHT": "the landing-door clear height is printed nowhere: B6-06 surround HELD with its bound per station (lift supplier / RFI L-1)",
+  "T421_THRESHOLD_POSITION": "the threshold's position across the shaft wall band is not drawn: the landing floor deducts its certain floor part, the rest stays a HELD named deduction",
+  "T423_1F_OPEN_PLAN": "1F open-plan ceiling parents (held by V3.0.32, no measured_net): nothing to list",
+  "T423_FACE_LENGTH": "T-388 F2 face-length residuals (GF-07 0.120 m, GF-14 0.045 m, GF-08 0.140 m): NOT this version (T-390)",
+  "T423_GF_CEILING_LIST": "GF open-plan ceiling (V3.0.32 restated 110.922696 -> 101.137092 m2): its 9.785604 m2 gap is explained only through still-held stair-zone / no-ceiling pieces that do not close by id (stair zone 9.8536 + 1.7719 vs 9.7856, + the 0.777392 Checker slab): list SET ASIDE by name, net unchanged (needs a T-284 ledger row by id)",
+  "T429_LAST_GOING": "ST-01 MS2-U: the 11th tread's going (the 2F floor edge) is drawn on no sheet: its m2 HELD beside the valued line; the piece and its step lm stand on the drawn front",
+  "T429_NOSING_BINDS_HERE": "B7-05 nosing (T-424) binds to this tread set: the landing nosing ST01-MS1T-N05 1.150 lm is DRAWING-CONFIRMED (T-434); no B7-05 line exists in the candidate before T-424",
+  "T429_ROUND_STAIR_CURVED": "ST-02 RS-C curved part: Q-50 A cond, reconstructed from the plans: tread / step HELD with their figures beside (RFI-S27)",
+  "T429_ST02_STRAIGHT_PART": "ST-02 straight-part drawing conflict (arch GF frame 27 risers vs ST p.4 / arch 1F 28, T-432): NOT settled here; RS-S / RS-LD / RS-A move only on the drawn tread fronts (T-438)",
+  "T429_WINDER_TURN": "ST-01 MS1-T winder turn: section A-A governs 5 winders (Q-46 A, T-434); the plans draw a 4-riser fan: winder subdivision not drawn (S-9, A8): tread / step / riser HELD with their figures beside (designer list C-ST-3)",
+  "T430_D33_LOADED_RUNS": "two loaded ground-beam runs (a beam lands on them; D-33, consultant): HELD with the printed unloaded figure and the candidate's own depth beside (T-426 s.4.1)",
+  "T430_D34_SHORT_RUNS": "four runs under 2.5 m valued at the 0.40 end of the unanswered D-34 pair: a downgrade-only extension of DG-a31a0d7e is PROPOSED for the Checker (research/agents_t430), the candidate line is not changed here (F-T426-1)",
+  "T430_ROUTE_G_NECK": "route G does not read a founded neck cut by a band as a support for the CLASS (the 'clear 7.35 m' note, T-426 s.6 (4)): the defect is fixed in the candidate lines here, not in route G",
+  "T431_BULKHEAD_FACES": "the bulkhead faces of the beam pieces over the dining piece (edge length printed by the ledger, depth for this face not decided): HELD blank, the edge beside; the paint line carries the decor part only",
+  "T431_CEILING_STRIP": "the ceiling over the 0.760 m2 west strip of the dining piece: no ceiling-ledger reading (T-283 never read it): HELD blank with its area beside",
+  "T431_D48_GARDEN_BAND": "the garden band proper and its curb (9.101 + 0.604 m2): planter or floor (designer D-48); HELD as the band lines, never 0",
+  "T442_GS_BEYOND_NETWORK": "the freelancer's plate area beyond everything drawn (6.3864 m2, -0.638616 m3, T-436 B-HIS): UNRESOLVED on his side; no engine line, never a cause without a drawn line",
+  "T442_GS_LIFT_SIDE": "the two panels against the lift ring (engine 2.615573 + 2.244696 vs own 2.721160 + 2.253380 m2, -0.011427 m3, T-436 F-LIFT): UNRESOLVED, 0.1143 m2 not placed; lines unchanged",
+  "T442_GS_STUB_ENDS": "the 45-degree end triangles of the beam stub BAND0038 (slab face -0.09 m2 / -0.009 m3 with the stub +0.027 m3, T-436 F-018-ENDS / E-T436-1): worker-traced, not re-measured by the Checker (T-436 verdict: panel only); not wired, lines unchanged",
+  "T443_FLIGHT_FACES": "faces along the flights stay with the stair side table (B7-07 / B7-08), whose form waits on ORR-007: not in any room line",
+  "T443_GF_DIVIDER_BAND": "GF stair divider band between the two lower flights: guard upstand or wall face, its south end and finish not printed (designer item): HELD BLANK child, 2.200 / 3.400 lm beside",
+  "T443_GF_LOBBY_WEST": "GF back lobby west boundary under the winders (open or enclosed not drawn): HELD BLANK child, 1.150 lm beside if the face stands on the drawn line",
+  "T443_GF_REVEAL_JAMBS": "doorless opening from the GF stair hall to the wet wash space: reveal owner (tile return or skirting) not printed: HELD BLANK child, 0.400 lm beside",
+  "T478_BW_PAD_COUNT": "boundary-wall base blinding: pad count and spacing not printed (M2, RFI S04): the new line is HELD BLANK; per pad at least 1.30 x 0.90 x 0.10 = 0.117 m3 beside; the band between pads is not drawn on blinding",
+  "T478_DOWNGRADE_RECORD": "DG-3521554d2fd011b9 (Checker, LINE_CONTENT_V1 binding on L-98eb2d58) held the whole footing-blinding line for its FF piece; after the SPLIT its content no longer exists (the line carries the 24 VERIFIED pits only, FF is its own held line): the Checker's downgrade check records it resolved by this split; the record file is not edited here (T-479 registry / verdict binding refresh)",
+  "T478_EARTHWORKS_BOUND_LISTS": "the V3.0.43 earthworks zones name L-98eb2d58 as a displacement line of the pits zone and the FF zone; the two new held lines (FF raft, beyond the plot line) are bound in the next earthworks round (held blank lines, no quantity moves)",
+  "T478_GB_NOT_REMEASURED": "the ground-beam blinding range is netted by plan overlap by construction (route G REACH low end) and stays HELD on S09 / S11; no Checker re-measure of the strips exists, so no value and no range change",
+  "T478_STRAPS": "strap blinding L-35382b18 stays HELD at its V3.0.43 range (S07 / D-15: no strap section on any sheet); the 0 .. 0.913 ledger is kept beside (F-T347-2)",
+  "T480_OUTER_BANDS": "an outer band whose guard / string meaning is not drawn (a curved flight's outer band; a band beside a short flight with no level change printed) stays UNKNOWN, blank",
+  "T480_TURN_PROFILES": "the rail over a well-end turn whose profile is not drawn (5 winders at a 0.10 m well; the half landing closing riser) is HELD by name, blank: bind it when a detail draws the profile",
+  "T480_UNRAILED_EDGES": "an open stair edge with no rail drawn (an outside stair) stays a designer item (held run line unchanged)",
+  "T483_W02_PIER": "W02 pier (D-53): if the designer confirms one, its room face takes skirting; no width drawn, nothing valued",
+  "T487_HOST_MATERIAL": "the REQUIRED face (w + 2 x bearing) x D leaves the host wall's MATERIAL base only (T-498 blockwork materials wiring); the MAS.BLOCK contract area is unchanged (R-MAS-ABOVE-LINTEL-1, T-482)",
+  "T487_LINTEL_BARS": "lintel bar steel kg (B11) HELD: bar cover, bend and anchorage lengths are not printed in the detail; the printed bars per band are on the record",
+  "T487_LINTEL_FORMWORK": "lintel formwork (B10-13, 2 x D x L + B x w per REQUIRED lintel) is printed beside each lintel line, never booked as an STR.FORMWORK line in this version",
+  "T488_DROP_LENGTH": "a drop wall's d-coefficient L stays as carried until its re-clip (T-288); only U is restated",
+  "T488_LINTEL_HOSTS": "a REQUIRED lintel whose host line becomes held keeps its line; its host face leaves the material base of a held line (T-498)",
+  "T488_ROOF_BUILDUP": "the roof-storey walls stay HELD ON ROOF DATUM until the roof build-up b_r (or the structural top of the roof-only plate) is printed (D-39); their terms U - L x b_r are on the record",
+  "T488_WIDTH_CONFLICT": "a width-conflict wall stays CONFLICT [low, high] until the designer answers its item (D-27 type)",
+  "T497_F10F_SCENARIO": "the trench is stated in the drawn-outline F10F scenario (the F10F line's high end); under the other S02 readings the trench owns up to 0.037 m3 more in the plot (0.047499 with beyond-plot), ground the F10F line's low end then does not dig: named beside, never added",
+  "T498_BLACK_015": "the 0.15 m black block face / module is not stated (owner 2026-11-02 data item): its units and joint mortar stay HELD blank (T-367 figure beside)",
+  "T498_WASTE": "no sourced breakage / waste value: procurement counts and bags are not booked (theoretical only)",
+  "T498_WHITE_FACE": "the AAC block face is not selected by the project: white unit counts stay HELD blank",
+  "T507_BUILDUP": "the exposed zone's roof build-up (falls screed, insulation, protection: B13-01) and its membrane rolls (procurement) are not in this package: installed membrane and upturn only",
+  "T507_DRAINAGE": "exposed-slab drainage / falls (R-WP-APPL-DRAIN-1): RFI beside the zone's line; never blocks or zeroes the membrane",
+  "T507_TERMINATIONS": "exposed-slab edge terminations (slab edge and void edge, R-WP-APPL-EDGE-1): lengths named beside the zone's membrane line, treatment HELD until a detail prints it (designer item)",
+  "T507_WINDOW_SILL": "an upturn run under a window whose sill height above the slab is not read: its own bounded line 0 .. run (it may be a transition, R-WP-APPL-UPTURN-1)",
+  "T508_CONFLICT": "a flight end where two drawings disagree (one more tread on the structural sheet) is a CONFLICT piece, blank; the room line keeps its figure for those stations until the conflict is closed",
+  "T508_FORM": "ORR-007: the stair skirting form (zigzag B7-07 / sloped B7-08) is not chosen: every flight piece stays a blank pair with both figures beside; with the form chosen the pair's line of that form is valued with no re-measure and the other is NOT_APPLICABLE",
+  "T508_OPENINGS": "a window / opening in a stair or landing face whose sill / head against the flight or landing is not printed stays HELD blank by name",
+  "T508_WINDERS": "a winder corner (risers on the section vs wedges on the plans) is HELD: winders are never generated (OWNER_RULE_STAIRS S-9)",
+  "T563_OTHER_DRY_PLASTER": "dry FIN.PLASTER lines outside the 11 T-556 rooms are not restated by this version (the T-556 table names these 11; any other dry room is a next method run, never a guess)",
+  "T563_ROOF_BUILDUP": "every restated line keeps its RFI: the roof build-up over the room (D-39 / DCR-6, designer) -> the roof-face share of each plaster line becomes DRAWING-CONFIRMED; until then HELD",
+  "T661_BOUNDARY_BAND": "the boundary band line keeps its V3.0.61 state: the Checker's T-659 residual (does the band continue below the stretches where the building stands on the plot line with its own exterior G.B?) is a cross-trade check not settled by any merged ledger; until it is, the drawn bound 5.6392 .. 11.0328 m3 is not wired (its low end may not be a lower bound)",
+  "T661_POOL_BLINDING": "pool blinding (ST p.7 '10cm PLAIN CONCRETE') is MISSING from the candidate (named by T-659, never 0): a lane S row adds it",
+  "T661_T642_COMPANION": "the T-642 GF BAND0030.2 depth companion (0 .. 0.025 m3) is a trial-BOQ overlay line, not a candidate line: it enters with the T-642 split wiring, not as an add here",
+  "T665_COURT_BEAMS": "3 court ground beams (no printed section) and 1 neck-cut 0.10 m sliver (D-35 ownership) stay HELD blank as the T-658 ledger states (CONFIRM)",
+  "T665_FOOTING_SCENARIO": "the F10 + F footing line keeps 2.176 .. 2.275 m3: it carries the V3.0.11 multi-tag conflict record whose guard is 'the range IS the readings'; the T-595 owner scenario 'F10 alone' 1.960 is a third reading that record does not carry; how an owner-approved scenario enters a conflict record is a separate lane I row (never a picked end)",
+  "T665_JUNCTION_OWNERSHIP": "F-T661-1 (one owner per 0.20 x 0.20 junction square of the five unlabelled R-T660-2 beam pieces, residual at most 0.048 m3) and the boundary band stretches are T-666 (lane S): their lines keep their V3.0.62 state here",
+  "T665_POOL_BLINDING_WIRING": "pool blinding is measured by T-667 (MERGED, research, unwired): a NEW B10 line enters with its own Gate B row, not here",
+  "V6_CONVENTIONS": "lines resting on unprinted generic route G conventions (not profile values: e.g. ground-beam length basis, exterior build-up, stair riser / waist) are outside this audit (T-044 bucket C)",
+  "WALL_FINISH_HELD_HEADS": "the room-face openings whose head / sill is still not printed (lift landing doors, W02, W11 / W12 sills, A-GF-01 / A-1F-01, the GF-11 / ST-GF doorless opening): the lines stay BOUNDED; the roof datum DCR-6 / annex G2 rooms stay without a figure",
+  "WALL_TILE_HELD_HEIGHTS": "wall-tile lines whose owner height is not established (annex rooms: G2 / Q-54 B / D-39; rooms with an undrawn level: T-088): the lines stay BLANK, never 0",
+  "WET_BACKING_BAND_SPECIFICATION": "the band of plaster between the tile top and the drawn soffit: owner method 0 (Q-43 = Q-48 A), drawing-derived 0 .. high HELD per line until a specification prints whether plaster runs above the decor ceiling (Q-52 C)",
+  "WET_BACKING_HELD_ROOMS": "plaster backing of the rooms whose wall-tile height is not established (annex rooms: G2 / Q-54 B / D-39; rooms with an undrawn level: T-088): the lines stay BLANK with the tile, never 0",
+  "WET_OPENING_REVEALS": "reveal surfaces of wet-room openings stay with the reveal ledgers (T-313 / T-326)",
+  "WET_WALL_SPATTER_DASH": "the spatter-dash coat on wet walls is a separate item (URBAN-FINISH-EXTRAS-SEPARATE-ITEMS@v1): its carrier is not settled here",
+  "WET_WALL_TILE_AND_KITCHEN_FLOOR": "V3.0.9b (same T-211 row): wet-room wall tiles room by room (T-209) and the GF kitchen floor item to WET_TILE (T-218); the wet rooms' wall-finish lines are NOT changed here"
+ }
+}
