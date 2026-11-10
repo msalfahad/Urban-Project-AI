@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10 16:50 UTC | Worker 2 | SUCCESS | T-680 READY c462bfb4 | shaft ST-01 lines restated on V3.0.65: W25/W27 DWF heads (T-201) + pier returns by band: GF 50.945..62.434 (was 48.52..62.01), 1F 45.317..46.564 (was 42.48..47.67), 2F plaster 47.342..48.772 / paint 45.392..46.822 (were blank); FIN.PLASTER blank 10->9 (+52.604/+48.090 m2), FIN.PAINT 3->2; wet rooms RD36087/RDF7D28 stay HELD, datum named; research only, not wired | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-10 16:41 UTC | Worker 2 | STARTED | run session_01E6cPneEgszFh6QwGghNA7N | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10T16:21Z | Lead | SUCCESS | board | 6 MERGED since 12:23 (T-668 V3.0.64 and T-671 V3.0.65 Gate B published; research T-673 lintel / stair concrete, T-674 ground slab, T-675 masonry round 2, T-676 plaster / paint census), 0 REJECTED, all runs closed; new T-677 concrete Gate B round 5 (W3, T-672 masonry after it), T-678 concrete open items, T-679 concrete reconciliation statement (W1), T-680 plaster / paint round 2, T-681 tiles census (W2); 1 register ruling, 2 lessons PROPOSED; Q-81 still blocks ratio wiring; Drive OK, no photos; queue check: 16 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-10T16:15Z | Lead | STARTED | run session_01E6cPnbFmnWx6jnkvLKSD4Z | repo-attached routine | task state: board | report pending
