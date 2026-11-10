@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10T11:00Z | Worker 3 | IDLE | none (run lock held by run 20261110T090124-351-9773 since 2026-11-10T09:01Z) | overlap lock: another Worker 3 run is active; no claim, no change, no quantity | lock
 - 2026-11-10T10:57Z | Verifier | STARTED | run session_01E6cPnaaVJZbUiFWyMbGtKP | repo-attached routine | task state: READY T-372 (W2 B9-04 perimeter joint mortar) | self-check pending
 - 2026-11-10T10:51Z | Worker 2 | SUCCESS | T-372 READY eef6c32a (research part; wiring stays with the hub) | B9-04 perimeter joint mortar bound per V3.0.63 MAS.MORTAR.BLACK line, beside the panel: 8 lines 0.176727..0.188035 m3 on panel 3.211255..3.215016 m3 (+5.50..5.86 %), 12 HELD blank with host causes; new lintel bearing bed 0.006113..0.008443 m3; trial r4 perimeter lows residual 0 on 8 lines; F-T372-1 (0.20 lines evidence UNKNOWN), F-T372-2 (lintel bed, GF-W22, 23 held bands 0..0.017896 m3 missing from V20). Freelancer no mortar row (RULE_DIFFERENCE). | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-10T10:40Z | Worker 2 | STARTED | run session_01E6cPneqepPnF5fyVg4TfKf | repo-attached routine | task state: none yet | self-check pending
