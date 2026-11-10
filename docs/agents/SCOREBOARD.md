@@ -2,6 +2,62 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
+## SCOREBOARD v2 2026-11-10 17:05 UTC
+
+FULL RESTATEMENT on the candidate of record ARCH_TAKEOFF_V3.0.65 (NOT RELEASED; lines sha 38af7909; T-671 Gate B PASS, merge 271ba60f) beside the released V2.9 + route G (unchanged). Verifier run session_01E6cPne2m28nR3xpe7rBSKd, lock checker, after T-680 GATE A PASS MERGED 707c624e (research, UNWIRED: moves no candidate line). BASIS, stated plainly: tools/alsenan_scoreboard.py / alsenan_keymap.py NOT re-run this run (the V3.0.65 BOQ_LINES.json exists only as the output of the full private Drive chain research/agents_t671/v3065_run.py, not reproduced this run). The candidate cells below are computed by the Checker's own script from the committed, sha-pinned line index research/agents_t671/out/LINE_INDEX_V3_0_65.json (5,075 lines: RELEASED 1,493, HELD 2,743, EXCLUDED 839; class as the index states it, downgrades applied there; inputs sha lines 38af7909) with the key map tests/alsenan/T001C_KEY_MAP.json item codes, same unit only (never converted): released = sum of measured_net of RELEASED lines; held = low .. high of HELD lines with a bound; UNKNOWN = HELD lines without a bound (never 0, never summed). Freelancer reference quantities = the same reference rows the tool scored (T-469 section below; reference data unchanged). Compared = a reference line every same-unit answer of which is RELEASED. The released-method rows (A) are the tool's 2026-10-28 20:50 cells, carried because the released method has not changed. FLOOR_AREA is a typed key (scored by tools/alsenan_keymap.py only): not restated this run. Drive read OK this run.
+
+### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can close from the existing drawings alone; Checker classification restated 2026-11-10 17:05 on V3.0.65)
+
+| Rank | Reference line | Unit | Class | What blocks it (named item) | Own-measured so far |
+|---|---|---|---|---|---|
+| 1 | CONC.GROUND (ground slab part P18, B10-05) | m3 | CLOSABLE AFTER T-677 (wiring of the merged T-674 ground-slab research 2.141320 -> 2.143747 m3, GB BAND0038 strip both or neither) | T-677 Gate B; the ground-beam part stays HELD (9 bounded + 20 UNKNOWN) | P18 slab panels own re-measure (2026-11-10 08:59 and T-674 own polygonisation 2.143771 AGREE): PARTIALLY VERIFIED |
+| 2 | CONC.FOOTING | m3 | BLOCKED BY CONSULTANT D-43 (F10 drawn outline vs schedule) | D-43; BOUNDARY_WALL strip HELD 5.6392 .. 11.0328 | 25 / 26 components own-measured AGREE (64.304 m3) |
+| 3 | CONC.SLAB | m3 | CLOSED IN THE CANDIDATE (WHOLE LINE VERIFIED, carried) | none for the line; release is the owner's | as 2026-10-28 |
+| 4 | DOORS.ALUMINIUM | m2 | CLOSED IN THE CANDIDATE as far as the drawings allow (12.760 m2, nothing held) | none; release is the owner's | as 2026-10-28 |
+| 5 | CONC.BEAM | m3 | CLOSABLE AFTER T-678 (14 bounded + 12 UNKNOWN: plan 8.7464 m2 without depth) | T-678; D-items named there | 5 pieces own DXF re-read (T-668) AGREE |
+| 6 | PLASTER.INTERNAL / PAINT.INTERNAL_WALL | m2 | CLOSABLE AFTER the plaster Gate B row (T-672 then the T-676 OP-009 fix + T-680 shaft lines), then BLOCKED BY CONSULTANT for the rest (wet-room floor datum C-SH-2, D-45 arch heights, b build-up DCR-6 / -7, roof D-39) | as class; F-V680-1 (MS2 turn form) | T-676 2 faces, T-680 2 faces AGREE |
+| 7 | CONC.COLUMN | m3 | BLOCKED BY CONSULTANT (D-16 C8, D-39 2F roof columns, tank columns) | D-16, D-39 | as T-671 Gate B |
+| 8 | CONC.STAIR_DOME, CONC.POOL, CONC.BLINDING, WINDOWS | m3 / m2 | BLOCKED (UNKNOWN items: stair waist S-9, dome, pool items; blinding Q-28 S2; windows Q-76 / D-53) | as named | as 2026-10-28 |
+
+### Per trade (owner T-132 table)
+
+| Trade | Unit | Baseline | Ref lines | Coverage % | Compared | WAPE % | Signed % | Verified share % | Held or UNKNOWN | Rule difference share % |
+|---|---|---|---|---|---|---|---|---|---|---|
+| CONCRETE | m3 | A (released V29_ROUTEG_NO_PROFILE), manifest 7e0c1eab, BOQ_LINES.csv b96185d4 (tool cells 2026-10-28, method unchanged) | 8 | 100.00 | 3 | 17.03 | -17.03 | 0.00 (0 / 8); 5 partial re-measures not counted | 5 ref lines HELD; 205 engine lines: 122 bounded 44.108 .. 113.540 m3 + 83 UNKNOWN (no bound) | 12.50 (1 / 8) |
+| CONCRETE | m3 | ARCH_TAKEOFF_V3.0.65 (candidate, NOT RELEASED), LINE_INDEX_V3_0_65.json, lines 38af7909 (Checker script, tool not run) | 8 | 100.00 | 1 | 0.77 | 0.77 | 12.50 (1 / 8: CONC.SLAB WHOLE LINE VERIFIED); P17 25 / 26 and P18 partial re-measures not counted | 7 ref lines HELD; 529 engine lines in m3 on the 8 keys: 301 released, 84 bounded, 54 UNKNOWN, 90 excluded (per key: RANGES table below) | NOT YET MEASURED |
+| DOORS | m2 | A (released V29_ROUTEG_NO_PROFILE), manifest 7e0c1eab, BOQ_LINES.csv b96185d4 | 1 | 0.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | NOT YET MEASURED (unit refused: the engine answers DOORS.ALUMINIUM in pcs, the reference in m2) | NOT YET MEASURED |
+| DOORS | m2 | ARCH_TAKEOFF_V3.0.65 (candidate), LINE_INDEX_V3_0_65.json | 1 | 100.00 | 1 | 6.33 | 6.33 | 0.00 (0 / 1) | 0 ref lines HELD (2 released m2 lines; 5 pcs lines not compared) | NOT YET MEASURED |
+| FLOOR_AREA | m2 | A (released V29_ROUTEG_NO_PROFILE), manifest 7e0c1eab, BOQ_LINES.csv b96185d4 | 1 | 100.00 | 1 | 5.85 | -5.85 | 0.00 (0 / 1) | 0 ref lines HELD | NOT YET MEASURED (1 partial rule verdict not counted) |
+| FLOOR_AREA | m2 | ARCH_TAKEOFF_V3.0.65 (candidate) | 1 | NOT YET MEASURED | NOT YET MEASURED | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | NOT YET MEASURED (typed key: tools/alsenan_keymap.py only, not run) | NOT YET MEASURED |
+| PAINT | m2 | A (released V29_ROUTEG_NO_PROFILE), manifest 7e0c1eab, BOQ_LINES.csv b96185d4 | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD; 13 engine lines: 13 UNKNOWN (no bound); 14 more excluded with reason | NOT YET MEASURED (1 partial rule verdict not counted) |
+| PAINT | m2 | ARCH_TAKEOFF_V3.0.65 (candidate), LINE_INDEX_V3_0_65.json | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD; 14 engine lines: 4 released 217.208, 7 bounded 487.121 .. 542.861 m2 + 3 UNKNOWN; 31 excluded; pending unwired T-680: 8 bounded 537.775 .. 589.001 + 2 UNKNOWN | NOT YET MEASURED |
+| PLASTER | m2 | A (released V29_ROUTEG_NO_PROFILE), manifest 7e0c1eab, BOQ_LINES.csv b96185d4 | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD; 29 engine lines: 2 bounded 2.360 .. 2.600 m2 + 27 UNKNOWN (no bound) | NOT YET MEASURED (1 partial rule verdict not counted) |
+| PLASTER | m2 | ARCH_TAKEOFF_V3.0.65 (candidate), LINE_INDEX_V3_0_65.json | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD; 62 engine lines: 38 released 363.374, 14 bounded 932.726 .. 1,006.776 m2 + 10 UNKNOWN; 13 excluded; pending unwired T-680: 15 bounded 985.330 .. 1,054.866 + 9 UNKNOWN | NOT YET MEASURED |
+| WINDOWS | m2 | A (released V29_ROUTEG_NO_PROFILE), manifest 7e0c1eab, BOQ_LINES.csv b96185d4 | 1 | 0.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | NOT YET MEASURED (unit refused: the engine answers WINDOWS.ALUMINIUM in pcs, the reference in m2) | NOT YET MEASURED |
+| WINDOWS | m2 | ARCH_TAKEOFF_V3.0.65 (candidate), LINE_INDEX_V3_0_65.json | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD; 5 m2 lines: 3 released 76.256, 1 bounded 9.870 .. 11.515 + 1 UNKNOWN (31 pcs lines not compared) | NOT YET MEASURED |
+| BLOCKWORK | m2 | ARCH_TAKEOFF_V3.0.65 (candidate), LINE_INDEX_V3_0_65.json; not keyed (freelancer 1,260.69 m2 not comparable while held, UNRESOLVED) | NOT YET MEASURED | NOT YET MEASURED | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (no whole line VERIFIED; 297.847 m2 on 18 walls Checker-verified as components) | MAS.BLOCK 28 lines: 13 released 467.7925 m2 + 15 UNKNOWN (no bound) | NOT YET MEASURED |
+| REBAR | kg | ARCH_TAKEOFF_V3.0.65 (candidate), LINE_INDEX_V3_0_65.json; not keyed (freelancer rebar is a kg / m3 lump = RULE_DIFFERENCE, T-272) | NOT YET MEASURED | NOT YET MEASURED | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (no rebar line VERIFIED) | STR.REBAR 2,644 lines: 374 released 9,375.3058 kg, 894 bounded 14,278.2495 .. 19,646.8779 kg + 799 UNKNOWN; 577 excluded; ratio ESTIMATE kept apart (T-663, Q-81 open) | NOT YET MEASURED |
+
+### Keyed reference lines as RANGES, ARCH_TAKEOFF_V3.0.65 (candidate, NOT RELEASED; released + held low .. high; UNKNOWN keeps the range open: no single %; a reference comparison, not an accuracy claim)
+
+| Key | Freelancer | ARCH_TAKEOFF_V3.0.65 | Was on V3.0.41 (T-469) |
+|---|---|---|---|
+| CONC.BLINDING | 47.055 m3 | released 12.734 on 1 + held 7.640 .. 13.466 (5) + 2 UNKNOWN = at least -56.70 %, upper end open | -55.25 .. -44.82 % |
+| CONC.FOOTING | 77.631 m3 | released 67.694 on 28 + held 7.845 .. 13.961 (4) = -2.69 .. +5.18 % (5 excluded) | -0.66 .. +0.08 % |
+| CONC.GROUND | 75.090 m3 | released 45.399 on 58 + held 1.173 .. 5.097 (9) + 20 UNKNOWN = at least -37.98 %, upper end open | at least -41.66 % |
+| CONC.COLUMN | 39.752 m3 | released 19.776 on 30 + held 18.443 .. 23.760 (52) + 13 UNKNOWN = at least -3.86 %, upper end open (13 excluded) | at least -19.45 % |
+| CONC.BEAM | 65.966 m3 | released 66.921 on 112 + held 5.983 .. 8.413 (14) + 12 UNKNOWN = at least +10.52 %, upper end open (54 excluded) | at least +13.23 % |
+| CONC.SLAB | 59.817 m3 | released 60.280 on 62 = +0.77 % (13 excluded) | +0.77 % |
+| CONC.STAIR_DOME | 21.833 m3 | released 10.450 on 8 + 6 UNKNOWN = at least -52.14 %, upper end open | at least -52.13 % |
+| CONC.POOL | 12.348 m3 | released 7.202 on 2 + 1 UNKNOWN = at least -41.67 %, upper end open | at least -41.67 % |
+| PLASTER.INTERNAL | 1,151.138 m2 | released 363.374 on 38 + held 932.726 .. 1,006.776 (14) + 10 UNKNOWN = at least +12.59 %, upper end open (13 excluded; the freelancer's rows are gross with half deductions: RULE_DIFFERENCE, T-173) | at least -7.15 % |
+| PAINT.INTERNAL_WALL | 1,191.128 m2 | released 217.208 on 4 + held 487.121 .. 542.861 (7) + 3 UNKNOWN = at least -40.87 %, upper end open | at least -40.87 % |
+| FLOOR.INTERNAL | 409.580 m2 | TYPED_KEY (tools/alsenan_keymap.py only; not run) | TYPED_KEY |
+| DOORS.ALUMINIUM | 12.000 m2 | released 12.760 on 2 = +6.33 % | +6.33 % |
+| WINDOWS.ALUMINIUM | 116.900 m2 | released 76.256 on 3 + held 9.870 .. 11.515 (1) + 1 UNKNOWN = at least -26.33 %, upper end open | at least -26.33 % |
+
+Cross-checks of this computation against Checker-verified figures of earlier verdicts: CONC.BEAM released 66.870678 + 0.050 (T-671) = 66.920678 AGREE; FIN.PLASTER held 932.72581 .. 1,006.77641 (14) + 10 and FIN.PAINT 487.1210 .. 542.8606 (7) + 3 AGREE with the T-676 census. Verified share: CONCRETE 1 / 8, every other keyed trade 0; nothing promoted this run. Sources: as the Basis above. Development reference only; no product accuracy figure.
+
 ## SCOREBOARD NOTE 2026-11-10 16:10 UTC (Verifier, run session_01E6cPneC95WJNrb9QgLWXnA; after T-674 MERGED bb4ec90b and T-676 MERGED cffefa0c)
 
 tools/alsenan_scoreboard.py NOT re-run this run: both merges are research only (unwired), so neither the candidate of record ARCH_TAKEOFF_V3.0.65 (38af7909) nor released V2.9 + route G moves a line; Drive read OK. Pending effect when wired (lane I, never one without the other): B10-05 ground slab 5 lines 2.141320 -> 2.143747 m3 (+0.002427, Checker own 2.143771) with GB BAND0038 strip +0.090 m2; FIN.PLASTER OP-009 reveal 1.08 .. 1.20 -> 1.08 m2 (ASSUMED - OWNER-APPROVED Q-55 C). Verified share unchanged: T-180 P18 stays PARTIALLY VERIFIED until that wiring lands (then CLOSABLE).
