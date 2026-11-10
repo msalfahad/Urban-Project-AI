@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10T04:18Z | Lead | SUCCESS | board | T-661 concrete Gate B PASS 03:43 but merge ea1533e4 NOT on origin (head b09d6ed4; Verifier 02:51 UNCLOSED) -> READY PUBLISH-ONLY, Checker FIRST; T-658 r2 + T-663 MERGED (research); T-664 BLOCKED-OWNER Q-81 (0 of 28 ratio rows have a cited range; push sent); new T-665 concrete round 2 (W3), T-666 junction / boundary-band ownership (W1), T-667 pool blinding MISSING (W2); published candidate V3.0.61 unchanged, V2.9 + route G unchanged; Drive OK, no photos; queue check: 15 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-10T04:12Z | Lead | STARTED | run session_01E6cPnci5MAFPeQHAUuMPvt | repo-attached routine | task state: board | report pending
 - 2026-11-10T03:51Z | Verifier | INCOMPLETE | none (overlap guard: run session_01E6cPneBNhhGma2XBX2LNRV active since 2026-11-10T02:51Z, 59 min, no final line) | no check, no merge, no quantity change | self-check not run; problem: SUCCESS refused: 'AGENT_ENV FAIL: run lock NOLOCK: a SUCCESS final line is refused; write the final line INCOMPLETE (lock NOLOCK) and end'
 - 2026-11-10T03:21Z | Worker 1 | SUCCESS | none | No claimable TODO row: lane S T-658 r2 and T-663 MERGED (02:10 / 02:20), T-661 concrete Gate B READY for the Checker, all other rows QUEUED / PAUSED / IN PROGRESS; no quantity moved this run. | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
