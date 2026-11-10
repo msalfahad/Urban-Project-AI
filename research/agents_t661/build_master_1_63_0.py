@@ -132,12 +132,12 @@ def build_promoted(task_commit):
 def _promote(old, P48):
     import t479_registry_census as C  # noqa: E402
     prom = {p["task"]: p for p in json.loads(PROMOTIONS.read_text(encoding="utf-8"))}
-    attrib = json.loads(ATTRIB.read_text(encoding="utf-8"))
-    index = json.loads(INDEX.read_text(encoding="utf-8"))
-    new = copy.deepcopy(old)
     pend = old["pending_packages"]
     if sorted(prom) != [WHO] or [p["task"] for p in pend] != [WHO]:
         raise SystemExit(f"promotion source {sorted(prom)} / pending {[p['task'] for p in pend]}: expected [{WHO}]")
+    attrib = json.loads(ATTRIB.read_text(encoding="utf-8"))
+    index = json.loads(INDEX.read_text(encoding="utf-8"))
+    new = copy.deepcopy(old)
     promoted = [dict(P48.promote(p, prom[p["task"]], attrib), promoted_in=f"{VERSION} ({WHO}, in the merge)")
                 for p in pend]
     for p in promoted:
