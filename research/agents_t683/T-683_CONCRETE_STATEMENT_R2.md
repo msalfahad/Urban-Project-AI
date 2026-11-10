@@ -73,9 +73,19 @@ all eight keyed concrete cover chains finds no other omitted or doubled row. Eng
 released -0.954803, rows - released -0.826803; % stays suppressed (26 HELD beam lines). No engine verdict, no quantity
 moved; who is right on the arithmetic: the reference's own rows (FREELANCER arithmetic slip, -0.128).
 
+## 3a. Next related item: CONC.SLAB localised by storey (R-T683-2)
+
+The slab key is the only one with every line released and VERIFIED (62 / 62); its -0.462755 m3 (-0.77 %) had no
+merged cause. Own read of his slab sheet: three storey sub-totals, each ONE gross row (GF 207 m2 x 0.16 = 33.12; 1F
+120 m2 x 0.16 = 19.2; roof 31.84 x 0.16 + 13.35 x 0.18 = 7.4974). Against the engine lines of the same storey tag:
+GF +0.050478 (+0.15 %), **1F -0.556333 (-2.90 %)**, 2F +0.043100 (+0.57 %); the three re-add to -0.462755 exactly.
+His 1F row computes a 0.081 m3 deduction (0.40 x 0.15 x 1.35) and multiplies it by a count of 0 (not applied). Status
+UNRESOLVED, residual named by storey: his areas carry no panel split, so no class is given; next step a 1F panel-area
+bridge (22 engine panels vs his 120 m2) on the candidate lines file (needs the chain run on the private drawings).
+
 ## 4. Rules, tests, lessons
 
-R-T683-1 / -2 / -3 in `t683_rules.py`. Tests `tests/t683_concrete_statement` (21): villa V683 by hand (stale class
+R-T683-1 / -2 / -3 in `t683_rules.py`. Tests `tests/t683_concrete_statement` (23): villa V683 by hand (stale class
 refused, added line, restating an unwired line refused, restating to MEASURABLE NOW refused, index != package refused,
 LOWER_ONLY turned into a bound refused, re-census after wiring not stale, package order invariance, bridge with a HELD
 line where ref = released is not agreement, components must re-add, NO_ENGINE_LINE, a line in two components refused,

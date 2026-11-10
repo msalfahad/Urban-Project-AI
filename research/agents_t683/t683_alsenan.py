@@ -107,6 +107,13 @@ COLUMN_COMPONENTS = [
 ]
 
 
+SLAB_STOREYS = [  # his storey sub-totals (own read of the slab sheet; area x thickness as he wrote them)
+    ("GF", "33.12", "his slab over GF: 207 m2 x 0.16 (one gross row)"),
+    ("1F", "19.2", "his slab over 1F: 120 m2 x 0.16 (one gross row; his 0.081 deduction multiplied by a count of 0)"),
+    ("2F", "7.4974", "his roof: 31.84 m2 x 0.16 + 13.35 m2 x 0.18"),
+]
+
+
 def load(rel):
     return json.loads((ROOT / rel).read_text(encoding="utf-8"))
 
@@ -185,6 +192,18 @@ def build() -> dict:
         rows_minus_released=R.s(R.sub(R.D(ba["row_sum"]), rel)),
         class_="REFERENCE ARITHMETIC: no engine verdict, no quantity moved; the cover total stays the keyed value; % "
                "stays suppressed (26 HELD beam lines)")
+    # R-T683-2 storey bridge of CONC.SLAB (the only key with every line released and VERIFIED; cause UNRESOLVED in
+    # T-679): his three storey sub-totals (own read) against the engine slab lines of the same storey tag.
+    slab_key = next(k for k in keys if k["key"] == "CONC.SLAB")
+    comps = []
+    for tag, ref, note in SLAB_STOREYS:
+        els = [x["element_id"] for x in lines if x["item_code"] == "STR.CONC.SLAB" and x["element_id"].split(":")[2] == tag]
+        comps.append({"name": f"slab {tag}", "reference": ref, "note": note,
+                      "engine": {"item_codes": ["STR.CONC.SLAB"], "element_ids": els}})
+    slab_br = S.bridge("CONC.SLAB", refs[slab_key["reference_id"]]["qty"], comps, lines)
+    for c in slab_br["components"]:
+        c["engine_scope"] = {"item_codes": ["STR.CONC.SLAB"], "storey_tag": c["component"].split()[-1],
+                             "element_ids_n": len(c["engine_scope"]["element_ids"])}
     st = OrderedDict()
     st["schema"] = "URBAN_T683_CONCRETE_STATEMENT_V1"
     st["task"] = "T-683"
@@ -219,7 +238,14 @@ def build() -> dict:
         rule="difference = reference - engine released; % only where the key holds no HELD line (R-T613-1 (g)); "
              "causes quoted from the merged scorecard V12 sections, scored on its own candidate (not re-classed)",
         keys=cmp_rows, not_keyed_item_codes=R.not_keyed(agg["codes"], keys),
-        column_bridge=br, column_bridge_not_comparable=nc, beam_arithmetic=beam_ar,
+        column_bridge=br, column_bridge_not_comparable=nc, beam_arithmetic=beam_ar, slab_storey_bridge=slab_br,
+        slab_cause=("LOCALISED, not resolved: of the -0.462755 m3 key difference, -0.556333 is on the 1F slab "
+                    "(his one row 120 m2 x 0.16 against 22 engine panels 19.756333 m3, VERIFIED) and +0.050478 / "
+                    "+0.043100 on GF / 2F; his 1F row computes a 0.081 m3 deduction (0.40 x 0.15 x 1.35) and "
+                    "multiplies it by a count of 0 (not applied). His areas are single gross figures with no panel "
+                    "split, so no class (ENGINE_RIGHT / RULE_DIFFERENCE) is given here: UNRESOLVED with the residual "
+                    "named by storey; next step a 1F panel-area bridge (engine 22 panels vs his 120 m2) on the "
+                    "candidate lines file"),
         key_map_proposal=OrderedDict(
             status="PROPOSED, not applied (R-T683-2 (d)): a key-map version is a Lead / lane I decision",
             change="CONC.COLUMN answers STR.CONC.NECK + STR.CONC.COLUMN + STR.CONC.LIFT element LIFT_PIT:WALLS only; "
@@ -307,6 +333,18 @@ def md(st: dict) -> str:
              + (", ".join(f"{x['line_id'][:10]} {x['element_id']} ({x['cls']})" for x in nc) or "none"))
     kp = st["reference_apart"]["key_map_proposal"]
     L.append(f"- Key map: {kp['status']}. {kp['change']}. Needs {kp['needs']}. Effect today: {kp['effect_today']}.")
+    sb = st["reference_apart"]["slab_storey_bridge"]
+    L.append(f"\n## CONC.SLAB storey bridge (R-T683-2), cover {sb['reference']} m3\n")
+    L.append("| Storey | Ref m3 | Engine lines | Released m3 | Verified whole | Ref - released | % |")
+    L.append("|---|---|---|---|---|---|---|")
+    for r in sb["components"]:
+        e = r["engine"]
+        L.append(f"| {r['component']} | {r['reference']} | {e['lines']} | {e['released']['m3']} | "
+                 f"{e['verified_share']['whole']} | {r['difference_ref_minus_released']} | "
+                 f"{r['pct_of_reference'] if r['pct_of_reference'] is not None else 'suppressed'} |")
+    for r in sb["components"]:
+        L.append(f"- {r['component']}: {r['note']}")
+    L.append(f"- Cause: {st['reference_apart']['slab_cause']}.")
     ba = st["reference_apart"]["beam_arithmetic"]
     L.append("\n## F-T679-3: CONC.BEAM reference arithmetic (R-T683-3)\n")
     L.append(f"Cover {ba['cover_total']} vs his rows {ba['his_row_sum']}: cover - rows = {ba['cover_minus_rows']} m3. "

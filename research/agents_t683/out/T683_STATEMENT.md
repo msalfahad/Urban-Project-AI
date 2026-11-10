@@ -79,7 +79,7 @@ Causes quoted from the merged scorecard V12 sections (m3 by class):
 - CONC.STAIR_DOME: UNRESOLVED: no merged reconciliation section for this key (scorecard V12 has none); nothing classed here
 - CONC.POOL: UNRESOLVED: no merged reconciliation section for this key (scorecard V12 has none); nothing classed here
 
-## F-T679-2: CONC.COLUMN scope bridge (R-T683-2), cover 39.7515 m3
+## F-T679-2: CONC.COLUMN scope bridge (R-T683-2), cover 39.751500 m3
 
 | Component | Ref m3 | Engine scope | Released n / m3 | Bounded n / low .. high | Blank n | Ref - released | Status |
 |---|---|---|---|---|---|---|---|
@@ -91,6 +91,18 @@ Causes quoted from the merged scorecard V12 sections (m3 by class):
 - columns GF + 1F + 2F (his three storey sub-totals 17.4375 + 7.728 + 3.381): T-551/columns@V12 class split quoted below (ENGINE_RIGHT 1.522, RULE_DIFFERENCE -2.66625, HELD 10.34925, UNRESOLVED -0.435)
 - NOT_COMPARABLE (engine, no reference component): L-5ae06fda LIFT_TIE_BEAM:GF (HELD)
 - Key map: PROPOSED, not applied (R-T683-2 (d)): a key-map version is a Lead / lane I decision. CONC.COLUMN answers STR.CONC.NECK + STR.CONC.COLUMN + STR.CONC.LIFT element LIFT_PIT:WALLS only; STR.CONC.LIFT element LIFT_TIE_BEAM:GF stays not keyed (no row of his on any sheet, T-545 s.2). Needs element-level key scope in tools/alsenan_keymap.py / alsenan_scoreboard.py (today item-code level: keying the whole STR.CONC.LIFT code would put the tie beam into the column key). Effect today: none on the numbers: both STR.CONC.LIFT lines are HELD blank, the key's % is already suppressed; the scope of the key becomes like for like.
+
+## CONC.SLAB storey bridge (R-T683-2), cover 59.817400 m3
+
+| Storey | Ref m3 | Engine lines | Released m3 | Verified whole | Ref - released | % |
+|---|---|---|---|---|---|---|
+| slab GF | 33.12 | 40 | 33.069522 | 0 / 33 | 0.050478 | 0.15 |
+| slab 1F | 19.2 | 26 | 19.756333 | 0 / 22 | -0.556333 | -2.90 |
+| slab 2F | 7.4974 | 9 | 7.4543 | 0 / 7 | 0.0431 | 0.57 |
+- slab GF: his slab over GF: 207 m2 x 0.16 (one gross row)
+- slab 1F: his slab over 1F: 120 m2 x 0.16 (one gross row; his 0.081 deduction multiplied by a count of 0)
+- slab 2F: his roof: 31.84 m2 x 0.16 + 13.35 m2 x 0.18
+- Cause: LOCALISED, not resolved: of the -0.462755 m3 key difference, -0.556333 is on the 1F slab (his one row 120 m2 x 0.16 against 22 engine panels 19.756333 m3, VERIFIED) and +0.050478 / +0.043100 on GF / 2F; his 1F row computes a 0.081 m3 deduction (0.40 x 0.15 x 1.35) and multiplies it by a count of 0 (not applied). His areas are single gross figures with no panel split, so no class (ENGINE_RIGHT / RULE_DIFFERENCE) is given here: UNRESOLVED with the residual named by storey; next step a 1F panel-area bridge (engine 22 panels vs his 120 m2) on the candidate lines file.
 
 ## F-T679-3: CONC.BEAM reference arithmetic (R-T683-3)
 

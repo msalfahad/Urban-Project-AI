@@ -23,7 +23,8 @@ R-T683-2 1.0.0  SCOPE BRIDGE OF A REFERENCE KEY. Provenance: F-T679-2 (the colum
     the key's engine side does not hold); owner 2026-11-08 12:40 (7) reference apart; R-T679-1 (e).
     (a) The cover total is split by the reference's OWN sub-totals into components that re-add to it exactly (else
         REFUSED); each component names the engine scope that answers it: item codes and, where one item code holds
-        two physical elements of which only one is in the reference, the element ids (element-level scope).
+        two physical elements of which only one is in the reference, the element ids (element-level scope). The
+        re-add is exact at 6 dp (a cover total stored as a binary float, e.g. 59.81739999999999, is read at 6 dp).
     (b) Per component: reference, engine released, bounded, blank, and the difference reference - released; the % is
         printed only when the component holds no HELD line (a HELD line inside a component is NEVER agreement, even
         when reference = released).
@@ -142,8 +143,10 @@ def bridge(key: str, reference_total, components: list[dict], lines: list[dict])
     tot = Decimal(0)
     for c in components:
         tot = add(tot, D(c["reference"]))
-    if tot != ref:
+    q = Decimal("0.000001")  # cover totals are stored as binary floats (59.81739999999999): compared at 6 dp
+    if tot.quantize(q) != ref.quantize(q):
         raise Refused(f"R-T683-2 (a): {key} components re-add to {s(tot)}, not the cover total {s(ref)}")
+    ref = ref.quantize(q)
     claimed: dict[str, str] = {}
     out_rows = []
     for c in components:

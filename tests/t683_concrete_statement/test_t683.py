@@ -259,7 +259,24 @@ def test_findings_closed(st):
     ra = s["reference_apart"]
     assert ra["beam_arithmetic"]["cover_minus_rows"] == "-0.128000"
     assert ra["beam_arithmetic"]["his_row_sum"] == "66.093875"
-    assert ra["column_bridge"]["reference"] == "39.7515"
+    assert ra["column_bridge"]["reference"] == "39.751500"
     assert [x["element_id"] for x in ra["column_bridge_not_comparable"]] == ["LIFT_TIE_BEAM:GF"]
     assert {r["line_id"] for r in s["f_t679_1_census_rows"]} == {"L-893c3db13b14dc38625e", "L-bef35462630d4b76596f"}
     assert all(r["pct_of_reference"] is None for r in ra["column_bridge"]["components"])
+
+
+def test_slab_storey_bridge(st):
+    _, s = st
+    sb = s["reference_apart"]["slab_storey_bridge"]
+    d = {r["component"]: X(r["difference_ref_minus_released"]) for r in sb["components"]}
+    assert d == {"slab GF": X("0.050478"), "slab 1F": X("-0.556333"), "slab 2F": X("0.0431")}
+    assert sum(d.values()) == X("-0.462755")  # = the key difference of T-679 / T-683, exactly
+    assert sb["reference"] == "59.817400"
+
+
+def test_bridge_float_cover_read_at_6dp():
+    comp = [{"name": "a", "reference": "33.12", "engine": {"item_codes": ["X"]}},
+            {"name": "b", "reference": "26.6974", "engine": {"item_codes": ["Y"]}}]
+    assert S.bridge("K", 59.81739999999999, comp, [])["reference"] == "59.817400"
+    with pytest.raises(R.Refused, match="re-add"):
+        S.bridge("K", 59.8175, comp, [])

@@ -4353,7 +4353,7 @@
   ],
   "column_bridge": {
    "key": "CONC.COLUMN",
-   "reference": "39.7515",
+   "reference": "39.751500",
    "components": [
     {
      "component": "lift pit walls (his 'walls' sub-total: ring 8 x 0.20 x 1.50)",
@@ -4538,6 +4538,176 @@
    "rows_minus_released": "-0.826803",
    "class_": "REFERENCE ARITHMETIC: no engine verdict, no quantity moved; the cover total stays the keyed value; % stays suppressed (26 HELD beam lines)"
   },
+  "slab_storey_bridge": {
+   "key": "CONC.SLAB",
+   "reference": "59.817400",
+   "components": [
+    {
+     "component": "slab GF",
+     "reference": "33.12",
+     "engine_scope": {
+      "item_codes": [
+       "STR.CONC.SLAB"
+      ],
+      "storey_tag": "GF",
+      "element_ids_n": 40
+     },
+     "engine": {
+      "lines": 40,
+      "released": {
+       "lines": 33,
+       "m3": "33.069522"
+      },
+      "held_bounded": {
+       "lines": 0,
+       "low": "0",
+       "high": "0",
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "held_blank": {
+       "lines": 0,
+       "high": null,
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "excluded": {
+       "lines": 7
+      },
+      "engine_range": [
+       "33.069522",
+       "33.069522"
+      ],
+      "verified_share": {
+       "whole": "0 / 33",
+       "whole_m3": "0",
+       "component": "0 / 33",
+       "component_m3": "0"
+      }
+     },
+     "difference_ref_minus_released": "0.050478",
+     "status": "RELEASED only",
+     "pct_of_reference": "0.15",
+     "note": "his slab over GF: 207 m2 x 0.16 (one gross row)"
+    },
+    {
+     "component": "slab 1F",
+     "reference": "19.2",
+     "engine_scope": {
+      "item_codes": [
+       "STR.CONC.SLAB"
+      ],
+      "storey_tag": "1F",
+      "element_ids_n": 26
+     },
+     "engine": {
+      "lines": 26,
+      "released": {
+       "lines": 22,
+       "m3": "19.756333"
+      },
+      "held_bounded": {
+       "lines": 0,
+       "low": "0",
+       "high": "0",
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "held_blank": {
+       "lines": 0,
+       "high": null,
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "excluded": {
+       "lines": 4
+      },
+      "engine_range": [
+       "19.756333",
+       "19.756333"
+      ],
+      "verified_share": {
+       "whole": "0 / 22",
+       "whole_m3": "0",
+       "component": "0 / 22",
+       "component_m3": "0"
+      }
+     },
+     "difference_ref_minus_released": "-0.556333",
+     "status": "RELEASED only",
+     "pct_of_reference": "-2.90",
+     "note": "his slab over 1F: 120 m2 x 0.16 (one gross row; his 0.081 deduction multiplied by a count of 0)"
+    },
+    {
+     "component": "slab 2F",
+     "reference": "7.4974",
+     "engine_scope": {
+      "item_codes": [
+       "STR.CONC.SLAB"
+      ],
+      "storey_tag": "2F",
+      "element_ids_n": 9
+     },
+     "engine": {
+      "lines": 9,
+      "released": {
+       "lines": 7,
+       "m3": "7.4543"
+      },
+      "held_bounded": {
+       "lines": 0,
+       "low": "0",
+       "high": "0",
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "held_blank": {
+       "lines": 0,
+       "high": null,
+       "by_cause": {
+        "DESIGNER ITEM": 0,
+        "OPEN BOUND": 0,
+        "MEASURABLE NOW": 0
+       }
+      },
+      "excluded": {
+       "lines": 2
+      },
+      "engine_range": [
+       "7.4543",
+       "7.4543"
+      ],
+      "verified_share": {
+       "whole": "0 / 7",
+       "whole_m3": "0",
+       "component": "0 / 7",
+       "component_m3": "0"
+      }
+     },
+     "difference_ref_minus_released": "0.0431",
+     "status": "RELEASED only",
+     "pct_of_reference": "0.57",
+     "note": "his roof: 31.84 m2 x 0.16 + 13.35 m2 x 0.18"
+    }
+   ],
+   "claimed_lines": 75
+  },
+  "slab_cause": "LOCALISED, not resolved: of the -0.462755 m3 key difference, -0.556333 is on the 1F slab (his one row 120 m2 x 0.16 against 22 engine panels 19.756333 m3, VERIFIED) and +0.050478 / +0.043100 on GF / 2F; his 1F row computes a 0.081 m3 deduction (0.40 x 0.15 x 1.35) and multiplies it by a count of 0 (not applied). His areas are single gross figures with no panel split, so no class (ENGINE_RIGHT / RULE_DIFFERENCE) is given here: UNRESOLVED with the residual named by storey; next step a 1F panel-area bridge (engine 22 panels vs his 120 m2) on the candidate lines file",
   "key_map_proposal": {
    "status": "PROPOSED, not applied (R-T683-2 (d)): a key-map version is a Lead / lane I decision",
    "change": "CONC.COLUMN answers STR.CONC.NECK + STR.CONC.COLUMN + STR.CONC.LIFT element LIFT_PIT:WALLS only; STR.CONC.LIFT element LIFT_TIE_BEAM:GF stays not keyed (no row of his on any sheet, T-545 s.2)",
