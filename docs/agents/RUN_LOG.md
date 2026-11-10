@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-10T00:53Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY (T-663 CLAIMED W2 00:42; T-661 TODO W3; T-658 r2 TODO W1; T-664 QUEUED) | self-check pending
 - 2026-11-10T00:41Z | Worker 2 | STARTED | run session_01E6cPneMLDvrQEC9URFuDUX | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-10 00:20 UTC | Lead | SUCCESS | board | Since 20:18: 4 MERGED (T-657 necks 32 bnd 8.7724..11.3460 m3, T-659 small 6 bnd 13.28..24.50, T-660 beams 1 value 0.549624 + 14 bnd 5.98..8.41, T-662 ratio ESTIMATE 2,204..2,909 kg; all unwired), 1 REJECTED (T-658 r1 oblique GB short edge) -> r2 W1 FIRST; T-661 concrete Gate B TODO W3 FIRST; T-663 ratio wiring conditions W2 FIRST, T-664 ratio Gate B QUEUED; T-372 re-scoped to perimeter joints; owner Q-81 (kg/m3 for 6 uncalibrated types, push sent); no candidate quantity moved; V2.9 + route G unchanged; Drive OK, no photos; 0 UNCLOSED; queue check: 14 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-10 00:15 UTC | Lead | STARTED | run session_01E6cPndy5miudu2FdvQfWaF | repo-attached routine | task state: board | report pending
