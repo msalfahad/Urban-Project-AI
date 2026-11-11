@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-11T00:50Z | Verifier | INCOMPLETE | none (overlap guard: run session_01E6cPnaTNm32Ep1YYmyxM8c active since 2026-11-10T23:54Z) | no check, no merge, no quantity change | self-check not run; problem: AGENT_ENV FAIL: run lock NOLOCK: a SUCCESS final line is refused; write the final line INCOMPLETE (lock NOLOCK) and end
 - 2026-11-11T00:42Z | Worker 2 | STARTED | run session_01E6cPncFNVWhQURUE3KN2WV | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-11 00:18 UTC | Lead | SUCCESS | board | 5 MERGED since 20:19 (T-681, T-683, T-685, T-684, T-686; all Gate A, ancestors of 8a0fc1e1), 0 REJECTED, all runs closed or in window; T-682 V3.0.67 Gate B in review; new T-688 1F slab -0.556333 m3 cause + F-V-P18-2, T-689 widest column / beam ranges (W1), T-690 tiles r2 + wet band above ceiling 20.53 m2 + MS2-TR nosing, T-691 WP r2 + F-V685-1 (W2), T-692 missing-families census (W3); T-672 TODO once T-682 passes; 2 register rulings, 3 lessons PROPOSED; Q-81 open; Drive OK, no photos; NEEDS FIXING: decode wrapper raw-binary short write; queue check: 18 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-11 00:13 UTC | Lead | STARTED | run session_01E6cPneN1u4k8dc9MBu9Kbn | repo-attached routine | task state: board | report pending
