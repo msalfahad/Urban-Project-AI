@@ -88,7 +88,7 @@ def summarise(run):
             "lines_sha256": {"V3_0_70": hashlib.sha256((run / "V3_0_70_BOQ_LINES.json").read_bytes()).hexdigest(),
                              "V3_0_71": hashlib.sha256((run / "V3_0_71_BOQ_LINES.json").read_bytes()).hexdigest()},
             "lines": {"V3_0_70": len(l67), "V3_0_71": len(l68)},
-            "identity": {k: rj["identity"][k] for k in ("replaced", "added", "outside_rows", "concrete",
+            "identity": {k: rj["identity"][k] for k in ("replaced", "added", "outside_rows", "lintels",
                                                          "outside_rows_identical_to_base", "diff")},
             "totals_moved": moved, "conc_code_totals": mas, "not_applicable_v3_0_71": na, "rows": rows,
             "waiting": led["waiting_pieces"]}
