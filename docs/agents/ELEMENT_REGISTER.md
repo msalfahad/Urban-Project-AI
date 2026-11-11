@@ -46,6 +46,18 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- CORNER BEADS B4-09 (Lead 2026-11-11 04:20; T-692 READY: missing family, MEASURABLE, no ledger -> T-697): ELEMENT = the
+  metal angle bead on every plastered external arris (wall ends, piers, opening jambs and heads where the plaster turns).
+  OWNER TRADE: plaster (lane A, B4-09, lm, its own line bound by id to the FIN.PLASTER / external render face lines; never
+  inside plaster m2). NOT counted where another element owns the arris: an entrance surround (B6-06, ruling above), a
+  tiled arris (wall-tile edge trim belongs to the tile family), a marble / stone jamb lining. One arris once: internal
+  and external faces of the same opening are two arrises only when both are plastered. HELD where the plaster face
+  itself is HELD (never 0).
+- COLUMN TOPS UNDER B8 / 2F ROOF SLAB DATUM (Lead 2026-11-11 04:20; T-689 READY): the W28 head 12.200 - 0.013 under the
+  printed B8 20 x 75 fixes the 2F roof slab top at >= 12.937 at the B8 supports (columns 412 / 415). OWNER TRADE: the
+  column line (lane S, STR.CONC.COLUMN) owns the shaft to the beam soffit / slab top by the joint rule R-CONC-OWN-1; the
+  B8 beam and the slab keep their own lines; the window head is evidence only (never a quantity of the window trade).
+  The plate transfer +0.133640 m3 stays refused (F-T689-1: the T18 sits in the plate, not in the column).
 - WET-ROOM WALL BAND ABOVE THE FINISHED CEILING (Lead 2026-11-11 00:20; T-686 MERGED ae9b3d6d, F-T686-1: 20.53 m2 in no line): ELEMENT = the wall face of a wet room between the finished (false) ceiling and the structural soffit. OWNER TRADE: plaster (lane A, FIN.PLASTER: heights rule, plaster runs to the structural soffit); wall tile stops at its printed / wet-room rule height and never enters the band; paint does not apply above a closed ceiling unless a drawing says so. One count only: T-690 measures it per room, proves it is in no plaster, tile or paint line now and names the FIN.PLASTER line that takes it; it moves into the candidate only through a plaster Gate B (T-687 if merged before its hand-in, else the next round). Status until then HELD (never 0).
 - STAIR MS2 1F NORTH-WEST CORNER SQUARE: RESOLVED (Lead 2026-11-11 00:20; T-684 MERGED 8563a6fa, Checker own read): the square is the flat west part of the split landing MS2-LD (+7.516) with 1 closing riser; the three radiating lines on the 1F plan are the GF MS1-T winders seen below. T-184 element stands; 0 change on the 16 V3.0.66 lines and the T-680 1F bands; MS2-TR nosing 1.150 lm proposed DRAWING-CONFIRMED (B7-05, measured with T-690). The ruling below is kept as history.
 - STAIR MS2 1F NORTH-WEST CORNER SQUARE (1.15 m) (Lead 2026-11-10 20:20; Checker F-V680-1 in the T-680 verdict): ELEMENT UNRESOLVED between drawn winders (three radiating lines on the visible layer of the 1F plan, the GF MS1-T pattern) and the T-184 flat half-landing. OWNER TRADE: structure (lane S) owns the element definition and its concrete (STR.CONC.STAIR waist / steps / landing); finishes lines (B7 treads / risers / nosing T-424, skirting MS2-LD T-681, shaft plaster / paint T-680) take the element as defined and move in the package that wires T-684, never on their own. Owner stair rule S-9 applies (only drawn winders, none generated). Investigation: T-684. Until then every dependent line keeps its current status; none is VERIFIED on the corner.
