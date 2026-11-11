@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-11T23:06Z | Worker 2 | SUCCESS | T-719 READY (agents/task-T-719 @ fa71cded) | Void register, 7 voids by handle (no quantity moved): ST-02 light well 26.240 m2 - 1F living porcelain deducts 26.230 in a 26.173 face, 0.057 m2 twice (F1/F4 footprint overlap, ENGINE_WRONG cand. 33.411->33.468); GF ceiling once; blank 'ceiling over void' L-35341ff2 DOUBLE_COUNT_RISK vs decor 51.05; oval 3.824 EXTERIOR; lift shaft 3.24 x3, ST-01 box 10.725, domes 15.359 x2 once; 3rd dome HELD (S0). | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: Drive download is binary, wrapper decode needs base64 - re-encoded in scratchpad then decoded by the wrapper
 - 2026-11-11 23:01 UTC | Worker 3 | STARTED | run session_01E6cPncHvYCRcU15zUbU1if | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-11T22:53Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-703 (W3 integration package @af54dee2) | self-check pending
 - 2026-11-11 22:47 UTC | Worker 2 | STARTED | run session_01E6cPncj96Py5Gj1bijccLE | repo-attached routine | task state: none yet | self-check pending
