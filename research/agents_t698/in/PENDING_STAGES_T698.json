@@ -1,0 +1,1316 @@
+{
+ "T-314": {
+  "base": "ARCH_TAKEOFF_V3.0.61",
+  "base_short": "2bc99980",
+  "blob": "040ed5f9a8766b1a779dc8c61d7daf22280e6c8a",
+  "branch": "agents/task-T-314",
+  "commit": "080ccaa5",
+  "identity": {
+   "added": 15,
+   "base_lines": 5073,
+   "diff": {
+    "vs_base": {
+     "ADDED": 15,
+     "CHANGED": 3,
+     "SAME": 5070
+    }
+   },
+   "faces": {
+    "face_lines": 18,
+    "faces": 126,
+    "openings": 38
+   },
+   "outside_rows": 5070,
+   "outside_rows_identical_to_base": 5070,
+   "outside_rows_sha256": "bc504d29c92aeac3c5921264575352472141d407f4154d99b7b373bc1b0b6591",
+   "replaced": 3,
+   "v3_0_62_lines": 5088
+  },
+  "missing_items": [
+   {
+    "key": "FIN.EXT.CORNERS (all floors)",
+    "status": "HELD (bounded)",
+    "unit": "lm",
+    "why": "external arrises: own m.l line; needs an item code with a registry family (T-337 FILL_ITEMS 710.171878 .. 821.858800 m.l with blank slab-edge arris)"
+   },
+   {
+    "key": "FIN.EXT.COPING",
+    "status": "UNKNOWN",
+    "unit": "lm",
+    "why": "none printed"
+   },
+   {
+    "key": "FIN.EXT.DRIP",
+    "status": "UNKNOWN",
+    "unit": "lm",
+    "why": "nothing drawn; owner not answered"
+   },
+   {
+    "key": "FIN.EXT.CORNERS accessory (beads)",
+    "status": "UNKNOWN",
+    "unit": "lm",
+    "why": "accessory on the same arrises, never a second edge"
+   },
+   {
+    "key": "FIN.EXT.FRAME",
+    "status": "HELD",
+    "unit": "m2",
+    "why": "frame / band profile not detailed (designer)"
+   },
+   {
+    "key": "FIN.EXT.FINISH DIVIDER",
+    "status": "UNKNOWN",
+    "unit": "m2",
+    "why": "no top level printed (T-324)"
+   },
+   {
+    "key": "FIN.WP.UPTURN-ZONE-FACE (4 roofs)",
+    "status": "HELD",
+    "unit": "m2",
+    "why": "waterproofing trade's face below the parapet inner finish; with the inner face ONE face 94.123 .. 99.558 m2, never summed high + high"
+   }
+  ],
+  "path": "research/agents_t314/out/summary_t314.json",
+  "rows": [
+   {
+    "action": "CHANGE",
+    "after": {
+     "high": 249.954348,
+     "low": 248.178057,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "element": "STOREY",
+    "element_id": "1F-FACADE:facade",
+    "evidence_status": "HELD",
+    "floor": "1F",
+    "line_id": "L-8bb83e16cc7b104ab88b",
+    "line_key": "L-8bb83e16cc7b104ab88b",
+    "net": [
+     248.178057,
+     249.954348
+    ]
+   },
+   {
+    "action": "CHANGE",
+    "after": {
+     "high": 410.179149,
+     "low": 376.694149,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "element": "STOREY",
+    "element_id": "GF-FACADE:facade",
+    "evidence_status": "HELD",
+    "floor": "GF",
+    "line_id": "L-b05f70c92405dbcfbe62",
+    "line_key": "L-b05f70c92405dbcfbe62",
+    "net": [
+     376.694149,
+     410.179149
+    ]
+   },
+   {
+    "action": "CHANGE",
+    "after": {
+     "high": null,
+     "low": null,
+     "state": "PROVISIONAL",
+     "value": 117.305
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "element": "STOREY",
+    "element_id": "2F-FACADE:facade",
+    "evidence_status": "ASSUMED — OWNER-APPROVED",
+    "floor": "2F",
+    "line_id": "L-d52c4f763b19aedf8b8b",
+    "line_key": "L-d52c4f763b19aedf8b8b",
+    "net": [
+     117.305,
+     117.305
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": 60.029307,
+     "low": 54.00748,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_OUTER",
+    "element_id": "1F-FACADE:PARAPET_OUTER:1F_ROOF",
+    "evidence_status": "HELD",
+    "floor": "1F",
+    "line_id": "L-5a04a3ec70ce025ddd95",
+    "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+    "net": [
+     54.00748,
+     60.029307
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": null,
+     "low": null,
+     "state": "MEASURED",
+     "value": 14.9
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_OUTER",
+    "element_id": "2F-FACADE:PARAPET_OUTER:2F_ROOF",
+    "evidence_status": "DRAWING-CONFIRMED",
+    "floor": "2F",
+    "line_id": "L-d503696a891174c1d837",
+    "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+    "net": [
+     14.9,
+     14.9
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": 15.271022,
+     "low": 14.671022,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_OUTER",
+    "element_id": "GF-FACADE:PARAPET_OUTER:ANNEX_ROOF",
+    "evidence_status": "HELD",
+    "floor": "GF",
+    "line_id": "L-7c48b6a481d71ac57c54",
+    "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+    "net": [
+     14.671022,
+     15.271022
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": null,
+     "low": null,
+     "state": "MEASURED",
+     "value": 14.385
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_OUTER",
+    "element_id": "GF-FACADE:PARAPET_OUTER:GF_ROOF",
+    "evidence_status": "DRAWING-CONFIRMED",
+    "floor": "GF",
+    "line_id": "L-5816ca234f93f8947eb9",
+    "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+    "net": [
+     14.385,
+     14.385
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": 72.749795,
+     "low": 71.68859,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PLINTH",
+    "element_id": "GF-FACADE:PLINTH",
+    "evidence_status": "HELD",
+    "floor": "GF",
+    "line_id": "L-0a6d30ea444e90e119bb",
+    "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+    "net": [
+     71.68859,
+     72.749795
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "SLAB_EDGE",
+    "element_id": "1F-FACADE:SLAB_EDGE",
+    "evidence_status": "HELD",
+    "floor": "1F",
+    "line_id": "L-22e75c3942faeeb6718a",
+    "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+    "net": null
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": 4.30924,
+     "low": 1.85426,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "SLAB_EDGE",
+    "element_id": "GF-FACADE:SLAB_EDGE",
+    "evidence_status": "HELD",
+    "floor": "GF",
+    "line_id": "L-e3ee1b7f7603762da446",
+    "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE GF",
+    "net": [
+     1.85426,
+     4.30924
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": 56.608545,
+     "low": 41.82353,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_INNER",
+    "element_id": "1F-FACADE:PARAPET_INNER:1F_ROOF",
+    "evidence_status": "HELD",
+    "floor": "1F",
+    "line_id": "L-d4178f2108229818b472",
+    "line_key": "NEW FIN.EXT.PARAPET-INNER 1F +9.70",
+    "net": [
+     41.82353,
+     56.608545
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": 14.15,
+     "low": 8.49,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_INNER",
+    "element_id": "2F-FACADE:PARAPET_INNER:2F_ROOF",
+    "evidence_status": "HELD",
+    "floor": "2F",
+    "line_id": "L-fbda06a1ad25128c6a63",
+    "line_key": "NEW FIN.EXT.PARAPET-INNER 2F +13.90",
+    "net": [
+     8.49,
+     14.15
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": 14.91405,
+     "low": 8.88843,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_INNER",
+    "element_id": "GF-FACADE:PARAPET_INNER:ANNEX_ROOF",
+    "evidence_status": "HELD",
+    "floor": "GF",
+    "line_id": "L-c79492a8ed9c2c310d37",
+    "line_key": "NEW FIN.EXT.PARAPET-INNER ANNEX +4.30",
+    "net": [
+     8.88843,
+     14.91405
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": 13.88495,
+     "low": 8.209433,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_INNER",
+    "element_id": "GF-FACADE:PARAPET_INNER:GF_ROOF",
+    "evidence_status": "HELD",
+    "floor": "GF",
+    "line_id": "L-60877480b3303b0be233",
+    "line_key": "NEW FIN.EXT.PARAPET-INNER GF +5.50",
+    "net": [
+     8.209433,
+     13.88495
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": 9.84653,
+     "low": 9.83151,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_TOP",
+    "element_id": "1F-FACADE:PARAPET_TOP:1F_ROOF",
+    "evidence_status": "HELD",
+    "floor": "1F",
+    "line_id": "L-757343d535ae19b589bf",
+    "line_key": "NEW FIN.EXT.PARAPET-TOP 1F +9.70",
+    "net": [
+     9.83151,
+     9.84653
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": null,
+     "low": null,
+     "state": "MEASURED",
+     "value": 5.415
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_TOP",
+    "element_id": "2F-FACADE:PARAPET_TOP:2F_ROOF",
+    "evidence_status": "DRAWING-CONFIRMED",
+    "floor": "2F",
+    "line_id": "L-89d750dd0e9ced13f5ca",
+    "line_key": "NEW FIN.EXT.PARAPET-TOP 2F +13.90",
+    "net": [
+     5.415,
+     5.415
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": 6.03701,
+     "low": 5.99701,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_TOP",
+    "element_id": "GF-FACADE:PARAPET_TOP:ANNEX_ROOF",
+    "evidence_status": "HELD",
+    "floor": "GF",
+    "line_id": "L-54e708d3940d1932607c",
+    "line_key": "NEW FIN.EXT.PARAPET-TOP ANNEX +4.30",
+    "net": [
+     5.99701,
+     6.03701
+    ]
+   },
+   {
+    "action": "ADD",
+    "after": {
+     "high": 5.67398,
+     "low": 5.592956,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "element": "PARAPET_TOP",
+    "element_id": "GF-FACADE:PARAPET_TOP:GF_ROOF",
+    "evidence_status": "HELD",
+    "floor": "GF",
+    "line_id": "L-490fdc0ff59a0e66ca13",
+    "line_key": "NEW FIN.EXT.PARAPET-TOP GF +5.50",
+    "net": [
+     5.592956,
+     5.67398
+    ]
+   }
+  ],
+  "stage": "ARCH_TAKEOFF_V3.0.62 (stage, renumbered at claim)",
+  "stage_short": "6021be27",
+  "totals_moved": {
+   "FIN.EXT.FINISH|m2": {
+    "base": {
+     "blocked_lines": 3,
+     "bounded_lines": 0,
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "lines": 3,
+     "released": 0.0
+    },
+    "v3_0_62": {
+     "blocked_lines": 1,
+     "bounded_lines": 13,
+     "held_high": 933.607926,
+     "held_low": 855.926427,
+     "lines": 18,
+     "released": 152.005
+    },
+    "view_base": {
+     "blank_lines": 3,
+     "bounded_lines": 0,
+     "held_range": null,
+     "lines": 3,
+     "released": null,
+     "status": "HELD",
+     "text": "HELD (3 blank lines)",
+     "valued_lines": 0
+    },
+    "view_v3_0_62": {
+     "blank_lines": 1,
+     "bounded_lines": 13,
+     "held_range": null,
+     "lines": 18,
+     "released": 152.005,
+     "status": "PARTIAL",
+     "text": "AT_LEAST 152.005 + HELD (14 lines: 13 bounded, 1 blank)",
+     "valued_lines": 4
+    }
+   }
+  }
+ },
+ "T-687": {
+  "base": "ARCH_TAKEOFF_V3.0.68",
+  "blob": "6252bd8decdba1fd957c0620fb33b56929868978",
+  "branch": "agents/task-T-687",
+  "commit": "a8cf49c8",
+  "identity": {
+   "added": 18,
+   "diff": {
+    "vs_base": {
+     "ADDED": 18,
+     "CHANGED": 16,
+     "SAME": 5089
+    },
+    "vs_released_v2_9": {
+     "NOT_IN_RELEASED": 3531,
+     "QUANTITY_DIFFERS": 1054,
+     "SAME_QUANTITY": 538
+    }
+   },
+   "finishes": {
+    "BOUND": 14,
+    "CAUSE": 1,
+    "VALUE": 1,
+    "band_bound": 14,
+    "band_value": 4
+   },
+   "outside_rows": 5089,
+   "outside_rows_identical_to_base": 5089,
+   "replaced": 16
+  },
+  "path": "research/agents_t687/summary_t687.json",
+  "rows": [
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 62.434,
+     "low": 50.945,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": 62.01,
+     "low": 48.52,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "HL:WALL_FINISH:ST_GF:PLASTER",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-95f2c45c2eccaaeccb08",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 62.434,
+     "low": 50.945,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": 62.01,
+     "low": 48.52,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "HL:WALL_FINISH:ST_GF:PAINT",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PAINT",
+    "line_id": "L-145bd2394f2907558243",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 46.564,
+     "low": 45.317,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": 47.67,
+     "low": 42.48,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "HL:WALL_FINISH:ST_1F:PLASTER",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-0eac839f9132da7bd116",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 46.564,
+     "low": 45.317,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": 47.67,
+     "low": 42.48,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "HL:WALL_FINISH:ST_1F:PAINT",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PAINT",
+    "line_id": "L-2ab93d5029a4b7cc4dca",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 48.772,
+     "low": 47.342,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "HL:WALL_FINISH:ST_2F:PLASTER",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-418121a4b223cb4e8646",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 46.822,
+     "low": 45.392,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "HL:WALL_FINISH:ST_2F:PAINT",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PAINT",
+    "line_id": "L-5a7a5c6f070ec7142ca5",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 21.64,
+     "low": 13.7028,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "GF-R8496F0:plaster",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-2211463bba5eeb2e4282",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 22.615,
+     "low": 16.945,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "GF-RB62B55:plaster",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-f43782d52f32b53a6f1e",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 16.44,
+     "low": 12.2064,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "GF-RFAD3C4:plaster",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-f179fc08a266294ad4a4",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 42.6735,
+     "low": 31.720506,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "GF-RA3AD49:plaster",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-595181aa140e7efb2ac7",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 25.21,
+     "low": 11.4,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "GF-RDF7D28:plaster",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-3f7fb1b37e68e6d6c7b7",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 19.555,
+     "low": 7.04,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "GF-RD36087:plaster",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-a636dabcd4bc7e59169a",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 56.9257,
+     "low": 36.911738,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "HL:WALL_FINISH:GF_01:PAINT",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PAINT",
+    "line_id": "L-cdf7f5cd2789b67004f1",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 36.405,
+     "low": 26.9586,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "HL:WALL_FINISH:GF_04:PAINT",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PAINT",
+    "line_id": "L-d7d6d2f765489a95c408",
+    "unit": "m2"
+   },
+   {
+    "action": "VALUE",
+    "after": {
+     "high": null,
+     "low": null,
+     "state": "PROVISIONAL",
+     "value": 1.08
+    },
+    "before": {
+     "high": 1.2,
+     "low": 1.08,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "GF-OPENING-OP-009:door jambs and head",
+    "evidence_status": "ASSUMED - OWNER-APPROVED",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-f4175f9915208dc5f9f7",
+    "unit": "m2"
+   },
+   {
+    "action": "CAUSE",
+    "after": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": "BLOCKED_RFI",
+     "value": null
+    },
+    "change": "CHANGE",
+    "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-64cb94b4b8dc2cb17608",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 6.21,
+     "low": 3.51,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "1F-R8BDA49:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-6bcf9406e3ff0b96da6b",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 6.21,
+     "low": 3.51,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "1F-R48AA46:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-fccef7ef809c5bc21a23",
+    "unit": "m2"
+   },
+   {
+    "action": "VALUE",
+    "after": {
+     "high": null,
+     "low": null,
+     "state": "PROVISIONAL",
+     "value": 10.8416
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "1F-R26FA0D:plaster band above ceiling",
+    "evidence_status": "ASSUMED - OWNER-APPROVED",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-be4e20be1c791ad6864e",
+    "unit": "m2"
+   },
+   {
+    "action": "VALUE",
+    "after": {
+     "high": null,
+     "low": null,
+     "state": "PROVISIONAL",
+     "value": 4.1856
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "1F-R52AC05:plaster band above ceiling",
+    "evidence_status": "ASSUMED - OWNER-APPROVED",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-aa45baf044e3abc14f92",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 4.9818,
+     "low": 4.275,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "1F-RED23B8:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-79b6a45ab31f122546a9",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 6.003,
+     "low": 3.393,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "1F-R48CDA5:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-ff2a3a31df4c48599b73",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 6.693,
+     "low": 3.783,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "2F-RE83BED:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-c6ffb2cc0e02828f0939",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 6.918815,
+     "low": 2.853686,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "GF-RC06FED:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-ea586fea86188a18bb67",
+    "unit": "m2"
+   },
+   {
+    "action": "VALUE",
+    "after": {
+     "high": null,
+     "low": null,
+     "state": "PROVISIONAL",
+     "value": 4.74496
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "GF-RF38DAF:plaster band above ceiling",
+    "evidence_status": "ASSUMED - OWNER-APPROVED",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-4ad6cf526013266c2125",
+    "unit": "m2"
+   },
+   {
+    "action": "VALUE",
+    "after": {
+     "high": null,
+     "low": null,
+     "state": "PROVISIONAL",
+     "value": 4.3584
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "GF-RB28769:plaster band above ceiling",
+    "evidence_status": "ASSUMED - OWNER-APPROVED",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-477f92690d1b141f67c5",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 5.29088,
+     "low": 5.05488,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "GF-RDBD4F9:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-ef7a16664d12b68a6e71",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 5.085875,
+     "low": 2.2448,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "GF-RD6F891:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-6e94267143f7df16bac4",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 4.248,
+     "low": 3.658,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "GF-R8496F0:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-0d72630e929dd193c181",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 4.425,
+     "low": 4.425,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "GF-RB62B55:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-9fc0022e1cd4a65e0f38",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 3.304,
+     "low": 3.304,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "GF-RFAD3C4:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-d2923b89f8c35723fe00",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 8.555,
+     "low": 8.545994,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "GF-RA3AD49:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-5f10df2be91ae985d170",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 17.298,
+     "low": 3.584,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "GF-RDF7D28:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-8d82373c9e2c2f2acd3b",
+    "unit": "m2"
+   },
+   {
+    "action": "BOUND",
+    "after": {
+     "high": 13.671,
+     "low": 2.56,
+     "state": "BOUNDED_EXPOSURE",
+     "value": null
+    },
+    "before": {
+     "high": null,
+     "low": null,
+     "state": null,
+     "value": null
+    },
+    "change": "ADD",
+    "element_id": "GF-RD36087:plaster band above ceiling",
+    "evidence_status": "HELD",
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-85676275dc71d09ffcf2",
+    "unit": "m2"
+   }
+  ],
+  "stage": "ARCH_TAKEOFF_V3.0.69 (integration package, Gate B pending)"
+ },
+ "schema": "URBAN_T698_PENDING_STAGES_V1"
+}
