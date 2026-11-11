@@ -1,0 +1,250 @@
+{
+ "schema": "T721_LEDGER_V1",
+ "candidate": "ARCH_TAKEOFF_V3.0.71",
+ "rules": {
+  "R-T721-1": "1.0.0",
+  "R-T721-2": "1.0.0",
+  "R-T721-3": "1.0.0"
+ },
+ "note": "research only; nothing wired, released or VERIFIED; floors beside, never summed into released; released STR.CONC.BEAM lines untouched (this ledger reads, never writes, the candidate)",
+ "census": {
+  "lines": 12,
+  "AT_LEAST": 1,
+  "BLANK_NAMED": 11,
+  "zero": 0,
+  "ranges": 0,
+  "at_least_sum_beside_m3": "0.115155",
+  "blank_plan_m2": "6.947100",
+  "bounded_untouched": {
+   "lines": 14,
+   "low_m3": "5.983229",
+   "high_m3": "8.412710"
+  }
+ },
+ "rows": [
+  {
+   "line_id": "L-17c4238c0ef76656d06e",
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-019#2F-031",
+   "class_after": "HELD",
+   "bound": "BLANK_NAMED",
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "member": "2F edge projection 0.1 x 4.35 m",
+   "basis": "R-T721-2 / R-T660-3",
+   "m3_per_m_depth": "0.435000",
+   "guard": "valued in ONE family only (beam OR parapet / projection)",
+   "set_aside_not_drawn": null,
+   "before": "blank"
+  },
+  {
+   "line_id": "L-331d4bbef719a7f0bbca",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.2",
+   "class_after": "HELD",
+   "bound": "BLANK_NAMED",
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "member": "GF edge projection 0.2 x 0.5251 m (edges 2C6 2C7)",
+   "basis": "R-T721-2 / R-T660-3",
+   "m3_per_m_depth": "0.105000",
+   "guard": "valued in ONE family only (beam OR parapet / projection)",
+   "set_aside_not_drawn": {
+    "low": "0.042000",
+    "high": "0.126000"
+   },
+   "before": "blank"
+  },
+  {
+   "line_id": "L-377cb988b2271c2e2e4d",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-038",
+   "class_after": "HELD",
+   "bound": "BLANK_NAMED",
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "member": "1F edge projection 0.1 x 5.69 m",
+   "basis": "R-T721-2 / R-T660-3",
+   "m3_per_m_depth": "0.569000",
+   "guard": "valued in ONE family only (beam OR parapet / projection)",
+   "set_aside_not_drawn": null,
+   "before": "blank"
+  },
+  {
+   "line_id": "L-54e397fe7b1485b2e8fe",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.2",
+   "class_after": "HELD",
+   "bound": "BLANK_NAMED",
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "member": "1F edge projection 0.2 x 0.5238 m (edges 5E1 5E6)",
+   "basis": "R-T721-2 / R-T660-3",
+   "m3_per_m_depth": "0.104800",
+   "guard": "valued in ONE family only (beam OR parapet / projection)",
+   "set_aside_not_drawn": {
+    "low": "0.042000",
+    "high": "0.126000"
+   },
+   "before": "blank"
+  },
+  {
+   "line_id": "L-56d278bedc8dda2837a9",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-036#BAND0025",
+   "class_after": "HELD",
+   "bound": "BLANK_NAMED",
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "member": "1F edge projection 0.2985 x 4.2845 m (edges 5DE 629)",
+   "basis": "R-T721-2 / R-T660-3",
+   "m3_per_m_depth": "1.544100",
+   "guard": "valued in ONE family only (beam OR parapet / projection)",
+   "set_aside_not_drawn": {
+    "low": "0.676000",
+    "high": "1.015000"
+   },
+   "before": "blank"
+  },
+  {
+   "line_id": "L-634cefe5e8a7fb458e16",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.1",
+   "class_after": "HELD",
+   "bound": "BLANK_NAMED",
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "member": "GF edge projection 0.1999 x 3.0005 m (edges 2C6 2C7)",
+   "basis": "R-T721-2 / R-T660-3",
+   "m3_per_m_depth": "0.599800",
+   "guard": "valued in ONE family only (beam OR parapet / projection)",
+   "set_aside_not_drawn": {
+    "low": "0.240000",
+    "high": "0.720000"
+   },
+   "before": "blank"
+  },
+  {
+   "line_id": "L-67f3d325019e618328eb",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.1",
+   "class_after": "HELD",
+   "bound": "BLANK_NAMED",
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "member": "1F edge projection 0.2 x 2.9987 m (edges 5E1 5E6)",
+   "basis": "R-T721-2 / R-T660-3",
+   "m3_per_m_depth": "0.599700",
+   "guard": "valued in ONE family only (beam OR parapet / projection)",
+   "set_aside_not_drawn": {
+    "low": "0.240000",
+    "high": "0.720000"
+   },
+   "before": "blank"
+  },
+  {
+   "line_id": "L-a9d5e7dc22013e24d691",
+   "element_id": "U-C:BEAMS:1F:BAND0014",
+   "class_after": "HELD",
+   "bound": "BLANK_NAMED",
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "member": "1F edge projection 0.2 x 7.4996 m (edges 5E7 5E5)",
+   "basis": "R-T721-2 / R-T660-3",
+   "m3_per_m_depth": "1.499900",
+   "guard": "valued in ONE family only (beam OR parapet / projection)",
+   "set_aside_not_drawn": {
+    "low": "0.600000",
+    "high": "1.800000"
+   },
+   "before": "blank"
+  },
+  {
+   "line_id": "L-ab37afa17f2ac5b0efd1",
+   "element_id": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY",
+   "class_after": "HELD",
+   "bound": "AT_LEAST",
+   "at_least_m3": "0.115155",
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-28 (east dome-opening ring: no mark; ST p.7 ring depth 'AS PER ARCH'; architect's sections draw no ring) - AT_LEAST from the printed bar stack, upper end open",
+   "member": "east dome-opening ring 0.20 wide, in-bay (B25 / CB12 / B6 x2 own the corners)",
+   "basis": "R-T721-1 BAR_STACK",
+   "depth_floor_m": "0.064",
+   "depth_terms": "2 x T8 link + T16 top + T14 side (1 level) + T18 bottom; cover not printed, not added",
+   "plan_area_readings_m2": [
+    "1.799300",
+    "1.7994065"
+   ],
+   "plan_area_used_m2": "1.799300",
+   "slab_overlap": "none: the 1F roof slab ledger stops at r_outer (T-160); the opening inside r_inner",
+   "not_adopted": [
+    "0.75 scaled from the N.I.S. detail (inadmissible)",
+    "0.50 (B4) - no B4 mark on this ring (Q-61 C(3))",
+    "0.16 roof-slab thickness - no sheet ties the ring depth to the slab",
+    "0.40 from '/20cm' read as layer pitch - a maximum spacing is no depth"
+   ],
+   "before": "blank"
+  },
+  {
+   "line_id": "L-aba59a2157a48a69e2fb",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-061",
+   "class_after": "HELD",
+   "bound": "BLANK_NAMED",
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "member": "GF edge projection 0.2 x 4.1 m",
+   "basis": "R-T721-2 / R-T660-3",
+   "m3_per_m_depth": "0.820000",
+   "guard": "valued in ONE family only (beam OR parapet / projection)",
+   "set_aside_not_drawn": null,
+   "before": "blank"
+  },
+  {
+   "line_id": "L-bb49e831f053bd30a6ce",
+   "element_id": "U-C:BEAMS:1F:BAND0023",
+   "class_after": "HELD",
+   "bound": "BLANK_NAMED",
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "member": "1F edge projection 0.3 x 0.8994 m (edges 5C1 619)",
+   "basis": "R-T721-2 / R-T660-3",
+   "m3_per_m_depth": "0.269800",
+   "guard": "valued in ONE family only (beam OR parapet / projection)",
+   "set_aside_not_drawn": {
+    "low": "0.135000",
+    "high": "0.202500"
+   },
+   "before": "blank"
+  },
+  {
+   "line_id": "L-fbb65dfd2a66a16714ac",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-037",
+   "class_after": "HELD",
+   "bound": "BLANK_NAMED",
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "measured_net": null,
+   "item": "D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "member": "1F edge projection 0.4 x 1.0 m",
+   "basis": "R-T721-2 / R-T660-3",
+   "m3_per_m_depth": "0.400000",
+   "guard": "valued in ONE family only (beam OR parapet / projection)",
+   "set_aside_not_drawn": null,
+   "before": "blank"
+  }
+ ]
+}
