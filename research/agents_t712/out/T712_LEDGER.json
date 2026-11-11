@@ -1,0 +1,568 @@
+{
+ "at_least_family_beside_m3": "5.099845",
+ "bounded_lines_unchanged": {
+  "high": "5.096771",
+  "lines": 9,
+  "low": "1.178378"
+ },
+ "by_designer_item": {
+  "D-33": {
+   "area_m2": "7.785884146",
+   "at_least_lines": 8,
+   "at_least_m3": "2.841864",
+   "blank": 0,
+   "lines": 8
+  },
+  "D-35": {
+   "area_m2": "9.031924732",
+   "at_least_lines": 9,
+   "at_least_m3": "2.257981",
+   "blank": 0,
+   "lines": 9
+  },
+  "D-35 (court)": {
+   "area_m2": "1.710000",
+   "at_least_lines": 0,
+   "at_least_m3": "0",
+   "blank": 3,
+   "lines": 3
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.70",
+ "census": {
+  "at_least": 17,
+  "blank_named": 3,
+  "lines": 20
+ },
+ "freelancer_section_on_the_20_drawn_plans_m3": "11.116685",
+ "lines": [
+  {
+   "area_m2": "2.910000000",
+   "at_least_m3": "0.727500",
+   "at_most_m3": null,
+   "at_most_why_none": "underside printed only as 'Outer Normal ground level' (the conflicting reading); no footing-top or formation level is printed (ST p.9 note 1 prints a MINIMUM depth only)",
+   "basis": "LITERAL_LEVELS",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-35",
+   "depth_floor_m": "0.25",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0015",
+   "freelancer_section_on_drawn_plan": "1.746000",
+   "hand": "drawn area 2.910000000 m2 x (+0.25 - 0.00) = 0.72750000000",
+   "item": "D-35 (exterior ground-beam depth 'FOLLOW ARCH.'; annex literal +0.25 -> N.G. 0.00 cannot hold the printed bars)",
+   "line_id": "L-402dbe61d1c924144a3c",
+   "m3_per_0_10m_depth": "0.291000",
+   "measured_net": null,
+   "member": "annex south band F8/7D4, col 207 -> col 20B -> east band face 7D1",
+   "t658_floor": "0.727500",
+   "vs_t658": "0.000000"
+  },
+  {
+   "area_m2": "0.450000000",
+   "at_least_m3": "0.112500",
+   "at_most_m3": null,
+   "at_most_why_none": "underside printed only as 'Outer Normal ground level' (the conflicting reading); no footing-top or formation level is printed (ST p.9 note 1 prints a MINIMUM depth only)",
+   "basis": "LITERAL_LEVELS",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-35",
+   "depth_floor_m": "0.25",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0012.1",
+   "freelancer_section_on_drawn_plan": "0.270000",
+   "hand": "drawn area 0.450000000 m2 x (+0.25 - 0.00) = 0.11250000000",
+   "item": "D-35 (exterior ground-beam depth 'FOLLOW ARCH.'; annex literal +0.25 -> N.G. 0.00 cannot hold the printed bars)",
+   "line_id": "L-6bf14711798e5af93594",
+   "m3_per_0_10m_depth": "0.045000",
+   "measured_net": null,
+   "member": "annex east band 10B/7D1 run 1, incl. the SE corner square (T-669) -> col 22C",
+   "t658_floor": "0.090000",
+   "vs_t658": "0.022500"
+  },
+  {
+   "area_m2": "0.690000000",
+   "at_least_m3": "0.172500",
+   "at_most_m3": null,
+   "at_most_why_none": "underside printed only as 'Outer Normal ground level' (the conflicting reading); no footing-top or formation level is printed (ST p.9 note 1 prints a MINIMUM depth only)",
+   "basis": "LITERAL_LEVELS",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-35",
+   "depth_floor_m": "0.25",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0012.2",
+   "freelancer_section_on_drawn_plan": "0.414000",
+   "hand": "drawn area 0.690000000 m2 x (+0.25 - 0.00) = 0.17250000000",
+   "item": "D-35 (exterior ground-beam depth 'FOLLOW ARCH.'; annex literal +0.25 -> N.G. 0.00 cannot hold the printed bars)",
+   "line_id": "L-3284f44000c02179ace7",
+   "m3_per_0_10m_depth": "0.069000",
+   "measured_net": null,
+   "member": "annex east band 10B/7D1 run 2, col 22C -> col 223 (C5)",
+   "t658_floor": "0.172500",
+   "vs_t658": "0.000000"
+  },
+  {
+   "area_m2": "1.800000000",
+   "at_least_m3": "0.450000",
+   "at_most_m3": null,
+   "at_most_why_none": "underside printed only as 'Outer Normal ground level' (the conflicting reading); no footing-top or formation level is printed (ST p.9 note 1 prints a MINIMUM depth only)",
+   "basis": "LITERAL_LEVELS",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-35",
+   "depth_floor_m": "0.25",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0016",
+   "freelancer_section_on_drawn_plan": "1.080000",
+   "hand": "drawn area 1.800000000 m2 x (+0.25 - 0.00) = 0.45000000000",
+   "item": "D-35 (exterior ground-beam depth 'FOLLOW ARCH.'; annex literal +0.25 -> N.G. 0.00 cannot hold the printed bars)",
+   "line_id": "L-4783c6e18002c3a8a37e",
+   "m3_per_0_10m_depth": "0.180000",
+   "measured_net": null,
+   "member": "annex west band 136/7D5, col 207 -> col 204",
+   "t658_floor": "0.450000",
+   "vs_t658": "0.000000"
+  },
+  {
+   "area_m2": "0.720000000",
+   "at_least_m3": "0.180000",
+   "at_most_m3": null,
+   "at_most_why_none": "underside printed only as 'Outer Normal ground level' (the conflicting reading); no footing-top or formation level is printed (ST p.9 note 1 prints a MINIMUM depth only)",
+   "basis": "LITERAL_LEVELS",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-35",
+   "depth_floor_m": "0.25",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0035",
+   "freelancer_section_on_drawn_plan": "0.432000",
+   "hand": "drawn area 0.720000000 m2 x (+0.25 - 0.00) = 0.18000000000",
+   "item": "D-35 (exterior ground-beam depth 'FOLLOW ARCH.'; annex literal +0.25 -> N.G. 0.00 cannot hold the printed bars)",
+   "line_id": "L-00465df980165c529476",
+   "m3_per_0_10m_depth": "0.072000",
+   "measured_net": null,
+   "member": "annex north band 137/138, col 204 -> col 214",
+   "t658_floor": "0.180000",
+   "vs_t658": "0.000000"
+  },
+  {
+   "area_m2": "0.541924732",
+   "at_least_m3": "0.135481",
+   "at_most_m3": null,
+   "at_most_why_none": "underside printed only as 'Outer Normal ground level' (the conflicting reading); no footing-top or formation level is printed (ST p.9 note 1 prints a MINIMUM depth only)",
+   "basis": "LITERAL_LEVELS",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-35",
+   "depth_floor_m": "0.25",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0042",
+   "freelancer_section_on_drawn_plan": "0.325155",
+   "hand": "drawn area 0.541924732 m2 x (+0.25 - 0.00) = 0.13548118300",
+   "item": "D-35 (exterior ground-beam depth 'FOLLOW ARCH.'; annex literal +0.25 -> N.G. 0.00 cannot hold the printed bars)",
+   "line_id": "L-e16c98075f69532a3dc7",
+   "m3_per_0_10m_depth": "0.054192",
+   "measured_net": null,
+   "member": "annex NE quarter ring r 1.00 .. 1.30, col 214 -> band 13E/7D6",
+   "t658_floor": "0.135473",
+   "vs_t658": "0.000008"
+  },
+  {
+   "area_m2": "0.150000000",
+   "at_least_m3": "0.037500",
+   "at_most_m3": null,
+   "at_most_why_none": "underside printed only as 'Outer Normal ground level' (the conflicting reading); no footing-top or formation level is printed (ST p.9 note 1 prints a MINIMUM depth only)",
+   "basis": "LITERAL_LEVELS",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-35",
+   "depth_floor_m": "0.25",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0017.2",
+   "freelancer_section_on_drawn_plan": "0.090000",
+   "hand": "drawn area 0.150000000 m2 x (+0.25 - 0.00) = 0.03750000000",
+   "item": "D-35 (exterior ground-beam depth 'FOLLOW ARCH.'; annex literal +0.25 -> N.G. 0.00 cannot hold the printed bars)",
+   "line_id": "L-b4a13a43967ee4765662",
+   "m3_per_0_10m_depth": "0.015000",
+   "measured_net": null,
+   "member": "annex band 13E/7D6 run 2, face 13D -> ring end",
+   "t658_floor": "0.037500",
+   "vs_t658": "0.000000"
+  },
+  {
+   "area_m2": "1.740000000",
+   "at_least_m3": "0.435000",
+   "at_most_m3": null,
+   "at_most_why_none": "underside printed only as 'Outer Normal ground level' (the conflicting reading); no footing-top or formation level is printed (ST p.9 note 1 prints a MINIMUM depth only)",
+   "basis": "LITERAL_LEVELS",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-35",
+   "depth_floor_m": "0.25",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.2",
+   "freelancer_section_on_drawn_plan": "1.044000",
+   "hand": "drawn area 1.740000000 m2 x (+0.25 - 0.00) = 0.43500000000",
+   "item": "D-35 (exterior ground-beam depth 'FOLLOW ARCH.'; annex literal +0.25 -> N.G. 0.00 cannot hold the printed bars)",
+   "line_id": "L-d8b98b143e293d30833b",
+   "m3_per_0_10m_depth": "0.174000",
+   "measured_net": null,
+   "member": "annex band 13D/7D2 run 1, col 211 (C3) -> col 223 (C5)",
+   "t658_floor": "0.435000",
+   "vs_t658": "0.000000"
+  },
+  {
+   "area_m2": "0.030000000",
+   "at_least_m3": "0.007500",
+   "at_most_m3": null,
+   "basis": "JUNCTION",
+   "beside": "if the 30x40 of the released interior span 0017.1 runs through the square: 0.012000 (reading, not the floor); col 211 owns its full section (R-T666-1)",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-35",
+   "depth_floor_m": "0.25",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.1",
+   "freelancer_section_on_drawn_plan": "0.018000",
+   "hand": "0.10 x 0.30 = 0.030000000 m2 x 0.25 (least of the members that may own the square)",
+   "item": "D-35 (exterior ground-beam depth 'FOLLOW ARCH.'; annex literal +0.25 -> N.G. 0.00 cannot hold the printed bars)",
+   "line_id": "L-be6708e07b40efa02779",
+   "m3_per_0_10m_depth": "0.003000",
+   "measured_net": null,
+   "member": "annex junction remainder of 13D/7D2 on 13E/7D6: face 7D6 -> col 211 (0.10 x 0.30)",
+   "was": "OPEN BOUND 'neck-cut sliver section not printed' (R-GB-NECK-CUT-1, T-669 census)"
+  },
+  {
+   "area_m2": "0.807695240",
+   "area_readings_m2": [
+    "0.807695240"
+   ],
+   "at_least_m3": "0.242308",
+   "at_most_m3": null,
+   "at_most_why_none": "loaded run: the unloaded titles are a reference, not a ceiling (R-T658-8)",
+   "basis": "LEAST_TITLE",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-33",
+   "depth_floor_m": "0.30",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0037.1",
+   "freelancer_section_on_drawn_plan": "0.484617",
+   "hand": "min area 0.807695240 m2 x least title 0.30 = 0.24230857200",
+   "item": "D-33 (run carrying a landing beam; ST p.13 prints sections only 'without concentrated load')",
+   "landing_beam": "182+183",
+   "line_id": "L-0bb78accf8c0a0fbdbaf",
+   "m3_per_0_10m_depth": "0.080769",
+   "measured_net": null,
+   "member": "oblique band 17E/17F, face 7E6 -> col 1EF",
+   "spans_m": [
+    "2.4269"
+   ],
+   "t658_floor": "0.242309",
+   "titles_holding": {
+    "2.4269": [
+     "0.30",
+     "0.40"
+    ]
+   },
+   "vs_t658": "-0.000001"
+  },
+  {
+   "area_m2": "0.492188906",
+   "area_readings_m2": [
+    "0.492188906"
+   ],
+   "at_least_m3": "0.147656",
+   "at_most_m3": null,
+   "at_most_why_none": "loaded run: the unloaded titles are a reference, not a ceiling (R-T658-8)",
+   "basis": "LEAST_TITLE",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-33",
+   "depth_floor_m": "0.30",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.2",
+   "freelancer_section_on_drawn_plan": "0.295313",
+   "hand": "min area 0.492188906 m2 x least title 0.30 = 0.14765667180",
+   "item": "D-33 (run carrying a landing beam; ST p.13 prints sections only 'without concentrated load')",
+   "landing_beam": "7E7+7E8",
+   "line_id": "L-d53e5eb08e2c6c668254",
+   "m3_per_0_10m_depth": "0.049218",
+   "measured_net": null,
+   "member": "band 177/7CD run 2, col 245 -> curved band outer face",
+   "spans_m": [
+    "1.5367"
+   ],
+   "t658_floor": "0.147657",
+   "titles_holding": {
+    "1.5367": [
+     "0.30",
+     "0.40"
+    ]
+   },
+   "vs_t658": "-0.000001"
+  },
+  {
+   "area_m2": "0.630000000",
+   "area_readings_m2": [
+    "0.630000000"
+   ],
+   "at_least_m3": "0.189000",
+   "at_most_m3": null,
+   "at_most_why_none": "loaded run: the unloaded titles are a reference, not a ceiling (R-T658-8)",
+   "basis": "LEAST_TITLE",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-33",
+   "depth_floor_m": "0.30",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0040",
+   "freelancer_section_on_drawn_plan": "0.378000",
+   "hand": "min area 0.630000000 m2 x least title 0.30 = 0.18900000000",
+   "item": "D-33 (run carrying a landing beam; ST p.13 prints sections only 'without concentrated load')",
+   "landing_beam": "180+181",
+   "line_id": "L-a8c5c32c7a785c1e3f05",
+   "m3_per_0_10m_depth": "0.063000",
+   "measured_net": null,
+   "member": "band 180D/180E, face 176 -> face 175",
+   "spans_m": [
+    "2.1"
+   ],
+   "t658_floor": "0.189000",
+   "titles_holding": {
+    "2.1": [
+     "0.30",
+     "0.40"
+    ]
+   },
+   "vs_t658": "0.000000"
+  },
+  {
+   "area_m2": "0.735000000",
+   "area_readings_m2": [
+    "0.735000000"
+   ],
+   "at_least_m3": "0.220500",
+   "at_most_m3": null,
+   "at_most_why_none": "loaded run: the unloaded titles are a reference, not a ceiling (R-T658-8)",
+   "basis": "LEAST_TITLE",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-33",
+   "depth_floor_m": "0.30",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0019",
+   "freelancer_section_on_drawn_plan": "0.441000",
+   "hand": "min area 0.735000000 m2 x least title 0.30 = 0.22050000000",
+   "item": "D-33 (run carrying a landing beam; ST p.13 prints sections only 'without concentrated load')",
+   "landing_beam": "141+7DA",
+   "line_id": "L-1487bdda099006e0c4ba",
+   "m3_per_0_10m_depth": "0.073500",
+   "measured_net": null,
+   "member": "band 142/7D8 (drawn ends)",
+   "spans_m": [
+    "2.45"
+   ],
+   "t658_floor": "0.220500",
+   "titles_holding": {
+    "2.45": [
+     "0.30",
+     "0.40"
+    ]
+   },
+   "vs_t658": "0.000000"
+  },
+  {
+   "area_m2": "1.500000000",
+   "area_readings_m2": [
+    "1.500000000"
+   ],
+   "at_least_m3": "0.600000",
+   "at_most_m3": null,
+   "at_most_why_none": "loaded run: the unloaded titles are a reference, not a ceiling (R-T658-8)",
+   "basis": "LEAST_TITLE",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-33",
+   "depth_floor_m": "0.40",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0010.3",
+   "freelancer_section_on_drawn_plan": "0.900000",
+   "hand": "min area 1.500000000 m2 x least title 0.40 = 0.60000000000",
+   "item": "D-33 (run carrying a landing beam; ST p.13 prints sections only 'without concentrated load')",
+   "landing_beam": "7E7+7E8",
+   "line_id": "L-5af89b9f1e5b90daf8f5",
+   "m3_per_0_10m_depth": "0.150000",
+   "measured_net": null,
+   "member": "band 184/7CF run 3, col 23C -> drawn end (5.00 m ON_LIMIT)",
+   "spans_m": [
+    "5.0"
+   ],
+   "t658_floor": "0.600000",
+   "titles_holding": {
+    "5.0": [
+     "0.40",
+     "0.60"
+    ]
+   },
+   "vs_t658": "0.000000"
+  },
+  {
+   "area_m2": "1.506000000",
+   "area_readings_m2": [
+    "1.506000000",
+    "1.491"
+   ],
+   "at_least_m3": "0.596400",
+   "at_most_m3": null,
+   "at_most_why_none": "loaded run: the unloaded titles are a reference, not a ceiling (R-T658-8)",
+   "basis": "LEAST_TITLE",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-33",
+   "depth_floor_m": "0.40",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.1",
+   "freelancer_section_on_drawn_plan": "0.903600",
+   "hand": "min area 1.491 m2 x least title 0.40 = 0.59640",
+   "item": "D-33 (run carrying a landing beam; ST p.13 prints sections only 'without concentrated load')",
+   "landing_beam": "175+7DE / 176+7E6 / 7DC+7DD",
+   "line_id": "L-e24946df436cbc25fca6",
+   "m3_per_0_10m_depth": "0.149100",
+   "measured_net": null,
+   "member": "band 177/7CD run 1, drawn end -> col 245",
+   "spans_m": [
+    "5.02",
+    "4.97"
+   ],
+   "t658_floor": "0.596400",
+   "titles_holding": {
+    "4.97": [
+     "0.40"
+    ],
+    "5.02": [
+     "0.60"
+    ]
+   },
+   "vs_t658": "0.000000"
+  },
+  {
+   "area_m2": "1.057500000",
+   "area_readings_m2": [
+    "1.057500000"
+   ],
+   "at_least_m3": "0.423000",
+   "at_most_m3": null,
+   "at_most_why_none": "loaded run: the unloaded titles are a reference, not a ceiling (R-T658-8)",
+   "basis": "LEAST_TITLE",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-33",
+   "depth_floor_m": "0.40",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0023:7DC+7DD#1",
+   "freelancer_section_on_drawn_plan": "0.634500",
+   "hand": "min area 1.057500000 m2 x least title 0.40 = 0.42300000000",
+   "item": "D-33 (run carrying a landing beam; ST p.13 prints sections only 'without concentrated load')",
+   "landing_beam": "7E1+7E2",
+   "line_id": "L-95a1f198cfe7f398d6ae",
+   "m3_per_0_10m_depth": "0.105750",
+   "measured_net": null,
+   "member": "band 7DC/7DD run 1, face 7CF -> col 7F5",
+   "spans_m": [
+    "3.525"
+   ],
+   "t658_floor": "0.423000",
+   "titles_holding": {
+    "3.525": [
+     "0.40"
+    ]
+   },
+   "vs_t658": "0.000000"
+  },
+  {
+   "area_m2": "1.057500000",
+   "area_readings_m2": [
+    "1.057500000"
+   ],
+   "at_least_m3": "0.423000",
+   "at_most_m3": null,
+   "at_most_why_none": "loaded run: the unloaded titles are a reference, not a ceiling (R-T658-8)",
+   "basis": "LEAST_TITLE",
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "d_id": "D-33",
+   "depth_floor_m": "0.40",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0032:7E7+7E8#2",
+   "freelancer_section_on_drawn_plan": "0.634500",
+   "hand": "min area 1.057500000 m2 x least title 0.40 = 0.42300000000",
+   "item": "D-33 (run carrying a landing beam; ST p.13 prints sections only 'without concentrated load')",
+   "landing_beam": "114+115+7DF",
+   "line_id": "L-cfb4555cb26b39934bff",
+   "m3_per_0_10m_depth": "0.105750",
+   "measured_net": null,
+   "member": "band 7E7/7E8 run 2, col 7ED -> face 177",
+   "spans_m": [
+    "3.525"
+   ],
+   "t658_floor": "0.423000",
+   "titles_holding": {
+    "3.525": [
+     "0.40"
+    ]
+   },
+   "vs_t658": "0.000000"
+  },
+  {
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "basis": null,
+   "bound": "BLANK_NAMED",
+   "class_after": "HELD",
+   "d_id": "D-35 (court)",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0002.1",
+   "freelancer_section_on_drawn_plan": "0.108000",
+   "item": "D-35 court stretch (exterior section; neither the slab / landing level it carries nor the yard ground under it is printed; GB.EXTERIOR.DEPTH_BASIS.COURT not declared)",
+   "line_id": "L-62243c74c430d383be86",
+   "m3_per_m_depth": [
+    "0.180000"
+   ],
+   "measured_net": null,
+   "member": "west entrance: band 185/7C7, col 230 (C7) -> main west face 109; landing north edge",
+   "plan_readings": "run net of columns",
+   "why": "no printed level for the slab / landing the beam carries nor for the ground under it; the exterior section's depth is 'FOLLOW ARCH.': any figure would be chosen"
+  },
+  {
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "basis": null,
+   "bound": "BLANK_NAMED",
+   "class_after": "HELD",
+   "d_id": "D-35 (court)",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0022",
+   "freelancer_section_on_drawn_plan": "0.684000",
+   "item": "D-35 court stretch (exterior section; neither the slab / landing level it carries nor the yard ground under it is printed; GB.EXTERIOR.DEPTH_BASIS.COURT not declared)",
+   "line_id": "L-21795b350fbd09150c43",
+   "m3_per_m_depth": [
+    "1.140000"
+   ],
+   "measured_net": null,
+   "member": "west entrance: band 178/7DB, face 145 -> face 7C7; edge between the yard stair (+0.15) and the landing",
+   "plan_readings": "run net of columns",
+   "why": "no printed level for the slab / landing the beam carries nor for the ground under it; the exterior section's depth is 'FOLLOW ARCH.': any figure would be chosen"
+  },
+  {
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "basis": null,
+   "bound": "BLANK_NAMED",
+   "class_after": "HELD",
+   "d_id": "D-35 (court)",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0041",
+   "freelancer_section_on_drawn_plan": "0.234000",
+   "item": "D-35 court stretch (exterior section; neither the slab / landing level it carries nor the yard ground under it is printed; GB.EXTERIOR.DEPTH_BASIS.COURT not declared)",
+   "line_id": "L-a55bfa01b726ef11650c",
+   "m3_per_m_depth": [
+    "0.390000",
+    "0.415000"
+   ],
+   "measured_net": null,
+   "member": "band 1811/1812, col 1E8 (C4) -> drawn end at the plot line (pool-deck side)",
+   "plan_readings": "run net of col 1E8 / strip of band 1812 under col 1E8 (0.025 m2) as a second reading",
+   "why": "no printed level for the slab / landing the beam carries nor for the ground under it; the exterior section's depth is 'FOLLOW ARCH.': any figure would be chosen"
+  }
+ ],
+ "not_claimed": "nothing wired, released or VERIFIED; no AT_MOST; floors never summed into a released total",
+ "rules": {
+  "R-T712-1": "1.0.0",
+  "R-T712-2": "1.0.0",
+  "R-T712-3": "1.0.0"
+ },
+ "schema": "T712_LEDGER_V1",
+ "task": "T-712"
+}
