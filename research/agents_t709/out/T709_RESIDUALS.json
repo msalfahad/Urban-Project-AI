@@ -1,0 +1,1455 @@
+{
+ "a_double_height": {
+  "engine_effect_if_wired": {
+   "FIN.PAINT": "+3.344721 .. 3.525121 m2",
+   "FIN.PLASTER": "+0.839412 .. 0.870912 m2 (new HELD/RELEASED band line under 1F-13 or GF-08, lane I decides the host)"
+  },
+  "gf_solid_pieces": {
+   "col_e": "0.547201",
+   "col_w": "0.8",
+   "solid": "2.65"
+  },
+  "gf_solid_under_lm": "3.997201",
+  "held_beam_faces": [
+   {
+    "datum": "depth of the beam under the 1F south wall (structural GF roof slab plan; not read this run)",
+    "face": "south wall over the GF opening / curb (no wall below, overhead line A8)",
+    "lm": "3.020000",
+    "m2": null
+   },
+   {
+    "datum": "beam depth under the 1F west well wall (same sheet)",
+    "face": "west well wall (1F wall AF7 over the GF dining; GF line 4B1 hidden)",
+    "lm": "4.000000",
+    "m2": null
+   }
+  ],
+  "paint_band": {
+   "levels": [
+    "4.65",
+    "5.50"
+   ],
+   "m2": [
+    "3.344721",
+    "3.525121"
+   ],
+   "status": "BOUNDED: high adds the column returns; low takes the ST-02 corner landing (+4.696) against the wall over at most 1.15 m (7.02 - 5.87) takes 0 .. 0.052900 m2 of the band (its length along the wall not read)"
+  },
+  "plaster_band": {
+   "levels": [
+    "5.29",
+    "5.50"
+   ],
+   "m2": [
+    "0.839412",
+    "0.870912"
+   ],
+   "status": "BOUNDED: face run by handle this run, heights T-556 DRAWING-CONFIRMED, FFL printed; high end adds the column returns proud 0.05 (0.15 lm) if they continue through the band"
+  },
+  "rule": "R-T709-1 (PROPOSED; scope: walls bounding a slab-free stairwell / void; provenance: owner Q-72 answer 2026-11-02, continuous exposed height through a stairwell)",
+  "south_wall_zone_lm": "7.02",
+  "verdict": "ENGINE_OMISSION (small): GF-08 stops at its own soffit / ceiling and 1F-13 starts at +5.50 on a wall that runs through the stairwell; the band in between is built and finished."
+ },
+ "a_shaft": {
+  "element": "ST-01 (stair beside the lift): four faces W / E (the lift-shaft wall's stair side) / N / S (GF only), each one face from its lowest floor to the roof soffit (Q-72 owner answer; T-173 / T-680). The lift shaft's own inside faces are no finish face (no line, his rows do not price them). The open south side above +5.50 is no face. Engine lines unchanged (L-95f2c45c / L-0eac839f / L-418121a4 plaster, L-145bd239 / L-2ab93d50 / L-5a7a5c6f paint).",
+  "his_row_24": {
+   "height": "5.4000",
+   "length": "2.5000",
+   "length_binding": "AMBIGUOUS",
+   "length_matches": [
+    "ST-01 N face (whole height)",
+    "ST-01 S face (GF only, +1.00 .. +5.34)",
+    "1F arrival 2.50 x 1.95: the wall facing it (in 1F-13)",
+    "2F arrival 2.50 x 1.95: the wall facing it (2F-01)"
+   ],
+   "m2": "13.5000",
+   "paint_row": 25,
+   "plaster_row": 24,
+   "printed_level_intervals_within_0.05_of_his_height": [],
+   "verdict": "UNRESOLVED (13.50): four drawn faces are 2.50 m wide (all already carried: the shaft lines, 1F-13, 2F-01) and no printed level interval is 5.40 m; his row cannot be bound to a physical face. Never added, never 0 on the engine side."
+  },
+  "his_row_8": {
+   "binding": "BOUND",
+   "bound_to": "ST-02 round-stair well walls, 1F plan printed 4000 + 7020 (DIMENSION E3E / D7B) + 3 column returns 0.05 proud (300E x 2, 3008)",
+   "candidates": [
+    [
+     "ST-01 W + E faces (T-173: 5.20 + 5.20)",
+     "10.40"
+    ],
+    [
+     "ST-01 N + W + E faces (T-173: 2.50 + 5.20 + 5.20)",
+     "12.90"
+    ],
+    [
+     "GF stair-hall piece outline (T-634, by handle)",
+     "12.30"
+    ],
+    [
+     "GF stair-lobby piece outline (T-634, by handle)",
+     "4.60"
+    ],
+    [
+     "ST-02 round-stair well walls, 1F plan printed 4000 + 7020 (DIMENSION E3E / D7B) + 3 column returns 0.05 proud (300E x 2, 3008)",
+     "11.17"
+    ]
+   ],
+   "drawn_well_lm": "11.17",
+   "engine_line": "1F-13 (L-9b4a7bab plaster / L-be48ea84 paint): chain 1F-LIV.ours carries the 'void zone walls' (T-606) at the 1F heights, once",
+   "height": "3.6000",
+   "his_minus_drawn_lm": "0.080000",
+   "length": "11.2500",
+   "m2": "40.5000",
+   "paint_row": 8,
+   "plaster_row": 8,
+   "verdict": "IDENTIFIED: not a shaft face. His GF 'stair wall' = the round-stair (ST-02) well walls, west 4.00 + south 7.02 + column returns 0.15 = 11.17 lm drawn vs his 11.25 (+0.08 lm), priced by him at one more storey (3.60) above the GF. The engine carries these faces in the 1F living line (1F-13) at the 1F heights: ENGINE_RIGHT on scope; the comparison belongs to 1F-13, not to the shaft. Whether his 1F living row also carries them is not determinable from his rows (no outline): named, no engine effect."
+  },
+  "residual_after": {
+   "identified_to_1F_13": "40.5000",
+   "unresolved": "13.5000"
+  },
+  "t701_unresolved": {
+   "paint": [
+    "54.000000",
+    "54.000000"
+   ],
+   "plaster": [
+    "54.000000",
+    "54.000000"
+   ]
+  }
+ },
+ "b_returns": {
+  "bridge": {
+   "count_term": [
+    "-14.820000",
+    "-11.627778"
+   ],
+   "engine": "24.150000",
+   "engine_count": 27,
+   "engine_mean": "0.894444",
+   "gap": "-8.190000",
+   "his": "15.960000",
+   "his_count": 14,
+   "his_unit": "1.140000",
+   "unit_term": [
+    "3.437778",
+    "6.630000"
+   ]
+  },
+  "element": "door return = the plastered faces inside the wall thickness at a door opening: 2 jambs + head, t x (2 x head + width) per door (T-634 R-T634-1, re-read by handle on 26 doors; OP-009 by T-676)",
+  "engine": {
+   "blank_held": [
+    "L-64cb94b4 1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+    "L-3e19506b GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+    "L-e70e7e48 GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD"
+   ],
+   "valued_lines": 27,
+   "valued_m2": "24.150000"
+  },
+  "his_row": {
+   "count": 14,
+   "depth": "0.2000",
+   "his_own_internal_door_count_row_44": 26,
+   "m2": "15.960000",
+   "row": 26,
+   "run": "5.7000"
+  },
+  "verdict": "RESOLVED (-8.19 closes exactly, R-T709-3): COUNT -14.820000 .. -11.627778 (he prices 14 doors; the drawings carry 27 valued door openings with a return and his own deduction list counts 26 internal doors: FREELANCER omission, ENGINE_RIGHT) and UNIT 3.437778 .. 6.630000 (his flat 0.20 x 5.70 = 1.14 per door vs the drawn mean 0.894444: 19 of the 26 re-read doors sit in 0.15 walls and the heads are 2.20 (Q-55 C) / 2.50: RULE_DIFFERENCE). The split depends on the order; the total does not. 3 blank returns stay HELD outside, never 0."
+ },
+ "c_return_paint": {
+  "bound_sum_m2": [
+   "0.000000",
+   "24.150000"
+  ],
+  "changed_since_v8": [
+   {
+    "face_id": "GF-OPENING-OP-009:door jambs and head",
+    "now": "RELEASED",
+    "then": "HELD"
+   }
+  ],
+  "count": 30,
+  "held_by_name": 3,
+  "note": "T-701's 'physically painted 19.17 .. 20.25' is these two highs (OP-009: which side of the external door reveal is facade render is not established); the low end stays 0 until the frame-covered depth is printed (frame / casing detail): a designer datum, not an owner question",
+  "physical_high_without_both_wet": "20.250000",
+  "physical_high_without_both_wet_and_external_side": "19.170000",
+  "rows": [
+   {
+    "face_id": "1F-OPENING-OP-004:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-004:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-54b2eb0ad40cc47b9be5",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "1F-OPENING-OP-005:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.795000"
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-a85b83a93486fdc400f8",
+    "plaster_m2": "0.795000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "1F-OPENING-OP-006:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.795000"
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-5d309e25e8b180283606",
+    "plaster_m2": "0.795000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "1F-OPENING-OP-008:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "1.060000"
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-f3590fade6406f912d2e",
+    "plaster_m2": "1.060000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "1F-OPENING-OP-010:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+     "flag": "NOT_ESTABLISHED (wet rooms both sides)",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-f8a0d9bfc3e6a3f113b2",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "1F-OPENING-OP-018:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-537fc3896f24cf408fe6",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "1F-OPENING-OP-019:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-019:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-f38f6ecefecd7e617cac",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "1F-OPENING-OP-020:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.810000"
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-020:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-0bc19199447147ca226a",
+    "plaster_m2": "0.810000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+    "paint_row": {
+     "bound_beside_m2": null,
+     "class": "HELD",
+     "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+     "flag": "HELD by name (plaster return blank)",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "HELD",
+    "plaster_line": "L-64cb94b4b8dc2cb17608",
+    "plaster_m2": null,
+    "v8_class_then": "HELD",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.810000"
+     ],
+     "class": "HELD",
+     "element_id": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-f0668097e8d872925fdf",
+    "plaster_m2": "0.810000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-34f4545187c3c764d174",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "2F-OPENING-OP-001:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.810000"
+     ],
+     "class": "HELD",
+     "element_id": "2F-OPENING-OP-001:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-ca7d121f07fd1a73536d",
+    "plaster_m2": "0.810000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "2F-OPENING-OP-006:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "2F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-833ba74bab1404d1f6cc",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "2F-OPENING-OP-007:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "1.060000"
+     ],
+     "class": "HELD",
+     "element_id": "2F-OPENING-OP-007:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-39497d7b7639a776f8f2",
+    "plaster_m2": "1.060000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-OPENING-OP-005:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "1.060000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-9cf5a4b4db78cf57cf7f",
+    "plaster_m2": "1.060000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-OPENING-OP-008:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "1.080000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-e11de0ecd42fcb0b5756",
+    "plaster_m2": "1.080000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-OPENING-OP-009:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "1.080000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-009:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-f4175f9915208dc5f9f7",
+    "plaster_m2": "1.080000",
+    "v8_class_then": "HELD",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-OPENING-OP-010:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "1.080000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-1f443fe4e172a90ddd7c",
+    "plaster_m2": "1.080000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-OPENING-OP-012:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.810000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-012:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-61825a3103a391956d70",
+    "plaster_m2": "0.810000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-OPENING-OP-013:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "1.060000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-013:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-3c21b044ce980ec0ee75",
+    "plaster_m2": "1.060000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-OPENING-OP-017:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-017:door jambs and head:RETURN_PAINT",
+     "flag": "NOT_ESTABLISHED (wet rooms both sides)",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-7dcb2bab84655929f7e8",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-OPENING-OP-018:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+     "flag": "NOT_ESTABLISHED (wet rooms both sides)",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-672329032e0d70329d5f",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-OPENING-OP-021:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "1.400000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-021:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-2f94dca4dd5f2ec05822",
+    "plaster_m2": "1.400000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-OPENING-OP-025:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "1.080000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-025:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-3ae66decd178e43c61e0",
+    "plaster_m2": "1.080000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-OPENING-OP-026:door jambs and head",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-026:door jambs and head:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-f4e9614350ce4659d186",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+    "paint_row": {
+     "bound_beside_m2": null,
+     "class": "HELD",
+     "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+     "flag": "HELD by name (plaster return blank)",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "HELD",
+    "plaster_line": "L-3e19506bd9e093dfb7be",
+    "plaster_m2": null,
+    "v8_class_then": "HELD",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "flag": "NOT_ESTABLISHED (wet rooms both sides)",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-6ebb9be39b8c4ff4693a",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "flag": "NOT_ESTABLISHED (wet rooms both sides)",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-698dfa14c60ff86b5c60",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED",
+    "paint_row": {
+     "bound_beside_m2": [
+      "0.000000",
+      "0.780000"
+     ],
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "flag": "frame-covered depth not printed",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "RELEASED",
+    "plaster_line": "L-8a038e1ca7c2d73d5b13",
+    "plaster_m2": "0.780000",
+    "v8_class_then": "RELEASED",
+    "v8_form": "same face id"
+   },
+   {
+    "face_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+    "paint_row": {
+     "bound_beside_m2": null,
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+     "flag": "HELD by name (plaster return blank)",
+     "item_code": "FIN.PAINT",
+     "value": null
+    },
+    "plaster_class": "HELD",
+    "plaster_line": "L-e70e7e48b4c15b4f5a21",
+    "plaster_m2": null,
+    "v8_class_then": "HELD",
+    "v8_form": "same face id"
+   }
+  ],
+  "rule": "R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids)",
+  "status": "HELD (frame-covered depth not printed); never a value, never 0, never in a released paint line",
+  "valued": 27
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.70",
+ "d_1F13_with_row_8": {
+  "engine_face_lm": "39.450000",
+  "his_lm_all": "60.850000",
+  "his_lm_rows_15_16": "49.600000",
+  "his_row_8_lm": "11.2500",
+  "note": "his three 1F-zone rows vs the one drawn face: his surplus in length is his (T-552 ENGINE_RIGHT stands), the well walls are in the 39.45 once"
+ },
+ "d_counts": {
+  "not_re_measured_open_zones": [
+   "1F-13",
+   "2F-01",
+   "GF-08"
+  ],
+  "opening_differs": 1,
+  "re_measured": 6
+ },
+ "d_dry_rooms": [
+  {
+   "bridge_t701": {
+    "paint": {
+     "DEDUCTIONS": [
+      "13.285000",
+      "8.487050"
+     ],
+     "HEIGHT": [
+      "22.260462",
+      "7.044450"
+     ],
+     "LENGTH": "-0.457200",
+     "engine_net": [
+      "36.911738",
+      "56.925700"
+     ],
+     "his": "72.000000",
+     "his_lm": "20.000000"
+    },
+    "plaster": {
+     "DEDUCTIONS": [
+      "14.817000",
+      "11.027000"
+     ],
+     "HEIGHT": [
+      "-3.824130",
+      "-3.824130"
+     ],
+     "LENGTH": "-0.457200",
+     "engine_net": [
+      "61.464330",
+      "65.254330"
+     ],
+     "his": "72.000000",
+     "his_lm": "20.000000"
+    }
+   },
+   "chain_source": "T-621 GF-DEWANEYA",
+   "curved_glazing": null,
+   "drawn_chain_perimeter": "20.127876",
+   "drawn_minus_engine_lm": "0.000876",
+   "engine_face_lm": "20.127",
+   "length_state": "AGREE",
+   "openings": [
+    {
+     "drawn_width": "1.0",
+     "head_used": "2.20",
+     "id": "D-GF-01",
+     "ledger_m2": [
+      "2.20",
+      "2.20"
+     ],
+     "ledger_minus_own": "0.000000",
+     "own_m2": "2.200000",
+     "state": "AGREE"
+    },
+    {
+     "drawn_width": "1.0",
+     "head_used": null,
+     "id": "A-GF-01",
+     "ledger_m2": [
+      "0",
+      "3.790"
+     ],
+     "ledger_minus_own": null,
+     "own_m2": null,
+     "state": "HELD in the ledger (no height)"
+    },
+    {
+     "drawn_width": "1.95492",
+     "head_used": "2.20",
+     "id": "W11",
+     "ledger_m2": [
+      "4.30100",
+      "4.30100"
+     ],
+     "ledger_minus_own": "0.000176",
+     "own_m2": "4.300824",
+     "state": "AGREE"
+    },
+    {
+     "drawn_width": "1.95492",
+     "head_used": "2.20",
+     "id": "W12",
+     "ledger_m2": [
+      "4.2900",
+      "4.2900"
+     ],
+     "ledger_minus_own": "-0.010824",
+     "own_m2": "4.300824",
+     "state": "DIFFERS"
+    }
+   ],
+   "re_measured": true,
+   "room": "GF-01",
+   "verdict": {
+    "DEDUCTIONS": "RULE_DIFFERENCE: every opening in full per room side (Q-73) vs his half list once; held heights / beam ends HELD",
+    "HEIGHT": "RULE_DIFFERENCE: his flat storey height vs plaster to the soffit (Q-72) and paint to the finished ceiling (owner G1, Q-48 A); annex datum bounded (Q-54 B, T-686 / R-T701-2)",
+    "LENGTH": "ENGINE_RIGHT (drawn face re-measured this run)"
+   }
+  },
+  {
+   "bridge_t701": {
+    "paint": {
+     "DEDUCTIONS": [
+      "22.596950",
+      "22.596950"
+     ],
+     "HEIGHT": [
+      "-1.076850",
+      "-1.076850"
+     ],
+     "LENGTH": "-1.753200",
+     "engine_net": [
+      "56.013100",
+      "56.013100"
+     ],
+     "his": "75.780000",
+     "his_lm": "21.050000"
+    },
+    "plaster": {
+     "DEDUCTIONS": [
+      "25.864740",
+      "25.864740"
+     ],
+     "HEIGHT": [
+      "-14.860530",
+      "-14.860530"
+     ],
+     "LENGTH": "-1.753200",
+     "engine_net": [
+      "66.528990",
+      "66.528990"
+     ],
+     "his": "75.780000",
+     "his_lm": "21.050000"
+    }
+   },
+   "chain_source": "T-621 GF-MASTER",
+   "curved_glazing": "W03 (arc edge, T-634 by handle)",
+   "drawn_chain_perimeter": "21.534454",
+   "drawn_minus_engine_lm": "-0.002546",
+   "engine_face_lm": "21.537",
+   "length_state": "AGREE",
+   "openings": [
+    {
+     "drawn_width": "1.0",
+     "head_used": "2.20",
+     "id": "D-GF-13",
+     "ledger_m2": [
+      "2.20",
+      "2.20"
+     ],
+     "ledger_minus_own": "0.000000",
+     "own_m2": "2.200000",
+     "state": "AGREE"
+    },
+    {
+     "drawn_width": "0.8",
+     "head_used": "2.20",
+     "id": "D-GF-14",
+     "ledger_m2": [
+      "1.76",
+      "1.76"
+     ],
+     "ledger_minus_own": "0.000000",
+     "own_m2": "1.760000",
+     "state": "AGREE"
+    }
+   ],
+   "re_measured": true,
+   "room": "GF-15",
+   "verdict": {
+    "DEDUCTIONS": "RULE_DIFFERENCE: every opening in full per room side (Q-73) vs his half list once; held heights / beam ends HELD",
+    "HEIGHT": "RULE_DIFFERENCE: his flat storey height vs plaster to the soffit (Q-72) and paint to the finished ceiling (owner G1, Q-48 A)",
+    "LENGTH": "ENGINE_RIGHT (drawn face re-measured this run)"
+   }
+  },
+  {
+   "bridge_t701": {
+    "paint": {
+     "DEDUCTIONS": [
+      "42.085700",
+      "15.331200"
+     ],
+     "HEIGHT": [
+      "-2.659400",
+      "-2.659400"
+     ],
+     "LENGTH": "3.823200",
+     "engine_net": [
+      "152.050500",
+      "178.805000"
+     ],
+     "his": "195.300000",
+     "his_lm": "54.250000"
+    },
+    "plaster": {
+     "DEDUCTIONS": [
+      "49.955950",
+      "16.371250"
+     ],
+     "HEIGHT": [
+      "-36.699720",
+      "-36.699720"
+     ],
+     "LENGTH": "3.823200",
+     "engine_net": [
+      "178.220570",
+      "211.805270"
+     ],
+     "his": "195.300000",
+     "his_lm": "54.250000"
+    }
+   },
+   "chain_by_layer_lm": {
+    "1": "53.720604",
+    "W": "13.808208"
+   },
+   "chain_source": "T-612 GF-OPEN.full",
+   "drawn_chain_perimeter": "71.928708",
+   "engine_face_lm": "53.188",
+   "note": "open zone: the face is the T-147 region clip (walls outside the shaft box, open sides excluded); a gross chain is not that face, so this run does not re-measure it (T-128 r2 two traces stand)",
+   "re_measured": false,
+   "room": "GF-08",
+   "verdict": {
+    "DEDUCTIONS": "RULE_DIFFERENCE: every opening in full per room side (Q-73) vs his half list once; held heights / beam ends HELD",
+    "HEIGHT": "RULE_DIFFERENCE: his flat storey height vs plaster to the soffit (Q-72) and paint to the finished ceiling (owner G1, Q-48 A)",
+    "LENGTH": "ENGINE_RIGHT (T-128 r2 two traces; not re-measured this run)"
+   }
+  },
+  {
+   "bridge_t701": {
+    "paint": {
+     "DEDUCTIONS": [
+      "7.880000",
+      "7.880000"
+     ],
+     "HEIGHT": [
+      "0.885000",
+      "0.885000"
+     ],
+     "LENGTH": "-0.680000",
+     "engine_net": [
+      "51.415000",
+      "51.415000"
+     ],
+     "his": "59.500000",
+     "his_lm": "17.500000"
+    },
+    "plaster": {
+     "DEDUCTIONS": [
+      "8.050000",
+      "8.016000"
+     ],
+     "HEIGHT": [
+      "-10.443000",
+      "-10.443000"
+     ],
+     "LENGTH": "-0.680000",
+     "engine_net": [
+      "62.573000",
+      "62.607000"
+     ],
+     "his": "59.500000",
+     "his_lm": "17.500000"
+    }
+   },
+   "chain_source": "T-621 1F-WEST-BED",
+   "curved_glazing": null,
+   "drawn_chain_perimeter": "17.7",
+   "drawn_minus_engine_lm": "0.000000",
+   "engine_face_lm": "17.7",
+   "length_state": "AGREE",
+   "openings": [
+    {
+     "drawn_width": "0.8",
+     "head_used": "2.20",
+     "id": "D-1F-01",
+     "ledger_m2": [
+      "1.76",
+      "1.76"
+     ],
+     "ledger_minus_own": "0.000000",
+     "own_m2": "1.760000",
+     "state": "AGREE"
+    },
+    {
+     "drawn_width": "1.0",
+     "head_used": "2.20",
+     "id": "D-1F-02",
+     "ledger_m2": [
+      "2.20",
+      "2.20"
+     ],
+     "ledger_minus_own": "0.000000",
+     "own_m2": "2.200000",
+     "state": "AGREE"
+    },
+    {
+     "drawn_width": "2.449774",
+     "head_used": "1.60",
+     "id": "W14",
+     "ledger_m2": [
+      "3.920",
+      "3.920"
+     ],
+     "ledger_minus_own": "0.000362",
+     "own_m2": "3.919638",
+     "state": "AGREE"
+    }
+   ],
+   "re_measured": true,
+   "room": "1F-01",
+   "verdict": {
+    "DEDUCTIONS": "RULE_DIFFERENCE: every opening in full per room side (Q-73) vs his half list once; held heights / beam ends HELD",
+    "HEIGHT": "RULE_DIFFERENCE: his flat storey height vs plaster to the soffit (Q-72) and paint to the finished ceiling (owner G1, Q-48 A)",
+    "LENGTH": "ENGINE_RIGHT (drawn face re-measured this run)"
+   }
+  },
+  {
+   "bridge_t701": {
+    "paint": {
+     "DEDUCTIONS": [
+      "5.330000",
+      "1.980000"
+     ],
+     "HEIGHT": [
+      "0.810000",
+      "0.810000"
+     ],
+     "LENGTH": "20.740000",
+     "engine_net": [
+      "48.940000",
+      "52.290000"
+     ],
+     "his": "75.820000",
+     "his_lm": "22.300000"
+    },
+    "plaster": {
+     "DEDUCTIONS": [
+      "6.612000",
+      "2.588000"
+     ],
+     "HEIGHT": [
+      "-9.558000",
+      "-9.558000"
+     ],
+     "LENGTH": "20.740000",
+     "engine_net": [
+      "58.026000",
+      "62.050000"
+     ],
+     "his": "75.820000",
+     "his_lm": "22.300000"
+    }
+   },
+   "chain_source": "T-621 1F-380x430",
+   "curved_glazing": null,
+   "drawn_chain_perimeter": "16.2",
+   "drawn_minus_engine_lm": "0.000000",
+   "engine_face_lm": "16.2",
+   "length_state": "AGREE",
+   "openings": [
+    {
+     "drawn_width": "1.0",
+     "head_used": null,
+     "id": "A-1F-01",
+     "ledger_m2": [
+      "0",
+      "3.990"
+     ],
+     "ledger_minus_own": null,
+     "own_m2": null,
+     "state": "HELD in the ledger (no height)"
+    },
+    {
+     "drawn_width": "0.9",
+     "head_used": "2.20",
+     "id": "D-1F-08",
+     "ledger_m2": [
+      "1.98",
+      "1.98"
+     ],
+     "ledger_minus_own": "0.000000",
+     "own_m2": "1.980000",
+     "state": "AGREE"
+    }
+   ],
+   "re_measured": true,
+   "room": "1F-10",
+   "verdict": {
+    "DEDUCTIONS": "RULE_DIFFERENCE: every opening in full per room side (Q-73) vs his half list once; held heights / beam ends HELD",
+    "HEIGHT": "RULE_DIFFERENCE: his flat storey height vs plaster to the soffit (Q-72) and paint to the finished ceiling (owner G1, Q-48 A)",
+    "LENGTH": "ENGINE_RIGHT (drawn face re-measured this run)"
+   }
+  },
+  {
+   "bridge_t701": {
+    "paint": {
+     "DEDUCTIONS": [
+      "12.736550",
+      "12.481450"
+     ],
+     "HEIGHT": [
+      "1.107450",
+      "1.107450"
+     ],
+     "LENGTH": "-0.846600",
+     "engine_net": [
+      "61.462600",
+      "61.717700"
+     ],
+     "his": "74.460000",
+     "his_lm": "21.900000"
+    },
+    "plaster": {
+     "DEDUCTIONS": [
+      "13.598000",
+      "8.176100"
+     ],
+     "HEIGHT": [
+      "-13.067910",
+      "-13.067910"
+     ],
+     "LENGTH": "-0.846600",
+     "engine_net": [
+      "74.776510",
+      "80.198410"
+     ],
+     "his": "74.460000",
+     "his_lm": "21.900000"
+    }
+   },
+   "chain_source": "T-606 1F-CUR.ours",
+   "curved_glazing": "W17 (curved, HELD outline range, T-556)",
+   "drawn_chain_perimeter": "22.15067",
+   "drawn_minus_engine_lm": "0.001670",
+   "engine_face_lm": "22.149",
+   "length_state": "AGREE",
+   "openings": [
+    {
+     "drawn_width": "0.9",
+     "head_used": "2.20",
+     "id": "D-1F-09",
+     "ledger_m2": [
+      "1.98",
+      "1.98"
+     ],
+     "ledger_minus_own": "0.000000",
+     "own_m2": "1.980000",
+     "state": "AGREE"
+    },
+    {
+     "drawn_width": "0.8",
+     "head_used": "2.20",
+     "id": "D-1F-10",
+     "ledger_m2": [
+      "1.76",
+      "1.76"
+     ],
+     "ledger_minus_own": "0.000000",
+     "own_m2": "1.760000",
+     "state": "AGREE"
+    }
+   ],
+   "re_measured": true,
+   "room": "1F-11",
+   "verdict": {
+    "DEDUCTIONS": "RULE_DIFFERENCE: every opening in full per room side (Q-73) vs his half list once; held heights / beam ends HELD",
+    "HEIGHT": "RULE_DIFFERENCE: his flat storey height vs plaster to the soffit (Q-72) and paint to the finished ceiling (owner G1, Q-48 A)",
+    "LENGTH": "ENGINE_RIGHT (drawn face re-measured this run)"
+   }
+  },
+  {
+   "bridge_t701": {
+    "paint": {
+     "DEDUCTIONS": [
+      "21.139800",
+      "17.789800"
+     ],
+     "HEIGHT": [
+      "5.173836",
+      "5.173836"
+     ],
+     "LENGTH": "35.333664",
+     "engine_net": [
+      "111.017700",
+      "114.367700"
+     ],
+     "his": "172.665000",
+     "his_lm": "49.600000"
+    },
+    "plaster": {
+     "DEDUCTIONS": [
+      "21.780000",
+      "17.790000"
+     ],
+     "HEIGHT": [
+      "-20.074164",
+      "-20.074164"
+     ],
+     "LENGTH": "35.333664",
+     "engine_net": [
+      "135.625500",
+      "139.615500"
+     ],
+     "his": "172.665000",
+     "his_lm": "49.600000"
+    }
+   },
+   "chain_by_layer_lm": {
+    "1": "52.140000"
+   },
+   "chain_source": "T-606 1F-LIV.ours",
+   "drawn_chain_perimeter": "52.44",
+   "engine_face_lm": "39.45",
+   "note": "open zone: the face is the T-147 region clip (walls outside the shaft box, open sides excluded); a gross chain is not that face, so this run does not re-measure it (T-128 r2 two traces stand)",
+   "re_measured": false,
+   "room": "1F-13",
+   "verdict": {
+    "DEDUCTIONS": "RULE_DIFFERENCE: every opening in full per room side (Q-73) vs his half list once; held heights / beam ends HELD",
+    "HEIGHT": "RULE_DIFFERENCE: his flat storey height vs plaster to the soffit (Q-72) and paint to the finished ceiling (owner G1, Q-48 A)",
+    "LENGTH": "ENGINE_RIGHT (T-128 r2 two traces; not re-measured this run)"
+   }
+  },
+  {
+   "bridge_t701": {
+    "paint": {
+     "DEDUCTIONS": [
+      "5.540000",
+      "5.540000"
+     ],
+     "HEIGHT": [
+      "0.945000",
+      "0.945000"
+     ],
+     "LENGTH": "0.000000",
+     "engine_net": [
+      "57.775000",
+      "57.775000"
+     ],
+     "his": "64.260000",
+     "his_lm": "18.900000"
+    },
+    "plaster": {
+     "DEDUCTIONS": [
+      "5.636000",
+      "5.636000"
+     ],
+     "HEIGHT": [
+      "-11.151000",
+      "-11.151000"
+     ],
+     "LENGTH": "0.000000",
+     "engine_net": [
+      "69.775000",
+      "69.775000"
+     ],
+     "his": "64.260000",
+     "his_lm": "18.900000"
+    }
+   },
+   "chain_source": "T-606 2F-MAID",
+   "curved_glazing": null,
+   "drawn_chain_perimeter": "18.9",
+   "drawn_minus_engine_lm": "0.000000",
+   "engine_face_lm": "18.9",
+   "length_state": "AGREE",
+   "openings": [
+    {
+     "drawn_width": "1.2",
+     "head_used": "1.50",
+     "id": "W29",
+     "ledger_m2": [
+      "1.80",
+      "1.80"
+     ],
+     "ledger_minus_own": "0.000000",
+     "own_m2": "1.800000",
+     "state": "AGREE"
+    },
+    {
+     "drawn_width": "0.8",
+     "head_used": "2.20",
+     "id": "D-2F-03",
+     "ledger_m2": [
+      "1.76",
+      "1.76"
+     ],
+     "ledger_minus_own": "0.000000",
+     "own_m2": "1.760000",
+     "state": "AGREE"
+    },
+    {
+     "drawn_width": "0.9",
+     "head_used": "2.20",
+     "id": "D-2F-02",
+     "ledger_m2": [
+      "1.98",
+      "1.98"
+     ],
+     "ledger_minus_own": "0.000000",
+     "own_m2": "1.980000",
+     "state": "AGREE"
+    }
+   ],
+   "re_measured": true,
+   "room": "2F-03",
+   "verdict": {
+    "DEDUCTIONS": "RULE_DIFFERENCE: every opening in full per room side (Q-73) vs his half list once; held heights / beam ends HELD",
+    "HEIGHT": "RULE_DIFFERENCE: his flat storey height vs plaster to the soffit (Q-72) and paint to the finished ceiling (owner G1, Q-48 A)",
+    "LENGTH": "ENGINE_RIGHT (drawn face re-measured this run); equal lengths"
+   }
+  },
+  {
+   "bridge_t701": {
+    "paint": {
+     "DEDUCTIONS": [
+      "7.529950",
+      "4.179950"
+     ],
+     "HEIGHT": [
+      "0.450450",
+      "0.450450"
+     ],
+     "LENGTH": "-0.030600",
+     "engine_net": [
+      "22.650200",
+      "26.000200"
+     ],
+     "his": "30.600000",
+     "his_lm": "9.000000"
+    },
+    "plaster": {
+     "DEDUCTIONS": [
+      "8.586000",
+      "4.180000"
+     ],
+     "HEIGHT": [
+      "-5.315310",
+      "-5.315310"
+     ],
+     "LENGTH": "-0.030600",
+     "engine_net": [
+      "27.359910",
+      "31.765910"
+     ],
+     "his": "30.600000",
+     "his_lm": "9.000000"
+    }
+   },
+   "chain_by_layer_lm": {
+    "1": "10.400000",
+    "5": "2.500000"
+   },
+   "chain_source": "T-606 2F-CORR.ours",
+   "drawn_chain_perimeter": "12.9",
+   "engine_face_lm": "9.009",
+   "note": "open zone: the face is the T-147 region clip (walls outside the shaft box, open sides excluded); a gross chain is not that face, so this run does not re-measure it (T-128 r2 two traces stand)",
+   "re_measured": false,
+   "room": "2F-01",
+   "verdict": {
+    "DEDUCTIONS": "RULE_DIFFERENCE: every opening in full per room side (Q-73) vs his half list once; held heights / beam ends HELD",
+    "HEIGHT": "RULE_DIFFERENCE: his flat storey height vs plaster to the soffit (Q-72) and paint to the finished ceiling (owner G1, Q-48 A)",
+    "LENGTH": "ENGINE_RIGHT (T-128 r2 two traces; not re-measured this run)"
+   }
+  }
+ ],
+ "d_findings": [
+  {
+   "drawn_width": "1.95492",
+   "head_used": "2.20",
+   "id": "W12",
+   "ledger_m2": [
+    "4.2900",
+    "4.2900"
+   ],
+   "ledger_minus_own": "-0.010824",
+   "own_m2": "4.300824",
+   "room": "GF-01",
+   "state": "DIFFERS"
+  }
+ ],
+ "inputs_sha256_16": {
+  "research/agents_t556/out/T556_PLASTER_HEIGHT.json": "8169a1953c386cca",
+  "research/agents_t569/WIRING_MANIFEST_V8.json": "c71ecdc0eb11cba4",
+  "research/agents_t634/out/T634_PLASTER_PAINT_REMEASURE.json": "5d678d5458cd2dd5",
+  "research/agents_t693/out/LINE_INDEX_V3_0_70.json": "6c12da077200db17",
+  "research/agents_t701/out/T701_RECONCILE.json": "9ef9a219deebd3b4",
+  "research/agents_t709/T709_DRAWN.json": "f2e5f42b55835af2",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json": "752c9f4e0c4546d0"
+ },
+ "schema": "URBAN_T709_RESIDUALS_V1"
+}
