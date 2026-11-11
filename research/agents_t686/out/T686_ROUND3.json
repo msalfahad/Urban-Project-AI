@@ -1,0 +1,716 @@
+{
+ "annex_datum": {
+  "owner_manual_3_15_inside": true,
+  "paint_tile_H_m": [
+   "2.494",
+   "3.25"
+  ],
+  "plaster_S_m": [
+   "3.084",
+   "3.84"
+  ],
+  "s": [
+   "3.544000",
+   "4.30"
+  ],
+  "terms": {
+   "beam": [
+    "0.60",
+    "owner manual method G1 (Q-43 A: floor height - beam - ceiling 15 cm; OWNER_RECONCILIATION 2026-10-20)"
+   ],
+   "ceiling": [
+    "0.15",
+    "owner manual method G1 (Q-43 A / Q-48 A)"
+   ],
+   "ffl": [
+    "0.30",
+    "annex FFL +0.30 printed in the four annex rooms (sheet 03; Q-54 problem statement)"
+   ],
+   "s_hi": [
+    "4.30",
+    "printed annex roof mark +4.30 (section B-B, T-321 ROOF-430): a slab top never lies above its finished roof; Q-54 B: +4.30 is NOT taken as the slab top, only as the ceiling of the bound"
+   ],
+   "slab": [
+    "0.16",
+    "structural general note 16 cm unless stated (owner Q-14); the GFRS annex part prints no thickness (T-678 own read)"
+   ]
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.66 (T-677 line index)",
+ "code_totals_m2": {
+  "FIN.PAINT": {
+   "after_round2": {
+    "blank": 2,
+    "bounded": 8,
+    "high": "589.0006",
+    "low": "537.7750"
+   },
+   "after_round3": {
+    "blank": 0,
+    "bounded": 10,
+    "high": "682.3313",
+    "low": "601.645338"
+   },
+   "this_round": {
+    "high": "93.3307",
+    "lines": 2,
+    "low": "63.870338"
+   },
+   "v3_0_66": {
+    "blank": 3,
+    "bounded": 7,
+    "held": 10,
+    "high": "542.8606",
+    "low": "487.121"
+   }
+  },
+  "FIN.PLASTER": {
+   "after_round2": {
+    "blank": 9,
+    "bounded": 15,
+    "high": "1054.74641",
+    "low": "985.32981"
+   },
+   "after_round3": {
+    "blank": 3,
+    "bounded": 21,
+    "high": "1202.87991",
+    "low": "1078.344516"
+   },
+   "this_round": {
+    "high": "148.1335",
+    "lines": 6,
+    "low": "93.014706"
+   },
+   "v3_0_66": {
+    "blank": 10,
+    "bounded": 14,
+    "held": 24,
+    "high": "1006.77641",
+    "low": "932.72581"
+   }
+  }
+ },
+ "f_t680_1": {
+  "area_impact_if_raster_m2": "0.26",
+  "governing": "W25 SW elevation (DWF vector, T-201, Checker MERGED 5dade783)",
+  "residuals": [
+   {
+    "governs": false,
+    "height_difference_m": "0.26",
+    "id": "W25 section A-A (raster 1:100, read by T-680, never scaled into a quantity)"
+   }
+  ],
+  "sill_head": [
+   "5.50",
+   "7.00"
+  ],
+  "why": "ERS evidence hierarchy: the DWF vector outline is measured geometry with the view's own level ticks (issue check 0.006 / 0.013 m) and its height 1.501 equals the window's own outline and the stacked W27 of the same type on both sources; the raster 1.76 m glazing contradicts that outline and a raster is never scaled (UP-OPEN-GEOM-001 proposal). Residual 0.26 m2 per finish on the 1F shaft lines named, not applied (designer D-45 class)."
+ },
+ "finding_above_ceiling_band": {
+  "m2_gross_per_annex_wet_rooms": "20.532",
+  "note": "wet-room FIN.PLASTER lines stop at the tile top (G1) as the released laundry / pantry backing lines do; the owner's 'plaster to the slab underside above false ceilings' (2026-11-02) puts a band S - H = 0.59 m above the ceiling that no wet-room line carries (34.8 m x 0.59 = this figure for the 4 annex rooms): named for the Lead, not added"
+ },
+ "inputs": {
+  "LINE_INDEX_V3_0_66.json": "02065c41e79dd9df0873cd351e13801c809ca6fa1e62e8a04196af4af13724a7",
+  "OPENINGS_T312.csv": "51ce597347d3855305f6ebd47945128817c89409af09631deacb022016ea915a",
+  "OPENING_DEDUCTIONS_T292.csv": "4d75de86848509e4a3b37bd4825dfd2d65e26f35eea5bd0ee3227f954277f5dd",
+  "ROOMS_T128_R3.csv": "696333bc12f0acb9c2be106b05731575009ca194eaf7171cfba030076790c8b7",
+  "ROOM_CLOSURE_T312.csv": "547d0b545d63cf044df571f8717d3634fb34316bc13b440b695e2b0aa0066ca2",
+  "T676_PLASTER_PAINT_CENSUS.json": "400b024835a159ccd378c832ffa05d32555f73565c796fa1ceba17dd2cd5e808",
+  "T678_LEDGER.json": "3c1319c5b6ceabde30273d0fcca91b1f19c06c797a5bf54dd44c95a5c89c1ebd",
+  "T680_SHAFT_ROUND2.json": "3a5bfc11b9d4dac53dc59e68dd752ceda1b33f27cbcdd9ba8cc5f56c217d47ea"
+ },
+ "lines": [
+  {
+   "before": "blank",
+   "calc": {
+    "deducted_at_high": "1.76",
+    "deducted_at_low": "4.254",
+    "gross": [
+     "17.9568",
+     "23.4"
+    ],
+    "high": "21.64",
+    "low": "13.7028"
+   },
+   "class": "HELD",
+   "element_id": "GF-R8496F0:plaster",
+   "height_m": [
+    "2.494",
+    "3.25"
+   ],
+   "height_rule": "tile-backing render to the tile top = finished ceiling G1 (Q-48 A; the candidate convention of the released wet backing lines, T-329 / T-399)",
+   "held_high": "21.64",
+   "held_low": "13.7028",
+   "item_code": "FIN.PLASTER",
+   "length_m": "7.2000",
+   "line_id": "L-2211463bba5eeb2e4282",
+   "materials": {
+    "BOND_COAT spatter dash (1:2)": {
+     "cement_bags": null,
+     "sand_m3": null,
+     "status": "HELD",
+     "water": "HELD",
+     "why": "spatter dash: T-364 row, no thickness from the project, the owner or the rules"
+    },
+    "LEVELLING_RENDER (1:4, Q-79)": {
+     "cement_bags": [
+      "1.574616",
+      "2.486696"
+     ],
+     "per_m2": {
+      "cement_bags": "0.114912",
+      "sand_m3": "0.01596"
+     },
+     "sand_m3": [
+      "0.218697",
+      "0.345374"
+     ],
+     "status": "AT_LEAST",
+     "water": "HELD (no water : cement ratio printed or owner-given)"
+    }
+   },
+   "measured_net": null,
+   "openings": [
+    {
+     "exists": true,
+     "head": "2.2",
+     "id": "D-GF-02",
+     "sill": "0.0",
+     "source": "T-128 r3 face (Q-55 C door head)",
+     "status": "ASSUMED - OWNER-APPROVED (Q-55 C door head 2.20)",
+     "width": "0.8"
+    },
+    {
+     "exists": true,
+     "id": "A-GF-01",
+     "source": "T-175 hosts",
+     "width": "1.0"
+    }
+   ],
+   "room": "GF-02",
+   "status": "OPEN BOUND (R-T686-1, Q-54 B respected: no point released)",
+   "still_open": "annex slab top s 3.544 .. 4.30 (Q-54 B / D-39); A-GF-01 crown (GF-02); door heads Q-55 C"
+  },
+  {
+   "before": "blank",
+   "calc": {
+    "deducted_at_high": "1.76",
+    "deducted_at_low": "1.76",
+    "gross": [
+     "18.705",
+     "24.375"
+    ],
+    "high": "22.615",
+    "low": "16.945"
+   },
+   "class": "HELD",
+   "element_id": "GF-RB62B55:plaster",
+   "height_m": [
+    "2.494",
+    "3.25"
+   ],
+   "height_rule": "tile-backing render to the tile top = finished ceiling G1 (Q-48 A; the candidate convention of the released wet backing lines, T-329 / T-399)",
+   "held_high": "22.615",
+   "held_low": "16.945",
+   "item_code": "FIN.PLASTER",
+   "length_m": "7.5000",
+   "line_id": "L-f43782d52f32b53a6f1e",
+   "materials": {
+    "BOND_COAT spatter dash (1:2)": {
+     "cement_bags": null,
+     "sand_m3": null,
+     "status": "HELD",
+     "water": "HELD",
+     "why": "spatter dash: T-364 row, no thickness from the project, the owner or the rules"
+    },
+    "LEVELLING_RENDER (1:4, Q-79)": {
+     "cement_bags": [
+      "1.947184",
+      "2.598735"
+     ],
+     "per_m2": {
+      "cement_bags": "0.114912",
+      "sand_m3": "0.01596"
+     },
+     "sand_m3": [
+      "0.270442",
+      "0.360935"
+     ],
+     "status": "AT_LEAST",
+     "water": "HELD (no water : cement ratio printed or owner-given)"
+    }
+   },
+   "measured_net": null,
+   "openings": [
+    {
+     "exists": true,
+     "head": "2.2",
+     "id": "D-GF-02",
+     "sill": "0.0",
+     "source": "T-128 r3 face (Q-55 C door head)",
+     "status": "ASSUMED - OWNER-APPROVED (Q-55 C door head 2.20)",
+     "width": "0.8"
+    }
+   ],
+   "room": "GF-03",
+   "status": "OPEN BOUND (R-T686-1, Q-54 B respected: no point released)",
+   "still_open": "annex slab top s 3.544 .. 4.30 (Q-54 B / D-39); A-GF-01 crown (GF-02); door heads Q-55 C"
+  },
+  {
+   "before": "blank",
+   "calc": {
+    "deducted_at_high": "1.76",
+    "deducted_at_low": "1.76",
+    "gross": [
+     "13.9664",
+     "18.2"
+    ],
+    "high": "16.44",
+    "low": "12.2064"
+   },
+   "class": "HELD",
+   "element_id": "GF-RFAD3C4:plaster",
+   "height_m": [
+    "2.494",
+    "3.25"
+   ],
+   "height_rule": "tile-backing render to the tile top = finished ceiling G1 (Q-48 A; the candidate convention of the released wet backing lines, T-329 / T-399)",
+   "held_high": "16.44",
+   "held_low": "12.2064",
+   "item_code": "FIN.PLASTER",
+   "length_m": "5.6000",
+   "line_id": "L-f179fc08a266294ad4a4",
+   "materials": {
+    "BOND_COAT spatter dash (1:2)": {
+     "cement_bags": null,
+     "sand_m3": null,
+     "status": "HELD",
+     "water": "HELD",
+     "why": "spatter dash: T-364 row, no thickness from the project, the owner or the rules"
+    },
+    "LEVELLING_RENDER (1:4, Q-79)": {
+     "cement_bags": [
+      "1.402662",
+      "1.889153"
+     ],
+     "per_m2": {
+      "cement_bags": "0.114912",
+      "sand_m3": "0.01596"
+     },
+     "sand_m3": [
+      "0.194814",
+      "0.262382"
+     ],
+     "status": "AT_LEAST",
+     "water": "HELD (no water : cement ratio printed or owner-given)"
+    }
+   },
+   "measured_net": null,
+   "openings": [
+    {
+     "exists": true,
+     "head": "2.2",
+     "id": "D-GF-04",
+     "sill": "0.0",
+     "source": "T-128 r3 face (Q-55 C door head)",
+     "status": "ASSUMED - OWNER-APPROVED (Q-55 C door head 2.20)",
+     "width": "0.8"
+    }
+   ],
+   "room": "GF-05",
+   "status": "OPEN BOUND (R-T686-1, Q-54 B respected: no point released)",
+   "still_open": "annex slab top s 3.544 .. 4.30 (Q-54 B / D-39); A-GF-01 crown (GF-02); door heads Q-55 C"
+  },
+  {
+   "before": "blank",
+   "calc": {
+    "deducted_at_high": "4.4515",
+    "deducted_at_low": "4.442494",
+    "gross": [
+     "36.163",
+     "47.125"
+    ],
+    "high": "42.6735",
+    "low": "31.720506"
+   },
+   "class": "HELD",
+   "element_id": "GF-RA3AD49:plaster",
+   "height_m": [
+    "2.494",
+    "3.25"
+   ],
+   "height_rule": "tile-backing render to the tile top = finished ceiling G1 (Q-48 A; the candidate convention of the released wet backing lines, T-329 / T-399)",
+   "held_high": "42.6735",
+   "held_low": "31.720506",
+   "item_code": "FIN.PLASTER",
+   "length_m": "14.5000",
+   "line_id": "L-595181aa140e7efb2ac7",
+   "materials": {
+    "BOND_COAT spatter dash (1:2)": {
+     "cement_bags": null,
+     "sand_m3": null,
+     "status": "HELD",
+     "water": "HELD",
+     "why": "spatter dash: T-364 row, no thickness from the project, the owner or the rules"
+    },
+    "LEVELLING_RENDER (1:4, Q-79)": {
+     "cement_bags": [
+      "3.645067",
+      "4.903697"
+     ],
+     "per_m2": {
+      "cement_bags": "0.114912",
+      "sand_m3": "0.01596"
+     },
+     "sand_m3": [
+      "0.506259",
+      "0.681069"
+     ],
+     "status": "AT_LEAST",
+     "water": "HELD (no water : cement ratio printed or owner-given)"
+    }
+   },
+   "measured_net": null,
+   "openings": [
+    {
+     "exists": true,
+     "head": "2.5",
+     "id": "W08",
+     "sill": "1.0",
+     "source": "T-201 heads",
+     "width": "1.501"
+    },
+    {
+     "exists": true,
+     "head": "2.2",
+     "id": "D-GF-05",
+     "sill": "0.0",
+     "source": "census frame width (T-237 rule d)",
+     "width": "1.0"
+    }
+   ],
+   "room": "GF-06",
+   "status": "OPEN BOUND (R-T686-1, Q-54 B respected: no point released)",
+   "still_open": "annex slab top s 3.544 .. 4.30 (Q-54 B / D-39); A-GF-01 crown (GF-02); door heads Q-55 C"
+  },
+  {
+   "before": "blank",
+   "calc": {
+    "deducted_at_high": "1.76",
+    "deducted_at_low": "2.24",
+    "gross": [
+     "13.64",
+     "26.97"
+    ],
+    "high": "25.21",
+    "low": "11.4"
+   },
+   "class": "HELD",
+   "element_id": "GF-RDF7D28:plaster",
+   "height_m": [
+    "2.2",
+    "4.35"
+   ],
+   "height_rule": "low = highest established head (D-GF-10 2.20, ASSUMED - OWNER-APPROVED Q-55 C): a ceiling never lies below a door head; high = G1 ceiling +4.65 - the lower floor option +0.30",
+   "held_high": "25.21",
+   "held_low": "11.4",
+   "item_code": "FIN.PLASTER",
+   "length_m": "6.2000",
+   "line_id": "L-3f7fb1b37e68e6d6c7b7",
+   "materials": {
+    "BOND_COAT spatter dash (1:2)": {
+     "cement_bags": null,
+     "sand_m3": null,
+     "status": "HELD",
+     "water": "HELD",
+     "why": "spatter dash: T-364 row, no thickness from the project, the owner or the rules"
+    },
+    "LEVELLING_RENDER (1:4, Q-79)": {
+     "cement_bags": [
+      "1.309997",
+      "2.896932"
+     ],
+     "per_m2": {
+      "cement_bags": "0.114912",
+      "sand_m3": "0.01596"
+     },
+     "sand_m3": [
+      "0.181944",
+      "0.402352"
+     ],
+     "status": "AT_LEAST",
+     "water": "HELD (no water : cement ratio printed or owner-given)"
+    }
+   },
+   "measured_net": null,
+   "openings": [
+    {
+     "cap_h": "0.8",
+     "exists": true,
+     "id": "W05",
+     "source": "T-201 heads (height only)",
+     "width": "0.6"
+    },
+    {
+     "exists": true,
+     "head": "2.2",
+     "id": "D-GF-10",
+     "sill": "0.0",
+     "source": "T-128 r3 face (Q-55 C door head)",
+     "status": "ASSUMED - OWNER-APPROVED (Q-55 C door head 2.20)",
+     "width": "0.8"
+    }
+   ],
+   "room": "GF-10",
+   "status": "OPEN BOUND (R-T686-3)",
+   "still_open": "room FFL +0.30 / +1.00 (T-088, C-SH-2); render top (stair soffit, held beam T-283 / Q-61 C; W05 height / sill)"
+  },
+  {
+   "before": "blank",
+   "calc": {
+    "deducted_at_high": "1.76",
+    "deducted_at_low": "3.74",
+    "gross": [
+     "10.78",
+     "21.315"
+    ],
+    "high": "19.555",
+    "low": "7.04"
+   },
+   "class": "HELD",
+   "element_id": "GF-RD36087:plaster",
+   "height_m": [
+    "2.2",
+    "4.35"
+   ],
+   "height_rule": "low = highest established head (D-GF-10 2.20, ASSUMED - OWNER-APPROVED Q-55 C): a ceiling never lies below a door head; high = G1 ceiling +4.65 - the lower floor option +0.30",
+   "held_high": "19.555",
+   "held_low": "7.04",
+   "item_code": "FIN.PLASTER",
+   "length_m": "4.9000",
+   "line_id": "L-a636dabcd4bc7e59169a",
+   "materials": {
+    "BOND_COAT spatter dash (1:2)": {
+     "cement_bags": null,
+     "sand_m3": null,
+     "status": "HELD",
+     "water": "HELD",
+     "why": "spatter dash: T-364 row, no thickness from the project, the owner or the rules"
+    },
+    "LEVELLING_RENDER (1:4, Q-79)": {
+     "cement_bags": [
+      "0.80898",
+      "2.247104"
+     ],
+     "per_m2": {
+      "cement_bags": "0.114912",
+      "sand_m3": "0.01596"
+     },
+     "sand_m3": [
+      "0.112358",
+      "0.312098"
+     ],
+     "status": "AT_LEAST",
+     "water": "HELD (no water : cement ratio printed or owner-given)"
+    }
+   },
+   "measured_net": null,
+   "openings": [
+    {
+     "exists": true,
+     "head": "2.2",
+     "id": "D-GF-10",
+     "sill": "0.0",
+     "source": "T-128 r3 face (Q-55 C door head)",
+     "status": "ASSUMED - OWNER-APPROVED (Q-55 C door head 2.20)",
+     "width": "0.8"
+    },
+    {
+     "exists": true,
+     "id": "T-128:doorway to the stair hall (no leaf drawn)",
+     "source": "T-128 r3 (unmatched)",
+     "width": "0.9"
+    }
+   ],
+   "room": "GF-11",
+   "status": "OPEN BOUND (R-T686-3)",
+   "still_open": "room FFL +0.30 / +1.00 (T-088, C-SH-2); render top (stair soffit, OP-020 passage head (T-441))"
+  },
+  {
+   "before": "blank",
+   "calc": {
+    "deducted_at_high": "8.48705",
+    "deducted_at_low": "13.285",
+    "gross": [
+     "50.196738",
+     "65.41275"
+    ],
+    "high": "56.9257",
+    "low": "36.911738"
+   },
+   "class": "HELD",
+   "element_id": "HL:WALL_FINISH:GF_01:PAINT",
+   "engine_gross_vs_freelancer_pct": [
+    "-30.282308",
+    "-9.148958"
+   ],
+   "freelancer_gross_m2": "72",
+   "height_m": [
+    "2.494",
+    "3.25"
+   ],
+   "height_rule": "paint to the finished ceiling G1 = s - 0.60 - 0.15 - FFL (Q-43 A); no beam end inside the band (the ceiling is below the beams)",
+   "held_high": "56.9257",
+   "held_low": "36.911738",
+   "item_code": "FIN.PAINT",
+   "length_m": "20.127",
+   "line_id": "L-cdf7f5cd2789b67004f1",
+   "measured_net": null,
+   "openings": [
+    {
+     "exists": true,
+     "height": "2.20",
+     "id": "W11",
+     "source": "T-207 closure (h 2.20 DRAWING-CONFIRMED; sill HELD)",
+     "width": "1.955"
+    },
+    {
+     "exists": true,
+     "height": "2.20",
+     "id": "W12",
+     "source": "T-207 closure (h 2.20 DRAWING-CONFIRMED; sill HELD)",
+     "width": "1.95"
+    },
+    {
+     "exists": true,
+     "head": "2.2",
+     "id": "D-GF-01",
+     "sill": "0.0",
+     "source": "T-128 r3 face (Q-55 C door head)",
+     "status": "ASSUMED - OWNER-APPROVED (Q-55 C door head 2.20)",
+     "width": "1.0"
+    },
+    {
+     "exists": true,
+     "id": "A-GF-01",
+     "source": "T-175 hosts",
+     "width": "1.0"
+    }
+   ],
+   "room": "GF-01",
+   "status": "OPEN BOUND (R-T686-1, Q-54 B respected)",
+   "still_open": "annex slab top s 3.544 .. 4.30 (Q-54 B / D-39); W11 / W12 sill (T-207); arch A-GF-01 crown (GF-01)"
+  },
+  {
+   "before": "blank",
+   "calc": {
+    "deducted_at_high": "4.22",
+    "deducted_at_low": "4.2164",
+    "gross": [
+     "31.175",
+     "40.625"
+    ],
+    "high": "36.405",
+    "low": "26.9586"
+   },
+   "class": "HELD",
+   "element_id": "HL:WALL_FINISH:GF_04:PAINT",
+   "engine_gross_vs_freelancer_pct": [
+    "-30.722222",
+    "-9.722222"
+   ],
+   "freelancer_gross_m2": "45",
+   "height_m": [
+    "2.494",
+    "3.25"
+   ],
+   "height_rule": "paint to the finished ceiling G1 = s - 0.60 - 0.15 - FFL (Q-43 A); no beam end inside the band (the ceiling is below the beams)",
+   "held_high": "36.405",
+   "held_low": "26.9586",
+   "item_code": "FIN.PAINT",
+   "length_m": "12.5",
+   "line_id": "L-d7d6d2f765489a95c408",
+   "measured_net": null,
+   "openings": [
+    {
+     "exists": true,
+     "head": "2.5",
+     "id": "W04",
+     "sill": "1.7",
+     "source": "T-201 heads",
+     "width": "0.6"
+    },
+    {
+     "exists": true,
+     "head": "2.2",
+     "id": "D-GF-03",
+     "sill": "0.0",
+     "source": "T-128 r3 face (Q-55 C door head)",
+     "status": "ASSUMED - OWNER-APPROVED (Q-55 C door head 2.20)",
+     "width": "0.9"
+    },
+    {
+     "exists": true,
+     "head": "2.2",
+     "id": "D-GF-04",
+     "sill": "0.0",
+     "source": "T-128 r3 face (Q-55 C door head)",
+     "status": "ASSUMED - OWNER-APPROVED (Q-55 C door head 2.20)",
+     "width": "0.8"
+    }
+   ],
+   "room": "GF-04",
+   "status": "OPEN BOUND (R-T686-1, Q-54 B respected)",
+   "still_open": "annex slab top s 3.544 .. 4.30 (Q-54 B / D-39); door heads Q-55 C"
+  }
+ ],
+ "reveals_still_blank": [
+  {
+   "cause_t676": "DESIGNER_ITEM",
+   "class": "HELD",
+   "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+   "held_high": null,
+   "held_low": null,
+   "information_note": "crown <= soffit 3.84 m and a flat head maximises 2 x t x spring + t x developed head for a given crown: <= t x (2 C + w); no lower bound is printed, so the line stays blank (never 0)",
+   "information_upper_m2": "1.302",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-3e19506bd9e093dfb7be",
+   "measured_net": null,
+   "missing_datum": "arch A-GF-01 spring and rise (crown) printed on no sheet (D-45); plan width 1.000 / wall 0.150 DRAWING-CONFIRMED (T-648)"
+  },
+  {
+   "cause_t676": "DESIGNER_ITEM",
+   "class": "HELD",
+   "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+   "held_high": null,
+   "held_low": null,
+   "information_note": "crown <= soffit 3.99 m and a flat head maximises 2 x t x spring + t x developed head for a given crown: <= t x (2 C + w); no lower bound is printed, so the line stays blank (never 0)",
+   "information_upper_m2": "1.347",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-64cb94b4b8dc2cb17608",
+   "measured_net": null,
+   "missing_datum": "arch A-1F-01 spring and rise printed on no sheet (D-45); plan 1.000 x 0.150 DRAWING-CONFIRMED (T-676 own read)"
+  },
+  {
+   "cause_t676": "DESIGNER_ITEM",
+   "class": "HELD",
+   "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-e70e7e48b4c15b4f5a21",
+   "measured_net": null,
+   "missing_datum": "gate D-GF-15 width and wall thickness not established (T-313 UNRESOLVED; D-53 entrance family) and no head printed"
+  }
+ ],
+ "rules": [
+  "R-T686-1",
+  "R-T686-2",
+  "R-T686-3",
+  "R-T686-4"
+ ],
+ "schema": "T686_ROUND3 v1",
+ "task": "T-686"
+}
