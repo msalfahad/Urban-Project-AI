@@ -4,6 +4,20 @@ The owner asked (2026-11-11): "anything important i said to you or gave you, sav
 Newest first within each section. Owner words in quotes are verbatim. Full records stay in OWNER_SESSION_CHANGES.md,
 OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short index. No client data in this file.
 
+## 0. For a fresh main-chat session (read this first)
+
+- Role: the main chat is the owner's single point of contact and auditor for the agent team (Lead, Workers 1-3,
+  Checker / Verifier; Scout paused). It records owner decisions on the board, writes the daily update (scheduled task
+  trig_01QAPf5hzouxE6bZh9PAbEJ6, 07:31 Kuwait: run ledger + scorecard), keeps RUN_LOG.md to 24 h (older entries to
+  archive/) and LEAD_REPORT.md to 3 entries, and reports material issues at once.
+- Board edits: edit files under .work/board/docs/agents/, then commit and push agents/control from .work/board
+  (commit message ends with the attribution lines; no model ids). Every owner change also gets one row in
+  OWNER_SESSION_CHANGES.md.
+- Engine facts: read-only from origin/claude/access-permissions-setup-ii24ws (candidate line index
+  research/agents_t*/out/LINE_INDEX_V3_0_*.json; newest Lead report in LEAD_REPORT.md).
+- main holds only the agent configuration (CLAUDE.md, .claude/settings.json, scripts/agent_env.sh + tests);
+  changes go by PR and the owner merges.
+
 ## 1. Standing rules (always apply)
 
 - Focus: "I always want you to focus on the boq and not urban project manager" (2026-11-07). App work only when the
