@@ -1,5 +1,5 @@
 {
- "candidate": "ARCH_TAKEOFF_V3.0.68",
+ "candidate": "ARCH_TAKEOFF_V3.0.69",
  "census": {
   "B4-04": {
    "after_t314_stage": {
@@ -10,7 +10,7 @@
     "lines": 18,
     "released": 152.005
    },
-   "before_v3_0_68": {
+   "before_v3_0_69": {
     "by_class": {
      "HELD blank": 3
     },
@@ -24,11 +24,13 @@
     "FIN.EXT.PARAPET-INNER",
     "FIN.EXT.PARAPET-TOP"
    ],
-   "note": "after = the T-314 r2 stage on V3.0.61; valid on V3.0.68 only because the 3 hosts are byte-equal (stage rows MAPPED vs the V3.0.61 index); r3 re-runs it on V3.0.68",
-   "rebase_v3_0_61_to_v3_0_68": {
-    "added": 32,
-    "changed": 112,
+   "note": "after = the T-314 r2 stage on V3.0.61; valid on V3.0.69 only because the 3 hosts are byte-equal (stage rows MAPPED vs the V3.0.61 index); r3 re-runs it on V3.0.69",
+   "rebase_v3_0_61_to_v3_0_69": {
+    "added": 50,
+    "changed": 127,
     "changed_by_code": {
+     "FIN.PAINT": 5,
+     "FIN.PLASTER": 10,
      "MAS.GLUE.AAC": 2,
      "MAS.MORTAR.BLACK": 6,
      "MAS.UNITS.BLACK": 6,
@@ -70,11 +72,11 @@
      "lines": 2
     },
     "INT|HOST_CHANGED": {
-     "blank": 2,
+     "blank": 9,
      "determinate_m2": 217.2081,
-     "held_hi": 433.1806,
-     "held_lo": 396.121,
-     "lines": 11
+     "held_hi": 544.0606,
+     "held_lo": 488.201,
+     "lines": 21
     },
     "INT|MAPPED": {
      "blank": 0,
@@ -82,13 +84,6 @@
      "held_hi": 1.4,
      "held_lo": 1.28,
      "lines": 33
-    },
-    "INT|MAPPED_PENDING_CHANGE": {
-     "blank": 7,
-     "determinate_m2": 0.0,
-     "held_hi": 110.88,
-     "held_lo": 92.08,
-     "lines": 10
     },
     "PENDING|AMBIGUOUS_HOST": {
      "blank": 0,
@@ -105,18 +100,11 @@
      "lines": 3
     },
     "PENDING|MAPPED": {
-     "blank": 6,
+     "blank": 7,
      "determinate_m2": 11.3906,
      "held_hi": 0.0,
      "held_lo": 0.0,
-     "lines": 34
-    },
-    "PENDING|MAPPED_PENDING_CHANGE": {
-     "blank": 1,
-     "determinate_m2": 0.0,
-     "held_hi": 0.0,
-     "held_lo": 0.0,
-     "lines": 1
+     "lines": 35
     }
    },
    "after_t349_line_level": {
@@ -142,7 +130,7 @@
      "lines": 39
     }
    },
-   "before_v3_0_68": {
+   "before_v3_0_69": {
     "lines": 0,
     "note": "no B4-05 line in the candidate"
    },
@@ -161,7 +149,7 @@
     "released_lm": 13.36392,
     "rule": "R-T645-1"
    },
-   "before_v3_0_68": {
+   "before_v3_0_69": {
     "by_class": {
      "HELD blank": 14
     },
@@ -174,17 +162,7 @@
   },
   "B9-03": {
    "after_t355": {
-    "by_host_class": {
-     "T-355 JOINT_MESH_CLASS|HOST_CHANGED": {
-      "determinate": 69.494844,
-      "held_rows": 0,
-      "rows": 18
-     },
-     "T-355 JOINT_MESH_CLASS|MAPPED": {
-      "determinate": 442.199025,
-      "held_rows": 0,
-      "rows": 114
-     },
+    "by_host_class_strip_and_sharmat": {
      "T-355 MESH_BY_WALL|HOST_CHANGED": {
       "determinate": 70.710218,
       "held_rows": 4,
@@ -206,12 +184,79 @@
       "rows": 99
      }
     },
-    "joint_mesh_by_class_owner_band_m": {
-     "A": 109.85,
-     "B": 67.9,
-     "C": 230.1439,
-     "MIXED": 87.05,
-     "UNKNOWN": 16.75
+    "joint_mesh": {
+     "by_host_class": {
+      "HOST_CHANGED": {
+       "drawing_band_m": 110.57046,
+       "held_joints_drawing": 46,
+       "held_joints_owner": 46,
+       "held_rows": 10,
+       "owner_band_m": 69.494844,
+       "rows": 18
+      },
+      "MAPPED": {
+       "drawing_band_m": 647.775468,
+       "held_joints_drawing": 256,
+       "held_joints_owner": 256,
+       "held_rows": 64,
+       "owner_band_m": 442.199025,
+       "rows": 114
+      }
+     },
+     "by_joint_class": {
+      "A": {
+       "drawing_band_m": 216.622853,
+       "held_joints_drawing": 86,
+       "held_joints_owner": 86,
+       "held_rows": 22,
+       "owner_band_m": 109.85,
+       "rows": 43
+      },
+      "B": {
+       "drawing_band_m": 111.022791,
+       "held_joints_drawing": 72,
+       "held_joints_owner": 72,
+       "held_rows": 22,
+       "owner_band_m": 67.9,
+       "rows": 38
+      },
+      "C": {
+       "drawing_band_m": 230.143869,
+       "held_joints_drawing": 80,
+       "held_joints_owner": 80,
+       "held_rows": 17,
+       "owner_band_m": 230.143869,
+       "rows": 25
+      },
+      "MIXED": {
+       "drawing_band_m": 174.43792,
+       "held_joints_drawing": 55,
+       "held_joints_owner": 55,
+       "held_rows": 10,
+       "owner_band_m": 87.05,
+       "rows": 17,
+       "split": "HELD (T-355: the MIXED class split is not resolved)"
+      },
+      "UNKNOWN": {
+       "drawing_band_m": 26.118495,
+       "held_joints_drawing": 9,
+       "held_joints_owner": 9,
+       "held_rows": 3,
+       "owner_band_m": 16.75,
+       "rows": 9
+      }
+     },
+     "note": "owner band .. drawing-derived band, neither chosen (T-355); class C bands coincide (exterior)",
+     "status": "HELD BAND PAIR",
+     "total": {
+      "drawing_band_m": 758.345928,
+      "held_joints_drawing": 302,
+      "held_joints_owner": 302,
+      "held_rows": 74,
+      "owner_band_m": 511.693869,
+      "rows": 132
+     },
+     "unit": "m"
     },
     "mesh_strip_held_by_cause_m": {
      "BLOCK_TOP_UNKNOWN": 92.1498,
@@ -223,7 +268,7 @@
     "sharmat_ties_pcs": 182,
     "status": "ASSUMED - OWNER-APPROVED module 0.200 (Q-77 / Q-75), PROVISIONAL; white walls HELD by name; OPTIONAL items, never inside MAS.BLOCK m2"
    },
-   "before_v3_0_68": {
+   "before_v3_0_69": {
     "lines": 0,
     "note": "no mesh / sharmat / joint-mesh line"
    },
@@ -260,9 +305,9 @@
   "B4-05": {
    "classes": {
     "AMBIGUOUS_HOST": 1,
-    "HOST_CHANGED": 14,
-    "MAPPED": 129,
-    "MAPPED_PENDING_CHANGE": 93,
+    "HOST_CHANGED": 60,
+    "MAPPED": 130,
+    "MAPPED_PENDING_CHANGE": 46,
     "MAPPED_PENDING_LINE": 71,
     "NO_HOST": 3,
     "STALE_ABSENT": 0,
@@ -319,7 +364,7 @@
   {
    "family": "B4-05",
    "host": "L-0eac839f9132da7bd116",
-   "why": "T-314 r2 / T-687 changes the host: T-687 BOUND BOUNDED_EXPOSURE 42.48..47.67 -> BOUNDED_EXPOSURE 45.317..46.564"
+   "why": "host moved since the reference index: HELD 42.48 .. 47.67 -> HELD 45.317 .. 46.564; resolved by T-687 merged (V3.0.69): T-687 BOUND BOUNDED_EXPOSURE 42.48..47.67 -> BOUNDED_EXPOSURE 45.317..46.564"
   },
   {
    "family": "B4-05",
@@ -329,7 +374,7 @@
   {
    "family": "B4-05",
    "host": "L-2211463bba5eeb2e4282",
-   "why": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64"
+   "why": "host moved since the reference index: HELD blank -> HELD 13.7028 .. 21.64; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64"
   },
   {
    "family": "B4-05",
@@ -344,12 +389,12 @@
   {
    "family": "B4-05",
    "host": "L-3f7fb1b37e68e6d6c7b7",
-   "why": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21"
+   "why": "host moved since the reference index: HELD blank -> HELD 11.4 .. 25.21; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21"
   },
   {
    "family": "B4-05",
    "host": "L-418121a4b223cb4e8646",
-   "why": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 47.342..48.772"
+   "why": "host moved since the reference index: HELD blank -> HELD 47.342 .. 48.772; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 47.342..48.772"
   },
   {
    "family": "B4-05",
@@ -359,17 +404,12 @@
   {
    "family": "B4-05",
    "host": "L-595181aa140e7efb2ac7",
-   "why": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735"
-  },
-  {
-   "family": "B4-05",
-   "host": "L-64cb94b4b8dc2cb17608",
-   "why": "carrier 1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD: T-687 CAUSE BLOCKED_RFI None..None -> BLOCKED_RFI None..None"
+   "why": "host moved since the reference index: HELD blank -> HELD 31.720506 .. 42.6735; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735"
   },
   {
    "family": "B4-05",
    "host": "L-8bb83e16cc7b104ab88b",
-   "why": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]"
+   "why": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]"
   },
   {
    "family": "B4-05",
@@ -379,7 +419,7 @@
   {
    "family": "B4-05",
    "host": "L-95f2c45c2eccaaeccb08",
-   "why": "T-314 r2 / T-687 changes the host: T-687 BOUND BOUNDED_EXPOSURE 48.52..62.01 -> BOUNDED_EXPOSURE 50.945..62.434"
+   "why": "host moved since the reference index: HELD 48.52 .. 62.01 -> HELD 50.945 .. 62.434; resolved by T-687 merged (V3.0.69): T-687 BOUND BOUNDED_EXPOSURE 48.52..62.01 -> BOUNDED_EXPOSURE 50.945..62.434"
   },
   {
    "family": "B4-05",
@@ -394,7 +434,7 @@
   {
    "family": "B4-05",
    "host": "L-a636dabcd4bc7e59169a",
-   "why": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555"
+   "why": "host moved since the reference index: HELD blank -> HELD 7.04 .. 19.555; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555"
   },
   {
    "family": "B4-05",
@@ -409,7 +449,7 @@
   {
    "family": "B4-05",
    "host": "L-b05f70c92405dbcfbe62",
-   "why": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]"
+   "why": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]"
   },
   {
    "family": "B4-05",
@@ -424,7 +464,7 @@
   {
    "family": "B4-05",
    "host": "L-d52c4f763b19aedf8b8b",
-   "why": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> PROVISIONAL [117.305, 117.305]"
+   "why": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> PROVISIONAL [117.305, 117.305]"
   },
   {
    "family": "B4-05",
@@ -434,17 +474,17 @@
   {
    "family": "B4-05",
    "host": "L-f179fc08a266294ad4a4",
-   "why": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44"
+   "why": "host moved since the reference index: HELD blank -> HELD 12.2064 .. 16.44; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44"
   },
   {
    "family": "B4-05",
    "host": "L-f4175f9915208dc5f9f7",
-   "why": "T-314 r2 / T-687 changes the host: T-687 VALUE BOUNDED_EXPOSURE 1.08..1.2 -> PROVISIONAL 1.08None..None"
+   "why": "host moved since the reference index: HELD 1.08 .. 1.2 -> RELEASED 1.08; resolved by T-687 merged (V3.0.69): T-687 VALUE BOUNDED_EXPOSURE 1.08..1.2 -> PROVISIONAL 1.08None..None"
   },
   {
    "family": "B4-05",
    "host": "L-f43782d52f32b53a6f1e",
-   "why": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615"
+   "why": "host moved since the reference index: HELD blank -> HELD 16.945 .. 22.615; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615"
   },
   {
    "family": "B4-05",
@@ -494,7 +534,7 @@
   {
    "family": "B9-03",
    "host": "L-0d9b9e89bb6455da475d",
-   "why": "wall left part line L-adb393d6db51056d343b (its V3.0.68 value is the other walls, membership CONFIRMED without it); now on its parent GF-WALLS:walls t=0.15 HELD blank"
+   "why": "wall left part line L-adb393d6db51056d343b (its V3.0.69 value is the other walls, membership CONFIRMED without it); now on its parent GF-WALLS:walls t=0.15 HELD blank"
   },
   {
    "family": "B9-03",
@@ -527,7 +567,7 @@
    "why": "host moved since the reference index: RELEASED 21.476 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE"
   }
  ],
- "line_index_sha256": "fc485958b2d1a51153409ca81a4f671b295766bc3bbfb27d9e1d43567df13e8d",
+ "line_index_sha256": "e908a5f105197d44277c8e1d2a2ef79c67b45681ca874d8c405e85d3b97602f1",
  "pending": {
   "T-314": {
    "base": "ARCH_TAKEOFF_V3.0.61",
@@ -560,7 +600,22 @@
   "research/agents_t645/out/STAIR_HOLD_CENSUS_T645.json": "3e1384ee4e84bf9e",
   "research/agents_t655/out/LINE_INDEX_V3_0_61.json": "10e5f116d30af67f",
   "research/agents_t672/out/LINE_INDEX_V3_0_68.json": "fc485958b2d1a511",
+  "research/agents_t687/out/LINE_INDEX_V3_0_69.json": "e908a5f105197d44",
   "research/agents_t698/in/PENDING_STAGES_T698.json": "cb42ebc40780b521"
+ },
+ "row_total": {
+  "b7_01_t135_disposition_rows": 14,
+  "by_family": {
+   "B4-04": 127,
+   "B4-04 stage": 18,
+   "B4-05": 311,
+   "B7-01": 14,
+   "B7-01 fix": 14,
+   "B9-03": 318
+  },
+  "note": "802 = 788 (B4-04 127 + T-314 stage 18 + B4-05 311 + B9-03 318 + B7-01 T-645 fix 14) + the 14 B7-01 T-135 disposition rows (r1's handoff '788' left these out)",
+  "rows": 802,
+  "without_t135_disposition": 788
  },
  "rows": [
   {
@@ -2396,7 +2451,7 @@
    "ledger_state": "HELD",
    "lo": 54.00748,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-5a04a3ec70ce025ddd95",
    "stage_after": "BOUNDED_EXPOSURE",
    "unit": "m2"
@@ -2411,7 +2466,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": 14.9,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-d503696a891174c1d837",
    "stage_after": "MEASURED",
    "unit": "m2"
@@ -2426,7 +2481,7 @@
    "ledger_state": "HELD",
    "lo": 14.671022,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-7c48b6a481d71ac57c54",
    "stage_after": "BOUNDED_EXPOSURE",
    "unit": "m2"
@@ -2441,7 +2496,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": 14.385,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-5816ca234f93f8947eb9",
    "stage_after": "MEASURED",
    "unit": "m2"
@@ -2456,7 +2511,7 @@
    "ledger_state": "HELD",
    "lo": 71.68859,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-0a6d30ea444e90e119bb",
    "stage_after": "BOUNDED_EXPOSURE",
    "unit": "m2"
@@ -2471,7 +2526,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-22e75c3942faeeb6718a",
    "stage_after": "BLOCKED_RFI",
    "unit": "m2"
@@ -2486,7 +2541,7 @@
    "ledger_state": "HELD",
    "lo": 1.85426,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-e3ee1b7f7603762da446",
    "stage_after": "BOUNDED_EXPOSURE",
    "unit": "m2"
@@ -2501,7 +2556,7 @@
    "ledger_state": "HELD",
    "lo": 41.82353,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-d4178f2108229818b472",
    "stage_after": "BOUNDED_EXPOSURE",
    "unit": "m2"
@@ -2516,7 +2571,7 @@
    "ledger_state": "HELD",
    "lo": 8.49,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-fbda06a1ad25128c6a63",
    "stage_after": "BOUNDED_EXPOSURE",
    "unit": "m2"
@@ -2531,7 +2586,7 @@
    "ledger_state": "HELD",
    "lo": 8.88843,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-c79492a8ed9c2c310d37",
    "stage_after": "BOUNDED_EXPOSURE",
    "unit": "m2"
@@ -2546,7 +2601,7 @@
    "ledger_state": "HELD",
    "lo": 8.209433,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-60877480b3303b0be233",
    "stage_after": "BOUNDED_EXPOSURE",
    "unit": "m2"
@@ -2561,7 +2616,7 @@
    "ledger_state": "HELD",
    "lo": 9.83151,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-757343d535ae19b589bf",
    "stage_after": "BOUNDED_EXPOSURE",
    "unit": "m2"
@@ -2576,7 +2631,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": 5.415,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-89d750dd0e9ced13f5ca",
    "stage_after": "MEASURED",
    "unit": "m2"
@@ -2591,7 +2646,7 @@
    "ledger_state": "HELD",
    "lo": 5.99701,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-54e708d3940d1932607c",
    "stage_after": "BOUNDED_EXPOSURE",
    "unit": "m2"
@@ -2606,7 +2661,7 @@
    "ledger_state": "HELD",
    "lo": 5.592956,
    "qty": null,
-   "reason": "added by the T-314 stage; id free in V3.0.68",
+   "reason": "added by the T-314 stage; id free in V3.0.69",
    "row": "L-490fdc0ff59a0e66ca13",
    "stage_after": "BOUNDED_EXPOSURE",
    "unit": "m2"
@@ -3212,7 +3267,7 @@
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3222,12 +3277,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
+   "reason": "host moved since the reference index: HELD blank -> HELD 13.7028 .. 21.64; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
    "row": "S-GF-02|GF-W04",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3237,12 +3292,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
+   "reason": "host moved since the reference index: HELD blank -> HELD 13.7028 .. 21.64; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
    "row": "S-GF-02|GF-W25",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3252,12 +3307,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
+   "reason": "host moved since the reference index: HELD blank -> HELD 13.7028 .. 21.64; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
    "row": "S-GF-02|GF-W26",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3267,12 +3322,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
+   "reason": "host moved since the reference index: HELD blank -> HELD 13.7028 .. 21.64; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
    "row": "S-GF-02|GF-W27",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3282,12 +3337,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
+   "reason": "host moved since the reference index: HELD blank -> HELD 13.7028 .. 21.64; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
    "row": "S-GF-02|OFF:COLUMN",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3297,12 +3352,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
+   "reason": "host moved since the reference index: HELD blank -> HELD 13.7028 .. 21.64; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
    "row": "S-GF-02|OFF:WALL",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3312,12 +3367,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
+   "reason": "host moved since the reference index: HELD blank -> HELD 13.7028 .. 21.64; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
    "row": "S-GF-02|OFF:DOORWAY",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_RESIDUAL",
    "family": "B4-05",
    "hi": null,
@@ -3327,12 +3382,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
+   "reason": "host moved since the reference index: HELD blank -> HELD 13.7028 .. 21.64; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 13.7028..21.64",
    "row": "S-GF-02|WALK-CLASS-RESIDUAL",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3342,12 +3397,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
+   "reason": "host moved since the reference index: HELD blank -> HELD 16.945 .. 22.615; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
    "row": "S-GF-03|GF-W00",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3357,12 +3412,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
+   "reason": "host moved since the reference index: HELD blank -> HELD 16.945 .. 22.615; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
    "row": "S-GF-03|GF-W25",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3372,12 +3427,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
+   "reason": "host moved since the reference index: HELD blank -> HELD 16.945 .. 22.615; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
    "row": "S-GF-03|GF-W26",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3387,12 +3442,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
+   "reason": "host moved since the reference index: HELD blank -> HELD 16.945 .. 22.615; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
    "row": "S-GF-03|GF-W27",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3402,12 +3457,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
+   "reason": "host moved since the reference index: HELD blank -> HELD 16.945 .. 22.615; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
    "row": "S-GF-03|OFF:WALL",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3417,12 +3472,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
+   "reason": "host moved since the reference index: HELD blank -> HELD 16.945 .. 22.615; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 16.945..22.615",
    "row": "S-GF-03|OFF:DOORWAY",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3432,12 +3487,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44",
+   "reason": "host moved since the reference index: HELD blank -> HELD 12.2064 .. 16.44; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44",
    "row": "S-GF-05|GF-W00",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3447,12 +3502,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44",
+   "reason": "host moved since the reference index: HELD blank -> HELD 12.2064 .. 16.44; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44",
    "row": "S-GF-05|GF-W02",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3462,12 +3517,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44",
+   "reason": "host moved since the reference index: HELD blank -> HELD 12.2064 .. 16.44; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44",
    "row": "S-GF-05|GF-W23",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3477,12 +3532,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44",
+   "reason": "host moved since the reference index: HELD blank -> HELD 12.2064 .. 16.44; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44",
    "row": "S-GF-05|GF-W24",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_RESIDUAL",
    "family": "B4-05",
    "hi": null,
@@ -3492,12 +3547,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44",
+   "reason": "host moved since the reference index: HELD blank -> HELD 12.2064 .. 16.44; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 12.2064..16.44",
    "row": "S-GF-05|WALK-CLASS-RESIDUAL",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3507,12 +3562,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
+   "reason": "host moved since the reference index: HELD blank -> HELD 31.720506 .. 42.6735; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
    "row": "S-GF-06|BAND-STRETCH",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3522,12 +3577,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
+   "reason": "host moved since the reference index: HELD blank -> HELD 31.720506 .. 42.6735; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
    "row": "S-GF-06|GF-W00",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3537,12 +3592,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
+   "reason": "host moved since the reference index: HELD blank -> HELD 31.720506 .. 42.6735; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
    "row": "S-GF-06|GF-W02",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3552,12 +3607,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
+   "reason": "host moved since the reference index: HELD blank -> HELD 31.720506 .. 42.6735; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
    "row": "S-GF-06|GF-W04",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3567,12 +3622,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
+   "reason": "host moved since the reference index: HELD blank -> HELD 31.720506 .. 42.6735; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
    "row": "S-GF-06|GF-W17",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3582,12 +3637,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
+   "reason": "host moved since the reference index: HELD blank -> HELD 31.720506 .. 42.6735; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
    "row": "S-GF-06|GF-W23",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3597,12 +3652,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
+   "reason": "host moved since the reference index: HELD blank -> HELD 31.720506 .. 42.6735; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
    "row": "S-GF-06|GF-W24",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3612,12 +3667,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
+   "reason": "host moved since the reference index: HELD blank -> HELD 31.720506 .. 42.6735; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
    "row": "S-GF-06|OFF:COLUMN",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3627,12 +3682,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
+   "reason": "host moved since the reference index: HELD blank -> HELD 31.720506 .. 42.6735; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
    "row": "S-GF-06|OFF:WALL",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_RESIDUAL",
    "family": "B4-05",
    "hi": null,
@@ -3642,7 +3697,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
+   "reason": "host moved since the reference index: HELD blank -> HELD 31.720506 .. 42.6735; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 31.720506..42.6735",
    "row": "S-GF-06|WALK-CLASS-RESIDUAL",
    "unit": "m2"
   },
@@ -3737,7 +3792,7 @@
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3747,12 +3802,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
+   "reason": "host moved since the reference index: HELD blank -> HELD 11.4 .. 25.21; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
    "row": "S-GF-10|GF-W10",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3762,12 +3817,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
+   "reason": "host moved since the reference index: HELD blank -> HELD 11.4 .. 25.21; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
    "row": "S-GF-10|GF-W14",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3777,12 +3832,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
+   "reason": "host moved since the reference index: HELD blank -> HELD 11.4 .. 25.21; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
    "row": "S-GF-10|GF-W22",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3792,12 +3847,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
+   "reason": "host moved since the reference index: HELD blank -> HELD 11.4 .. 25.21; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
    "row": "S-GF-10|GF-W29",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3807,12 +3862,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
+   "reason": "host moved since the reference index: HELD blank -> HELD 11.4 .. 25.21; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
    "row": "S-GF-10|OFF:WALL",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3822,12 +3877,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
+   "reason": "host moved since the reference index: HELD blank -> HELD 11.4 .. 25.21; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
    "row": "S-GF-10|OFF:DOORWAY",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_RESIDUAL",
    "family": "B4-05",
    "hi": null,
@@ -3837,12 +3892,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
+   "reason": "host moved since the reference index: HELD blank -> HELD 11.4 .. 25.21; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 11.4..25.21",
    "row": "S-GF-10|WALK-CLASS-RESIDUAL",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3852,12 +3907,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
+   "reason": "host moved since the reference index: HELD blank -> HELD 7.04 .. 19.555; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
    "row": "S-GF-11|GF-W09",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3867,12 +3922,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
+   "reason": "host moved since the reference index: HELD blank -> HELD 7.04 .. 19.555; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
    "row": "S-GF-11|GF-W14",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3882,12 +3937,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
+   "reason": "host moved since the reference index: HELD blank -> HELD 7.04 .. 19.555; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
    "row": "S-GF-11|GF-W22",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3897,12 +3952,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
+   "reason": "host moved since the reference index: HELD blank -> HELD 7.04 .. 19.555; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
    "row": "S-GF-11|GF-W29",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3912,12 +3967,12 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
+   "reason": "host moved since the reference index: HELD blank -> HELD 7.04 .. 19.555; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
    "row": "S-GF-11|OFF:WALL",
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_WET_FACE",
    "family": "B4-05",
    "hi": null,
@@ -3927,7 +3982,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
+   "reason": "host moved since the reference index: HELD blank -> HELD 7.04 .. 19.555; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 7.04..19.555",
    "row": "S-GF-11|OFF:DOORWAY",
    "unit": "m2"
   },
@@ -4532,7 +4587,7 @@
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_DRY_LINE",
    "family": "B4-05",
    "hi": 47.67,
@@ -4542,7 +4597,7 @@
    "ledger_state": "HELD",
    "lo": 42.48,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BOUNDED_EXPOSURE 42.48..47.67 -> BOUNDED_EXPOSURE 45.317..46.564",
+   "reason": "host moved since the reference index: HELD 42.48 .. 47.67 -> HELD 45.317 .. 46.564; resolved by T-687 merged (V3.0.69): T-687 BOUND BOUNDED_EXPOSURE 42.48..47.67 -> BOUNDED_EXPOSURE 45.317..46.564",
    "row": "S-L-0eac839f9132da7bd116",
    "unit": "m2"
   },
@@ -4622,7 +4677,7 @@
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_DRY_LINE",
    "family": "B4-05",
    "hi": null,
@@ -4632,7 +4687,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 47.342..48.772",
+   "reason": "host moved since the reference index: HELD blank -> HELD 47.342 .. 48.772; resolved by T-687 merged (V3.0.69): T-687 BOUND BLOCKED_RFI None..None -> BOUNDED_EXPOSURE 47.342..48.772",
    "row": "S-L-418121a4b223cb4e8646",
    "unit": "m2"
   },
@@ -4667,7 +4722,7 @@
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_DRY_LINE",
    "family": "B4-05",
    "hi": 1.2,
@@ -4677,7 +4732,7 @@
    "ledger_state": "HELD",
    "lo": 1.08,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 VALUE BOUNDED_EXPOSURE 1.08..1.2 -> PROVISIONAL 1.08None..None",
+   "reason": "host moved since the reference index: HELD 1.08 .. 1.2 -> RELEASED 1.08; resolved by T-687 merged (V3.0.69): T-687 VALUE BOUNDED_EXPOSURE 1.08..1.2 -> PROVISIONAL 1.08None..None",
    "row": "S-L-f4175f9915208dc5f9f7",
    "unit": "m2"
   },
@@ -4862,7 +4917,7 @@
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "HOST_CHANGED",
    "face_family": "INT_DRY_LINE",
    "family": "B4-05",
    "hi": 62.01,
@@ -4872,7 +4927,7 @@
    "ledger_state": "HELD",
    "lo": 48.52,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-687 BOUND BOUNDED_EXPOSURE 48.52..62.01 -> BOUNDED_EXPOSURE 50.945..62.434",
+   "reason": "host moved since the reference index: HELD 48.52 .. 62.01 -> HELD 50.945 .. 62.434; resolved by T-687 merged (V3.0.69): T-687 BOUND BOUNDED_EXPOSURE 48.52..62.01 -> BOUNDED_EXPOSURE 50.945..62.434",
    "row": "S-L-95f2c45c2eccaaeccb08",
    "unit": "m2"
   },
@@ -4887,7 +4942,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 2.01,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SE-1/EDGE/plinth",
    "unit": "m2"
   },
@@ -4902,7 +4957,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 18.22,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SE-1/EDGE/storey",
    "unit": "m2"
   },
@@ -4917,7 +4972,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 3.35,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SE-1/EDGE/parapet",
    "unit": "m2"
   },
@@ -4932,7 +4987,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.465,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-1/EDGE/plinth",
    "unit": "m2"
   },
@@ -4947,7 +5002,7 @@
    "ledger_state": "ASSUMED — OWNER-APPROVED",
    "lo": null,
    "qty": 10.2,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SW-1/EDGE/storey",
    "unit": "m2"
   },
@@ -4962,7 +5017,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 1.55,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-1/EDGE/parapet",
    "unit": "m2"
   },
@@ -4977,7 +5032,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.3063,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-2/EDGE/plinth",
    "unit": "m2"
   },
@@ -4992,7 +5047,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 8.168178,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SW-2/EDGE/storey",
    "unit": "m2"
   },
@@ -5007,7 +5062,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 1.021022,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-2/EDGE/parapet",
    "unit": "m2"
   },
@@ -5022,7 +5077,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.075,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NW-1/EDGE/plinth",
    "unit": "m2"
   },
@@ -5037,7 +5092,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 2.0,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NW-1/EDGE/storey",
    "unit": "m2"
   },
@@ -5052,7 +5107,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.25,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NW-1/EDGE/parapet",
    "unit": "m2"
   },
@@ -5067,7 +5122,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.03,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-3/COVERED/plinth",
    "unit": "m2"
   },
@@ -5082,7 +5137,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 1.04,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SW-3/COVERED/storey",
    "unit": "m2"
   },
@@ -5097,7 +5152,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.93,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-3/EDGE/plinth",
    "unit": "m2"
   },
@@ -5112,7 +5167,7 @@
    "ledger_state": "ASSUMED — OWNER-APPROVED",
    "lo": null,
    "qty": 20.09,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SW-3/EDGE/storey",
    "unit": "m2"
   },
@@ -5127,7 +5182,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 3.1,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-3/EDGE/parapet",
    "unit": "m2"
   },
@@ -5142,7 +5197,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 2.55,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-5/COVERED/plinth",
    "unit": "m2"
   },
@@ -5157,7 +5212,7 @@
    "ledger_state": "ASSUMED — OWNER-APPROVED",
    "lo": null,
    "qty": 11.3,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SW-5/COVERED/storey",
    "unit": "m2"
   },
@@ -5172,7 +5227,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 3.145,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SE-2/COVERED/plinth",
    "unit": "m2"
   },
@@ -5187,7 +5242,7 @@
    "ledger_state": "HELD",
    "lo": 11.65,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SE-2/COVERED/storey",
    "unit": "m2"
   },
@@ -5202,7 +5257,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 1.19,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NE-1/COVERED/plinth",
    "unit": "m2"
   },
@@ -5217,7 +5272,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 6.3,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NE-1/COVERED/storey",
    "unit": "m2"
   },
@@ -5232,7 +5287,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.34,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SE-3/COVERED/plinth",
    "unit": "m2"
   },
@@ -5247,7 +5302,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 1.8,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SE-3/COVERED/storey",
    "unit": "m2"
   },
@@ -5262,7 +5317,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 1.19,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-6/FLUSH/plinth",
    "unit": "m2"
   },
@@ -5277,7 +5332,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 6.3,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SW-6/FLUSH/storey",
    "unit": "m2"
   },
@@ -5292,7 +5347,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 3.825,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SE-4/FLUSH/plinth",
    "unit": "m2"
   },
@@ -5307,7 +5362,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 17.85,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SE-4/FLUSH/storey",
    "unit": "m2"
   },
@@ -5322,7 +5377,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 12.6395,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-7/FLUSH/plinth",
    "unit": "m2"
   },
@@ -5337,7 +5392,7 @@
    "ledger_state": "ASSUMED — OWNER-APPROVED",
    "lo": null,
    "qty": 63.495,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SW-7/FLUSH/storey",
    "unit": "m2"
   },
@@ -5352,7 +5407,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.2125,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NW-2/FLUSH/plinth",
    "unit": "m2"
   },
@@ -5367,7 +5422,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 1.125,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NW-2/FLUSH/storey",
    "unit": "m2"
   },
@@ -5382,7 +5437,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.425,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NE-2/COVERED/plinth",
    "unit": "m2"
   },
@@ -5397,7 +5452,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 2.25,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NE-2/COVERED/storey",
    "unit": "m2"
   },
@@ -5412,7 +5467,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.0425,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SE-5/COVERED/plinth",
    "unit": "m2"
   },
@@ -5427,7 +5482,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.225,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SE-5/COVERED/storey",
    "unit": "m2"
   },
@@ -5442,7 +5497,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.068,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NE-3/COVERED/plinth",
    "unit": "m2"
   },
@@ -5457,7 +5512,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.36,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NE-3/COVERED/storey",
    "unit": "m2"
   },
@@ -5472,7 +5527,7 @@
    "ledger_state": "HELD",
    "lo": 0.13545,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NW-3/COVERED/plinth",
    "unit": "m2"
   },
@@ -5487,7 +5542,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.253706,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NW-3/COVERED/storey",
    "unit": "m2"
   },
@@ -5502,7 +5557,7 @@
    "ledger_state": "HELD",
    "lo": 4.66039,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NW-4/COVERED/plinth",
    "unit": "m2"
   },
@@ -5517,7 +5572,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 1.331559,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NW-4/COVERED/storey",
    "unit": "m2"
   },
@@ -5532,7 +5587,7 @@
    "ledger_state": "HELD",
    "lo": 0.10045,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NW-5/COVERED/plinth",
    "unit": "m2"
   },
@@ -5547,7 +5602,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.200706,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NW-5/COVERED/storey",
    "unit": "m2"
   },
@@ -5562,7 +5617,7 @@
    "ledger_state": "HELD",
    "lo": 0.056,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-8/COVERED/plinth",
    "unit": "m2"
   },
@@ -5577,7 +5632,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.36,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SW-8/COVERED/storey",
    "unit": "m2"
   },
@@ -5592,7 +5647,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.3825,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NW-6/COVERED/plinth",
    "unit": "m2"
   },
@@ -5607,7 +5662,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 2.025,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NW-6/COVERED/storey",
    "unit": "m2"
   },
@@ -5622,7 +5677,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.425,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-9/COVERED/plinth",
    "unit": "m2"
   },
@@ -5637,7 +5692,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 2.25,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SW-9/COVERED/storey",
    "unit": "m2"
   },
@@ -5652,7 +5707,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 1.275,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-9/EDGE/plinth",
    "unit": "m2"
   },
@@ -5667,7 +5722,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 6.75,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/SW-9/EDGE/storey",
    "unit": "m2"
   },
@@ -5682,7 +5737,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.75,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/SW-9/EDGE/parapet",
    "unit": "m2"
   },
@@ -5697,7 +5752,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 7.9,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NW-7/EDGE/plinth",
    "unit": "m2"
   },
@@ -5712,7 +5767,7 @@
    "ledger_state": "HELD",
    "lo": 7.065,
    "qty": null,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NW-7/EDGE/storey",
    "unit": "m2"
   },
@@ -5727,7 +5782,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 3.95,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NW-7/EDGE/parapet",
    "unit": "m2"
   },
@@ -5742,7 +5797,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 19.37,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NE-4/EDGE/plinth",
    "unit": "m2"
   },
@@ -5757,7 +5812,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 87.165,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NE-4/EDGE/storey",
    "unit": "m2"
   },
@@ -5772,7 +5827,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 9.685,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NE-4/EDGE/parapet",
    "unit": "m2"
   },
@@ -5787,7 +5842,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 3.24,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NE-6/EDGE/plinth",
    "unit": "m2"
   },
@@ -5802,7 +5857,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 43.2,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/NE-6/EDGE/storey",
    "unit": "m2"
   },
@@ -5817,7 +5872,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 5.4,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NE-6/EDGE/parapet",
    "unit": "m2"
   },
@@ -5832,7 +5887,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.705,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/P-1/COVERED/plinth",
    "unit": "m2"
   },
@@ -5847,7 +5902,7 @@
    "ledger_state": "ASSUMED — OWNER-APPROVED",
    "lo": null,
    "qty": 22.24,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/P-1/COVERED/storey",
    "unit": "m2"
   },
@@ -5862,7 +5917,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 3.995,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/P-2/COVERED/plinth",
    "unit": "m2"
   },
@@ -5877,7 +5932,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 17.4,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-GF/P-2/COVERED/storey",
    "unit": "m2"
   },
@@ -5892,7 +5947,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NW-1/SLAB_EDGE_BELOW/slab_edge",
    "unit": "m2"
   },
@@ -5907,7 +5962,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 4.9152,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/NW-1/STOREY/storey",
    "unit": "m2"
   },
@@ -5922,7 +5977,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 1.5206,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NW-1/PARAPET/parapet",
    "unit": "m2"
   },
@@ -5937,7 +5992,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NW-2/SLAB_EDGE_BELOW/slab_edge",
    "unit": "m2"
   },
@@ -5952,7 +6007,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 6.6754,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/NW-2/STOREY/storey",
    "unit": "m2"
   },
@@ -5967,7 +6022,7 @@
    "ledger_state": "HELD",
    "lo": 4.223108,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NW-2/PARAPET/parapet",
    "unit": "m2"
   },
@@ -5982,7 +6037,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NW-3/SLAB_EDGE_BELOW/slab_edge",
    "unit": "m2"
   },
@@ -5997,7 +6052,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 2.4276,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/NW-3/STOREY/storey",
    "unit": "m2"
   },
@@ -6012,7 +6067,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.7511,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NW-3/PARAPET/parapet",
    "unit": "m2"
   },
@@ -6027,7 +6082,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NE-1/SLAB_EDGE_BELOW/slab_edge",
    "unit": "m2"
   },
@@ -6042,7 +6097,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.336,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/NE-1/STOREY/storey",
    "unit": "m2"
   },
@@ -6057,7 +6112,7 @@
    "ledger_state": "HELD",
    "lo": 0.087968,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NE-1/PARAPET/parapet",
    "unit": "m2"
   },
@@ -6072,7 +6127,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NW-4/SLAB_EDGE_BELOW/slab_edge",
    "unit": "m2"
   },
@@ -6087,7 +6142,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.953328,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/NW-4/STOREY/storey",
    "unit": "m2"
   },
@@ -6102,7 +6157,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.5135,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NW-4/PARAPET/parapet",
    "unit": "m2"
   },
@@ -6117,7 +6172,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/SW-1/SLAB_EDGE_BELOW/slab_edge",
    "unit": "m2"
   },
@@ -6132,7 +6187,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 0.336,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/SW-1/STOREY/storey",
    "unit": "m2"
   },
@@ -6147,7 +6202,7 @@
    "ledger_state": "HELD",
    "lo": 0.087968,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/SW-1/PARAPET/parapet",
    "unit": "m2"
   },
@@ -6162,7 +6217,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NW-5/SLAB_EDGE_BELOW/slab_edge",
    "unit": "m2"
   },
@@ -6177,7 +6232,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 19.519,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/NW-5/STOREY/storey",
    "unit": "m2"
   },
@@ -6192,7 +6247,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 3.0134,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NW-5/PARAPET/parapet",
    "unit": "m2"
   },
@@ -6207,7 +6262,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 77.649,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/NE-2/STOREY/storey",
    "unit": "m2"
   },
@@ -6222,7 +6277,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 25.051,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/NE-2/PARAPET/parapet",
    "unit": "m2"
   },
@@ -6237,7 +6292,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 4.08,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [376.694149, 410.179149]",
    "row": "S-1F/SE-1/OVER_LOWER_ROOF/over_lower_roof",
    "unit": "m2"
   },
@@ -6252,7 +6307,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/SE-1/SLAB_EDGE_BELOW/slab_edge",
    "unit": "m2"
   },
@@ -6267,7 +6322,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 27.58,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/SE-1/STOREY/storey",
    "unit": "m2"
   },
@@ -6282,7 +6337,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 7.807,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/SE-1/PARAPET/parapet",
    "unit": "m2"
   },
@@ -6297,7 +6352,7 @@
    "ledger_state": "HELD",
    "lo": null,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/SW-2/SLAB_EDGE_BELOW/slab_edge",
    "unit": "m2"
   },
@@ -6312,7 +6367,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 18.48,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/SW-2/STOREY/storey",
    "unit": "m2"
   },
@@ -6327,7 +6382,7 @@
    "ledger_state": "HELD",
    "lo": 1.694,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/SW-2/PARAPET/parapet",
    "unit": "m2"
   },
@@ -6342,7 +6397,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 16.14,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/SE-2/STOREY/storey",
    "unit": "m2"
   },
@@ -6357,7 +6412,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 59.514,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> BOUNDED_EXPOSURE [248.178057, 249.954348]",
    "row": "S-1F/SW-3/STOREY/storey",
    "unit": "m2"
   },
@@ -6372,7 +6427,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 8.801,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-1F/SW-3/PARAPET/parapet",
    "unit": "m2"
   },
@@ -6387,7 +6442,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 28.56,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> PROVISIONAL [117.305, 117.305]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> PROVISIONAL [117.305, 117.305]",
    "row": "S-2F/NW-1/STOREY+PARAPET/storey",
    "unit": "m2"
   },
@@ -6402,7 +6457,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 3.4,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-2F/NW-1/STOREY+PARAPET/parapet",
    "unit": "m2"
   },
@@ -6417,7 +6472,7 @@
    "ledger_state": "ASSUMED — OWNER-APPROVED",
    "lo": null,
    "qty": 31.82,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> PROVISIONAL [117.305, 117.305]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> PROVISIONAL [117.305, 117.305]",
    "row": "S-2F/NE-1/STOREY+PARAPET/storey",
    "unit": "m2"
   },
@@ -6432,7 +6487,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 4.05,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-2F/NE-1/STOREY+PARAPET/parapet",
    "unit": "m2"
   },
@@ -6447,7 +6502,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 26.685,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> PROVISIONAL [117.305, 117.305]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> PROVISIONAL [117.305, 117.305]",
    "row": "S-2F/SE-1/STOREY+PARAPET/storey",
    "unit": "m2"
   },
@@ -6462,7 +6517,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 3.4,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-2F/SE-1/STOREY+PARAPET/parapet",
    "unit": "m2"
   },
@@ -6477,7 +6532,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 30.24,
-   "reason": "T-314 r2 / T-687 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> PROVISIONAL [117.305, 117.305]",
+   "reason": "T-314 r2 changes the host: T-314 r2 CHANGE BLOCKED_RFI -> PROVISIONAL [117.305, 117.305]",
    "row": "S-2F/SW-1/STOREY+PARAPET/storey",
    "unit": "m2"
   },
@@ -6492,7 +6547,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 4.05,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-2F/SW-1/STOREY+PARAPET/parapet",
    "unit": "m2"
   },
@@ -6507,7 +6562,7 @@
    "ledger_state": "HELD",
    "lo": 0.0,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-GF/NE-6x/EDGE/parapet",
    "unit": "m2"
   },
@@ -6522,7 +6577,7 @@
    "ledger_state": "HELD",
    "lo": 8.88843,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-parapet inner_face_above_upturn ANNEX",
    "unit": "m2"
   },
@@ -6537,7 +6592,7 @@
    "ledger_state": "HELD",
    "lo": 8.209433,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-parapet inner_face_above_upturn GF",
    "unit": "m2"
   },
@@ -6552,7 +6607,7 @@
    "ledger_state": "HELD",
    "lo": 41.82353,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-parapet inner_face_above_upturn 1F",
    "unit": "m2"
   },
@@ -6567,7 +6622,7 @@
    "ledger_state": "HELD",
    "lo": 8.49,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-parapet inner_face_above_upturn 2F",
    "unit": "m2"
   },
@@ -6582,7 +6637,7 @@
    "ledger_state": "HELD",
    "lo": 5.99701,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-parapet top_surface ANNEX",
    "unit": "m2"
   },
@@ -6597,7 +6652,7 @@
    "ledger_state": "HELD",
    "lo": 5.592956,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-parapet top_surface GF",
    "unit": "m2"
   },
@@ -6612,7 +6667,7 @@
    "ledger_state": "HELD",
    "lo": 9.83151,
    "qty": null,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-parapet top_surface 1F",
    "unit": "m2"
   },
@@ -6627,7 +6682,7 @@
    "ledger_state": "DRAWING-CONFIRMED",
    "lo": null,
    "qty": 5.415,
-   "reason": "exists only in the T-314 r2 / T-687 stage",
+   "reason": "exists only in the T-314 r2 stage",
    "row": "S-parapet top_surface 2F",
    "unit": "m2"
   },
@@ -6782,7 +6837,7 @@
    "unit": "m2"
   },
   {
-   "class": "MAPPED_PENDING_CHANGE",
+   "class": "MAPPED",
    "face_family": "PENDING",
    "family": "B4-05",
    "hi": null,
@@ -6792,7 +6847,7 @@
    "ledger_state": "UNKNOWN",
    "lo": null,
    "qty": null,
-   "reason": "carrier 1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD: T-687 CAUSE BLOCKED_RFI None..None -> BLOCKED_RFI None..None",
+   "reason": "carrier 1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD HELD blank; ledger row HELD blank; resolved by T-687 merged (V3.0.69): T-687 CAUSE BLOCKED_RFI None..None -> BLOCKED_RFI None..None",
    "row": "PENDING:REVEAL.ARCH:A-1F-01",
    "unit": "m2"
   },
@@ -6867,7 +6922,7 @@
    "ledger_state": "DRAWING-CONFIRMED; HELD beside: REVEAL_OUT_JAMBS",
    "lo": null,
    "qty": 0.5064,
-   "reason": "2 V3.0.68 carriers for W02: L-429605a88ef09abda085 RELEASED 0.5064 / L-bcc55693d203e384d46e HELD blank: the row must be split by carrier before wiring",
+   "reason": "2 V3.0.69 carriers for W02: L-429605a88ef09abda085 RELEASED 0.5064 / L-bcc55693d203e384d46e HELD blank: the row must be split by carrier before wiring",
    "row": "PENDING:REVEAL.WINDOW_OUT:W02",
    "unit": "m2"
   },
@@ -7552,7 +7607,7 @@
    "ledger_state": "ASSUMED — OWNER-APPROVED",
    "lo": null,
    "qty": 13.75,
-   "reason": "host value moved only because ['GF-W22'] left the line; this wall's membership CONFIRMED at V3.0.68; part line GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "reason": "host value moved only because ['GF-W22'] left the line; this wall's membership CONFIRMED at V3.0.69; part line GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
    "row": "GF-W19",
    "unit": "m"
   },
@@ -7594,7 +7649,7 @@
    "ledger_state": "ASSUMED — OWNER-APPROVED",
    "lo": null,
    "qty": 20.210518,
-   "reason": "wall left part line L-adb393d6db51056d343b (its V3.0.68 value is the other walls, membership CONFIRMED without it); now on its parent GF-WALLS:walls t=0.15 HELD blank",
+   "reason": "wall left part line L-adb393d6db51056d343b (its V3.0.69 value is the other walls, membership CONFIRMED without it); now on its parent GF-WALLS:walls t=0.15 HELD blank",
    "row": "GF-W22",
    "unit": "m"
   },
@@ -9881,1849 +9936,2773 @@
    "unit": "pcs"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 16.920767,
    "host_line_id": "L-2fdc0f971a94348ec855",
    "host_named": "1F-W00",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 16.920767,
+   "ledger_state": "HELD BAND PAIR class C",
+   "lo": 16.920767,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "1F-W00|1F|WB-FL0041-FL0042#1|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 16.620767,
    "host_line_id": "L-2fdc0f971a94348ec855",
    "host_named": "1F-W00",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 10.05,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD)",
+   "lo": 10.05,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "1F-W00|1F|WB-FL0041-FL0042#1|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 4.270767,
    "host_line_id": "L-2fdc0f971a94348ec855",
    "host_named": "1F-W01",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 4.270767,
+   "ledger_state": "HELD BAND PAIR class C",
+   "lo": 4.270767,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "1F-W01|1F|WB-FL0041-FL0042#2|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 4.170767,
    "host_line_id": "L-2fdc0f971a94348ec855",
    "host_named": "1F-W01",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 3.35,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 3.35,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "1F-W01|1F|WB-FL0041-FL0042#2|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 8.1,
    "host_line_id": "L-10dd62f66ad05488e63b",
    "host_named": "1F-W02",
+   "joint_class": "UNKNOWN",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class UNKNOWN",
-   "lo": null,
-   "qty": 6.7,
+   "ledger_state": "HELD BAND PAIR class UNKNOWN",
+   "lo": 6.7,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W02|1F|WB-FL0059-FL0061|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 8.1,
    "host_line_id": "L-10dd62f66ad05488e63b",
    "host_named": "1F-W02",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 6.7,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 6.7,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W02|1F|WB-FL0059-FL0061|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 18.0,
    "host_line_id": "L-10dd62f66ad05488e63b",
    "host_named": "1F-W03",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 13.4,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 13.4,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W03|1F|WB-FL0068-FL0070|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 18.0,
    "host_line_id": "L-10dd62f66ad05488e63b",
    "host_named": "1F-W03",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 13.4,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 13.4,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W03|1F|WB-FL0068-FL0070|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 4,
+    "held_joints_owner": 4
+   },
    "hi": 2.8,
    "host_line_id": "L-b7b4d784fbe7fdbebe84",
    "host_named": "1F-W04",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 2.8,
+   "ledger_state": "HELD BAND PAIR class C + held joints 4 / 4",
+   "lo": 2.8,
+   "qty": null,
    "reason": "host present, same state as the reference index (line also holds ['1F-W00/W01 BAY-ENDS', '1F-W25'] carried on the line without a T-355 row: no mesh row, named); part line 1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "1F-W04|1F|WB-FL0074-FL0076|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 4,
+    "held_joints_owner": 4
+   },
    "hi": 2.8,
    "host_line_id": "L-b7b4d784fbe7fdbebe84",
    "host_named": "1F-W04",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 4 / 4",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index (line also holds ['1F-W00/W01 BAY-ENDS', '1F-W25'] carried on the line without a T-355 row: no mesh row, named); part line 1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "1F-W04|1F|WB-FL0074-FL0076|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 7,
+    "held_joints_owner": 7
+   },
    "hi": 0.348956,
    "host_line_id": "L-2fdc0f971a94348ec855",
    "host_named": "1F-W05",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 0.348956,
+   "ledger_state": "HELD BAND PAIR class C + held joints 7 / 7",
+   "lo": 0.348956,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "1F-W05|1F|WB-FL0082-FL0083|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 7,
+    "held_joints_owner": 7
+   },
    "hi": 0.348956,
    "host_line_id": "L-2fdc0f971a94348ec855",
    "host_named": "1F-W05",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD) + held joints 7 / 7",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "1F-W05|1F|WB-FL0082-FL0083|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 44.57,
    "host_line_id": "L-2fdc0f971a94348ec855",
    "host_named": "1F-W06",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 44.57,
+   "ledger_state": "HELD BAND PAIR class C",
+   "lo": 44.57,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "1F-W06|1F|WB-FL0002-FL0003|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 43.77,
    "host_line_id": "L-2fdc0f971a94348ec855",
    "host_named": "1F-W06",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 26.8,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD)",
+   "lo": 26.8,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "1F-W06|1F|WB-FL0002-FL0003|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 13.265185,
    "host_line_id": "L-5ffa7157a2fe483dd008",
    "host_named": "1F-W07",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 10.05,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 10.05,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent 1F-WALLS:walls t=0.20",
    "row": "1F-W07|1F|WB-FL0016-FL0018|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 13.265185,
    "host_line_id": "L-5ffa7157a2fe483dd008",
    "host_named": "1F-W07",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 10.05,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 10.05,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent 1F-WALLS:walls t=0.20",
    "row": "1F-W07|1F|WB-FL0016-FL0018|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 10.5,
    "host_line_id": "L-2fdc0f971a94348ec855",
    "host_named": "1F-W08",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 10.5,
+   "ledger_state": "HELD BAND PAIR class C",
+   "lo": 10.5,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "1F-W08|1F|WB-FL0020-FL0021|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 10.3,
    "host_line_id": "L-2fdc0f971a94348ec855",
    "host_named": "1F-W08",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 6.7,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 6.7,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "1F-W08|1F|WB-FL0020-FL0021|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 5.5,
    "host_line_id": "L-10dd62f66ad05488e63b",
    "host_named": "1F-W09",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 3.35,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 3.35,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W09|1F|WB-FL0024-FL0025|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 5.5,
    "host_line_id": "L-10dd62f66ad05488e63b",
    "host_named": "1F-W09",
+   "joint_class": "UNKNOWN",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class UNKNOWN",
-   "lo": null,
-   "qty": 3.35,
+   "ledger_state": "HELD BAND PAIR class UNKNOWN",
+   "lo": 3.35,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W09|1F|WB-FL0024-FL0025|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 9,
+    "held_joints_owner": 9
+   },
    "hi": 10.37,
    "host_line_id": "L-b7b4d784fbe7fdbebe84",
    "host_named": "1F-W10",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 10.37,
+   "ledger_state": "HELD BAND PAIR class C + held joints 9 / 9",
+   "lo": 10.37,
+   "qty": null,
    "reason": "host present, same state as the reference index (line also holds ['1F-W00/W01 BAY-ENDS', '1F-W25'] carried on the line without a T-355 row: no mesh row, named); part line 1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "1F-W10|1F|WB-FL0030-FL0031|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 9,
+    "held_joints_owner": 9
+   },
    "hi": 10.37,
    "host_line_id": "L-b7b4d784fbe7fdbebe84",
    "host_named": "1F-W10",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD) + held joints 9 / 9",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index (line also holds ['1F-W00/W01 BAY-ENDS', '1F-W25'] carried on the line without a T-355 row: no mesh row, named); part line 1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "1F-W10|1F|WB-FL0030-FL0031|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 8,
+    "held_joints_owner": 8
+   },
    "hi": 0.073831,
    "host_line_id": "L-c22e309433e7b671cf2d",
    "host_named": "1F-W11",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 8 / 8",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent 1F-WALLS:walls t=0.15",
    "row": "1F-W11|1F|WB-FL0006-FL0007|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 8,
+    "held_joints_owner": 8
+   },
    "hi": 0.073831,
    "host_line_id": "L-c22e309433e7b671cf2d",
    "host_named": "1F-W11",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 8 / 8",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent 1F-WALLS:walls t=0.15",
    "row": "1F-W11|1F|WB-FL0006-FL0007|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 3.725,
    "host_line_id": "L-a56a8add7812d1b52cb7",
    "host_named": "1F-W12",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "1F-W12|1F|WB-FL0011-FL0012|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 3.725,
    "host_line_id": "L-a56a8add7812d1b52cb7",
    "host_named": "1F-W12",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "1F-W12|1F|WB-FL0011-FL0012|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 4.74983,
    "host_line_id": "L-a56a8add7812d1b52cb7",
    "host_named": "1F-W13",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD) + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "1F-W13|1F|WB-FL0013-FL0014|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 4.74983,
    "host_line_id": "L-a56a8add7812d1b52cb7",
    "host_named": "1F-W13",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "1F-W13|1F|WB-FL0013-FL0014|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 3.94,
    "host_line_id": "L-c22e309433e7b671cf2d",
    "host_named": "1F-W14 + 1F-W15",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 3.35,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 3.35,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent 1F-WALLS:walls t=0.15",
    "row": "1F-W14 + 1F-W15|1F|WB-FL0022-FL0023|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 3.94,
    "host_line_id": "L-c22e309433e7b671cf2d",
    "host_named": "1F-W14 + 1F-W15",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 3.35,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD)",
+   "lo": 3.35,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent 1F-WALLS:walls t=0.15",
    "row": "1F-W14 + 1F-W15|1F|WB-FL0022-FL0023|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 1.220684,
    "host_line_id": "L-c22e309433e7b671cf2d",
    "host_named": "1F-W16",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent 1F-WALLS:walls t=0.15",
    "row": "1F-W16|1F|WB-FL0027-FL0028#1|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 1.220684,
    "host_line_id": "L-c22e309433e7b671cf2d",
    "host_named": "1F-W16",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent 1F-WALLS:walls t=0.15",
    "row": "1F-W16|1F|WB-FL0027-FL0028#1|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 1.63548,
    "host_line_id": "L-a56a8add7812d1b52cb7",
    "host_named": "1F-W17",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "1F-W17|1F|WB-FL0043-FL0044|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 1.63548,
    "host_line_id": "L-a56a8add7812d1b52cb7",
    "host_named": "1F-W17",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "1F-W17|1F|WB-FL0043-FL0044|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 5.2,
    "host_line_id": "L-4054259959463edd70fb",
    "host_named": "1F-W18",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
    "row": "1F-W18|1F|WB-FL0046-FL0047|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 5.2,
    "host_line_id": "L-4054259959463edd70fb",
    "host_named": "1F-W18",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
    "row": "1F-W18|1F|WB-FL0046-FL0047|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 0.341056,
    "host_line_id": "L-a56a8add7812d1b52cb7",
    "host_named": "1F-W19",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "1F-W19|1F|WB-FL0050-FL0051|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 0.341056,
    "host_line_id": "L-a56a8add7812d1b52cb7",
    "host_named": "1F-W19",
+   "joint_class": "UNKNOWN",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class UNKNOWN",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class UNKNOWN",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "1F-W19|1F|WB-FL0050-FL0051|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 1.583664,
    "host_line_id": "L-73acd5a9d7e7cf6515c1",
    "host_named": "1F-W20",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD)",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W20|1F|WB-FL0054-FL0055#1|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 1.583664,
    "host_line_id": "L-73acd5a9d7e7cf6515c1",
    "host_named": "1F-W20",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W20|1F|WB-FL0054-FL0055#1|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 3.94,
    "host_line_id": "L-73acd5a9d7e7cf6515c1",
    "host_named": "1F-W20",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 3.35,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 3.35,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W20|1F|WB-FL0054-FL0055#2|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 3.94,
    "host_line_id": "L-73acd5a9d7e7cf6515c1",
    "host_named": "1F-W20",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 3.35,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 3.35,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W20|1F|WB-FL0054-FL0055#2|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 2.05,
    "host_line_id": "L-73acd5a9d7e7cf6515c1",
    "host_named": "1F-W21",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W21|1F|WB-FL0059-FL0060|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 2.05,
    "host_line_id": "L-73acd5a9d7e7cf6515c1",
    "host_named": "1F-W21",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W21|1F|WB-FL0059-FL0060|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 1.1562,
    "host_line_id": "L-73acd5a9d7e7cf6515c1",
    "host_named": "1F-W22",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W22|1F|WB-FL0063-FL0065|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 1.1562,
    "host_line_id": "L-73acd5a9d7e7cf6515c1",
    "host_named": "1F-W22",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
    "row": "1F-W22|1F|WB-FL0063-FL0065|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 13.85,
    "host_line_id": "L-a56a8add7812d1b52cb7",
    "host_named": "1F-W23",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 6.7,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD)",
+   "lo": 6.7,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "1F-W23|1F|WB-FL0074-FL0075|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 13.85,
    "host_line_id": "L-a56a8add7812d1b52cb7",
    "host_named": "1F-W23",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 6.7,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 6.7,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "1F-W23|1F|WB-FL0074-FL0075|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 1,
+    "held_joints_owner": 1
+   },
    "hi": 1.39234,
    "host_line_id": "L-4054259959463edd70fb",
    "host_named": "1F-W24",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 1 / 1",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
    "row": "1F-W24|1F|WB-FL0078-FL0079|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 1,
+    "held_joints_owner": 1
+   },
    "hi": 1.39234,
    "host_line_id": "L-4054259959463edd70fb",
    "host_named": "1F-W24",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 1 / 1",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line 1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
    "row": "1F-W24|1F|WB-FL0078-FL0079|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 5.5,
    "host_line_id": "L-afe984a62285e133ec2f",
    "host_named": "2F-W00",
+   "joint_class": "UNKNOWN",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class UNKNOWN",
-   "lo": null,
-   "qty": 3.35,
+   "ledger_state": "HELD BAND PAIR class UNKNOWN",
+   "lo": 3.35,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent 2F-WALLS:walls t=0.20",
    "row": "2F-W00|2F|WB-FL0004-FL0005|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 5.5,
    "host_line_id": "L-afe984a62285e133ec2f",
    "host_named": "2F-W00",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 3.35,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 3.35,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent 2F-WALLS:walls t=0.20",
    "row": "2F-W00|2F|WB-FL0004-FL0005|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 5.5,
    "host_line_id": "L-76a4d8e50423fb02b914",
    "host_named": "2F-W01",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 3.35,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 3.35,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 21.66 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "2F-W01|2F|WB-FL0006-FL0007|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 5.5,
    "host_line_id": "L-76a4d8e50423fb02b914",
    "host_named": "2F-W01",
+   "joint_class": "UNKNOWN",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class UNKNOWN",
-   "lo": null,
-   "qty": 3.35,
+   "ledger_state": "HELD BAND PAIR class UNKNOWN",
+   "lo": 3.35,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 21.66 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "2F-W01|2F|WB-FL0006-FL0007|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 8,
+    "held_joints_owner": 8
+   },
    "hi": 3.47,
    "host_line_id": "L-bbb82de298fecbafa11d",
    "host_named": "2F-W02",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 3.47,
+   "ledger_state": "HELD BAND PAIR class C + held joints 8 / 8",
+   "lo": 3.47,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 15.9165 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "2F-W02|2F|WB-FL0010-FL0011|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 8,
+    "held_joints_owner": 8
+   },
    "hi": 3.47,
    "host_line_id": "L-bbb82de298fecbafa11d",
    "host_named": "2F-W02",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD) + held joints 8 / 8",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 15.9165 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "2F-W02|2F|WB-FL0010-FL0011|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 7.4,
    "host_line_id": "L-9056ebed77701b50abfc",
    "host_named": "2F-W03",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 7.4,
+   "ledger_state": "HELD BAND PAIR class C + held joints 3 / 3",
+   "lo": 7.4,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 25.885 -> HELD blank; part line 2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
    "row": "2F-W03|2F|WB-FL0002-FL0003|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 7.4,
    "host_line_id": "L-9056ebed77701b50abfc",
    "host_named": "2F-W03",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 25.885 -> HELD blank; part line 2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
    "row": "2F-W03|2F|WB-FL0002-FL0003|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 13.024844,
    "host_line_id": "L-e90c9dd5ca08ffb64728",
    "host_named": "2F-W04",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 13.024844,
+   "ledger_state": "HELD BAND PAIR class C + held joints 2 / 2",
+   "lo": 13.024844,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 21.476 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "2F-W04|2F|WB-FL0020-FL0021|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 12.824844,
    "host_line_id": "L-e90c9dd5ca08ffb64728",
    "host_named": "2F-W04",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 6.7,
+   "ledger_state": "HELD BAND PAIR class A + held joints 2 / 2",
+   "lo": 6.7,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 21.476 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "2F-W04|2F|WB-FL0020-FL0021|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 5,
+    "held_joints_owner": 5
+   },
    "hi": 1.0,
    "host_line_id": "L-a6eedf5e4adec6d07618",
    "host_named": "2F-W05",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 5 / 5",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 3.8 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
    "row": "2F-W05|2F|WB-FL0024-FL0026|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 5,
+    "held_joints_owner": 5
+   },
    "hi": 1.0,
    "host_line_id": "L-a6eedf5e4adec6d07618",
    "host_named": "2F-W05",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 5 / 5",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 3.8 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
    "row": "2F-W05|2F|WB-FL0024-FL0026|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 18.7,
    "host_line_id": "L-76a4d8e50423fb02b914",
    "host_named": "2F-W06",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 13.4,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 13.4,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 21.66 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "2F-W06|2F|WB-FL0031-FL0032|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 18.7,
    "host_line_id": "L-76a4d8e50423fb02b914",
    "host_named": "2F-W06",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 13.4,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 13.4,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 21.66 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "2F-W06|2F|WB-FL0031-FL0032|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 5,
+    "held_joints_owner": 5
+   },
    "hi": 2.7,
    "host_line_id": "L-bbb82de298fecbafa11d",
    "host_named": "2F-W07",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 2.7,
+   "ledger_state": "HELD BAND PAIR class C + held joints 5 / 5",
+   "lo": 2.7,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 15.9165 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "2F-W07|2F|WB-FL0035-FL0036|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 5,
+    "held_joints_owner": 5
+   },
    "hi": 2.7,
    "host_line_id": "L-bbb82de298fecbafa11d",
    "host_named": "2F-W07",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 2.7,
+   "ledger_state": "HELD BAND PAIR class A + held joints 5 / 5",
+   "lo": 2.7,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 15.9165 -> HELD blank; part line 2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "2F-W07|2F|WB-FL0035-FL0036|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 3.35,
    "host_line_id": "L-e1e06ec149b44d4f6f8a",
    "host_named": "2F-W08",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 9.64 -> HELD blank; part line 2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "2F-W08|2F|WB-FL0024-FL0025|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 3.35,
    "host_line_id": "L-e1e06ec149b44d4f6f8a",
    "host_named": "2F-W08",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host moved since the reference index: RELEASED 9.64 -> HELD blank; part line 2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "2F-W08|2F|WB-FL0024-FL0025|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 5,
+    "held_joints_owner": 5
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W00",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class C + held joints 5 / 5",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W00|GF|WB-FL0001-FL0002#1|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 5,
+    "held_joints_owner": 5
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W00",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD) + held joints 5 / 5",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W00|GF|WB-FL0001-FL0002#1|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 43.067401,
    "host_line_id": "L-1c53fadb2f92d1f36d4e",
    "host_named": "GF-W01",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 43.067401,
+   "ledger_state": "HELD BAND PAIR class C + held joints 3 / 3",
+   "lo": 43.067401,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "GF-W01|GF|WB-FL0001-FL0002#2|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 42.367401,
    "host_line_id": "L-1c53fadb2f92d1f36d4e",
    "host_named": "GF-W01",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 25.55,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD) + held joints 3 / 3",
+   "lo": 25.55,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
    "row": "GF-W01|GF|WB-FL0001-FL0002#2|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 1,
+    "held_joints_owner": 1
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W02",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 1 / 1",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W02|GF|WB-FL0007-FL0008#1|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 1,
+    "held_joints_owner": 1
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W02",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 1 / 1",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W02|GF|WB-FL0007-FL0008#1|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W03",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W03|GF|WB-FL0007-FL0008#2|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W03",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W03|GF|WB-FL0007-FL0008#2|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 5,
+    "held_joints_owner": 5
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W04",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class C + held joints 5 / 5",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W04|GF|WB-FL0017-FL0018#1|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 5,
+    "held_joints_owner": 5
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W04",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD) + held joints 5 / 5",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W04|GF|WB-FL0017-FL0018#1|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 10.1,
    "host_line_id": "L-a3f88ecda2402f67c500",
    "host_named": "GF-W05",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 10.1,
+   "ledger_state": "HELD BAND PAIR class C",
+   "lo": 10.1,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line GF-WALLS:walls t=0.20#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
    "row": "GF-W05|GF|WB-FL0017-FL0018#2|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 9.9,
    "host_line_id": "L-a3f88ecda2402f67c500",
    "host_named": "GF-W05",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 7.3,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD)",
+   "lo": 7.3,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line GF-WALLS:walls t=0.20#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
    "row": "GF-W05|GF|WB-FL0017-FL0018#2|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W06",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class C + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W06|GF|WB-FL0020-FL0021|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W06",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W06|GF|WB-FL0020-FL0021|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 9.3,
    "host_line_id": "L-4e304f59db838d5fc7ec",
    "host_named": "GF-W07",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 9.3,
+   "ledger_state": "HELD BAND PAIR class C",
+   "lo": 9.3,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "GF-W07|GF|WB-FL0023-FL0024|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 9.1,
    "host_line_id": "L-4e304f59db838d5fc7ec",
    "host_named": "GF-W07",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 7.3,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 7.3,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
    "row": "GF-W07|GF|WB-FL0023-FL0024|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 7,
+    "held_joints_owner": 7
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W08",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 7 / 7",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W08|GF|WB-FL0025-FL0026|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 7,
+    "held_joints_owner": 7
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W08",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 7 / 7",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W08|GF|WB-FL0025-FL0026|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W09",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W09|GF|WB-FL0032-FL0033|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W09",
+   "joint_class": "UNKNOWN",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class UNKNOWN",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class UNKNOWN + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W09|GF|WB-FL0032-FL0033|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 8,
+    "held_joints_owner": 8
+   },
    "hi": 10.37,
    "host_line_id": "L-541cf7210e52db0498bb",
    "host_named": "GF-W10",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 10.37,
+   "ledger_state": "HELD BAND PAIR class C + held joints 8 / 8",
+   "lo": 10.37,
+   "qty": null,
    "reason": "host present, same state as the reference index (line also holds ['GF P-GF-05 ABOVE-LINTEL'] carried on the line without a T-355 row: no mesh row, named); part line GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "GF-W10|GF|WB-FL0041-FL0042|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 8,
+    "held_joints_owner": 8
+   },
    "hi": 10.37,
    "host_line_id": "L-541cf7210e52db0498bb",
    "host_named": "GF-W10",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD) + held joints 8 / 8",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index (line also holds ['GF P-GF-05 ABOVE-LINTEL'] carried on the line without a T-355 row: no mesh row, named); part line GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "GF-W10|GF|WB-FL0041-FL0042|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 14.5,
    "host_line_id": "L-541cf7210e52db0498bb",
    "host_named": "GF-W11",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 14.5,
+   "ledger_state": "HELD BAND PAIR class C",
+   "lo": 14.5,
+   "qty": null,
    "reason": "host present, same state as the reference index (line also holds ['GF P-GF-05 ABOVE-LINTEL'] carried on the line without a T-355 row: no mesh row, named); part line GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "GF-W11|GF|WB-FL0055-FL0056|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 14.3,
    "host_line_id": "L-541cf7210e52db0498bb",
    "host_named": "GF-W11",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 7.3,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 7.3,
+   "qty": null,
    "reason": "host present, same state as the reference index (line also holds ['GF P-GF-05 ABOVE-LINTEL'] carried on the line without a T-355 row: no mesh row, named); part line GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
    "row": "GF-W11|GF|WB-FL0055-FL0056|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W12",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class C + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W12|GF|WB-FL0057-FL0058|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W12",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W12|GF|WB-FL0057-FL0058|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 4,
+    "held_joints_owner": 4
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W13",
+   "joint_class": "UNKNOWN",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class UNKNOWN",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class UNKNOWN + held joints 4 / 4",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W13|GF|WB-FL0068-FL0069|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 4,
+    "held_joints_owner": 4
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W13",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD) + held joints 4 / 4",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W13|GF|WB-FL0068-FL0069|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 7,
+    "held_joints_owner": 7
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W14",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 7 / 7",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W14|GF|WB-FL0076-FL0077|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 7,
+    "held_joints_owner": 7
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W14",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 7 / 7",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W14|GF|WB-FL0076-FL0077|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 24.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W15",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 24.0,
+   "ledger_state": "HELD BAND PAIR class C",
+   "lo": 24.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W15|GF|WB-FL0078-FL0079|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 23.6,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W15",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 14.6,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 14.6,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W15|GF|WB-FL0078-FL0079|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 2.431134,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W16",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 2.431134,
+   "ledger_state": "HELD BAND PAIR class C + held joints 3 / 3",
+   "lo": 2.431134,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W16|GF|WB-FL0081-FL0082|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 1.231134,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W16",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD) + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W16|GF|WB-FL0081-FL0082|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 8,
+    "held_joints_owner": 8
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W17",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class C + held joints 8 / 8",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W17|GF|WB-FL0083-FL0084|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 8,
+    "held_joints_owner": 8
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W17",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 8 / 8",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W17|GF|WB-FL0083-FL0084|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W18",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class C + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W18|GF|WB-FL0097-FL0098|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W18",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W18|GF|WB-FL0097-FL0098|INT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 0.93,
    "host_line_id": "L-adb393d6db51056d343b",
    "host_named": "GF-W19",
+   "joint_class": "UNKNOWN",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class UNKNOWN",
-   "lo": null,
-   "qty": 0.0,
-   "reason": "host value moved only because ['GF-W22'] left the line; this wall's membership CONFIRMED at V3.0.68; part line GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "ledger_state": "HELD BAND PAIR class UNKNOWN",
+   "lo": 0.0,
+   "qty": null,
+   "reason": "host value moved only because ['GF-W22'] left the line; this wall's membership CONFIRMED at V3.0.69; part line GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
    "row": "GF-W19|GF|WB-FL0059-FL0060|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 0.93,
    "host_line_id": "L-adb393d6db51056d343b",
    "host_named": "GF-W19",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
-   "reason": "host value moved only because ['GF-W22'] left the line; this wall's membership CONFIRMED at V3.0.68; part line GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 0.0,
+   "qty": null,
+   "reason": "host value moved only because ['GF-W22'] left the line; this wall's membership CONFIRMED at V3.0.69; part line GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
    "row": "GF-W19|GF|WB-FL0059-FL0060|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 0.05,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W20",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W20|GF|WB-FL0063-FL0064#2|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 0.05,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W20",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W20|GF|WB-FL0063-FL0064#2|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 0.240386,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W22",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
-   "reason": "wall left part line L-adb393d6db51056d343b (its V3.0.68 value is the other walls, membership CONFIRMED without it); now on its parent GF-WALLS:walls t=0.15 HELD blank",
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 0.0,
+   "qty": null,
+   "reason": "wall left part line L-adb393d6db51056d343b (its V3.0.69 value is the other walls, membership CONFIRMED without it); now on its parent GF-WALLS:walls t=0.15 HELD blank",
    "row": "GF-W22|GF|WB-FL0070-FL0072|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "HOST_CHANGED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 0.240386,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W22",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
-   "reason": "wall left part line L-adb393d6db51056d343b (its V3.0.68 value is the other walls, membership CONFIRMED without it); now on its parent GF-WALLS:walls t=0.15 HELD blank",
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 0.0,
+   "qty": null,
+   "reason": "wall left part line L-adb393d6db51056d343b (its V3.0.69 value is the other walls, membership CONFIRMED without it); now on its parent GF-WALLS:walls t=0.15 HELD blank",
    "row": "GF-W22|GF|WB-FL0070-FL0072|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W23",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W23|GF|WB-FL0086-FL0087|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W23",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W23|GF|WB-FL0086-FL0087|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W24",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W24|GF|WB-FL0089-FL0090|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W24",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W24|GF|WB-FL0089-FL0090|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W25",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W25|GF|WB-FL0092-FL0093|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 3,
+    "held_joints_owner": 3
+   },
    "hi": 0.0,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W25",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 3 / 3",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W25|GF|WB-FL0092-FL0093|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 8.6,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W26",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 3.65,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 3.65,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W26|GF|WB-FL0095-FL0096|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 8.6,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W26",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 3.65,
+   "ledger_state": "HELD BAND PAIR class B",
+   "lo": 3.65,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W26|GF|WB-FL0095-FL0096|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 4,
+    "held_joints_owner": 4
+   },
    "hi": 0.0,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W27",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 4 / 4",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W27|GF|WB-FL0010-FL0011|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 4,
+    "held_joints_owner": 4
+   },
    "hi": 0.0,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W27",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 4 / 4",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W27|GF|WB-FL0010-FL0011|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 11.866168,
    "host_line_id": "L-abf15bdf70ccf1e7b474",
    "host_named": "GF-W28",
+   "joint_class": "MIXED",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class MIXED",
-   "lo": null,
-   "qty": 7.3,
+   "ledger_state": "HELD BAND PAIR class MIXED (class split HELD)",
+   "lo": 7.3,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "GF-W28|GF|WB-FL0030-FL0031|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 0,
+    "held_joints_owner": 0
+   },
    "hi": 11.866168,
    "host_line_id": "L-abf15bdf70ccf1e7b474",
    "host_named": "GF-W28",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 7.3,
+   "ledger_state": "HELD BAND PAIR class A",
+   "lo": 7.3,
+   "qty": null,
    "reason": "host present, same state as the reference index; part line GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
    "row": "GF-W28|GF|WB-FL0030-FL0031|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 0.247439,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W31",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W31|GF|WB-FL0100-FL0101|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 0.247439,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W31",
+   "joint_class": "UNKNOWN",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class UNKNOWN",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class UNKNOWN + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W31|GF|WB-FL0100-FL0101|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 5,
+    "held_joints_owner": 5
+   },
    "hi": 5.047182,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W32",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 3.65,
+   "ledger_state": "HELD BAND PAIR class B + held joints 5 / 5",
+   "lo": 3.65,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W32|GF|WB-FL0048-FL0049|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 5,
+    "held_joints_owner": 5
+   },
    "hi": 5.047182,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W32",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 3.65,
+   "ledger_state": "HELD BAND PAIR class B + held joints 5 / 5",
+   "lo": 3.65,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W32|GF|WB-FL0048-FL0049|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 0.52465,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W34",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W34|GF|WB-FL0102-FL0103|INT-A",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 0.52465,
    "host_line_id": "L-0d9b9e89bb6455da475d",
    "host_named": "GF-W34",
+   "joint_class": "B",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class B",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class B + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD ON DROP in the register: on its parent GF-WALLS:walls t=0.15",
    "row": "GF-W34|GF|WB-FL0102-FL0103|INT-B",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W36",
+   "joint_class": "C",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class C",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class C + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W36|GF|WB-FL0094-FL0096|EXT",
    "unit": "m"
   },
   {
+   "band_pair": true,
    "class": "MAPPED",
    "family": "B9-03",
+   "held": true,
+   "held_parts": {
+    "held_joints_drawing": 2,
+    "held_joints_owner": 2
+   },
    "hi": 0.0,
    "host_line_id": "L-4165954ce4871eda30cc",
    "host_named": "GF-W36",
+   "joint_class": "A",
    "ledger": "T-355 JOINT_MESH_CLASS",
-   "ledger_state": "class A",
-   "lo": null,
-   "qty": 0.0,
+   "ledger_state": "HELD BAND PAIR class A + held joints 2 / 2",
+   "lo": 0.0,
+   "qty": null,
    "reason": "host present, same state as the reference index; wall HELD in the register: on its parent GF-WALLS:walls t=0.20",
    "row": "GF-W36|GF|WB-FL0094-FL0096|INT",
    "unit": "m"
@@ -12135,7 +13114,7 @@
    "unit": "lm"
   }
  ],
- "rule": "R-T698-1 1.0.0",
+ "rule": "R-T698-1 1.1.0",
  "schema": "URBAN_T698_WIRING_READINESS_V1",
  "sources": {
   "B4-04": "T-305 face ledger (MERGED) -> T-337 binding (MERGED) -> T-314 r2 stage 080ccaa5 (QUEUED r3)",
@@ -12143,7 +13122,23 @@
   "B7-01": "T-135 STAIR_FLIGHT_ONCE_V1 (MERGED 05e2eab) + T-645 R-T645-1 fix rows (MERGED) via T-425 flight table",
   "B9-03": "T-355 r2 masonry accessories (MERGED 21f7b58a) -> T-363 (QUEUED); wall -> line crosswalk T-449 round 3"
  },
+ "t687_resolution": {
+  "added": 18,
+  "all_after_states_equal_v3_0_69": true,
+  "changed": 16,
+  "rows": 34
+ },
  "task": "T-698",
+ "v3_0_68_to_v3_0_69": {
+  "added": 18,
+  "changed": 15,
+  "changed_by_code": {
+   "FIN.PAINT": 5,
+   "FIN.PLASTER": 10
+  },
+  "family_lines_changed": [],
+  "removed": 0
+ },
  "wall_line_membership": {
   "L-10dd62f66ad05488e63b": {
    "element_id": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
@@ -12152,7 +13147,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "CONFIRMED",
     0.0
    ],
@@ -12169,7 +13164,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "CONFIRMED",
     0.0
    ],
@@ -12184,7 +13179,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "CONFIRMED",
     0.0
    ],
@@ -12203,7 +13198,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "CONFIRMED",
     0.0
    ],
@@ -12219,7 +13214,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "CONFIRMED",
     0.0
    ],
@@ -12234,7 +13229,7 @@
     "RESIDUAL",
     2.64
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "RESIDUAL",
     2.64
    ],
@@ -12250,7 +13245,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "CONFIRMED",
     0.0
    ],
@@ -12267,7 +13262,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "NOT_CHECKABLE (host not valued)",
     null
    ],
@@ -12283,7 +13278,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "CONFIRMED",
     0.0
    ],
@@ -12299,7 +13294,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "NOT_CHECKABLE (host not valued)",
     null
    ],
@@ -12314,7 +13309,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "CONFIRMED",
     0.0
    ],
@@ -12329,7 +13324,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "CONFIRMED",
     0.0
    ],
@@ -12348,7 +13343,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "NOT_CHECKABLE (host not valued)",
     null
    ],
@@ -12363,7 +13358,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "CONFIRMED",
     0.0
    ],
@@ -12374,16 +13369,16 @@
   },
   "L-adb393d6db51056d343b": {
    "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
-   "residual_named": "['GF-W22'] left the line (V3.0.68 value = the other walls)",
+   "residual_named": "['GF-W22'] left the line (V3.0.69 value = the other walls)",
    "v3_0_45": [
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "RESIDUAL",
     -12.9311
    ],
-   "v3_0_68_without_left": [
+   "v3_0_69_without_left": [
     "CONFIRMED",
     0.0
    ],
@@ -12399,7 +13394,7 @@
     "RESIDUAL",
     2.062
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "RESIDUAL",
     2.062
    ],
@@ -12415,7 +13410,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "NOT_CHECKABLE (host not valued)",
     null
    ],
@@ -12431,7 +13426,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "NOT_CHECKABLE (host not valued)",
     null
    ],
@@ -12446,7 +13441,7 @@
     "CONFIRMED",
     0.0
    ],
-   "v3_0_68": [
+   "v3_0_69": [
     "NOT_CHECKABLE (host not valued)",
     null
    ],

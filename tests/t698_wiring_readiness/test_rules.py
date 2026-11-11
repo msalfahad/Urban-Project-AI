@@ -124,3 +124,31 @@ def test_order_and_mirror_invariance():
     # mapping is by id, never by position: the same rows in reverse (a mirrored / re-ordered ledger) map identically
     hosts = ["L-k1", "L-k2", "L-k3", "L-k9", "NEW FIN.EXT.FINISH PLINTH K"]
     assert [cls(h) for h in hosts] == [cls(h) for h in reversed(hosts)][::-1]
+
+
+def test_held_parts_rule_9b_normal_and_adverse():
+    """rule 9b (1.1.0): K698 wall K-W1, one face 0.000 m of joint mesh + 2 held joints."""
+    ok = {"row": "K-W1|INT", "qty": None, "held": True, "held_parts": {"held_joints_owner": 2, "held_joints_drawing": 2}}
+    clean = {"row": "K-W2|INT", "qty": None, "held": True, "held_parts": {"held_joints_owner": 0, "held_joints_drawing": 0}}
+    assert R.check_held_parts([ok, clean])
+    with pytest.raises(R.ReadinessError, match="not HELD"):          # the 0 m face with held joints as a plain 0
+        R.check_held_parts([dict(ok, qty=0.0, held=False)])
+    with pytest.raises(R.ReadinessError, match="not HELD"):          # marker dropped, quantity None
+        R.check_held_parts([dict(ok, held=False)])
+
+
+def test_band_pair_rule_9c_normal_and_adverse():
+    """rule 9c (1.1.0): K698 joint mesh, owner band 12.000 m .. drawing band 18.500 m (by hand), neither chosen."""
+    row = {"row": "K-W1|INT", "qty": None, "held": True, "band_pair": True, "lo": 12.0, "hi": 18.5}
+    assert R.check_band_pair([row])
+    with pytest.raises(R.ReadinessError, match="determinate"):
+        R.check_band_pair([dict(row, qty=12.0)])                      # one band picked as the quantity
+    with pytest.raises(R.ReadinessError, match="determinate"):
+        R.check_band_pair([dict(row, hi=None)])                       # the drawing band dropped
+    census = {"status": "HELD BAND PAIR", "total": {"owner_band_m": 12.0, "drawing_band_m": 18.5},
+              "by_joint_class": {"MIXED": {"owner_band_m": 4.0, "drawing_band_m": 7.0, "split": "HELD"}}}
+    assert R.check_census_not_determinate(census)
+    with pytest.raises(R.ReadinessError, match="determinate"):        # a census that sums one band as determinate
+        R.check_census_not_determinate(dict(census, by_host_class={"MAPPED": {"determinate": 12.0}}))
+    with pytest.raises(R.ReadinessError, match="HELD BAND PAIR"):
+        R.check_census_not_determinate(dict(census, status="determinate"))

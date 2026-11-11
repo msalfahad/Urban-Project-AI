@@ -20,6 +20,11 @@ The rule (no quantity is produced, changed or wired here):
   7. A row with no host by construction (an item with no candidate line and no stage line) -> NO_HOST, named.
   8. Every ledger row lands in exactly one class: rows in == sum of classes (reconciled by count, by family).
   9. HELD stays HELD and blank stays blank: a ledger row's quantity is copied as the ledger states it, never 0.
+  9b. (1.1.0) A row whose ledger names HELD PARTS (e.g. held joints counted by name beside a measured length) carries
+     them (`held_parts`) and the HELD marker (`held` True, `qty` None): a row of 0 m with held parts is never a plain 0.
+  9c. (1.1.0) A ledger that states two unchosen bands (owner method vs drawing-derived method) maps as a HELD BAND PAIR:
+     `qty` None, `lo` = owner band, `hi` = drawing band, `band_pair` True; a census never sums one band as
+     determinate (it states the pair and the class split, with a class whose split is unresolved kept HELD).
 
 Scope: every villa (no project data in this module). Provenance: T-698 (lane I, 2026-11-11), from T-692 F-T692-1
 ('the gap is wiring, not measuring') and the Lead row's acceptance (a test fails when a mapped host id is absent).
@@ -28,7 +33,7 @@ from __future__ import annotations
 
 from collections import Counter
 
-RULE_ID, RULE_VERSION = "R-T698-1", "1.0.0"
+RULE_ID, RULE_VERSION = "R-T698-1", "1.1.0"   # 1.1.0: rules 9b / 9c (T-698 r2, Gate A defects)
 MAPPED, HOST_CHANGED, PENDING_CHANGE = "MAPPED", "HOST_CHANGED", "MAPPED_PENDING_CHANGE"
 PENDING_LINE, STALE, WRONG, NO_HOST = "MAPPED_PENDING_LINE", "STALE_ABSENT", "WRONG_HOST", "NO_HOST"
 AMBIGUOUS = "AMBIGUOUS_HOST"
@@ -112,6 +117,39 @@ def check_no_zero_for_held(rows):
     for r in rows:
         if r.get("ledger_state") in ("HELD", "UNKNOWN") and r.get("qty") in (0, 0.0, "0"):
             raise ReadinessError(f"row {r['row']}: held / unknown quantity carried as 0")
+    return True
+
+
+def check_held_parts(rows):
+    """rule 9b: a row with held parts (> 0) is HELD (marker set, quantity None), never a plain number or 0."""
+    for r in rows:
+        hp = r.get("held_parts") or {}
+        if any((v or 0) > 0 for v in hp.values()) and (not r.get("held") or r.get("qty") is not None):
+            raise ReadinessError(f"row {r['row']}: {hp} held parts but the row is not HELD (qty {r.get('qty')!r})")
+    return True
+
+
+def check_band_pair(rows):
+    """rule 9c: a band-pair row is never determinate (qty None, held marker, both bands carried)."""
+    for r in rows:
+        if r.get("band_pair") and (r.get("qty") is not None or not r.get("held") or r.get("lo") is None
+                                   or r.get("hi") is None):
+            raise ReadinessError(f"row {r['row']}: an unchosen band pair stated as determinate or without its bands")
+    return True
+
+
+def check_census_not_determinate(census_entry):
+    """rule 9c on a census: a band-pair ledger's census entry carries status HELD BAND PAIR and no 'determinate' key
+    (anywhere in it); summing one band as determinate fails."""
+    def walk(o, path):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if "determinate" in str(k):
+                    raise ReadinessError(f"band-pair census states a determinate quantity at {path}/{k}")
+                walk(v, f"{path}/{k}")
+    if census_entry.get("status") != "HELD BAND PAIR":
+        raise ReadinessError("band-pair census entry is not labelled HELD BAND PAIR")
+    walk(census_entry, "")
     return True
 
 

@@ -1,5 +1,5 @@
 """T-698 on the development villa: the committed readiness output equals a rebuild from merged repository files, every
-mapped host is a V3.0.68 line, every ledger row is accounted once, and the census reconciles to the ledgers' own totals.
+mapped host is a V3.0.69 line (r2; r1 mapped V3.0.68), every ledger row is accounted once, and the census reconciles to the ledgers' own totals.
 Repository files only (no drawing, no Drive)."""
 from __future__ import annotations
 
@@ -22,8 +22,8 @@ def built():
 
 
 @pytest.fixture(scope="module")
-def i68():
-    return A.index(A.IDX68)
+def i69():
+    return A.index(A.IDX69)
 
 
 def test_committed_output_reproduces(built):
@@ -32,18 +32,18 @@ def test_committed_output_reproduces(built):
 
 
 def test_candidate_and_index_pin(built):
-    assert built["candidate"] == "ARCH_TAKEOFF_V3.0.68"
-    assert built["line_index_sha256"].startswith("fc485958")      # the T-672 index T-696 also pins
+    assert built["candidate"] == "ARCH_TAKEOFF_V3.0.69"
+    assert built["line_index_sha256"].startswith("e908a5f1")      # the T-687 V3.0.69 index (Gate B PASS 0b6d1bc2)
 
 
-def test_every_mapped_host_is_in_the_index(built, i68):
+def test_every_mapped_host_is_in_the_index(built, i69):
     on_target = [r for r in built["rows"] if r["class"] in (R.MAPPED, R.HOST_CHANGED, R.PENDING_CHANGE)]
-    assert on_target and all(r["host_line_id"] in i68 for r in on_target)
+    assert on_target and all(r["host_line_id"] in i69 for r in on_target)
 
 
-def test_guard_fails_when_a_mapped_host_is_absent(built, i68):
+def test_guard_fails_when_a_mapped_host_is_absent(built, i69):
     victim = next(r for r in built["rows"] if r["class"] == R.MAPPED)["host_line_id"]
-    shrunk = {k: v for k, v in i68.items() if k != victim}
+    shrunk = {k: v for k, v in i69.items() if k != victim}
     with pytest.raises(R.ReadinessError):
         R.check_hosts_present(built["rows"], shrunk)
 
@@ -73,7 +73,7 @@ def test_named_exceptions(built):
 def test_t314_stage_rebases_clean(built):
     stage = [r for r in built["rows"] if r["ledger"] == "T-314 r2 stage"]
     assert Counter(r["class"] for r in stage) == {R.MAPPED: 3, R.PENDING_LINE: 15}
-    assert built["census"]["B4-04"]["rebase_v3_0_61_to_v3_0_68"]["family_lines_changed"] == []
+    assert built["census"]["B4-04"]["rebase_v3_0_61_to_v3_0_69"]["family_lines_changed"] == []
 
 
 def test_spatter_census_reconciles_to_t349(built):
@@ -90,20 +90,81 @@ def test_spatter_census_reconciles_to_t349(built):
 
 def test_mesh_census_reconciles_to_t355(built):
     a = built["census"]["B9-03"]["after_t355"]
-    by = a["by_host_class"]
+    by = a["by_host_class_strip_and_sharmat"]
     mesh = sum(v["determinate"] for k, v in by.items() if k.startswith("T-355 MESH_BY_WALL|"))
     ties = sum(v["determinate"] for k, v in by.items() if k.startswith("T-355 SHARMAT|"))
-    joint = sum(v["determinate"] for k, v in by.items() if k.startswith("T-355 JOINT_MESH_CLASS|"))
     assert mesh == pytest.approx(a["mesh_strip_net_m"], abs=1e-4)
     assert ties == a["sharmat_ties_pcs"] == 182
-    assert joint == pytest.approx(sum(a["joint_mesh_by_class_owner_band_m"].values()), abs=1e-4)
+    assert not any(k.startswith("T-355 JOINT_MESH_CLASS|") for k in by)     # the band pair is never summed here
+
+
+def test_joint_mesh_is_a_held_band_pair_reconciled_to_t355(built):
+    """Gate A defect 2: owner band .. drawing band, neither chosen; never 'determinate'; MIXED split HELD."""
+    jm = built["census"]["B9-03"]["after_t355"]["joint_mesh"]
+    assert R.check_census_not_determinate(jm)
+    t = jm["total"]
+    assert t["rows"] == 132
+    assert t["owner_band_m"] == pytest.approx(511.693869, abs=1e-6)
+    assert t["drawing_band_m"] == pytest.approx(758.345928, abs=1e-6)
+    hc = jm["by_host_class"]
+    assert hc["MAPPED"]["owner_band_m"] == pytest.approx(442.199025, abs=1e-6)
+    assert hc["HOST_CHANGED"]["owner_band_m"] == pytest.approx(69.494844, abs=1e-6)
+    t355 = json.loads((ROOT / A.T355_SUM).read_text(encoding="utf-8"))["joint_mesh_by_class"]
+    for c, v in jm["by_joint_class"].items():
+        assert v["owner_band_m"] == pytest.approx(t355[c]["owner_band_m"], abs=1e-4)
+        assert v["drawing_band_m"] == pytest.approx(t355[c]["drawing_band_m"], abs=1e-4)
+        assert v["rows"] == t355[c]["sides"]
+    assert jm["by_joint_class"]["MIXED"]["split"].startswith("HELD")
+    joint = [r for r in built["rows"] if r["ledger"] == "T-355 JOINT_MESH_CLASS"]
+    assert all(r["qty"] is None and r["held"] and r["band_pair"] for r in joint)
+    assert all("HELD BAND PAIR" in r["ledger_state"] for r in joint)
+    assert all("class split HELD" in r["ledger_state"] for r in joint if r["joint_class"] == "MIXED")
+
+
+def test_joint_mesh_held_joints_carried_never_plain_zero(built):
+    """Gate A defect 1: every joint-mesh row carries held_joints_owner / _drawing; 74 rows / 302 joints held; the 59
+    rows of 0 m (owner band) with held joints are HELD, never a plain 0 (e.g. GF-W02 INT-A: 0.0 m + 1 held joint)."""
+    joint = [r for r in built["rows"] if r["ledger"] == "T-355 JOINT_MESH_CLASS"]
+    assert all(set(r["held_parts"]) == {"held_joints_owner", "held_joints_drawing"} for r in joint)
+    held = [r for r in joint if any(r["held_parts"].values())]
+    assert len(held) == 74
+    assert sum(r["held_parts"]["held_joints_owner"] for r in joint) == 302
+    assert sum(r["held_parts"]["held_joints_drawing"] for r in joint) == 302
+    zero = [r for r in held if r["lo"] == 0]          # owner band 0.0 m + held joints (34 of them 0.0 on both bands)
+    assert len(zero) == 59 and sum(1 for r in zero if r["hi"] == 0) == 34 and all(r["qty"] is None and r["held"] and "held joints" in r["ledger_state"] for r in zero)
+    w02 = next(r for r in joint if r["row"] == "GF-W02|GF|WB-FL0007-FL0008#1|INT-A")
+    assert w02["qty"] is None and w02["held_parts"] == {"held_joints_owner": 1, "held_joints_drawing": 1}
+    jm = built["census"]["B9-03"]["after_t355"]["joint_mesh"]["total"]
+    assert (jm["held_rows"], jm["held_joints_owner"], jm["held_joints_drawing"]) == (74, 302, 302)
+    assert R.check_held_parts(built["rows"]) and R.check_band_pair(built["rows"])
+    csv_rows = A.to_csv(built).splitlines()
+    assert "held_joints_owner" in csv_rows[0]
+
+
+def test_row_total_states_the_t135_rows(built):
+    rt = built["row_total"]
+    assert rt["rows"] == 802 == len(built["rows"])
+    assert rt["without_t135_disposition"] == 788 and rt["b7_01_t135_disposition_rows"] == 14
+
+
+def test_t687_pending_rows_resolved_on_v3_0_69(built):
+    """r1 held 47 rows as MAPPED_PENDING_CHANGE on T-687 hosts; T-687 is merged: none waits on it now, each T-687
+    after-state equals V3.0.69, and only the T-314 r2 stage (not merged) still holds rows pending."""
+    assert built["t687_resolution"] == {"rows": 34, "changed": 16, "added": 18, "all_after_states_equal_v3_0_69": True}
+    pend = [r for r in built["rows"] if r["class"] == R.PENDING_CHANGE]
+    assert pend and all("T-687" not in r["reason"] for r in pend)
+    assert all("T-314 r2" in r["reason"] for r in pend)
+    on687 = [r for r in built["rows"] if "resolved by T-687 merged" in r["reason"] or "T-687 merged, V3.0.69" in r["reason"]]
+    assert len(on687) == 47
+    assert built["families"]["B4-05"]["classes"][R.PENDING_CHANGE] == 46
+    assert built["v3_0_68_to_v3_0_69"]["changed"] == 15 and built["v3_0_68_to_v3_0_69"]["removed"] == 0
 
 
 def test_wall_membership(built):
     m = built["wall_line_membership"]
     gf015 = m["L-adb393d6db51056d343b"]
-    assert gf015["v3_0_45"] == ["CONFIRMED", 0.0] and gf015["v3_0_68"][0] == "RESIDUAL"
-    assert gf015["v3_0_68_without_left"] == ["CONFIRMED", 0.0]
+    assert gf015["v3_0_45"] == ["CONFIRMED", 0.0] and gf015["v3_0_69"][0] == "RESIDUAL"
+    assert gf015["v3_0_69_without_left"] == ["CONFIRMED", 0.0]
     w22 = [r for r in built["rows"] if r["host_named"] == "GF-W22" and r["family"] == "B9-03"]
     assert w22 and all(r["class"] == R.HOST_CHANGED for r in w22)
 

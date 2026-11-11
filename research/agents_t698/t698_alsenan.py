@@ -3,10 +3,14 @@ candidate, released, rule / knowledge version or registry file is touched; no qu
 
 For the merged-but-unwired families T-692 put first (B4-04 external plaster -> T-314 r3, B4-05 spatter dash -> T-364,
 B9-03 masonry accessories -> T-363, B7-01 stair flight -> the T-645 fix rows on the T-135 once-only rule), every ledger
-row is mapped by id to the candidate of record ARCH_TAKEOFF_V3.0.68 (line index d1de50cb, T-672 Gate B PASS) or named
-stale, the hosts that moved since the ledger are listed with their before / after state, the dependencies on the two
-pending packages (T-314 r2 stage 080ccaa5, T-687 a8cf49c8) are resolved from their pinned extracts, and the expected
-census before / after per unit and the build order are stated.
+row is mapped by id to the candidate of record ARCH_TAKEOFF_V3.0.69 (T-687 Gate B PASS, published 0b6d1bc2; r1 mapped
+V3.0.68, T-672) or named stale, the hosts that moved since the ledger are listed with their before / after state, the
+dependency on the pending T-314 r2 stage 080ccaa5 is resolved from its pinned extract, the T-687 changes that r1 held as
+MAPPED_PENDING_CHANGE are resolved against the merged V3.0.69 index (every T-687 after-state checked equal), and the
+expected census before / after per unit and the build order are stated.
+
+r2 (Gate A defects): the T-355 joint-mesh rows carry held_joints_owner / _drawing and the HELD marker (rule 9b) and map
+as an unchosen HELD BAND PAIR owner .. drawing (rule 9c); the MIXED class split stays HELD.
 
 Inputs: merged repository files only (sha256-pinned in PINS) + in/PENDING_STAGES_T698.json (git blob ids of the two
 pending summaries; re-extract with t698_extract_pending.py). No drawing is opened; no client data is read or written.
@@ -31,7 +35,8 @@ if str(HERE) not in sys.path:
 import t698_rules as R  # noqa: E402
 
 SCHEMA = "URBAN_T698_WIRING_READINESS_V1"
-CANDIDATE = "ARCH_TAKEOFF_V3.0.68"
+CANDIDATE = "ARCH_TAKEOFF_V3.0.69"
+IDX69 = "research/agents_t687/out/LINE_INDEX_V3_0_69.json"
 IDX68 = "research/agents_t672/out/LINE_INDEX_V3_0_68.json"
 IDX61 = "research/agents_t655/out/LINE_INDEX_V3_0_61.json"
 IDX45 = "research/agents_t479/out/LINE_INDEX_V3_0_45.json"
@@ -50,7 +55,7 @@ T135 = "research/agents_t135/FLIGHTS_ONCE.csv"
 T645 = "research/agents_t645/out/STAIR_HOLD_CENSUS_T645.json"
 T425 = "research/agents_t425/FLIGHT_TABLE_T425.csv"
 PENDING = "research/agents_t698/in/PENDING_STAGES_T698.json"
-PINS = [IDX68, IDX61, IDX45, T349_BIND, T349_PEND, T349_FILL, T349_SUM, T337_BIND, T337_ITEMS, T355_WALL, T355_SHAR,
+PINS = [IDX69, IDX68, IDX61, IDX45, T349_BIND, T349_PEND, T349_FILL, T349_SUM, T337_BIND, T337_ITEMS, T355_WALL, T355_SHAR,
         T355_JOINT, T355_SUM, T449_REG, T135, T645, T425, PENDING]
 # merge commits of the ledgers (board MERGED cells; Checker verdicts there)
 SOURCES = {
@@ -115,6 +120,23 @@ def pending():
     return p, keys314, chg314, chg687, add687, missing314
 
 
+def t687_resolution(p, i69):
+    """r1 held the T-687 hosts as MAPPED_PENDING_CHANGE; T-687 is merged (V3.0.69): every stated after-state must equal
+    the V3.0.69 line, else the readiness map refuses to build (no silent resolution)."""
+    st = {"BOUNDED_EXPOSURE": "HELD", "BLOCKED_RFI": "HELD", "PROVISIONAL": "RELEASED"}
+    out, bad = [], []
+    for r in p["T-687"]["rows"]:
+        a, ln = r["after"], i69.get(r["line_id"])
+        got = None if ln is None else (ln["class"], ln["measured_net"], ln["held_low"], ln["held_high"])
+        want = (st.get(a["state"], a["state"]), a["value"], a["low"], a["high"])
+        (out if got == want else bad).append(r["line_id"])
+    if bad:
+        raise R.ReadinessError(f"T-687 after-state differs from V3.0.69 on {bad}")
+    return {"rows": len(out), "changed": sum(1 for r in p["T-687"]["rows"] if r["change"] == "CHANGE"),
+            "added": sum(1 for r in p["T-687"]["rows"] if r["change"] != "CHANGE"),
+            "all_after_states_equal_v3_0_69": True}
+
+
 def missing_of(name, missing314):
     """a 'NEW <code> ...' host that the T-314 stage lists among its MISSING items (no line by design): the entry whose
     code is the host's code, the one also naming the host's next word when several share the code."""
@@ -134,17 +156,17 @@ def missing_reason(name, missing314, default):
 
 
 # ============================================================================================ B4-04 external plaster
-def b404(i68, i61, P):
+def b404(tgt, i61, P):
     p, keys314, chg314, _, _, missing314 = P
     out = []
     for r in cload(T337_BIND):
-        cls, host, why = R.classify(r["line"], allowed_codes=EXT_CODES, target=i68, reference=i61,
+        cls, host, why = R.classify(r["line"], allowed_codes=EXT_CODES, target=tgt, reference=i61,
                                     pending_lines=keys314, pending_name="T-314 r2")
         out.append(row("B4-04", "T-337 BINDING", r["key"], cls, host, why, ledger_state=r["status"], unit="m2",
                        qty=None if r["status"] in ("HELD", "UNKNOWN") else num(r["lo"]), lo=num(r["lo"]),
                        hi=num(r["hi"]), host_named=r["line"]))
     for r in cload(T337_ITEMS):
-        cls, host, why = R.classify(r["line"], allowed_codes=EXT_CODES, target=i68, reference=i61,
+        cls, host, why = R.classify(r["line"], allowed_codes=EXT_CODES, target=tgt, reference=i61,
                                     pending_lines=keys314, pending_name="T-314 r2")
         if cls == R.NO_HOST:
             why = missing_reason(r["line"], missing314, why)
@@ -153,10 +175,10 @@ def b404(i68, i61, P):
     stage = []
     for r in p["T-314"]["rows"]:
         if r["action"] == "CHANGE":
-            cls, host, why = R.classify(r["line_id"], allowed_codes=EXT_CODES, target=i68, reference=i61)
-        else:   # an added stage line must not collide with a V3.0.68 id
-            cls, host, why = ((R.STALE, None, "stage id collides with a V3.0.68 line") if r["line_id"] in i68 else
-                              (R.PENDING_LINE, r["line_id"], "added by the T-314 stage; id free in V3.0.68"))
+            cls, host, why = R.classify(r["line_id"], allowed_codes=EXT_CODES, target=tgt, reference=i61)
+        else:   # an added stage line must not collide with a V3.0.69 id
+            cls, host, why = ((R.STALE, None, "stage id collides with a V3.0.69 line") if r["line_id"] in tgt else
+                              (R.PENDING_LINE, r["line_id"], "added by the T-314 stage; id free in V3.0.69"))
         stage.append(row("B4-04", "T-314 r2 stage", r["line_id"], cls, host, why, ledger_state=r["evidence_status"],
                          unit="m2", qty=None, lo=(r["net"] or [None])[0], hi=(r["net"] or [None, None])[-1],
                          host_named=r["line_key"], stage_after=r["after"]["state"]))
@@ -164,26 +186,31 @@ def b404(i68, i61, P):
 
 
 # ============================================================================================ B4-05 spatter dash
-def opening_host(i68, kind, opening):
+def opening_host(tgt, kind, opening):
     if kind in ("FIN.PLASTER", "REVEAL.ARCH"):
-        want = [ln for ln in i68.values() if ln["item_code"] == "FIN.PLASTER"
+        want = [ln for ln in tgt.values() if ln["item_code"] == "FIN.PLASTER"
                 and f"-REVEAL-{opening}:THROUGH:JAMBS_HEAD" in ln["element_id"]]
     else:
         side = "IN" if kind == "REVEAL.WINDOW_IN" else "OUT"
-        want = [ln for ln in i68.values() if ln["item_code"] == "ARCH.WINDOW_REVEAL"
+        want = [ln for ln in tgt.values() if ln["item_code"] == "ARCH.WINDOW_REVEAL"
                 and f"-REVEAL-{opening}:{side}:JAMBS_HEAD" in ln["element_id"]]
     return want
 
 
-def b405(i68, i45, P):
+def b405(tgt, i45, P):
     _, keys314, chg314, chg687, _, missing314 = P
-    chg = dict(chg314)
-    chg.update(chg687)
+    chg = dict(chg314)          # T-687 is merged (V3.0.69): its changes are no longer pending, they are the host state
     out = []
+
+    def merged687(cls, host, why):
+        if host in chg687 and cls in (R.HOST_CHANGED, R.MAPPED):
+            return cls, f"{why}; resolved by T-687 merged (V3.0.69): {chg687[host]}"
+        return cls, why
     for r in cload(T349_BIND):
         h = r["carrier_line"]
-        cls, host, why = R.classify(h, allowed_codes=SPATTER_CODES, target=i68, reference=i45, pending_changed=chg,
-                                    pending_lines=keys314, pending_name="T-314 r2 / T-687")
+        cls, host, why = R.classify(h, allowed_codes=SPATTER_CODES, target=tgt, reference=i45, pending_changed=chg,
+                                    pending_lines=keys314, pending_name="T-314 r2")
+        cls, why = merged687(cls, host, why)
         if cls == R.NO_HOST:
             why = missing_reason(h, missing314, why)
         out.append(row("B4-05", "T-349 BINDING", r["row_id"], cls, host, why, ledger_state=r["state"], unit="m2",
@@ -192,14 +219,15 @@ def b405(i68, i45, P):
     for k, r in enumerate(cload(T349_PEND)):
         key = f"PENDING:{r['item']}:{r['opening']}"
         if r["carrier"].startswith("L-"):
-            cls, host, why = R.classify(r["carrier"], allowed_codes=SPATTER_CODES, target=i68, reference=i45,
-                                        pending_changed=chg, pending_name="T-687")
+            cls, host, why = R.classify(r["carrier"], allowed_codes=SPATTER_CODES, target=tgt, reference=i45,
+                                        pending_changed=chg, pending_name="T-314 r2")
+            cls, why = merged687(cls, host, why)
         else:
-            hits = opening_host(i68, r["item"], r["opening"])
+            hits = opening_host(tgt, r["item"], r["opening"])
             if not hits:
-                cls, host, why = R.STALE, None, f"no V3.0.68 carrier for {r['item']} {r['opening']}"
+                cls, host, why = R.STALE, None, f"no V3.0.69 carrier for {r['item']} {r['opening']}"
             elif len(hits) > 1:
-                cls, host, why = R.AMBIGUOUS, None, (f"{len(hits)} V3.0.68 carriers for {r['opening']}: "
+                cls, host, why = R.AMBIGUOUS, None, (f"{len(hits)} V3.0.69 carriers for {r['opening']}: "
                                                         + " / ".join(f"{h['line_id']} {R.state_text(h)}" for h in hits)
                                                         + ": the row must be split by carrier before wiring")
             else:
@@ -208,8 +236,12 @@ def b405(i68, i45, P):
                 want = num(r["m2"])
                 if host in chg:
                     cls, why = R.PENDING_CHANGE, f"carrier {h['element_id']}: {chg[host]}"
+                elif host in chg687 and want is not None and h["measured_net"] is None:
+                    cls, why = R.HOST_CHANGED, (f"carrier {h['element_id']} {R.state_text(h)} (T-687 merged, V3.0.69: "
+                                                f"{chg687[host]}) vs the ledger {want} m2: restate on the carrier")
                 elif want is None:
                     cls, why = R.MAPPED, f"carrier {h['element_id']} {R.state_text(h)}; ledger row HELD blank"
+                    cls, why = merged687(cls, host, why)
                 elif h["measured_net"] is not None and abs(h["measured_net"] - want) <= 1e-6:
                     cls, why = R.MAPPED, f"carrier {h['element_id']} {R.state_text(h)} = ledger {want}"
                 else:
@@ -221,22 +253,22 @@ def b405(i68, i45, P):
 
 
 # ============================================================================================ B9-03 accessories
-def wall_hosts(i68):
+def wall_hosts(tgt):
     """T-449 round 3 register (V3.0.26 statuses reproduced on V3.0.44): wall -> parent line, status; the part line is
     the parent element + '#BLOCKWORK:' + slug(status + ' ' + block type) (arch_v3026.part_element_id)."""
-    by_eid = {ln["element_id"]: ln for ln in i68.values() if ln["item_code"] == "MAS.BLOCK"}
+    by_eid = {ln["element_id"]: ln for ln in tgt.values() if ln["item_code"] == "MAS.BLOCK"}
     reg = [x for x in jload(T449_REG)["entries"] if x.get("item_code") == "MAS.BLOCK"]
     return {x["element_id"]: x for x in reg}, by_eid
 
 
-def b903(i68, i45):
-    reg, by_eid = wall_hosts(i68)
+def b903(tgt, i45):
+    reg, by_eid = wall_hosts(tgt)
     bt = {r["wall_id"]: r["block_type"] for r in cload(T355_WALL)}
     host_of, members, carried = {}, defaultdict(list), {}
     for w, x in reg.items():
         st = x["patch"]["status"]
         s = x["patch"]["part_status"] if st == "ESTABLISHED PART + HELD" else st
-        parent = i68.get(x["line_id"])
+        parent = tgt.get(x["line_id"])
         if s in ("HELD", "HELD ON DROP"):
             host_of[w] = (x["line_id"], f"wall {st} in the register: on its parent {parent['element_id']}")
             continue
@@ -252,48 +284,48 @@ def b903(i68, i45):
             carried[w] = x["patch"]["carried"]
     memb = {}
     for h, ws in sorted(members.items()):
-        st68, r68 = R.membership_check(ws, carried, i68[h])
+        st69, r69 = R.membership_check(ws, carried, tgt[h])
         st45, r45 = R.membership_check(ws, carried, i45.get(h))
         named = None
-        if st68 == "RESIDUAL":
-            drop = [w for w in ws if abs(r68 + carried[w]) <= 1e-6]
+        if st69 == "RESIDUAL":
+            drop = [w for w in ws if abs(r69 + carried[w]) <= 1e-6]
             extra = [w for w, x in reg.items() if host_of[w][0] is None and x["line_id"] == next(
-                x2["line_id"] for w2, x2 in reg.items() if w2 == ws[0]) and abs(r68 - x["patch"]["carried"]) <= 1e-6]
+                x2["line_id"] for w2, x2 in reg.items() if w2 == ws[0]) and abs(r69 - x["patch"]["carried"]) <= 1e-6]
             pair = [(a, b) for a in reg for b in reg if a < b and host_of[a][0] is None and host_of[b][0] is None
-                    and abs(r68 - reg[a]["patch"]["carried"] - reg[b]["patch"]["carried"]) <= 1e-6
+                    and abs(r69 - reg[a]["patch"]["carried"] - reg[b]["patch"]["carried"]) <= 1e-6
                     and reg[a]["line_id"] == reg[b]["line_id"] == reg[ws[0]]["line_id"]]
-            named = (f"{drop} left the line (V3.0.68 value = the other walls)" if drop else
+            named = (f"{drop} left the line (V3.0.69 value = the other walls)" if drop else
                      f"{extra} carried on the line without a T-355 row" if extra else
                      f"{list(pair[0])} carried on the line without a T-355 row" if pair else "UNNAMED")
-        memb[h] = {"element_id": i68[h]["element_id"], "walls": ws, "v3_0_68": [st68, r68], "v3_0_45": [st45, r45],
+        memb[h] = {"element_id": tgt[h]["element_id"], "walls": ws, "v3_0_69": [st69, r69], "v3_0_45": [st45, r45],
                    "residual_named": named}
     out = []
     left = {}
     for h, m in memb.items():
-        if m["v3_0_68"][0] == "RESIDUAL" and "left the line" in (m["residual_named"] or ""):
-            gone = [w for w in m["walls"] if abs(m["v3_0_68"][1] + carried[w]) <= 1e-6]
+        if m["v3_0_69"][0] == "RESIDUAL" and "left the line" in (m["residual_named"] or ""):
+            gone = [w for w in m["walls"] if abs(m["v3_0_69"][1] + carried[w]) <= 1e-6]
             rest = [w for w in m["walls"] if w not in gone]
-            m["v3_0_68_without_left"] = list(R.membership_check(rest, carried, i68[h]))
+            m["v3_0_69_without_left"] = list(R.membership_check(rest, carried, tgt[h]))
             for w in gone:
                 left[w] = (h, reg[w]["line_id"])
-    moved = {h for h, m in memb.items() if m["v3_0_68"][0] == "RESIDUAL" and "without a T-355 row" not in
-             (m["residual_named"] or "") and m.get("v3_0_68_without_left", ["RESIDUAL"])[0] != "CONFIRMED"}
+    moved = {h for h, m in memb.items() if m["v3_0_69"][0] == "RESIDUAL" and "without a T-355 row" not in
+             (m["residual_named"] or "") and m.get("v3_0_69_without_left", ["RESIDUAL"])[0] != "CONFIRMED"}
     nonmesh = {h: m["residual_named"] for h, m in memb.items() if "without a T-355 row" in (m["residual_named"] or "")}
 
-    def one(ledger, key, w, ledger_state, unit, qty, lo=None, hi=None):
+    def one(ledger, key, w, ledger_state, unit, qty, lo=None, hi=None, **extra):
         h, how = host_of.get(w, (None, f"wall {w} not in the T-449 register"))
-        cls, host, why = R.classify(h, allowed_codes={"MAS.BLOCK"}, target=i68, reference=i45)
+        cls, host, why = R.classify(h, allowed_codes={"MAS.BLOCK"}, target=tgt, reference=i45)
         if w in left:
             part, parent = left[w]
             out.append(row("B9-03", ledger, key, R.HOST_CHANGED, parent,
-                           f"wall left part line {part} (its V3.0.68 value is the other walls, membership CONFIRMED "
-                           f"without it); now on its parent {i68[parent]['element_id']} {R.state_text(i68[parent])}",
-                           ledger_state=ledger_state, unit=unit, qty=qty, lo=lo, hi=hi, host_named=w))
+                           f"wall left part line {part} (its V3.0.69 value is the other walls, membership CONFIRMED "
+                           f"without it); now on its parent {tgt[parent]['element_id']} {R.state_text(tgt[parent])}",
+                           ledger_state=ledger_state, unit=unit, qty=qty, lo=lo, hi=hi, host_named=w, **extra))
             return
         if cls == R.HOST_CHANGED and any(h == v[0] for v in left.values()) and \
-                memb[h].get("v3_0_68_without_left", [None])[0] == "CONFIRMED":
+                memb[h].get("v3_0_69_without_left", [None])[0] == "CONFIRMED":
             cls, why = R.MAPPED, (f"host value moved only because {[k for k, v in left.items() if v[0] == h]} left "
-                                  f"the line; this wall's membership CONFIRMED at V3.0.68")
+                                  f"the line; this wall's membership CONFIRMED at V3.0.69")
         if cls == R.MAPPED and h in moved:
             cls, why = R.HOST_CHANGED, f"line membership moved: {memb[h]['residual_named']}"
         elif cls == R.MAPPED and h in nonmesh:
@@ -301,7 +333,7 @@ def b903(i68, i45):
         if cls == R.NO_HOST:
             why = how
         out.append(row("B9-03", ledger, key, cls, host, f"{why}; {how}" if cls != R.NO_HOST else why,
-                       ledger_state=ledger_state, unit=unit, qty=qty, lo=lo, hi=hi, host_named=w))
+                       ledger_state=ledger_state, unit=unit, qty=qty, lo=lo, hi=hi, host_named=w, **extra))
 
     for r in cload(T355_WALL):
         held = r["state"].startswith("HELD")
@@ -310,14 +342,19 @@ def b903(i68, i45):
     for k, r in enumerate(cload(T355_SHAR)):
         one("T-355 SHARMAT", f"{r['wall_id']}|{r['column_at']}|{r['face']}", r["wall_id"], r["state"], "pcs",
             None if r["state"] == "HELD" else num(r["ties"]))
-    for r in cload(T355_JOINT):
-        one("T-355 JOINT_MESH_CLASS", f"{r['wall_id']}|{r['run']}|{r['side']}", r["wall_id"], f"class {r['class']}",
-            "m", num(r["owner_band_m"]), hi=num(r["drawing_band_m"]))
+    for r in cload(T355_JOINT):   # rules 9b / 9c: an unchosen band pair, held joints counted by name, never 0
+        hj = {"owner": int(r["held_joints_owner"]), "drawing": int(r["held_joints_drawing"])}
+        state = (f"HELD BAND PAIR class {r['class']}" + (" (class split HELD)" if r["class"] == "MIXED" else "")
+                 + (f" + held joints {hj['owner']} / {hj['drawing']}" if any(hj.values()) else ""))
+        one("T-355 JOINT_MESH_CLASS", f"{r['wall_id']}|{r['run']}|{r['side']}", r["wall_id"], state,
+            "m", None, lo=num(r["owner_band_m"]), hi=num(r["drawing_band_m"]), held=True, band_pair=True,
+            held_parts={"held_joints_owner": hj["owner"], "held_joints_drawing": hj["drawing"]},
+            joint_class=r["class"])
     return out, memb
 
 
 # ============================================================================================ B7-01 stair flight
-def b701(i68):
+def b701(tgt):
     t645 = jload(T645)
     lines = {r["engine_flight"]: r for r in t645["lines"] if r["item_code"] == "FIN.STAIR.FLIGHT"}
     t425 = {}
@@ -328,7 +365,7 @@ def b701(i68):
     for r in cload(T135):
         L = lines.get(r["flight"])
         h = (L or {}).get("line_id")
-        cls, host, why = R.classify(h, allowed_codes={"FIN.STAIR.FLIGHT"}, target=i68)
+        cls, host, why = R.classify(h, allowed_codes={"FIN.STAIR.FLIGHT"}, target=tgt)
         d = t425.get(r["flight"], {})
         cnt = r["state"]
         if cls == R.MAPPED:   # the T-135 disposition against the later merged reading (T-425 table, T-645 class)
@@ -348,8 +385,8 @@ def b701(i68):
     fix = []
     blank = {"class": "HELD", "measured_net": None, "held_low": None, "held_high": None}
     for f, L in sorted(lines.items()):
-        ln = i68.get(L["line_id"])
-        cls, host, why = R.classify(L["line_id"], allowed_codes={"FIN.STAIR.FLIGHT"}, target=i68)
+        ln = tgt.get(L["line_id"])
+        cls, host, why = R.classify(L["line_id"], allowed_codes={"FIN.STAIR.FLIGHT"}, target=tgt)
         before = {k: L["before"][k] for k in blank}
         if cls == R.MAPPED and {k: ln[k] for k in blank} != before:
             cls, why = R.HOST_CHANGED, f"host {R.state_text(ln)} is not the T-645 before-state"
@@ -361,10 +398,10 @@ def b701(i68):
 
 
 # ============================================================================================ census before / after
-def census_before(i68, codes):
+def census_before(tgt, codes):
     c = Counter()
     v = lo = hi = 0.0
-    for ln in i68.values():
+    for ln in tgt.values():
         if ln["item_code"] in codes:
             c[ln["class"] + (" blank" if ln["class"] == "HELD" and ln["held_low"] is None and ln["held_high"] is None
                              else "")] += 1
@@ -384,8 +421,12 @@ def rebase_delta(a, b, codes):
 
 
 def mesh_split(rows):
+    """mesh strip / sharmat: determinate sum + held rows per host class. Joint mesh (band pair) is NOT here: see
+    joint_census (rule 9c)."""
     out = defaultdict(lambda: {"rows": 0, "determinate": 0.0, "held_rows": 0})
     for r in rows:
+        if r.get("band_pair"):
+            continue
         k = f"{r['ledger']}|{r['class']}"
         o = out[k]
         o["rows"] += 1
@@ -396,14 +437,34 @@ def mesh_split(rows):
     return dict(sorted(out.items()))
 
 
+def joint_census(rows):
+    """rule 9c: the T-355 joint mesh as a HELD BAND PAIR (owner .. drawing), split by joint class and by host class,
+    with held rows (rows carrying held joints) and held joints counted by name; never a determinate figure."""
+    jr = [r for r in rows if r.get("band_pair")]
+
+    def agg(sel):
+        return {"rows": len(sel), "owner_band_m": round(sum(r["lo"] for r in sel), 6),
+                "drawing_band_m": round(sum(r["hi"] for r in sel), 6),
+                "held_rows": sum(1 for r in sel if any(r["held_parts"].values())),
+                "held_joints_owner": sum(r["held_parts"]["held_joints_owner"] for r in sel),
+                "held_joints_drawing": sum(r["held_parts"]["held_joints_drawing"] for r in sel)}
+    by_cls = {c: agg([r for r in jr if r["joint_class"] == c]) for c in sorted({r["joint_class"] for r in jr})}
+    by_host = {c: agg([r for r in jr if r["class"] == c]) for c in sorted({r["class"] for r in jr})}
+    by_cls["MIXED"]["split"] = "HELD (T-355: the MIXED class split is not resolved)"
+    return {"status": "HELD BAND PAIR", "unit": "m",
+            "note": "owner band .. drawing-derived band, neither chosen (T-355); class C bands coincide (exterior)",
+            "total": agg(jr), "by_joint_class": by_cls, "by_host_class": by_host}
+
+
 def build():
-    i68, i61, i45 = index(IDX68), index(IDX61), index(IDX45)
+    i69, i68, i61, i45 = index(IDX69), index(IDX68), index(IDX61), index(IDX45)
     P = pending()
+    res687 = t687_resolution(P[0], i69)
     fam = {}
-    b404_rows, stage = b404(i68, i61, P)
-    b405_rows = b405(i68, i45, P)
-    b903_rows, memb = b903(i68, i45)
-    b701_rows, b701_fix = b701(i68)
+    b404_rows, stage = b404(i69, i61, P)
+    b405_rows = b405(i69, i45, P)
+    b903_rows, memb = b903(i69, i45)
+    b701_rows, b701_fix = b701(i69)
     n = {"B4-04": len(cload(T337_BIND)) + len(cload(T337_ITEMS)), "B4-04 stage": len(P[0]["T-314"]["rows"]),
          "B4-05": len(cload(T349_BIND)) + len(cload(T349_PEND)),
          "B9-03": len(cload(T355_WALL)) + len(cload(T355_SHAR)) + len(cload(T355_JOINT)),
@@ -411,8 +472,10 @@ def build():
     for name, rows in (("B4-04", b404_rows), ("B4-04 stage", stage), ("B4-05", b405_rows), ("B9-03", b903_rows),
                        ("B7-01", b701_rows), ("B7-01 fix", b701_fix)):
         rc = R.reconcile(rows, n[name], name)
-        R.check_hosts_present(rows, i68)
+        R.check_hosts_present(rows, i69)
         R.check_no_zero_for_held(rows)
+        R.check_held_parts(rows)
+        R.check_band_pair(rows)
         fam[name] = {"rows": n[name], "classes": rc}
     allrows = b404_rows + stage + b405_rows + b903_rows + b701_rows + b701_fix
     # spatter census after (T-349 FILL proposed lines) split by host readiness
@@ -430,25 +493,26 @@ def build():
     p = P[0]
     t355 = jload(T355_SUM)
     t645 = jload(T645)
+    jc = joint_census(b903_rows)
+    R.check_census_not_determinate(jc)
     census = {
-        "B4-04": {"unit": "m2", "codes": sorted(EXT_CODES), "before_v3_0_68": census_before(i68, EXT_CODES),
+        "B4-04": {"unit": "m2", "codes": sorted(EXT_CODES), "before_v3_0_69": census_before(i69, EXT_CODES),
                   "after_t314_stage": p["T-314"]["totals_moved"]["FIN.EXT.FINISH|m2"]["v3_0_62"],
-                  "rebase_v3_0_61_to_v3_0_68": rebase_delta(i61, i68, EXT_CODES),
-                  "note": "after = the T-314 r2 stage on V3.0.61; valid on V3.0.68 only because the 3 hosts are "
-                          "byte-equal (stage rows MAPPED vs the V3.0.61 index); r3 re-runs it on V3.0.68"},
-        "B4-05": {"unit": "m2", "before_v3_0_68": {"lines": 0, "note": "no B4-05 line in the candidate"},
+                  "rebase_v3_0_61_to_v3_0_69": rebase_delta(i61, i69, EXT_CODES),
+                  "note": "after = the T-314 r2 stage on V3.0.61; valid on V3.0.69 only because the 3 hosts are "
+                          "byte-equal (stage rows MAPPED vs the V3.0.61 index); r3 re-runs it on V3.0.69"},
+        "B4-05": {"unit": "m2", "before_v3_0_69": {"lines": 0, "note": "no B4-05 line in the candidate"},
                   "after_t349_fill_by_host_class": {f"{k[0]}|{k[1]}": v for k, v in sorted(split.items())},
                   "after_t349_line_level": jload(T349_SUM)["line_level"]},
-        "B9-03": {"unit": "m / pcs", "before_v3_0_68": {"lines": 0, "note": "no mesh / sharmat / joint-mesh line"},
+        "B9-03": {"unit": "m / pcs", "before_v3_0_69": {"lines": 0, "note": "no mesh / sharmat / joint-mesh line"},
                   "after_t355": {"mesh_strip_net_m": t355["mesh_primary_total_net_m"],
                                  "mesh_strip_held_by_cause_m": t355["mesh_held_by_cause_m"],
                                  "sharmat_ties_pcs": t355["ties_primary_total"],
-                                 "joint_mesh_by_class_owner_band_m": {k: v["owner_band_m"] for k, v in
-                                                                      t355["joint_mesh_by_class"].items()},
-                                 "by_host_class": mesh_split(b903_rows),
+                                 "joint_mesh": jc,
+                                 "by_host_class_strip_and_sharmat": mesh_split(b903_rows),
                                  "status": "ASSUMED - OWNER-APPROVED module 0.200 (Q-77 / Q-75), PROVISIONAL; "
                                            "white walls HELD by name; OPTIONAL items, never inside MAS.BLOCK m2"}},
-        "B7-01": {"unit": "lm", "before_v3_0_68": census_before(i68, {"FIN.STAIR.FLIGHT"}),
+        "B7-01": {"unit": "lm", "before_v3_0_69": census_before(i69, {"FIN.STAIR.FLIGHT"}),
                   "after_t645": {"by_class": Counter(r["ledger_state"] for r in b701_fix),
                                  "released_lm": round(sum(r["qty"] or 0 for r in b701_fix), 6),
                                  "bounded_low_lm": round(sum(r["lo"] or 0 for r in b701_fix), 6),
@@ -459,17 +523,23 @@ def build():
                             for r in allrows if r["class"] in (R.HOST_CHANGED, R.PENDING_CHANGE)})
     return {
         "schema": SCHEMA, "task": "T-698", "rule": f"{R.RULE_ID} {R.RULE_VERSION}", "candidate": CANDIDATE,
-        "line_index_sha256": sha(IDX68), "pins": {k: sha(k)[:16] for k in PINS},
+        "line_index_sha256": sha(IDX69), "pins": {k: sha(k)[:16] for k in PINS},
         "pending": {k: {"branch": v["branch"], "commit": v["commit"], "blob": v["blob"], "base": v["base"]}
                     for k, v in p.items() if k != "schema"},
-        "sources": SOURCES, "families": fam, "census": census, "wall_line_membership": memb,
+        "sources": SOURCES, "families": fam,
+        "row_total": {"rows": len(allrows), "by_family": dict(n),
+                      "without_t135_disposition": len(allrows) - n["B7-01"], "b7_01_t135_disposition_rows": n["B7-01"],
+                      "note": "802 = 788 (B4-04 127 + T-314 stage 18 + B4-05 311 + B9-03 318 + B7-01 T-645 fix 14) "
+                              "+ the 14 B7-01 T-135 disposition rows (r1's handoff '788' left these out)"},
+        "t687_resolution": res687,
+        "v3_0_68_to_v3_0_69": rebase_delta(i68, i69, set()), "census": census, "wall_line_membership": memb,
         "hosts_to_restate": [{"family": a, "host": b, "why": c} for a, b, c in changed_hosts],
         "rows": allrows,
     }
 
 
 CSV_COLS = ("family", "ledger", "row", "class", "host_line_id", "host_named", "ledger_state", "unit", "qty", "lo", "hi",
-            "reason")
+            "held", "band_pair", "held_joints_owner", "held_joints_drawing", "reason")
 
 
 def to_csv(d):
@@ -477,7 +547,7 @@ def to_csv(d):
     w = csv.DictWriter(buf, fieldnames=CSV_COLS, extrasaction="ignore", lineterminator="\n")
     w.writeheader()
     for r in d["rows"]:
-        w.writerow(r)
+        w.writerow(dict(r, **(r.get("held_parts") or {})))
     return buf.getvalue()
 
 
