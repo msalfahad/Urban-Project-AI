@@ -24,7 +24,7 @@ def test_counts_and_loader(doc):
     acts = {}
     for e in doc["entries"]:
         acts[e["action"]] = acts.get(e["action"], 0) + 1
-    assert acts == {"NARROW": 1, "BOUND": 5, "RELABEL": 1}
+    assert acts == {"NARROW": 1, "BOUND": 5, "OWNER": 1}
     d = M.load_inputs(doc)
     assert len(d["_entries"]) == 7
     assert {e["source_tasks"][0] for e in doc["entries"]} == {"T-689", "T-688"}
@@ -56,9 +56,11 @@ def test_expected_totals_by_hand(doc):
     assert (t["bounded_lines"], t["blocked_lines"], t["lines"], t["released"]) == (27, 2, 59, 19.7765)
 
 
-def test_relabel_and_not_wired(doc):
+def test_owner_record_and_not_wired(doc):
     r = {e["line_id"]: e for e in doc["entries"]}[T.SLAB]
-    assert r["label"]["from"] == "BEAM_STRIP" and r["label"]["to"] == "GROUND_SLAB"
+    assert r["label"]["from"] == "BEAM_STRIP" and r["label"]["to"] == "GROUND_SLAB" and r["label"]["region"] == \
+        "BAND0042"
+    assert M.OWNER_CODE[r["label"]["to"]] == r["expect"]["item_code"] == "STR.CONC.GROUND_SLAB"
     assert r["expect"]["value"] == 0.114 and r["expect"]["class"] == "RELEASED"
     assert any("0.133640" in x["what"] for x in doc["not_wired"])
 

@@ -10,7 +10,7 @@ printed, the finished roof mark is +9.80; the 1F column base is +6.00 (approved)
       plane (R-T678-2 record), finished +3.60: h 2.99 .. 3.40 -> BOUND 0.06 x 2.99 = 0.1794 .. 0.075 x 3.40 = 0.255.
   C9  a 1F column NOT under B1 (HELD 0.216 .. 0.304): the B1 joint bound is refused for it (plate transfer, F-T689-1).
   W   a column whose only datum is a window head with NO printed beam over it: refused, the line stays HELD blank.
-  GS  a released ground-slab face 0.114 m3 labelled BEAM_STRIP: RELABEL -> GROUND_SLAB, 0.114 unchanged.
+  GS  a released ground-slab face 0.114 m3 the detector labels BEAM_STRIP: OWNER record GROUND_SLAB, 0.114 unchanged.
   CR  a released column 0.36; a plaster line 44.31 m2: untouched.
 COLUMN totals (m3): released 0.36 unchanged; held 0.432 .. 0.608 (C2 + C9, 2 bounded, 3 blank)
   -> 0.432 + 0.0232 + 0.2392 + 0.1794 = 0.8738 .. 0.608 + 0.38 + 0.255 = 1.243 (4 bounded, 1 blank: W).
@@ -38,7 +38,7 @@ C2_OLD = (round(0.08 * 2.70, 6), round(0.08 * 3.80, 6))                # 0.216 .
 C2_NEW = (round(0.08 * H_LO, 6), C2_OLD[1])                            # 0.2392 .. 0.304
 C5 = (round(0.08 * H_LO, 6), round(0.10 * H_HI, 6))                    # 0.2392 .. 0.38
 A1 = (round(0.06 * (3.19 - 0.20), 6), round(0.075 * (3.60 - 0.20), 6))  # 0.1794 .. 0.255
-LABEL = "calculation.inputs.region"
+LABEL = {"detector": "slab-region detector", "region": "BAND9", "from": "BEAM_STRIP", "to": "GROUND_SLAB"}
 
 
 def _ln(code, eid, state, net=None, rng=None, unit="m3", rec=None, floor="1F"):
@@ -66,7 +66,8 @@ def base():
         _ln("STR.CONC.COLUMN", "C9", "BOUNDED_EXPOSURE", rng=_rng(C2_OLD)),
         _ln("STR.CONC.COLUMN", "W", "BLOCKED_RFI"),
         _ln("STR.CONC.COLUMN", "CR", "MEASURED", net=0.36),
-        _ln("STR.CONC.GROUND_SLAB", "GS", "MEASURED", net=0.114, floor="GF", rec={"region": "BEAM_STRIP"}),
+        _ln("STR.CONC.GROUND_SLAB", "GS", "MEASURED", net=0.114, floor="GF"),
+        _ln("STR.CONC.GROUND_BEAM", "GB", "BLOCKED_RFI", floor="GF"),
         _ln("FIN.PLASTER", "R1:PLASTER", "PROVISIONAL", net=44.31, unit="m2"),
     ]
 
@@ -121,9 +122,9 @@ def entries():
          "height": _h(PLANE, 0.20, {"kind": "CEILING", "mark_abs_m": 3.60, "what": "annex finished"}),
          "after": {"low": A1[0], "high": A1[1]}, "items": ["D-66", "Q-54 B"], "question": "annex slab top",
          "basis": "conflict bound on the plane", "status": dict(ST)},
-        {"action": "RELABEL", "line_id": ID["GS"], "source_tasks": ["T-Q"], "member": "GS face",
+        {"action": "OWNER", "line_id": ID["GS"], "source_tasks": ["T-Q"], "member": "GS face",
          "expect": _x("GS", code="STR.CONC.GROUND_SLAB", cls="RELEASED", value=0.114),
-         "label": {"path": LABEL, "from": "BEAM_STRIP", "to": "GROUND_SLAB"},
+         "label": dict(LABEL),
          "ruling": "R-T688-3 (a): own level mark", "basis": "face is slab"},
     ]
 
@@ -158,9 +159,10 @@ def test_normal_hand_figures():
     assert A30._qty(b["C2"])["low"] == C2_NEW[0] and A30._qty(b["C2"])["high"] == C2_NEW[1]
     assert (A30._qty(b["C5"])["low"], A30._qty(b["C5"])["high"]) == C5
     assert (A30._qty(b["A1"])["low"], A30._qty(b["A1"])["high"]) == A1
-    assert b["GS"]["measured_net"] == 0.114 and b["GS"]["calculation"]["inputs"]["region"] == "GROUND_SLAB"
-    assert ident["replaced"] == 4 and ident["added"] == 0 and ident["outside_rows"] == 4
-    assert ident["concrete"] == {"BOUND": 2, "NARROW": 1, "RELABEL": 1}
+    assert b["GS"]["measured_net"] == 0.114 and b["GS"]["evidence_state"] == "MEASURED"
+    assert b["GS"]["calculation"]["inputs"][A.REC_KEY]["label"]["to"] == "GROUND_SLAB"
+    assert ident["replaced"] == 4 and ident["added"] == 0 and ident["outside_rows"] == 5
+    assert ident["concrete"] == {"BOUND": 2, "NARROW": 1, "OWNER": 1}
     t = moved["STR.CONC.COLUMN|m3"]["v3_0_70"]
     assert t["released"] == pytest.approx(0.36) and t["bounded_lines"] == 4 and t["blocked_lines"] == 1
     assert t["held_low"] == pytest.approx(0.8738) and t["held_high"] == pytest.approx(1.243)
@@ -190,7 +192,7 @@ def test_mirror_order_same_lines():
 def test_outside_lines_byte_identical():
     new, *_ = run()
     for o, n in zip(LN, new):
-        if o["location"]["element_id"] in ("C9", "W", "CR", "R1:PLASTER"):
+        if o["location"]["element_id"] in ("C9", "W", "CR", "GB", "R1:PLASTER"):
             assert A30.line_sha(o) == A30.line_sha(n)
 
 
@@ -286,18 +288,26 @@ def test_adverse_status_never_verified():
         run(_one(1, status={"low_end": "VERIFIED", "high_end": "HELD", "basis": "x"}))
 
 
-def test_adverse_relabel_moves_no_quantity():
+def test_adverse_owner_record_moves_no_quantity():
     with pytest.raises(A.InputsError, match="no quantity terms"):
         run(_one(3, after={"value": 0.2}))
     with pytest.raises(A.InputsError, match="stale binding"):
-        run(_one(3, label={"path": LABEL, "from": "MEMBER_STRIP", "to": "GROUND_SLAB"}))
-    with pytest.raises(A.InputsError, match="stale binding"):
         run(_one(3, expect=_x("GS", code="STR.CONC.GROUND_SLAB", cls="RELEASED", value=0.120)))
-    with pytest.raises(A.InputsError, match="does not change"):
-        run(_one(3, label={"path": LABEL, "from": "BEAM_STRIP", "to": "BEAM_STRIP"}))
+    with pytest.raises(A.InputsError, match="not corrected"):
+        run(_one(3, label=dict(LABEL, to="BEAM_STRIP")))
+    with pytest.raises(A.InputsError, match="released value"):
+        run(_one(3, expect=_x("GS", code="STR.CONC.GROUND_SLAB", cls="RELEASED")))
 
 
-def test_adverse_tampered_relabel_state_fails_check():
+def test_adverse_owner_on_another_element_refused():
+    """the ground-slab ruling never lands on a ground-beam line (one element, one owner)"""
+    e = copy.deepcopy(entries()[3])
+    e.update(line_id=ID["GB"], expect=_x("GB", code="STR.CONC.GROUND_BEAM"))
+    with pytest.raises(A.InputsError, match="ruled owner"):
+        run(entries()[:3] + [e])
+
+
+def test_adverse_tampered_owner_state_fails_check():
     new, *_ = run()
     bad = [copy.deepcopy(x) for x in new]
     gs = next(x for x in bad if x["location"]["element_id"] == "GS")
@@ -327,7 +337,7 @@ def test_adverse_released_or_other_code():
     e["expect"] = dict(e["expect"], item_code="FIN.PLASTER", unit="m2")
     with pytest.raises(A.InputsError, match="STR.CONC"):
         run([e])
-    with pytest.raises(A.InputsError, match="BOUND, NARROW or RELABEL"):
+    with pytest.raises(A.InputsError, match="BOUND, NARROW or OWNER"):
         run(_one(1, action="VALUE"))
 
 

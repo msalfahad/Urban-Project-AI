@@ -6,7 +6,7 @@ Checker-merged files, each pinned by sha256 (an edited file stops the build):
       low 0.303 -> 0.3287) and the five blank CONFLICT columns bounded (annex trio + annex C3 on R-T678-2, 2F C5 415
       on R-T689-1);
   research/agents_t688/out/T688_STATEMENT.json   T-688 (MERGED a62b3024, Verifier 2026-11-11 01:56 Gate A PASS, own
-      FR08 noding): F-V-P18-2 / R-T688-3: L-a7ab57d8 is GROUND SLAB (B10-05), its region label BEAM_STRIP is wrong;
+      FR08 noding): F-V-P18-2 / R-T688-3: L-a7ab57d8 is GROUND SLAB (B10-05), the detector region label BEAM_STRIP (BAND0042) is wrong;
   research/agents_t678/out/T678_LEDGER.json      T-678 (MERGED f8515d4b; via research/agents_t682/t682_inputs.py, its
       pins unchanged): the annex slab-top plane record (R-T678-2 / R-T682-1, ONE_PLANE, s_lo 3.544);
   research/agents_t687/out/LINE_INDEX_V3_0_69.json  T-687 (Gate B PASS, MERGED 12bf5b8c): the class and range each
@@ -63,8 +63,7 @@ COLUMN = "STR.CONC.COLUMN"
 C2_412 = "L-919a5749ef79759e01ca"
 C5_415 = "L-bc01297b1c4a4c45a15f"
 SLAB = "L-a7ab57d873e26a587fd9"
-LABEL_PATH = "location.region_label"          # set from the live line read (see LABEL_FROM)
-LABEL_FROM, LABEL_TO = "BEAM_STRIP", "GROUND_SLAB"
+LABEL_FROM, LABEL_TO = "BEAM_STRIP", "GROUND_SLAB"    # the slab-region detector label (not a BOQ line field)
 BASE_2F, CEIL_2F = "9.65", "13.90"
 BASE_ANNEX = "0.25"
 Q_SECTION = ("D-66 (section, F-T689-3: this outline is not yet in D-66's registered list): drawn outline vs schedule "
@@ -208,16 +207,20 @@ def build(project_id=None):
     if tot != (_d(btb["low"]), _d(btb["high"])):
         raise SystemExit(f"blank-to-bounded {tot} is not the ledger's {btb['low']} .. {btb['high']}")
 
-    # RELABEL: the T-688 F-V-P18-2 face
+    # OWNER: the T-688 F-V-P18-2 face (the BOQ line carries no region label: the record is the correction)
     f = t688["f_v_p18_2"]
     if f["line"] != SLAB or f["owner"]["owner"] != "GROUND_SLAB" or not f["band_pairing_refused"]:
         raise SystemExit("T-688 F-V-P18-2 record moved")
     x = ix[SLAB]
-    ents.append({"action": "RELABEL", "line_id": SLAB, "source_tasks": ["T-688"],
+    ents.append({"action": "OWNER", "line_id": SLAB, "source_tasks": ["T-688"],
                  "member": "GF ground-slab face 0.95 x 1.20 with its own +0.30 (four 0.30 m member strips around it)",
                  "expect": {"item_code": x["item_code"], "element_id": x["element_id"], "unit": x["unit"],
                             "class": x["class"], "value": x["measured_net"]},
-                 "label": {"path": LABEL_PATH, "from": LABEL_FROM, "to": LABEL_TO},
+                 "label": {"detector": "slab-region detector (structural ground plan faces)", "region": "BAND0042",
+                           "from": LABEL_FROM, "to": LABEL_TO, "refused": "BAND0042 as a member over this face: its "
+                           "pairing of two panel edges 0.95 apart is no drawn member section (R-T688-3 (b)); its "
+                           "runs, when the GB line L-e16c9807 is bounded, stay outside this face",
+                           "gb_line": f["gb_line"]["line"]},
                  "ruling": "R-T688-3 1.0.0 (a) / (c): a face with its own level mark is slab; BAND0042 pairing two "
                            "panel edges 0.95 apart is refused as a member (Checker F-V-P18-2 CLOSED)",
                  "basis": f"{f['verdict']}; quantity {x['measured_net']} m3 unchanged"})

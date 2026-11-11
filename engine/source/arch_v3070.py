@@ -10,8 +10,11 @@ STR.CONC.* moves, released m3 never:
                            smaller reading x lower height .. larger reading x upper height (one reading never chosen);
                   NARROW   a HELD bounded line whose end moves INSIDE its old range on a new drawn datum (never widened,
                            the other end byte-equal), e.g. a column top raised to the joint of a printed beam it supports;
-                  RELABEL  a line whose detector region label names the wrong physical element (R-T688-3): the label is
-                           corrected, the quantity, state and range stay exactly as they were.
+                  OWNER    a line whose face the slab-region DETECTOR labels as another element (R-T688-3): the
+                           detector label is not a BOQ line field, so the line gains the ownership record (physical
+                           element, the wrong detector label and region, the corrected owner, the band pairing refused)
+                           and its quantity, state, range and class stay exactly as they were; the line's item code must
+                           be the code of the ruled owner (a ground-slab face -> STR.CONC.GROUND_SLAB).
                 A height lower datum is accepted only as
                   BEAM_JOINT  (R-T689-1) a drawn head under a PRINTED beam: top >= max(head - read tolerance) + the
                               beam's printed total depth, transferred only to that beam's own support columns (a beam's top
@@ -23,7 +26,7 @@ R-T693-1 (every villa; = R-T682-2 (a) .. (u) as written, plus): (v) a column bou
 recomputed at wiring time and equal to the merged ledger to 1e-6 m3; a CONFLICT section carries both readings and is
 bounded smaller x lower .. larger x upper; (w) a narrowing never widens a range and never moves the end it does not
 name; (x) a slab-top bound from a beam joint reaches only that beam's supports; the plate-wide transfer of it waits for a
-ruling (F-T689-1) and is refused here; (y) a label correction changes no quantity, state, range or class; (z) the
+ruling (F-T689-1) and is refused here; (y) an ownership record changes no quantity, state, range or class, and binds only a line of the ruled owner's code; (z) the
 designer items of every restated line stay named in its question (the section item and the top datum item).
 Files: V3_0_70_BOQ_LINES.json / .csv, V3_0_70_INTEGRATION_LEDGER.json / .csv, V3_0_70_DIFF.csv, V3_0_70_RUN.json.
 Nothing here names a project, a sheet, a layer or a coordinate.
@@ -64,7 +67,8 @@ RULE_ID, RULE_VERSION = "R-T693-1", "T-693"
 REC_KEY = "concrete_ledger_v3070"
 EARLIER_KEYS = A3067.EARLIER_KEYS + (A3067.REC_KEY,)
 P_CR = "CONC_RANGE"
-ACTIONS = ("BOUND", "NARROW", "RELABEL")
+ACTIONS = ("BOUND", "NARROW", "OWNER")
+OWNER_CODE = {"GROUND_SLAB": "STR.CONC.GROUND_SLAB", "MEMBER_STRIP": "STR.CONC.GROUND_BEAM"}   # R-T688-3 (c)
 CODE_PREFIX, UNIT = A3063.CODE_PREFIX, A3063.UNIT
 COLUMN = "STR.CONC.COLUMN"
 BOUNDED, BLANK = A3063.BOUNDED, A3063.BLANK
@@ -79,8 +83,8 @@ MAX_H = 12.0                                         # one storey of a villa col
 
 PIECES = {
     P_CR: {"module": "engine/source/arch_v3070.py (named STR.CONC.COLUMN lines restated from the Checker-merged T-689 "
-                     "ledger: the 2F C2 at the B8 joint narrowed, five blank CONFLICT columns bounded; one region label "
-                     "corrected from T-688 R-T688-3; nothing else moves, released m3 never)",
+                     "ledger: the 2F C2 at the B8 joint narrowed, five blank CONFLICT columns bounded; one ground-slab "
+                     "line given its R-T688-3 ownership record (T-688); nothing else moves, released m3 never)",
            "policy": "CONCRETE_GATE_B_V7", "rule_id": "R-T689-1..3 / R-T678-2 / R-T688-3 (R-T693-1)",
            "owner_rules": ["R-CONC-OWN-1 / UP-CONC-JOINT-001 (column top = slab top; the column owns the shaft to "
                            "the joint)",
@@ -206,7 +210,7 @@ def _entry(x, srcs):
     a = x.get("action")
     w = f"{a} {x.get('line_id')}"
     if a not in ACTIONS:
-        raise InputsError(f"entry action {a!r}: V3.0.70 restates to BOUND, NARROW or RELABEL only (R-T682-2 (u): "
+        raise InputsError(f"entry action {a!r}: V3.0.70 restates to BOUND, NARROW or OWNER only (R-T682-2 (u): "
                           f"released m3 does not move)")
     if not isinstance(x.get("line_id"), str) or not A3063.LINE_ID_RE.match(x["line_id"]):
         raise InputsError(f"{w}: line id")
@@ -247,16 +251,19 @@ def _entry(x, srcs):
         if not x.get("items") or not all(str(i).strip() for i in x["items"]):
             raise InputsError(f"{w}: the designer items that keep the line HELD are named (R-T693-1 (z))")
         e.update(_after={"low": lo, "high": hi}, _readings=rs, _height=hrec, status=_status(x["status"], w))
-    else:                                               # RELABEL
+    else:                                               # OWNER
         A3063._need(x, ("label", "ruling"), w)
         lb = x["label"]
-        A3063._need(lb, ("path", "from", "to"), w)
+        A3063._need(lb, ("detector", "region", "from", "to"), w)
         if lb["from"] == lb["to"]:
-            raise InputsError(f"{w}: the label does not change")
+            raise InputsError(f"{w}: the detector label is not corrected")
+        if OWNER_CODE.get(lb["to"]) != ex["item_code"]:
+            raise InputsError(f"{w}: the ruled owner {lb['to']} is {OWNER_CODE.get(lb['to'])}, not this line's "
+                              f"{ex['item_code']} (R-T693-1 (y))")
         if ex["class"] == "RELEASED" and ex.get("value") is None:
-            raise InputsError(f"{w}: a released line's label is corrected against its released value (expect value)")
+            raise InputsError(f"{w}: a released line's record is bound to its released value (expect value)")
         if x.get("after") or x.get("readings") or x.get("height"):
-            raise InputsError(f"{w}: a label correction carries no quantity terms (R-T693-1 (y))")
+            raise InputsError(f"{w}: an ownership record carries no quantity terms (R-T693-1 (y))")
     return e
 
 
@@ -264,13 +271,13 @@ def load_inputs(doc, project_id=None):
     """URBAN_V3070_INPUTS_V1 -> the validated doc.
     {"schema", "project_id", "sources": [{"task", "file", "sha256", "merge_commit", "checker_run"}],
      "expect_totals": {"<code>|m3": {...}} (optional, asserted on the code totals),
-     "entries": [{"action" BOUND | NARROW | RELABEL, "line_id", "source_tasks", "member", "member_mark", "basis",
+     "entries": [{"action" BOUND | NARROW | OWNER, "line_id", "source_tasks", "member", "member_mark", "basis",
                   "expect" {item_code, element_id, unit, class, low, high},
                   BOUND / NARROW: "readings" [{source, b_m, d_m}], "height" {base_m, base_status, datum_lo {kind
                   BEAM_JOINT {beam, heads [{id, head_abs_m, tol_m, status}], beam_depth_m, depth_source, supports} |
                   PLANE {plane}}, datum_hi {kind CEILING, mark_abs_m, what}, h_lo_m, h_hi_m}, "after" {low, high},
                   "ends_moved" (NARROW), "items", "question", "status" {low_end, high_end, basis};
-                  RELABEL: "label" {path, from, to}, "ruling"}]}"""
+                  OWNER: "label" {detector, region, from, to, refused}, "ruling"}]}"""
     if not doc:
         return None
     if doc.get("schema") != INPUTS_SCHEMA:
@@ -299,26 +306,11 @@ def _supersede(inp):
     return {k: inp.pop(k) for k in EARLIER_KEYS if k in inp}
 
 
-def _get(d, path):
-    for p in path.split("."):
-        if not isinstance(d, dict) or p not in d:
-            return None
-        d = d[p]
-    return d
-
-
-def _set(d, path, v):
-    ps = path.split(".")
-    for p in ps[:-1]:
-        d = d[p]
-    d[ps[-1]] = v
-
-
 def _assert_before(b, e):
-    if e["action"] != "RELABEL":
+    if e["action"] != "OWNER":
         A3063._assert_bound(b, e)                 # code, element, unit, class, range (blank = no range)
     else:
-        x, w = e["expect"], f"RELABEL {e['line_id']}"
+        x, w = e["expect"], f"OWNER {e['line_id']}"
         if b is None:
             raise InputsError(f"{w}: not in the candidate (stale binding)")
         ok = (b["item_code"] == x["item_code"] and (b.get("location") or {}).get("element_id") == x["element_id"]
@@ -328,11 +320,7 @@ def _assert_before(b, e):
         if not ok:
             raise InputsError(f"{w}: candidate line {b['item_code']} {line_class(b)} {b.get('measured_net')} is not "
                               f"the ruling's {x} (stale binding)")
-        cur = _get(b, e["label"]["path"])
-        if cur != e["label"]["from"]:
-            raise InputsError(f"RELABEL {e['line_id']}: {e['label']['path']} is {cur!r}, not the ruling's "
-                              f"{e['label']['from']!r} (stale binding)")
-    if e["action"] != "RELABEL" and b["evidence_state"] not in (BOUNDED, BLANK):
+    if e["action"] != "OWNER" and b["evidence_state"] not in (BOUNDED, BLANK):
         raise InputsError(f"{e['action']} {e['line_id']}: state {b['evidence_state']} is not a held column state")
 
 
@@ -355,11 +343,11 @@ def _restate(b, e, srcs):
            "bounded_range": b.get("bounded_range"), "rfi": b.get("rfi"),
            "formula": (b.get("calculation") or {}).get("formula"), "class": line_class(b)}
     inp = None
-    if a == "RELABEL":
+    if a == "OWNER":
         lb = e["label"]
-        _set(ln, lb["path"], lb["to"])
-        head = f"region label {lb['from']} -> {lb['to']} ({e['ruling']}); quantity unchanged"
-        after = {"label": lb["to"]}
+        head = (f"owner {lb['to']} ({e['ruling']}): the {lb['detector']} labels this face {lb['from']} ({lb['region']}), "
+                f"wrong; quantity unchanged")
+        after = {"owner": lb["to"]}
         ln["calculation"] = dict(ln["calculation"])
         inp = ln["calculation"]["inputs"] = dict(ln["calculation"].get("inputs") or {})
         sup = {}
@@ -385,7 +373,7 @@ def _restate(b, e, srcs):
                         label=e.get("label"), ruling=e.get("ruling"), superseded=sup,
                         freelancer_beside=e.get("freelancer_beside"))
     A305._note(ln, f"{METHOD}: {head[:300]} (was {A302._q(A30._qty(b)) or 'blank'})"
-               + ("" if a == "RELABEL" else "; NOT RELEASED"))
+               + ("" if a == "OWNER" else "; NOT RELEASED"))
     return A3063._fin(ln)
 
 
@@ -407,11 +395,11 @@ def changes_for(doc, prev):
         after = _restate(b, e, srcs)
         log["by_action"][e["action"]] = log["by_action"].get(e["action"], 0) + 1
         q = A30._qty(after)
-        held = None if e["action"] == "RELABEL" else [
+        held = None if e["action"] == "OWNER" else [
             {"what": e["member"], "why": "; ".join(e["items"]), "range": [q["low"], q["high"]]}]
         changes.append(A305._change(P_CR, "CHANGE", b, after, drawing_reference="; ".join(s["file"] for s in srcs),
                                     held=held, downstream=[], verification=A3036._ver(srcs),
-                                    evidence_status=line_class(after) if e["action"] == "RELABEL" else "HELD",
+                                    evidence_status=line_class(after) if e["action"] == "OWNER" else "HELD",
                                     codes=[P_CR], group=b["item_code"], step=e["action"]))
     log["lines"] = len(changes)
     return changes, log
@@ -453,7 +441,7 @@ def check_totals(t0, t1, changes, expect=None):
 
 def check_concrete(lines, before=None):
     """on finished lines: every V3.0.70 line is in the state its action names; a range line is HELD bounded with its
-    question and its items, its recomputed terms equal to its range; a RELABEL line kept its quantity, state and
+    question and its items, its recomputed terms equal to its range; an OWNER line kept its quantity, state and
     class; with `before`, no STR.CONC line changed class to RELEASED and no released quantity moved. -> summary"""
     out = {a: 0 for a in ACTIONS}
     old = {x["line_id"]: x for x in before} if before is not None else None
@@ -474,10 +462,11 @@ def check_concrete(lines, before=None):
                 ok = w.get("low") is not None and r[0] >= w["low"] - TOL and r[1] <= w["high"] + TOL
             if ok and a == "BOUND":
                 ok = rec["was"]["bounded_range"] is None
-        elif a == "RELABEL":
+        elif a == "OWNER":
             w = rec["was"]
             ok = ok and ln["evidence_state"] == w["evidence_state"] and ln.get("measured_net") == w["measured_net"] \
-                and ln.get("bounded_range") == w["bounded_range"] and line_class(ln) == w["class"]
+                and ln.get("bounded_range") == w["bounded_range"] and line_class(ln) == w["class"] and \
+                OWNER_CODE.get((rec.get("label") or {}).get("to")) == ln["item_code"]
         else:
             ok = False
         if ok and old is not None:
@@ -581,7 +570,7 @@ def ledger_csv(rows):
                        "v2_9": q(r.get("before_released_v2_9")), "base": q(r.get("before_base")),
                        "v3_0_70": q(r.get("after_v3_0_70")), "class": " -> ".join(r["class"]),
                        "ends": (f"low {r['end_status']['low_end']} / high {r['end_status']['high_end']}"
-                                if r.get("end_status") else f"label -> {(r.get('label') or {}).get('to')}"),
+                                if r.get("end_status") else f"owner {(r.get('label') or {}).get('to')}"),
                        "evidence_status": r["evidence_status"],
                        "verification": f"{r['verification'].get('task')} "
                                        f"{' '.join(x[:8] for x in r['verification'].get('merge_commits') or ())}"}
