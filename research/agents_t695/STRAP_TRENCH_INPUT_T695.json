@@ -1,0 +1,882 @@
+{
+ "f10f_box_plan_m2": 0.0,
+ "f10f_drawn_grown_plan_m2": 5.52,
+ "ff_box_plan_m2": 22.56,
+ "frame_offset_mm": [
+  75967.735,
+  14447.703
+ ],
+ "gb_pieces": [
+  {
+   "L_routeG_m": 2.4,
+   "beam_free_m2": 0.24,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "170+7C3#1",
+   "strip_free_m2": 0.4,
+   "strip_m2": 1.2,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 3.37,
+   "beam_free_m2": 0.471,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "170+7C3#2",
+   "strip_free_m2": 0.785,
+   "strip_m2": 1.685,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 3.35,
+   "beam_free_m2": 0.42,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "170+7C3#3",
+   "strip_free_m2": 0.7,
+   "strip_m2": 1.675,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 3.25,
+   "beam_free_m2": 0.495,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "170+7C3#4",
+   "strip_free_m2": 0.825,
+   "strip_m2": 1.625,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 0.6,
+   "beam_free_m2": 0.0,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "185+7C7#1",
+   "strip_free_m2": 0.0,
+   "strip_m2": 0.3,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 2.9,
+   "beam_free_m2": 0.539958,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "15D+7C8#1",
+   "strip_free_m2": 0.899929,
+   "strip_m2": 1.45,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 4.3,
+   "beam_free_m2": 0.72,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "10A+7C9#1",
+   "strip_free_m2": 1.2,
+   "strip_m2": 2.15,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 1.9,
+   "beam_free_m2": 0.075056,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "145+7CA#1",
+   "strip_free_m2": 0.125093,
+   "strip_m2": 0.95,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 4.4,
+   "beam_free_m2": 0.092087,
+   "beam_over_BP_m2": 0.522913,
+   "beam_over_B_m2": 0.397603,
+   "by_strap": {
+    "SB2|BOX": [
+     0.633097,
+     0.810426,
+     0.397603,
+     0.522913
+    ],
+    "SB2|DRAWN": [
+     0.633097,
+     0.810426,
+     0.397603,
+     0.522913
+    ]
+   },
+   "piece": "109+7CB#1",
+   "strip_free_m2": 0.214574,
+   "strip_m2": 2.2,
+   "strip_over_BP_m2": 0.810426,
+   "strip_over_B_m2": 0.633097
+  },
+  {
+   "L_routeG_m": 4.4,
+   "beam_free_m2": 0.21,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "109+7CB#2",
+   "strip_free_m2": 0.35,
+   "strip_m2": 2.2,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 2.7,
+   "beam_free_m2": 0.495,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "109+7CB#3",
+   "strip_free_m2": 0.825,
+   "strip_m2": 1.35,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 2.4,
+   "beam_free_m2": 0.119938,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "15C+7CC#1",
+   "strip_free_m2": 0.199896,
+   "strip_m2": 1.2,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 5.02,
+   "beam_free_m2": 0.636062,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "177+7CD#1",
+   "strip_free_m2": 1.060104,
+   "strip_m2": 2.51,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 1.5367,
+   "beam_free_m2": 0.015,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "177+7CD#2",
+   "strip_free_m2": 0.025,
+   "strip_m2": 0.768335,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 0.39,
+   "beam_free_m2": 0.0,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "107+7CE#1",
+   "strip_free_m2": 0.0,
+   "strip_m2": 0.19501,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 3.02,
+   "beam_free_m2": 0.433322,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "184+7CF#1",
+   "strip_free_m2": 0.722203,
+   "strip_m2": 1.51,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 2.65,
+   "beam_free_m2": 0.015,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "184+7CF#2",
+   "strip_free_m2": 0.025,
+   "strip_m2": 1.325,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 5.0,
+   "beam_free_m2": 0.922678,
+   "beam_over_BP_m2": 0.27,
+   "beam_over_B_m2": 0.21,
+   "by_strap": {
+    "SB1|BOX": [
+     0.35,
+     0.45,
+     0.21,
+     0.27
+    ],
+    "SB1|DRAWN": [
+     0.280031,
+     0.36004,
+     0.21,
+     0.27
+    ]
+   },
+   "piece": "184+7CF#3",
+   "strip_free_m2": 1.325332,
+   "strip_m2": 2.5,
+   "strip_over_BP_m2": 0.45,
+   "strip_over_B_m2": 0.35
+  },
+  {
+   "L_routeG_m": 2.975,
+   "beam_free_m2": 0.142563,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "7D0+FC#1",
+   "strip_free_m2": 0.285063,
+   "strip_m2": 1.190131,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 5.745,
+   "beam_free_m2": 0.254612,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "7D0+FC#2",
+   "strip_free_m2": 0.509112,
+   "strip_m2": 2.298254,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 6.35,
+   "beam_free_m2": 0.36016,
+   "beam_over_BP_m2": 0.003787,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {
+    "SB1|BOX": [
+     0.0,
+     0.011345,
+     0.0,
+     0.003787
+    ]
+   },
+   "piece": "7D0+FC#3",
+   "strip_free_m2": 0.72016,
+   "strip_m2": 2.54028,
+   "strip_over_BP_m2": 0.011345,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 1.2,
+   "beam_free_m2": 0.0,
+   "beam_over_BP_m2": 0.006233,
+   "beam_over_B_m2": 0.001223,
+   "by_strap": {
+    "SB1|BOX": [
+     0.003664,
+     0.018674,
+     0.001223,
+     0.006233
+    ]
+   },
+   "piece": "7D0+FC#4",
+   "strip_free_m2": 0.0,
+   "strip_m2": 0.480053,
+   "strip_over_BP_m2": 0.018674,
+   "strip_over_B_m2": 0.003664
+  },
+  {
+   "L_routeG_m": 1.5,
+   "beam_free_m2": 0.195013,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "10B+7D1#1",
+   "strip_free_m2": 0.325022,
+   "strip_m2": 0.75,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 2.3,
+   "beam_free_m2": 0.195,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "10B+7D1#2",
+   "strip_free_m2": 0.325,
+   "strip_m2": 1.15,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 0.1,
+   "beam_free_m2": 0.0,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "13D+7D2#1",
+   "strip_free_m2": 0.0,
+   "strip_m2": 0.05,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 5.8,
+   "beam_free_m2": 1.154944,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "13D+7D2#2",
+   "strip_free_m2": 1.924907,
+   "strip_m2": 2.9,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 4.3,
+   "beam_free_m2": 0.905825,
+   "beam_over_BP_m2": 0.144175,
+   "beam_over_B_m2": 0.066624,
+   "by_strap": {
+    "SB3|BOX": [
+     0.139476,
+     0.246701,
+     0.066624,
+     0.144175
+    ],
+    "SB3|DRAWN": [
+     0.139476,
+     0.246701,
+     0.066624,
+     0.144175
+    ]
+   },
+   "piece": "13F+7D3#1",
+   "strip_free_m2": 1.503299,
+   "strip_m2": 2.15,
+   "strip_over_BP_m2": 0.246701,
+   "strip_over_B_m2": 0.139476
+  },
+  {
+   "L_routeG_m": 10.13,
+   "beam_free_m2": 0.74789,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "7D4+F8#1",
+   "strip_free_m2": 1.495449,
+   "strip_m2": 4.052447,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 6.4,
+   "beam_free_m2": 0.377934,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "136+7D5#1",
+   "strip_free_m2": 0.877934,
+   "strip_m2": 2.403756,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 4.3,
+   "beam_free_m2": 1.093026,
+   "beam_over_BP_m2": 0.001974,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {
+    "SB3|BOX": [
+     0.001338,
+     0.025557,
+     0.0,
+     0.001974
+    ],
+    "SB3|DRAWN": [
+     0.001338,
+     0.025557,
+     0.0,
+     0.001974
+    ]
+   },
+   "piece": "13E+7D6#1",
+   "strip_free_m2": 1.799443,
+   "strip_m2": 2.15,
+   "strip_over_BP_m2": 0.025557,
+   "strip_over_B_m2": 0.001338
+  },
+  {
+   "L_routeG_m": 0.5,
+   "beam_free_m2": 0.0,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "13E+7D6#2",
+   "strip_free_m2": 0.0,
+   "strip_m2": 0.25,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 4.3,
+   "beam_free_m2": 1.29,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "140+7D7#1",
+   "strip_free_m2": 2.15,
+   "strip_m2": 2.15,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 2.45,
+   "beam_free_m2": 0.547322,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "142+7D8#1",
+   "strip_free_m2": 0.912203,
+   "strip_m2": 1.225,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 1.45,
+   "beam_free_m2": 0.210355,
+   "beam_over_BP_m2": 0.224645,
+   "beam_over_B_m2": 0.160554,
+   "by_strap": {
+    "SB3|BOX": [
+     0.26759,
+     0.374408,
+     0.160554,
+     0.224645
+    ],
+    "SB3|DRAWN": [
+     0.26759,
+     0.374408,
+     0.160554,
+     0.224645
+    ]
+   },
+   "piece": "13C+7D9#1",
+   "strip_free_m2": 0.350592,
+   "strip_m2": 0.725,
+   "strip_over_BP_m2": 0.374408,
+   "strip_over_B_m2": 0.26759
+  },
+  {
+   "L_routeG_m": 1.2,
+   "beam_free_m2": 0.36,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "141+7DA#1",
+   "strip_free_m2": 0.6,
+   "strip_m2": 0.6,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 3.8,
+   "beam_free_m2": 0.550781,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "178+7DB#1",
+   "strip_free_m2": 0.86111,
+   "strip_m2": 1.9,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 7.35,
+   "beam_free_m2": 1.365,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "7DC+7DD#1",
+   "strip_free_m2": 2.275,
+   "strip_m2": 3.675,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 3.75,
+   "beam_free_m2": 0.634686,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "175+7DE#1",
+   "strip_free_m2": 1.029686,
+   "strip_m2": 1.875,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 2.325,
+   "beam_free_m2": 0.114852,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "114+7DF#1",
+   "strip_free_m2": 0.164792,
+   "strip_m2": 1.1625,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 1.0,
+   "beam_free_m2": 0.0,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "114+7DF#2",
+   "strip_free_m2": 0.0,
+   "strip_m2": 0.5,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 6.9,
+   "beam_free_m2": 0.391907,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "7E0+FD#1",
+   "strip_free_m2": 0.706911,
+   "strip_m2": 2.928451,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 6.72,
+   "beam_free_m2": 1.693678,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "7E1+7E2#1",
+   "strip_free_m2": 2.781309,
+   "strip_m2": 3.36,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 3.2277,
+   "beam_free_m2": 0.548354,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "17C+7E3#1",
+   "strip_free_m2": 0.913924,
+   "strip_m2": 1.613853,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 4.2723,
+   "beam_free_m2": 1.281688,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "17D+7E4#1",
+   "strip_free_m2": 2.136147,
+   "strip_m2": 2.136147,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 1.2,
+   "beam_free_m2": 0.06,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "17B+7E5#1",
+   "strip_free_m2": 0.1,
+   "strip_m2": 0.6,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 3.75,
+   "beam_free_m2": 0.825,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "176+7E6#1",
+   "strip_free_m2": 1.375,
+   "strip_m2": 1.875,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 7.35,
+   "beam_free_m2": 1.155,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "7E7+7E8#1",
+   "strip_free_m2": 1.925,
+   "strip_m2": 3.675,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 4.225,
+   "beam_free_m2": 0.9975,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "7E9+7EA#1",
+   "strip_free_m2": 1.6625,
+   "strip_m2": 2.1125,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 1.25,
+   "beam_free_m2": 0.187323,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "16F+7FF#1",
+   "strip_free_m2": 0.312323,
+   "strip_m2": 0.625,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 3.1,
+   "beam_free_m2": 0.42,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "137+138#1",
+   "strip_free_m2": 0.7,
+   "strip_m2": 1.537793,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 2.7,
+   "beam_free_m2": 0.239958,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "15E+15F#1",
+   "strip_free_m2": 0.399929,
+   "strip_m2": 1.35,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 2.4269,
+   "beam_free_m2": 0.228303,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "17E+17F#1",
+   "strip_free_m2": 0.380504,
+   "strip_m2": 1.213462,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 0.789,
+   "beam_free_m2": 0.236694,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "180+181#1",
+   "strip_free_m2": 0.39449,
+   "strip_m2": 0.39449,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 2.0732,
+   "beam_free_m2": 0.534975,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "182+183#1",
+   "strip_free_m2": 0.880632,
+   "strip_m2": 1.036622,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 2.1,
+   "beam_free_m2": 0.63,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "180D+180E#1",
+   "strip_free_m2": 1.05,
+   "strip_m2": 1.05,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 1.3,
+   "beam_free_m2": 0.097678,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "1811+1812#1",
+   "strip_free_m2": 0.162797,
+   "strip_m2": 0.65,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 1.8064,
+   "beam_free_m2": 0.397892,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "139+13A#1",
+   "strip_free_m2": 0.663157,
+   "strip_m2": 1.002933,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  },
+  {
+   "L_routeG_m": 6.2868,
+   "beam_free_m2": 0.739926,
+   "beam_over_BP_m2": 0.0,
+   "beam_over_B_m2": 0.0,
+   "by_strap": {},
+   "piece": "157+158#1",
+   "strip_free_m2": 1.201044,
+   "strip_m2": 3.242331,
+   "strip_over_BP_m2": 0.0,
+   "strip_over_B_m2": 0.0
+  }
+ ],
+ "gf_drop_evidence": {
+  "ground_beam_plan_level_marks": [
+   "+0.15",
+   "+0.30",
+   "+1.00"
+  ],
+  "hatches": {
+   "FOUNDATION_PLAN|S-COL.HAT|SOLID": 30,
+   "FOUNDATION_PLAN|S-HAT.BAT|ANSI37": 2,
+   "GROUND_BEAMS_PLAN|2|MUDST": 1,
+   "GROUND_BEAMS_PLAN|S-COL.HAT|SOLID": 30,
+   "GROUND_BEAMS_PLAN|S-HAT.BAT|ANSI37": 2,
+   "GROUND_BEAMS_PLAN|S-HAT.BAT|AR-B816": 1,
+   "GROUND_BEAMS_PLAN|S-HAT.BAT|AR-B816C": 2,
+   "OTHER_SHEETS|S-COL.HAT|ANSI35": 5,
+   "OTHER_SHEETS|S-COL.HAT|SOLID": 89,
+   "OTHER_SHEETS|S-HAT.BAT|ANSI31": 14,
+   "OTHER_SHEETS|S-HAT.BAT|SOLID": 22,
+   "OTHER_SHEETS|S-INSU.D|ANSI37": 1,
+   "OTHER_SHEETS|S-LINE.SCH|PLAST": 3,
+   "OTHER_SHEETS|S-PLAH.D|AR-CONC": 1,
+   "OTHER_SHEETS|S-REIN.D|SOLID": 32,
+   "OTHER_SHEETS|S-SECRH.D|DOTS": 1
+  }
+ },
+ "pit_match_residual_mm_max": 0.3,
+ "pits_zone_plan_m2": 124.649469,
+ "schema": "URBAN_T695_STRAP_TRENCH_INPUT_V1",
+ "source": {
+  "drive": "Alsenan chalet project / ST7757 dxf.dxf",
+  "frame": "route G registered on FOUNDATION PLAN",
+  "projection_m": 0.1,
+  "projection_source": "ST7757.pdf p.13 typical footing / ground-beam details",
+  "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ },
+ "straps": {
+  "SB1": {
+   "beyond_plot_m2": 0.0,
+   "centre_axis_outside_zones_m": 5.6001,
+   "concrete_plan_inside_f10f_box_m2": 0.0,
+   "concrete_plan_inside_pits_zone_m2": 1.224969,
+   "concrete_plan_outside_zones_f10_drawn_m2": 3.045031,
+   "concrete_plan_outside_zones_m2": 3.920067,
+   "drawn_width_m": [
+    0.7,
+    0.7
+   ],
+   "edge_handles": [
+    "1689",
+    "1B1C"
+   ],
+   "side_strip_over_boundary_band_m2": 0.0,
+   "side_strip_plan_outside_zones_f10_drawn_m2": 3.91504,
+   "side_strip_plan_outside_zones_m2": 5.040087
+  },
+  "SB2": {
+   "beyond_plot_m2": 0.0,
+   "centre_axis_outside_zones_m": 2.0889,
+   "concrete_plan_inside_f10f_box_m2": 0.0,
+   "concrete_plan_inside_pits_zone_m2": 3.074871,
+   "concrete_plan_outside_zones_f10_drawn_m2": 2.063126,
+   "concrete_plan_outside_zones_m2": 2.063126,
+   "drawn_width_m": [
+    0.9871,
+    0.9884
+   ],
+   "edge_handles": [
+    "1B08",
+    "1B09"
+   ],
+   "side_strip_over_boundary_band_m2": 0.0,
+   "side_strip_plan_outside_zones_f10_drawn_m2": 2.480908,
+   "side_strip_plan_outside_zones_m2": 2.480908
+  },
+  "SB3": {
+   "beyond_plot_m2": 0.0,
+   "centre_axis_outside_zones_m": 3.0443,
+   "concrete_plan_inside_f10f_box_m2": 0.0,
+   "concrete_plan_inside_pits_zone_m2": 0.850087,
+   "concrete_plan_outside_zones_f10_drawn_m2": 1.525376,
+   "concrete_plan_outside_zones_m2": 1.525376,
+   "drawn_width_m": [
+    0.5022,
+    0.5
+   ],
+   "edge_handles": [
+    "1B26",
+    "1B27"
+   ],
+   "side_strip_over_boundary_band_m2": 0.0,
+   "side_strip_plan_outside_zones_f10_drawn_m2": 2.134241,
+   "side_strip_plan_outside_zones_m2": 2.134241
+  }
+ },
+ "trench_union_BP_m2": 9.655235,
+ "trench_union_B_m2": 7.508569
+}

@@ -1,0 +1,789 @@
+{
+ "b_min_m": "0.40",
+ "by_cause": {
+  "DESIGNER ITEM": 18,
+  "MEASURABLE NOW": 1,
+  "METHOD GAP": 2
+ },
+ "candidate_index": "ARCH_TAKEOFF_V3.0.69 (research/agents_t687/out/LINE_INDEX_V3_0_69.json)",
+ "counts": {
+  "+AT_LEAST": 2,
+  "AT_MOST": 16,
+  "NONE (datum named)": 3
+ },
+ "family": {
+  "at_least_lines": [
+   "D-1F-06",
+   "D-GF-04"
+  ],
+  "at_least_sum_m3": "0.084000",
+  "at_most_lines": 16,
+  "at_most_sum_m3": "1.321826",
+  "never_summed_with": "the candidate's released / bounded LINTEL totals (beside, not added)",
+  "pier_counted_once": {
+   "W11/W12": "0.045840"
+  }
+ },
+ "lines": [
+  {
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "block": "BLACK",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "T-238 (arched head: crown level printed nowhere, arch not dimensioned)",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": null,
+   "convention": null,
+   "deciding_datum": "the crown level and the arch detail; a curved head is never a straight-lintel m3 (R-T673-3)",
+   "ends": [
+    [
+     "START",
+     "SEARCH_LIMIT",
+     null,
+     "3.000000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.500000"
+    ]
+   ],
+   "existence": "OPEN",
+   "length_hi_m": null,
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-b729bd6381f216153df8",
+   "opening": "A-GF-01",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "storey": "GF",
+   "why_no_at_most": "A-GF-01: CURVED head: never a straight-lintel m3 (R-T673-3)",
+   "width_m": 1.0
+  },
+  {
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.138030",
+   "block": "BLACK",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "T-227 (dome opening ring 1F-073 over 1F-W11: soffit not printed)",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": "0.048000",
+   "convention": "CEILING",
+   "deciding_datum": "the dome-ring soffit over 1F-W11",
+   "ends": [
+    [
+     "START",
+     "END_OF_MASONRY",
+     null,
+     "1.372800"
+    ],
+    [
+     "END",
+     "END_OF_MASONRY",
+     null,
+     "2.427200"
+    ]
+   ],
+   "existence": "OPEN",
+   "length_hi_m": "4.601000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-2c1c49db7cd7b16c6206",
+   "opening": "D-1F-01",
+   "owner_manual": "1.20 m precast (0.8 + 2 x 0.15 = 1.10)",
+   "storey": "1F",
+   "why_no_at_most": null,
+   "width_m": 0.8
+  },
+  {
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "at_least_m3": "0.036000",
+   "at_most_m3": null,
+   "block": "BLACK",
+   "cause_class": "METHOD GAP",
+   "cause_ref": "R-T678-3 (END on the crossing wall WB-FL0027-FL0028, 0.0733 m)",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": null,
+   "convention": null,
+   "deciding_datum": "END: the lintel may bear into / through the crossing wall; its far face is not a recorded stopper and no merged rule caps a junction end (Lead / Checker ruling, not an owner question)",
+   "ends": [
+    [
+     "START",
+     "END_OF_MASONRY",
+     null,
+     "0.746700"
+    ],
+    [
+     "END",
+     "CROSSING_WALL",
+     "WB-FL0027-FL0028:CROSSING_THROUGH_BOTH",
+     "0.073300"
+    ]
+   ],
+   "existence": "REQUIRED",
+   "length_hi_m": null,
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-9ec762c0bd529b924f33",
+   "opening": "D-1F-06",
+   "owner_manual": "1.20 m precast (0.8 + 2 x 0.15 = 1.10)",
+   "storey": "1F",
+   "why_no_at_most": "D-1F-06 END: stopper 'CROSSING_WALL' not recorded (R-T678-3: OPEN end)",
+   "width_m": 0.8
+  },
+  {
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.126240",
+   "block": "BLACK",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "T-227 (D-1F-09 wholly inside the east dome opening 1F-077: wall top not drawn)",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": "0.051000",
+   "convention": "CEILING",
+   "deciding_datum": "the top of 1F-W13 over D-1F-09",
+   "ends": [
+    [
+     "START",
+     "OPENING",
+     "D-1F-08",
+     "0.844500"
+    ],
+    [
+     "END",
+     "END_OF_MASONRY",
+     null,
+     "2.862700"
+    ]
+   ],
+   "existence": "OPEN",
+   "length_hi_m": "4.208000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-961608860fcb38c106af",
+   "opening": "D-1F-09",
+   "owner_manual": "1.20 m precast (0.9 + 2 x 0.15 = 1.20)",
+   "storey": "1F",
+   "why_no_at_most": null,
+   "width_m": 0.9
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.056000",
+   "block": "BLACK",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "D-04 / Q-61 C(4) (BM-2F-017 unlabelled, depth not printed)",
+   "conditional_exclusion_member": "BM-2F-017 (unsized)",
+   "conditional_lo_m3": "0.036000",
+   "convention": "MIN_BEARING",
+   "deciding_datum": "REQUIRED for any BM-2F-017 depth <= 0.52 m on the drawn 2F slab-top bound 12.68 (12.68 - 9.70 - d >= 2.20 + 0.20 + 0.06); the beam serves the door if d > 0.58 on that bound",
+   "ends": [
+    [
+     "START",
+     "END_OF_MASONRY",
+     null,
+     "0.251600"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.248400"
+    ]
+   ],
+   "existence": "CONDITIONAL_EXCLUSION",
+   "length_hi_m": "1.400000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-1c0e7646345156fcd0cb",
+   "opening": "D-2F-02",
+   "owner_manual": "1.20 m precast (0.9 + 2 x 0.15 = 1.20)",
+   "storey": "2F",
+   "why_no_at_most": null,
+   "width_m": 0.9
+  },
+  {
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "at_least_m3": "0.048000",
+   "at_most_m3": null,
+   "block": "BLACK",
+   "cause_class": "METHOD GAP",
+   "cause_ref": "R-T678-3 (END: no stopper inside the 3.00 m search)",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": null,
+   "convention": null,
+   "deciding_datum": "END stopper: the host run WB-FL0089-FL0090 ends 3.2703 m past the jamb at a T-junction (T-274); no merged rule gives a junction end a ceiling (Lead / Checker ruling, not an owner question)",
+   "ends": [
+    [
+     "START",
+     "END_OF_MASONRY",
+     null,
+     "0.629700"
+    ],
+    [
+     "END",
+     "SEARCH_LIMIT",
+     null,
+     "3.000000"
+    ]
+   ],
+   "existence": "REQUIRED",
+   "length_hi_m": null,
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-274b112580029084b80e",
+   "opening": "D-GF-04",
+   "owner_manual": "1.20 m precast (0.8 + 2 x 0.15 = 1.10)",
+   "storey": "GF",
+   "why_no_at_most": "D-GF-04 END: search limit with no extended stopper (OPEN end)",
+   "width_m": 0.8
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "block": "WHITE",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "Q-67 side-passage FFL (not printed) + START stopper WB-FL0001-FL0002:NOT_WALL not recorded",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": "0.040000",
+   "convention": null,
+   "deciding_datum": "REQUIRED if the side-passage FFL <= +0.30 (CB7 bound c_lo 2.494, spare 0.034); the START stopper (what lies 0.30 past the jamb) for the AT_MOST",
+   "ends": [
+    [
+     "START",
+     "UNRECORDED",
+     "WB-FL0001-FL0002:NOT_WALL",
+     "0.300000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.200000"
+    ]
+   ],
+   "existence": "OPEN",
+   "length_hi_m": null,
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-df32d6f42a824be21d3f",
+   "opening": "D-GF-05",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "storey": "GF",
+   "why_no_at_most": "D-GF-05 START: stopper 'UNRECORDED' not recorded (R-T678-3: OPEN end)",
+   "width_m": 1.0
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.060000",
+   "block": "BLACK",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "D-43 (ST p.8 n.19 unsized lift tie beam over GF-W08)",
+   "conditional_exclusion_member": "the lift tie beam of ST p.8 n.19 (unsized)",
+   "conditional_lo_m3": "0.056000",
+   "convention": "MIN_BEARING",
+   "deciding_datum": "the lift tie beam depth and level: at the door head it serves the opening (no lintel)",
+   "ends": [
+    [
+     "START",
+     "END_OF_MASONRY",
+     null,
+     "1.600000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.100000"
+    ]
+   ],
+   "existence": "CONDITIONAL_EXCLUSION",
+   "length_hi_m": "1.500000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-0d5e2e3ac4167df90d6d",
+   "opening": "D-GF-08",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "storey": "GF",
+   "why_no_at_most": null,
+   "width_m": 1.0
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.061876",
+   "block": "WHITE",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "T-581 DRAWING CONFLICT (D120 1.00 frame in a 0.90 gap) + host GF-W10 held piece",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": "0.052000",
+   "convention": "MIN_BEARING",
+   "deciding_datum": "the opening width (0.90 or 1.00) and the soffit over GF-W10's held piece",
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     null,
+     "1.453100"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.146900"
+    ]
+   ],
+   "existence": "OPEN",
+   "length_hi_m": "1.546900",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-072bc37c5486905a9d21",
+   "opening": "D-GF-09",
+   "owner_manual": "width not drawn: piece not chosen",
+   "storey": "GF",
+   "why_no_at_most": null,
+   "width_m": [
+    "0.90",
+    "1.00"
+   ]
+  },
+  {
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "block": "BLACK",
+   "cause_class": "MEASURABLE NOW",
+   "cause_ref": "host GF-W30: no drawn wall piece in the T-274 run geometry, no T-644 jamb row",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": "0.024000",
+   "convention": null,
+   "deciding_datum": "a read of the GF-W30 run (band, pieces, both jamb stoppers) from the architectural DXF",
+   "ends": [],
+   "existence": "OPEN",
+   "length_hi_m": null,
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-17953d7882899d43473f",
+   "opening": "D-GF-14",
+   "owner_manual": "1.20 m precast (0.8 + 2 x 0.15 = 1.10)",
+   "storey": "GF",
+   "why_no_at_most": "D-GF-14: no jamb evidence: AT_MOST not formed, never 0",
+   "width_m": 0.8
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.072000",
+   "block": "BLACK",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "D-45 / register LIFT LANDING DOOR LINTEL",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": "0.072000",
+   "convention": "CEILING",
+   "deciding_datum": "as L-GF-01",
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     null,
+     "0.400000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.400000"
+    ]
+   ],
+   "existence": "OPEN",
+   "length_hi_m": "1.800000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-a500f10eedbd63a147ab",
+   "opening": "L-1F-01",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "storey": "1F",
+   "why_no_at_most": null,
+   "width_m": 1.0
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.072000",
+   "block": "BLACK",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "D-45 / register LIFT LANDING DOOR LINTEL",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": "0.072000",
+   "convention": "CEILING",
+   "deciding_datum": "as L-GF-01",
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     null,
+     "0.400000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.400000"
+    ]
+   ],
+   "existence": "OPEN",
+   "length_hi_m": "1.800000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-fd8aaedc3457d6648f18",
+   "opening": "L-2F-01",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "storey": "2F",
+   "why_no_at_most": null,
+   "width_m": 1.0
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.072000",
+   "block": "BLACK",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "D-45 / register LIFT LANDING DOOR LINTEL (head not printed; shaft wall RC or masonry not printed)",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": "0.072000",
+   "convention": "CEILING",
+   "deciding_datum": "the lift landing door head and the shaft wall material",
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     null,
+     "0.400000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.400000"
+    ]
+   ],
+   "existence": "OPEN",
+   "length_hi_m": "1.800000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-8f69c40749d579c14bf1",
+   "opening": "L-GF-01",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "storey": "GF",
+   "why_no_at_most": null,
+   "width_m": 1.0
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.052000",
+   "block": "BLACK",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "D-45 (head drawn on no sheet, T-207 re-check)",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": "0.052000",
+   "convention": "MIN_BEARING",
+   "deciding_datum": "the P-GF-01 head level",
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     null,
+     "0.000000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "1.800000"
+    ]
+   ],
+   "existence": "OPEN",
+   "length_hi_m": "1.300000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-d887eecf51c121831336",
+   "opening": "P-GF-01",
+   "owner_manual": "1.20 m precast (0.9 + 2 x 0.15 = 1.20)",
+   "storey": "GF",
+   "why_no_at_most": null,
+   "width_m": 0.9
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.040000",
+   "block": "WHITE",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "D-39 / Q-54 B (annex roof slab top)",
+   "conditional_exclusion_member": "CB6 BM-GF-030 (20x75) over the drawn head +2.80",
+   "conditional_lo_m3": "0.040000",
+   "convention": "MIN_BEARING",
+   "deciding_datum": "lintel only if the annex slab top >= +3.829 (2.80 drawn head + 0.019 tol + 0.20 + 0.06 bed + CB6 0.75); drawn bound today 3.544 .. 4.30 (R-T678-2)",
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     null,
+     "1.300000"
+    ],
+    [
+     "END",
+     "OPENING",
+     "D-GF-03",
+     "0.150000"
+    ]
+   ],
+   "existence": "CONDITIONAL_EXCLUSION",
+   "length_hi_m": "1.000000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-1313767d897f06ef95b6",
+   "opening": "W04",
+   "owner_manual": "1.20 m precast (0.6 + 2 x 0.15 = 0.90)",
+   "storey": "GF",
+   "why_no_at_most": null,
+   "width_m": 0.6
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.100000",
+   "block": "WHITE",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "D-39 / Q-54 B (annex roof slab top)",
+   "conditional_exclusion_member": "CB6 BM-GF-030 (20x75) over the drawn head +2.80",
+   "conditional_lo_m3": "0.092000",
+   "convention": "CEILING",
+   "deciding_datum": "lintel only if the annex slab top >= +3.816 (2.80 + 0.006 + 0.20 + 0.06 + 0.75)",
+   "ends": [
+    [
+     "START",
+     "OPENING",
+     "D-GF-03",
+     "0.850000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.550000"
+    ]
+   ],
+   "existence": "CONDITIONAL_EXCLUSION",
+   "length_hi_m": "2.500000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-7f9eb7cced8df33202a5",
+   "opening": "W08",
+   "owner_manual": "2.50 m precast (1.5 + 2 x 0.15 = 1.80)",
+   "storey": "GF",
+   "why_no_at_most": null,
+   "width_m": 1.5
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.149160",
+   "block": "WHITE",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "T-207 sill / head level not drawn (height 2.20 DRAWING-CONFIRMED)",
+   "conditional_exclusion_member": "B9 (0.75) over GF-W18",
+   "conditional_lo_m3": "0.110000",
+   "convention": "CEILING",
+   "deciding_datum": "REQUIRED only if the head <= 2.234 above FFL +0.30 under B9 0.75 (sill <= 0.034); a higher head leaves less than D + bed under B9",
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     null,
+     "0.633000"
+    ],
+    [
+     "END",
+     "OPENING",
+     "W12",
+     "1.145100"
+    ]
+   ],
+   "existence": "CONDITIONAL_EXCLUSION",
+   "length_hi_m": "3.729000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-c1e57b06555adcf8edf7",
+   "opening": "W11",
+   "owner_manual": "2.50 m precast (1.95 + 2 x 0.15 = 2.25)",
+   "storey": "GF",
+   "why_no_at_most": null,
+   "width_m": 1.95
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.140360",
+   "block": "WHITE",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "T-207 sill / head level not drawn (as W11)",
+   "conditional_exclusion_member": "B9 (0.75) over GF-W18",
+   "conditional_lo_m3": "0.110000",
+   "convention": "CEILING",
+   "deciding_datum": "as W11",
+   "ends": [
+    [
+     "START",
+     "OPENING",
+     "W11",
+     "1.145100"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.412100"
+    ]
+   ],
+   "existence": "CONDITIONAL_EXCLUSION",
+   "length_hi_m": "3.509000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-e39175199fc6edc4db86",
+   "opening": "W12",
+   "owner_manual": "2.50 m precast (1.95 + 2 x 0.15 = 2.25)",
+   "storey": "GF",
+   "why_no_at_most": null,
+   "width_m": 1.95
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.060000",
+   "block": "WHITE",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "R-T228-3 F3 (1F stair-shaft landing member over W25, 'about +7.6', not printed)",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": "0.056000",
+   "convention": "MIN_BEARING",
+   "deciding_datum": "the landing member level and depth over W25",
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     null,
+     "1.400000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.100000"
+    ]
+   ],
+   "existence": "OPEN",
+   "length_hi_m": "1.500000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-bf88bf6f5efaa0ae5bdc",
+   "opening": "W25",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "storey": "1F",
+   "why_no_at_most": null,
+   "width_m": 1.0
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.108000",
+   "block": "WHITE",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "D-39 (2F stair-roof structural top / build-up)",
+   "conditional_exclusion_member": "the 2F stair-roof piece over W26 (soffit 3.00)",
+   "conditional_lo_m3": "0.080000",
+   "convention": "CEILING",
+   "deciding_datum": "printed head 2.80 under the single 3.00 piece: gap 0.20 = D exactly (spare -0.06 with the bed): REQUIRED only if the structural soffit is >= 3.06; below 3.00 the piece serves the opening; between, HELD by name",
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     null,
+     "0.750000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.750000"
+    ]
+   ],
+   "existence": "CONDITIONAL_EXCLUSION",
+   "length_hi_m": "2.700000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-b699ce0da6b29b888435",
+   "opening": "W26",
+   "owner_manual": "1.50 m precast (1.2 + 2 x 0.15 = 1.50)",
+   "storey": "2F",
+   "why_no_at_most": null,
+   "width_m": 1.2
+  },
+  {
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "at_least_m3": null,
+   "at_most_m3": "0.060000",
+   "block": "WHITE",
+   "cause_class": "DESIGNER ITEM",
+   "cause_ref": "R-T228-3 F4 (2F stair-shaft member at +9.70 not printed on the shaft line)",
+   "conditional_exclusion_member": null,
+   "conditional_lo_m3": "0.056000",
+   "convention": "MIN_BEARING",
+   "deciding_datum": "the 2F stair-shaft member level and depth over W27",
+   "ends": [
+    [
+     "START",
+     "COLUMN",
+     null,
+     "1.400000"
+    ],
+    [
+     "END",
+     "COLUMN",
+     null,
+     "0.100000"
+    ]
+   ],
+   "existence": "OPEN",
+   "length_hi_m": "1.500000",
+   "line_after": "HELD blank (unchanged; bound beside)",
+   "line_id": "L-f892163c0602656f7e57",
+   "opening": "W27",
+   "owner_manual": "1.50 m precast (1.0 + 2 x 0.15 = 1.30)",
+   "storey": "2F",
+   "why_no_at_most": null,
+   "width_m": 1.0
+  }
+ ],
+ "lintel_census_before": {
+  "blank": 21,
+  "bounded": 24,
+  "lines": 61,
+  "released": 16
+ },
+ "rules": [
+  "R-T699-1 1.0.0",
+  "R-T673-3",
+  "R-T678-1",
+  "R-T678-3",
+  "R-T696-1"
+ ],
+ "task": "T-699"
+}
