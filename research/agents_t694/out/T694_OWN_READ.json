@@ -1,0 +1,219 @@
+{
+ "bytes": 3153037,
+ "cases": [
+  {
+   "at": [
+    0,
+    0
+   ],
+   "handle": "544",
+   "leader": "545",
+   "leader_far": [
+    1864,
+    1866
+   ],
+   "outlines": {
+    "329": [
+     1491,
+     2177,
+     2191,
+     2377
+    ],
+    "359": [
+     -1121,
+     677,
+     -721,
+     877
+    ],
+    "37D": [
+     2354,
+     677,
+     3454,
+     927
+    ]
+   },
+   "text": "P.C 20x70"
+  },
+  {
+   "at": [
+    0,
+    0
+   ],
+   "handle": "548",
+   "leader": "549",
+   "leader_far": [
+    1864,
+    1866
+   ],
+   "outlines": {
+    "347": [
+     3391,
+     677,
+     3591,
+     1077
+    ],
+    "371": [
+     1391,
+     677,
+     2091,
+     927
+    ],
+    "374": [
+     -2309,
+     2177,
+     -1709,
+     2427
+    ],
+    "386": [
+     1591,
+     2177,
+     2091,
+     2377
+    ]
+   },
+   "text": "P.C 20x50"
+  },
+  {
+   "at": [
+    0,
+    0
+   ],
+   "handle": "77C",
+   "leader": "77F",
+   "leader_far": [
+    2354,
+    -1098
+   ],
+   "outlines": {
+    "667": [
+     5072,
+     -1107,
+     5272,
+     -107
+    ],
+    "679": [
+     -548,
+     -1782,
+     -298,
+     -782
+    ],
+    "67C": [
+     -548,
+     -82,
+     -348,
+     418
+    ],
+    "67F": [
+     -2548,
+     -1782,
+     -2348,
+     -1282
+    ],
+    "682": [
+     -2548,
+     -82,
+     -2348,
+     418
+    ],
+    "77B": [
+     2652,
+     -1400,
+     2852,
+     -1000
+    ]
+   },
+   "text": "P.C 20x50"
+  }
+ ],
+ "gap_outlines": {
+  "34A": {
+   "dimensions_within_600": 0,
+   "drawn_mm": [
+    200,
+    400
+   ],
+   "size_texts_within_600": [],
+   "texts_within_600": []
+  },
+  "34D": {
+   "dimensions_within_600": 0,
+   "drawn_mm": [
+    400,
+    200
+   ],
+   "size_texts_within_600": [],
+   "texts_within_600": []
+  },
+  "350": {
+   "dimensions_within_600": 0,
+   "drawn_mm": [
+    400,
+    200
+   ],
+   "size_texts_within_600": [],
+   "texts_within_600": []
+  },
+  "356": {
+   "dimensions_within_600": 0,
+   "drawn_mm": [
+    400,
+    200
+   ],
+   "size_texts_within_600": [],
+   "texts_within_600": []
+  },
+  "415": {
+   "dimensions_within_600": 0,
+   "drawn_mm": [
+    600,
+    200
+   ],
+   "size_texts_within_600": [],
+   "texts_within_600": [
+    [
+     "79F",
+     "4%%C16/Top",
+     434
+    ]
+   ]
+  },
+  "778": {
+   "dimensions_within_600": 0,
+   "drawn_mm": [
+    200,
+    400
+   ],
+   "size_texts_within_600": [],
+   "texts_within_600": [
+    [
+     "7A2",
+     "5%%C18/Top",
+     346
+    ]
+   ]
+  },
+  "77B": {
+   "dimensions_within_600": 0,
+   "drawn_mm": [
+    200,
+    400
+   ],
+   "size_texts_within_600": [],
+   "texts_within_600": [
+    [
+     "709",
+     "5%%c10/m",
+     503
+    ]
+   ]
+  }
+ },
+ "pc_texts_in_file": [
+  "P.C 20x50",
+  "P.C 20x70"
+ ],
+ "schema": "URBAN_T694_OWN_READ_V1",
+ "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'",
+ "tol_mm": 600
+}
