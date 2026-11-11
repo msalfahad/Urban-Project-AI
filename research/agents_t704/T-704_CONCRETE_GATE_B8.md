@@ -111,3 +111,20 @@ Lesson row (ERS s.7, proposed): | 2026-11-11 | a task row asked to wire two AT_L
 since V3.0.67 | the row was written from the research census, not from the candidate's records | before wiring a bound,
 read the candidate line's records: a figure already beside it is confirmed, never restated under a second record |
 tests/t704_lintel_side (test_adverse_line_with_a_figure_beside_already) | PROPOSED |
+
+## 6. Validation
+
+- L1 / L2: `tests/t704_lintel_side` (37: hand villa K704, not the development villa: W1 CEILING 0.04 x 2.35 = 0.094,
+  D1 MIN_BEARING 0.03 x 1.55 = 0.0465 with a conditional exclusion, W2 / W3 sharing a pier taken whole (family
+  0.350582 with the pier once), W4 directed ceiling 0.06004125 -> 0.060042, A1 curved head DATUM_NAMED, D9 V3.0.67
+  AT_LEAST confirmed; lines stay HELD blank, no total moves, outside lines byte-identical, mirror order; adverse: a
+  half-up rounded ledger, a bearing beyond the drawn length, an open (crossing-wall) end, one end only, a section in
+  cm, a missing depth (never 0), a length that is not the terms, a conditional least above the AT_MOST, existence
+  REQUIRED, an exclusion with no member, a figure on a datum-named line, the pier counted twice / not taken whole, a
+  bounded line, a line already carrying a figure, a stale confirm, applied twice, a line named twice, another project,
+  a beam code, a valued restated line, a moved total), the inputs builder on the committed ledger (counts, hand rows,
+  family, tampered pin), master 1.72.0 (pending) builder / checks / adverse.
+- L3 on the task branch: every test folder that imports `tools/urban_boq_m9.py` or an `arch_v305x .. v307x` module (68
+  folders) + t212 / t379 / t459 / t463 / t485 / t699 / t061: 2,773 passed, 0 failed, 39 skipped (private inputs),
+  2 xfail (d2530eea: m9_* + gates 1,260 / 27 s / 2 x; 6149774f: the other 45 folders 1,513 / 12 s). Freeze 0, codemap
+  stale none, `build_master_1_72_0.py --check` True / 0 problems. L4 full suite: for the Checker's Gate B (as T-693).
