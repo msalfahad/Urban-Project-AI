@@ -114,7 +114,7 @@ tests/t704_lintel_side (test_adverse_line_with_a_figure_beside_already) | PROPOS
 
 ## 6. Validation
 
-- L1 / L2: `tests/t704_lintel_side` (37: hand villa K704, not the development villa: W1 CEILING 0.04 x 2.35 = 0.094,
+- L1 / L2: `tests/t704_lintel_side` (44 = 29 module + 4 inputs + 11 master; hand villa K704, not the development villa: W1 CEILING 0.04 x 2.35 = 0.094,
   D1 MIN_BEARING 0.03 x 1.55 = 0.0465 with a conditional exclusion, W2 / W3 sharing a pier taken whole (family
   0.350582 with the pier once), W4 directed ceiling 0.06004125 -> 0.060042, A1 curved head DATUM_NAMED, D9 V3.0.67
   AT_LEAST confirmed; lines stay HELD blank, no total moves, outside lines byte-identical, mirror order; adverse: a
