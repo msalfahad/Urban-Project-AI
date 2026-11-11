@@ -101,8 +101,8 @@ PIECES = {
                              "(w + the bearing taken at each end to its drawn stopper: the available length 1 mm up "
                              "when both ends are bounded (CEILING), the schedule bearing 0.40 at a bounded end and the "
                              "whole available length at a deficit end (MIN_BEARING)); the line is 0 or at most that "
-                             "figure while existence is open (R-T699-1); never below the drawn stopper-to-stopper length, the opening "
-                             "read on the same drawing as the ends (R-T704-2)"},
+                             "figure while existence is open (R-T699-1); never below the drawn stopper-to-stopper "
+                             "length, the opening read on the same drawing as the ends (R-T704-2)"},
 }
 WAITING = dict(A3070.WAITING)
 WAITING.update({
