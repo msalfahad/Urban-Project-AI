@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-11T21:19Z | Worker 1 | STARTED | run session_01E6cPndZL1rqU6sTEzE1ruV | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-11T21:01Z | Worker 3 | STARTED | run session_01E6cPnauJyR6BtgsiLXssSq | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-11T21:00Z | Worker 2 | SUCCESS | T-718 READY @38ea638d (research, unwired) | F-V715-1 closed: MS2-L walled skirting 2.250 m (T-410, front-edge datum) vs 2.200 m (Checker, riser-face datum) = drawn 0.050 nosing projection, 3.300 run and 4/1/3/4 risers identical; 14 cut pieces on 4 flights agree with T-410 by handle (R-T718-1). Ceilings from drawn stoppers (R-T718-2): MS1-T riser 0.785833..1.111337 m2, step 5.75..8.131728 lm; RS-C riser 1.803598..2.131176 m2, step 13.800..16.521440 lm (floors raised to drawn lines); soffits stay AT_LEAST (D-67, RFI-S27). | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: decode of the raw-binary Drive zip refused ('AGENT_ENV FAIL: base64 decode failed'), worked around by base64-encoding the download in the session scratchpad and decoding through the wrapper
 - 2026-11-11T20:50Z | Verifier | STARTED | run session_01E6cPnaPYZfAQojExUp1PFf | repo-attached routine | task state: READY T-712 (W1 @0c6dfcd2), T-716 (W3 @3f58085d) | self-check pending
