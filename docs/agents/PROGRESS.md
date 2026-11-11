@@ -1,5 +1,34 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-11 08:25 UTC (Lead). Previous version: 2026-11-11 04:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared
+lines, the slab); released: 0.
+
+Since 04:20 (newest first):
+- Plaster and paint are now in the candidate (the checker rebuilt it from the drawings and checked all 34 changed lines
+  by hand): internal plaster 388.58 m2 measured plus 1,131.97 .. 1,300.69 m2 held with a range and 3 lines without a
+  figure (each with its reason); paint 217.21 m2 measured plus 601.65 .. 682.33 m2 held, every paint line has a figure
+  or a range; the wall band above the wet-room ceilings (78.8 .. 123.0 m2) is in plaster. Against your freelancer our
+  plaster is at least 32 % higher and our paint 24 .. 31 % lower: a job now traces both differences room by room to
+  their causes (height basis, plaster behind tiles, openings); his figures are a reference, never proof.
+- Concrete: the column ranges (one column +0.026 m3 on its low figure, 5 columns without a figure now 1.38 .. 2.23 m3)
+  passed the checker and go into the candidate next; the concrete statement for 12-13 Nov passed on the current
+  candidate (291.48 m3 measured in 317 lines; nothing changed).
+- Masonry round 3 passed the checker: the walls still without a figure now carry an upper or lower drawn limit where the
+  drawings give one; wired after the column package.
+- Waterproofing roof figure corrected to 115.814 m2 (dome holes) passed the checker; not yet wired.
+- With the checker: corner beads (a missing family; internal 285.03 m, external 310.68 m, 2 short pieces held) and the
+  earthworks list (20 lines: 8 measurable now, 11 need the designer, 1 needs a soil test; strap trench dig 9.95 ..
+  16.12 m3, refill 6.44 .. 10.95 m3, estimated on the accepted founding level).
+- Sent back once: the wiring map of measured-but-unwired items (it showed some held joint-mesh lengths as zero); a
+  small fix job.
+- Next: column wiring into the candidate, then masonry limits; lintels without a figure (drawn limits), earthworks
+  round 2 (fill under the ground slab, lift pit); plaster / paint difference with the freelancer, tiles round 3 (roof
+  and terrace layers, stair core). The 11 Nov architectural milestone is not met; masonry and plaster / paint are now
+  in the candidate, tiles and waterproofing wiring remain: estimate 13-14 Nov. Steel by ratio waits on your Q-81 answer.
+
+Previous section (2026-11-11 04:20):
 Last update: 2026-11-11 04:20 UTC (Lead). Previous version: 2026-11-11 00:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared

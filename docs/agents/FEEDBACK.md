@@ -3,6 +3,17 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-11 08:25 (since 04:20)
+
+- T-689 column held ranges: WORKED (MERGED 66ffd421; low 0.303 -> 0.3287, 5 blank columns bounded +1.382780 .. 2.231250 m3). Wiring -> T-693 (now TODO).
+- T-691 waterproofing round 2: WORKED (MERGED 5e4fdc33; roof 115.832 -> 115.814 m2 by the dome chords, unwired).
+- T-692 missing-families census: WORKED (MERGED 8678ddfb; 38 = 32 + 6 by id).
+- T-694 concrete statement r3: WORKED (MERGED 510f069d; = index to the digit; PC-2F a designer item D-66).
+- T-696 masonry round 3: WORKED (MERGED 5b51924e; 61 blank B9 lines by cause, one-sided bounds). Wiring -> new T-703 (queued after T-693).
+- T-687 plaster / paint Gate B r1: WORKED (V3.0.69 published 0b6d1bc2). Plaster >= +32.09 % / paint -31.25 .. -24.48 % vs freelancer -> new T-701 reconciliation.
+- T-698 wiring readiness: PARTIAL (REJECTED: 59 held joint-mesh rows read 0 m; owner band called determinate). Decision: TODO r2 with exactly those two fixes + V3.0.69 host restatement.
+- Recurring cause: a derived map dropped a ledger's HELD fields (ERS s.7 row PROPOSED).
+
 ## Lead 2026-11-11 00:20 (since 20:20)
 
 - T-681 tiles census: WORKED (MERGED ebd8a77d after the Checker's own gate e DXF read). MEASURABLE_NOW 6 + WIRING_GAP 1 -> T-690.

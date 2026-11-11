@@ -46,6 +46,11 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- ARRIS ONCE: CORNER BEAD vs EXTERNAL PLASTER FACES (Lead 2026-11-11 08:25; F-T697-3, T-697 READY): ELEMENT = one
+  plastered external arris. OWNER TRADE: plaster, line family B4-09 corner beads (lm), one bead per arris by arris id
+  from the T-697 ledger. B4-04 external plaster (T-314) carries the face AREA (m2) only and never a corner / bead length
+  for the same arris; T-314 r3 excludes any arris lm by arris id. Bead height on exposed faces = G1 (F-T697-1) is
+  PROPOSED until the Checker confirms it on T-697. Lift-shaft arrises -> B6-06 (surround), not B4-09.
 - CORNER BEADS B4-09 (Lead 2026-11-11 04:20; T-692 READY: missing family, MEASURABLE, no ledger -> T-697): ELEMENT = the
   metal angle bead on every plastered external arris (wall ends, piers, opening jambs and heads where the plaster turns).
   OWNER TRADE: plaster (lane A, B4-09, lm, its own line bound by id to the FIN.PLASTER / external render face lines; never
