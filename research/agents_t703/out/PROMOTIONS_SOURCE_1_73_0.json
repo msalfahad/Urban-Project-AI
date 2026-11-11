@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-703",
+  "merge_commit": "da1a8906f3f5737cc793a146663acc718071486c",
+  "verdict_time": "2026-11-11 23:44 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-11T23:44Z per `date -u`, run unknown, lock checker; GATE B PASS; merge da1a8906 published by `engine push`, ls-remote da1a8906; CODEMAP conflict only: working-branch version + codemap build, check stale none, freeze 0; BOQ_FAMILY_MASTER_1.73.0 promoted in a follow-up merge commit by the package's own tools)",
+  "board_commit": "af034091"
+ }
+]
