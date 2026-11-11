@@ -1,0 +1,1051 @@
+{
+ "b8_bound": {
+  "beam": "B8 2F (79E, row 1EBA)",
+  "c5_415_note": "2F C5 (L-bc01297b) is a B8 support too, but its line is blank (section D-66): it gains the height floor h >= 3.287000 m only, no m3 (section not settled)",
+  "clear_span_m": "3.47",
+  "depth_m": "0.75",
+  "governing": "W28",
+  "h_lo_412": "3.287000",
+  "heads": [
+   {
+    "at": [
+     "0.375",
+     "0.975"
+    ],
+    "head_abs": "12.200",
+    "id": "W28",
+    "status": "DRAWING-CONFIRMED",
+    "tol": "0.013"
+   },
+   {
+    "at": [
+     "2.270",
+     "3.470"
+    ],
+    "head_abs": "12.200",
+    "id": "W29",
+    "status": "DRAWING-CONFIRMED",
+    "tol": "0.019"
+   }
+  ],
+  "plate_transfer": {
+   "state": "REFUSED",
+   "why": "R-T678-2: thickness 'T 18' printed inside the 2F roof outline (7B3 / 7B4, 1A7D / 1A7E, the two tank panels): one plane not established"
+  },
+  "s_lo": "12.937000",
+  "s_lo_before": "12.68",
+  "supports": {
+   "412": "C2",
+   "415": "C5"
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.67",
+ "conditional_on_one_plane_m3": "0.133640",
+ "families": {
+  "STR.CONC.BEAM": {
+   "after": [
+    "5.983229",
+    "8.412710"
+   ],
+   "before": [
+    "5.983229",
+    "8.412710"
+   ],
+   "bounded_lines": 14,
+   "top_80pct_lines": 8,
+   "width_after": "2.429481",
+   "width_before": "2.429481",
+   "width_reduced_m3": "0.000000"
+  },
+  "STR.CONC.COLUMN": {
+   "after": [
+    "10.290050",
+    "13.270250"
+   ],
+   "before": [
+    "10.264350",
+    "13.270250"
+   ],
+   "bounded_lines": 22,
+   "top_80pct_lines": 16,
+   "width_after": "2.980200",
+   "width_before": "3.005900",
+   "width_reduced_m3": "0.025700"
+  }
+ },
+ "lines": [
+  {
+   "after": [
+    "0.756000",
+    "1.050000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.756000",
+    "1.050000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C9@254644,59429|1F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-755eb56b55e86301b488",
+   "member": "C9 1F lift column, FFRS 679",
+   "rank_cum_pct": "9.8",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": true,
+   "width": "0.294000"
+  },
+  {
+   "after": [
+    "0.504000",
+    "0.735000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.504000",
+    "0.735000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C6@250087,56100|1F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-a87ea657a42a311cb851",
+   "member": "C6 1F, FFRS 688",
+   "rank_cum_pct": "17.5",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": true,
+   "width": "0.231000"
+  },
+  {
+   "after": [
+    "0.420000",
+    "0.630000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.420000",
+    "0.630000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C5@259715,51786|1F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-831f6fe3de133294bb8f",
+   "member": "C5 1F, FFRS 673 / 694 (one of the pair)",
+   "rank_cum_pct": "24.5",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": true,
+   "width": "0.210000"
+  },
+  {
+   "after": [
+    "0.420000",
+    "0.630000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.420000",
+    "0.630000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C5@255627,63526|1F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-c677b628a776d3b87b02",
+   "member": "C5 1F, FFRS 694 / 673 (one of the pair)",
+   "rank_cum_pct": "31.4",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": true,
+   "width": "0.210000"
+  },
+  {
+   "after": [
+    "0.424200",
+    "0.595000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.424200",
+    "0.595000"
+   ],
+   "causes": [
+    {
+     "item": "D-39",
+     "kind": "TOP DATUM"
+    }
+   ],
+   "conditional": {
+    "low_if_one_plane": "0.460180",
+    "premise": "the same one-plate premise the current low (R-T669-2, 12.68) rests on; R-T678-2 refuses it (T 18 printed inside the plate)"
+   },
+   "element_id": "P-C:COL:SH12:C9@254644,59429|2F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-53f223b06db14ac41d47",
+   "member": "C9 2F 20x70, SFRS 418",
+   "rank_cum_pct": "37.1",
+   "searched": "T-669 / T-678: slab top not printed (finished +13.90 only); this run: W28 / W29 heads under printed B8 (R-T689-1), plate transfer refused by R-T678-2 (T 18 printed inside the plate)",
+   "top_80pct": true,
+   "width": "0.170800"
+  },
+  {
+   "after": [
+    "0.672000",
+    "0.840000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.672000",
+    "0.840000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C7@247954,58915|1F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-85809d3db52bb93dfe96",
+   "member": "C7 1F, FFRS 68E",
+   "rank_cum_pct": "42.7",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": true,
+   "width": "0.168000"
+  },
+  {
+   "after": [
+    "0.182400",
+    "0.350000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.182400",
+    "0.350000"
+   ],
+   "causes": [
+    {
+     "item": null,
+     "kind": "SECTION"
+    },
+    {
+     "item": "D-39",
+     "kind": "TOP DATUM"
+    }
+   ],
+   "conditional": {
+    "low_if_one_plane": "0.202960",
+    "premise": "the same one-plate premise the current low (R-T669-2, 12.68) rests on; R-T678-2 refuses it (T 18 printed inside the plate)"
+   },
+   "element_id": "HL:PLANTED_COLUMN:PC-2F:CONCRETE",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "member": "PC-2F planted column, FFRS 77B / SFRS 778",
+   "rank_cum_pct": "48.3",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one; T-669 / T-678: slab top not printed (finished +13.90 only); this run: W28 / W29 heads under printed B8 (R-T689-1), plate transfer refused by R-T678-2 (T 18 printed inside the plate)",
+   "top_80pct": true,
+   "width": "0.167600"
+  },
+  {
+   "after": [
+    "0.303000",
+    "0.425000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.303000",
+    "0.425000"
+   ],
+   "causes": [
+    {
+     "item": "D-39",
+     "kind": "TOP DATUM"
+    }
+   ],
+   "conditional": {
+    "low_if_one_plane": "0.328700",
+    "premise": "the same one-plate premise the current low (R-T669-2, 12.68) rests on; R-T678-2 refuses it (T 18 printed inside the plate)"
+   },
+   "element_id": "P-C:COL:SH12:C2@254644,61274|2F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-26f6b6f2365c72e42291",
+   "member": "C2 2F 20x50, SFRS 41B",
+   "rank_cum_pct": "52.3",
+   "searched": "T-669 / T-678: slab top not printed (finished +13.90 only); this run: W28 / W29 heads under printed B8 (R-T689-1), plate transfer refused by R-T678-2 (T 18 printed inside the plate)",
+   "top_80pct": true,
+   "width": "0.122000"
+  },
+  {
+   "after": [
+    "0.303000",
+    "0.425000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.303000",
+    "0.425000"
+   ],
+   "causes": [
+    {
+     "item": "D-39",
+     "kind": "TOP DATUM"
+    }
+   ],
+   "conditional": {
+    "low_if_one_plane": "0.328700",
+    "premise": "the same one-plate premise the current low (R-T669-2, 12.68) rests on; R-T678-2 refuses it (T 18 printed inside the plate)"
+   },
+   "element_id": "P-C:COL:SH12:C2@251723,58368|2F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-33a9b7728781fcba12e2",
+   "member": "C2 2F 20x50, SFRS 41E",
+   "rank_cum_pct": "56.4",
+   "searched": "T-669 / T-678: slab top not printed (finished +13.90 only); this run: W28 / W29 heads under printed B8 (R-T689-1), plate transfer refused by R-T678-2 (T 18 printed inside the plate)",
+   "top_80pct": true,
+   "width": "0.122000"
+  },
+  {
+   "after": [
+    "0.328700",
+    "0.425000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.303000",
+    "0.425000"
+   ],
+   "causes": [
+    {
+     "item": "D-39",
+     "kind": "TOP DATUM"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C2@252679,64225|2F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-919a5749ef79759e01ca",
+   "member": "C2 2F 20x50, SFRS 412 (B8 west support)",
+   "rank_cum_pct": "60.5",
+   "searched": "T-669 / T-678: slab top not printed (finished +13.90 only); this run: W28 / W29 heads under printed B8 (R-T689-1), plate transfer refused by R-T678-2 (T 18 printed inside the plate)",
+   "top_80pct": true,
+   "width": "0.122000"
+  },
+  {
+   "after": [
+    "0.303000",
+    "0.425000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.303000",
+    "0.425000"
+   ],
+   "causes": [
+    {
+     "item": "D-39",
+     "kind": "TOP DATUM"
+    }
+   ],
+   "conditional": {
+    "low_if_one_plane": "0.328700",
+    "premise": "the same one-plate premise the current low (R-T669-2, 12.68) rests on; R-T678-2 refuses it (T 18 printed inside the plate)"
+   },
+   "element_id": "P-C:COL:SH12:C1@251701,62344|2F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "member": "C1 2F 20x50, SFRS 421",
+   "rank_cum_pct": "64.5",
+   "searched": "T-669 / T-678: slab top not printed (finished +13.90 only); this run: W28 / W29 heads under printed B8 (R-T689-1), plate transfer refused by R-T678-2 (T 18 printed inside the plate)",
+   "top_80pct": true,
+   "width": "0.122000"
+  },
+  {
+   "after": [
+    "0.900000",
+    "1.012500"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.900000",
+    "1.012500"
+   ],
+   "causes": [
+    {
+     "item": "D-16",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C8@256160,53630|GF",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-4c4496579e5bfa20ae9f",
+   "member": "C8 GF at F14, GFRS 380",
+   "rank_cum_pct": "68.3",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": true,
+   "width": "0.112500"
+  },
+  {
+   "after": [
+    "0.450000",
+    "0.562500"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.450000",
+    "0.562500"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C3@265215,57750|GF",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-8de64040a1c3ae6cf137",
+   "member": "C3 GF, GFRS 344",
+   "rank_cum_pct": "72.0",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": true,
+   "width": "0.112500"
+  },
+  {
+   "after": [
+    "0.420000",
+    "0.525000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.420000",
+    "0.525000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C4@264812,63850|1F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-8f8ad257d9b2cb9e027f",
+   "member": "C4 1F, FFRS 676 / 697 (one of the pair)",
+   "rank_cum_pct": "75.5",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": true,
+   "width": "0.105000"
+  },
+  {
+   "after": [
+    "0.420000",
+    "0.525000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.420000",
+    "0.525000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C3@247476,61310|1F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-cc702b8541c15fdfd98c",
+   "member": "C3 1F, FFRS 691",
+   "rank_cum_pct": "79.0",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": true,
+   "width": "0.105000"
+  },
+  {
+   "after": [
+    "0.420000",
+    "0.525000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.420000",
+    "0.525000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C4@259526,63482|1F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-e112e2add2f8979a6c39",
+   "member": "C4 1F, FFRS 697 / 676 (one of the pair)",
+   "rank_cum_pct": "82.5",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": true,
+   "width": "0.105000"
+  },
+  {
+   "after": [
+    "0.411750",
+    "0.506250"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.411750",
+    "0.506250"
+   ],
+   "causes": [
+    {
+     "item": "D-39",
+     "kind": "TOP DATUM"
+    },
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C3@238374,54773|GF",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-fad18af6e7139a5e99d1",
+   "member": "C3 GF annex",
+   "rank_cum_pct": "85.6",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one; T-669 / T-678: slab top not printed (finished +13.90 only); this run: W28 / W29 heads under printed B8 (R-T689-1), plate transfer refused by R-T678-2 (T 18 printed inside the plate)",
+   "top_80pct": false,
+   "width": "0.094500"
+  },
+  {
+   "after": [
+    "0.360000",
+    "0.450000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.360000",
+    "0.450000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C@265272,52633|GF",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-43dae3d6dfec957b26a8",
+   "member": "C GF, GFRS 347 / 359",
+   "rank_cum_pct": "88.6",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": false,
+   "width": "0.090000"
+  },
+  {
+   "after": [
+    "0.360000",
+    "0.450000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.360000",
+    "0.450000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C@247429,51302|GF",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-9cb26d86575a92694880",
+   "member": "C GF, GFRS 359 / 347",
+   "rank_cum_pct": "91.6",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": false,
+   "width": "0.090000"
+  },
+  {
+   "after": [
+    "0.756000",
+    "0.840000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.756000",
+    "0.840000"
+   ],
+   "causes": [
+    {
+     "item": "D-16",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C8@256160,53630|1F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-1dc713c83bf62e525ff2",
+   "member": "C8 1F at F14, FFRS 69A",
+   "rank_cum_pct": "94.4",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": false,
+   "width": "0.084000"
+  },
+  {
+   "after": [
+    "0.420000",
+    "0.504000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.420000",
+    "0.504000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C5@243102,55481|1F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-291ba2ddf4bbe4f14cf7",
+   "member": "C5 1F, FFRS 685",
+   "rank_cum_pct": "97.2",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": false,
+   "width": "0.084000"
+  },
+  {
+   "after": [
+    "0.756000",
+    "0.840000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.756000",
+    "0.840000"
+   ],
+   "causes": [
+    {
+     "item": "D-66",
+     "kind": "SECTION"
+    }
+   ],
+   "conditional": null,
+   "element_id": "P-C:COL:SH12:C9@259284,59442|1F",
+   "family": "STR.CONC.COLUMN",
+   "line_id": "L-4aed92c117a7ab1c90ee",
+   "member": "C9 1F T.C, FFRS 667",
+   "rank_cum_pct": "100.0",
+   "searched": "T-256 (Checker-verified): p.9 schedule, p.4-6 slab plans + PDF plot, A-A / B-B / C-C / D-D cuts, CAP, p.10-16, architectural plans: no third member-specific print; owner X6 (Q-61 (1)): a schedule / drawing conflict is never settled by picking the printed one",
+   "top_80pct": false,
+   "width": "0.084000"
+  },
+  {
+   "after": [
+    "0.248000",
+    "0.744000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.248000",
+    "0.744000"
+   ],
+   "causes": [
+    {
+     "item": "D-04",
+     "kind": "DEPTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "U-C:BEAMS:2F:BAND0006.1",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-d62d2fcf3d0023ad1ad1",
+   "member": "2F unlabelled piece BAND0006.1, 3.10 m x 0.20 drawn",
+   "rank_cum_pct": "20.4",
+   "searched": "T-402 r2 (Checker-verified): 14 S-SEC.LINE cuts reach none of these pieces, 377 plan dimensions, marks within 1.2 m: none; edge continuity does not bind a mark (R-T402-3); this run: no drawn head under a piece bounds its soffit",
+   "top_80pct": true,
+   "width": "0.496000"
+  },
+  {
+   "after": [
+    "2.262872",
+    "2.545691"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "2.262872",
+    "2.545691"
+   ],
+   "causes": [
+    {
+     "item": "D-27",
+     "kind": "WIDTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-056#BAND0042",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-1fd49f3e7c5a7dd19d4d",
+   "member": "GF BM-GF-056 (BAND0042), width conflict",
+   "rank_cum_pct": "32.1",
+   "searched": "T-402 r2: no section cuts the member, no plan dimension within 0.06 m; schedule row vs drawn edges",
+   "top_80pct": true,
+   "width": "0.282819"
+  },
+  {
+   "after": [
+    "1.013607",
+    "1.266989"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "1.013607",
+    "1.266989"
+   ],
+   "causes": [
+    {
+     "item": "D-27",
+     "kind": "WIDTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-054#BAND0008",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-9e4895663f76d7f03ac9",
+   "member": "GF BM-GF-054 (BAND0008), width conflict",
+   "rank_cum_pct": "42.5",
+   "searched": "T-402 r2: no section cuts the member, no plan dimension within 0.06 m; schedule row vs drawn edges",
+   "top_80pct": true,
+   "width": "0.253382"
+  },
+  {
+   "after": [
+    "0.112000",
+    "0.336000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.112000",
+    "0.336000"
+   ],
+   "causes": [
+    {
+     "item": "D-04",
+     "kind": "DEPTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "U-C:BEAMS:2F:BAND0011.1",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-7c3edce23ec8faa3d674",
+   "member": "2F unlabelled piece BAND0011.1, 1.40 m",
+   "rank_cum_pct": "51.7",
+   "searched": "T-402 r2 (Checker-verified): 14 S-SEC.LINE cuts reach none of these pieces, 377 plan dimensions, marks within 1.2 m: none; edge continuity does not bind a mark (R-T402-3); this run: no drawn head under a piece bounds its soffit",
+   "top_80pct": true,
+   "width": "0.224000"
+  },
+  {
+   "after": [
+    "0.112000",
+    "0.336000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.112000",
+    "0.336000"
+   ],
+   "causes": [
+    {
+     "item": "D-04",
+     "kind": "DEPTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "U-C:BEAMS:2F:BAND0008.1",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-dc8cbfc119d006ff3927",
+   "member": "2F unlabelled piece BAND0008.1, 1.40 m",
+   "rank_cum_pct": "60.9",
+   "searched": "T-402 r2 (Checker-verified): 14 S-SEC.LINE cuts reach none of these pieces, 377 plan dimensions, marks within 1.2 m: none; edge continuity does not bind a mark (R-T402-3); this run: no drawn head under a piece bounds its soffit",
+   "top_80pct": true,
+   "width": "0.224000"
+  },
+  {
+   "after": [
+    "0.212000",
+    "0.397500"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.212000",
+    "0.397500"
+   ],
+   "causes": [
+    {
+     "item": "D-03",
+     "kind": "MARK"
+    }
+   ],
+   "conditional": null,
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-057#BAND0019.2",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-88ccf8d4505411deb9e5",
+   "member": "GF CB3 / 'B3 (With Stair)' span BAND0019.2",
+   "rank_cum_pct": "68.6",
+   "searched": "T-402 / T-241: two printed marks on one span, one row each in p.10 / p.11",
+   "top_80pct": true,
+   "width": "0.185500"
+  },
+  {
+   "after": [
+    "0.090400",
+    "0.271200"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.090400",
+    "0.271200"
+   ],
+   "causes": [
+    {
+     "item": "D-04",
+     "kind": "DEPTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-015#BAND0001.3",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-8d031491396379f0cbb1",
+   "member": "2F BM-2F-015 (BAND0001.3), 1.13 m east of 415",
+   "rank_cum_pct": "76.0",
+   "searched": "T-402 r2 (Checker-verified): 14 S-SEC.LINE cuts reach none of these pieces, 377 plan dimensions, marks within 1.2 m: none; edge continuity does not bind a mark (R-T402-3); this run: no drawn head under a piece bounds its soffit",
+   "top_80pct": true,
+   "width": "0.180800"
+  },
+  {
+   "after": [
+    "0.064000",
+    "0.192000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.064000",
+    "0.192000"
+   ],
+   "causes": [
+    {
+     "item": "D-04",
+     "kind": "DEPTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "U-C:BEAMS:1F:BAND0005.1",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-f83c4a469845c7e14dfa",
+   "member": "1F BM-1F-032 (BAND0005.1), 0.80 m",
+   "rank_cum_pct": "81.3",
+   "searched": "T-402 r2 (Checker-verified): 14 S-SEC.LINE cuts reach none of these pieces, 377 plan dimensions, marks within 1.2 m: none; edge continuity does not bind a mark (R-T402-3); this run: no drawn head under a piece bounds its soffit",
+   "top_80pct": true,
+   "width": "0.128000"
+  },
+  {
+   "after": [
+    "0.442550",
+    "0.553230"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.442550",
+    "0.553230"
+   ],
+   "causes": [
+    {
+     "item": "D-27",
+     "kind": "WIDTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-030#BAND0009",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-39ca5340879eafc35355",
+   "member": "1F B6 vertical span (BAND0009)",
+   "rank_cum_pct": "85.8",
+   "searched": "T-402 r2: no section cuts the member, no plan dimension within 0.06 m; schedule row vs drawn edges",
+   "top_80pct": false,
+   "width": "0.110680"
+  },
+  {
+   "after": [
+    "0.456300",
+    "0.547500"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.456300",
+    "0.547500"
+   ],
+   "causes": [
+    {
+     "item": "D-02",
+     "kind": "WIDTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.2",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-43e804ba4a4c07529fd5",
+   "member": "1F CB10 span 2 (BAND0026.2)",
+   "rank_cum_pct": "89.6",
+   "searched": "T-402 r2: no section cuts the member, no plan dimension within 0.06 m; schedule row vs drawn edges",
+   "top_80pct": false,
+   "width": "0.091200"
+  },
+  {
+   "after": [
+    "0.347000",
+    "0.433800"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.347000",
+    "0.433800"
+   ],
+   "causes": [
+    {
+     "item": "D-27",
+     "kind": "WIDTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.1",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-2c7b0b1e1a439d9ffd1e",
+   "member": "GF CB2 span 1 (BAND0036.1)",
+   "rank_cum_pct": "93.2",
+   "searched": "T-402 r2: no section cuts the member, no plan dimension within 0.06 m; schedule row vs drawn edges",
+   "top_80pct": false,
+   "width": "0.086800"
+  },
+  {
+   "after": [
+    "0.335000",
+    "0.418800"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.335000",
+    "0.418800"
+   ],
+   "causes": [
+    {
+     "item": "D-27",
+     "kind": "WIDTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.2",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-60f09eece6568b15f6ce",
+   "member": "GF CB2 span 2 (BAND0036.2)",
+   "rank_cum_pct": "96.6",
+   "searched": "T-402 r2: no section cuts the member, no plan dimension within 0.06 m; schedule row vs drawn edges",
+   "top_80pct": false,
+   "width": "0.083800"
+  },
+  {
+   "after": [
+    "0.287500",
+    "0.345000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.287500",
+    "0.345000"
+   ],
+   "causes": [
+    {
+     "item": "D-02",
+     "kind": "WIDTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.1",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-50667f69855b6d588011",
+   "member": "1F CB10 span 1 (BAND0026.1)",
+   "rank_cum_pct": "99.0",
+   "searched": "T-402 r2: no section cuts the member, no plan dimension within 0.06 m; schedule row vs drawn edges",
+   "top_80pct": false,
+   "width": "0.057500"
+  },
+  {
+   "after": [
+    "0.000000",
+    "0.025000"
+   ],
+   "after_state": "HELD",
+   "before": [
+    "0.000000",
+    "0.025000"
+   ],
+   "causes": [
+    {
+     "item": "FR-T642-2",
+     "kind": "DEPTH"
+    }
+   ],
+   "conditional": null,
+   "element_id": "U-C:BEAMS:GF:BAND0030.2~T642_DEPTH_B4_B7",
+   "family": "STR.CONC.BEAM",
+   "line_id": "L-bef35462630d4b76596f",
+   "member": "GF BAND0030.2 depth companion (B4 0.50 vs B7 0.75)",
+   "rank_cum_pct": "100.0",
+   "searched": "T-402 r2 (Checker-verified): 14 S-SEC.LINE cuts reach none of these pieces, 377 plan dimensions, marks within 1.2 m: none; edge continuity does not bind a mark (R-T402-3); this run: no drawn head under a piece bounds its soffit",
+   "top_80pct": false,
+   "width": "0.025000"
+  }
+ ],
+ "not_claimed": "research only; no candidate line, rule / knowledge version file, key map or default changed; nothing released; development villa, not an accuracy claim",
+ "register_gaps": [
+  [
+   "L-541c7e565bb93ecdb78b",
+   "SECTION"
+  ]
+ ],
+ "rules": [
+  "R-T689-1 1.0.0",
+  "R-T689-2 1.0.0",
+  "R-T689-3 1.0.0"
+ ],
+ "schema": "T689_HELD_RANGES_V1",
+ "task": "T-689"
+}

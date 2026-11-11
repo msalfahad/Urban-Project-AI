@@ -1,0 +1,106 @@
+{
+ "b15_schedule_row": {
+  "H_cm": "120",
+  "W_cm": "20",
+  "bottom": "4 d16",
+  "handle": "1F07",
+  "top": "6 d18"
+ },
+ "b8": {
+  "band_width_m": 0.2,
+  "clear_span_412_to_415_m": 3.47,
+  "edge_layer_linetype": "CONTINUOUS",
+  "edges": [
+   "38D",
+   "38E"
+  ],
+  "label": "79E",
+  "label_in_span_412_415": true,
+  "schedule_row": {
+   "H_cm": "75",
+   "W_cm": "20",
+   "bottom": "4 d16",
+   "handle": "1EBA",
+   "top": "2 d12"
+  },
+  "supports_on_band": {
+   "40F": true,
+   "412": true,
+   "415": true
+  }
+ },
+ "schema": "T689_OWN_READ_V1",
+ "sfrs_columns": {
+  "40F": {
+   "d_m": 0.5,
+   "layer": "S-COL.BON",
+   "w_m": 0.2
+  },
+  "412": {
+   "d_m": 0.5,
+   "layer": "S-COL.BON",
+   "w_m": 0.2
+  },
+  "415": {
+   "d_m": 0.2,
+   "layer": "S-COL.BON",
+   "w_m": 0.6
+  },
+  "418": {
+   "d_m": 0.7,
+   "layer": "S-COL.BON",
+   "w_m": 0.2
+  },
+  "41B": {
+   "d_m": 0.5,
+   "layer": "S-COL.BON",
+   "w_m": 0.2
+  },
+  "41E": {
+   "d_m": 0.5,
+   "layer": "S-COL.BON",
+   "w_m": 0.2
+  },
+  "421": {
+   "d_m": 0.5,
+   "layer": "S-COL.BON",
+   "w_m": 0.2
+  },
+  "424": {
+   "d_m": 0.5,
+   "layer": "S-COL.BON",
+   "w_m": 0.25
+  },
+  "778": {
+   "d_m": 0.4,
+   "layer": "S-COL.BON",
+   "w_m": 0.2
+  }
+ },
+ "sfrs_texts": {
+  "level_marks_inside": [],
+  "thickness_texts_inside": [
+   [
+    "7B3",
+    "T"
+   ],
+   [
+    "7B4",
+    "18"
+   ],
+   [
+    "1A7D",
+    "T"
+   ],
+   [
+    "1A7E",
+    "18"
+   ]
+  ]
+ },
+ "source": {
+  "bytes": 3153037,
+  "file": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'",
+  "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ }
+}
