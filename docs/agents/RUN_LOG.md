@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-11T08:52Z | Verifier | STARTED | run session_01E6cPnaf8w5jqX7SS3wPbfc | repo-attached routine | task state: READY T-695 (W1 earthworks census), T-697 (corner beads) | self-check pending
 - 2026-11-11T08:43Z | Worker 2 | STARTED | run session_01E6cPnc7SFXYEP3mNtS6vaz | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-11 08:18 UTC | Lead | SUCCESS | board | 6 MERGED since 04:17 (T-687 Gate B V3.0.69 plaster/paint published 0b6d1bc2, T-689, T-691, T-692, T-694, T-696; ancestors checked), 1 REJECTED (T-698 -> TODO r2, two exact fixes); READY 2 (T-695, T-697); T-693 column wiring TODO (W3 first); new T-699 lintel limits, T-700 earthworks r2 (W1), T-701 plaster +32 % / paint -24..-31 % vs freelancer reconciliation, T-702 tiles r3 (W2), T-703 masonry limits wiring (queued); arris-once register ruling, 2 lessons PROPOSED; all runs closed; Q-81 open; Drive OK, no photos; queue check: 19 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-11 08:14 UTC | Lead | STARTED | run session_01E6cPneb3ySEPpCBJSrMoo1 | repo-attached routine | task state: board | report pending
