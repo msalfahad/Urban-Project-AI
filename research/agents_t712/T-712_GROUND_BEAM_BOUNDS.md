@@ -4,7 +4,7 @@ Worker 1, 2026-11-11, branch `agents/task-T-712`. Nothing wired, released or VER
 a released total. ERS s.2-7; R-CONC-OWN-1 / R-T666-1; UP-QTY-STATUS-001; R-T658-1 (bounds contain the drawn member);
 R-T696-1 (floors at 6 dp). Rules `t712_rules.py` (R-T712-1 .. 3), own DXF outlines `t712_measure.py` ->
 `out/T712_AREAS.json`, ledger `t712_alsenan.py` -> `out/T712_LEDGER.json` + `out/T712_CENSUS.md`, tests
-`tests/t712_ground_beam_bounds` (31).
+`tests/t712_ground_beam_bounds` (27).
 
 ## Own reads this run (Drive 'Alsenan chalet project', read-only; private copies only)
 
