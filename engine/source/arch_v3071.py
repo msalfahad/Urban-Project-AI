@@ -23,6 +23,13 @@ stays HELD blank: no measured_net, no bounded_range, its question names the deci
 a code total (a family AT_MOST is a run-record figure, with a pier both lines take whole counted once); (cc) AT_MOST is
 stated with existence OPEN or a CONDITIONAL EXCLUSION (the member named); an AT_LEAST bound needs existence REQUIRED
 and is not formed here; (dd) the conditional least figure never exceeds the AT_MOST and is never called a bound.
+R-T704-2 (Lead ruling F-V704-1, 2026-11-11, every villa): an AT_MOST length is measured on ONE geometry, stopper to
+stopper: the drawn opening gap and the drawn ends are read from the same drawing, never the schedule width plus the drawn
+ends (a drawn gap wider than the schedule width would be lost). Both ends at their stoppers (CEILING): length = max(the
+R-T699-1 terms w + the bearing taken at each end, the drawn stopper-to-stopper length gap + START drawn + END drawn);
+a deficit end (MIN_BEARING): length = max(w, drawn gap) + the bearing taken at each end. The drawn gap is an input of
+every AT_MOST line (missing: refused, never the schedule width by default); a pier two lines take whole is counted
+once at the length each line takes it with.
 Files: V3_0_71_BOQ_LINES.json / .csv, V3_0_71_INTEGRATION_LEDGER.json / .csv, V3_0_71_DIFF.csv, V3_0_71_RUN.json.
 Nothing here names a project, a sheet, a layer or a coordinate.
 """
@@ -59,7 +66,7 @@ ROLLBACK = A30.ROLLBACK
 InputsError = A3063.InputsError
 _fmt = A3063._fmt
 line_class = A3063.line_class
-RULE_ID, RULE_VERSION = "R-T704-1", "T-704"
+RULE_ID, RULE_VERSION = "R-T704-1 / R-T704-2", "T-704"
 REC_KEY = "concrete_ledger_v3071"
 P_LS = "LINTEL_SIDE"
 ACTIONS = ("AT_MOST", "DATUM_NAMED")
@@ -70,6 +77,7 @@ EXISTENCE = ("OPEN", "CONDITIONAL_EXCLUSION")
 CAUSES = ("DESIGNER ITEM", "NEEDS OWNER RULE", "MEASURABLE NOW", "METHOD GAP")
 RECORDED = ("COLUMN", "END_OF_MASONRY", "END", "OPENING", "SEARCH_LIMIT")
 CONVENTIONS = ("CEILING", "MIN_BEARING")
+BASES = ("R-T699-1_TERMS", "STOPPER_TO_STOPPER", "DRAWN_GAP")      # R-T704-2: which geometry governs the length
 TOT_TOL = A3063.TOT_TOL
 _CTX = Context(prec=50)                  # local context only (never the process-global precision: F-T648-2)
 Q6 = Decimal("0.000001")
@@ -79,7 +87,7 @@ PIECES = {
     P_LS: {"module": "engine/source/arch_v3071.py (HELD blank STR.CONC.LINTEL lines given the one-sided bound the "
                      "Checker-merged T-699 ledger states BESIDE them, recomputed from its terms, or the exact missing "
                      "datum named; no quantity, range or total moves)",
-           "policy": "CONCRETE_GATE_B_V8", "rule_id": "R-T699-1 / R-T673-3 / R-T696-1 (R-T704-1)",
+           "policy": "CONCRETE_GATE_B_V8", "rule_id": "R-T699-1 / R-T673-3 / R-T696-1 (R-T704-1 / R-T704-2)",
            "owner_rules": ["R-CONC-OWN-1 (one physical element once: a lintel whose head reaches a member soffit is "
                            "owned by the member)",
                            "UP-QTY-STATUS-001 (held is blank or bounded, never 0)",
@@ -93,7 +101,8 @@ PIECES = {
                              "(w + the bearing taken at each end to its drawn stopper: the available length 1 mm up "
                              "when both ends are bounded (CEILING), the schedule bearing 0.40 at a bounded end and the "
                              "whole available length at a deficit end (MIN_BEARING)); the line is 0 or at most that "
-                             "figure while existence is open (R-T699-1)"},
+                             "figure while existence is open (R-T699-1); never below the drawn stopper-to-stopper length, the opening "
+                             "read on the same drawing as the ends (R-T704-2)"},
 }
 WAITING = dict(A3070.WAITING)
 WAITING.update({
@@ -145,30 +154,52 @@ def section(s, w="section"):
 
 
 def at_most(e, w="AT_MOST"):
-    """R-T704-1 (aa): -> (exact, ceiled, length). e = {section, width_m, end_terms [2 x {side, stopper, available_m,
-    taken_m}], length_m}."""
+    """R-T704-1 (aa) + R-T704-2: -> (exact, ceiled, length, basis). e = {section, width_m, drawn_gap_m, convention,
+    end_terms [2 x {side, stopper, available_m, drawn_m, taken_m}], length_m}."""
     B, D = section(e.get("section"), w)
     wd = _d(e.get("width_m"), f"{w} width")
     if not Decimal(0) < wd <= Decimal(10):
         raise InputsError(f"{w}: width {wd} is not in metres")
+    gap = _d(e.get("drawn_gap_m"), f"{w} drawn gap (R-T704-2: the opening as drawn, never the schedule width by "
+                                    f"default)")
+    if not Decimal(0) < gap <= Decimal(10):
+        raise InputsError(f"{w}: drawn gap {gap} is not in metres")
     ts = e.get("end_terms")
     if not isinstance(ts, list) or len(ts) != 2 or sorted(t.get("side") for t in ts) != ["END", "START"]:
         raise InputsError(f"{w}: two ends (START, END), each with its stopper (no jamb evidence: no AT_MOST)")
-    length = wd
+    terms, drawn = wd, gap
     for t in ts:
         if t.get("stopper") not in RECORDED:
             raise InputsError(f"{w} {t.get('side')}: stopper {t.get('stopper')!r} not recorded (an OPEN end gives no "
                               f"AT_MOST)")
         a, k = _d(t.get("available_m"), f"{w} {t['side']} available"), _d(t.get("taken_m"), f"{w} {t['side']} taken")
+        r = _d(t.get("drawn_m"), f"{w} {t['side']} drawn available (R-T704-2)")
         if a < 0 or a > 10 or k < 0:
             raise InputsError(f"{w} {t['side']}: available {a} / taken {k} m")
+        if not (Decimal(0) <= r <= a and a - r < MM):
+            raise InputsError(f"{w} {t['side']}: drawn {r} is not the available {a} before its 1 mm up")
         if k > a.quantize(MM, rounding=ROUND_CEILING):
             raise InputsError(f"{w} {t['side']}: bearing taken {k} beyond the drawn available {a} (1 mm up)")
-        length = _CTX.add(length, k)
+        terms = _CTX.add(terms, k)
+        drawn = _CTX.add(drawn, r)
+    conv = e.get("convention")
+    if conv == "CEILING":
+        length, basis = (terms, "R-T699-1_TERMS") if terms >= drawn else (drawn, "STOPPER_TO_STOPPER")
+    elif conv == "MIN_BEARING":
+        length, basis = (terms, "R-T699-1_TERMS") if wd >= gap else (_CTX.add(terms, gap - wd), "DRAWN_GAP")
+    else:
+        raise InputsError(f"{w}: convention {conv!r}")
     if length != _d(e.get("length_m"), f"{w} length"):
-        raise InputsError(f"{w}: length {length} is not the ledger's {e.get('length_m')}")
+        raise InputsError(f"{w}: length {e.get('length_m')} is not the recomputed {length} ({basis}; R-T704-2: an "
+                          f"AT_MOST is never below the drawn stopper-to-stopper length)")
     exact = _mul(B, D, length)
-    return exact, ceil6(exact), length
+    return exact, ceil6(exact), length, basis
+
+
+def contribution(e, t):
+    """R-T704-2: the length one end adds to its line (the drawn available on a STOPPER_TO_STOPPER line, else the
+    bearing taken)."""
+    return _d(t["drawn_m"] if e.get("_basis") == "STOPPER_TO_STOPPER" else t["taken_m"], "pier")
 
 
 def if_required(c, sec, w="if REQUIRED"):
@@ -219,13 +250,14 @@ def _entry(x, srcs):
     if a == "AT_MOST":
         if x.get("convention") not in CONVENTIONS:
             raise InputsError(f"{w}: convention {x.get('convention')!r}")
-        exact, hi, length = at_most(x, w)
+        exact, hi, length, basis = at_most(x, w)
         if hi != _d(x.get("at_most_m3"), f"{w} AT_MOST") or hi <= 0:
             raise InputsError(f"{w}: ledger AT_MOST {x.get('at_most_m3')} is not the recomputed {hi} (R-T704-1 (aa))")
         lo = if_required(x.get("if_required"), x["section"], w)
         if lo is not None and lo > hi:
             raise InputsError(f"{w}: conditional least {lo} above the AT_MOST {hi} (R-T704-1 (dd))")
-        e.update(_exact=exact, _hi=float(hi), _lo=None if lo is None else float(lo), _length=float(length))
+        e.update(_exact=exact, _hi=float(hi), _lo=None if lo is None else float(lo), _length=float(length),
+                 _basis=basis)
     else:
         if x.get("at_most_m3") is not None or x.get("end_terms"):
             raise InputsError(f"{w}: a datum-named line carries no one-sided figure")
@@ -235,7 +267,7 @@ def _entry(x, srcs):
         if x.get("if_required") is not None:
             sec = x.get("section") or {"B_m": None, "D_m": None}
             lo = if_required(x["if_required"], sec, w)
-        e.update(_exact=None, _hi=None, _lo=None if lo is None else float(lo), _length=None)
+        e.update(_exact=None, _hi=None, _lo=None if lo is None else float(lo), _length=None, _basis=None)
     return e
 
 
@@ -245,8 +277,9 @@ def load_inputs(doc, project_id=None):
      "entries": [{"action" AT_MOST | DATUM_NAMED, "line_id", "source_tasks", "opening", "member", "basis",
                   "expect" {item_code, element_id, unit, class HELD, low None, high None},
                   "existence" OPEN | CONDITIONAL_EXCLUSION, "excluded_by", "cause" {class, ref, deciding_datum},
-                  AT_MOST: "section" {B_m, D_m, source}, "width_m", "width_note", "end_terms" [{side, stopper,
-                  stopper_id, available_m, taken_m, why}], "length_m", "convention", "at_most_m3";
+                  AT_MOST: "section" {B_m, D_m, source}, "width_m", "width_note", "drawn_gap_m", "end_terms"
+                  [{side, stopper, stopper_id, available_m, drawn_m, taken_m, why}], "length_m", "convention",
+                  "at_most_m3", "ledger_at_most_m3" (the merged ledger's figure when R-T704-2 raises it);
                   DATUM_NAMED: "why_no_bound" (+ "section" when a conditional figure is given);
                   "if_required" {value_m3, width_m, bounded_ends, b_min_m, meaning} | None, "owner_manual"}],
      "confirm": [{"line_id", "opening", "kind" AT_LEAST_M3, "value", "carried_by", ...}] (asserted unchanged),
@@ -287,7 +320,7 @@ def family(ents, fam):
         a, b = (rows[x] for x in p["lines"])
         for one, other in ((a, b), (b, a)):
             if not any(t.get("stopper") == "OPENING" and t.get("stopper_id") == other["opening"] and
-                       _d(t["taken_m"], "pier") == pm for t in one["end_terms"]):
+                       contribution(one, t) == pm for t in one["end_terms"]):
                 raise InputsError(f"shared pier {p}: {one['opening']} does not take the pier to {other['opening']} "
                                   f"whole")
         B, D = section(rows[p["lines"][0]]["section"], "shared pier")
@@ -331,9 +364,15 @@ def _assert_before(b, e):
 
 
 def _terms_text(e):
+    bx = f"{_fmt(e['section']['B_m'])} x {_fmt(e['section']['D_m'])}"
+    if e.get("_basis") == "STOPPER_TO_STOPPER":
+        t = " + ".join(f"{x['side']} {x['stopper']} {_fmt(x['drawn_m'])}" for x in e["end_terms"])
+        return f"{bx} x (drawn gap {_fmt(e['drawn_gap_m'])} + {t}: stopper to stopper, R-T704-2)"
     t = " + ".join(f"{x['side']} {x['stopper']} {_fmt(x['taken_m'])} (of {_fmt(x['available_m'])})"
                    for x in e["end_terms"])
-    return f"{_fmt(e['section']['B_m'])} x {_fmt(e['section']['D_m'])} x (w {_fmt(e['width_m'])} + {t})"
+    if e.get("_basis") == "DRAWN_GAP":
+        return f"{bx} x (drawn gap {_fmt(e['drawn_gap_m'])} (schedule w {_fmt(e['width_m'])}) + {t}, R-T704-2)"
+    return f"{bx} x (w {_fmt(e['width_m'])} + {t})"
 
 
 def _question(e):
@@ -352,7 +391,10 @@ def _restate(b, e, srcs):
            "formula": (b.get("calculation") or {}).get("formula"), "class": line_class(b)}
     if a == "AT_MOST":
         beside = {"kind": "AT_MOST_M3", "value": e["_hi"], "convention": e["convention"], "length_m": e["_length"],
-                  "basis": _terms_text(e), "width_note": e.get("width_note")}
+                  "length_basis": e["_basis"], "drawn_gap_m": e["drawn_gap_m"], "basis": _terms_text(e),
+                  "width_note": e.get("width_note")}
+        if e.get("ledger_at_most_m3") is not None:
+            beside["ledger_at_most_m3"] = e["ledger_at_most_m3"]
         head = (f"HELD, UPPER END ONLY (blank): 0 or at most {_fmt(e['_hi'])} m3 beside, existence {e['existence']}"
                 + (f" (no lintel if {e['excluded_by']} serves the opening)" if e.get("excluded_by") else ""))
         body = f"{_terms_text(e)}, {e['convention']}, ceiled at 6 dp (R-T696-1)"
@@ -370,7 +412,8 @@ def _restate(b, e, srcs):
     inp = ln["calculation"]["inputs"] = dict(ln["calculation"].get("inputs") or {})
     inp[REC_KEY] = _rec(srcs, action=a, opening=e["opening"], member=e["member"], was=was, beside=beside,
                         existence=e["existence"], excluded_by=e.get("excluded_by"), cause=e["cause"],
-                        section=e.get("section"), width_m=e.get("width_m"), end_terms=e.get("end_terms"),
+                        section=e.get("section"), width_m=e.get("width_m"), drawn_gap_m=e.get("drawn_gap_m"),
+                        end_terms=e.get("end_terms"),
                         if_required=None if e["_lo"] is None else dict(e["if_required"], value_m3=e["_lo"]),
                         why_no_bound=e.get("why_no_bound"), basis=e["basis"][:600],
                         owner_manual=e.get("owner_manual"))
@@ -516,7 +559,7 @@ def ledger_rows(changes, released_lines=None):
                      "evidence_status": c.get("evidence_status"), "beside": rec.get("beside"),
                      "if_required": rec.get("if_required"), "existence": rec.get("existence"),
                      "excluded_by": rec.get("excluded_by"), "cause": rec.get("cause"),
-                     "end_terms": rec.get("end_terms"), "still_held": c.get("held"),
+                     "drawn_gap_m": rec.get("drawn_gap_m"), "end_terms": rec.get("end_terms"), "still_held": c.get("held"),
                      "release_status": "NOT RELEASED", "basis": rec["basis"], "owner_manual": rec.get("owner_manual"),
                      "owner_manual_method": PIECES[c["piece"]]["owner_manual_method"],
                      "drawing_derived_method": PIECES[c["piece"]]["drawing_method"],
@@ -600,5 +643,5 @@ def policy_record():
 
 
 __all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "load_inputs", "changes_for",
-           "at_most", "if_required", "family", "check_lintels", "check_totals", "integrate", "ledger_rows",
+           "at_most", "contribution", "if_required", "family", "check_lintels", "check_totals", "integrate", "ledger_rows",
            "diff_rows", "write", "InputsError", "line_class"]

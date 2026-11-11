@@ -78,15 +78,17 @@ def _x(o):
     return {"item_code": LIN, "element_id": f"LINTEL:{o}", "unit": "m3", "class": "HELD", "low": None, "high": None}
 
 
-def _t(side, stop, avail, taken, sid=None):
-    return {"side": side, "stopper": stop, "stopper_id": sid, "available_m": avail, "taken_m": taken, "why": "hand"}
+def _t(side, stop, avail, taken, sid=None, drawn=None):
+    return {"side": side, "stopper": stop, "stopper_id": sid, "available_m": avail,
+            "drawn_m": avail if drawn is None else drawn, "taken_m": taken, "why": "hand"}
 
 
-def _am(o, B, D, w, ends, length, hi, conv, lo=None, existence="OPEN", excl=None):
+def _am(o, B, D, w, ends, length, hi, conv, lo=None, existence="OPEN", excl=None, gap=None):
     e = {"action": "AT_MOST", "line_id": ID[o], "source_tasks": ["T-P"], "opening": o, "member": f"lintel {o}",
          "expect": _x(o), "existence": existence, "excluded_by": excl,
          "cause": {"class": "DESIGNER ITEM", "ref": "head not printed", "deciding_datum": f"the {o} head level"},
-         "section": {"B_m": B, "D_m": D, "source": "schedule"}, "width_m": w, "end_terms": ends, "length_m": length,
+         "section": {"B_m": B, "D_m": D, "source": "schedule"}, "width_m": w, "drawn_gap_m": w if gap is None else gap,
+         "end_terms": ends, "length_m": length,
          "convention": conv, "at_most_m3": hi, "basis": f"{o} hand", "if_required": lo}
     return e
 
@@ -101,9 +103,9 @@ def doc():
             0.094, "CEILING", _lo(0.08, 1.20, 2)),
         _am("D1", 0.15, 0.20, 0.90, [_t("START", "COLUMN", 0.25, 0.25), _t("END", "END_OF_MASONRY", 1.10, 0.40)], 1.55,
             0.0465, "MIN_BEARING", _lo(0.039, 0.90, 1), "CONDITIONAL_EXCLUSION", "beam BX over the head"),
-        _am("W2", 0.20, 0.20, 1.00, [_t("START", "COLUMN", 0.50, 0.50), _t("END", "OPENING", 0.801, 0.801, "W3")],
+        _am("W2", 0.20, 0.20, 1.00, [_t("START", "COLUMN", 0.50, 0.50), _t("END", "OPENING", 0.801, 0.801, "W3", 0.8004)],
             2.301, 0.09204, "CEILING"),
-        _am("W3", 0.20, 0.20, 1.00, [_t("START", "OPENING", 0.801, 0.801, "W2"), _t("END", "COLUMN", 0.45, 0.45)],
+        _am("W3", 0.20, 0.20, 1.00, [_t("START", "OPENING", 0.801, 0.801, "W2", 0.8004), _t("END", "COLUMN", 0.45, 0.45)],
             2.251, 0.09004, "CEILING"),
         _am("W4", 0.15, 0.25, 0.80, [_t("START", "COLUMN", 0.40, 0.40), _t("END", "COLUMN", 0.4011, 0.4011)], 1.6011,
             0.060042, "CEILING"),
@@ -177,8 +179,8 @@ def test_conditional_exclusion_and_question():
 
 def test_directed_rounding_ceiling():
     e = doc()["entries"][4]
-    exact, hi, length = A.at_most(e)
-    assert str(exact) == "0.06004125" and str(hi) == "0.060042"
+    exact, hi, length, basis = A.at_most(e)
+    assert str(exact) == "0.06004125" and str(hi) == "0.060042" and basis == "R-T699-1_TERMS"
 
 
 def test_mirror_order():
@@ -315,3 +317,82 @@ def test_check_totals_refuses_a_moved_total():
     t0 = {"STR.CONC.LINTEL|m3": {"released": 0.072}}
     with pytest.raises(ValueError, match="never summed"):
         A.check_totals(t0, {"STR.CONC.LINTEL|m3": {"released": 0.166}}, [])
+
+
+# ------------------------------------------------------------------ R-T704-2 (Lead ruling F-V704-1): one geometry
+# K704 hand figures: W1 drawn gap 1.205 (5 mm wider than the schedule 1.20), ends drawn 0.55 / 0.60 (columns):
+#   stopper to stopper 0.55 + 1.205 + 0.60 = 2.355 > the R-T699-1 terms 1.20 + 0.55 + 0.60 = 2.35 -> 0.04 x 2.355 = 0.0942
+# D1 (MIN_BEARING) drawn gap 0.905: max(0.90, 0.905) + 0.25 + 0.40 = 1.555 -> 0.03 x 1.555 = 0.04665
+# W2 / W3 drawn gaps 1.005: W2 0.50 + 1.005 + 0.8004 = 2.3054 -> 0.092216; W3 0.8004 + 1.005 + 0.45 = 2.2554 -> 0.090216;
+#   the pier is counted once at the drawn 0.8004 both take: 0.04 x 0.8004 = 0.032016;
+#   family 0.0942 + 0.04665 + 0.092216 + 0.090216 + 0.06004125 - 0.032016 = 0.35130725 -> 0.351308
+
+
+def test_r_t704_2_normal_gap_equals_schedule():
+    d = A.load_inputs(doc(), PID)
+    assert {e["opening"]: e["_basis"] for e in d["_entries"] if e["action"] == "AT_MOST"} == {
+        "W1": "R-T699-1_TERMS", "D1": "R-T699-1_TERMS", "W2": "R-T699-1_TERMS", "W3": "R-T699-1_TERMS",
+        "W4": "R-T699-1_TERMS"}
+    _, new, *_ = run()
+    bs = _rec(_by(new, "W1"))["beside"]
+    assert bs["length_basis"] == "R-T699-1_TERMS" and bs["drawn_gap_m"] == 1.20 and bs["value"] == 0.094
+
+
+def _wide():
+    d = doc()
+    e = {x["opening"]: x for x in d["entries"]}
+    e["W1"].update(drawn_gap_m=1.205, length_m=2.355, at_most_m3=0.0942, ledger_at_most_m3=0.094)
+    e["D1"].update(drawn_gap_m=0.905, length_m=1.555, at_most_m3=0.04665)
+    e["W2"].update(drawn_gap_m=1.005, length_m=2.3054, at_most_m3=0.092216)
+    e["W3"].update(drawn_gap_m=1.005, length_m=2.2554, at_most_m3=0.090216)
+    d["family"].update(at_most_m3=0.351308)
+    d["family"]["shared_piers"][0].update(pier_m=0.8004, double_counted_m3=0.032016)
+    return d
+
+
+def test_r_t704_2_adverse_drawn_gap_wider_governs():
+    d = A.load_inputs(_wide(), PID)
+    by = {e["opening"]: e for e in d["_entries"]}
+    assert by["W1"]["_basis"] == "STOPPER_TO_STOPPER" and by["W1"]["_hi"] == 0.0942
+    assert by["D1"]["_basis"] == "DRAWN_GAP" and by["D1"]["_hi"] == 0.04665
+    assert by["W4"]["_basis"] == "R-T699-1_TERMS"
+    assert d["_family"]["at_most_m3"] == 0.351308
+    _, new, ident, *_ = run(_wide())
+    w1 = _by(new, "W1")
+    bs = _rec(w1)["beside"]
+    assert bs["length_basis"] == "STOPPER_TO_STOPPER" and bs["ledger_at_most_m3"] == 0.094
+    assert "stopper to stopper" in w1["calculation"]["formula"] and "1.205" in w1["calculation"]["formula"]
+    assert w1["evidence_state"] == "BLOCKED_RFI" and w1.get("measured_net") is None and ident["lintels"]["AT_MOST"] == 5
+
+
+def test_r_t704_2_adverse_schedule_width_plus_drawn_ends_refused():
+    d = _wide()
+    d["entries"][0].update(length_m=2.35, at_most_m3=0.094)       # schedule 1.20 + drawn ends: below the drawn maximum
+    with pytest.raises(A.InputsError, match="never below the drawn stopper-to-stopper"):
+        A.load_inputs(d, PID)
+    d = _wide()
+    d["entries"][1].update(length_m=1.55, at_most_m3=0.0465)       # MIN_BEARING on the schedule width
+    with pytest.raises(A.InputsError, match="never below"):
+        A.load_inputs(d, PID)
+
+
+def test_r_t704_2_adverse_pier_counted_at_its_taken_length():
+    d = _wide()
+    d["family"]["shared_piers"][0].update(pier_m=0.801, double_counted_m3=0.03204)
+    with pytest.raises(A.InputsError, match="whole"):
+        A.load_inputs(d, PID)
+
+
+def test_r_t704_2_adverse_missing_drawn_gap_or_end():
+    d = doc()
+    del d["entries"][0]["drawn_gap_m"]
+    with pytest.raises(A.InputsError, match="never the schedule width by default"):
+        A.load_inputs(d, PID)
+    d = doc()
+    d["entries"][0]["end_terms"][0]["drawn_m"] = None
+    with pytest.raises(A.InputsError, match="never 0"):
+        A.load_inputs(d, PID)
+    d = doc()
+    d["entries"][0]["end_terms"][0]["drawn_m"] = 0.56          # drawn above its available
+    with pytest.raises(A.InputsError, match="before its 1 mm up"):
+        A.load_inputs(d, PID)

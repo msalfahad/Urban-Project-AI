@@ -6,6 +6,10 @@ Checker-merged files, each pinned by sha256 (an edited file stops the build):
       the 21 blank STR.CONC.LINTEL lines of V3.0.69;
   research/agents_t699/t699_rules.py          T-699 (same merge): the rule the ledger was built with; the ledger is
       REBUILT here by research/agents_t699/t699_alsenan.build() and must equal the committed file field by field;
+  research/agents_t644/out/JAMB_EVIDENCE_T644.csv  T-644 (merged; the jamb evidence T-699 itself read): the DRAWN
+      opening gap (clear_width_m) of each opening, for R-T704-2 (r2, Lead ruling F-V704-1: an AT_MOST length is
+      measured on one geometry, stopper to stopper; W11 / W12 drawn gap 1.9549 vs schedule 1.95, Checker own P7757
+      re-measure 2026-11-11T15:32Z AGREE);
   research/agents_t693/out/LINE_INDEX_V3_0_70.json  T-693 (Gate B PASS, MERGED 2bfa2fbe): the class and range each
       line carries on the candidate of record V3.0.70 e8e001de (the binding; asserted again on the live run).
 
@@ -45,7 +49,8 @@ import t699_alsenan as A699  # noqa: E402  (T-699, merged: rebuilds the ledger)
 T699 = ROOT / "research/agents_t699/out/T699_LEDGER.json"
 RULES = ROOT / "research/agents_t699/t699_rules.py"
 INDEX = ROOT / "research/agents_t693/out/LINE_INDEX_V3_0_70.json"
-PINS = {T699: "c41adc99bb7e59ca012968faed2af0e589143d58d6cafc7c17631d59fff9aa77",
+JAMBS = ROOT / "research/agents_t644/out/JAMB_EVIDENCE_T644.csv"
+PINS = {JAMBS: "8b72cfb16ad6fcf8b19842ed76db7fc9ef59232004cc8cd207e9cc354dabcf1c",T699: "c41adc99bb7e59ca012968faed2af0e589143d58d6cafc7c17631d59fff9aa77",
         RULES: "6ebc65273babc3ceeae7cf65e3d203b484093d76aeaf6b6541c00e575c895d3a",
         INDEX: "6c12da077200db176c6b81e0e869b21e731547f1e3265fb982c0be1ef7b7ec98"}
 C699 = ("Verifier 2026-11-11T10:03Z (Gate A PASS, merge 3b0e03d4: own P7757 re-measure W08 1.50 + (0.85 - 0.40) + 0.55 "
@@ -108,7 +113,8 @@ def end_terms(row, b_min=A699.B_MIN):
             elif pier:
                 why += f"; pier to {pier[0]} ({pier[1]}): taken whole, counted once in the family"
             terms.append({"side": e["side"], "stopper": e["stopper"], "stopper_id": e.get("stopper_id"),
-                          "available_m": float(R.R73.ceil_mm(a)), "taken_m": float(taken), "why": why})
+                          "available_m": float(R.R73.ceil_mm(a)), "drawn_m": float(a), "taken_m": float(taken),
+                          "why": why})
         length = w + sum(X(str(t["taken_m"])) for t in terms)
         hi = R.BR.mul(X(str(row["B_m"])), X(str(row["D_m"])), length)
         if best is None or hi > best[0]:
@@ -120,6 +126,34 @@ def end_terms(row, b_min=A699.B_MIN):
     return terms, float(w), ("width CONFLICT " + " / ".join(str(x) for x in widths) + f": {w} used (largest; the span "
                              "between the stoppers is fixed by the drawing, R-T699-1 (a))") if extra or len(widths) > 1 \
         else None
+
+
+def drawn_gaps():
+    """T-644 jamb evidence: the drawn opening gap per opening (one value for both sides, else refused)."""
+    import csv
+    out = {}
+    with JAMBS.open(encoding="utf-8", newline="") as f:
+        for r in csv.DictReader(f):
+            g = X(r["clear_width_m"])
+            if out.setdefault(r["opening_id"], g) != g:
+                raise SystemExit(f"{r['opening_id']}: two drawn gaps in the jamb evidence")
+    return out
+
+
+def r_t704_2(row, terms, w, gap):
+    """R-T704-2 (Lead ruling F-V704-1, every villa): the AT_MOST length on ONE geometry. CEILING: max(the R-T699-1
+    terms, drawn gap + START drawn + END drawn); MIN_BEARING: the R-T699-1 terms + max(0, drawn gap - w).
+    -> (length, at_most, basis)."""
+    t699 = X(row["length_hi_m"])
+    if row["convention"] == "CEILING":
+        if isinstance(row["width_m"], list):
+            raise SystemExit(f"{row['opening']}: a width conflict on a CEILING line (one geometry not defined)")
+        s2s = gap + sum(X(str(t["drawn_m"])) for t in terms)
+        length, basis = (t699, "R-T699-1_TERMS") if t699 >= s2s else (s2s, "STOPPER_TO_STOPPER")
+    else:
+        length, basis = (t699, "R-T699-1_TERMS") if X(str(w)) >= gap else (t699 + gap - X(str(w)), "DRAWN_GAP")
+    hi = R.BR.round_high(R.BR.mul(X(str(row["B_m"])), X(str(row["D_m"])), length))
+    return length, hi, basis
 
 
 def _expect(ix):
@@ -157,6 +191,7 @@ def build(project_id=None):
     if {r["line_id"] for r in blank} != {r["line_id"] for r in led["lines"]}:
         raise SystemExit("the 21 blank lintel lines of V3.0.70 are not the ledger's")
     ents, confirm = [], []
+    gaps = drawn_gaps()
     for r in led["lines"]:
         x = ix[r["line_id"]]
         if x["class"] != "HELD" or x["held_low"] is not None or x["element_id"] != f"LINTEL:{r['opening']}":
@@ -180,22 +215,46 @@ def build(project_id=None):
                            "(R-T519-1 reading, T-650)"}
         if r["at_most_m3"] is not None:
             terms, w, wnote = end_terms(r)
-            base.update(action="AT_MOST", width_m=w, width_note=wnote, end_terms=terms, length_m=float(X(r["length_hi_m"])),
-                        convention=r["convention"], at_most_m3=float(X(r["at_most_m3"])),
-                        basis=(f"R-T699-1 (a): {r['B_m']} x {r['D_m']} x ({w} + "
-                               + " + ".join(f"{t['taken_m']:g}" for t in terms)
-                               + f") = {r['at_most_m3']} m3 AT_MOST ({r['convention']}); existence {r['existence']}"))
+            gap = gaps[r["opening"]]
+            length, hi, lb = r_t704_2(r, terms, w, gap)
+            if lb == "R-T699-1_TERMS":
+                basis = (f"R-T699-1 (a): {r['B_m']} x {r['D_m']} x ({w} + "
+                         + " + ".join(f"{t['taken_m']:g}" for t in terms)
+                         + f") = {r['at_most_m3']} m3 AT_MOST ({r['convention']}; drawn gap {gap} <= the terms, "
+                           f"R-T704-2); existence {r['existence']}")
+            else:
+                basis = (f"R-T704-2 ({lb}): {r['B_m']} x {r['D_m']} x {length} = {hi} m3 AT_MOST (drawn gap {gap} vs "
+                         f"schedule {w}; the merged R-T699-1 figure {r['at_most_m3']} lost the drawn gap excess); "
+                         f"existence {r['existence']}")
+            base.update(action="AT_MOST", width_m=w, width_note=wnote, drawn_gap_m=float(gap), end_terms=terms,
+                        length_m=float(length), convention=r["convention"], at_most_m3=float(hi), basis=basis)
+            if hi != X(r["at_most_m3"]):
+                base["ledger_at_most_m3"] = float(X(r["at_most_m3"]))
         else:
             base.update(action="DATUM_NAMED", why_no_bound=r["why_no_at_most"],
                         basis=f"R-T699-1: no one-sided bound ({r['why_no_at_most']}); existence {r['existence']}")
         ents.append(base)
     rows = {e["opening"]: e for e in ents}
     a, b, pier = SHARED
-    dbl = R.BR.mul(X(str(rows[a]["section"]["B_m"])), X(str(rows[a]["section"]["D_m"])), R.R73.ceil_mm(pier))
-    if X(led["family"]["pier_counted_once"]["W11/W12"]) != dbl:
+    B, D = X(str(rows[a]["section"]["B_m"])), X(str(rows[a]["section"]["D_m"]))
+    if X(led["family"]["pier_counted_once"]["W11/W12"]) != R.BR.mul(B, D, R.R73.ceil_mm(pier)):
         raise SystemExit("shared pier double count moved")
-    fam = {"at_most_m3": float(X(led["family"]["at_most_sum_m3"])), "lines": led["family"]["at_most_lines"],
-           "shared_piers": [{"lines": [rows[a]["line_id"], rows[b]["line_id"]], "pier_m": float(R.R73.ceil_mm(pier)),
+    # R-T704-2: the pier is counted once at the length both lines take it with (drawn on a stopper-to-stopper line)
+    took = set()
+    for o in (a, b):
+        e = rows[o]
+        s2s = e["basis"].startswith("R-T704-2 (STOPPER_TO_STOPPER)")
+        t = next(t for t in e["end_terms"] if t["stopper"] == "OPENING" and t["stopper_id"] == (b if o == a else a))
+        took.add(X(str(t["drawn_m"] if s2s else t["taken_m"])))
+    if len(took) != 1:
+        raise SystemExit(f"shared pier taken at two lengths {took}: name the overlap")
+    pm = took.pop()
+    dbl = R.BR.mul(B, D, pm)
+    exact = sum(R.BR.mul(X(str(e["section"]["B_m"])), X(str(e["section"]["D_m"])), X(str(e["length_m"])))
+                for e in ents if e["action"] == "AT_MOST")
+    fam = {"at_most_m3": float(R.BR.round_high(exact - dbl)), "lines": led["family"]["at_most_lines"],
+           "ledger_at_most_m3": float(X(led["family"]["at_most_sum_m3"])),
+           "shared_piers": [{"lines": [rows[a]["line_id"], rows[b]["line_id"]], "pier_m": float(pm),
                              "double_counted_m3": float(dbl)}],
            "at_least_m3": float(X(led["family"]["at_least_sum_m3"])), "at_least_lines": [c["line_id"] for c in confirm]}
     return {"schema": SCHEMA, "project_id": project_id, "sources": list(SOURCES.values()), "entries": ents,

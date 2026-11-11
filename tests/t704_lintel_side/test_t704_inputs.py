@@ -1,6 +1,6 @@
 """T-704: the URBAN_V3071_INPUTS_V1 builder on the committed, sha-pinned T-699 ledger and the V3.0.70 index (no
 drawing): 16 AT_MOST + 3 DATUM_NAMED entries, the 2 V3.0.67 AT_LEAST lines confirmed, the hand rows of T-699 s.2, the
-family AT_MOST with the W11 / W12 pier once, and every entry accepted by the module (recomputed from its terms)."""
+family AT_MOST (R-T704-2: 1.322146) with the W11 / W12 pier once, and every entry accepted by the module (recomputed from its terms)."""
 from __future__ import annotations
 
 import sys
@@ -32,13 +32,22 @@ def test_hand_rows():
     assert BY["D-2F-02"]["at_most_m3"] == 0.056 and BY["D-2F-02"]["convention"] == "MIN_BEARING"
     assert BY["L-GF-01"]["at_most_m3"] == 0.072 and BY["L-GF-01"]["if_required"]["value_m3"] == 0.072
     assert BY["D-GF-09"]["width_m"] == 1.0 and BY["D-GF-09"]["at_most_m3"] == 0.061876
-    assert BY["W11"]["at_most_m3"] == 0.14916 and BY["W12"]["at_most_m3"] == 0.14036
+    # R-T704-2 (Lead ruling F-V704-1, r2): W11 / W12 on one geometry, stopper to stopper (drawn gap 1.9549, T-644):
+    # W11 0.04 x (0.633 + 1.9549 + 1.1451 = 3.733) = 0.149320; W12 0.04 x (1.1451 + 1.9549 + 0.4121 = 3.5121) = 0.140484
+    assert BY["W11"]["at_most_m3"] == 0.14932 and BY["W12"]["at_most_m3"] == 0.140484
+    assert BY["W11"]["ledger_at_most_m3"] == 0.14916 and BY["W12"]["ledger_at_most_m3"] == 0.14036
+    assert BY["W11"]["drawn_gap_m"] == 1.9549 and BY["W11"]["length_m"] == 3.733 and BY["W12"]["length_m"] == 3.5121
+    # every other AT_MOST line: drawn gap = schedule (or narrower), the merged R-T699-1 figure stands
+    assert sorted(o for o, e in BY.items() if e.get("ledger_at_most_m3") is not None) == ["W11", "W12"]
+    assert BY["D-1F-09"]["at_most_m3"] == 0.12624      # pier to the released D-1F-08 less its bearing, not the gap
     assert BY["W04"]["existence"] == "CONDITIONAL_EXCLUSION" and BY["W04"]["excluded_by"]
 
 
 def test_family_and_module_accepts():
     d = A.load_inputs(DOC, "any")
-    assert d["_family"]["at_most_m3"] == 1.321826 and d["_family"]["lines"] == 16
+    # 1.367950 - 0.04 x 1.1451 (pier once, at the drawn length both take) = 1.322146 (Checker's own figure)
+    assert d["_family"]["at_most_m3"] == 1.322146 and d["_family"]["lines"] == 16
+    assert DOC["family"]["ledger_at_most_m3"] == 1.321826 and DOC["family"]["shared_piers"][0]["pier_m"] == 1.1451
     assert DOC["family"]["at_least_m3"] == 0.084
     assert sum(1 for e in d["_entries"] if e["_hi"] is not None) == 16
 

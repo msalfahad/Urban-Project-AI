@@ -50,7 +50,8 @@ PENDING = {
     "integrates": ["T-699"], "tests": ["tests/t704_lintel_side"],
     "changes_families_by_item_code": ["STR.CONC.LINTEL"],
     "note": "T-704 (research/agents_t704/T-704_CONCRETE_GATE_B8.md): CONCRETE_GATE_B_V8 from the merged T-699 ledger: "
-            "16 HELD blank STR.CONC.LINTEL lines carry their AT_MOST beside (family 1.321826 m3, the W11 / W12 pier "
+            "16 HELD blank STR.CONC.LINTEL lines carry their AT_MOST beside (family 1.322146 m3, R-T704-2 stopper to "
+            "stopper on W11 / W12, the W11 / W12 pier "
             "once; existence open or a conditional exclusion by a member), 3 the exact missing datum; D-GF-04 / "
             "D-1F-06 AT_LEAST 0.048 / 0.036 (V3.0.67) confirmed; every line stays blank, no quantity or total moves; "
             "every other line byte-identical; the Gate B integration package",
@@ -59,7 +60,7 @@ PROPOSED = ("1.72.0 (T-704): restated by the ARCH_TAKEOFF_V3.0.71 package (Gate 
             "blank lintel lines from the merged T-699 ledger; the released capability of V2.9 + route G is unchanged")
 OPT_IN = "ARCH_TAKEOFF_V3.0.71 (engine/source/arch_v3071.py, opt-in candidate; Gate B package T-704)"
 MISS = {
-    "B9-02": ("in the opt-in candidate V3.0.71: of the 21 lintels HELD blank, 16 carry AT_MOST beside (family 1.321826 "
+    "B9-02": ("in the opt-in candidate V3.0.71: of the 21 lintels HELD blank, 16 carry AT_MOST beside (family 1.322146 "
               "m3, never summed; existence UNRESOLVED on designer items), 2 AT_LEAST 0.048 / 0.036 (V3.0.67, high end "
               "a junction METHOD GAP), 3 their exact missing datum (A-GF-01 curved head, D-GF-05 START stopper, D-GF-14 "
               "jambs MEASURABLE NOW)"),
