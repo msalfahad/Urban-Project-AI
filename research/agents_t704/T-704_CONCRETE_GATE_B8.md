@@ -4,6 +4,43 @@ Worker 3, 2026-11-11. INTEGRATION PACKAGE for Checker Gate B. Base: the candidat
 PASS, merge 2bfa2fbe, run of record e8e001de); released default V2.9 + route G untouched; nothing released. No drawing,
 workbook, client name or coordinate here; Drive files named by folder and title only.
 
+## 0. Round 2 (Verifier REJECTED 2026-11-11T15:32Z; Lead r2 scope 16:25)
+
+- (1) Gate B regression fix: `engine/source/arch_v3071.py` names 'rebar' only in its WAITING note (the lintel
+  formwork / rebar / bed mortar of these openings stay as V3.0.70). Declared in
+  `tests/structural_comparison_engine/rebar_product_registry.py` OTHER_REBAR_AWARE with that reason (T-477 precedent);
+  no firewall test changed; both firewall folders pass.
+- (2) LEAD RULING F-V704-1, adopted as **R-T704-2** (every villa): an AT_MOST length is measured on ONE geometry,
+  stopper to stopper (the drawn opening gap and the drawn ends from the same drawing), never schedule width + drawn
+  ends. Module: `at_most()` takes the drawn gap (required; missing = refused, never the schedule width by default) and
+  each end's drawn available length; CEILING: length = max(R-T699-1 terms, gap + START drawn + END drawn); MIN_BEARING:
+  R-T699-1 terms + max(0, gap - w); basis recorded (`R-T699-1_TERMS` / `STOPPER_TO_STOPPER` / `DRAWN_GAP`) and the
+  merged ledger's figure kept beside (`ledger_at_most_m3`) where R-T704-2 raises it. A pier both lines take is counted
+  once at the length both take it with (drawn on a stopper-to-stopper line). Drawn gaps: the merged T-644 jamb
+  evidence `research/agents_t644/out/JAMB_EVIDENCE_T644.csv` (clear_width_m, the file T-699 itself read; sha 8b72cfb1
+  pinned), drawn end = the T-699 resolved available length (after a released neighbour's bearing).
+- Effect, all 16 AT_MOST lines checked: W11 0.04 x (0.633 + 1.9549 + 1.1451 = 3.733) = **0.149320** (was 0.149160,
+  +0.000160, +0.11 %); W12 0.04 x (1.1451 + 1.9549 + 0.4121 = 3.5121) = **0.140484** (was 0.140360, +0.000124,
+  +0.09 %); family 1.367950 - 0.04 x 1.1451 = **1.322146 m3** (was 1.321826, +0.000320) = the Checker's own figures.
+  The other 14: drawn gap = schedule width (D-GF-09 drawn 0.90 < 1.00 used) so the R-T699-1 terms stand (ends 1 mm up
+  already >= the drawn stopper-to-stopper length; D-1F-09's START is the pier to the released D-1F-08 less its 0.40
+  bearing, 0.4445, not the gap). Note: with the 1 mm-up end terms on the drawn gap, W11 / W12 would read 0.149356 /
+  0.140556; the ruling's stopper-to-stopper figures are used.
+- Tests (hand villa K704, non-Alsenan): normal (gap = schedule: every line `R-T699-1_TERMS`, figures unchanged);
+  adverse (W1 drawn gap 5 mm wider: 0.04 x 2.355 = 0.0942 > 0.094; D1 MIN_BEARING gap 0.905: 0.04665; W2 / W3 pier at
+  the drawn 0.8004: family 0.351308; schedule width + drawn ends refused "never below the drawn stopper-to-stopper";
+  the pier counted at its taken 0.801 refused; drawn gap missing / drawn end None / drawn above available refused).
+- r2 run of record (own fresh t167 `v304_run.py` 29 min on the same Drive copies, P7757.dxf ab54dd55, ST sha
+  9f9d1179 -> `v3071_run.py` exit 0): V3_0_69 7ea65f9b, V3_0_70 e8e001de (asserted) -> **V3_0_71 fc0bd98f** (r1
+  ddb559b9); own line diff 70 -> 71: 5,123 = 5,123, 19 changed (fields calculation / notes / rfi only; evidence_state,
+  measured_net, bounded_range moved on 0), 5,104 byte-identical, totals moved none; W11 / W12 basis STOPPER_TO_STOPPER
+  beside 0.149320 / 0.140484 (merged ledger figure beside), the other 14 R-T699-1_TERMS. Census V3_0_71 re-run:
+  issues {}, complete map, 0 stale blocks (index: only the lines sha moved); package families: no quantity family
+  changed, B9-02 record only; summary family 1.322146, pier 1.1451 / 0.045804.
+- Proposed ERS s.7 row: | 2026-11-11 | AT_MOST from schedule width + drawn ends lost 4.9 mm of drawn gap on W11 / W12
+  | width and ends from two different sources | an upper bound is measured on one geometry, stopper to stopper
+  (R-T704-2) | tests/t704_lintel_side test_r_t704_2_* | PROPOSED |.
+
 ## 1. What is wired (Checker-merged only)
 
 | source | merge | Checker | wired as |
@@ -32,7 +69,8 @@ run log) and changes nothing on them. T-699 itself says "D-GF-04 / D-1F-06 uncha
   `concrete_ledger_v3071.beside` {kind AT_MOST_M3, value, convention, length, terms}; the rfi question names the cause
   class, the reference and the deciding datum (and the member of a conditional exclusion). No code total moves
   (asserted: `check_totals` refuses any moved total). The family AT_MOST is a run-record figure only: sum of the exact
-  figures less the W11 / W12 pier both take whole (counted once) = 1.321826 m3, recomputed and asserted.
+  figures less the W11 / W12 pier both take whole (counted once) = 1.322146 m3 (r2, R-T704-2; r1 1.321826),
+  recomputed and asserted.
 - (cc) AT_MOST only with existence OPEN or CONDITIONAL_EXCLUSION (member named); an AT_LEAST needs existence REQUIRED
   and is not formed here (refused); a line that already carries a one-sided figure is refused for restatement.
 - (dd) The "if REQUIRED" least figure is beside as CONDITIONAL, never a bound, never above the AT_MOST.
@@ -52,8 +90,8 @@ piece is carried beside per line (`owner_manual`).
 |---|---|---|---|---|---|
 | W04 | L-1313767d | COND. EXCL. (CB6) | 0.04 x (0.60 + 0.40 + 0) = 0.040 MIN_BEARING | 0.040 | D-39 / Q-54 B |
 | W08 | L-7f9eb7cc | COND. EXCL. (CB6) | 0.04 x (1.50 + 0.45 + 0.55) = 0.100 | 0.092 | D-39 / Q-54 B |
-| W11 | L-c1e57b06 | COND. EXCL. (B9) | 0.04 x (1.95 + 0.633 + 1.146) = 0.149160 | 0.110 | T-207 |
-| W12 | L-e3917519 | COND. EXCL. (B9) | 0.04 x (1.95 + 1.146 + 0.413) = 0.140360 | 0.110 | T-207 |
+| W11 | L-c1e57b06 | COND. EXCL. (B9) | R-T704-2: 0.04 x (0.633 + 1.9549 + 1.1451) = 0.149320 (r1 0.149160) | 0.110 | T-207 |
+| W12 | L-e3917519 | COND. EXCL. (B9) | R-T704-2: 0.04 x (1.1451 + 1.9549 + 0.4121) = 0.140484 (r1 0.140360) | 0.110 | T-207 |
 | W25 | L-bf88bf6f | OPEN | 0.04 x (1.00 + 0.40 + 0.10) = 0.060 MIN_BEARING | 0.056 | R-T228-3 F3 |
 | W26 | L-b699ce0d | COND. EXCL. (stair-roof piece) | 0.04 x (1.20 + 0.75 + 0.75) = 0.108 | 0.080 | D-39 |
 | W27 | L-f892163c | OPEN | 0.04 x 1.50 = 0.060 MIN_BEARING | 0.056 | R-T228-3 F4 |
@@ -69,7 +107,7 @@ piece is carried beside per line (`owner_manual`).
 | D-GF-14 | L-17953d78 | OPEN | none: no jamb evidence (GF-W30) | 0.024 | DATUM_NAMED (MEASURABLE NOW) |
 | D-GF-04 / D-1F-06 | L-274b1125 / L-9ec762c0 | REQUIRED (Q-55 C) | AT_LEAST 0.048 / 0.036 (V3.0.67, confirmed) | - | METHOD GAP (junction END) |
 
-Family AT_MOST (16 lines): 1.367666 - 0.04 x 1.146 (W11 / W12 pier once) = **1.321826 m3**; AT_LEAST 0.084 m3 (2
+Family AT_MOST (16 lines): 1.367950 - 0.04 x 1.1451 (W11 / W12 pier once) = **1.322146 m3** (r1 1.321826); AT_LEAST 0.084 m3 (2
 lines); 3 lines no figure. STR.CONC.LINTEL census before and after: 61 lines = 16 released + 24 bounded 1.361 ..
 2.050636 + 21 blank; released / bounded / every code total unchanged (a beside figure is never summed).
 
@@ -93,7 +131,7 @@ record only. Summary `summary_t704.json` (lintel census by what sits beside each
 |---|---|---|
 | released | 16 lines, 1.016 m3 | same |
 | bounded | 24 lines, 1.361 .. 2.050636 m3 | same |
-| blank, AT_MOST beside | 0 | 16 (family 1.321826 m3, never summed) |
+| blank, AT_MOST beside | 0 | 16 (family 1.322146 m3, never summed) |
 | blank, AT_LEAST beside | 2 (0.084 m3, V3.0.67) | 2 (same lines, unchanged) |
 | blank, datum only | 19 | 3 (datum named) |
 

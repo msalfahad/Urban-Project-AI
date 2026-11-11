@@ -325,16 +325,16 @@
  ],
  "extends": "ARCH_TAKEOFF_V3.0.70",
  "family_at_most": {
-  "at_most_m3": 1.321826,
+  "at_most_m3": 1.322146,
   "lines": 16,
   "shared_piers": [
    {
-    "double_counted_m3": 0.04584,
+    "double_counted_m3": 0.045804,
     "lines": [
      "L-c1e57b06555adcf8edf7",
      "L-e39175199fc6edc4db86"
     ],
-    "pier_m": 1.146
+    "pier_m": 1.1451
    }
   ]
  },
@@ -365,7 +365,7 @@
  },
  "lines_sha256": {
   "V3_0_70": "e8e001defe0acbdcde364ade8cac94bf60cfbb547a1f9a91679ad844b64e56e4",
-  "V3_0_71": "ddb559b918e835f71d1d8ff83f68af988217c2d806e4eb7971a92ad199eda60d"
+  "V3_0_71": "fc0bd98f914ab9a7bfb035fbb5dfaeadf8a9868dfffc74f509785d728e2389a5"
  },
  "lintel_census": {
   "V3_0_70": {
@@ -383,7 +383,7 @@
   },
   "V3_0_71": {
    "at_least_beside_sum_m3_not_a_total": 0.084,
-   "at_most_beside_sum_m3_not_a_total": 1.367666,
+   "at_most_beside_sum_m3_not_a_total": 1.36795,
    "blank_at_least": 2,
    "blank_at_most": 16,
    "blank_datum_only": 3,
