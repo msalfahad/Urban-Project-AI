@@ -3,7 +3,7 @@
 Worker 1, 2026-11-11, branch `agents/task-T-721`. Nothing wired, released or VERIFIED; no AT_MOST; no floor summed into a
 released total. ERS s.2-7; R-CONC-OWN-1; R-T660-3; R-T711-3; R-T712-1; UP-QTY-STATUS-001; R-T696-1. Rules `t721_rules.py`
 (R-T721-1 .. 3), ledger `t721_alsenan.py` -> `out/T721_LEDGER.json` + `out/T721_CENSUS.md`, tests
-`tests/t721_beam_blank_bounds` (44).
+`tests/t721_beam_blank_bounds` (41).
 
 ## What the 12 lines are (correction to the row text)
 
