@@ -1,0 +1,363 @@
+{
+ "schema": "URBAN_T688_OWN_1F_PANELS_V1",
+ "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' (private copy; numbers only)",
+ "frame": "FR04",
+ "noding": {
+  "layers": [
+   "1",
+   "S-COL.BON",
+   "S-BOUN"
+  ],
+  "ext_mm": 30.0,
+  "sagitta_mm": 0.2,
+  "faces": 151,
+  "placement_cells": 12
+ },
+ "lines": [
+  {
+   "line_id": "L-038456ade3eb09b43bb8",
+   "engine_cell": "SITE-2e3a01f998f4e488",
+   "class": "RELEASED",
+   "engine_m3": 0.074772,
+   "engine_m2": 0.467325,
+   "own_face": 131,
+   "own_m2": 0.467528
+  },
+  {
+   "line_id": "L-193eabb70dbbd7b9b798",
+   "engine_cell": "SITE-323e81ae12039d01",
+   "class": "RELEASED",
+   "engine_m3": 1.0328,
+   "engine_m2": 6.455,
+   "own_face": 38,
+   "own_m2": 6.455
+  },
+  {
+   "line_id": "L-2f6e26eb87c794452551",
+   "engine_cell": "SITE-398ad7de9cd54a5a",
+   "class": "EXCLUDED",
+   "engine_m3": null,
+   "engine_m2": null,
+   "own_face": 62,
+   "own_m2": 0.079115
+  },
+  {
+   "line_id": "L-326b2c83d8ec682ba992",
+   "engine_cell": "SITE-e12037595b4a20b0",
+   "class": "RELEASED",
+   "engine_m3": 0.706161,
+   "engine_m2": 4.413506,
+   "own_face": 117,
+   "own_m2": 4.413508
+  },
+  {
+   "line_id": "L-3b73c9e2ed0cbe3eb446",
+   "engine_cell": "SITE-d0ed586d1bfd5d55",
+   "class": "RELEASED",
+   "engine_m3": 0.056324,
+   "engine_m2": 0.352025,
+   "own_face": 71,
+   "own_m2": 0.3522
+  },
+  {
+   "line_id": "L-427f3499df72e84f700d",
+   "engine_cell": "SITE-0a53f612664d3cf6",
+   "class": "RELEASED",
+   "engine_m3": 0.749374,
+   "engine_m2": 4.683587,
+   "own_face": 44,
+   "own_m2": 4.683588
+  },
+  {
+   "line_id": "L-4baffcb95570ca418d0c",
+   "engine_cell": "SITE-516a3b7ae454a85c",
+   "class": "RELEASED",
+   "engine_m3": 0.864,
+   "engine_m2": 5.4,
+   "own_face": 23,
+   "own_m2": 5.4
+  },
+  {
+   "line_id": "L-578ddf276a2e214a3945",
+   "engine_cell": "SITE-cdaabd40e66141bf",
+   "class": "RELEASED",
+   "engine_m3": 1.764553,
+   "engine_m2": 11.028456,
+   "own_face": 51,
+   "own_m2": 11.028456
+  },
+  {
+   "line_id": "L-657e6e2cba5a0d0d9d95",
+   "engine_cell": "SITE-fe6e4edfb9e9df0d",
+   "class": "RELEASED",
+   "engine_m3": 2.8328,
+   "engine_m2": 17.705,
+   "own_face": 12,
+   "own_m2": 17.705
+  },
+  {
+   "line_id": "L-683900f927474df70227",
+   "engine_cell": "SITE-5b33730ec36fa67a",
+   "class": "RELEASED",
+   "engine_m3": 0.093075,
+   "engine_m2": 0.581719,
+   "own_face": 138,
+   "own_m2": 0.581948
+  },
+  {
+   "line_id": "L-7a83b8f273dea348e19e",
+   "engine_cell": "SITE-b1fdbf122e7d8a5b",
+   "class": "RELEASED",
+   "engine_m3": 0.083518,
+   "engine_m2": 0.521987,
+   "own_face": 114,
+   "own_m2": 0.522202
+  },
+  {
+   "line_id": "L-7e132c398bac4f1ae67b",
+   "engine_cell": "SITE-ec94bbd491600b92",
+   "class": "RELEASED",
+   "engine_m3": 0.093075,
+   "engine_m2": 0.581719,
+   "own_face": 139,
+   "own_m2": 0.581948
+  },
+  {
+   "line_id": "L-8586e34ce4717efb4e36",
+   "engine_cell": "SITE-1847ba557d0991ce",
+   "class": "RELEASED",
+   "engine_m3": 0.674369,
+   "engine_m2": 4.214806,
+   "own_face": 40,
+   "own_m2": 4.214806
+  },
+  {
+   "line_id": "L-8843faaf6b256bc4b840",
+   "engine_cell": "SITE-d50e79d29e4c7ca8",
+   "class": "EXCLUDED",
+   "engine_m3": null,
+   "engine_m2": null,
+   "own_face": 35,
+   "own_m2": 0.890084
+  },
+  {
+   "line_id": "L-8e5c2f484172e9259455",
+   "engine_cell": "SITE-0e91aeecfe22e08b",
+   "class": "RELEASED",
+   "engine_m3": 0.056324,
+   "engine_m2": 0.352025,
+   "own_face": 66,
+   "own_m2": 0.3522
+  },
+  {
+   "line_id": "L-916cf0fe632402045078",
+   "engine_cell": "SITE-db44cdd415cfe47b",
+   "class": "EXCLUDED",
+   "engine_m3": null,
+   "engine_m2": null,
+   "own_face": 136,
+   "own_m2": 0.202971
+  },
+  {
+   "line_id": "L-af41a42f8504dd178716",
+   "engine_cell": "SITE-7d0ae6284372b473",
+   "class": "RELEASED",
+   "engine_m3": 0.515274,
+   "engine_m2": 3.220463,
+   "own_face": 64,
+   "own_m2": 3.220461
+  },
+  {
+   "line_id": "L-b41477e3593134b8c4b0",
+   "engine_cell": "SITE-97f1b67f08f56f05",
+   "class": "RELEASED",
+   "engine_m3": 0.441905,
+   "engine_m2": 2.761906,
+   "own_face": 42,
+   "own_m2": 2.761904
+  },
+  {
+   "line_id": "L-bde4aa4648e5b6f0b67d",
+   "engine_cell": "SITE-765e648e6f1c5d22",
+   "class": "RELEASED",
+   "engine_m3": 0.083518,
+   "engine_m2": 0.521987,
+   "own_face": 109,
+   "own_m2": 0.522202
+  },
+  {
+   "line_id": "L-d44c5050e83961c571db",
+   "engine_cell": "SITE-099b3363738e8f6d",
+   "class": "RELEASED",
+   "engine_m3": 2.20865,
+   "engine_m2": 13.804063,
+   "own_face": 18,
+   "own_m2": 13.804061
+  },
+  {
+   "line_id": "L-d624ff4e772d75ebb20f",
+   "engine_cell": "SITE-4ac8f85d424b4f0f",
+   "class": "RELEASED",
+   "engine_m3": 1.764553,
+   "engine_m2": 11.028456,
+   "own_face": 49,
+   "own_m2": 11.028456
+  },
+  {
+   "line_id": "L-db44466cc89e4968448f",
+   "engine_cell": "SITE-cab3f5a253608203",
+   "class": "RELEASED",
+   "engine_m3": 1.520549,
+   "engine_m2": 9.503431,
+   "own_face": 16,
+   "own_m2": 9.503433
+  },
+  {
+   "line_id": "L-df7ef6ffd5da8e1e9418",
+   "engine_cell": "SITE-0e9b0c4e2c51ecc2",
+   "class": "RELEASED",
+   "engine_m3": 0.729167,
+   "engine_m2": 4.557294,
+   "own_face": 53,
+   "own_m2": 4.557295
+  },
+  {
+   "line_id": "L-e79f12c2c021010426db",
+   "engine_cell": "SITE-d4a3945595cf359e",
+   "class": "RELEASED",
+   "engine_m3": 3.3368,
+   "engine_m2": 20.855,
+   "own_face": 47,
+   "own_m2": 20.855
+  },
+  {
+   "line_id": "L-ee20c11a155ca588335f",
+   "engine_cell": "SITE-954c733066cf20e8",
+   "class": "EXCLUDED",
+   "engine_m3": null,
+   "engine_m2": null,
+   "own_face": 9,
+   "own_m2": 0.082274
+  },
+  {
+   "line_id": "L-fb9a2ac1d861b37db720",
+   "engine_cell": "SITE-a0b63a7e47e5d9a3",
+   "class": "RELEASED",
+   "engine_m3": 0.074772,
+   "engine_m2": 0.467325,
+   "own_face": 130,
+   "own_m2": 0.467528
+  }
+ ],
+ "shared_faces": {},
+ "census": [
+  {
+   "own_face": 112,
+   "m2": 15.326052,
+   "class": "OPENING",
+   "opening_lines": 20,
+   "inner_lines": 0,
+   "narrow_width_mm": 4372.2
+  },
+  {
+   "own_face": 68,
+   "m2": 14.980372,
+   "class": "OPENING",
+   "opening_lines": 20,
+   "inner_lines": 0,
+   "narrow_width_mm": 4100.0
+  },
+  {
+   "own_face": 27,
+   "m2": 10.725,
+   "class": "STAIR_ZONE",
+   "opening_lines": 0,
+   "inner_lines": 30,
+   "narrow_width_mm": 2500.0
+  },
+  {
+   "own_face": 32,
+   "m2": 3.893654,
+   "class": "BAND",
+   "opening_lines": 0,
+   "inner_lines": 0,
+   "narrow_width_mm": 300.0
+  },
+  {
+   "own_face": 52,
+   "m2": 3.799779,
+   "class": "BAND",
+   "opening_lines": 0,
+   "inner_lines": 0,
+   "narrow_width_mm": 550.0
+  },
+  {
+   "own_face": 93,
+   "m2": 3.24,
+   "class": "OPENING",
+   "opening_lines": 2,
+   "inner_lines": 0,
+   "narrow_width_mm": 1800.0
+  },
+  {
+   "own_face": 98,
+   "m2": 2.995,
+   "class": "BAND",
+   "opening_lines": 0,
+   "inner_lines": 2,
+   "narrow_width_mm": 450.0
+  },
+  {
+   "own_face": 48,
+   "m2": 2.205,
+   "class": "BAND",
+   "opening_lines": 0,
+   "inner_lines": 0,
+   "narrow_width_mm": 350.0
+  }
+ ],
+ "released_engine_m2": 123.47708,
+ "released_own_m2": 123.478724,
+ "released_unlocated": [],
+ "f_v_p18_2": {
+  "frame": "FR08",
+  "engine_m2": 1.14,
+  "level_marks_in_frame": 14,
+  "faces": [
+   {
+    "m2": 1.14,
+    "width_m": 0.95,
+    "length_m": 1.2,
+    "own_marks": [
+     "+0.30"
+    ],
+    "neighbours": [
+     {
+      "shared_edge_m": 0.95,
+      "width_m": 0.3,
+      "length_m": 4.25,
+      "own_marks": []
+     },
+     {
+      "shared_edge_m": 1.2,
+      "width_m": 0.3,
+      "length_m": 1.5,
+      "own_marks": []
+     },
+     {
+      "shared_edge_m": 1.2,
+      "width_m": 0.3,
+      "length_m": 1.2,
+      "own_marks": []
+     },
+     {
+      "shared_edge_m": 0.95,
+      "width_m": 0.3,
+      "length_m": 2.45,
+      "own_marks": []
+     }
+    ]
+   }
+  ]
+ }
+}
