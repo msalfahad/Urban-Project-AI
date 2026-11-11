@@ -1,0 +1,488 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.71",
+ "flags": [
+  {
+   "if_corrected": "33.468204",
+   "line": "L-b06400d46d252f242018",
+   "m2": "0.057168",
+   "verdict": "ENGINE_WRONG (candidate)",
+   "void": "V-01",
+   "what": "1F living porcelain deducts one 1.15 x 0.05 strip of the light well twice (two ST-02 flight footprints summed where they overlap)"
+  },
+  {
+   "if_corrected": "line stays blank / EXCLUDED; no value moves",
+   "line": "L-35341ff2e6a848b9436b",
+   "m2": "16.005000",
+   "verdict": "DOUBLE_COUNT_RISK",
+   "void": "V-01",
+   "what": "blank 'ceiling over void' line names m2 the decor group line L-43bf1f86 already carries; it must never be valued beside it"
+  }
+ ],
+ "lines": {
+  "1F-R3CFCFD:ceiling": {
+   "class": "RELEASED",
+   "line_id": "L-ac337bf041e8184a315c",
+   "role": "1F east master ceiling (under V-06)",
+   "value": "18.674700"
+  },
+  "1F-R48AA46:ceiling": {
+   "class": "RELEASED",
+   "line_id": "L-c25a76ebdaab3ec65076",
+   "role": "1F bath ceiling (under V-05)",
+   "value": "3.781500"
+  },
+  "1F-R48CDA5:ceiling": {
+   "class": "RELEASED",
+   "line_id": "L-c85ec92c5f1e50dadd11",
+   "role": "1F bath ceiling (under V-06)",
+   "value": "4.277800"
+  },
+  "1F-R78C367:ceiling": {
+   "class": "HELD",
+   "line_id": "L-fc116bb666b184740090",
+   "role": "1F living ceiling parent",
+   "value": null
+  },
+  "1F-R78C367:ceiling over void": {
+   "class": "HELD",
+   "line_id": "L-35341ff2e6a848b9436b",
+   "role": "1F living 'ceiling over void' (V2.9 base line)",
+   "value": null
+  },
+  "1F-R78C367:ceiling#DECOR_GROUP": {
+   "class": "RELEASED",
+   "line_id": "L-43bf1f869e1588f1d3bd",
+   "role": "1F living decor ceiling (top of V-01)",
+   "value": "51.049600"
+  },
+  "1F-R78C367:floor": {
+   "class": "RELEASED",
+   "line_id": "L-b06400d46d252f242018",
+   "role": "1F living porcelain (pierced storey of V-01)",
+   "value": "33.411036"
+  },
+  "1F-R8BDA49:ceiling": {
+   "class": "RELEASED",
+   "line_id": "L-05b1d88f06c38f962cb6",
+   "role": "1F bath ceiling (under V-05)",
+   "value": "3.599800"
+  },
+  "1F-RB72F22:ceiling": {
+   "class": "RELEASED",
+   "line_id": "L-69ebc828b4c61f4ea348",
+   "role": "1F west master ceiling (under V-05)",
+   "value": "7.469200"
+  },
+  "2F-R1DB2D2:ceiling": {
+   "class": "RELEASED",
+   "line_id": "L-7531772e1581b35eea5f",
+   "role": "2F maid ceiling (under dome 3)",
+   "value": "19.350001"
+  },
+  "2F-R4D1B62:stairwell ceiling": {
+   "class": "HELD",
+   "line_id": "L-dd6930fd19ca1b908c56",
+   "role": "ST-01 2F stairwell",
+   "value": null
+  },
+  "2F-RE83BED:ceiling": {
+   "class": "RELEASED",
+   "line_id": "L-1bd4ec39660768d22677",
+   "role": "2F bath ceiling (under dome 3)",
+   "value": "5.550000"
+  },
+  "DOME:EAST:intrados": {
+   "class": "HELD",
+   "line_id": "L-f74c0fc7f78b579e6097",
+   "role": "east dome soffit (top of V-06)",
+   "value": null
+  },
+  "DOME:WEST:intrados": {
+   "class": "HELD",
+   "line_id": "L-cf3e2b55648f676ffb1d",
+   "role": "west dome soffit (top of V-05)",
+   "value": null
+  },
+  "GF-R31F8AE:stairwell ceiling": {
+   "class": "HELD",
+   "line_id": "L-2175a965bb7c48a50e6c",
+   "role": "ST-01 GF stairwell",
+   "value": null
+  },
+  "GF-RC99C2A:ceiling": {
+   "class": "RELEASED",
+   "line_id": "L-eb3be58fc760b39f0e38",
+   "role": "GF open-plan ceiling (storey below V-01)",
+   "value": "101.137092"
+  }
+ },
+ "moved": "none (research; no candidate line changed)",
+ "register": [
+  {
+   "below": "GF",
+   "ceiling_GF": {
+    "deductions": [
+     [
+      "T-283 GF 'no ceiling: opening in the slab above'",
+      "14.9434"
+     ],
+     [
+      "T-283 GF stair zone (stair face of the slab plan)",
+      "9.8536"
+     ],
+     [
+      "T-283 GF-159 (flight under a beam band), bound by sum only",
+      "1.3756"
+     ]
+    ],
+    "engine_V2.9_double_height_m2": 16.005,
+    "face_in_outline_m2": 26.1725,
+    "residual_m2": "-0.000100",
+    "result": "DEDUCTED_ONCE"
+   },
+   "ceiling_top": {
+    "east_dome_overlap_m2": 0.108438,
+    "lines": [
+     "1F-R78C367:ceiling#DECOR_GROUP",
+     "1F-R78C367:ceiling over void"
+    ],
+    "note": "the decor group 51.0496 = face 75.983 - ST-01 stair zone 10.725 - 0.1725 - east dome 14.0359 holds the well top; the blank 'ceiling over void' line names 16.005 of it again",
+    "result": "DOUBLE_COUNT_RISK"
+   },
+   "evidence": "1F plan by handle: wall faces AF7 / AEC, slab edges AF5 / D24 / B75 / B74; X-rect B77-B79 with the VOID word B7A; GF draws the rectangle 'above' (4B0) and the same treads (0.000 m apart)",
+   "floor_1F": {
+    "cause": "ST-02 F1 (radial) and F4 footprints overlap 0.057438 m2 on the 1F plan (F4 read from 2.82, F1 box to 2.87); the engine sums footprints, so the strip is deducted twice; the T-116 residue 3.453 = the geometric remainder 3.45327",
+    "deductions": [
+     [
+      "engine VOID (X-marked rectangle)",
+      16.005
+     ],
+     [
+      "engine STAIR_BELOW_SEEN (ST-02 F1 + F4 + F6)",
+      6.771668
+     ],
+     [
+      "T-116 opening residue (VOID_RESIDUE + STAIR_FOOTPRINT)",
+      "3.453"
+     ]
+    ],
+    "face_in_outline_m2": 26.1725,
+    "outline_outside_face_m2": 0.0675,
+    "residual_after_overlap_m2": "0.000270",
+    "residual_m2": "-0.057168",
+    "result": "DEDUCTED_TWICE"
+   },
+   "lines": [
+    "L-b06400d46d252f242018",
+    "L-eb3be58fc760b39f0e38",
+    "L-43bf1f869e1588f1d3bd",
+    "L-35341ff2e6a848b9436b"
+   ],
+   "name": "ST-02 light well over the GF reception (double height GF + 1F)",
+   "outline": "7.02 x 4.0 - 1.15 x 1.6 (arrival floor NE of the east flight)",
+   "outline_m2": "26.240000",
+   "parts_m2": {
+    "ST-02 corner landing +4.696": 1.3225,
+    "X-marked rectangle": 16.005,
+    "flights, pocket and 0.05 edge strips": "8.912500"
+   },
+   "pierces": "1F",
+   "status": "DRAWING-CONFIRMED",
+   "void": "V-01",
+   "walls_double_height": {
+    "south AEC": 7.02,
+    "west AF7": 4.0
+   }
+  },
+  {
+   "below": "GF (pool court, exterior)",
+   "cross_check": "T-071: '1F void: layer 5 oval 3.820 m2' (+0.004 here)",
+   "engine_faces_1f_m2": {},
+   "engine_faces_gf_m2": {},
+   "evidence": "1F layer-5 outline BCF / 2F1C / C7A / 2F1B (joints 0.000); GF draws it 'above' on the same centres (20A / 299)",
+   "lines": [],
+   "name": "oval opening beside the 1F east bay",
+   "note": "outside every internal face on both plans: no internal floor / ceiling line; the slab-top / soffit / edge lines of the 1F projection are not in the candidate (named, not valued)",
+   "outline_m2": "3.824427",
+   "pierces": "1F (slab east of the curved glazing)",
+   "result": "EXTERIOR",
+   "span_m": [
+    1.849984,
+    2.700583
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "void": "V-02"
+  },
+  {
+   "below": "pit / GF",
+   "evidence": "engine stacked shaft (three plans aligned on the column grid), own SHAFT spaces",
+   "lines": [],
+   "name": "lift shaft 1.80 x 1.80",
+   "note": "its own space on every plan: no room floor or ceiling line includes it (EXCLUDED, NO_FINISH); shaft lining / top: no line (needs a specification), named",
+   "outline_m2": "3.240000",
+   "per_floor": {
+    "1F": {
+     "kind": "SHAFT",
+     "m2": 3.24,
+     "room": "1F-RCCB686"
+    },
+    "2F": {
+     "kind": "SHAFT",
+     "m2": 3.24,
+     "room": "2F-R2BDCEE"
+    },
+    "GF": {
+     "kind": "SHAFT",
+     "m2": 3.24,
+     "room": "GF-R89E756"
+    }
+   },
+   "pierces": "1F and 2F slabs (stacked GF / 1F / 2F)",
+   "result": "DEDUCTED_ONCE",
+   "status": "DRAWING-CONFIRMED",
+   "void": "V-03"
+  },
+  {
+   "below": "GF / 1F (stair continuous to the 2F stair hall)",
+   "ceiling_1F": {
+    "box_m2": "10.725000",
+    "result": "DEDUCTED_ONCE",
+    "t283_stair_zone_m2": "10.7250"
+   },
+   "evidence": "ST-01 box 2.50 x 4.29 at 1F (printed; T-283 stair zone); well between flights 0.20 x 3.40 (1F A8D / A8E, 2F 1356 .. 1359): an open balustrade gap, not a wall (T-709)",
+   "floor_1F": "flights F2 / F3 / F5 treads 8.336981 (engine STAIR_FLIGHTS), arrival landing 4.865 to marble (T-122), dog-leg well / turning landing 2.142 (T-116): cited, not re-measured here",
+   "lines": [
+    "L-2175a965bb7c48a50e6c",
+    "L-dd6930fd19ca1b908c56",
+    "L-b06400d46d252f242018"
+   ],
+   "name": "ST-01 dog-leg stair shaft (GF -> 2F)",
+   "note": "GF / 2F are STAIR spaces (no room floor finish); their stairwell ceilings stay HELD (Q-72 investigation, stair box top 12.974 at 2F): one line each, no double count",
+   "outline_m2": "10.725000",
+   "per_floor": {
+    "1F": {
+     "face_m2": 75.983002,
+     "flights": [
+      {
+       "below_seen": true,
+       "id": "F1",
+       "kind": "RADIAL",
+       "stacked_over_below": false,
+       "treads_m2": 4.094413
+      },
+      {
+       "below_seen": false,
+       "id": "F2",
+       "kind": "STRAIGHT",
+       "stacked_over_below": true,
+       "treads_m2": 3.795
+      },
+      {
+       "below_seen": false,
+       "id": "F3",
+       "kind": "STRAIGHT",
+       "stacked_over_below": true,
+       "treads_m2": 3.45
+      },
+      {
+       "below_seen": true,
+       "id": "F4",
+       "kind": "STRAIGHT",
+       "stacked_over_below": false,
+       "treads_m2": 3.45
+      },
+      {
+       "below_seen": false,
+       "id": "F5",
+       "kind": "RADIAL",
+       "stacked_over_below": false,
+       "treads_m2": 1.495
+      },
+      {
+       "below_seen": true,
+       "id": "F6",
+       "kind": "STRAIGHT",
+       "stacked_over_below": false,
+       "treads_m2": 1.38
+      }
+     ],
+     "kind": "DRY",
+     "room": "1F-R78C367"
+    },
+    "2F": {
+     "face_m2": 18.600001,
+     "flights": [
+      {
+       "below_seen": false,
+       "id": "F1",
+       "kind": "STRAIGHT",
+       "stacked_over_below": true,
+       "treads_m2": 3.45
+      },
+      {
+       "below_seen": false,
+       "id": "F2",
+       "kind": "STRAIGHT",
+       "stacked_over_below": true,
+       "treads_m2": 3.45
+      }
+     ],
+     "kind": "STAIR",
+     "room": "2F-R4D1B62"
+    },
+    "GF": {
+     "face_m2": 12.475,
+     "flights": [
+      {
+       "below_seen": false,
+       "id": "F1",
+       "kind": "STRAIGHT",
+       "stacked_over_below": false,
+       "treads_m2": 2.415
+      },
+      {
+       "below_seen": false,
+       "id": "F2",
+       "kind": "STRAIGHT",
+       "stacked_over_below": false,
+       "treads_m2": 1.035
+      }
+     ],
+     "kind": "STAIR",
+     "room": "GF-R31F8AE"
+    }
+   },
+   "pierces": "1F and 2F slabs",
+   "status": "DRAWING-CONFIRMED",
+   "void": "V-04"
+  },
+  {
+   "below": "1F rooms",
+   "ceiling_below": [
+    {
+     "candidate_m2": "7.469200",
+     "dome_part_m2": "11.5808",
+     "element": "1F-RB72F22:ceiling",
+     "face_m2": "19.05",
+     "line": "L-69ebc828b4c61f4ea348",
+     "result": "DEDUCTED_ONCE"
+    },
+    {
+     "candidate_m2": "3.599800",
+     "dome_part_m2": "1.4227",
+     "element": "1F-R8BDA49:ceiling",
+     "face_m2": "5.0225",
+     "line": "L-05b1d88f06c38f962cb6",
+     "result": "DEDUCTED_ONCE"
+    },
+    {
+     "candidate_m2": "3.781500",
+     "dome_part_m2": "1.2410",
+     "element": "1F-R48AA46:ceiling",
+     "face_m2": "5.0225",
+     "line": "L-c25a76ebdaab3ec65076",
+     "result": "DEDUCTED_ONCE"
+    }
+   ],
+   "ceiling_top": {
+    "class": "HELD",
+    "line": "L-cf3e2b55648f676ffb1d",
+    "result": "DEDUCTED_ONCE"
+   },
+   "cuts_2f_faces_m2": 0.0,
+   "evidence": "2F plan layer-5 circle 12EB r 2.211092 (Q-44 A; S0 concrete dome, S1 open skylight)",
+   "lines": [
+    "L-69ebc828b4c61f4ea348",
+    "L-05b1d88f06c38f962cb6",
+    "L-c25a76ebdaab3ec65076",
+    "L-cf3e2b55648f676ffb1d"
+   ],
+   "name": "west dome opening",
+   "outline_m2": "15.359013",
+   "own_overlap_living_m2": null,
+   "pierces": "1F roof slab (2F plan, roof terrace)",
+   "status": "DRAWING-CONFIRMED",
+   "t283": {
+    "OPEN_DISC_M2": "15.359",
+    "OVER_FLOOR_PIECES_M2": "14.2445",
+    "OVER_WALLS_OR_OUTSIDE_M2": "1.1145"
+   },
+   "void": "V-05"
+  },
+  {
+   "below": "1F rooms",
+   "ceiling_below": [
+    {
+     "candidate_m2": "18.674700",
+     "dome_part_m2": "0.3418",
+     "element": "1F-R3CFCFD:ceiling",
+     "face_m2": "19.016545",
+     "line": "L-ac337bf041e8184a315c",
+     "result": "DEDUCTED_ONCE"
+    },
+    {
+     "candidate_m2": "4.277800",
+     "dome_part_m2": "0.4472",
+     "element": "1F-R48CDA5:ceiling",
+     "face_m2": "4.725",
+     "line": "L-c85ec92c5f1e50dadd11",
+     "result": "DEDUCTED_ONCE"
+    },
+    {
+     "dome_part_m2": "14.0359",
+     "element": "1F-R78C367 (inside the decor group)",
+     "own_m2": "14.066017",
+     "residual_m2": "0.030117",
+     "result": "DEDUCTED_ONCE (HELD part); 0.030 m2 named residual: own circle vs T-283's arc pieces"
+    }
+   ],
+   "ceiling_top": {
+    "class": "HELD",
+    "line": "L-f74c0fc7f78b579e6097",
+    "result": "DEDUCTED_ONCE"
+   },
+   "cuts_2f_faces_m2": 0.0,
+   "evidence": "2F plan layer-5 circle 2F33 r 2.211092 (Q-44 A; S0 concrete dome, S1 open skylight)",
+   "lines": [
+    "L-ac337bf041e8184a315c",
+    "L-c85ec92c5f1e50dadd11",
+    "L-f74c0fc7f78b579e6097"
+   ],
+   "name": "east dome opening",
+   "outline_m2": "15.359013",
+   "own_overlap_living_m2": 14.066017,
+   "pierces": "1F roof slab (2F plan, roof terrace)",
+   "status": "DRAWING-CONFIRMED",
+   "t283": {
+    "OPEN_DISC_M2": "15.359",
+    "OVER_FLOOR_PIECES_M2": "14.8249",
+    "OVER_WALLS_OR_OUTSIDE_M2": "0.5341"
+   },
+   "void": "V-06"
+  },
+  {
+   "below": "2F rooms",
+   "disc_if_opened_m2": 15.274758,
+   "evidence": "2F plan layer-2 circle 1300 r 2.205018 drawn 'above'; no opening line on any plan and no structural drawing",
+   "lines": [
+    "L-7531772e1581b35eea5f",
+    "L-1bd4ec39660768d22677"
+   ],
+   "name": "third dome (upper roof)",
+   "note": "S0 (approved design): no opening: 2F ceilings full (maid 19.350, bath 5.550) are right; under the client's S1 open skylight the 2F maid / bath / shaft ceilings would lose the overlaps listed: HELD by scenario, never 0, never applied here",
+   "outline_m2": null,
+   "over_2f_faces_m2": {
+    "2F-R1DB2D2": 11.065712,
+    "2F-R2BDCEE": 1.619003,
+    "2F-RE83BED": 1.623767
+   },
+   "pierces": "top roof slab (+13.90)",
+   "result": "NOT A DRAWN VOID (S0)",
+   "status": "HELD",
+   "void": "V-07"
+  }
+ ],
+ "rule": "R-T719-1 .. -5 (t719_rules.py)",
+ "task": "T-719",
+ "tol_m2": "0.005"
+}
