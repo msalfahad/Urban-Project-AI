@@ -133,7 +133,7 @@ and never summed into that layer; a figure that does not depend on a held datum 
   share without a roof bound, a backing line of another room / a paint line / an excluded line, a released line,
   applied twice, totals not the inputs', a stray structural change; a tiled face keeps no paint), the inputs builder
   on the committed ledgers (counts, hand figures, totals, tampered pin refused), master 1.70.0 (pending) builder /
-  checks / adverse. 49 pass.
+  checks / adverse. 43 pass.
 - L4 full suite on the task tree (c2b7f2ad, with the two later code edits landing during the run): 22,922 passed,
   678 skipped (377 private-input phases), 105 xfail, 0 failed; the determinism guard flagged only this task's own test
   file, edited while the suite ran. After the final commit: t687 + t672 + t682 + t677 + t479 + t459 + t457 + t483 +
