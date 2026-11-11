@@ -1,0 +1,571 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.70",
+ "family": {
+  "after": {
+   "blank": 0,
+   "bounded_lines": 27,
+   "high": "15.501500",
+   "low": "11.800070",
+   "lower_only_floor": "0.657400",
+   "lower_only_lines": 2
+  },
+  "before": {
+   "blank": 2,
+   "bounded_lines": 27,
+   "high": "15.501500",
+   "low": "11.672830"
+  },
+  "plate_transfer_applied_m3": "0.127240",
+  "t689_one_plate_named_m3": "0.133640",
+  "zone_allowance_m3": "0.006400"
+ },
+ "formwork": [
+  {
+   "column_line": "L-53f223b06db14ac41d47",
+   "fw_line": "L-fa037ca1982c83c29750",
+   "h_m": [
+    "3.267000",
+    "4.25"
+   ],
+   "high_m2": "7.362000",
+   "low_m2": "5.592600",
+   "member": "C9 2F 20x70",
+   "perimeter_m": [
+    "1.80",
+    "1.80"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.160000",
+    "0.160000"
+   ]
+  },
+  {
+   "column_line": "L-26f6b6f2365c72e42291",
+   "fw_line": "L-8029c283cbbe702cd468",
+   "h_m": [
+    "3.287000",
+    "4.25"
+   ],
+   "high_m2": "5.726000",
+   "low_m2": "4.349800",
+   "member": "C2 2F 20x50",
+   "perimeter_m": [
+    "1.40",
+    "1.40"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.160000",
+    "0.180000"
+   ]
+  },
+  {
+   "column_line": "L-33a9b7728781fcba12e2",
+   "fw_line": "L-5c555f96b85e393a9ea1",
+   "h_m": [
+    "3.267000",
+    "4.25"
+   ],
+   "high_m2": "5.726000",
+   "low_m2": "4.349800",
+   "member": "C2 2F 20x50",
+   "perimeter_m": [
+    "1.40",
+    "1.40"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.160000",
+    "0.160000"
+   ]
+  },
+  {
+   "column_line": "L-d79d17d14f39d5148cb8",
+   "fw_line": "L-f2f2781ade657190d7e6",
+   "h_m": [
+    "3.287000",
+    "4.25"
+   ],
+   "high_m2": "5.726000",
+   "low_m2": "4.349800",
+   "member": "C1 2F 20x50",
+   "perimeter_m": [
+    "1.40",
+    "1.40"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.160000",
+    "0.180000"
+   ]
+  },
+  {
+   "column_line": "L-541c7e565bb93ecdb78b",
+   "fw_line": "L-fcb1852ca2be8ce69eb8",
+   "h_m": [
+    "2.517000",
+    "3.50"
+   ],
+   "high_m2": "4.676000",
+   "low_m2": "2.828400",
+   "member": "PC-2F (drawn 20x40 vs text 77C P.C 20x50)",
+   "perimeter_m": [
+    "1.20",
+    "1.40"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.160000",
+    "0.160000"
+   ]
+  },
+  {
+   "column_line": "L-0ede77cfd0badc4c7d62",
+   "fw_line": "L-8c96ce0b710b93d43d60",
+   "h_m": [
+    "3.287000",
+    null
+   ],
+   "high_m2": null,
+   "low_m2": "4.349800",
+   "member": "C2 2F tank (drawn 20x50 = schedule 2ND 20x50)",
+   "perimeter_m": [
+    "1.40",
+    "1.40"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.180000",
+    "0.180000"
+   ]
+  },
+  {
+   "column_line": "L-c10e2945d582b5a03126",
+   "fw_line": "L-7f7fa7a824ff3d8969ce",
+   "h_m": [
+    "3.287000",
+    null
+   ],
+   "high_m2": null,
+   "low_m2": "4.349800",
+   "member": "C3 2F tank (drawn 25x50 vs schedule 2ND 20x50)",
+   "perimeter_m": [
+    "1.40",
+    "1.50"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.160000",
+    "0.180000"
+   ]
+  },
+  {
+   "column_line": "L-919a5749ef79759e01ca",
+   "fw_line": "L-6f83fc39933954d0e3e6",
+   "h_m": [
+    "3.287",
+    "4.25"
+   ],
+   "high_m2": "5.698000",
+   "low_m2": "4.349800",
+   "member": "C2 2F 412 (T-693)",
+   "perimeter_m": [
+    "1.40",
+    "1.40"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.180000",
+    "0.180000"
+   ]
+  },
+  {
+   "column_line": "L-9f5a647014bbf83359f9",
+   "fw_line": "L-6cba8c04e5f32a060b06",
+   "h_m": [
+    "3.294",
+    "4.05"
+   ],
+   "high_m2": "5.446000",
+   "low_m2": "3.760800",
+   "member": "C GF annex 34A (T-693)",
+   "perimeter_m": [
+    "1.20",
+    "1.40"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.160000",
+    "0.160000"
+   ]
+  },
+  {
+   "column_line": "L-c0b3340a906c2c7650f8",
+   "fw_line": "L-ddec0b3f3436cdbdbf8b",
+   "h_m": [
+    "3.294",
+    "4.05"
+   ],
+   "high_m2": "5.446000",
+   "low_m2": "3.760800",
+   "member": "C GF annex 34D (T-693)",
+   "perimeter_m": [
+    "1.20",
+    "1.40"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.160000",
+    "0.160000"
+   ]
+  },
+  {
+   "column_line": "L-e6c1c9a7feec10f64975",
+   "fw_line": "L-f9836bd6176bc3f9cc84",
+   "h_m": [
+    "3.294",
+    "4.05"
+   ],
+   "high_m2": "5.446000",
+   "low_m2": "3.760800",
+   "member": "C GF annex 356 (T-693)",
+   "perimeter_m": [
+    "1.20",
+    "1.40"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.160000",
+    "0.160000"
+   ]
+  },
+  {
+   "column_line": "L-694a75c84dd6e4bb4491",
+   "fw_line": "L-7fe93376cb482ad01860",
+   "h_m": [
+    "3.294",
+    "4.05"
+   ],
+   "high_m2": "5.835000",
+   "low_m2": "3.760800",
+   "member": "C3 GF annex 350 (T-693)",
+   "perimeter_m": [
+    "1.20",
+    "1.50"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.160000",
+    "0.160000"
+   ]
+  },
+  {
+   "column_line": "L-bc01297b1c4a4c45a15f",
+   "fw_line": "L-b35c1688058336adc729",
+   "h_m": [
+    "3.287",
+    "4.25"
+   ],
+   "high_m2": "6.544000",
+   "low_m2": "4.377800",
+   "member": "C5 2F 415 (T-693)",
+   "perimeter_m": [
+    "1.40",
+    "1.60"
+   ],
+   "state": "HELD with the column",
+   "t_m": [
+    "0.160000",
+    "0.160000"
+   ]
+  }
+ ],
+ "lines": [
+  {
+   "after": [
+    "0.457380",
+    "0.595000"
+   ],
+   "areas_m2": [
+    "0.14"
+   ],
+   "before": [
+    "0.424200",
+    "0.595000"
+   ],
+   "beside": {},
+   "class_after": "HELD (bounded)",
+   "delta_low_m3": "0.033180",
+   "governing_panel": "P7",
+   "h_lo": "3.267000",
+   "handle": "418",
+   "item": "D-39 (2F roof slab top) high end",
+   "kind": "PLATE",
+   "line_id": "L-53f223b06db14ac41d47",
+   "member": "C9 2F 20x70",
+   "panel_t_m": [
+    "0.160000",
+    "0.160000",
+    "0.160000",
+    "0.160000"
+   ],
+   "panels_touched": [
+    "P3",
+    "P4",
+    "P6",
+    "P7"
+   ],
+   "top_lo": "12.917000"
+  },
+  {
+   "after": [
+    "0.328700",
+    "0.425000"
+   ],
+   "areas_m2": [
+    "0.10"
+   ],
+   "before": [
+    "0.303000",
+    "0.425000"
+   ],
+   "beside": {},
+   "class_after": "HELD (bounded)",
+   "delta_low_m3": "0.025700",
+   "governing_panel": "P1",
+   "h_lo": "3.287000",
+   "handle": "41B",
+   "item": "D-39 (2F roof slab top) high end",
+   "kind": "PLATE",
+   "line_id": "L-26f6b6f2365c72e42291",
+   "member": "C2 2F 20x50",
+   "panel_t_m": [
+    "0.180000",
+    "0.160000",
+    "0.160000"
+   ],
+   "panels_touched": [
+    "P1",
+    "P3",
+    "P4"
+   ],
+   "top_lo": "12.937000"
+  },
+  {
+   "after": [
+    "0.326700",
+    "0.425000"
+   ],
+   "areas_m2": [
+    "0.10"
+   ],
+   "before": [
+    "0.303000",
+    "0.425000"
+   ],
+   "beside": {},
+   "class_after": "HELD (bounded)",
+   "delta_low_m3": "0.023700",
+   "governing_panel": "P6",
+   "h_lo": "3.267000",
+   "handle": "41E",
+   "item": "D-39 (2F roof slab top) high end",
+   "kind": "PLATE",
+   "line_id": "L-33a9b7728781fcba12e2",
+   "member": "C2 2F 20x50",
+   "panel_t_m": [
+    "0.160000",
+    "0.160000",
+    "0.160000"
+   ],
+   "panels_touched": [
+    "P3",
+    "P5",
+    "P6"
+   ],
+   "top_lo": "12.917000"
+  },
+  {
+   "after": [
+    "0.328700",
+    "0.425000"
+   ],
+   "areas_m2": [
+    "0.10"
+   ],
+   "before": [
+    "0.303000",
+    "0.425000"
+   ],
+   "beside": {},
+   "class_after": "HELD (bounded)",
+   "delta_low_m3": "0.025700",
+   "governing_panel": "P2",
+   "h_lo": "3.287000",
+   "handle": "421",
+   "item": "D-39 (2F roof slab top) high end",
+   "kind": "PLATE",
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "member": "C1 2F 20x50",
+   "panel_t_m": [
+    "0.180000",
+    "0.180000",
+    "0.160000",
+    "0.160000"
+   ],
+   "panels_touched": [
+    "P1",
+    "P2",
+    "P3",
+    "P5"
+   ],
+   "top_lo": "12.937000"
+  },
+  {
+   "after": [
+    "0.201360",
+    "0.350000"
+   ],
+   "areas_m2": [
+    "0.08",
+    "0.10"
+   ],
+   "before": [
+    "0.182400",
+    "0.350000"
+   ],
+   "beside": {},
+   "class_after": "HELD (bounded)",
+   "delta_low_m3": "0.018960",
+   "governing_panel": "P4",
+   "h_lo": "2.517000",
+   "handle": "778",
+   "item": "D-39 (2F roof slab top) high end",
+   "kind": "PLATE",
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "member": "PC-2F (drawn 20x40 vs text 77C P.C 20x50)",
+   "panel_t_m": [
+    "0.160000"
+   ],
+   "panels_touched": [
+    "P4"
+   ],
+   "top_lo": "12.917000"
+  },
+  {
+   "after": [
+    "0.328700",
+    null
+   ],
+   "areas_m2": [
+    "0.10"
+   ],
+   "before": [
+    null,
+    null
+   ],
+   "beside": {
+    "DOWN-STAND (top = slab top <= +13.90)": "h <= 4.250000 m",
+    "UP-STAND (B15 bottom at the soffit of P2, the only panel on its band: top <= 13.90 - t_P2 + 1.20)": "h <= 5.270000 m"
+   },
+   "class_after": "HELD LOWER_ONLY (high OPEN)",
+   "delta_low_m3": "0.328700",
+   "governing_panel": "P2",
+   "h_lo": "3.287000",
+   "handle": "40F",
+   "item": "D-44 (B15 20x120 up / down-stand)",
+   "kind": "TANK",
+   "line_id": "L-0ede77cfd0badc4c7d62",
+   "member": "C2 2F tank (drawn 20x50 = schedule 2ND 20x50)",
+   "panel_t_m": [
+    "0.180000"
+   ],
+   "panels_touched": [
+    "P2"
+   ],
+   "top_lo": "12.937000"
+  },
+  {
+   "after": [
+    "0.328700",
+    null
+   ],
+   "areas_m2": [
+    "0.10",
+    "0.125"
+   ],
+   "before": [
+    null,
+    null
+   ],
+   "beside": {
+    "DOWN-STAND (top = slab top <= +13.90)": "h <= 4.250000 m",
+    "UP-STAND (B15 bottom at the soffit of P2, the only panel on its band: top <= 13.90 - t_P2 + 1.20)": "h <= 5.270000 m"
+   },
+   "class_after": "HELD LOWER_ONLY (high OPEN)",
+   "delta_low_m3": "0.328700",
+   "governing_panel": "P2",
+   "h_lo": "3.287000",
+   "handle": "424",
+   "item": "D-44 (B15 20x120 up / down-stand); section CONFLICT D-66",
+   "kind": "TANK",
+   "line_id": "L-c10e2945d582b5a03126",
+   "member": "C3 2F tank (drawn 25x50 vs schedule 2ND 20x50)",
+   "panel_t_m": [
+    "0.180000",
+    "0.160000"
+   ],
+   "panels_touched": [
+    "P2",
+    "P5"
+   ],
+   "top_lo": "12.937000"
+  }
+ ],
+ "not_claimed": "development villa; research only, unwired; no released quantity; freelancer not used",
+ "plate": {
+  "b8_south_panels": [
+   "P1",
+   "P4"
+  ],
+  "level_convention": [
+   "LEVEL texts printed on the same drawing: +0.15, +0.30, +1.00, +9.70",
+   "+9.70 marks 3F4 / 3F6 print the lower roofs beside this outline on this plan"
+  ],
+  "s_lo_b8": "12.937000",
+  "state": "ONE_TOP_PLANE",
+  "t_by_panel": {
+   "P1": "0.180000",
+   "P2": "0.180000",
+   "P3": "0.160000",
+   "P4": "0.160000",
+   "P5": "0.160000",
+   "P6": "0.160000",
+   "P7": "0.160000"
+  },
+  "texts_inside": [
+   {
+    "kind": "THICKNESS",
+    "text": "T 18 (1A7D / 1A7E)"
+   },
+   {
+    "kind": "THICKNESS",
+    "text": "T 18 (7B3 / 7B4)"
+   }
+  ]
+ },
+ "r_t669_2_restated": {
+  "overstatement_if_b8_refused_m3": "0.006400",
+  "superseded_by": "B8 bound 12.937000 (tank panels) / 12.917000 (0.16 panels)",
+  "tank_panel_top_lo": "12.680000",
+  "typical_panel_top_lo": "12.660000",
+  "w26_panel_t": "0.18"
+ },
+ "rules": [
+  "R-T707-1 1.0.0",
+  "R-T707-2 1.0.0"
+ ],
+ "schema": "T707_COLUMN_TAIL_V1",
+ "task": "T-707"
+}
