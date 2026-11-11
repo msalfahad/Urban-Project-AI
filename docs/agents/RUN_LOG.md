@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-11T09:56Z | Verifier | STARTED | run session_01E6cPndwCerU44AFrZJZK1C | repo-attached routine | task state: READY T-699 (W1 lintel blanks), T-701 (W2 plaster/paint reconciliation) | self-check pending
 - 2026-11-11T09:31Z | Worker 1 | SUCCESS | T-699 READY (agents/task-T-699 @ 5089dc94) | 21 blank STR.CONC.LINTEL lines classed (R-T699-1): 16 AT_MOST beside (family 1.321826 m3), 2 AT_LEAST 0.084 m3 (D-GF-04/D-1F-06, junction END = method gap), 3 datum named; 18 designer items, no line moved, freelancer NOT_COMPARABLE | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-11T09:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-11T09:01Z | Worker 3 | STARTED | run session_01E6cPndhE2o4XhFmFJQLNqK | repo-attached routine | task state: none yet | self-check pending
