@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-11T17:31Z | Worker 1 | SUCCESS | T-711 READY (agents/task-T-711 @ bf9305dd) | 15 blank STR.CONC lines on V3.0.70 restated 15/15: 11 AT_LEAST (necks 0.9515, lift pit walls 1.903 = 1.100 m2 x 1.73 from p.14 + GF '+1.00' at lift, parapets 8.050942, ST-03 0.355017, ST-01 remainder 1.213429 = min of 27/28 readings), 4 blank named (tie beam D-43, MS2 riser C-ST-3, D1 waist S-9, ST-02 curved D-08); none 0, no range; freelancer lift net 1.65 < 1.903 ENGINE_RIGHT | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-11T17:20Z | Worker 1 | STARTED | run session_01E6cPnevndGkxeGDh9t8fgm | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-11 17:01 UTC | Worker 3 | STARTED | run session_01E6cPndwXGFJ5ri2QDadmAe | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-11T16:51Z | Verifier | SUCCESS | none READY (T-713 CLAIMED W2 16:41; T-704 r2, T-708, T-711, T-712, T-714..T-716 TODO per Lead 16:25) | no check, no merge, no quantity change (engine 8294c146 = candidate V3.0.70 lines e8e001de, released V2.9 + route G unchanged); scoreboard already restated 16:05 today, no cell changed; T-180: CLOSABLE LINES re-read, no CLOSABLE NOW line (CONC.GROUND blocked by ground-beam HELD part / T-712, rest BLOCKED BY CONSULTANT as named), slot not used; no owner question; ERS: not applicable (no discrepancy touched) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
