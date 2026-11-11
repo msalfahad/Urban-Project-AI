@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-11T19:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-11 19:01 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-11T18:58Z | Verifier | STARTED | run session_01E6cPnej1TbCEeJXkapQmje | repo-attached routine | task state: READY T-704 r2 (W3 integration package @77f15a9f), T-715 (W2 @e005b315) | self-check pending
 - 2026-11-11T18:54Z | Worker 2 | SUCCESS | T-715 READY e005b315 | 85 HELD stair-finish lines on V3.0.70 by id: risers 7 measured 10.338610 m2 + 2 AT_LEAST, pitch 7 = 20.234818 lm, MS1-T winder tread 1.3225 m2 (tiling: D-67 holds only the split), 15 duplicate-reading lines NOT_APPLICABLE, skirting 13 pieces x 2 forms conditional (payable 17.009 .. 23.300 lm, ORR-007); soffits >= 20.42 / 4.46 m2 | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: Drive DXF zip came back binary and 'agent_env.sh decode' refused it: 'AGENT_ENV FAIL: base64 decode failed' (no drawing read; committed merged ledgers only)
