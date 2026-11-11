@@ -3,7 +3,7 @@
 Worker 1, 2026-11-11, branch `agents/task-T-721`. Nothing wired, released or VERIFIED; no AT_MOST; no floor summed into a
 released total. ERS s.2-7; R-CONC-OWN-1; R-T660-3; R-T711-3; R-T712-1; UP-QTY-STATUS-001; R-T696-1. Rules `t721_rules.py`
 (R-T721-1 .. 3), ledger `t721_alsenan.py` -> `out/T721_LEDGER.json` + `out/T721_CENSUS.md`, tests
-`tests/t721_beam_blank_bounds` (41).
+`tests/t721_beam_blank_bounds` (43).
 
 ## What the 12 lines are (correction to the row text)
 
@@ -35,12 +35,26 @@ tested (normal + adverse), not applied.
 | East dome ring L-ab37afa1 | 1 | blank | **AT_LEAST 0.115155 m3** | R-T721-1 bar stack: depth >= 2 x 0.008 + 0.016 + 0.014 + 0.018 = **0.064 m** (cover not printed, not added); plan in-bay **1.7993 m2** (line) / own 1.7994065 (T-160 bay faces, shapely) -> least; slab stops at r_outer (T-160), opening inside r_inner, B25 / CB12 / B6 x2 own the corners: counted once |
 | Projection strips / boxes | 11 | blank | **BLANK_NAMED** | R-T721-2 / R-T660-3: no section, mark, bars or material; may be slab-cast, parapet base or non-concrete (T-319 F-T311-C2 'material UNKNOWN') -> no floor; m3 per m of depth = plan 0.435 / 0.105 / 0.569 / 0.1048 / 1.5441 / 0.5998 / 0.5997 / 1.4999 / 0.82 / 0.2698 / 0.40 = **6.9471 m2**; one-family guard (beam OR parapet / projection) |
 
-Census 12 / 12 by id: 1 AT_LEAST (0.115155 m3 beside), 11 BLANK_NAMED; none 0, none a range. Family after: 14 bounded
+Census 12 / 12 by id: 1 AT_LEAST (0.115155 m3 beside), 11 BLANK_NAMED; none 0, none a range; + 4 drawn pieces in no
+line (0.378618 m2, below). Family after: 14 bounded
 5.983229 .. 8.412710 (untouched) + 1 AT_LEAST 0.115155 + 11 blank.
 
 Not adopted for the ring (shown, never used): 0.75 scaled from the N.I.S. detail; 0.50 (B4, no mark on this ring, Q-61
 C(3)); 0.16 roof-slab thickness (ST p.8 note 18: no sheet ties the ring depth to the slab); 0.40 from reading '/20cm'
 as a layer pitch (it is a maximum spacing, not a depth).
+
+## Second finding: drawn strip plan the lines do not carry (per-unit quantity, no m3 moves)
+
+Own DXF read: the GF strip north of B20 (edges 2C6 / 2C7, 0.200 apart) and the 1F strip north of B23 (5E1 / 5E6) each
+run UNBROKEN 4.325 m from the NW corner to the B1 / next band face; a column (366 GF / 68C 1F, 0.80 wide) sits flush on
+the beam's outer face SOUTH of the strip, not in it. The lines split the strip at the column faces (3.0005 + 0.5251 /
+2.9987 + 0.5238 m), so **0.80 x 0.20 = 0.16 m2 per strip lies in no line**. The rounded NW corner square (0.20 x 0.20
+inside arcs 316 / 647, r 0.2313) lies between the north strip (starts at its east face) and the west strip (ends at its
+south face): **0.029309 m2 each, in no line**. Total **0.378618 m2** of drawn projection plan, listed beside as BLANK
+(D-26), m3 per m of depth; family plan 6.9471 -> 7.3257 m2. Cross-check against the T-139 slab ledger: every strip face
+there is EDGE_HELD with no slab m3 (no slab double count); its face partition differs (GF 1.5621 vs lines 1.5248; the
+2F 0.10 strip 0.2718 vs line 0.435, -0.1632 UNRESOLVED: stepped outline 3CA / 3C7 / 3C4, not re-measured this run).
+Proposed for the wiring (T-722 or a later round): add the 4 pieces as blank children of their members, never 0.
 
 ## Owner manual method beside the drawing-derived method
 

@@ -45,6 +45,69 @@ D28 = ("D-28 (east dome-opening ring: no mark; ST p.7 ring depth 'AS PER ARCH'; 
 RELEASED_BEAM_M3_NOTE = "released STR.CONC.BEAM lines untouched (this ledger reads, never writes, the candidate)"
 
 
+T139 = RES / "agents_t139" / "PANELS.csv"
+# Second plan reading of each strip: the T-139 slab-ledger faces classed EDGE_HELD (no slab m3 on them), mapped by the
+# beam-register id their evidence names. Members, not lines: two lines of one member share one reading.
+EDGE_FACES = {
+    "BM-GF-058": ["GF-063"],                    # strip north of B20 + rounded corner (+ the head of the west strip)
+    "BM-GF-061": ["GF-096"],                    # outer west strip (its head lies in GF-063)
+    "BM-1F-036": ["1F-027", "1F-028"],          # strip outside CB12
+    "BM-1F-033": ["1F-043"],                    # strip north of B23: east piece only in the slab ledger
+    "BM-1F-037": ["1F-069"],                    # rounded box outside CB12
+    "BAND0014": ["1F-059", "1F-079", "1F-093"],  # 1F outer west strip, three faces
+    "2F-031": ["2F-031"],                       # 0.10 strip west of B15
+}
+
+
+# Drawn strip pieces that belong to NO line (own DXF read this run; plan m2 = m3 per m of depth; blank, D-26):
+#  the outer strip runs unbroken past a column that is flush with the beam's outer face (edges continuous, no cross line
+#  at the column), but the line split it at the column faces; and the rounded NW corner square lies between the north
+#  strip (starts at the corner's east face) and the west strip (ends at the corner's south face).
+NO_LINE_PIECES = [
+    {"piece": "GF strip north of B20 in front of column 366 (55.693 .. 56.493; edges 2C6 / 2C7 unbroken)",
+     "member": "BM-GF-058", "w": "0.20", "l": "0.80"},
+    {"piece": "1F strip north of B23 in front of column 68C (16.969 .. 17.769; edges 5E1 / 5E6 unbroken)",
+     "member": "BM-1F-033", "w": "0.20", "l": "0.80"},
+    {"piece": "GF NW rounded corner square 52.493 .. 52.693 x 45.348 .. 45.548 inside arc 316 (r 0.231)",
+     "member": "BM-GF-058 / BM-GF-061", "corner": {"centre": (52.72284670, 45.31850394), "r": 0.23133436,
+                                                   "square": (52.49339480, 45.34795583, 52.69339480, 45.54795583)}},
+    {"piece": "1F NW rounded corner square 13.769 .. 13.969 x 45.348 .. 45.548 inside arc 647 (r 0.231; chamfer line 5E9 drawn inside it)",
+     "member": "BM-1F-033 / BAND0014", "corner": {"centre": (13.99844059, 45.31850394), "r": 0.23133436,
+                                                  "square": (13.76898869, 45.34795583, 13.96898869, 45.54795583)}},
+]
+
+
+def no_line_pieces():
+    from shapely.geometry import Point, box
+    out = []
+    for p in NO_LINE_PIECES:
+        if "corner" in p:
+            c = p["corner"]
+            a = D(str(round(box(*c["square"]).intersection(Point(*c["centre"]).buffer(c["r"], 4096)).area, 6)))
+        else:
+            a = D(p["w"]) * D(p["l"])
+        out.append({"piece": p["piece"], "member": p["member"], "plan_m2": str(a), "class": "BLANK_NAMED (no line)",
+                    "item": "D-26 (PROJECTION)"})
+    return out
+
+
+def edge_faces():
+    import csv
+    rows = {r["id"]: r for r in csv.DictReader(T139.open(encoding="utf-8"))}
+    out = {}
+    for member, ids in EDGE_FACES.items():
+        assert all(rows[i]["cls"] == "EDGE_HELD" and not rows[i]["m3"] for i in ids), member   # no slab m3 on them
+        out[member] = {"faces": ids, "area_m2": str(sum((D(rows[i]["area"]) for i in ids), D(0)))}
+    return out
+
+
+def member_key(element_id):
+    for k in EDGE_FACES:
+        if k in element_id:
+            return k
+    return None
+
+
 def load():
     idx = json.loads(INDEX.read_text(encoding="utf-8"))
     assert idx["candidate_version"] == "ARCH_TAKEOFF_V3.0.71", idx["candidate_version"]
@@ -71,6 +134,7 @@ def east_ring_area(dome):
 
 def build():
     idx, t660, dome = load()
+    faces = edge_faces()
     held = held_beams(idx)
     blanks = [l for l in held if l["held_low"] is None and l["held_high"] is None]
     bounded = [l for l in held if l not in blanks]
@@ -105,6 +169,9 @@ def build():
                                  f"{' (edges ' + m['edge_handles'] + ')' if m['edge_handles'] else ''}",
                        "basis": "R-T721-2 / R-T660-3", "m3_per_m_depth": b["m3_per_m_depth"], "guard": b["guard"],
                        "set_aside_not_drawn": m["trial_range_beside_not_drawn"], "before": "blank"})
+            k = member_key(l["element_id"])
+            st["slab_ledger_reading"] = (dict(member=k, **faces[k]) if k else
+                                         "no EDGE_HELD face in the T-139 slab ledger (piece with no engine band, D-26)")
         rows.append(st)
     floors = [D(r["at_least_m3"]) for r in rows if r["bound"] == "AT_LEAST"]
     census = {"lines": len(rows), "AT_LEAST": len(floors), "BLANK_NAMED": sum(r["bound"] == "BLANK_NAMED" for r in rows),
@@ -113,6 +180,18 @@ def build():
               "at_least_sum_beside_m3": str(sum(floors, D(0))),
               "blank_plan_m2": str(sum((D(r["m3_per_m_depth"]) for r in rows if r["bound"] == "BLANK_NAMED"), D(0))),
               "bounded_untouched": {"lines": len(bounded), "low_m3": str(lo), "high_m3": str(hi)}}
+    xc = {}
+    for r in rows:
+        s = r.get("slab_ledger_reading")
+        if isinstance(s, dict):
+            e = xc.setdefault(s["member"], {"lines_m2": D(0), "slab_faces_m2": D(s["area_m2"]), "faces": s["faces"]})
+            e["lines_m2"] += D(r["m3_per_m_depth"])
+    nlp = no_line_pieces()
+    census["drawn_pieces_in_no_line"] = {"pieces": nlp,
+                                         "plan_m2": str(sum((D(p["plan_m2"]) for p in nlp), D(0)))}
+    census["plan_cross_check"] = {k: {"lines_m2": str(v["lines_m2"]), "slab_faces_m2": str(v["slab_faces_m2"]),
+                                      "faces_minus_lines_m2": str(v["slab_faces_m2"] - v["lines_m2"]),
+                                      "faces": v["faces"]} for k, v in sorted(xc.items())}
     return {"schema": "T721_LEDGER_V1", "candidate": "ARCH_TAKEOFF_V3.0.71", "rules": R.RULES,
             "note": "research only; nothing wired, released or VERIFIED; floors beside, never summed into released; "
                     + RELEASED_BEAM_M3_NOTE, "census": census, "rows": rows}

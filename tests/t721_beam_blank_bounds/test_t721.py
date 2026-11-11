@@ -162,3 +162,20 @@ def test_committed_outputs_match_build():
     led = A.build()
     on_disk = json.loads(A.OUT_JSON.read_text(encoding="utf-8"))
     assert on_disk == json.loads(json.dumps(led, ensure_ascii=False))
+
+
+def test_dev_villa_strip_pieces_in_no_line_by_hand():
+    c = A.build()["census"]
+    p = c["drawn_pieces_in_no_line"]
+    assert len(p["pieces"]) == 4 and X(p["plan_m2"]) == X("0.378618")
+    front = [X(x["plan_m2"]) for x in p["pieces"] if "in front of column" in x["piece"]]
+    assert front == [X("0.16"), X("0.16")]                       # 0.80 x 0.20 each, edges unbroken past the column
+    corners = [X(x["plan_m2"]) for x in p["pieces"] if "corner" in x["piece"]]
+    assert corners[0] == corners[1] and X("0.0292") < corners[0] < X("0.0294")   # 0.04 square inside r 0.2313
+    # the B20 strip: lines 0.5998 + 0.105 + the piece 0.16 = 4.325 x 0.20 drawn (to the lines' 4 dp)
+    assert abs(X("0.5998") + X("0.105") + X("0.16") - X("4.325") * X("0.20")) <= X("0.0003")
+
+
+def test_dev_villa_slab_ledger_carries_no_m3_on_the_strips():
+    c = A.build()["census"]["plan_cross_check"]
+    assert set(c) == {"2F-031", "BAND0014", "BM-1F-033", "BM-1F-036", "BM-1F-037", "BM-GF-058", "BM-GF-061"}

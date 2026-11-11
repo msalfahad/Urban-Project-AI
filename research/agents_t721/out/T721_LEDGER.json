@@ -19,6 +19,100 @@
    "lines": 14,
    "low_m3": "5.983229",
    "high_m3": "8.412710"
+  },
+  "drawn_pieces_in_no_line": {
+   "pieces": [
+    {
+     "piece": "GF strip north of B20 in front of column 366 (55.693 .. 56.493; edges 2C6 / 2C7 unbroken)",
+     "member": "BM-GF-058",
+     "plan_m2": "0.1600",
+     "class": "BLANK_NAMED (no line)",
+     "item": "D-26 (PROJECTION)"
+    },
+    {
+     "piece": "1F strip north of B23 in front of column 68C (16.969 .. 17.769; edges 5E1 / 5E6 unbroken)",
+     "member": "BM-1F-033",
+     "plan_m2": "0.1600",
+     "class": "BLANK_NAMED (no line)",
+     "item": "D-26 (PROJECTION)"
+    },
+    {
+     "piece": "GF NW rounded corner square 52.493 .. 52.693 x 45.348 .. 45.548 inside arc 316 (r 0.231)",
+     "member": "BM-GF-058 / BM-GF-061",
+     "plan_m2": "0.029309",
+     "class": "BLANK_NAMED (no line)",
+     "item": "D-26 (PROJECTION)"
+    },
+    {
+     "piece": "1F NW rounded corner square 13.769 .. 13.969 x 45.348 .. 45.548 inside arc 647 (r 0.231; chamfer line 5E9 drawn inside it)",
+     "member": "BM-1F-033 / BAND0014",
+     "plan_m2": "0.029309",
+     "class": "BLANK_NAMED (no line)",
+     "item": "D-26 (PROJECTION)"
+    }
+   ],
+   "plan_m2": "0.378618"
+  },
+  "plan_cross_check": {
+   "2F-031": {
+    "lines_m2": "0.435000",
+    "slab_faces_m2": "0.2718",
+    "faces_minus_lines_m2": "-0.163200",
+    "faces": [
+     "2F-031"
+    ]
+   },
+   "BAND0014": {
+    "lines_m2": "1.499900",
+    "slab_faces_m2": "1.5147",
+    "faces_minus_lines_m2": "0.014800",
+    "faces": [
+     "1F-059",
+     "1F-079",
+     "1F-093"
+    ]
+   },
+   "BM-1F-033": {
+    "lines_m2": "0.704500",
+    "slab_faces_m2": "0.366",
+    "faces_minus_lines_m2": "-0.338500",
+    "faces": [
+     "1F-043"
+    ]
+   },
+   "BM-1F-036": {
+    "lines_m2": "1.544100",
+    "slab_faces_m2": "1.6178",
+    "faces_minus_lines_m2": "0.073700",
+    "faces": [
+     "1F-027",
+     "1F-028"
+    ]
+   },
+   "BM-1F-037": {
+    "lines_m2": "0.400000",
+    "slab_faces_m2": "0.3852",
+    "faces_minus_lines_m2": "-0.014800",
+    "faces": [
+     "1F-069"
+    ]
+   },
+   "BM-GF-058": {
+    "lines_m2": "0.704800",
+    "slab_faces_m2": "1.0721",
+    "faces_minus_lines_m2": "0.367300",
+    "faces": [
+     "GF-063"
+    ]
+   },
+   "BM-GF-061": {
+    "lines_m2": "0.820000",
+    "slab_faces_m2": "0.49",
+    "faces_minus_lines_m2": "-0.330000",
+    "faces": [
+     "GF-096"
+    ]
+   }
   }
  },
  "rows": [
@@ -36,7 +130,14 @@
    "m3_per_m_depth": "0.435000",
    "guard": "valued in ONE family only (beam OR parapet / projection)",
    "set_aside_not_drawn": null,
-   "before": "blank"
+   "before": "blank",
+   "slab_ledger_reading": {
+    "member": "2F-031",
+    "faces": [
+     "2F-031"
+    ],
+    "area_m2": "0.2718"
+   }
   },
   {
    "line_id": "L-331d4bbef719a7f0bbca",
@@ -55,7 +156,14 @@
     "low": "0.042000",
     "high": "0.126000"
    },
-   "before": "blank"
+   "before": "blank",
+   "slab_ledger_reading": {
+    "member": "BM-GF-058",
+    "faces": [
+     "GF-063"
+    ],
+    "area_m2": "1.0721"
+   }
   },
   {
    "line_id": "L-377cb988b2271c2e2e4d",
@@ -71,7 +179,8 @@
    "m3_per_m_depth": "0.569000",
    "guard": "valued in ONE family only (beam OR parapet / projection)",
    "set_aside_not_drawn": null,
-   "before": "blank"
+   "before": "blank",
+   "slab_ledger_reading": "no EDGE_HELD face in the T-139 slab ledger (piece with no engine band, D-26)"
   },
   {
    "line_id": "L-54e397fe7b1485b2e8fe",
@@ -90,7 +199,14 @@
     "low": "0.042000",
     "high": "0.126000"
    },
-   "before": "blank"
+   "before": "blank",
+   "slab_ledger_reading": {
+    "member": "BM-1F-033",
+    "faces": [
+     "1F-043"
+    ],
+    "area_m2": "0.366"
+   }
   },
   {
    "line_id": "L-56d278bedc8dda2837a9",
@@ -109,7 +225,15 @@
     "low": "0.676000",
     "high": "1.015000"
    },
-   "before": "blank"
+   "before": "blank",
+   "slab_ledger_reading": {
+    "member": "BM-1F-036",
+    "faces": [
+     "1F-027",
+     "1F-028"
+    ],
+    "area_m2": "1.6178"
+   }
   },
   {
    "line_id": "L-634cefe5e8a7fb458e16",
@@ -128,7 +252,14 @@
     "low": "0.240000",
     "high": "0.720000"
    },
-   "before": "blank"
+   "before": "blank",
+   "slab_ledger_reading": {
+    "member": "BM-GF-058",
+    "faces": [
+     "GF-063"
+    ],
+    "area_m2": "1.0721"
+   }
   },
   {
    "line_id": "L-67f3d325019e618328eb",
@@ -147,7 +278,14 @@
     "low": "0.240000",
     "high": "0.720000"
    },
-   "before": "blank"
+   "before": "blank",
+   "slab_ledger_reading": {
+    "member": "BM-1F-033",
+    "faces": [
+     "1F-043"
+    ],
+    "area_m2": "0.366"
+   }
   },
   {
    "line_id": "L-a9d5e7dc22013e24d691",
@@ -166,7 +304,16 @@
     "low": "0.600000",
     "high": "1.800000"
    },
-   "before": "blank"
+   "before": "blank",
+   "slab_ledger_reading": {
+    "member": "BAND0014",
+    "faces": [
+     "1F-059",
+     "1F-079",
+     "1F-093"
+    ],
+    "area_m2": "1.5147"
+   }
   },
   {
    "line_id": "L-ab37afa17f2ac5b0efd1",
@@ -209,7 +356,14 @@
    "m3_per_m_depth": "0.820000",
    "guard": "valued in ONE family only (beam OR parapet / projection)",
    "set_aside_not_drawn": null,
-   "before": "blank"
+   "before": "blank",
+   "slab_ledger_reading": {
+    "member": "BM-GF-061",
+    "faces": [
+     "GF-096"
+    ],
+    "area_m2": "0.49"
+   }
   },
   {
    "line_id": "L-bb49e831f053bd30a6ce",
@@ -228,7 +382,8 @@
     "low": "0.135000",
     "high": "0.202500"
    },
-   "before": "blank"
+   "before": "blank",
+   "slab_ledger_reading": "no EDGE_HELD face in the T-139 slab ledger (piece with no engine band, D-26)"
   },
   {
    "line_id": "L-fbb65dfd2a66a16714ac",
@@ -244,7 +399,14 @@
    "m3_per_m_depth": "0.400000",
    "guard": "valued in ONE family only (beam OR parapet / projection)",
    "set_aside_not_drawn": null,
-   "before": "blank"
+   "before": "blank",
+   "slab_ledger_reading": {
+    "member": "BM-1F-037",
+    "faces": [
+     "1F-069"
+    ],
+    "area_m2": "0.3852"
+   }
   }
  ]
 }
