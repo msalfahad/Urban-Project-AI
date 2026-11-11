@@ -332,6 +332,13 @@ def _restate(b, e, srcs):
     return A3063._fin(ln)
 
 
+def room_line(ln, engine_room, room):
+    """the room's own wall-finish line: element '<engine room>:...' or the hold-ledger form 'HL:WALL_FINISH:<room with
+    _>:PLASTER' (the room label the merged ledger names, e.g. GF-07 -> GF_07)."""
+    eid = (ln.get("location") or {}).get("element_id") or ""
+    return eid.startswith(engine_room + ":") or (bool(room) and eid == f"HL:WALL_FINISH:{room.replace('-', '_')}:PLASTER")
+
+
 def _band_line(src, b, srcs):
     from engine.source import boq_line as BL
     from engine.source import arch_v3046 as A3046
@@ -408,7 +415,7 @@ def changes_for(doc, prev):
         w = f"band {bd['engine_room']}"
         if src is None or src["item_code"] != PLASTER or src["unit"] != UNIT:
             raise InputsError(f"{w}: backing line {bd['backing_line_id']} is not a candidate FIN.PLASTER m2 line")
-        if not ((src.get("location") or {}).get("element_id") or "").startswith(bd["engine_room"] + ":"):
+        if not room_line(src, bd["engine_room"], bd["room"]):
             raise InputsError(f"{w}: backing line {bd['backing_line_id']} is not this room's line")
         if f"{bd['engine_room']}{BAND_SUFFIX}" in eids:
             raise InputsError(f"{w}: the candidate already carries this band")
@@ -492,8 +499,7 @@ def check_finishes(lines, before=None):
             out[a] += 1
         elif rec["piece"] == P_BAND:
             src = by.get(rec["backing_line_id"])
-            if src is None or src["item_code"] != PLASTER or not ((src.get("location") or {}).get("element_id")
-                                                                  or "").startswith(rec["engine_room"] + ":"):
+            if src is None or src["item_code"] != PLASTER or not room_line(src, rec["engine_room"], rec["room"]):
                 raise ValueError(f"{METHOD}: {ln['line_id']} binds no backing line of its room")
             if rec["engine_room"] in rooms or not eid.endswith(BAND_SUFFIX) or ln["item_code"] != PLASTER:
                 raise ValueError(f"{METHOD}: {ln['line_id']} a second band for {rec['engine_room']} or a bad id")

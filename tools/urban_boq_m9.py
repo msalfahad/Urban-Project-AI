@@ -4681,7 +4681,8 @@ def main(argv=None):
                    ("ARCH_TAKEOFF_V3.0.65",) +   # T-671 (the V3.0.65 candidate; a V3.0.64 run first, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.66",) +   # T-677 (the V3.0.66 candidate; a V3.0.65 run first, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.67",) +   # T-682 (the V3.0.67 candidate; a V3.0.66 run first, see cmd_arch)
-                   ("ARCH_TAKEOFF_V3.0.68",),   # T-672 (the V3.0.68 candidate; a V3.0.67 run first, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.68",) +   # T-672 (the V3.0.68 candidate; a V3.0.67 run first, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.69",),   # T-687 (the V3.0.69 candidate; a V3.0.68 run first, see cmd_arch)
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")

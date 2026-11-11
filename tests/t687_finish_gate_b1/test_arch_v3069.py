@@ -199,6 +199,15 @@ def test_adverse_inputs_refused(mut, msg):
         run(d)
 
 
+def test_hold_ledger_backing_form():
+    """a room whose backing line carries the hold-ledger element form HL:WALL_FINISH:<room>:PLASTER is its own room's
+    line (development villa GF-07); another room's HL line is not."""
+    ln = {"location": {"element_id": "HL:WALL_FINISH:GF_07:PLASTER"}}
+    assert M.room_line(ln, "GF-RC06FED", "GF-07")
+    assert not M.room_line(ln, "GF-RC06FED", "GF-08")
+    assert not M.room_line({"location": {"element_id": "HL:WALL_FINISH:GF_07:PAINT"}}, "GF-RC06FED", "GF-07")
+
+
 def test_adverse_backing_lines():
     d = doc()
     d["bands"][0]["backing_line_id"] = lid("W2", "FIN.PLASTER")                    # another room's line
