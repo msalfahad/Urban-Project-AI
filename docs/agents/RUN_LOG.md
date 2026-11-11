@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-11T07:13Z | Worker 3 | SUCCESS | T-698 READY @5b4559c0 | wiring readiness (R-T698-1): 788 rows of the B4-04/B4-05/B9-03/B7-01 ledgers mapped to V3.0.68, 0 stale; T-314 stage rebases clean; 217.2081 m2 det spatter sits on the 4 T-556 dry-plaster hosts (now HELD 262.018..262.052) -> restate in T-364; mesh 472.76 of 543.47 m ready (2F hosts HELD); B7-01 wire T-645 rows (13.36392 lm), not T-135 values | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-11T07:01Z | Worker 3 | STARTED | run session_01E6cPnac3tgqQmoy4ayCHfJ | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-11T06:52Z | Worker 2 | SUCCESS | T-697 READY agents/task-T-697 @ 995bf31b | B4-09 corner beads: merged T-405 ledger bound to V3.0.68 (168 bound, 1 open); interior 275.95 -> 285.03 m.l (stair-shaft arrises +16.38 by Q-72/T-680; GF-08 V60/V61 HELD 3.4364..3.5364 each under stair C landing, own DXF read, V61 confirmed an arris); exterior 310.6831 unchanged; lift arrises -> B6-06; F-T697-1 bead height = G1 (exposed), F-T697-3 T-314 corners double-count risk; Drive read OK (P7757 zip raw binary, base64-wrapped then decoded by the wrapper) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-11T06:52Z | Verifier | STARTED | run session_01E6cPncdZEPbJjz2ey34pSg | repo-attached routine | task state: READY T-687 (W3 Gate B V3.0.69 plaster/paint) | self-check pending
