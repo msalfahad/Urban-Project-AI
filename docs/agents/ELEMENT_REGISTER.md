@@ -46,6 +46,9 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- VOIDS B2-05 (Lead 2026-11-11 20:25; T-719 A TODO, T-720 A TODO): ELEMENT = a drawn opening in a floor plate (printed VOID / open-to-below, stair well, lift shaft, dome opening) on the floor where the plate is missing. OWNER = the register (A, worker 2 builds it). Readers: FIN.FLOOR / FIN.CEILING deduct it once on that floor only; the wall faces it exposes become double-height bands (plaster per the register ruling, R-T709-1); B2-03 gross area does NOT deduct it (gross), only names it. Concrete slab lines already own the slab outline (S); T-719 never moves a slab quantity.
+- BEAM vs SLAB INTERSECTION FOR THE BLANK BEAMS (Lead 2026-11-11 20:25; T-721 S TODO): the beam owns the part below the slab soffit only (R-CONC-OWN-1); a one-sided beam bound is built on the depth below the slab; the slab line is not touched.
+- STAIR SKIRTING MS2-L (Lead 2026-11-11 20:25; F-V715-1, T-718 A TODO): owner trade A (finish face); the run length is settled from one drawn geometry (wall vs stair side, R-T704-2); payable form stays ORR-007.
 - STAIRS: CONCRETE vs FINISH FACES (Lead 2026-11-11 16:25; T-711 S / T-715 A both TODO): ELEMENT = each flight, landing and
   winder of every stair. OWNER TRADE: the concrete body (waist, steps, landing slab) = S (STR.CONC.STAIR, T-711); the
   finish faces (tread, riser, nosing, sloped and zigzag skirting, soffit) = A (FIN.STAIR.* / FIN.MARBLE.*, T-715). Both
