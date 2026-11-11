@@ -1,0 +1,104 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.69.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.67",
+  "ARCH_TAKEOFF_V3.0.68"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.67": {
+   "lines": 5076,
+   "lines_sha256": "a29a11a96f9f08d834706e70b073433094b21d105c29e2bff2a0665fd5ce6c34"
+  },
+  "ARCH_TAKEOFF_V3.0.68": {
+   "lines": 5105,
+   "lines_sha256": "d8f6fe7114ddcc00eb286c0da518f105af3ad9ef9c76da720cafe7f7e201533b",
+   "previous": "ARCH_TAKEOFF_V3.0.67",
+   "item_codes": {
+    "MAS.GLUE.AAC": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "MAS.MORTAR.BLACK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 6,
+     "record": 0
+    },
+    "MAS.MORTAR.BLACK.LINTEL_BED": {
+     "added": 9,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MAS.MORTAR.BLACK.PERIMETER": {
+     "added": 20,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MAS.UNITS.BLACK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 6,
+     "record": 0
+    },
+    "MAS.UNITS.WHITE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    }
+   },
+   "families": {
+    "B9-01": {
+     "MAS.UNITS.BLACK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 6,
+      "record": 0
+     },
+     "MAS.UNITS.WHITE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B9-04": {
+     "MAS.GLUE.AAC": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     },
+     "MAS.MORTAR.BLACK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 6,
+      "record": 0
+     },
+     "MAS.MORTAR.BLACK.LINTEL_BED": {
+      "added": 9,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "MAS.MORTAR.BLACK.PERIMETER": {
+      "added": 20,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 45,
+   "record_only": 0
+  }
+ }
+}
