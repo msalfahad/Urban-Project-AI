@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-11 12:25; owner change of focus 2026-11-09 18:30 in force)
+
+- Candidate of record V3.0.70 / master 1.71.0 (T-693 Gate B PASS 2bfa2fbe, published 3d09bd8f; NOT RELEASED). Since 08:25 MERGED: T-697 (6ed575ad), T-695 (bbda7212), T-699 (3b0e03d4), T-701 (65083ee7), T-698 r2 (f824c4d5), T-700 (8210b549), T-702 (b90d85af), T-693 Gate B (V3.0.70). 0 REJECTED. READY 0.
+- Next: T-704 concrete round 8 (worker 3, V3.0.71: T-699 lintel one-sided bounds), then T-703 masonry round 4, then T-705's ordered list (beads, earthworks, annex plaster fix, tiles, roof WP) and T-314 / T-364 / T-363; worker 1 T-706 slab residual, T-707 column tail, T-708 earthworks r3; worker 2 T-709 paint residuals, T-710 WP r3. T-664 BLOCKED-OWNER Q-81.
+- Confidence: 12-13 Nov concrete reconciliation + scorecard HIGH (columns in; lintel bounds next; slab residual investigated); masonry limits wired by 12 Nov MEDIUM (one lintel package first; each Gate B needs about 2 Checker runs for L4); M3 architectural ledger estimate 13-14 Nov MEDIUM (beads, tiles, WP, annex plaster wiring remain); rebar ratio LOW (owner answer).
+
 ## Status (Lead, 2026-11-11 08:25; owner change of focus 2026-11-09 18:30 in force)
 
 - Candidate of record V3.0.69 / master 1.70.0 (origin 0b6d1bc2; NOT RELEASED). Since 04:20 MERGED: T-689 (66ffd421), T-691 (5e4fdc33), T-692 (8678ddfb), T-694 (510f069d), T-696 (5b51924e), T-687 Gate B (V3.0.69, 12bf5b8c, published 0b6d1bc2). 1 REJECTED (T-698, rework TODO r2). READY 2 (T-695, T-697).

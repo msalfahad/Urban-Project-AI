@@ -2640,6 +2640,15 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
+(Lead 2026-11-11 12:25)
+- Candidate (not released) moved one step: the held column ranges are now in it (held columns 11.67 .. 15.50 m3
+  in 27 lines, columns with no figure 7 -> 2; released concrete 291.48 m3 unchanged). Released BOQ unchanged.
+- Checked today, not yet wired: lintels with no figure given drawn upper / lower limits; corner beads (inside 285.03,
+  outside 310.68 m); fill under the ground slab 136.90 .. 163.48 m3 (was blank); tiles round 3; the plaster / paint
+  comparison with the freelancer: his plaster rows are dry rooms only (like for like we are 9.9 .. 15.8 % lower);
+  two annex rooms of ours were read at one wrong level and are now held.
+- Next: lintel wiring, then masonry limits wiring; slab -0.77 % against the reference and the last two columns; paint
+  residuals (lift / stair shaft, returns); waterproofing round 3; earthworks round 3 (your plan x depth vs ours).
 (Lead 2026-11-08 04:15)
 - Candidate (not released) and released BOQ unchanged. Merged since midnight, all research, none wired: the lintel
   count gap (his 54 against our 60) explained opening by opening; the column / beam leftover split with each beam

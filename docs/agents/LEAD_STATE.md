@@ -1,59 +1,62 @@
 # LEAD STATE (at most 5 KB; the Lead rewrites it at the end of every run)
 
-Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log 0b6d1bc2..`,
-`git -C .work/board log <board commit of this run>..`, `git log fd71bc30..` on main, RUN_LOG lines after 08:14Z 11 Nov,
+Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log 3d09bd8f..`,
+`git -C .work/board log <board commit of this run>..`, `git log fd71bc30..` on main, RUN_LOG lines after 12:16Z 11 Nov,
 rows changed since), then rewrite. Check every MERGED claim with `git merge-base --is-ancestor <sha> origin/...`.
 
 ## Last seen
-- engine origin head: 0b6d1bc2 (T-687 maps). Merges since bdef4f70: 66ffd421 T-689, 5e4fdc33 T-691, 8678ddfb T-692,
-  510f069d T-694, 5b51924e T-696, 12bf5b8c T-687 Gate B (V3.0.69). Candidate of record ARCH_TAKEOFF_V3.0.69 7ea65f9b /
-  master 1.70.0 (NOT RELEASED). Released V2.9 + G. No owner commit.
-- main: fd71bc30. Last Lead run: 2026-11-11 08:14 UTC (session_01E6cPneb3ySEPpCBJSrMoo1).
-- Drive: no file in the Alsenan folder modified after 16:00 10 Nov.
+- engine origin head: 3d09bd8f (T-693 maps). Merges since 0b6d1bc2: 6ed575ad T-697, bbda7212 T-695, 3b0e03d4 T-699,
+  65083ee7 T-701, f824c4d5 T-698 r2, 8210b549 T-700, b90d85af T-702, 2bfa2fbe T-693 Gate B (V3.0.70). Candidate of
+  record ARCH_TAKEOFF_V3.0.70 e8e001de / master 1.71.0 (NOT RELEASED). Released V2.9 + G. No owner commit.
+- main: fd71bc30. Last Lead run: 2026-11-11 12:16 UTC (session_01E6cPnesVSXsDpynqQ3D1Mi).
+- Verifier run 11:50 (session_01E6cPncdZEPbJjz2ey34pSg) had no final line at 12:25: check it closed (else UNCLOSED).
+- Drive: no file in the private folders modified after 16:00 10 Nov.
 
 ## Governing
 - OWNER DECISION 2026-11-09 18:30: concrete -> rebar by ratio -> masonry -> plaster / paint -> tiles -> WP ->
   earthworks -> 38 missing families (MEP last). 11-08 12:40 directive (wire / prove only; Gate B one at a time); UPM
   untouched. No OWNER_SESSION_CHANGES row after 18:30.
-- Hub order: T-693 (concrete r7, V3.0.70) -> T-703 (masonry r4, T-696 limits) -> T-314 / T-364 / T-363 per T-698 r2
-  -> T-664 if Q-81 answered. Later hub rows to open once merged: T-697 corner beads, T-695/T-700 earthworks, T-691 WP.
+- Hub order: T-704 (concrete r8 lintels, V3.0.71) -> T-703 (masonry r4) -> T-705's ordered list -> T-314 / T-364 /
+  T-363 -> T-664 if Q-81 answered.
 
-## Baseline (V3.0.69)
-- STR.CONC: released 317 = 291.476251 m3; LINTEL bounded 1.361 .. 2.050636 (24), blank 21 (T-699); COLUMN held
-  10.26435 .. 13.27025 (T-689 merged, unwired: -> 11.67283 .. 15.5015, blank 7 -> 2 via T-693); BEAM 6.023229 ..
-  8.507710 (consultant); Band HELD 5.6392 .. 11.0328 (Q-28). Slab vs ref -0.77 % UNRESOLVED.
-- B9: BLACK pcs 2,571.27625 + 698.66125 .. 702.91125, blank 12; MORTAR 2.59294 + 0.618315 .. 0.622076 m3; T-696
-  one-sided limits unwired (T-703).
-- FIN.PLASTER 388.584 + HELD 1,131.966 .. 1,300.694 + 3 blank; FIN.PAINT 217.208 + 601.645 .. 682.331, 0 blank.
-  Vs freelancer plaster >= +32.09 %, paint -31.25 .. -24.48 % -> T-701.
-- WP 58 = 53 HELD + 5 MISSING; roof 115.814 proposed (merged, unwired). Tiles 104 HELD (T-702).
-  B11 detailed 9,628.462205 kg; ratio unwired (Q-81). Verified share CONCRETE 1 / 8.
+## Baseline (V3.0.70)
+- STR.CONC: released 317 = 291.476251 m3; COLUMN held 11.67283 .. 15.5015 (27) + 2 blank (tank, D-44); keyed
+  19.7765 + 20.44523 .. 26.8475 + 6 UNKNOWN; LINTEL 1.361 .. 2.050636 (24) + 21 blank (T-699 bounds -> T-704); BEAM
+  consultant-blocked; band HELD Q-28; slab -0.77 % UNRESOLVED (T-706); plate +0.133640 NOT APPLIED (T-707).
+- B9 as V3.0.68 (T-703 pending). FIN.PLASTER 388.584 + 1,131.966 .. 1,300.694 + 3 blank; FIN.PAINT 217.208 +
+  601.645 .. 682.331. Like for like plaster -15.81 .. -9.88 %; shaft 54.00 / returns -8.19 UNRESOLVED (T-709).
+- WP 53 HELD + 5 MISSING (T-710); tiles 104 HELD (T-702 r3 merged unwired); earthworks Z2 136.901 .. 163.479 (T-708).
+  B11 detailed 9,628.462205 kg; ratio unwired (Q-81). Verified whole lines 1 (CONC.SLAB).
 
-## Live rows (08:25)
-- READY: T-695 (W1 earthworks census), T-697 (W2 corner beads), both CHECKER-RUNS. CLAIMED: none.
-- TODO: S: T-699 (W1 FIRST), T-700 (after T-695 MERGED); A: T-701 (W2 FIRST), T-702; I: T-693 (W3 FIRST), T-698 r2.
-- QUEUED: T-703, T-363, T-424, T-314, T-364, T-513, T-502, T-382, T-509. BLOCKED-OWNER: T-664 (Q-81). IN PROGRESS:
-  T-180. PAUSED: T-450 p2, T-451, T-472.
-- LANE ORDER: S (worker 1): T-699, T-700, T-363, T-424; A (worker 2): T-701, T-702, T-314, T-364, T-513, T-502;
-  I (worker 3): T-693, T-698, T-703, T-664, T-382, T-509. Queue check 19 actionable, 0 flagged, 0 stall.
+## Live rows (12:25)
+- READY: none. CLAIMED: none. TODO: I: T-704 (W3 FIRST), T-705; S: T-706 (W1 FIRST), T-707, T-708; A: T-709 (W2
+  FIRST), T-710. QUEUED: T-703 (after T-704), T-363, T-424, T-314, T-364, T-513, T-502, T-382, T-509. BLOCKED-OWNER:
+  T-664 (Q-81). IN PROGRESS: T-180. PAUSED: T-450 p2, T-451, T-472.
+- LANE ORDER: S: T-706, T-707, T-708, T-363, T-424; A: T-709, T-710, T-314, T-364, T-513, T-502; I: T-704, T-705,
+  T-703, T-664, T-382, T-509. Queue check 18 actionable, 0 flagged, 0 stall.
 
 ## Top 5 priorities
-1. T-693 column wiring Gate B (concrete first); T-697 / T-695 Gate A; SCOREBOARD v2 restated on V3.0.69.
-2. T-703 masonry limits wiring after T-693.
-3. T-701 plaster / paint vs freelancer reconciliation (material discrepancy).
-4. T-699 lintel limits; T-700 earthworks r2; T-702 tiles r3.
-5. T-698 r2 -> T-314 / T-364 / T-363 wiring; Q-81 answer -> T-664.
+1. T-704 lintel bounds Gate B; SCOREBOARD v2 restated on V3.0.70 (plaster like for like).
+2. T-703 masonry limits after T-704.
+3. T-706 slab residual; T-707 column tail (F-T689-1 ruling applied).
+4. T-709 paint residuals; T-710 WP r3; T-708 earthworks r3.
+5. T-705 wiring map -> beads / earthworks / annex plaster fix / tiles / roof WP packages; Q-81 -> T-664.
 
 ## Rules decided (keep)
-- Board check reads the newest Lead note line containing 'LANE ORDER:'; a status cell with 'after T-nnn' reads as
-  WAITING. Status word FIRST; 7 cells; NEVER a '|' inside a cell. `board check` pulls first: commit before.
-- Shared hub: one Gate B package at a time; the next may be BUILT on a Gate-B-passed task head.
+- Board check reads the newest Lead note line containing 'LANE ORDER:'; status word FIRST; 7 cells; never a '|'
+  inside a cell. `board check` pulls first: commit before.
+- Shared hub: one Gate B package at a time; the next may be BUILT on a Gate-B-passed task head. L4 may span 2
+  Checker runs (T-693 precedent).
 - MERGED / scoreboard restatement only after `engine push` success and the sha seen on origin.
-- Register rulings: 08:25 arris once (B4-09 bead lm, plaster; B4-04 faces m2 only, T-314 r3 excludes arris lm);
-  04:20 corner beads -> plaster; column tops under B8; 00:20 wet band above ceiling -> plaster.
-- Lessons PROPOSED 08:25: ledger HELD fields carried by every derived map; arris once.
+- Register rulings: arris once (B4-09 bead lm; T-314 faces m2 only); corner beads -> plaster; column tops under B8;
+  wet band above ceiling -> plaster.
+- Lead 12:25: F-T689-1 a rule conflict moves no quantity (settle by drawing); scoreboard plaster like for like, wet
+  render / bands NOT_COMPARABLE, never blended.
+- Lessons PROPOSED 12:25: like for like before calling a discrepancy (T-701); detector label is not a line field
+  (F-T693-1); rule conflict settled by drawing (F-T689-1).
 - Materials: FINISH V7, PLASTER V3; UPC-BLACK-BLOCK-001 1.1.0 (Q-80).
 
 ## Blockers / open owner items
-- Q-81 (rebar ratio). ORR-007 stair skirting payable form. Decode wrapper raw-binary (NEEDS FIXING, owner).
-  Q-34 2F top roof. Scout paused. M3 estimate 13-14 Nov. Designer items (D-xx) keep lines HELD, never block integration.
+- Q-81 (rebar ratio). ORR-007 stair skirting payable form. Decode wrapper raw-binary; L4 longer than one Checker
+  lock on 2 cores (NEEDS FIXING, owner). Q-34 2F top roof. Scout paused. M3 estimate 13-14 Nov. Designer items keep
+  lines HELD, never block integration.
