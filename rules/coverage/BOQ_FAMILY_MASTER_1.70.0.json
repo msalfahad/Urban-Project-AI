@@ -1316,7 +1316,7 @@
     "commit a703655 (T-112, verifier run 40): owner method 234.17 m2 on 4 verified dry rooms (research)",
     "engine/source/arch_v3060.py:421 changes_for(): LIST_CEILING / MOVE_FACE_DEDUCTION / NOT_APPLICABLE / MATERIAL_STATE / MEASURE_PAIR by line id, stale bindings refused; engine/source/arch_v3060.py:472 check_split_remainder(); tests/t423_split_remainder/test_arch_v3060.py:130 (villa V423 by hand)",
     "engine/source/arch_v3061.py:260 changes_for(): PLASTER_HEIGHT by line id, stale bindings and a paint change refused; engine/source/arch_v3061.py:322 check_plaster_height(); engine/source/arch_v3061.py:363 check_totals(); tests/t563_plaster_height/test_arch_v3061.py:118 (villa V563 by hand)",
-    "engine/source/arch_v3069.py:147 _restate_entry() / engine/source/arch_v3069.py:147 _restate(): held finish lines restated from the merged ledgers; engine/source/arch_v3069.py:182 band_figure(); engine/source/arch_v3069.py:463 check_finishes(); tests/t687_finish_gate_b1/test_arch_v3069.py:126 (villa K687 by hand)"
+    "engine/source/arch_v3069.py:147 _restate_entry() / engine/source/arch_v3069.py:147 _restate(): held finish lines restated from the merged ledgers; engine/source/arch_v3069.py:182 band_figure(); engine/source/arch_v3069.py:470 check_finishes(); tests/t687_finish_gate_b1/test_arch_v3069.py:126 (villa K687 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.PLASTER",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0.60 (engine/source/arch_v3060.py, opt-in candidate; pending Gate B, T-423) | ARCH_TAKEOFF_V3.0.61 (engine/source/arch_v3061.py, opt-in candidate; pending Gate B, T-563) | ARCH_TAKEOFF_V3.0.69 (engine/source/arch_v3069.py, opt-in candidate; Gate B package T-687)",
@@ -1542,7 +1542,7 @@
     "tests/t284_ceiling_integration/test_arch_v3032.py:206 test_paint_not_decor_plus_bulkhead_refused()",
     "engine/source/arch_v3041.py:533 changes_for(): a piece cut off by a prolonged zone edge becomes one room floor line, the zone lines give the parts up by id (RETIRE / SHRINK), its bed pair, skirting rows and ceiling lines in the same step; engine/source/arch_v3041.py:643 check_pieces(): floor = parts, each part given up once, bed m2 = net, skirting rows close, decor + unread = floor, paint = decor; tests/t431_zone_extent_integration/test_arch_v3041.py:113 test_hand_figures_k431() (K431 by hand)",
     "engine/source/arch_v3061.py:260 changes_for(): PLASTER_HEIGHT by line id, stale bindings and a paint change refused; engine/source/arch_v3061.py:322 check_plaster_height(); engine/source/arch_v3061.py:363 check_totals(); tests/t563_plaster_height/test_arch_v3061.py:118 (villa V563 by hand)",
-    "engine/source/arch_v3069.py:147 _restate_entry() / engine/source/arch_v3069.py:147 _restate(): held finish lines restated from the merged ledgers; engine/source/arch_v3069.py:182 band_figure(); engine/source/arch_v3069.py:463 check_finishes(); tests/t687_finish_gate_b1/test_arch_v3069.py:126 (villa K687 by hand)"
+    "engine/source/arch_v3069.py:147 _restate_entry() / engine/source/arch_v3069.py:147 _restate(): held finish lines restated from the merged ledgers; engine/source/arch_v3069.py:182 band_figure(); engine/source/arch_v3069.py:470 check_finishes(); tests/t687_finish_gate_b1/test_arch_v3069.py:126 (villa K687 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.PAINT",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0.32 (engine/source/arch_v3032.py: FIN.PAINT.CEILING, opt-in candidate; pending Gate B, T-284) | ARCH_TAKEOFF_V3.0.41 (engine/source/arch_v3041.py, opt-in candidate; pending Gate B, T-431) | ARCH_TAKEOFF_V3.0.61 (engine/source/arch_v3061.py, opt-in candidate; pending Gate B, T-563) | ARCH_TAKEOFF_V3.0.69 (engine/source/arch_v3069.py, opt-in candidate; Gate B package T-687)",
@@ -8020,7 +8020,7 @@
     "FIN.PLASTER"
    ],
    "note": "T-687 (research/agents_t687/T-687_FINISH_GATE_B1.md): FINISH_GATE_B_V1 from the merged T-676 / T-680 / T-686 / T-690 ledgers: 14 HELD FIN.PLASTER / FIN.PAINT lines bounded (6 stair-shaft storey bands, 6 annex / stair-core wet backing lines, 2 annex paint lines), the OP-009 reveal closed to 1.08 m2 (PROVISIONAL, Q-55 C), the A-1F-01 cause corrected (stays blank); 18 FIN.PLASTER wet-room band lines (ceiling -> soffit, R-T690-1) added beside their backing lines (4 PROVISIONAL, 14 HELD bounded); every other line byte-identical; the Gate B integration package",
-   "task_commit": "7f2f81b3c51259bd3a2daaf61c3efa9bac31b1fa"
+   "task_commit": "4706afc6460f97a74324c2319fe0df4991473163"
   }
  ],
  "not_a_boq_line_codes": {
