@@ -76,7 +76,7 @@ def test_open_component_blanks_parent_and_materials():
 
 
 def test_unprinted_height_at_least_only_and_materials_follow():
-    lowc = {"id": "S1", "class": "X", "end": {"upper": None, "lower": Decimal("2.40")}}
+    lowc = {"id": "S1", "class": "X", "colour": "BLACK", "end": {"upper": None, "lower": Decimal("2.40")}}
     p = M.parent_bound([lowc, comp(2, TXT_ANNEX)])
     assert p["kind"] == "AT_LEAST" and p["printed_m2"] == 2.4 and p["blocking_components"] == ["S1", "W2"]
     u = M.material_follow(p, "MAS.UNITS.BLACK", "0.15", None)
@@ -84,6 +84,11 @@ def test_unprinted_height_at_least_only_and_materials_follow():
     m = M.material_follow(p, "MAS.MORTAR.BLACK", "0.15", None)
     assert m["kind"] == "AT_LEAST" and m["printed"] == 0.02655  # 2.40 x 0.0110625 exact
     assert M.material_follow(p, "MAS.UNITS.WHITE", "0.15", None)["kind"] == "NONE"
+    # the black minimum gives the AAC glue no minimum (colour of the drawn minimum decides)
+    assert M.material_follow(p, "MAS.GLUE.AAC", "0.15", Decimal("3.5"))["kind"] == "NONE"
+    # a drawn minimum of unknown colour gives no material minimum at all
+    p2 = M.parent_bound([dict(lowc, colour=None), comp(2, TXT_ANNEX)])
+    assert p2["kind"] == "AT_LEAST" and M.material_follow(p2, "MAS.UNITS.BLACK", "0.15", None)["kind"] == "NONE"
 
 
 def test_adverse_inputs():
@@ -122,8 +127,16 @@ def test_development_villa_regression_from_merged_files():
     assert mats["MAS.MORTAR.BLACK"]["printed"] == 0.021738                # 1.965 x 0.0110625 = 0.0217378125 up
     assert mats["MAS.GLUE.AAC"]["printed"] == 6.8775
     assert mats["MAS.UNITS.WHITE"]["kind"] == "NONE" and mats["MAS.MORTAR.BLACK.PERIMETER"]["kind"] == "NONE"
+    named = p2["named_not_carried"]                                       # PART_HELD roof-datum walls: named only
+    assert {n["wall"] for n in named} == {"2F-W08", "2F-W03"} and all(n["carried_by_part_lines"] for n in named)
+    g = ps["L-0d9b9e89bb6455da475d"]                                      # GF-W22 moved in by R-T488-1 (PART_REDUCED)
+    assert g["bound"]["kind"] == "AT_LEAST" and g["bound"]["printed_m2"] == 12.9311
+    gm = {v["code"]: v for v in g["materials"].values()}
+    assert gm["MAS.UNITS.BLACK"]["printed"] == 161.63875 and gm["MAS.UNITS.BLACK"]["kind"] == "AT_LEAST"
+    assert gm["MAS.MORTAR.BLACK"]["printed"] == 0.14305                 # 0.14305029375 rounded DOWN
+    assert gm["MAS.GLUE.AAC"]["kind"] == "NONE" and gm["MAS.UNITS.WHITE"]["kind"] == "NONE"
     for lid, p in ps.items():
-        if lid != "L-246f3c09de4c6b90efe5":
+        if lid not in ("L-246f3c09de4c6b90efe5", "L-0d9b9e89bb6455da475d"):
             assert p["bound"]["kind"] == "NONE" and p["bound"]["blocking_components"]
             assert all(v["kind"] == "NONE" for v in p["materials"].values())
     gf15 = ps["L-0d9b9e89bb6455da475d"]["by_class"]

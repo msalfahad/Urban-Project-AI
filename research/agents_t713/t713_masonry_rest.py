@@ -59,8 +59,9 @@ T696 = ROOT / "research/agents_t696/out/T696_B9_CENSUS.json"
 REG = ROOT / "research/agents_t449/round3/out/CORRECTION_REGISTER_BLOCKWORK_T449.json"
 T670 = ROOT / "research/agents_t670/out/T670_MATERIALS.json"
 T482 = ROOT / "research/agents_t482/out/T482_CONDITIONS.json"
+T488 = ROOT / "research/agents_t488/summary_t488.json"
 RB = ROOT / "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json"
-PINS = {IDX70: "6c12da07", IDX68: "fc485958", T696: "6810a8ea", REG: "4f1c794c", T670: "4c58a226", T482: "ddb013b0", RB: "da38d121"}
+PINS = {IDX70: "6c12da07", IDX68: "fc485958", T696: "6810a8ea", REG: "4f1c794c", T670: "4c58a226", T482: "ddb013b0", T488: "ff6b8a6b", RB: "da38d121"}
 LINES70_SHA = "e8e001de"
 
 BLOCKS_PER_M2 = "12.5"                      # Q-75 / Q-80, 40 x 20 face, 0.15 and 0.20 (owner 2026-11-07)
@@ -154,6 +155,11 @@ def parent_bound(components):
         raise ValueError("a parent with no component: census incomplete (never 0)")
     ups = [c["end"]["upper"] for c in components]
     lows = [c["end"]["lower"] for c in components if c["end"]["lower"] is not None and c["end"]["lower"] > 0]
+    by_col = {}
+    for c in components:
+        lo = c["end"]["lower"]
+        if lo is not None and lo > 0 and c.get("colour"):
+            by_col[c["colour"]] = BR.add(by_col.get(c["colour"], 0), lo)
     blockers = [c["id"] for c in components if c["end"]["upper"] is None]
     out = {"blocking_components": blockers}
     if not blockers:
@@ -161,7 +167,8 @@ def parent_bound(components):
         out.update(kind="AT_MOST", exact_m2=str(ex), printed_m2=float(BR.round_high(ex)))
     elif lows:
         ex = BR.add(*lows)
-        out.update(kind="AT_LEAST", exact_m2=str(ex), printed_m2=float(BR.round_low(ex)))
+        out.update(kind="AT_LEAST", exact_m2=str(ex), printed_m2=float(BR.round_low(ex)),
+                   low_by_colour={k: str(v) for k, v in sorted(by_col.items())})
     else:
         out.update(kind="NONE")
     return out
@@ -190,7 +197,14 @@ def material_follow(parent, code, t, glue):
         return {"kind": "NONE", "why": "no AAC count rule (Q-60 faces beside only): HELD with the parent"}
     if code == "MAS.MORTAR.BLACK.PERIMETER":
         return {"kind": "NONE", "why": "perimeter joint needs the piece ends / soffit courses: HELD with the parent"}
-    base = BR.D(parent["exact_m2"])
+    if parent["kind"] == "AT_MOST":
+        base = BR.D(parent["exact_m2"])
+    else:            # a minimum of one colour is only the drawn minimum of the components of that colour
+        col = "WHITE" if code == "MAS.GLUE.AAC" else "BLACK"
+        lo = parent.get("low_by_colour", {}).get(col)
+        if lo is None:
+            return {"kind": "NONE", "why": f"no drawn minimum of {col} block in this parent: HELD with it"}
+        base = BR.D(lo)
     if code == "MAS.UNITS.BLACK":
         ex = BR.mul(base, BLOCKS_PER_M2)
     elif code == "MAS.MORTAR.BLACK":
@@ -210,6 +224,37 @@ def material_follow(parent, code, t, glue):
 def drop_u_overrides(t482):
     """T-482 R-MAS-WIDTH-CONFLICT-1 (Checker-merged): a DROP wall's U is the max over its D-27 readings."""
     return {w["element_id"]: w["U_m2"] for w in t482["width_conflicts"] if "U_m2" in w}
+
+
+def moved_components(t488, mas70):
+    """R-T488-1 (Checker-merged V3.0.55): a wall that LEFT a reduced part line (PART_REDUCED) is carried by the parent
+    (component, with its range and the part line's colour); a wall named on the parent whose part line is PART_HELD
+    stays carried by that part line (named only, never counted twice)."""
+    rows = t488["rows"]
+    reduced = {r["line_id"]: r for r in rows if r.get("action") == "PART_REDUCED"}
+    held = {r["line_id"] for r in rows if r.get("action") == "PART_HELD"}
+    comps, named = {}, {}
+    for r in rows:
+        if r.get("action") != "PARENT_RESTATED" or r["line_id"] not in mas70:
+            continue
+        for a in r.get("added_held", []):
+            if a["kind"] == "CONFLICT":
+                src = [x for x in reduced.values() if x["element_id"].startswith(r["element_id"] + "#")
+                       and x["line_id"] in mas70]
+                if len(src) != 1:
+                    raise SystemExit(f"{a['wall']}: no single reduced MAS.BLOCK part line for the moved wall")
+                col = "BLACK" if src[0]["element_id"].endswith("_BLACK") else "WHITE"
+                lo, hi = (BR.D(x) for x in a["range"])
+                comps.setdefault(r["line_id"], []).append({
+                    "id": f"{a['wall']}#R-T488-1", "wall": a["wall"], "state": "CONFLICT (moved from the part line)",
+                    "class": "WIDTH_CONFLICT", "cause": f"{a['item']} width conflict, bounded both ends (T-482)",
+                    "length_m": None, "held_text": a["terms"], "colour": col,
+                    "end": {"upper": hi, "lower": lo, "why": "CONFLICT range, both ends drawn"}})
+            elif a["kind"] == "ROOF_DATUM":
+                pl = [k for k, v in mas70.items() if v["element_id"].startswith(r["element_id"] + "#") and k in held]
+                named.setdefault(r["line_id"], []).append({"wall": a["wall"], "terms": a["terms"],
+                                                           "carried_by_part_lines": sorted(pl)})
+    return comps, named
 
 
 def parents(reg, mas70, u_over=None):
@@ -289,6 +334,9 @@ def build(candidate=None):
     rows = census(idx70, _load(T696), _load(T670))
     blk = {k: v for k, v in m70.items() if v["item_code"] == "MAS.BLOCK"}
     comps = parents(_load(REG), blk, drop_u_overrides(_load(T482)))
+    moved, named_only = moved_components(_load(T488), blk)
+    for lid, cs in moved.items():
+        comps[lid].extend(cs)
     rb = _load(RB)
     pres = {}
     for lid, cs in sorted(comps.items()):
@@ -313,7 +361,7 @@ def build(candidate=None):
         pres[lid] = {"host": blk[lid]["element_id"], "bound": b, "components": [
             dict(c, end={k: (str(v) if hasattr(v, "as_tuple") else v) for k, v in c["end"].items()}) for c in cs],
             "by_class": {k: dict(v, length_m=str(v["length_m"]), upper_m2=str(v["upper_m2"])) for k, v in
-                         by_cls.items()}, "materials": mats}
+                         by_cls.items()}, "materials": mats, "named_not_carried": named_only.get(lid, [])}
     missing = [k for k, v in blk.items() if v["class"] == "HELD" and "#" not in v["element_id"]
                and not v["element_id"].startswith("HOUSE_BELOW_NG") and k not in pres]
     if missing:

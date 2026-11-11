@@ -1517,7 +1517,12 @@
      "GF-W27#2",
      "GF-W30#0"
     ],
-    "kind": "NONE"
+    "kind": "AT_LEAST",
+    "exact_m2": "12.9311",
+    "printed_m2": 12.9311,
+    "low_by_colour": {
+     "BLACK": "12.9311"
+    }
    },
    "components": [
     {
@@ -1701,6 +1706,21 @@
       "lower": null,
       "why": "U at d = 0 (d >= 0); lower open"
      }
+    },
+    {
+     "id": "GF-W22#R-T488-1",
+     "wall": "GF-W22",
+     "state": "CONFLICT (moved from the part line)",
+     "class": "WIDTH_CONFLICT",
+     "cause": "D-27 width conflict, bounded both ends (T-482)",
+     "length_m": null,
+     "held_text": "GF-W22 CONFLICT [12.9311, 12.9439] m2 (D-27)",
+     "colour": "BLACK",
+     "end": {
+      "upper": "12.9439",
+      "lower": "12.9311",
+      "why": "CONFLICT range, both ends drawn"
+     }
     }
    ],
    "by_class": {
@@ -1727,35 +1747,46 @@
      "length_m": "0",
      "upper_m2": "0",
      "cause": "no wall band or member over the wall (GF-H01 / GF-H02 / GF-W37 glazed line or strip: material, base, top designer, T-228; GF-W30 0.30 stub + door: method gap, T-125 D)"
+    },
+    "WIDTH_CONFLICT": {
+     "components": 1,
+     "length_m": "0",
+     "upper_m2": "12.9439",
+     "cause": "D-27 width conflict, bounded both ends (T-482)"
     }
    },
    "materials": {
     "L-3594af8e0405355d51c4": {
      "code": "MAS.GLUE.AAC",
      "kind": "NONE",
-     "why": "parent blank: the material exists only as far as the face does"
+     "why": "no drawn minimum of WHITE block in this parent: HELD with it"
     },
     "L-39a62186ff15c48d51d5": {
      "code": "MAS.MORTAR.BLACK",
-     "kind": "NONE",
-     "why": "parent blank: the material exists only as far as the face does"
+     "kind": "AT_LEAST",
+     "exact": "0.14305029375",
+     "printed": 0.14305,
+     "why": "one-ended like its parent"
     },
     "L-a229ef96563932929757": {
      "code": "MAS.MORTAR.BLACK.PERIMETER",
      "kind": "NONE",
-     "why": "parent blank: the material exists only as far as the face does"
+     "why": "perimeter joint needs the piece ends / soffit courses: HELD with the parent"
     },
     "L-c9b56cb8453e5f67a334": {
      "code": "MAS.UNITS.WHITE",
      "kind": "NONE",
-     "why": "parent blank: the material exists only as far as the face does"
+     "why": "no AAC count rule (Q-60 faces beside only): HELD with the parent"
     },
     "L-dc7b4e20a2f54668b179": {
      "code": "MAS.UNITS.BLACK",
-     "kind": "NONE",
-     "why": "parent blank: the material exists only as far as the face does"
+     "kind": "AT_LEAST",
+     "exact": "161.63875",
+     "printed": 161.63875,
+     "why": "one-ended like its parent"
     }
-   }
+   },
+   "named_not_carried": []
   },
   "L-246f3c09de4c6b90efe5": {
    "host": "2F-WALLS:walls t=0.15",
@@ -1855,7 +1886,25 @@
      "printed": 6.8775,
      "why": "colour not split: each colour's part is at most the whole face"
     }
-   }
+   },
+   "named_not_carried": [
+    {
+     "wall": "2F-W08",
+     "terms": "2F-W08 HELD ON ROOF DATUM 9.79 - 3 x b_r m2 (D-39)",
+     "carried_by_part_lines": [
+      "L-9056ebed77701b50abfc",
+      "L-e1e06ec149b44d4f6f8a"
+     ]
+    },
+    {
+     "wall": "2F-W03",
+     "terms": "2F-W03 HELD ON ROOF DATUM 26.255 - 7.4 x b_r m2 (D-39)",
+     "carried_by_part_lines": [
+      "L-9056ebed77701b50abfc",
+      "L-e1e06ec149b44d4f6f8a"
+     ]
+    }
+   ]
   },
   "L-4165954ce4871eda30cc": {
    "host": "GF-WALLS:walls t=0.20",
@@ -2330,7 +2379,8 @@
      "kind": "NONE",
      "why": "parent blank: the material exists only as far as the face does"
     }
-   }
+   },
+   "named_not_carried": []
   },
   "L-5ffa7157a2fe483dd008": {
    "host": "1F-WALLS:walls t=0.20",
@@ -2433,7 +2483,8 @@
      "kind": "NONE",
      "why": "parent blank: the material exists only as far as the face does"
     }
-   }
+   },
+   "named_not_carried": []
   },
   "L-afe984a62285e133ec2f": {
    "host": "2F-WALLS:walls t=0.20",
@@ -2621,7 +2672,69 @@
      "kind": "NONE",
      "why": "parent blank: the material exists only as far as the face does"
     }
-   }
+   },
+   "named_not_carried": [
+    {
+     "wall": "2F-W01",
+     "terms": "2F-W01 HELD ON ROOF DATUM 6.93 - 1.8 x b_r m2 (D-39)",
+     "carried_by_part_lines": [
+      "L-76a4d8e50423fb02b914",
+      "L-a6eedf5e4adec6d07618",
+      "L-bbb82de298fecbafa11d",
+      "L-e90c9dd5ca08ffb64728"
+     ]
+    },
+    {
+     "wall": "2F-W06",
+     "terms": "2F-W06 HELD ON ROOF DATUM 15.015 - 3.9 x b_r m2 (D-39)",
+     "carried_by_part_lines": [
+      "L-76a4d8e50423fb02b914",
+      "L-a6eedf5e4adec6d07618",
+      "L-bbb82de298fecbafa11d",
+      "L-e90c9dd5ca08ffb64728"
+     ]
+    },
+    {
+     "wall": "2F-W04",
+     "terms": "2F-W04 HELD ON ROOF DATUM 21.7875 - 6.225 x b_r m2 (D-39)",
+     "carried_by_part_lines": [
+      "L-76a4d8e50423fb02b914",
+      "L-a6eedf5e4adec6d07618",
+      "L-bbb82de298fecbafa11d",
+      "L-e90c9dd5ca08ffb64728"
+     ]
+    },
+    {
+     "wall": "2F-W05",
+     "terms": "2F-W05 HELD ON ROOF DATUM 3.85 - 1 x b_r m2 (D-39)",
+     "carried_by_part_lines": [
+      "L-76a4d8e50423fb02b914",
+      "L-a6eedf5e4adec6d07618",
+      "L-bbb82de298fecbafa11d",
+      "L-e90c9dd5ca08ffb64728"
+     ]
+    },
+    {
+     "wall": "2F-W02",
+     "terms": "2F-W02 HELD ON ROOF DATUM 9.865 - 3.47 x b_r m2 (D-39)",
+     "carried_by_part_lines": [
+      "L-76a4d8e50423fb02b914",
+      "L-a6eedf5e4adec6d07618",
+      "L-bbb82de298fecbafa11d",
+      "L-e90c9dd5ca08ffb64728"
+     ]
+    },
+    {
+     "wall": "2F-W07",
+     "terms": "2F-W07 HELD ON ROOF DATUM 6.36 - 2.7 x b_r m2 (D-39)",
+     "carried_by_part_lines": [
+      "L-76a4d8e50423fb02b914",
+      "L-a6eedf5e4adec6d07618",
+      "L-bbb82de298fecbafa11d",
+      "L-e90c9dd5ca08ffb64728"
+     ]
+    }
+   ]
   },
   "L-c22e309433e7b671cf2d": {
    "host": "1F-WALLS:walls t=0.15",
@@ -2828,7 +2941,8 @@
      "kind": "NONE",
      "why": "parent blank: the material exists only as far as the face does"
     }
-   }
+   },
+   "named_not_carried": []
   },
   "L-ff06449b7f61f19c418d": {
    "host": "GF-WALLS:walls t=0.40",
@@ -2888,7 +3002,8 @@
      "kind": "NONE",
      "why": "parent blank: the material exists only as far as the face does"
     }
-   }
+   },
+   "named_not_carried": []
   }
  },
  "by_cause_item": {
@@ -2992,6 +3107,12 @@
    "blocks_parents": [],
    "components": 9,
    "length_m": "6.5080"
+  },
+  "WIDTH_CONFLICT": {
+   "cause": "D-27 width conflict, bounded both ends (T-482)",
+   "blocks_parents": [],
+   "components": 1,
+   "length_m": "0"
   }
  },
  "plate_tops": {
@@ -3027,6 +3148,7 @@
   "research/agents_t449/round3/out/CORRECTION_REGISTER_BLOCKWORK_T449.json": "4f1c794c",
   "research/agents_t670/out/T670_MATERIALS.json": "4c58a226",
   "research/agents_t482/out/T482_CONDITIONS.json": "ddb013b0",
+  "research/agents_t488/summary_t488.json": "ff6b8a6b",
   "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json": "da38d121"
  }
 }
