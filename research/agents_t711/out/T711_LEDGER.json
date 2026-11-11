@@ -1,0 +1,257 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.70",
+ "census": {
+  "at_least": 11,
+  "blank_named": 4,
+  "lines": 15
+ },
+ "families": {
+  "STR.CONC.LIFT": {
+   "at_least_lines": 1,
+   "at_least_m3": "1.903000",
+   "blank_named": 1,
+   "lines": 2
+  },
+  "STR.CONC.NECK": {
+   "at_least_lines": 4,
+   "at_least_m3": "0.951500",
+   "blank_named": 0,
+   "lines": 4
+  },
+  "STR.CONC.PARAPET": {
+   "at_least_lines": 4,
+   "at_least_m3": "8.050942",
+   "blank_named": 0,
+   "lines": 4
+  },
+  "STR.CONC.STAIR": {
+   "at_least_lines": 2,
+   "at_least_m3": "1.568446",
+   "blank_named": 3,
+   "lines": 5
+  }
+ },
+ "lines": [
+  {
+   "at_least_m3": "0.173000",
+   "at_most_m3": null,
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "element_id": "P-C:NECK:COL:SH10:C1@213452,60528",
+   "hand": "min section 0.1 m2 (D-63: plan GR vs schedule FOUNDATION) x h 1.73 = +0.95 - (-0.78) [raft top <= -1.50 + 0.17 + 0.55]",
+   "item": "D-43 / D-63 (upper end open: supplier raft depth)",
+   "line_id": "L-12f3d8b9375cac407bca",
+   "measured_net": null,
+   "member": "lift neck C1 1099 on raft FF",
+   "source": "T-657 ledger (MERGED d96a2958, Gate A PASS) restated under R-T711-1"
+  },
+  {
+   "at_least_m3": "0.173000",
+   "at_most_m3": null,
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "element_id": "P-C:NECK:COL:SH10:C2@214579,60524",
+   "hand": "min section 0.1 m2 (D-63: plan GR vs schedule FOUNDATION) x h 1.73 = +0.95 - (-0.78) [raft top <= -1.50 + 0.17 + 0.55]",
+   "item": "D-43 / D-63 (upper end open: supplier raft depth)",
+   "line_id": "L-dd6d11415961b554e906",
+   "measured_net": null,
+   "member": "lift neck C2 1093 on raft FF",
+   "source": "T-657 ledger (MERGED d96a2958, Gate A PASS) restated under R-T711-1"
+  },
+  {
+   "at_least_m3": "0.173000",
+   "at_most_m3": null,
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "element_id": "P-C:NECK:COL:SH10:C2@213395,59220",
+   "hand": "min section 0.1 m2 (D-63: plan GR vs schedule FOUNDATION) x h 1.73 = +0.95 - (-0.78) [raft top <= -1.50 + 0.17 + 0.55]",
+   "item": "D-43 / D-63 (upper end open: supplier raft depth)",
+   "line_id": "L-8eb74a02fcf5ae4465f8",
+   "measured_net": null,
+   "member": "lift neck C2 1096 on raft FF",
+   "source": "T-657 ledger (MERGED d96a2958, Gate A PASS) restated under R-T711-1"
+  },
+  {
+   "at_least_m3": "0.432500",
+   "at_most_m3": null,
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "element_id": "P-C:NECK:COL:SH10:C9@214557,59222",
+   "hand": "min section 0.25 m2 (D-63: plan GR vs schedule FOUNDATION) x h 1.73 = +0.95 - (-0.78) [raft top <= -1.50 + 0.17 + 0.55]",
+   "item": "D-43 / D-63 (upper end open: supplier raft depth)",
+   "line_id": "L-953e87a3e9d0425d404e",
+   "measured_net": null,
+   "member": "lift neck C9 1090 on raft FF",
+   "source": "T-657 ledger (MERGED d96a2958, Gate A PASS) restated under R-T711-1"
+  },
+  {
+   "at_least_m3": "1.903000",
+   "at_most_m3": null,
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "element_id": "LIFT_PIT:WALLS",
+   "freelancer": "lift walls 8.00 x 0.20 x 1.50 = 2.400 m3 incl. the column pieces 0.750 (also in his necks); his net 1.650 < drawn floor 1.903: ENGINE_RIGHT proposal on the low end (his flat 1.50 m is not a printed height; the drawn minimum is 1.73 m)",
+   "hand": "ring 1.600 - columns 0.500 = 1.1 m2 (T-394; column long sides run along the ring, so the D-63 short-side readings 0.20 / 0.30 and 0.25 / 0.30 leave the overlap 0.20 x (0.50 x 3 + 1.00) = 0.500 unchanged) x h 1.73 (top +0.95, raft top <= -0.78)",
+   "item": "D-43 (upper end open: supplier pit depth)",
+   "line_id": "L-684fcad323adc0c8a267",
+   "measured_net": null,
+   "member": "lift pit walls '20', ring net of the four lift columns, raft top -> slab-on-grade top",
+   "ownership": "starts on the raft top (footing owns the raft); columns own their pieces (necks); the ground slab L-41cfb82e (3.56054, own panels only) excludes the ring (T-401 / T-397); ground beams end on the ring's outer face: intersection once (R-CONC-OWN-1)"
+  },
+  {
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "bound": "BLANK_NAMED",
+   "class_after": "HELD",
+   "element_id": "LIFT_TIE_BEAM:GF",
+   "item": "D-43 (tie-beam section not printed; ST p.8 note 19 gives only the level 3.00 m)",
+   "line_id": "L-5ae06fda7d729d54c033",
+   "measured_net": null,
+   "member": "GF lift tie beam at +3.00 m above GF (note 19: 4.50 > 4.30)",
+   "per_unit": "5.500 m (runs 1.80 / 1.80 / 1.20 / 0.70 between column faces, T-401) x section: 5.500 m3 per m2 of section",
+   "why": "no width or depth printed on any sheet; the wall thickness '20' (p.8 note 20: walls round columns as thick as the column) does not fix a beam section"
+  },
+  {
+   "at_least_m3": "1.799103",
+   "at_most_m3": null,
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "element_id": "ANNEX_ROOF#PARAPET_RC",
+   "hand": "sum of smallest drawn tops 5.99701 m2 x upstand 0.30",
+   "item": "Q-65 C (material above the upstand) + D-39 (b_edge, roof build-up)",
+   "line_id": "L-1d419b64e8ca1af30fb4",
+   "measured_net": null,
+   "member": "ANNEX roof parapet RC above the structural slab top (7 runs)",
+   "runs_geometry_held_at_min": [
+    "SW-3"
+   ],
+   "why_no_at_most": "all-RC alternative (P2 / P3 / sections) = top x (h + b_edge), b_edge not printed"
+  },
+  {
+   "at_least_m3": "1.677886",
+   "at_most_m3": null,
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "element_id": "GF_TERRACE#PARAPET_RC",
+   "hand": "sum of smallest drawn tops 5.592956 m2 x upstand 0.30",
+   "item": "Q-65 C (material above the upstand) + D-39 (b_edge, roof build-up)",
+   "line_id": "L-b5ffc172a354375ca107",
+   "measured_net": null,
+   "member": "GF roof parapet RC above the structural slab top (3 runs)",
+   "runs_geometry_held_at_min": [
+    "SW-9"
+   ],
+   "why_no_at_most": "all-RC alternative (P2 / P3 / sections) = top x (h + b_edge), b_edge not printed"
+  },
+  {
+   "at_least_m3": "2.949453",
+   "at_most_m3": null,
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "element_id": "1F_ROOF#PARAPET_RC",
+   "hand": "sum of smallest drawn tops 9.83151 m2 x upstand 0.30",
+   "item": "Q-65 C (material above the upstand) + D-39 (b_edge, roof build-up)",
+   "line_id": "L-9a2c81164ec6499cc28c",
+   "measured_net": null,
+   "member": "1F roof parapet RC above the structural slab top (11 runs)",
+   "runs_geometry_held_at_min": [
+    "SW-2"
+   ],
+   "why_no_at_most": "all-RC alternative (P2 / P3 / sections) = top x (h + b_edge), b_edge not printed"
+  },
+  {
+   "at_least_m3": "1.624500",
+   "at_most_m3": null,
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "element_id": "2F_ROOF#PARAPET_RC",
+   "hand": "sum of smallest drawn tops 5.415 m2 x upstand 0.30",
+   "item": "Q-65 C (material above the upstand) + D-39 (b_edge, roof build-up)",
+   "line_id": "L-030538dda6a32c601c4c",
+   "measured_net": null,
+   "member": "2F roof parapet RC above the structural slab top (4 runs)",
+   "runs_geometry_held_at_min": [],
+   "why_no_at_most": "all-RC alternative (P2 / P3 / sections) = top x (h + b_edge), b_edge not printed"
+  },
+  {
+   "at_least_m3": "0.355017",
+   "at_most_m3": null,
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "element_id": "P-C:SCOPE:STAIRS:GROUND:CC-5ab1872c70:FLIGHTS",
+   "hand": "5 x 1/2 x 0.30 x 0.17 x 2.80 = 0.357000 - arrival wedge owned by the ground slab 0.001983",
+   "item": "S-9 (E1 waist / support not printed)",
+   "line_id": "L-061e18cf35a4b6b33d68",
+   "measured_net": null,
+   "member": "ST-03 entrance flight E1 (steps + waist)",
+   "source": "T-258 ST03-E1-STEPS DRAWING-CONFIRMED; T-673 / T-677 Checker AGREE 0.357"
+  },
+  {
+   "at_least_m3": "1.213429",
+   "at_most_m3": null,
+   "bound": "AT_LEAST",
+   "class_after": "HELD",
+   "componentwise_min": "1.209143",
+   "element_id": "P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS",
+   "hand": "reading A 0.863029 + 1/2 x (4.50/27) x 1.44 + 1.44 x 0.16 = 1.213429; reading B 1.054813 + 1/2 x (4.50/28) x 1.44 + 0.2304 = 1.400927 (min = A)",
+   "item": "C-ST-4 / RFI-A04 (MS1-L 10 vs 12 fronts), D-67 / C-ST-3 (winders, turn soffit)",
+   "line_id": "L-7863355dfcb68a681d2d",
+   "measured_net": null,
+   "member": "ST-01 GF -> 1F remainder (MS1-L + winder treads + turn slab)",
+   "reading_sums": {
+    "A_section_arch_27": "1.213429",
+    "B_structural_28": "1.400927"
+   },
+   "why_floor_holds": "winder treads: the sum of wedges = 1/2 r x the turn area whatever the subdivision (D-67); under a warped soffit the waist is >= 0.16 normal (>= 0.16 vertical) over >= 1.44 m2, under a flat turn slab the winders stack higher than wedges: either build is >= wedges + 1.44 x 0.16",
+   "why_no_at_most": "the turn soffit is not drawn (C-ST-3): a warped soffit's vertical thickness exceeds 0.16, so the census high 1.434413 is not a bound"
+  },
+  {
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "bound": "BLANK_NAMED",
+   "class_after": "HELD",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_TR",
+   "item": "C-ST-3 (section through the MS2 half-landing junction)",
+   "line_id": "L-659243ed9fc2831c3ae8",
+   "measured_net": null,
+   "member": "ST-01 MS2 turn riser between the half landings +7.516 / +7.684",
+   "per_unit": "0.328 m3 per m of riser thickness per m of length (depth 0.168 + 0.16), plus the 0.10 x 0.05 well end",
+   "why": "the plates (T 0.16) are 0.168 apart in level: the upper soffit +7.524 clears the lower top +7.516 by 0.008, so a junction member must exist, but its thickness and depth are drawn nowhere (step line 5E2 only)"
+  },
+  {
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "bound": "BLANK_NAMED",
+   "class_after": "HELD",
+   "element_id": "DG5:ST-01:LOBBY",
+   "item": "S-9 (D1 waist thickness / support)",
+   "line_id": "L-821032bc04a0b0d02133",
+   "measured_net": null,
+   "member": "ST-01b lobby D1 waist / support under the 4 drawn steps (+0.30 -> +1.00, on grade)",
+   "per_unit": "about 1.15 x 0.90 = 1.035 m2 plan per m of vertical waist thickness, if a waist is built",
+   "why": "the steps (0.100286, released elsewhere) stand on the ground-slab zone: a waist may not exist (steps on compacted fill) or be any thickness; an AT_LEAST would be 0, an AT_MOST is unbounded"
+  },
+  {
+   "at_least_m3": null,
+   "at_most_m3": null,
+   "bound": "BLANK_NAMED",
+   "class_after": "HELD",
+   "element_id": "P-C:STAIRS:GROUND:SITE-4df8fcd99d130701",
+   "item": "D-08 / owner Q-50 / Q-51 (curved parts HELD), C-ST-3",
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "measured_net": null,
+   "member": "ST-02 round stair remainder (12 curved treads, helicoid soffit, CA, 2CC)",
+   "per_unit": "wedges 1/2 x r x 4.1077 m2 = 2.05385 m3 per m of riser (0.330 at r 0.1607, information only) + helicoid waist + CA 0 .. 0.09",
+   "why": "the curved part's rise is printed nowhere (no section cuts ST-02; the uniform 4.50 / 28 is a reconstruction, ASSUMED - OWNER-APPROVED for the straight flights only) and the helicoid soffit and the CA level are not drawn"
+  }
+ ],
+ "not_claimed": "nothing wired, released or VERIFIED; no AT_MOST; never summed into a total",
+ "rules": {
+  "R-T711-1": "1.0.0",
+  "R-T711-2": "1.0.0",
+  "R-T711-3": "1.0.0"
+ },
+ "schema": "T711_LEDGER_V1",
+ "t673_ledger_sha_input": "research/agents_t673/out/T673_LEDGER.json (causes of the 5 stair lines, read)",
+ "task": "T-711"
+}
