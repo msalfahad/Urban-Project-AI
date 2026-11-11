@@ -1,0 +1,339 @@
+{
+ "schema": "URBAN_T706_STATEMENT_V1",
+ "rules": [
+  "R-T706-1 1.0.0",
+  "R-T706-2 1.0.0",
+  "R-T706-3 1.0.0"
+ ],
+ "candidate": "ARCH_TAKEOFF_V3.0.70",
+ "key": "CONC.SLAB",
+ "reference_m3": "59.817400",
+ "engine_released_m3": "60.280155",
+ "key_residual_m3": "-0.462755",
+ "key_residual_pct": "-0.77",
+ "storey_terms_sum_m3": "-0.462755",
+ "storeys": {
+  "GF": {
+   "released_lines": 33,
+   "released_m3": "33.069522",
+   "released_engine_face_m2": 206.684809,
+   "released_own_m2": 206.684676,
+   "checked": 33,
+   "geometry_claim_allowed": true,
+   "own_minus_engine_face_m2": "-0.000133",
+   "max_abs_panel_diff_m2": "0.000222",
+   "zones": [
+    {
+     "t_m": "0.16",
+     "panels": 33,
+     "engine_m2": "206.684512",
+     "own_m2": "206.684676",
+     "own_minus_engine_m2": "0.000164",
+     "reference_m2": "207.000000",
+     "resolution_m2": "1",
+     "ref_minus_engine_m2": "0.315488",
+     "term_m3": "0.050478",
+     "status": "ROUNDING_ONLY"
+    }
+   ],
+   "zone_terms_sum_m3": "0.050478",
+   "reference_m3": "33.120000",
+   "difference_m3": "0.050478",
+   "transfers": 0,
+   "status": "ROUNDING_ONLY",
+   "excluded": [
+    {
+     "line_id": "L-00e79bf1cdb584521505",
+     "engine_face_m2": 0.127841,
+     "own_face_m2": 0.127841,
+     "inscribed_width_m": 0.2,
+     "class": "MEMBER_STRIP"
+    },
+    {
+     "line_id": "L-8b2a9850c1641f342be7",
+     "engine_face_m2": 0.74,
+     "own_face_m2": 0.74,
+     "inscribed_width_m": 0.2,
+     "class": "MEMBER_STRIP"
+    },
+    {
+     "line_id": "L-8ffe95ad42d5967263a4",
+     "engine_face_m2": 0.123648,
+     "own_face_m2": 0.123648,
+     "inscribed_width_m": 0.2,
+     "class": "MEMBER_STRIP"
+    },
+    {
+     "line_id": "L-901bcd0b3b31e3e128d5",
+     "engine_face_m2": 4.792612,
+     "own_face_m2": 4.792612,
+     "inscribed_width_m": 0.9,
+     "class": "MEMBER_STRIP"
+    },
+    {
+     "line_id": "L-c1807dde80fa21936c24",
+     "engine_face_m2": 0.08663,
+     "own_face_m2": 0.082274,
+     "inscribed_width_m": 0.0769,
+     "class": "NARROW_BAND"
+    },
+    {
+     "line_id": "L-f7d4ebb244caf3d1b1d9",
+     "engine_face_m2": 0.201339,
+     "own_face_m2": 0.520489,
+     "inscribed_width_m": 0.2008,
+     "class": "MEMBER_STRIP"
+    },
+    {
+     "line_id": "L-fddb4eda34df524271e6",
+     "engine_face_m2": 0.489955,
+     "own_face_m2": 0.489955,
+     "inscribed_width_m": 0.2,
+     "class": "MEMBER_STRIP"
+    }
+   ],
+   "unowned_faces_by_class": {
+    "MEMBER_STRIP": 49,
+    "OPENING": 3,
+    "STAIR_ZONE": 2
+   },
+   "radial_rings": [],
+   "closure": {
+    "rule": "R-T706-2 1.0.0",
+    "closed": true,
+    "unresolved": []
+   }
+  },
+  "1F": {
+   "released_lines": 22,
+   "released_m3": "19.756333",
+   "released_engine_face_m2": 123.477086,
+   "released_own_m2": 123.478724,
+   "checked": 22,
+   "geometry_claim_allowed": true,
+   "own_minus_engine_face_m2": "0.001638",
+   "max_abs_panel_diff_m2": "0.000227",
+   "zones": [
+    {
+     "t_m": "0.16",
+     "panels": 22,
+     "engine_m2": "123.477081",
+     "own_m2": "123.478724",
+     "own_minus_engine_m2": "0.001643",
+     "reference_m2": "120.000000",
+     "resolution_m2": "1",
+     "ref_minus_engine_m2": "-3.477081",
+     "term_m3": "-0.556333",
+     "status": "UNRESOLVED_AMBIGUOUS"
+    }
+   ],
+   "zone_terms_sum_m3": "-0.556333",
+   "reference_m3": "19.200000",
+   "difference_m3": "-0.556333",
+   "transfers": 0,
+   "status": "UNRESOLVED_AMBIGUOUS",
+   "excluded": [
+    {
+     "line_id": "L-2f6e26eb87c794452551",
+     "engine_face_m2": 0.099261,
+     "own_face_m2": 0.079115,
+     "inscribed_width_m": 0.0766,
+     "class": "NARROW_BAND"
+    },
+    {
+     "line_id": "L-8843faaf6b256bc4b840",
+     "engine_face_m2": 0.890124,
+     "own_face_m2": 0.890084,
+     "inscribed_width_m": 0.3,
+     "class": "MEMBER_STRIP"
+    },
+    {
+     "line_id": "L-916cf0fe632402045078",
+     "engine_face_m2": 0.202971,
+     "own_face_m2": 0.202971,
+     "inscribed_width_m": 0.05,
+     "class": "NARROW_BAND"
+    },
+    {
+     "line_id": "L-ee20c11a155ca588335f",
+     "engine_face_m2": 0.08663,
+     "own_face_m2": 0.082274,
+     "inscribed_width_m": 0.0769,
+     "class": "NARROW_BAND"
+    }
+   ],
+   "unowned_faces_by_class": {
+    "DOME_OPENING": 2,
+    "MEMBER_STRIP": 41,
+    "OPENING": 2,
+    "STAIR_ZONE": 1
+   },
+   "radial_rings": [],
+   "closure": {
+    "rule": "R-T706-2 1.0.0",
+    "closed": true,
+    "unresolved": []
+   }
+  },
+  "2F": {
+   "released_lines": 7,
+   "released_m3": "7.454300",
+   "released_engine_face_m2": 44.885,
+   "released_own_m2": 44.885,
+   "checked": 7,
+   "geometry_claim_allowed": true,
+   "own_minus_engine_face_m2": "0.000000",
+   "max_abs_panel_diff_m2": "0.000000",
+   "zones": [
+    {
+     "t_m": "0.16",
+     "panels": 5,
+     "engine_m2": "31.250000",
+     "own_m2": "31.250000",
+     "own_minus_engine_m2": "0.000000",
+     "reference_m2": "31.840000",
+     "resolution_m2": "0.01",
+     "ref_minus_engine_m2": "0.590000",
+     "term_m3": "0.094400",
+     "status": "REFERENCE_LARGER"
+    },
+    {
+     "t_m": "0.18",
+     "panels": 2,
+     "engine_m2": "13.635000",
+     "own_m2": "13.635000",
+     "own_minus_engine_m2": "0.000000",
+     "reference_m2": "13.350000",
+     "resolution_m2": "0.01",
+     "ref_minus_engine_m2": "-0.285000",
+     "term_m3": "-0.051300",
+     "status": "NOT_WHOLE_PANELS"
+    }
+   ],
+   "zone_terms_sum_m3": "0.043100",
+   "reference_m3": "7.497400",
+   "difference_m3": "0.043100",
+   "transfers": 0,
+   "status": "NOT_WHOLE_PANELS",
+   "excluded": [
+    {
+     "line_id": "L-05a66015a9196923301d",
+     "engine_face_m2": 0.08663,
+     "own_face_m2": 0.082274,
+     "inscribed_width_m": 0.0769,
+     "class": "NARROW_BAND"
+    },
+    {
+     "line_id": "L-378a77a134c2799f98f2",
+     "engine_face_m2": 0.271761,
+     "own_face_m2": 0.251615,
+     "inscribed_width_m": 0.0771,
+     "class": "NARROW_BAND"
+    }
+   ],
+   "unowned_faces_by_class": {
+    "DOME_SEGMENT": 24,
+    "MEMBER_STRIP": 17
+   },
+   "radial_rings": [
+    {
+     "segments": 20,
+     "segment_m2": 0.7679,
+     "radius_m": 1.468
+    },
+    {
+     "segments": 20,
+     "segment_m2": 0.7679,
+     "radius_m": 1.468
+    }
+   ],
+   "closure": {
+    "rule": "R-T706-2 1.0.0",
+    "closed": true,
+    "unresolved": []
+   }
+  }
+ },
+ "causes": {
+  "GF": {
+   "term_m3": "0.050478",
+   "cause": "REFERENCE ROUNDING: his typed 207 m2 is read at +-0.5 m2 (+-0.080 m3); engine net 206.684513 m2 lies 0.315488 m2 below it, inside the band; own re-measure 33 / 33 panels CHECKED",
+   "status": "CLOSED_WITHIN_REFERENCE_RESOLUTION",
+   "verdict": "ENGINE_RIGHT"
+  },
+  "1F": {
+   "term_m3": "-0.556333",
+   "cause": "T-688 (merged): rounding -0.080 .. +0.080 + scope -0.636333 .. -0.476333 (2.977 .. 3.977 m2 of drawn panels not in his 120; 62 subsets fit, none named)",
+   "status": "UNRESOLVED_AMBIGUOUS (reference composition)",
+   "verdict": "ENGINE_RIGHT on geometry"
+  },
+  "2F": {
+   "term_m3": "0.043100",
+   "cause": "THICKNESS ZONES: 0.16 zone +0.59 m2 x 0.16 = +0.094400; 0.18 zone -0.285 m2 x 0.18 = -0.051300; 'T 18' printed inside exactly the two 0.18 panels; no whole-panel subset or zone transfer fits either typed figure",
+   "status": "NOT_WHOLE_PANELS (reference dimensions; residual named)",
+   "verdict": "ENGINE_RIGHT on geometry and zones"
+  }
+ },
+ "beam_slip": {
+  "omitted_rows": [
+   59
+  ],
+  "doubled_rows": [],
+  "gap_m3": "-0.128000",
+  "carry": {
+   "row": 79,
+   "range": [
+    59,
+    78
+   ],
+   "value": "17.155000"
+  },
+  "total": {
+   "row": 82,
+   "range": [
+    60,
+    78
+   ],
+   "value": "17.027000"
+  },
+  "members": {
+   "59": {
+    "mark": "B1",
+    "storey": "1F",
+    "section": "0.20 x 0.40",
+    "length_m": "1.60",
+    "engine": "OWNED"
+   }
+  },
+  "engine_b1_1f_t545_terms": {
+   "floor": "1F",
+   "mark": "B1",
+   "THROUGH_SUPPORT": "-0.118312"
+  },
+  "released_1f_beam_lines_unchanged_since_v3_0_58": true,
+  "explanation": [
+   {
+    "row": 59,
+    "status": "REFERENCE_ARITHMETIC",
+    "mark": "B1",
+    "storey": "1F",
+    "section": "0.20 x 0.40",
+    "engine": "OWNED"
+   }
+  ],
+  "explained": true,
+  "engine_quantity_moved_m3": "0.000000"
+ },
+ "member_sections_m": [
+  "0.20",
+  "0.25",
+  "0.30",
+  "0.35",
+  "0.40",
+  "0.45",
+  "0.50",
+  "0.55",
+  "0.65",
+  "0.90"
+ ]
+}
