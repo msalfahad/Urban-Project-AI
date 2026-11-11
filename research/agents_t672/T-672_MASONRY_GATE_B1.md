@@ -69,12 +69,12 @@ carried as their own lines so a reviewer can price or drop them by line.
 Drive 'Alsenan chalet project' copies 'P7757_DXF_COMPRESSED.zip' (inner P7757.dxf ab54dd55) and 'ST7757 dxf.dxf'
 (9f9d1179), decoded into the private folder only: own fresh t167 `v304_run.py` (27 min) -> `research/agents_t672/v3068_run.py`
 (exit 0): every earlier version re-run and asserted, **V3_0_67 a29a11a9 (asserted = T-682 run of record)** ->
-**V3_0_68 d8f6fe71**, 5,105 lines; replaced 16 (12 restated + 4 not applicable), added 29 (20 perimeter + 9 bed),
+**V3_0_68 d1de50cb**, 5,105 lines; replaced 16 (12 restated + 4 not applicable), added 29 (20 perimeter + 9 bed),
 outside 5,060 byte-identical (asserted). Diff vs V3.0.67: CHANGED 16, ADDED 29, SAME 5,060. vs released V2.9 + route G:
 QUANTITY_DIFFERS 1,049 and SAME_QUANTITY 543 unchanged, NOT_IN_RELEASED 3,484 -> 3,513 (+29 new lines): no released
 line moved. The 1.0.0 reproduction: 74 / 74 material lines byte-identical. Census `t479_registry_census.py` (unchanged;
 verdicts V3.0.44 b3b08dd7, downgrades 81732639) on V3_0_67 reproduces `research/agents_t682/out/LINE_INDEX_V3_0_67.json`
-byte for byte; on V3_0_68 -> `out/LINE_INDEX_V3_0_68.json` (2b790b93), issues {}, complete map, 0 stale blocks (registry
+byte for byte; on V3_0_68 -> `out/LINE_INDEX_V3_0_68.json` (fc485958), issues {}, complete map, 0 stale blocks (registry
 1.69.0 pending). `t672_package_families.py` (T-483 attribute unchanged, chain 67 -> 68): B9-01 UNITS.BLACK 6 changed /
 UNITS.WHITE 2; B9-04 MORTAR.BLACK 6 / GLUE.AAC 2 changed, PERIMETER +20, LINTEL_BED +9. Summary `summary_t672.json`.
 
@@ -136,4 +136,17 @@ measured wall by wall gets its own code bound by id to the line it adds to (ever
 
 ## 7. Validation
 
-VALIDATION_PLACEHOLDER
+- L1 / L2: `tests/t672_masonry_gate_b1` (hand villa K672, not the development villa: a 0.20 m black host with two
+  REQUIRED lintels (EXACT and deficit bed), a 0.15 m black host with a HELD lintel face (restated 96 .. 100 pcs /
+  0.08496 .. 0.0885 m3, bed HELD 0 .. 0.80 f), a white host left alone, a colour-less below-ground host retired to
+  NOT_APPLICABLE; mirror order; adverse: a candidate line the old rulebook does not reproduce, a T-670 figure that
+  differs, a typed rate, N/A on a coloured host, a valued perimeter on a blank panel (never 0), a missing perimeter
+  entry, an envelope that is not the ledger's, a measured bed under a HELD lintel, a bed figure not recomputed, applied
+  twice, a millimetre face), the inputs builder on the committed ledgers (counts, hand figures, totals 0.176727 ..
+  0.188035 and + 0.017896 + 0.006943, bearings 4.40 .. 5.48992 m, tampered pin refused), master 1.69.0 (pending).
+- L4 full suite on a8f7cfcd (34 min): 22,779 passed, 685 skipped (377 private-input phases), 105 xfail, 3 FAILED, all
+  three this package's own: maps not rebuilt yet; `t457` reads every '*BED*' item code in the candidate closure as a
+  wall fixing bed (the bed code is renamed MAS.MORTAR.BLACK.LINTEL_BEARING: a lintel bearing bed joint, not a tile bed);
+  `t459` candidate binding not rebuilt for the new module (rebuilt by its tool, one new module with no binding, exactly
+  as T-682). All three re-run GREEN on the final commit together with the importer folders listed below.
+- Freeze check 0 differing; codemap check stale none; the chain run re-asserts every earlier version's sha.

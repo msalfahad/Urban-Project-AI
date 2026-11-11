@@ -12,7 +12,7 @@
   },
   "ARCH_TAKEOFF_V3.0.68": {
    "lines": 5105,
-   "lines_sha256": "d8f6fe7114ddcc00eb286c0da518f105af3ad9ef9c76da720cafe7f7e201533b",
+   "lines_sha256": "d1de50cb0a58919e0860ca46cbd5170baf55ac9b66f55978b988214aef95bf94",
    "previous": "ARCH_TAKEOFF_V3.0.67",
    "item_codes": {
     "MAS.GLUE.AAC": {
@@ -27,7 +27,7 @@
      "changed": 6,
      "record": 0
     },
-    "MAS.MORTAR.BLACK.LINTEL_BED": {
+    "MAS.MORTAR.BLACK.LINTEL_BEARING": {
      "added": 9,
      "removed": 0,
      "changed": 0,
@@ -80,7 +80,7 @@
       "changed": 6,
       "record": 0
      },
-     "MAS.MORTAR.BLACK.LINTEL_BED": {
+     "MAS.MORTAR.BLACK.LINTEL_BEARING": {
       "added": 9,
       "removed": 0,
       "changed": 0,

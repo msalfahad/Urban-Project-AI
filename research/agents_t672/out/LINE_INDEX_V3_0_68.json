@@ -122,7 +122,7 @@
  ],
  "inputs": {
   "downgrades": "817326399e5b9ffff1d727b9599dff46d1f917c930e759c37e1d5721f0f85766",
-  "lines": "d8f6fe7114ddcc00eb286c0da518f105af3ad9ef9c76da720cafe7f7e201533b",
+  "lines": "d1de50cb0a58919e0860ca46cbd5170baf55ac9b66f55978b988214aef95bf94",
   "verdicts": "b3b08dd767c82e3019ad4e72590ee9ff130cd44f104e198826c0f47f98974922"
  },
  "lines": [
@@ -6068,6 +6068,18 @@
   },
   {
    "binding": null,
+   "class": "RELEASED",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-02",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-1a5694500bafb7eb0402",
+   "measured_net": 0.001111,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "HELD",
    "element_id": "HL:BEAM_STEEL:BM-GF-048:R055:TOP_ENDS_NOTE_9_40D_70D",
    "held_high": 31.858,
@@ -9174,18 +9186,6 @@
   {
    "binding": null,
    "class": "HELD",
-   "element_id": "MATERIAL:LINTEL_BED:D-GF-10",
-   "held_high": 0.000907,
-   "held_low": 0.000556,
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-25f45bfdc5a89d36ee07",
-   "measured_net": null,
-   "unbound_records": [],
-   "unit": "m3"
-  },
-  {
-   "binding": null,
-   "class": "HELD",
    "element_id": "HL:BEAM_STEEL:BM-GF-041:R045:S2of3:TOP_CORNER_ENDS_NOTE_9_40D_70D",
    "held_high": 4.48,
    "held_low": 2.56,
@@ -9494,18 +9494,6 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
-  },
-  {
-   "binding": null,
-   "class": "HELD",
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-04",
-   "held_high": 0.000667,
-   "held_low": 0.000556,
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-274454917a4f78eb74a6",
-   "measured_net": null,
-   "unbound_records": [],
-   "unit": "m3"
   },
   {
    "binding": null,
@@ -14186,18 +14174,6 @@
    "held_low": null,
    "item_code": "STR.CONC.BEAM",
    "line_id": "L-3a54b132ba356e2c33b2",
-   "measured_net": null,
-   "unbound_records": [],
-   "unit": "m3"
-  },
-  {
-   "binding": null,
-   "class": "HELD",
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-10",
-   "held_high": 0.000916,
-   "held_low": 0.000556,
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-3a9170dd9b3234b28a54",
    "measured_net": null,
    "unbound_records": [],
    "unit": "m3"
@@ -22109,6 +22085,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-03",
+   "held_high": 0.000887,
+   "held_low": 0.000556,
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-5b8280807d1cabdbe720",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "EXCLUDED",
    "element_id": "2F-RE83BED:paint above wall tile",
    "held_high": null,
@@ -22250,6 +22238,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "m2"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-08",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-5c796f67253fa62c83a3",
+   "measured_net": 0.001111,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -25031,6 +25031,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-09",
+   "held_high": 0.001111,
+   "held_low": 0.0,
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-686a15f1996005bed645",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -32606,18 +32618,6 @@
   },
   {
    "binding": null,
-   "class": "RELEASED",
-   "element_id": "MATERIAL:LINTEL_BED:D-GF-13",
-   "held_high": null,
-   "held_low": null,
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-885feb3034e49dcfec17",
-   "measured_net": 0.001111,
-   "unbound_records": [],
-   "unit": "m3"
-  },
-  {
-   "binding": null,
    "class": "HELD",
    "element_id": "HL:SLAB_STEEL:SLAB:GF-016:BOTTOM_MESH:Y",
    "held_high": 11.48,
@@ -33842,18 +33842,6 @@
   },
   {
    "binding": null,
-   "class": "RELEASED",
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-02",
-   "held_high": null,
-   "held_low": null,
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-8cbc05fa23ccd7c70fd0",
-   "measured_net": 0.001111,
-   "unbound_records": [],
-   "unit": "m3"
-  },
-  {
-   "binding": null,
    "class": "HELD",
    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-141-7DA-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
    "held_high": 21.342,
@@ -34152,6 +34140,18 @@
    "item_code": "STR.CONC.COLUMN",
    "line_id": "L-8df3988123e987fa87f9",
    "measured_net": 0.675,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-GF-13",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-8e1664a6a6aee81d2fda",
+   "measured_net": 0.001111,
    "unbound_records": [],
    "unit": "m3"
   },
@@ -37847,18 +37847,6 @@
    "measured_net": 1.0,
    "unbound_records": [],
    "unit": "pcs"
-  },
-  {
-   "binding": null,
-   "class": "RELEASED",
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-08",
-   "held_high": null,
-   "held_low": null,
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-9d6bd961d25def2b3771",
-   "measured_net": 0.001111,
-   "unbound_records": [],
-   "unit": "m3"
   },
   {
    "binding": null,
@@ -41774,6 +41762,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-07",
+   "held_high": 0.000916,
+   "held_low": 0.000556,
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-ae1d4bef41f3c27ec8ad",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "RELEASED",
    "element_id": "FW:L-2416e65f053a14199cfc:FACES:CALCULATED:-:G",
    "held_high": null,
@@ -42533,18 +42533,6 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "m2"
-  },
-  {
-   "binding": null,
-   "class": "HELD",
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-09",
-   "held_high": 0.001111,
-   "held_low": 0.0,
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-b197eafae66391b21e63",
-   "measured_net": null,
-   "unbound_records": [],
-   "unit": "m3"
   },
   {
    "binding": null,
@@ -44360,6 +44348,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-10",
+   "held_high": 0.000916,
+   "held_low": 0.000556,
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-ba28032b9e9df2926781",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -52977,6 +52977,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-GF-10",
+   "held_high": 0.000907,
+   "held_low": 0.000556,
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-dc668eb5431a839c451e",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:COLUMN_STEEL:COL-1F-31:BAR_ENDS_STOPPING_AT_THIS_ROOF",
    "held_high": null,
    "held_low": null,
@@ -55388,6 +55400,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-04",
+   "held_high": 0.000667,
+   "held_low": 0.000556,
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-e5cefb37cd4e0ab67fc5",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "RELEASED",
    "element_id": "GF-REVEAL-W07:OUT:JAMBS_HEAD:VALUED",
    "held_high": null,
@@ -55724,18 +55748,6 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "m2"
-  },
-  {
-   "binding": null,
-   "class": "HELD",
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-03",
-   "held_high": 0.000887,
-   "held_low": 0.000556,
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-e713fdfec0deacffc3db",
-   "measured_net": null,
-   "unbound_records": [],
-   "unit": "m3"
   },
   {
    "binding": null,
@@ -59528,18 +59540,6 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
-  },
-  {
-   "binding": null,
-   "class": "HELD",
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-07",
-   "held_high": 0.000916,
-   "held_low": 0.000556,
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-f778561af33c2a33612f",
-   "measured_net": null,
-   "unbound_records": [],
-   "unit": "m3"
   },
   {
    "binding": null,

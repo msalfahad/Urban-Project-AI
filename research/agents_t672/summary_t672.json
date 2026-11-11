@@ -49,7 +49,7 @@
  },
  "lines_sha256": {
   "V3_0_67": "a29a11a96f9f08d834706e70b073433094b21d105c29e2bff2a0665fd5ce6c34",
-  "V3_0_68": "d8f6fe7114ddcc00eb286c0da518f105af3ad9ef9c76da720cafe7f7e201533b"
+  "V3_0_68": "d1de50cb0a58919e0860ca46cbd5170baf55ac9b66f55978b988214aef95bf94"
  },
  "mas_code_totals": {
   "MAS.BLOCK|m2": {
@@ -88,7 +88,7 @@
     "released": 43.596
    }
   },
-  "MAS.MORTAR.BLACK.LINTEL_BED|m3": {
+  "MAS.MORTAR.BLACK.LINTEL_BEARING|m3": {
    "v3_0_67": null,
    "v3_0_68": {
     "blocked_lines": 0,
@@ -1343,10 +1343,10 @@
     null,
     "RELEASED"
    ],
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-02",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-02",
    "evidence_status": "ASSUMED - OWNER-APPROVED",
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-8cbc05fa23ccd7c70fd0",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-1a5694500bafb7eb0402",
    "piece": "LINTEL_BED",
    "unit": "m3",
    "v2_9": {
@@ -1375,10 +1375,10 @@
     null,
     "HELD"
    ],
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-03",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-03",
    "evidence_status": "ASSUMED - OWNER-APPROVED",
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-e713fdfec0deacffc3db",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-5b8280807d1cabdbe720",
    "piece": "LINTEL_BED",
    "unit": "m3",
    "v2_9": {
@@ -1407,10 +1407,10 @@
     null,
     "HELD"
    ],
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-04",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-04",
    "evidence_status": "ASSUMED - OWNER-APPROVED",
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-274454917a4f78eb74a6",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-e5cefb37cd4e0ab67fc5",
    "piece": "LINTEL_BED",
    "unit": "m3",
    "v2_9": {
@@ -1439,10 +1439,10 @@
     null,
     "HELD"
    ],
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-07",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-07",
    "evidence_status": "ASSUMED - OWNER-APPROVED",
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-f778561af33c2a33612f",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-ae1d4bef41f3c27ec8ad",
    "piece": "LINTEL_BED",
    "unit": "m3",
    "v2_9": {
@@ -1471,10 +1471,10 @@
     null,
     "RELEASED"
    ],
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-08",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-08",
    "evidence_status": "ASSUMED - OWNER-APPROVED",
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-9d6bd961d25def2b3771",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-5c796f67253fa62c83a3",
    "piece": "LINTEL_BED",
    "unit": "m3",
    "v2_9": {
@@ -1503,10 +1503,10 @@
     null,
     "HELD"
    ],
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-10",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-10",
    "evidence_status": "ASSUMED - OWNER-APPROVED",
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-3a9170dd9b3234b28a54",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-ba28032b9e9df2926781",
    "piece": "LINTEL_BED",
    "unit": "m3",
    "v2_9": {
@@ -1535,10 +1535,10 @@
     null,
     "HELD"
    ],
-   "element_id": "MATERIAL:LINTEL_BED:D-1F-09",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-09",
    "evidence_status": "HELD",
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-b197eafae66391b21e63",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-686a15f1996005bed645",
    "piece": "LINTEL_BED",
    "unit": "m3",
    "v2_9": {
@@ -1567,10 +1567,10 @@
     null,
     "HELD"
    ],
-   "element_id": "MATERIAL:LINTEL_BED:D-GF-10",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-GF-10",
    "evidence_status": "ASSUMED - OWNER-APPROVED",
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-25f45bfdc5a89d36ee07",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-dc668eb5431a839c451e",
    "piece": "LINTEL_BED",
    "unit": "m3",
    "v2_9": {
@@ -1599,10 +1599,10 @@
     null,
     "RELEASED"
    ],
-   "element_id": "MATERIAL:LINTEL_BED:D-GF-13",
+   "element_id": "MATERIAL:LINTEL_BEARING:D-GF-13",
    "evidence_status": "ASSUMED - OWNER-APPROVED",
-   "item_code": "MAS.MORTAR.BLACK.LINTEL_BED",
-   "line_id": "L-885feb3034e49dcfec17",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "line_id": "L-8e1664a6a6aee81d2fda",
    "piece": "LINTEL_BED",
    "unit": "m3",
    "v2_9": {
@@ -1616,7 +1616,7 @@
  "schema": "T672_SUMMARY_V1",
  "totals_moved": [
   "MAS.GLUE.AAC|kg",
-  "MAS.MORTAR.BLACK.LINTEL_BED|m3",
+  "MAS.MORTAR.BLACK.LINTEL_BEARING|m3",
   "MAS.MORTAR.BLACK.PERIMETER|m3",
   "MAS.MORTAR.BLACK|m3",
   "MAS.UNITS.BLACK|pcs",
