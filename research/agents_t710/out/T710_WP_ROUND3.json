@@ -1,0 +1,1079 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.70",
+ "census": {
+  "by_cause": {
+   "DESIGNER": 46,
+   "MEASURABLE_NOW": 8,
+   "NEEDS_OWNER_RULE": 3,
+   "NO_PHYSICAL_ELEMENT": 1
+  },
+  "held": 53,
+  "missing": 5,
+  "rows": [
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.180000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "1F-R26FA0D:doorway transition OP-008",
+    "key": "L-689197a4778b786de143",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "1F-R26FA0D:doorway transition OP-010",
+    "key": "L-bec3b3df8ec830a46447",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.160000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "1F-R48AA46:doorway transition OP-004",
+    "key": "L-aed6f48195f99648c3f3",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.160000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "1F-R48CDA5:doorway transition OP-018",
+    "key": "L-dfc4e74604047cb21407",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.160000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "1F-R8BDA49:doorway transition CLOSURE|D2:3118|D2:417@D2:3118:0",
+    "key": "L-07b084a5187a64634108",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.160000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "1F-RED23B8:doorway transition OP-019",
+    "key": "L-19f6405a5e60a99c29f7",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.160000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "2F-RE83BED:doorway transition OP-006",
+    "key": "L-b5a04e7c058346b6f734",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.200000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "GF-RA3AD49:doorway transition OP-025",
+    "key": "L-b46013c737051e5441fe",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "GF-RB28769:doorway transition OP-018",
+    "key": "L-65194e5d4497f0882024",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.160000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "GF-RB62B55:doorway transition CLOSURE|D2:495|D2:417@D2:495:0",
+    "key": "L-1c36054a8cadc0726e65",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.159408",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "GF-RD36087:doorway transition CLOSURE|D2:825|D2:417@D2:825:0",
+    "key": "L-77a630d7e60ca6c404ba",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.160000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "GF-RD6F891:doorway transition CLOSURE|D2:820:0|D2:820:0",
+    "key": "L-20400ca6dc38abb30c33",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "GF-RF38DAF:doorway transition OP-017",
+    "key": "L-19908ce0b9a2bcadff80",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.160000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "P7757 plans print the door; no threshold / wet-room detail issued (T-195 register)",
+    "element": "GF-RFAD3C4:doorway transition OP-026",
+    "key": "L-b4a23dc5fc953bc5a163",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "NEEDS_OWNER_RULE",
+    "code": "FIN.WP.MEMBRANE_ROLLS",
+    "drawing": "no plan draws the 2F top roof outline (Q-34 parked)",
+    "element": "2F-ROOF-TOP:wp_rolls_to_buy",
+    "key": "L-90b40877c8c3da54ba1b",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "1F-R26FA0D:wp_penetrations",
+    "key": "L-9971bd68a5150abebe0a",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "1F-R48AA46:wp_penetrations",
+    "key": "L-3e6dbcb5614746978a87",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "1F-R48CDA5:wp_penetrations",
+    "key": "L-a5f885a2f86ee05d5b8b",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "1F-R52AC05:wp_penetrations",
+    "key": "L-fb8f6c4b9b3044505557",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "2 .. 3 pcs (FD 2 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "1F-R8BDA49:wp_penetrations",
+    "key": "L-2253a7ed9e80ac00c728",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "1F-RED23B8:wp_penetrations",
+    "key": "L-2af93ddb70a431b92800",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "2F-RE83BED:wp_penetrations",
+    "key": "L-faa7232880f13c1e4a99",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "GF-R8496F0:wp_penetrations",
+    "key": "L-6375385673176b8b2c9c",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "GF-RA3AD49:wp_penetrations",
+    "key": "L-229e7bf9e837e1d838bd",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "GF-RB28769:wp_penetrations",
+    "key": "L-bcda623f9ad89eba41db",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "GF-RB62B55:wp_penetrations",
+    "key": "L-f650522e7882dddccdfa",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "GF-RD36087:wp_penetrations",
+    "key": "L-a4bbc2efdb8425554344",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "GF-RD6F891:wp_penetrations",
+    "key": "L-20dfb3cd1232128b3cb6",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "GF-RDBD4F9:wp_penetrations",
+    "key": "L-0db07ac89503dd3f5980",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "GF-RDF7D28:wp_penetrations",
+    "key": "L-657bff4f4cc8e417bc6c",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "GF-RF38DAF:wp_penetrations",
+    "key": "L-5f41701522d675c37b10",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "sanitary-7757.pdf (floor drains printed; W.C. pan outlet type printed on no sheet)",
+    "element": "GF-RFAD3C4:wp_penetrations",
+    "key": "L-345e907e572a363fb615",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "pcs"
+   },
+   {
+    "after": {
+     "origin": "overlay op",
+     "source": "T-529 R-WP-APPL-EXPOSED-2b (MERGED 5f775ba6): ledge 0.639573 m2 MEASURED, EXPOSED",
+     "status": "MEASURED",
+     "value": "0.639573"
+    },
+    "bound": "0.000000 .. 0.639573",
+    "cause": "MEASURABLE_NOW",
+    "code": "FIN.WP.ROOF",
+    "drawing": "P7757 1F pool-court ledge (T-522 / T-529 measured, overlay only)",
+    "element": "1F-POOLCOURT-550-LEDGE:wp_membrane",
+    "key": "L-2361d6ec13c952bd2ae3",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "NEEDS_OWNER_RULE",
+    "code": "FIN.WP.ROOF",
+    "drawing": "no plan draws the 2F top roof outline (Q-34 parked)",
+    "element": "2F-ROOF-TOP:wp_membrane",
+    "key": "L-3e8fe55da71851816dd4",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": {
+     "origin": "overlay op",
+     "source": "T-522 / T-529 (MERGED 4777890b / 5f775ba6): ledge wall-end upturn 0.551614 lm; the 2.976663 lm glazing transition has no m2 / lm line (beside)",
+     "status": "MEASURED",
+     "value": "0.551614"
+    },
+    "bound": "0.000000 .. 3.528277",
+    "cause": "MEASURABLE_NOW",
+    "code": "FIN.WP.ROOF_UPTURN",
+    "drawing": "P7757 1F pool-court ledge (T-522 / T-529 measured, overlay only)",
+    "element": "1F-POOLCOURT-550-LEDGE:wp_upturn",
+    "key": "L-d7d1bf8c5991ccf69ea2",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "lm"
+   },
+   {
+    "after": {
+     "origin": "overlay op",
+     "source": "T-522 (MERGED 4777890b): window run upturn 0.500002 lm, sill '84' printed >= 0.20",
+     "status": "MEASURED",
+     "value": "0.500002"
+    },
+    "bound": "0.000000 .. 0.500002",
+    "cause": "MEASURABLE_NOW",
+    "code": "FIN.WP.ROOF_UPTURN",
+    "drawing": "P7757 1F pool-court ledge (T-522 / T-529 measured, overlay only)",
+    "element": "1F-POOLCOURT-550:wp_upturn window_face",
+    "key": "L-1954878bb02c91139e1b",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "lm"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "NEEDS_OWNER_RULE",
+    "code": "FIN.WP.ROOF_UPTURN",
+    "drawing": "no plan draws the 2F top roof outline (Q-34 parked)",
+    "element": "2F-ROOF-TOP:wp_upturn",
+    "key": "L-aac1f35e08f85b643692",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "lm"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 1.000000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.TERMINATION",
+    "drawing": "P7757 plan: Q-37 A fixes the pantry only; edge detail printed on no sheet",
+    "element": "GF-R8496F0:termination passage OP-027",
+    "key": "L-9592048116294937ab6f",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "lm"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.004711",
+    "cause": "NO_PHYSICAL_ELEMENT",
+    "code": "FIN.WP.TERMINATION",
+    "drawing": "P7757 plan: membrane edge at an opening; stop detail not issued",
+    "element": "GF-RB28769:termination other",
+    "key": "L-f78da96a7d31f7b72068",
+    "on_v3070": "HELD",
+    "proposal": "EXCLUDED with its reason (T-303 finding 5: the face is WALL); never a 0 in a total",
+    "status": "HELD",
+    "unit": "lm"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 0.900000",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.TERMINATION",
+    "drawing": "P7757 plan: Q-37 A fixes the pantry only; edge detail printed on no sheet",
+    "element": "GF-RD36087:termination passage OP-020",
+    "key": "L-c57860d79f54a4c1c4b3",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "lm"
+   },
+   {
+    "after": null,
+    "bound": "0.000000 .. 1.255652",
+    "cause": "DESIGNER",
+    "code": "FIN.WP.TERMINATION",
+    "drawing": "P7757 plan: Q-37 A fixes the pantry only; edge detail printed on no sheet",
+    "element": "GF-RDBD4F9:termination zone_line ZONE|D2:731:0|0",
+    "key": "L-a4df8fc50fbab4bef48f",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "lm"
+   },
+   {
+    "after": {
+     "detail": {
+      "doors_lm": "1.000000",
+      "held_terms": [
+       "W10 sill not printed: 1.000000 m excluded in the low, included in the high",
+       "W09 sill not printed: 1.500000 m excluded in the low, included in the high"
+      ],
+      "high_lm": "9.500000",
+      "high_m2": "1.900000",
+      "low_lm": "7.000000",
+      "low_m2": "1.400000",
+      "sources": {
+       "column": "2FAE S-COL.BON 1.100 x 0.250 at x -0.200 .. 0.900, y 4.450 .. 4.700: 0.050 proud of 158 over 0.900; the boundary steps round it orthogonally, so the wall run length is unchanged (4.45 + 0.90 + 0.05 + 2.10 + 3.00 = 10.50 = 4.50 + 3.00 + 3.00)",
+       "doors": [
+        "D120 insert 33E, rot 180 (gap between 158 and 159)"
+       ],
+       "sills": "W09 / W10 HELD: designer D-45 (opening heights printed on no sheet; T-175)",
+       "walls": [
+        "west:B0",
+        "west:AF",
+        "west:AE",
+        "north:158",
+        "north:159",
+        "south:A6"
+       ],
+       "windows": [
+        "W10",
+        "W09"
+       ]
+      },
+      "status": "OPEN_BOUND",
+      "upturn_h": "0.200000",
+      "wall_runs_lm": "10.500000"
+     },
+     "high": "1.900000",
+     "low": "1.400000",
+     "status": "OPEN_BOUND",
+     "value": null
+    },
+    "bound": "blank",
+    "cause": "MEASURABLE_NOW",
+    "code": "FIN.WP.WALL_UPTURN",
+    "drawing": "T-648 r2 finishes hold census (merged 57db7053)",
+    "element": "GF-RC99C2A:wp_wall_upturn:wet_zone",
+    "key": "L-8090ff20f2b547d1bc96",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "WP.FOUNDATION.BURIED_LIQUID",
+    "drawing": "ST7757.pdf p.13 foundation details / schedules: boundary details print no coating (designer item)",
+    "element": "WPF:BOUNDARY_GB_AND_STRAPS",
+    "key": "L-4f4e4c930e33ed6dafa3",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "WP.FOUNDATION.BURIED_LIQUID",
+    "drawing": "ST7757.pdf p.13 foundation details / schedules: beam depth / slab-on-fill not established (designer item)",
+    "element": "WPF:BURIED_GROUND_BEAM_FACES_HELD",
+    "key": "L-eba4599c26b0d24de873",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "WP.FOUNDATION.BURIED_LIQUID",
+    "drawing": "ST7757.pdf p.13 foundation details / schedules: Q-21 C: founding level selects the p.13 detail (designer)",
+    "element": "WPF:FOOTING_TOPS_OUTSIDE_NECKS",
+    "key": "L-12aca7f853626262bd07",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "WP.FOUNDATION.BURIED_LIQUID",
+    "drawing": "ST7757.pdf p.13 foundation details / schedules: Q-21 C: neck height on the formation (designer)",
+    "element": "WPF:NECK_FACES",
+    "key": "L-84a874dedb35cbe2bafb",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "WP.FOUNDATION.FOOTING_MEMBRANE",
+    "drawing": "ST7757.pdf p.13 foundation details / schedules: Q-31 C: F10 / F outline 1B1B two readings, designer item",
+    "element": "WPF:FOOTING_UNDERLAY_MEMBRANE_1B1B",
+    "key": "L-f7da4df288b4e006c0e7",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "WP.FOUNDATION.FOOTING_SCREED",
+    "drawing": "ST7757.pdf p.13 foundation details / schedules: Q-31 C: F10 / F outline 1B1B two readings, designer item",
+    "element": "WPF:FOOTING_PROTECTION_SCREED_1B1B",
+    "key": "L-46cee803214ff2d964fa",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "WP.FOUNDATION.FOOTING_SCREED",
+    "drawing": "ST7757.pdf p.13 foundation details / schedules: Q-31 C: F10 / F outline 1B1B two readings, designer item",
+    "element": "WPF:FOOTING_PROTECTION_SCREED_1B1B",
+    "key": "L-79bc828150bbfe63ce8e",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m3"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "WP.FOUNDATION.FOOTING_SIDES",
+    "drawing": "ST7757.pdf p.13 foundation details / schedules: Q-21 C: founding level selects the p.13 detail (designer)",
+    "element": "WPF:FOOTING_SIDE_FACES",
+    "key": "L-13b1d3c202bc08fb65c2",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "WP.FOUNDATION.LIFT_PIT_BOARD",
+    "drawing": "ST7757.pdf p.13 foundation details / schedules: D-43 pit height 'as per lift manufacturer'",
+    "element": "WPF:LIFT_PIT_BOARD_WALLS",
+    "key": "L-f0aadf70513eb21d5671",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+    "drawing": "ST7757.pdf p.13 foundation details / schedules: D-43 pit height 'as per lift manufacturer'",
+    "element": "WPF:LIFT_PIT_MEMBRANE_WALLS",
+    "key": "L-302b401eff698289c54e",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": null,
+    "bound": "blank",
+    "cause": "DESIGNER",
+    "code": "WP.FOUNDATION.PROCUREMENT",
+    "drawing": "ST7757.pdf p.13 foundation details / schedules: UP-WP-MAT-001: product / thickness / laps / coats printed on no sheet",
+    "element": "WPF:FOUNDATION_WP_PROCUREMENT",
+    "key": "L-d2488bbb7103c8cd2980",
+    "on_v3070": "HELD",
+    "status": "HELD",
+    "unit": "item"
+   },
+   {
+    "after": "0.200",
+    "cause": "MEASURABLE_NOW",
+    "code": "FIN.WP.DOORWAY",
+    "drawing": "PRINTED: gap 1.000 (D120 33E) x wall 0.200 (158 / 15A) = 0.200",
+    "element": "the membrane continued through the pantry door D-GF-07 over the wall thickness (UP-WP-003 v1.1 floor piece)",
+    "key": "MISSING:FIN.WP.DOORWAY[m2]/DOOR:D-GF-07-PANTRY/THRESHOLD_FLOOR",
+    "on_v3070": "NO LINE",
+    "status": "MEASURED_UNWIRED",
+    "unit": "m2"
+   },
+   {
+    "after": "1",
+    "cause": "MEASURABLE_NOW",
+    "code": "FIN.WP.DOORWAY_TRANSITION_NR",
+    "drawing": "PRINTED: one door D120 33E",
+    "element": "one doorway transition per physical door (UP-WP-DOOR-001, Q-35 C)",
+    "key": "MISSING:FIN.WP.DOORWAY_TRANSITION_NR[pcs]/DOOR:D-GF-07-PANTRY/TRANSITION",
+    "on_v3070": "NO LINE",
+    "status": "MEASURED_UNWIRED",
+    "unit": "pcs"
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "drawing": "NOT PRINTED: no wet-room / threshold detail issued (T-195 register)",
+    "element": "the transition built by its detail at that door (Q-35 C)",
+    "key": "MISSING:FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-07-PANTRY/TRANSITION",
+    "on_v3070": "NO LINE",
+    "status": "HELD",
+    "unit": "m2"
+   },
+   {
+    "after": "4.500",
+    "cause": "MEASURABLE_NOW",
+    "code": "FIN.WP.TERMINATION",
+    "drawing": "PRINTED box line B3 4.000 + AD 0.500 = DIMENSION 5E1 4500; the stop line itself by owner Q-37 A",
+    "element": "the membrane edge where the pantry opens to the dining room (no wall)",
+    "key": "MISSING:FIN.WP.TERMINATION[lm]/GF-07:OPEN_SIDE_DINING/MEMBRANE_EDGE",
+    "on_v3070": "NO LINE",
+    "status": "MEASURED_UNWIRED",
+    "unit": "lm"
+   },
+   {
+    "after": "1 .. 1 (T-691: 1 FD, no W.C.)",
+    "cause": "MEASURABLE_NOW",
+    "code": "FIN.WP.PENETRATION",
+    "drawing": "PRINTED: one floor drain on sanitary-7757 GF; no W.C.; the stack is at high level",
+    "element": "membrane penetrations in the pantry floor (UP-WP-004)",
+    "key": "MISSING:FIN.WP.PENETRATION[pcs]/GF-07/FLOOR_PENETRATIONS",
+    "on_v3070": "NO LINE",
+    "status": "MEASURED_UNWIRED",
+    "unit": "pcs"
+   }
+  ]
+ },
+ "own": {
+  "beams": "boundary beams per panel as T-213 (merged); depths from the ST7757.pdf p.10 / p.11 schedules as read in research/qs_wall_treatment_01/pa04/structural.py: B1 20x40, B2 20x40, B4 20x50, B5 20x50, CB4 20x50, CB5 20x40, B11 20x75, B17 45x75, B27 90x85, B28 25x75; slab t 0.16 (note 18; 'T 16' in 280)",
+  "drawings": "Drive 'Alsenan chalet project': P7757_DXF_COMPRESSED.zip -> P7757.dxf (sha256 ab54dd55) and 'ST7757 dxf.dxf' (sha256 9f9d1179), own decode this run into the private folder",
+  "overlay": "ST S-COL.BON 35C -> arch S-COL.BON 2FAE (the T-702 GF fit), then the arch plan-to-plan translation found by column votes (GF -> 1F 14 columns, GF -> 2F 6); ST 1F-roof sheet -> GF-roof sheet 19 column votes. Checked: GF-roof sheet -> 1F plan 18 of 27 ST columns within 12 m land on an arch column (worst 0.3 mm); 1F-roof sheet -> 2F plan 7 of 21 (worst 0.1 mm); the others change size between storeys"
+ },
+ "penetrations": {
+  "datum": "W.C. pan outlet (floor S-trap through the membrane / slab or wall P-trap)",
+  "evidence_this_run": "every W.C. room on a suspended floor (6 of 6: 1F-RED23B8, 1F-R52AC05, 1F-R48AA46, 1F-R8BDA49, 1F-R48CDA5, 2F-RE83BED) lies over a sunken panel, and the one suspended wet room without a W.C. (1F laundry) has none: consistent with floor-outlet pans drained through a recess, NOT proof (a recess also serves a shower fall); high ends stay open",
+  "high": 31,
+  "low": 19,
+  "settled_by": "a wet-room / W.C. installation detail or a sanitary fixture schedule giving the pan outlet; the issued sanitary-7757 sheets are plans only (no section, no trap detail; T-206 / T-691)"
+ },
+ "rules": [
+  "R-T710-1",
+  "R-T710-2",
+  "R-T710-3"
+ ],
+ "schema": "URBAN_T710_WP_ROUND3_V1",
+ "sunken": {
+  "extra_high_total_m2": "13.335040",
+  "outside_wet_rooms": [
+   {
+    "cell": "1F-DRY-NORTH (B3F / C1F / C29 / C24)",
+    "m2": "0.5831",
+    "panel": "280",
+    "scope": "floor bed of that room (HELD d), NOT waterproofing"
+   },
+   {
+    "cell": "1F-DRY-NORTH (B3F / C1F / C29 / C24)",
+    "m2": "0.6419",
+    "panel": "287",
+    "scope": "floor bed of that room (HELD d), NOT waterproofing"
+   }
+  ],
+  "panel_closure": {
+   "275": {
+    "boundary_beams": {
+     "B1": "0.40",
+     "B11": "0.75",
+     "B4": "0.50"
+    },
+    "d_max_m": "0.24",
+    "hatch_m2": "3.3316",
+    "in_dry_cell_m2": "0",
+    "in_wet_rooms_m2": "3.331600",
+    "walls_and_gaps_m2": "0.000000"
+   },
+   "276": {
+    "boundary_beams": {
+     "B1": "0.40",
+     "B11": "0.75"
+    },
+    "d_max_m": "0.24",
+    "hatch_m2": "2.6048",
+    "in_dry_cell_m2": "0",
+    "in_wet_rooms_m2": "2.572100",
+    "walls_and_gaps_m2": "0.032700"
+   },
+   "280": {
+    "boundary_beams": {
+     "B1": "0.40",
+     "B27": "0.85",
+     "B5": "0.50",
+     "CB5": "0.40"
+    },
+    "d_max_m": "0.24",
+    "hatch_m2": "7.3009",
+    "in_dry_cell_m2": "0.5831",
+    "in_wet_rooms_m2": "6.176700",
+    "walls_and_gaps_m2": "0.541100"
+   },
+   "287": {
+    "boundary_beams": {
+     "B1": "0.40",
+     "B27": "0.85",
+     "CB4": "0.50"
+    },
+    "d_max_m": "0.24",
+    "hatch_m2": "2.1456",
+    "in_dry_cell_m2": "0.6419",
+    "in_wet_rooms_m2": "1.283500",
+    "walls_and_gaps_m2": "0.220200"
+   },
+   "298": {
+    "boundary_beams": {
+     "B17": "0.75",
+     "B28": "0.75",
+     "B4": "0.50"
+    },
+    "d_max_m": "0.34",
+    "hatch_m2": "4.1096",
+    "in_dry_cell_m2": "0",
+    "in_wet_rooms_m2": "4.108900",
+    "walls_and_gaps_m2": "0.000700"
+   },
+   "5BF": {
+    "boundary_beams": {
+     "B2": "0.40"
+    },
+    "d_max_m": "0.24",
+    "hatch_m2": "5.4000",
+    "in_dry_cell_m2": "0",
+    "in_wet_rooms_m2": "5.399700",
+    "walls_and_gaps_m2": "0.000300"
+   }
+  },
+  "recess_loop_total_m": "51.8980",
+  "released_wall_upturn_m2": "25.214585",
+  "rooms": [
+   {
+    "door_m": "0.800",
+    "faces": "B09 / B01 / AD6 / B1F",
+    "floor_m2_engine": "3.5775",
+    "floor_m2_own": "3.577500",
+    "floor_verdict": "AGREE",
+    "panel_cover_m2": "3.3316",
+    "panel_cover_pct": "93.1",
+    "recess": [
+     {
+      "along_faces_m": "1.9020",
+      "d_max_m": "0.24",
+      "extra_m2": "0 .. 1.754904",
+      "free_step_m": "5.4101",
+      "in_room_m2": "3.3316",
+      "loop_m": "7.3121",
+      "panel": "275",
+      "status": "HELD"
+     }
+    ],
+    "recess_wp_extra_m2": {
+     "high": "1.754904",
+     "low": "0",
+     "status": "HELD (D-41: drop d and membrane position unprinted)"
+    },
+    "room": "1F-RED23B8",
+    "upturn_m2_engine": "1.36",
+    "upturn_m2_own": "1.360000",
+    "upturn_run_m": "6.800000",
+    "upturn_verdict": "AGREE",
+    "windows": "0.600 (N)"
+   },
+   {
+    "door_m": "0.800",
+    "faces": "B05 / B0E / AD7 / CC5",
+    "floor_m2_engine": "2.646",
+    "floor_m2_own": "2.646000",
+    "floor_verdict": "AGREE",
+    "panel_cover_m2": "2.5721",
+    "panel_cover_pct": "97.2",
+    "recess": [
+     {
+      "along_faces_m": "4.9720",
+      "d_max_m": "0.24",
+      "extra_m2": "0 .. 1.545600",
+      "free_step_m": "1.4680",
+      "in_room_m2": "2.5721",
+      "loop_m": "6.4400",
+      "panel": "276",
+      "status": "HELD"
+     }
+    ],
+    "recess_wp_extra_m2": {
+     "high": "1.545600",
+     "low": "0",
+     "status": "HELD (D-41: drop d and membrane position unprinted)"
+    },
+    "room": "1F-R52AC05",
+    "upturn_m2_engine": "1.148",
+    "upturn_m2_own": "1.148000",
+    "upturn_run_m": "5.740000",
+    "upturn_verdict": "AGREE",
+    "windows": "0.600 (N)"
+   },
+   {
+    "door_m": "0.800",
+    "faces": "B3E / C23 / AE4 / C28",
+    "floor_m2_engine": "5.0225",
+    "floor_m2_own": "5.022500",
+    "floor_verdict": "AGREE",
+    "panel_cover_m2": "4.9551",
+    "panel_cover_pct": "98.7",
+    "recess": [
+     {
+      "along_faces_m": "8.2602",
+      "d_max_m": "0.24",
+      "extra_m2": "0 .. 2.109216",
+      "free_step_m": "0.5282",
+      "in_room_m2": "4.9551",
+      "loop_m": "8.7884",
+      "panel": "280",
+      "status": "HELD"
+     }
+    ],
+    "recess_wp_extra_m2": {
+     "high": "2.109216",
+     "low": "0",
+     "status": "HELD (D-41: drop d and membrane position unprinted)"
+    },
+    "room": "1F-R48AA46",
+    "upturn_m2_engine": "1.64",
+    "upturn_m2_own": "1.640000",
+    "upturn_run_m": "8.200000",
+    "upturn_verdict": "AGREE",
+    "windows": "0.600 (S)"
+   },
+   {
+    "door_m": "0.800",
+    "faces": "C22 / C1C / C25 / C26",
+    "floor_m2_engine": "5.0225",
+    "floor_m2_own": "5.022500",
+    "floor_verdict": "AGREE",
+    "panel_cover_m2": "2.5051",
+    "panel_cover_pct": "49.9",
+    "recess": [
+     {
+      "along_faces_m": "3.1652",
+      "d_max_m": "0.24",
+      "extra_m2": "0 .. 1.301640",
+      "free_step_m": "2.2584",
+      "in_room_m2": "1.2216",
+      "loop_m": "5.4235",
+      "panel": "280",
+      "status": "HELD"
+     },
+     {
+      "along_faces_m": "2.4479",
+      "d_max_m": "0.24",
+      "extra_m2": "0 .. 1.329360",
+      "free_step_m": "3.0911",
+      "in_room_m2": "1.2835",
+      "loop_m": "5.5390",
+      "panel": "287",
+      "status": "HELD"
+     }
+    ],
+    "recess_wp_extra_m2": {
+     "high": "2.631000",
+     "low": "0",
+     "status": "HELD (D-41: drop d and membrane position unprinted)"
+    },
+    "room": "1F-R8BDA49",
+    "upturn_m2_engine": "1.64",
+    "upturn_m2_own": "1.640000",
+    "upturn_run_m": "8.200000",
+    "upturn_verdict": "AGREE",
+    "windows": "0.600 (S)"
+   },
+   {
+    "door_m": "0.800",
+    "faces": "C0D / B69 / B1B / C0C",
+    "floor_m2_engine": "4.725",
+    "floor_m2_own": "4.725000",
+    "floor_verdict": "AGREE",
+    "panel_cover_m2": "4.1089",
+    "panel_cover_pct": "87.0",
+    "recess": [
+     {
+      "along_faces_m": "3.9644",
+      "d_max_m": "0.34",
+      "extra_m2": "0 .. 2.990368",
+      "free_step_m": "4.8308",
+      "in_room_m2": "4.1089",
+      "loop_m": "8.7952",
+      "panel": "298",
+      "status": "HELD"
+     }
+    ],
+    "recess_wp_extra_m2": {
+     "high": "2.990368",
+     "low": "0",
+     "status": "HELD (D-41: drop d and membrane position unprinted)"
+    },
+    "room": "1F-R48CDA5",
+    "upturn_m2_engine": "1.58",
+    "upturn_m2_own": "1.580000",
+    "upturn_run_m": "7.900000",
+    "upturn_verdict": "AGREE",
+    "windows": "0.4643 (E)"
+   },
+   {
+    "door_m": "0.800",
+    "faces": "1296 / 128F / 1298 / 127B",
+    "floor_m2_engine": "5.55",
+    "floor_m2_own": "5.550000",
+    "floor_verdict": "AGREE",
+    "panel_cover_m2": "5.3997",
+    "panel_cover_pct": "97.3",
+    "recess": [
+     {
+      "along_faces_m": "6.6018",
+      "d_max_m": "0.24",
+      "extra_m2": "0 .. 2.303952",
+      "free_step_m": "2.9980",
+      "in_room_m2": "5.3997",
+      "loop_m": "9.5998",
+      "panel": "5BF",
+      "status": "HELD"
+     }
+    ],
+    "recess_wp_extra_m2": {
+     "high": "2.303952",
+     "low": "0",
+     "status": "HELD (D-41: drop d and membrane position unprinted)"
+    },
+    "room": "2F-RE83BED",
+    "upturn_m2_engine": "1.78",
+    "upturn_m2_own": "1.780000",
+    "upturn_run_m": "8.900000",
+    "upturn_verdict": "AGREE",
+    "windows": "0.600 (N)"
+   }
+  ],
+  "rooms_without_panel": [
+   "1F-R26FA0D (laundry, no W.C.)"
+  ]
+ },
+ "task": "T-710",
+ "wp_lines_on_candidate": 160,
+ "wp_lines_unchanged_since_v3066": true
+}
