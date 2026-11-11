@@ -1,0 +1,190 @@
+{
+ "schema": "URBAN_T688_STATEMENT_V1",
+ "rules": [
+  "R-T688-1 1.0.0",
+  "R-T688-2 1.0.0",
+  "R-T688-3 1.0.0"
+ ],
+ "candidate": "ARCH_TAKEOFF_V3.0.66",
+ "slab_1f": {
+  "engine_m2": "123.477081",
+  "own_m2": "123.478724",
+  "own_minus_engine_m2": "0.001643",
+  "our_error": false,
+  "engine_m3": "19.756333",
+  "reference_m3": "19.200000",
+  "difference_m3": "-0.556333",
+  "reference_typed": "120",
+  "resolution_m2": "1",
+  "split_m3": {
+   "our_error": "0.000000",
+   "own_vs_engine_noise (arc chords, not a cause)": "0.000263",
+   "reference rounding band": [
+    "-0.080000",
+    "0.080000"
+   ],
+   "reference scope band": [
+    "-0.636333",
+    "-0.476333"
+   ]
+  },
+  "scope_band_m2": [
+   "2.977081",
+   "3.977081"
+  ],
+  "fitting_subsets": 62,
+  "status": "UNRESOLVED_AMBIGUOUS",
+  "convention_check": [
+   {
+    "storey": "GF",
+    "ref_minus_engine_m2": "0.315488",
+    "within_rounding": true
+   }
+  ],
+  "same_convention": true,
+  "candidates": [
+   {
+    "candidate": "dome-corner fillers (8 cells between the two dome rings and their square bays)",
+    "lines": [
+     "L-038456ade3eb09b43bb8",
+     "L-3b73c9e2ed0cbe3eb446",
+     "L-683900f927474df70227",
+     "L-7a83b8f273dea348e19e",
+     "L-7e132c398bac4f1ae67b",
+     "L-8e5c2f484172e9259455",
+     "L-bde4aa4648e5b6f0b67d",
+     "L-fb9a2ac1d861b37db720"
+    ],
+    "m2": "3.846112",
+    "m3": "0.615378",
+    "fits": true
+   },
+   {
+    "candidate": "the panel between B23 and the B6 over the west dome",
+    "lines": [
+     "L-af41a42f8504dd178716"
+    ],
+    "m2": "3.220462",
+    "m3": "0.515274",
+    "fits": true
+   }
+  ],
+  "located": 22,
+  "census": [
+   {
+    "own_face": 112,
+    "m2": 15.326052,
+    "class": "OPENING",
+    "opening_lines": 20,
+    "inner_lines": 0,
+    "narrow_width_mm": 4372.2
+   },
+   {
+    "own_face": 68,
+    "m2": 14.980372,
+    "class": "OPENING",
+    "opening_lines": 20,
+    "inner_lines": 0,
+    "narrow_width_mm": 4100.0
+   },
+   {
+    "own_face": 27,
+    "m2": 10.725,
+    "class": "STAIR_ZONE",
+    "opening_lines": 0,
+    "inner_lines": 30,
+    "narrow_width_mm": 2500.0
+   },
+   {
+    "own_face": 32,
+    "m2": 3.893654,
+    "class": "BAND",
+    "opening_lines": 0,
+    "inner_lines": 0,
+    "narrow_width_mm": 300.0
+   },
+   {
+    "own_face": 52,
+    "m2": 3.799779,
+    "class": "BAND",
+    "opening_lines": 0,
+    "inner_lines": 0,
+    "narrow_width_mm": 550.0
+   },
+   {
+    "own_face": 93,
+    "m2": 3.24,
+    "class": "OPENING",
+    "opening_lines": 2,
+    "inner_lines": 0,
+    "narrow_width_mm": 1800.0
+   },
+   {
+    "own_face": 98,
+    "m2": 2.995,
+    "class": "BAND",
+    "opening_lines": 0,
+    "inner_lines": 2,
+    "narrow_width_mm": 450.0
+   },
+   {
+    "own_face": 48,
+    "m2": 2.205,
+    "class": "BAND",
+    "opening_lines": 0,
+    "inner_lines": 0,
+    "narrow_width_mm": 350.0
+   }
+  ]
+ },
+ "slab_2f_observation": [
+  {
+   "thickness": "0.16",
+   "engine_m2": "31.250000",
+   "reference_m2": "31.84",
+   "ref_minus_engine_m2": "0.590000",
+   "m3": "0.094400"
+  },
+  {
+   "thickness": "0.18",
+   "engine_m2": "13.635000",
+   "reference_m2": "13.35",
+   "ref_minus_engine_m2": "-0.285000",
+   "m3": "-0.051300"
+  }
+ ],
+ "f_v_p18_2": {
+  "line": "L-a7ab57d873e26a587fd9",
+  "engine": {
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "class": "RELEASED",
+   "m3": 0.114
+  },
+  "own": {
+   "m2": 1.14,
+   "width_m": 0.95,
+   "length_m": 1.2,
+   "own_level_marks": [
+    "+0.30"
+   ],
+   "neighbour_widths_m": [
+    0.3
+   ],
+   "neighbours": 4,
+   "m3_at_0.10": "0.114000"
+  },
+  "owner": {
+   "owner": "GROUND_SLAB",
+   "line_family": "B10-05",
+   "why": "own level mark: a floor, not a member"
+  },
+  "band_pairing_refused": true,
+  "gb_line": {
+   "line": "L-e16c98075f69532a3dc7",
+   "class": "HELD",
+   "note": "runs = the curved exterior annex member ARC:139+13A 1.8063 m x 0.30 (T-426 / T-242 ledger); none of them inside this face"
+  },
+  "register_proposal": "ELEMENT_REGISTER: GF / SLAB / geometry-hash of the 0.95 x 1.20 face -> owner trade CONCRETE, line B10-05 STR.CONC.GROUND_SLAB L-a7ab57d8 (0.114 m3); kind GB only for the four 0.30 m strips around it; BAND0042 when bounded keeps its runs outside the face (R-T688-3 (b)); the +0.30 / +0.15 step sits on a 0.30 strip: a GB-part item",
+  "verdict": "ENGINE_RIGHT (quantity line); detector label BEAM_STRIP wrong, no double release (GB HELD)"
+ }
+}
