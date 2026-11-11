@@ -7984,7 +7984,7 @@
     "MAS.UNITS.WHITE"
    ],
    "note": "T-672 (research/agents_t672/T-672_MASONRY_GATE_B1.md): MASONRY_GATE_B_V1 from the merged T-670 / T-372 / T-675 ledgers: the V3.0.59 producer re-run on rulebook 1.1.0 (Q-80) after a byte-identical 1.0.0 reproduction restates the 12 black unit / mortar lines of the six 0.15 m black hosts (11 values + 1 range each code); the 4 AAC lines on the MAIN_S / ANNEX_S hosts NOT_APPLICABLE_WITH_EVIDENCE (ST p.1 note 2, R-T675-1); 20 MAS.MORTAR.BLACK.PERIMETER lines (8 valued / bounded, 12 HELD with the host's cause) and 9 MAS.MORTAR.BLACK.LINTEL_BEARING lines (3 exact, 5 bounded, 1 held bounded) added beside the panel lines; every other line byte-identical; the Gate B integration package",
-   "task_commit": "d52627d1391a192f56d9532a59a9d95c3e478106"
+   "task_commit": "79596f0e95fcb4b4e1ca8e598cd6b6dad664d7f2"
   }
  ],
  "not_a_boq_line_codes": {
