@@ -1,0 +1,1249 @@
+{
+ "annex_plaster_coverage": {
+  "GF-01": {
+   "change": [
+    "-13.503662",
+    "1.006350"
+   ],
+   "datum_bound": [
+    "47.960668",
+    "66.260680"
+   ],
+   "line": "L-b1529955",
+   "line_range": [
+    "61.464330",
+    "65.254330"
+   ],
+   "reproduced_at_S_3.79": [
+    "61.464330",
+    "65.254330"
+   ],
+   "status": "NARROW",
+   "terms": {
+    "beam_ends": "0.236",
+    "beam_note": "CB6 2 ends (T-556)",
+    "fixed": "10.791",
+    "fixed_note": "W11 4.301 + W12 4.29 (hole areas below S, T-686) + D-GF-01 2.20",
+    "held_note": "A-GF-01 arch, no printed height: 0 .. 1.0 x S (T-556 / D-45)",
+    "held_width": "1.0"
+   }
+  },
+  "GF-04": {
+   "change": [
+    "-8.825000",
+    "0.625000"
+   ],
+   "datum_bound": [
+    "34.330000",
+    "43.780000"
+   ],
+   "line": "L-1ddc23d5",
+   "line_range": [
+    "43.155000",
+    "43.155000"
+   ],
+   "reproduced_at_S_3.79": [
+    "43.155000",
+    "43.155000"
+   ],
+   "status": "NARROW",
+   "terms": {
+    "beam_ends": "0",
+    "beam_note": "-",
+    "fixed": "4.22",
+    "fixed_note": "W04 0.6 x (2.5 - 1.7) = 0.48 (S >= 2.5) + D-GF-03 1.98 + D-GF-04 1.76",
+    "held_note": "-",
+    "held_width": "0"
+   }
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.69",
+ "census": {
+  "FIN.PAINT": {
+   "DRY": {
+    "blank": [],
+    "held": [
+     "459.991338",
+     "526.511300"
+    ],
+    "lines": 11,
+    "released": "217.208100"
+   },
+   "EXCLUDED": {
+    "blank": [],
+    "held": [
+     "0.000000",
+     "0.000000"
+    ],
+    "lines": 31,
+    "released": "0.000000"
+   },
+   "SHAFT": {
+    "blank": [],
+    "held": [
+     "141.654000",
+     "155.820000"
+    ],
+    "lines": 3,
+    "released": "0.000000"
+   }
+  },
+  "FIN.PLASTER": {
+   "DRY": {
+    "blank": [],
+    "held": [
+     "840.645810",
+     "895.896410"
+    ],
+    "lines": 11,
+    "released": "0.000000"
+   },
+   "EXCLUDED": {
+    "blank": [],
+    "held": [
+     "0.000000",
+     "0.000000"
+    ],
+    "lines": 13,
+    "released": "0.000000"
+   },
+   "RETURN": {
+    "blank": [
+     "L-64cb94b4",
+     "L-3e19506b",
+     "L-e70e7e48"
+    ],
+    "held": [
+     "0.000000",
+     "0.000000"
+    ],
+    "lines": 30,
+    "released": "24.150000"
+   },
+   "SHAFT": {
+    "blank": [],
+    "held": [
+     "143.604000",
+     "157.770000"
+    ],
+    "lines": 3,
+    "released": "0.000000"
+   },
+   "WET_BAND": {
+    "blank": [],
+    "held": [
+     "54.701360",
+     "98.894370"
+    ],
+    "lines": 18,
+    "released": "24.130560"
+   },
+   "WET_RENDER": {
+    "blank": [],
+    "held": [
+     "93.014706",
+     "148.133500"
+    ],
+    "lines": 18,
+    "released": "340.303800"
+   }
+  }
+ },
+ "dry_rooms": [
+  {
+   "paint": {
+    "face_lm": "20.127000",
+    "high": {
+     "DEDUCTIONS": "8.487050",
+     "HEIGHT": "7.044450",
+     "H_m": "3.250000",
+     "LENGTH": "-0.457200",
+     "gap": "15.074300",
+     "net": "56.925700"
+    },
+    "his_gross": "72.000000",
+    "his_length_lm": "20.000000",
+    "his_weighted_height_m": "3.600000",
+    "low": {
+     "DEDUCTIONS": "13.285000",
+     "HEIGHT": "22.260462",
+     "H_m": "2.494000",
+     "LENGTH": "-0.457200",
+     "gap": "35.088262",
+     "net": "36.911738"
+    }
+   },
+   "paint_class": "HELD",
+   "paint_height_basis": "finished ceiling (owner G1, Q-48 A); annex H 2.494 .. 3.25 (T-686, Q-54 B)",
+   "paint_line": "L-cdf7f5cd",
+   "plaster": {
+    "face_lm": "20.127000",
+    "high": {
+     "DEDUCTIONS": "11.027000",
+     "HEIGHT": "-3.824130",
+     "H_m": "3.790000",
+     "LENGTH": "-0.457200",
+     "gap": "6.745670",
+     "net": "65.254330"
+    },
+    "his_gross": "72.000000",
+    "his_length_lm": "20.000000",
+    "his_weighted_height_m": "3.600000",
+    "low": {
+     "DEDUCTIONS": "14.817000",
+     "HEIGHT": "-3.824130",
+     "H_m": "3.790000",
+     "LENGTH": "-0.457200",
+     "gap": "10.535670",
+     "net": "61.464330"
+    }
+   },
+   "plaster_class": "HELD",
+   "plaster_height_basis": "slab / roof underside (Q-72; T-556 gross / face)",
+   "plaster_line": "L-b1529955",
+   "room": "GF-01"
+  },
+  {
+   "paint": {
+    "face_lm": "12.500000",
+    "high": {
+     "DEDUCTIONS": "4.220000",
+     "HEIGHT": "4.375000",
+     "H_m": "3.250000",
+     "LENGTH": "0.000000",
+     "gap": "8.595000",
+     "net": "36.405000"
+    },
+    "his_gross": "45.000000",
+    "his_length_lm": "12.500000",
+    "his_weighted_height_m": "3.600000",
+    "low": {
+     "DEDUCTIONS": "4.216400",
+     "HEIGHT": "13.825000",
+     "H_m": "2.494000",
+     "LENGTH": "0.000000",
+     "gap": "18.041400",
+     "net": "26.958600"
+    }
+   },
+   "paint_class": "HELD",
+   "paint_height_basis": "finished ceiling (owner G1, Q-48 A); annex H 2.494 .. 3.25 (T-686, Q-54 B)",
+   "paint_line": "L-d7d6d2f7",
+   "plaster": {
+    "face_lm": "12.500000",
+    "high": {
+     "DEDUCTIONS": "4.220000",
+     "HEIGHT": "-2.375000",
+     "H_m": "3.790000",
+     "LENGTH": "0.000000",
+     "gap": "1.845000",
+     "net": "43.155000"
+    },
+    "his_gross": "45.000000",
+    "his_length_lm": "12.500000",
+    "his_weighted_height_m": "3.600000",
+    "low": {
+     "DEDUCTIONS": "4.220000",
+     "HEIGHT": "-2.375000",
+     "H_m": "3.790000",
+     "LENGTH": "0.000000",
+     "gap": "1.845000",
+     "net": "43.155000"
+    }
+   },
+   "plaster_class": "HELD",
+   "plaster_height_basis": "slab / roof underside (Q-72; T-556 gross / face)",
+   "plaster_line": "L-1ddc23d5",
+   "room": "GF-04"
+  },
+  {
+   "paint": {
+    "face_lm": "21.537000",
+    "high": {
+     "DEDUCTIONS": "22.596950",
+     "HEIGHT": "-1.076850",
+     "H_m": "3.650000",
+     "LENGTH": "-1.753200",
+     "gap": "19.766900",
+     "net": "56.013100"
+    },
+    "his_gross": "75.780000",
+    "his_length_lm": "21.050000",
+    "his_weighted_height_m": "3.600000",
+    "low": {
+     "DEDUCTIONS": "22.596950",
+     "HEIGHT": "-1.076850",
+     "H_m": "3.650000",
+     "LENGTH": "-1.753200",
+     "gap": "19.766900",
+     "net": "56.013100"
+    }
+   },
+   "paint_class": "RELEASED",
+   "paint_height_basis": "finished ceiling (owner G1, Q-48 A)",
+   "paint_line": "L-7f083d3e",
+   "plaster": {
+    "face_lm": "21.537000",
+    "high": {
+     "DEDUCTIONS": "25.864740",
+     "HEIGHT": "-14.860530",
+     "H_m": "4.290000",
+     "LENGTH": "-1.753200",
+     "gap": "9.251010",
+     "net": "66.528990"
+    },
+    "his_gross": "75.780000",
+    "his_length_lm": "21.050000",
+    "his_weighted_height_m": "3.600000",
+    "low": {
+     "DEDUCTIONS": "25.864740",
+     "HEIGHT": "-14.860530",
+     "H_m": "4.290000",
+     "LENGTH": "-1.753200",
+     "gap": "9.251010",
+     "net": "66.528990"
+    }
+   },
+   "plaster_class": "HELD",
+   "plaster_height_basis": "slab / roof underside (Q-72; T-556 gross / face)",
+   "plaster_line": "L-0d93f220",
+   "room": "GF-15"
+  },
+  {
+   "paint": {
+    "face_lm": "53.188000",
+    "high": {
+     "DEDUCTIONS": "15.331200",
+     "HEIGHT": "-2.659400",
+     "H_m": "3.650000",
+     "LENGTH": "3.823200",
+     "gap": "16.495000",
+     "net": "178.805000"
+    },
+    "his_gross": "195.300000",
+    "his_length_lm": "54.250000",
+    "his_weighted_height_m": "3.600000",
+    "low": {
+     "DEDUCTIONS": "42.085700",
+     "HEIGHT": "-2.659400",
+     "H_m": "3.650000",
+     "LENGTH": "3.823200",
+     "gap": "43.249500",
+     "net": "152.050500"
+    }
+   },
+   "paint_class": "HELD",
+   "paint_height_basis": "finished ceiling (owner G1, Q-48 A)",
+   "paint_line": "L-c0ac22c9",
+   "plaster": {
+    "face_lm": "53.188000",
+    "high": {
+     "DEDUCTIONS": "16.371250",
+     "HEIGHT": "-36.699720",
+     "H_m": "4.290000",
+     "LENGTH": "3.823200",
+     "gap": "-16.505270",
+     "net": "211.805270"
+    },
+    "his_gross": "195.300000",
+    "his_length_lm": "54.250000",
+    "his_weighted_height_m": "3.600000",
+    "low": {
+     "DEDUCTIONS": "49.955950",
+     "HEIGHT": "-36.699720",
+     "H_m": "4.290000",
+     "LENGTH": "3.823200",
+     "gap": "17.079430",
+     "net": "178.220570"
+    }
+   },
+   "plaster_class": "HELD",
+   "plaster_height_basis": "slab / roof underside (Q-72; T-556 gross / face)",
+   "plaster_line": "L-8cecb1d0",
+   "room": "GF-08"
+  },
+  {
+   "paint": {
+    "face_lm": "17.700000",
+    "high": {
+     "DEDUCTIONS": "7.880000",
+     "HEIGHT": "0.885000",
+     "H_m": "3.350000",
+     "LENGTH": "-0.680000",
+     "gap": "8.085000",
+     "net": "51.415000"
+    },
+    "his_gross": "59.500000",
+    "his_length_lm": "17.500000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "7.880000",
+     "HEIGHT": "0.885000",
+     "H_m": "3.350000",
+     "LENGTH": "-0.680000",
+     "gap": "8.085000",
+     "net": "51.415000"
+    }
+   },
+   "paint_class": "RELEASED",
+   "paint_height_basis": "finished ceiling (owner G1, Q-48 A)",
+   "paint_line": "L-ade6f056",
+   "plaster": {
+    "face_lm": "17.700000",
+    "high": {
+     "DEDUCTIONS": "8.016000",
+     "HEIGHT": "-10.443000",
+     "H_m": "3.990000",
+     "LENGTH": "-0.680000",
+     "gap": "-3.107000",
+     "net": "62.607000"
+    },
+    "his_gross": "59.500000",
+    "his_length_lm": "17.500000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "8.050000",
+     "HEIGHT": "-10.443000",
+     "H_m": "3.990000",
+     "LENGTH": "-0.680000",
+     "gap": "-3.073000",
+     "net": "62.573000"
+    }
+   },
+   "plaster_class": "HELD",
+   "plaster_height_basis": "slab / roof underside (Q-72; T-556 gross / face)",
+   "plaster_line": "L-af9621f4",
+   "room": "1F-01"
+  },
+  {
+   "paint": {
+    "face_lm": "17.400000",
+    "high": {
+     "DEDUCTIONS": "6.285000",
+     "HEIGHT": "0.870000",
+     "H_m": "3.350000",
+     "LENGTH": "-0.340000",
+     "gap": "6.815000",
+     "net": "52.005000"
+    },
+    "his_gross": "58.820000",
+    "his_length_lm": "17.300000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "6.285000",
+     "HEIGHT": "0.870000",
+     "H_m": "3.350000",
+     "LENGTH": "-0.340000",
+     "gap": "6.815000",
+     "net": "52.005000"
+    }
+   },
+   "paint_class": "RELEASED",
+   "paint_height_basis": "finished ceiling (owner G1, Q-48 A)",
+   "paint_line": "L-d9f4ecdb",
+   "plaster": {
+    "face_lm": "17.400000",
+    "high": {
+     "DEDUCTIONS": "6.285000",
+     "HEIGHT": "-10.266000",
+     "H_m": "3.990000",
+     "LENGTH": "-0.340000",
+     "gap": "-4.321000",
+     "net": "63.141000"
+    },
+    "his_gross": "58.820000",
+    "his_length_lm": "17.300000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "6.285000",
+     "HEIGHT": "-10.266000",
+     "H_m": "3.990000",
+     "LENGTH": "-0.340000",
+     "gap": "-4.321000",
+     "net": "63.141000"
+    }
+   },
+   "plaster_class": "HELD",
+   "plaster_height_basis": "slab / roof underside (Q-72; T-556 gross / face)",
+   "plaster_line": "L-971f0bda",
+   "room": "1F-04"
+  },
+  {
+   "paint": {
+    "face_lm": "16.200000",
+    "high": {
+     "DEDUCTIONS": "1.980000",
+     "HEIGHT": "0.810000",
+     "H_m": "3.350000",
+     "LENGTH": "20.740000",
+     "gap": "23.530000",
+     "net": "52.290000"
+    },
+    "his_gross": "75.820000",
+    "his_length_lm": "22.300000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "5.330000",
+     "HEIGHT": "0.810000",
+     "H_m": "3.350000",
+     "LENGTH": "20.740000",
+     "gap": "26.880000",
+     "net": "48.940000"
+    }
+   },
+   "paint_class": "HELD",
+   "paint_height_basis": "finished ceiling (owner G1, Q-48 A)",
+   "paint_line": "L-f53c1329",
+   "plaster": {
+    "face_lm": "16.200000",
+    "high": {
+     "DEDUCTIONS": "2.588000",
+     "HEIGHT": "-9.558000",
+     "H_m": "3.990000",
+     "LENGTH": "20.740000",
+     "gap": "13.770000",
+     "net": "62.050000"
+    },
+    "his_gross": "75.820000",
+    "his_length_lm": "22.300000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "6.612000",
+     "HEIGHT": "-9.558000",
+     "H_m": "3.990000",
+     "LENGTH": "20.740000",
+     "gap": "17.794000",
+     "net": "58.026000"
+    }
+   },
+   "plaster_class": "HELD",
+   "plaster_height_basis": "slab / roof underside (Q-72; T-556 gross / face)",
+   "plaster_line": "L-2ba8077b",
+   "room": "1F-10"
+  },
+  {
+   "paint": {
+    "face_lm": "22.149000",
+    "high": {
+     "DEDUCTIONS": "12.481450",
+     "HEIGHT": "1.107450",
+     "H_m": "3.350000",
+     "LENGTH": "-0.846600",
+     "gap": "12.742300",
+     "net": "61.717700"
+    },
+    "his_gross": "74.460000",
+    "his_length_lm": "21.900000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "12.736550",
+     "HEIGHT": "1.107450",
+     "H_m": "3.350000",
+     "LENGTH": "-0.846600",
+     "gap": "12.997400",
+     "net": "61.462600"
+    }
+   },
+   "paint_class": "HELD",
+   "paint_height_basis": "finished ceiling (owner G1, Q-48 A)",
+   "paint_line": "L-349db74a",
+   "plaster": {
+    "face_lm": "22.149000",
+    "high": {
+     "DEDUCTIONS": "8.176100",
+     "HEIGHT": "-13.067910",
+     "H_m": "3.990000",
+     "LENGTH": "-0.846600",
+     "gap": "-5.738410",
+     "net": "80.198410"
+    },
+    "his_gross": "74.460000",
+    "his_length_lm": "21.900000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "13.598000",
+     "HEIGHT": "-13.067910",
+     "H_m": "3.990000",
+     "LENGTH": "-0.846600",
+     "gap": "-0.316510",
+     "net": "74.776510"
+    }
+   },
+   "plaster_class": "HELD",
+   "plaster_height_basis": "slab / roof underside (Q-72; T-556 gross / face)",
+   "plaster_line": "L-31db3c83",
+   "room": "1F-11"
+  },
+  {
+   "paint": {
+    "face_lm": "39.450000",
+    "high": {
+     "DEDUCTIONS": "17.789800",
+     "HEIGHT": "5.173836",
+     "H_m": "3.350000",
+     "LENGTH": "35.333664",
+     "gap": "58.297300",
+     "net": "114.367700"
+    },
+    "his_gross": "172.665000",
+    "his_length_lm": "49.600000",
+    "his_weighted_height_m": "3.481149",
+    "low": {
+     "DEDUCTIONS": "21.139800",
+     "HEIGHT": "5.173836",
+     "H_m": "3.350000",
+     "LENGTH": "35.333664",
+     "gap": "61.647300",
+     "net": "111.017700"
+    }
+   },
+   "paint_class": "HELD",
+   "paint_height_basis": "finished ceiling (owner G1, Q-48 A)",
+   "paint_line": "L-be48ea84",
+   "plaster": {
+    "face_lm": "39.450000",
+    "high": {
+     "DEDUCTIONS": "17.790000",
+     "HEIGHT": "-20.074164",
+     "H_m": "3.990000",
+     "LENGTH": "35.333664",
+     "gap": "33.049500",
+     "net": "139.615500"
+    },
+    "his_gross": "172.665000",
+    "his_length_lm": "49.600000",
+    "his_weighted_height_m": "3.481149",
+    "low": {
+     "DEDUCTIONS": "21.780000",
+     "HEIGHT": "-20.074164",
+     "H_m": "3.990000",
+     "LENGTH": "35.333664",
+     "gap": "37.039500",
+     "net": "135.625500"
+    }
+   },
+   "plaster_class": "HELD",
+   "plaster_height_basis": "slab / roof underside (Q-72; T-556 gross / face)",
+   "plaster_line": "L-9b4a7bab",
+   "room": "1F-13"
+  },
+  {
+   "paint": {
+    "face_lm": "18.900000",
+    "high": {
+     "DEDUCTIONS": "5.540000",
+     "HEIGHT": "0.945000",
+     "H_m": "3.350000",
+     "LENGTH": "0.000000",
+     "gap": "6.485000",
+     "net": "57.775000"
+    },
+    "his_gross": "64.260000",
+    "his_length_lm": "18.900000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "5.540000",
+     "HEIGHT": "0.945000",
+     "H_m": "3.350000",
+     "LENGTH": "0.000000",
+     "gap": "6.485000",
+     "net": "57.775000"
+    }
+   },
+   "paint_class": "RELEASED",
+   "paint_height_basis": "finished ceiling (owner G1, Q-48 A)",
+   "paint_line": "L-5410f904",
+   "plaster": {
+    "face_lm": "18.900000",
+    "high": {
+     "DEDUCTIONS": "5.636000",
+     "HEIGHT": "-11.151000",
+     "H_m": "3.990000",
+     "LENGTH": "0.000000",
+     "gap": "-5.515000",
+     "net": "69.775000"
+    },
+    "his_gross": "64.260000",
+    "his_length_lm": "18.900000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "5.636000",
+     "HEIGHT": "-11.151000",
+     "H_m": "3.990000",
+     "LENGTH": "0.000000",
+     "gap": "-5.515000",
+     "net": "69.775000"
+    }
+   },
+   "plaster_class": "HELD",
+   "plaster_height_basis": "slab / roof underside (Q-72; T-556 gross / face)",
+   "plaster_line": "L-4ce74fc3",
+   "room": "2F-03"
+  },
+  {
+   "paint": {
+    "face_lm": "9.009000",
+    "high": {
+     "DEDUCTIONS": "4.179950",
+     "HEIGHT": "0.450450",
+     "H_m": "3.350000",
+     "LENGTH": "-0.030600",
+     "gap": "4.599800",
+     "net": "26.000200"
+    },
+    "his_gross": "30.600000",
+    "his_length_lm": "9.000000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "7.529950",
+     "HEIGHT": "0.450450",
+     "H_m": "3.350000",
+     "LENGTH": "-0.030600",
+     "gap": "7.949800",
+     "net": "22.650200"
+    }
+   },
+   "paint_class": "HELD",
+   "paint_height_basis": "finished ceiling (owner G1, Q-48 A)",
+   "paint_line": "L-c74cfb4e",
+   "plaster": {
+    "face_lm": "9.009000",
+    "high": {
+     "DEDUCTIONS": "4.180000",
+     "HEIGHT": "-5.315310",
+     "H_m": "3.990000",
+     "LENGTH": "-0.030600",
+     "gap": "-1.165910",
+     "net": "31.765910"
+    },
+    "his_gross": "30.600000",
+    "his_length_lm": "9.000000",
+    "his_weighted_height_m": "3.400000",
+    "low": {
+     "DEDUCTIONS": "8.586000",
+     "HEIGHT": "-5.315310",
+     "H_m": "3.990000",
+     "LENGTH": "-0.030600",
+     "gap": "3.240090",
+     "net": "27.359910"
+    }
+   },
+   "plaster_class": "HELD",
+   "plaster_height_basis": "slab / roof underside (Q-72; T-556 gross / face)",
+   "plaster_line": "L-ae0cdd79",
+   "room": "2F-01"
+  }
+ ],
+ "dry_sums": {
+  "paint": {
+   "DEDUCTIONS": {
+    "high": "106.771400",
+    "low": "148.625350"
+   },
+   "HEIGHT": {
+    "high": "17.924936",
+    "low": "42.590948"
+   },
+   "LENGTH": {
+    "high": "55.789264",
+    "low": "55.789264"
+   }
+  },
+  "plaster": {
+   "DEDUCTIONS": {
+    "high": "110.154090",
+    "low": "165.404690"
+   },
+   "HEIGHT": {
+    "high": "-137.634764",
+    "low": "-137.634764"
+   },
+   "LENGTH": {
+    "high": "55.789264",
+    "low": "55.789264"
+   }
+  }
+ },
+ "his": {
+  "decor_paint": "452.3250",
+  "half": "58.2475",
+  "paint_gross": "1249.3750",
+  "paint_net": "1191.1275",
+  "plaster_gross": "1209.3850",
+  "plaster_net": "1151.1375",
+  "wet_spatter": "433.8300"
+ },
+ "inputs_sha256_16": {
+  "research/agents_t556/out/T556_PLASTER_HEIGHT.json": "8169a1953c386cca",
+  "research/agents_t687/out/LINE_INDEX_V3_0_69.json": "e908a5f105197d44",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json": "752c9f4e0c4546d0"
+ },
+ "key_scope_wet": {
+  "beside_not_summed": {
+   "engine_wet_render_faces_incl_GF-02": [
+    "433.318506",
+    "488.437300"
+   ],
+   "his_wet_spatter": "433.8300"
+  },
+  "cause": "RULE_DIFFERENCE",
+  "engine": [
+   "498.447626",
+   "589.822230"
+  ],
+  "engine_lines": 35,
+  "his_in_key": "0",
+  "why": "his internal plaster prices dry faces only; his wet faces are his spatter row (J47 = his wall-tile total, T-317) and the levelling render is in his tile rate (owner wet-wall rule 2026-11-02: spatter by the plasterer, render by the tiler). The engine's FIN.PLASTER carries the render (T-331 / T-454) and the band above the ceiling (T-690, Q-72), so the PLASTER.INTERNAL key compares different scopes"
+ },
+ "like_for_like_dry_plus_shaft": {
+  "paint": {
+   "engine_net": [
+    "818.853438",
+    "899.539400"
+   ],
+   "his_gross": "1169.125000",
+   "pct": [
+    "-29.960146",
+    "-23.058749"
+   ]
+  },
+  "plaster": {
+   "engine_net": [
+    "984.249810",
+    "1053.666410"
+   ],
+   "his_gross": "1169.125000",
+   "pct": [
+    "-15.813124",
+    "-9.875641"
+   ]
+  }
+ },
+ "returns": {
+  "paint": {
+   "bound_note": "painted part <= plastered returns - 5 doors with wet rooms both sides (T-634); low end also without the external door OP-009 (its outer reveal side is facade render, side not established); frame-covered depth not printed: HELD",
+   "cause": "ENGINE_OMISSION",
+   "engine": "no FIN.PAINT return line (T-561 ENGINE_OMISSION, T-569 fix row not wired)",
+   "his_gross": "15.9600",
+   "physical_bound": [
+    "19.170444",
+    "20.250444"
+   ]
+  },
+  "plaster": {
+   "by_cause": {
+    "UNRESOLVED": [
+     "-8.190000",
+     "-8.190000"
+    ]
+   },
+   "engine_blank": [
+    "L-3e19506b",
+    "L-64cb94b4",
+    "L-e70e7e48"
+   ],
+   "engine_lines": 30,
+   "engine_released": "24.150000",
+   "gap_at_engine_high": "-8.190000",
+   "gap_at_engine_low": "-8.190000",
+   "his_gross": "15.9600"
+  }
+ },
+ "schema": "URBAN_T701_PLASTER_PAINT_RECONCILE_V1",
+ "shaft": {
+  "paint": {
+   "by_cause": {
+    "ENGINE_RIGHT": [
+     "12.652000",
+     "12.642000"
+    ],
+    "HELD": [
+     "34.684000",
+     "20.528000"
+    ],
+    "RULE_DIFFERENCE": [
+     "1.930000",
+     "1.930000"
+    ],
+    "UNRESOLVED": [
+     "54.000000",
+     "54.000000"
+    ]
+   },
+   "components": [
+    {
+     "at_engine_high": "54.000000",
+     "at_engine_low": "54.000000",
+     "cause": "UNRESOLVED",
+     "name": "his rows with no drawn face"
+    },
+    {
+     "at_engine_high": "13.850000",
+     "at_engine_low": "13.850000",
+     "cause": "ENGINE_RIGHT",
+     "name": "his box vs the drawn faces (T-173)"
+    },
+    {
+     "at_engine_high": "1.930000",
+     "at_engine_low": "1.930000",
+     "cause": "RULE_DIFFERENCE",
+     "name": "paint top: 0.15 decor line under the roof vs his plaster top (T-173 177.07 - 175.14)"
+    },
+    {
+     "at_engine_high": "-1.208000",
+     "at_engine_low": "-1.198000",
+     "cause": "ENGINE_RIGHT",
+     "name": "pier returns (T-680 R-T680-2): built faces he omits"
+    },
+    {
+     "at_engine_high": "0.000000",
+     "at_engine_low": "3.260000",
+     "cause": "HELD",
+     "name": "build-up b 0 .. 0.10 (not printed)"
+    },
+    {
+     "at_engine_high": "20.528000",
+     "at_engine_low": "31.424000",
+     "cause": "HELD",
+     "name": "drawn deductions + held items (contacts, W25 / W27, held heads, beam ends; full Q-73 vs his half list), remainder of the T-173 / T-680 gross"
+    }
+   ],
+   "engine": [
+    "141.654000",
+    "155.820000"
+   ],
+   "gap_at_engine_high": "89.100000",
+   "gap_at_engine_low": "103.266000",
+   "his_gross": "244.920000"
+  },
+  "plaster": {
+   "by_cause": {
+    "ENGINE_RIGHT": [
+     "12.637000",
+     "12.627000"
+    ],
+    "HELD": [
+     "34.679000",
+     "20.523000"
+    ],
+    "UNRESOLVED": [
+     "54.000000",
+     "54.000000"
+    ]
+   },
+   "components": [
+    {
+     "at_engine_high": "54.000000",
+     "at_engine_low": "54.000000",
+     "cause": "UNRESOLVED",
+     "name": "his rows with no drawn face"
+    },
+    {
+     "at_engine_high": "13.850000",
+     "at_engine_low": "13.850000",
+     "cause": "ENGINE_RIGHT",
+     "name": "his box vs the drawn faces (T-173)"
+    },
+    {
+     "at_engine_high": "-1.223000",
+     "at_engine_low": "-1.213000",
+     "cause": "ENGINE_RIGHT",
+     "name": "pier returns (T-680 R-T680-2): built faces he omits"
+    },
+    {
+     "at_engine_high": "0.000000",
+     "at_engine_low": "3.250000",
+     "cause": "HELD",
+     "name": "build-up b 0 .. 0.10 (not printed)"
+    },
+    {
+     "at_engine_high": "20.523000",
+     "at_engine_low": "31.429000",
+     "cause": "HELD",
+     "name": "drawn deductions + held items (contacts, W25 / W27, held heads, beam ends; full Q-73 vs his half list), remainder of the T-173 / T-680 gross"
+    }
+   ],
+   "engine": [
+    "143.604000",
+    "157.770000"
+   ],
+   "gap_at_engine_high": "87.150000",
+   "gap_at_engine_low": "101.316000",
+   "his_gross": "244.920000"
+  }
+ },
+ "wash": {
+  "paint": {
+   "cause": "RULE_DIFFERENCE",
+   "engine": "EXCLUDED (GF-02 'paint above wall tile': full-height porcelain, no paint face)",
+   "his_gross": "24.300000"
+  },
+  "plaster": {
+   "face_lm": "7.200000",
+   "high": {
+    "DEDUCTIONS": "1.760000",
+    "HEIGHT": "2.520000",
+    "H_m": "3.250000",
+    "LENGTH": "-1.620000",
+    "gap": "2.660000",
+    "net": "21.640000"
+   },
+   "his_gross": "24.300000",
+   "his_length_lm": "6.750000",
+   "his_weighted_height_m": "3.600000",
+   "low": {
+    "DEDUCTIONS": "4.254000",
+    "HEIGHT": "7.963200",
+    "H_m": "2.494000",
+    "LENGTH": "-1.620000",
+    "gap": "10.597200",
+    "net": "13.702800"
+   }
+  },
+  "room": "GF-02"
+ },
+ "whole": {
+  "paint": {
+   "by_cause": {
+    "ENGINE_OMISSION": [
+     "15.960000",
+     "15.960000"
+    ],
+    "ENGINE_RIGHT": [
+     "68.441264",
+     "68.431264"
+    ],
+    "HELD": [
+     "76.537950",
+     "20.528000"
+    ],
+    "RULE_DIFFERENCE": [
+     "215.582348",
+     "190.916336"
+    ],
+    "UNRESOLVED": [
+     "54.000000",
+     "54.000000"
+    ]
+   },
+   "components": [
+    {
+     "at_engine_high": "55.789264",
+     "at_engine_low": "55.789264",
+     "cause": "ENGINE_RIGHT",
+     "name": "DRY LENGTH (his lengths vs the drawn faces)"
+    },
+    {
+     "at_engine_high": "17.924936",
+     "at_engine_low": "42.590948",
+     "cause": "RULE_DIFFERENCE",
+     "name": "DRY HEIGHT (his flat height vs the layer's basis)"
+    },
+    {
+     "at_engine_high": "106.771400",
+     "at_engine_low": "106.771400",
+     "cause": "RULE_DIFFERENCE",
+     "name": "DRY DEDUCTIONS at the engine minimum (openings in full, Q-73)"
+    },
+    {
+     "at_engine_high": "0.000000",
+     "at_engine_low": "41.853950",
+     "cause": "HELD",
+     "name": "DRY DEDUCTIONS held range (heads / arches / beam ends not established)"
+    },
+    {
+     "at_engine_high": "24.300000",
+     "at_engine_low": "24.300000",
+     "cause": "RULE_DIFFERENCE",
+     "name": "WASH row 9: wet face, no paint (one finish per face)"
+    },
+    {
+     "at_engine_high": "54.000000",
+     "at_engine_low": "54.000000",
+     "cause": "UNRESOLVED",
+     "name": "SHAFT his rows with no drawn face"
+    },
+    {
+     "at_engine_high": "13.850000",
+     "at_engine_low": "13.850000",
+     "cause": "ENGINE_RIGHT",
+     "name": "SHAFT his box vs the drawn faces (T-173)"
+    },
+    {
+     "at_engine_high": "1.930000",
+     "at_engine_low": "1.930000",
+     "cause": "RULE_DIFFERENCE",
+     "name": "SHAFT paint top: 0.15 decor line under the roof vs his plaster top (T-173 177.07 - 175.14)"
+    },
+    {
+     "at_engine_high": "-1.208000",
+     "at_engine_low": "-1.198000",
+     "cause": "ENGINE_RIGHT",
+     "name": "SHAFT pier returns (T-680 R-T680-2): built faces he omits"
+    },
+    {
+     "at_engine_high": "0.000000",
+     "at_engine_low": "3.260000",
+     "cause": "HELD",
+     "name": "SHAFT build-up b 0 .. 0.10 (not printed)"
+    },
+    {
+     "at_engine_high": "20.528000",
+     "at_engine_low": "31.424000",
+     "cause": "HELD",
+     "name": "SHAFT drawn deductions + held items (contacts, W25 / W27, held heads, beam ends; full Q-73 vs his half list), remainder of the T-173 / T-680 gross"
+    },
+    {
+     "at_engine_high": "15.960000",
+     "at_engine_low": "15.960000",
+     "cause": "ENGINE_OMISSION",
+     "name": "RETURNS: no engine paint return line"
+    },
+    {
+     "at_engine_high": "39.990000",
+     "at_engine_low": "39.990000",
+     "cause": "RULE_DIFFERENCE",
+     "name": "SOFFITS his rows 18-19 (stair flight soffits = CEILING class, Q-57)"
+    }
+   ],
+   "engine": [
+    "818.853438",
+    "899.539400"
+   ],
+   "engine_vs_his_net_pct": [
+    "-31.253922",
+    "-24.480007"
+   ],
+   "gap_at_engine_high": "349.835600",
+   "gap_at_engine_low": "430.521562",
+   "his_gross": "1249.3750",
+   "his_half_step": "58.2475",
+   "his_net": "1191.1275"
+  },
+  "plaster": {
+   "by_cause": {
+    "ENGINE_RIGHT": [
+     "66.806264",
+     "66.796264"
+    ],
+    "HELD": [
+     "92.423600",
+     "20.523000"
+    ],
+    "RULE_DIFFERENCE": [
+     "-516.205100",
+     "-613.022904"
+    ],
+    "UNRESOLVED": [
+     "45.810000",
+     "45.810000"
+    ]
+   },
+   "components": [
+    {
+     "at_engine_high": "55.789264",
+     "at_engine_low": "55.789264",
+     "cause": "ENGINE_RIGHT",
+     "name": "DRY LENGTH (his lengths vs the drawn faces)"
+    },
+    {
+     "at_engine_high": "-137.634764",
+     "at_engine_low": "-137.634764",
+     "cause": "RULE_DIFFERENCE",
+     "name": "DRY HEIGHT (his flat height vs the layer's basis)"
+    },
+    {
+     "at_engine_high": "110.154090",
+     "at_engine_low": "110.154090",
+     "cause": "RULE_DIFFERENCE",
+     "name": "DRY DEDUCTIONS at the engine minimum (openings in full, Q-73)"
+    },
+    {
+     "at_engine_high": "0.000000",
+     "at_engine_low": "55.250600",
+     "cause": "HELD",
+     "name": "DRY DEDUCTIONS held range (heads / arches / beam ends not established)"
+    },
+    {
+     "at_engine_high": "-1.620000",
+     "at_engine_low": "-1.620000",
+     "cause": "ENGINE_RIGHT",
+     "name": "WASH row 9 (wet render) LENGTH (his lengths vs the drawn faces)"
+    },
+    {
+     "at_engine_high": "2.520000",
+     "at_engine_low": "7.963200",
+     "cause": "RULE_DIFFERENCE",
+     "name": "WASH row 9 (wet render) HEIGHT (his flat height vs the layer's basis)"
+    },
+    {
+     "at_engine_high": "1.760000",
+     "at_engine_low": "1.760000",
+     "cause": "RULE_DIFFERENCE",
+     "name": "WASH row 9 (wet render) DEDUCTIONS at the engine minimum (openings in full, Q-73)"
+    },
+    {
+     "at_engine_high": "0.000000",
+     "at_engine_low": "2.494000",
+     "cause": "HELD",
+     "name": "WASH row 9 (wet render) DEDUCTIONS held range (heads / arches / beam ends not established)"
+    },
+    {
+     "at_engine_high": "54.000000",
+     "at_engine_low": "54.000000",
+     "cause": "UNRESOLVED",
+     "name": "SHAFT his rows with no drawn face"
+    },
+    {
+     "at_engine_high": "13.850000",
+     "at_engine_low": "13.850000",
+     "cause": "ENGINE_RIGHT",
+     "name": "SHAFT his box vs the drawn faces (T-173)"
+    },
+    {
+     "at_engine_high": "-1.223000",
+     "at_engine_low": "-1.213000",
+     "cause": "ENGINE_RIGHT",
+     "name": "SHAFT pier returns (T-680 R-T680-2): built faces he omits"
+    },
+    {
+     "at_engine_high": "0.000000",
+     "at_engine_low": "3.250000",
+     "cause": "HELD",
+     "name": "SHAFT build-up b 0 .. 0.10 (not printed)"
+    },
+    {
+     "at_engine_high": "20.523000",
+     "at_engine_low": "31.429000",
+     "cause": "HELD",
+     "name": "SHAFT drawn deductions + held items (contacts, W25 / W27, held heads, beam ends; full Q-73 vs his half list), remainder of the T-173 / T-680 gross"
+    },
+    {
+     "at_engine_high": "-8.190000",
+     "at_engine_low": "-8.190000",
+     "cause": "UNRESOLVED",
+     "name": "RETURNS his doors not by id"
+    },
+    {
+     "at_engine_high": "-589.822230",
+     "at_engine_low": "-498.447626",
+     "cause": "RULE_DIFFERENCE",
+     "name": "KEY SCOPE wet render + bands (his spatter row, not his plaster)"
+    }
+   ],
+   "engine": [
+    "1520.550236",
+    "1689.278640"
+   ],
+   "engine_vs_his_net_pct": [
+    "32.091104",
+    "46.748641"
+   ],
+   "gap_at_engine_high": "-479.893640",
+   "gap_at_engine_low": "-311.165236",
+   "his_gross": "1209.3850",
+   "his_half_step": "58.2475",
+   "his_net": "1151.1375"
+  }
+ }
+}
