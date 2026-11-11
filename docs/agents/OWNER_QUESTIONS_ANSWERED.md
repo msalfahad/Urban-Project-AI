@@ -4,6 +4,19 @@ The binding Answer line of each question is also in the index at the end of OWNE
 
 ## Answered
 
+### Q-81 Rebar by ratio: 6 element types without a kg/m3 (Lead 2026-11-10 00:16)
+
+- **Q-81** (Lead 2026-11-10 00:16, ERS s.6; owner package item 1) Rebar by ratio: 6 element types have no source for a kg/m3.
+  Issue: your 18:30 rule takes kg/m3 "owner-given or calibrated from this villa's counted members". Ground beam, neck, column, slab, stair and pool / tank wall have NO completely counted member on this villa, so no calibration exists and no figure was given.
+  Evidence / investigation: T-662 (Checker GATE A PASS 169a4df2) calibrated only BEAM 147.8 .. 175.9, FOOTING 68.7 .. 71.1 (1 member, weak), GROUND SLAB 61.7 kg/m3; no ratio was borrowed between types (ERS: no borrowed value).
+  Alternatives: (A) you give one kg/m3 (or a range) per type from Urban's own estimating practice; (B) you approve the printed ranges the team will cite from the Drive engineering books (task T-663, page cited) as the owner-approved ratio for these 6 types, carried as a range.
+  Impact: 74 members (ground beam 20, neck 28, slab 16, stair 6, pool 2, other 2) keep their whole steel HELD blank; engine today detailed 9,628 kg + ESTIMATE 2,204 .. 2,909 kg vs the freelancer's 44.19 t lump (reference only, never proof).
+  Recommendation: A (Kuwait villa practice is narrower than generic book ranges); B only if you have no figures. Every ratio line stays ESTIMATE, never VERIFIED; detailed and ratio subtotals stay apart.
+  Stays HELD meanwhile: those 74 members' steel, and the blank bar groups of 219 partly counted members (no ratio on a member that has a detailed count, as your rule says).
+  Next action: T-663 range check and T-664 wiring of the calibrated types go ahead without waiting.
+
+ANSWER (owner 2026-11-11, main chat, verbatim): "Steel you mean rebar? yes do not assume. We will do the ratio rebar in tons, and since rebar is taking a while here we can leave at at the very far end of the project. We can test later everything and ignore accurate rebar and give approx rebar in tons." = DEFERRED: no kg/m3 is assumed or borrowed now; all rebar work (detailed and ratio) is parked; at the end of the project rebar is given as one approximate ratio figure in tons (ESTIMATE, never VERIFIED), values to be set then. The detailed 9.6 t already measured is kept as it is.
+
 ### Q-79 Cement : sand mix of the three wall coats (worker 2, T-454, 2026-11-03; withdrawn by the Lead -> T-489, answered by the owner)
 
 - **Q-79 WITHDRAWN -> T-489** (Lead 2026-11-03 12:18 UTC per `date -u`). Why: a plaster / render / spatter mix is a non-critical procurement parameter; MISSION 'Cement-based materials' and the rule hierarchy (level 4: documented engineering estimating method, labelled ENGINEERING ESTIMATE with assumption, calculation and sensitivity) cover it, and the investigation is not exhausted: the 1990 specification can be downloaded whole with download_file_content (limit about 6.2 MB) and decoded into .work/private, instead of read_file_content's 97,008-character cut. Cement / sand stay HELD (never 0) until T-489 lands.
