@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-11 20:25; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) in force)
+
+- Candidate of record V3.0.71 fc0bd98f / master 1.72.0 (NOT RELEASED; T-704 r2 Gate B PASS, merge b211b3a2). Since 16:25 MERGED: T-711 (1e06f656), T-713 (aa4d8979), T-704 r2 (b211b3a2), T-715 (a4e4277a). READY: T-712, T-716.
+- Next hub (join approved work first): T-703 masonry + T-713 bounds (V3.0.72) -> T-722 concrete round 9 (V3.0.73) -> T-717 plaster / paint + bands (V3.0.74) -> formwork / beads / tiles / WP+roof / earthworks per the T-705 / T-723 maps. Gate A: T-721 beams, T-714 formwork, T-718 stair finishes r2, T-719 / T-720 missing families, T-708 earthworks r3. Rebar parked.
+- Confidence: masonry limits in the candidate by 13 Nov MEDIUM-HIGH (one Gate B a run, L4 may need 2); concrete limits by 14 Nov MEDIUM; plaster / paint by 15 Nov MEDIUM; tiles / WP wiring 15-17 Nov LOW-MEDIUM; 19-20 Nov blind test only when ready.
+
 ## Status (Lead, 2026-11-11 16:25; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) in force)
 
 - Candidate of record V3.0.70 / master 1.71.0 (NOT RELEASED), unchanged. Since 12:25 MERGED (research, unwired): T-706 (11489726), T-709 (fe461c6e), T-707 (f34a5baa), T-710 (4a34ced0), T-705 (8294c146); REJECTED: T-704 Gate B (firewall declaration; r2 TODO with ruling R-T704-2).

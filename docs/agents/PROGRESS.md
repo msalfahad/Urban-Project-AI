@@ -2668,6 +2668,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
+(Lead 2026-11-11 20:25)
+- Candidate (not released) moved one step: the 16 lintels with no figure now carry a drawn upper limit beside them
+  (all of them together at most 1.322 m3), measured end to end on one drawing; no total moved. Released BOQ unchanged.
+- Checked this evening, not yet wired: concrete with no figure (stairs, parapets, lift pit walls at least 1.90 m3, necks)
+  given lower limits; masonry parent walls given one-ended limits; stair finishes sorted by cause (risers 10.34 m2
+  measured, nosing pitch 20.23 m, the rest held by named causes).
+- Waiting for the checker: ground beams (17 lines at least 5.10 m3 together, 3 with no landing level printed); the
+  designer list count per item.
+- Next: masonry limits into the candidate, then the concrete limits, then plaster / paint; the blank beams; one stair
+  skirting run that reads 2.25 m on the plan against a 2.20 m wall; floor voids and gross floor area per floor.
 (Lead 2026-11-11 12:25)
 - Candidate (not released) moved one step: the held column ranges are now in it (held columns 11.67 .. 15.50 m3
   in 27 lines, columns with no figure 7 -> 2; released concrete 291.48 m3 unchanged). Released BOQ unchanged.

@@ -3,6 +3,14 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-11 20:25 (since 16:22)
+
+- T-711 concrete blank tail: WORKED (MERGED 1e06f656; 11 AT_LEAST, 4 blanks named; lift pit walls >= 1.903 m3, freelancer 1.65 below the drawn floor).
+- T-713 masonry rest: WORKED (MERGED aa4d8979; 2 parent one-ended bounds) -> wired with T-703 (scope added).
+- T-704 r2 lintel Gate B: WORKED (MERGED b211b3a2; V3.0.71, R-T704-2, L4 0 fail).
+- T-715 stair finishes: PARTIAL (MERGED a4e4277a; no drawing read in the worker run, F-V715-1 MS2-L skirting 2.25 vs 2.20 m, 5 lines AT_LEAST only) -> T-718.
+- Recurring cause: raw Drive downloads refused by decode (PR #6 open) cost one worker its drawing read; owner item stays in NEEDS FIXING.
+
 ## Lead 2026-11-11 16:25 (since 12:21)
 
 - T-706 slab / beam residual: WORKED (MERGED 11489726; -0.77 % closed by storey, 1F part a typed reference row; beam -0.128 reference slip).
