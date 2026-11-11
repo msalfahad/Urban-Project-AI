@@ -1,0 +1,608 @@
+{
+ "schema": "T696_B9_BOUNDS_V1",
+ "rule": "R-T696-1 BOUND_ROUNDING_V1 1.0.0",
+ "candidate": "ARCH_TAKEOFF_V3.0.68",
+ "line_index": "d1de50cb",
+ "pins": {
+  "research/agents_t672/out/LINE_INDEX_V3_0_68.json": "fc485958",
+  "research/agents_t670/out/T670_MATERIALS.json": "4c58a226",
+  "research/agents_t372/out/T372_PERIMETER_LEDGER.json": "a324087f",
+  "research/agents_t675/out/T675_MASONRY_ROUND2.json": "66e63dfc",
+  "research/agents_t520/out/PERIMETER_BY_WALL_T520.csv": "fb5ac4ab",
+  "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json": "da38d121"
+ },
+ "kappa": "0.92625",
+ "f_015": "0.0013893750",
+ "joint_rate_015": "0.0110625",
+ "bounded_lines": 15,
+ "moved": 10,
+ "not_reproduced": [
+  "L-686a15f1996005bed645",
+  "L-3b5eff6cf7e4128fa4c6",
+  "L-c596929191d328f3878c",
+  "L-dfe9524c3d14b0030c36"
+ ],
+ "exact_outside_v3_0_68": [
+  "L-866a6602ffa70d03f210",
+  "L-5b8280807d1cabdbe720",
+  "L-686a15f1996005bed645",
+  "L-ae1d4bef41f3c27ec8ad",
+  "L-ba28032b9e9df2926781",
+  "L-dc668eb5431a839c451e",
+  "L-e5cefb37cd4e0ab67fc5",
+  "L-3b5eff6cf7e4128fa4c6",
+  "L-c596929191d328f3878c",
+  "L-dfe9524c3d14b0030c36"
+ ],
+ "rows": [
+  {
+   "line_id": "L-4b9a29d424ea40e0af8a",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "what": "material base 98.771 .. 100.271 m2 x 4.5 (1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE)",
+   "inputs": {
+    "host_net_m2": 101.976,
+    "base_m2": [
+     "98.771",
+     "100.271"
+    ],
+    "rate": "4.5"
+   },
+   "exact": [
+    "444.4695",
+    "451.2195"
+   ],
+   "half_way_of_exact": [
+    444.4695,
+    451.2195
+   ],
+   "v3_0_68": [
+    444.4695,
+    451.2195
+   ],
+   "reproduced": true,
+   "r_t696_1": [
+    444.4695,
+    451.2195
+   ],
+   "delta": [
+    0.0,
+    0.0
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": true
+  },
+  {
+   "line_id": "L-6989349aef1cd4fa0940",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "what": "material base 43.1175 .. 44.2975 m2 x 4.5 (GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE)",
+   "inputs": {
+    "host_net_m2": 44.2975,
+    "base_m2": [
+     "43.1175",
+     "44.2975"
+    ],
+    "rate": "4.5"
+   },
+   "exact": [
+    "194.02875",
+    "199.33875"
+   ],
+   "half_way_of_exact": [
+    194.02875,
+    199.33875
+   ],
+   "v3_0_68": [
+    194.02875,
+    199.33875
+   ],
+   "reproduced": true,
+   "r_t696_1": [
+    194.02875,
+    199.33875
+   ],
+   "delta": [
+    0.0,
+    0.0
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": true
+  },
+  {
+   "line_id": "L-aa5532bb971eceac1b76",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "what": "material base 45.236 .. 46.836 m2 x 4.5 (1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE)",
+   "inputs": {
+    "host_net_m2": 46.836,
+    "base_m2": [
+     "45.236",
+     "46.836"
+    ],
+    "rate": "4.5"
+   },
+   "exact": [
+    "203.5620",
+    "210.7620"
+   ],
+   "half_way_of_exact": [
+    203.562,
+    210.762
+   ],
+   "v3_0_68": [
+    203.562,
+    210.762
+   ],
+   "reproduced": true,
+   "r_t696_1": [
+    203.562,
+    210.762
+   ],
+   "delta": [
+    0.0,
+    0.0
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": true
+  },
+  {
+   "line_id": "L-866a6602ffa70d03f210",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "what": "material base 55.8929 .. 56.2329 m2 x 0.0110625 (1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK)",
+   "inputs": {
+    "host_net_m2": 58.2529,
+    "base_m2": [
+     "55.8929",
+     "56.2329"
+    ],
+    "rate": "0.0110625"
+   },
+   "exact": [
+    "0.61831520625",
+    "0.62207645625"
+   ],
+   "half_way_of_exact": [
+    0.618315,
+    0.622076
+   ],
+   "v3_0_68": [
+    0.618315,
+    0.622076
+   ],
+   "reproduced": true,
+   "r_t696_1": [
+    0.618315,
+    0.622077
+   ],
+   "delta": [
+    0.0,
+    1e-06
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": false
+  },
+  {
+   "line_id": "L-5b8280807d1cabdbe720",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "what": "lintel D-1F-03 bearing 0.4 .. 0.63852 m x f 0.0013893750",
+   "inputs": {
+    "bearing_m": [
+     "0.4",
+     "0.63852"
+    ],
+    "f_m3_per_m": "0.0013893750"
+   },
+   "exact": [
+    "0.00055575000",
+    "0.000887143725000"
+   ],
+   "half_way_of_exact": [
+    0.000556,
+    0.000887
+   ],
+   "v3_0_68": [
+    0.000556,
+    0.000887
+   ],
+   "reproduced": true,
+   "r_t696_1": [
+    0.000555,
+    0.000888
+   ],
+   "delta": [
+    -1e-06,
+    1e-06
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": false
+  },
+  {
+   "line_id": "L-686a15f1996005bed645",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "what": "lintel D-1F-09 bearing 0 .. 0.80 m x f 0.0013893750",
+   "inputs": {
+    "bearing_m": [
+     "0",
+     "0.80"
+    ],
+    "f_m3_per_m": "0.0013893750"
+   },
+   "exact": [
+    "0",
+    "0.001111500000"
+   ],
+   "half_way_of_exact": [
+    0.0,
+    0.001112
+   ],
+   "v3_0_68": [
+    0.0,
+    0.001111
+   ],
+   "reproduced": false,
+   "r_t696_1": [
+    0.0,
+    0.001112
+   ],
+   "delta": [
+    0.0,
+    1e-06
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": false
+  },
+  {
+   "line_id": "L-ae1d4bef41f3c27ec8ad",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "what": "lintel D-1F-07 bearing 0.4 .. 0.6593 m x f 0.0013893750",
+   "inputs": {
+    "bearing_m": [
+     "0.4",
+     "0.6593"
+    ],
+    "f_m3_per_m": "0.0013893750"
+   },
+   "exact": [
+    "0.00055575000",
+    "0.00091601493750"
+   ],
+   "half_way_of_exact": [
+    0.000556,
+    0.000916
+   ],
+   "v3_0_68": [
+    0.000556,
+    0.000916
+   ],
+   "reproduced": true,
+   "r_t696_1": [
+    0.000555,
+    0.000917
+   ],
+   "delta": [
+    -1e-06,
+    1e-06
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": false
+  },
+  {
+   "line_id": "L-ba28032b9e9df2926781",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "what": "lintel D-1F-10 bearing 0.4 .. 0.6593 m x f 0.0013893750",
+   "inputs": {
+    "bearing_m": [
+     "0.4",
+     "0.6593"
+    ],
+    "f_m3_per_m": "0.0013893750"
+   },
+   "exact": [
+    "0.00055575000",
+    "0.00091601493750"
+   ],
+   "half_way_of_exact": [
+    0.000556,
+    0.000916
+   ],
+   "v3_0_68": [
+    0.000556,
+    0.000916
+   ],
+   "reproduced": true,
+   "r_t696_1": [
+    0.000555,
+    0.000917
+   ],
+   "delta": [
+    -1e-06,
+    1e-06
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": false
+  },
+  {
+   "line_id": "L-dc668eb5431a839c451e",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "what": "lintel D-GF-10 bearing 0.4 .. 0.653 m x f 0.0013893750",
+   "inputs": {
+    "bearing_m": [
+     "0.4",
+     "0.653"
+    ],
+    "f_m3_per_m": "0.0013893750"
+   },
+   "exact": [
+    "0.00055575000",
+    "0.0009072618750"
+   ],
+   "half_way_of_exact": [
+    0.000556,
+    0.000907
+   ],
+   "v3_0_68": [
+    0.000556,
+    0.000907
+   ],
+   "reproduced": true,
+   "r_t696_1": [
+    0.000555,
+    0.000908
+   ],
+   "delta": [
+    -1e-06,
+    1e-06
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": false
+  },
+  {
+   "line_id": "L-e5cefb37cd4e0ab67fc5",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "what": "lintel D-1F-04 bearing 0.4 .. 0.4798 m x f 0.0013893750",
+   "inputs": {
+    "bearing_m": [
+     "0.4",
+     "0.4798"
+    ],
+    "f_m3_per_m": "0.0013893750"
+   },
+   "exact": [
+    "0.00055575000",
+    "0.00066662212500"
+   ],
+   "half_way_of_exact": [
+    0.000556,
+    0.000667
+   ],
+   "v3_0_68": [
+    0.000556,
+    0.000667
+   ],
+   "reproduced": true,
+   "r_t696_1": [
+    0.000555,
+    0.000667
+   ],
+   "delta": [
+    -1e-06,
+    0.0
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": false
+  },
+  {
+   "line_id": "L-3b5eff6cf7e4128fa4c6",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "what": "walls 1F-W20, 1F-W21, 1F-W22 drawn + 0 held bands + 0 held pieces",
+   "inputs": {
+    "walls": [
+     "1F-W20",
+     "1F-W21",
+     "1F-W22"
+    ],
+    "drawn": [
+     "0.018728497125000",
+     "0.019896266812500"
+    ],
+    "bands_high": "0",
+    "pieces_high": "0"
+   },
+   "exact": [
+    "0.018728497125000",
+    "0.019896266812500"
+   ],
+   "half_way_of_exact": [
+    0.018728,
+    0.019896
+   ],
+   "v3_0_68": [
+    0.018729,
+    0.019896
+   ],
+   "reproduced": false,
+   "r_t696_1": [
+    0.018728,
+    0.019897
+   ],
+   "delta": [
+    -1e-06,
+    1e-06
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": false
+  },
+  {
+   "line_id": "L-43e616eea98ad2c1902e",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "what": "walls 1F-W18, 1F-W24 drawn + 1 held bands + 1 held pieces",
+   "inputs": {
+    "walls": [
+     "1F-W18",
+     "1F-W24"
+    ],
+    "drawn": [
+     "0.014744255906250",
+     "0.020830274156250"
+    ],
+    "bands_high": "0.00514068750",
+    "pieces_high": "0.001469611406250"
+   },
+   "exact": [
+    "0.014744255906250",
+    "0.027440573062500"
+   ],
+   "half_way_of_exact": [
+    0.014744,
+    0.027441
+   ],
+   "v3_0_68": [
+    0.014744,
+    0.027441
+   ],
+   "reproduced": true,
+   "r_t696_1": [
+    0.014744,
+    0.027441
+   ],
+   "delta": [
+    0.0,
+    0.0
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": true
+  },
+  {
+   "line_id": "L-c596929191d328f3878c",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "what": "walls 1F-W12, 1F-W13, 1F-W17, 1F-W19, 1F-W23 drawn + 18 held bands + 5 held pieces",
+   "inputs": {
+    "walls": [
+     "1F-W12",
+     "1F-W13",
+     "1F-W17",
+     "1F-W19",
+     "1F-W23"
+    ],
+    "drawn": [
+     "0.028342902656250",
+     "0.032123600437500"
+    ],
+    "bands_high": "0.012198712500",
+    "pieces_high": "0.005474206968750"
+   },
+   "exact": [
+    "0.028342902656250",
+    "0.049796519906250"
+   ],
+   "half_way_of_exact": [
+    0.028343,
+    0.049797
+   ],
+   "v3_0_68": [
+    0.028344,
+    0.049793
+   ],
+   "reproduced": false,
+   "r_t696_1": [
+    0.028342,
+    0.049797
+   ],
+   "delta": [
+    -2e-06,
+    4e-06
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": false
+  },
+  {
+   "line_id": "L-dfe9524c3d14b0030c36",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "what": "walls GF-W28, GF-W29 drawn + 2 held bands + 0 held pieces",
+   "inputs": {
+    "walls": [
+     "GF-W28",
+     "GF-W29"
+    ],
+    "drawn": [
+     "0.010360430437500",
+     "0.010638930656250"
+    ],
+    "bands_high": "0.00055575000",
+    "pieces_high": "0"
+   },
+   "exact": [
+    "0.010360430437500",
+    "0.011194680656250"
+   ],
+   "half_way_of_exact": [
+    0.01036,
+    0.011195
+   ],
+   "v3_0_68": [
+    0.010361,
+    0.011195
+   ],
+   "reproduced": false,
+   "r_t696_1": [
+    0.01036,
+    0.011195
+   ],
+   "delta": [
+    -1e-06,
+    0.0
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": false
+  },
+  {
+   "line_id": "L-1e61a4aaeb00aa711dcd",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "what": "material base 55.8929 .. 56.2329 m2 x 12.5 (1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK)",
+   "inputs": {
+    "host_net_m2": 58.2529,
+    "base_m2": [
+     "55.8929",
+     "56.2329"
+    ],
+    "rate": "12.5"
+   },
+   "exact": [
+    "698.66125",
+    "702.91125"
+   ],
+   "half_way_of_exact": [
+    698.66125,
+    702.91125
+   ],
+   "v3_0_68": [
+    698.66125,
+    702.91125
+   ],
+   "reproduced": true,
+   "r_t696_1": [
+    698.66125,
+    702.91125
+   ],
+   "delta": [
+    0.0,
+    0.0
+   ],
+   "exact_inside_restated": true,
+   "exact_inside_v3_0_68": true
+  }
+ ]
+}
