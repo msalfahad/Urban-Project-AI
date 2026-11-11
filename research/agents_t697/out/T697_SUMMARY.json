@@ -1,0 +1,285 @@
+{
+ "all": {
+  "by_status_m": {
+   "ASSUMED — OWNER-APPROVED": 293.85,
+   "DRAWING-CONFIRMED": 301.8631
+  },
+  "drawing_high_m": 619.3931,
+  "drawing_low_m": 595.7131,
+  "held_blank_rows": 22,
+  "held_bounded_high_m": 30.5028,
+  "held_bounded_low_m": 16.5528,
+  "held_bounded_rows": 6,
+  "owner_measured_m": 595.7131,
+  "rows_by_status": {
+   "ASSUMED — OWNER-APPROVED": 68,
+   "DRAWING-CONFIRMED": 34,
+   "HELD": 28,
+   "NOT A BEAD": 52,
+   "NOT_APPLICABLE": 3
+  }
+ },
+ "binding": {
+  "BINDING_OPEN": 1,
+  "BOUND": 168,
+  "NO_HOST": 13,
+  "OWNED_BY_B6-06": 3
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.68",
+ "changes_vs_t405": [
+  {
+   "edge_id": "GF-08#V60",
+   "now": "3.4364 .. 3.5364",
+   "rule": "R-T697-2",
+   "t405": "3.6500"
+  },
+  {
+   "edge_id": "GF-08#V61",
+   "now": "3.4364 .. 3.5364",
+   "rule": "R-T697-2",
+   "t405": "3.6500"
+  },
+  {
+   "edge_id": "ST-1F#V10 + ST-1F#V11",
+   "now": 7.92,
+   "rule": "R-T697-6",
+   "t405": "HELD"
+  },
+  {
+   "edge_id": "ST-2F#V10 + ST-2F#V11",
+   "now": "7.58 .. 7.78",
+   "rule": "R-T697-6",
+   "t405": "HELD"
+  },
+  {
+   "edge_id": "ST-GF#V14 + ST-GF#V15",
+   "now": 8.46,
+   "rule": "R-T697-6",
+   "t405": "HELD"
+  },
+  {
+   "edge_id": "LIFT#GF-08",
+   "now": "NOT_APPLICABLE",
+   "rule": "R-T697-4",
+   "t405": "HELD"
+  },
+  {
+   "edge_id": "LIFT#1F-13",
+   "now": "NOT_APPLICABLE",
+   "rule": "R-T697-4",
+   "t405": "HELD"
+  },
+  {
+   "edge_id": "LIFT#2F-01",
+   "now": "NOT_APPLICABLE",
+   "rule": "R-T697-4",
+   "t405": "HELD"
+  },
+  {
+   "edge_id": "EXT#GF-CONVEX-PLINTH",
+   "now": "2.1 .. 2.55",
+   "rule": "R-T697-5",
+   "t405": "note only"
+  },
+  {
+   "edge_id": "EXT#1F-CONVEX-PARAPET-ENDS",
+   "now": "0.0 .. 11.9",
+   "rule": "R-T697-5",
+   "t405": "note only"
+  },
+  {
+   "edge_id": "EXT#GF-MOUTHS-STOP",
+   "now": "0.0 .. 1.2",
+   "rule": "R-T697-5",
+   "t405": "note only"
+  }
+ ],
+ "exterior": {
+  "by_status_m": {
+   "ASSUMED — OWNER-APPROVED": 32.2,
+   "DRAWING-CONFIRMED": 278.4831
+  },
+  "drawing_high_m": 310.6831,
+  "drawing_low_m": 310.6831,
+  "held_blank_rows": 11,
+  "held_bounded_high_m": 15.65,
+  "held_bounded_low_m": 2.1,
+  "held_bounded_rows": 3,
+  "owner_measured_m": 310.6831,
+  "rows_by_status": {
+   "ASSUMED — OWNER-APPROVED": 6,
+   "DRAWING-CONFIRMED": 31,
+   "HELD": 14
+  }
+ },
+ "family": "B4-09 corner beads (m.l)",
+ "hosts": {
+  "L-0d93f2209cd9bb827c0a": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 0,
+   "owner_m": 28.85,
+   "rows": 7
+  },
+  "L-0eac839f9132da7bd116": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 0,
+   "owner_m": 7.92,
+   "rows": 1
+  },
+  "L-1ddc23d5657b4c4e4d0d": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 0,
+   "owner_m": 10.5,
+   "rows": 2
+  },
+  "L-2ba8077ba9bb2e1ff0f6": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 1,
+   "owner_m": 5.3,
+   "rows": 2
+  },
+  "L-31db3c83552682d92ca3": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 1,
+   "owner_m": 33.95,
+   "rows": 10
+  },
+  "L-418121a4b223cb4e8646": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 1,
+   "owner_m": 0.0,
+   "rows": 1
+  },
+  "L-4ce74fc37a08d4bdf0d8": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 0,
+   "owner_m": 10.5,
+   "rows": 2
+  },
+  "L-8bb83e16cc7b104ab88b": {
+   "class": "HELD",
+   "code": "FIN.EXT.FINISH",
+   "held_rows": 2,
+   "owner_m": 88.5122,
+   "rows": 15
+  },
+  "L-8cecb1d010d5aafbf25d": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 4,
+   "owner_m": 57.95,
+   "rows": 18
+  },
+  "L-95f2c45c2eccaaeccb08": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 1,
+   "owner_m": 19.16,
+   "rows": 4
+  },
+  "L-971f0bdaf68d7fd0966c": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 0,
+   "owner_m": 17.3,
+   "rows": 4
+  },
+  "L-9b4a7bab033d677e2017": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 0,
+   "owner_m": 44.75,
+   "rows": 11
+  },
+  "L-9b4a7bab033d677e2017 | L-0eac839f9132da7bd116": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 0,
+   "owner_m": 5.4,
+   "rows": 1
+  },
+  "L-ae0cdd794cc5fdbe0c29": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 0,
+   "owner_m": 14.05,
+   "rows": 3
+  },
+  "L-af9621f43bc316a871ea": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 0,
+   "owner_m": 24.0,
+   "rows": 6
+  },
+  "L-b05f70c92405dbcfbe62": {
+   "class": "HELD",
+   "code": "FIN.EXT.FINISH",
+   "held_rows": 3,
+   "owner_m": 183.5,
+   "rows": 21
+  },
+  "L-b152995525ed123ddac9": {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "held_rows": 1,
+   "owner_m": 5.4,
+   "rows": 2
+  },
+  "L-c0e9a4c62171de1f369b": {
+   "class": "HELD",
+   "code": "ARCH.FACADE",
+   "held_rows": 1,
+   "owner_m": 0.0,
+   "rows": 1
+  },
+  "L-d52c4f763b19aedf8b8b": {
+   "class": "HELD",
+   "code": "FIN.EXT.FINISH",
+   "held_rows": 0,
+   "owner_m": 38.6709,
+   "rows": 6
+  }
+ },
+ "index_lines_sha": "d1de50cb",
+ "inputs_sha8": {
+  "index": "fc485958",
+  "s87a": "66cf96e7",
+  "t313w": "540720aa",
+  "t405": "a394b744",
+  "t680": "3a5bfc11"
+ },
+ "interior": {
+  "by_status_m": {
+   "ASSUMED — OWNER-APPROVED": 261.65,
+   "DRAWING-CONFIRMED": 23.38
+  },
+  "drawing_high_m": 308.71,
+  "drawing_low_m": 285.03,
+  "held_blank_rows": 11,
+  "held_bounded_high_m": 14.8528,
+  "held_bounded_low_m": 14.4528,
+  "held_bounded_rows": 3,
+  "owner_measured_m": 285.03,
+  "rows_by_status": {
+   "ASSUMED — OWNER-APPROVED": 62,
+   "DRAWING-CONFIRMED": 3,
+   "HELD": 14,
+   "NOT A BEAD": 52,
+   "NOT_APPLICABLE": 3
+  }
+ },
+ "rows": 185,
+ "t405_measured_m": {
+  "exterior": 310.6831,
+  "interior": 275.95
+ },
+ "task": "T-697"
+}
