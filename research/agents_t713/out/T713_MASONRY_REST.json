@@ -1,0 +1,3032 @@
+{
+ "schema": "T713_MASONRY_REST_V1",
+ "candidate": "ARCH_TAKEOFF_V3.0.70",
+ "line_index": "e8e001de",
+ "rule": "R-T713-1 PARENT_ONE_END_V1 1.0.0",
+ "counts": {
+  "MAS.BLOCK | HELD blank": 15,
+  "MAS.GLUE.AAC | HELD blank": 10,
+  "MAS.GLUE.AAC | HELD bounded": 3,
+  "MAS.GLUE.AAC | NOT_APPLICABLE": 2,
+  "MAS.MORTAR.BLACK | HELD blank": 12,
+  "MAS.MORTAR.BLACK | HELD bounded": 1,
+  "MAS.MORTAR.BLACK.LINTEL_BEARING | HELD bounded": 6,
+  "MAS.MORTAR.BLACK.PERIMETER | HELD bounded": 4,
+  "MAS.MORTAR.BLACK.PERIMETER | HELD blank": 12,
+  "MAS.UNITS.BLACK | HELD blank": 12,
+  "MAS.UNITS.BLACK | HELD bounded": 1,
+  "MAS.UNITS.WHITE | HELD blank": 15,
+  "MAS.UNITS.WHITE | NOT_APPLICABLE": 2
+ },
+ "census": [
+  {
+   "line_id": "L-c22e309433e7b671cf2d",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "1F-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-5ffa7157a2fe483dd008",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "1F-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-246f3c09de4c6b90efe5",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "2F-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-e1e06ec149b44d4f6f8a",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-9056ebed77701b50abfc",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-afe984a62285e133ec2f",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "2F-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-a6eedf5e4adec6d07618",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-bbb82de298fecbafa11d",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-76a4d8e50423fb02b914",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-e90c9dd5ca08ffb64728",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-0d9b9e89bb6455da475d",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "GF-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-4165954ce4871eda30cc",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "GF-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-ff06449b7f61f19c418d",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "GF-WALLS:walls t=0.40",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-ee857398614d817e6917",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "HOUSE_BELOW_NG:ANNEX_S",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-7503af7cc1eea4e6735d",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "host": "HOUSE_BELOW_NG:MAIN_S",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "HOST",
+   "cause": "see parents / T-696 hosts"
+  },
+  {
+   "line_id": "L-8e250abdcadfdbf33951",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:1F-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-c22e309433e7b671cf2d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "6 of 6 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-5adcc762eca024e4cd94",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:1F-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-5ffa7157a2fe483dd008",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "3 of 3 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-aa5532bb971eceac1b76",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "class": "HELD",
+   "held_low": 203.562,
+   "held_high": 210.762,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "HELD lintel faces in the host (0 .. face each): W13, W21, W22, W23, W25 (lintel lines held: DESIGNER_QUESTIONS row 2 / T-704)"
+  },
+  {
+   "line_id": "L-4b9a29d424ea40e0af8a",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "class": "HELD",
+   "held_low": 444.4695,
+   "held_high": 451.2195,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "HELD lintel faces in the host (0 .. face each): W16, W19, W20, W24 (lintel lines held: DESIGNER_QUESTIONS row 2 / T-704)"
+  },
+  {
+   "line_id": "L-d6373b9f427e4b599a5d",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:2F-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-246f3c09de4c6b90efe5",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "1 of 1 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-bd48d897f8f11b6377ef",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-9056ebed77701b50abfc",
+   "t696_beside": {
+    "kind": "AT_MOST",
+    "base_m2": "25.895",
+    "exact": "90.6325",
+    "printed": 90.6325,
+    "why": "one-ended: b_r >= 0 only; the line stays HELD blank (never a range / point, never 0)"
+   }
+  },
+  {
+   "line_id": "L-1023c410bd8c6ab7fade",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-afe984a62285e133ec2f",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "4 of 4 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-4ccc5dc26bd2472b03ad",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-bbb82de298fecbafa11d",
+   "t696_beside": {
+    "kind": "AT_MOST",
+    "base_m2": "16.225",
+    "exact": "73.0125",
+    "printed": 73.0125,
+    "why": "one-ended: b_r >= 0 only; the line stays HELD blank (never a range / point, never 0)"
+   }
+  },
+  {
+   "line_id": "L-320814d3876198a0e9a1",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-e90c9dd5ca08ffb64728",
+   "t696_beside": {
+    "kind": "AT_MOST",
+    "base_m2": "21.7875",
+    "exact": "98.04375",
+    "printed": 98.04375,
+    "why": "one-ended: b_r >= 0 only; the line stays HELD blank (never a range / point, never 0)"
+   }
+  },
+  {
+   "line_id": "L-3594af8e0405355d51c4",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:GF-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-0d9b9e89bb6455da475d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "6 of 10 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-0e1c62793fcfd587bd78",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:GF-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-4165954ce4871eda30cc",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "17 of 19 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-6989349aef1cd4fa0940",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "class": "HELD",
+   "held_low": 194.02875,
+   "held_high": 199.33875,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "HELD lintel faces in the host (0 .. face each): D-GF-09, W05, W06, W07 (lintel lines held: DESIGNER_QUESTIONS row 2 / T-704)"
+  },
+  {
+   "line_id": "L-24d4696063cef72b0ddb",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:GF-WALLS:walls t=0.40",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-ff06449b7f61f19c418d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "1 of 1 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-6b0bb35ba62fe484aa7e",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S",
+   "class": "EXCLUDED",
+   "held_low": null,
+   "held_high": null,
+   "state": "NOT_APPLICABLE",
+   "cause_class": "NOT APPLICABLE",
+   "cause": "black block below N.G. (ST p.1 note 2; R-T675-1): no AAC material"
+  },
+  {
+   "line_id": "L-a951fbf0e4fdacf3308d",
+   "item_code": "MAS.GLUE.AAC",
+   "unit": "kg",
+   "host": "MATERIAL:HOUSE_BELOW_NG:MAIN_S",
+   "class": "EXCLUDED",
+   "held_low": null,
+   "held_high": null,
+   "state": "NOT_APPLICABLE",
+   "cause_class": "NOT APPLICABLE",
+   "cause": "black block below N.G. (ST p.1 note 2; R-T675-1): no AAC material"
+  },
+  {
+   "line_id": "L-fdbe5743c95c05ae9c19",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:1F-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-c22e309433e7b671cf2d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "6 of 6 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-866a6602ffa70d03f210",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "class": "HELD",
+   "held_low": 0.618315,
+   "held_high": 0.622076,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "HELD lintel faces in the host (0 .. face each): D-1F-09 (lintel lines held: DESIGNER_QUESTIONS row 2 / T-704)"
+  },
+  {
+   "line_id": "L-298e323d027a4723652d",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:1F-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-5ffa7157a2fe483dd008",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "3 of 3 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-cdb8d54311c5c841528f",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:2F-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-246f3c09de4c6b90efe5",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "1 of 1 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-b765c24ac4b275c661bc",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-e1e06ec149b44d4f6f8a",
+   "t696_beside": {
+    "kind": "AT_MOST",
+    "base_m2": "9.47",
+    "exact": "0.104761875",
+    "printed": 0.104762,
+    "why": "one-ended: b_r >= 0 only; the line stays HELD blank (never a range / point, never 0)"
+   }
+  },
+  {
+   "line_id": "L-4631ba5deb8ca9a53491",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-afe984a62285e133ec2f",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "4 of 4 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-3cdc29f2fadd13ef35d4",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-a6eedf5e4adec6d07618",
+   "t696_beside": {
+    "kind": "AT_MOST",
+    "base_m2": "3.85",
+    "exact": "0.056787500",
+    "printed": 0.056788,
+    "why": "one-ended: b_r >= 0 only; the line stays HELD blank (never a range / point, never 0)"
+   }
+  },
+  {
+   "line_id": "L-539af3a600dcf190cd01",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-76a4d8e50423fb02b914",
+   "t696_beside": {
+    "kind": "AT_MOST",
+    "base_m2": "21.945",
+    "exact": "0.3236887500",
+    "printed": 0.323689,
+    "why": "one-ended: b_r >= 0 only; the line stays HELD blank (never a range / point, never 0)"
+   }
+  },
+  {
+   "line_id": "L-39a62186ff15c48d51d5",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:GF-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-0d9b9e89bb6455da475d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "6 of 10 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-a6e9b9d47f2b81204b1e",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:GF-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-4165954ce4871eda30cc",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "17 of 19 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-07e80def32e147b160ac",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:GF-WALLS:walls t=0.40",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-ff06449b7f61f19c418d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "1 of 1 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-17cea41ab1b8f2bdb19e",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "annex neighbour-side ground-beam soffit CONFLICT (D-35 / RFI-S09): no bound",
+   "host_line_id": "L-ee857398614d817e6917",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "no host bound"
+   }
+  },
+  {
+   "line_id": "L-cf220ce7edefedd935b4",
+   "item_code": "MAS.MORTAR.BLACK",
+   "unit": "m3",
+   "host": "MATERIAL:HOUSE_BELOW_NG:MAIN_S",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "black block below the neighbour-side ground beams (ST p.1 note 2): height only h >= 0.70 m, no section prints the leaf thickness or bottom level: AT_LEAST only",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "t696_beside": {
+    "kind": "AT_LEAST",
+    "base_m2": "11.389",
+    "exact": "0.1259908125",
+    "printed": 0.12599,
+    "condition": "CONDITIONAL: one leaf of at least 0.15 m (thickness not printed)",
+    "t675_printed": 0.125991,
+    "delta": -1e-06
+   }
+  },
+  {
+   "line_id": "L-5b8280807d1cabdbe720",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "host": "MATERIAL:LINTEL_BEARING:D-1F-03",
+   "class": "HELD",
+   "held_low": 0.000556,
+   "held_high": 0.000887,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "built bearing at a FLAGGED_DEFICIT lintel end (T-675 R-T675-2; DESIGNER_QUESTIONS row 2)"
+  },
+  {
+   "line_id": "L-e5cefb37cd4e0ab67fc5",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "host": "MATERIAL:LINTEL_BEARING:D-1F-04",
+   "class": "HELD",
+   "held_low": 0.000556,
+   "held_high": 0.000667,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "built bearing at a FLAGGED_DEFICIT lintel end (T-675 R-T675-2; DESIGNER_QUESTIONS row 2)"
+  },
+  {
+   "line_id": "L-ae1d4bef41f3c27ec8ad",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "host": "MATERIAL:LINTEL_BEARING:D-1F-07",
+   "class": "HELD",
+   "held_low": 0.000556,
+   "held_high": 0.000916,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "built bearing at a FLAGGED_DEFICIT lintel end (T-675 R-T675-2; DESIGNER_QUESTIONS row 2)"
+  },
+  {
+   "line_id": "L-686a15f1996005bed645",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "host": "MATERIAL:LINTEL_BEARING:D-1F-09",
+   "class": "HELD",
+   "held_low": 0.0,
+   "held_high": 0.001111,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-1F-09 lintel in the east dome piece (D-42; T-675)"
+  },
+  {
+   "line_id": "L-ba28032b9e9df2926781",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "host": "MATERIAL:LINTEL_BEARING:D-1F-10",
+   "class": "HELD",
+   "held_low": 0.000556,
+   "held_high": 0.000916,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "built bearing at a FLAGGED_DEFICIT lintel end (T-675 R-T675-2; DESIGNER_QUESTIONS row 2)"
+  },
+  {
+   "line_id": "L-dc668eb5431a839c451e",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "unit": "m3",
+   "host": "MATERIAL:LINTEL_BEARING:D-GF-10",
+   "class": "HELD",
+   "held_low": 0.000556,
+   "held_high": 0.000907,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "built bearing at a FLAGGED_DEFICIT lintel end (T-675 R-T675-2; DESIGNER_QUESTIONS row 2)"
+  },
+  {
+   "line_id": "L-c596929191d328f3878c",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": 0.028344,
+   "held_high": 0.049793,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel-deficit / dome-piece junction bands and range block ends (T-520 / T-675 R-T675-3; D-42, DESIGNER_QUESTIONS row 2)"
+  },
+  {
+   "line_id": "L-43e616eea98ad2c1902e",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": 0.014744,
+   "held_high": 0.027441,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel-deficit / dome-piece junction bands and range block ends (T-520 / T-675 R-T675-3; D-42, DESIGNER_QUESTIONS row 2)"
+  },
+  {
+   "line_id": "L-3b5eff6cf7e4128fa4c6",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": 0.018729,
+   "held_high": 0.019896,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel-deficit / dome-piece junction bands and range block ends (T-520 / T-675 R-T675-3; D-42, DESIGNER_QUESTIONS row 2)"
+  },
+  {
+   "line_id": "L-46ec36d9f39b1a93164e",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:1F-WALLS:walls t=0.15#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-c22e309433e7b671cf2d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "6 of 6 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-0af727d388db346cacdf",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:1F-WALLS:walls t=0.20#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-5ffa7157a2fe483dd008",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "3 of 3 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-d6c5a1c1ac4213684f49",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-e1e06ec149b44d4f6f8a",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "perimeter joint of the 2F walls: vertical bands depend on b_r (T-520 figure only), HELD with the host"
+   }
+  },
+  {
+   "line_id": "L-c10db6d6a0726d12b9b8",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:2F-WALLS:walls t=0.15#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-246f3c09de4c6b90efe5",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "1 of 1 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-5828bb6c90125f4ac3e4",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-a6eedf5e4adec6d07618",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "perimeter joint of the 2F walls: vertical bands depend on b_r (T-520 figure only), HELD with the host"
+   }
+  },
+  {
+   "line_id": "L-083709069040ee974c34",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-76a4d8e50423fb02b914",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "perimeter joint of the 2F walls: vertical bands depend on b_r (T-520 figure only), HELD with the host"
+   }
+  },
+  {
+   "line_id": "L-2fc617d78b42e0735e64",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-afe984a62285e133ec2f",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "4 of 4 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-dfe9524c3d14b0030c36",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": 0.010361,
+   "held_high": 0.011195,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "lintel-deficit / dome-piece junction bands and range block ends (T-520 / T-675 R-T675-3; D-42, DESIGNER_QUESTIONS row 2)"
+  },
+  {
+   "line_id": "L-a229ef96563932929757",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:GF-WALLS:walls t=0.15#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-0d9b9e89bb6455da475d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "6 of 10 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-d69e452a4a19c1416858",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:GF-WALLS:walls t=0.20#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-4165954ce4871eda30cc",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "17 of 19 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-f57d9679c2acf87dc06b",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:GF-WALLS:walls t=0.40#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-ff06449b7f61f19c418d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "1 of 1 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-40e2063e8fc129aab6cb",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "annex neighbour-side ground-beam soffit CONFLICT (D-35 / RFI-S09): no bound",
+   "host_line_id": "L-ee857398614d817e6917",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "no host bound"
+   }
+  },
+  {
+   "line_id": "L-b24efc9b17d005f76ce7",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "unit": "m3",
+   "host": "MATERIAL:HOUSE_BELOW_NG:MAIN_S#PERIMETER_JOINT",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "black block below the neighbour-side ground beams (ST p.1 note 2): height only h >= 0.70 m, no section prints the leaf thickness or bottom level: AT_LEAST only",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "perimeter joint below N.G.: no drawn wall ends / soffit course: HELD"
+   }
+  },
+  {
+   "line_id": "L-e5a117db55cf7c5caaab",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:1F-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-c22e309433e7b671cf2d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "6 of 6 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-1e61a4aaeb00aa711dcd",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "class": "HELD",
+   "held_low": 698.66125,
+   "held_high": 702.91125,
+   "state": "HELD bounded",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "HELD lintel faces in the host (0 .. face each): D-1F-09 (lintel lines held: DESIGNER_QUESTIONS row 2 / T-704)"
+  },
+  {
+   "line_id": "L-4b1429e0aedd15f625fd",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:1F-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-5ffa7157a2fe483dd008",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "3 of 3 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-318e6311ab5e01c0fa3e",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:2F-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-246f3c09de4c6b90efe5",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "1 of 1 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-c76dd0d11a5776939008",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-e1e06ec149b44d4f6f8a",
+   "t696_beside": {
+    "kind": "AT_MOST",
+    "base_m2": "9.47",
+    "exact": "118.375",
+    "printed": 118.375,
+    "why": "one-ended: b_r >= 0 only; the line stays HELD blank (never a range / point, never 0)"
+   }
+  },
+  {
+   "line_id": "L-c7e5807d75a4b93bf229",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-afe984a62285e133ec2f",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "4 of 4 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-a9876502e10fb732bc6c",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-a6eedf5e4adec6d07618",
+   "t696_beside": {
+    "kind": "AT_MOST",
+    "base_m2": "3.85",
+    "exact": "48.125",
+    "printed": 48.125,
+    "why": "one-ended: b_r >= 0 only; the line stays HELD blank (never a range / point, never 0)"
+   }
+  },
+  {
+   "line_id": "L-8075d1bd45ac1b2c5e77",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-76a4d8e50423fb02b914",
+   "t696_beside": {
+    "kind": "AT_MOST",
+    "base_m2": "21.945",
+    "exact": "274.3125",
+    "printed": 274.3125,
+    "why": "one-ended: b_r >= 0 only; the line stays HELD blank (never a range / point, never 0)"
+   }
+  },
+  {
+   "line_id": "L-dc7b4e20a2f54668b179",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:GF-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-0d9b9e89bb6455da475d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "6 of 10 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-e812502cb3615c2b9a56",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:GF-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-4165954ce4871eda30cc",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "17 of 19 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-43f32c104c36f9bd85be",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:GF-WALLS:walls t=0.40",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-ff06449b7f61f19c418d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "1 of 1 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-8971f07e8552cf3831c0",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "annex neighbour-side ground-beam soffit CONFLICT (D-35 / RFI-S09): no bound",
+   "host_line_id": "L-ee857398614d817e6917",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "no host bound"
+   }
+  },
+  {
+   "line_id": "L-bd21b0ea1ce4e1c8dabd",
+   "item_code": "MAS.UNITS.BLACK",
+   "unit": "pcs",
+   "host": "MATERIAL:HOUSE_BELOW_NG:MAIN_S",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "black block below the neighbour-side ground beams (ST p.1 note 2): height only h >= 0.70 m, no section prints the leaf thickness or bottom level: AT_LEAST only",
+   "host_line_id": "L-7503af7cc1eea4e6735d",
+   "t696_beside": {
+    "kind": "AT_LEAST",
+    "base_m2": "11.389",
+    "exact": "142.3625",
+    "printed": 142.3625,
+    "condition": "CONDITIONAL: one leaf of at least 0.15 m (thickness not printed)",
+    "t675_printed": 142.3625,
+    "delta": 0.0
+   }
+  },
+  {
+   "line_id": "L-d4c62b9df1e162be5e8b",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:1F-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-c22e309433e7b671cf2d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "6 of 6 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-90c7f0aecafe7b4a51a1",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:1F-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-5ffa7157a2fe483dd008",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "3 of 3 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-f78bc052b5ce391b2cac",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "RULE NOT GIVEN",
+   "cause": "the AAC block face the project uses is not printed and the company rules give no AAC count rule (Q-60 records two supplier faces, 62.5 x 25 and 60 x 20, without choosing): host area VALUED, the count HELD; never the black 12.5 / m2",
+   "host_line_id": "L-b7b4d784fbe7fdbebe84",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "the producer's 62.5 x 25 (6.4 / m2) and 60 x 20 (8.33 / m2) alternatives stay beside on the line (V3.0.59); no face chosen"
+   }
+  },
+  {
+   "line_id": "L-54ba4f569a7c37de7c4c",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "RULE NOT GIVEN",
+   "cause": "the AAC block face the project uses is not printed and the company rules give no AAC count rule (Q-60 records two supplier faces, 62.5 x 25 and 60 x 20, without choosing): host area VALUED, the count HELD; never the black 12.5 / m2",
+   "host_line_id": "L-2fdc0f971a94348ec855",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "the producer's 62.5 x 25 (6.4 / m2) and 60 x 20 (8.33 / m2) alternatives stay beside on the line (V3.0.59); no face chosen"
+   }
+  },
+  {
+   "line_id": "L-6d9df440e35bc7c5551c",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:2F-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-246f3c09de4c6b90efe5",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "1 of 1 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-25ee426cc7cc99a0fdff",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-9056ebed77701b50abfc",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "AAC face not selected (Q-60 supplier faces 62.5 x 25 / 60 x 20 beside only): no count rule, HELD"
+   }
+  },
+  {
+   "line_id": "L-5245ce2427156823ff3b",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-afe984a62285e133ec2f",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "4 of 4 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-45b7623964da3bbafd91",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-bbb82de298fecbafa11d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "AAC face not selected (Q-60 supplier faces 62.5 x 25 / 60 x 20 beside only): no count rule, HELD"
+   }
+  },
+  {
+   "line_id": "L-128f47fcdb032a1f2ddb",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "DESIGNER ITEM",
+   "cause": "D-39: the main-roof structural level / build-up b_r is not printed; each wall is U - L x b_r with b_r >= 0 (the structural top cannot sit above the finished +13.90), so the host area has a drawn UPPER end only; no printed upper limit of b_r",
+   "host_line_id": "L-e90c9dd5ca08ffb64728",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "AAC face not selected (Q-60 supplier faces 62.5 x 25 / 60 x 20 beside only): no count rule, HELD"
+   }
+  },
+  {
+   "line_id": "L-c9b56cb8453e5f67a334",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:GF-WALLS:walls t=0.15",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-0d9b9e89bb6455da475d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "6 of 10 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-1a2a8192895b1cb3a201",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:GF-WALLS:walls t=0.20",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-4165954ce4871eda30cc",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "17 of 19 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-859f0937ec4a656a21f7",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "RULE NOT GIVEN",
+   "cause": "the AAC block face the project uses is not printed and the company rules give no AAC count rule (Q-60 records two supplier faces, 62.5 x 25 and 60 x 20, without choosing): host area VALUED, the count HELD; never the black 12.5 / m2",
+   "host_line_id": "L-a3f88ecda2402f67c500",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "the producer's 62.5 x 25 (6.4 / m2) and 60 x 20 (8.33 / m2) alternatives stay beside on the line (V3.0.59); no face chosen"
+   }
+  },
+  {
+   "line_id": "L-356dacfc4b7952007c7d",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "RULE NOT GIVEN",
+   "cause": "the AAC block face the project uses is not printed and the company rules give no AAC count rule (Q-60 records two supplier faces, 62.5 x 25 and 60 x 20, without choosing): host area VALUED, the count HELD; never the black 12.5 / m2",
+   "host_line_id": "L-541cf7210e52db0498bb",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "the producer's 62.5 x 25 (6.4 / m2) and 60 x 20 (8.33 / m2) alternatives stay beside on the line (V3.0.59); no face chosen"
+   }
+  },
+  {
+   "line_id": "L-6444a86319689e07512c",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "RULE NOT GIVEN",
+   "cause": "the AAC block face the project uses is not printed and the company rules give no AAC count rule (Q-60 records two supplier faces, 62.5 x 25 and 60 x 20, without choosing): host area VALUED, the count HELD; never the black 12.5 / m2",
+   "host_line_id": "L-4e304f59db838d5fc7ec",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "the producer's 62.5 x 25 (6.4 / m2) and 60 x 20 (8.33 / m2) alternatives stay beside on the line (V3.0.59); no face chosen"
+   }
+  },
+  {
+   "line_id": "L-ee1c4e34adec6ee5813d",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:GF-WALLS:walls t=0.40",
+   "class": "HELD",
+   "held_low": null,
+   "held_high": null,
+   "state": "HELD blank",
+   "cause_class": "OPEN BOUND",
+   "cause": "BLOCK_WALL_NOT_ESTABLISHED parent: the held walls / pieces of this thickness that no part line carries (colour not split); at least one of them has no drawn end (see its walls)",
+   "host_line_id": "L-ff06449b7f61f19c418d",
+   "t696_beside": {
+    "kind": "NONE",
+    "why": "1 of 1 held walls / pieces have no drawn end and the colour is not split: no material bound"
+   }
+  },
+  {
+   "line_id": "L-2ae0aac40cd54e372c68",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S",
+   "class": "EXCLUDED",
+   "held_low": null,
+   "held_high": null,
+   "state": "NOT_APPLICABLE",
+   "cause_class": "NOT APPLICABLE",
+   "cause": "black block below N.G. (ST p.1 note 2; R-T675-1): no AAC material"
+  },
+  {
+   "line_id": "L-09c52c7b398d3218cc0e",
+   "item_code": "MAS.UNITS.WHITE",
+   "unit": "pcs",
+   "host": "MATERIAL:HOUSE_BELOW_NG:MAIN_S",
+   "class": "EXCLUDED",
+   "held_low": null,
+   "held_high": null,
+   "state": "NOT_APPLICABLE",
+   "cause_class": "NOT APPLICABLE",
+   "cause": "black block below N.G. (ST p.1 note 2; R-T675-1): no AAC material"
+  }
+ ],
+ "parents": {
+  "L-0d9b9e89bb6455da475d": {
+   "host": "GF-WALLS:walls t=0.15",
+   "bound": {
+    "blocking_components": [
+     "GF-W23#0",
+     "GF-W24#0",
+     "GF-W25#0",
+     "GF-W26#0",
+     "GF-W26#1",
+     "GF-W27#0",
+     "GF-W27#1",
+     "GF-W27#2",
+     "GF-W30#0"
+    ],
+    "kind": "NONE"
+   },
+   "components": [
+    {
+     "id": "GF-W20#0",
+     "wall": "GF-W20",
+     "state": "HELD ON DROP",
+     "class": "DROP",
+     "cause": "D-41 sunken-panel drop not printed (R-MAS-DROP-1)",
+     "length_m": null,
+     "held_text": "drop d of the sunken panel over 0.9308 m",
+     "end": {
+      "upper": "4.239672",
+      "lower": null,
+      "why": "U at d = 0 (d >= 0); lower open"
+     }
+    },
+    {
+     "id": "GF-W23#0",
+     "wall": "GF-W23",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "1.3000",
+     "held_text": "0:slab GF-139 1.3000 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W24#0",
+     "wall": "GF-W24",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "4.5000",
+     "held_text": "0:slab GF-139 4.5000 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W25#0",
+     "wall": "GF-W25",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "4.5000",
+     "held_text": "0:slab GF-137 4.5000 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W26#0",
+     "wall": "GF-W26",
+     "state": "HELD",
+     "class": "OPENING_WIDTH",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)",
+     "length_m": null,
+     "held_text": "opening A-GF-01: width not drawn",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W26#1",
+     "wall": "GF-W26",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "4.4500",
+     "held_text": "0:B4 BM-GF-032 4.4500 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W27#0",
+     "wall": "GF-W27",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "0.0489",
+     "held_text": "0:B4 BM-GF-032 0.0489 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W27#1",
+     "wall": "GF-W27",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "0.0011",
+     "held_text": "1:B4 BM-GF-032 0.0011 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W27#2",
+     "wall": "GF-W27",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "1.4500",
+     "held_text": "2:slab GF-137 1.4500 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W30#0",
+     "wall": "GF-W30",
+     "state": "HELD",
+     "class": "NO_PIECE",
+     "cause": "no wall band or member over the wall (GF-H01 / GF-H02 / GF-W37 glazed line or strip: material, base, top designer, T-228; GF-W30 0.30 stub + door: method gap, T-125 D)",
+     "length_m": null,
+     "held_text": "no drawn wall piece (no wall band or member bound)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W31#0",
+     "wall": "GF-W31",
+     "state": "HELD ON DROP",
+     "class": "DROP",
+     "cause": "D-41 sunken-panel drop not printed (R-MAS-DROP-1)",
+     "length_m": null,
+     "held_text": "drop d of the sunken panel over 1.0311 m",
+     "end": {
+      "upper": "5.630974",
+      "lower": null,
+      "why": "U at d = 0 (d >= 0); lower open"
+     }
+    },
+    {
+     "id": "GF-W32#0",
+     "wall": "GF-W32",
+     "state": "HELD ON DROP",
+     "class": "DROP",
+     "cause": "D-41 sunken-panel drop not printed (R-MAS-DROP-1)",
+     "length_m": null,
+     "held_text": "drop d of the sunken panel over 0.7911 m",
+     "end": {
+      "upper": "9.127727",
+      "lower": null,
+      "why": "U at d = 0 (d >= 0); lower open"
+     }
+    },
+    {
+     "id": "GF-W34#0",
+     "wall": "GF-W34",
+     "state": "HELD ON DROP",
+     "class": "DROP",
+     "cause": "D-41 sunken-panel drop not printed (R-MAS-DROP-1)",
+     "length_m": null,
+     "held_text": "drop d of the sunken panel over 1.7827 m",
+     "end": {
+      "upper": "10.4121",
+      "lower": null,
+      "why": "U at d = 0 (d >= 0); lower open"
+     }
+    }
+   ],
+   "by_class": {
+    "DROP": {
+     "components": 4,
+     "length_m": "0",
+     "upper_m2": "29.410473",
+     "cause": "D-41 sunken-panel drop not printed (R-MAS-DROP-1)"
+    },
+    "ANNEX_DATUM": {
+     "components": 7,
+     "length_m": "16.2500",
+     "upper_m2": "0",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed"
+    },
+    "OPENING_WIDTH": {
+     "components": 1,
+     "length_m": "0",
+     "upper_m2": "0",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)"
+    },
+    "NO_PIECE": {
+     "components": 1,
+     "length_m": "0",
+     "upper_m2": "0",
+     "cause": "no wall band or member over the wall (GF-H01 / GF-H02 / GF-W37 glazed line or strip: material, base, top designer, T-228; GF-W30 0.30 stub + door: method gap, T-125 D)"
+    }
+   },
+   "materials": {
+    "L-3594af8e0405355d51c4": {
+     "code": "MAS.GLUE.AAC",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-39a62186ff15c48d51d5": {
+     "code": "MAS.MORTAR.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-a229ef96563932929757": {
+     "code": "MAS.MORTAR.BLACK.PERIMETER",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-c9b56cb8453e5f67a334": {
+     "code": "MAS.UNITS.WHITE",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-dc7b4e20a2f54668b179": {
+     "code": "MAS.UNITS.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    }
+   }
+  },
+  "L-246f3c09de4c6b90efe5": {
+   "host": "2F-WALLS:walls t=0.15",
+   "bound": {
+    "blocking_components": [],
+    "kind": "AT_MOST",
+    "exact_m2": "1.965000",
+    "printed_m2": 1.965
+   },
+   "components": [
+    {
+     "id": "2F-W03#0",
+     "wall": "2F-W03",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "UNLABELLED_MEMBER",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))",
+     "length_m": "0.1000",
+     "held_text": "0:H west corner in the BM-2F-016 band 0.1000 m: 0.100 m of the census inside the west band (BM-2F-016, unlabelled, D-04): depth not printed (Q-61 C(4))",
+     "end": {
+      "upper": "0.425000",
+      "lower": null,
+      "length_m": "0.1000",
+      "height_max_m": "4.25",
+      "why": "L x (13.90 - 9.65 - 0) with member depth >= 0 and b_r >= 0"
+     }
+    },
+    {
+     "id": "2F-W03#1",
+     "wall": "2F-W03",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "UNLABELLED_MEMBER",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))",
+     "length_m": "0.2000",
+     "held_text": "2:H junction BM-2F-018 0.2000 m: 0.200 m where the unlabelled BM-2F-018 frames into the band (D-04): the soffit is the deeper of B2 / B1 (0.40) and a member whose depth is not printed",
+     "end": {
+      "upper": "0.770000",
+      "lower": null,
+      "length_m": "0.2000",
+      "height_max_m": "3.85",
+      "why": "L x (13.90 - 9.65 - 0.40) with member depth >= 0 and b_r >= 0"
+     }
+    },
+    {
+     "id": "2F-W03#2",
+     "wall": "2F-W03",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "UNLABELLED_MEMBER",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))",
+     "length_m": "0.2000",
+     "held_text": "4:H junction BM-2F-017 0.2000 m: 0.200 m where the unlabelled BM-2F-017 frames into the band (D-04): the soffit is the deeper of B1 / B2 (0.40) and a member whose depth is not printed",
+     "end": {
+      "upper": "0.770000",
+      "lower": null,
+      "length_m": "0.2000",
+      "height_max_m": "3.85",
+      "why": "L x (13.90 - 9.65 - 0.40) with member depth >= 0 and b_r >= 0"
+     }
+    }
+   ],
+   "by_class": {
+    "UNLABELLED_MEMBER": {
+     "components": 3,
+     "length_m": "0.5000",
+     "upper_m2": "1.965000",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))"
+    }
+   },
+   "materials": {
+    "L-318e6311ab5e01c0fa3e": {
+     "code": "MAS.UNITS.BLACK",
+     "kind": "AT_MOST",
+     "exact": "24.5625000",
+     "printed": 24.5625,
+     "why": "colour not split: each colour's part is at most the whole face"
+    },
+    "L-6d9df440e35bc7c5551c": {
+     "code": "MAS.UNITS.WHITE",
+     "kind": "NONE",
+     "why": "no AAC count rule (Q-60 faces beside only): HELD with the parent"
+    },
+    "L-c10db6d6a0726d12b9b8": {
+     "code": "MAS.MORTAR.BLACK.PERIMETER",
+     "kind": "NONE",
+     "why": "perimeter joint needs the piece ends / soffit courses: HELD with the parent"
+    },
+    "L-cdb8d54311c5c841528f": {
+     "code": "MAS.MORTAR.BLACK",
+     "kind": "AT_MOST",
+     "exact": "0.0217378125000",
+     "printed": 0.021738,
+     "why": "colour not split: each colour's part is at most the whole face"
+    },
+    "L-d6373b9f427e4b599a5d": {
+     "code": "MAS.GLUE.AAC",
+     "kind": "AT_MOST",
+     "exact": "6.8775000",
+     "printed": 6.8775,
+     "why": "colour not split: each colour's part is at most the whole face"
+    }
+   }
+  },
+  "L-4165954ce4871eda30cc": {
+   "host": "GF-WALLS:walls t=0.20",
+   "bound": {
+    "blocking_components": [
+     "GF-H02#0",
+     "GF-W00#0",
+     "GF-W00#1",
+     "GF-W02#0",
+     "GF-W03#0",
+     "GF-W04#0",
+     "GF-W04#1",
+     "GF-W06#0",
+     "GF-W08#0",
+     "GF-W08#1",
+     "GF-W09#0",
+     "GF-W10#0",
+     "GF-W13#0",
+     "GF-W14#0",
+     "GF-W14#1",
+     "GF-W15#0",
+     "GF-W17#0",
+     "GF-W17#1",
+     "GF-W17#2",
+     "GF-W18#0",
+     "GF-W35#0",
+     "GF-W35#1",
+     "GF-W36#0",
+     "GF-W37#0"
+    ],
+    "kind": "NONE"
+   },
+   "components": [
+    {
+     "id": "GF-H02#0",
+     "wall": "GF-H02",
+     "state": "HELD",
+     "class": "NO_PIECE",
+     "cause": "no wall band or member over the wall (GF-H01 / GF-H02 / GF-W37 glazed line or strip: material, base, top designer, T-228; GF-W30 0.30 stub + door: method gap, T-125 D)",
+     "length_m": null,
+     "held_text": "no drawn wall piece (no wall band or member bound)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W00#0",
+     "wall": "GF-W00",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "5.4500",
+     "held_text": "0:CB7 BM-GF-013 5.4500 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W00#1",
+     "wall": "GF-W00",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "4.4500",
+     "held_text": "1:CB7 BM-GF-013 4.4500 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W02#0",
+     "wall": "GF-W02",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "1.6500",
+     "held_text": "0:slab GF-139 1.6500 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W03#0",
+     "wall": "GF-W03",
+     "state": "HELD",
+     "class": "LABEL",
+     "cause": "D-03 'CB3' and 'B3 (with stair)' on one line (owner Q-61 (2))",
+     "length_m": "2.6400",
+     "held_text": "0:CB3 and 2.6400 m: CB3 and",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W04#0",
+     "wall": "GF-W04",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "5.8481",
+     "held_text": "0:CB6 BM-GF-030 5.8481 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W04#1",
+     "wall": "GF-W04",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "0.0019",
+     "held_text": "1:CB6 BM-GF-030 0.0019 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W06#0",
+     "wall": "GF-W06",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "2.5000",
+     "held_text": "0:B2 BM-GF-028 2.5000 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W08#0",
+     "wall": "GF-W08",
+     "state": "HELD",
+     "class": "LIFT_TIE_BEAM",
+     "cause": "D-43 lift tie beam at +3.00 printed, size not (ST p.8 n.19)",
+     "length_m": null,
+     "held_text": "printed note calls for an unsized member over the wall: lift tie beam size (ST p.8 n.19)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W08#1",
+     "wall": "GF-W08",
+     "state": "HELD",
+     "class": "OPENING_WIDTH",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)",
+     "length_m": null,
+     "held_text": "opening L-GF-01: width not drawn",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W09#0",
+     "wall": "GF-W09",
+     "state": "HELD",
+     "class": "LIFT_TIE_BEAM",
+     "cause": "D-43 lift tie beam at +3.00 printed, size not (ST p.8 n.19)",
+     "length_m": null,
+     "held_text": "printed note calls for an unsized member over the wall: lift tie beam size (ST p.8 n.19)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W10#0",
+     "wall": "GF-W10",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "STAIR_SHAFT",
+     "cause": "stair-shaft piece: no floor on the shaft line, landing member level not printed (A-A sheet 10; D-03 'B3 (With Stair)')",
+     "length_m": "2.5000",
+     "held_text": "0:SF B3 (With Stair) stair-foot 2.5000 m: base +0.30 stair-foot landing (plan LEVEL 4AB / 4AC; section A-A sheet10), top = the stair landing member / cranked 'B3 (With Stair)' (6B6), size and soffit n",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W12#0",
+     "wall": "GF-W12",
+     "state": "HELD ON DROP",
+     "class": "DROP",
+     "cause": "D-41 sunken-panel drop not printed (R-MAS-DROP-1)",
+     "length_m": null,
+     "held_text": "drop d of the sunken panel over 0.4500 m",
+     "end": {
+      "upper": "1.953",
+      "lower": null,
+      "why": "U at d = 0 (d >= 0); lower open"
+     }
+    },
+    {
+     "id": "GF-W13#0",
+     "wall": "GF-W13",
+     "state": "HELD",
+     "class": "LIFT_TIE_BEAM",
+     "cause": "D-43 lift tie beam at +3.00 printed, size not (ST p.8 n.19)",
+     "length_m": null,
+     "held_text": "printed note calls for an unsized member over the wall: lift tie beam size (ST p.8 n.19)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W14#0",
+     "wall": "GF-W14",
+     "state": "HELD",
+     "class": "LIFT_TIE_BEAM",
+     "cause": "D-43 lift tie beam at +3.00 printed, size not (ST p.8 n.19)",
+     "length_m": null,
+     "held_text": "printed note calls for an unsized member over the wall: lift tie beam size (ST p.8 n.19)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W14#1",
+     "wall": "GF-W14",
+     "state": "HELD",
+     "class": "OPENING_WIDTH",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)",
+     "length_m": null,
+     "held_text": "opening P-GF-01: width not drawn",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W15#0",
+     "wall": "GF-W15",
+     "state": "HELD",
+     "class": "OPENING_WIDTH",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)",
+     "length_m": null,
+     "held_text": "opening D-GF-07: width not drawn",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W16#0",
+     "wall": "GF-W16",
+     "state": "HELD ON DROP",
+     "class": "DROP",
+     "cause": "D-41 sunken-panel drop not printed (R-MAS-DROP-1)",
+     "length_m": null,
+     "held_text": "drop d of the sunken panel over 2.9489 m",
+     "end": {
+      "upper": "15.435626",
+      "lower": null,
+      "why": "U at d = 0 (d >= 0); lower open"
+     }
+    },
+    {
+     "id": "GF-W17#0",
+     "wall": "GF-W17",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "0.1002",
+     "held_text": "0:CB7 BM-GF-013 0.1002 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W17#1",
+     "wall": "GF-W17",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "1.2998",
+     "held_text": "1:B1 BM-GF-034 1.2998 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W17#2",
+     "wall": "GF-W17",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "2.3000",
+     "held_text": "2:CB5 BM-GF-035 2.3000 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W18#0",
+     "wall": "GF-W18",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "6.1000",
+     "held_text": "0:B9 BM-GF-029 6.1000 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W35#0",
+     "wall": "GF-W35",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "1.2900",
+     "held_text": "0:slab GF-105 1.2900 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W35#1",
+     "wall": "GF-W35",
+     "state": "HELD",
+     "class": "ANNEX_DATUM",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+     "length_m": "0.4000",
+     "held_text": "1:B7 BM-GF-049 0.4000 m: STOREY_HEIGHT.GF.ANNEX HELD: not declared for this project",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W36#0",
+     "wall": "GF-W36",
+     "state": "HELD",
+     "class": "MEMBER_FACE",
+     "cause": "member face of unknown kind over the piece (method gap, T-228)",
+     "length_m": "0.5000",
+     "held_text": "0:BEAM_OR_COLUMN face 0.5000 m: BEAM_OR_COLUMN face",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "GF-W37#0",
+     "wall": "GF-W37",
+     "state": "HELD",
+     "class": "NO_PIECE",
+     "cause": "no wall band or member over the wall (GF-H01 / GF-H02 / GF-W37 glazed line or strip: material, base, top designer, T-228; GF-W30 0.30 stub + door: method gap, T-125 D)",
+     "length_m": null,
+     "held_text": "no drawn wall piece (no wall band or member bound)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    }
+   ],
+   "by_class": {
+    "NO_PIECE": {
+     "components": 2,
+     "length_m": "0",
+     "upper_m2": "0",
+     "cause": "no wall band or member over the wall (GF-H01 / GF-H02 / GF-W37 glazed line or strip: material, base, top designer, T-228; GF-W30 0.30 stub + door: method gap, T-125 D)"
+    },
+    "ANNEX_DATUM": {
+     "components": 12,
+     "length_m": "31.3900",
+     "upper_m2": "0",
+     "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed"
+    },
+    "LABEL": {
+     "components": 1,
+     "length_m": "2.6400",
+     "upper_m2": "0",
+     "cause": "D-03 'CB3' and 'B3 (with stair)' on one line (owner Q-61 (2))"
+    },
+    "LIFT_TIE_BEAM": {
+     "components": 4,
+     "length_m": "0",
+     "upper_m2": "0",
+     "cause": "D-43 lift tie beam at +3.00 printed, size not (ST p.8 n.19)"
+    },
+    "OPENING_WIDTH": {
+     "components": 3,
+     "length_m": "0",
+     "upper_m2": "0",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)"
+    },
+    "STAIR_SHAFT": {
+     "components": 1,
+     "length_m": "2.5000",
+     "upper_m2": "0",
+     "cause": "stair-shaft piece: no floor on the shaft line, landing member level not printed (A-A sheet 10; D-03 'B3 (With Stair)')"
+    },
+    "DROP": {
+     "components": 2,
+     "length_m": "0",
+     "upper_m2": "17.388626",
+     "cause": "D-41 sunken-panel drop not printed (R-MAS-DROP-1)"
+    },
+    "MEMBER_FACE": {
+     "components": 1,
+     "length_m": "0.5000",
+     "upper_m2": "0",
+     "cause": "member face of unknown kind over the piece (method gap, T-228)"
+    }
+   },
+   "materials": {
+    "L-0e1c62793fcfd587bd78": {
+     "code": "MAS.GLUE.AAC",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-1a2a8192895b1cb3a201": {
+     "code": "MAS.UNITS.WHITE",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-a6e9b9d47f2b81204b1e": {
+     "code": "MAS.MORTAR.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-d69e452a4a19c1416858": {
+     "code": "MAS.MORTAR.BLACK.PERIMETER",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-e812502cb3615c2b9a56": {
+     "code": "MAS.UNITS.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    }
+   }
+  },
+  "L-5ffa7157a2fe483dd008": {
+   "host": "1F-WALLS:walls t=0.20",
+   "bound": {
+    "blocking_components": [
+     "1F-W07#0",
+     "1F-W10#0"
+    ],
+    "kind": "NONE"
+   },
+   "components": [
+    {
+     "id": "1F-W04#0",
+     "wall": "1F-W04",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "UNLABELLED_MEMBER",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))",
+     "length_m": "0.8000",
+     "held_text": "1:H BM-1F-032 0.8000 m: unlabelled span from the B23 band face to the column (T-110 BM-1F-032, D-04): depth not printed (Q-61 C(4))",
+     "end": {
+      "upper": "3.360000",
+      "lower": null,
+      "length_m": "0.8000",
+      "height_max_m": "4.20",
+      "why": "L x (9.65 - 5.45 - 0) with member depth >= 0"
+     }
+    },
+    {
+     "id": "1F-W07#0",
+     "wall": "1F-W07",
+     "state": "HELD",
+     "class": "OPENING_WIDTH",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)",
+     "length_m": null,
+     "held_text": "opening L-1F-01: width not drawn",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "1F-W10#0",
+     "wall": "1F-W10",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "STAIR_SHAFT",
+     "cause": "stair-shaft piece: no floor on the shaft line, landing member level not printed (A-A sheet 10; D-03 'B3 (With Stair)')",
+     "length_m": "2.5000",
+     "held_text": "0:SF B3 (With Stair) 2.5000 m: no floor at +5.50 on the shaft line (A-A sheet10); top = 'B3 (With Stair)' 6B8 with no floor-level member printed; base / top = the +3.50 and about +7.6 landing",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    }
+   ],
+   "by_class": {
+    "UNLABELLED_MEMBER": {
+     "components": 1,
+     "length_m": "0.8000",
+     "upper_m2": "3.360000",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))"
+    },
+    "OPENING_WIDTH": {
+     "components": 1,
+     "length_m": "0",
+     "upper_m2": "0",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)"
+    },
+    "STAIR_SHAFT": {
+     "components": 1,
+     "length_m": "2.5000",
+     "upper_m2": "0",
+     "cause": "stair-shaft piece: no floor on the shaft line, landing member level not printed (A-A sheet 10; D-03 'B3 (With Stair)')"
+    }
+   },
+   "materials": {
+    "L-0af727d388db346cacdf": {
+     "code": "MAS.MORTAR.BLACK.PERIMETER",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-298e323d027a4723652d": {
+     "code": "MAS.MORTAR.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-4b1429e0aedd15f625fd": {
+     "code": "MAS.UNITS.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-5adcc762eca024e4cd94": {
+     "code": "MAS.GLUE.AAC",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-90c7f0aecafe7b4a51a1": {
+     "code": "MAS.UNITS.WHITE",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    }
+   }
+  },
+  "L-afe984a62285e133ec2f": {
+   "host": "2F-WALLS:walls t=0.20",
+   "bound": {
+    "blocking_components": [
+     "2F-W00#0",
+     "2F-W02#0",
+     "2F-W02#1"
+    ],
+    "kind": "NONE"
+   },
+   "components": [
+    {
+     "id": "2F-W00#0",
+     "wall": "2F-W00",
+     "state": "HELD",
+     "class": "OPENING_WIDTH",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)",
+     "length_m": null,
+     "held_text": "opening L-2F-01: width not drawn",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "2F-W02#0",
+     "wall": "2F-W02",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "STAIR_SHAFT",
+     "cause": "stair-shaft piece: no floor on the shaft line, landing member level not printed (A-A sheet 10; D-03 'B3 (With Stair)')",
+     "length_m": "2.5000",
+     "held_text": "0:SF B3 2.5000 m: SL-1 shaft piece: no floor at +9.70 on the stair-wall line (A-A sheet10; R-T228-3, F4)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "2F-W02#1",
+     "wall": "2F-W02",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "RESIDUAL",
+     "cause": "length residual between drawn faces and ledger pieces, location not established (method gap, T-017)",
+     "length_m": "0.0970",
+     "held_text": "2:R length residual 0.0970 m: 0.097 m between the drawn faces (2.500 + 3.470) and the ledger pieces (B3 2.500 + B8 3.567); location not established (T-017 census AGREE 7.000)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "2F-W02#2",
+     "wall": "2F-W02",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "UNLABELLED_MEMBER",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))",
+     "length_m": "0.9330",
+     "held_text": "3:H BM-2F-015 0.9330 m: unlabelled east end span past the column (T-110 BM-2F-015, D-04): depth not printed, candidates B8 H75 / B3 H40 (Q-61 C(4): a bound, never a value)",
+     "end": {
+      "upper": "3.965250",
+      "lower": null,
+      "length_m": "0.9330",
+      "height_max_m": "4.25",
+      "why": "L x (13.90 - 9.65 - 0) with member depth >= 0 and b_r >= 0"
+     }
+    },
+    {
+     "id": "2F-W05#0",
+     "wall": "2F-W05",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "UNLABELLED_MEMBER",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))",
+     "length_m": "1.2000",
+     "held_text": "1:H BM-2F-017 1.2000 m: unlabelled vertical piece from column 418 to the top band inner face 393 (T-110 BM-2F-017, D-04): depth not printed (Q-61 C(4))",
+     "end": {
+      "upper": "5.100000",
+      "lower": null,
+      "length_m": "1.2000",
+      "height_max_m": "4.25",
+      "why": "L x (13.90 - 9.65 - 0) with member depth >= 0 and b_r >= 0"
+     }
+    },
+    {
+     "id": "2F-W05#1",
+     "wall": "2F-W05",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "UNLABELLED_MEMBER",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))",
+     "length_m": "0.0500",
+     "held_text": "2:H junction in the top band 0.0500 m: 0.050 m from the top band inner face to the inner face of 2F-W03, where BM-2F-017 frames into the band: soffit the deeper of B1 / B2 (0.40) and BM-2F-017 (not p",
+     "end": {
+      "upper": "0.192500",
+      "lower": null,
+      "length_m": "0.0500",
+      "height_max_m": "3.85",
+      "why": "L x (13.90 - 9.65 - 0.40) with member depth >= 0 and b_r >= 0"
+     }
+    },
+    {
+     "id": "2F-W07#0",
+     "wall": "2F-W07",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "UNLABELLED_MEMBER",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))",
+     "length_m": "2.9000",
+     "held_text": "1:H BM-2F-016 2.9000 m: west band south span (T-110 BM-2F-016, D-04): B15 printed on the north span only; depth not printed (candidates B15 H120 or a 20x40 type, Q-61 C(4))",
+     "end": {
+      "upper": "12.325000",
+      "lower": null,
+      "length_m": "2.9000",
+      "height_max_m": "4.25",
+      "why": "L x (13.90 - 9.65 - 0) with member depth >= 0 and b_r >= 0"
+     }
+    },
+    {
+     "id": "2F-W07#1",
+     "wall": "2F-W07",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "UNLABELLED_MEMBER",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))",
+     "length_m": "0.1250",
+     "held_text": "2:H south corner in the BM-2F-016 band 0.1250 m: 0.125 m of the census in the corner where BM-2F-016 meets the top band: soffit the deeper of B2 (0.40) and BM-2F-016 (depth not printed)",
+     "end": {
+      "upper": "0.481250",
+      "lower": null,
+      "length_m": "0.1250",
+      "height_max_m": "3.85",
+      "why": "L x (13.90 - 9.65 - 0.40) with member depth >= 0 and b_r >= 0"
+     }
+    }
+   ],
+   "by_class": {
+    "OPENING_WIDTH": {
+     "components": 1,
+     "length_m": "0",
+     "upper_m2": "0",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)"
+    },
+    "STAIR_SHAFT": {
+     "components": 1,
+     "length_m": "2.5000",
+     "upper_m2": "0",
+     "cause": "stair-shaft piece: no floor on the shaft line, landing member level not printed (A-A sheet 10; D-03 'B3 (With Stair)')"
+    },
+    "RESIDUAL": {
+     "components": 1,
+     "length_m": "0.0970",
+     "upper_m2": "0",
+     "cause": "length residual between drawn faces and ledger pieces, location not established (method gap, T-017)"
+    },
+    "UNLABELLED_MEMBER": {
+     "components": 5,
+     "length_m": "5.2080",
+     "upper_m2": "22.064000",
+     "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))"
+    }
+   },
+   "materials": {
+    "L-1023c410bd8c6ab7fade": {
+     "code": "MAS.GLUE.AAC",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-2fc617d78b42e0735e64": {
+     "code": "MAS.MORTAR.BLACK.PERIMETER",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-4631ba5deb8ca9a53491": {
+     "code": "MAS.MORTAR.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-5245ce2427156823ff3b": {
+     "code": "MAS.UNITS.WHITE",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-c7e5807d75a4b93bf229": {
+     "code": "MAS.UNITS.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    }
+   }
+  },
+  "L-c22e309433e7b671cf2d": {
+   "host": "1F-WALLS:walls t=0.15",
+   "bound": {
+    "blocking_components": [
+     "1F-W11#0",
+     "1F-W11#1",
+     "1F-W13#0",
+     "1F-W13#1",
+     "1F-W13#2",
+     "1F-W14 + 1F-W15#0",
+     "1F-W16#0",
+     "1F-W17#0",
+     "1F-W17#1",
+     "1F-W24#0"
+    ],
+    "kind": "NONE"
+   },
+   "components": [
+    {
+     "id": "1F-W11#0",
+     "wall": "1F-W11",
+     "state": "HELD",
+     "class": "DOME",
+     "cause": "D-20 / D-42 wall top inside the dome openings not drawn (T-227); east ring band unlabelled (Q-44 A)",
+     "length_m": "4.0100",
+     "held_text": "0:DOME_OPENING+RING face 4.0100 m: DOME_OPENING+RING face",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "1F-W11#1",
+     "wall": "1F-W11",
+     "state": "HELD",
+     "class": "OPENING_POSITION",
+     "cause": "opening position against held pieces not read (with the dome piece)",
+     "length_m": null,
+     "held_text": "openings 1.7600 m2 exceed the closable part 0.8880 m2: their position against the held pieces is not read",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "1F-W13#0",
+     "wall": "1F-W13",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "DOME",
+     "cause": "D-20 / D-42 wall top inside the dome openings not drawn (T-227); east ring band unlabelled (Q-44 A)",
+     "length_m": "0.2903",
+     "held_text": "5:H east ring west crossing 0.2903 m: ring band between arcs 64A (r 2.411) and 649 (r 2.211) of the east dome: no B4 label on the east circle (B4 1828 / 1829 label the west ring only); its size rest",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "1F-W13#1",
+     "wall": "1F-W13",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "DOME",
+     "cause": "D-20 / D-42 wall top inside the dome openings not drawn (T-227); east ring band unlabelled (Q-44 A)",
+     "length_m": "2.8947",
+     "held_text": "6:H east dome opening 1F-077 2.8947 m: inside the east dome opening (circle 649 r 2.211, S-OPENING 656 .. 65A): the top of the wall is not drawn (T-227: designer); D-1F-09 lies wholly here",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "1F-W13#2",
+     "wall": "1F-W13",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "DOME",
+     "cause": "D-20 / D-42 wall top inside the dome openings not drawn (T-227); east ring band unlabelled (Q-44 A)",
+     "length_m": "0.2903",
+     "held_text": "7:H east ring east crossing 0.2903 m: ring band between arcs 649 and 64D (r 2.411): no B4 label on the east circle (Q-44 A as above)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "1F-W14 + 1F-W15#0",
+     "wall": "1F-W14 + 1F-W15",
+     "state": "HELD",
+     "class": "OPENING_WIDTH",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)",
+     "length_m": null,
+     "held_text": "opening P-1F-01: width not drawn",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "1F-W16#0",
+     "wall": "1F-W16",
+     "state": "HELD",
+     "class": "OPENING_WIDTH",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)",
+     "length_m": null,
+     "held_text": "opening A-1F-01: width not drawn",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "1F-W17#0",
+     "wall": "1F-W17",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "DOME",
+     "cause": "D-20 / D-42 wall top inside the dome openings not drawn (T-227); east ring band unlabelled (Q-44 A)",
+     "length_m": "0.4616",
+     "held_text": "0:H east dome opening 1F-077 0.4616 m: from the 1F-W13 north face to circle 649 (r 2.211) the centreline is inside the east dome opening: top of wall not drawn (T-227: designer)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "1F-W17#1",
+     "wall": "1F-W17",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "DOME",
+     "cause": "D-20 / D-42 wall top inside the dome openings not drawn (T-227); east ring band unlabelled (Q-44 A)",
+     "length_m": "0.0029",
+     "held_text": "1:H east ring sliver 0.0029 m: 0.00294 m between circle 649 and B6 face 6D2: east ring band, no B4 label (Q-44 A)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    },
+    {
+     "id": "1F-W24#0",
+     "wall": "1F-W24",
+     "state": "ESTABLISHED PART + HELD",
+     "class": "DOME",
+     "cause": "D-20 / D-42 wall top inside the dome openings not drawn (T-227); east ring band unlabelled (Q-44 A)",
+     "length_m": "1.0577",
+     "held_text": "2:H dome opening 1F-073 1.0577 m: from B6 face 6DF to the north wall face the centreline is inside the west dome opening (arc 5FF r 2.211, S-OPENING 604 .. 617; T-139 face 1F-073): the top of th",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    }
+   ],
+   "by_class": {
+    "DOME": {
+     "components": 7,
+     "length_m": "9.0075",
+     "upper_m2": "0",
+     "cause": "D-20 / D-42 wall top inside the dome openings not drawn (T-227); east ring band unlabelled (Q-44 A)"
+    },
+    "OPENING_POSITION": {
+     "components": 1,
+     "length_m": "0",
+     "upper_m2": "0",
+     "cause": "opening position against held pieces not read (with the dome piece)"
+    },
+    "OPENING_WIDTH": {
+     "components": 2,
+     "length_m": "0",
+     "upper_m2": "0",
+     "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)"
+    }
+   },
+   "materials": {
+    "L-46ec36d9f39b1a93164e": {
+     "code": "MAS.MORTAR.BLACK.PERIMETER",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-8e250abdcadfdbf33951": {
+     "code": "MAS.GLUE.AAC",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-d4c62b9df1e162be5e8b": {
+     "code": "MAS.UNITS.WHITE",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-e5a117db55cf7c5caaab": {
+     "code": "MAS.UNITS.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-fdbe5743c95c05ae9c19": {
+     "code": "MAS.MORTAR.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    }
+   }
+  },
+  "L-ff06449b7f61f19c418d": {
+   "host": "GF-WALLS:walls t=0.40",
+   "bound": {
+    "blocking_components": [
+     "GF-H01#0"
+    ],
+    "kind": "NONE"
+   },
+   "components": [
+    {
+     "id": "GF-H01#0",
+     "wall": "GF-H01",
+     "state": "HELD",
+     "class": "NO_PIECE",
+     "cause": "no wall band or member over the wall (GF-H01 / GF-H02 / GF-W37 glazed line or strip: material, base, top designer, T-228; GF-W30 0.30 stub + door: method gap, T-125 D)",
+     "length_m": null,
+     "held_text": "no drawn wall piece (no wall band or member bound)",
+     "end": {
+      "upper": null,
+      "lower": null,
+      "why": "no drawn end"
+     }
+    }
+   ],
+   "by_class": {
+    "NO_PIECE": {
+     "components": 1,
+     "length_m": "0",
+     "upper_m2": "0",
+     "cause": "no wall band or member over the wall (GF-H01 / GF-H02 / GF-W37 glazed line or strip: material, base, top designer, T-228; GF-W30 0.30 stub + door: method gap, T-125 D)"
+    }
+   },
+   "materials": {
+    "L-07e80def32e147b160ac": {
+     "code": "MAS.MORTAR.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-24d4696063cef72b0ddb": {
+     "code": "MAS.GLUE.AAC",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-43f32c104c36f9bd85be": {
+     "code": "MAS.UNITS.BLACK",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-ee1c4e34adec6ee5813d": {
+     "code": "MAS.UNITS.WHITE",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    },
+    "L-f57d9679c2acf87dc06b": {
+     "code": "MAS.MORTAR.BLACK.PERIMETER",
+     "kind": "NONE",
+     "why": "parent blank: the material exists only as far as the face does"
+    }
+   }
+  }
+ },
+ "by_cause_item": {
+  "ANNEX_DATUM": {
+   "cause": "D-06 / D-17 annex roof +4.30 not a structural datum (owner Q-54 B HOLD); annex floor build-up not printed",
+   "blocks_parents": [
+    "L-0d9b9e89bb6455da475d",
+    "L-4165954ce4871eda30cc"
+   ],
+   "components": 19,
+   "length_m": "47.6400"
+  },
+  "DOME": {
+   "cause": "D-20 / D-42 wall top inside the dome openings not drawn (T-227); east ring band unlabelled (Q-44 A)",
+   "blocks_parents": [
+    "L-c22e309433e7b671cf2d"
+   ],
+   "components": 7,
+   "length_m": "9.0075"
+  },
+  "DROP": {
+   "cause": "D-41 sunken-panel drop not printed (R-MAS-DROP-1)",
+   "blocks_parents": [],
+   "components": 6,
+   "length_m": "0"
+  },
+  "LABEL": {
+   "cause": "D-03 'CB3' and 'B3 (with stair)' on one line (owner Q-61 (2))",
+   "blocks_parents": [
+    "L-4165954ce4871eda30cc"
+   ],
+   "components": 1,
+   "length_m": "2.6400"
+  },
+  "LIFT_TIE_BEAM": {
+   "cause": "D-43 lift tie beam at +3.00 printed, size not (ST p.8 n.19)",
+   "blocks_parents": [
+    "L-4165954ce4871eda30cc"
+   ],
+   "components": 4,
+   "length_m": "0"
+  },
+  "MEMBER_FACE": {
+   "cause": "member face of unknown kind over the piece (method gap, T-228)",
+   "blocks_parents": [
+    "L-4165954ce4871eda30cc"
+   ],
+   "components": 1,
+   "length_m": "0.5000"
+  },
+  "NO_PIECE": {
+   "cause": "no wall band or member over the wall (GF-H01 / GF-H02 / GF-W37 glazed line or strip: material, base, top designer, T-228; GF-W30 0.30 stub + door: method gap, T-125 D)",
+   "blocks_parents": [
+    "L-0d9b9e89bb6455da475d",
+    "L-4165954ce4871eda30cc",
+    "L-ff06449b7f61f19c418d"
+   ],
+   "components": 4,
+   "length_m": "0"
+  },
+  "OPENING_POSITION": {
+   "cause": "opening position against held pieces not read (with the dome piece)",
+   "blocks_parents": [
+    "L-c22e309433e7b671cf2d"
+   ],
+   "components": 1,
+   "length_m": "0"
+  },
+  "OPENING_WIDTH": {
+   "cause": "opening width not drawn on any sheet (no D-id yet: T-716 to assign)",
+   "blocks_parents": [
+    "L-0d9b9e89bb6455da475d",
+    "L-4165954ce4871eda30cc",
+    "L-5ffa7157a2fe483dd008",
+    "L-afe984a62285e133ec2f",
+    "L-c22e309433e7b671cf2d"
+   ],
+   "components": 8,
+   "length_m": "0"
+  },
+  "RESIDUAL": {
+   "cause": "length residual between drawn faces and ledger pieces, location not established (method gap, T-017)",
+   "blocks_parents": [
+    "L-afe984a62285e133ec2f"
+   ],
+   "components": 1,
+   "length_m": "0.0970"
+  },
+  "STAIR_SHAFT": {
+   "cause": "stair-shaft piece: no floor on the shaft line, landing member level not printed (A-A sheet 10; D-03 'B3 (With Stair)')",
+   "blocks_parents": [
+    "L-4165954ce4871eda30cc",
+    "L-5ffa7157a2fe483dd008",
+    "L-afe984a62285e133ec2f"
+   ],
+   "components": 3,
+   "length_m": "7.5000"
+  },
+  "UNLABELLED_MEMBER": {
+   "cause": "D-04 unlabelled member, depth not printed (Q-61 C(4))",
+   "blocks_parents": [],
+   "components": 9,
+   "length_m": "6.5080"
+  }
+ },
+ "plate_tops": {
+  "2F": {
+   "below": [
+    "9.65",
+    "drawn",
+    "FFRS p.5 top: 2F FFL +9.70 - drawn 0.05 (T-482 / T-214, DRAWING-CONFIRMED)"
+   ],
+   "above": [
+    "13.90",
+    "max",
+    "main roof +13.90 finished (A-A); structural top 13.90 - b_r, b_r >= 0 (D-39)"
+   ]
+  },
+  "1F": {
+   "below": [
+    "5.45",
+    "drawn",
+    "GFRS p.4 top (T-482)"
+   ],
+   "above": [
+    "9.65",
+    "drawn",
+    "FFRS p.5 top (T-482)"
+   ]
+  }
+ },
+ "pins": {
+  "research/agents_t693/out/LINE_INDEX_V3_0_70.json": "6c12da07",
+  "research/agents_t672/out/LINE_INDEX_V3_0_68.json": "fc485958",
+  "research/agents_t696/out/T696_B9_CENSUS.json": "6810a8ea",
+  "research/agents_t449/round3/out/CORRECTION_REGISTER_BLOCKWORK_T449.json": "4f1c794c",
+  "research/agents_t670/out/T670_MATERIALS.json": "4c58a226",
+  "research/agents_t482/out/T482_CONDITIONS.json": "ddb013b0",
+  "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json": "da38d121"
+ }
+}
