@@ -1,5 +1,36 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-11 04:20 UTC (Lead). Previous version: 2026-11-11 00:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared
+lines, the slab); released: 0.
+
+Since 00:20 (newest first):
+- Masonry is now in the candidate (the checker rebuilt it from the drawings and checked every changed line by hand):
+  black 15 cm blocks 1,075.80 -> 2,571.28 pcs measured plus 698.66 .. 702.91 pcs held with a range; block mortar
+  1.27 -> 2.59 m3 plus 0.62 m3 held; the joint mortar around wall edges (20 lines) and the bed under lintel ends
+  (9 lines) are their own lines; 4 lightweight-block lines are not applicable (structural note: those walls are black
+  block). 12 walls still have no figure because the wall itself is held; none of these lines is verified (they follow
+  your approved block size and mix). The freelancer has blockwork m2 only, so there is no like-for-like comparison.
+- The last concrete wiring is published: lintels 1.36 .. 2.05 m3 in 24 lines (21 keep a named reason), held column
+  concrete 10.26 .. 13.27 m3; released m3 unchanged.
+- First-floor slab difference (-0.56 m3 vs the freelancer): our 22 panels re-measured by the checker agree with the
+  engine; his first floor is a typed 120 m2 with no breakdown, so the gap is his rounding plus scope; it stays
+  unresolved without a question to you.
+- Column ranges narrowed from the drawings (a window head under a printed beam fixes one roof level): one column's low
+  figure +0.026 m3, 5 columns without a figure now ranged 1.38 .. 2.23 m3; with the checker, then wired.
+- Waterproofing: the main roof figure is 0.018 m2 too high because the two dome holes were cut as coarse polygons;
+  corrected 115.814 m2 (-0.016 %), inside its drawn range; with the checker.
+- Tiles round 2 checker-passed: no tile figure changes; the wet-room wall band above the ceilings is 78.8 .. 123.0 m2
+  over 18 rooms and goes to plaster.
+- The list of missing BOQ families is with the checker: of your 38, the biggest gap is wiring work already measured
+  (spatter dash about 914 m2, joint mesh about 543 m), not new measuring.
+- Next: plaster / paint wiring, then the column wiring; concrete statement for 12-13 Nov on the current candidate;
+  earthworks list and the quantities the drawings fix; masonry round 3 (the 12 held walls); corner beads (a missing
+  family). The 11 Nov architectural milestone is not met (your concrete-first order); estimate 13-14 Nov. Steel by
+  ratio waits on your Q-81 answer.
+
+Previous section (2026-11-11 00:20):
 Last update: 2026-11-11 00:20 UTC (Lead). Previous version: 2026-11-10 20:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged; released: 0.
