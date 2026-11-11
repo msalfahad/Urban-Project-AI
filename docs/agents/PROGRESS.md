@@ -1,5 +1,31 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-11 00:20 UTC (Lead). Previous version: 2026-11-10 20:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged; released: 0.
+
+Since 20:20 (newest first):
+- The last concrete wiring (9 more lintels ranged, the planted column 0.18 .. 0.35 m3, the annex column's lower figure)
+  is handed in and is with the checker now: lintels 0.93 .. 1.50 m3 in 17 lines become 1.36 .. 2.05 m3 in 24 lines,
+  21 lintels keep a named reason; held column concrete 9.67 .. 12.41 -> 10.26 .. 13.27 m3. Released m3 unchanged.
+- Concrete statement on the current candidate checker-passed: 291.48 m3 measured and released in 317 lines, 42.01 ..
+  66.19 m3 held with a range in 101 lines, 89 lines without a figure, each with its reason (never zero). The slab
+  difference with your freelancer (-0.77 %) sits on the first floor (-0.56 m3); a job now traces it to its cause.
+- The checker re-measured all 26 ground-slab pieces himself: all agree (21.64 m3); the slab line stays partly verified
+  only because its ground-beam part is still held.
+- Stair corner settled from the drawings: the first-floor corner is a flat landing (the radiating lines are the
+  ground-floor winders seen below); nothing changes in the quantities.
+- Plaster / paint: 8 of the 11 lines without a figure now have a drawn range (plaster 1,078 .. 1,203 m2 in 21 bounded
+  lines, every paint line has a range); a 20.5 m2 wall band above wet-room ceilings belongs to no line yet: plaster
+  takes it (a job measures it room by room).
+- Waterproofing: 58 lines classed; the pantry upturn was missing (adds 5.6 .. 7.5 % to the upturn when wired); the
+  checker found the main roof figure 0.02 .. 0.18 m2 above its own drawn range (under 1 %): a job settles the cause.
+- Tiles: 104 held lines classed; adhesive stays held at 149 .. 248 bags because no tile size is printed.
+- Next: masonry wiring as soon as the concrete wiring passes, then plaster / paint wiring; first-floor slab cause,
+  widest held column / beam ranges, tiles round 2, waterproofing round 2, the list of the missing BOQ families. The
+  11 Nov architectural milestone is not met today (your concrete-first order). Steel by ratio waits on your Q-81 answer.
+
+Previous section (2026-11-10 20:20):
 Last update: 2026-11-10 20:20 UTC (Lead). Previous version: 2026-11-10 16:25 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged; released: 0.

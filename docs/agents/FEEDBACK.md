@@ -3,6 +3,17 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-11 00:20 (since 20:20)
+
+- T-681 tiles census: WORKED (MERGED ebd8a77d after the Checker's own gate e DXF read). MEASURABLE_NOW 6 + WIRING_GAP 1 -> T-690.
+- T-683 concrete statement round 2: WORKED (MERGED 85c1d7aa; V3.0.66 totals = index to the digit; F-T679-1..3 closed). 1F slab -0.556333 m3 UNRESOLVED -> T-688.
+- T-685 waterproofing census: WORKED (MERGED 904cdff0; pantry omission measured, unwired). Checker F-V685-1 (released roof membrane above its drawn band, < 1 %) + 4 MEASURABLE_NOW + 18 OPEN_BOUND -> T-691.
+- T-684 MS2 1F NW corner: WORKED (MERGED 8563a6fa; flat landing, 0 change; F-V680-1 closed). MS2-TR nosing 1.150 lm -> T-690.
+- T-686 plaster / paint round 3: WORKED (MERGED ae9b3d6d; plaster blank 9 -> 3, paint 2 -> 0). F-T686-1 wet band above the ceiling 20.53 m2 -> register ruling (plaster owns) + T-690; wiring with T-687.
+- T-180 P18 ground slab: PARTIAL by design (26 / 26 AGREE; GB part HELD). F-V-P18-2 -> T-688 (b).
+- T-682 concrete Gate B round 6: READY, in review (CHECKER-RUNS 0).
+- Recurring cause (5 runs): the decode wrapper does not accept the connector's raw-binary downloads (one run saw a silent short write): NEEDS FIXING for the owner; workers keep re-encoding and must compare byte counts.
+
 ## Lead 2026-11-10 20:20 (since 16:25)
 
 - T-677 concrete Gate B round 5: WORKED (MERGED 8a28bce5, V3.0.66 published 11d94e99; 5,054 byte-identical, 21 changed, 1 added; one slab / BAND0038 double count removed). Closed.

@@ -6,52 +6,52 @@
   "last_run": "2026-11-10T04:31:46Z",
   "result": "ok",
   "working_on": "Daily update 10 Nov 04:31 UTC (scheduler SUCCEEDED); next 11 Nov 04:31 UTC",
-  "as_of": "2026-11-10T20:25:00Z"
+  "as_of": "2026-11-11T00:25:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-11-10T20:13:03Z",
+  "last_run": "2026-11-11T00:13:00Z",
   "result": "running",
-  "working_on": "Board refilled: last concrete wiring (9 lintels, planted column, annex column) next, then masonry and plaster / paint wiring; concrete statement round 2, stair corner winders vs landing, waterproofing held-line list, plaster / paint round 3; steel ratio waits on Q-81",
-  "as_of": "2026-11-10T20:25:00Z"
+  "working_on": "Board refilled: masonry wiring next after the last concrete wiring (with the checker); first-floor slab difference, widest column / beam ranges, tiles round 2 + wet-room band above ceilings, waterproofing round 2, missing-families list; steel ratio waits on Q-81",
+  "as_of": "2026-11-11T00:25:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-10T19:21:00Z",
+  "last_run": "2026-11-10T23:20:00Z",
   "result": "ok",
-  "working_on": "19:21 nothing claimable (both rows taken); 17:20 concrete open items (merged); next: concrete statement round 2, stair NW corner",
-  "as_of": "2026-11-10T20:25:00Z"
+  "working_on": "23:20 stair corner settled (flat landing, merged); 21:20 concrete statement round 2 (merged); next: first-floor slab difference, widest held column / beam ranges",
+  "as_of": "2026-11-11T00:25:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-10T18:39:34Z",
+  "last_run": "2026-11-10T22:39:51Z",
   "result": "ok",
-  "working_on": "18:41 tiles held-line list (with the checker); 16:41 plaster / paint round 2 (merged); next: waterproofing held-line list, plaster / paint round 3",
-  "as_of": "2026-11-10T20:25:00Z"
+  "working_on": "22:41 plaster / paint round 3 (merged); 20:42 waterproofing held-line list (merged); next: tiles round 2 + wet-room band above ceilings, waterproofing round 2",
+  "as_of": "2026-11-11T00:25:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-11-10T19:04:18Z",
+  "last_run": "2026-11-10T23:00:07Z",
   "result": "ok",
-  "working_on": "19:05 concrete reconciliation statement (merged); 17:01 concrete wiring V3.0.66 (merged, published); next: last concrete wiring round 6, then masonry wiring",
-  "as_of": "2026-11-10T20:25:00Z"
+  "working_on": "23:00 correct stop (its 21:01 run still active); 21:01 last concrete wiring V3.0.67 handed in (with the checker); next: masonry wiring once it passes, else the missing-families list",
+  "as_of": "2026-11-11T00:25:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-11-10T19:51:00Z",
-  "result": "ok",
-  "working_on": "19:51 overlap stop (correct); 18:51 V3.0.66 Gate B passed and published + concrete statement merged; tiles list partial; next: tiles 2-room re-measure, scoreboard on V3.0.66, ground-slab reference line",
-  "as_of": "2026-11-10T20:25:00Z"
+  "last_run": "2026-11-10T23:52:11Z",
+  "result": "running",
+  "working_on": "23:54 stair corner + plaster / paint round 3 merged; last concrete wiring V3.0.67 in review; 21:50 tiles list, concrete statement, waterproofing list merged; 22:50 ground slab 26 / 26 agree",
+  "as_of": "2026-11-11T00:25:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,15 +60,15 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-11-10T20:25:00Z"
+  "as_of": "2026-11-11T00:25:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
   "role": "Rewrites the dashboard data from the board",
   "cadence": "every 12 h at :54 (since 28 Oct 21:44)",
-  "last_run": "2026-11-10T00:54:37Z",
+  "last_run": "2026-11-10T12:56:52Z",
   "result": "ok",
-  "working_on": "Refreshed 10 Nov 00:54 UTC (scheduler SUCCEEDED); next 10 Nov 12:54 UTC",
-  "as_of": "2026-11-10T20:25:00Z"
+  "working_on": "Refreshed 10 Nov 12:56 UTC (scheduler SUCCEEDED); next 11 Nov 00:54 UTC",
+  "as_of": "2026-11-11T00:25:00Z"
  }
 ]

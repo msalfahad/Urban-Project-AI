@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-11 00:20; owner change of focus 2026-11-09 18:30 in force)
+
+- Candidate of record V3.0.66 / master 1.67.0 (origin 8a0fc1e1; NOT RELEASED); V3.0.67 (T-682) in Checker Gate B since 23:54. Since 20:20 MERGED: T-681 (ebd8a77d), T-683 (85c1d7aa), T-685 (904cdff0), T-684 (8563a6fa), T-686 (ae9b3d6d, maps 8a0fc1e1). 0 REJECTED. READY 1 (T-682).
+- Next: T-682 Gate B, then T-672 masonry round 1 (worker 3, built on the T-682 head), then T-687 plaster / paint round 1 (+ T-686); T-688 1F slab residual and T-689 widest column / beam ranges (worker 1); T-690 tiles round 2 + wet band above the ceiling and T-691 waterproofing round 2 (worker 2); T-692 missing-families census (worker 3 while the hub is in review). T-664 BLOCKED-OWNER Q-81.
+- Confidence: T-682 published by 11 Nov 03:00 MEDIUM-HIGH (in review); 12-13 Nov concrete reconciliation + scorecard HIGH on V3.0.66 (T-683 merged), restated on V3.0.67 by the Checker; masonry wiring (T-672) merged by 11 Nov 12:00 MEDIUM; plaster / paint wiring (T-687) by 12 Nov MEDIUM-LOW (serial hub); M3 architectural ledger NOT MET on 11 Nov (owner order concrete first), new estimate 13-14 Nov for masonry + plaster / paint in the candidate; rebar ratio LOW (owner answer).
+
 ## Status (Lead, 2026-11-10 20:20; owner change of focus 2026-11-09 18:30 in force)
 
 - Candidate of record V3.0.66 / master 1.67.0 (origin 4c6726ce; NOT RELEASED). Since 16:25 MERGED: T-680 (707c624e), T-678 (f8515d4b), T-677 Gate B (V3.0.66, 8a28bce5, published 11d94e99), T-679 (4c6726ce). 0 REJECTED. READY 1 (T-681, Checker gate e owed).
