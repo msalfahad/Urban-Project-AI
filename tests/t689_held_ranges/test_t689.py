@@ -165,3 +165,37 @@ def test_dev_every_top_line_has_items_except_named_gap(res):
     assert res["register_gaps"] == [["L-541c7e565bb93ecdb78b", "SECTION"]]
     for r in res["lines"]:
         assert r["after_state"] == "HELD" and X(r["after"][1]) > 0
+
+
+# ---- next related item: blank conflict lines bounded (V689 by hand: column K4 drawn 0.20 x 0.40, schedule 0.25 x
+# 0.50; annex height 3.10 .. 3.85 from a drawn head under a printed beam): 0.08 x 3.10 = 0.248 .. 0.125 x 3.85 = 0.48125
+def test_conflict_bound_by_hand_and_order_free():
+    a = R.conflict_bound(areas=(X("0.08"), X("0.125")), height=(X("3.10"), X("3.85")), item="D-9")
+    b = R.conflict_bound(areas=(X("0.125"), X("0.08")), height=(X("3.10"), X("3.85")), item="D-9")
+    assert a == b and a["low"] == X("0.248000") and a["high"] == X("0.481250") and a["state"] == "HELD"
+
+
+@pytest.mark.parametrize("areas, height", [((X("0.08"), None), (X("3.1"), X("3.85"))),
+                                           ((X("0.08"), X("0.125")), (None, X("3.85"))),
+                                           ((X("0.08"), X("0.125")), None)])
+def test_conflict_bound_missing_stays_blank_never_0(areas, height):
+    r = R.conflict_bound(areas=areas, height=height, item="D-9")
+    assert r["state"] == "HELD" and r["low"] is None and r["high"] is None
+
+
+def test_conflict_bound_adverse():
+    with pytest.raises(R.Refused):
+        R.conflict_bound(areas=(X("0.08"), X("0.125")), height=(X("3.85"), X("3.10")), item="D-9")
+    with pytest.raises(R.Refused):
+        R.conflict_bound(areas=(X("80000"), X("0.125")), height=(X("3.10"), X("3.85")), item="D-9")  # mm2 not m2
+
+
+def test_dev_blank_lines_bounded(res):
+    b = res["blank_to_bounded"]
+    assert b["column_blank_before"] == 7 and b["column_blank_after"] == 2
+    assert (b["low"], b["high"]) == ("1.382780", "2.231250")
+    got = {r["line_id"]: tuple(r["after"]) for r in b["lines"]}
+    assert got["L-694a75c84dd6e4bb4491"] == ("0.263520", "0.506250")
+    assert got["L-bc01297b1c4a4c45a15f"] == ("0.328700", "0.510000")
+    # none of the five is in D-66's registered handle list: a register gap each (R-T689-3)
+    assert len(b["register_gaps"]) == 5

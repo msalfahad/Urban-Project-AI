@@ -39,6 +39,136 @@
    "415": "C5"
   }
  },
+ "blank_to_bounded": {
+  "column_blank_after": 2,
+  "column_blank_before": 7,
+  "high": "2.231250",
+  "lines": [
+   {
+    "after": [
+     "0.263520",
+     "0.405000"
+    ],
+    "areas_m2": [
+     "0.08",
+     "0.1"
+    ],
+    "before": "blank (OPEN)",
+    "element_id": "P-C:COL:SH12:C@238150,57853|GF",
+    "height_m": [
+     "3.294",
+     "4.05"
+    ],
+    "line_id": "L-9f5a647014bbf83359f9",
+    "member": "C GF annex (one of the trio 34A / 34D / 356, identical readings; pairing not asserted), outline 34A",
+    "section_item": null,
+    "source": "outline 34A 200x400 mm vs schedule C GR 20x50 cm; R-T678-2 annex 3.294 .. 4.05"
+   },
+   {
+    "after": [
+     "0.263520",
+     "0.405000"
+    ],
+    "areas_m2": [
+     "0.08",
+     "0.1"
+    ],
+    "before": "blank (OPEN)",
+    "element_id": "P-C:COL:SH12:C@233893,56561|GF",
+    "height_m": [
+     "3.294",
+     "4.05"
+    ],
+    "line_id": "L-c0b3340a906c2c7650f8",
+    "member": "C GF annex (one of the trio, pairing not asserted), outline 34D",
+    "section_item": null,
+    "source": "outline 34D 200x400 mm vs schedule C GR 20x50 cm; R-T678-2 annex 3.294 .. 4.05"
+   },
+   {
+    "after": [
+     "0.263520",
+     "0.405000"
+    ],
+    "areas_m2": [
+     "0.08",
+     "0.1"
+    ],
+    "before": "blank (OPEN)",
+    "element_id": "P-C:COL:SH12:C@235241,51296|GF",
+    "height_m": [
+     "3.294",
+     "4.05"
+    ],
+    "line_id": "L-e6c1c9a7feec10f64975",
+    "member": "C GF annex (one of the trio, pairing not asserted), outline 356",
+    "section_item": null,
+    "source": "outline 356 200x400 mm vs schedule C GR 20x50 cm; R-T678-2 annex 3.294 .. 4.05"
+   },
+   {
+    "after": [
+     "0.263520",
+     "0.506250"
+    ],
+    "areas_m2": [
+     "0.08",
+     "0.125"
+    ],
+    "before": "blank (OPEN)",
+    "element_id": "P-C:COL:SH12:C3@241094,51256|GF",
+    "height_m": [
+     "3.294",
+     "4.05"
+    ],
+    "line_id": "L-694a75c84dd6e4bb4491",
+    "member": "C3 GF annex, outline 350",
+    "section_item": null,
+    "source": "outline 350 200x400 mm vs schedule C3 GR 25x50 cm; R-T678-2 annex 3.294 .. 4.05"
+   },
+   {
+    "after": [
+     "0.328700",
+     "0.510000"
+    ],
+    "areas_m2": [
+     "0.1",
+     "0.12"
+    ],
+    "before": "blank (OPEN)",
+    "element_id": "P-C:COL:SH12:C5@255627,63526|2F",
+    "height_m": [
+     "3.287000",
+     "4.25"
+    ],
+    "line_id": "L-bc01297b1c4a4c45a15f",
+    "member": "C5 2F (B8 east support), outline 415",
+    "section_item": null,
+    "source": "outline 415 600x200 mm vs schedule C5 2ND 20x50 cm; R-T689-1 B8 joint 3.287000 .. D-39 ceiling 4.25"
+   }
+  ],
+  "low": "1.382780",
+  "register_gaps": [
+   [
+    "L-9f5a647014bbf83359f9",
+    "SECTION"
+   ],
+   [
+    "L-c0b3340a906c2c7650f8",
+    "SECTION"
+   ],
+   [
+    "L-e6c1c9a7feec10f64975",
+    "SECTION"
+   ],
+   [
+    "L-694a75c84dd6e4bb4491",
+    "SECTION"
+   ],
+   [
+    "L-bc01297b1c4a4c45a15f",
+    "SECTION"
+   ]
+  ]
+ },
  "candidate": "ARCH_TAKEOFF_V3.0.67",
  "conditional_on_one_plane_m3": "0.133640",
  "families": {

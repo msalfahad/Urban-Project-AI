@@ -47,3 +47,13 @@ Register gaps (top 80 %): [['L-541c7e565bb93ecdb78b', 'SECTION']]
 | BEAM | L-60f09eec | GF CB2 span 2 (BAND0036.2) | 96.6 (outside 80 %) | 0.335000 .. 0.418800 | 0.335000 .. 0.418800 | WIDTH D-27 |  |
 | BEAM | L-50667f69 | 1F CB10 span 1 (BAND0026.1) | 99.0 (outside 80 %) | 0.287500 .. 0.345000 | 0.287500 .. 0.345000 | WIDTH D-02 |  |
 | BEAM | L-bef35462 | GF BAND0030.2 depth companion (B4 0.50 vs B7 0.75) | 100.0 (outside 80 %) | 0.000000 .. 0.025000 | 0.000000 .. 0.025000 | DEPTH FR-T642-2 |  |
+
+Blank COLUMN lines bounded (conflict pair x height bound): 5, 1.382780 .. 2.231250 m3; blank 7 -> 2; section register gaps [['L-9f5a647014bbf83359f9', 'SECTION'], ['L-c0b3340a906c2c7650f8', 'SECTION'], ['L-e6c1c9a7feec10f64975', 'SECTION'], ['L-694a75c84dd6e4bb4491', 'SECTION'], ['L-bc01297b1c4a4c45a15f', 'SECTION']]
+
+| Line | Member | Areas m2 | Height m | After | Section item |
+|---|---|---|---|---|---|
+| L-9f5a6470 | C GF annex (one of the trio 34A / 34D / 356, identical readings; pairing not asserted), outline 34A | 0.08 .. 0.1 | 3.294 .. 4.05 | 0.263520 .. 0.405000 | NONE |
+| L-c0b3340a | C GF annex (one of the trio, pairing not asserted), outline 34D | 0.08 .. 0.1 | 3.294 .. 4.05 | 0.263520 .. 0.405000 | NONE |
+| L-e6c1c9a7 | C GF annex (one of the trio, pairing not asserted), outline 356 | 0.08 .. 0.1 | 3.294 .. 4.05 | 0.263520 .. 0.405000 | NONE |
+| L-694a75c8 | C3 GF annex, outline 350 | 0.08 .. 0.125 | 3.294 .. 4.05 | 0.263520 .. 0.506250 | NONE |
+| L-bc01297b | C5 2F (B8 east support), outline 415 | 0.1 .. 0.12 | 3.287000 .. 4.25 | 0.328700 .. 0.510000 | NONE |

@@ -122,6 +122,21 @@ def keep(before, item):
             "item": item}
 
 
+def conflict_bound(*, areas, height, item):
+    """A blank column line whose section is a CONFLICT pair (both readings known) and whose height is bounded gets
+    a_min x h_lo .. a_max x h_hi (R-COL-SECTION-CONFLICT-1, as the bounded conflict lines); one reading is never
+    chosen. A missing height end or a missing reading keeps the line blank, HELD by name, never 0."""
+    if len(areas) != 2 or any(a is None for a in areas):
+        return keep((None, None), item or "section reading missing")
+    if height is None or height[0] is None or height[1] is None:
+        return keep((None, None), item or "height datum missing")
+    a1, a2 = sorted(D(a, "area") for a in areas)
+    hl, hh = D(height[0], "h_lo"), D(height[1], "h_hi")
+    if a1 <= 0 or hl <= 0 or hl > hh:
+        raise Refused("conflict bound: non-positive area / height or h_lo above h_hi")
+    return {"state": "HELD", "low": q6(a1 * hl), "high": q6(a2 * hh), "item": item}
+
+
 # ---------------------------------------------------------------------------------------------------- R-T689-3
 def register_gaps(lines, register):
     """lines: [{line_id, causes: [{kind, item}]}]; register: set of D-nn present in the designer register.

@@ -64,6 +64,28 @@ at a support is the top of the supporting column (one joint node), so for 412 an
 Result: COLUMN width 3.005900 -> **2.980200 m3 (-0.025700)**; BEAM width 2.429481 unchanged. Every other top line is
 tied to its designer item; none is closed, none moved to a midpoint, the freelancer is not used.
 
+## 2a. Next related item: 5 BLANK column lines bounded (OPEN -> bounded; `conflict_bound`)
+
+Five COLUMN lines were HELD blank only because 'their section waits for D-66' (T-678 / T-682 follow-up). A section
+CONFLICT with both readings known bounds the volume exactly as the 20 bounded conflict lines already are (smaller
+reading x lower height .. larger reading x upper height; one reading is never chosen). Readings: own read of the
+outlines this run (GFRS 34A / 34D / 356 / 350 0.20 x 0.40, SFRS 415 0.60 x 0.20) vs the schedule (C GR 20 x 50, C3 GR
+25 x 50, C5 2ND 20 x 50), each classed CONFLICT PRINTED_VS_DRAWN by T-217 (merged). Heights: annex 3.294 .. 4.05 m
+(R-T678-2, Checker-verified: W08 head under CB6, base 0.25 APPROVED, one plane, finished +4.30); 2F C5 at 415 3.287 ..
+4.25 m (R-T689-1 above, B8 east support; D-39 ceiling).
+
+| Line | Member | Areas m2 | Height m | Before | After m3 |
+|---|---|---|---|---|---|
+| L-9f5a6470 / L-c0b3340a / L-e6c1c9a7 | C GF annex trio (34A / 34D / 356; identical readings, pairing not asserted) | 0.08 .. 0.10 | 3.294 .. 4.05 | blank | 0.26352 .. 0.405 each |
+| L-694a75c8 | C3 GF annex, 350 | 0.08 .. 0.125 | 3.294 .. 4.05 | blank | 0.26352 .. 0.50625 |
+| L-bc01297b | C5 2F, 415 | 0.10 .. 0.12 | 3.287 .. 4.25 | blank | 0.3287 .. 0.51 |
+
+COLUMN blank 7 -> **2** (left: 2F tank C2 40F and C3 424, D-44 up / down-stand of B15 refuses their ceiling). The
+bounded set gains **1.382780 .. 2.231250 m3**; the COLUMN family moves from 10.264350 .. 13.270250 + 7 OPEN to
+**11.672830 .. 15.501500 + 2 OPEN** (22 + 5 = 27 bounded lines). Width of the five 0.848470, closing an OPEN end each.
+**Register gap F-T689-3:** none of 34A / 34D / 356 / 350 / 415 is in D-66's registered list of 13 outlines, though the
+census cites 'D-66' for them; proposal: add the five to D-66 (same question: plan outline or schedule band).
+
 ## 3. Register gap (R-T689-3): PC-2F section has no designer item (F-T689-2)
 
 L-541c7e56 (PC-2F, rank 7, 0.1824 .. 0.350) carries two independent causes: height (D-39) and section, drawn FFRS 77B /

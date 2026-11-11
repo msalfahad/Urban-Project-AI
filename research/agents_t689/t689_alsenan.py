@@ -186,6 +186,48 @@ def build():
                            REGISTER | {"FR-T642-2"})
     cond_total = sum((X(r["conditional"]["low_if_one_plane"]) - X(r["before"][0]) for r in rows if r["conditional"]),
                      X(0))
+
+    # Next related item: BLANK column lines whose two section readings are both known (CONFLICT pair, drawn outline
+    # vs schedule band; own read of the outline) and whose height is bounded by a merged / this-run datum:
+    # bound = a_min x h_lo .. a_max x h_hi (R-COL-SECTION-CONFLICT-1, as the bounded D-66 lines), never one reading.
+    sched = t566["schedule"]
+    gf_sec = {p["members"]["GF"]["handle"]: (p["labels"]["FP"]["mark"], p["members"]["GF"]["section_mm"])
+              for p in t566["positions"] if "GF" in p["members"]}
+    blank = {l["line_id"]: l for l in idx["lines"] if l["item_code"] == "STR.CONC.COLUMN" and l["class"] == "HELD"
+             and l["held_low"] is None}
+    annex_h = (X("3.544") - X("0.25"), X("4.30") - X("0.25"))  # R-T678-2 annex datum (merged, Checker-verified)
+    c5_h = (X(h412), FINISHED_ROOF - BASE_2F)                  # R-T689-1 at 415 (B8 support) .. D-39 ceiling
+    plan = [  # line, member, outline handle, storey band, height pair, height source, own-read outline
+        ("L-9f5a647014bbf83359f9", "C GF annex (one of the trio 34A / 34D / 356, identical readings; pairing not asserted)", "34A", "GR", annex_h, "R-T678-2 annex 3.294 .. 4.05"),
+        ("L-c0b3340a906c2c7650f8", "C GF annex (one of the trio, pairing not asserted)", "34D", "GR", annex_h, "R-T678-2 annex 3.294 .. 4.05"),
+        ("L-e6c1c9a7feec10f64975", "C GF annex (one of the trio, pairing not asserted)", "356", "GR", annex_h, "R-T678-2 annex 3.294 .. 4.05"),
+        ("L-694a75c84dd6e4bb4491", "C3 GF annex", "350", "GR", annex_h, "R-T678-2 annex 3.294 .. 4.05"),
+        ("L-bc01297b1c4a4c45a15f", "C5 2F (B8 east support)", "415", "2ND", c5_h,
+         f"R-T689-1 B8 joint {h412} .. D-39 ceiling 4.25"),
+    ]
+    sec_2f = {h: (marks_2f[h], [int(1000 * own["sfrs_columns"][h]["w_m"] + 0.5),
+                                int(1000 * own["sfrs_columns"][h]["d_m"] + 0.5)]) for h in ("415",)}
+    blank_rows = []
+    for lid, member, h, band, (hl, hh), hsrc in plan:
+        assert lid in blank, lid
+        mark, drawn = gf_sec[h] if h in gf_sec else sec_2f[h]
+        w, d = sched[mark]["bands"][band]
+        a_draw = X(drawn[0]) * X(drawn[1]) / X(10**6)
+        a_sch = X(w) * X(d) / X(10**4)
+        assert a_draw != a_sch, (lid, "AGREE: not a conflict pair")
+        cb = R.conflict_bound(areas=(a_draw, a_sch), height=(hl, hh), item="D-39 / Q-54 B / section CONFLICT")
+        lo, hi = cb["low"], cb["high"]
+        nb = R.narrow(before=(None, None), after=(lo, hi),
+                      source={"kind": "CONFLICT_PAIR_X_HEIGHT_BOUND",
+                              "ref": f"outline {h} {drawn[0]}x{drawn[1]} mm vs schedule {mark} {band} {w}x{d} cm; {hsrc}"})
+        blank_rows.append({"line_id": lid, "element_id": blank[lid]["element_id"], "member": f"{member}, outline {h}",
+                           "before": "blank (OPEN)", "after": [str(nb["low"]), str(nb["high"])],
+                           "areas_m2": [str(min(a_draw, a_sch)), str(max(a_draw, a_sch))],
+                           "height_m": [str(hl), str(hh)], "source": nb["source"]["ref"],
+                           "section_item": "D-66" if h in D66_HANDLES else None})
+    gaps_blank = [[r["line_id"], "SECTION"] for r in blank_rows if r["section_item"] is None]
+    blo = sum((X(r["after"][0]) for r in blank_rows), X(0))
+    bhi = sum((X(r["after"][1]) for r in blank_rows), X(0))
     return {
         "schema": "T689_HELD_RANGES_V1", "task": "T-689", "candidate": idx["candidate_version"],
         "rules": ["R-T689-1 1.0.0", "R-T689-2 1.0.0", "R-T689-3 1.0.0"],
@@ -201,6 +243,9 @@ def build():
         "conditional_on_one_plane_m3": str(cond_total),
         "register_gaps": [list(g) for g in gaps],
         "lines": rows,
+        "blank_to_bounded": {"lines": blank_rows, "low": str(blo), "high": str(bhi),
+                             "column_blank_before": len(blank), "column_blank_after": len(blank) - len(blank_rows),
+                             "register_gaps": gaps_blank},
     }
 
 
@@ -233,6 +278,14 @@ def md(res):
                  f"{'' if r['top_80pct'] else ' (outside 80 %)'} | {r['before'][0]} .. {r['before'][1]} | "
                  f"{r['after'][0]} .. {r['after'][1]} | {c} | "
                  f"{r['conditional']['low_if_one_plane'] if r['conditional'] else ''} |")
+    b = res["blank_to_bounded"]
+    o += ["", f"Blank COLUMN lines bounded (conflict pair x height bound): {len(b['lines'])}, {b['low']} .. {b['high']} m3; "
+          f"blank {b['column_blank_before']} -> {b['column_blank_after']}; section register gaps {b['register_gaps']}", "",
+          "| Line | Member | Areas m2 | Height m | After | Section item |", "|---|---|---|---|---|---|"]
+    for r in b["lines"]:
+        o.append(f"| {r['line_id'][:10]} | {r['member']} | {r['areas_m2'][0]} .. {r['areas_m2'][1]} | "
+                 f"{r['height_m'][0]} .. {r['height_m'][1]} | {r['after'][0]} .. {r['after'][1]} | "
+                 f"{r['section_item'] or 'NONE'} |")
     return "\n".join(o) + "\n"
 
 
