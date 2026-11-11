@@ -1,0 +1,2097 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.70",
+ "class_counts": {
+  "FIN.MARBLE.LANDING|NOT_APPLICABLE": 1,
+  "FIN.MARBLE.LANDING|WIRING_GAP": 1,
+  "FIN.MARBLE.RISER|AT_LEAST": 2,
+  "FIN.MARBLE.RISER|MEASURED": 7,
+  "FIN.MARBLE.RISER|NOT_APPLICABLE": 4,
+  "FIN.MARBLE.TREAD|BLANK_NAMED": 1,
+  "FIN.MARBLE.TREAD|MEASURED": 1,
+  "FIN.MARBLE.TREAD|NOT_APPLICABLE": 3,
+  "FIN.STAIR.FLIGHT|BLANK_NAMED": 2,
+  "FIN.STAIR.FLIGHT|MEASURED": 7,
+  "FIN.STAIR.FLIGHT|NOT_APPLICABLE": 5,
+  "FIN.STAIR.SKIRTING.SLOPED|AT_LEAST": 1,
+  "FIN.STAIR.SKIRTING.SLOPED|AT_MOST": 4,
+  "FIN.STAIR.SKIRTING.SLOPED|CONDITIONAL_ON_FORM": 13,
+  "FIN.STAIR.SKIRTING.SLOPED|NOT_APPLICABLE": 2,
+  "FIN.STAIR.SKIRTING.SLOPED|RANGE": 2,
+  "FIN.STAIR.SKIRTING.ZIGZAG|AT_MOST": 4,
+  "FIN.STAIR.SKIRTING.ZIGZAG|CONDITIONAL_ON_FORM": 14,
+  "FIN.STAIR.SKIRTING.ZIGZAG|NOT_APPLICABLE": 2,
+  "FIN.STAIR.SKIRTING.ZIGZAG|RANGE": 2,
+  "FIN.STAIR.SOFFIT|AT_LEAST": 2,
+  "FIN.STAIR.STEP_LM|AT_LEAST": 2,
+  "FIN.STAIR.STEP_LM|NOT_APPLICABLE": 3
+ },
+ "lines": [
+  {
+   "after": {
+    "carrier": null,
+    "cause": "T-493: the bound 0 .. 9.225 = 2F arrival 4.8650 + MS2-LD 2.9325 (own lines, unwired) + 1.4275 not landing; NOT_APPLICABLE once those two lines are wired",
+    "class": "WIRING_GAP",
+    "high": null,
+    "item": null,
+    "line_id": "L-5d2be30dd8d2ffeacc42",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-493 MERGED)",
+    "value": null
+   },
+   "before": {
+    "high": 9.225001,
+    "low": 0.0,
+    "net": null
+   },
+   "element_id": "2F-R4D1B62:landings",
+   "item_code": "FIN.MARBLE.LANDING",
+   "line_id": "L-5d2be30dd8d2ffeacc42",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "T-493: the bound 0 .. 2.9225 holds no landing: 0.690 MS1-L / D1 treads (now in the released tread lines), 1.3225 winders (-> 1F flight 5 tread, R-T715-2), 0.680 divider, 0.230 unread strip",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-1983e89d8b619eade1db",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-493 MERGED)",
+    "value": null
+   },
+   "before": {
+    "high": 2.9225,
+    "low": 0.0,
+    "net": null
+   },
+   "element_id": "GF-R31F8AE:landings",
+   "item_code": "FIN.MARBLE.LANDING",
+   "line_id": "L-1983e89d8b619eade1db",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 1",
+    "cause": "R-T715-3: RS-C seen through the void from 1F (T-412 binding: exposure measured on GF F1); carrier GF-RC99C2A:flight 1 FIN.MARBLE.RISER (HELD)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-1e36bc3c0893eeeb9c58",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-C",
+   "element_id": "1F-R78C367:flight 1",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-1e36bc3c0893eeeb9c58",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 12 risers x 1.150 x (4.20/25 - 0.030)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-0f060e9951c28c4cf074",
+    "low": null,
+    "status": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+    "value": "1.904400"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS2-L",
+   "element_id": "1F-R78C367:flight 2",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-0f060e9951c28c4cf074",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 12 risers x 1.150 x (4.50/27 - 0.030)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-07e0855f961a839c1277",
+    "low": null,
+    "status": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+    "value": "1.886000"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS1-U",
+   "element_id": "1F-R78C367:flight 3",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-07e0855f961a839c1277",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 2",
+    "cause": "R-T715-3: RS-S seen through the void from 1F (T-412: exposure measured on GF F2); carrier GF-RC99C2A:flight 2 FIN.MARBLE.RISER (HELD)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-24792292e996c57c52d9",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-S",
+   "element_id": "1F-R78C367:flight 4",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-24792292e996c57c52d9",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-2: 5 turn risers (A-A) x >= 1.150 x (4.50/27 - 0.030)",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "D-67 (winder subdivision not drawn; S-9, C-ST-3)",
+    "line_id": "L-820baecf7f726b4d8f1e",
+    "low": "0.785833",
+    "status": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS1-T",
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-820baecf7f726b4d8f1e",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 4",
+    "cause": "R-T715-3: RS-A seen through the void from 1F (T-412: exposure measured on GF F4); carrier GF-RC99C2A:flight 4 FIN.MARBLE.RISER (HELD)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-f24a09f1b4117814e4c8",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-A",
+   "element_id": "1F-R78C367:flight 6",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-f24a09f1b4117814e4c8",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 12 risers x 1.150 x (4.20/25 - 0.030)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-12f56cbfe750f8b30c41",
+    "low": null,
+    "status": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+    "value": "1.904400"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS2-U",
+   "element_id": "2F-R4D1B62:flight 2",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-12f56cbfe750f8b30c41",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 10 risers x 1.150 x (4.50/27 - 0.030)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-ecc450d6cc865617f8f6",
+    "low": null,
+    "status": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+    "value": "1.571667"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS1-L",
+   "element_id": "GF-R31F8AE:flight 1",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-ecc450d6cc865617f8f6",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 4 risers x 1.150 x (0.70/4 - 0.030)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-8938aa3b25bf605e4b9d",
+    "low": null,
+    "status": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+    "value": "0.667000"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "D1",
+   "element_id": "GF-R31F8AE:flight 2",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-8938aa3b25bf605e4b9d",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "12 drawn curved riser lines: smaller of the two readings of their summed length (13.7964 lm, R-T711-2) x (4.50/28 - 0.030); marble may extend over the 0.050 band / curtail (open), never shorter",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+    "line_id": "L-913cda8eb6d73f6e28cc",
+    "low": "1.803386",
+    "status": "ASSUMED - OWNER-APPROVED (riser 4.50/28) on DRAWING-CONFIRMED riser lines (T-415 / T-412)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-C",
+   "element_id": "GF-RC99C2A:flight 1",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-913cda8eb6d73f6e28cc",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 11 risers x 1.150 x (4.50/28 - 0.030)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-099fe9fcfa5667fb8b99",
+    "low": null,
+    "status": "ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section); t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+    "value": "1.653536"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-S",
+   "element_id": "GF-RC99C2A:flight 2",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-099fe9fcfa5667fb8b99",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 2",
+    "cause": "R-T715-3: the rest of the GF reading of RS-S (T-412 by elimination; its tread / step EXCLUDED); carrier GF-RC99C2A:flight 2 FIN.MARBLE.RISER (HELD)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-2efa4a4f4cc2aad9a2f2",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-S",
+   "element_id": "GF-RC99C2A:flight 3",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-2efa4a4f4cc2aad9a2f2",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 5 risers x 1.150 x (4.50/28 - 0.030)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-16e0c6682725260f28e7",
+    "low": null,
+    "status": "ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section); t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+    "value": "0.751607"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-A",
+   "element_id": "GF-RC99C2A:flight 4",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-16e0c6682725260f28e7",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 1",
+    "cause": "R-T715-3: RS-C seen through the void from 1F (T-412 binding: exposure measured on GF F1); carrier GF-RC99C2A:flight 1 FIN.MARBLE.TREAD (HELD)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-6cf11c2d30387d0942b9",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": 4.094413,
+    "low": 0.0,
+    "net": null
+   },
+   "drawn_flight": "RS-C",
+   "element_id": "1F-R78C367:flight 1",
+   "item_code": "FIN.MARBLE.TREAD",
+   "line_id": "L-6cf11c2d30387d0942b9",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 2",
+    "cause": "R-T715-3: RS-S seen through the void from 1F (T-412: exposure measured on GF F2); carrier GF-RC99C2A:flight 2 FIN.MARBLE.TREAD (RELEASED)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-ea55ed317bc4de89aec1",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": 3.45,
+    "low": 0.0,
+    "net": null
+   },
+   "drawn_flight": "RS-S",
+   "element_id": "1F-R78C367:flight 4",
+   "item_code": "FIN.MARBLE.TREAD",
+   "line_id": "L-ea55ed317bc4de89aec1",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-2: the 5 winder treads tile the turn region 1.3225 m2 (1.150 x 1.150 inside the finishes) whatever the subdivision; D-67 holds the split, not the area",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-b4660de0ddd98ad0ffc2",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-493 itemised region)",
+    "value": "1.322500"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS1-T",
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.MARBLE.TREAD",
+   "line_id": "L-b4660de0ddd98ad0ffc2",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 4",
+    "cause": "R-T715-3: RS-A seen through the void from 1F (T-412: exposure measured on GF F4); carrier GF-RC99C2A:flight 4 FIN.MARBLE.TREAD (RELEASED)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-5d338389185d72a6fb16",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": 1.38,
+    "low": 0.0,
+    "net": null
+   },
+   "drawn_flight": "RS-A",
+   "element_id": "1F-R78C367:flight 6",
+   "item_code": "FIN.MARBLE.TREAD",
+   "line_id": "L-5d338389185d72a6fb16",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "marble edge (1.150 front edge vs 1.250 lane, curtail 0.090129 beyond the lane) not detailed; the drawn treads give no floor without the junction tread split",
+    "class": "BLANK_NAMED",
+    "high": null,
+    "item": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+    "line_id": "L-fa534ec5f9dc14947899",
+    "low": null,
+    "status": "HELD",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-C",
+   "element_id": "GF-RC99C2A:flight 1",
+   "item_code": "FIN.MARBLE.TREAD",
+   "line_id": "L-fa534ec5f9dc14947899",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 1",
+    "cause": "R-T715-3: RS-C seen through the void from 1F (T-412 binding: exposure measured on GF F1); carrier GF-RC99C2A:flight 1 FIN.STAIR.FLIGHT (HELD)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-256e8ae3e15334092b5d",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-C",
+   "element_id": "1F-R78C367:flight 1",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-256e8ae3e15334092b5d",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 11 goings x hypot(0.300, 4.20/25)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-a08d67ca292ab16ef9c3",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": "3.782209"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS2-L",
+   "element_id": "1F-R78C367:flight 2",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-a08d67ca292ab16ef9c3",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 11 goings x hypot(0.300, 4.50/27)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-54eb280b9f7bf5eda65f",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": "3.775064"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS1-U",
+   "element_id": "1F-R78C367:flight 3",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-54eb280b9f7bf5eda65f",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 2",
+    "cause": "R-T715-3: RS-S seen through the void from 1F (T-412: exposure measured on GF F2); carrier GF-RC99C2A:flight 2 FIN.STAIR.FLIGHT (HELD)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-23e0ff3c4f454647b2b5",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-S",
+   "element_id": "1F-R78C367:flight 4",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-23e0ff3c4f454647b2b5",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "walking line of the turn not drawn: no pitch line (R-T715-2)",
+    "class": "BLANK_NAMED",
+    "high": null,
+    "item": "D-67 (winder subdivision not drawn; S-9, C-ST-3)",
+    "line_id": "L-c6724654ee4ccdb0c508",
+    "low": null,
+    "status": "HELD",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS1-T",
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-c6724654ee4ccdb0c508",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 4",
+    "cause": "R-T715-3: RS-A seen through the void from 1F (T-412: exposure measured on GF F4); carrier GF-RC99C2A:flight 4 FIN.STAIR.FLIGHT (HELD)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-437643d5f8553a89a0cd",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-A",
+   "element_id": "1F-R78C367:flight 6",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-437643d5f8553a89a0cd",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": "1F-R78C367:flight 2",
+    "cause": "R-T715-3: MS2-L stacked under 2F (T-184 R-STAIR-CONT-1, T-129; its tread / step / riser EXCLUDED); carrier 1F-R78C367:flight 2 FIN.STAIR.FLIGHT (HELD)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-0c2df36a42803126d3b9",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS2-L",
+   "element_id": "2F-R4D1B62:flight 1",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-0c2df36a42803126d3b9",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 11 goings x hypot(0.300, 4.20/25)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-48bb13e2f1c94d852a03",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": "3.782209"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS2-U",
+   "element_id": "2F-R4D1B62:flight 2",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-48bb13e2f1c94d852a03",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 9 goings x hypot(0.300, 4.50/27)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-a1a0ab49818d4b9621b5",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": "3.088689"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS1-L",
+   "element_id": "GF-R31F8AE:flight 1",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-a1a0ab49818d4b9621b5",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 3 goings x hypot(0.300, 0.70/4)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-cccf54f717124cd750b3",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": "1.041933"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "D1",
+   "element_id": "GF-R31F8AE:flight 2",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-cccf54f717124cd750b3",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "curved pitch line on the walking line needs the junction tread (T-415 tread 12 curved + 0.0846 straight); curved parts HELD (Q-50 A cond)",
+    "class": "BLANK_NAMED",
+    "high": null,
+    "item": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+    "line_id": "L-30009d8eb01996ec6399",
+    "low": null,
+    "status": "HELD",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-C",
+   "element_id": "GF-RC99C2A:flight 1",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-30009d8eb01996ec6399",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 10 goings x hypot(0.300, 4.50/28)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-509c6af3d162ae145108",
+    "low": null,
+    "status": "ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section)",
+    "value": "3.403367"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-S",
+   "element_id": "GF-RC99C2A:flight 2",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-509c6af3d162ae145108",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 2",
+    "cause": "R-T715-3: the rest of the GF reading of RS-S (T-412 by elimination; its tread / step EXCLUDED); carrier GF-RC99C2A:flight 2 FIN.STAIR.FLIGHT (HELD)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-d827589991777fe63819",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-S",
+   "element_id": "GF-RC99C2A:flight 3",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-d827589991777fe63819",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-1: 4 goings x hypot(0.300, 4.50/28)",
+    "class": "MEASURED",
+    "high": null,
+    "item": null,
+    "line_id": "L-406aae9a9854e015c45e",
+    "low": null,
+    "status": "ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section)",
+    "value": "1.361347"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-A",
+   "element_id": "GF-RC99C2A:flight 4",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "line_id": "L-406aae9a9854e015c45e",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 0.9 + 4 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-775f62538c1f46077807",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.140175"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:D1.E",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-775f62538c1f46077807",
+   "piece": "D1.E",
+   "t410_figure": 1.140175,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 1.2 + 5 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-b77a64fb9a941582f25c",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.470544"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:E1.S",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-b77a64fb9a941582f25c",
+   "piece": "E1.S",
+   "t410_figure": 1.470544,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 0.4 + 2 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-a43adc74906d8bcd7b1c",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "0.470071"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-a43adc74906d8bcd7b1c",
+   "piece": "MS1-L.W1",
+   "t410_figure": 0.470071,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 0.75 + 3 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-ff51392df9e2c8c21efe",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "0.881382"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1B",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-ff51392df9e2c8c21efe",
+   "piece": "MS1-L.W1B",
+   "t410_figure": 0.881383,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 0.5 + 1 risers, returns 0.1; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-aed4c2990437f767dc90",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "0.687588"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1C",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-aed4c2990437f767dc90",
+   "piece": "MS1-L.W1C",
+   "t410_figure": 0.687589,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "T-690: no wall face against the flight over this stretch (the shaft window reaches below the flight); unwired",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-18efa069acded71c81e7",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-690 MERGED, Checker AGREE)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W2",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-18efa069acded71c81e7",
+   "piece": "MS1-L.W2",
+   "t410_figure": 1.233936,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 corner turn: this wall in [plan, plan + 5 x 4.50/27]; pair W + N zigzag 3.183333 exact, sloped pair 2.493380 .. 2.620192",
+    "class": "RANGE",
+    "high": "1.420192",
+    "item": "D-67 (which wall each winder riser meets) + ORR-007 (form)",
+    "line_id": "L-28c33cd0ab5d19426661",
+    "low": "1.150000",
+    "status": "DRAWING-CONFIRMED (plan T-410, rise A-A 5 risers)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-T.N",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-28c33cd0ab5d19426661",
+   "pair_zigzag_exact": "3.183333",
+   "piece": "MS1-T.N",
+   "t410_figure": null,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 corner turn: this wall in [plan, plan + 5 x 4.50/27]; pair W + N zigzag 3.183333 exact, sloped pair 2.493380 .. 2.620192",
+    "class": "RANGE",
+    "high": "1.460974",
+    "item": "D-67 (which wall each winder riser meets) + ORR-007 (form)",
+    "line_id": "L-2fae5d35b21e97684844",
+    "low": "1.200000",
+    "status": "DRAWING-CONFIRMED (plan T-410, rise A-A 5 risers)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-T.W",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-2fae5d35b21e97684844",
+   "pair_zigzag_exact": "3.183333",
+   "piece": "MS1-T.W",
+   "t410_figure": null,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 0.95 + 4 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-32f71724eeeaa46638c9",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.110854"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E1",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-32f71724eeeaa46638c9",
+   "piece": "MS1-U.E1",
+   "t410_figure": 1.110855,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4: full-wall figure of this form; 0 if no wall face (open side)",
+    "class": "AT_MOST",
+    "high": "1.052389",
+    "item": "designer (T-410): hidden opening 33C / 33D (0.90 m) in the lift wall above the cut: its sill against the flight (+4.0 .. +4.5) not printed (T-410)",
+    "line_id": "L-20c2640927e41626893d",
+    "low": null,
+    "status": "HELD",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E2",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-20c2640927e41626893d",
+   "piece": "MS1-U.E2",
+   "t410_figure": 1.052389,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 1.15 + 4 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-cfecfcea2280155a6a74",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.344718"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E3a",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-cfecfcea2280155a6a74",
+   "piece": "MS1-U.E3a",
+   "t410_figure": 1.344719,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4: full-wall figure of this form; 0 if no wall face (open side)",
+    "class": "AT_MOST",
+    "high": "0.350797",
+    "item": "CONFLICT: the top 0.300 of MS1-U (architectural plan vs ST p.4; T-508 / C-ST-4)",
+    "line_id": "L-8e463d6ce740fc19e60c",
+    "low": null,
+    "status": "HELD",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E3b",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-8e463d6ce740fc19e60c",
+   "piece": "MS1-U.E3b",
+   "t410_figure": 0.350796,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 1.0 + 4 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-9b1da1af7c162de2233c",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.171840"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-9b1da1af7c162de2233c",
+   "piece": "MS2-L.W1",
+   "t410_figure": 1.17184,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 0.75 + 3 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-caacb4c1425981b2585f",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "0.878880"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1B",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-caacb4c1425981b2585f",
+   "piece": "MS2-L.W1B",
+   "t410_figure": 0.87888,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 0.5 + 1 risers, returns 0.1; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-193f8e812d9ade5f9c41",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "0.685920"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1C",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-193f8e812d9ade5f9c41",
+   "piece": "MS2-L.W1C",
+   "t410_figure": 0.68592,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "T-690: no wall face against the flight over this stretch (the shaft window reaches below the flight); unwired",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-4ff56def5b73b558afbe",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-690 MERGED, Checker AGREE)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W2",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-4ff56def5b73b558afbe",
+   "piece": "MS2-L.W2",
+   "t410_figure": 1.230432,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "sloped rake undefined over a zero run; any form must rise the 0.168 step",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "ORR-007 + UP-STAIR-011 at zero run",
+    "line_id": "L-76de75ce9a315998be99",
+    "low": "0.168000",
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-TR.N",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-76de75ce9a315998be99",
+   "piece": "MS2-TR.N",
+   "t410_figure": null,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 3.3 + 12 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-4b902816d29b75fab7fc",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "3.867073"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-U.E",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-4b902816d29b75fab7fc",
+   "piece": "MS2-U.E",
+   "t410_figure": 3.867073,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4: full-wall figure of this form; 0 if no wall face (open side)",
+    "class": "AT_MOST",
+    "high": "4.910135",
+    "item": "RFI-S27 / D-08: outer band 23D / 23E guard or string not established, curved flight (T-410)",
+    "line_id": "L-1c082cc60442407ed517",
+    "low": null,
+    "status": "HELD",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-C.OUT",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-1c082cc60442407ed517",
+   "piece": "RS-C.OUT",
+   "t410_figure": null,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4: full-wall figure of this form; 0 if no wall face (open side)",
+    "class": "AT_MOST",
+    "high": "0.232143",
+    "item": "RFI-S27: the 0.050 outer band A7 / A9 (RL-09) guard or string not established; no wall face (T-410)",
+    "line_id": "L-ebe230d8c2fbc35332b8",
+    "low": null,
+    "status": "HELD",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S0",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-ebe230d8c2fbc35332b8",
+   "piece": "RS-S.S0",
+   "t410_figure": 0.232143,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 0.8 + 3 risers, returns 0.05; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-0ae4be232407b92343ef",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "0.978571"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S1",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-0ae4be232407b92343ef",
+   "piece": "RS-S.S1",
+   "t410_figure": 0.978571,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 sloped: plan 2.0 + 7 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-d980ace38bdd63fa8de4",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "2.321429"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S2",
+   "form": "SLOPED",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "line_id": "L-d980ace38bdd63fa8de4",
+   "piece": "RS-S.S2",
+   "t410_figure": 2.321429,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 0.9 + 4 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-4548e7ad947b07624e81",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.600000"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:D1.E",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-4548e7ad947b07624e81",
+   "piece": "D1.E",
+   "t410_figure": 1.6,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 1.2 + 5 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-add5acd610925402e0f5",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "2.050000"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:E1.S",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-add5acd610925402e0f5",
+   "piece": "E1.S",
+   "t410_figure": 2.05,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 0.4 + 2 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-53f3b7f153af0e1f5538",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "0.733333"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-53f3b7f153af0e1f5538",
+   "piece": "MS1-L.W1",
+   "t410_figure": 0.733334,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 0.75 + 3 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-9e5ed7164ee85f0fc196",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.250000"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1B",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-9e5ed7164ee85f0fc196",
+   "piece": "MS1-L.W1B",
+   "t410_figure": 1.250001,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 0.5 + 1 risers, returns 0.1; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-c56a452218763d5e7bbf",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "0.766667"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1C",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-c56a452218763d5e7bbf",
+   "piece": "MS1-L.W1C",
+   "t410_figure": 0.766667,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "T-690: no wall face against the flight over this stretch (the shaft window reaches below the flight); unwired",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-76748b7b62ab2d52b4e2",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-690 MERGED, Checker AGREE)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W2",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-76748b7b62ab2d52b4e2",
+   "piece": "MS1-L.W2",
+   "t410_figure": 1.716668,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 corner turn: this wall in [plan, plan + 5 x 4.50/27]; pair W + N zigzag 3.183333 exact, sloped pair 2.493380 .. 2.620192",
+    "class": "RANGE",
+    "high": "1.983334",
+    "item": "D-67 (which wall each winder riser meets) + ORR-007 (form)",
+    "line_id": "L-5f0bd2b45c1718aeefc4",
+    "low": "1.150000",
+    "status": "DRAWING-CONFIRMED (plan T-410, rise A-A 5 risers)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-T.N",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-5f0bd2b45c1718aeefc4",
+   "pair_zigzag_exact": "3.183333",
+   "piece": "MS1-T.N",
+   "t410_figure": null,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 corner turn: this wall in [plan, plan + 5 x 4.50/27]; pair W + N zigzag 3.183333 exact, sloped pair 2.493380 .. 2.620192",
+    "class": "RANGE",
+    "high": "2.033334",
+    "item": "D-67 (which wall each winder riser meets) + ORR-007 (form)",
+    "line_id": "L-5bc4cea35db33e41d78c",
+    "low": "1.200000",
+    "status": "DRAWING-CONFIRMED (plan T-410, rise A-A 5 risers)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-T.W",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-5bc4cea35db33e41d78c",
+   "pair_zigzag_exact": "3.183333",
+   "piece": "MS1-T.W",
+   "t410_figure": null,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 0.95 + 4 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-bc0e1e80ca50865ccd06",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.616667"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E1",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-bc0e1e80ca50865ccd06",
+   "piece": "MS1-U.E1",
+   "t410_figure": 1.616668,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4: full-wall figure of this form; 0 if no wall face (open side)",
+    "class": "AT_MOST",
+    "high": "1.400000",
+    "item": "designer (T-410): hidden opening 33C / 33D (0.90 m) in the lift wall above the cut: its sill against the flight (+4.0 .. +4.5) not printed (T-410)",
+    "line_id": "L-1ed4cfaa1c12054b401d",
+    "low": null,
+    "status": "HELD",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E2",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-1ed4cfaa1c12054b401d",
+   "piece": "MS1-U.E2",
+   "t410_figure": 1.400001,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 1.15 + 4 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-9ec979f00305b8ae8049",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.816667"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E3a",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-9ec979f00305b8ae8049",
+   "piece": "MS1-U.E3a",
+   "t410_figure": 1.816668,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4: full-wall figure of this form; 0 if no wall face (open side)",
+    "class": "AT_MOST",
+    "high": "0.466667",
+    "item": "CONFLICT: the top 0.300 of MS1-U (architectural plan vs ST p.4; T-508 / C-ST-4)",
+    "line_id": "L-984553ed0b69b0f77fe2",
+    "low": null,
+    "status": "HELD",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E3b",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-984553ed0b69b0f77fe2",
+   "piece": "MS1-U.E3b",
+   "t410_figure": 0.466667,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 1.0 + 4 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-656ab12cc9b9797d3b1a",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.672000"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-656ab12cc9b9797d3b1a",
+   "piece": "MS2-L.W1",
+   "t410_figure": 1.672,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 0.75 + 3 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-20432b887f91dee03925",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.254000"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1B",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-20432b887f91dee03925",
+   "piece": "MS2-L.W1B",
+   "t410_figure": 1.254,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 0.5 + 1 risers, returns 0.1; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-1c907e0a59c55204e430",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "0.768000"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1C",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-1c907e0a59c55204e430",
+   "piece": "MS2-L.W1C",
+   "t410_figure": 0.768,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "T-690: no wall face against the flight over this stretch (the shaft window reaches below the flight); unwired",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-f45c2e6d46b0cc6a7e53",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-690 MERGED, Checker AGREE)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W2",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-f45c2e6d46b0cc6a7e53",
+   "piece": "MS2-L.W2",
+   "t410_figure": 1.722,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4: lone closing step on the north wall face: zigzag = 1 x 0.168 (plan 0)",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (form)",
+    "line_id": "L-5021b820dba41f631dde",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-684 / T-690: riser position drawn on 1F + 2F; 4.20/25)",
+    "value": "0.168000"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-TR.N",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-5021b820dba41f631dde",
+   "piece": "MS2-TR.N",
+   "t410_figure": 0.168,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 3.3 + 12 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-c8dce28c50dabd7b17fb",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "5.316000"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-U.E",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-c8dce28c50dabd7b17fb",
+   "piece": "MS2-U.E",
+   "t410_figure": 5.316,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4: full-wall figure of this form; 0 if no wall face (open side)",
+    "class": "AT_MOST",
+    "high": "6.444104",
+    "item": "RFI-S27 / D-08: outer band 23D / 23E guard or string not established, curved flight (T-410)",
+    "line_id": "L-1a0d2ab50e42b0219eab",
+    "low": null,
+    "status": "HELD",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-C.OUT",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-1a0d2ab50e42b0219eab",
+   "piece": "RS-C.OUT",
+   "t410_figure": null,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4: full-wall figure of this form; 0 if no wall face (open side)",
+    "class": "AT_MOST",
+    "high": "0.360715",
+    "item": "RFI-S27: the 0.050 outer band A7 / A9 (RL-09) guard or string not established; no wall face (T-410)",
+    "line_id": "L-c074ce526885a44423d0",
+    "low": null,
+    "status": "HELD",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S0",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-c074ce526885a44423d0",
+   "piece": "RS-S.S0",
+   "t410_figure": 0.360714,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 0.8 + 3 risers, returns 0.05; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-544b6b11bab9bbf037fb",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "1.332143"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S1",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-544b6b11bab9bbf037fb",
+   "piece": "RS-S.S1",
+   "t410_figure": 1.332143,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-4 zigzag: plan 2.0 + 7 risers, returns 0.0; never additive with its sibling form line",
+    "class": "CONDITIONAL_ON_FORM",
+    "high": null,
+    "item": "ORR-007 (payable form)",
+    "line_id": "L-8dde910ffeeb94a58323",
+    "low": null,
+    "status": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+    "value": "3.125000"
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S2",
+   "form": "ZIGZAG",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "line_id": "L-8dde910ffeeb94a58323",
+   "piece": "RS-S.S2",
+   "t410_figure": 3.125,
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "min(O, D) of the measured rows 17.197803 + MS1-L CONFLICT smallest reading 3.225561; held rows >= 0",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "C-ST-3 / D-67 (winder + junction 1.500 m2 plan), O vs D soffit method (no owner rule)",
+    "line_id": "L-1fcec3328ccd0ea243d4",
+    "low": "20.423364",
+    "status": "DRAWING-CONFIRMED (T-281 MERGED)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR:ST-01:soffit",
+   "item_code": "FIN.STAIR.SOFFIT",
+   "line_id": "L-1fcec3328ccd0ea243d4",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "min(O, D) of the measured RS-S / RS-LD / RS-A rows; RS-C, members and unknown sub-pieces >= 0",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "D-08 / RFI-S27 (RS-C waist not printed: helical soffit HELD)",
+    "line_id": "L-c77e3887f7e348b1461d",
+    "low": "4.460946",
+    "status": "ASSUMED - OWNER-APPROVED (riser 4.50/28) (T-281 MERGED)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR:ST-02:soffit",
+   "item_code": "FIN.STAIR.SOFFIT",
+   "line_id": "L-c77e3887f7e348b1461d",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 1",
+    "cause": "R-T715-3: RS-C seen through the void from 1F (T-412 binding: exposure measured on GF F1); carrier GF-RC99C2A:flight 1 FIN.STAIR.STEP_LM (HELD)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-3a3aabb15b187e33e3da",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": 13.7964,
+    "low": 0.0,
+    "net": null
+   },
+   "drawn_flight": "RS-C",
+   "element_id": "1F-R78C367:flight 1",
+   "item_code": "FIN.STAIR.STEP_LM",
+   "line_id": "L-3a3aabb15b187e33e3da",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 2",
+    "cause": "R-T715-3: RS-S seen through the void from 1F (T-412: exposure measured on GF F2); carrier GF-RC99C2A:flight 2 FIN.STAIR.STEP_LM (RELEASED)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-c955f6b3a3abca48d562",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": 11.5,
+    "low": 0.0,
+    "net": null
+   },
+   "drawn_flight": "RS-S",
+   "element_id": "1F-R78C367:flight 4",
+   "item_code": "FIN.STAIR.STEP_LM",
+   "line_id": "L-c955f6b3a3abca48d562",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "R-T715-2: 5 winder treads (A-A 5 turn risers, the 5th onto MS1-LD) x lane 1.150; each winder nosing spans inner corner -> outer wall >= 1.150",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "D-67 (winder subdivision not drawn; S-9, C-ST-3)",
+    "line_id": "L-e085c168dee5fb19a7fb",
+    "low": "5.750000",
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "MS1-T",
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.STAIR.STEP_LM",
+   "line_id": "L-e085c168dee5fb19a7fb",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": "GF-RC99C2A:flight 4",
+    "cause": "R-T715-3: RS-A seen through the void from 1F (T-412: exposure measured on GF F4); carrier GF-RC99C2A:flight 4 FIN.STAIR.STEP_LM (RELEASED)",
+    "class": "NOT_APPLICABLE",
+    "high": null,
+    "item": null,
+    "line_id": "L-57202d2823270429cd80",
+    "low": null,
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "before": {
+    "high": 4.6,
+    "low": 0.0,
+    "net": null
+   },
+   "drawn_flight": "RS-A",
+   "element_id": "1F-R78C367:flight 6",
+   "item_code": "FIN.STAIR.STEP_LM",
+   "line_id": "L-57202d2823270429cd80",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "12 curved steps, each nosing a drawn riser line: smaller reading (T-415 12 x 1.150 = 13.800, engine RADIAL 13.7964); curtail steps 1-3 may add, never less",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+    "line_id": "L-95b9555dd144951b071e",
+    "low": "13.796400",
+    "status": "DRAWING-CONFIRMED (T-415 / T-412)",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "drawn_flight": "RS-C",
+   "element_id": "GF-RC99C2A:flight 1",
+   "item_code": "FIN.STAIR.STEP_LM",
+   "line_id": "L-95b9555dd144951b071e",
+   "unit": "lm"
+  }
+ ],
+ "new_lines_proposed": [
+  {
+   "basis": "1 riser (A-A) x 1.150 (T-684 / T-690 drawn line) x (4.20/25 - 0.030)",
+   "proposed": "FIN.MARBLE.RISER ST-01 MS2-TR closing riser (no candidate line)",
+   "status": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED",
+   "value_m2": "0.158700"
+  }
+ ],
+ "rules": {
+  "R-T715-1": "1.0.0",
+  "R-T715-2": "1.0.0",
+  "R-T715-3": "1.0.0",
+  "R-T715-4": "1.0.0"
+ },
+ "schema": "T715_STAIR_FINISH_LEDGER_V1",
+ "skirting_form_pair": {
+  "payable_bound_lm": [
+   "17.009046",
+   "23.300477"
+  ],
+  "pieces_x_forms": 26,
+  "sum_sloped_lm": "17.009047",
+  "sum_zigzag_lm": "23.300476"
+ }
+}
