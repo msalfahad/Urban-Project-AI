@@ -1,0 +1,250 @@
+{
+ "ground_sheet": {
+  "blocks": [
+   {
+    "block": 0,
+    "faces": 31,
+    "level_mark_handles": [
+     "1B0",
+     "1B2",
+     "1B4"
+    ],
+    "level_marks_in_hull_only": [],
+    "level_marks_inside": [
+     "+0.30",
+     "+0.30",
+     "+0.30"
+    ],
+    "panel_m2": 43.945398
+   },
+   {
+    "block": 1,
+    "faces": 98,
+    "level_mark_handles": [
+     "1C9",
+     "1BE",
+     "1C0",
+     "1C2",
+     "1CD"
+    ],
+    "level_marks_in_hull_only": [
+     "+0.15"
+    ],
+    "level_marks_inside": [
+     "+0.30",
+     "+1.00",
+     "+1.00",
+     "+1.00",
+     "+1.00"
+    ],
+    "panel_m2": 177.006763
+   }
+  ],
+  "level_marks_on_sheet": [
+   "+0.15",
+   "+0.15",
+   "+0.15",
+   "+0.15",
+   "+0.15",
+   "+0.15",
+   "+0.30",
+   "+0.30",
+   "+0.30",
+   "+0.30",
+   "+1.00",
+   "+1.00",
+   "+1.00",
+   "+1.00"
+  ],
+  "non_panel_faces_m2": {
+   "BEAM": 57.028129,
+   "COLUMN": 5.145442,
+   "JUNCTION_GAP": 0.88253
+  },
+  "panels": {
+   "SITE-01e75a66f002baa9": {
+    "area_m2": 6.000148,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-0caa2bd2c0478041": {
+    "area_m2": 2.050202,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-2d53359453ef2573": {
+    "area_m2": 14.525798,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-3f7728a83b30ec14": {
+    "area_m2": 2.615573,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-49a7dae5c139aebb": {
+    "area_m2": 3.834377,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-4bb22fd85925adb0": {
+    "area_m2": 2.0625,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-4df8fcd99d130701": {
+    "area_m2": 8.372326,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-5922f7d38ef95d0f": {
+    "area_m2": 2.6825,
+    "block": 0,
+    "level_marks_inside": []
+   },
+   "SITE-659735106ca717bc": {
+    "area_m2": 6.88,
+    "block": 0,
+    "level_marks_inside": [
+     "+0.30"
+    ]
+   },
+   "SITE-67b20a045d91a15c": {
+    "area_m2": 4.18,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-720fbae909da79f9": {
+    "area_m2": 6.86,
+    "block": 0,
+    "level_marks_inside": []
+   },
+   "SITE-77b8830f567fb93d": {
+    "area_m2": 14.893125,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-7fae2795d77272cb": {
+    "area_m2": 1.44,
+    "block": 0,
+    "level_marks_inside": []
+   },
+   "SITE-997c65af642cbd7e": {
+    "area_m2": 0.155623,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-b1e0844b87508d13": {
+    "area_m2": 1.704031,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-b8f67954c29b4613": {
+    "area_m2": 14.893125,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-c1089bdb4cfcdc4a": {
+    "area_m2": 41.076188,
+    "block": 1,
+    "level_marks_inside": [
+     "+0.30",
+     "+1.00",
+     "+1.00"
+    ]
+   },
+   "SITE-c1b4b440fb6ecf4c": {
+    "area_m2": 2.244696,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-c26e93b649f5066b": {
+    "area_m2": 8.124,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-cd1f57cc06b2f5af": {
+    "area_m2": 24.505,
+    "block": 1,
+    "level_marks_inside": [
+     "+1.00"
+    ]
+   },
+   "SITE-d74f3fe29b88467a": {
+    "area_m2": 10.905052,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-dddf2004a2525169": {
+    "area_m2": 3.255,
+    "block": 1,
+    "level_marks_inside": []
+   },
+   "SITE-e4c2bd9d98ce6a72": {
+    "area_m2": 22.965398,
+    "block": 0,
+    "level_marks_inside": [
+     "+0.30"
+    ]
+   },
+   "SITE-f22fd4467ee5a144": {
+    "area_m2": 3.1175,
+    "block": 0,
+    "level_marks_inside": []
+   },
+   "SITE-f98829c44e7af78b": {
+    "area_m2": 11.61,
+    "block": 1,
+    "level_marks_inside": [
+     "+1.00"
+    ]
+   }
+  }
+ },
+ "lift_pit": {
+  "ff_outline": "route G FOUNDATION_PLAN box of FF (= S-FOOTINGS 1B2B, T-322)",
+  "grown": {
+   "beyond_plot_m2": 0.0,
+   "in_f10_drawn_m2": 0.0,
+   "in_pits_zone_m2": 0.0,
+   "in_pool_envelope_m2": 0.0,
+   "plan_m2": 22.56
+  },
+  "pits_zone_plan_m2": 124.649469,
+  "projection_m": 0.1,
+  "raw": {
+   "beyond_plot_m2": 0.0,
+   "in_f10_drawn_m2": 0.0,
+   "in_pits_zone_m2": 0.0,
+   "in_pool_envelope_m2": 0.0,
+   "plan_m2": 20.7
+  },
+  "ring_handles": {
+   "inner": "10EA",
+   "outer": "10EB"
+  },
+  "ring_inner_plan_m2": 3.24,
+  "ring_outer_in_pits_zone_m2": 0.0,
+  "ring_outer_inside_ff_raw_m2": 4.84,
+  "ring_outer_plan_m2": 4.84,
+  "straps": {
+   "SB1": {
+    "in_ff_grown_m2": 0.0,
+    "in_ff_raw_m2": 0.0
+   },
+   "SB2": {
+    "in_ff_grown_m2": 0.0,
+    "in_ff_raw_m2": 0.0
+   },
+   "SB3": {
+    "in_ff_grown_m2": 0.0,
+    "in_ff_raw_m2": 0.0
+   }
+  }
+ },
+ "schema": "URBAN_T700_ZONE_INPUT_V1",
+ "source": {
+  "drive": "Alsenan chalet project / ST7757 dxf.dxf",
+  "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ }
+}
