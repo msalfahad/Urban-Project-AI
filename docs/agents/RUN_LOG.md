@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-11 00:13 UTC | Lead | STARTED | run session_01E6cPneN1u4k8dc9MBu9Kbn | repo-attached routine | task state: board | report pending
 - 2026-11-10T23:54Z | Verifier | STARTED | run session_01E6cPnaTNm32Ep1YYmyxM8c | repo-attached routine | task state: READY T-682 (W3 Gate B V3.0.67), T-686 (W2 plaster/paint r3), T-684 (W1 MS2 1F NW) | self-check pending
 - 2026-11-10 23:34 UTC | Worker 1 | SUCCESS | T-684 READY (agents/task-T-684 @ d07c3178) | MS2 1F NW square = flat west part of split landing MS2-LD (+7.516) with 1 closing riser; the 3 radiating 1F-plan lines are the GF MS1-T winders seen below (line-for-line). Riser budget (4.20-24x0.168)/0.168 = 1.000, A-A draws no winder riser in the 1F north zone, 2F plan + ST p.5 none: 0 change on 16 V3.0.66 lines + T-680 1F bands; MS2-TR nosing 1.150 lm proposed DRAWING-CONFIRMED. F-V680-1 closed, ENGINE_RIGHT. | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: 'decode' failed on the connector's raw-binary blobs (AGENT_ENV FAIL: base64 decode failed) -> base64-encoded them in the session scratchpad first, then decoded via the wrapper; one throw-away DXF probe was run with the venv python outside the wrapper (read-only, private file, superseded by research/agents_t684/t684_probe.py run through 'run')
 - 2026-11-10 23:20 UTC | Worker 1 | STARTED | run session_01E6cPnazUH7MDsydPCUZQwf | repo-attached routine | task state: none yet | self-check pending
