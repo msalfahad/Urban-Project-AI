@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-11 16:25 (since 12:21)
+
+- T-706 slab / beam residual: WORKED (MERGED 11489726; -0.77 % closed by storey, 1F part a typed reference row; beam -0.128 reference slip).
+- T-709 paint / plaster residuals r2: PARTIAL (MERGED fe461c6e; band omission found -> T-717 wiring; 13.50 m2 of the shaft residual UNRESOLVED, shown by name).
+- T-704 lintel bounds Gate B: FAILED (REJECTED: new module undeclared in the rebar firewall) -> r2 TODO with ruling R-T704-2 (AT_MOST on one geometry).
+- T-707 column tail: WORKED (MERGED f34a5baa; F-T689-1 settled from the drawing, +0.12724 m3; tank pair LOWER_ONLY).
+- T-710 waterproofing r3: WORKED (MERGED 4a34ced0; 58 / 58 by cause; recess HELD 0 .. 13.335 m2 on D-41).
+- T-705 wiring readiness r3: WORKED (MERGED 8294c146; 287 rows stale 0; hub order H1 -> H5; rulings F-T705-1 / -2 given).
+- Owner 15:30: rebar parked (T-664, T-382 parked); designer list started (DESIGNER_QUESTIONS.md, T-716 fills it).
+
 ## Lead 2026-11-11 08:25 (since 04:20)
 
 - T-689 column held ranges: WORKED (MERGED 66ffd421; low 0.303 -> 0.3287, 5 blank columns bounded +1.382780 .. 2.231250 m3). Wiring -> T-693 (now TODO).
@@ -128,5 +138,6 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-639 rebar 801 + 6 (Gate A): WORKED (807 / 807 classed; FR-T639-1..6 +412.444 kg Checker AGREE). Decision: V17 (T-641); F-T639-1 released bars on HELD concrete -> T-643.
 - T-634 internal plaster / paint 31 rows (Gate A): WORKED (29 DRAWING-CONFIRMED, 2 DIFFER, GF-15 -0.015161 m2). Decision: V17 (T-641); statement V12 (T-635).
 - Checker T-180 P02 / P04 slots: F-C-P02-13 (arc band, depth unsourced), F-C-P02-14 and F-C-P04-1 (omissions), GF B11 ENGINE_WRONG -0.003159 m3. Decision: one fix row T-642 (S FIRST).
+
 
 

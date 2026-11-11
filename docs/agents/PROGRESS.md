@@ -1,5 +1,33 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-11 16:25 UTC (Lead). Previous version: 2026-11-11 08:25 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared
+lines, the slab); released: 0. No candidate line changed since 12:25.
+
+Since 08:25 (newest first):
+- Steel (rebar) is parked to the end of the project by your decision: the 9.6 t already counted from the drawings stays
+  as it is; no ratio and no kg per m3 is assumed now; at the end it is given as one approximate figure in tons.
+- Lintels: the package that gives 16 lintels without a figure an upper limit (about 1.32 m3 together) failed the
+  checker's full test run on a bookkeeping test, not on the quantities; it is being redone first, with the limit
+  measured end to end on one drawing (1.322 m3).
+- Concrete checks passed the checker: the slab difference with your freelancer (-0.77 %) is explained floor by floor
+  (rounding and thickness zones; the first-floor part cannot be traced because his figure is a typed area); the beam
+  difference (-0.128 m3) is a row his total leaves out; the roof-plate columns are settled from the drawing (+0.127 m3
+  on their low figure); the two water-tank columns have only a lower figure (0.33 m3 each) until the designer answers.
+- Plaster / paint: of his 54.00 m2 'stair wall' row, 40.50 m2 is the round-stair well, which we carry once (we are
+  right); 13.50 m2 is not yet explained. A missed band in the double-height space was found (plaster 0.84 .. 0.87,
+  paint 3.34 .. 3.53 m2) and will be added after the masonry package.
+- Waterproofing: all 58 open lines now have a cause (46 need the designer, 8 are measured and wait for wiring, 3 wait on
+  your Q-34, 1 is not an element); the sunken wet-room slab panels may need 0 .. 13.3 m2 more membrane (designer item).
+- New work: concrete still without a figure (stairs 5, parapets 4, lift 2, necks 4, ground beams 20), the masonry
+  still without a figure, formwork limits from the concrete limits, stair finishes, earthworks round 3, and the single
+  designer list you asked for (DESIGNER_QUESTIONS.md, 13 items so far).
+- Milestone: reconciled quantities + scorecard (12-13 Nov) is at risk: lintels and masonry must both pass the
+  integration check by 13 Nov; estimate 13-14 Nov.
+
+Previous section (2026-11-11 08:25):
+
 Last update: 2026-11-11 08:25 UTC (Lead). Previous version: 2026-11-11 04:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared

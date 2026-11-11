@@ -46,6 +46,16 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- STAIRS: CONCRETE vs FINISH FACES (Lead 2026-11-11 16:25; T-711 S / T-715 A both TODO): ELEMENT = each flight, landing and
+  winder of every stair. OWNER TRADE: the concrete body (waist, steps, landing slab) = S (STR.CONC.STAIR, T-711); the
+  finish faces (tread, riser, nosing, sloped and zigzag skirting, soffit) = A (FIN.STAIR.* / FIN.MARBLE.*, T-715). Both
+  read the SAME flight geometry; neither writes the other's line; an undrawn winder is HELD in both, never generated.
+- CORNER BEAD HEIGHT STATE (Lead 2026-11-11 16:25; F-T705-1): a bead exists where the drawn arris of a plastered face
+  exists; its length takes its host face's height state: on a HELD host the bead is HELD with the host's bound, never
+  released at a chosen height, never 0; released together with its host. Owner trade unchanged (B4-09, plaster).
+- PARAPETS / LIFT / NECK CONCRETE vs MASONRY (Lead 2026-11-11 16:25; T-711 S / T-713 A both TODO): a concrete parapet or
+  lift wall is S (STR.CONC.*); a block parapet or lift wall is A (MAS.*); where the drawing does not say which, both
+  stay HELD under the named designer item (D-39 / D-43), never measured in both.
 - ARRIS ONCE: CORNER BEAD vs EXTERNAL PLASTER FACES (Lead 2026-11-11 08:25; F-T697-3, T-697 READY): ELEMENT = one
   plastered external arris. OWNER TRADE: plaster, line family B4-09 corner beads (lm), one bead per arris by arris id
   from the T-697 ledger. B4-04 external plaster (T-314) carries the face AREA (m2) only and never a corner / bead length
