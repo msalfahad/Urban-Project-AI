@@ -1,0 +1,846 @@
+{
+ "rooms": {
+  "1F-01": {
+   "chain": [
+    "C2A",
+    "C1F",
+    "C24",
+    "B40"
+   ],
+   "chain_source": "T-621 1F-WEST-BED",
+   "edges": [
+    {
+     "gaps": [
+      {
+       "width": "0.8",
+       "window_framed": false
+      }
+     ],
+     "handle": "C2A",
+     "layer": "1",
+     "lm": "4.25",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "C1F",
+     "layer": "1",
+     "lm": "4.5",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "C24",
+     "layer": "1",
+     "lm": "4.25",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "2.449774",
+       "window_framed": true
+      }
+     ],
+     "handle": "B40",
+     "layer": "1",
+     "lm": "4.5",
+     "type": "LINE"
+    }
+   ],
+   "gap_count": 3,
+   "notch_lm": "0.2",
+   "perimeter": "17.7",
+   "storey": "1F"
+  },
+  "1F-10": {
+   "chain": [
+    "AD0",
+    "B08",
+    "AD8",
+    "AFF"
+   ],
+   "chain_source": "T-621 1F-380x430",
+   "edges": [
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "AD0",
+     "layer": "1",
+     "lm": "3.8",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "B08",
+     "layer": "1",
+     "lm": "4.3",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "0.9",
+       "window_framed": false
+      }
+     ],
+     "handle": "AD8",
+     "layer": "1",
+     "lm": "3.8",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "AFF",
+     "layer": "1",
+     "lm": "4.3",
+     "type": "LINE"
+    }
+   ],
+   "gap_count": 2,
+   "notch_lm": "0.0",
+   "perimeter": "16.2",
+   "storey": "1F"
+  },
+  "1F-11": {
+   "chain": [
+    "B1D",
+    "C0F",
+    "C0A",
+    "BD2",
+    "B6B",
+    "ACE",
+    "B0D",
+    "C09",
+    "C15",
+    "C0B",
+    "B0B"
+   ],
+   "chain_source": "T-606 1F-CUR.ours",
+   "edges": [
+    {
+     "gaps": [
+      {
+       "width": "0.9",
+       "window_framed": false
+      }
+     ],
+     "handle": "B1D",
+     "layer": "1",
+     "lm": "1.8",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "0.8",
+       "window_framed": false
+      }
+     ],
+     "handle": "C0F",
+     "layer": "1",
+     "lm": "2.25",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "C0A",
+     "layer": "1",
+     "lm": "2.265716",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "BD2",
+     "layer": "W",
+     "lm": "3.509762",
+     "type": "ARC"
+    },
+    {
+     "gaps": [],
+     "handle": "B6B",
+     "layer": "1",
+     "lm": "0.875192",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "ACE",
+     "layer": "1",
+     "lm": "4.2",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "B0D",
+     "layer": "1",
+     "lm": "4.0",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "C09",
+     "layer": "1",
+     "lm": "0.5",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "C15",
+     "layer": "1",
+     "lm": "0.15",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "C0B",
+     "layer": "1",
+     "lm": "0.5",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "B0B",
+     "layer": "1",
+     "lm": "2.1",
+     "type": "LINE"
+    }
+   ],
+   "gap_count": 2,
+   "notch_lm": "-0.0",
+   "perimeter": "22.15067",
+   "storey": "1F"
+  },
+  "1F-13": {
+   "chain": [
+    "AEC",
+    "B68",
+    "AF9",
+    "B10",
+    "AFE",
+    "B16",
+    "ADE",
+    "C21",
+    "AEB",
+    "AF7"
+   ],
+   "chain_source": "T-606 1F-LIV.ours",
+   "edges": [
+    {
+     "gaps": [],
+     "handle": "AEC",
+     "layer": "1",
+     "lm": "10.67",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.55232",
+       "window_framed": true
+      },
+      {
+       "width": "1.55232",
+       "window_framed": true
+      }
+     ],
+     "handle": "B68",
+     "layer": "1",
+     "lm": "5.2",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "0.9",
+       "window_framed": false
+      },
+      {
+       "width": "0.9",
+       "window_framed": false
+      }
+     ],
+     "handle": "AF9",
+     "layer": "1",
+     "lm": "8.3",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "B10",
+     "layer": "1",
+     "lm": "1.2",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "0.9",
+       "window_framed": false
+      },
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "AFE",
+     "layer": "1",
+     "lm": "3.67",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "B16",
+     "layer": "1",
+     "lm": "5.2",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": true
+      }
+     ],
+     "handle": "ADE",
+     "layer": "1",
+     "lm": "2.5",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.2",
+       "window_framed": true
+      },
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "C21",
+     "layer": "1",
+     "lm": "6.45",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "AEB",
+     "layer": "1",
+     "lm": "3.8",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "AF7",
+     "layer": "1",
+     "lm": "5.15",
+     "type": "LINE"
+    }
+   ],
+   "gap_count": 10,
+   "notch_lm": "0.3",
+   "perimeter": "52.44",
+   "storey": "1F"
+  },
+  "2F-01": {
+   "chain": [
+    "1283",
+    "1294",
+    "128A",
+    "129A",
+    "138B",
+    "12B7"
+   ],
+   "chain_source": "T-606 2F-CORR.ours",
+   "edges": [
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "1283",
+     "layer": "1",
+     "lm": "4.5",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "0.9",
+       "window_framed": false
+      }
+     ],
+     "handle": "1294",
+     "layer": "1",
+     "lm": "1.25",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "128A",
+     "layer": "1",
+     "lm": "2.0",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "129A",
+     "layer": "1",
+     "lm": "0.7",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "138B",
+     "layer": "5",
+     "lm": "2.5",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "12B7",
+     "layer": "1",
+     "lm": "1.95",
+     "type": "LINE"
+    }
+   ],
+   "gap_count": 3,
+   "notch_lm": "0.0",
+   "perimeter": "12.9",
+   "storey": "2F"
+  },
+  "2F-03": {
+   "chain": [
+    "1284",
+    "1292",
+    "1279",
+    "128B"
+   ],
+   "chain_source": "T-606 2F-MAID",
+   "edges": [
+    {
+     "gaps": [],
+     "handle": "1284",
+     "layer": "1",
+     "lm": "3.0",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "1292",
+     "layer": "1",
+     "lm": "6.45",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.2",
+       "window_framed": true
+      }
+     ],
+     "handle": "1279",
+     "layer": "1",
+     "lm": "3.0",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "0.8",
+       "window_framed": false
+      },
+      {
+       "width": "0.9",
+       "window_framed": false
+      }
+     ],
+     "handle": "128B",
+     "layer": "1",
+     "lm": "6.45",
+     "type": "LINE"
+    }
+   ],
+   "gap_count": 3,
+   "notch_lm": "0.0",
+   "perimeter": "18.9",
+   "storey": "2F"
+  },
+  "GF-01": {
+   "chain": [
+    "119",
+    "127",
+    "10E",
+    "139",
+    "124"
+   ],
+   "chain_source": "T-621 GF-DEWANEYA",
+   "edges": [
+    {
+     "gaps": [],
+     "handle": "119",
+     "layer": "1",
+     "lm": "4.0",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "127",
+     "layer": "1",
+     "lm": "5.2",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "10E",
+     "layer": "1",
+     "lm": "1.727876",
+     "type": "ARC"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "139",
+     "layer": "1",
+     "lm": "2.9",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.95492",
+       "window_framed": true
+      },
+      {
+       "width": "1.95492",
+       "window_framed": true
+      }
+     ],
+     "handle": "124",
+     "layer": "1",
+     "lm": "6.3",
+     "type": "LINE"
+    }
+   ],
+   "gap_count": 4,
+   "notch_lm": "0.0",
+   "perimeter": "20.127876",
+   "storey": "GF"
+  },
+  "GF-08": {
+   "chain": [
+    "B5",
+    "E0",
+    "97",
+    "27D#1",
+    "2E4",
+    "222",
+    "20F",
+    "AB",
+    "158",
+    "AE",
+    "104"
+   ],
+   "chain_source": "T-612 GF-OPEN.full",
+   "edges": [
+    {
+     "gaps": [
+      {
+       "width": "6.331578",
+       "window_framed": true
+      }
+     ],
+     "handle": "B5",
+     "layer": "1",
+     "lm": "7.5",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "E0",
+     "layer": "1",
+     "lm": "2.0",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "0.041681",
+       "window_framed": false
+      }
+     ],
+     "handle": "97",
+     "layer": "1",
+     "lm": "0.691681",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "27D#1",
+     "layer": "W",
+     "lm": "13.808208",
+     "type": "ARC"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": false
+      },
+      {
+       "width": "1.255652",
+       "window_framed": false
+      }
+     ],
+     "handle": "2E4",
+     "layer": "1",
+     "lm": "7.908923",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "222",
+     "layer": "1",
+     "lm": "1.05",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": false
+      },
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "20F",
+     "layer": "1",
+     "lm": "4.7",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "2.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "AB",
+     "layer": "1",
+     "lm": "3.4",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "158",
+     "layer": "1",
+     "lm": "3.0",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.5",
+       "window_framed": true
+      },
+      {
+       "width": "1.0",
+       "window_framed": true
+      }
+     ],
+     "handle": "AE",
+     "layer": "1",
+     "lm": "4.5",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "104",
+     "layer": "1",
+     "lm": "18.97",
+     "type": "LINE"
+    }
+   ],
+   "gap_count": 10,
+   "notch_lm": "4.399896",
+   "perimeter": "71.928708",
+   "storey": "GF"
+  },
+  "GF-15": {
+   "chain": [
+    "2B5",
+    "27D#0",
+    "27D#1",
+    "2E2",
+    "2E0",
+    "319",
+    "2E7",
+    "2DE"
+   ],
+   "chain_source": "T-621 GF-MASTER",
+   "edges": [
+    {
+     "gaps": [],
+     "handle": "2B5",
+     "layer": "1",
+     "lm": "4.82",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "27D#0",
+     "layer": "W",
+     "lm": "0.091681",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "27D#1",
+     "layer": "W",
+     "lm": "5.010179",
+     "type": "ARC"
+    },
+    {
+     "gaps": [
+      {
+       "width": "1.0",
+       "window_framed": false
+      }
+     ],
+     "handle": "2E2",
+     "layer": "1",
+     "lm": "5.582863",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "2E0",
+     "layer": "1",
+     "lm": "0.961845",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "319",
+     "layer": "1",
+     "lm": "1.256041",
+     "type": "LINE"
+    },
+    {
+     "gaps": [
+      {
+       "width": "0.8",
+       "window_framed": false
+      }
+     ],
+     "handle": "2E7",
+     "layer": "1",
+     "lm": "1.361845",
+     "type": "LINE"
+    },
+    {
+     "gaps": [],
+     "handle": "2DE",
+     "layer": "1",
+     "lm": "2.15",
+     "type": "LINE"
+    }
+   ],
+   "gap_count": 2,
+   "notch_lm": "0.3",
+   "perimeter": "21.534454",
+   "storey": "GF"
+  }
+ },
+ "schema": "T709_DRAWN_V1",
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf, sha256 ab54dd55...)",
+ "st02_well": {
+  "column_returns_in_zone": [
+   {
+    "column": "300E",
+    "proud_m": "0.05"
+   },
+   {
+    "column": "300E",
+    "proud_m": "0.05"
+   },
+   {
+    "column": "3008",
+    "proud_m": "0.05"
+   }
+  ],
+  "column_returns_lm": "0.15",
+  "face_south_lm": "10.672799",
+  "face_west_piece_lm": "1.04884",
+  "frame_dx_note": "GF pieces moved by the storey-frame offset onto the 1F frame (same well centre on both plans)",
+  "gf_columns_in_zone_lm": "1.347201",
+  "gf_overhead_line_in_zone_lm": "7.017201",
+  "gf_pieces": {
+   "col_e": {
+    "handle": "2FC6",
+    "in_zone_lm": "0.547201",
+    "layer": "S-COL.BON"
+   },
+   "col_w": {
+    "handle": "2FD2",
+    "in_zone_lm": "0.8",
+    "layer": "S-COL.BON"
+   },
+   "overhead": {
+    "handle": "A8",
+    "in_zone_lm": "7.017201",
+    "layer": "2",
+    "plane_offset_mm": 0.0
+   },
+   "solid": {
+    "handle": "336",
+    "in_zone_lm": "2.65",
+    "layer": "1",
+    "plane_offset_mm": 0.0
+   }
+  },
+  "gf_solid_wall_in_zone_lm": "2.65",
+  "south": "7.02",
+  "wall_thickness_west": "0.15",
+  "west": "4.0"
+ },
+ "units": "m"
+}

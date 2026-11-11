@@ -1,0 +1,229 @@
+{
+ "b8_south_panels": [
+  "P1",
+  "P4"
+ ],
+ "beam_edge_lines_inside": 21,
+ "columns": {
+  "40F": {
+   "member": "C2 2F (tank)",
+   "panels_touched": [
+    "P2"
+   ],
+   "section_drawn_m": [
+    0.2,
+    0.5
+   ]
+  },
+  "412": {
+   "member": "C2 2F",
+   "panels_touched": [
+    "P1",
+    "P2"
+   ],
+   "section_drawn_m": [
+    0.2,
+    0.5
+   ]
+  },
+  "415": {
+   "member": "C5 2F",
+   "panels_touched": [
+    "P4"
+   ],
+   "section_drawn_m": [
+    0.6,
+    0.2
+   ]
+  },
+  "418": {
+   "member": "C9 2F",
+   "panels_touched": [
+    "P3",
+    "P4",
+    "P6",
+    "P7"
+   ],
+   "section_drawn_m": [
+    0.2,
+    0.7
+   ]
+  },
+  "41B": {
+   "member": "C2 2F",
+   "panels_touched": [
+    "P1",
+    "P3",
+    "P4"
+   ],
+   "section_drawn_m": [
+    0.2,
+    0.5
+   ]
+  },
+  "41E": {
+   "member": "C2 2F",
+   "panels_touched": [
+    "P3",
+    "P5",
+    "P6"
+   ],
+   "section_drawn_m": [
+    0.2,
+    0.5
+   ]
+  },
+  "421": {
+   "member": "C1 2F",
+   "panels_touched": [
+    "P1",
+    "P2",
+    "P3",
+    "P5"
+   ],
+   "section_drawn_m": [
+    0.2,
+    0.5
+   ]
+  },
+  "424": {
+   "member": "C3 2F (tank)",
+   "panels_touched": [
+    "P2",
+    "P5"
+   ],
+   "section_drawn_m": [
+    0.25,
+    0.5
+   ]
+  },
+  "778": {
+   "member": "PC-2F",
+   "panels_touched": [
+    "P4"
+   ],
+   "section_drawn_m": [
+    0.2,
+    0.4
+   ]
+  }
+ },
+ "general_note": {
+  "contains_16": true,
+  "handle": "7D",
+  "layer": "S-NOTE",
+  "reading": "T-044 r2 decoded: all slabs cast 16 cm unless stated otherwise (ST p.8 note 18)"
+ },
+ "panels": [
+  {
+   "id": "P1",
+   "size_m": [
+    1.8,
+    3.0
+   ],
+   "t_and_b_marks": [
+    "1A7F",
+    "1A80"
+   ],
+   "thickness_texts": [
+    {
+     "T": "1A7D",
+     "cm": 18,
+     "value": "1A7E"
+    }
+   ]
+  },
+  {
+   "id": "P2",
+   "size_m": [
+    2.5,
+    3.3
+   ],
+   "t_and_b_marks": [
+    "7AF",
+    "7B0"
+   ],
+   "thickness_texts": [
+    {
+     "T": "7B3",
+     "cm": 18,
+     "value": "7B4"
+    }
+   ]
+  },
+  {
+   "id": "P3",
+   "size_m": [
+    1.8,
+    1.8
+   ],
+   "t_and_b_marks": [],
+   "thickness_texts": []
+  },
+  {
+   "id": "P4",
+   "size_m": [
+    3.0,
+    5.0
+   ],
+   "t_and_b_marks": [],
+   "thickness_texts": []
+  },
+  {
+   "id": "P5",
+   "size_m": [
+    2.5,
+    2.9
+   ],
+   "t_and_b_marks": [],
+   "thickness_texts": []
+  },
+  {
+   "id": "P6",
+   "size_m": [
+    1.8,
+    1.2
+   ],
+   "t_and_b_marks": [],
+   "thickness_texts": []
+  },
+  {
+   "id": "P7",
+   "size_m": [
+    3.0,
+    1.2
+   ],
+   "t_and_b_marks": [],
+   "thickness_texts": []
+  }
+ ],
+ "plane_evidence": {
+  "entities_checked_inside": 100,
+  "inserts_inside": 0,
+  "level_970_marks_beside_the_outline": [
+   "3F4",
+   "3F6"
+  ],
+  "level_texts_inside": [],
+  "level_values_printed_on_the_drawing": [
+   "+0.15",
+   "+0.30",
+   "+1.00",
+   "+9.70"
+  ],
+  "linetypes_inside": [
+   "CONTINUOUS"
+  ],
+  "water_tank_label": "1A85"
+ },
+ "schema": "T707_OWN_READ_V1",
+ "sfrs_outline_m": [
+  8.1,
+  6.8
+ ],
+ "source": {
+  "bytes": 3153037,
+  "file": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'",
+  "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ }
+}

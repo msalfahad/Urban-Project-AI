@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 5680 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 5714 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 83 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2624 | pytest suites, one folder per round. |
+| `tests/` | 2633 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -473,7 +473,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3069.py` | 658 | MEDIUM | 6 | ARCH_TAKEOFF_V3.0.69 (T-687, lane I, PLASTER / PAINT GATE B ROUND 1 integration package): the SAME opt-in BOQ |
 | `arch_v307.py` | 751 | HIGH | 21 | ARCH_TAKEOFF_V3.0.7 (T-193): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.6 (engine.source.arch_v30, |
 | `arch_v3070.py` | 634 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.70 (T-693, lane I, CONCRETE GATE B ROUND 7 integration package): the SAME opt-in BOQ candidate as |
-| `arch_v3071.py` | 605 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.71 (T-704, lane I, CONCRETE GATE B ROUND 8 integration package): the SAME opt-in BOQ candidate as |
+| `arch_v3071.py` | 648 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.71 (T-704, lane I, CONCRETE GATE B ROUND 8 integration package): the SAME opt-in BOQ candidate as |
 | `arch_v308.py` | 680 | MEDIUM | 8 | ARCH_TAKEOFF_V3.0.8 (T-231): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.7 (engine.source.arch_v30, |
 | `arch_v309.py` | 591 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.9 (T-211, package V3.0.9a): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.8 |
 | `arch_walls.py` | 236 | HIGH | 5 | WALL RUNS AND THE ROOM GRAPH (M9 S3) - the walls of one floor plan by thickness, and which spaces each wall and |
@@ -1686,6 +1686,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t701_plaster_paint_reconcile/` | 1 |
 | `tests/t702_tiles_round3/` | 1 |
 | `tests/t704_lintel_side/` | 3 |
+| `tests/t705_wiring_readiness_r3/` | 2 |
+| `tests/t706_slab_reconciliation/` | 1 |
+| `tests/t707_column_tail/` | 1 |
+| `tests/t709_paint_plaster_residuals/` | 1 |
+| `tests/t710_wp_round3/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -2379,6 +2384,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t701/` | 5 |
 | `research/agents_t702/` | 6 |
 | `research/agents_t704/` | 11 |
+| `research/agents_t705/` | 5 |
+| `research/agents_t706/` | 9 |
+| `research/agents_t707/` | 7 |
+| `research/agents_t709/` | 7 |
+| `research/agents_t710/` | 6 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
