@@ -1692,6 +1692,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t709_paint_plaster_residuals/` | 1 |
 | `tests/t710_wp_round3/` | 1 |
 | `tests/t711_concrete_blank_tail/` | 1 |
+| `tests/t712_ground_beam_bounds/` | 1 |
 | `tests/t713_masonry_rest/` | 1 |
 | `tests/t715_stair_finishes/` | 1 |
 | `tests/t718_stair_finish_bounds/` | 1 |
@@ -2394,6 +2395,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t709/` | 7 |
 | `research/agents_t710/` | 6 |
 | `research/agents_t711/` | 5 |
+| `research/agents_t712/` | 7 |
 | `research/agents_t713/` | 3 |
 | `research/agents_t715/` | 5 |
 | `research/agents_t718/` | 7 |
