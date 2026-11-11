@@ -20,7 +20,7 @@ T-675); no concrete, finish or other line moves:
                 the panel line (never inside it, its own producer key); a valued panel line's perimeter is the merged
                 envelope [T-372 low, T-372 high + held junction bands + held piece soffits] (PROVISIONAL value when low
                 = high, else HELD BOUNDED); a HELD panel line's perimeter is HELD blank with the host's own cause;
-  LINTEL_BED    one MAS.MORTAR.BLACK.LINTEL_BED line per lintel whose face the material base deducts (R-T372-1 (5),
+  LINTEL_BED    one MAS.MORTAR.BLACK.LINTEL_BEARING line per lintel whose face the material base deducts (R-T372-1 (5),
                 R-T675-2): the bed joint between the bearing course and the lintel underside, which the panel does not
                 credit; bearing low .. high from the merged jamb ledger (a deficit end bounded by the drawn available
                 masonry at 6 dp, F-C-T372-1), m3 = bearing x kappa x t x joint, kappa = unit face / module face; a
@@ -70,7 +70,7 @@ _fmt = A3063._fmt
 RULE_ID, RULE_VERSION = "R-T672-1", "T-672"
 REC_KEY = "masonry_gate_b_v3068"
 P_MAT, P_NA, P_PER, P_BED = "MAT_RESTATE", "MAT_NOT_APPLICABLE", "PERIMETER_JOINT", "LINTEL_BED"
-PERIM, BED = "MAS.MORTAR.BLACK.PERIMETER", "MAS.MORTAR.BLACK.LINTEL_BED"
+PERIM, BED = "MAS.MORTAR.BLACK.PERIMETER", "MAS.MORTAR.BLACK.LINTEL_BEARING"
 MAT_CODES = A3059.CODES
 CODES = MAT_CODES + (PERIM, BED)
 UNIT = dict(A3059.UNIT, **{PERIM: "m3", BED: "m3"})
@@ -507,7 +507,7 @@ def bed_lines(doc, cur):
                    opening_id=e["opening_id"], lintel_line_id=ll["line_id"], mortar_line_id=m["line_id"],
                    host_line_id=hid, bearing_m=[_r(bear[0]), _r(bear[1])], factor_m3_per_m=_r(f, 9),
                    ends=e.get("ends"), was=e.get("was"), cause=e.get("cause"))
-        eid = f"MATERIAL:LINTEL_BED:{e['opening_id']}"
+        eid = f"MATERIAL:LINTEL_BEARING:{e['opening_id']}"
         form = (f"{METHOD}: lintel {e['opening_id']} bed joint = bearing {_fmt(bear[0])}"
                 + ("" if bear[0] == bear[1] else f" .. {_fmt(bear[1])}")
                 + f" m x {_fmt(_r(f, 9))} m3/m (kappa x t {t} x 0.010) = {_fmt(lo)}"

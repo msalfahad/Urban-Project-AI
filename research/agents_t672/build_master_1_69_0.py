@@ -1,7 +1,7 @@
 """T-672: build rules/coverage/BOQ_FAMILY_MASTER_1.69.0.json = 1.68.0 (T-682, merged and promoted; never edited)
   + the ARCH_TAKEOFF_V3.0.68 package (T-672, MASONRY_GATE_B_V1; tools/family_master_candidate.py rule r3) and the
     B9-01 (MAS.UNITS.*) / B9-04 (MAS.MORTAR.BLACK, MAS.GLUE.AAC and the two new codes MAS.MORTAR.BLACK.PERIMETER /
-    MAS.MORTAR.BLACK.LINTEL_BED, owned by B9-04: block mortar) text of the families whose lines it restates or adds.
+    MAS.MORTAR.BLACK.LINTEL_BEARING, owned by B9-04: block mortar) text of the families whose lines it restates or adds.
 
 Two modes, ONE version number (the ADOPTED lesson: a merged integration package leaves the registry promoted in the
 same merge, F-C-T563-1 / T-651 / T-655 / T-661 / T-665 / T-668 / T-671 / T-677 / T-682):
@@ -49,18 +49,18 @@ OLD_CAND, CAND, AS_OF = "ARCH_TAKEOFF_V3.0.67", "ARCH_TAKEOFF_V3.0.68", "T-672"
 DIFF_SPAN = "V3.0.67 .. V3.0.68"
 WHO = "T-672"
 FAMS = ("B9-01", "B9-04")
-NEW_CODES = {"B9-04": ("MAS.MORTAR.BLACK.LINTEL_BED", "MAS.MORTAR.BLACK.PERIMETER")}
+NEW_CODES = {"B9-04": ("MAS.MORTAR.BLACK.LINTEL_BEARING", "MAS.MORTAR.BLACK.PERIMETER")}
 PENDING = {
     "task": "T-672", "method_version": CAND, "module": MOD, "status": FMC.PENDING_STATUS,
     "integrates": ["T-670", "T-372", "T-675"], "tests": ["tests/t672_masonry_gate_b1"],
-    "changes_families_by_item_code": ["MAS.GLUE.AAC", "MAS.MORTAR.BLACK", "MAS.MORTAR.BLACK.LINTEL_BED",
+    "changes_families_by_item_code": ["MAS.GLUE.AAC", "MAS.MORTAR.BLACK", "MAS.MORTAR.BLACK.LINTEL_BEARING",
                                       "MAS.MORTAR.BLACK.PERIMETER", "MAS.UNITS.BLACK", "MAS.UNITS.WHITE"],
     "note": "T-672 (research/agents_t672/T-672_MASONRY_GATE_B1.md): MASONRY_GATE_B_V1 from the merged T-670 / T-372 / "
             "T-675 ledgers: the V3.0.59 producer re-run on rulebook 1.1.0 (Q-80) after a byte-identical 1.0.0 "
             "reproduction restates the 12 black unit / mortar lines of the six 0.15 m black hosts (11 values + 1 "
             "range each code); the 4 AAC lines on the MAIN_S / ANNEX_S hosts NOT_APPLICABLE_WITH_EVIDENCE (ST p.1 note "
             "2, R-T675-1); 20 MAS.MORTAR.BLACK.PERIMETER lines (8 valued / bounded, 12 HELD with the host's cause) and "
-            "9 MAS.MORTAR.BLACK.LINTEL_BED lines (3 exact, 5 bounded, 1 held bounded) added beside the panel lines; "
+            "9 MAS.MORTAR.BLACK.LINTEL_BEARING lines (3 exact, 5 bounded, 1 held bounded) added beside the panel lines; "
             "every other line byte-identical; the Gate B integration package",
 }
 PROPOSED = ("1.69.0 (T-672): restated by the ARCH_TAKEOFF_V3.0.68 package (Gate B): 0.15 m black units / mortar on the "
@@ -73,7 +73,7 @@ MISS = {
               "(no AAC face selected), 2 lines NOT_APPLICABLE_WITH_EVIDENCE (black hosts below N.G.)"),
     "B9-04": ("in the opt-in candidate V3.0.68: MAS.MORTAR.BLACK restated with the units (PROVISIONAL, 10 mm joint); "
               "MAS.GLUE.AAC 2 lines NOT_APPLICABLE_WITH_EVIDENCE; MAS.MORTAR.BLACK.PERIMETER one line per mortar line "
-              "(12 HELD with the host); MAS.MORTAR.BLACK.LINTEL_BED one line per deducted black-host lintel face; "
+              "(12 HELD with the host); MAS.MORTAR.BLACK.LINTEL_BEARING one line per deducted black-host lintel face; "
               "waste / procurement HELD"),
 }
 

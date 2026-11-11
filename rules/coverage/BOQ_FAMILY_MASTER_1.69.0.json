@@ -4196,7 +4196,7 @@
    ],
    "released_method_reads": "none",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0.59 (engine/source/arch_v3059.py, opt-in candidate; pending Gate B, T-498) | ARCH_TAKEOFF_V3.0.68 (engine/source/arch_v3068.py, opt-in candidate; Gate B package T-672)",
-   "missing": "block mortar / glue not measured | 1.56.0 (T-637): the overlay carries 33 MAS.MORTAR.BLACK m3 and 17 MAS.GLUE.AAC kg lines (T-630); none is in the candidate V3.0.57, none released by a candidate method | V3.0.59: black mortar 1.269444 m3 PROVISIONAL (10 mm joint owner-provisional), 0.15 m mortar HELD (T-367 beside); AAC glue 43.596 kg point + 842.06025 .. 861.32025 kg range; project bag group HELD (16 held lines); perimeter joint mortar (R-T520-1) is its own producer key, not in this stage; the cross-trade cement / sand total is T-511's census | released route: block mortar / glue not measured | in the opt-in candidate V3.0.68: MAS.MORTAR.BLACK restated with the units (PROVISIONAL, 10 mm joint); MAS.GLUE.AAC 2 lines NOT_APPLICABLE_WITH_EVIDENCE; MAS.MORTAR.BLACK.PERIMETER one line per mortar line (12 HELD with the host); MAS.MORTAR.BLACK.LINTEL_BED one line per deducted black-host lintel face; waste / procurement HELD",
+   "missing": "block mortar / glue not measured | 1.56.0 (T-637): the overlay carries 33 MAS.MORTAR.BLACK m3 and 17 MAS.GLUE.AAC kg lines (T-630); none is in the candidate V3.0.57, none released by a candidate method | V3.0.59: black mortar 1.269444 m3 PROVISIONAL (10 mm joint owner-provisional), 0.15 m mortar HELD (T-367 beside); AAC glue 43.596 kg point + 842.06025 .. 861.32025 kg range; project bag group HELD (16 held lines); perimeter joint mortar (R-T520-1) is its own producer key, not in this stage; the cross-trade cement / sand total is T-511's census | released route: block mortar / glue not measured | in the opt-in candidate V3.0.68: MAS.MORTAR.BLACK restated with the units (PROVISIONAL, 10 mm joint); MAS.GLUE.AAC 2 lines NOT_APPLICABLE_WITH_EVIDENCE; MAS.MORTAR.BLACK.PERIMETER one line per mortar line (12 HELD with the host); MAS.MORTAR.BLACK.LINTEL_BEARING one line per deducted black-host lintel face; waste / procurement HELD",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [],
    "development_villa": {
@@ -4206,7 +4206,7 @@
    "item_codes": [
     "MAS.GLUE.AAC",
     "MAS.MORTAR.BLACK",
-    "MAS.MORTAR.BLACK.LINTEL_BED",
+    "MAS.MORTAR.BLACK.LINTEL_BEARING",
     "MAS.MORTAR.BLACK.PERIMETER"
    ],
    "in_v3_0_candidate_1_1_0": "no",
@@ -7978,12 +7978,12 @@
    "changes_families_by_item_code": [
     "MAS.GLUE.AAC",
     "MAS.MORTAR.BLACK",
-    "MAS.MORTAR.BLACK.LINTEL_BED",
+    "MAS.MORTAR.BLACK.LINTEL_BEARING",
     "MAS.MORTAR.BLACK.PERIMETER",
     "MAS.UNITS.BLACK",
     "MAS.UNITS.WHITE"
    ],
-   "note": "T-672 (research/agents_t672/T-672_MASONRY_GATE_B1.md): MASONRY_GATE_B_V1 from the merged T-670 / T-372 / T-675 ledgers: the V3.0.59 producer re-run on rulebook 1.1.0 (Q-80) after a byte-identical 1.0.0 reproduction restates the 12 black unit / mortar lines of the six 0.15 m black hosts (11 values + 1 range each code); the 4 AAC lines on the MAIN_S / ANNEX_S hosts NOT_APPLICABLE_WITH_EVIDENCE (ST p.1 note 2, R-T675-1); 20 MAS.MORTAR.BLACK.PERIMETER lines (8 valued / bounded, 12 HELD with the host's cause) and 9 MAS.MORTAR.BLACK.LINTEL_BED lines (3 exact, 5 bounded, 1 held bounded) added beside the panel lines; every other line byte-identical; the Gate B integration package",
+   "note": "T-672 (research/agents_t672/T-672_MASONRY_GATE_B1.md): MASONRY_GATE_B_V1 from the merged T-670 / T-372 / T-675 ledgers: the V3.0.59 producer re-run on rulebook 1.1.0 (Q-80) after a byte-identical 1.0.0 reproduction restates the 12 black unit / mortar lines of the six 0.15 m black hosts (11 values + 1 range each code); the 4 AAC lines on the MAIN_S / ANNEX_S hosts NOT_APPLICABLE_WITH_EVIDENCE (ST p.1 note 2, R-T675-1); 20 MAS.MORTAR.BLACK.PERIMETER lines (8 valued / bounded, 12 HELD with the host's cause) and 9 MAS.MORTAR.BLACK.LINTEL_BEARING lines (3 exact, 5 bounded, 1 held bounded) added beside the panel lines; every other line byte-identical; the Gate B integration package",
    "task_commit": "d52627d1391a192f56d9532a59a9d95c3e478106"
   }
  ],

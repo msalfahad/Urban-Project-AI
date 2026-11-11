@@ -28,7 +28,7 @@ import build_master_1_43_0 as B43  # noqa: E402
 OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.68.0.json"
 NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.69.0.json"
 FAMS = {"B9-01", "B9-04"}
-NEWCODES = {"MAS.MORTAR.BLACK.LINTEL_BED", "MAS.MORTAR.BLACK.PERIMETER"}
+NEWCODES = {"MAS.MORTAR.BLACK.LINTEL_BEARING", "MAS.MORTAR.BLACK.PERIMETER"}
 TEXT = {"evidence", "opt_in_readers", "missing", "note"}
 TEXT_B904 = TEXT | {"item_codes"}
 MOVED_TOP_PENDING = {"version", "supersedes", "source", "pending_packages", "families"}

@@ -30,7 +30,7 @@ unchanged (read-only use of `arch_v3059.materials_for`).
   summed into it (its own producer key, R-T520-1 increment over the panel). Valued panel: envelope [T-372 low, T-372
   high + held bands high + held piece soffits high] (asserted = the T-675 envelope; band sum per line asserted);
   PROVISIONAL when low = high, else HELD BOUNDED. HELD panel: HELD blank with the host's own cause and question.
-- (d) LINTEL_BED: one new MAS.MORTAR.BLACK.LINTEL_BED line per lintel face the material base names on a BLACK host (9;
+- (d) LINTEL_BED: one new MAS.MORTAR.BLACK.LINTEL_BEARING line per lintel face the material base names on a BLACK host (9;
   white AAC hosts carry thin-bed glue, no bed joint line); m3 = bearing x kappa x t x 0.010, kappa = unit face / module
   face = 0.92625 (f = 0.001389375 m3/m at 0.15 m), recomputed in the module and asserted equal to the ledger;
   EXACT -> PROVISIONAL, deficit end -> BOUNDED (0.40 .. drawn available, 6 dp), lintel itself HELD (D-1F-09) -> BOUNDED
@@ -87,7 +87,7 @@ Code census, V3.0.67 -> V3.0.68 (units never summed across codes):
 | MAS.GLUE.AAC kg | 43.596 (2) + 842.06025 .. 861.32025 (3) + 12 blank, 17 lines | same figures, 10 blank + 2 N/A (15 in totals) |
 | MAS.UNITS.WHITE pcs | 17 blank | 15 blank + 2 N/A |
 | MAS.MORTAR.BLACK.PERIMETER m3 | none | 0.104549 (4) + 0.072178 .. 0.108325 (4) + 12 blank = 0.176727 .. 0.212874 |
-| MAS.MORTAR.BLACK.LINTEL_BED m3 | none | 0.003333 (3) + 0.00278 .. 0.005404 (6) = 0.006113 .. 0.008737 (D-1F-09 0 .. 0.001111 inside) |
+| MAS.MORTAR.BLACK.LINTEL_BEARING m3 | none | 0.003333 (3) + 0.00278 .. 0.005404 (6) = 0.006113 .. 0.008737 (D-1F-09 0 .. 0.001111 inside) |
 
 Changed / added lines (hand check of each figure: net x 12.5; net x 0.0110625; perimeter envelope; bearing x f):
 
