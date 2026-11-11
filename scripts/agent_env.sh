@@ -284,11 +284,28 @@ cmd_decode() {
   [[ -f "$src" ]] || die "no such file: $src"
   [[ "$name" =~ ^[A-Za-z0-9][A-Za-z0-9._-]*$ ]] || die "NAME must be a plain file name"
   mkdir -p "$PRIVATE" && chmod 700 "$PRIVATE"
-  # The Drive connector saves large downloads as JSON ({"content": <base64>, ...}); accept both forms.
-  python3 -I -c 'import base64,json,sys
-raw=open(sys.argv[1],"rb").read()
-if raw.lstrip()[:1]==b"{": raw=json.loads(raw)["content"].encode()
-open(sys.argv[2],"wb").write(base64.b64decode(raw))' "$src" "$PRIVATE/$name" || die "base64 decode failed"
+  # The Drive connector hands a download over as JSON ({"content": <base64>, ...}), as plain base64 text, or as the raw
+  # file bytes (owner 2026-11-11: raw downloads were refused and agents re-encoded or unzipped outside the wrapper).
+  # Accept all three; write, then check the written size against the decoded size and fail loudly on a short write.
+  local form
+  form="$(python3 -I -c 'import base64,binascii,json,os,re,sys
+src,dst=sys.argv[1],sys.argv[2]
+raw=open(src,"rb").read()
+if not raw: sys.exit("source file is empty")
+MAGIC=(b"PK\x03\x04",b"%PDF",b"AC10",b"\x89PNG",b"\xff\xd8\xff",b"\xd0\xcf\x11\xe0")
+if raw.startswith(MAGIC): data,form=raw,"raw bytes"
+elif raw.lstrip()[:1]==b"{":
+    try: data,form=base64.b64decode(json.loads(raw)["content"],validate=True),"connector JSON (base64)"
+    except (ValueError,KeyError,TypeError,binascii.Error) as e: sys.exit("connector JSON without valid base64 content: %s"%e)
+else:
+    txt=re.sub(rb"\s+",b"",raw)
+    try: data,form=base64.b64decode(txt,validate=True),"base64 text"
+    except (ValueError,binascii.Error): data,form=raw,"raw bytes"
+if not data: sys.exit("decoded content is empty")
+with open(dst,"wb") as f:
+    f.write(data); f.flush(); os.fsync(f.fileno())
+if os.path.getsize(dst)!=len(data): sys.exit("short write: %d of %d bytes"%(os.path.getsize(dst),len(data)))
+print(form)' "$src" "$PRIVATE/$name")" || { rm -f "$PRIVATE/$name"; die "decode failed (see the reason above)"; }
   if [[ "$name" == *.zip ]]; then
     local dest="$PRIVATE/${name%.zip}" out
     mkdir -p "$dest"
@@ -304,9 +321,9 @@ for i in z.infolist():
     t=os.path.realpath(os.path.join(dest,n))
     if not (t==dest or t.startswith(dest+os.sep)): sys.exit("zip entry path escapes the private folder: "+n)
 z.extractall(dest); print(len(z.infolist()))' "$PRIVATE/$name" "$dest")" || die "unzip refused"
-    say "decoded and unzipped into $dest ($out entries)"
+    say "decoded ($form) and unzipped into $dest ($out entries)"
   else
-    say "decoded into $PRIVATE/$name ($(stat -c %s "$PRIVATE/$name") bytes)"
+    say "decoded ($form) into $PRIVATE/$name ($(stat -c %s "$PRIVATE/$name") bytes)"
   fi
 }
 
