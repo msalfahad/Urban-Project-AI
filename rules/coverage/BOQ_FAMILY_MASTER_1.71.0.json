@@ -4543,7 +4543,7 @@
     "engine/source/generic_route.py:1080 GROUND_SLAB / SLABS: the family of the slab faces (:1095-1214 CONCRETE items) in route G",
     "engine/source/arch_v3042.py:401 changes_for(): a held slab cell valued at its re-measured panels x T (shaft / ring beside with their owners), a stair-zone panel added as one ground-slab line, cause texts re-named with every figure kept; engine/source/arch_v3042.py:483 check_slab(): slab line = panels x T, no panel in two lines, one line per cell, no live held-bound record on a valued cell, a re-texted line moves no figure; tests/t442_ground_slab_integration/test_arch_v3042.py:111 test_hand_figures_g442() (G442 by hand)",
     "engine/source/arch_v3066.py:389 changes_for(): BOUND / VALUE / REVALUE / ADD_SHARED / CONFIRM by line id, stale bindings refused; engine/source/arch_v3066.py:500 check_concrete(); engine/source/arch_v3066.py:474 check_totals(); tests/t677_concrete_gate_b5/test_arch_v3066.py:161 (villa V677 by hand)",
-    "engine/source/arch_v3070.py:205 _entry() / engine/source/arch_v3070.py:351 _restate(): held column ranges restated from the merged ledgers; engine/source/arch_v3070.py:189 column_bound() / engine/source/arch_v3070.py:142 top_low(); engine/source/arch_v3070.py:454 check_concrete(); tests/t693_concrete_gate_b7/test_arch_v3070.py:153 (villa K693 by hand)"
+    "engine/source/arch_v3070.py:209 _entry() / engine/source/arch_v3070.py:339 _restate(): held column ranges restated from the merged ledgers; engine/source/arch_v3070.py:193 column_bound() / engine/source/arch_v3070.py:146 top_low(); engine/source/arch_v3070.py:442 check_concrete(); tests/t693_concrete_gate_b7/test_arch_v3070.py:154 (villa K693 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.GROUND_SLAB",
    "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.42 (engine/source/arch_v3042.py, opt-in candidate; pending Gate B, T-442) | ARCH_TAKEOFF_V3.0.66 (engine/source/arch_v3066.py, opt-in candidate; Gate B package T-677) | ARCH_TAKEOFF_V3.0.70 (engine/source/arch_v3070.py, opt-in candidate; Gate B package T-693)",
@@ -4607,7 +4607,7 @@
     "engine/source/arch_v3063.py:385 changes_for(): BOUND / VALUE / HELD_BLANK / LOWER_ONLY / UPPER_ONLY / CONFIRM by line id, stale bindings refused; engine/source/arch_v3063.py:472 check_concrete(); engine/source/arch_v3063.py:446 check_totals(); tests/t665_concrete_gate_b2/test_arch_v3063.py:161 (villa V665 by hand)",
     "engine/source/arch_v3065.py:328 changes_for(): BOUND / VALUE / NOT_APPLICABLE / ADD_COMPANION / CONFIRM by line id, stale bindings refused; engine/source/arch_v3065.py:438 check_concrete(); engine/source/arch_v3065.py:412 check_totals(); tests/t671_concrete_gate_b4/test_arch_v3065.py:146 (villa V671 by hand)",
     "engine/source/arch_v3067.py:259 changes_for(): BOUND / LOWER_ONLY by line id with the existence status, assumption and plane records, stale bindings refused; engine/source/arch_v3067.py:324 check_concrete(); engine/source/arch_v3067.py:296 check_totals(); tests/t682_concrete_gate_b6/test_arch_v3067.py:176 (villa V682 by hand)",
-    "engine/source/arch_v3070.py:205 _entry() / engine/source/arch_v3070.py:351 _restate(): held column ranges restated from the merged ledgers; engine/source/arch_v3070.py:189 column_bound() / engine/source/arch_v3070.py:142 top_low(); engine/source/arch_v3070.py:454 check_concrete(); tests/t693_concrete_gate_b7/test_arch_v3070.py:153 (villa K693 by hand)"
+    "engine/source/arch_v3070.py:209 _entry() / engine/source/arch_v3070.py:339 _restate(): held column ranges restated from the merged ledgers; engine/source/arch_v3070.py:193 column_bound() / engine/source/arch_v3070.py:146 top_low(); engine/source/arch_v3070.py:442 check_concrete(); tests/t693_concrete_gate_b7/test_arch_v3070.py:154 (villa K693 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.COLUMN",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0.1 route G scope piece (merge 967d6d5) | ARCH_TAKEOFF_V3.0.42 (engine/source/arch_v3042.py, opt-in candidate; pending Gate B, T-442) | ARCH_TAKEOFF_V3.0.63 (engine/source/arch_v3063.py, opt-in candidate; Gate B package T-665) | ARCH_TAKEOFF_V3.0.65 (engine/source/arch_v3065.py, opt-in candidate; Gate B package T-671) | ARCH_TAKEOFF_V3.0.67 (engine/source/arch_v3067.py, opt-in candidate; Gate B package T-682) | ARCH_TAKEOFF_V3.0.70 (engine/source/arch_v3070.py, opt-in candidate; Gate B package T-693)",
@@ -8049,7 +8049,7 @@
     "STR.CONC.GROUND_SLAB"
    ],
    "note": "T-693 (research/agents_t693/T-693_CONCRETE_GATE_B7.md): CONCRETE_GATE_B_V7 from the merged T-689 / T-688 ledgers: the 2F C2 at the B8 joint narrowed (low 0.303 -> 0.3287 m3, R-T689-1), five HELD blank CONFLICT columns bounded (annex x4 on R-T678-2, 2F C5 415 on R-T689-1: +1.382780 .. 2.231250 m3, COLUMN blank 7 -> 2), one ground-slab region label corrected (R-T688-3, quantity 0.114 m3 unchanged); released m3 unchanged; every other line byte-identical; the Gate B integration package",
-   "task_commit": "3f9fbe3c1909b0483fc79b09ceb78c2f928b21b2"
+   "task_commit": "a5468012fdff544326110cf6734ce49e09bceb48"
   }
  ],
  "not_a_boq_line_codes": {
