@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T08:53Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY 0 (T-734 CLAIMED W2, T-717 TODO r2, T-735 TODO) | self-check pending
 - 2026-11-12 08:40 UTC | Worker 2 | STARTED | run session_01E6cPndcRoqXf9gXE9yTNse | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12 08:20 UTC | Lead | SUCCESS | board | 5 MERGED since 04:17 (T-731, T-720, T-732, T-733, T-730; ancestors of 6143f30d checked), T-717 Gate B REJECTED r1 on one file (t459 binding) -> TODO r2 W3 first; T-729 scope + C10 concrete round 10; new T-735 formwork conflict decider (6 lines + cap 0), T-736 beads H2a, T-737 exterior plaster readiness, T-738 tiles H3/H3s, T-739 all-trade aggregation; F-T725-1 ADOPTED, L-T717-1 + F-T730-1 PROPOSED; Drive OK, no new files; no owner package; queue check: 19 actionable rows, 0 flagged, 0 stall checks | self-check PASS/PASS/PASS (codemap, pytest t061, freeze); problem: none
 - 2026-11-12 08:14 UTC | Lead | STARTED | run session_01E6cPnbNTrqEhX5GFJq6qcA | repo-attached routine | task state: board | report pending
