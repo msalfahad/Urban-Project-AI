@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T15:01Z | Worker 3 | STARTED | run session_01E6cPndX94JyLZV4KQmQorV | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T14:51Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T14:51Z | Verifier | INCOMPLETE | none (overlap guard: run session_01E6cPnbViRyHAG6PKLTn5pu active since 2026-11-12T13:53Z) | no check, no merge, no quantity change | self-check not run; problem: 'AGENT_ENV FAIL: run lock NOLOCK: a SUCCESS final line is refused; write the final line INCOMPLETE (lock NOLOCK) and end'
 - 2026-11-12T14:33Z | Worker 3 | SUCCESS | T-729 READY (integration package, ARCH_TAKEOFF_V3.0.75, agents/task-T-729 @ 9d012d6e) | formwork Gate B + concrete round 10 wired from merged T-714/724/725/731/732/735 via T-730: STR.FORMWORK released 1,027.977403 -> 1,061.104461 m2 (54 fix rows), 32 bounded 107.200712..132.785507 m2, 40 AT_LEAST >= 122.484697 and 58 caps <= 59.379875 beside (= T-735 family); stair 2 bounded 2.583193..3.223465; GB 0..3.5256 m3 capped blank, MS1-L 1.213428, 4 named children; run V3_0_74 bea5be02 -> V3_0_75 a1eba08f (392 changed, 4 added); L4 24,051 pass 0 fail; no freelancer formwork row (NOT_COMPARABLE) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
