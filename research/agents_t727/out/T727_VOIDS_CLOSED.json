@@ -1,0 +1,286 @@
+{
+ "V-07": {
+  "cause": "2F plan layer-2 circle 1300 r 2.205018 drawn 'above'; no opening line on any plan and no structural drawing; scenario S0 (approved design, no opening) vs S1 (open skylight) not decided (Q-29 / T-185)",
+  "deducted_from": [],
+  "disc_if_opened_m2": 15.274758,
+  "lines": [
+   "L-7531772e1581b35eea5f",
+   "L-1bd4ec39660768d22677"
+  ],
+  "m2": null,
+  "over_2f_faces_m2": {
+   "2F-R1DB2D2": 11.065712,
+   "2F-R2BDCEE": 1.619003,
+   "2F-RE83BED": 1.623767
+  },
+  "result": "VOID_EXTENT_UNRESOLVED",
+  "status": "HELD",
+  "void": "V-07"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.72",
+ "ceiling_top": {
+  "decor_face_split_m2": {
+   "ST-01 stair zone": "10.7250",
+   "decor": "51.0496",
+   "east dome HELD": "14.0359",
+   "face": "75.983002",
+   "residual": "0.000002",
+   "stair beyond face": "0.1725",
+   "sum": "75.983000"
+  },
+  "decor_line": {
+   "class": "RELEASED",
+   "equals_ledger": true,
+   "line": "L-43bf1f869e1588f1d3bd",
+   "measured_net": 51.0496
+  },
+  "gf_ceiling": {
+   "line": "L-eb3be58fc760b39f0e38",
+   "measured_net": 101.137092,
+   "t719_result": "DEDUCTED_ONCE"
+  },
+  "over_void_line": {
+   "class": "HELD",
+   "line": "L-35341ff2e6a848b9436b",
+   "names_m2": "16.005",
+   "value": null
+  },
+  "ownership": {
+   "area": "V-01 top (1F roof soffit over the light well)",
+   "excluded": [
+    [
+     "L-35341ff2e6a848b9436b",
+     "DUPLICATE_FACE of L-43bf1f869e1588f1d3bd"
+    ]
+   ],
+   "owner": "L-43bf1f869e1588f1d3bd",
+   "result": "ONCE"
+  },
+  "roof_over_well_2F": {
+   "entities": {
+    "CIRCLE/5": 1,
+    "INSERT/4": 1,
+    "LINE/S-COL.BON": 1
+   },
+   "named": [
+    {
+     "block": "ROOF",
+     "handle": "12AA",
+     "layer": "4",
+     "type": "INSERT"
+    },
+    {
+     "block": null,
+     "handle": "2F33",
+     "layer": "5",
+     "type": "CIRCLE"
+    }
+   ],
+   "opening_outline_found": false
+  },
+  "st01_zone_gap_to_well_m": 3.686801,
+  "st01_zone_in_well_m2": 0.0,
+  "well_top_in_decor_m2": 26.064062,
+  "well_top_under_east_dome_m2": 0.108438
+ },
+ "downstream": [
+  {
+   "excess_m2": "0.057439",
+   "highs_sum_m2": "7.544413",
+   "lines": [
+    "L-6cf11c2d30387d0942b9",
+    "L-ea55ed317bc4de89aec1"
+   ],
+   "owner": "stair ledger (lane A stairs / T-725 family); never valued as the sum",
+   "result": "DOUBLE_COUNT_RISK in the held highs (R-T727-1)",
+   "union_m2": 7.486974,
+   "what": "FIN.MARBLE.TREAD 1F-R78C367 flights 1 / 4 (HELD 0 .. high)"
+  }
+ ],
+ "floor_1F": {
+  "bed_line_same_area": {
+   "line": "L-ebce765b8341024e776f",
+   "measured_net": 33.411036
+  },
+  "class": "RELEASED",
+  "corrected_m2": 33.411036,
+  "face_in_well_m2": 26.1725,
+  "line": "L-b06400d46d252f242018",
+  "measured_net": 33.411036,
+  "net_record": {
+   "later": "T-421 threshold 0.300",
+   "residual_m2": "0.000000",
+   "result": "RECORD_OF_NET",
+   "rows": 22,
+   "source": "T-345 TRACE_ROWS (STAIR_FLOOR_RESIDUE_V1 piece rows + floor-scope rows)"
+  },
+  "net_record_in_well": {
+   "below_seen_rows_m2": {
+    "F1": "1.981743",
+    "F4": "3.352442",
+    "F6": "1.380000"
+   },
+   "below_seen_rows_sum_m2": "6.714185",
+   "residual_m2": "0.000432",
+   "result": "DEDUCTED_ONCE",
+   "rows": [
+    [
+     "TREADS_BELOW_SEEN F1",
+     "1.981743"
+    ],
+    [
+     "TREADS_BELOW_SEEN F4",
+     "3.352442"
+    ],
+    [
+     "TREADS_BELOW_SEEN F6",
+     "1.380000"
+    ],
+    [
+     "VOID V01",
+     "16.005000"
+    ],
+    [
+     "VOID_RESIDUE R01",
+     "1.437249"
+    ],
+    [
+     "VOID_RESIDUE R02",
+     "0.597420"
+    ],
+    [
+     "STAIR_FOOTPRINT R04",
+     "1.352454"
+    ],
+    [
+     "STAIR_FOOTPRINT R05",
+     "0.057500"
+    ],
+    [
+     "STAIR_FOOTPRINT R07",
+     "0.001783"
+    ],
+    [
+     "STAIR_FOOTPRINT R08",
+     "0.001092"
+    ],
+    [
+     "STAIR_FOOTPRINT R09",
+     "0.001090"
+    ],
+    [
+     "STAIR_FOOTPRINT R10",
+     "0.001082"
+    ],
+    [
+     "STAIR_FOOTPRINT R11",
+     "0.001082"
+    ],
+    [
+     "STAIR_FOOTPRINT R12",
+     "0.001066"
+    ],
+    [
+     "STAIR_FOOTPRINT R13",
+     "0.001065"
+    ]
+   ]
+  },
+  "not_applied": "33.468204 (T-719 if-corrected) would add the 0.0575 m2 stair strip inside the opening back as porcelain floor",
+  "own_geometry_in_well": {
+   "below_seen_union_m2": 6.71423,
+   "residual_m2": "0.000000",
+   "result": "DEDUCTED_ONCE",
+   "rows": [
+    [
+     "void window",
+     16.005
+    ],
+    [
+     "F1 (union increment)",
+     1.981668
+    ],
+    [
+     "F4 (union increment)",
+     3.352562
+    ],
+    [
+     "F6 (union increment)",
+     1.38
+    ],
+    [
+     "remainder (residue cells)",
+     3.45327
+    ]
+   ]
+  },
+  "t719_base_list_check": {
+   "residual_m2": "-0.057168",
+   "result": "DEDUCTED_TWICE",
+   "rows": [
+    [
+     "engine VOID",
+     16.005
+    ],
+    [
+     "engine STAIR_BELOW_SEEN (base list: F1 + F4 + F6 summed)",
+     6.771668
+    ],
+    [
+     "T-116 residue as typed by T-719",
+     "3.453"
+    ]
+   ],
+   "t719_if_corrected_m2": "33.468204",
+   "t719_result": "DEDUCTED_TWICE"
+  },
+  "verdict": "ENGINE_RIGHT on the net (the overlap is deducted once, on F1; F4 carries its union increment); T-719 finding (1) withdrawn: it checked the superseded base list (ENGINE_LIST_STALE, T-345), not the record that set the net",
+  "well_m2": 26.24
+ },
+ "moved": [],
+ "overlap": {
+  "engine_footprint_overlap_m2": 0.057438,
+  "exceeds_tol": true,
+  "gf_plan_same_place": {
+   "B43": [
+    [
+     "22F",
+     "5"
+    ]
+   ],
+   "B4E": [
+    [
+     "234",
+     "2"
+    ]
+   ]
+  },
+  "handle_vs_engine_cause": "F1 is radial: its last riser is drawn 1.1498 wide (engine riser_widths), so its last quad is a hair short of the 1.150 rectangle between B43 and B4E",
+  "handle_vs_engine_m2": "-0.000062",
+  "handles": {
+   "F1_last_line": "B4E",
+   "F4_first_riser": "B43"
+  },
+  "inside_void_window_m2": 0.0,
+  "inside_well_m2": 0.057438,
+  "layers": {
+   "B43": "5",
+   "B4E": "2"
+  },
+  "lengths_m": {
+   "B43": 1.15,
+   "B4E": 1.15
+  },
+  "overlap_w_h_m": [
+   0.05,
+   1.15
+  ],
+  "parallel": true,
+  "spacing_m": 0.05,
+  "strip_by_handles_m2": "0.057500",
+  "sum_minus_union_m2": "0.057438"
+ },
+ "rule": "R-T727-1 .. -4 (t727_rules.py)",
+ "task": "T-727",
+ "tol_m2": "0.005"
+}
