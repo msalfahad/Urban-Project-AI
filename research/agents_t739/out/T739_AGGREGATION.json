@@ -1,10 +1,17 @@
 {
- "candidate": "ARCH_TAKEOFF_V3.0.73 (NOT RELEASED), lines sha c5a0b128",
- "chain_readd_v3_0_72_to_v3_0_73": {
-  "lines_changed": 5,
-  "other_lines_byte_equal": 5090,
-  "package_rows": 33,
-  "rows_checked_before_after": 33
+ "candidate": "ARCH_TAKEOFF_V3.0.74 (NOT RELEASED), lines sha bea5be02",
+ "cause_sources_pinned": {
+  "file": "research/agents_t739/CAUSE_SOURCES_PIN.json",
+  "files": 104,
+  "sha256": "5a2e36bda41bfb13ba4d692b3d7a815cda393c33989d12684846d097791605bc"
+ },
+ "chain_readd_v3_0_73_to_v3_0_74": {
+  "added": 32,
+  "lines_changed_or_added": 36,
+  "other_lines_byte_equal": 5119,
+  "package_rows": 36,
+  "replaced": 4,
+  "rows_checked_before_after": 36
  },
  "component_coverage": {
   "B1 Site": {
@@ -38,9 +45,9 @@
    "without": 237
   },
   "B4 Walls": {
-   "lines": 262,
-   "with_committed_component_record": 0,
-   "without": 262
+   "lines": 294,
+   "with_committed_component_record": 36,
+   "without": 258
   },
   "B5 Ceilings": {
    "lines": 57,
@@ -307,9 +314,9 @@
   {
    "at_least_n": 0,
    "blank_n": 3,
-   "bounded": "1131.965876 .. 1300.69428",
-   "bounded_n": 34,
-   "compare": "LIKE FOR LIKE only (Lead 2026-11-11 12:25; ruling 2026-11-12 04:17): -14.83 .. -8.82 % with his 13.50 m2 shaft row APART (NO_FACE / UNRESOLVED on his side), his full total beside -15.81 .. -9.88 % (T-726, quoted, not re-derived); the key-level blended figure is never printed as a %",
+   "bounded": "1106.948597 .. 1302.168817",
+   "bounded_n": 35,
+   "compare": "LIKE FOR LIKE only (Lead 2026-11-11 12:25; ruling 2026-11-12 04:17): -16.76 .. -8.68 % with his 13.50 m2 shaft row APART (NO_FACE / UNRESOLVED on his side), his full total beside -17.72 .. -9.74 % (T-717 on V3.0.74, quoted, not re-derived; engine 961.910324 .. 1055.286936 m2); the key-level blended figure is never printed as a %",
    "excluded_n": 13,
    "freelancer": "1151.138 m2",
    "key": "PLASTER.INTERNAL",
@@ -319,10 +326,10 @@
   },
   {
    "at_least_n": 0,
-   "blank_n": 0,
-   "bounded": "601.645338 .. 682.3313",
-   "bounded_n": 10,
-   "compare": "-31.25 .. -24.48 %",
+   "blank_n": 3,
+   "bounded": "604.990059 .. 710.006421",
+   "bounded_n": 38,
+   "compare": "at least -30.97 %, upper end open",
    "excluded_n": 31,
    "freelancer": "1191.128 m2",
    "key": "PAINT.INTERNAL_WALL",
@@ -781,7 +788,7 @@
   ],
   "cause_source_counts": {
    "T-654": 1808,
-   "T-676": 49,
+   "T-676": 46,
    "T-680": 2,
    "T-681": 58,
    "T-684": 5,
@@ -795,14 +802,16 @@
    "T-714": 347,
    "T-715": 79,
    "T-716": 34,
+   "T-717": 32,
    "T-718": 6,
    "T-722": 31,
    "T-724": 11,
    "T-725": 17,
-   "T-732": 13
+   "T-732": 13,
+   "T-737": 3
   },
   "findings_F_T739_1": 0,
-  "lines": 2765,
+  "lines": 2797,
   "not_used_as_cause": {
    "T-662": "T-662 rebar ratio: its 'cause' is the ratio route taken (detailed kept / no calibration), not the reason the line is held"
   },
@@ -833,13 +842,15 @@
    "T-713": 95,
    "T-714": 370,
    "T-715": 85,
+   "T-717 package rows (T-709 records)": 32,
    "T-718": 12,
    "T-721": 12,
    "T-722": 32,
    "T-724": 11,
    "T-725": 17,
    "T-732": 13,
-   "T-734": 1
+   "T-734": 1,
+   "T-737": 3
   },
   "rows": [
    {
@@ -2766,6 +2777,19 @@
     "state": "BOUNDED",
     "trade": "B10 Concrete",
     "unit": "m3"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: NOT_ESTABLISHED (wet rooms both sides) (T-717 row; T-709 T-709:GF-OPENING-OP-018:door jambs and head)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-0ea62c4cef8e2ce5a244",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [
@@ -5003,8 +5027,8 @@
     "cause": "HELD: HELD on the roof build-up over 12.50 lm (ROOF-430 (+4.30); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
     "cause_class_t716": "DESIGNER: D-39",
     "cause_source": "T-676 T676_PLASTER_PAINT_CENSUS.json",
-    "held_high": 43.155,
-    "held_low": 43.155,
+    "held_high": 43.78,
+    "held_low": 34.33,
     "item_code": "FIN.PLASTER",
     "line_id": "L-1ddc23d5657b4c4e4d0d",
     "state": "BOUNDED",
@@ -6641,6 +6665,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.780000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-26efbd99ac40f2435692",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "its concrete element is HELD in the candidate (L-9cb26d86575a92694880): the bars follow that cause; own hold beside it: not printed",
     "cause_class_t716": "NOT_PRINTED: NOT_PRINTED",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -7200,6 +7237,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.780000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-2b4e45da29a5b2dd7981",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "UNBOUNDED: D-43 lift pit depth",
     "cause_class_t716": "NAMED_TEXT: NAMED_TEXT",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -7510,6 +7560,19 @@
     "state": "BOUNDED",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BLOCKED_RFI: HELD by name (plaster return blank) (T-717 row; T-709 T-709:GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-2d7f8ab2fb489d7f0963",
+    "state": "BLANK",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [],
@@ -9362,6 +9425,19 @@
     "state": "BOUNDED",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.795000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.795,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-37cdb8db76a870eff3fe",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [],
@@ -12626,6 +12702,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 1.060000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 1.06,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-4e7e711e5c8abc074414",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "schedule notation unresolved: per-metre / spacing count (Q-71 needs the drawn zones) or diameter not printed: depth FOLLOW ARCH not printed; spacing count Q-71; p.8 note 21 adds side bars 2 / 3 / 4 T12 by beam width only where the depth is over 60 cm (width-to-count key not printed)",
     "cause_class_t716": "OWNER: Q-71",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -13984,6 +14073,19 @@
     "line_id": "L-56acf34557c315f65bb1",
     "state": "BLANK",
     "trade": "B3 Floors",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.795000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.795,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-56b08dbf65e47a26c561",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
     "unit": "m2"
    },
    {
@@ -16275,6 +16377,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.810000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.81,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-65c1d5f9695ad983d89f",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "its concrete element is HELD in the candidate (L-e112e2add2f8979a6c39): the bars follow that cause; own hold beside it: BLOCKED_DETAILING",
     "cause_class_t716": "NAMED_TEXT: NAMED_TEXT",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -16489,6 +16604,19 @@
     "state": "BOUNDED",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 1.080000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 1.08,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-6777e02aa04439148278",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [],
@@ -17227,6 +17355,19 @@
     "state": "BOUNDED",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BLOCKED_RFI: HELD by name (plaster return blank) (T-717 row; T-709 T-709:1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-6d2b3f8c5c33dd795433",
+    "state": "BLANK",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [],
@@ -18552,6 +18693,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.780000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-762c50f64c3b6b6b9999",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "count owner Q-71 open (A ceil, B A + 1, C fractional); owner Q-74 open (strap length basis): readings A axis face to face 4.5500 m, B projection gap 4.5500 m, C footing centre to centre 7.0500 m (T-141 MERGED 6ab7719 holds every strap); count Q-71; outer link only (inner legs not drawn); hooks not printed [rule URBAN-REBAR-NET-AND-PROCUREMENT]",
     "cause_class_t716": "OWNER: Q-71+Q-74",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -18936,6 +19090,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 1.080000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 1.08,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-78d0a48c8bf5af4b21c4",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "UNBOUNDED: in-situ / compacted dry densities not sourced; Z2 draw; excavation and backfill held",
     "cause_class_t716": "OWNER: Q-21",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -18987,6 +19154,19 @@
     "state": "BLANK",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 1.080000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 1.08,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-7969458ba9185391c684",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [],
@@ -19800,6 +19980,19 @@
     "state": "BLANK",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 1.400000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 1.4,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-7f8d0739849d36a7e832",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [
@@ -21444,6 +21637,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 1.060000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 1.06,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-897dca14b0b8c45be725",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "its concrete element is HELD in the candidate (L-dd3c32e4340e7a823a6e): the bars follow that cause; own hold beside it: PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: N",
     "cause_class_t716": "OWNER: Q-17+Q-21",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -21673,11 +21879,12 @@
    },
    {
     "also_stated_by": [
-     "T-654 TRIAL_BOQ_R4_T654.json"
+     "T-654 TRIAL_BOQ_R4_T654.json",
+     "T-676 T676_PLASTER_PAINT_CENSUS.json"
     ],
-    "cause": "the storey's exterior render / Sigma area is measured face by face in the merged ledgers (T-305: GF 387.285 .. 420.770 HELD on W02 / D-GF-07, 1F 234.526, 2F 132.205 in line; restated by T-337 / T-348 r2 / T-567: gross 1,166.4517846 .. 1,185.4079770 m2 incl. parapets) and is wired by T-314 (QUEUED, owner Gate B order item 2), which REPLACES this blank line by face rows; a T-640 row on the same line would collide (overlay R1)",
+    "cause": "why: host present, same state as the stage base",
     "cause_class_t716": "REASON_CODE: EXTERIOR_FINISH_NOT_SPECIFIED",
-    "cause_source": "T-676 T676_PLASTER_PAINT_CENSUS.json",
+    "cause_source": "T-737 T737_READINESS.json",
     "held_high": null,
     "held_low": null,
     "item_code": "FIN.EXT.FINISH",
@@ -21984,6 +22191,19 @@
     "state": "BOUNDED",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: NOT_ESTABLISHED (wet rooms both sides) (T-717 row; T-709 T-709:GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-8dd621261ceb5b8e3919",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [
@@ -22456,6 +22676,19 @@
     "state": "BLANK",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 1.060000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 1.06,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-91dfc7c4d8ea4c86a547",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [
@@ -24421,6 +24654,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: NOT_ESTABLISHED (wet rooms both sides) (T-717 row; T-709 T-709:GF-OPENING-OP-017:door jambs and head)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-9df1fbe948884e7c4d2a",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "bar label printed without '/m' ('5 o 10' on SLAB:GF-076 x): 5 bars in all or 5 per metre; the bound carries both readings and the count convention A .. B: 0.957 .. 1.34 kg",
     "cause_class_t716": "NAMED_TEXT: NAMED_TEXT",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -26183,6 +26429,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: BOUNDED: high adds the column returns; low takes the ST-02 corner landing (+4.696) against the wall over at most 1.15 m (7.02 - 5.87) takes 0 .. 0.052900 m2 of the band (its length along the wall not read) (T-709 a_double_height R-T709-1 (PROPOSED; scope: walls bounding a slab-free stairwell / void; provenance: owner Q-72 answer 2026-11-02, continuous exposed height through a stairwell))",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 3.525121,
+    "held_low": 3.344721,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-ab4ed4328ee652456117",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "anchorage length into the end support: note 9 is a starter-bar note; outside its group HELD BLANK (owner 2026-10-29 option B, DGP-T373-LAP): development length 40 d (compression) .. 70 d (tension), ST7757 p.8 note 9, zone not printed; bend / hook shape at the end not detailed (D-36)",
     "cause_class_t716": "DESIGNER: D-36",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -27102,11 +27361,12 @@
    },
    {
     "also_stated_by": [
-     "T-654 TRIAL_BOQ_R4_T654.json"
+     "T-654 TRIAL_BOQ_R4_T654.json",
+     "T-676 T676_PLASTER_PAINT_CENSUS.json"
     ],
-    "cause": "the storey's exterior render / Sigma area is measured face by face in the merged ledgers (T-305: GF 387.285 .. 420.770 HELD on W02 / D-GF-07, 1F 234.526, 2F 132.205 in line; restated by T-337 / T-348 r2 / T-567: gross 1,166.4517846 .. 1,185.4079770 m2 incl. parapets) and is wired by T-314 (QUEUED, owner Gate B order item 2), which REPLACES this blank line by face rows; a T-640 row on the same line would collide (overlay R1)",
+    "cause": "why: host present, same state as the stage base",
     "cause_class_t716": "REASON_CODE: EXTERIOR_FINISH_NOT_SPECIFIED",
-    "cause_source": "T-676 T676_PLASTER_PAINT_CENSUS.json",
+    "cause_source": "T-737 T737_READINESS.json",
     "held_high": null,
     "held_low": null,
     "item_code": "FIN.EXT.FINISH",
@@ -27158,6 +27418,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: BOUNDED: face run by handle this run, heights T-556 DRAWING-CONFIRMED, FFL printed; high end adds the column returns proud 0.05 (0.15 lm) if they continue through the band (T-709 a_double_height R-T709-1 (PROPOSED; scope: walls bounding a slab-free stairwell / void; provenance: owner Q-72 answer 2026-11-02, continuous exposed height through a stairwell))",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.870912,
+    "held_low": 0.839412,
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-b10c1b356670f749cc23",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "bar ends / legs / bends / extents not detailed or dimensioned (designer item, RFI S21 family): held ends A 16, B 17",
     "cause_class_t716": "NOT_PRINTED: NOT_PRINTED",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -27186,6 +27459,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.780000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-b12d7eb43e52a3d98ab4",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "COUNT_READING_HELD: the bars are printed 'n o d/m'; count A = ceil(rate x width), B = A + 1; the meaning of the notation is established for footings only (T-171, MERGED 701d227: maximum c/c spacing, N = ceil(L/s) + 1) and is not extended to suspended slabs without its own evidence (ERS s.3); lengths measured: A 15.153 kg, B 17.558 kg (C 14.795 information: an unrounded count is not a bar population) [rule URBAN-REBAR-NET-AND-PROCUREMENT]",
     "cause_class_t716": "REASON_CODE: COUNT_READING_HELD",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -27204,8 +27490,8 @@
     "cause": "HELD: HELD on the roof build-up over 20.1270 lm (ROOF-430 (+4.30); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts; RFI kept: D-39 / DCR-6 (designer): the roof build-up over this room is not printed (only the drawn-section 0.05 layer): confirm the roof finish build-up so the plaster height under the roof slab is DRAWING-CONFIRMED",
     "cause_class_t716": "DESIGNER: D-39",
     "cause_source": "T-676 T676_PLASTER_PAINT_CENSUS.json",
-    "held_high": 65.25433,
-    "held_low": 61.46433,
+    "held_high": 66.249856,
+    "held_low": 47.949844,
     "item_code": "FIN.PLASTER",
     "line_id": "L-b152995525ed123ddac9",
     "state": "BOUNDED",
@@ -28540,6 +28826,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 1.080000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 1.08,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-ba30cda374ebb4a8c7da",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "bottom mesh printed as a rate 'n o d/m' with no first / last bar position: count A = ceil(rate x W) .. B = A + 1; the p.15 straight length w - 0.040 m is drawing-derived; bound 4.267 .. 4.409 kg (Q-71 point 9 principle: PROVISIONAL / HELD)",
     "cause_class_t716": "NAMED_TEXT: NAMED_TEXT",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -29755,6 +30054,19 @@
     "unit": "kg"
    },
    {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.780000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-c17b547dd9cdad8faf26",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
     "also_stated_by": [
      "T-654 TRIAL_BOQ_R4_T654.json",
      "T-673 T673_LEDGER.json",
@@ -30512,6 +30824,19 @@
     "line_id": "L-c73eba7ed76c3a44d296",
     "state": "BLANK",
     "trade": "B10 Concrete",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.810000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.81,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-c74cb759ac5ff7e6cfa0",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
     "unit": "m2"
    },
    {
@@ -32288,6 +32613,19 @@
     "unit": "m2"
    },
    {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.810000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.81,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-d086b605ac0e50af082a",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
     "also_stated_by": [
      "T-654 TRIAL_BOQ_R4_T654.json"
     ],
@@ -32818,11 +33156,12 @@
    },
    {
     "also_stated_by": [
-     "T-654 TRIAL_BOQ_R4_T654.json"
+     "T-654 TRIAL_BOQ_R4_T654.json",
+     "T-676 T676_PLASTER_PAINT_CENSUS.json"
     ],
-    "cause": "the storey's exterior render / Sigma area is measured face by face in the merged ledgers (T-305: GF 387.285 .. 420.770 HELD on W02 / D-GF-07, 1F 234.526, 2F 132.205 in line; restated by T-337 / T-348 r2 / T-567: gross 1,166.4517846 .. 1,185.4079770 m2 incl. parapets) and is wired by T-314 (QUEUED, owner Gate B order item 2), which REPLACES this blank line by face rows; a T-640 row on the same line would collide (overlay R1)",
+    "cause": "why: host present, same state as the stage base",
     "cause_class_t716": "REASON_CODE: EXTERIOR_FINISH_NOT_SPECIFIED",
-    "cause_source": "T-676 T676_PLASTER_PAINT_CENSUS.json",
+    "cause_source": "T-737 T737_READINESS.json",
     "held_high": null,
     "held_low": null,
     "item_code": "FIN.EXT.FINISH",
@@ -33123,6 +33462,19 @@
     "state": "BLANK",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: NOT_ESTABLISHED (wet rooms both sides) (T-717 row; T-709 T-709:1F-OPENING-OP-010:door jambs and head)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-d7409e4cefc3ee62aaf6",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [],
@@ -33631,6 +33983,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.810000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.81,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-d9d0cb88542f719484f7",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "Checker downgrade DG-30f59008802b7c52 UNSUPPORTED BASIS (ST7757.pdf p.8 general note 9: lap / development for STARTER bars only (>= 70 d; 40 d): no lap, anchorage or bar-end length printed for beam ends, column storey laps or ground-beam / strap bar ends (Checker 2,247-text scan of the ST DXF, 2026-10-30 19:58); research/agents_t373/T373_LAP_BINDING.csv (merged db5a8dff): line-by-line binding, authority_class NOTE9_OUTSIDE_GROUP, proposed HELD) [the downgrade moved no line to HELD: the line was HELD already; the Checker record restates why]",
     "cause_class_t716": "DESIGNER: D-04",
     "cause_source": "T-654 TRIAL_BOQ_R4_T654.json",
@@ -33641,6 +34006,19 @@
     "state": "BOUNDED",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 1.060000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 1.06,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-da69c4bd2954b31c0fb7",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [],
@@ -33886,6 +34264,19 @@
     "state": "BLANK",
     "trade": "B9 Masonry",
     "unit": "pcs"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: NOT_ESTABLISHED (wet rooms both sides) (T-717 row; T-709 T-709:GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-dc8b92788150cda368a1",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [
@@ -36017,8 +36408,8 @@
     "cause": "DESIGNER: D-39",
     "cause_class_t716": "DESIGNER: D-39",
     "cause_source": "T-716 cause-class census (V3.0.70, merged 17aaab4b)",
-    "held_high": 6.918815,
-    "held_low": 2.853686,
+    "held_high": 6.186806,
+    "held_low": 0.499037,
     "item_code": "FIN.PLASTER",
     "line_id": "L-ea586fea86188a18bb67",
     "state": "BOUNDED",
@@ -36078,6 +36469,19 @@
     "state": "BOUNDED",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BLOCKED_RFI: HELD by name (plaster return blank) (T-717 row; T-709 T-709:GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-eab5536cbc5b1f7829dd",
+    "state": "BLANK",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [],
@@ -36791,8 +37195,8 @@
     "cause": "NAMED_TEXT: NAMED_TEXT",
     "cause_class_t716": "NAMED_TEXT: NAMED_TEXT",
     "cause_source": "T-716 cause-class census (V3.0.70, merged 17aaab4b)",
-    "held_high": 5.29088,
-    "held_low": 5.05488,
+    "held_high": 5.005988,
+    "held_low": 3.892324,
     "item_code": "FIN.PLASTER",
     "line_id": "L-ef7a16664d12b68a6e71",
     "state": "BOUNDED",
@@ -37334,6 +37738,19 @@
    },
    {
     "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.780000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-f3270cd391188bcf433c",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
+   },
+   {
+    "also_stated_by": [],
     "cause": "why: T-638 FR-T638-50 RELEASE 0.000007 m2 (wiring form, R-T714-2: CURRENT)",
     "cause_class_t716": "REASON_CODE: SPLIT_UNRESOLVED",
     "cause_source": "T-714 T714_FORMWORK_BOUNDS.json",
@@ -37409,6 +37826,19 @@
     "state": "BLANK",
     "trade": "B11 Rebar",
     "unit": "kg"
+   },
+   {
+    "also_stated_by": [],
+    "cause": "BOUNDED_EXPOSURE: frame-covered depth not printed (T-709 c_return_paint R-T709-4 (= the T-569 V8 form, restated on V3.0.70 line ids), bound 0.000000 .. 0.780000 m2)",
+    "cause_class_t716": "NOT IN T-716 (held after V3.0.70)",
+    "cause_source": "T-717 package row -> T-709 T709_RESIDUALS.json",
+    "held_high": 0.78,
+    "held_low": 0.0,
+    "item_code": "FIN.PAINT",
+    "line_id": "L-f430f55002cce63efb40",
+    "state": "BOUNDED",
+    "trade": "B4 Walls",
+    "unit": "m2"
    },
    {
     "also_stated_by": [
@@ -39382,7 +39812,7 @@
     "unit": "m2"
    }
   ],
-  "with_cause": 2765
+  "with_cause": 2797
  },
  "inputs": {
   "bench": {
@@ -39393,21 +39823,21 @@
    "path": "research/agents_t469/DOWNGRADES_SNAPSHOT.json",
    "sha256": "817326399e5b9ffff1d727b9599dff46d1f917c930e759c37e1d5721f0f85766"
   },
-  "index72": {
-   "path": "research/agents_t703/out/LINE_INDEX_V3_0_72.json",
-   "sha256": "8e753204d90ebf75d8fa5fe3de120f235bdb16e06a7d677e6aeb615e84ef5d2b"
-  },
   "index73": {
    "path": "research/agents_t722/out/LINE_INDEX_V3_0_73.json",
    "sha256": "af8d567d8a8ae8288ddf3c4c8207d2cbfcf2f322513af84e63a4448898ad7b23"
+  },
+  "index74": {
+   "path": "research/agents_t717/out/LINE_INDEX_V3_0_74.json",
+   "sha256": "6733cbc143cdfffd82eeaee54457f97bbfa7b91b541f648a411825887b8b3bca"
   },
   "keymap": {
    "path": "tests/alsenan/T001C_KEY_MAP.json",
    "sha256": "d304446e32a540757e620e6517681fdffd34bb7114727b57f7219768bcebcdb9"
   },
   "master": {
-   "path": "rules/coverage/BOQ_FAMILY_MASTER_1.74.0.json",
-   "sha256": "edf5e4646f087a453c3a4202ea862d946b766351cf91053f3cf9632be5a6ae0e"
+   "path": "rules/coverage/BOQ_FAMILY_MASTER_1.75.0.json",
+   "sha256": "cb551f248590005f90353a9634e9ca3e88bd224636cd02ada223eb36ccf584d6"
   },
   "t469": {
    "path": "research/agents_t469/out/T469_SCOREBOARD_V3_0_41.json",
@@ -39421,17 +39851,21 @@
    "path": "research/agents_t692/out/T692_CENSUS.json",
    "sha256": "4603d478296a24a33475d3a1aa74033e8b2650521b3d4e1fbe094840d9c7e369"
   },
+  "t709": {
+   "path": "research/agents_t709/out/T709_RESIDUALS.json",
+   "sha256": "fcbd5aa7d9a12018358a757a284fa746302f44b9ddb122f51c9ad7a53bd82151"
+  },
   "t716": {
    "path": "research/agents_t716/out/T716_CENSUS.json",
    "sha256": "af27f1d5f389b438b02eb7316611c96256bc3239f9ca8c8d3e2c0211ccd87255"
   },
+  "t717": {
+   "path": "research/agents_t717/out/T717_SUMMARY.json",
+   "sha256": "ec817f34969da526fa8b0a5a84ab18f6ba94616d63bf421cf51b1290b059ab3b"
+  },
   "t722": {
    "path": "research/agents_t722/out/T722_SUMMARY.json",
    "sha256": "e6d8906cbb5343bdc47f0d389cab2d47880013750fbc668bfb740e3a42178216"
-  },
-  "t726": {
-   "path": "research/agents_t726/out/T726_SHAFT_RESIDUAL.json",
-   "sha256": "30ea2e2385b25677ccffd1db5d07aeafb987675a21c937ecb1a4cf2bb0a4a9ca"
   }
  },
  "item_codes": [
@@ -44880,29 +45314,62 @@
    "unit": "m2"
   },
   {
-   "bounded_high": "682.3313",
-   "bounded_low": "601.645338",
+   "bounded_high": "710.006421",
+   "bounded_low": "604.990059",
    "counts": {
     "AT_LEAST": 0,
     "AT_MOST": 0,
-    "BLANK": 0,
-    "BOUNDED": 10,
+    "BLANK": 3,
+    "BOUNDED": 38,
     "EXCLUDED": 31,
     "RELEASED": 4
    },
    "family": "B4-06",
    "item_code": "FIN.PAINT",
    "line_ids": {
+    "BLANK": [
+     "L-2d7f8ab2fb489d7f0963",
+     "L-6d2b3f8c5c33dd795433",
+     "L-eab5536cbc5b1f7829dd"
+    ],
     "BOUNDED": [
+     "L-0ea62c4cef8e2ce5a244",
      "L-145bd2394f2907558243",
+     "L-26efbd99ac40f2435692",
      "L-2ab93d5029a4b7cc4dca",
+     "L-2b4e45da29a5b2dd7981",
      "L-349db74a70e1eecda2d2",
+     "L-37cdb8db76a870eff3fe",
+     "L-4e7e711e5c8abc074414",
+     "L-56b08dbf65e47a26c561",
      "L-5a7a5c6f070ec7142ca5",
+     "L-65c1d5f9695ad983d89f",
+     "L-6777e02aa04439148278",
+     "L-762c50f64c3b6b6b9999",
+     "L-78d0a48c8bf5af4b21c4",
+     "L-7969458ba9185391c684",
+     "L-7f8d0739849d36a7e832",
+     "L-897dca14b0b8c45be725",
+     "L-8dd621261ceb5b8e3919",
+     "L-91dfc7c4d8ea4c86a547",
+     "L-9df1fbe948884e7c4d2a",
+     "L-ab4ed4328ee652456117",
+     "L-b12d7eb43e52a3d98ab4",
+     "L-ba30cda374ebb4a8c7da",
      "L-be48ea84285be20645af",
      "L-c0ac22c964a42e7d71b1",
+     "L-c17b547dd9cdad8faf26",
+     "L-c74cb759ac5ff7e6cfa0",
      "L-c74cfb4e07bcc47bc5d6",
      "L-cdf7f5cd2789b67004f1",
+     "L-d086b605ac0e50af082a",
+     "L-d7409e4cefc3ee62aaf6",
      "L-d7d6d2f765489a95c408",
+     "L-d9d0cb88542f719484f7",
+     "L-da69c4bd2954b31c0fb7",
+     "L-dc8b92788150cda368a1",
+     "L-f3270cd391188bcf433c",
+     "L-f430f55002cce63efb40",
      "L-f53c1329983ad689b7ae"
     ],
     "EXCLUDED": [
@@ -44946,7 +45413,7 @@
     ]
    },
    "released": "217.2081",
-   "statement": "NO SINGLE TOTAL: released 217.2081 (4) + bounded 601.645338 .. 682.3313 (10) = 818.853438 .. 899.5394 m2",
+   "statement": "NO SINGLE TOTAL: released 217.2081 (4) + bounded 604.990059 .. 710.006421 (38) = 822.198159 .. 927.214521 m2 + 3 BLANK (no bound: upper end open)",
    "trade": "B4 Walls",
    "unit": "m2"
   },
@@ -45004,13 +45471,13 @@
    "unit": "m2"
   },
   {
-   "bounded_high": "1300.69428",
-   "bounded_low": "1131.965876",
+   "bounded_high": "1302.168817",
+   "bounded_low": "1106.948597",
    "counts": {
     "AT_LEAST": 0,
     "AT_MOST": 0,
     "BLANK": 3,
-    "BOUNDED": 34,
+    "BOUNDED": 35,
     "EXCLUDED": 13,
     "RELEASED": 43
    },
@@ -45048,6 +45515,7 @@
      "L-a636dabcd4bc7e59169a",
      "L-ae0cdd794cc5fdbe0c29",
      "L-af9621f43bc316a871ea",
+     "L-b10c1b356670f749cc23",
      "L-b152995525ed123ddac9",
      "L-c6ffb2cc0e02828f0939",
      "L-d2923b89f8c35723fe00",
@@ -45120,7 +45588,7 @@
     ]
    },
    "released": "388.58436",
-   "statement": "NO SINGLE TOTAL: released 388.58436 (43) + bounded 1131.965876 .. 1300.69428 (34) = 1520.550236 .. 1689.27864 m2 + 3 BLANK (no bound: upper end open)",
+   "statement": "NO SINGLE TOTAL: released 388.58436 (43) + bounded 1106.948597 .. 1302.168817 (35) = 1495.532957 .. 1690.753177 m2 + 3 BLANK (no bound: upper end open)",
    "trade": "B4 Walls",
    "unit": "m2"
   },
@@ -47409,10 +47877,10 @@
    "unit": "m3"
   }
  ],
- "line_count": 5123,
+ "line_count": 5155,
  "missing_families": {
   "families": 104,
-  "master": "1.74.0",
+  "master": "1.75.0",
   "no_line": 39,
   "rows": [
    {
@@ -47900,8 +48368,8 @@
  },
  "schema": "URBAN_T739_AGGREGATION_V1",
  "state_count": {
-  "BLANK": 1602,
-  "BOUNDED": 1163,
+  "BLANK": 1605,
+  "BOUNDED": 1192,
   "EXCLUDED": 843,
   "RELEASED": 1515
  },
@@ -48157,18 +48625,18 @@
   {
    "at_least_low": "0",
    "at_most_high": "0",
-   "bounded_high": "1983.02558",
-   "bounded_low": "1733.611214",
+   "bounded_high": "2012.175238",
+   "bounded_low": "1711.938656",
    "counts": {
     "AT_LEAST": 0,
     "AT_MOST": 0,
-    "BLANK": 24,
-    "BOUNDED": 44,
+    "BLANK": 27,
+    "BOUNDED": 73,
     "EXCLUDED": 44,
     "RELEASED": 144
    },
    "released": "1353.360803",
-   "statement": "NO SINGLE TOTAL: released 1353.360803 (144) + bounded 1733.611214 .. 1983.02558 (44) = 3086.972017 .. 3336.386383 m2 + 24 BLANK (no bound: upper end open)",
+   "statement": "NO SINGLE TOTAL: released 1353.360803 (144) + bounded 1711.938656 .. 2012.175238 (73) = 3065.299459 .. 3365.536041 m2 + 27 BLANK (no bound: upper end open)",
    "total": null,
    "trade": "B4 Walls",
    "unit": "m2"

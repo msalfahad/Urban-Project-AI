@@ -1,11 +1,17 @@
-"""T-739 ALL-TRADE AGGREGATION STATEMENT on the candidate of record ARCH_TAKEOFF_V3.0.73 (R-T739-1; lane I, research).
+"""T-739 ALL-TRADE AGGREGATION STATEMENT on the candidate of record ARCH_TAKEOFF_V3.0.74 (R-T739-1; lane I, research).
+
+r2 (Verifier 2026-11-12T11:58Z REJECTED r1): restated on V3.0.74 only (never mixed with V3.0.73); the per-line cause
+records are read from a committed, sha-pinned file list (CAUSE_SOURCES_PIN.json, written by --pin) instead of a live
+glob, so a later merge of another task's research output can no longer change this statement (the r1 fault: the
+rebuild read 'T-676' 46 -> 49 records merged after the run of record).
 
 Reads only committed, sha-pinned JSON (no drawing, no workbook beyond the committed normalised benchmark the key map
 already reads); writes only research/agents_t739/out/. No quantity, class or candidate file changes; nothing released
-(V3.0.73 NOT RELEASED; released V2.9 + route G untouched).
+(V3.0.74 NOT RELEASED; released V2.9 + route G untouched).
 
   python3 -I research/agents_t739/t739_alsenan.py --write   # write out/
   python3 -I research/agents_t739/t739_alsenan.py --check   # rebuild and compare with out/ (exit 1 on a difference)
+  python3 -I research/agents_t739/t739_alsenan.py --pin     # (re)write CAUSE_SOURCES_PIN.json from the tree (run of record only)
 """
 from __future__ import annotations
 
@@ -26,15 +32,21 @@ import t739_rules as R  # noqa: E402
 
 OUT = HERE / "out"
 JSON_OUT, MD_OUT = OUT / "T739_AGGREGATION.json", OUT / "T739_AGGREGATION.md"
+CAUSE_PIN = HERE / "CAUSE_SOURCES_PIN.json"
+CANDIDATE = "ARCH_TAKEOFF_V3.0.74"
 PIN = {
+    "index74": ("research/agents_t717/out/LINE_INDEX_V3_0_74.json",
+                "6733cbc143cdfffd82eeaee54457f97bbfa7b91b541f648a411825887b8b3bca"),
     "index73": ("research/agents_t722/out/LINE_INDEX_V3_0_73.json",
                 "af8d567d8a8ae8288ddf3c4c8207d2cbfcf2f322513af84e63a4448898ad7b23"),
-    "index72": ("research/agents_t703/out/LINE_INDEX_V3_0_72.json",
-                "8e753204d90ebf75d8fa5fe3de120f235bdb16e06a7d677e6aeb615e84ef5d2b"),
+    "t717": ("research/agents_t717/out/T717_SUMMARY.json",
+             "ec817f34969da526fa8b0a5a84ab18f6ba94616d63bf421cf51b1290b059ab3b"),
+    "t709": ("research/agents_t709/out/T709_RESIDUALS.json",
+             "fcbd5aa7d9a12018358a757a284fa746302f44b9ddb122f51c9ad7a53bd82151"),
     "t722": ("research/agents_t722/out/T722_SUMMARY.json",
              "e6d8906cbb5343bdc47f0d389cab2d47880013750fbc668bfb740e3a42178216"),
-    "master": ("rules/coverage/BOQ_FAMILY_MASTER_1.74.0.json",
-               "edf5e4646f087a453c3a4202ea862d946b766351cf91053f3cf9632be5a6ae0e"),
+    "master": ("rules/coverage/BOQ_FAMILY_MASTER_1.75.0.json",
+               "cb551f248590005f90353a9634e9ca3e88bd224636cd02ada223eb36ccf584d6"),
     "t469": ("research/agents_t469/out/T469_SCOREBOARD_V3_0_41.json",
              "0c9c9be01dc35cd7b025e09527ea7d945bdf7297dac346013f924d00982b6bba"),
     "t692": ("research/agents_t692/out/T692_CENSUS.json",
@@ -43,8 +55,6 @@ PIN = {
                "d304446e32a540757e620e6517681fdffd34bb7114727b57f7219768bcebcdb9"),
     "bench": ("tests/alsenan/registers_b1/BENCHMARK_NORMALISED.json",
               "959a8eeb67e3129a3ead75851ef17651dcd005acfc6d6b34add936477fabe613"),
-    "t726": ("research/agents_t726/out/T726_SHAFT_RESIDUAL.json",
-             "30ea2e2385b25677ccffd1db5d07aeafb987675a21c937ecb1a4cf2bb0a4a9ca"),
     "downgrades": ("research/agents_t469/DOWNGRADES_SNAPSHOT.json",
                    "817326399e5b9ffff1d727b9599dff46d1f917c930e759c37e1d5721f0f85766"),
     "t716": ("research/agents_t716/out/T716_CENSUS.json",
@@ -130,14 +140,17 @@ def cause_records(index_ids):
     by_prefix = defaultdict(list)
     for i in index_ids:
         by_prefix[i[:10]].append(i)
-    files = sorted(glob.glob(str(ROOT / "research/agents_t[6-9][0-9][0-9]/out/*.json")))
+    pinned = load_cause_pin()
     recs, used = [], Counter()
-    for f in files:
-        rel = str(Path(f).relative_to(ROOT))
+    for rel, want in pinned.items():
+        f = ROOT / rel
         m = TASK_DIR.search(rel)
         tn = int(m.group(1))
         if tn < ADDED_SINCE_T654 or tn in (716, 739) or tn in NOT_A_HOLD_CAUSE or "LINE_INDEX" in rel:
             continue
+        b = f.read_bytes()
+        if hashlib.sha256(b).hexdigest() != want:
+            raise R.AggregationError(f"{rel}: pinned cause source changed (re-pin is a new run of record)")
         if tn == 654:
             d = load("t654")
             if rel != PIN["t654"][0]:
@@ -145,7 +158,7 @@ def cause_records(index_ids):
             acc = [(x["line_id"], x.get("cause")) for x in d["per_line"]]
         else:
             try:
-                d = json.loads(Path(f).read_text(encoding="utf-8"))
+                d = json.loads(b.decode("utf-8"))
             except (ValueError, UnicodeDecodeError):
                 continue
             acc = []
@@ -158,6 +171,27 @@ def cause_records(index_ids):
     return recs, used
 
 
+def scan_cause_sources():
+    """The research outputs a cause can come from, as on the tree now (used only by --pin)."""
+    out = {}
+    for f in sorted(glob.glob(str(ROOT / "research/agents_t[6-9][0-9][0-9]/out/*.json"))):
+        rel = str(Path(f).relative_to(ROOT))
+        tn = int(TASK_DIR.search(rel).group(1))
+        if tn < ADDED_SINCE_T654 or tn in (716, 739) or tn in NOT_A_HOLD_CAUSE or "LINE_INDEX" in rel:
+            continue
+        if tn == 654 and rel != PIN["t654"][0]:
+            continue
+        out[rel] = hashlib.sha256(Path(f).read_bytes()).hexdigest()
+    return out
+
+
+def load_cause_pin():
+    d = json.loads(CAUSE_PIN.read_text(encoding="utf-8"))
+    if d.get("schema") != "URBAN_T739_CAUSE_PIN_V1" or d.get("candidate") != CANDIDATE:
+        raise R.AggregationError("cause pin is not for the candidate of record")
+    return d["files"]
+
+
 def downgrade_causes(index, snap):
     applied = {x["downgrade_id"] for x in index["downgrades"] if x["status"] == "APPLIED"}
     out = {}
@@ -168,42 +202,96 @@ def downgrade_causes(index, snap):
     return out, sorted(applied)
 
 
-def chain_readd(i72, i73, t722):
-    """(d) V3.0.72 + the T-722 package rows = V3.0.73; every other line byte-equal."""
-    a = {l["line_id"]: l for l in i72["lines"]}
-    b = {l["line_id"]: l for l in i73["lines"]}
-    if set(a) != set(b):
-        raise R.AggregationError("V3.0.72 and V3.0.73 indexes carry different line ids")
-    rows = {r["line_id"]: r for r in t722["rows"]}
+def chain_readd(i73, i74, t717):
+    """(d) V3.0.73 + the T-717 package rows (4 replaced, 32 added) = V3.0.74; every other line byte-equal."""
+    a = {l["line_id"]: l for l in i73["lines"]}
+    b = {l["line_id"]: l for l in i74["lines"]}
+    rows = {r["line_id"]: r for r in t717["rows"]}
+    if len(rows) != len(t717["rows"]):
+        raise R.AggregationError("T-717 package carries a line id twice")
+    if set(a) - set(b):
+        raise R.AggregationError("V3.0.74 dropped a V3.0.73 line")
+    added = set(b) - set(a)
+    if added != {l for l, r in rows.items() if r["change"] == "ADD"}:
+        raise R.AggregationError("V3.0.74 added lines != the T-717 ADD rows")
 
     def st(ln):
         return {"low": ln["held_low"], "high": ln["held_high"], "value": ln["measured_net"]}
     checked, changed = 0, []
-    for lid, l73 in b.items():
-        l72 = a[lid]
+    for lid, l74 in b.items():
+        l73 = a.get(lid)
         if lid in rows:
             r = rows[lid]
-            for side, ln in (("before", l72), ("after", l73)):
-                want = {k: r[side].get(k) for k in ("low", "high", "value")}
-                if st(ln) != want:
-                    raise R.AggregationError(f"{lid}: index {side} {st(ln)} != T-722 record {want}")
+            if r["change"] == "CHANGE":
+                want = {k: r["before_base"].get(k) for k in ("low", "high", "value")}
+                if st(l73) != want:
+                    raise R.AggregationError(f"{lid}: V3.0.73 index {st(l73)} != T-717 before {want}")
+            want = {k: r["after_v3_0_74"].get(k) for k in ("low", "high", "value")}
+            if st(l74) != want or l74["item_code"] != r["item_code"] or l74["unit"] != r["unit"]:
+                raise R.AggregationError(f"{lid}: V3.0.74 index {st(l74)} != T-717 after {want}")
             checked += 1
-            if l72 != l73:
+            if l73 != l74:
                 changed.append(lid)
-        elif l72 != l73:
-            raise R.AggregationError(f"{lid}: changed V3.0.72 -> V3.0.73 with no package row")
-    return {"package_rows": len(rows), "rows_checked_before_after": checked, "lines_changed": len(changed),
+        elif l73 != l74:
+            raise R.AggregationError(f"{lid}: changed V3.0.73 -> V3.0.74 with no package row")
+    return {"package_rows": len(rows), "rows_checked_before_after": checked, "lines_changed_or_added": len(changed),
+            "replaced": sum(1 for r in rows.values() if r["change"] == "CHANGE"), "added": len(added),
             "other_lines_byte_equal": len(b) - len(rows)}
 
 
+def package_causes(t717, t709):
+    """(e) the 32 lines T-717 ADDED in V3.0.74 have no line-id record in any earlier task (they did not exist): their
+    cause is the T-717 row's own flag, else the T-709 record the row's map_row names, bound by element id (return
+    paint: c_return_paint.rows[].paint_row.flag; band: a_double_height.<paint|plaster>_band.status). Read, never
+    invented; a row whose record cannot be bound stays without a cause (F-T739-1)."""
+    ret = {r["paint_row"]["element_id"]: r["paint_row"] for r in t709["c_return_paint"]["rows"]}
+    band = t709["a_double_height"]
+    out = []
+    for r in t717["rows"]:
+        if r["change"] != "ADD" or r["class"][1] != "HELD":
+            continue
+        text = None
+        if r.get("flag"):
+            text = f"{r['after_v3_0_74']['state']}: {r['flag']} (T-717 row; T-709 {r['map_row']})"
+        elif r["piece"] == "RETURN_PAINT" and ret.get(r["element_id"], {}).get("flag"):
+            pr = ret[r["element_id"]]
+            text = (f"{r['after_v3_0_74']['state']}: {pr['flag']} (T-709 c_return_paint "
+                    f"{t709['c_return_paint']['rule']}, bound {' .. '.join(pr['bound_beside_m2'])} m2)")
+        elif r["piece"] == "DH_BAND":
+            k = {"FIN.PAINT": "paint_band", "FIN.PLASTER": "plaster_band"}.get(r["item_code"])
+            if k and band.get(k, {}).get("status"):
+                text = f"{r['after_v3_0_74']['state']}: {band[k]['status']} (T-709 a_double_height {band['rule']})"
+        if text:
+            out.append((717, "T-717 package row -> T-709 T709_RESIDUALS.json", r["line_id"], text))
+    return out
+
+
+def component_ids(i74, t717, t722):
+    """Lines whose committed package record (T-717 after, or T-722 after when V3.0.74 left the line unchanged)
+    equals the V3.0.74 index state."""
+    b = {l["line_id"]: l for l in i74["lines"]}
+    out = {}
+    for src, rows, after in (("T-717", t717["rows"], "after_v3_0_74"), ("T-722", t722["rows"], "after")):
+        for r in rows:
+            ln = b.get(r["line_id"])
+            if ln is None or r["line_id"] in out:
+                continue
+            if {"low": ln["held_low"], "high": ln["held_high"], "value": ln["measured_net"]} == \
+                    {k: r[after].get(k) for k in ("low", "high", "value")}:
+                out[r["line_id"]] = src
+    return out
+
+
 def build():
-    i73, i72, t722 = load("index73"), load("index72"), load("t722")
+    i74, i73, t717, t722 = load("index74"), load("index73"), load("t717"), load("t722")
     master, t469, t692 = load("master"), load("t469"), load("t692")
-    keymap, bench, t726, snap = load("keymap"), load("bench"), load("t726"), load("downgrades")
-    if i73["candidate_version"] != "ARCH_TAKEOFF_V3.0.73":
+    keymap, bench, snap = load("keymap"), load("bench"), load("downgrades")
+    if i74["candidate_version"] != CANDIDATE or i73["candidate_version"] != "ARCH_TAKEOFF_V3.0.73":
         raise R.AggregationError("not the candidate of record")
+    if i74["inputs"]["lines"] != t717["lines_sha256"]["V3_0_74"]:
+        raise R.AggregationError("V3.0.74 index and T-717 summary name different run outputs")
     own, reg = trade_map(master)
-    lines = i73["lines"]
+    lines = i74["lines"]
 
     def trade_of(code):
         if code in reg:
@@ -234,8 +322,10 @@ def build():
                       "line_ids": {s: sorted(cells[s]["lines"]) for s in R.STATES if cells[s]["lines"]}})
 
     # (d) chain re-add + component coverage
-    chain = chain_readd(i72, i73, t722)
-    comp = Counter(trade_of(r["item_code"]) for r in t722["rows"])
+    chain = chain_readd(i73, i74, t717)
+    cid = component_ids(i74, t717, t722)
+    code_of = {l["line_id"]: l["item_code"] for l in lines}
+    comp = Counter(trade_of(code_of[x]) for x in cid)
     comp_cover = {t: {"lines": n, "with_committed_component_record": comp.get(t, 0),
                       "without": n - comp.get(t, 0)}
                   for t, n in sorted(Counter(trade_of(l["item_code"]) for l in lines).items())}
@@ -268,7 +358,10 @@ def build():
     # (e) causes
     held = [l["line_id"] for l in lines if l["class"] == "HELD"]
     recs, used = cause_records({l["line_id"] for l in lines})
-    dg, applied = downgrade_causes(i73, snap)
+    pk = package_causes(t717, load("t709"))
+    recs += pk
+    used["T-717 package rows (T-709 records)"] += len(pk)
+    dg, applied = downgrade_causes(i74, snap)
     t716 = load("t716")
     cls716 = {}
     for lid, a in t716["assignment"].items():
@@ -299,7 +392,7 @@ def build():
         try:
             t = trade_of(r["item_code"])
         except R.AggregationError:
-            t = "NO_FAMILY in master 1.74.0"
+            t = "NO_FAMILY in master 1.75.0"
         c = v29[(t, r["unit"])]
         c["released"] += R.D(r["released_qty"])
         c["released_lines"] += r["released_lines"]
@@ -337,11 +430,13 @@ def build():
                "blank_n": cells[R.BLANK]["n"], "excluded_n": cells[R.EXCLUDED]["n"],
                "other_unit_lines_not_compared": dict(other_unit)}
         if k["key"] == "PLASTER.INTERNAL":
-            rc = t726["reconciliation"]
+            rc = t717["like_for_like"]["plaster"]
+            pa, pg = rc["pct_vs_his_with_row_apart"], rc["pct_vs_his_gross"]
             row["compare"] = ("LIKE FOR LIKE only (Lead 2026-11-11 12:25; ruling 2026-11-12 04:17): "
-                              f"{' .. '.join(rc['like_for_like_plaster_pct_row_named_apart'])} % with his 13.50 m2 "
+                              f"{pa[0]:+.2f} .. {pa[1]:+.2f} % with his 13.50 m2 "
                               "shaft row APART (NO_FACE / UNRESOLVED on his side), his full total beside "
-                              f"{' .. '.join(rc['like_for_like_plaster_pct'])} % (T-726, quoted, not re-derived); "
+                              f"{pg[0]:+.2f} .. {pg[1]:+.2f} % (T-717 on V3.0.74, quoted, not re-derived; "
+                              f"engine {rc['engine_net_v3_0_74'][0]} .. {rc['engine_net_v3_0_74'][1]} m2); "
                               "the key-level blended figure is never printed as a %")
         elif "typed_lines" in json.dumps(k) or k["key"] == "FLOOR.INTERNAL":
             row["compare"] = "TYPED_KEY (tools/alsenan_keymap.py typed selectors only; not run here)"
@@ -353,7 +448,7 @@ def build():
                                          cells[R.BOUNDED]["high"], refq, open_up)
         keyed.append(row)
 
-    # missing families (no line in V3.0.73), with the T-692 class where it has one
+    # missing families (no line in V3.0.74), with the T-692 class where it has one
     t692c = {r["code"]: r for r in t692["rows"]}
     present = {own[l["item_code"]][1] for l in lines if l["item_code"] in own}
     missing, since = [], []
@@ -377,10 +472,12 @@ def build():
                      "statement": next(x["statement"] for x in trades if (x["trade"], x["unit"]) == (t, u))})
     return {
         "schema": "URBAN_T739_AGGREGATION_V1", "hand_readd_cells": hand, "task": "T-739", "rule": f"{R.RULE_ID} {R.RULE_VERSION}",
-        "candidate": "ARCH_TAKEOFF_V3.0.73 (NOT RELEASED), lines sha c5a0b128",
+        "candidate": f"{CANDIDATE} (NOT RELEASED), lines sha {t717['lines_sha256']['V3_0_74'][:8]}",
+        "cause_sources_pinned": {"file": str(CAUSE_PIN.relative_to(ROOT)), "files": len(load_cause_pin()),
+                                 "sha256": hashlib.sha256(CAUSE_PIN.read_bytes()).hexdigest()},
         "inputs": {k: {"path": v[0], "sha256": v[1]} for k, v in PIN.items()},
         "line_count": len(lines), "state_count": dict(Counter(R.state_of(l) for l in lines)),
-        "trades": trades, "item_codes": codes, "chain_readd_v3_0_72_to_v3_0_73": chain,
+        "trades": trades, "item_codes": codes, "chain_readd_v3_0_73_to_v3_0_74": chain,
         "component_coverage": comp_cover, "ruled_form_beside": RULED_BESIDE, "concrete_census_crosscheck_t722": cc,
         "held": {"lines": len(held), "with_cause": len(causes), "findings_F_T739_1": len(findings),
                  "cause_source_counts": dict(sorted(src_count.items())), "records_read_by_task": dict(sorted(used.items())),
@@ -390,7 +487,7 @@ def build():
         "released_v2_9_route_g_beside": {"source": "T-469 committed side A (BOQ lines 1eff0920, 1,455 lines)",
                                          "rows": v29_rows},
         "freelancer_keyed": keyed,
-        "missing_families": {"master": "1.74.0", "families": len(master["families"]), "no_line": len(missing),
+        "missing_families": {"master": "1.75.0", "families": len(master["families"]), "no_line": len(missing),
                              "rows": missing, "t692_rows_now_with_lines": since},
         "not_claimed": "development villa statement; nothing wired or released; no accuracy figure; freelancer "
                        "agreement is never proof",
@@ -414,12 +511,14 @@ def render_md(b):
     for c in b["item_codes"]:
         L.append(f"| {c['trade']} | {c['family']} | {c['item_code']} | {c['unit']} | {c['statement']} | "
                  f"{c['counts']['EXCLUDED']} |")
-    ch = b["chain_readd_v3_0_72_to_v3_0_73"]
+    ch = b["chain_readd_v3_0_73_to_v3_0_74"]
     L += ["", "## Re-add checks", "",
           f"- Every subtotal computed twice (lines direct, item-code subtotals) in Decimal: equal.",
-          f"- Chain V3.0.72 -> V3.0.73: {ch['package_rows']} T-722 package rows, before / after checked "
-          f"{ch['rows_checked_before_after']} (index fields moved on {ch['lines_changed']}: the AT_LEAST / NAMED rows move "
-          f"no index field); {ch['other_lines_byte_equal']} other lines byte-equal.",
+          f"- Chain V3.0.73 -> V3.0.74: {ch['package_rows']} T-717 package rows ({ch['replaced']} replaced, "
+          f"{ch['added']} added), before / after checked {ch['rows_checked_before_after']}; "
+          f"{ch['other_lines_byte_equal']} other lines byte-equal.",
+          f"- Cause sources: {b['cause_sources_pinned']['files']} committed research outputs pinned in "
+          f"{b['cause_sources_pinned']['file']} (sha {b['cause_sources_pinned']['sha256'][:8]}); a later merge is not read.",
           "- T-722 concrete census (its own after figures, rounded float sums) against this exact re-add: " +
           "; ".join(f"{x['item_code']} {'AGREE' if x['agree'] else 'DIFFERS ' + json.dumps(x['exact_minus_t722_printed'], sort_keys=True) + ' (index 0 .. cap lines: ' + (', '.join(x['zero_low_caps']) or 'none') + '; F-T739-2)'}"
                     f" released {x['released_m3']} m3, bounded {x['bounded']}, blank {x['blank']}"
@@ -427,9 +526,9 @@ def render_md(b):
                        if x['beside_run_record_only'] else "") for x in b["concrete_census_crosscheck_t722"]),
           "- F-T739-2 (form ruled, not yet in the index): " + "; ".join(f"{k} {v}" for k, v in
                                                                       sorted(b["ruled_form_beside"].items())) + ".",
-          "- Component layer: only the T-722 package rows carry a committed per-line component record (before / after);"
-          " every other line's gross / deductions / additions live in the private run output (V3_0_73_BOQ_LINES "
-          "c5a0b128), NOT re-added here:", "",
+          "- Component layer: only the T-717 and T-722 package rows carry a committed per-line record (before / after)"
+          " equal to the V3.0.74 state; every other line's gross / deductions / additions live in the private run "
+          "output (V3_0_74_BOQ_LINES bea5be02), NOT re-added here:", "",
           "| Trade | Lines | With committed component record | Without |", "|---|---|---|---|"]
     for t, v in b["component_coverage"].items():
         L.append(f"| {t} | {v['lines']} | {v['with_committed_component_record']} | {v['without']} |")
@@ -459,7 +558,7 @@ def render_md(b):
                      f"{r['held_high']} |")
         L.append("")
     m = b["missing_families"]
-    L += ["", f"## Families with no line in V3.0.73 ({m['no_line']} of {m['families']}, master {m['master']})", "",
+    L += ["", f"## Families with no line in V3.0.74 ({m['no_line']} of {m['families']}, master {m['master']})", "",
           "| Family | Group | Item | Unit | T-692 class |", "|---|---|---|---|---|"]
     for r in m["rows"]:
         L.append(f"| {r['family']} | {r['group']} | {r['item']} | {r['unit']} | {r['t692_class']} |")
@@ -474,6 +573,12 @@ def dumps(b):
 
 
 def main(argv):
+    if "--pin" in argv:
+        CAUSE_PIN.write_text(json.dumps({"schema": "URBAN_T739_CAUSE_PIN_V1", "candidate": CANDIDATE,
+                                         "files": scan_cause_sources()}, indent=1, sort_keys=True) + "\n",
+                             encoding="utf-8")
+        print("pinned", CAUSE_PIN.name)
+        return 0
     b = build()
     j, md = dumps(b), render_md(b)
     if "--write" in argv:

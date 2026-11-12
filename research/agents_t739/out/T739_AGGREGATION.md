@@ -1,6 +1,6 @@
-# T-739 all-trade aggregation statement, ARCH_TAKEOFF_V3.0.73 (NOT RELEASED), lines sha c5a0b128
+# T-739 all-trade aggregation statement, ARCH_TAKEOFF_V3.0.74 (NOT RELEASED), lines sha bea5be02
 
-Rule R-T739-1 1.0.0. 5123 lines; states: BLANK 1602, BOUNDED 1163, EXCLUDED 843, RELEASED 1515. development villa statement; nothing wired or released; no accuracy figure; freelancer agreement is never proof.
+Rule R-T739-1 1.0.0. 5155 lines; states: BLANK 1605, BOUNDED 1192, EXCLUDED 843, RELEASED 1515. development villa statement; nothing wired or released; no accuracy figure; freelancer agreement is never proof.
 
 ## Per trade and unit (never summed across states or units)
 
@@ -19,7 +19,7 @@ Rule R-T739-1 1.0.0. 5123 lines; states: BLANK 1602, BOUNDED 1163, EXCLUDED 843,
 | B3 Floors | m2 | 102 | 776.0081 | 7 | 1.31 .. 1.54 | 0 | 0 | 8 | 23 | NO SINGLE TOTAL: released 776.0081 (102) + bounded 1.31 .. 1.54 (7) = 777.3181 .. 777.5481 m2 + 8 BLANK (no bound: upper end open) |
 | B3 Floors | m3 | 0 | 0 | 44 | 12.468577 .. 17.195274 | 0 | 0 | 0 | 0 | NO SINGLE TOTAL: released none + bounded 12.468577 .. 17.195274 (44) = 12.468577 .. 17.195274 m3 |
 | B4 Walls | lm | 3 | 198.855559 | 0 | 0 .. 0 | 0 | 0 | 3 | 0 | NO SINGLE TOTAL: released 198.855559 (3) + 3 BLANK (no bound: upper end open) |
-| B4 Walls | m2 | 144 | 1353.360803 | 44 | 1733.611214 .. 1983.02558 | 0 | 0 | 24 | 44 | NO SINGLE TOTAL: released 1353.360803 (144) + bounded 1733.611214 .. 1983.02558 (44) = 3086.972017 .. 3336.386383 m2 + 24 BLANK (no bound: upper end open) |
+| B4 Walls | m2 | 144 | 1353.360803 | 73 | 1711.938656 .. 2012.175238 | 0 | 0 | 27 | 44 | NO SINGLE TOTAL: released 1353.360803 (144) + bounded 1711.938656 .. 2012.175238 (73) = 3065.299459 .. 3365.536041 m2 + 27 BLANK (no bound: upper end open) |
 | B5 Ceilings | m2 | 49 | 439.271677 | 0 | 0 .. 0 | 0 | 0 | 8 | 0 | NO SINGLE TOTAL: released 439.271677 (49) + 8 BLANK (no bound: upper end open) |
 | B6 Openings | lm | 3 | 3 | 0 | 0 .. 0 | 0 | 0 | 0 | 0 | 3 lm (all released) |
 | B6 Openings | m2 | 11 | 119.116 | 7 | 25.65 .. 39.735 | 0 | 0 | 4 | 1 | NO SINGLE TOTAL: released 119.116 (11) + bounded 25.65 .. 39.735 (7) = 144.766 .. 158.851 m2 + 4 BLANK (no bound: upper end open) |
@@ -97,9 +97,9 @@ Rule R-T739-1 1.0.0. 5123 lines; states: BLANK 1602, BOUNDED 1163, EXCLUDED 843,
 | B4 Walls | B4-07 | ARCH.FACADE_RUN | lm | NO SINGLE TOTAL: released 198.855559 (3) + 3 BLANK (no bound: upper end open) | 0 |
 | B4 Walls | B4-08 | ARCH.WINDOW_REVEAL | m2 | NO SINGLE TOTAL: released 12.438866 (54) + 8 BLANK (no bound: upper end open) | 0 |
 | B4 Walls | B4-07 | FIN.EXT.FINISH | m2 | NO SINGLE TOTAL: released none + 3 BLANK (no bound: upper end open) | 0 |
-| B4 Walls | B4-06 | FIN.PAINT | m2 | NO SINGLE TOTAL: released 217.2081 (4) + bounded 601.645338 .. 682.3313 (10) = 818.853438 .. 899.5394 m2 | 31 |
+| B4 Walls | B4-06 | FIN.PAINT | m2 | NO SINGLE TOTAL: released 217.2081 (4) + bounded 604.990059 .. 710.006421 (38) = 822.198159 .. 927.214521 m2 + 3 BLANK (no bound: upper end open) | 31 |
 | B4 Walls | B4-06 | FIN.PAINT.CEILING | m2 | 394.825677 m2 (all released) | 0 |
-| B4 Walls | B4-03 | FIN.PLASTER | m2 | NO SINGLE TOTAL: released 388.58436 (43) + bounded 1131.965876 .. 1300.69428 (34) = 1520.550236 .. 1689.27864 m2 + 3 BLANK (no bound: upper end open) | 13 |
+| B4 Walls | B4-03 | FIN.PLASTER | m2 | NO SINGLE TOTAL: released 388.58436 (43) + bounded 1106.948597 .. 1302.168817 (35) = 1495.532957 .. 1690.753177 m2 + 3 BLANK (no bound: upper end open) | 13 |
 | B4 Walls | B4-01 | FIN.WALL.TILE | m2 | NO SINGLE TOTAL: released 340.3038 (12) + 6 BLANK (no bound: upper end open) | 0 |
 | B5 Ceilings | B5-01 | FIN.CEILING | m2 | NO SINGLE TOTAL: released 411.337177 (36) + 5 BLANK (no bound: upper end open) | 0 |
 | B5 Ceilings | B5-04 | FIN.CEILING.BULKHEAD | m2 | NO SINGLE TOTAL: released 27.9345 (13) + 1 BLANK (no bound: upper end open) | 0 |
@@ -168,10 +168,11 @@ Rule R-T739-1 1.0.0. 5123 lines; states: BLANK 1602, BOUNDED 1163, EXCLUDED 843,
 ## Re-add checks
 
 - Every subtotal computed twice (lines direct, item-code subtotals) in Decimal: equal.
-- Chain V3.0.72 -> V3.0.73: 33 T-722 package rows, before / after checked 33 (index fields moved on 5: the AT_LEAST / NAMED rows move no index field); 5090 other lines byte-equal.
+- Chain V3.0.73 -> V3.0.74: 36 T-717 package rows (4 replaced, 32 added), before / after checked 36; 5119 other lines byte-equal.
+- Cause sources: 104 committed research outputs pinned in research/agents_t739/CAUSE_SOURCES_PIN.json (sha 5a2e36bd); a later merge is not read.
 - T-722 concrete census (its own after figures, rounded float sums) against this exact re-add: STR.CONC.BEAM AGREE released 66.920678 m3, bounded 5.983229 .. 8.41271 (14), blank 12, beside (run record only, not in the index) {'AT_LEAST': 0.115155}; STR.CONC.COLUMN AGREE released 19.7765 m3, bounded 11.80007 .. 15.5015 (27), blank 2, beside (run record only, not in the index) {'AT_LEAST': 0.6574}; STR.CONC.GROUND_BEAM DIFFERS {"blank": -1, "bounded": 1, "high": "3.5256"} (index 0 .. cap lines: L-fb7a6431fede62e93fd5 0 .. 3.5256; F-T739-2) released 23.760555 m3, bounded 1.178378 .. 5.096771 (9), blank 20, beside (run record only, not in the index) {'AT_LEAST': 5.099845}; STR.CONC.LIFT AGREE released 0 m3, bounded 0 .. 0 (0), blank 2, beside (run record only, not in the index) {'AT_LEAST': 1.903}; STR.CONC.PARAPET AGREE released 0 m3, bounded 0 .. 0 (0), blank 4, beside (run record only, not in the index) {'AT_LEAST': 8.050942}; STR.CONC.STAIR AGREE released 5.368881 m3, bounded 0 .. 0 (0), blank 5, beside (run record only, not in the index) {'AT_LEAST': 1.568446}
 - F-T739-2 (form ruled, not yet in the index): L-fb7a6431fede62e93fd5 F-T723-3 / T-724 (MERGED, Checker): one state = HELD BLANK with an AT_MOST cap 3.5256 m3 beside (index still 0 .. 3.5256; restatement listed for concrete round 10, T-730); ruled reading: GROUND_BEAM bounded 1.178378 .. 1.571171 (8) + 21 BLANK, cap beside.
-- Component layer: only the T-722 package rows carry a committed per-line component record (before / after); every other line's gross / deductions / additions live in the private run output (V3_0_73_BOQ_LINES c5a0b128), NOT re-added here:
+- Component layer: only the T-717 and T-722 package rows carry a committed per-line record (before / after) equal to the V3.0.74 state; every other line's gross / deductions / additions live in the private run output (V3_0_74_BOQ_LINES bea5be02), NOT re-added here:
 
 | Trade | Lines | With committed component record | Without |
 |---|---|---|---|
@@ -181,7 +182,7 @@ Rule R-T739-1 1.0.0. 5123 lines; states: BLANK 1602, BOUNDED 1163, EXCLUDED 843,
 | B13 Other | 66 | 0 | 66 |
 | B2 Spaces | 16 | 0 | 16 |
 | B3 Floors | 237 | 0 | 237 |
-| B4 Walls | 262 | 0 | 262 |
+| B4 Walls | 294 | 36 | 258 |
 | B5 Ceilings | 57 | 0 | 57 |
 | B6 Openings | 97 | 0 | 97 |
 | B7 Stairs | 174 | 4 | 170 |
@@ -191,7 +192,7 @@ Rule R-T739-1 1.0.0. 5123 lines; states: BLANK 1602, BOUNDED 1163, EXCLUDED 843,
 
 ## HELD lines and their causes (never 0, never summed into a released figure)
 
-2765 HELD lines: 2765 with a committed cause, 0 without (F-T739-1, listed by id in the JSON). Cause source (latest task wins): T-654 1808, T-676 49, T-680 2, T-681 58, T-684 5, T-685 53, T-686 3, T-694 116, T-699 21, T-711 8, T-712 13, T-713 91, T-714 347, T-715 79, T-716 34, T-718 6, T-722 31, T-724 11, T-725 17, T-732 13.
+2797 HELD lines: 2797 with a committed cause, 0 without (F-T739-1, listed by id in the JSON). Cause source (latest task wins): T-654 1808, T-676 46, T-680 2, T-681 58, T-684 5, T-685 53, T-686 3, T-694 116, T-699 21, T-711 8, T-712 13, T-713 91, T-714 347, T-715 79, T-716 34, T-717 32, T-718 6, T-722 31, T-724 11, T-725 17, T-732 13, T-737 3.
 
 F-T739-1 by item code: none
 
@@ -233,8 +234,8 @@ Source: T-469 committed side A (BOQ lines 1eff0920, 1,455 lines).
 | CONC.SLAB | 59.817 m3 | 60.280155 (62) | 0 .. 0 (0) | 0 | +0.77 % |
 | CONC.STAIR_DOME | 21.833 m3 | 10.450243 (8) | 0 .. 0 (0) | 6 | at least -52.14 %, upper end open |
 | CONC.POOL | 12.348 m3 | 7.202297 (2) | 0 .. 0 (0) | 1 | at least -41.67 %, upper end open |
-| PLASTER.INTERNAL | 1151.138 m2 | 388.58436 (43) | 1131.965876 .. 1300.69428 (34) | 3 | LIKE FOR LIKE only (Lead 2026-11-11 12:25; ruling 2026-11-12 04:17): -14.83 .. -8.82 % with his 13.50 m2 shaft row APART (NO_FACE / UNRESOLVED on his side), his full total beside -15.81 .. -9.88 % (T-726, quoted, not re-derived); the key-level blended figure is never printed as a % |
-| PAINT.INTERNAL_WALL | 1191.128 m2 | 217.2081 (4) | 601.645338 .. 682.3313 (10) | 0 | -31.25 .. -24.48 % |
+| PLASTER.INTERNAL | 1151.138 m2 | 388.58436 (43) | 1106.948597 .. 1302.168817 (35) | 3 | LIKE FOR LIKE only (Lead 2026-11-11 12:25; ruling 2026-11-12 04:17): -16.76 .. -8.68 % with his 13.50 m2 shaft row APART (NO_FACE / UNRESOLVED on his side), his full total beside -17.72 .. -9.74 % (T-717 on V3.0.74, quoted, not re-derived; engine 961.910324 .. 1055.286936 m2); the key-level blended figure is never printed as a % |
+| PAINT.INTERNAL_WALL | 1191.128 m2 | 217.2081 (4) | 604.990059 .. 710.006421 (38) | 3 | at least -30.97 %, upper end open |
 | FLOOR.INTERNAL | 409.58 m2 | 380.96655 (42) | 0 .. 0 (0) | 0 | TYPED_KEY (tools/alsenan_keymap.py typed selectors only; not run here) |
 | DOORS.ALUMINIUM | 12 m2 | 12.76 (2) | 0 .. 0 (0) | 0 | +6.33 % |
 | WINDOWS.ALUMINIUM | 116.9 m2 | 76.256 (3) | 9.87 .. 11.515 (1) | 1 | at least -26.33 %, upper end open |
@@ -303,7 +304,7 @@ Source: T-469 committed side A (BOQ lines 1eff0920, 1,455 lines).
 | L-c22a64296e7db7575c68 | ARCH.FACADE_RUN | RELEASED | 63.168865 | None | None |
 
 
-## Families with no line in V3.0.73 (39 of 104, master 1.74.0)
+## Families with no line in V3.0.74 (39 of 104, master 1.75.0)
 
 | Family | Group | Item | Unit | T-692 class |
 |---|---|---|---|---|
