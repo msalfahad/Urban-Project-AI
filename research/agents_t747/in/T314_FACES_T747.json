@@ -1,0 +1,1943 @@
+{
+ "expect": {
+  "L-8bb83e16cc7b104ab88b": {
+   "gross": [
+    278.961829,
+    280.73812
+   ],
+   "net": [
+    248.178057,
+    249.954348
+   ]
+  },
+  "L-b05f70c92405dbcfbe62": {
+   "gross": [
+    469.329178,
+    469.329178
+   ],
+   "net": [
+    376.694149,
+    410.179149
+   ]
+  },
+  "L-d52c4f763b19aedf8b8b": {
+   "gross": [
+    125.16,
+    125.16
+   ],
+   "net": [
+    117.305,
+    117.305
+   ]
+  },
+  "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70": {
+   "gross": [
+    54.00748,
+    60.029307
+   ]
+  },
+  "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90": {
+   "gross": [
+    14.9,
+    14.9
+   ],
+   "net": [
+    14.9,
+    14.9
+   ]
+  },
+  "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30": {
+   "gross": [
+    14.671022,
+    15.271022
+   ],
+   "net": [
+    14.671022,
+    15.271022
+   ]
+  },
+  "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50": {
+   "gross": [
+    14.385,
+    14.385
+   ],
+   "net": [
+    14.385,
+    14.385
+   ]
+  },
+  "NEW FIN.EXT.FINISH PLINTH GF": {
+   "gross": [
+    71.68859,
+    72.749795
+   ],
+   "net": [
+    71.68859,
+    72.749795
+   ]
+  },
+  "NEW FIN.EXT.FINISH SLAB-EDGE 1F": {
+   "gross": null,
+   "net": null
+  },
+  "NEW FIN.EXT.FINISH SLAB-EDGE GF": {
+   "gross": [
+    1.85426,
+    4.30924
+   ]
+  },
+  "NEW FIN.EXT.PARAPET-INNER 1F +9.70": {
+   "gross": [
+    41.82353,
+    56.608545
+   ],
+   "net": [
+    41.82353,
+    56.608545
+   ]
+  },
+  "NEW FIN.EXT.PARAPET-INNER 2F +13.90": {
+   "gross": [
+    8.49,
+    14.15
+   ],
+   "net": [
+    8.49,
+    14.15
+   ]
+  },
+  "NEW FIN.EXT.PARAPET-INNER ANNEX +4.30": {
+   "gross": [
+    8.88843,
+    14.91405
+   ],
+   "net": [
+    8.88843,
+    14.91405
+   ]
+  },
+  "NEW FIN.EXT.PARAPET-INNER GF +5.50": {
+   "gross": [
+    8.209433,
+    13.88495
+   ],
+   "net": [
+    8.209433,
+    13.88495
+   ]
+  },
+  "NEW FIN.EXT.PARAPET-TOP 1F +9.70": {
+   "gross": [
+    9.83151,
+    9.84653
+   ],
+   "net": [
+    9.83151,
+    9.84653
+   ]
+  },
+  "NEW FIN.EXT.PARAPET-TOP 2F +13.90": {
+   "gross": [
+    5.415,
+    5.415
+   ],
+   "net": [
+    5.415,
+    5.415
+   ]
+  },
+  "NEW FIN.EXT.PARAPET-TOP ANNEX +4.30": {
+   "gross": [
+    5.99701,
+    6.03701
+   ],
+   "net": [
+    5.99701,
+    6.03701
+   ]
+  },
+  "NEW FIN.EXT.PARAPET-TOP GF +5.50": {
+   "gross": [
+    5.592956,
+    5.67398
+   ],
+   "net": [
+    5.592956,
+    5.67398
+   ]
+  }
+ },
+ "faces": [
+  {
+   "bottom": 0.0,
+   "element": "PLINTH",
+   "face_id": "GF/SE-1/EDGE/plinth",
+   "hi": 2.01,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 2.01,
+   "status": "DRAWING-CONFIRMED",
+   "top": 0.3
+  },
+  {
+   "bottom": 0.3,
+   "element": "STOREY",
+   "face_id": "GF/SE-1/EDGE/storey",
+   "hi": 26.8,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 26.8,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.3
+  },
+  {
+   "bottom": 4.3,
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/SE-1/EDGE/parapet",
+   "hi": 3.35,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "lo": 3.35,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.8
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SW-1/EDGE/plinth",
+   "hi": 0.465,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.465,
+   "status": "DRAWING-CONFIRMED",
+   "top": 0.3
+  },
+  {
+   "bottom": 0.3,
+   "element": "STOREY",
+   "face_id": "GF/SW-1/EDGE/storey",
+   "hi": 12.4,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 12.4,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.3
+  },
+  {
+   "bottom": 4.3,
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/SW-1/EDGE/parapet",
+   "hi": 1.55,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "lo": 1.55,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.8
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SW-2/EDGE/plinth",
+   "hi": 0.3063,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.3063,
+   "status": "DRAWING-CONFIRMED",
+   "top": 0.3
+  },
+  {
+   "bottom": 0.3,
+   "element": "STOREY",
+   "face_id": "GF/SW-2/EDGE/storey",
+   "hi": 8.168178,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 8.168178,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.3
+  },
+  {
+   "bottom": 4.3,
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/SW-2/EDGE/parapet",
+   "hi": 1.021022,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "lo": 1.021022,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.8
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/NW-1/EDGE/plinth",
+   "hi": 0.075,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.075,
+   "status": "DRAWING-CONFIRMED",
+   "top": 0.3
+  },
+  {
+   "bottom": 0.3,
+   "element": "STOREY",
+   "face_id": "GF/NW-1/EDGE/storey",
+   "hi": 2.0,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 2.0,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.3
+  },
+  {
+   "bottom": 4.3,
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/NW-1/EDGE/parapet",
+   "hi": 0.25,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "lo": 0.25,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.8
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SW-3/COVERED/plinth",
+   "hi": 0.03,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.03,
+   "status": "DRAWING-CONFIRMED",
+   "top": 0.3
+  },
+  {
+   "bottom": 0.3,
+   "element": "STOREY",
+   "face_id": "GF/SW-3/COVERED/storey",
+   "hi": 1.04,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 1.04,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SW-3/EDGE/plinth",
+   "hi": 0.93,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.93,
+   "status": "DRAWING-CONFIRMED",
+   "top": 0.3
+  },
+  {
+   "bottom": 0.3,
+   "element": "STOREY",
+   "face_id": "GF/SW-3/EDGE/storey",
+   "hi": 24.8,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 24.8,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.3
+  },
+  {
+   "bottom": 4.3,
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/SW-3/EDGE/parapet",
+   "hi": 3.1,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "lo": 3.1,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.8
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SW-5/COVERED/plinth",
+   "hi": 2.55,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 2.55,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/SW-5/COVERED/storey",
+   "hi": 13.5,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 13.5,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SE-2/COVERED/plinth",
+   "hi": 3.145,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 3.145,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/SE-2/COVERED/storey",
+   "hi": 16.65,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 16.65,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/NE-1/COVERED/plinth",
+   "hi": 1.19,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 1.19,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/NE-1/COVERED/storey",
+   "hi": 6.3,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 6.3,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SE-3/COVERED/plinth",
+   "hi": 0.34,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.34,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/SE-3/COVERED/storey",
+   "hi": 1.8,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 1.8,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SW-6/FLUSH/plinth",
+   "hi": 1.19,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 1.19,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/SW-6/FLUSH/storey",
+   "hi": 6.3,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 6.3,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SE-4/FLUSH/plinth",
+   "hi": 3.825,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 3.825,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/SE-4/FLUSH/storey",
+   "hi": 20.25,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 20.25,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SW-7/FLUSH/plinth",
+   "hi": 12.6395,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 12.6395,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/SW-7/FLUSH/storey",
+   "hi": 66.915,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 66.915,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/NW-2/FLUSH/plinth",
+   "hi": 0.2125,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.2125,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/NW-2/FLUSH/storey",
+   "hi": 1.125,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 1.125,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/NE-2/COVERED/plinth",
+   "hi": 0.425,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.425,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/NE-2/COVERED/storey",
+   "hi": 2.25,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 2.25,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SE-5/COVERED/plinth",
+   "hi": 0.0425,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.0425,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/SE-5/COVERED/storey",
+   "hi": 0.225,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 0.225,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/NE-3/COVERED/plinth",
+   "hi": 0.068,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.068,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/NE-3/COVERED/storey",
+   "hi": 0.36,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 0.36,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": null,
+   "element": "PLINTH",
+   "face_id": "GF/NW-3/COVERED/plinth",
+   "hi": 0.164475,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.13545,
+   "status": "HELD",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/NW-3/COVERED/storey",
+   "hi": 0.8707,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 0.8707,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": null,
+   "element": "PLINTH",
+   "face_id": "GF/NW-4/COVERED/plinth",
+   "hi": 5.659045,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 4.66039,
+   "status": "HELD",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/NW-4/COVERED/storey",
+   "hi": 29.9596,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 29.9596,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": null,
+   "element": "PLINTH",
+   "face_id": "GF/NW-5/COVERED/plinth",
+   "hi": 0.121975,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.10045,
+   "status": "HELD",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/NW-5/COVERED/storey",
+   "hi": 0.6457,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 0.6457,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": null,
+   "element": "PLINTH",
+   "face_id": "GF/SW-8/COVERED/plinth",
+   "hi": 0.068,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.056,
+   "status": "HELD",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/SW-8/COVERED/storey",
+   "hi": 0.36,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 0.36,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/NW-6/COVERED/plinth",
+   "hi": 0.3825,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.3825,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/NW-6/COVERED/storey",
+   "hi": 2.025,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 2.025,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SW-9/COVERED/plinth",
+   "hi": 0.425,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.425,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/SW-9/COVERED/storey",
+   "hi": 2.25,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 2.25,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/SW-9/EDGE/plinth",
+   "hi": 1.275,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 1.275,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/SW-9/EDGE/storey",
+   "hi": 6.75,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 6.75,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 5.5,
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/SW-9/EDGE/parapet",
+   "hi": 0.75,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+   "lo": 0.75,
+   "status": "DRAWING-CONFIRMED",
+   "top": 6.0
+  },
+  {
+   "bottom": 0.0,
+   "element": "PLINTH",
+   "face_id": "GF/NW-7/EDGE/plinth",
+   "hi": 7.9,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 7.9,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/NW-7/EDGE/storey",
+   "hi": 35.55,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 35.55,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 5.5,
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/NW-7/EDGE/parapet",
+   "hi": 3.95,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+   "lo": 3.95,
+   "status": "DRAWING-CONFIRMED",
+   "top": 6.0
+  },
+  {
+   "bottom": 0.0,
+   "element": "PLINTH",
+   "face_id": "GF/NE-4/EDGE/plinth",
+   "hi": 19.37,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 19.37,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/NE-4/EDGE/storey",
+   "hi": 87.165,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 87.165,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 5.5,
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/NE-4/EDGE/parapet",
+   "hi": 9.685,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+   "lo": 9.685,
+   "status": "DRAWING-CONFIRMED",
+   "top": 6.0
+  },
+  {
+   "bottom": 0.0,
+   "element": "PLINTH",
+   "face_id": "GF/NE-6/EDGE/plinth",
+   "hi": 3.24,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 3.24,
+   "status": "DRAWING-CONFIRMED",
+   "top": 0.3
+  },
+  {
+   "bottom": 0.3,
+   "element": "STOREY",
+   "face_id": "GF/NE-6/EDGE/storey",
+   "hi": 43.2,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 43.2,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.3
+  },
+  {
+   "bottom": 4.3,
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/NE-6/EDGE/parapet",
+   "hi": 5.4,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "lo": 5.4,
+   "status": "DRAWING-CONFIRMED",
+   "top": 4.8
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/P-1/COVERED/plinth",
+   "hi": 0.705,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 0.705,
+   "status": "DRAWING-CONFIRMED",
+   "top": 0.3
+  },
+  {
+   "bottom": 0.3,
+   "element": "STOREY",
+   "face_id": "GF/P-1/COVERED/storey",
+   "hi": 24.44,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 24.44,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 0.15,
+   "element": "PLINTH",
+   "face_id": "GF/P-2/COVERED/plinth",
+   "hi": 3.995,
+   "line": "NEW FIN.EXT.FINISH PLINTH GF",
+   "lo": 3.995,
+   "status": "DRAWING-CONFIRMED",
+   "top": 1.0
+  },
+  {
+   "bottom": 1.0,
+   "element": "STOREY",
+   "face_id": "GF/P-2/COVERED/storey",
+   "hi": 21.15,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 21.15,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NW-1/STOREY/storey",
+   "hi": 4.9152,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 4.9152,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-1/PARAPET/parapet",
+   "hi": 1.5206,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 1.5206,
+   "status": "DRAWING-CONFIRMED",
+   "top": 10.999
+  },
+  {
+   "bottom": null,
+   "element": "SLAB_EDGE",
+   "face_id": "1F/NW-2/SLAB_EDGE_BELOW/slab_edge",
+   "hi": 2.00625,
+   "line": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "lo": 0.535,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NW-2/STOREY/storey",
+   "hi": 14.8188,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 14.8188,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-2/PARAPET/parapet",
+   "hi": 3.977236,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 3.977236,
+   "status": "DRAWING-CONFIRMED",
+   "top": 11.0
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NW-3/STOREY/storey",
+   "hi": 2.4276,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 2.4276,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-3/PARAPET/parapet",
+   "hi": 0.7511,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 0.7511,
+   "status": "DRAWING-CONFIRMED",
+   "top": 10.999
+  },
+  {
+   "bottom": null,
+   "element": "SLAB_EDGE",
+   "face_id": "1F/NE-1/SLAB_EDGE_BELOW/slab_edge",
+   "hi": null,
+   "line": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "lo": null,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NE-1/STOREY/storey",
+   "hi": 0.336,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 0.336,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NE-1/PARAPET/parapet",
+   "hi": 0.103968,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 0.087968,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": null,
+   "element": "SLAB_EDGE",
+   "face_id": "1F/NW-4/SLAB_EDGE_BELOW/slab_edge",
+   "hi": null,
+   "line": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "lo": null,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NW-4/STOREY/storey",
+   "hi": 1.9627,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 1.9627,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-4/PARAPET/parapet",
+   "hi": 0.5135,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 0.5135,
+   "status": "DRAWING-CONFIRMED",
+   "top": 10.799
+  },
+  {
+   "bottom": null,
+   "element": "SLAB_EDGE",
+   "face_id": "1F/SW-1/SLAB_EDGE_BELOW/slab_edge",
+   "hi": null,
+   "line": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "lo": null,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/SW-1/STOREY/storey",
+   "hi": 0.336,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 0.336,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/SW-1/PARAPET/parapet",
+   "hi": 0.103968,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 0.087968,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": null,
+   "element": "SLAB_EDGE",
+   "face_id": "1F/NW-5/SLAB_EDGE_BELOW/slab_edge",
+   "hi": null,
+   "line": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "lo": null,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NW-5/STOREY/storey",
+   "hi": 28.245,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 28.245,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-5/PARAPET/parapet",
+   "hi": 3.0134,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 3.0134,
+   "status": "DRAWING-CONFIRMED",
+   "top": 10.148
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NE-2/STOREY/storey",
+   "hi": 80.934,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 80.934,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NE-2/PARAPET/parapet",
+   "hi": 25.051,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 25.051,
+   "status": "DRAWING-CONFIRMED",
+   "top": 11.0
+  },
+  {
+   "bottom": 4.3,
+   "element": "STOREY",
+   "face_id": "1F/SE-1/OVER_LOWER_ROOF/over_lower_roof",
+   "hi": 4.08,
+   "line": "L-b05f70c92405dbcfbe62",
+   "lo": 4.08,
+   "status": "DRAWING-CONFIRMED",
+   "top": 5.5
+  },
+  {
+   "bottom": null,
+   "element": "SLAB_EDGE",
+   "face_id": "1F/SE-1/SLAB_EDGE_BELOW/slab_edge",
+   "hi": null,
+   "line": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "lo": null,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/SE-1/STOREY/storey",
+   "hi": 31.5,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 31.5,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/SE-1/PARAPET/parapet",
+   "hi": 7.807,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 7.807,
+   "status": "DRAWING-CONFIRMED",
+   "top": 10.741
+  },
+  {
+   "bottom": null,
+   "element": "SLAB_EDGE",
+   "face_id": "1F/SW-2/SLAB_EDGE_BELOW/slab_edge",
+   "hi": null,
+   "line": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "lo": null,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/SW-2/STOREY/storey",
+   "hi": 18.48,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 18.48,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/SW-2/PARAPET/parapet",
+   "hi": 7.04,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 1.694,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/SE-2/STOREY/storey",
+   "hi": 18.9,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 18.9,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/SW-3/STOREY/storey",
+   "hi": 62.454,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 62.454,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/SW-3/PARAPET/parapet",
+   "hi": 8.801,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 8.801,
+   "status": "DRAWING-CONFIRMED",
+   "top": 11.0
+  },
+  {
+   "bottom": 9.7,
+   "element": "STOREY",
+   "face_id": "2F/NW-1/STOREY+PARAPET/storey",
+   "hi": 28.56,
+   "line": "L-d52c4f763b19aedf8b8b",
+   "lo": 28.56,
+   "status": "DRAWING-CONFIRMED",
+   "top": 13.9
+  },
+  {
+   "bottom": 13.9,
+   "element": "PARAPET_OUTER",
+   "face_id": "2F/NW-1/STOREY+PARAPET/parapet",
+   "hi": 3.4,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "lo": 3.4,
+   "status": "DRAWING-CONFIRMED",
+   "top": 14.4
+  },
+  {
+   "bottom": 9.7,
+   "element": "STOREY",
+   "face_id": "2F/NE-1/STOREY+PARAPET/storey",
+   "hi": 34.02,
+   "line": "L-d52c4f763b19aedf8b8b",
+   "lo": 34.02,
+   "status": "DRAWING-CONFIRMED",
+   "top": 13.9
+  },
+  {
+   "bottom": 13.9,
+   "element": "PARAPET_OUTER",
+   "face_id": "2F/NE-1/STOREY+PARAPET/parapet",
+   "hi": 4.05,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "lo": 4.05,
+   "status": "DRAWING-CONFIRMED",
+   "top": 14.4
+  },
+  {
+   "bottom": 9.7,
+   "element": "STOREY",
+   "face_id": "2F/SE-1/STOREY+PARAPET/storey",
+   "hi": 28.56,
+   "line": "L-d52c4f763b19aedf8b8b",
+   "lo": 28.56,
+   "status": "DRAWING-CONFIRMED",
+   "top": 13.9
+  },
+  {
+   "bottom": 13.9,
+   "element": "PARAPET_OUTER",
+   "face_id": "2F/SE-1/STOREY+PARAPET/parapet",
+   "hi": 3.4,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "lo": 3.4,
+   "status": "DRAWING-CONFIRMED",
+   "top": 14.4
+  },
+  {
+   "bottom": 9.7,
+   "element": "STOREY",
+   "face_id": "2F/SW-1/STOREY+PARAPET/storey",
+   "hi": 34.02,
+   "line": "L-d52c4f763b19aedf8b8b",
+   "lo": 34.02,
+   "status": "DRAWING-CONFIRMED",
+   "top": 13.9
+  },
+  {
+   "bottom": 13.9,
+   "element": "PARAPET_OUTER",
+   "face_id": "2F/SW-1/STOREY+PARAPET/parapet",
+   "hi": 4.05,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "lo": 4.05,
+   "status": "DRAWING-CONFIRMED",
+   "top": 14.4
+  },
+  {
+   "bottom": 4.3,
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/NE-6x/EDGE/parapet",
+   "hi": 0.6,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "lo": 0.0,
+   "status": "HELD",
+   "top": 4.8
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NW-2/SCREEN-FRONT/storey",
+   "hi": 4.71571,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 4.71571,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NW-2/SCREEN-BACK/storey",
+   "hi": 4.71571,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 4.71571,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NW-2/SCREEN-MOULDING-STEPS/storey",
+   "hi": 1.776291,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 0.0,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NW-1/CORNER-ARC/storey",
+   "hi": 0.715029,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 0.715029,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-1/CORNER-ARC/parapet",
+   "hi": 0.221319,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 0.221319,
+   "status": "DRAWING-CONFIRMED",
+   "top": 11.0
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NW-3/SW-RETURN/storey",
+   "hi": 1.252688,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 1.252688,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-3/SW-RETURN/parapet",
+   "hi": 0.427737,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 0.427737,
+   "status": "DRAWING-CONFIRMED",
+   "top": 11.0
+  },
+  {
+   "bottom": null,
+   "element": "SLAB_EDGE",
+   "face_id": "GF/AT225/RING-INNER/slab_edge",
+   "hi": 3.3477,
+   "line": "NEW FIN.EXT.FINISH SLAB-EDGE GF",
+   "lo": 0.89272,
+   "status": "HELD",
+   "top": 5.5
+  },
+  {
+   "bottom": 5.3,
+   "element": "SLAB_EDGE",
+   "face_id": "GF/POOL-COURT-FRONT/slab_edge",
+   "hi": 0.96154,
+   "line": "NEW FIN.EXT.FINISH SLAB-EDGE GF",
+   "lo": 0.96154,
+   "status": "HELD",
+   "top": 5.5
+  },
+  {
+   "bottom": 5.5,
+   "element": "STOREY",
+   "face_id": "1F/NW-5/SW-PIER-RETURNS/storey",
+   "hi": 2.253392,
+   "line": "L-8bb83e16cc7b104ab88b",
+   "lo": 2.253392,
+   "status": "DRAWING-CONFIRMED",
+   "top": 9.7
+  },
+  {
+   "bottom": 9.7,
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-5/SW-PIER-RETURNS/parapet",
+   "hi": 0.697479,
+   "line": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "lo": 0.053652,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": null,
+   "element": "PARAPET_INNER",
+   "face_id": "PARAPET_INNER/ANNEX",
+   "hi": 14.91405,
+   "line": "NEW FIN.EXT.PARAPET-INNER ANNEX +4.30",
+   "lo": 8.88843,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": null,
+   "element": "PARAPET_INNER",
+   "face_id": "PARAPET_INNER/GF",
+   "hi": 13.88495,
+   "line": "NEW FIN.EXT.PARAPET-INNER GF +5.50",
+   "lo": 8.209433,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": null,
+   "element": "PARAPET_INNER",
+   "face_id": "PARAPET_INNER/1F",
+   "hi": 56.608545,
+   "line": "NEW FIN.EXT.PARAPET-INNER 1F +9.70",
+   "lo": 41.82353,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": null,
+   "element": "PARAPET_INNER",
+   "face_id": "PARAPET_INNER/2F",
+   "hi": 14.15,
+   "line": "NEW FIN.EXT.PARAPET-INNER 2F +13.90",
+   "lo": 8.49,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": null,
+   "element": "PARAPET_TOP",
+   "face_id": "PARAPET_TOP/ANNEX",
+   "hi": 6.03701,
+   "line": "NEW FIN.EXT.PARAPET-TOP ANNEX +4.30",
+   "lo": 5.99701,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": null,
+   "element": "PARAPET_TOP",
+   "face_id": "PARAPET_TOP/GF",
+   "hi": 5.67398,
+   "line": "NEW FIN.EXT.PARAPET-TOP GF +5.50",
+   "lo": 5.592956,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": null,
+   "element": "PARAPET_TOP",
+   "face_id": "PARAPET_TOP/1F",
+   "hi": 9.84653,
+   "line": "NEW FIN.EXT.PARAPET-TOP 1F +9.70",
+   "lo": 9.83151,
+   "status": "HELD",
+   "top": null
+  },
+  {
+   "bottom": null,
+   "element": "PARAPET_TOP",
+   "face_id": "PARAPET_TOP/2F",
+   "hi": 5.415,
+   "line": "NEW FIN.EXT.PARAPET-TOP 2F +13.90",
+   "lo": 5.415,
+   "status": "DRAWING-CONFIRMED",
+   "top": null
+  }
+ ],
+ "lines": [
+  {
+   "element": "STOREY",
+   "element_id": null,
+   "floor": "GF",
+   "key": "L-b05f70c92405dbcfbe62",
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "why_held": "W02 (D-53) and D-GF-07 (D-45) hole sizes HELD"
+  },
+  {
+   "element": "STOREY",
+   "element_id": null,
+   "floor": "1F",
+   "key": "L-8bb83e16cc7b104ab88b",
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "why_held": null
+  },
+  {
+   "element": "STOREY",
+   "element_id": null,
+   "floor": "2F",
+   "key": "L-d52c4f763b19aedf8b8b",
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "why_held": null
+  },
+  {
+   "element": "PARAPET_OUTER",
+   "element_id": "GF-FACADE:PARAPET_OUTER:ANNEX_ROOF",
+   "floor": "GF",
+   "key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "line_id": null,
+   "why_held": "annex boundary face on AC7 (T-324 C5, Q-65 C): house parapet or boundary wall 0 .. 0.600 m2"
+  },
+  {
+   "element": "PARAPET_OUTER",
+   "element_id": "GF-FACADE:PARAPET_OUTER:GF_ROOF",
+   "floor": "GF",
+   "key": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+   "line_id": null,
+   "why_held": null
+  },
+  {
+   "element": "PARAPET_OUTER",
+   "element_id": "1F-FACADE:PARAPET_OUTER:1F_ROOF",
+   "floor": "1F",
+   "key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "line_id": null,
+   "why_held": "parapet heights NE-1 / SW-1 / SW-2 not printed and the NW-2 frame profile (chord 3.2496 vs arc 3.5283 m, T-324 C3)"
+  },
+  {
+   "element": "PARAPET_OUTER",
+   "element_id": "2F-FACADE:PARAPET_OUTER:2F_ROOF",
+   "floor": "2F",
+   "key": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "line_id": null,
+   "why_held": null
+  },
+  {
+   "element": "PLINTH",
+   "element_id": "GF-FACADE:PLINTH",
+   "floor": "GF",
+   "key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "line_id": null,
+   "why_held": "pool-court plinth bottom level not printed; plinth finish (plaster / Sigma or cladding) not specified (T-317)"
+  },
+  {
+   "element": "SLAB_EDGE",
+   "element_id": "1F-FACADE:SLAB_EDGE",
+   "floor": "1F",
+   "key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "line_id": null,
+   "why_held": "1F slab edge over open air: 13.079 m run, depth / finish not printed (Q-68 C)"
+  },
+  {
+   "element": "SLAB_EDGE",
+   "element_id": "GF-FACADE:SLAB_EDGE",
+   "floor": "GF",
+   "key": "NEW FIN.EXT.FINISH SLAB-EDGE GF",
+   "line_id": null,
+   "why_held": "void ring inner face depth not printed (T-348 r2); pool-court front edge: owner trade open (court sea wall on the plot line, Q-65 C)"
+  },
+  {
+   "element": "PARAPET_INNER",
+   "element_id": "GF-FACADE:PARAPET_INNER:ANNEX_ROOF",
+   "floor": "GF",
+   "key": "NEW FIN.EXT.PARAPET-INNER ANNEX +4.30",
+   "line_id": null,
+   "why_held": "parapet inner face above the membrane upturn: split height not printed (D-39); the upturn zone below it is the waterproofing trade's"
+  },
+  {
+   "element": "PARAPET_INNER",
+   "element_id": "GF-FACADE:PARAPET_INNER:GF_ROOF",
+   "floor": "GF",
+   "key": "NEW FIN.EXT.PARAPET-INNER GF +5.50",
+   "line_id": null,
+   "why_held": "parapet inner face above the membrane upturn: split height not printed (D-39); the upturn zone below it is the waterproofing trade's"
+  },
+  {
+   "element": "PARAPET_INNER",
+   "element_id": "1F-FACADE:PARAPET_INNER:1F_ROOF",
+   "floor": "1F",
+   "key": "NEW FIN.EXT.PARAPET-INNER 1F +9.70",
+   "line_id": null,
+   "why_held": "parapet inner face above the membrane upturn: split height not printed (D-39); the upturn zone below it is the waterproofing trade's"
+  },
+  {
+   "element": "PARAPET_INNER",
+   "element_id": "2F-FACADE:PARAPET_INNER:2F_ROOF",
+   "floor": "2F",
+   "key": "NEW FIN.EXT.PARAPET-INNER 2F +13.90",
+   "line_id": null,
+   "why_held": "parapet inner face above the membrane upturn: split height not printed (D-39); the upturn zone below it is the waterproofing trade's"
+  },
+  {
+   "element": "PARAPET_TOP",
+   "element_id": "GF-FACADE:PARAPET_TOP:ANNEX_ROOF",
+   "floor": "GF",
+   "key": "NEW FIN.EXT.PARAPET-TOP ANNEX +4.30",
+   "line_id": null,
+   "why_held": "parapet top width bands (T-324 D bands)"
+  },
+  {
+   "element": "PARAPET_TOP",
+   "element_id": "GF-FACADE:PARAPET_TOP:GF_ROOF",
+   "floor": "GF",
+   "key": "NEW FIN.EXT.PARAPET-TOP GF +5.50",
+   "line_id": null,
+   "why_held": "parapet top width bands (T-324 D bands)"
+  },
+  {
+   "element": "PARAPET_TOP",
+   "element_id": "1F-FACADE:PARAPET_TOP:1F_ROOF",
+   "floor": "1F",
+   "key": "NEW FIN.EXT.PARAPET-TOP 1F +9.70",
+   "line_id": null,
+   "why_held": "parapet top width bands (T-324 D bands)"
+  },
+  {
+   "element": "PARAPET_TOP",
+   "element_id": "2F-FACADE:PARAPET_TOP:2F_ROOF",
+   "floor": "2F",
+   "key": "NEW FIN.EXT.PARAPET-TOP 2F +13.90",
+   "line_id": null,
+   "why_held": "parapet top width bands (T-324 D bands)"
+  }
+ ],
+ "openings": [
+  {
+   "cap_m2": null,
+   "face_id": "1F/NE-2/STOREY/storey",
+   "head": 8.0,
+   "hole_m2": 0.48,
+   "opening_id": "W19",
+   "sill": 7.2,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/NE-2/STOREY/storey",
+   "head": 8.0,
+   "hole_m2": 0.48,
+   "opening_id": "W20",
+   "sill": 7.2,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/NE-2/STOREY/storey",
+   "head": 8.0,
+   "hole_m2": 2.325,
+   "opening_id": "W24",
+   "sill": 6.5,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/NW-2/STOREY/storey",
+   "head": null,
+   "hole_m2": 8.1434,
+   "opening_id": "W17",
+   "sill": null,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/NW-5/STOREY/storey",
+   "head": 8.6,
+   "hole_m2": 4.363,
+   "opening_id": "W15",
+   "sill": 5.5,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/NW-5/STOREY/storey",
+   "head": 8.6,
+   "hole_m2": 4.363,
+   "opening_id": "W16",
+   "sill": 5.5,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/SE-1/STOREY/storey",
+   "head": 8.5,
+   "hole_m2": 3.92,
+   "opening_id": "W14",
+   "sill": 6.9,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/SE-2/STOREY/storey",
+   "head": 8.8,
+   "hole_m2": 2.76,
+   "opening_id": "W13",
+   "sill": 6.5,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/SW-3/STOREY/storey",
+   "head": 7.0,
+   "hole_m2": 1.5,
+   "opening_id": "W25",
+   "sill": 5.5,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/SW-3/STOREY/storey",
+   "head": 8.0,
+   "hole_m2": 0.48,
+   "opening_id": "W21",
+   "sill": 7.2,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/SW-3/STOREY/storey",
+   "head": 8.0,
+   "hole_m2": 0.48,
+   "opening_id": "W22",
+   "sill": 7.2,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/SW-3/STOREY/storey",
+   "head": 8.0,
+   "hole_m2": 0.48,
+   "opening_id": "W23",
+   "sill": 7.2,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "2F/NE-1/STOREY+PARAPET/storey",
+   "head": 11.9,
+   "hole_m2": 2.2,
+   "opening_id": "D-2F-01",
+   "sill": 9.7,
+   "status": "ASSUMED — OWNER-APPROVED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "2F/SE-1/STOREY+PARAPET/storey",
+   "head": 12.5,
+   "hole_m2": 1.875,
+   "opening_id": "W26",
+   "sill": 10.8,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "2F/SW-1/STOREY+PARAPET/storey",
+   "head": 11.2,
+   "hole_m2": 1.5,
+   "opening_id": "W27",
+   "sill": 9.7,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "2F/SW-1/STOREY+PARAPET/storey",
+   "head": 12.2,
+   "hole_m2": 0.48,
+   "opening_id": "W28",
+   "sill": 11.4,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "2F/SW-1/STOREY+PARAPET/storey",
+   "head": 12.2,
+   "hole_m2": 1.8,
+   "opening_id": "W29",
+   "sill": 10.7,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": 28.485,
+   "face_id": "GF/NW-7/EDGE/storey",
+   "head": null,
+   "hole_m2": null,
+   "opening_id": "W02",
+   "sill": null,
+   "status": "HELD"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/P-1/COVERED/storey",
+   "head": 2.5,
+   "hole_m2": 2.2,
+   "opening_id": "D-GF-05",
+   "sill": 0.3,
+   "status": "ASSUMED — OWNER-APPROVED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/P-2/COVERED/storey",
+   "head": 3.5,
+   "hole_m2": 2.25,
+   "opening_id": "W09",
+   "sill": 2.0,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/P-2/COVERED/storey",
+   "head": 3.5,
+   "hole_m2": 1.5,
+   "opening_id": "W10",
+   "sill": 2.0,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SE-1/EDGE/storey",
+   "head": null,
+   "hole_m2": 4.29,
+   "opening_id": "W11",
+   "sill": null,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SE-1/EDGE/storey",
+   "head": null,
+   "hole_m2": 4.29,
+   "opening_id": "W12",
+   "sill": null,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": 5.0,
+   "face_id": "GF/SE-2/COVERED/storey",
+   "head": 3.5,
+   "hole_m2": null,
+   "opening_id": "D-GF-07",
+   "sill": 1.0,
+   "status": "HELD"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SE-4/FLUSH/storey",
+   "head": 4.0,
+   "hole_m2": 2.4,
+   "opening_id": "W01",
+   "sill": 2.0,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SW-1/EDGE/storey",
+   "head": 2.5,
+   "hole_m2": 2.2,
+   "opening_id": "D-GF-01",
+   "sill": 0.3,
+   "status": "ASSUMED — OWNER-APPROVED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SW-3/EDGE/storey",
+   "head": 2.8,
+   "hole_m2": 0.48,
+   "opening_id": "W04",
+   "sill": 2.0,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SW-3/EDGE/storey",
+   "head": 2.5,
+   "hole_m2": 1.98,
+   "opening_id": "D-GF-03",
+   "sill": 0.3,
+   "status": "ASSUMED — OWNER-APPROVED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SW-3/EDGE/storey",
+   "head": 2.8,
+   "hole_m2": 2.25,
+   "opening_id": "W08",
+   "sill": 1.3,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SW-5/COVERED/storey",
+   "head": 3.2,
+   "hole_m2": 2.2,
+   "opening_id": "D-GF-06",
+   "sill": 1.0,
+   "status": "ASSUMED — OWNER-APPROVED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SW-7/FLUSH/storey",
+   "head": 3.2,
+   "hole_m2": 1.98,
+   "opening_id": "D-GF-09",
+   "sill": 1.0,
+   "status": "ASSUMED — OWNER-APPROVED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SW-7/FLUSH/storey",
+   "head": null,
+   "hole_m2": 0.48,
+   "opening_id": "W05",
+   "sill": null,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SW-7/FLUSH/storey",
+   "head": 3.5,
+   "hole_m2": 0.48,
+   "opening_id": "W06",
+   "sill": 2.7,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/SW-7/FLUSH/storey",
+   "head": 3.5,
+   "hole_m2": 0.48,
+   "opening_id": "W07",
+   "sill": 2.7,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "1F/NW-4/STOREY/storey",
+   "head": 8.5,
+   "hole_m2": 1.009372,
+   "opening_id": "W18",
+   "sill": 6.34,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/NW-3/COVERED/storey",
+   "head": 5.3,
+   "hole_m2": 0.616994,
+   "opening_id": "W03 (frame end on NW-3)",
+   "sill": 1.0,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/NW-4/COVERED/storey",
+   "head": 5.3,
+   "hole_m2": 28.628041,
+   "opening_id": "W03",
+   "sill": 1.0,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "cap_m2": null,
+   "face_id": "GF/NW-5/COVERED/storey",
+   "head": 5.3,
+   "hole_m2": 0.444994,
+   "opening_id": "W03 (frame end on NW-5)",
+   "sill": 1.0,
+   "status": "DRAWING-CONFIRMED"
+  }
+ ],
+ "schema": "URBAN_T747_STAGE_FACES_V1",
+ "source_blobs": {
+  "research/agents_t305/FACE_LINE_LEDGER_T305.csv": "ff60627d29a8806d745003acdf70a3b82340101a",
+  "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv": "8c12e9bf87d5f69d4378b0d4eabd38933517a5ef",
+  "research/agents_t324/T-324_PARAPET_COMPONENTS.md": "f7fd462f378ea98a32ba73a09b6230f82d275fe4",
+  "research/agents_t337/BINDING_T337.csv": "54f05a11b9d72595ac0b393bc0769e6aae553e87",
+  "research/agents_t337/FILL_ITEMS_T314_T337.csv": "fd4774eba3d149339fda9387e6cd16acbc592227",
+  "research/agents_t337/FILL_T314_T337.csv": "8c1d3a3414d1a83136cd53bc1d8c25fcec5638a3",
+  "research/agents_t337/ITEMS_T337.csv": "1d3152a0cffca8631fcd3c46f38c049ef7980c24",
+  "research/agents_t337/OPENINGS_T337.csv": "06465cbb96ae1962314094e8f26002b4732c9fd0",
+  "research/agents_t348/FACES_T348.csv": "5a0617087cfa2c41392999dd4b0af807d4d6a0be",
+  "research/agents_t348/FILL_T314_T348.csv": "c1ceb41bc8d18a9be41c819593bdf40678d4195b",
+  "research/agents_t349/CLOSURE_T349.csv": "681612cabf6a642372d292e65ee20ebf0cdf4559",
+  "research/agents_t567/out/FACES_T567.csv": "2620a7f1a4e74eb68f488c31257e64b91cd2e3af"
+ },
+ "stage": {
+  "branch": "agents/task-T-314",
+  "commit": "080ccaa5",
+  "inputs_blob": "7c6cb3388b8425d16e8b20dd4a9c566ebbf6cc93",
+  "pin": "research/agents_t737/in/T314_STAGE_T737.json"
+ }
+}
