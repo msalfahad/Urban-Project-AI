@@ -41,6 +41,8 @@ branch. The Verifier alone also pushes a verified merge to `claude/access-permis
 
 - Clone, fetch from, attach (add_repo) or push to any other repository. This repository is the only one.
 - Push to `main`, force-push, rewrite published history, delete branches, or change remotes.
+- Merge a pull request. Only the owner's main chat merges pull requests, and only in this repository (owner
+  2026-11-12: "Push and merge for Urban project AI and not urbanprojectmanager"). Scheduled agents never merge.
 - Create, change or fire scheduled tasks or sessions.
 - Write to Google Drive. Drive is read-only.
 - Edit frozen engine methods or existing rule / knowledge version files, or release an unverified quantity.
