@@ -226,16 +226,20 @@ def test_endpoint_coverage_names_a_drain_with_no_pipe():
 
 def test_committed_alsenan_output_re_adds():
     """the committed development-villa output (counts and lm only) is internally consistent: every row re-adds from
-    its runs / risers, statuses never mixed, HELD never valued 0, no coordinates in the file."""
+    its runs / risers, statuses never mixed, HELD never valued 0, no coordinates in the file. V2 (r2): every plan run of
+    the not-to-scale sheets is HELD_SCHEMATIC_NOT_TO_SCALE with its scaled figure apart; risers keep printed levels."""
     import json
     out = json.loads((ROOT / "research" / "agents_t745" / "out" / "T745_ALSENAN_RUNS.json").read_text())
-    assert out["method"] == R.METHOD_ID
+    assert out["method"] == R.METHOD_ID == "DRAIN_RUN_CENSUS_T745_V2"
+    assert set(out["sheet_basis"].values()) == {R.BASIS_SCHEMATIC}
     for row in out["rows"]:
         if row["kind"] == "PLAN":
+            assert row["status"] == R.HELD_SCHEMATIC and row["lm"] is None and row["lm_high"] is None
+            assert row["info_label"] == R.SCALED_INFO_LABEL
             runs = [r for r in out["runs"] if (r["floor"], r["system"], r["diameter_in"], r["status"])
                     == (row["floor"], row["system"], row["diameter_in"], row["status"])]
-            assert len(runs) == row["runs"]
-            assert sum(r["lm"] for r in runs) == pytest.approx(row["lm"], abs=0.002 * len(runs))
+            assert len(runs) == row["runs"] and all(r["lm"] is None for r in runs)
+            assert sum(r["scaled_info_lm"] for r in runs) == pytest.approx(row["scaled_info_lm"], abs=0.002)
         elif row["kind"] == "RISER":
             zs = [z for z in out["risers"] if (z["system"], z["diameter_in"], z["lm"]["status"])
                   == (row["system"], row["diameter_in"], row["status"])]
@@ -247,8 +251,120 @@ def test_committed_alsenan_output_re_adds():
                 assert sum(z["lm"]["high"] for z in zs) == pytest.approx(row["lm_high"])
         else:
             assert row["status"] == R.HELD_NOT_DRAWN and row["lm"] is None
+    t = out["totals_by_state"]
+    assert "PLAN|MEASURED" not in t and "PLAN|HELD_DIAMETER_UNPRINTED" not in t
+    assert t["PLAN|HELD_SCHEMATIC_NOT_TO_SCALE"]["lm"] is None
+    assert t["PLAN|HELD_SCHEMATIC_NOT_TO_SCALE"]["scaled_info_lm"] == pytest.approx(119.163, abs=0.002)
+    assert t["RISER|MEASURED"]["lm"] == pytest.approx(32.40) and t["RISER|BOUNDED"]["lm_high"] == pytest.approx(15.60)
     assert out["floor_drain_outlets"] == {"GF": {"floor_drains": 11, "with_a_drawn_pipe": 11, "without": 0},
                                           "1F": {"floor_drains": 7, "with_a_drawn_pipe": 7, "without": 0},
                                           "2F": {"floor_drains": 1, "with_a_drawn_pipe": 1, "without": 0}}
     text = json.dumps(out)
     assert "segs" not in text and "at_m" not in text
+
+
+def test_committed_v2_is_the_restatement_of_the_checked_v1_census():
+    """r2 changes the status, never the drawn lengths the Checker reproduced: restating the committed V1 records
+    gives the committed V2 file exactly."""
+    import json
+    sys.path.insert(0, str(ROOT / "research" / "agents_t745"))
+    import t745_restate_r2 as S
+    d = ROOT / "research" / "agents_t745" / "out"
+    v1 = json.loads((d / "T745_ALSENAN_RUNS_V1_REJECTED.json").read_text())
+    v2 = json.loads((d / "T745_ALSENAN_RUNS.json").read_text())
+    assert json.loads(json.dumps(S.restate(v1))) == v2
+    old = {r["run_id"]: r["lm"] for r in v1["runs"]}
+    for r in v2["runs"]:
+        assert r["scaled_info_lm"] == old[r["run_id"]]           # same drawn length, now information only
+    m03 = next(r for r in v2["runs"] if r["run_id"] == "1F-M03")
+    assert "5.587" in m03["label_note"] and "0.467" in m03["label_note"]
+    assert 5.587 + 0.467 == pytest.approx(m03["scaled_info_lm"], abs=0.002)
+
+
+# ---------------------------------------------------------------------------------- r2: sheet length basis (R-T380-1)
+NTS_NOTE = "NOTES:- THE BUILDER TO WORK WITH STATED DIMENSIONS NOT TO SCALE DRAWING."
+
+
+@pytest.mark.parametrize("text,basis", [
+    (NTS_NOTE, R.BASIS_SCHEMATIC),
+    ("SCALE: N.T.S.", R.BASIS_SCHEMATIC),
+    ("scale nts", R.BASIS_SCHEMATIC),
+    ("DO NOT SCALE FROM THIS DRAWING", R.BASIS_SCHEMATIC),
+    ("SCALE 1:100", R.BASIS_SCALED),
+    ("ALL STATED DIMENSIONS ARE IN MM", R.BASIS_SCALED),        # 'stated dimensions' alone is no disclaimer
+    ("PLANTS AND CONTENTS SCHEDULE", R.BASIS_SCALED),           # 'nts' inside a word is no disclaimer
+])
+def test_sheet_basis_read_from_the_notes(text, basis):
+    assert R.sheet_basis(text) == basis
+
+
+def test_unread_notes_box_gives_no_basis():
+    with pytest.raises(R.RefusedSheet):
+        R.sheet_basis(None)
+    runs, _ = villa()
+    with pytest.raises(R.RefusedSheet):
+        R.table(runs, [], K, basis="GUESSED")
+
+
+def test_not_to_scale_sheet_yields_no_measured_plan_lm():
+    """ADVERSE (verdict FIX 3): the same villa drawn on a sheet carrying a not-to-scale note: no plan row is
+    MEASURED, no plan row is valued, the scaled figures survive only as labelled information, never 0."""
+    runs, _ = villa()
+    rows, marks = rows_of_basis(runs, R.sheet_basis(NTS_NOTE))
+    plan = [r for r in rows.values() if r["kind"] == "PLAN"]
+    assert plan and all(r["status"] == R.HELD_SCHEMATIC and r["lm"] is None for r in plan)
+    info = {(r["system"], r["diameter_in"]): r["scaled_info_lm"] for r in plan}
+    assert info[(R.BUILDING_DRAIN, 6)] == pytest.approx(15.600, abs=1e-3)
+    assert info[(R.SOIL_WASTE_BRANCH, None)] == pytest.approx(7.531, abs=1e-3)
+    assert all(r["info_label"] == R.SCALED_INFO_LABEL for r in plan)
+    t = R.totals_by_state(plan)
+    assert "PLAN|MEASURED" not in t
+    assert t["PLAN|HELD_SCHEMATIC_NOT_TO_SCALE"]["lm"] is None
+    assert t["PLAN|HELD_SCHEMATIC_NOT_TO_SCALE"]["scaled_info_lm"] == pytest.approx(15.6 + 7.531 + 1.4, abs=2e-3)
+    assert [m["len_m"] for m in marks] == [0.04]              # a symbol mark stays a mark
+
+
+def test_stated_dimension_is_measured_even_on_a_not_to_scale_sheet():
+    """NORMAL: a run whose length the sheet PRINTS (12.40 m) is MEASURED at the printed value, not the scaled one;
+    without a printed diameter it is still HELD_DIAMETER but valued (the length is stated)."""
+    runs, _ = villa()
+    k = next(r for r in runs if r.pen == "K")
+    k.stated_m = 12.40                                        # the drawn 15.60 m is not used
+    wc = next(r for r in runs if r.pen == "M" and len(r.segments) == 2 and not r.bridges)
+    wc.stated_m = 2.50
+    rows, _ = rows_of_basis(runs, R.BASIS_SCHEMATIC)
+    assert rows[("PLAN", "GF", R.BUILDING_DRAIN, 6, R.MEASURED)]["lm"] == pytest.approx(12.40)
+    assert rows[("PLAN", "GF", R.SOIL_WASTE_BRANCH, None, R.HELD_DIAMETER)]["lm"] == pytest.approx(2.50)
+    sch = rows[("PLAN", "GF", R.SOIL_WASTE_BRANCH, None, R.HELD_SCHEMATIC)]
+    assert sch["runs"] == 2 and sch["lm"] is None and sch["scaled_info_lm"] == pytest.approx(2.565685 + 2.4, abs=1e-3)
+
+
+def test_mixed_sheets_keep_their_own_basis_and_never_sum_across():
+    """GF on a scaled sheet, 1F (mirrored bathrooms) on a not-to-scale sheet: GF MEASURED, 1F HELD; the risers on
+    printed levels stay MEASURED whatever the plan sheets say."""
+    gf, _ = villa()
+    f1, _ = villa(lambda p: (500 - p[0], p[1]))
+    for r in f1:
+        r.floor = "1F"
+    rwp = R.Riser("RWP-1", R.RAINWATER_PIPE, 4, 7.00, 0.00, 0.15)
+    rows, _ = R.table(gf + f1, [rwp], K, basis={"GF": R.BASIS_SCALED, "1F": R.BASIS_SCHEMATIC})
+    t = R.totals_by_state(rows)
+    assert t["PLAN|MEASURED"]["lm"] == pytest.approx(15.6)
+    assert t["PLAN|HELD_SCHEMATIC_NOT_TO_SCALE"]["lm"] is None
+    assert t["PLAN|HELD_SCHEMATIC_NOT_TO_SCALE"]["scaled_info_lm"] == pytest.approx(15.6 + 7.531 + 1.4, abs=2e-3)
+    assert t["RISER|MEASURED"]["lm"] == pytest.approx(6.85)
+
+
+def test_schematic_record_carrying_a_value_is_refused():
+    bad = {"run_id": "x", "floor": "GF", "system": R.SOIL_WASTE_BRANCH, "diameter_in": 4,
+           "status": R.HELD_SCHEMATIC, "lm": 3.0, "scaled_info_lm": 3.0, "symbol_mark": False}
+    with pytest.raises(ValueError):
+        R.table_from_records([bad], [])
+    bad2 = dict(bad, status=R.MEASURED, lm=None)
+    with pytest.raises(ValueError):
+        R.table_from_records([bad2], [])
+
+
+def rows_of_basis(runs, basis):
+    rows, marks = R.table(runs, [], K, basis=basis)
+    return {(r["kind"], r["floor"], r["system"], r["diameter_in"], r["status"]): r for r in rows}, marks

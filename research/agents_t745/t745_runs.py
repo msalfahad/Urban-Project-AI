@@ -24,15 +24,23 @@ too. A riser between two levels of which one is not printed is HELD (or BOUNDED 
 the reading names them), never 0. A system the drawings do not draw at all (e.g. water supply on a drainage-only set)
 is a HELD row with its cause, never 0.
 
+LENGTH BASIS (V2, T-745 r2; the merged T-380 rule R-T380-1). A plan run has a length only where the drawings STATE it
+(a printed dimension: Run.stated_m) or, on a sheet that keeps its printed scale, scaled along the drawn centreline. A
+sheet whose notes disclaim its scale ('work with stated dimensions', 'not to scale', 'N.T.S.') is a SCHEMATIC: its
+scaled plan length is HELD_SCHEMATIC_NOT_TO_SCALE, carried only as an information figure labelled SCALED_INFO_LABEL,
+never MEASURED, never released and never summed with a measured value. A sheet whose notes box was not read gets no
+basis at all (refused): the basis is read, never assumed. Risers stay on printed levels at both ends (R-T380-1).
+
 Statuses (ENGINEERING_REASONING_STANDARD): MEASURED = drawn and printed; HELD = needed but a printed value is missing;
 BOUNDED = an interval between printed values. Nothing here is VERIFIED; the Checker re-measures.
 """
 from __future__ import annotations
 
 import math
+import re
 from dataclasses import dataclass, field
 
-METHOD_ID = "DRAIN_RUN_CENSUS_T745_V1"
+METHOD_ID = "DRAIN_RUN_CENSUS_T745_V2"   # V1 (r1, 3e1d0514) rejected, never merged
 
 # systems (the role of a pipe; the pen -> system map is a per-drawing reading, named in the report)
 BUILDING_DRAIN = "BUILDING_DRAIN"            # external / underground collector to the manhole
@@ -52,6 +60,13 @@ HELD_DIAMETER = "HELD_DIAMETER_UNPRINTED"
 HELD_LEVEL = "HELD_LEVEL_UNPRINTED"
 BOUNDED = "BOUNDED"
 HELD_NOT_DRAWN = "HELD_NOT_DRAWN"
+HELD_SCHEMATIC = "HELD_SCHEMATIC_NOT_TO_SCALE"
+
+# sheet length basis
+BASIS_SCALED = "SCALED_DRAWING"            # notes read, no scale disclaimer: the printed scale may be used
+BASIS_SCHEMATIC = "SCHEMATIC_NOT_TO_SCALE"  # notes disclaim the scale: no plan length may be scaled
+SCALED_INFO_LABEL = "SCALED FROM NOT-TO-SCALE SCHEMATIC, never released"
+_NTS = re.compile(r"NOT\s+TO\s+SCALE|(?<![A-Z])N\.?\s?T\.?\s?S\.?(?![A-Z])|WORK\s+(?:ONLY\s+)?(?:WITH|TO)\s+STATED\s+DIMENSIONS|DO\s+NOT\s+SCALE", re.I)
 
 JOIN_TOL = 0.6            # sheet units (pt): two segment ends this close are one point
 BRIDGE_ANG_DEG = 2.0      # a bridged gap is straight on with both end segments
@@ -80,6 +95,14 @@ def scale_from_dimensions(pairs):
     if (hi - lo) / lo > SCALE_AGREE:
         raise RefusedSheet(f"printed dimensions disagree: {lo:.6f} .. {hi:.6f} m per unit")
     return sum(ks) / len(ks)
+
+
+def sheet_basis(notes_text):
+    """the length basis of one sheet from the transcription of its notes / title-block text. None (not read) is
+    refused: a basis is read from the sheet, never assumed."""
+    if notes_text is None:
+        raise RefusedSheet("notes box not read: the sheet's length basis is unknown")
+    return BASIS_SCHEMATIC if _NTS.search(notes_text) else BASIS_SCALED
 
 
 # ------------------------------------------------------------------------------------------------------ geometry
@@ -130,6 +153,7 @@ class Run:
     system: str | None = None
     diameter_in: float | None = None
     symbol_mark: bool = False
+    stated_m: float | None = None       # a length the drawing PRINTS for this run (dimension), metres
 
     def length_units(self):
         return sum(math.dist(a, b) for a, b in self.segments) + sum(math.dist(a, b) for a, b in self.bridges)
@@ -272,39 +296,91 @@ class Riser:
 
 
 # ------------------------------------------------------------------------------------------------------- summary
-def run_status(r):
+def run_status(r, basis=BASIS_SCALED):
+    """status of one plan run. A printed (stated) length is MEASURED whatever the sheet basis; a scaled length is
+    MEASURED only on a SCALED_DRAWING sheet; on a schematic it is HELD_SCHEMATIC_NOT_TO_SCALE. The diameter is then
+    checked: a length with no printed diameter is HELD_DIAMETER_UNPRINTED."""
     if r.system is None:
         return "HELD_SYSTEM_UNRESOLVED"
+    if r.stated_m is None and basis != BASIS_SCALED:
+        if basis != BASIS_SCHEMATIC:
+            raise RefusedSheet(f"unknown sheet basis {basis!r}")
+        return HELD_SCHEMATIC
     return MEASURED if r.diameter_in is not None else HELD_DIAMETER
 
 
-def table(runs, risers, scale, not_drawn=()):
-    """rows per floor x system x diameter x status: lm (horizontal, plan-measured) and riser lm, never mixed. Symbol
-    marks are listed apart. not_drawn: [(system, cause)] systems the set does not draw -> HELD_NOT_DRAWN rows.
-    scale: metres per sheet unit, one number or {floor: number} (each sheet its own measured scale)."""
+def run_record(r, scale, basis=BASIS_SCALED):
+    """one plan run as a record: (run_id, floor, system, diameter_in, status, lm, scaled_info_lm, symbol_mark). lm is
+    the valued length (stated, or scaled on a SCALED_DRAWING sheet) or None; scaled_info_lm is the scaled length of a
+    schematic run, an information figure only."""
+    k = scale[r.floor] if isinstance(scale, dict) else scale
+    b = basis.get(r.floor) if isinstance(basis, dict) else basis
+    scaled = r.length_units() * k
+    if r.symbol_mark:
+        return {"run_id": r.run_id, "floor": r.floor, "system": r.system, "diameter_in": r.diameter_in,
+                "status": "SYMBOL_MARK", "lm": None, "scaled_info_lm": round(scaled, 6), "symbol_mark": True}
+    st = run_status(r, b)
+    if st == HELD_SCHEMATIC:
+        lm, info = None, scaled
+    elif r.stated_m is not None:
+        lm, info = r.stated_m, None
+    else:
+        lm, info = scaled, None
+    return {"run_id": r.run_id, "floor": r.floor, "system": r.system, "diameter_in": r.diameter_in, "status": st,
+            "lm": None if lm is None else round(lm, 6), "scaled_info_lm": None if info is None else round(info, 6),
+            "symbol_mark": False}
+
+
+def riser_record(z):
+    st, lo, hi = z.lm()
+    return {"riser_id": z.riser_id, "system": z.system, "diameter_in": z.diameter_in, "status": st, "low": lo,
+            "high": hi}
+
+
+def table(runs, risers, scale, not_drawn=(), basis=BASIS_SCALED):
+    """rows per floor x system x diameter x status: lm (horizontal, plan) and riser lm, never mixed. Symbol marks are
+    listed apart. not_drawn: [(system, cause)] systems the set does not draw -> HELD_NOT_DRAWN rows. scale: metres per
+    sheet unit, one number or {floor: number}; basis: one sheet basis or {floor: basis} (sheet_basis)."""
+    return table_from_records([run_record(r, scale, basis) for r in runs], [riser_record(z) for z in risers],
+                              not_drawn)
+
+
+def table_from_records(run_recs, riser_recs, not_drawn=()):
+    """the same table from run / riser records (also used to restate a committed census without its coordinates).
+    A HELD_SCHEMATIC row carries lm None and its scaled figure apart, labelled SCALED_INFO_LABEL."""
     rows = {}
     marks = []
-    for r in runs:
-        k = scale[r.floor] if isinstance(scale, dict) else scale
-        if r.symbol_mark:
-            marks.append({"run_id": r.run_id, "floor": r.floor, "len_m": round(r.length_units() * k, 3)})
+    for r in run_recs:
+        if r["symbol_mark"]:
+            marks.append({"run_id": r["run_id"], "floor": r["floor"], "len_m": round(r["scaled_info_lm"], 3)})
             continue
-        key = (r.floor, r.system, r.diameter_in, run_status(r), "PLAN")
-        row = rows.setdefault(key, {"floor": r.floor, "system": r.system, "diameter_in": r.diameter_in,
-                                  "status": run_status(r), "kind": "PLAN", "runs": 0, "lm": 0.0, "lm_high": 0.0})
+        key = (r["floor"], r["system"], r["diameter_in"], r["status"], "PLAN")
+        row = rows.setdefault(key, {"floor": r["floor"], "system": r["system"], "diameter_in": r["diameter_in"],
+                                    "diameter_printed": r["diameter_in"] is not None, "status": r["status"],
+                                    "kind": "PLAN", "runs": 0, "lm": 0.0, "lm_high": 0.0})
         row["runs"] += 1
-        row["lm"] += r.length_units() * k
-        row["lm_high"] = row["lm"]
-    for z in risers:
-        st, lo, hi = z.lm()
-        k = ("ALL", z.system, z.diameter_in, st, "RISER")
-        row = rows.setdefault(k, {"floor": "ALL", "system": z.system, "diameter_in": z.diameter_in, "status": st,
-                                  "kind": "RISER", "runs": 0, "lm": 0.0, "lm_high": 0.0, "held_ids": []})
+        if r["status"] == HELD_SCHEMATIC:
+            if r["lm"] is not None:
+                raise ValueError(f"{r['run_id']}: a schematic run carries a valued lm")
+            row["lm"] = row["lm_high"] = None
+            row["scaled_info_lm"] = row.get("scaled_info_lm", 0.0) + r["scaled_info_lm"]
+            row["info_label"] = SCALED_INFO_LABEL
+        else:
+            if r["lm"] is None:
+                raise ValueError(f"{r['run_id']}: status {r['status']} without a length")
+            row["lm"] += r["lm"]
+            row["lm_high"] = row["lm"]
+    for z in riser_recs:
+        st, lo, hi = z["status"], z["low"], z["high"]
+        k = ("ALL", z["system"], z["diameter_in"], st, "RISER")
+        row = rows.setdefault(k, {"floor": "ALL", "system": z["system"], "diameter_in": z["diameter_in"],
+                                  "status": st, "kind": "RISER", "runs": 0, "lm": 0.0, "lm_high": 0.0,
+                                  "held_ids": []})
         row["runs"] += 1
         if lo is None:
             row["lm"] = None
             row["lm_high"] = None
-            row.setdefault("held_ids", []).append(z.riser_id)
+            row.setdefault("held_ids", []).append(z["riser_id"])
         elif row["lm"] is not None:
             row["lm"] += lo
             row["lm_high"] += hi
@@ -317,18 +393,24 @@ def table(runs, risers, scale, not_drawn=()):
         if row["lm"] is not None:
             row["lm"] = round(row["lm"], 3)
             row["lm_high"] = round(row["lm_high"], 3)
+        if "scaled_info_lm" in row:
+            row["scaled_info_lm"] = round(row["scaled_info_lm"], 3)
         out.append(row)
     out.sort(key=lambda r: (r["kind"], r["floor"], r["system"] or "", r["diameter_in"] or 0, r["status"]))
     return out, marks
 
 
 def totals_by_state(rows):
-    """sums per kind x status, never across kinds (plan vs riser) and never a HELD row as 0."""
+    """sums per kind x status, never across kinds (plan vs riser) and never a HELD row as 0. A schematic row's scaled
+    figure is summed apart (scaled_info_lm, labelled), never into lm."""
     t = {}
     for r in rows:
         k = f"{r['kind']}|{r['status']}"
         c = t.setdefault(k, {"rows": 0, "lm": 0.0, "lm_high": 0.0, "unvalued_rows": 0})
         c["rows"] += 1
+        if "scaled_info_lm" in r:
+            c["scaled_info_lm"] = round(c.get("scaled_info_lm", 0.0) + r["scaled_info_lm"], 3)
+            c["info_label"] = SCALED_INFO_LABEL
         if r["lm"] is None:
             c["unvalued_rows"] += 1
         else:

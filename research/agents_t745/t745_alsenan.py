@@ -8,7 +8,10 @@ Usage (from the checkout root, through the wrapper):
 <private reading.json> is the person's reading of the sheet: page -> floor, the plot rectangle edges and its printed
 sides (the scale), the pen -> system map read from the sheet, the printed diameter labels (a point on the run each
 names), the hand-entered runs of pens not extracted (the blue high-level stack offset), the risers with their printed
-levels, and the systems the set does not draw. It holds drawing coordinates, so it stays in .work/private. Output:
+levels, the systems the set does not draw, and 'sheet_notes' {page: transcription of the NOTES / title-block text}
+(the sheets' text is outlined vectors, so it is read by eye; a page with no transcription is refused). The notes set
+each sheet's length basis (t745_runs.sheet_basis): on a not-to-scale sheet every plan run is
+HELD_SCHEMATIC_NOT_TO_SCALE and its scaled length is an information figure only (T-745 r2, rule R-T380-1). It holds drawing coordinates, so it stays in .work/private. Output:
 run ids, systems, diameters, statuses and lm only (no coordinates)."""
 
 from __future__ import annotations
@@ -135,8 +138,9 @@ def main(argv=None):
     doc = pymupdf.open(a.sanitary_pdf)
     plot = rd["plot"]
     box = (plot["x_left"] - 3, plot["y_top"] - 3, plot["x_right"] + 3, plot["y_bottom"] + 3)
-    all_runs, scales, kfl, fd_cov, label_refused = [], {}, {}, {}, []
+    all_runs, scales, kfl, fd_cov, label_refused, basis = [], {}, {}, {}, [], {}
     for pg, floor in rd["pages"].items():
+        basis[floor] = R.sheet_basis(rd.get("sheet_notes", {}).get(pg))
         page = doc[int(pg) - 1]
         lines, dots, box_edges = page_paths(page)
         k, sc = plot_scale(lines + box_edges, plot)
@@ -171,14 +175,12 @@ def main(argv=None):
     # each sheet keeps its own measured scale; the sheets of one set must agree (a sheet plotted differently is named)
     k = kfl
     R.scale_from_dimensions([(v, 1.0) for v in k.values()])
-    rows, marks = R.table(all_runs, risers, k, not_drawn=[tuple(x) for x in rd.get("not_drawn", [])])
+    rows, marks = R.table(all_runs, risers, k, not_drawn=[tuple(x) for x in rd.get("not_drawn", [])], basis=basis)
     out = {
         "method": R.METHOD_ID, "source": "Drive 'Alsenan chalet project' / sanitary-7757.pdf p.1-3",
-        "sheet_scale": scales, "pens": {p: v[2] for p, v in rd["pens"].items()},
-        "runs": [{"run_id": r.run_id, "floor": r.floor, "pen": r.pen, "system": r.system,
-                  "diameter_in": r.diameter_in, "status": "SYMBOL_MARK" if r.symbol_mark else R.run_status(r),
-                  "segments": len(r.segments), "bridged_gaps": len(r.bridges),
-                  "lm": round(r.length_units() * k[r.floor], 3)} for r in all_runs],
+        "sheet_scale": scales, "sheet_basis": basis, "pens": {p: v[2] for p, v in rd["pens"].items()},
+        "runs": [dict(R.run_record(r, k, basis), pen=r.pen, segments=len(r.segments), bridged_gaps=len(r.bridges))
+                 for r in all_runs],
         "risers": [{"riser_id": z.riser_id, "system": z.system, "diameter_in": z.diameter_in,
                     "lm": dict(zip(("status", "low", "high"), z.lm())), "note": z.note} for z in risers],
         "rows": rows, "totals_by_state": R.totals_by_state(rows), "symbol_marks": marks,
@@ -190,7 +192,8 @@ def main(argv=None):
     for r in rows:
         print(r["kind"], r["floor"], r["system"], r["diameter_in"], r["status"], r["runs"], r["lm"], r["lm_high"])
     for r in out["runs"]:
-        print(" ", r["run_id"], r["system"], r["diameter_in"], r["status"], r["segments"], r["bridged_gaps"], r["lm"])
+        print(" ", r["run_id"], r["system"], r["diameter_in"], r["status"], r["segments"], r["bridged_gaps"], r["lm"],
+              r["scaled_info_lm"])
     return 0
 
 
