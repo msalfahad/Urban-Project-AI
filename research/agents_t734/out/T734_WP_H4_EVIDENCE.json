@@ -1,0 +1,1417 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.73",
+ "census": {
+  "by_cause": {
+   "DESIGNER": 41,
+   "MEASURABLE_NOW": 13,
+   "NEEDS_OWNER_RULE": 3,
+   "NO_PHYSICAL_ELEMENT": 1
+  },
+  "by_cause_t710": {
+   "DESIGNER": 46,
+   "MEASURABLE_NOW": 8,
+   "NEEDS_OWNER_RULE": 3,
+   "NO_PHYSICAL_ELEMENT": 1
+  },
+  "cause_moved": [
+   "L-9971bd68a5150abebe0a",
+   "L-6375385673176b8b2c9c",
+   "L-229e7bf9e837e1d838bd",
+   "L-a4bbc2efdb8425554344",
+   "L-0db07ac89503dd3f5980"
+  ],
+  "gone": [],
+  "held": 53,
+  "measurable_now": [
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "1F-R26FA0D:wp_penetrations",
+    "key": "L-9971bd68a5150abebe0a",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-R8496F0:wp_penetrations",
+    "key": "L-6375385673176b8b2c9c",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RA3AD49:wp_penetrations",
+    "key": "L-229e7bf9e837e1d838bd",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RD36087:wp_penetrations",
+    "key": "L-a4bbc2efdb8425554344",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RDBD4F9:wp_penetrations",
+    "key": "L-0db07ac89503dd3f5980",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "{\"origin\": \"overlay op\", \"source\": \"T-529 R-WP-APPL-EXPOSED-2b (MERGED 5f775ba6): ledge 0.639573 m2 MEASURED, EXPOSED\", \"status\": \"MEASURED\", \"value\": \"0.639573\"}",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.ROOF",
+    "element": "1F-POOLCOURT-550-LEDGE:wp_membrane",
+    "key": "L-2361d6ec13c952bd2ae3",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.639573
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": "{\"origin\": \"overlay op\", \"source\": \"T-522 / T-529 (MERGED 4777890b / 5f775ba6): ledge wall-end upturn 0.551614 lm; the 2.976663 lm glazing transition has no m2 / lm line (beside)\", \"status\": \"MEASURED\", \"value\": \"0.551614\"}",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.ROOF_UPTURN",
+    "element": "1F-POOLCOURT-550-LEDGE:wp_upturn",
+    "key": "L-d7d1bf8c5991ccf69ea2",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "lm",
+    "v3073_bounds": [
+     0.0,
+     3.528277
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": "{\"origin\": \"overlay op\", \"source\": \"T-522 (MERGED 4777890b): window run upturn 0.500002 lm, sill '84' printed >= 0.20\", \"status\": \"MEASURED\", \"value\": \"0.500002\"}",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.ROOF_UPTURN",
+    "element": "1F-POOLCOURT-550:wp_upturn window_face",
+    "key": "L-1954878bb02c91139e1b",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "lm",
+    "v3073_bounds": [
+     0.0,
+     0.500002
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": "{\"detail\": {\"doors_lm\": \"1.000000\", \"held_terms\": [\"W10 sill not printed: 1.000000 m excluded in the low, included in the high\", \"W09 sill not printed: 1.500000 m excluded in the low, included in the high\"], \"high_lm\": \"9.500000\", \"high_m2\": \"1.900000\", \"low_lm\": \"7.000000\", \"low_m2\": \"1.400000\", \"sources\": {\"column\": \"2FAE S-COL.BON 1.100 x 0.250 at x -0.200 .. 0.900, y 4.450 .. 4.700: 0.050 proud of 158 over 0.900; the boundary steps round it orthogonally, so the wall run length is unchanged (4.45 + 0.90 + 0.05 + 2.10 + 3.00 = 10.50 = 4.50 + 3.00 + 3.00)\", \"doors\": [\"D120 insert 33E, rot 180 (gap between 158 and 159)\"], \"sills\": \"W09 / W10 HELD: designer D-45 (opening heights printed on no sheet; T-175)\", \"walls\": [\"west:B0\", \"west:AF\", \"west:AE\", \"north:158\", \"north:159\", \"south:A6\"], \"windows\": [\"W10\", \"W09\"]}, \"status\": \"OPEN_BOUND\", \"upturn_h\": \"0.200000\", \"wall_runs_lm\": \"10.500000\"}, \"high\": \"1.900000\", \"low\": \"1.400000\", \"status\": \"OPEN_BOUND\", \"value\": null}",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.WALL_UPTURN",
+    "element": "GF-RC99C2A:wp_wall_upturn:wet_zone",
+    "key": "L-8090ff20f2b547d1bc96",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "0.200",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY",
+    "element": "the membrane continued through the pantry door D-GF-07 over the wall thickness (UP-WP-003 v1.1 floor piece)",
+    "key": "MISSING:FIN.WP.DOORWAY[m2]/DOOR:D-GF-07-PANTRY/THRESHOLD_FLOOR",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION_NR",
+    "element": "one doorway transition per physical door (UP-WP-DOOR-001, Q-35 C)",
+    "key": "MISSING:FIN.WP.DOORWAY_TRANSITION_NR[pcs]/DOOR:D-GF-07-PANTRY/TRANSITION",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "4.500",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.TERMINATION",
+    "element": "the membrane edge where the pantry opens to the dining room (no wall)",
+    "key": "MISSING:FIN.WP.TERMINATION[lm]/GF-07:OPEN_SIDE_DINING/MEMBRANE_EDGE",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "lm",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 (T-691: 1 FD, no W.C.)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "membrane penetrations in the pantry floor (UP-WP-004)",
+    "key": "MISSING:FIN.WP.PENETRATION[pcs]/GF-07/FLOOR_PENETRATIONS",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   }
+  ],
+  "missing": 5,
+  "missing_rows": [
+   {
+    "after": "0.200",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY",
+    "element": "the membrane continued through the pantry door D-GF-07 over the wall thickness (UP-WP-003 v1.1 floor piece)",
+    "key": "MISSING:FIN.WP.DOORWAY[m2]/DOOR:D-GF-07-PANTRY/THRESHOLD_FLOOR",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION_NR",
+    "element": "one doorway transition per physical door (UP-WP-DOOR-001, Q-35 C)",
+    "key": "MISSING:FIN.WP.DOORWAY_TRANSITION_NR[pcs]/DOOR:D-GF-07-PANTRY/TRANSITION",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "the transition built by its detail at that door (Q-35 C)",
+    "key": "MISSING:FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-07-PANTRY/TRANSITION",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "4.500",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.TERMINATION",
+    "element": "the membrane edge where the pantry opens to the dining room (no wall)",
+    "key": "MISSING:FIN.WP.TERMINATION[lm]/GF-07:OPEN_SIDE_DINING/MEMBRANE_EDGE",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "lm",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 (T-691: 1 FD, no W.C.)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "membrane penetrations in the pantry floor (UP-WP-004)",
+    "key": "MISSING:FIN.WP.PENETRATION[pcs]/GF-07/FLOOR_PENETRATIONS",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   }
+  ],
+  "rows": [
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "1F-R26FA0D:doorway transition OP-008",
+    "key": "L-689197a4778b786de143",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.18
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "1F-R26FA0D:doorway transition OP-010",
+    "key": "L-bec3b3df8ec830a46447",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "1F-R48AA46:doorway transition OP-004",
+    "key": "L-aed6f48195f99648c3f3",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.16
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "1F-R48CDA5:doorway transition OP-018",
+    "key": "L-dfc4e74604047cb21407",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.16
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "1F-R8BDA49:doorway transition CLOSURE|D2:3118|D2:417@D2:3118:0",
+    "key": "L-07b084a5187a64634108",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.16
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "1F-RED23B8:doorway transition OP-019",
+    "key": "L-19f6405a5e60a99c29f7",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.16
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "2F-RE83BED:doorway transition OP-006",
+    "key": "L-b5a04e7c058346b6f734",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.16
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "GF-RA3AD49:doorway transition OP-025",
+    "key": "L-b46013c737051e5441fe",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.2
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "GF-RB28769:doorway transition OP-018",
+    "key": "L-65194e5d4497f0882024",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "GF-RB62B55:doorway transition CLOSURE|D2:495|D2:417@D2:495:0",
+    "key": "L-1c36054a8cadc0726e65",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.16
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "GF-RD36087:doorway transition CLOSURE|D2:825|D2:417@D2:825:0",
+    "key": "L-77a630d7e60ca6c404ba",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.159408
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "GF-RD6F891:doorway transition CLOSURE|D2:820:0|D2:820:0",
+    "key": "L-20400ca6dc38abb30c33",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.16
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "GF-RF38DAF:doorway transition OP-017",
+    "key": "L-19908ce0b9a2bcadff80",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "GF-RFAD3C4:doorway transition OP-026",
+    "key": "L-b4a23dc5fc953bc5a163",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.16
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "NEEDS_OWNER_RULE",
+    "cause_t710": "NEEDS_OWNER_RULE",
+    "changed": [],
+    "code": "FIN.WP.MEMBRANE_ROLLS",
+    "element": "2F-ROOF-TOP:wp_rolls_to_buy",
+    "key": "L-90b40877c8c3da54ba1b",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "1F-R26FA0D:wp_penetrations",
+    "key": "L-9971bd68a5150abebe0a",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "1F-R48AA46:wp_penetrations",
+    "key": "L-3e6dbcb5614746978a87",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "1F-R48CDA5:wp_penetrations",
+    "key": "L-a5f885a2f86ee05d5b8b",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "1F-R52AC05:wp_penetrations",
+    "key": "L-fb8f6c4b9b3044505557",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "2 .. 3 pcs (FD 2 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "1F-R8BDA49:wp_penetrations",
+    "key": "L-2253a7ed9e80ac00c728",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "1F-RED23B8:wp_penetrations",
+    "key": "L-2af93ddb70a431b92800",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "2F-RE83BED:wp_penetrations",
+    "key": "L-faa7232880f13c1e4a99",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-R8496F0:wp_penetrations",
+    "key": "L-6375385673176b8b2c9c",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RA3AD49:wp_penetrations",
+    "key": "L-229e7bf9e837e1d838bd",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RB28769:wp_penetrations",
+    "key": "L-bcda623f9ad89eba41db",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RB62B55:wp_penetrations",
+    "key": "L-f650522e7882dddccdfa",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RD36087:wp_penetrations",
+    "key": "L-a4bbc2efdb8425554344",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RD6F891:wp_penetrations",
+    "key": "L-20dfb3cd1232128b3cb6",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 pcs (FD 1 firm + W.C. 0 open)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RDBD4F9:wp_penetrations",
+    "key": "L-0db07ac89503dd3f5980",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RDF7D28:wp_penetrations",
+    "key": "L-657bff4f4cc8e417bc6c",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RF38DAF:wp_penetrations",
+    "key": "L-5f41701522d675c37b10",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 2 pcs (FD 1 firm + W.C. 1 open)",
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "GF-RFAD3C4:wp_penetrations",
+    "key": "L-345e907e572a363fb615",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "{\"origin\": \"overlay op\", \"source\": \"T-529 R-WP-APPL-EXPOSED-2b (MERGED 5f775ba6): ledge 0.639573 m2 MEASURED, EXPOSED\", \"status\": \"MEASURED\", \"value\": \"0.639573\"}",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.ROOF",
+    "element": "1F-POOLCOURT-550-LEDGE:wp_membrane",
+    "key": "L-2361d6ec13c952bd2ae3",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": [
+     0.0,
+     0.639573
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "NEEDS_OWNER_RULE",
+    "cause_t710": "NEEDS_OWNER_RULE",
+    "changed": [],
+    "code": "FIN.WP.ROOF",
+    "element": "2F-ROOF-TOP:wp_membrane",
+    "key": "L-3e8fe55da71851816dd4",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "{\"origin\": \"overlay op\", \"source\": \"T-522 / T-529 (MERGED 4777890b / 5f775ba6): ledge wall-end upturn 0.551614 lm; the 2.976663 lm glazing transition has no m2 / lm line (beside)\", \"status\": \"MEASURED\", \"value\": \"0.551614\"}",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.ROOF_UPTURN",
+    "element": "1F-POOLCOURT-550-LEDGE:wp_upturn",
+    "key": "L-d7d1bf8c5991ccf69ea2",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "lm",
+    "v3073_bounds": [
+     0.0,
+     3.528277
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": "{\"origin\": \"overlay op\", \"source\": \"T-522 (MERGED 4777890b): window run upturn 0.500002 lm, sill '84' printed >= 0.20\", \"status\": \"MEASURED\", \"value\": \"0.500002\"}",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.ROOF_UPTURN",
+    "element": "1F-POOLCOURT-550:wp_upturn window_face",
+    "key": "L-1954878bb02c91139e1b",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "lm",
+    "v3073_bounds": [
+     0.0,
+     0.500002
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "NEEDS_OWNER_RULE",
+    "cause_t710": "NEEDS_OWNER_RULE",
+    "changed": [],
+    "code": "FIN.WP.ROOF_UPTURN",
+    "element": "2F-ROOF-TOP:wp_upturn",
+    "key": "L-aac1f35e08f85b643692",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "lm",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.TERMINATION",
+    "element": "GF-R8496F0:termination passage OP-027",
+    "key": "L-9592048116294937ab6f",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "lm",
+    "v3073_bounds": [
+     0.0,
+     1.0
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "NO_PHYSICAL_ELEMENT",
+    "cause_t710": "NO_PHYSICAL_ELEMENT",
+    "changed": [],
+    "code": "FIN.WP.TERMINATION",
+    "element": "GF-RB28769:termination other",
+    "key": "L-f78da96a7d31f7b72068",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "lm",
+    "v3073_bounds": [
+     0.0,
+     0.004711
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.TERMINATION",
+    "element": "GF-RD36087:termination passage OP-020",
+    "key": "L-c57860d79f54a4c1c4b3",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "lm",
+    "v3073_bounds": [
+     0.0,
+     0.9
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.TERMINATION",
+    "element": "GF-RDBD4F9:termination zone_line ZONE|D2:731:0|0",
+    "key": "L-a4df8fc50fbab4bef48f",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "lm",
+    "v3073_bounds": [
+     0.0,
+     1.255652
+    ],
+    "v3073_value": null
+   },
+   {
+    "after": "{\"detail\": {\"doors_lm\": \"1.000000\", \"held_terms\": [\"W10 sill not printed: 1.000000 m excluded in the low, included in the high\", \"W09 sill not printed: 1.500000 m excluded in the low, included in the high\"], \"high_lm\": \"9.500000\", \"high_m2\": \"1.900000\", \"low_lm\": \"7.000000\", \"low_m2\": \"1.400000\", \"sources\": {\"column\": \"2FAE S-COL.BON 1.100 x 0.250 at x -0.200 .. 0.900, y 4.450 .. 4.700: 0.050 proud of 158 over 0.900; the boundary steps round it orthogonally, so the wall run length is unchanged (4.45 + 0.90 + 0.05 + 2.10 + 3.00 = 10.50 = 4.50 + 3.00 + 3.00)\", \"doors\": [\"D120 insert 33E, rot 180 (gap between 158 and 159)\"], \"sills\": \"W09 / W10 HELD: designer D-45 (opening heights printed on no sheet; T-175)\", \"walls\": [\"west:B0\", \"west:AF\", \"west:AE\", \"north:158\", \"north:159\", \"south:A6\"], \"windows\": [\"W10\", \"W09\"]}, \"status\": \"OPEN_BOUND\", \"upturn_h\": \"0.200000\", \"wall_runs_lm\": \"10.500000\"}, \"high\": \"1.900000\", \"low\": \"1.400000\", \"status\": \"OPEN_BOUND\", \"value\": null}",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.WALL_UPTURN",
+    "element": "GF-RC99C2A:wp_wall_upturn:wet_zone",
+    "key": "L-8090ff20f2b547d1bc96",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "WP.FOUNDATION.BURIED_LIQUID",
+    "element": "WPF:BOUNDARY_GB_AND_STRAPS",
+    "key": "L-4f4e4c930e33ed6dafa3",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "WP.FOUNDATION.BURIED_LIQUID",
+    "element": "WPF:BURIED_GROUND_BEAM_FACES_HELD",
+    "key": "L-eba4599c26b0d24de873",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "WP.FOUNDATION.BURIED_LIQUID",
+    "element": "WPF:FOOTING_TOPS_OUTSIDE_NECKS",
+    "key": "L-12aca7f853626262bd07",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "WP.FOUNDATION.BURIED_LIQUID",
+    "element": "WPF:NECK_FACES",
+    "key": "L-84a874dedb35cbe2bafb",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "WP.FOUNDATION.FOOTING_MEMBRANE",
+    "element": "WPF:FOOTING_UNDERLAY_MEMBRANE_1B1B",
+    "key": "L-f7da4df288b4e006c0e7",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "WP.FOUNDATION.FOOTING_SCREED",
+    "element": "WPF:FOOTING_PROTECTION_SCREED_1B1B",
+    "key": "L-46cee803214ff2d964fa",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "WP.FOUNDATION.FOOTING_SCREED",
+    "element": "WPF:FOOTING_PROTECTION_SCREED_1B1B",
+    "key": "L-79bc828150bbfe63ce8e",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m3",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "WP.FOUNDATION.FOOTING_SIDES",
+    "element": "WPF:FOOTING_SIDE_FACES",
+    "key": "L-13b1d3c202bc08fb65c2",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "WP.FOUNDATION.LIFT_PIT_BOARD",
+    "element": "WPF:LIFT_PIT_BOARD_WALLS",
+    "key": "L-f0aadf70513eb21d5671",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+    "element": "WPF:LIFT_PIT_MEMBRANE_WALLS",
+    "key": "L-302b401eff698289c54e",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "WP.FOUNDATION.PROCUREMENT",
+    "element": "WPF:FOUNDATION_WP_PROCUREMENT",
+    "key": "L-d2488bbb7103c8cd2980",
+    "on_v3073": "HELD",
+    "restate": "LIVE",
+    "unit": "item",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "0.200",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY",
+    "element": "the membrane continued through the pantry door D-GF-07 over the wall thickness (UP-WP-003 v1.1 floor piece)",
+    "key": "MISSING:FIN.WP.DOORWAY[m2]/DOOR:D-GF-07-PANTRY/THRESHOLD_FLOOR",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION_NR",
+    "element": "one doorway transition per physical door (UP-WP-DOOR-001, Q-35 C)",
+    "key": "MISSING:FIN.WP.DOORWAY_TRANSITION_NR[pcs]/DOOR:D-GF-07-PANTRY/TRANSITION",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": null,
+    "cause": "DESIGNER",
+    "cause_t710": "DESIGNER",
+    "changed": [],
+    "code": "FIN.WP.DOORWAY_TRANSITION",
+    "element": "the transition built by its detail at that door (Q-35 C)",
+    "key": "MISSING:FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-07-PANTRY/TRANSITION",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "m2",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "4.500",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.TERMINATION",
+    "element": "the membrane edge where the pantry opens to the dining room (no wall)",
+    "key": "MISSING:FIN.WP.TERMINATION[lm]/GF-07:OPEN_SIDE_DINING/MEMBRANE_EDGE",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "lm",
+    "v3073_bounds": null,
+    "v3073_value": null
+   },
+   {
+    "after": "1 .. 1 (T-691: 1 FD, no W.C.)",
+    "cause": "MEASURABLE_NOW",
+    "cause_t710": "MEASURABLE_NOW",
+    "changed": [],
+    "code": "FIN.WP.PENETRATION",
+    "element": "membrane penetrations in the pantry floor (UP-WP-004)",
+    "key": "MISSING:FIN.WP.PENETRATION[pcs]/GF-07/FLOOR_PENETRATIONS",
+    "on_v3073": "NO LINE",
+    "restate": "MISSING",
+    "unit": "pcs",
+    "v3073_bounds": null,
+    "v3073_value": null
+   }
+  ],
+  "stale": [],
+  "wp_entries_differing": 0,
+  "wp_line_ids_equal": true,
+  "wp_lines_v3070": 160,
+  "wp_lines_v3073": 160
+ },
+ "d41": {
+  "designer_item": "DESIGNER_QUESTIONS.md item 9 'Sunken wet-room slab panels: membrane position' (D-41): membrane on the structural slab (tray: + loop x d) or on the fill under the tile (+0); d unprinted, bounded by the boundary beams (d_max 0.24 / 0.34 m)",
+  "high_m2": "13.335040",
+  "hosts": [
+   {
+    "class": "RELEASED",
+    "m2": 1.36,
+    "restate": "LIVE",
+    "room": "1F-RED23B8",
+    "upturn_line": "L-a93486d24647a9e14445"
+   },
+   {
+    "class": "RELEASED",
+    "m2": 1.148,
+    "restate": "LIVE",
+    "room": "1F-R52AC05",
+    "upturn_line": "L-ace6533512ada47d1352"
+   },
+   {
+    "class": "RELEASED",
+    "m2": 1.64,
+    "restate": "LIVE",
+    "room": "1F-R48AA46",
+    "upturn_line": "L-ba15212ec9887e6d4f73"
+   },
+   {
+    "class": "RELEASED",
+    "m2": 1.64,
+    "restate": "LIVE",
+    "room": "1F-R8BDA49",
+    "upturn_line": "L-6e6daedebef2db6a83bd"
+   },
+   {
+    "class": "RELEASED",
+    "m2": 1.58,
+    "restate": "LIVE",
+    "room": "1F-R48CDA5",
+    "upturn_line": "L-60f100105399a9bdfb08"
+   },
+   {
+    "class": "RELEASED",
+    "m2": 1.78,
+    "restate": "LIVE",
+    "room": "2F-RE83BED",
+    "upturn_line": "L-b842beb71b67af783cd7"
+   }
+  ],
+  "hosts_released_m2": "9.148000",
+  "low_m2": "0",
+  "recess_loop_m": "51.8980",
+  "statement": "no candidate line: a HELD component beside the six released wall-upturn hosts (all LIVE on V3.0.73); low 0 is a physical alternative (membrane on the fill), never a default; nothing moves in this task",
+  "status": "HELD"
+ },
+ "inputs": {
+  "line_index_v3070": "research/agents_t693/out/LINE_INDEX_V3_0_70.json",
+  "line_index_v3073": "research/agents_t722/out/LINE_INDEX_V3_0_73.json",
+  "t710": "research/agents_t710/out/T710_WP_ROUND3.json"
+ },
+ "released_moved": "none (research, unwired; V2.9 + route G unchanged)",
+ "roof": {
+  "after_state": {
+   "audit_candidate_qty": "115.832000",
+   "class": "HELD",
+   "high": "115.813974",
+   "low": "115.656474",
+   "why": "HELD: UNSUPPORTED BASIS"
+  },
+  "band_agree": {
+   "high": "0.000014",
+   "low": "0.000014"
+  },
+  "band_own": [
+   "115.656474",
+   "115.813974"
+  ],
+  "band_t321": [
+   "115.65646",
+   "115.81396"
+  ],
+  "carriers": [
+   {
+    "carrier": "C1",
+    "edge_m": "8.175",
+    "handles": "12E6 + 1280 + door gap 1.000 (1280 east end .. 1281 west end) + 1281",
+    "kind": "H"
+   },
+   {
+    "carrier": "C2",
+    "edge_m": "6.600",
+    "handles": "1291 (2F block east wall outer face)",
+    "kind": "V"
+   },
+   {
+    "carrier": "C3",
+    "edge_m": "6.570",
+    "handles": "1278 (north parapet inner face)",
+    "kind": "H"
+   },
+   {
+    "carrier": "C4",
+    "edge_m": "-11.600",
+    "handles": "12A7 (east parapet inner face)",
+    "kind": "V"
+   },
+   {
+    "carrier": "C5",
+    "edge_m": "-18.870",
+    "handles": "1285 (south parapet inner face)",
+    "kind": "H"
+   },
+   {
+    "carrier": "C6",
+    "edge_m": "7.100",
+    "handles": "12C9 (west parapet inner face)",
+    "kind": "V"
+   },
+   {
+    "carrier": "C7",
+    "edge_m": "4.125",
+    "handles": "12B9 (west-wing north parapet inner face)",
+    "kind": "H"
+   },
+   {
+    "carrier": "C8",
+    "edge_m": "-2.100",
+    "handles": "12E2 (layer D band line, D-band reading) / the 2F west wall outer face (wall-face reading)",
+    "kind": "V"
+   }
+  ],
+  "dband": {
+   "evidence": "12E2 continues a stepped layer-D profile on the 2F west wall (12E0 / 12DF / 12DD / 12DC / 12D3 / 12CB / 12D5 / 12D6 / 12D8 / 12D9 / 12DB: 25 / 50 / 75 mm steps off the wall face) drawn at the plan cut: a projecting facade feature 0.075 proud over 2.7684 m, not a base. Layer D also holds elevation titles; no text, hatch, schedule or detail names the feature",
+   "m2": "0.157500",
+   "pct_of_high": "0.135994",
+   "physical_alternatives": [
+    "built before the membrane (a masonry pilaster / thickened wall): the membrane stops at its face and turns up there -> D-band reading (low)",
+    "applied after the membrane (cladding / moulding): the membrane runs to the wall face under it -> wall-face reading (high)"
+   ],
+   "settled_by": "an elevation / wall section or finishes schedule naming the 2F west wall feature (designer item, proposed for DESIGNER_QUESTIONS; ERS s.2.7 not met: no owner rule)"
+  },
+  "dome": {
+   "chords": 105,
+   "inscribed_m2": "15.349849",
+   "r_m": "2.211092",
+   "ring_chord_m": "13.890625",
+   "ring_true_m": "13.892698",
+   "tangent": {
+    "12EB": "12C9 (west parapet, clearance 0.0000 m)",
+    "2F33": "12A7 (east parapet, 0.0000 m)"
+   },
+   "true_m2": "15.359013",
+   "under_deduction_two_m2": "0.018329"
+  },
+  "downgrade_cli": "python3 -I tools/boq_export_v1.py downgrade-add --lines <V3_0_73_BOQ_LINES.json> --candidate-version ARCH_TAKEOFF_V3.0.73 --line-ids L-636fd3ff1784a12e653b --state HELD --basis-label 'UNSUPPORTED BASIS' --reason <reason> --evidence <each evidence item> --lock-file <Checker lock> --verdict-commit <Checker commit> --out <DOWNGRADE_V1_SET>",
+  "downgrade_record_draft": {
+   "basis_label": "UNSUPPORTED BASIS",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.73",
+   "engine_qty_binding": 115.832,
+   "evidence": [
+    "Alsenan chalet project / P7757.dxf (2F plan, +9.70 roof) CIRCLE 12EB and CIRCLE 2F33 = radius 2211.0915 mm each (pi r^2 = 15.359013 m2; 105-chord polygon 15.349849 m2)",
+    "Alsenan chalet project / P7757.dxf (2F plan) LINE 1281 / 1291 / 1278 / 12A7 / 1285 / 12C9 / 12B9 / 12E2 / 12E6 / 1280 + door gap 1.000 = closed face 146.374500 m2 (12E2) .. 146.532000 m2 (2F wall face), perimeter 65.140 m",
+    "ARCH_TAKEOFF_V3.0.73 L-636fd3ff1784a12e653b = 115.832 m2 = 146.532000 - 2 x 15.349849 = 115.832303 (3-decimal rounding 0.000303)"
+   ],
+   "line_ids": [
+    "L-636fd3ff1784a12e653b"
+   ],
+   "reason": "UNSUPPORTED BASIS: the released +9.70 roof membrane 115.832 m2 lies 0.018026 m2 ABOVE its own same-basis band 115.656474 .. 115.813974 m2: the trace deducts the two dome CIRCLEs 12EB / 2F33 (r 2.211092 m) as inscribed 105-chord polygons (1 mm sagitta), 15.349849 instead of 15.359013 m2 each (under-deduction 0.018329 m2, R-T691-1); the face is closed on named lines (wall-face reading 146.532000 m2, D-band reading 146.374500 m2: the 0.075 layer-D feature at the 2F west wall foot is unprinted, D-BAND 0.1575 m2). Downgrade only: the line goes HELD; the candidate figure stays in the audit rows; the H4 package then carries the drawing band (R-T734-1 c), never a chosen end",
+   "state": "HELD",
+   "unit": "m2"
+  },
+  "element": "flat membrane of the +9.70 terraces round the 2F block, inside the parapet / wall faces where it turns up 0.20 (UP-WP-ROOF-001, Q-24), the two dome discs open (Q-24 / Q-29: membrane stops at the dome circle with an upturn); flat m2, upturn lm and rolls pcs kept apart",
+  "eligibility": {
+   "eligible": "True",
+   "excess": "0.018026",
+   "state": "ABOVE_BAND"
+  },
+  "engine_reconstruction": {
+   "basis": "the engine closed the face on the 2F wall face (wall-face reading) and deducted 105-chord polygons: 146.532000 - 2 x 15.349849 = 115.832303",
+   "dband_chord": "115.674803",
+   "residual_to_released": "-0.000303",
+   "rounded": "115.832",
+   "wall_face_chord": "115.832303"
+  },
+  "handle_lengths_m": {
+   "1278": "6.570",
+   "1280": "0.6158",
+   "1281": "6.4842",
+   "1285": "18.870",
+   "1291": "6.800",
+   "12A7": "11.600",
+   "12B9": "4.125",
+   "12C9": "7.100",
+   "12E2": "2.7684",
+   "12E6": "0.075"
+  },
+  "method": "R-T734-2: the face rebuilt from its 8 named carrier lines (vertex = carrier x carrier, shoelace); independent of the T-321 / T-691 buffered flood fill",
+  "per_component": [
+   {
+    "component": "face, D-band reading (C8 on 12E2)",
+    "m2": "146.374500"
+   },
+   {
+    "component": "face, wall-face reading (C8 on the 2F west wall face)",
+    "m2": "146.532000"
+   },
+   {
+    "component": "D-BAND strip 0.075 x 2.100 (12E6 x 12E2 below C7)",
+    "m2": "0.157500"
+   },
+   {
+    "component": "dome 12EB true pi r^2",
+    "m2": "15.359013"
+   },
+   {
+    "component": "dome 2F33 true pi r^2",
+    "m2": "15.359013"
+   },
+   {
+    "component": "each dome as the engine's 105-chord polygon",
+    "m2": "15.349849"
+   }
+  ],
+  "released": "115.832",
+  "released_vs_band": {
+   "above_high_m2": "0.018026",
+   "above_high_pct": "0.015565",
+   "above_low_m2": "0.175526",
+   "above_low_pct": "0.151765"
+  },
+  "rolls": {
+   "line": "L-2ecffd1f396ede3b5eb4",
+   "released_pcs": "17",
+   "statement": "not named by the record (another line, unit pcs): the procurement count is KEEP in T-730; the strip count's sensitivity to the 0.075 D-BAND and to 0.018 m2 was not re-run here (the roof layout inputs live in the engine trace)"
+  },
+  "upturn": {
+   "chord_reconstruction_lm": "92.921250",
+   "class": "NOT A DOWNGRADE (R-T734-1 d): 92.922 -> 92.925 raises a released value; a Gate B change with its own re-measure, needing no record; the T-730 H4 blocker 'WAITS T-734' on this row can be lifted",
+   "dband_effect_lm": "0.000 (both readings give perimeter 65.140: the strip trades 12E6 0.075 for its 0.075 top edge)",
+   "line": "L-5ce5ba49792e8f9d1f6f",
+   "open": "a +0.000750 lm residual between the released 92.922 and the 105-chord reconstruction 92.921250 is not named in this run (above the 0.0005 rounding half-step): the Gate B re-measure of the upturn change names it before wiring",
+   "released_lm": "92.922",
+   "residual_lm": "0.000750",
+   "true_lm": "92.925396"
+  },
+  "which_figure_the_downgrade_keeps": "the record keeps NO figure of its own (owner 2026-10-24 23:57: never a Checker measurement). It binds the released 115.832 (engine_qty), which stays only in the audit rows ('Audit (unsupported basis)'). The line becomes HELD; the H4 package then writes the drawing band 115.656474 .. 115.813974 m2 (both ends measured; neither chosen). 115.813974 is NOT released: its high end rests on the unprinted D-BAND reading"
+ },
+ "rules": [
+  "R-T734-1",
+  "R-T734-2",
+  "R-T734-3"
+ ],
+ "schema": "URBAN_T734_WP_H4_EVIDENCE_V1",
+ "task": "T-734"
+}
