@@ -1,0 +1,2929 @@
+{
+ "schema": "URBAN_T746_PAINT_EDGES_V1",
+ "candidate": "ARCH_TAKEOFF_V3.0.74",
+ "rules": [
+  "R-T746-1",
+  "R-T746-2",
+  "R-T746-3"
+ ],
+ "owner_rule": "UP-FIN-PAINT-002 1.0.0 param 'edges' (LM_ITEMS_NOT_AREA); Lead ruling T-746 reading B",
+ "inputs_sha256_16": {
+  "research/agents_t717/out/LINE_INDEX_V3_0_74.json": "6733cbc143cdfffd",
+  "research/agents_t313/REVEAL_LEDGER_T313.csv": "2cfa42112aa470c8",
+  "research/agents_t709/out/T709_RESIDUALS.json": "fcbd5aa7d9a12018",
+  "research/agents_t740/out/T740_PAINT_RULE.json": "3918f7e4382728ea",
+  "research/agents_t746/DOOR_FRAMES_T746.csv": "ec54cd8870ee76f4"
+ },
+ "return_lines": {
+  "count": 30,
+  "by_status": {
+   "BOUNDED": 27,
+   "HELD": 3
+  },
+  "edge_lm": [
+   "0.000000",
+   "33.800000"
+  ],
+  "held": 3,
+  "paint_m2_removed_rule_A": [
+   "20.250000",
+   "24.150000"
+  ],
+  "paint_m2_removed_engine": [
+   "0.000000",
+   "24.150000"
+  ],
+  "frames_drawn_full_depth": 25,
+  "by_part": {
+   "HEAD": {
+    "lm": [
+     "0.000000",
+     "25.000000"
+    ],
+    "gross": "25.000000"
+   },
+   "JAMBS": {
+    "lm": [
+     "0.000000",
+     "8.800000"
+    ],
+    "gross": "119.400000"
+   }
+  }
+ },
+ "windows": {
+  "sides": 58,
+  "by_side_status": {
+   "IN HELD": 2,
+   "IN NO_PAINT_EDGE": 27,
+   "OUT HELD": 3,
+   "OUT PAINT_LM": 26
+  },
+  "outside_edge_lm": [
+   "106.020000",
+   "106.020000"
+  ],
+  "outside_held": 3
+ },
+ "paint_m2": {
+  "rule_A_T740": [
+   "841.260635",
+   "929.204847"
+  ],
+  "rule_B_after": [
+   "821.010635",
+   "905.054847"
+  ],
+  "engine_V3_0_74": [
+   "822.198159",
+   "927.214521"
+  ],
+  "engine_returns_out": [
+   "822.198159",
+   "903.064521"
+  ],
+  "floor_readd_residual": [
+   "0.000000",
+   "0.000000"
+  ]
+ },
+ "by_floor": {
+  "GF": {
+   "return_lines": 16,
+   "door_edge_lm": [
+    "0.000000",
+    "22.400000"
+   ],
+   "door_edge_held": 2,
+   "window_out_edge_lm": [
+    "39.700000",
+    "39.700000"
+   ],
+   "rule_paint_A": [
+    "336.267835",
+    "405.123147"
+   ],
+   "rule_paint_B": [
+    "326.057835",
+    "391.793147"
+   ],
+   "returns_removed_rule": [
+    "10.210000",
+    "13.330000"
+   ],
+   "engine_paint": [
+    "326.223659",
+    "407.437921"
+   ],
+   "engine_paint_returns_out": [
+    "326.223659",
+    "394.107921"
+   ],
+   "returns_removed_engine": [
+    "0.000000",
+    "13.330000"
+   ]
+  },
+  "1F": {
+   "return_lines": 11,
+   "door_edge_lm": [
+    "0.000000",
+    "8.700000"
+   ],
+   "door_edge_held": 1,
+   "window_out_edge_lm": [
+    "51.320000",
+    "51.320000"
+   ],
+   "rule_paint_A": [
+    "376.685650",
+    "390.834550"
+   ],
+   "rule_paint_B": [
+    "369.295650",
+    "382.664550"
+   ],
+   "returns_removed_rule": [
+    "7.390000",
+    "8.170000"
+   ],
+   "engine_paint": [
+    "370.157300",
+    "386.529400"
+   ],
+   "engine_paint_returns_out": [
+    "370.157300",
+    "378.359400"
+   ],
+   "returns_removed_engine": [
+    "0.000000",
+    "8.170000"
+   ]
+  },
+  "2F": {
+   "return_lines": 3,
+   "door_edge_lm": [
+    "0.000000",
+    "2.700000"
+   ],
+   "door_edge_held": 0,
+   "window_out_edge_lm": [
+    "15.000000",
+    "15.000000"
+   ],
+   "rule_paint_A": [
+    "128.307150",
+    "133.247150"
+   ],
+   "rule_paint_B": [
+    "125.657150",
+    "130.597150"
+   ],
+   "returns_removed_rule": [
+    "2.650000",
+    "2.650000"
+   ],
+   "engine_paint": [
+    "125.817200",
+    "133.247200"
+   ],
+   "engine_paint_returns_out": [
+    "125.817200",
+    "130.597200"
+   ],
+   "returns_removed_engine": [
+    "0.000000",
+    "2.650000"
+   ]
+  }
+ },
+ "return_rows": [
+  {
+   "opening": "D-1F-01",
+   "kind": "DOOR",
+   "floor": "1F",
+   "rooms": "1F-01;1F-02",
+   "plaster_line": "L-54b2eb0ad40cc47b9be5",
+   "paint_line": "L-2b4e45da29a5b2dd7981",
+   "paint_element": "1F-OPENING-OP-004:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.800000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D315 handle C2B: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-1F-08",
+   "kind": "DOOR",
+   "floor": "1F",
+   "rooms": "1F-10;1F-13",
+   "plaster_line": "L-a85b83a93486fdc400f8",
+   "paint_line": "L-37cdb8db76a870eff3fe",
+   "paint_element": "1F-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.9",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.900 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.795000",
+    "0.795000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.795000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.795000",
+    "0.795000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.900000"
+   ],
+   "gross_lm": "5.300000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.900000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.900000",
+     "lm": [
+      "0.000000",
+      "0.900000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D215 handle C18: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-1F-09",
+   "kind": "DOOR",
+   "floor": "1F",
+   "rooms": "1F-11;1F-13",
+   "plaster_line": "L-5d309e25e8b180283606",
+   "paint_line": "L-56b08dbf65e47a26c561",
+   "paint_element": "1F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.9",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.900 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.795000",
+    "0.795000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.795000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.795000",
+    "0.795000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.900000"
+   ],
+   "gross_lm": "5.300000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.900000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.900000",
+     "lm": [
+      "0.000000",
+      "0.900000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D215 handle BEF: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-1F-05",
+   "kind": "DOOR",
+   "floor": "1F",
+   "rooms": "1F-07;1F-13",
+   "plaster_line": "L-f3590fade6406f912d2e",
+   "paint_line": "L-da69c4bd2954b31c0fb7",
+   "paint_element": "1F-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+   "depth": "0.2",
+   "width": "0.9",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.200 x 2.200; 0.200 x 0.900 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "1.060000",
+    "1.060000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "1.060000"
+   ],
+   "paint_m2_before_rule_A": [
+    "1.060000",
+    "1.060000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.900000"
+   ],
+   "gross_lm": "5.300000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.900000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.900000",
+     "lm": [
+      "0.000000",
+      "0.900000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block d220 handle C1A: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-1F-06",
+   "kind": "DOOR",
+   "floor": "1F",
+   "rooms": "1F-07;1F-08",
+   "plaster_line": "L-f8a0d9bfc3e6a3f113b2",
+   "paint_line": "L-d7409e4cefc3ee62aaf6",
+   "paint_element": "1F-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.800000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "WET_BOTH_SIDES_TILE_NOT_ESTABLISHED"
+    }
+   ],
+   "frame": "plan block D315 handle 11B4: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-1F-10",
+   "kind": "DOOR",
+   "floor": "1F",
+   "rooms": "1F-11;1F-12",
+   "plaster_line": "L-537fc3896f24cf408fe6",
+   "paint_line": "L-762c50f64c3b6b6b9999",
+   "paint_element": "1F-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.800000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D315 handle C12: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-1F-07",
+   "kind": "DOOR",
+   "floor": "1F",
+   "rooms": "1F-09",
+   "plaster_line": "L-f38f6ecefecd7e617cac",
+   "paint_line": "L-f430f55002cce63efb40",
+   "paint_element": "1F-OPENING-OP-019:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.800000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D315 handle BEE: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-1F-02",
+   "kind": "DOOR",
+   "floor": "1F",
+   "rooms": "1F-01;1F-13;ST-1F",
+   "plaster_line": "L-0bc19199447147ca226a",
+   "paint_line": "L-c74cb759ac5ff7e6cfa0",
+   "paint_element": "1F-OPENING-OP-020:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "1.0",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 1.000 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.810000",
+    "0.810000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.810000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.810000",
+    "0.810000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "1.000000"
+   ],
+   "gross_lm": "5.400000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "1.000000",
+     "lm": [
+      "0.000000",
+      "1.000000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D115 handle C31: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "A-1F-01",
+   "kind": "ARCH",
+   "floor": "1F",
+   "rooms": "1F-10",
+   "plaster_line": "L-64cb94b4b8dc2cb17608",
+   "paint_line": "L-6d2b3f8c5c33dd795433",
+   "paint_element": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "depth": "0.15",
+   "width": null,
+   "height": null,
+   "size_source": "jambs / head not measured in the T-313 ledger: JAMBS UNRESOLVED, HEAD UNRESOLVED",
+   "plaster_m2": null,
+   "paint_m2_before_engine": null,
+   "paint_m2_before_rule_A": null,
+   "paint_m2_after_B": null,
+   "edge_lm_after_B": null,
+   "gross_lm": null,
+   "status": "HELD",
+   "cause": "SIZE_NOT_ESTABLISHED",
+   "why": "width or height not established: the edge lm is HELD (blank), never 0",
+   "parts": [],
+   "frame": "handle -: no census symbol"
+  },
+  {
+   "opening": "D-1F-03",
+   "kind": "DOOR",
+   "floor": "1F",
+   "rooms": "1F-04;1F-13",
+   "plaster_line": "L-f0668097e8d872925fdf",
+   "paint_line": "L-d086b605ac0e50af082a",
+   "paint_element": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "1.0",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 1.000 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.810000",
+    "0.810000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.810000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.810000",
+    "0.810000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "1.000000"
+   ],
+   "gross_lm": "5.400000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "1.000000",
+     "lm": [
+      "0.000000",
+      "1.000000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D115 handle C32: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-1F-04",
+   "kind": "DOOR",
+   "floor": "1F",
+   "rooms": "1F-04;1F-03",
+   "plaster_line": "L-34f4545187c3c764d174",
+   "paint_line": "L-c17b547dd9cdad8faf26",
+   "paint_element": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.800000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D315 handle C2E: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-2F-01",
+   "kind": "DOOR",
+   "floor": "2F",
+   "rooms": "2F-01",
+   "plaster_line": "L-ca7d121f07fd1a73536d",
+   "paint_line": "L-d9d0cb88542f719484f7",
+   "paint_element": "2F-OPENING-OP-001:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "1.0",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 1.000 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.810000",
+    "0.810000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.810000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.810000",
+    "0.810000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "1.000000"
+   ],
+   "gross_lm": "5.400000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "1.000000",
+     "lm": [
+      "0.000000",
+      "1.000000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D115 handle 12BA: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-2F-03",
+   "kind": "DOOR",
+   "floor": "2F",
+   "rooms": "2F-03;2F-02",
+   "plaster_line": "L-833ba74bab1404d1f6cc",
+   "paint_line": "L-b12d7eb43e52a3d98ab4",
+   "paint_element": "2F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.800000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D315 handle 12BB: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-2F-02",
+   "kind": "DOOR",
+   "floor": "2F",
+   "rooms": "2F-03;2F-01",
+   "plaster_line": "L-39497d7b7639a776f8f2",
+   "paint_line": "L-4e7e711e5c8abc074414",
+   "paint_element": "2F-OPENING-OP-007:door jambs and head:RETURN_PAINT",
+   "depth": "0.2",
+   "width": "0.9",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.200 x 2.200; 0.200 x 0.900 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "1.060000",
+    "1.060000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "1.060000"
+   ],
+   "paint_m2_before_rule_A": [
+    "1.060000",
+    "1.060000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.900000"
+   ],
+   "gross_lm": "5.300000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.900000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.900000",
+     "lm": [
+      "0.000000",
+      "0.900000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block d220 handle 12C2: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-03",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-04",
+   "plaster_line": "L-9cf5a4b4db78cf57cf7f",
+   "paint_line": "L-897dca14b0b8c45be725",
+   "paint_element": "GF-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+   "depth": "0.2",
+   "width": "0.9",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.200 x 2.200; 0.200 x 0.900 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "1.060000",
+    "1.060000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "1.060000"
+   ],
+   "paint_m2_before_rule_A": [
+    "1.060000",
+    "1.060000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.900000"
+   ],
+   "gross_lm": "5.300000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.900000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.900000",
+     "lm": [
+      "0.000000",
+      "0.900000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block d220 handle 1B5: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-06",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-07",
+   "plaster_line": "L-e11de0ecd42fcb0b5756",
+   "paint_line": "L-7969458ba9185391c684",
+   "paint_element": "GF-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+   "depth": "0.2",
+   "width": "1.0",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.200 x 2.200; 0.200 x 1.000 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "1.080000",
+    "1.080000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "1.080000"
+   ],
+   "paint_m2_before_rule_A": [
+    "1.080000",
+    "1.080000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "1.000000"
+   ],
+   "gross_lm": "5.400000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "1.000000",
+     "lm": [
+      "0.000000",
+      "1.000000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D120 handle 33E: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-01",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-01",
+   "plaster_line": "L-f4175f9915208dc5f9f7",
+   "paint_line": "L-6777e02aa04439148278",
+   "paint_element": "GF-OPENING-OP-009:door jambs and head:RETURN_PAINT",
+   "depth": "0.2",
+   "width": "1.0",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.200 x 2.200; 0.200 x 1.000 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "1.080000",
+    "1.080000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "1.080000"
+   ],
+   "paint_m2_before_rule_A": [
+    "1.080000",
+    "1.080000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "1.000000"
+   ],
+   "gross_lm": "5.400000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "1.000000",
+     "lm": [
+      "0.000000",
+      "1.000000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D120 handle 15E: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-08",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-08;ST-GF",
+   "plaster_line": "L-1f443fe4e172a90ddd7c",
+   "paint_line": "L-ba30cda374ebb4a8c7da",
+   "paint_element": "GF-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+   "depth": "0.2",
+   "width": "1.0",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.200 x 2.200; 0.200 x 1.000 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "1.080000",
+    "1.080000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "1.080000"
+   ],
+   "paint_m2_before_rule_A": [
+    "1.080000",
+    "1.080000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "1.000000"
+   ],
+   "gross_lm": "5.400000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "1.000000",
+     "lm": [
+      "0.000000",
+      "1.000000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D120 handle 2C7: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-13",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-08;GF-15",
+   "plaster_line": "L-61825a3103a391956d70",
+   "paint_line": "L-65c1d5f9695ad983d89f",
+   "paint_element": "GF-OPENING-OP-012:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "1.0",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 1.000 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.810000",
+    "0.810000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.810000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.810000",
+    "0.810000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "1.000000"
+   ],
+   "gross_lm": "5.400000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "1.000000",
+     "lm": [
+      "0.000000",
+      "1.000000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D115 handle 2F2: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-09",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "ST-GF",
+   "plaster_line": "L-3c21b044ce980ec0ee75",
+   "paint_line": "L-91dfc7c4d8ea4c86a547",
+   "paint_element": "GF-OPENING-OP-013:door jambs and head:RETURN_PAINT",
+   "depth": "0.2",
+   "width": "0.9",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.200 x 2.200; 0.200 x 0.900 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "1.060000",
+    "1.060000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "1.060000"
+   ],
+   "paint_m2_before_rule_A": [
+    "1.060000",
+    "1.060000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "5.300000"
+   ],
+   "gross_lm": "5.300000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERAGE_NOT_PRINTED; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 4.400000, HEAD 0.000000 .. 0.900000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "4.400000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.900000",
+     "lm": [
+      "0.000000",
+      "0.900000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "handle 3FF: POSITION CONFLICT: the block's frame posts are not at the drawn masonry jambs (block width vs wall gap) (block 1.000 m vs masonry 0.900 m)"
+  },
+  {
+   "opening": "D-GF-11",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-12;GF-14",
+   "plaster_line": "L-7dcb2bab84655929f7e8",
+   "paint_line": "L-9df1fbe948884e7c4d2a",
+   "paint_element": "GF-OPENING-OP-017:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.800000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "WET_BOTH_SIDES_TILE_NOT_ESTABLISHED"
+    }
+   ],
+   "frame": "plan block D315 handle 321: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-12",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-13;GF-14",
+   "plaster_line": "L-672329032e0d70329d5f",
+   "paint_line": "L-0ea62c4cef8e2ce5a244",
+   "paint_element": "GF-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.800000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "WET_BOTH_SIDES_TILE_NOT_ESTABLISHED"
+    }
+   ],
+   "frame": "plan block D315 handle 320: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-07",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-08",
+   "plaster_line": "L-2f94dca4dd5f2ec05822",
+   "paint_line": "L-7f8d0739849d36a7e832",
+   "paint_element": "GF-OPENING-OP-021:door jambs and head:RETURN_PAINT",
+   "depth": "0.2",
+   "width": "2.0",
+   "height": "2.5",
+   "size_source": "T-313 ledger: 2 x 0.200 x 2.500; 0.200 x 2.000 (DRAWING-CONFIRMED)",
+   "plaster_m2": [
+    "1.400000",
+    "1.400000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "1.400000"
+   ],
+   "paint_m2_before_rule_A": [
+    "1.400000",
+    "1.400000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "2.000000"
+   ],
+   "gross_lm": "7.000000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 2.000000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "5.000000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "2.000000",
+     "lm": [
+      "0.000000",
+      "2.000000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D200 handle 281: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-05",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-06",
+   "plaster_line": "L-3ae66decd178e43c61e0",
+   "paint_line": "L-78d0a48c8bf5af4b21c4",
+   "paint_element": "GF-OPENING-OP-025:door jambs and head:RETURN_PAINT",
+   "depth": "0.2",
+   "width": "1.0",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.200 x 2.200; 0.200 x 1.000 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "1.080000",
+    "1.080000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "1.080000"
+   ],
+   "paint_m2_before_rule_A": [
+    "1.080000",
+    "1.080000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "1.000000"
+   ],
+   "gross_lm": "5.400000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "1.000000",
+     "lm": [
+      "0.000000",
+      "1.000000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D120 handle 192: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-04",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-04;GF-05",
+   "plaster_line": "L-f4e9614350ce4659d186",
+   "paint_line": "L-26efbd99ac40f2435692",
+   "paint_element": "GF-OPENING-OP-026:door jambs and head:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.800000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "plan block D315 handle 19E: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "A-GF-01",
+   "kind": "ARCH",
+   "floor": "GF",
+   "rooms": "GF-01;GF-02",
+   "plaster_line": "L-3e19506bd9e093dfb7be",
+   "paint_line": "L-eab5536cbc5b1f7829dd",
+   "paint_element": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "depth": "0.15",
+   "width": null,
+   "height": null,
+   "size_source": "jambs / head not measured in the T-313 ledger: JAMBS HELD, HEAD HELD",
+   "plaster_m2": null,
+   "paint_m2_before_engine": null,
+   "paint_m2_before_rule_A": null,
+   "paint_m2_after_B": null,
+   "edge_lm_after_B": null,
+   "gross_lm": null,
+   "status": "HELD",
+   "cause": "SIZE_NOT_ESTABLISHED",
+   "why": "width or height not established: the edge lm is HELD (blank), never 0",
+   "parts": [],
+   "frame": "handle -: no census symbol"
+  },
+  {
+   "opening": "D-GF-02",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-02;GF-03",
+   "plaster_line": "L-6ebb9be39b8c4ff4693a",
+   "paint_line": "L-8dd621261ceb5b8e3919",
+   "paint_element": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.800000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "WET_BOTH_SIDES_TILE_NOT_ESTABLISHED"
+    }
+   ],
+   "frame": "plan block D315 handle 1EF: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-10",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-10;GF-11",
+   "plaster_line": "L-698dfa14c60ff86b5c60",
+   "paint_line": "L-dc8b92788150cda368a1",
+   "paint_element": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "0.800000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+   "why": "per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "cause": "FRAME_COVERS_RETURN_DRAWN"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "WET_BOTH_SIDES_TILE_NOT_ESTABLISHED"
+    }
+   ],
+   "frame": "plan block D315 handle 339: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 3.0 3.0 0.0 0.0 mm)"
+  },
+  {
+   "opening": "D-GF-14",
+   "kind": "DOOR",
+   "floor": "GF",
+   "rooms": "GF-15;GF-16",
+   "plaster_line": "L-8a038e1ca7c2d73d5b13",
+   "paint_line": "L-f3270cd391188bcf433c",
+   "paint_element": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "depth": "0.15",
+   "width": "0.8",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.150 x 2.200; 0.150 x 0.800 (ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20))",
+   "plaster_m2": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_before_engine": [
+    "0.000000",
+    "0.780000"
+   ],
+   "paint_m2_before_rule_A": [
+    "0.780000",
+    "0.780000"
+   ],
+   "paint_m2_after_B": [
+    "0.000000",
+    "0.000000"
+   ],
+   "edge_lm_after_B": [
+    "0.000000",
+    "5.200000"
+   ],
+   "gross_lm": "5.200000",
+   "status": "BOUNDED",
+   "cause": "JAMBS FRAME_COVERAGE_NOT_PRINTED; HEAD FRAME_COVERAGE_NOT_PRINTED",
+   "why": "per component: JAMBS 0.000000 .. 4.400000, HEAD 0.000000 .. 0.800000",
+   "parts": [
+    {
+     "part": "JAMBS",
+     "gross": "4.400000",
+     "lm": [
+      "0.000000",
+      "4.400000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    },
+    {
+     "part": "HEAD",
+     "gross": "0.800000",
+     "lm": [
+      "0.000000",
+      "0.800000"
+     ],
+     "cause": "FRAME_COVERAGE_NOT_PRINTED"
+    }
+   ],
+   "frame": "handle 334: not a door block: no frame drawn"
+  },
+  {
+   "opening": "D-GF-15",
+   "kind": "GATE",
+   "floor": "GF",
+   "rooms": "",
+   "plaster_line": "L-e70e7e48b4c15b4f5a21",
+   "paint_line": "L-2d7f8ab2fb489d7f0963",
+   "paint_element": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "jambs / head not measured in the T-313 ledger: JAMBS UNRESOLVED, HEAD UNRESOLVED",
+   "plaster_m2": null,
+   "paint_m2_before_engine": null,
+   "paint_m2_before_rule_A": null,
+   "paint_m2_after_B": null,
+   "edge_lm_after_B": null,
+   "gross_lm": null,
+   "status": "HELD",
+   "cause": "SIZE_NOT_ESTABLISHED",
+   "why": "width or height not established: the edge lm is HELD (blank), never 0",
+   "parts": [],
+   "frame": "handle 2D8: masonry jamb not found on both faces"
+  }
+ ],
+ "window_rows": [
+  {
+   "opening": "W01",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "ST-GF",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W01",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "ST-GF",
+   "depth": "0.1",
+   "width": "1.2",
+   "height": "2.0",
+   "size_source": "T-313 ledger: 2 x 0.100 x 2.000; 0.100 x 1.200 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "5.200000",
+    "5.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 1.2 m.l: own item (bound to ARCH.WINDOW_REVEAL L-0de10f4db591a2467b82), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W02",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "GF-08",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W02",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "GF-08",
+   "depth": "0.08",
+   "width": null,
+   "height": null,
+   "size_source": "jambs / head not measured in the T-313 ledger: JAMBS HELD, HEAD MEASURED",
+   "edge_lm": null,
+   "status": "HELD",
+   "cause": "SIZE_NOT_ESTABLISHED",
+   "why": "width or height not established: the edge lm is HELD (blank), never 0; known part HEAD 6.33 m.l (not a value of the whole)",
+   "sill": "SILL 6.33 m.l: own item (bound to ARCH.WINDOW_REVEAL L-a430e89b6d52e1c994e0), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W03",
+   "side": "IN",
+   "kind": "FLOOR_GLAZING",
+   "room": "GF-08",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "jambs / head not measured in the T-313 ledger: JAMBS UNRESOLVED, HEAD UNRESOLVED",
+   "edge_lm": null,
+   "status": "HELD",
+   "cause": "SIZE_NOT_ESTABLISHED",
+   "why": "width or height not established: the edge lm is HELD (blank), never 0",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W03",
+   "side": "OUT",
+   "kind": "FLOOR_GLAZING",
+   "room": "GF-08",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "jambs / head not measured in the T-313 ledger: JAMBS UNRESOLVED, HEAD UNRESOLVED",
+   "edge_lm": null,
+   "status": "HELD",
+   "cause": "SIZE_NOT_ESTABLISHED",
+   "why": "width or height not established: the edge lm is HELD (blank), never 0",
+   "sill": "THRESHOLD 0 m.l: own item (bound to ARCH.WINDOW_REVEAL NO_LINE), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W04",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "GF-04",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W04",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "GF-04",
+   "depth": "0.08",
+   "width": "0.6",
+   "height": "0.8",
+   "size_source": "T-313 ledger: 2 x 0.080 x 0.800; 0.080 x 0.600 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "2.200000",
+    "2.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 0.6 m.l: own item (bound to ARCH.WINDOW_REVEAL L-6add1d9c5ce0493a3e60), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W05",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "GF-10",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W05",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "GF-10",
+   "depth": "0.08",
+   "width": "0.6",
+   "height": "0.8",
+   "size_source": "T-313 ledger: 2 x 0.080 x 0.800; 0.080 x 0.600 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "2.200000",
+    "2.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 0.6 m.l: own item (bound to ARCH.WINDOW_REVEAL L-bd633784436adfde4033), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W06",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "GF-13",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W06",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "GF-13",
+   "depth": "0.08",
+   "width": "0.6",
+   "height": "0.8",
+   "size_source": "T-313 ledger: 2 x 0.080 x 0.800; 0.080 x 0.600 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "2.200000",
+    "2.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 0.6 m.l: own item (bound to ARCH.WINDOW_REVEAL L-eef0162ee1ce392fc7d5), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W07",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "GF-16",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W07",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "GF-16",
+   "depth": "0.08",
+   "width": "0.6",
+   "height": "0.8",
+   "size_source": "T-313 ledger: 2 x 0.080 x 0.800; 0.080 x 0.600 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "2.200000",
+    "2.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 0.6 m.l: own item (bound to ARCH.WINDOW_REVEAL L-dec26399645ab26c13f9), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W08",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "GF-06",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W08",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "GF-06",
+   "depth": "0.08",
+   "width": "1.5",
+   "height": "1.5",
+   "size_source": "T-313 ledger: 2 x 0.080 x 1.500; 0.080 x 1.500 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "4.500000",
+    "4.500000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 1.5 m.l: own item (bound to ARCH.WINDOW_REVEAL L-b6691e6f54bf47eb4f89), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W09",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "GF-07",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W09",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "GF-07",
+   "depth": "0.08",
+   "width": "1.5",
+   "height": "1.5",
+   "size_source": "T-313 ledger: 2 x 0.080 x 1.500; 0.080 x 1.500 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "4.500000",
+    "4.500000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 1.5 m.l: own item (bound to ARCH.WINDOW_REVEAL L-1bedabba8af5d2529e77), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W10",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "GF-07",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W10",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "GF-07",
+   "depth": "0.08",
+   "width": "1.0",
+   "height": "1.5",
+   "size_source": "T-313 ledger: 2 x 0.080 x 1.500; 0.080 x 1.000 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "4.000000",
+    "4.000000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 1.0 m.l: own item (bound to ARCH.WINDOW_REVEAL L-bea7d46e51c809fbe623), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W11",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "GF-01",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W11",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "GF-01",
+   "depth": "0.1",
+   "width": "1.95",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.100 x 2.200; 0.100 x 1.950 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "6.350000",
+    "6.350000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 1.95 m.l: own item (bound to ARCH.WINDOW_REVEAL L-10af4bb68e88181775a7), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W12",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "GF-01",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W12",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "GF-01",
+   "depth": "0.1",
+   "width": "1.95",
+   "height": "2.2",
+   "size_source": "T-313 ledger: 2 x 0.100 x 2.200; 0.100 x 1.950 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "6.350000",
+    "6.350000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 1.95 m.l: own item (bound to ARCH.WINDOW_REVEAL L-36e2b88d45f02c84a404), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W13",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "ST-1F",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W13",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "ST-1F",
+   "depth": "0.1",
+   "width": "1.2",
+   "height": "2.3",
+   "size_source": "T-313 ledger: 2 x 0.100 x 2.300; 0.100 x 1.200 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "5.800000",
+    "5.800000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 1.2 m.l: own item (bound to ARCH.WINDOW_REVEAL L-ec91f75c35edf30f9c65), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W14",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "1F-01",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W14",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "1F-01",
+   "depth": "0.1",
+   "width": "2.45",
+   "height": "1.6",
+   "size_source": "T-313 ledger: 2 x 0.100 x 1.600; 0.100 x 2.450 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "5.650000",
+    "5.650000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 2.45 m.l: own item (bound to ARCH.WINDOW_REVEAL L-ea48300c45f8efa96ffe), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W15",
+   "side": "IN",
+   "kind": "FLOOR_GLAZING",
+   "room": "1F-13",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W15",
+   "side": "OUT",
+   "kind": "FLOOR_GLAZING",
+   "room": "1F-13",
+   "depth": "0.08",
+   "width": "1.55",
+   "height": "3.1",
+   "size_source": "T-313 ledger: 2 x 0.080 x 3.100; 0.080 x 1.550 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "7.750000",
+    "7.750000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "THRESHOLD 0.0 m.l: own item (bound to ARCH.WINDOW_REVEAL L-0e2e7299371efb8338cc), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W16",
+   "side": "IN",
+   "kind": "FLOOR_GLAZING",
+   "room": "1F-13",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W16",
+   "side": "OUT",
+   "kind": "FLOOR_GLAZING",
+   "room": "1F-13",
+   "depth": "0.08",
+   "width": "1.55",
+   "height": "3.1",
+   "size_source": "T-313 ledger: 2 x 0.080 x 3.100; 0.080 x 1.550 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "7.750000",
+    "7.750000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "THRESHOLD 0.0 m.l: own item (bound to ARCH.WINDOW_REVEAL L-146170b53ca02c2456f9), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W17",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "1F-11",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "jambs / head not measured in the T-313 ledger: JAMBS UNRESOLVED, HEAD UNRESOLVED",
+   "edge_lm": null,
+   "status": "HELD",
+   "cause": "SIZE_NOT_ESTABLISHED",
+   "why": "width or height not established: the edge lm is HELD (blank), never 0",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W17",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "1F-11",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "jambs / head not measured in the T-313 ledger: JAMBS UNRESOLVED, HEAD UNRESOLVED",
+   "edge_lm": null,
+   "status": "HELD",
+   "cause": "SIZE_NOT_ESTABLISHED",
+   "why": "width or height not established: the edge lm is HELD (blank), never 0",
+   "sill": "SILL 0 m.l: own item (bound to ARCH.WINDOW_REVEAL L-c90d5d6c06a671fc3b99), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W18",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "1F-12",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W18",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "1F-12",
+   "depth": "0.08",
+   "width": "0.5",
+   "height": "2.16",
+   "size_source": "T-313 ledger: 2 x 0.080 x 2.160; 0.080 x 0.500 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "4.820000",
+    "4.820000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 0.5 m.l: own item (bound to ARCH.WINDOW_REVEAL NO_LINE), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W19",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "1F-02",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W19",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "1F-02",
+   "depth": "0.08",
+   "width": "0.6",
+   "height": "0.8",
+   "size_source": "T-313 ledger: 2 x 0.080 x 0.800; 0.080 x 0.600 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "2.200000",
+    "2.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 0.6 m.l: own item (bound to ARCH.WINDOW_REVEAL L-e709025cfb48633cc369), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W20",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "1F-03",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W20",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "1F-03",
+   "depth": "0.08",
+   "width": "0.6",
+   "height": "0.8",
+   "size_source": "T-313 ledger: 2 x 0.080 x 0.800; 0.080 x 0.600 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "2.200000",
+    "2.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 0.6 m.l: own item (bound to ARCH.WINDOW_REVEAL L-e60b1ffc24c8bc76ec1a), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W21",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "1F-07",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W21",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "1F-07",
+   "depth": "0.08",
+   "width": "0.6",
+   "height": "0.8",
+   "size_source": "T-313 ledger: 2 x 0.080 x 0.800; 0.080 x 0.600 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "2.200000",
+    "2.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 0.6 m.l: own item (bound to ARCH.WINDOW_REVEAL L-cdd13c017d2f5328032e), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W22",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "1F-08",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W22",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "1F-08",
+   "depth": "0.08",
+   "width": "0.6",
+   "height": "0.8",
+   "size_source": "T-313 ledger: 2 x 0.080 x 0.800; 0.080 x 0.600 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "2.200000",
+    "2.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 0.6 m.l: own item (bound to ARCH.WINDOW_REVEAL L-dbec1a970ca591bebd43), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W23",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "1F-09",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W23",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "1F-09",
+   "depth": "0.08",
+   "width": "0.6",
+   "height": "0.8",
+   "size_source": "T-313 ledger: 2 x 0.080 x 0.800; 0.080 x 0.600 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "2.200000",
+    "2.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 0.6 m.l: own item (bound to ARCH.WINDOW_REVEAL L-1b5962c15890ecb2f6da), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W24",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "1F-04",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W24",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "1F-04",
+   "depth": "0.08",
+   "width": "1.55",
+   "height": "1.5",
+   "size_source": "T-313 ledger: 2 x 0.080 x 1.500; 0.080 x 1.550 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "4.550000",
+    "4.550000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 1.55 m.l: own item (bound to ARCH.WINDOW_REVEAL L-560e87c03e18569ae941), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W25",
+   "side": "IN",
+   "kind": "FLOOR_GLAZING",
+   "room": "ST-1F",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W25",
+   "side": "OUT",
+   "kind": "FLOOR_GLAZING",
+   "room": "ST-1F",
+   "depth": "0.08",
+   "width": "1.0",
+   "height": "1.5",
+   "size_source": "T-313 ledger: 2 x 0.080 x 1.500; 0.080 x 1.000 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "4.000000",
+    "4.000000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "THRESHOLD 0.0 m.l: own item (bound to ARCH.WINDOW_REVEAL L-63087103666a3c4b177b), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W26",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "ST-2F",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W26",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "ST-2F",
+   "depth": "0.1",
+   "width": "1.2",
+   "height": "1.7",
+   "size_source": "T-313 ledger: 2 x 0.100 x 1.700; 0.100 x 1.200 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "4.600000",
+    "4.600000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 1.2 m.l: own item (bound to ARCH.WINDOW_REVEAL L-d91627a1feb6dc854723), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W27",
+   "side": "IN",
+   "kind": "FLOOR_GLAZING",
+   "room": "ST-2F",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W27",
+   "side": "OUT",
+   "kind": "FLOOR_GLAZING",
+   "room": "ST-2F",
+   "depth": "0.08",
+   "width": "1.0",
+   "height": "1.5",
+   "size_source": "T-313 ledger: 2 x 0.080 x 1.500; 0.080 x 1.000 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "4.000000",
+    "4.000000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "THRESHOLD 0.0 m.l: own item (bound to ARCH.WINDOW_REVEAL L-d540d2198577747bcf84), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W28",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "2F-02",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W28",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "2F-02",
+   "depth": "0.08",
+   "width": "0.6",
+   "height": "0.8",
+   "size_source": "T-313 ledger: 2 x 0.080 x 0.800; 0.080 x 0.600 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "2.200000",
+    "2.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 0.6 m.l: own item (bound to ARCH.WINDOW_REVEAL L-44f5f5c49b50d62b44f3), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  },
+  {
+   "opening": "W29",
+   "side": "IN",
+   "kind": "WINDOW",
+   "room": "2F-03",
+   "depth": null,
+   "width": null,
+   "height": null,
+   "size_source": "T-313 WINDOW_DEPTHS: depth_in 0.000",
+   "edge_lm": [
+    "0.000000",
+    "0.000000"
+   ],
+   "status": "NO_PAINT_EDGE",
+   "cause": "FRAME_FLUSH_NO_RETURN",
+   "why": "frame flush with the room face (T-313 by DXF handle, DRAWING-CONFIRMED): no room-side return, 0 lm (also in a tiled wall)",
+   "sill": null,
+   "line": "none needed (0)"
+  },
+  {
+   "opening": "W29",
+   "side": "OUT",
+   "kind": "WINDOW",
+   "room": "2F-03",
+   "depth": "0.08",
+   "width": "1.2",
+   "height": "1.5",
+   "size_source": "T-313 ledger: 2 x 0.080 x 1.500; 0.080 x 1.200 (DRAWING-CONFIRMED)",
+   "edge_lm": [
+    "4.200000",
+    "4.200000"
+   ],
+   "status": "PAINT_LM",
+   "cause": null,
+   "why": "2 x h + w of a painted plastered return",
+   "sill": "SILL 1.2 m.l: own item (bound to ARCH.WINDOW_REVEAL L-a6565fe2cd9df42f77fd), finish not printed as paint: not a paint edge",
+   "line": "NO LINE (window outside jambs / head: missing family, T-313)"
+  }
+ ]
+}
