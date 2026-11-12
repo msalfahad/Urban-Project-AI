@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T16:14Z | Lead | STARTED | run session_01E6cPnerJ1msLuZNiTBaT8V | repo-attached routine | task state: board | report pending
 - 2026-11-12T15:51Z | Verifier | STARTED | run session_01E6cPndRu2x62YBGWB8KoeH | repo-attached routine | task state: READY T-743 (W1 @c18ed1ec), T-729 (W3 @9d012d6e) per run log | self-check pending
 - 2026-11-12 15:42 UTC | Worker 1 | SUCCESS | T-743 READY c18ed1ec (B12-01 sanitary census, research only) | Alsenan per room, both sheets side by side: WC 12, basin 17 (5 on both sheets, 12 sanitary only), shower tray 3 + walk-in 3, FD 19 (14x4in + 5x3in; machine FD check 19=19); HELD kitchen sink 1, washing point 1; vs T-010 reading +1 basin +2 showers +1 FD; arch plan draws only 5 basins; finding: 'WC'/'WASH' room-tag blocks read as fixtures by name (wet_room_evidence.py:127, 9 phantom); no freelancer sanitary line | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12 15:22 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
