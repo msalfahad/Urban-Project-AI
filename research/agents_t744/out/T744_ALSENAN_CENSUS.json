@@ -1,0 +1,455 @@
+{
+ "method_v1": "WET_ROOM_EVIDENCE_V1",
+ "method_v2": "WET_ROOM_EVIDENCE_V2",
+ "chain_method": "ARCH_TAKEOFF_V2.11",
+ "v1_reproduces_chain_classes": true,
+ "spaces_classed": 37,
+ "class_counts_v1": {
+  "HELD": 5,
+  "DRY": 9,
+  "NONE": 6,
+  "WET": 17
+ },
+ "class_counts_v2": {
+  "HELD": 5,
+  "DRY": 9,
+  "NONE": 6,
+  "WET": 17
+ },
+ "plan_fixtures_in_spaces_v1": {
+  "BASIN": 3,
+  "WC": 7
+ },
+ "plan_fixtures_in_spaces_v2": {
+  "BASIN": 3
+ },
+ "fixture_named_inserts": [
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "1C8",
+   "block": "WC",
+   "layer": "4",
+   "kind_by_name": "WC",
+   "content": "TEXT_ONLY",
+   "verdict": "TAG",
+   "room_id": "GF-RFAD3C4",
+   "content_types": {
+    "TEXT": 2
+   }
+  },
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "1CF",
+   "block": "WASH2",
+   "layer": "1",
+   "kind_by_name": "BASIN",
+   "content": "GEOMETRY",
+   "verdict": "FIXTURE",
+   "room_id": "GF-R8496F0",
+   "content_types": {
+    "ARC": 8,
+    "LWPOLYLINE": 2,
+    "CIRCLE": 6,
+    "LINE": 7
+   }
+  },
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "1EE",
+   "block": "WASH2",
+   "layer": "1",
+   "kind_by_name": "BASIN",
+   "content": "GEOMETRY",
+   "verdict": "FIXTURE",
+   "room_id": "GF-R8496F0",
+   "content_types": {
+    "ARC": 8,
+    "LWPOLYLINE": 2,
+    "CIRCLE": 6,
+    "LINE": 7
+   }
+  },
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "1F0",
+   "block": "WASH",
+   "layer": "4",
+   "kind_by_name": "BASIN",
+   "content": "TEXT_ONLY",
+   "verdict": "TAG",
+   "room_id": "GF-R8496F0",
+   "content_types": {
+    "TEXT": 2
+   }
+  },
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "1F7",
+   "block": "WC",
+   "layer": "4",
+   "kind_by_name": "WC",
+   "content": "TEXT_ONLY",
+   "verdict": "TAG",
+   "room_id": "GF-RB62B55",
+   "content_types": {
+    "TEXT": 2
+   }
+  },
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "2C0",
+   "block": "WASH2",
+   "layer": "1",
+   "kind_by_name": "BASIN",
+   "content": "GEOMETRY",
+   "verdict": "FIXTURE",
+   "room_id": "GF-RDBD4F9",
+   "content_types": {
+    "ARC": 8,
+    "LWPOLYLINE": 2,
+    "CIRCLE": 6,
+    "LINE": 7
+   }
+  },
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "2C1",
+   "block": "WASH2",
+   "layer": "1",
+   "kind_by_name": "BASIN",
+   "content": "GEOMETRY",
+   "verdict": "FIXTURE",
+   "room_id": "GF-RDBD4F9",
+   "content_types": {
+    "ARC": 8,
+    "LWPOLYLINE": 2,
+    "CIRCLE": 6,
+    "LINE": 7
+   }
+  },
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "2C5",
+   "block": "WASH",
+   "layer": "4",
+   "kind_by_name": "BASIN",
+   "content": "TEXT_ONLY",
+   "verdict": "TAG",
+   "room_id": "GF-RDBD4F9",
+   "content_types": {
+    "TEXT": 2
+   }
+  },
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "2DA",
+   "block": "WC",
+   "layer": "4",
+   "kind_by_name": "WC",
+   "content": "TEXT_ONLY",
+   "verdict": "TAG",
+   "room_id": "GF-RDF7D28",
+   "content_types": {
+    "TEXT": 2
+   }
+  },
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "322",
+   "block": "WC",
+   "layer": "4",
+   "kind_by_name": "WC",
+   "content": "TEXT_ONLY",
+   "verdict": "TAG",
+   "room_id": "GF-RB28769",
+   "content_types": {
+    "TEXT": 2
+   }
+  },
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "323",
+   "block": "WC",
+   "layer": "4",
+   "kind_by_name": "WC",
+   "content": "TEXT_ONLY",
+   "verdict": "TAG",
+   "room_id": "GF-RF38DAF",
+   "content_types": {
+    "TEXT": 2
+   }
+  },
+  {
+   "region": "SH05:GF",
+   "floor": "GF",
+   "handle": "33B",
+   "block": "WASH2",
+   "layer": "1",
+   "kind_by_name": "BASIN",
+   "content": "GEOMETRY",
+   "verdict": "FIXTURE",
+   "room_id": "GF-RD36087",
+   "content_types": {
+    "ARC": 8,
+    "LWPOLYLINE": 2,
+    "CIRCLE": 6,
+    "LINE": 7
+   }
+  },
+  {
+   "region": "SH04:1F",
+   "floor": "1F",
+   "handle": "C19",
+   "block": "WC",
+   "layer": "4",
+   "kind_by_name": "WC",
+   "content": "TEXT_ONLY",
+   "verdict": "TAG",
+   "room_id": "1F-R52AC05",
+   "content_types": {
+    "TEXT": 2
+   }
+  },
+  {
+   "region": "SH03:2F",
+   "floor": "2F",
+   "handle": "12B6",
+   "block": "WC",
+   "layer": "4",
+   "kind_by_name": "WC",
+   "content": "TEXT_ONLY",
+   "verdict": "TAG",
+   "room_id": "2F-RE83BED",
+   "content_types": {
+    "TEXT": 2
+   }
+  }
+ ],
+ "text_only_blocks_any_name": 45,
+ "room_builder_label_sources": {
+  "TEXT": 25,
+  "None": 8,
+  "ZONE_SHARED": 1,
+  "STACKED_FOOTPRINT": 3,
+  "ZONE_GROUP": 1
+ },
+ "inventory_verdicts": {
+  "TAG": 9,
+  "FIXTURE": 5
+ },
+ "spaces_whose_evidence_differs": [
+  {
+   "room_id": "1F-R52AC05",
+   "v1": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "plan_fixtures": [
+     "WC"
+    ],
+    "coordination_checks": []
+   },
+   "v2": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "label_source": "TEXT",
+    "plan_fixtures": [],
+    "unconfirmed": [],
+    "coordination_checks": []
+   },
+   "class_or_reason_or_basis_changed": false
+  },
+  {
+   "room_id": "2F-RE83BED",
+   "v1": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "plan_fixtures": [
+     "WC"
+    ],
+    "coordination_checks": []
+   },
+   "v2": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "label_source": "TEXT",
+    "plan_fixtures": [],
+    "unconfirmed": [],
+    "coordination_checks": []
+   },
+   "class_or_reason_or_basis_changed": false
+  },
+  {
+   "room_id": "GF-RB28769",
+   "v1": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "plan_fixtures": [
+     "WC"
+    ],
+    "coordination_checks": []
+   },
+   "v2": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "label_source": "TEXT",
+    "plan_fixtures": [],
+    "unconfirmed": [],
+    "coordination_checks": []
+   },
+   "class_or_reason_or_basis_changed": false
+  },
+  {
+   "room_id": "GF-RB62B55",
+   "v1": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "plan_fixtures": [
+     "WC"
+    ],
+    "coordination_checks": []
+   },
+   "v2": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "label_source": "TEXT",
+    "plan_fixtures": [],
+    "unconfirmed": [],
+    "coordination_checks": []
+   },
+   "class_or_reason_or_basis_changed": false
+  },
+  {
+   "room_id": "GF-RDF7D28",
+   "v1": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "plan_fixtures": [
+     "WC"
+    ],
+    "coordination_checks": []
+   },
+   "v2": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "label_source": "TEXT",
+    "plan_fixtures": [],
+    "unconfirmed": [],
+    "coordination_checks": []
+   },
+   "class_or_reason_or_basis_changed": false
+  },
+  {
+   "room_id": "GF-RF38DAF",
+   "v1": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "plan_fixtures": [
+     "WC"
+    ],
+    "coordination_checks": []
+   },
+   "v2": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "label_source": "TEXT",
+    "plan_fixtures": [],
+    "unconfirmed": [],
+    "coordination_checks": []
+   },
+   "class_or_reason_or_basis_changed": false
+  },
+  {
+   "room_id": "GF-RFAD3C4",
+   "v1": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "plan_fixtures": [
+     "WC"
+    ],
+    "coordination_checks": []
+   },
+   "v2": {
+    "class": "WET",
+    "reason": "LABEL_WET",
+    "basis": "architectural label BATHROOM (TEXT) - owner wet area",
+    "labels": [
+     "BATHROOM"
+    ],
+    "label_source": "TEXT",
+    "plan_fixtures": [],
+    "unconfirmed": [],
+    "coordination_checks": []
+   },
+   "class_or_reason_or_basis_changed": false
+  }
+ ],
+ "spaces_whose_class_reason_basis_changed": [],
+ "line_index": {
+  "candidate": "ARCH_TAKEOFF_V3.0.75",
+  "lines": 5159,
+  "lines_naming_a_changed_space": []
+ }
+}
