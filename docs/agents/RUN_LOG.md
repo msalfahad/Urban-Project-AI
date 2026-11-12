@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T15:06Z | Worker 2 | SUCCESS | T-742 READY (agents/task-T-742 @ 467ffd96) | B9-05 parapet blocks drafted: 25 runs censused by DXF handle, 4 lines HELD 0 .. 101.464 m2 (P1 reading 55.045 .. 60.413; material unkeyed Q-65 C / D-39); faces vs centreline close by the corner term (annex / GF / 2F); 1F NW roof-plan inner face 12A7 11.600 m confirms the V3.0.23 -0.4435 m; freelancer 172.93 m2 = datum ENGINE_RIGHT + material UNRESOLVED | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12T15:01Z | Worker 3 | STARTED | run session_01E6cPndX94JyLZV4KQmQorV | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T14:51Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T14:51Z | Verifier | INCOMPLETE | none (overlap guard: run session_01E6cPnbViRyHAG6PKLTn5pu active since 2026-11-12T13:53Z) | no check, no merge, no quantity change | self-check not run; problem: 'AGENT_ENV FAIL: run lock NOLOCK: a SUCCESS final line is refused; write the final line INCOMPLETE (lock NOLOCK) and end'
