@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T05:51Z | Verifier | STARTED | run session_01E6cPnep7o5HWYiBduvqwbB | repo-attached routine | task state: READY T-720 (W2 @06b1638c), T-731 (W1 @4a378456) | self-check pending
 - 2026-11-12T05:32Z | Worker 1 | SUCCESS | T-731 READY (agents/task-T-731 @ 4a378456) | Section A-A prints the GF half landing +3.50 (320 over +0.30): coherent ST reading = 16 x 0.15625 + 12 x 0.1667; T-725's 4.50/28 uniform misses the landing by 0.071 m (refused). Highs only: MS1-L concrete hi 1.037005 -> 1.023763 m3, well-side formwork hi 0.854426 -> 0.843465 m2, junction cap 0.873917 -> 0.862807 m2; floors unchanged (L-7863355d 1.213428 directed). MS2-LD-W/E, MS1-LD, D1 re-measured by handle, residual 0 m3; freelancer NOT_COMPARABLE; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12T05:21Z | Worker 1 | STARTED | run session_01E6cPnaUmrG16JX9nb5nxBS | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T05:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
