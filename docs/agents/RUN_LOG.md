@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T00:51Z | Verifier | STARTED | run session_01E6cPnbAfTHysZaH2YWF1hF | repo-attached routine | task state: READY 0 per Lead 00:18 (re-checking board) | self-check pending
 - 2026-11-12T00:41Z | Worker 2 | STARTED | run session_01E6cPndfHwiRk6EtS48GZVp | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12 00:18 UTC | Lead | SUCCESS | board | 8 MERGED since 20:17 (T-712, T-716, T-721, T-718, T-703 Gate B -> candidate V3.0.72 / master 1.73.0, T-714 PARTIAL, T-723, T-719; ancestors of 302e002d checked), READY 0; T-722 concrete round 9 TODO (V3.0.73, + T-721 ring, F-T723-1..3); new T-724 checker findings, T-725 stair formwork, T-726 plaster shaft 13.50 m2, T-727 void deductions (floor +0.057 m2, ceiling 16.005 risk), T-728 bead ledger; DESIGNER_QUESTIONS per item (D-39 92 sole lines); lessons L-T716-1 / F-V715-1 ADOPTED, union-not-sum and L-T703-1 PROPOSED; Drive OK, no new files, no photos; no owner package; queue check: 19 actionable rows, 0 flagged, 0 stall checks | self-check PASS (codemap, t061, freeze); problem: none
 - 2026-11-12 00:14 UTC | Lead | STARTED | run session_01E6cPndtVCL8zKTzDKQehC7 | repo-attached routine | task state: board | report pending
