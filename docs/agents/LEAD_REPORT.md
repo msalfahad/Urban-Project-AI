@@ -1,5 +1,20 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-12 04:20 UTC
+
+Drive read OK (no file in the private project folders modified since 16:00 UTC 10 Nov, no photo task). Training villa: candidate of record now ARCH_TAKEOFF_V3.0.73 / master 1.74.0 (NOT RELEASED; released V2.9 + route G untouched). 6 pieces merged since 00:16, all with the Checker's own re-measure; READY 0, REJECTED 0.
+- CONCRETE (m3; released / bounded / one-sided / blank never summed): concrete limits package PASSED (full suite 23,712 pass 0 fail; 33 lines by hand). Released 317 lines = 291.476251 unchanged. Only held figure moved: COLUMN held low 11.67283 -> 11.80007 (+0.12724, one-plane 2F roof slab top on 5 column sections), high 15.5015 kept. Beside blank lines now: ground beams at least 5.099845, lift pit at least 1.903, east dome ring at least 0.115155 (the 0.140345 alternative is incoherent and is never a designer candidate), parapet floor restated 1.677887 -> 1.677886 (rounding rule). Lift: freelancer 1.650 < drawn 1.903, ENGINE_RIGHT. Stair MS1-L: one reading mixed 28 risers with a 27-riser rise; coherent reading lowers its high 1.054813 -> 1.037005 (new task, highs only).
+- FORMWORK (m2): soffit edges read 0.250 on the drawing: 4 lines low +0.001093 (L-3280c42c 3.559782); one ground-beam band capped 3.5256 m3 held; 4 drawn strip pieces 0.378618 m2 named as blank children. Stair formwork 20 lines: E1 risers 1.904 .. 2.380 and MS2-TR >= 0.1932 verified by the Checker; MS1-L well side 0.679 .. 0.854 and turn >= 7.679 on the worker's hand figure; 16 blank by cause. Released stair formwork 36.927436 unchanged. Not in the candidate yet (formwork package V3.0.75 after plaster / paint).
+- FINISHES (m2): 1F living porcelain 33.411036 is RIGHT (light well deducted once, overlap 1.150 x 0.050 = 0.0575 re-measured by handle); last run's ENGINE_WRONG finding came from a stale list and is withdrawn. A ceiling line over the well is excluded as a duplicate face (owner line is the decor ceiling, well top 26.064). Plaster: his 13.50 shaft row sits on no drawn face (continuation of his stair-house row, 204.42 group); engine carries the shaft faces once and does not add it. Like for like with that row apart: engine -14.83 .. -8.82 % below his 1,155.625 (his full total 1,169.125 shown beside). Corner beads 116 all held with their host wall: interior 294.0828 .. 294.4828 m.l, exterior 43 blank pending the exterior plaster task.
+- REBAR: parked by your decision; nothing done.
+- Learned: check a finding against the line's own live record before raising it (a stale list produced a false ENGINE_WRONG); a stair reading takes count, riser and total rise from one coherent reading; adopted: deduct a void once as the union; a merge that adds a master version promotes it in the same publication.
+- Team health: 13 runs since 00:16, every one closed with a final line; self-check PASS everywhere; Checker 5 Gate A + 1 Gate B in 4 h. Board: 8 TODO (S 3, A 3, I 2), queue check 19 actionable, 0 flagged, 0 stall.
+- Gates: lowest open gate 1 (stair concrete reading T-731, moved-member formwork T-732). M3: concrete limits in the candidate a day ahead of estimate; plaster / paint next (14 Nov MEDIUM-HIGH); formwork 15 Nov MEDIUM; tiles / WP 15-17 Nov LOW-MEDIUM.
+
+OWNER PACKAGE: none today (no item meets section 2.7). The designer list (DESIGNER_QUESTIONS.md) is unchanged; send it when you choose.
+
+NEEDS FIXING (owner only): (1) Decode fix PR #6 still open: Drive downloads arrive as raw binary and the wrapper refuses them; workers re-encode by hand each run (works, costs minutes). (2) Approved scheduled-task edits still not possible under the repository settings (no change since 11 Nov).
+
 ## LEAD REPORT 2026-11-12 00:16 UTC
 
 Drive read OK (no file in the private project folders modified since 16:00 UTC 10 Nov, no photo task). Training villa: candidate of record now ARCH_TAKEOFF_V3.0.72 / master 1.73.0 (NOT RELEASED; released V2.9 + route G untouched). 8 pieces merged since 20:17, all checked by own re-measure; READY 0.
@@ -30,20 +45,4 @@ Drive read OK (no file in the private project folders modified since 16:00 UTC 1
 OWNER PACKAGE: none today (no item meets section 2.7). The designer list becomes per item when the census passes the Checker.
 
 NEEDS FIXING (owner only): (1) Decode fix PR #6 still open: this evening a worker built a stair-finish package without reading the drawing because the raw download was refused; agents re-encode meanwhile, but it costs runs. (2) A Gate B full suite still takes about an hour of one Checker run (18:58 -> 20:05). (3) Scheduled-task edits you approved cannot be made under the current repository settings (as recorded 15:30).
-
-## LEAD REPORT 2026-11-11 16:25 UTC
-
-Drive read OK (no file in the private project folders modified since 16:00 UTC 10 Nov, no photo task). Training villa: candidate of record stays ARCH_TAKEOFF_V3.0.70 / master 1.71.0 (NOT RELEASED; released default V2.9 + route G untouched). No candidate line moved since 12:25: five research pieces merged (all unwired), one integration package rejected. Whole lines verified: 1 (CONC.SLAB), unchanged.
-- CONCRETE (m3; released / bounded / blank never summed): released 317 = 291.476251 unchanged. Slab -0.77 % vs freelancer closed by storey: GF reference rounding, 2F thickness zones; 1F -0.556333 stays UNRESOLVED (his 1F row is a typed area). Beam -0.128 = his total's formula omits one row (his slip). Column tail settled from the drawing: 5 roof-plate lows +0.12724 (not the flat +0.13364); held 11.80007 .. 15.5015, tank pair LOWER_ONLY 0.3287 each (designer item). Still blank: lintel 21, ground beam 20, beam 12, stair 5, parapet 4, neck 4, lift 2: new investigations opened for all of them except beams (designer list).
-- LINTELS: the wiring package (16 blank lintels get an upper bound, family 1.321826 m3) failed the full suite on a declaration test, not on quantities; my ruling raises the bound to 1.322146 m3 (measured stopper to stopper on one drawing); rework is first in lane I.
-- PLASTER / PAINT (m2): like for like plaster -15.81 .. -9.88 % vs freelancer (unchanged). 40.50 of his 54.00 shaft row is the round-stair well, carried once by the engine (engine right); 13.50 unresolved. New omission found: double-height band plaster 0.84 .. 0.87 / paint 3.34 .. 3.53, to be wired after masonry.
-- WATERPROOFING (m2): 58 held / missing lines classed: 46 designer, 8 measurable now (measured, unwired), 3 owner Q-34, 1 not an element; sunken wet-room panels add a HELD 0 .. 13.335 m2 recess membrane. Freelancer not compared.
-- REBAR: parked by your decision; detailed 9,628.462205 kg kept as is; no ratio, no kg/m3 assumed.
-- Learned: a rule conflict is settled by the drawing (it moved the plate low to a third value); compare like for like before calling a discrepancy; an upper bound comes from one geometry; read a reference total's formula before reconciling it.
-- Team health: 13 runs since 12:21, all closed with a final line; self-check PASS for all three workers; Checker throughput 5 Gate A + 1 Gate B in 4 h; READY 0 now. Board: 8 TODO (S 4, A 2, I 2), queue check 20 actionable, 0 flagged.
-- Gate: lowest open gate 1 (concrete blanks); M3 (reconciled quantities + scorecard, 12-13 Nov) at risk: the lintel and masonry packages must both pass Gate B by 13 Nov.
-
-OWNER PACKAGE: none today. Designer list started (DESIGNER_QUESTIONS.md, 13 items by family); it is for you to send, and becomes per item once its census lands.
-
-NEEDS FIXING (owner only): (1) Decode fix PR #6 (raw Drive downloads) still open: agents re-encode meanwhile. (2) A Gate B full suite takes longer than one Checker lock on 2 cores (T-693 needed 2 runs). (3) Scheduled-task edits you approved cannot be made from any session under the current repository settings (as recorded 15:30).
 

@@ -1,6 +1,6 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-11 16:25 UTC (Lead). Previous version: 2026-11-11 08:25 UTC. The released numbers did not change
+Last update: 2026-11-12 04:20 UTC (Lead). Previous version: 2026-11-12 00:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared
 lines, the slab); released: 0. No candidate line changed since 12:25.
@@ -2668,6 +2668,21 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
+(Lead 2026-11-12 04:20)
+- Candidate (not released) moved one step: the concrete limits are in it. Only one held figure moved: the held columns'
+  low end rose from 11.67 to 11.80 m3 (the one-plane roof slab top, read on the column sections); every other changed
+  line carries a limit or a named reason beside a blank (ground beams at least 5.10 m3, east dome ring at least
+  0.115 m3, lift pit walls at least 1.90 m3). Released concrete 291.48 m3 in the candidate unchanged; released BOQ
+  unchanged. Full test suite 23,712 pass, 0 fail; 33 lines checked by hand.
+- Settled tonight from the drawings: the 1F living floor is right as it is (33.41 m2): the light well is deducted once;
+  the 'twice' finding came from an old list the line no longer reads, and was withdrawn. Of your freelancer's 54.00 m2
+  stair-wall plaster row, the last 13.50 m2 sits on no drawn face (it continues his stair-house row); we do not add it,
+  and the plaster comparison now shows it apart: like for like the engine is 8.8 .. 14.8 % below his figure.
+- Checked, not yet wired: stair formwork (20 lines: 2 with a range, 2 with a lower limit, 16 with a named reason);
+  corner beads (116, all held with their wall, inside about 294 m); the dome ring depth kept at its lower figure.
+- Next: plaster / paint into the candidate, then formwork; one stair flight whose reading mixed 28 risers with a
+  27-riser rise (its high figure drops slightly, 1.055 -> 1.037 m3); formwork for the members whose concrete limits moved;
+  gross floor area per floor; tiles over the voids; the roof waterproofing record the checker must issue.
 (Lead 2026-11-12 00:16)
 - Candidate (not released) moved one step: the masonry walls with no figure now carry a one-ended limit beside them
   (18 lines; e.g. a 2F wall at most 1.965 m2, a GF wall at least 12.93 m2), and 10 held masonry ranges were rounded
