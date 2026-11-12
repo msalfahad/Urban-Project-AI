@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T20:52Z | Verifier | STARTED | run session_01E6cPnbAR4cM8GKQ3n4uQ3P | repo-attached routine | task state: READY none per board (T-751/T-745 r2/T-736 TODO or CLAIMED; W2 run active since 20:40) | self-check pending
 - 2026-11-12T20:40Z | Worker 2 | STARTED | run session_01E6cPneUutNBoo7QvFBHhFQ | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12 20:17 UTC | Lead | SUCCESS | board | 7 MERGED since 16:20 (T-729 Gate B V3.0.75, T-743, T-746, T-744, T-748, T-747; ancestors of a3f62c52 checked), T-745 REJECTED r1 -> TODO r2 with Lead ruling (T-380 governs B12-02, no scaled lm; designer item 16); F-V748-1 hub named: T-736 now TODO carries roof membrane record DG-98cbadebaecc5ede; NEW T-750 H4 WP package, T-751 exterior paint edges closure, T-752 B13-07 metalwork census; Drive OK, no new files; no owner package; queue check: 17 actionable rows, 0 flagged, 0 stall checks | self-check PASS/PASS/PASS (codemap, pytest t061, freeze); problem: none
 - 2026-11-12 20:12 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
