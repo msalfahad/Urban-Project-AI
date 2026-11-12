@@ -1,0 +1,70 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.77.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.75",
+  "ARCH_TAKEOFF_V3.0.76"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.75": {
+   "lines": 5159,
+   "lines_sha256": "a1eba08f9fac04c914aa3a5d7a88a9aee22d09d187709f008c5d956565372dc0"
+  },
+  "ARCH_TAKEOFF_V3.0.76": {
+   "lines": 5173,
+   "lines_sha256": "9b35725cf55ec092a321bb6000883f3480ef04e70c5445de02e42f4f77be59c0",
+   "previous": "ARCH_TAKEOFF_V3.0.75",
+   "item_codes": {
+    "FIN.CEILING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "FIN.PLASTER.BEAD": {
+     "added": 14,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.WP.ROOF": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    }
+   },
+   "families": {
+    "B4-09": {
+     "FIN.PLASTER.BEAD": {
+      "added": 14,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B5-01": {
+     "FIN.CEILING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B8-06": {
+     "FIN.WP.ROOF": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 16,
+   "record_only": 0
+  }
+ }
+}

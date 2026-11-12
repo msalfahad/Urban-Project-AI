@@ -1,0 +1,1274 @@
+{
+ "bead_projection": {
+  "arrises": 73,
+  "arrises_blank": 6,
+  "arrises_measured": 67,
+  "at_least": 5,
+  "at_least_sum": "128.6328",
+  "bounded": 9,
+  "high": "165.65",
+  "lines": 14,
+  "low": "165.45",
+  "rows_high": "294.4828",
+  "rows_low": "294.0828"
+ },
+ "inputs": {
+  "entries": [
+   {
+    "action": "BOUND",
+    "arrises": [
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-GF-13#GF-15",
+      "high": 5.4,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.4,
+      "room": "GF-15",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-GF-14#GF-15",
+      "high": 5.2,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.2,
+      "room": "GF-15",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-15#V02",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-15",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-15#V12",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-15",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-15#V13",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-15",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-15#V55",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-15",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-15#V56",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-15",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:GF_15#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:GF_15:PLASTER",
+     "high": 66.52899,
+     "item_code": "FIN.PLASTER",
+     "low": 66.52899,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-0d93f2209cd9bb827c0a",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1)"
+   },
+   {
+    "action": "BOUND",
+    "arrises": [
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "",
+      "edge_id": "ST-1F#V10 + ST-1F#V11",
+      "high": 7.92,
+      "ledger_status": "DRAWING-CONFIRMED",
+      "low": 7.92,
+      "room": "ST-1F",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:ST_1F#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:ST_1F:PLASTER",
+     "high": 46.564,
+     "item_code": "FIN.PLASTER",
+     "low": 45.317,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-0eac839f9132da7bd116",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1)"
+   },
+   {
+    "action": "BOUND",
+    "arrises": [
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-GF-03#GF-04",
+      "high": 5.3,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.3,
+      "room": "GF-04",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-GF-04#GF-04",
+      "high": 5.2,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.2,
+      "room": "GF-04",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:GF_04#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:GF_04:PLASTER",
+     "high": 43.78,
+     "item_code": "FIN.PLASTER",
+     "low": 34.33,
+     "unit": "m2"
+    },
+    "host_change_since_t728": {
+     "by": "T-717 (V3.0.74) annex datum Q-54 B",
+     "t728": "HELD 43.155 .. 43.155 m2",
+     "v3_0_75": "HELD 34.33 .. 43.78 m2"
+    },
+    "host_line_id": "L-1ddc23d5657b4c4e4d0d",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1)"
+   },
+   {
+    "action": "AT_LEAST",
+    "arrises": [
+     {
+      "class": "OPENING_UNDER_HEAD",
+      "drawing_band": "",
+      "edge_id": "A-1F-01#1F-10",
+      "high": null,
+      "ledger_status": "HELD",
+      "low": null,
+      "room": "1F-10",
+      "state": "HELD_BLANK",
+      "why": "bead: arch drawn on no view (T-313 UNRESOLVED)"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-1F-08#1F-10",
+      "high": 5.3,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.3,
+      "room": "1F-10",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:1F_10#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:1F_10:PLASTER",
+     "high": 62.05,
+     "item_code": "FIN.PLASTER",
+     "low": 58.026,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1); 1 arris(es) blank: A-1F-01#1F-10: arch drawn on no view (T-313 UNRESOLVED)"
+   },
+   {
+    "action": "AT_LEAST",
+    "arrises": [
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-11#V03",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-11",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-11#V06",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-11",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-11#V11",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-11",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "WALL_END",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-11#V13",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-11",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "WALL_END",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-11#V14",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-11",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-11#V16",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-11",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-11#V25",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-11",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-1F-09#1F-11",
+      "high": 5.3,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.3,
+      "room": "1F-11",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-1F-10#1F-11",
+      "high": 5.2,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.2,
+      "room": "1F-11",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "WINDOW_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "W17#IN",
+      "high": null,
+      "ledger_status": "HELD",
+      "low": null,
+      "room": "1F-11",
+      "state": "HELD_BLANK",
+      "why": "bead: curved opening: room side not measured (T-238 / T-302 developed surface)"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:1F_11#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:1F_11:PLASTER",
+     "high": 80.19841,
+     "item_code": "FIN.PLASTER",
+     "low": 74.77651,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-31db3c83552682d92ca3",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1); 1 arris(es) blank: W17#IN: curved opening: room side not measured (T-238 / T-302 developed surface)"
+   },
+   {
+    "action": "BOUND",
+    "arrises": [
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "",
+      "edge_id": "ST-2F#V10 + ST-2F#V11",
+      "high": 7.78,
+      "ledger_status": "HELD",
+      "low": 7.58,
+      "room": "ST-2F",
+      "state": "HELD_BOUND",
+      "why": "bead: top band under the roof: roof datum D-39 and build-up b 0 .. 0.10 (T-680)"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:ST_2F#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:ST_2F:PLASTER",
+     "high": 48.772,
+     "item_code": "FIN.PLASTER",
+     "low": 47.342,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-418121a4b223cb4e8646",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1)"
+   },
+   {
+    "action": "BOUND",
+    "arrises": [
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-2F-02#2F-03",
+      "high": 5.3,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.3,
+      "room": "2F-03",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-2F-03#2F-03",
+      "high": 5.2,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.2,
+      "room": "2F-03",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:2F_03#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:2F_03:PLASTER",
+     "high": 69.775,
+     "item_code": "FIN.PLASTER",
+     "low": 69.775,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-4ce74fc37a08d4bdf0d8",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1)"
+   },
+   {
+    "action": "AT_LEAST",
+    "arrises": [
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-GF-07#GF-08",
+      "high": 7.0,
+      "ledger_status": "DRAWING-CONFIRMED",
+      "low": 7.0,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-GF-08#GF-08",
+      "high": 5.4,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.4,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-GF-13#GF-08",
+      "high": 5.4,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.4,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-08#V27",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-08#V28",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-08#V41",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-08#V42",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-08#V56",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-08#V57",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "",
+      "edge_id": "GF-08#V60",
+      "high": 3.5364,
+      "ledger_status": "HELD",
+      "low": 3.4364,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "bead: under the HIDDEN outline of stair C quarter landing C-L1 (finished +4.696429, SOURCE_VERIFIED) minus build-up b 0 .. 0.10 (not printed) minus 0.16 (zone tag T16) minus GF-08 floor +1.00: soffit below G1 3.65"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "",
+      "edge_id": "GF-08#V61",
+      "high": 3.5364,
+      "ledger_status": "HELD",
+      "low": 3.4364,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "bead: under the HIDDEN outline of stair C quarter landing C-L1 (finished +4.696429, SOURCE_VERIFIED) minus build-up b 0 .. 0.10 (not printed) minus 0.16 (zone tag T16) minus GF-08 floor +1.00: soffit below G1 3.65; V61 IS an arris: line 4AF is layer '2' HIDDEN (the landing's east edge overhead), not"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-08#V62",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-08#V66",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-08#V67",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-08#V79",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.65 .. 4.29 m (beside, F-T697-1; not the bound)",
+      "edge_id": "GF-08#V80",
+      "high": 3.65,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.65,
+      "room": "GF-08",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "OPENING_UNDER_HEAD",
+      "drawing_band": "",
+      "edge_id": "OPEN#GF-08-OP003",
+      "high": null,
+      "ledger_status": "HELD",
+      "low": null,
+      "room": "GF-08",
+      "state": "HELD_BLANK",
+      "why": "bead: 11.22 m open side of the living zone toward the court / pantry zones (engine passage OP-003, column jambs both ends): an engine zone edge, not a drawn opening; whether its end columns stand proud into the court is not re"
+     },
+     {
+      "class": "WINDOW_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "W03#IN",
+      "high": null,
+      "ledger_status": "HELD",
+      "low": null,
+      "room": "GF-08",
+      "state": "HELD_BLANK",
+      "why": "bead: curved opening: room side not measured (T-238 / T-302 developed surface)"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:GF_08#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:GF_08:PLASTER",
+     "high": 211.80527,
+     "item_code": "FIN.PLASTER",
+     "low": 178.22057,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-8cecb1d010d5aafbf25d",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1); 2 arris(es) blank: OPEN#GF-08-OP003: 11.22 m open side of the living zone toward the court / pantry zones (engine passage OP-003, column jambs both end; W03#IN: curved opening: room side not measured (T-238 / T-302 developed surface)"
+   },
+   {
+    "action": "AT_LEAST",
+    "arrises": [
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-GF-08#ST-GF",
+      "high": 5.4,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.4,
+      "room": "ST-GF",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-GF-09#ST-GF",
+      "high": 5.3,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.3,
+      "room": "ST-GF",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "OPENING_UNDER_HEAD",
+      "drawing_band": "",
+      "edge_id": "OPEN#ST-GF-OP020",
+      "high": null,
+      "ledger_status": "HELD",
+      "low": null,
+      "room": "ST-GF",
+      "state": "HELD_BLANK",
+      "why": "bead: doorless 0.90 opening stair hall -> GF-11 (engine passage OP-020, column + masonry jamb): head not drawn on either plan: read this run, nothing crosses it on P7757.dxf (any linetype) and the ST7757 GF roof-slab plan show"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "",
+      "edge_id": "ST-GF#V14 + ST-GF#V15",
+      "high": 8.46,
+      "ledger_status": "DRAWING-CONFIRMED",
+      "low": 8.46,
+      "room": "ST-GF",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:ST_GF#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:ST_GF:PLASTER",
+     "high": 62.434,
+     "item_code": "FIN.PLASTER",
+     "low": 50.945,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-95f2c45c2eccaaeccb08",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1); 1 arris(es) blank: OPEN#ST-GF-OP020: doorless 0.90 opening stair hall -> GF-11 (engine passage OP-020, column + masonry jamb): head not drawn on either"
+   },
+   {
+    "action": "BOUND",
+    "arrises": [
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-04#V13",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-04",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-04#V14",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-04",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-1F-03#1F-04",
+      "high": 5.4,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.4,
+      "room": "1F-04",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-1F-04#1F-04",
+      "high": 5.2,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.2,
+      "room": "1F-04",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:1F_04#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:1F_04:PLASTER",
+     "high": 63.141,
+     "item_code": "FIN.PLASTER",
+     "low": 63.141,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-971f0bdaf68d7fd0966c",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1)"
+   },
+   {
+    "action": "BOUND",
+    "arrises": [
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-13#V23",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-13",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-13#V27",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-13",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-13#V28",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-13",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-13#V31",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-13",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-13#V32",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-13",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-13#V58",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-13",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-13#V69",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-13",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-1F-03#1F-13",
+      "high": 5.4,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.4,
+      "room": "1F-13",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-1F-05#1F-13",
+      "high": 5.3,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.3,
+      "room": "1F-13",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-1F-08#1F-13",
+      "high": 5.3,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.3,
+      "room": "1F-13",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-1F-09#1F-13",
+      "high": 5.3,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.3,
+      "room": "1F-13",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:1F_13#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:1F_13:PLASTER",
+     "high": 139.6155,
+     "item_code": "FIN.PLASTER",
+     "low": 135.6255,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-9b4a7bab033d677e2017",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1)"
+   },
+   {
+    "action": "BOUND",
+    "arrises": [
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "2F-01#V25",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "2F-01",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-2F-01#2F-01",
+      "high": 5.4,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.4,
+      "room": "2F-01",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-2F-02#2F-01",
+      "high": 5.3,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.3,
+      "room": "2F-01",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:2F_01#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:2F_01:PLASTER",
+     "high": 31.76591,
+     "item_code": "FIN.PLASTER",
+     "low": 27.35991,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-ae0cdd794cc5fdbe0c29",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1)"
+   },
+   {
+    "action": "BOUND",
+    "arrises": [
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-01#V06",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-01",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-01#V07",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-01",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-01#V16",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-01",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "EXTERNAL_CORNER",
+      "drawing_band": "drawing-derived 3.35 .. 3.99 m (beside, F-T697-1; not the bound)",
+      "edge_id": "1F-01#V17",
+      "high": 3.35,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 3.35,
+      "room": "1F-01",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-1F-01#1F-01",
+      "high": 5.2,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.2,
+      "room": "1F-01",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-1F-02#1F-01",
+      "high": 5.4,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.4,
+      "room": "1F-01",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:1F_01#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:1F_01:PLASTER",
+     "high": 62.607,
+     "item_code": "FIN.PLASTER",
+     "low": 62.573,
+     "unit": "m2"
+    },
+    "host_change_since_t728": null,
+    "host_line_id": "L-af9621f43bc316a871ea",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1)"
+   },
+   {
+    "action": "AT_LEAST",
+    "arrises": [
+     {
+      "class": "OPENING_UNDER_HEAD",
+      "drawing_band": "",
+      "edge_id": "A-GF-01#GF-01",
+      "high": null,
+      "ledger_status": "HELD",
+      "low": null,
+      "room": "GF-01",
+      "state": "HELD_BLANK",
+      "why": "bead: arch outline pending D-45: springing height not printed (Q-55 C is a door height, not an arch springing, R-T405-7); head on the drawn arc 1.223795 m (T-238 ARC 2422, DRAWING-CONFIRMED)"
+     },
+     {
+      "class": "DOOR_JAMB_HEAD",
+      "drawing_band": "",
+      "edge_id": "D-GF-01#GF-01",
+      "high": 5.4,
+      "ledger_status": "ASSUMED — OWNER-APPROVED",
+      "low": 5.4,
+      "room": "GF-01",
+      "state": "HELD_BOUND",
+      "why": "measured arris; host HELD"
+     }
+    ],
+    "element_id": "HL:WALL_FINISH:GF_01#BEAD",
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:GF_01:PLASTER",
+     "high": 66.249856,
+     "item_code": "FIN.PLASTER",
+     "low": 47.949844,
+     "unit": "m2"
+    },
+    "host_change_since_t728": {
+     "by": "T-717 (V3.0.74) annex datum Q-54 B",
+     "t728": "HELD 61.46433 .. 65.25433 m2",
+     "v3_0_75": "HELD 47.949844 .. 66.249856 m2"
+    },
+    "host_line_id": "L-b152995525ed123ddac9",
+    "piece": "BEAD_ADD",
+    "rule": "R-T728-1",
+    "source_tasks": [
+     "T-728",
+     "T-730"
+    ],
+    "status": "HELD",
+    "why": "host HELD: the bead takes its state and cause, own arris lengths kept (F-T728-1); 1 arris(es) blank: A-GF-01#GF-01: arch outline pending D-45: springing height not printed (Q-55 C is a door height, not an arch springing, R-T405-7)"
+   },
+   {
+    "action": "EXCLUDE",
+    "cause": "DUPLICATE_FACE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-R78C367:ceiling over void",
+     "high": null,
+     "item_code": "FIN.CEILING",
+     "low": null,
+     "unit": "m2"
+    },
+    "line_id": "L-35341ff2e6a848b9436b",
+    "owner_expect": {
+     "class": "RELEASED",
+     "element_id": "1F-R78C367:ceiling#DECOR_GROUP",
+     "item_code": "FIN.CEILING",
+     "measured_net": 51.0496,
+     "unit": "m2"
+    },
+    "owner_line_id": "L-43bf1f869e1588f1d3bd",
+    "piece": "CEIL_EXCL",
+    "rule": "R-T727-2",
+    "source_tasks": [
+     "T-727",
+     "T-730"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "the void line names 16.005 m2 = the well rectangle only, already inside the released decor face L-43bf1f869e1588f1d3bd (51.0496 m2 carries the well top 26.064062 m2); the upper plan over the well prints no opening outline (T-727 s.3): one face, one line"
+   },
+   {
+    "action": "HOLD",
+    "expect": {
+     "class": "RELEASED",
+     "element_id": "2F-ROOF-AT379:wp_membrane",
+     "item_code": "FIN.WP.ROOF",
+     "measured_net": 115.832,
+     "unit": "m2"
+    },
+    "high": 115.813974,
+    "line_id": "L-636fd3ff1784a12e653b",
+    "low": 115.656474,
+    "piece": "DG_HOLD",
+    "record": {
+     "checker": {
+      "routine": "Verifier",
+      "run_token": "20261112T135228-451-21809",
+      "verdict_commit": "022f34f12"
+     },
+     "downgrade_id": "DG-98cbadebaecc5ede",
+     "engine_qty": 115.832,
+     "file": "research/agents_t736/in/DG_98cbadebaecc5ede.json",
+     "file_sha256": "de5894ce14d2561589ac8847e1a32b0322334dbcf159e0b91531636548ffa430",
+     "line_content_sha256": "96dcbdd91b8daabc94b9a47cf76b02b391e3935826aeed7dfbb738dc87a7360d",
+     "line_ids": [
+      "L-636fd3ff1784a12e653b"
+     ],
+     "reason": "UNSUPPORTED BASIS: the released +9.70 roof membrane 115.832 m2 lies 0.018026 m2 ABOVE its own same-basis band 115.656474 .. 115.813974 m2: the trace deducts the two dome CIRCLEs 12EB / 2F33 (r 2.211092 m) as inscribed 105-chord polygons (1 mm sagitta), 15.349849 instead of 15.359013 m2 each (under-deduction 0.018329 m2, R-T691-1); the face is closed on named lines (wall-face reading 146.532000 m2, D-band reading 146.374500 m2: the 0.075 layer-D feature at the 2F west wall foot is unprinted, D-BAND 0.1575 m2). Downgrade only: the line goes HELD; the candidate figure stays in the audit rows; the H4 package then carries the drawing band (R-T734-1 c), never a chosen end",
+     "state": "HELD",
+     "unit": "m2"
+    },
+    "rule": "R-T665-1 (g) / R-T734-1 (c)",
+    "source_tasks": [
+     "DG-98cbadebaecc5ede"
+    ],
+    "status": "HELD",
+    "why": "Checker downgrade-only record DG-98cbadebaecc5ede (UNSUPPORTED BASIS): the released figure lies above its own same-basis band (dome circles deducted as inscribed polygons, under-deduction 0.018329 m2); the band's two ends are the two closed-face readings (wall face / D-band, the 0.075 layer-D feature unprinted): held at the record's band, never a chosen end"
+   }
+  ],
+  "project_id": "development-villa-t131",
+  "schema": "URBAN_V3076_INPUTS_V1",
+  "sources": [
+   {
+    "checker_run": "Verifier 2026-11-12T03:48Z Gate A PASS (session_01E6cPnd1boTCdgLn15ZAk7E)",
+    "file": "research/agents_t728/out/T728_BEAD_RESTATEMENT.json",
+    "merge_commit": "80e27c10",
+    "sha256": "97cd9836ce4af7f7b43e88ef29bbe3b0f437dfdf84c6c8d376571310bc407ff5",
+    "task": "T-728"
+   },
+   {
+    "checker_run": "Verifier 2026-11-12 ~02:00Z Gate A PASS (session_01E6cPndwcoCFyW6yDFf3dsv)",
+    "file": "research/agents_t727/out/T727_VOIDS_CLOSED.json",
+    "merge_commit": "8ea912b5",
+    "sha256": "b4e587746aec25501a622b263a95275e6eafb4455747438e492c6d04a1cb9d9b",
+    "task": "T-727"
+   },
+   {
+    "checker_run": "Verifier 2026-11-12T07:58Z Gate A PASS (session_01E6cPneP2vRoV5ySBhUeVJ5)",
+    "file": "research/agents_t730/out/T730_ROWS.csv",
+    "merge_commit": "6143f30d",
+    "sha256": "737bdb55966b6ebd71dd8775ef03fa17316e3d4e8e06b5a21f77388170880594",
+    "task": "T-730"
+   },
+   {
+    "checker_run": "Verifier 2026-11-12T15:06:49Z downgrade-only record (run token 20261112T135228-451-21809, verdict commit 022f34f12; board commit 2d28645c)",
+    "file": "research/agents_t736/in/DG_98cbadebaecc5ede.json",
+    "merge_commit": "2d28645c",
+    "sha256": "de5894ce14d2561589ac8847e1a32b0322334dbcf159e0b91531636548ffa430",
+    "task": "DG-98cbadebaecc5ede"
+   }
+  ]
+ },
+ "pins": {
+  "research/agents_t717/out/LINE_INDEX_V3_0_74.json": "6733cbc143cdfffd82eeaee54457f97bbfa7b91b541f648a411825887b8b3bca",
+  "research/agents_t727/out/T727_VOIDS_CLOSED.json": "b4e587746aec25501a622b263a95275e6eafb4455747438e492c6d04a1cb9d9b",
+  "research/agents_t728/out/T728_BEAD_RESTATEMENT.json": "97cd9836ce4af7f7b43e88ef29bbe3b0f437dfdf84c6c8d376571310bc407ff5",
+  "research/agents_t729/out/LINE_INDEX_V3_0_75.json": "498c36bc6647a853a51feba83ce3bf2817d206f84911b8a27e025daab920b4c2",
+  "research/agents_t730/out/T730_ROWS.csv": "737bdb55966b6ebd71dd8775ef03fa17316e3d4e8e06b5a21f77388170880594",
+  "research/agents_t736/in/DG_98cbadebaecc5ede.json": "de5894ce14d2561589ac8847e1a32b0322334dbcf159e0b91531636548ffa430"
+ },
+ "schema": "URBAN_T736_ENTRIES_V1"
+}
