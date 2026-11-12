@@ -1,0 +1,209 @@
+{
+ "added": {
+  "L-0ea62c4cef8e2ce5a244": {
+   "element_id": "GF-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  },
+  "L-26efbd99ac40f2435692": {
+   "element_id": "GF-OPENING-OP-026:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  },
+  "L-2b4e45da29a5b2dd7981": {
+   "element_id": "1F-OPENING-OP-004:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  },
+  "L-2d7f8ab2fb489d7f0963": {
+   "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD blank",
+   "unit": "m2"
+  },
+  "L-37cdb8db76a870eff3fe": {
+   "element_id": "1F-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.795",
+   "unit": "m2"
+  },
+  "L-4e7e711e5c8abc074414": {
+   "element_id": "2F-OPENING-OP-007:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 1.06",
+   "unit": "m2"
+  },
+  "L-56b08dbf65e47a26c561": {
+   "element_id": "1F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.795",
+   "unit": "m2"
+  },
+  "L-65c1d5f9695ad983d89f": {
+   "element_id": "GF-OPENING-OP-012:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.81",
+   "unit": "m2"
+  },
+  "L-6777e02aa04439148278": {
+   "element_id": "GF-OPENING-OP-009:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 1.08",
+   "unit": "m2"
+  },
+  "L-6d2b3f8c5c33dd795433": {
+   "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD blank",
+   "unit": "m2"
+  },
+  "L-762c50f64c3b6b6b9999": {
+   "element_id": "1F-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  },
+  "L-78d0a48c8bf5af4b21c4": {
+   "element_id": "GF-OPENING-OP-025:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 1.08",
+   "unit": "m2"
+  },
+  "L-7969458ba9185391c684": {
+   "element_id": "GF-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 1.08",
+   "unit": "m2"
+  },
+  "L-7f8d0739849d36a7e832": {
+   "element_id": "GF-OPENING-OP-021:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 1.4",
+   "unit": "m2"
+  },
+  "L-897dca14b0b8c45be725": {
+   "element_id": "GF-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 1.06",
+   "unit": "m2"
+  },
+  "L-8dd621261ceb5b8e3919": {
+   "element_id": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  },
+  "L-91dfc7c4d8ea4c86a547": {
+   "element_id": "GF-OPENING-OP-013:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 1.06",
+   "unit": "m2"
+  },
+  "L-9df1fbe948884e7c4d2a": {
+   "element_id": "GF-OPENING-OP-017:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  },
+  "L-ab4ed4328ee652456117": {
+   "element_id": "PAINT-BAND@L-c0ac22c964a42e7d71b1",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 3.344721 .. 3.525121",
+   "unit": "m2"
+  },
+  "L-b10c1b356670f749cc23": {
+   "element_id": "PLASTER-BAND@L-8cecb1d010d5aafbf25d",
+   "item_code": "FIN.PLASTER",
+   "state": "HELD 0.839412 .. 0.870912",
+   "unit": "m2"
+  },
+  "L-b12d7eb43e52a3d98ab4": {
+   "element_id": "2F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  },
+  "L-ba30cda374ebb4a8c7da": {
+   "element_id": "GF-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 1.08",
+   "unit": "m2"
+  },
+  "L-c17b547dd9cdad8faf26": {
+   "element_id": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  },
+  "L-c74cb759ac5ff7e6cfa0": {
+   "element_id": "1F-OPENING-OP-020:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.81",
+   "unit": "m2"
+  },
+  "L-d086b605ac0e50af082a": {
+   "element_id": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.81",
+   "unit": "m2"
+  },
+  "L-d7409e4cefc3ee62aaf6": {
+   "element_id": "1F-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  },
+  "L-d9d0cb88542f719484f7": {
+   "element_id": "2F-OPENING-OP-001:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.81",
+   "unit": "m2"
+  },
+  "L-da69c4bd2954b31c0fb7": {
+   "element_id": "1F-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 1.06",
+   "unit": "m2"
+  },
+  "L-dc8b92788150cda368a1": {
+   "element_id": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  },
+  "L-eab5536cbc5b1f7829dd": {
+   "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD blank",
+   "unit": "m2"
+  },
+  "L-f3270cd391188bcf433c": {
+   "element_id": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  },
+  "L-f430f55002cce63efb40": {
+   "element_id": "1F-OPENING-OP-019:door jambs and head:RETURN_PAINT",
+   "item_code": "FIN.PAINT",
+   "state": "HELD 0.0 .. 0.78",
+   "unit": "m2"
+  }
+ },
+ "base": "ARCH_TAKEOFF_V3.0.73",
+ "candidate": "ARCH_TAKEOFF_V3.0.74",
+ "changed": {
+  "L-1ddc23d5657b4c4e4d0d": "HELD 43.155 .. 43.155 -> HELD 34.33 .. 43.78",
+  "L-b152995525ed123ddac9": "HELD 61.46433 .. 65.25433 -> HELD 47.949844 .. 66.249856",
+  "L-ea586fea86188a18bb67": "HELD 2.853686 .. 6.918815 -> HELD 0.499037 .. 6.186806",
+  "L-ef7a16664d12b68a6e71": "HELD 5.05488 .. 5.29088 -> HELD 3.892324 .. 5.005988"
+ },
+ "commit": "9b998fc8a477a6ca8ab0fb73b8a231e6e3a9ff81",
+ "index_blob": "6370885bff655ce34928a590f6366120bb008374",
+ "package": "T-717",
+ "schema": "URBAN_T730_T717_PENDING_V1",
+ "state": "READY (worker 3, 2026-11-12T05:55Z), Gate B pending: NOT the candidate of record"
+}
