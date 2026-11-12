@@ -16,7 +16,8 @@ villa F729 (own figures, no drawing; every figure below by hand):
   R*  released column 2.000 m3, released formwork 10.000 m2, released plaster 50.000 m2: byte-identical.
 Totals by hand: STR.FORMWORK released +9.625 (4.000 + 5.625), bounded +1 (3.200 .. 3.400), blocked -3 (6 blank -> 3);
 STR.FORMWORK.STAIR bounded +1 (1.904 .. 2.380), blocked -1; STR.CONC.GROUND_BEAM bounded -1, high -1.600, blocked +1;
-STR.CONC.BEAM lines +1, blocked +1; STR.CONC.STAIR, released lines and FIN.PLASTER unchanged.
+STR.CONC.BEAM lines +1, blocked +1; G2 (a BLOCKED_RFI line with a 0 .. 0.800 record, counted blocked) capped 0.800
+with no total moving; STR.CONC.STAIR, released lines and FIN.PLASTER unchanged.
 Adverse: a cap of 0, VERIFIED status, a stale element / range, applied twice, low above high, a unit slip, an AT_LEAST
 restating a figure the line does not carry, the same figure restated, a low-end release without its companion, a line
 named twice, a child with a figure, a formwork action on a concrete line, a cap that is not the range's high."""
@@ -66,6 +67,7 @@ def base():
         _ln(FWS, "FW:S1:SIDE", "BLOCKED_RFI"),
         _ln(FWS, "FW:S2:SIDE", "BLOCKED_RFI"),
         _ln("STR.CONC.GROUND_BEAM", "GB:G1:BOUNDARY", "BOUNDED_EXPOSURE", unit="m3", rng=(0.0, 1.6)),
+        _ln("STR.CONC.GROUND_BEAM", "GB:G2:RECORD", "BLOCKED_RFI", unit="m3", rng=(0.0, 0.8)),
         _ln("STR.CONC.STAIR", "ST:T1", "BLOCKED_RFI", unit="m3", rec=t1),
         _ln("STR.CONC.BEAM", "HL:BEAM_LEDGER:GF:BM-B1#BAND1.1", "BLOCKED_RFI", unit="m3"),
         _ln("STR.CONC.COLUMN", "COL:R1", "MEASURED", net=2.0, unit="m3"),
@@ -100,6 +102,7 @@ def doc():
         _e("FW:S1:SIDE", "BOUND", code=FWS, low="1.904", high="2.380"),
         _e("FW:S2:SIDE", "CAP", code=FWS, cap="0.800"),
         _e("GB:G1:BOUNDARY", "CAP", code="STR.CONC.GROUND_BEAM", unit="m3", elow=0.0, ehigh=1.6, cap="1.600"),
+        _e("GB:G2:RECORD", "CAP", code="STR.CONC.GROUND_BEAM", unit="m3", elow=0.0, ehigh=0.8, cap="0.800"),
         dict(_e("ST:T1", "AT_LEAST", code="STR.CONC.STAIR", unit="m3", low="1.000000",
                 restates={"value": "1.000001", "why": "half-up print; exact sum floors (R-T696-1)"}),
              expect={"item_code": "STR.CONC.STAIR", "element_id": "ST:T1", "unit": "m3", "class": "HELD",
@@ -145,9 +148,12 @@ def test_states_by_hand():
     assert A3073.REC_KEY in t1["calculation"]["inputs"][A.REC_KEY]["superseded"]
     child = [ln for ln in new if ln["location"]["element_id"].endswith("#B1-STRIP")]
     assert len(child) == 1 and child[0]["item_code"] == "STR.CONC.BEAM" and child[0]["measured_net"] is None
-    assert ident["added"] == 1 and ident["replaced"] == 10
+    g2 = L["GB:G2:RECORD"]          # a BLOCKED_RFI line carrying a 0 .. x record (counted blocked): capped the same
+    assert g2["bounded_range"] is None and A.conc_figures(g2) == [(A.REC_KEY, "AT_MOST_M3", 0.8)]
+    assert L["FW:FACE:F1"]["evidence_state"] == "PROVISIONAL"
+    assert ident["added"] == 1 and ident["replaced"] == 11
     assert ident["formwork_concrete"] == {"FW_WIRE:RELEASE": 2, "FW_WIRE:BOUND": 2, "FW_WIRE:AT_LEAST": 1,
-                                          "FW_WIRE:CAP": 2, "FW_WIRE:NAMED": 1, "CONC_C10:CAP": 1,
+                                          "FW_WIRE:CAP": 2, "FW_WIRE:NAMED": 1, "CONC_C10:CAP": 2,
                                           "CONC_C10:AT_LEAST": 1, "CONC_C10:ADD_NAMED": 1}
 
 
@@ -193,7 +199,7 @@ def test_written_files(tmp_path):
     p, ch, _new, _i = run()
     names, ident, led = A.write(tmp_path, p, ch, {"piece": "T729"})
     assert "V3_0_75_BOQ_LINES.json" in names and led["integration_package"] is True
-    assert ident["diff"]["vs_base"] == {"CHANGED": 10, "ADDED": 1, "SAME": 4}
+    assert ident["diff"]["vs_base"] == {"CHANGED": 11, "ADDED": 1, "SAME": 4}
     assert all(r["release_status"] == "NOT RELEASED" for r in led["rows"])
 
 

@@ -84,7 +84,8 @@ P_FW, P_C10 = "FW_WIRE", "CONC_C10"
 FW_ACTIONS = ("RELEASE", "BOUND", "AT_LEAST", "CAP", "NAMED")
 C10_ACTIONS = ("CAP", "AT_LEAST", "ADD_NAMED")
 BOUNDED, BLANK = A3063.BOUNDED, A3063.BLANK
-RELEASED_STATE = "MEASURED"              # the valued state of the released formwork lines (A3036.VALUED_STATES)
+RELEASED_STATE = "PROVISIONAL"           # the valued state of the released CALCULATED formwork lines (181 of 244 on
+                                         # V3.0.74; the other 63 SOURCE_DERIVED); never MEASURED / VERIFIED here
 TOL = 1e-6
 TOT_TOL = 5e-6
 MAX_FW = 500.0                           # one formwork line above 500 m2 is a unit slip
@@ -287,9 +288,9 @@ def _assert_before(b, e):
     ok = (b["item_code"] == x["item_code"] and loc.get("element_id") == x["element_id"] and b["unit"] == x["unit"]
           and line_class(b) == "HELD" and b.get("measured_net") is None)
     r = A3063._view_range(b)
-    if ok and x.get("low") is not None:
-        ok = b["evidence_state"] == BOUNDED and r is not None and abs(r[0] - x["low"]) <= TOL and \
-            abs(r[1] - x["high"]) <= TOL
+    if ok and x.get("low") is not None:            # the range the line carries in its record (a BLOCKED_RFI line
+        ok = b["evidence_state"] in (BOUNDED, BLANK) and r is not None and abs(r[0] - x["low"]) <= TOL and \
+            abs(r[1] - x["high"]) <= TOL              # may carry a 0 .. x record the code totals count blocked)
     elif ok:
         ok = r is None
     if not ok:
