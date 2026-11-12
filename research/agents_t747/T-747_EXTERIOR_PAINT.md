@@ -28,6 +28,9 @@ construction except where the drawing shows another finish; that is what this ta
   apart; +1.00 = landing line 1BFE = D-GF-07 sill, door line 1C00 +1.00 .. +3.50). Polygonised: stones 1.154674 m2,
   stones + the 3 wedges to the drawn intrados 1.298383 m2 (zone), split at +1.00: plinth band 0.222500, storey band
   1.075883. Its material is printed nowhere: NOT_PRINTED_FINISH zone, paint 0 .. zone off the low end of GF/SE-2.
+- Face attribution: the annex section hatch 1C01 is 6,700 mm wide (= GF/SE-1 annex face 6.70); the surround spans
+  x 1,859 mm (-279,637 .. -277,778) inside the 3,700 mm left of the annex (= GF/SE-2 3.70, the face holding D-GF-07,
+  sill +1.00 / head +3.50 = door line 1C00). Plinth band 0.15 .. 1.00 and storey band 1.00 .. 5.50 as T-337 binds SE-2.
 
 ## 3. Result per stage line (m2; render = stage net, asserted equal line by line to 6 dp)
 
