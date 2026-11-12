@@ -1,0 +1,544 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.72",
+ "dxf_sha8": "9f9d1179",
+ "findings": [
+  {
+   "after": "AT_LEAST 0.115155 m3",
+   "before": "AT_LEAST 0.115155 m3",
+   "cause_named": "D-28: the ring depth is not stated (182F overridden 'AS PER ARCH'; the architect's sections draw no ring); the upper end stays open",
+   "changed": false,
+   "counted_levels": [
+    "top 3T16",
+    "side 2T14/20cm level 1 (labelled)",
+    "bottom 3T18"
+   ],
+   "depth_floor_m": "0.064",
+   "drawing": {
+    "depth_dimension": "182F: measured 3750 drawing units, text overridden 'AS PER ARCH' (no stated depth)",
+    "detail": "ST p.7 'DETAIL OF DOME' (N.I.S.); sheet note: 'THE BUILDER TO WORK WITH STATED DIMENSIONS. NOT TO SCALE DRAWING.'",
+    "outline": "1A0A (section outline, open at the dome springing), link 1A0B inside it"
+   },
+   "excluded_levels": [
+    {
+     "level": "side 2T14/20cm level 2 (drawn)",
+     "why": "further drawn level of a pitch-labelled set: count depends on the depth (not a stated number; not-to-scale detail)"
+    },
+    {
+     "level": "unlabelled circle near the top (dome shell T12/15cm lapping into the section)",
+     "why": "not tied to the member face (outside the link / off the shared vertical)"
+    }
+   ],
+   "finding": "F-V721-1",
+   "formwork_effect": "T-714 ring formwork line keeps FLOOR_ONLY soffit 1.7993 m2 (plan band): unchanged",
+   "line_id": "L-ab37afa17f2ac5b0efd1",
+   "not_adopted": {
+    "scaled_0.75": "pitch drawn 1000 units = printed 0.20 m gives 1:5; outline 1000 x 3750 -> 0.20 x 0.75 m: a measurement of a not-to-scale detail whose depth figure is overridden; shown, never used",
+    "two_side_levels_depth_m": "0.078",
+    "two_side_levels_m3": "0.140345",
+    "why": "the second level is a drawn picture of the '/20cm' pitch in a detail marked N.I.S. whose sheet says 'work with stated dimensions'; the number of levels of a pitch set follows the depth, so it cannot bound the depth (R-T724-1)"
+   }
+  },
+  {
+   "family_low_shift_m2": "0.001093",
+   "finding": "F-V714-1",
+   "restated": [
+    {
+     "after": "0.000096 .. 0.000120",
+     "before": "0.000095 .. 0.000120",
+     "class": "BOUNDED",
+     "edge_pair": "274/278",
+     "edge_width_m": "0.250",
+     "faces": [
+      {
+       "cause": "soffit b x L at the drawn width, other end at the schedule width",
+       "dep": "SCALED",
+       "edge_pair": "274/278",
+       "edge_width": "0.250",
+       "face_id": "R4-258.GF-008~REST.BEAM_SOFFIT",
+       "high": "0.000120",
+       "implied_length_m": "0.000480",
+       "length_matches_f2f": false,
+       "low": "0.000096",
+       "recorded_width": "0.2502"
+      }
+     ],
+     "line_id": "L-030e2ec62b20bcc5267d",
+     "member_lines": [
+      "L-2c7b0b1e1a439d9ffd1e",
+      "L-60f09eece6568b15f6ce"
+     ],
+     "recorded_differs": true,
+     "recorded_width_m": "0.2502",
+     "schedule_width_m": "0.20",
+     "shift_low_m2": "0.000001"
+    },
+    {
+     "after": "3.559782 .. 3.733233",
+     "before": "3.559227 .. 3.733233",
+     "class": "BOUNDED",
+     "edge_pair": "274/278",
+     "edge_width_m": "0.250",
+     "faces": [
+      {
+       "cause": "beam side L x (D - t): width not in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-258.GF-005~BM-GF-055#BAND0036.1.BEAM_SIDE",
+       "high": "2.310933",
+       "low": "2.310933"
+      },
+      {
+       "cause": "soffit b x L at the drawn width, other end at the schedule width",
+       "dep": "SCALED",
+       "edge_pair": "274/278",
+       "edge_width": "0.250",
+       "face_id": "R4-258.GF-005~BM-GF-055#BAND0036.1.BEAM_SOFFIT",
+       "high": "0.867255",
+       "implied_length_m": "3.469020",
+       "length_matches_f2f": true,
+       "low": "0.693804",
+       "recorded_width": "0.2502"
+      },
+      {
+       "cause": "edge band L x t along the beam: no beam width / depth in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-274.GF-005~BM-GF-055#BAND0036.1.EDGE_BAND",
+       "high": "0.555045",
+       "low": "0.555045"
+      }
+     ],
+     "line_id": "L-3280c42cb578a211045e",
+     "member_lines": [
+      "L-2c7b0b1e1a439d9ffd1e"
+     ],
+     "recorded_differs": true,
+     "recorded_width_m": "0.2502",
+     "schedule_width_m": "0.20",
+     "shift_low_m2": "0.000555"
+    },
+    {
+     "after": "0.000196 .. 0.000245",
+     "before": "0.000195 .. 0.000245",
+     "class": "BOUNDED",
+     "edge_pair": "274/278",
+     "edge_width_m": "0.250",
+     "faces": [
+      {
+       "cause": "soffit b x L at the drawn width, other end at the schedule width",
+       "dep": "SCALED",
+       "edge_pair": "274/278",
+       "edge_width": "0.250",
+       "face_id": "R4-258.GF-005~REST.BEAM_SOFFIT",
+       "high": "0.000245",
+       "implied_length_m": "0.000980",
+       "length_matches_f2f": false,
+       "low": "0.000196",
+       "recorded_width": "0.2502"
+      }
+     ],
+     "line_id": "L-59f0c115e7db8fa87f58",
+     "member_lines": [
+      "L-2c7b0b1e1a439d9ffd1e",
+      "L-60f09eece6568b15f6ce"
+     ],
+     "recorded_differs": true,
+     "recorded_width_m": "0.2502",
+     "schedule_width_m": "0.20",
+     "shift_low_m2": "0.000001"
+    },
+    {
+     "after": "3.435526 .. 3.603002",
+     "before": "3.434990 .. 3.603002",
+     "class": "BOUNDED",
+     "edge_pair": "274/278",
+     "edge_width_m": "0.250",
+     "faces": [
+      {
+       "cause": "beam side L x (D - t): width not in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-258.GF-008~BM-GF-055#BAND0036.2.BEAM_SIDE",
+       "high": "2.229689",
+       "low": "2.229689"
+      },
+      {
+       "cause": "soffit b x L at the drawn width, other end at the schedule width",
+       "dep": "SCALED",
+       "edge_pair": "274/278",
+       "edge_width": "0.250",
+       "face_id": "R4-258.GF-008~BM-GF-055#BAND0036.2.BEAM_SOFFIT",
+       "high": "0.837380",
+       "implied_length_m": "3.349520",
+       "length_matches_f2f": true,
+       "low": "0.669904",
+       "recorded_width": "0.2502"
+      },
+      {
+       "cause": "edge band L x t along the beam: no beam width / depth in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-274.GF-008~BM-GF-055#BAND0036.2.EDGE_BAND",
+       "high": "0.535933",
+       "low": "0.535933"
+      }
+     ],
+     "line_id": "L-b496828905921760d1ee",
+     "member_lines": [
+      "L-60f09eece6568b15f6ce"
+     ],
+     "recorded_differs": true,
+     "recorded_width_m": "0.2502",
+     "schedule_width_m": "0.20",
+     "shift_low_m2": "0.000536"
+    }
+   ],
+   "scaled_faces": 10,
+   "source_of_0.2502": "T-402 HELD_LINES_T402.csv column drawn_width_m = schedule b x the member's concrete ratio (0.433997 / 0.34692 x 0.20 = 0.250198 -> 0.2502): the band polygon area carries joint slivers, so it is not the edge distance; edges 274 / 278 are 0.250 exactly",
+   "stand": [
+    {
+     "after": "0.074916 .. 0.089900",
+     "before": "0.074916 .. 0.089900",
+     "class": "BOUNDED",
+     "edge_pair": "5E7/5E8",
+     "edge_width_m": "0.300",
+     "faces": [
+      {
+       "cause": "soffit b x L at the drawn width, other end at the schedule width",
+       "dep": "SCALED",
+       "edge_pair": "5E7/5E8",
+       "edge_width": "0.300",
+       "face_id": "R4-282.1F-072~REST.BEAM_SOFFIT",
+       "high": "0.089900",
+       "implied_length_m": "0.299667",
+       "length_matches_f2f": false,
+       "low": "0.074916",
+       "recorded_width": "0.3"
+      }
+     ],
+     "line_id": "L-261043f6ba027907f445",
+     "member_lines": [
+      "L-43e804ba4a4c07529fd5",
+      "L-50667f69855b6d588011"
+     ],
+     "recorded_differs": false,
+     "recorded_width_m": "0.3",
+     "schedule_width_m": "0.25",
+     "shift_low_m2": "0.000000"
+    },
+    {
+     "after": "10.650655 .. 11.952103",
+     "before": "10.650655 .. 11.952103",
+     "class": "BOUNDED",
+     "edge_pair": "434/433",
+     "edge_width_m": "0.400",
+     "faces": [
+      {
+       "cause": "beam side L x (D - t): width not in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-258.GF-109.BEAM_SIDE",
+       "high": "7.708004",
+       "low": "7.708004"
+      },
+      {
+       "cause": "soffit b x L at the drawn width, other end at the schedule width",
+       "dep": "SCALED",
+       "edge_pair": "434/433",
+       "edge_width": "0.400",
+       "face_id": "R4-258.GF-109.BEAM_SOFFIT",
+       "high": "3.310396",
+       "implied_length_m": "7.356435",
+       "length_matches_f2f": false,
+       "low": "2.942574",
+       "recorded_width": "0.4"
+      },
+      {
+       "cause": "contact 0 .. x decided by a neighbour",
+       "dep": "CAP_ONLY",
+       "face_id": "R4-261.GF-109.BEAM_SIDE_HELD_M2",
+       "high": "0.933626",
+       "low": "0.000000"
+      },
+      {
+       "cause": "edge band L x t along the beam: no beam width / depth in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-274.GF-109.EDGE_BAND",
+       "high": "0.000077",
+       "low": "0.000077"
+      }
+     ],
+     "line_id": "L-4f782e5fef70ea41044e",
+     "member_lines": [
+      "L-1fd49f3e7c5a7dd19d4d"
+     ],
+     "recorded_differs": false,
+     "recorded_width_m": "0.4",
+     "schedule_width_m": "0.45",
+     "shift_low_m2": "0.000000"
+    },
+    {
+     "after": "0.912506 .. 1.095008",
+     "before": "0.912506 .. 1.095008",
+     "class": "BOUNDED",
+     "edge_pair": "5E7/5E8",
+     "edge_width_m": "0.300",
+     "faces": [
+      {
+       "cause": "beam side L x (D - t): width not in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-282.1F-072~BM-1F-031#BAND0026.2.BEAM_SIDE",
+       "high": "0.000000",
+       "low": "0.000000"
+      },
+      {
+       "cause": "soffit b x L at the drawn width, other end at the schedule width",
+       "dep": "SCALED",
+       "edge_pair": "5E7/5E8",
+       "edge_width": "0.300",
+       "face_id": "R4-282.1F-072~BM-1F-031#BAND0026.2.BEAM_SOFFIT",
+       "high": "1.095006",
+       "implied_length_m": "3.650020",
+       "length_matches_f2f": true,
+       "low": "0.912504",
+       "recorded_width": "0.3"
+      },
+      {
+       "cause": "edge band L x t along the beam: no beam width / depth in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-296.1F-072~BM-1F-031#BAND0026.2.EDGE_BAND",
+       "high": "0.000002",
+       "low": "0.000002"
+      }
+     ],
+     "line_id": "L-773e61946c076353c74c",
+     "member_lines": [
+      "L-43e804ba4a4c07529fd5"
+     ],
+     "recorded_differs": false,
+     "recorded_width_m": "0.3",
+     "schedule_width_m": "0.25",
+     "shift_low_m2": "0.000000"
+    },
+    {
+     "after": "5.280567 .. 9.614546",
+     "before": "5.280567 .. 9.614546",
+     "class": "BOUNDED",
+     "edge_pair": "2CE/463",
+     "edge_width_m": "0.200",
+     "faces": [
+      {
+       "cause": "beam side L x (D - t): width not in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-258.GF-108.BEAM_SIDE",
+       "high": "3.929136",
+       "low": "3.929136"
+      },
+      {
+       "cause": "soffit b x L at the drawn width, other end at the schedule width",
+       "dep": "SCALED",
+       "edge_pair": "2CE/463",
+       "edge_width": "0.200",
+       "face_id": "R4-258.GF-108.BEAM_SOFFIT",
+       "high": "1.689289",
+       "implied_length_m": "6.757155",
+       "length_matches_f2f": false,
+       "low": "1.351431",
+       "recorded_width": "0.2"
+      },
+      {
+       "cause": "contact 0 .. x decided by a neighbour",
+       "dep": "CAP_ONLY",
+       "face_id": "R4-261.GF-108.BEAM_SIDE_HELD_M2",
+       "high": "3.996121",
+       "low": "0.000000"
+      }
+     ],
+     "line_id": "L-812bdedead08caaa543f",
+     "member_lines": [
+      "L-9e4895663f76d7f03ac9"
+     ],
+     "recorded_differs": false,
+     "recorded_width_m": "0.2",
+     "schedule_width_m": "0.25",
+     "shift_low_m2": "0.000000"
+    },
+    {
+     "after": "3.901443 .. 4.122348",
+     "before": "3.901443 .. 4.122348",
+     "class": "BOUNDED",
+     "edge_pair": "5CD/5CC",
+     "edge_width_m": "0.200",
+     "faces": [
+      {
+       "cause": "beam side L x (D - t): width not in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-282.1F-024.BEAM_SIDE",
+       "high": "3.016574",
+       "low": "3.016574"
+      },
+      {
+       "cause": "soffit b x L at the drawn width, other end at the schedule width",
+       "dep": "SCALED",
+       "edge_pair": "5CD/5CC",
+       "edge_width": "0.200",
+       "face_id": "R4-282.1F-024.BEAM_SOFFIT",
+       "high": "1.104523",
+       "implied_length_m": "4.418090",
+       "length_matches_f2f": true,
+       "low": "0.883618",
+       "recorded_width": "0.2"
+      },
+      {
+       "cause": "edge band L x t along the beam: no beam width / depth in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-296.1F-024.EDGE_BAND",
+       "high": "0.001251",
+       "low": "0.001251"
+      }
+     ],
+     "line_id": "L-81facd0ae5a789414e9f",
+     "member_lines": [
+      "L-39ca5340879eafc35355"
+     ],
+     "recorded_differs": false,
+     "recorded_width_m": "0.2",
+     "schedule_width_m": "0.25",
+     "shift_low_m2": "0.000000"
+    },
+    {
+     "after": "0.575087 .. 0.690103",
+     "before": "0.575087 .. 0.690103",
+     "class": "BOUNDED",
+     "edge_pair": "5E7/5E8",
+     "edge_width_m": "0.300",
+     "faces": [
+      {
+       "cause": "beam side L x (D - t): width not in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-282.1F-072~BM-1F-031#BAND0026.1.BEAM_SIDE",
+       "high": "0.000000",
+       "low": "0.000000"
+      },
+      {
+       "cause": "soffit b x L at the drawn width, other end at the schedule width",
+       "dep": "SCALED",
+       "edge_pair": "5E7/5E8",
+       "edge_width": "0.300",
+       "face_id": "R4-282.1F-072~BM-1F-031#BAND0026.1.BEAM_SOFFIT",
+       "high": "0.690094",
+       "implied_length_m": "2.300313",
+       "length_matches_f2f": true,
+       "low": "0.575078",
+       "recorded_width": "0.3"
+      },
+      {
+       "cause": "edge band L x t along the beam: no beam width / depth in it",
+       "dep": "INDEPENDENT",
+       "face_id": "R4-296.1F-072~BM-1F-031#BAND0026.1.EDGE_BAND",
+       "high": "0.000009",
+       "low": "0.000009"
+      }
+     ],
+     "line_id": "L-abb2a65c35825e04c6bf",
+     "member_lines": [
+      "L-50667f69855b6d588011"
+     ],
+     "recorded_differs": false,
+     "recorded_width_m": "0.3",
+     "schedule_width_m": "0.25",
+     "shift_low_m2": "0.000000"
+    }
+   ]
+  },
+  {
+   "census": {
+    "AT_LEAST": 0,
+    "BOUNDED": 8,
+    "HELD_BLANK": 0,
+    "HELD_BLANK_CAP": 1
+   },
+   "evidence": "S-BOUN bands 7FE 8.344 + 7FC 0.230 + 810 0.240 = 8.814 m2 / 0.20 = 44.07 m (own DXF read); x 0.20 x 0.40 (ST p.14 '(20x40)', A-A; T-403 Gate A) = 3.5256 m3 gross; boundary columns 20 x 30 'SEE ARCH PLAN': none drawn (0 column entities inside the bands, own read), count not printed (M4 / Q-28); each takes 0.20 x 0.30 x 0.40 = 0.024 m3 of the beam",
+   "family_after": "8 BOUNDED 1.178378 .. 1.571171 + 1 HELD BLANK with cap 3.525600 beside",
+   "family_before_T712_form": "9 bounded 1.178378 .. 5.096771",
+   "finding": "F-T723-3",
+   "index": "0.0 .. 3.5256",
+   "line_id": "L-fb7a6431fede62e93fd5",
+   "matches_T704_code_form": true,
+   "state": "HELD BLANK, cap 3.5256 m3 beside (AT_MOST, gross DRAWING-CONFIRMED; net = 3.5256 - n x 0.024, n not printed)",
+   "t712_at_least_lines": {
+    "at_least": 17,
+    "blank_named": 3,
+    "lines": 20
+   }
+  },
+  {
+   "finding": "T-721 strip pieces",
+   "pieces": [
+    {
+     "area_m2": "0.16",
+     "item": "D-05 / D-26 (projection: no section / mark / bars / material)",
+     "m3_per_m_depth": "0.160000",
+     "member": "BM-GF-058 projection BAND0031 (edges 2C6 / 2C7, 0.200 apart, unbroken 4.325 m)",
+     "owner": null,
+     "piece": "GF-STRIP-AT-COL",
+     "record_slivers_m2": {
+      "L-634cefe5e8a7fb458e16": 0.0001
+     },
+     "rule": "R-T724-4",
+     "state": "NAMED_BLANK_CHILD",
+     "where": "strip piece in front of flush column 366 (S-COL.BON, 0.80 x 0.25, north face = strip edge 2C6)"
+    },
+    {
+     "area_m2": "0.029309",
+     "item": "D-05 / D-26 (projection corner, rounded outline arc 316)",
+     "m3_per_m_depth": "0.029309",
+     "member": "GF NW corner of the roof-edge projection",
+     "owner": null,
+     "piece": "GF-NW-CORNER",
+     "record_slivers_m2": {},
+     "rule": "R-T724-4",
+     "state": "NAMED_BLANK_CHILD",
+     "where": "north strip BAND0031 (starts at the square's east face, 2C6 / 2C7 end x = 2B5) and the GF west strip (2B7 / 2B5, ends at the square's south face)"
+    },
+    {
+     "area_m2": "0.16",
+     "item": "D-05 / D-26 (projection: no section / mark / bars / material)",
+     "m3_per_m_depth": "0.160000",
+     "member": "BM-1F-033 projection BAND0013 (edges 5E1 / 5E6, 0.200 apart, unbroken 4.325 m)",
+     "owner": null,
+     "piece": "1F-STRIP-AT-COL",
+     "record_slivers_m2": {},
+     "rule": "R-T724-4",
+     "state": "NAMED_BLANK_CHILD",
+     "where": "strip piece in front of flush column 68C (S-COL.BON, 0.80 x 0.25, north face = strip edge 5E1)"
+    },
+    {
+     "area_m2": "0.029309",
+     "item": "D-05 / D-26 (projection corner, rounded outline arc 647)",
+     "m3_per_m_depth": "0.029309",
+     "member": "1F NW corner of the roof-edge projection",
+     "owner": null,
+     "piece": "1F-NW-CORNER",
+     "record_slivers_m2": {},
+     "rule": "R-T724-4",
+     "state": "NAMED_BLANK_CHILD",
+     "where": "north strip BAND0013 (starts at 5E7, the square's east face) and the 1F west strip BAND0014 L-a9d5e7dc (5E7 / 5E5, ends at y of 5E1)"
+    }
+   ],
+   "slab_check": "T-139 / T-241 partition: GF-063 and 1F-043 are EDGE_HELD faces with no slab m3 -> no slab double count; the beam bands end at the strip edge (outer face) and the columns 366 / 68C lie south of it (0 overlap)",
+   "total_m2": "0.378618"
+  }
+ ],
+ "not_claimed": "nothing wired, released or VERIFIED; the candidate is not restated (concrete round 10 / the formwork hub wire it); no freelancer row exists for these members (NOT_COMPARABLE)",
+ "pins": {
+  "research/agents_t402/HELD_LINES_T402.csv": "e7a8f8a4d3de89f2",
+  "research/agents_t703/out/LINE_INDEX_V3_0_72.json": "8e753204d90ebf75",
+  "research/agents_t712/out/T712_LEDGER.json": "9d2bbd78d5a40b16",
+  "research/agents_t714/out/T714_FORMWORK_BOUNDS.json": "17959a8de65c4707",
+  "research/agents_t721/out/T721_LEDGER.json": "76b09766541b9049"
+ },
+ "rules": {
+  "R-T724-1": "1.0.0",
+  "R-T724-2": "1.0.0",
+  "R-T724-3": "1.0.0",
+  "R-T724-4": "1.0.0"
+ },
+ "schema": "URBAN_T724_CHECKER_FINDINGS_V1",
+ "task": "T-724"
+}
