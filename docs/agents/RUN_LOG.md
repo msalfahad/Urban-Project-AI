@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T13:29Z | Worker 1 | SUCCESS | T-741 READY (agents/task-T-741 @ 821735bd) | Checker downgrade-only issue path: research/agents_t741/downgrade_add.py wraps boq_export_v1 downgrade-add (HELD/CONFLICT only, record file DOWNGRADES.json only, dry run writes nothing); T-734 roof membrane L-636fd3ff RELEASED 115.832 m2 on V3.0.74 ready for the Checker's own dry run/issue (full V3.0.74 lines private, not rebuilt this run); 31 new tests pass, no quantity changed | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12T13:22Z | Worker 1 | STARTED | run session_01E6cPnaoJp4Dkw7cufKZJNb | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T13:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T12:58Z | Worker 2 | SUCCESS | T-740 READY @49c6df83 | Paint area rule UP-FIN-PAINT-002 (rulebook 1.2.0) restated face by face on V3.0.74: paint engine 822.198..927.215 -> rule 841.261..929.205 m2 (+2.32/+0.21 %), released 4 lines unchanged; gap 673.335/763.539 m2 = bands + tiled faces + named causes (returns -20.25 reading A, 1F-11 W17 ENGINE_WRONG +0.861/-4.305, GF-01 W11/W12 +0.011/+2.315, beam ends below ceiling 0.315), residual 0; open: return reading A vs lm (B), exterior lines blank | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
