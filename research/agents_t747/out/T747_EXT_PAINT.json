@@ -1,0 +1,6622 @@
+{
+ "by_element": {
+  "PARAPET_INNER": {
+   "blank_faces": [],
+   "deducted": [
+    "0.000000",
+    "0.000000"
+   ],
+   "faces": 4,
+   "paint": [
+    "67.411393",
+    "99.557545"
+   ],
+   "render": [
+    "67.411393",
+    "99.557545"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "state": "BOUNDED"
+  },
+  "PARAPET_OUTER": {
+   "blank_faces": [],
+   "deducted": [
+    "0.000000",
+    "0.000000"
+   ],
+   "faces": 28,
+   "paint": [
+    "97.963502",
+    "104.585329"
+   ],
+   "render": [
+    "97.963502",
+    "104.585329"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "state": "BOUNDED"
+  },
+  "PARAPET_TOP": {
+   "blank_faces": [],
+   "deducted": [
+    "0.000000",
+    "0.000000"
+   ],
+   "faces": 4,
+   "paint": [
+    "26.836476",
+    "26.972520"
+   ],
+   "render": [
+    "26.836476",
+    "26.972520"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "state": "BOUNDED"
+  },
+  "PLINTH": {
+   "blank_faces": [],
+   "deducted": [
+    "0.222500",
+    "0.000000"
+   ],
+   "faces": 29,
+   "paint": [
+    "71.466090",
+    "72.749795"
+   ],
+   "render": [
+    "71.688590",
+    "72.749795"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "state": "BOUNDED"
+  },
+  "SLAB_EDGE": {
+   "blank_faces": [
+    "1F/NE-1/SLAB_EDGE_BELOW/slab_edge",
+    "1F/NW-4/SLAB_EDGE_BELOW/slab_edge",
+    "1F/SW-1/SLAB_EDGE_BELOW/slab_edge",
+    "1F/NW-5/SLAB_EDGE_BELOW/slab_edge",
+    "1F/SE-1/SLAB_EDGE_BELOW/slab_edge",
+    "1F/SW-2/SLAB_EDGE_BELOW/slab_edge"
+   ],
+   "deducted": [
+    "0.000000",
+    "0.000000"
+   ],
+   "faces": 9,
+   "paint": [
+    "2.389260",
+    "6.315490"
+   ],
+   "render": [
+    "2.389260",
+    "6.315490"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "state": "BLANK_PART"
+  },
+  "STOREY": {
+   "blank_faces": [],
+   "deducted": [
+    "1.075883",
+    "0.000000"
+   ],
+   "faces": 52,
+   "paint": [
+    "741.101323",
+    "777.438497"
+   ],
+   "render": [
+    "742.177206",
+    "777.438497"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "state": "BOUNDED"
+  }
+ },
+ "by_floor": {
+  "1F": {
+   "blank_faces": [
+    "1F/NE-1/SLAB_EDGE_BELOW/slab_edge",
+    "1F/NW-4/SLAB_EDGE_BELOW/slab_edge",
+    "1F/SW-1/SLAB_EDGE_BELOW/slab_edge",
+    "1F/NW-5/SLAB_EDGE_BELOW/slab_edge",
+    "1F/SE-1/SLAB_EDGE_BELOW/slab_edge",
+    "1F/SW-2/SLAB_EDGE_BELOW/slab_edge"
+   ],
+   "deducted": [
+    "0.000000",
+    "0.000000"
+   ],
+   "faces": 41,
+   "paint": [
+    "354.375577",
+    "378.444980"
+   ],
+   "render": [
+    "354.375577",
+    "378.444980"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "state": "BLANK_PART"
+  },
+  "2F": {
+   "blank_faces": [],
+   "deducted": [
+    "0.000000",
+    "0.000000"
+   ],
+   "faces": 10,
+   "paint": [
+    "146.110000",
+    "151.770000"
+   ],
+   "render": [
+    "146.110000",
+    "151.770000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "state": "BOUNDED"
+  },
+  "GF": {
+   "blank_faces": [],
+   "deducted": [
+    "1.298383",
+    "0.000000"
+   ],
+   "faces": 75,
+   "paint": [
+    "506.682467",
+    "557.404196"
+   ],
+   "render": [
+    "507.980850",
+    "557.404196"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "state": "BOUNDED"
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.75",
+ "edges": {
+  "corners": {
+   "basis": "T-737 re-binding of the T-697 exterior arrises (vertical convex corners, mouths, stop-ends, plinth): one arris = one corner lm, the same arrises as the B4-09 beads (arris once)",
+   "by_host": {
+    "L-8bb83e16cc7b104ab88b": {
+     "lm": [
+      "37.800000",
+      "37.800000"
+     ],
+     "no_host": [],
+     "rows": [
+      "EXT#1F-CONVEX EXTERNAL_CORNER HELD_BOUND"
+     ]
+    },
+    "L-b05f70c92405dbcfbe62": {
+     "lm": [
+      "95.100000",
+      "95.100000"
+     ],
+     "no_host": [],
+     "rows": [
+      "EXT#1F-CONVEX EXTERNAL_CORNER HELD_BOUND",
+      "EXT#GF-CONVEX EXTERNAL_CORNER HELD_BOUND",
+      "EXT#GF-MOUTHS MOUTH_WALL_END HELD_BOUND"
+     ]
+    },
+    "L-d52c4f763b19aedf8b8b": {
+     "lm": [
+      "16.800000",
+      "16.800000"
+     ],
+     "no_host": [],
+     "rows": [
+      "EXT#2F-CONVEX EXTERNAL_CORNER RELEASED"
+     ]
+    },
+    "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70": {
+     "lm": [
+      "0.000000",
+      "11.900000"
+     ],
+     "no_host": [],
+     "rows": [
+      "EXT#1F-CONVEX-PARAPET-ENDS EXTERNAL_CORNER HELD_BOUND"
+     ]
+    },
+    "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90": {
+     "lm": [
+      "2.000000",
+      "2.000000"
+     ],
+     "no_host": [],
+     "rows": [
+      "EXT#2F-CONVEX EXTERNAL_CORNER RELEASED"
+     ]
+    },
+    "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30": {
+     "lm": [
+      "2.000000",
+      "2.000000"
+     ],
+     "no_host": [],
+     "rows": [
+      "EXT#GF-CONVEX EXTERNAL_CORNER HELD_BOUND",
+      "EXT#GF-MOUTHS MOUTH_WALL_END HELD_BOUND"
+     ]
+    },
+    "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50": {
+     "lm": [
+      "1.000000",
+      "2.200000"
+     ],
+     "no_host": [],
+     "rows": [
+      "EXT#GF-CONVEX EXTERNAL_CORNER RELEASED",
+      "EXT#GF-MOUTHS-STOP EXTERNAL_CORNER HELD_BOUND"
+     ]
+    },
+    "NEW FIN.EXT.FINISH PLINTH GF": {
+     "lm": [
+      "13.800000",
+      "14.250000"
+     ],
+     "no_host": [],
+     "rows": [
+      "EXT#GF-CONVEX EXTERNAL_CORNER HELD_BOUND",
+      "EXT#GF-CONVEX-PLINTH EXTERNAL_CORNER HELD_BOUND",
+      "EXT#GF-MOUTHS MOUTH_WALL_END HELD_BOUND"
+     ]
+    },
+    "NO_HOST": {
+     "lm": [
+      "0.000000",
+      "0.000000"
+     ],
+     "no_host": [
+      "EXT#GF-MOUTHS 1.4 m (reference text, not a quantity)"
+     ],
+     "rows": [
+      "EXT#GF-MOUTHS MOUTH_WALL_END HELD_BLANK"
+     ]
+    }
+   },
+   "not_restated": "horizontal arrises (parapet top edges, slab edges, copings) are in T-337 FILL_ITEMS FIN.EXT.CORNERS 710.171878 .. 821.858800 m.l (stage missing item, HELD bounded): cited, not restated here",
+   "total_lm": [
+    "168.500000",
+    "182.050000"
+   ]
+  },
+  "openings": [
+   {
+    "basis": "RECTANGLE",
+    "face_id": "1F/NE-2/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "2.200000",
+     "2.200000"
+    ],
+    "opening": "W19",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "2.200000",
+       "2.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "1F/NE-2/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "2.200000",
+     "2.200000"
+    ],
+    "opening": "W20",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "2.200000",
+       "2.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "1F/NE-2/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "4.550000",
+     "4.550000"
+    ],
+    "opening": "W24",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "4.550000",
+       "4.550000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "1F/NW-2/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": null,
+    "opening": "W17",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": null,
+      "lm": null,
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "HELD",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "ARC_DEVELOPED",
+    "face_id": "1F/NW-5/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "6.846100",
+     "6.846100"
+    ],
+    "opening": "W15",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.903900",
+       "0.903900"
+      ],
+      "lm": [
+       "7.750000",
+       "7.750000"
+      ],
+      "source": "T-746 window OUT"
+     }
+    ],
+    "source": "T-405 / T-737 ring",
+    "state": "POINT",
+    "why": "arched head: developed outline governs the rectangle (T-405 ARCHED, Checker-merged)"
+   },
+   {
+    "basis": "ARC_DEVELOPED",
+    "face_id": "1F/NW-5/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "6.846100",
+     "6.846100"
+    ],
+    "opening": "W16",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.903900",
+       "0.903900"
+      ],
+      "lm": [
+       "7.750000",
+       "7.750000"
+      ],
+      "source": "T-746 window OUT"
+     }
+    ],
+    "source": "T-405 / T-737 ring",
+    "state": "POINT",
+    "why": "arched head: developed outline governs the rectangle (T-405 ARCHED, Checker-merged)"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "1F/SE-1/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "5.650000",
+     "5.650000"
+    ],
+    "opening": "W14",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "5.650000",
+       "5.650000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "1F/SE-2/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "5.800000",
+     "5.800000"
+    ],
+    "opening": "W13",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "5.800000",
+       "5.800000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "1F/SW-3/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "4.000000",
+     "4.000000"
+    ],
+    "opening": "W25",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "4.000000",
+       "4.000000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "1F/SW-3/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "2.200000",
+     "2.200000"
+    ],
+    "opening": "W21",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "2.200000",
+       "2.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "1F/SW-3/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "2.200000",
+     "2.200000"
+    ],
+    "opening": "W22",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "2.200000",
+       "2.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "1F/SW-3/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "2.200000",
+     "2.200000"
+    ],
+    "opening": "W23",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "2.200000",
+       "2.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "DRAWN_FRAME",
+    "face_id": "2F/NE-1/STOREY+PARAPET/storey",
+    "kind": "DOOR",
+    "lm": [
+     "0.000000",
+     "1.000000"
+    ],
+    "opening": "D-2F-01",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "5.400000",
+       "4.400000"
+      ],
+      "lm": [
+       "5.400000",
+       "5.400000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 door return",
+    "state": "BOUNDED",
+    "why": "door: frame posts drawn over the full wall depth at the jambs (T-746): jambs 0, head 0 .. w; already inside T-746's door edge total, cited, never added again"
+   },
+   {
+    "basis": "ARC_DEVELOPED",
+    "face_id": "2F/SE-1/STOREY+PARAPET/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "4.070900",
+     "4.070900"
+    ],
+    "opening": "W26",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.529100",
+       "0.529100"
+      ],
+      "lm": [
+       "4.600000",
+       "4.600000"
+      ],
+      "source": "T-746 window OUT"
+     }
+    ],
+    "source": "T-405 / T-737 ring",
+    "state": "POINT",
+    "why": "arched head: developed outline governs the rectangle (T-405 ARCHED, Checker-merged)"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "2F/SW-1/STOREY+PARAPET/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "4.000000",
+     "4.000000"
+    ],
+    "opening": "W27",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "4.000000",
+       "4.000000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "2F/SW-1/STOREY+PARAPET/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "2.200000",
+     "2.200000"
+    ],
+    "opening": "W28",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "2.200000",
+       "2.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "2F/SW-1/STOREY+PARAPET/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "4.200000",
+     "4.200000"
+    ],
+    "opening": "W29",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "4.200000",
+       "4.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/NW-7/EDGE/storey",
+    "kind": "WINDOW",
+    "lm": null,
+    "opening": "W02",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": null,
+      "lm": null,
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "HELD",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "DRAWN_FRAME",
+    "face_id": "GF/P-1/COVERED/storey",
+    "kind": "DOOR",
+    "lm": [
+     "0.000000",
+     "1.000000"
+    ],
+    "opening": "D-GF-05",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "5.400000",
+       "4.400000"
+      ],
+      "lm": [
+       "5.400000",
+       "5.400000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 door return",
+    "state": "BOUNDED",
+    "why": "door: frame posts drawn over the full wall depth at the jambs (T-746): jambs 0, head 0 .. w; already inside T-746's door edge total, cited, never added again"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/P-2/COVERED/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "4.500000",
+     "4.500000"
+    ],
+    "opening": "W09",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "4.500000",
+       "4.500000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/P-2/COVERED/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "4.000000",
+     "4.000000"
+    ],
+    "opening": "W10",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "4.000000",
+       "4.000000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/SE-1/EDGE/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "6.350000",
+     "6.350000"
+    ],
+    "opening": "W11",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "6.350000",
+       "6.350000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/SE-1/EDGE/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "6.350000",
+     "6.350000"
+    ],
+    "opening": "W12",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "6.350000",
+       "6.350000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "DRAWN_FRAME",
+    "face_id": "GF/SE-2/COVERED/storey",
+    "kind": "DOOR",
+    "lm": [
+     "0.000000",
+     "2.000000"
+    ],
+    "opening": "D-GF-07",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "7.000000",
+       "5.000000"
+      ],
+      "lm": [
+       "7.000000",
+       "7.000000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 door return",
+    "state": "BOUNDED",
+    "why": "door: frame posts drawn over the full wall depth at the jambs (T-746): jambs 0, head 0 .. w; already inside T-746's door edge total, cited, never added again"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/SE-4/FLUSH/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "5.200000",
+     "5.200000"
+    ],
+    "opening": "W01",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "5.200000",
+       "5.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "DRAWN_FRAME",
+    "face_id": "GF/SW-1/EDGE/storey",
+    "kind": "DOOR",
+    "lm": [
+     "0.000000",
+     "1.000000"
+    ],
+    "opening": "D-GF-01",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "5.400000",
+       "4.400000"
+      ],
+      "lm": [
+       "5.400000",
+       "5.400000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 door return",
+    "state": "BOUNDED",
+    "why": "door: frame posts drawn over the full wall depth at the jambs (T-746): jambs 0, head 0 .. w; already inside T-746's door edge total, cited, never added again"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/SW-3/EDGE/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "2.200000",
+     "2.200000"
+    ],
+    "opening": "W04",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "2.200000",
+       "2.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "DRAWN_FRAME",
+    "face_id": "GF/SW-3/EDGE/storey",
+    "kind": "DOOR",
+    "lm": [
+     "0.000000",
+     "0.900000"
+    ],
+    "opening": "D-GF-03",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "5.300000",
+       "4.400000"
+      ],
+      "lm": [
+       "5.300000",
+       "5.300000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 door return",
+    "state": "BOUNDED",
+    "why": "door: frame posts drawn over the full wall depth at the jambs (T-746): jambs 0, head 0 .. w; already inside T-746's door edge total, cited, never added again"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/SW-3/EDGE/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "4.500000",
+     "4.500000"
+    ],
+    "opening": "W08",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "4.500000",
+       "4.500000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "DRAWN_FRAME",
+    "face_id": "GF/SW-5/COVERED/storey",
+    "kind": "DOOR",
+    "lm": [
+     "0.000000",
+     "1.000000"
+    ],
+    "opening": "D-GF-06",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "5.400000",
+       "4.400000"
+      ],
+      "lm": [
+       "5.400000",
+       "5.400000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 door return",
+    "state": "BOUNDED",
+    "why": "door: frame posts drawn over the full wall depth at the jambs (T-746): jambs 0, head 0 .. w; already inside T-746's door edge total, cited, never added again"
+   },
+   {
+    "basis": "DRAWN_FRAME",
+    "face_id": "GF/SW-7/FLUSH/storey",
+    "kind": "DOOR",
+    "lm": [
+     "0.000000",
+     "5.300000"
+    ],
+    "opening": "D-GF-09",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "5.300000",
+       "0.000000"
+      ],
+      "lm": [
+       "5.300000",
+       "5.300000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 door return",
+    "state": "BOUNDED",
+    "why": "door: frame posts drawn over the full wall depth at the jambs (T-746): jambs 0, head 0 .. w; already inside T-746's door edge total, cited, never added again"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/SW-7/FLUSH/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "2.200000",
+     "2.200000"
+    ],
+    "opening": "W05",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "2.200000",
+       "2.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/SW-7/FLUSH/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "2.200000",
+     "2.200000"
+    ],
+    "opening": "W06",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "2.200000",
+       "2.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/SW-7/FLUSH/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "2.200000",
+     "2.200000"
+    ],
+    "opening": "W07",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "2.200000",
+       "2.200000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "1F/NW-4/STOREY/storey",
+    "kind": "WINDOW",
+    "lm": [
+     "4.820000",
+     "4.820000"
+    ],
+    "opening": "W18",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": [
+       "0.000000",
+       "0.000000"
+      ],
+      "lm": [
+       "4.820000",
+       "4.820000"
+      ],
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "POINT",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": null,
+    "face_id": "GF/NW-3/COVERED/storey",
+    "lm": null,
+    "opening": "W03 (frame end on NW-3)",
+    "others": [],
+    "source": "W03",
+    "state": "PART_OF",
+    "why": "frame-end part of W03 on a neighbour face: its edge is W03's (one opening, once)"
+   },
+   {
+    "basis": "RECTANGLE",
+    "face_id": "GF/NW-4/COVERED/storey",
+    "kind": "WINDOW",
+    "lm": null,
+    "opening": "W03",
+    "others": [
+     {
+      "basis": "RECTANGLE",
+      "diff": null,
+      "lm": null,
+      "source": "T-737 ring"
+     }
+    ],
+    "source": "T-746 window OUT",
+    "state": "HELD",
+    "why": "window outside jambs + head (T-313 / T-746); sill / threshold are their own item"
+   },
+   {
+    "basis": null,
+    "face_id": "GF/NW-5/COVERED/storey",
+    "lm": null,
+    "opening": "W03 (frame end on NW-5)",
+    "others": [],
+    "source": "W03",
+    "state": "PART_OF",
+    "why": "frame-end part of W03 on a neighbour face: its edge is W03's (one opening, once)"
+   }
+  ],
+  "summary": {
+   "doors": {
+    "count": 7,
+    "held": [],
+    "lm": [
+     "0.000000",
+     "12.200000"
+    ]
+   },
+   "reconciliation": {
+    "arched_rectangle_over_developed": "2.336900",
+    "check": "0.000000",
+    "governing_window_edge_lm": "103.683100",
+    "t746_not_on_facade_lm": "0.000000",
+    "t746_on_facade_openings": "106.020000",
+    "t746_outside_edge_lm_all": "106.020000",
+    "t746_windows_not_on_a_facade_face": []
+   },
+   "windows": {
+    "count": 29,
+    "held": [
+     "W17",
+     "W02",
+     "W03"
+    ],
+    "lm": [
+     "103.683100",
+     "103.683100"
+    ]
+   }
+  }
+ },
+ "evidence": {
+  "elevations": {
+   "drawn_distinct_surfaces": 1,
+   "dxf_finish_words": 0,
+   "dxf_text_entities": 177,
+   "finish_words_searched": "clad / stone / marble / granite / ceramic / tile / plaster / paint / sigma / coat / finish and their Arabic equivalents",
+   "material_hatch_on_facade_faces": 0,
+   "se_hatches": "1C01 annex roof section, 23DE ground slab section, 23E3 section block, 23E7 AR-PARQ1 ground: sections / ground, none on a facade face",
+   "sheets": "architectural PDF p.6 SOUTH EAST, p.7 SOUTH WEST, p.8 NORTH WEST, p.9 NORTH EAST (single sheet 09) ELEVATION 1:100; DXF titles SOUTH EAST / NORTH WEST ELEVATION (handles 24DB, 2A69)",
+   "verdict": "no facade face is printed as clad or tiled on any elevation: deduction CLAD / TILED = 0 by the drawing; one distinct surface is drawn (the SE entrance stone surround), material printed nowhere"
+  },
+  "surround": {
+   "attribution": "the face that holds D-GF-07 (sill +1.00, head +3.50 = the door the surround frames); the Checker confirms the face by handle",
+   "faces": {
+    "GF/SE-2/COVERED/plinth": "0.222500",
+    "GF/SE-2/COVERED/storey": "1.075883"
+   },
+   "handles": "layer '1' LINE 1CA6 .. 1CF0, 23AE .. 2402 (+ 1C58 .. 1C63 annex coping arc excluded by area)",
+   "levels": "+0.15 .. +4.36 (stone bottom on the +0.15 landing, arch crown +4.36)",
+   "stones_only_m2": "1.154674",
+   "why_zone": "stones + the three wedges between the voussoirs and the drawn intrados (closed at 1 mm snap); stones alone 1.154674 (0.1 mm snap); split at +1.00 (plinth band 0.15 .. 1.00 / storey 1.00 ..)",
+   "zone_m2": "1.298383",
+   "zone_plinth_m2": "0.222500",
+   "zone_storey_m2": "1.075883"
+  }
+ },
+ "faces": [
+  {
+   "bottom": 0.0,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SE-1/EDGE/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "2.010000",
+    "2.010000"
+   ],
+   "render": [
+    "2.010000",
+    "2.010000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 0.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.3,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SE-1/EDGE/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "W11",
+    "W12"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "18.220000",
+    "18.220000"
+   ],
+   "render": [
+    "18.220000",
+    "18.220000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 4.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 4.3,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/SE-1/EDGE/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "paint": [
+    "3.350000",
+    "3.350000"
+   ],
+   "render": [
+    "3.350000",
+    "3.350000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 4.8,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SW-1/EDGE/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.465000",
+    "0.465000"
+   ],
+   "render": [
+    "0.465000",
+    "0.465000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 0.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.3,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SW-1/EDGE/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "D-GF-01"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "10.200000",
+    "10.200000"
+   ],
+   "render": [
+    "10.200000",
+    "10.200000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 4.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 4.3,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/SW-1/EDGE/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "paint": [
+    "1.550000",
+    "1.550000"
+   ],
+   "render": [
+    "1.550000",
+    "1.550000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 4.8,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SW-2/EDGE/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.306300",
+    "0.306300"
+   ],
+   "render": [
+    "0.306300",
+    "0.306300"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 0.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.3,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SW-2/EDGE/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "8.168178",
+    "8.168178"
+   ],
+   "render": [
+    "8.168178",
+    "8.168178"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 4.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 4.3,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/SW-2/EDGE/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "paint": [
+    "1.021022",
+    "1.021022"
+   ],
+   "render": [
+    "1.021022",
+    "1.021022"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 4.8,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NW-1/EDGE/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.075000",
+    "0.075000"
+   ],
+   "render": [
+    "0.075000",
+    "0.075000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 0.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.3,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NW-1/EDGE/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "2.000000",
+    "2.000000"
+   ],
+   "render": [
+    "2.000000",
+    "2.000000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 4.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 4.3,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/NW-1/EDGE/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "paint": [
+    "0.250000",
+    "0.250000"
+   ],
+   "render": [
+    "0.250000",
+    "0.250000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 4.8,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SW-3/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.030000",
+    "0.030000"
+   ],
+   "render": [
+    "0.030000",
+    "0.030000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 0.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.3,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SW-3/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "1.040000",
+    "1.040000"
+   ],
+   "render": [
+    "1.040000",
+    "1.040000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SW-3/EDGE/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.930000",
+    "0.930000"
+   ],
+   "render": [
+    "0.930000",
+    "0.930000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 0.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.3,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SW-3/EDGE/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "W04",
+    "D-GF-03",
+    "W08"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "20.090000",
+    "20.090000"
+   ],
+   "render": [
+    "20.090000",
+    "20.090000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 4.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 4.3,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/SW-3/EDGE/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "paint": [
+    "3.100000",
+    "3.100000"
+   ],
+   "render": [
+    "3.100000",
+    "3.100000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 4.8,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SW-5/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "2.550000",
+    "2.550000"
+   ],
+   "render": [
+    "2.550000",
+    "2.550000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SW-5/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "D-GF-06"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "11.300000",
+    "11.300000"
+   ],
+   "render": [
+    "11.300000",
+    "11.300000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [
+    {
+     "kind": "NOT_PRINTED_FINISH",
+     "m2": "0.222500"
+    }
+   ],
+   "element": "PLINTH",
+   "face_id": "GF/SE-2/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "2.922500",
+    "3.145000"
+   ],
+   "render": [
+    "3.145000",
+    "3.145000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "BOUNDED",
+   "top": 1.0,
+   "why": "paint = render of the same face - drawn deductions"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [
+    {
+     "kind": "NOT_PRINTED_FINISH",
+     "m2": "1.075883"
+    }
+   ],
+   "element": "STOREY",
+   "face_id": "GF/SE-2/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "D-GF-07"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "10.574117",
+    "16.650000"
+   ],
+   "render": [
+    "11.650000",
+    "16.650000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "BOUNDED",
+   "top": 5.5,
+   "why": "paint = render of the same face - drawn deductions"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NE-1/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "1.190000",
+    "1.190000"
+   ],
+   "render": [
+    "1.190000",
+    "1.190000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NE-1/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "6.300000",
+    "6.300000"
+   ],
+   "render": [
+    "6.300000",
+    "6.300000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SE-3/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.340000",
+    "0.340000"
+   ],
+   "render": [
+    "0.340000",
+    "0.340000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SE-3/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "1.800000",
+    "1.800000"
+   ],
+   "render": [
+    "1.800000",
+    "1.800000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SW-6/FLUSH/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "1.190000",
+    "1.190000"
+   ],
+   "render": [
+    "1.190000",
+    "1.190000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SW-6/FLUSH/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "6.300000",
+    "6.300000"
+   ],
+   "render": [
+    "6.300000",
+    "6.300000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SE-4/FLUSH/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "3.825000",
+    "3.825000"
+   ],
+   "render": [
+    "3.825000",
+    "3.825000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SE-4/FLUSH/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "W01"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "17.850000",
+    "17.850000"
+   ],
+   "render": [
+    "17.850000",
+    "17.850000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SW-7/FLUSH/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "12.639500",
+    "12.639500"
+   ],
+   "render": [
+    "12.639500",
+    "12.639500"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SW-7/FLUSH/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "D-GF-09",
+    "W05",
+    "W06",
+    "W07"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "63.495000",
+    "63.495000"
+   ],
+   "render": [
+    "63.495000",
+    "63.495000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NW-2/FLUSH/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.212500",
+    "0.212500"
+   ],
+   "render": [
+    "0.212500",
+    "0.212500"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NW-2/FLUSH/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "1.125000",
+    "1.125000"
+   ],
+   "render": [
+    "1.125000",
+    "1.125000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NE-2/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.425000",
+    "0.425000"
+   ],
+   "render": [
+    "0.425000",
+    "0.425000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NE-2/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "2.250000",
+    "2.250000"
+   ],
+   "render": [
+    "2.250000",
+    "2.250000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SE-5/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.042500",
+    "0.042500"
+   ],
+   "render": [
+    "0.042500",
+    "0.042500"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SE-5/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "0.225000",
+    "0.225000"
+   ],
+   "render": [
+    "0.225000",
+    "0.225000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NE-3/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.068000",
+    "0.068000"
+   ],
+   "render": [
+    "0.068000",
+    "0.068000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NE-3/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "0.360000",
+    "0.360000"
+   ],
+   "render": [
+    "0.360000",
+    "0.360000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NW-3/COVERED/plinth",
+   "face_status": "HELD",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.135450",
+    "0.164475"
+   ],
+   "render": [
+    "0.135450",
+    "0.164475"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BOUNDED",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NW-3/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "W03 (frame end on NW-3)"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "0.253706",
+    "0.253706"
+   ],
+   "render": [
+    "0.253706",
+    "0.253706"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NW-4/COVERED/plinth",
+   "face_status": "HELD",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "4.660390",
+    "5.659045"
+   ],
+   "render": [
+    "4.660390",
+    "5.659045"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BOUNDED",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NW-4/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "W03"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "1.331559",
+    "1.331559"
+   ],
+   "render": [
+    "1.331559",
+    "1.331559"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NW-5/COVERED/plinth",
+   "face_status": "HELD",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.100450",
+    "0.121975"
+   ],
+   "render": [
+    "0.100450",
+    "0.121975"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BOUNDED",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NW-5/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "W03 (frame end on NW-5)"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "0.200706",
+    "0.200706"
+   ],
+   "render": [
+    "0.200706",
+    "0.200706"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SW-8/COVERED/plinth",
+   "face_status": "HELD",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.056000",
+    "0.068000"
+   ],
+   "render": [
+    "0.056000",
+    "0.068000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "BOUNDED",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SW-8/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "0.360000",
+    "0.360000"
+   ],
+   "render": [
+    "0.360000",
+    "0.360000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NW-6/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.382500",
+    "0.382500"
+   ],
+   "render": [
+    "0.382500",
+    "0.382500"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NW-6/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "2.025000",
+    "2.025000"
+   ],
+   "render": [
+    "2.025000",
+    "2.025000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SW-9/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.425000",
+    "0.425000"
+   ],
+   "render": [
+    "0.425000",
+    "0.425000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SW-9/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "2.250000",
+    "2.250000"
+   ],
+   "render": [
+    "2.250000",
+    "2.250000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/SW-9/EDGE/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "1.275000",
+    "1.275000"
+   ],
+   "render": [
+    "1.275000",
+    "1.275000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/SW-9/EDGE/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "6.750000",
+    "6.750000"
+   ],
+   "render": [
+    "6.750000",
+    "6.750000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/SW-9/EDGE/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+   "paint": [
+    "0.750000",
+    "0.750000"
+   ],
+   "render": [
+    "0.750000",
+    "0.750000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 6.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.0,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NW-7/EDGE/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "7.900000",
+    "7.900000"
+   ],
+   "render": [
+    "7.900000",
+    "7.900000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NW-7/EDGE/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "W02"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "7.065000",
+    "35.550000"
+   ],
+   "render": [
+    "7.065000",
+    "35.550000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BOUNDED",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/NW-7/EDGE/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+   "paint": [
+    "3.950000",
+    "3.950000"
+   ],
+   "render": [
+    "3.950000",
+    "3.950000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 6.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.0,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NE-4/EDGE/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "19.370000",
+    "19.370000"
+   ],
+   "render": [
+    "19.370000",
+    "19.370000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NE-4/EDGE/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "87.165000",
+    "87.165000"
+   ],
+   "render": [
+    "87.165000",
+    "87.165000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/NE-4/EDGE/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+   "paint": [
+    "9.685000",
+    "9.685000"
+   ],
+   "render": [
+    "9.685000",
+    "9.685000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 6.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.0,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/NE-6/EDGE/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "3.240000",
+    "3.240000"
+   ],
+   "render": [
+    "3.240000",
+    "3.240000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 0.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.3,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/NE-6/EDGE/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "43.200000",
+    "43.200000"
+   ],
+   "render": [
+    "43.200000",
+    "43.200000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 4.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 4.3,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/NE-6/EDGE/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "paint": [
+    "5.400000",
+    "5.400000"
+   ],
+   "render": [
+    "5.400000",
+    "5.400000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 4.8,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/P-1/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "0.705000",
+    "0.705000"
+   ],
+   "render": [
+    "0.705000",
+    "0.705000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "P-1",
+   "state": "POINT",
+   "top": 0.3,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.3,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/P-1/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "D-GF-05"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "22.240000",
+    "22.240000"
+   ],
+   "render": [
+    "22.240000",
+    "22.240000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "P-1",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 0.15,
+   "deductions": [],
+   "element": "PLINTH",
+   "face_id": "GF/P-2/COVERED/plinth",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "paint": [
+    "3.995000",
+    "3.995000"
+   ],
+   "render": [
+    "3.995000",
+    "3.995000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "P-2",
+   "state": "POINT",
+   "top": 1.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 1.0,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "GF/P-2/COVERED/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [
+    "W09",
+    "W10"
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "17.400000",
+    "17.400000"
+   ],
+   "render": [
+    "17.400000",
+    "17.400000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "P-2",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NW-1/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "4.915200",
+    "4.915200"
+   ],
+   "render": [
+    "4.915200",
+    "4.915200"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-1/PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "1.520600",
+    "1.520600"
+   ],
+   "render": [
+    "1.520600",
+    "1.520600"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 10.999,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "SLAB_EDGE",
+   "face_id": "1F/NW-2/SLAB_EDGE_BELOW/slab_edge",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "paint": [
+    "0.535000",
+    "2.006250"
+   ],
+   "render": [
+    "0.535000",
+    "2.006250"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NW-2/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [
+    "W17"
+   ],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "6.675400",
+    "6.675400"
+   ],
+   "render": [
+    "6.675400",
+    "6.675400"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-2/PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "3.977236",
+    "3.977236"
+   ],
+   "render": [
+    "3.977236",
+    "3.977236"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 11.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NW-3/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "2.427600",
+    "2.427600"
+   ],
+   "render": [
+    "2.427600",
+    "2.427600"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-3/PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "0.751100",
+    "0.751100"
+   ],
+   "render": [
+    "0.751100",
+    "0.751100"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 10.999,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "SLAB_EDGE",
+   "face_id": "1F/NE-1/SLAB_EDGE_BELOW/slab_edge",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "paint": null,
+   "render": null,
+   "residual": null,
+   "side": "NE",
+   "state": "BLANK",
+   "top": null,
+   "why": "render face blank (HELD, no bound): paint blank, never 0"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NE-1/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "0.336000",
+    "0.336000"
+   ],
+   "render": [
+    "0.336000",
+    "0.336000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NE-1/PARAPET/parapet",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "0.087968",
+    "0.103968"
+   ],
+   "render": [
+    "0.087968",
+    "0.103968"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "SLAB_EDGE",
+   "face_id": "1F/NW-4/SLAB_EDGE_BELOW/slab_edge",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "paint": null,
+   "render": null,
+   "residual": null,
+   "side": "NW",
+   "state": "BLANK",
+   "top": null,
+   "why": "render face blank (HELD, no bound): paint blank, never 0"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NW-4/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [
+    "W18"
+   ],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "0.953328",
+    "0.953328"
+   ],
+   "render": [
+    "0.953328",
+    "0.953328"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-4/PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "0.513500",
+    "0.513500"
+   ],
+   "render": [
+    "0.513500",
+    "0.513500"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 10.799,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "SLAB_EDGE",
+   "face_id": "1F/SW-1/SLAB_EDGE_BELOW/slab_edge",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "paint": null,
+   "render": null,
+   "residual": null,
+   "side": "SW",
+   "state": "BLANK",
+   "top": null,
+   "why": "render face blank (HELD, no bound): paint blank, never 0"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/SW-1/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "0.336000",
+    "0.336000"
+   ],
+   "render": [
+    "0.336000",
+    "0.336000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/SW-1/PARAPET/parapet",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "0.087968",
+    "0.103968"
+   ],
+   "render": [
+    "0.087968",
+    "0.103968"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "SLAB_EDGE",
+   "face_id": "1F/NW-5/SLAB_EDGE_BELOW/slab_edge",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "paint": null,
+   "render": null,
+   "residual": null,
+   "side": "NW",
+   "state": "BLANK",
+   "top": null,
+   "why": "render face blank (HELD, no bound): paint blank, never 0"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NW-5/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [
+    "W15",
+    "W16"
+   ],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "19.519000",
+    "19.519000"
+   ],
+   "render": [
+    "19.519000",
+    "19.519000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-5/PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "3.013400",
+    "3.013400"
+   ],
+   "render": [
+    "3.013400",
+    "3.013400"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 10.148,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NE-2/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [
+    "W19",
+    "W20",
+    "W24"
+   ],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "77.649000",
+    "77.649000"
+   ],
+   "render": [
+    "77.649000",
+    "77.649000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NE-2/PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "25.051000",
+    "25.051000"
+   ],
+   "render": [
+    "25.051000",
+    "25.051000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 11.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 4.3,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/SE-1/OVER_LOWER_ROOF/over_lower_roof",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "holes": [],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "paint": [
+    "4.080000",
+    "4.080000"
+   ],
+   "render": [
+    "4.080000",
+    "4.080000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "SLAB_EDGE",
+   "face_id": "1F/SE-1/SLAB_EDGE_BELOW/slab_edge",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "paint": null,
+   "render": null,
+   "residual": null,
+   "side": "SE",
+   "state": "BLANK",
+   "top": null,
+   "why": "render face blank (HELD, no bound): paint blank, never 0"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/SE-1/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [
+    "W14"
+   ],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "27.580000",
+    "27.580000"
+   ],
+   "render": [
+    "27.580000",
+    "27.580000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/SE-1/PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "7.807000",
+    "7.807000"
+   ],
+   "render": [
+    "7.807000",
+    "7.807000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 10.741,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "SLAB_EDGE",
+   "face_id": "1F/SW-2/SLAB_EDGE_BELOW/slab_edge",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "paint": null,
+   "render": null,
+   "residual": null,
+   "side": "SW",
+   "state": "BLANK",
+   "top": null,
+   "why": "render face blank (HELD, no bound): paint blank, never 0"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/SW-2/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "18.480000",
+    "18.480000"
+   ],
+   "render": [
+    "18.480000",
+    "18.480000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/SW-2/PARAPET/parapet",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "1.694000",
+    "7.040000"
+   ],
+   "render": [
+    "1.694000",
+    "7.040000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/SE-2/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [
+    "W13"
+   ],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "16.140000",
+    "16.140000"
+   ],
+   "render": [
+    "16.140000",
+    "16.140000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/SW-3/STOREY/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [
+    "W25",
+    "W21",
+    "W22",
+    "W23"
+   ],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "59.514000",
+    "59.514000"
+   ],
+   "render": [
+    "59.514000",
+    "59.514000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/SW-3/PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "8.801000",
+    "8.801000"
+   ],
+   "render": [
+    "8.801000",
+    "8.801000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 11.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "2F/NW-1/STOREY+PARAPET/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "holes": [],
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "line_key": "L-d52c4f763b19aedf8b8b",
+   "paint": [
+    "28.560000",
+    "28.560000"
+   ],
+   "render": [
+    "28.560000",
+    "28.560000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 13.9,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 13.9,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "2F/NW-1/STOREY+PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "paint": [
+    "3.400000",
+    "3.400000"
+   ],
+   "render": [
+    "3.400000",
+    "3.400000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 14.4,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "2F/NE-1/STOREY+PARAPET/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "holes": [
+    "D-2F-01"
+   ],
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "line_key": "L-d52c4f763b19aedf8b8b",
+   "paint": [
+    "31.820000",
+    "31.820000"
+   ],
+   "render": [
+    "31.820000",
+    "31.820000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 13.9,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 13.9,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "2F/NE-1/STOREY+PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "paint": [
+    "4.050000",
+    "4.050000"
+   ],
+   "render": [
+    "4.050000",
+    "4.050000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT",
+   "top": 14.4,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "2F/SE-1/STOREY+PARAPET/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "holes": [
+    "W26"
+   ],
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "line_key": "L-d52c4f763b19aedf8b8b",
+   "paint": [
+    "26.685000",
+    "26.685000"
+   ],
+   "render": [
+    "26.685000",
+    "26.685000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 13.9,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 13.9,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "2F/SE-1/STOREY+PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "paint": [
+    "3.400000",
+    "3.400000"
+   ],
+   "render": [
+    "3.400000",
+    "3.400000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT",
+   "top": 14.4,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "2F/SW-1/STOREY+PARAPET/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "holes": [
+    "W27",
+    "W28",
+    "W29"
+   ],
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "line_key": "L-d52c4f763b19aedf8b8b",
+   "paint": [
+    "30.240000",
+    "30.240000"
+   ],
+   "render": [
+    "30.240000",
+    "30.240000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 13.9,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 13.9,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "2F/SW-1/STOREY+PARAPET/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "paint": [
+    "4.050000",
+    "4.050000"
+   ],
+   "render": [
+    "4.050000",
+    "4.050000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT",
+   "top": 14.4,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 4.3,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "GF/NE-6x/EDGE/parapet",
+   "face_status": "HELD",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "paint": [
+    "0.000000",
+    "0.600000"
+   ],
+   "render": [
+    "0.000000",
+    "0.600000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "BOUNDED",
+   "top": 4.8,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NW-2/SCREEN-FRONT/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "4.715710",
+    "4.715710"
+   ],
+   "render": [
+    "4.715710",
+    "4.715710"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NW-2/SCREEN-BACK/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "4.715710",
+    "4.715710"
+   ],
+   "render": [
+    "4.715710",
+    "4.715710"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NW-2/SCREEN-MOULDING-STEPS/storey",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "0.000000",
+    "1.776291"
+   ],
+   "render": [
+    "0.000000",
+    "1.776291"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NW-1/CORNER-ARC/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "0.715029",
+    "0.715029"
+   ],
+   "render": [
+    "0.715029",
+    "0.715029"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-1/CORNER-ARC/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "0.221319",
+    "0.221319"
+   ],
+   "render": [
+    "0.221319",
+    "0.221319"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 11.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NW-3/SW-RETURN/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "1.252688",
+    "1.252688"
+   ],
+   "render": [
+    "1.252688",
+    "1.252688"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-3/SW-RETURN/parapet",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "0.427737",
+    "0.427737"
+   ],
+   "render": [
+    "0.427737",
+    "0.427737"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 11.0,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "SLAB_EDGE",
+   "face_id": "GF/AT225/RING-INNER/slab_edge",
+   "face_status": "HELD",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE GF",
+   "paint": [
+    "0.892720",
+    "3.347700"
+   ],
+   "render": [
+    "0.892720",
+    "3.347700"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "AT225",
+   "state": "BOUNDED",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.3,
+   "deductions": [],
+   "element": "SLAB_EDGE",
+   "face_id": "GF/POOL-COURT-FRONT/slab_edge",
+   "face_status": "HELD",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE GF",
+   "paint": [
+    "0.961540",
+    "0.961540"
+   ],
+   "render": [
+    "0.961540",
+    "0.961540"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF slab_edge",
+   "state": "POINT",
+   "top": 5.5,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 5.5,
+   "deductions": [],
+   "element": "STOREY",
+   "face_id": "1F/NW-5/SW-PIER-RETURNS/storey",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "holes": [],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "paint": [
+    "2.253392",
+    "2.253392"
+   ],
+   "render": [
+    "2.253392",
+    "2.253392"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT",
+   "top": 9.7,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": 9.7,
+   "deductions": [],
+   "element": "PARAPET_OUTER",
+   "face_id": "1F/NW-5/SW-PIER-RETURNS/parapet",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "paint": [
+    "0.053652",
+    "0.697479"
+   ],
+   "render": [
+    "0.053652",
+    "0.697479"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PARAPET_INNER",
+   "face_id": "PARAPET_INNER/ANNEX",
+   "face_status": "HELD",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.PARAPET-INNER ANNEX +4.30",
+   "paint": [
+    "8.888430",
+    "14.914050"
+   ],
+   "render": [
+    "8.888430",
+    "14.914050"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF ANNEX",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PARAPET_INNER",
+   "face_id": "PARAPET_INNER/GF",
+   "face_status": "HELD",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.PARAPET-INNER GF +5.50",
+   "paint": [
+    "8.209433",
+    "13.884950"
+   ],
+   "render": [
+    "8.209433",
+    "13.884950"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF GF",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PARAPET_INNER",
+   "face_id": "PARAPET_INNER/1F",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.PARAPET-INNER 1F +9.70",
+   "paint": [
+    "41.823530",
+    "56.608545"
+   ],
+   "render": [
+    "41.823530",
+    "56.608545"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF 1F",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PARAPET_INNER",
+   "face_id": "PARAPET_INNER/2F",
+   "face_status": "HELD",
+   "floor": "2F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.PARAPET-INNER 2F +13.90",
+   "paint": [
+    "8.490000",
+    "14.150000"
+   ],
+   "render": [
+    "8.490000",
+    "14.150000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF 2F",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PARAPET_TOP",
+   "face_id": "PARAPET_TOP/ANNEX",
+   "face_status": "HELD",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.PARAPET-TOP ANNEX +4.30",
+   "paint": [
+    "5.997010",
+    "6.037010"
+   ],
+   "render": [
+    "5.997010",
+    "6.037010"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF ANNEX",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PARAPET_TOP",
+   "face_id": "PARAPET_TOP/GF",
+   "face_status": "HELD",
+   "floor": "GF",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.PARAPET-TOP GF +5.50",
+   "paint": [
+    "5.592956",
+    "5.673980"
+   ],
+   "render": [
+    "5.592956",
+    "5.673980"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF GF",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PARAPET_TOP",
+   "face_id": "PARAPET_TOP/1F",
+   "face_status": "HELD",
+   "floor": "1F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.PARAPET-TOP 1F +9.70",
+   "paint": [
+    "9.831510",
+    "9.846530"
+   ],
+   "render": [
+    "9.831510",
+    "9.846530"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF 1F",
+   "state": "BOUNDED",
+   "top": null,
+   "why": "paint = render of the same face"
+  },
+  {
+   "bottom": null,
+   "deductions": [],
+   "element": "PARAPET_TOP",
+   "face_id": "PARAPET_TOP/2F",
+   "face_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "holes": [],
+   "line_id": null,
+   "line_key": "NEW FIN.EXT.PARAPET-TOP 2F +13.90",
+   "paint": [
+    "5.415000",
+    "5.415000"
+   ],
+   "render": [
+    "5.415000",
+    "5.415000"
+   ],
+   "residual": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF 2F",
+   "state": "POINT",
+   "top": null,
+   "why": "paint = render of the same face"
+  }
+ ],
+ "index_census": {
+  "facade_paint_lines_now": 0,
+  "fence_lines": 16,
+  "fence_pairs": [
+   "L-0a2fbaa46f6a6b23323e EXT.FENCE.PAINT FENCE:F-SEA:FACE:OUTSIDE:PAINT HELD blank",
+   "L-1c6a9f23a2f8320764a0 EXT.FENCE.PAINT FENCE:F-LOWER:FACE:OUTSIDE:PAINT HELD blank",
+   "L-1e9a80dbea82741116cf EXT.FENCE.PAINT FENCE:F-NORTH:FACE:OUTSIDE:PAINT HELD blank",
+   "L-2246f2ea8b345ac80584 EXT.FENCE.PAINT FENCE:F-SEA:FACE:PLOT:PAINT HELD blank",
+   "L-36726588eba347a4c783 EXT.FENCE.PLASTER FENCE:F-NORTH:FACE:PLOT:PLASTER HELD blank",
+   "L-4465d1e72082b5678e4a EXT.FENCE.PAINT FENCE:F-STREET:FACE:PLOT:PAINT HELD blank",
+   "L-52d8589716c7724358ca EXT.FENCE.PLASTER FENCE:F-LOWER:FACE:OUTSIDE:PLASTER HELD blank",
+   "L-639e70724813476c31d3 EXT.FENCE.PLASTER FENCE:F-SEA:FACE:OUTSIDE:PLASTER HELD blank",
+   "L-8502adc8f55776e67a28 EXT.FENCE.PAINT FENCE:F-STREET:FACE:OUTSIDE:PAINT HELD blank",
+   "L-8c90675aafd8738b1e26 EXT.FENCE.PAINT FENCE:F-LOWER:FACE:PLOT:PAINT HELD blank",
+   "L-b1c2e0b93312e521d699 EXT.FENCE.PLASTER FENCE:F-NORTH:FACE:OUTSIDE:PLASTER HELD blank",
+   "L-b7cf09f5c8966460da56 EXT.FENCE.PLASTER FENCE:F-SEA:FACE:PLOT:PLASTER HELD blank",
+   "L-bac8095037312e3e90f4 EXT.FENCE.PAINT FENCE:F-NORTH:FACE:PLOT:PAINT HELD blank",
+   "L-e46d3f1324eb8625cbdc EXT.FENCE.PLASTER FENCE:F-STREET:FACE:PLOT:PLASTER HELD blank",
+   "L-e802015729d4df311c0c EXT.FENCE.PLASTER FENCE:F-LOWER:FACE:PLOT:PLASTER HELD blank",
+   "L-eb19e5f5365e81dcedeb EXT.FENCE.PLASTER FENCE:F-STREET:FACE:OUTSIDE:PLASTER HELD blank"
+  ],
+  "fence_verdict": "REFUSED here (R-T747-1 rule 3, Q-65): boundary wall faces have their own EXT.FENCE.* plaster / paint pairs; none is a facade face; unchanged",
+  "fin_ext_finish_lines_now": [
+   "L-8bb83e16cc7b104ab88b 1F-FACADE:facade HELD",
+   "L-b05f70c92405dbcfbe62 GF-FACADE:facade HELD",
+   "L-d52c4f763b19aedf8b8b 2F-FACADE:facade HELD"
+  ]
+ },
+ "lines": [
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "1.075883",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "element_id": "GF-FACADE:facade",
+   "faces": 30,
+   "floor": "GF",
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "line_paint": [
+    "375.618266",
+    "410.179149"
+   ],
+   "paint_m2": [
+    "375.618266",
+    "410.179149"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "376.694149",
+    "410.179149"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 410.179149,
+    "low": 376.694149,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "element_id": "1F-FACADE:facade",
+   "faces": 18,
+   "floor": "1F",
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "line_paint": [
+    "248.178057",
+    "249.954348"
+   ],
+   "paint_m2": [
+    "248.178057",
+    "249.954348"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "248.178057",
+    "249.954348"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 249.954348,
+    "low": 248.178057,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "element_id": "2F-FACADE:facade",
+   "faces": 4,
+   "floor": "2F",
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "line_key": "L-d52c4f763b19aedf8b8b",
+   "line_paint": [
+    "117.305000",
+    "117.305000"
+   ],
+   "paint_m2": [
+    "117.305000",
+    "117.305000"
+   ],
+   "paint_state": "PROVISIONAL",
+   "render_equals_stage": true,
+   "render_m2": [
+    "117.305000",
+    "117.305000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 117.305
+   },
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "element_id": "GF-FACADE:PARAPET_OUTER:ANNEX_ROOF",
+   "faces": 7,
+   "floor": "GF",
+   "line_id": "L-7c48b6a481d71ac57c54",
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "line_paint": [
+    "14.671022",
+    "15.271022"
+   ],
+   "paint_m2": [
+    "14.671022",
+    "15.271022"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "14.671022",
+    "15.271022"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 15.271022,
+    "low": 14.671022,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "element_id": "GF-FACADE:PARAPET_OUTER:GF_ROOF",
+   "faces": 3,
+   "floor": "GF",
+   "line_id": "L-5816ca234f93f8947eb9",
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+   "line_paint": [
+    "14.385000",
+    "14.385000"
+   ],
+   "paint_m2": [
+    "14.385000",
+    "14.385000"
+   ],
+   "paint_state": "MEASURED",
+   "render_equals_stage": true,
+   "render_m2": [
+    "14.385000",
+    "14.385000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 14.385
+   },
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "element_id": "1F-FACADE:PARAPET_OUTER:1F_ROOF",
+   "faces": 14,
+   "floor": "1F",
+   "line_id": "L-5a04a3ec70ce025ddd95",
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "line_paint": [
+    "54.007480",
+    "60.029307"
+   ],
+   "paint_m2": [
+    "54.007480",
+    "60.029307"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "54.007480",
+    "60.029307"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 60.029307,
+    "low": 54.00748,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "element_id": "2F-FACADE:PARAPET_OUTER:2F_ROOF",
+   "faces": 4,
+   "floor": "2F",
+   "line_id": "L-d503696a891174c1d837",
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "line_paint": [
+    "14.900000",
+    "14.900000"
+   ],
+   "paint_m2": [
+    "14.900000",
+    "14.900000"
+   ],
+   "paint_state": "MEASURED",
+   "render_equals_stage": true,
+   "render_m2": [
+    "14.900000",
+    "14.900000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 14.9
+   },
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.222500",
+    "0.000000"
+   ],
+   "element": "PLINTH",
+   "element_id": "GF-FACADE:PLINTH",
+   "faces": 29,
+   "floor": "GF",
+   "line_id": "L-0a6d30ea444e90e119bb",
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "line_paint": [
+    "71.466090",
+    "72.749795"
+   ],
+   "paint_m2": [
+    "71.466090",
+    "72.749795"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "71.688590",
+    "72.749795"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 72.749795,
+    "low": 71.68859,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [
+    "1F/NE-1/SLAB_EDGE_BELOW/slab_edge",
+    "1F/NW-4/SLAB_EDGE_BELOW/slab_edge",
+    "1F/SW-1/SLAB_EDGE_BELOW/slab_edge",
+    "1F/NW-5/SLAB_EDGE_BELOW/slab_edge",
+    "1F/SE-1/SLAB_EDGE_BELOW/slab_edge",
+    "1F/SW-2/SLAB_EDGE_BELOW/slab_edge"
+   ],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "SLAB_EDGE",
+   "element_id": "1F-FACADE:SLAB_EDGE",
+   "faces": 7,
+   "floor": "1F",
+   "line_id": "L-22e75c3942faeeb6718a",
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "line_paint": null,
+   "paint_m2": [
+    "0.535000",
+    "2.006250"
+   ],
+   "paint_state": "blank (HELD, never 0)",
+   "render_equals_stage": true,
+   "render_m2": [
+    "0.535000",
+    "2.006250"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "state": "BLANK_PART"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "SLAB_EDGE",
+   "element_id": "GF-FACADE:SLAB_EDGE",
+   "faces": 2,
+   "floor": "GF",
+   "line_id": "L-e3ee1b7f7603762da446",
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE GF",
+   "line_paint": [
+    "1.854260",
+    "4.309240"
+   ],
+   "paint_m2": [
+    "1.854260",
+    "4.309240"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "1.854260",
+    "4.309240"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 4.30924,
+    "low": 1.85426,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_INNER",
+   "element_id": "GF-FACADE:PARAPET_INNER:ANNEX_ROOF",
+   "faces": 1,
+   "floor": "GF",
+   "line_id": "L-c79492a8ed9c2c310d37",
+   "line_key": "NEW FIN.EXT.PARAPET-INNER ANNEX +4.30",
+   "line_paint": [
+    "8.888430",
+    "14.914050"
+   ],
+   "paint_m2": [
+    "8.888430",
+    "14.914050"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "8.888430",
+    "14.914050"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 14.91405,
+    "low": 8.88843,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_INNER",
+   "element_id": "GF-FACADE:PARAPET_INNER:GF_ROOF",
+   "faces": 1,
+   "floor": "GF",
+   "line_id": "L-60877480b3303b0be233",
+   "line_key": "NEW FIN.EXT.PARAPET-INNER GF +5.50",
+   "line_paint": [
+    "8.209433",
+    "13.884950"
+   ],
+   "paint_m2": [
+    "8.209433",
+    "13.884950"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "8.209433",
+    "13.884950"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 13.88495,
+    "low": 8.209433,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_INNER",
+   "element_id": "1F-FACADE:PARAPET_INNER:1F_ROOF",
+   "faces": 1,
+   "floor": "1F",
+   "line_id": "L-d4178f2108229818b472",
+   "line_key": "NEW FIN.EXT.PARAPET-INNER 1F +9.70",
+   "line_paint": [
+    "41.823530",
+    "56.608545"
+   ],
+   "paint_m2": [
+    "41.823530",
+    "56.608545"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "41.823530",
+    "56.608545"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 56.608545,
+    "low": 41.82353,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_INNER",
+   "element_id": "2F-FACADE:PARAPET_INNER:2F_ROOF",
+   "faces": 1,
+   "floor": "2F",
+   "line_id": "L-fbda06a1ad25128c6a63",
+   "line_key": "NEW FIN.EXT.PARAPET-INNER 2F +13.90",
+   "line_paint": [
+    "8.490000",
+    "14.150000"
+   ],
+   "paint_m2": [
+    "8.490000",
+    "14.150000"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "8.490000",
+    "14.150000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 14.15,
+    "low": 8.49,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_TOP",
+   "element_id": "GF-FACADE:PARAPET_TOP:ANNEX_ROOF",
+   "faces": 1,
+   "floor": "GF",
+   "line_id": "L-54e708d3940d1932607c",
+   "line_key": "NEW FIN.EXT.PARAPET-TOP ANNEX +4.30",
+   "line_paint": [
+    "5.997010",
+    "6.037010"
+   ],
+   "paint_m2": [
+    "5.997010",
+    "6.037010"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "5.997010",
+    "6.037010"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 6.03701,
+    "low": 5.99701,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_TOP",
+   "element_id": "GF-FACADE:PARAPET_TOP:GF_ROOF",
+   "faces": 1,
+   "floor": "GF",
+   "line_id": "L-490fdc0ff59a0e66ca13",
+   "line_key": "NEW FIN.EXT.PARAPET-TOP GF +5.50",
+   "line_paint": [
+    "5.592956",
+    "5.673980"
+   ],
+   "paint_m2": [
+    "5.592956",
+    "5.673980"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "5.592956",
+    "5.673980"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 5.67398,
+    "low": 5.592956,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_TOP",
+   "element_id": "1F-FACADE:PARAPET_TOP:1F_ROOF",
+   "faces": 1,
+   "floor": "1F",
+   "line_id": "L-757343d535ae19b589bf",
+   "line_key": "NEW FIN.EXT.PARAPET-TOP 1F +9.70",
+   "line_paint": [
+    "9.831510",
+    "9.846530"
+   ],
+   "paint_m2": [
+    "9.831510",
+    "9.846530"
+   ],
+   "paint_state": "BOUNDED_EXPOSURE",
+   "render_equals_stage": true,
+   "render_m2": [
+    "9.831510",
+    "9.846530"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": 9.84653,
+    "low": 9.83151,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_TOP",
+   "element_id": "2F-FACADE:PARAPET_TOP:2F_ROOF",
+   "faces": 1,
+   "floor": "2F",
+   "line_id": "L-89d750dd0e9ced13f5ca",
+   "line_key": "NEW FIN.EXT.PARAPET-TOP 2F +13.90",
+   "line_paint": [
+    "5.415000",
+    "5.415000"
+   ],
+   "paint_m2": [
+    "5.415000",
+    "5.415000"
+   ],
+   "paint_state": "MEASURED",
+   "render_equals_stage": true,
+   "render_m2": [
+    "5.415000",
+    "5.415000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "stage_after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 5.415
+   },
+   "state": "POINT"
+  }
+ ],
+ "owner_rule": "UP-FIN-PAINT-002 1.0.0 (OWNER RULE PAINT 2026-11-12) + OWNER_NOTES_SIGMA 2026-10-21",
+ "pins": {
+  "research/agents_t405/EDGE_LEDGER_T405.csv": "a394b74428e89593",
+  "research/agents_t729/out/LINE_INDEX_V3_0_75.json": "498c36bc6647a853",
+  "research/agents_t737/in/T314_STAGE_T737.json": "aa2701da225c2747",
+  "research/agents_t737/out/T737_ROWS.csv": "ca61f5e3b7e9789d",
+  "research/agents_t746/out/T746_PAINT_EDGES.json": "96595bd2593afd3e",
+  "research/agents_t747/in/T314_FACES_T747.json": "8b3a7ada443750fb"
+ },
+ "rules": [
+  "R-T747-1",
+  "R-T747-2",
+  "R-T747-3"
+ ],
+ "schema": "URBAN_T747_EXT_PAINT_V1",
+ "sides": [
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 2,
+   "floor": "1F",
+   "paint_m2": [
+    "25.138968",
+    "25.154968"
+   ],
+   "render_m2": [
+    "25.138968",
+    "25.154968"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [
+    "1F/NE-1/SLAB_EDGE_BELOW/slab_edge"
+   ],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "SLAB_EDGE",
+   "faces": 1,
+   "floor": "1F",
+   "paint_m2": null,
+   "render_m2": null,
+   "residual_m2": null,
+   "side": "NE",
+   "state": "BLANK"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 2,
+   "floor": "1F",
+   "paint_m2": [
+    "77.985000",
+    "77.985000"
+   ],
+   "render_m2": [
+    "77.985000",
+    "77.985000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 8,
+   "floor": "1F",
+   "paint_m2": [
+    "10.478544",
+    "11.122371"
+   ],
+   "render_m2": [
+    "10.478544",
+    "11.122371"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [
+    "1F/NW-4/SLAB_EDGE_BELOW/slab_edge",
+    "1F/NW-5/SLAB_EDGE_BELOW/slab_edge"
+   ],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "SLAB_EDGE",
+   "faces": 3,
+   "floor": "1F",
+   "paint_m2": [
+    "0.535000",
+    "2.006250"
+   ],
+   "render_m2": [
+    "0.535000",
+    "2.006250"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BLANK_PART"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 11,
+   "floor": "1F",
+   "paint_m2": [
+    "48.143057",
+    "49.919348"
+   ],
+   "render_m2": [
+    "48.143057",
+    "49.919348"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_INNER",
+   "faces": 1,
+   "floor": "1F",
+   "paint_m2": [
+    "41.823530",
+    "56.608545"
+   ],
+   "render_m2": [
+    "41.823530",
+    "56.608545"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF 1F",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_TOP",
+   "faces": 1,
+   "floor": "1F",
+   "paint_m2": [
+    "9.831510",
+    "9.846530"
+   ],
+   "render_m2": [
+    "9.831510",
+    "9.846530"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF 1F",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 1,
+   "floor": "1F",
+   "paint_m2": [
+    "7.807000",
+    "7.807000"
+   ],
+   "render_m2": [
+    "7.807000",
+    "7.807000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [
+    "1F/SE-1/SLAB_EDGE_BELOW/slab_edge"
+   ],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "SLAB_EDGE",
+   "faces": 1,
+   "floor": "1F",
+   "paint_m2": null,
+   "render_m2": null,
+   "residual_m2": null,
+   "side": "SE",
+   "state": "BLANK"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 2,
+   "floor": "1F",
+   "paint_m2": [
+    "43.720000",
+    "43.720000"
+   ],
+   "render_m2": [
+    "43.720000",
+    "43.720000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 3,
+   "floor": "1F",
+   "paint_m2": [
+    "10.582968",
+    "15.944968"
+   ],
+   "render_m2": [
+    "10.582968",
+    "15.944968"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [
+    "1F/SW-1/SLAB_EDGE_BELOW/slab_edge",
+    "1F/SW-2/SLAB_EDGE_BELOW/slab_edge"
+   ],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "SLAB_EDGE",
+   "faces": 2,
+   "floor": "1F",
+   "paint_m2": null,
+   "render_m2": null,
+   "residual_m2": null,
+   "side": "SW",
+   "state": "BLANK"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 3,
+   "floor": "1F",
+   "paint_m2": [
+    "78.330000",
+    "78.330000"
+   ],
+   "render_m2": [
+    "78.330000",
+    "78.330000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 1,
+   "floor": "2F",
+   "paint_m2": [
+    "4.050000",
+    "4.050000"
+   ],
+   "render_m2": [
+    "4.050000",
+    "4.050000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 1,
+   "floor": "2F",
+   "paint_m2": [
+    "31.820000",
+    "31.820000"
+   ],
+   "render_m2": [
+    "31.820000",
+    "31.820000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 1,
+   "floor": "2F",
+   "paint_m2": [
+    "3.400000",
+    "3.400000"
+   ],
+   "render_m2": [
+    "3.400000",
+    "3.400000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 1,
+   "floor": "2F",
+   "paint_m2": [
+    "28.560000",
+    "28.560000"
+   ],
+   "render_m2": [
+    "28.560000",
+    "28.560000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_INNER",
+   "faces": 1,
+   "floor": "2F",
+   "paint_m2": [
+    "8.490000",
+    "14.150000"
+   ],
+   "render_m2": [
+    "8.490000",
+    "14.150000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF 2F",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_TOP",
+   "faces": 1,
+   "floor": "2F",
+   "paint_m2": [
+    "5.415000",
+    "5.415000"
+   ],
+   "render_m2": [
+    "5.415000",
+    "5.415000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF 2F",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 1,
+   "floor": "2F",
+   "paint_m2": [
+    "3.400000",
+    "3.400000"
+   ],
+   "render_m2": [
+    "3.400000",
+    "3.400000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 1,
+   "floor": "2F",
+   "paint_m2": [
+    "26.685000",
+    "26.685000"
+   ],
+   "render_m2": [
+    "26.685000",
+    "26.685000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 1,
+   "floor": "2F",
+   "paint_m2": [
+    "4.050000",
+    "4.050000"
+   ],
+   "render_m2": [
+    "4.050000",
+    "4.050000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 1,
+   "floor": "2F",
+   "paint_m2": [
+    "30.240000",
+    "30.240000"
+   ],
+   "render_m2": [
+    "30.240000",
+    "30.240000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "SLAB_EDGE",
+   "faces": 1,
+   "floor": "GF",
+   "paint_m2": [
+    "0.892720",
+    "3.347700"
+   ],
+   "render_m2": [
+    "0.892720",
+    "3.347700"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "AT225",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 3,
+   "floor": "GF",
+   "paint_m2": [
+    "15.085000",
+    "15.685000"
+   ],
+   "render_m2": [
+    "15.085000",
+    "15.685000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PLINTH",
+   "faces": 5,
+   "floor": "GF",
+   "paint_m2": [
+    "24.293000",
+    "24.293000"
+   ],
+   "render_m2": [
+    "24.293000",
+    "24.293000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 5,
+   "floor": "GF",
+   "paint_m2": [
+    "139.275000",
+    "139.275000"
+   ],
+   "render_m2": [
+    "139.275000",
+    "139.275000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NE",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 2,
+   "floor": "GF",
+   "paint_m2": [
+    "4.200000",
+    "4.200000"
+   ],
+   "render_m2": [
+    "4.200000",
+    "4.200000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PLINTH",
+   "faces": 7,
+   "floor": "GF",
+   "paint_m2": [
+    "13.466290",
+    "14.515495"
+   ],
+   "render_m2": [
+    "13.466290",
+    "14.515495"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 7,
+   "floor": "GF",
+   "paint_m2": [
+    "14.000971",
+    "42.485971"
+   ],
+   "render_m2": [
+    "14.000971",
+    "42.485971"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "NW",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PLINTH",
+   "faces": 1,
+   "floor": "GF",
+   "paint_m2": [
+    "0.705000",
+    "0.705000"
+   ],
+   "render_m2": [
+    "0.705000",
+    "0.705000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "P-1",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 1,
+   "floor": "GF",
+   "paint_m2": [
+    "22.240000",
+    "22.240000"
+   ],
+   "render_m2": [
+    "22.240000",
+    "22.240000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "P-1",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PLINTH",
+   "faces": 1,
+   "floor": "GF",
+   "paint_m2": [
+    "3.995000",
+    "3.995000"
+   ],
+   "render_m2": [
+    "3.995000",
+    "3.995000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "P-2",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 1,
+   "floor": "GF",
+   "paint_m2": [
+    "17.400000",
+    "17.400000"
+   ],
+   "render_m2": [
+    "17.400000",
+    "17.400000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "P-2",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_INNER",
+   "faces": 1,
+   "floor": "GF",
+   "paint_m2": [
+    "8.888430",
+    "14.914050"
+   ],
+   "render_m2": [
+    "8.888430",
+    "14.914050"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF ANNEX",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_TOP",
+   "faces": 1,
+   "floor": "GF",
+   "paint_m2": [
+    "5.997010",
+    "6.037010"
+   ],
+   "render_m2": [
+    "5.997010",
+    "6.037010"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF ANNEX",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_INNER",
+   "faces": 1,
+   "floor": "GF",
+   "paint_m2": [
+    "8.209433",
+    "13.884950"
+   ],
+   "render_m2": [
+    "8.209433",
+    "13.884950"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF GF",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_TOP",
+   "faces": 1,
+   "floor": "GF",
+   "paint_m2": [
+    "5.592956",
+    "5.673980"
+   ],
+   "render_m2": [
+    "5.592956",
+    "5.673980"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF GF",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "SLAB_EDGE",
+   "faces": 1,
+   "floor": "GF",
+   "paint_m2": [
+    "0.961540",
+    "0.961540"
+   ],
+   "render_m2": [
+    "0.961540",
+    "0.961540"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "ROOF slab_edge",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 1,
+   "floor": "GF",
+   "paint_m2": [
+    "3.350000",
+    "3.350000"
+   ],
+   "render_m2": [
+    "3.350000",
+    "3.350000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.222500",
+    "0.000000"
+   ],
+   "element": "PLINTH",
+   "faces": 5,
+   "floor": "GF",
+   "paint_m2": [
+    "9.140000",
+    "9.362500"
+   ],
+   "render_m2": [
+    "9.362500",
+    "9.362500"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "1.075883",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 6,
+   "floor": "GF",
+   "paint_m2": [
+    "52.749117",
+    "58.825000"
+   ],
+   "render_m2": [
+    "53.825000",
+    "58.825000"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SE",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PARAPET_OUTER",
+   "faces": 4,
+   "floor": "GF",
+   "paint_m2": [
+    "6.421022",
+    "6.421022"
+   ],
+   "render_m2": [
+    "6.421022",
+    "6.421022"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "PLINTH",
+   "faces": 10,
+   "floor": "GF",
+   "paint_m2": [
+    "19.866800",
+    "19.878800"
+   ],
+   "render_m2": [
+    "19.866800",
+    "19.878800"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "BOUNDED"
+  },
+  {
+   "blank_faces": [],
+   "deducted_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "element": "STOREY",
+   "faces": 10,
+   "floor": "GF",
+   "paint_m2": [
+    "129.953178",
+    "129.953178"
+   ],
+   "render_m2": [
+    "129.953178",
+    "129.953178"
+   ],
+   "residual_m2": [
+    "0.000000",
+    "0.000000"
+   ],
+   "side": "SW",
+   "state": "POINT"
+  }
+ ],
+ "stage": {
+  "branch": "agents/task-T-314",
+  "commit": "080ccaa5",
+  "inputs_blob": "7c6cb3388b8425d16e8b20dd4a9c566ebbf6cc93",
+  "pin": "research/agents_t737/in/T314_STAGE_T737.json"
+ },
+ "total": {
+  "blank_faces": [
+   "1F/NE-1/SLAB_EDGE_BELOW/slab_edge",
+   "1F/NW-4/SLAB_EDGE_BELOW/slab_edge",
+   "1F/SW-1/SLAB_EDGE_BELOW/slab_edge",
+   "1F/NW-5/SLAB_EDGE_BELOW/slab_edge",
+   "1F/SE-1/SLAB_EDGE_BELOW/slab_edge",
+   "1F/SW-2/SLAB_EDGE_BELOW/slab_edge"
+  ],
+  "deducted": [
+   "1.298383",
+   "0.000000"
+  ],
+  "faces": 126,
+  "paint": [
+   "1007.168044",
+   "1087.619176"
+  ],
+  "render": [
+   "1008.466427",
+   "1087.619176"
+  ],
+  "residual": [
+   "0.000000",
+   "0.000000"
+  ],
+  "state": "BLANK_PART"
+ },
+ "version": "1.0.0"
+}
