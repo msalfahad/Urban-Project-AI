@@ -1,0 +1,1083 @@
+{
+ "method": "DRAIN_RUN_CENSUS_T745_V1",
+ "source": "Drive 'Alsenan chalet project' / sanitary-7757.pdf p.1-3",
+ "sheet_scale": {
+  "GF": {
+   "long_pt": 822.0,
+   "short_pt": 393.0,
+   "m_per_pt": 0.038166,
+   "scale_1_to": 108.2
+  },
+  "1F": {
+   "long_pt": 822.0,
+   "short_pt": 393.0,
+   "m_per_pt": 0.038165,
+   "scale_1_to": 108.2
+  },
+  "2F": {
+   "long_pt": 822.0,
+   "short_pt": 393.0,
+   "m_per_pt": 0.038165,
+   "scale_1_to": 108.2
+  }
+ },
+ "pens": {
+  "K": "BUILDING_DRAIN",
+  "M": "SOIL_WASTE_BRANCH",
+  "R": "FIXTURE_WASTE"
+ },
+ "runs": [
+  {
+   "run_id": "GF-K01",
+   "floor": "GF",
+   "pen": "K",
+   "system": "BUILDING_DRAIN",
+   "diameter_in": 6,
+   "status": "MEASURED",
+   "segments": 8,
+   "bridged_gaps": 7,
+   "lm": 25.542
+  },
+  {
+   "run_id": "GF-K02",
+   "floor": "GF",
+   "pen": "K",
+   "system": "BUILDING_DRAIN",
+   "diameter_in": 6,
+   "status": "MEASURED",
+   "segments": 3,
+   "bridged_gaps": 1,
+   "lm": 8.259
+  },
+  {
+   "run_id": "GF-M01",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.794
+  },
+  {
+   "run_id": "GF-M02",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 1.682
+  },
+  {
+   "run_id": "GF-M03",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 3.459
+  },
+  {
+   "run_id": "GF-M04",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.797
+  },
+  {
+   "run_id": "GF-M05",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 1.232
+  },
+  {
+   "run_id": "GF-M06",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 1.337
+  },
+  {
+   "run_id": "GF-M07",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.8
+  },
+  {
+   "run_id": "GF-M08",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.588
+  },
+  {
+   "run_id": "GF-M09",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.489
+  },
+  {
+   "run_id": "GF-M10",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 1,
+   "lm": 8.832
+  },
+  {
+   "run_id": "GF-M11",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 1,
+   "lm": 7.918
+  },
+  {
+   "run_id": "GF-M12",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 1.344
+  },
+  {
+   "run_id": "GF-M13",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 1,
+   "lm": 4.303
+  },
+  {
+   "run_id": "GF-M14",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 2.444
+  },
+  {
+   "run_id": "GF-M15",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.798
+  },
+  {
+   "run_id": "GF-M16",
+   "floor": "GF",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 0.65
+  },
+  {
+   "run_id": "GF-R01",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 1.077
+  },
+  {
+   "run_id": "GF-R02",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 0.972
+  },
+  {
+   "run_id": "GF-R03",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 1.56
+  },
+  {
+   "run_id": "GF-R04",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 1.085
+  },
+  {
+   "run_id": "GF-R05",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 0.888
+  },
+  {
+   "run_id": "GF-R06",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.832
+  },
+  {
+   "run_id": "GF-R07",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 2.015
+  },
+  {
+   "run_id": "GF-R08",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 1.119
+  },
+  {
+   "run_id": "GF-R09",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.911
+  },
+  {
+   "run_id": "GF-R10",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.359
+  },
+  {
+   "run_id": "GF-R11",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 0.994
+  },
+  {
+   "run_id": "GF-R12",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 1.823
+  },
+  {
+   "run_id": "GF-R13",
+   "floor": "GF",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 1.237
+  },
+  {
+   "run_id": "GF-X01",
+   "floor": "GF",
+   "pen": "READ",
+   "system": "SOIL_STACK_OFFSET",
+   "diameter_in": 4,
+   "status": "MEASURED",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 0.801
+  },
+  {
+   "run_id": "1F-M01",
+   "floor": "1F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.969
+  },
+  {
+   "run_id": "1F-M02",
+   "floor": "1F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 0.499
+  },
+  {
+   "run_id": "1F-M03",
+   "floor": "1F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": 4,
+   "status": "MEASURED",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 6.055
+  },
+  {
+   "run_id": "1F-M04",
+   "floor": "1F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 2.405
+  },
+  {
+   "run_id": "1F-M05",
+   "floor": "1F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 0.389
+  },
+  {
+   "run_id": "1F-M06",
+   "floor": "1F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 2.024
+  },
+  {
+   "run_id": "1F-M07",
+   "floor": "1F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 2.231
+  },
+  {
+   "run_id": "1F-M08",
+   "floor": "1F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 1.339
+  },
+  {
+   "run_id": "1F-M09",
+   "floor": "1F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 0.504
+  },
+  {
+   "run_id": "1F-M10",
+   "floor": "1F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "SYMBOL_MARK",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 0.064
+  },
+  {
+   "run_id": "1F-M11",
+   "floor": "1F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "SYMBOL_MARK",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 0.041
+  },
+  {
+   "run_id": "1F-R01",
+   "floor": "1F",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.981
+  },
+  {
+   "run_id": "1F-R02",
+   "floor": "1F",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 1.775
+  },
+  {
+   "run_id": "1F-R03",
+   "floor": "1F",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 1.195
+  },
+  {
+   "run_id": "1F-R04",
+   "floor": "1F",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 2.409
+  },
+  {
+   "run_id": "1F-R05",
+   "floor": "1F",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 1.017
+  },
+  {
+   "run_id": "1F-R06",
+   "floor": "1F",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 5,
+   "bridged_gaps": 0,
+   "lm": 2.372
+  },
+  {
+   "run_id": "1F-R07",
+   "floor": "1F",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 1.511
+  },
+  {
+   "run_id": "1F-R08",
+   "floor": "1F",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 0.815
+  },
+  {
+   "run_id": "2F-M01",
+   "floor": "2F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 1.85
+  },
+  {
+   "run_id": "2F-M02",
+   "floor": "2F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "SYMBOL_MARK",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 0.046
+  },
+  {
+   "run_id": "2F-M03",
+   "floor": "2F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "SYMBOL_MARK",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 0.041
+  },
+  {
+   "run_id": "2F-M04",
+   "floor": "2F",
+   "pen": "M",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "SYMBOL_MARK",
+   "segments": 1,
+   "bridged_gaps": 0,
+   "lm": 0.046
+  },
+  {
+   "run_id": "2F-R01",
+   "floor": "2F",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 2,
+   "bridged_gaps": 0,
+   "lm": 0.861
+  },
+  {
+   "run_id": "2F-R02",
+   "floor": "2F",
+   "pen": "R",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "segments": 3,
+   "bridged_gaps": 0,
+   "lm": 1.021
+  }
+ ],
+ "risers": [
+  {
+   "riser_id": "SS-A 2F-1F",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "lm": {
+    "status": "MEASURED",
+    "low": 4.2,
+    "high": 4.2
+   },
+   "note": "2F SS4in T/B -> 1F SS4in F/A-T/B; 2F +9.70 and 1F +5.50 printed"
+  },
+  {
+   "riser_id": "SS-A 1F-GF",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "lm": {
+    "status": "BOUNDED",
+    "low": 4.5,
+    "high": 5.2
+   },
+   "note": "-> GF SS4in F/A; GF FFL in that wet room not printed; neighbour spaces +0.30 / +1.00"
+  },
+  {
+   "riser_id": "SS-A foot",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "lm": {
+    "status": "HELD_LEVEL_UNPRINTED",
+    "low": null,
+    "high": null
+   },
+   "note": "GF floor to the branch invert: invert not printed"
+  },
+  {
+   "riser_id": "SS-B 1F-GF",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "lm": {
+    "status": "BOUNDED",
+    "low": 4.5,
+    "high": 5.2
+   },
+   "note": "1F SS4in T/B -> GF stack foot"
+  },
+  {
+   "riser_id": "SS-B foot",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "lm": {
+    "status": "HELD_LEVEL_UNPRINTED",
+    "low": null,
+    "high": null
+   },
+   "note": "invert not printed"
+  },
+  {
+   "riser_id": "SS-C 1F-GF",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "lm": {
+    "status": "BOUNDED",
+    "low": 4.5,
+    "high": 5.2
+   },
+   "note": "1F SS4in T/B -> GF SS4in F/A"
+  },
+  {
+   "riser_id": "SS-C foot",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "lm": {
+    "status": "HELD_LEVEL_UNPRINTED",
+    "low": null,
+    "high": null
+   },
+   "note": "invert not printed"
+  },
+  {
+   "riser_id": "SS-D 1F-GF H/L",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "lm": {
+    "status": "HELD_LEVEL_UNPRINTED",
+    "low": null,
+    "high": null
+   },
+   "note": "1F SS4in T/B -> GF SS4in F/A H/L: the high level is not printed"
+  },
+  {
+   "riser_id": "SS-D drop",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "lm": {
+    "status": "HELD_LEVEL_UNPRINTED",
+    "low": null,
+    "high": null
+   },
+   "note": "GF high-level offset down to the underground branch: neither level printed"
+  },
+  {
+   "riser_id": "RWP-1",
+   "system": "RAINWATER_PIPE",
+   "diameter_in": 4,
+   "lm": {
+    "status": "MEASURED",
+    "low": 9.4,
+    "high": 9.4
+   },
+   "note": "2F roof RWP4in T/B, 1F F/A-T/B, GF F/A free discharge 15 cm above FFL into the court (+0.15)"
+  },
+  {
+   "riser_id": "RWP-2",
+   "system": "RAINWATER_PIPE",
+   "diameter_in": 4,
+   "lm": {
+    "status": "MEASURED",
+    "low": 4.05,
+    "high": 4.05
+   },
+   "note": "2F roof RWP4in T/B -> 1F east roof (+5.50) free discharge 15 cm above FFL"
+  },
+  {
+   "riser_id": "RWP-3",
+   "system": "RAINWATER_PIPE",
+   "diameter_in": 4,
+   "lm": {
+    "status": "MEASURED",
+    "low": 5.25,
+    "high": 5.25
+   },
+   "note": "2F roof RWP4in T/B -> 1F west roof (+4.30) free discharge 15 cm above FFL"
+  },
+  {
+   "riser_id": "RWP-4",
+   "system": "RAINWATER_PIPE",
+   "diameter_in": 4,
+   "lm": {
+    "status": "MEASURED",
+    "low": 4.15,
+    "high": 4.15
+   },
+   "note": "1F west roof (+4.30) RWP4in T/B -> GF west face free discharge 15 cm above FFL, +-0.00 printed at the discharge"
+  },
+  {
+   "riser_id": "RWP-5",
+   "system": "RAINWATER_PIPE",
+   "diameter_in": 4,
+   "lm": {
+    "status": "MEASURED",
+    "low": 5.35,
+    "high": 5.35
+   },
+   "note": "1F east roof (+5.50) RWP4in T/B -> GF SE face free discharge 15 cm above FFL, +-0.00 printed at the discharge"
+  }
+ ],
+ "rows": [
+  {
+   "floor": "ALL",
+   "system": "BUILDING_DRAIN",
+   "diameter_in": null,
+   "status": "HELD_NOT_DRAWN",
+   "kind": "-",
+   "runs": 0,
+   "lm": null,
+   "lm_high": null,
+   "cause": "external connection from the manhole to the public sewer: drawn as an arrow beyond the plot line, no end point or length"
+  },
+  {
+   "floor": "ALL",
+   "system": "COLD_SUPPLY",
+   "diameter_in": null,
+   "status": "HELD_NOT_DRAWN",
+   "kind": "-",
+   "runs": 0,
+   "lm": null,
+   "lm_high": null,
+   "cause": "the set holds drainage plans only (sheets titled DRAINAGE PLAN, GF / 1F / 2F); no water supply sheet in the Drive folder"
+  },
+  {
+   "floor": "ALL",
+   "system": "HOT_SUPPLY",
+   "diameter_in": null,
+   "status": "HELD_NOT_DRAWN",
+   "kind": "-",
+   "runs": 0,
+   "lm": null,
+   "lm_high": null,
+   "cause": "as COLD_SUPPLY"
+  },
+  {
+   "floor": "ALL",
+   "system": "VENT",
+   "diameter_in": null,
+   "status": "HELD_NOT_DRAWN",
+   "kind": "-",
+   "runs": 0,
+   "lm": null,
+   "lm_high": null,
+   "cause": "no vent run drawn; the manhole note names a vent pipe with no length or route"
+  },
+  {
+   "floor": "1F",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "kind": "PLAN",
+   "runs": 8,
+   "lm": 12.077,
+   "lm_high": 12.077
+  },
+  {
+   "floor": "1F",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "kind": "PLAN",
+   "runs": 8,
+   "lm": 10.361,
+   "lm_high": 10.361
+  },
+  {
+   "floor": "1F",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": 4,
+   "status": "MEASURED",
+   "kind": "PLAN",
+   "runs": 1,
+   "lm": 6.055,
+   "lm_high": 6.055
+  },
+  {
+   "floor": "2F",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "kind": "PLAN",
+   "runs": 2,
+   "lm": 1.882,
+   "lm_high": 1.882
+  },
+  {
+   "floor": "2F",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "kind": "PLAN",
+   "runs": 1,
+   "lm": 1.85,
+   "lm_high": 1.85
+  },
+  {
+   "floor": "GF",
+   "system": "BUILDING_DRAIN",
+   "diameter_in": 6,
+   "status": "MEASURED",
+   "kind": "PLAN",
+   "runs": 2,
+   "lm": 33.801,
+   "lm_high": 33.801
+  },
+  {
+   "floor": "GF",
+   "system": "FIXTURE_WASTE",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "kind": "PLAN",
+   "runs": 13,
+   "lm": 14.873,
+   "lm_high": 14.873
+  },
+  {
+   "floor": "GF",
+   "system": "SOIL_STACK_OFFSET",
+   "diameter_in": 4,
+   "status": "MEASURED",
+   "kind": "PLAN",
+   "runs": 1,
+   "lm": 0.801,
+   "lm_high": 0.801
+  },
+  {
+   "floor": "GF",
+   "system": "SOIL_WASTE_BRANCH",
+   "diameter_in": null,
+   "status": "HELD_DIAMETER_UNPRINTED",
+   "kind": "PLAN",
+   "runs": 16,
+   "lm": 37.469,
+   "lm_high": 37.469
+  },
+  {
+   "floor": "ALL",
+   "system": "RAINWATER_PIPE",
+   "diameter_in": 4,
+   "status": "MEASURED",
+   "kind": "RISER",
+   "runs": 5,
+   "lm": 28.2,
+   "lm_high": 28.2,
+   "held_ids": []
+  },
+  {
+   "floor": "ALL",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "status": "BOUNDED",
+   "kind": "RISER",
+   "runs": 3,
+   "lm": 13.5,
+   "lm_high": 15.6,
+   "held_ids": []
+  },
+  {
+   "floor": "ALL",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "status": "HELD_LEVEL_UNPRINTED",
+   "kind": "RISER",
+   "runs": 5,
+   "lm": null,
+   "lm_high": null,
+   "held_ids": [
+    "SS-A foot",
+    "SS-B foot",
+    "SS-C foot",
+    "SS-D 1F-GF H/L",
+    "SS-D drop"
+   ]
+  },
+  {
+   "floor": "ALL",
+   "system": "SOIL_STACK",
+   "diameter_in": 4,
+   "status": "MEASURED",
+   "kind": "RISER",
+   "runs": 1,
+   "lm": 4.2,
+   "lm_high": 4.2,
+   "held_ids": []
+  }
+ ],
+ "totals_by_state": {
+  "-|HELD_NOT_DRAWN": {
+   "rows": 4,
+   "lm": null,
+   "lm_high": null,
+   "unvalued_rows": 4
+  },
+  "PLAN|HELD_DIAMETER_UNPRINTED": {
+   "rows": 6,
+   "lm": 78.512,
+   "lm_high": 78.512,
+   "unvalued_rows": 0
+  },
+  "PLAN|MEASURED": {
+   "rows": 3,
+   "lm": 40.657,
+   "lm_high": 40.657,
+   "unvalued_rows": 0
+  },
+  "RISER|MEASURED": {
+   "rows": 2,
+   "lm": 32.4,
+   "lm_high": 32.4,
+   "unvalued_rows": 0
+  },
+  "RISER|BOUNDED": {
+   "rows": 1,
+   "lm": 13.5,
+   "lm_high": 15.6,
+   "unvalued_rows": 0
+  },
+  "RISER|HELD_LEVEL_UNPRINTED": {
+   "rows": 1,
+   "lm": null,
+   "lm_high": null,
+   "unvalued_rows": 1
+  }
+ },
+ "symbol_marks": [
+  {
+   "run_id": "1F-M10",
+   "floor": "1F",
+   "len_m": 0.064
+  },
+  {
+   "run_id": "1F-M11",
+   "floor": "1F",
+   "len_m": 0.041
+  },
+  {
+   "run_id": "2F-M02",
+   "floor": "2F",
+   "len_m": 0.046
+  },
+  {
+   "run_id": "2F-M03",
+   "floor": "2F",
+   "len_m": 0.041
+  },
+  {
+   "run_id": "2F-M04",
+   "floor": "2F",
+   "len_m": 0.046
+  }
+ ],
+ "floor_drain_outlets": {
+  "GF": {
+   "floor_drains": 11,
+   "with_a_drawn_pipe": 11,
+   "without": 0
+  },
+  "1F": {
+   "floor_drains": 7,
+   "with_a_drawn_pipe": 7,
+   "without": 0
+  },
+  "2F": {
+   "floor_drains": 1,
+   "with_a_drawn_pipe": 1,
+   "without": 0
+  }
+ },
+ "labels_refused": []
+}
