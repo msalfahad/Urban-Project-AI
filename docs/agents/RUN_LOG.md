@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T03:35Z | Worker 1 | SUCCESS | T-725 READY (agents/task-T-725 @ 0ea20400) | 20 HELD stair formwork lines on V3.0.72: BOUNDED 2 (MS1-L well side 0.679193..0.854426, E1 risers 1.904..2.380 m2), AT_LEAST 2 (MS1-L+turn >=7.678894, MS2-TR >=0.1932 m2), 16 blank with cause (12 capped); no freelancer row. Finding F-T725-1: MS1-L reading B mixed 28 risers with 4.50/27, highs only (conc hi 1.054813->1.037005 m3); E1 lines cite RFI-S26 not D-67/D-68 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12T03:21Z | Worker 1 | STARTED | run session_01E6cPndaUE98s5SFWgcGozG | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T03:07Z | Worker 3 | SUCCESS | T-728 READY (478f3e55) | Bead ledger restated on V3.0.72 by R-T728-1: 116/116 arris rows, stale 0, all 18 hosts HELD -> 0 beads released; interior 67 HELD 294.0828..294.4828 m.l (reconciles exactly to T-697 285.03 - 5.40 + 14.4528) + 6 blank, exterior 43 blank pending T-314 r3 (310.6831 m.l text only); host m2 bound not transferable to m.l (F-T728-1) | self-check codemap PASS, t061 PASS, freeze PASS; problem: none
 - 2026-11-12T03:00Z | Worker 3 | STARTED | run session_01E6cPnbRUw3dHftSfadrjGY | repo-attached routine | task state: none yet | self-check pending
