@@ -25,8 +25,10 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
 - UrbanProjectsManager: "do not touch the Urbanprojectmanager, i added it here so that in the future you can have
   access of projects and maybe you can fill in later or we can use our agents to make contracts, or marketing or
   anything else" (2026-11-08). No agent reads, changes, branches or pushes it unless the owner asks.
-- Merging: "You can merge everything related to boq" (2026-11-08). Since PR #5 (2026-11-11) a direct push to main
-  is denied, so the owner merges PRs on GitHub himself.
+- Merging: "You can merge everything related to boq" (2026-11-08); "why do i merge, its your role" and "Push and
+  merge for Urban project AI and not urbanprojectmanager" (2026-11-12). The main chat pushes and merges in
+  Urban-Project-AI only, never in UrbanProjectsManager. Direct pushes to main stay denied; main changes through
+  merged PRs. PR #7 removes the merge block (the owner merges that one last PR; afterwards the main chat merges).
 - No assumptions: only the owner's rules and what the drawings print; unresolved stays HELD as a range or blank,
   never 0. "do not assume" (2026-11-11).
 - Never copy client drawings, client data, names or personal data into the repository (it is public). Google Drive
@@ -43,6 +45,11 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
   integrated quantities and verified lines, not agent activity (2026-11-08).
 
 ## 2. Decisions by date
+
+### 2026-11-12
+- "why do i merge, its your role" / "Push and merge for Urban project AI and not urbanprojectmanager": merging is
+  the main chat's job in this repository. PR #7 opened (settings allow the main chat to merge PRs; agents never merge,
+  written in CLAUDE.md). PR #6 (decode fix) merged by the owner.
 
 ### 2026-11-11
 - REBAR PARKED: "We will do the ratio rebar in tons, and since rebar is taking a while here we can leave at at the
@@ -108,7 +115,7 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
 
 ## 4. Open owner actions (not yet confirmed)
 
-- Merge PR #6 (decode fix): https://github.com/msalfahad/Urban-Project-AI/pull/6
+- Merge PR #7 (the last PR needing the owner; it lets the main chat merge): https://github.com/msalfahad/Urban-Project-AI/pull/7
 - Make the repository private.
 - Upload the freelancer floors / railings workbooks and the 1990 specification (not blockers).
 - Send the designer question list once the Lead has compiled it.
