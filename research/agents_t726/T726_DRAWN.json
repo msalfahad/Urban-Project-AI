@@ -1,0 +1,288 @@
+{
+ "box": {
+  "1F": {
+   "handles": {
+    "E": "B16",
+    "N": "ADE",
+    "S": "AEB",
+    "W": "AF1"
+   },
+   "n_to_s_m": 6.45,
+   "s_line_inside_box_m": 1.41148,
+   "w_arrival_piece_handle": "C21",
+   "w_face_n_to_arrival_m": 6.45,
+   "width_m": 2.5
+  },
+  "2F": {
+   "handles": {
+    "E": "129A",
+    "N": "127E",
+    "S": "1283",
+    "W": "12B7"
+   },
+   "n_to_s_m": 6.45,
+   "s_line_inside_box_m": 1.084191,
+   "slab_edge_drawn_length_m": 1.3,
+   "slab_edge_handle": "138B",
+   "slab_edge_u_from_n_m": 4.5,
+   "w_arrival_piece_handle": "12B7",
+   "w_face_n_to_arrival_m": 6.45,
+   "width_m": 2.5
+  },
+  "GF": {
+   "handles": {
+    "E": "21C",
+    "N": "26E",
+    "S": "220",
+    "S_outer": "20F",
+    "W": "298"
+   },
+   "lift_outer_width_m": 2.2,
+   "n_to_s_m": 5.0,
+   "n_to_s_outer_m": 5.2,
+   "s_line_inside_box_m": 1.4,
+   "s_wall_thickness_m": 0.2,
+   "width_m": 2.5
+  }
+ },
+ "levels": [
+  {
+   "beside_annex_roof_block": true,
+   "frame": "1F",
+   "handle": "D20",
+   "inside_st01_box": false,
+   "value": "+4.30"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "1F",
+   "handle": "1251",
+   "inside_st01_box": false,
+   "value": "+5.50"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "1F",
+   "handle": "D16",
+   "inside_st01_box": false,
+   "value": "+5.50"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "1F",
+   "handle": "D18",
+   "inside_st01_box": true,
+   "value": "+5.50"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "1F",
+   "handle": "D1B",
+   "inside_st01_box": false,
+   "value": "+5.50"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "1F",
+   "handle": "D1D",
+   "inside_st01_box": false,
+   "value": "+5.50"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "2F",
+   "handle": "134E",
+   "inside_st01_box": true,
+   "value": "+9.70"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "2F",
+   "handle": "1350",
+   "inside_st01_box": false,
+   "value": "+9.70"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "2F",
+   "handle": "1352",
+   "inside_st01_box": false,
+   "value": "+9.70"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "394",
+   "inside_st01_box": false,
+   "value": "+0.15"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "407",
+   "inside_st01_box": false,
+   "value": "+0.15"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "409",
+   "inside_st01_box": false,
+   "value": "+0.15"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "40B",
+   "inside_st01_box": false,
+   "value": "+0.15"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "40D",
+   "inside_st01_box": false,
+   "value": "+0.15"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "4AE",
+   "inside_st01_box": false,
+   "value": "+0.15"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "401",
+   "inside_st01_box": false,
+   "value": "+0.30"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "403",
+   "inside_st01_box": false,
+   "value": "+0.30"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "405",
+   "inside_st01_box": false,
+   "value": "+0.30"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "4AC",
+   "inside_st01_box": true,
+   "value": "+0.30"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "40F",
+   "inside_st01_box": false,
+   "value": "+1.00"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "411",
+   "inside_st01_box": false,
+   "value": "+1.00"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "413",
+   "inside_st01_box": true,
+   "value": "+1.00"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "GF",
+   "handle": "A74",
+   "inside_st01_box": false,
+   "value": "+1.00"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "NW_ELEVATION",
+   "handle": "2883",
+   "inside_st01_box": null,
+   "value": "+0.15"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "NW_ELEVATION",
+   "handle": "2885",
+   "inside_st01_box": null,
+   "value": "+1.00"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "NW_ELEVATION",
+   "handle": "2887",
+   "inside_st01_box": null,
+   "value": "+5.50"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "SE_ELEVATION",
+   "handle": "242C",
+   "inside_st01_box": null,
+   "value": "+0.15"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "SE_ELEVATION",
+   "handle": "2449",
+   "inside_st01_box": null,
+   "value": "+0.30"
+  },
+  {
+   "beside_annex_roof_block": false,
+   "frame": "SE_ELEVATION",
+   "handle": "244B",
+   "inside_st01_box": null,
+   "value": "+4.30"
+  }
+ ],
+ "lift": {
+  "1F": {
+   "handles": {
+    "E": "B11",
+    "N": "B15",
+    "S": "B1A",
+    "W": "B13"
+   },
+   "inner_d_m": 1.8,
+   "inner_w_m": 1.8
+  },
+  "2F": {
+   "handles": {
+    "E": "1293",
+    "N": "1299",
+    "S": "129C",
+    "W": "1297"
+   },
+   "inner_d_m": 1.8,
+   "inner_w_m": 1.8
+  },
+  "GF": {
+   "handles": {
+    "E": "212",
+    "N": "219",
+    "S": "21E",
+    "W": "216"
+   },
+   "inner_d_m": 1.8,
+   "inner_w_m": 1.8
+  }
+ },
+ "schema": "T726_DRAWN_V1",
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf, sha256 ab54dd55...)",
+ "units": "m"
+}
