@@ -47,6 +47,7 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
 ## 2. Decisions by date
 
 ### 2026-11-12
+- PAINT RULE: "Paint, technically would be close enough to plastering (inside the building) outside will also should be the same, the difference is with the corners outside maybe only and lm for windows doors and corners, so the Area is the same." Confirmed: paint stops at the false ceiling (Q-72 kept); no paint on tiled faces. Paint m2 = plaster m2 of the same faces minus those two; corners / openings are lm items.
 - "why do i merge, its your role" / "Push and merge for Urban project AI and not urbanprojectmanager": merging is
   the main chat's job in this repository. PR #7 opened (settings allow the main chat to merge PRs; agents never merge,
   written in CLAUDE.md). PR #6 (decode fix) merged by the owner.
