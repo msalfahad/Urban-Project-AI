@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-12 08:16 (since 04:17)
+
+- T-731 stair MS1-L coherent reading: WORKED (MERGED in 067b0035; 16 risers by handle AGREE; highs only; F-T725-1 adopted).
+- T-720 gross floor area B2-03: WORKED (MERGED 067b0035; 3/3 VERIFIED; no BOQ line -> register family in T-729's master).
+- T-733 tiles H3 readiness: WORKED (MERGED 7146583d; treads ENGINE_RIGHT, V-07 NOT_A_VOID) -> wiring T-738.
+- T-732 moved-member formwork: WORKED (MERGED 35c0c09e; 7/7 restated; F-T732-1 T-707 lows are upper-bound method) -> T-729.
+- T-730 wiring map r5: WORKED (MERGED 6143f30d; 10/10 AGREE) -> C10 into T-729; 6 conflict lines + cap 0 -> NEW T-735.
+- T-717 plaster / paint Gate B r1: FAILED on one gate (36/36 by hand AGREE; t459 binding not rebuilt for arch_v3074) -> TODO r2 worker 3 first, exact fault in the row; lesson L-T717-1 proposed.
+
 ## Lead 2026-11-12 00:16 (since 20:17)
 
 - T-712 ground beams: WORKED (MERGED dfeb0240; 17 AT_LEAST 5.099845 m3 + 3 court blanks, hand AGREE).

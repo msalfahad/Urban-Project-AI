@@ -1,5 +1,29 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-12 08:16 UTC (Lead). Previous version: 2026-11-12 04:17 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared
+lines, the slab); released: 0. No candidate line changed since 04:17.
+
+Since 04:17 (newest first):
+- Plaster / paint: the package was checked line by line and all 36 changed lines agree by hand (held plaster range
+  moves -25.02 / +1.47 m2, held paint range +3.34 / +27.68 m2, measured figures unchanged); it failed only because one
+  bookkeeping file was not rebuilt. It is redone first and should be in the candidate on 13 Nov.
+- Floor area per storey is verified: ground 278.27 m2 (house 217.79 + annex 60.48), first 209.84 m2, second 55.08 m2.
+- Two suspected double counts were checked on the drawing and are not errors: the stair treads (7.54 m2 on one layer
+  set) and the second-floor ceiling over the dome (the slab is continuous, no void).
+- Concrete: one stair flight is now read from one coherent section; only its upper limit changed (1.037 -> 1.024 m3).
+- Formwork: the 7 roof columns whose concrete moved now have limits (together about 102.9 .. 127.2 m2, held); 6 other
+  columns have two disagreeing figures from earlier work and one beam side a limit of 0: a task settles them from the
+  drawing before they go in (none is picked, none counted as 0).
+- Next in the candidate: plaster / paint, then formwork with the small concrete round, then corner beads, then tiles and
+  stair finishes; exterior plaster is being re-checked against the current candidate; a statement of all trade totals
+  for the scorecard has started.
+- Milestone: reconciled quantities + scorecard (12-13 Nov) slips to 14-16 Nov: plaster / paint 13 Nov, formwork 14 Nov,
+  tiles 15-16 Nov; waterproofing after its roof record.
+
+Previous section (2026-11-12 04:17):
+
 Last update: 2026-11-12 04:17 UTC (Lead). Previous version: 2026-11-12 00:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared
