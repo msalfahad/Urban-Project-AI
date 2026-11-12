@@ -1,0 +1,646 @@
+{
+ "balance": {
+  "A_candidate_of_record": {
+   "D": [
+    119.963335,
+    128.643547,
+    6
+   ],
+   "E": [
+    233.205833,
+    234.333083,
+    9
+   ],
+   "closure": {
+    "disposal_s0_m3": 234.333083,
+    "import_s0_m3": 128.643547,
+    "residual_disposal_m3": -0.0,
+    "residual_import_m3": 0.0,
+    "sum_closed_excavation_high_m3": 234.333083,
+    "sum_closed_fill_high_m3": 128.643547
+   },
+   "disposal": [
+    "HELD (in-situ dry density (MEASURED, e.g. field density test of the excavated soil); placement target dry density of the fill (its own field and source); suitable share of the excavated soil (geotechnical classification against the fill specification; bound 0 .. 1 meanwhile); fill demand of the HELD fill lines L-89b8e6beaea55fc0e4c9 L-afa1a6f9e01eb47c56e4 L-2b8f1ae2ec46cd74552f L-91abe286a34e874e8ab2 L-6471367d85bdf361f9e7 L-eac006402d3035da007b (each can draw site soil); excavation of the HELD lines L-4445d5e20d1805f12402 L-b4ebff00041d90e03eca L-54baa058d6ccd9a38314 L-313384fed48301ae02d2 L-d9185fb243fd3b7130e9 L-438a4abd3adc0475d0bd L-b97f95d2784d456e0743 L-952a18b10db99c4eb1d3 L-a5844c9318406eccedde; handling loss of the re-used excavated soil (loss_reuse): no measured, specified or documented figure (Kuwait MPW General Specifications 1990 s.02220 / s.02223 and the reference folders state none))",
+    "at least 234.333083 m3 [ESTIMATED]"
+   ],
+   "import": [
+    "HELD (in-situ dry density (MEASURED, e.g. field density test of the excavated soil); placement target dry density of the fill (its own field and source); suitable share of the excavated soil (geotechnical classification against the fill specification; bound 0 .. 1 meanwhile); fill demand of the HELD fill lines L-89b8e6beaea55fc0e4c9 L-afa1a6f9e01eb47c56e4 L-2b8f1ae2ec46cd74552f L-91abe286a34e874e8ab2 L-6471367d85bdf361f9e7 L-eac006402d3035da007b (each can draw site soil); excavation of the HELD lines L-4445d5e20d1805f12402 L-b4ebff00041d90e03eca L-54baa058d6ccd9a38314 L-313384fed48301ae02d2 L-d9185fb243fd3b7130e9 L-438a4abd3adc0475d0bd L-b97f95d2784d456e0743 L-952a18b10db99c4eb1d3 L-a5844c9318406eccedde; handling loss of the re-used excavated soil (loss_reuse): no measured, specified or documented figure (Kuwait MPW General Specifications 1990 s.02220 / s.02223 and the reference folders state none))",
+    "at least 128.643547 m3 [ESTIMATED]"
+   ]
+  },
+  "B_t695_t700_geometry": {
+   "D": [
+    256.86433,
+    292.123036,
+    3
+   ],
+   "E": [
+    244.034031,
+    271.861583,
+    6
+   ],
+   "beside": {
+    "at_least": [
+     {
+      "at_least_m3": 31.05,
+      "basis": "T-700: own plan 20.70 m2 x formation >= 1.50 (p.9 note 1)",
+      "line_id": "L-b4ebff00041d90e03eca",
+      "missing": "lift pit depth 'as per lift manufacturer' (ST p.14; S14 / D-43 -> LIFT SUPPLIER)",
+      "note": "a proven minimum of a disjoint zone, named beside, never summed (R-T505-1 / R-T708-2)",
+      "role": "EXCAVATION_INSITU",
+      "zone": "Z1-PIT-FF"
+     },
+     {
+      "at_least_m3": 12.688,
+      "basis": "T-700: (20.70 - ring 4.84) x raft-top depth >= 0.80",
+      "line_id": "L-2b8f1ae2ec46cd74552f",
+      "missing": "lift pit depth 'as per lift manufacturer' (ST p.14; S14 / D-43 -> LIFT SUPPLIER)",
+      "note": "a proven minimum of a disjoint zone, named beside, never summed (R-T505-1 / R-T708-2)",
+      "role": "FILL_COMPACTED",
+      "zone": "Z1-PIT-FF"
+     }
+    ],
+    "exposure": {
+     "high_m3": 1.176467,
+     "line_id": "L-438a4abd3adc0475d0bd",
+     "low_m3": 1.069269,
+     "why": "HELD BOUNDED_EXPOSURE (T-497, R-T497-1): in plot .. with beyond-plot; its bound stays beside, never summed (as T-505)"
+    },
+    "not_entered": [
+     {
+      "bound": "RANGE",
+      "element_id": "EW-T350:B1-03:Z1-TRENCH-STRAPS",
+      "high_m3": 10.952471,
+      "line_id": "NEW (split of L-89b8e6beaea55fc0e4c9)",
+      "low_m3": 6.437519,
+      "why": "no candidate line id yet (a lane-I package mints it): never summed"
+     }
+    ]
+   },
+   "closure": {
+    "disposal_s0_m3": 271.861583,
+    "import_s0_m3": 292.123036,
+    "residual_disposal_m3": -0.0,
+    "residual_import_m3": 0.0,
+    "sum_closed_excavation_high_m3": 271.861583,
+    "sum_closed_fill_high_m3": 292.123036
+   },
+   "disposal": [
+    "HELD (in-situ dry density (MEASURED, e.g. field density test of the excavated soil); placement target dry density of the fill (its own field and source); suitable share of the excavated soil (geotechnical classification against the fill specification; bound 0 .. 1 meanwhile); fill demand of the HELD fill lines L-89b8e6beaea55fc0e4c9 L-afa1a6f9e01eb47c56e4 L-2b8f1ae2ec46cd74552f (each can draw site soil); excavation of the HELD lines L-4445d5e20d1805f12402 L-b4ebff00041d90e03eca L-313384fed48301ae02d2 L-d9185fb243fd3b7130e9 L-438a4abd3adc0475d0bd L-b97f95d2784d456e0743; handling loss of the re-used excavated soil (loss_reuse): no measured, specified or documented figure (Kuwait MPW General Specifications 1990 s.02220 / s.02223 and the reference folders state none))",
+    "at least 271.861583 m3 [ESTIMATED]"
+   ],
+   "import": [
+    "HELD (in-situ dry density (MEASURED, e.g. field density test of the excavated soil); placement target dry density of the fill (its own field and source); suitable share of the excavated soil (geotechnical classification against the fill specification; bound 0 .. 1 meanwhile); fill demand of the HELD fill lines L-89b8e6beaea55fc0e4c9 L-afa1a6f9e01eb47c56e4 L-2b8f1ae2ec46cd74552f (each can draw site soil); excavation of the HELD lines L-4445d5e20d1805f12402 L-b4ebff00041d90e03eca L-313384fed48301ae02d2 L-d9185fb243fd3b7130e9 L-438a4abd3adc0475d0bd L-b97f95d2784d456e0743; handling loss of the re-used excavated soil (loss_reuse): no measured, specified or documented figure (Kuwait MPW General Specifications 1990 s.02220 / s.02223 and the reference folders state none))",
+    "at least 292.123036 m3 [ESTIMATED]"
+   ]
+  },
+  "line_changes_A_to_B": [
+   {
+    "after": [
+     0.877899,
+     21.407259,
+     "ESTIMATED"
+    ],
+    "before": [
+     null,
+     null,
+     "HELD"
+    ],
+    "delta_m3": [
+     null,
+     null
+    ],
+    "line_id": "L-54baa058d6ccd9a38314",
+    "role": "EXCAVATION_INSITU",
+    "zone": "Z1-TRENCH-ANNEX"
+   },
+   {
+    "after": [
+     0.0,
+     0.0,
+     "CALCULATED"
+    ],
+    "before": [
+     null,
+     null,
+     "HELD"
+    ],
+    "delta_m3": [
+     null,
+     null
+    ],
+    "line_id": "L-952a18b10db99c4eb1d3",
+    "role": "EXCAVATION_INSITU",
+    "zone": "Z1-TRENCH-INT-GB-MAIN-ZERO"
+   },
+   {
+    "after": [
+     9.950299,
+     16.121241,
+     "ESTIMATED"
+    ],
+    "before": [
+     null,
+     null,
+     "HELD"
+    ],
+    "delta_m3": [
+     null,
+     null
+    ],
+    "line_id": "L-a5844c9318406eccedde",
+    "role": "EXCAVATION_INSITU",
+    "zone": "Z1-TRENCH-STRAPS"
+   },
+   {
+    "after": [
+     0.0,
+     0.0,
+     "CALCULATED"
+    ],
+    "before": [
+     null,
+     null,
+     "HELD"
+    ],
+    "delta_m3": [
+     null,
+     null
+    ],
+    "line_id": "L-91abe286a34e874e8ab2",
+    "role": "FILL_COMPACTED",
+    "zone": "Z1-POOL"
+   },
+   {
+    "after": [
+     0.0,
+     0.0,
+     "CALCULATED"
+    ],
+    "before": [
+     null,
+     null,
+     "HELD"
+    ],
+    "delta_m3": [
+     null,
+     null
+    ],
+    "line_id": "L-6471367d85bdf361f9e7",
+    "role": "FILL_COMPACTED",
+    "zone": "Z1-TRENCH-EXT-GB-MAIN"
+   },
+   {
+    "after": [
+     136.900995,
+     163.479489,
+     "PARTIALLY VERIFIED (T-700 Gate A; GS-08 / 12 / 16 and beam readings enveloped)"
+    ],
+    "before": [
+     null,
+     null,
+     "HELD"
+    ],
+    "delta_m3": [
+     null,
+     null
+    ],
+    "line_id": "L-eac006402d3035da007b",
+    "role": "FILL_COMPACTED",
+    "zone": "Z2"
+   }
+  ],
+  "s0_change_m3": {
+   "disposal": 37.5285,
+   "import": 163.479489
+  }
+ },
+ "break_even_yield_closed_parts": {
+  "A": {
+   "k_star": [
+    1.812806,
+    1.953373
+   ],
+   "note": "closed parts only; HELD lines open on both sides: an indicator, never a quantity",
+   "open_excavation_lines": 9,
+   "open_fill_lines": 6
+  },
+  "B": {
+   "k_star": [
+    0.835381,
+    1.058386
+   ],
+   "note": "closed parts only; HELD lines open on both sides: an indicator, never a quantity",
+   "open_excavation_lines": 6,
+   "open_fill_lines": 3
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.74",
+ "dry_mass_inputs": [
+  {
+   "bound": "BLANK",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "line_id": "L-4445d5e20d1805f12402",
+   "missing": [
+    "the zone volume (HELD)",
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    null,
+    null
+   ],
+   "zone": "Z1-LOWER-GB-ROW"
+  },
+  {
+   "bound": "RANGE",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "expression": "7.264500 .. 8.391750 m3 x rho_insitu t/m3",
+   "line_id": "L-ce0132c7212e42e306a5",
+   "missing": [
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    7.2645,
+    8.39175
+   ],
+   "zone": "Z1-PIT-F10F"
+  },
+  {
+   "bound": "AT_LEAST",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "expression": "31.050000 (at least) m3 x rho_insitu t/m3",
+   "line_id": "L-b4ebff00041d90e03eca",
+   "missing": [
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": true,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    31.05,
+    null
+   ],
+   "zone": "Z1-PIT-FF"
+  },
+  {
+   "bound": "VALUE",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "expression": "208.164757 m3 x rho_insitu t/m3",
+   "line_id": "L-cf8ffcdaacd0159b7e29",
+   "missing": [
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    208.164757,
+    208.164757
+   ],
+   "zone": "Z1-PITS-24"
+  },
+  {
+   "bound": "VALUE",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "expression": "17.776576 m3 x rho_insitu t/m3",
+   "line_id": "L-0a49a302b7926f86a37f",
+   "missing": [
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    17.776576,
+    17.776576
+   ],
+   "zone": "Z1-POOL"
+  },
+  {
+   "bound": "RANGE",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "expression": "0.877899 .. 21.407259 m3 x rho_insitu t/m3",
+   "line_id": "L-54baa058d6ccd9a38314",
+   "missing": [
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": true,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    0.877899,
+    21.407259
+   ],
+   "zone": "Z1-TRENCH-ANNEX"
+  },
+  {
+   "bound": "BLANK",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "line_id": "L-313384fed48301ae02d2",
+   "missing": [
+    "the zone volume (HELD)",
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    null,
+    null
+   ],
+   "zone": "Z1-TRENCH-BOUNDARY"
+  },
+  {
+   "bound": "BLANK",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "line_id": "L-d9185fb243fd3b7130e9",
+   "missing": [
+    "the zone volume (HELD)",
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    null,
+    null
+   ],
+   "zone": "Z1-TRENCH-COURT"
+  },
+  {
+   "bound": "BLANK",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "line_id": "L-438a4abd3adc0475d0bd",
+   "missing": [
+    "the zone volume (HELD)",
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    null,
+    null
+   ],
+   "zone": "Z1-TRENCH-EXT-GB-MAIN"
+  },
+  {
+   "bound": "BLANK",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "line_id": "L-b97f95d2784d456e0743",
+   "missing": [
+    "the zone volume (HELD)",
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    null,
+    null
+   ],
+   "zone": "Z1-TRENCH-INT-GB-MAIN-D33"
+  },
+  {
+   "bound": "ZERO_BY_GEOMETRY",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "expression": "0.000000 m3 x rho_insitu t/m3",
+   "line_id": "L-952a18b10db99c4eb1d3",
+   "missing": [
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    0.0,
+    0.0
+   ],
+   "zone": "Z1-TRENCH-INT-GB-MAIN-ZERO"
+  },
+  {
+   "bound": "RANGE",
+   "density_needed": "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED",
+   "dry_t": null,
+   "expression": "9.950299 .. 16.121241 m3 x rho_insitu t/m3",
+   "line_id": "L-a5844c9318406eccedde",
+   "missing": [
+    "in-situ dry density of the excavated soil (ASTM D6938 or sand cone), MEASURED"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "in situ",
+   "volume_m3": [
+    9.950299,
+    16.121241
+   ],
+   "zone": "Z1-TRENCH-STRAPS"
+  },
+  {
+   "bound": "BLANK",
+   "density_needed": "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))",
+   "dry_t": null,
+   "line_id": "L-89b8e6beaea55fc0e4c9",
+   "missing": [
+    "the zone volume (HELD)",
+    "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "compacted (placed)",
+   "volume_m3": [
+    null,
+    null
+   ],
+   "zone": "Z1-OTHER-TRENCHES"
+  },
+  {
+   "bound": "BLANK",
+   "density_needed": "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))",
+   "dry_t": null,
+   "line_id": "L-afa1a6f9e01eb47c56e4",
+   "missing": [
+    "the zone volume (HELD)",
+    "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "compacted (placed)",
+   "volume_m3": [
+    null,
+    null
+   ],
+   "zone": "Z1-PIT-F10F"
+  },
+  {
+   "bound": "AT_LEAST",
+   "density_needed": "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))",
+   "dry_t": null,
+   "expression": "12.688000 (at least) m3 x rho_placement_target t/m3",
+   "line_id": "L-2b8f1ae2ec46cd74552f",
+   "missing": [
+    "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))"
+   ],
+   "state": "HELD",
+   "t700_zone": true,
+   "volume_basis": "compacted (placed)",
+   "volume_m3": [
+    12.688,
+    null
+   ],
+   "zone": "Z1-PIT-FF"
+  },
+  {
+   "bound": "RANGE",
+   "density_needed": "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))",
+   "dry_t": null,
+   "expression": "119.963335 .. 128.643547 m3 x rho_placement_target t/m3",
+   "line_id": "L-a6af7c610a8adce59df3",
+   "missing": [
+    "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "compacted (placed)",
+   "volume_m3": [
+    119.963335,
+    128.643547
+   ],
+   "zone": "Z1-PITS-24"
+  },
+  {
+   "bound": "ZERO_BY_GEOMETRY",
+   "density_needed": "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))",
+   "dry_t": null,
+   "expression": "0.000000 m3 x rho_placement_target t/m3",
+   "line_id": "L-91abe286a34e874e8ab2",
+   "missing": [
+    "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "compacted (placed)",
+   "volume_m3": [
+    0.0,
+    0.0
+   ],
+   "zone": "Z1-POOL"
+  },
+  {
+   "bound": "ZERO_BY_GEOMETRY",
+   "density_needed": "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))",
+   "dry_t": null,
+   "expression": "0.000000 m3 x rho_placement_target t/m3",
+   "line_id": "L-6471367d85bdf361f9e7",
+   "missing": [
+    "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))"
+   ],
+   "state": "HELD",
+   "t700_zone": false,
+   "volume_basis": "compacted (placed)",
+   "volume_m3": [
+    0.0,
+    0.0
+   ],
+   "zone": "Z1-TRENCH-EXT-GB-MAIN"
+  },
+  {
+   "bound": "RANGE",
+   "density_needed": "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))",
+   "dry_t": null,
+   "expression": "136.900995 .. 163.479489 m3 x rho_placement_target t/m3",
+   "line_id": "L-eac006402d3035da007b",
+   "missing": [
+    "placement target dry density of the fill (project specification x MDD by ASTM D1557; 95 % Modified Proctor is PROPOSED-SPEC only, owner 2026-11-02 18:00 (2))"
+   ],
+   "state": "HELD",
+   "t700_zone": true,
+   "volume_basis": "compacted (placed)",
+   "volume_m3": [
+    136.900995,
+    163.479489
+   ],
+   "zone": "Z2"
+  }
+ ],
+ "inputs_sha256": {
+  "agents_t505/summary_t505.json": "8307f721485b6c5a7f49753613176775c8dc71f09b9e09a1537e5e8c4551dd36",
+  "agents_t687/out/LINE_INDEX_V3_0_69.json": "e908a5f105197d44277c8e1d2a2ef79c67b45681ca874d8c405e85d3b97602f1",
+  "agents_t700/WIRING_T700.csv": "51e105f79aef46d5b9389d2a5975b844dcb261fe604f927446a6f1d054baa508",
+  "agents_t700/ZONES_T700.json": "73d3692174fd5b2f4bf84748e032138bbdd14d4734a9cbee46d7e8b4d5cf0a4a",
+  "agents_t700/ZONE_INPUT_T700.json": "1de5838b1a88664cdf0eb82d5bc4f33a5548e14b9e5679591f0c9e246f75298d",
+  "agents_t717/out/LINE_INDEX_V3_0_74.json": "6733cbc143cdfffd82eeaee54457f97bbfa7b91b541f648a411825887b8b3bca",
+  "agents_t722/out/LINE_INDEX_V3_0_73.json": "af8d567d8a8ae8288ddf3c4c8207d2cbfcf2f322513af84e63a4448898ad7b23"
+ },
+ "rules": {
+  "R-T708-1": "1.0.0 PROPOSED",
+  "R-T708-2": "1.0.0 PROPOSED"
+ },
+ "task": "T-708",
+ "wiring_rows": 8,
+ "z2_reconciliation": {
+  "ends": {
+   "high": {
+    "delta_by_cause_m3": {
+     "BEAM_ANNEX_EXT_D35": 0.297063,
+     "BEAM_ANNEX_INT_D33": 0.0,
+     "BEAM_ANNEX_INT_D34": 0.0,
+     "BEAM_COURT": 1.045,
+     "BEAM_MAIN_EXT_D35": 0.559912,
+     "BEAM_MAIN_INT": 2.825895,
+     "BEAM_MAIN_INT_D33": 4.908485,
+     "BEAM_MAIN_INT_D34": 1.455394,
+     "PANEL_ANNEX_030": -31.55978,
+     "PANEL_HELD_LEVEL": 0.0,
+     "PANEL_MAIN_100": 0.0
+    },
+    "difference_engine_minus_owner_m3": -20.468033,
+    "engine_m3": 163.479489,
+    "owner_m3": 183.947522,
+    "residual_cause": "rounding: per-term figures at 6 decimals vs the owner total rounded once (no physical residual)",
+    "residual_m3": 2e-06
+   },
+   "low": {
+    "delta_by_cause_m3": {
+     "BEAM_ANNEX_EXT_D35": 0.0,
+     "BEAM_ANNEX_INT_D33": 0.0,
+     "BEAM_ANNEX_INT_D34": 0.0,
+     "BEAM_COURT": 0.0,
+     "BEAM_MAIN_EXT_D35": 0.0,
+     "BEAM_MAIN_INT": 2.825895,
+     "BEAM_MAIN_INT_D33": -0.944518,
+     "BEAM_MAIN_INT_D34": 1.154278,
+     "PANEL_ANNEX_030": -31.55978,
+     "PANEL_HELD_LEVEL": -18.5224,
+     "PANEL_MAIN_100": 0.0
+    },
+    "difference_engine_minus_owner_m3": -47.046527,
+    "engine_m3": 136.900995,
+    "owner_m3": 183.947522,
+    "residual_cause": "rounding: per-term figures at 6 decimals vs the owner total rounded once (no physical residual)",
+    "residual_m3": 2e-06
+   }
+  },
+  "owner_depth_m": 0.85,
+  "owner_m3": 183.947522,
+  "owner_plan_m2": 216.40885,
+  "terms": 90
+ }
+}

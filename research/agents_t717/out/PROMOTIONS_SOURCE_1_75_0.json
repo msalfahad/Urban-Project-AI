@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-717",
+  "merge_commit": "e6481b43361ef209b82ceaa36894188b48f44aa2",
+  "verdict_time": "2026-11-12 11:30 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-12T11:30Z per `date -u`, run session_01E6cPnf7xqvmmWpQDuZeQWj, lock checker; GATE B PASS; merge e6481b43 (tree = task head 25566c28)",
+  "board_commit": "40085bb8"
+ }
+]

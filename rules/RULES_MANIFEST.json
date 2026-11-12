@@ -288,6 +288,10 @@
    "kind": "AUTHORED",
    "sha256": "edf5e4646f087a453c3a4202ea862d946b766351cf91053f3cf9632be5a6ae0e"
   },
+  "coverage/BOQ_FAMILY_MASTER_1.75.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "cb551f248590005f90353a9634e9ca3e88bd224636cd02ada223eb36ccf584d6"
+  },
   "coverage/BOQ_FAMILY_MASTER_1.8.0.json": {
    "kind": "AUTHORED",
    "sha256": "eeacbc8d585d474b06a436fa9869eb46fc284bdddf8677f388bf363563530215"
@@ -341,6 +345,10 @@
   "rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json": {
    "kind": "AUTHORED",
    "sha256": "da38d121eec33c00ff3c8b524ed022be6a66f5789fdd9a0cd37f216f84dcde35"
+  },
+  "rulebook/URBAN_COMPANY_RULEBOOK_1.2.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "baf602108b825884188e0cf5b0e42e7beebfc4b0dc9f909f1eb8832d6a900bb6"
   }
  },
  "latest_owner_approved": "1.5.0",

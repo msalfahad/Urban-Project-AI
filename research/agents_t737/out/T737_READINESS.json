@@ -1,0 +1,3193 @@
+{
+ "beads": {
+  "by_host_state": [
+   {
+    "blank": 1,
+    "high": 0.0,
+    "host": "L-8bb83e16cc7b104ab88b",
+    "low": 0.0,
+    "rows": 1,
+    "state": "HELD_BLANK",
+    "value": 0.0
+   },
+   {
+    "blank": 0,
+    "high": 87.3122,
+    "host": "L-8bb83e16cc7b104ab88b",
+    "low": 87.3122,
+    "rows": 13,
+    "state": "HELD_BOUND",
+    "value": 0.0
+   },
+   {
+    "blank": 2,
+    "high": 0.0,
+    "host": "L-b05f70c92405dbcfbe62",
+    "low": 0.0,
+    "rows": 2,
+    "state": "HELD_BLANK",
+    "value": 0.0
+   },
+   {
+    "blank": 0,
+    "high": 168.6,
+    "host": "L-b05f70c92405dbcfbe62",
+    "low": 168.6,
+    "rows": 19,
+    "state": "HELD_BOUND",
+    "value": 0.0
+   },
+   {
+    "blank": 0,
+    "high": 0.0,
+    "host": "L-d52c4f763b19aedf8b8b",
+    "low": 0.0,
+    "rows": 6,
+    "state": "RELEASED",
+    "value": 36.6709
+   },
+   {
+    "blank": 0,
+    "high": 11.9,
+    "host": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+    "low": 0.0,
+    "rows": 1,
+    "state": "HELD_BOUND",
+    "value": 0.0
+   },
+   {
+    "blank": 0,
+    "high": 0.0,
+    "host": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+    "low": 0.0,
+    "rows": 1,
+    "state": "RELEASED",
+    "value": 2.0
+   },
+   {
+    "blank": 0,
+    "high": 2.0,
+    "host": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+    "low": 2.0,
+    "rows": 2,
+    "state": "HELD_BOUND",
+    "value": 0.0
+   },
+   {
+    "blank": 0,
+    "high": 1.2,
+    "host": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+    "low": 0.0,
+    "rows": 1,
+    "state": "HELD_BOUND",
+    "value": 0.0
+   },
+   {
+    "blank": 0,
+    "high": 0.0,
+    "host": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+    "low": 0.0,
+    "rows": 1,
+    "state": "RELEASED",
+    "value": 1.0
+   },
+   {
+    "blank": 0,
+    "high": 14.25,
+    "host": "NEW FIN.EXT.FINISH PLINTH GF",
+    "low": 13.8,
+    "rows": 3,
+    "state": "HELD_BOUND",
+    "value": 0.0
+   },
+   {
+    "blank": 1,
+    "high": 0.0,
+    "host": "NO_HOST",
+    "low": 0.0,
+    "rows": 1,
+    "state": "HELD_BLANK",
+    "value": 0.0
+   }
+  ],
+  "reconciliation": {
+   "1F": {
+    "ledger_m": 88.5122,
+    "parts_m": 88.5122
+   },
+   "2F": {
+    "ledger_m": 38.6709,
+    "parts_m": 38.6709
+   },
+   "GF": {
+    "ledger_m": 183.5,
+    "parts_m": 183.5
+   },
+   "measured_parts_by_state": {
+    "HELD_BOUND": 269.6122,
+    "NO_HOST": 1.4,
+    "RELEASED": 39.6709
+   },
+   "total": {
+    "ledger_m": 310.6831,
+    "parts_m": 310.6831
+   }
+  },
+  "rows": [
+   {
+    "bead_class": "DOOR_JAMB_HEAD",
+    "bead_state_after": "RELEASED",
+    "census": "",
+    "element_id": "",
+    "floor": "2F",
+    "high": null,
+    "host_after": "L-d52c4f763b19aedf8b8b",
+    "host_after_state": "RELEASED",
+    "host_now": "BLANK",
+    "id": "D-2F-01#EXT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 5.4,
+    "line": "L-d52c4f763b19aedf8b8b",
+    "low": null,
+    "note": "",
+    "part_m": 5.4,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": 5.4
+   },
+   {
+    "bead_class": "DOOR_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 5.4,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "D-GF-01#EXT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 5.4,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 5.4,
+    "note": "",
+    "part_m": 5.4,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "DOOR_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 5.3,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "D-GF-03#EXT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 5.3,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 5.3,
+    "note": "",
+    "part_m": 5.3,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "DOOR_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 5.4,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "D-GF-05#EXT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 5.4,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 5.4,
+    "note": "",
+    "part_m": 5.4,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "DOOR_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 5.4,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "D-GF-06#EXT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 5.4,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 5.4,
+    "note": "",
+    "part_m": 5.4,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "DOOR_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 7.0,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "D-GF-07#EXT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 7.0,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 7.0,
+    "note": "CONFLICT E4: ring 7.00 DC uses the 2.00 width the face ledger holds (D-53); carried, not picked",
+    "part_m": 7.0,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "DOOR_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 5.3,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "D-GF-09#EXT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 5.3,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 5.3,
+    "note": "",
+    "part_m": 5.3,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "EXTERNAL_CORNER",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 37.8,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "EXT#1F-CONVEX",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 39.0,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 37.8,
+    "note": "host: stage after-state",
+    "part_m": 37.8,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "EXTERNAL_CORNER",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 1.2,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "EXT#1F-CONVEX",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 39.0,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 1.2,
+    "note": "host: stage after-state",
+    "part_m": 1.2,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "EXTERNAL_CORNER",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 11.9,
+    "host_after": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "EXT#1F-CONVEX-PARAPET-ENDS",
+    "kind": "BEAD",
+    "ledger_high": 11.9,
+    "ledger_low": 0.0,
+    "ledger_m": null,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 0.0,
+    "note": "bead: parapet end height HELD (T-172) || host: stage after-state",
+    "part_m": null,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "EXTERNAL_CORNER",
+    "bead_state_after": "RELEASED",
+    "census": "",
+    "element_id": "",
+    "floor": "2F",
+    "high": null,
+    "host_after": "L-d52c4f763b19aedf8b8b",
+    "host_after_state": "RELEASED",
+    "host_now": "BLANK",
+    "id": "EXT#2F-CONVEX",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 18.8,
+    "line": "L-d52c4f763b19aedf8b8b",
+    "low": null,
+    "note": "released together with its host",
+    "part_m": 16.8,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": 16.8
+   },
+   {
+    "bead_class": "EXTERNAL_CORNER",
+    "bead_state_after": "RELEASED",
+    "census": "",
+    "element_id": "",
+    "floor": "2F",
+    "high": null,
+    "host_after": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+    "host_after_state": "RELEASED",
+    "host_now": "BLANK",
+    "id": "EXT#2F-CONVEX",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 18.8,
+    "line": "L-d52c4f763b19aedf8b8b",
+    "low": null,
+    "note": "released together with its host",
+    "part_m": 2.0,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": 2.0
+   },
+   {
+    "bead_class": "EXTERNAL_CORNER",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 57.5,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "EXT#GF-CONVEX",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 66.9,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 57.5,
+    "note": "host: stage after-state",
+    "part_m": 57.5,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "EXTERNAL_CORNER",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 1.0,
+    "host_after": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "EXT#GF-CONVEX",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 66.9,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 1.0,
+    "note": "host: stage after-state",
+    "part_m": 1.0,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "EXTERNAL_CORNER",
+    "bead_state_after": "RELEASED",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": null,
+    "host_after": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+    "host_after_state": "RELEASED",
+    "host_now": "BLANK",
+    "id": "EXT#GF-CONVEX",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 66.9,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": null,
+    "note": "released together with its host",
+    "part_m": 1.0,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": 1.0
+   },
+   {
+    "bead_class": "EXTERNAL_CORNER",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 7.4,
+    "host_after": "NEW FIN.EXT.FINISH PLINTH GF",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "EXT#GF-CONVEX",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 66.9,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 7.4,
+    "note": "host: stage after-state",
+    "part_m": 7.4,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "EXTERNAL_CORNER",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 2.55,
+    "host_after": "NEW FIN.EXT.FINISH PLINTH GF",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "EXT#GF-CONVEX-PLINTH",
+    "kind": "BEAD",
+    "ledger_high": 2.55,
+    "ledger_low": 2.1,
+    "ledger_m": null,
+    "line": "L-c0e9a4c62171de1f369b",
+    "low": 2.1,
+    "note": "T-697 cause '3 pool-court convex corners below the F.F.L. ... plinth': the plinth faces of NW-3 .. NW-6 bind to the stage PLINTH line",
+    "part_m": null,
+    "split": "RE-HOSTED",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "MOUTH_WALL_END",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 36.4,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "EXT#GF-MOUTHS",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 43.1,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 36.4,
+    "note": "host: stage after-state",
+    "part_m": 36.4,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "MOUTH_WALL_END",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 1.0,
+    "host_after": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "EXT#GF-MOUTHS",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 43.1,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 1.0,
+    "note": "host: stage after-state",
+    "part_m": 1.0,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "MOUTH_WALL_END",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 4.3,
+    "host_after": "NEW FIN.EXT.FINISH PLINTH GF",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "EXT#GF-MOUTHS",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 43.1,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 4.3,
+    "note": "host: stage after-state",
+    "part_m": 4.3,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "MOUTH_WALL_END",
+    "bead_state_after": "HELD_BLANK",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": null,
+    "host_after": "NO_HOST",
+    "host_after_state": "",
+    "host_now": "BLANK",
+    "id": "EXT#GF-MOUTHS",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 43.1,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": null,
+    "note": "NO_HOST: 1.4 m of DRAWING-CONFIRMED arris above every face the stage holds (passage wall end above the annex parapet top +4.80 to +5.50); ledger 1.4 m (reference text, not a quantity)",
+    "part_m": 1.4,
+    "split": "SPLIT",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "EXTERNAL_CORNER",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 1.2,
+    "host_after": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+    "host_after_state": "RELEASED",
+    "host_now": "BLANK",
+    "id": "EXT#GF-MOUTHS-STOP",
+    "kind": "BEAD",
+    "ledger_high": 1.2,
+    "ledger_low": 0.0,
+    "ledger_m": null,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 0.0,
+    "note": "T-172 'GF house +5.50 -> +6.00 ... passage-mouth end UNKNOWN: stop-end HELD 0 .. 1.20 m.l': on the GF parapet outer face",
+    "part_m": null,
+    "split": "RE-HOSTED",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 5.2,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W01#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 5.2,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 5.2,
+    "note": "",
+    "part_m": 5.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BLANK",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": null,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W02#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": null,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": null,
+    "note": "",
+    "part_m": null,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BLANK",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": null,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W03#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": null,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": null,
+    "note": "",
+    "part_m": null,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 2.2,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W04#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 2.2,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 2.2,
+    "note": "",
+    "part_m": 2.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 2.2,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W05#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 2.2,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 2.2,
+    "note": "",
+    "part_m": 2.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 2.2,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W06#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 2.2,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 2.2,
+    "note": "",
+    "part_m": 2.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 2.2,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W07#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 2.2,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 2.2,
+    "note": "",
+    "part_m": 2.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 4.5,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W08#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 4.5,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 4.5,
+    "note": "",
+    "part_m": 4.5,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 4.5,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W09#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 4.5,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 4.5,
+    "note": "",
+    "part_m": 4.5,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 4.0,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W10#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 4.0,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 4.0,
+    "note": "",
+    "part_m": 4.0,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 6.35,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W11#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 6.35,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 6.35,
+    "note": "",
+    "part_m": 6.35,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "GF",
+    "high": 6.35,
+    "host_after": "L-b05f70c92405dbcfbe62",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W12#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 6.35,
+    "line": "L-b05f70c92405dbcfbe62",
+    "low": 6.35,
+    "note": "",
+    "part_m": 6.35,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 5.8,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W13#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 5.8,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 5.8,
+    "note": "",
+    "part_m": 5.8,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 5.65,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W14#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 5.65,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 5.65,
+    "note": "",
+    "part_m": 5.65,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 6.8461,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W15#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 6.8461,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 6.8461,
+    "note": "",
+    "part_m": 6.8461,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 6.8461,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W16#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 6.8461,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 6.8461,
+    "note": "",
+    "part_m": 6.8461,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BLANK",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": null,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W17#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": null,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": null,
+    "note": "",
+    "part_m": null,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 4.82,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W18#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 4.82,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 4.82,
+    "note": "",
+    "part_m": 4.82,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 2.2,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W19#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 2.2,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 2.2,
+    "note": "",
+    "part_m": 2.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 2.2,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W20#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 2.2,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 2.2,
+    "note": "",
+    "part_m": 2.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 2.2,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W21#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 2.2,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 2.2,
+    "note": "",
+    "part_m": 2.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 2.2,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W22#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 2.2,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 2.2,
+    "note": "",
+    "part_m": 2.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 2.2,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W23#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 2.2,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 2.2,
+    "note": "",
+    "part_m": 2.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 4.55,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W24#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 4.55,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 4.55,
+    "note": "",
+    "part_m": 4.55,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "HELD_BOUND",
+    "census": "",
+    "element_id": "",
+    "floor": "1F",
+    "high": 4.0,
+    "host_after": "L-8bb83e16cc7b104ab88b",
+    "host_after_state": "BOUNDED",
+    "host_now": "BLANK",
+    "id": "W25#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 4.0,
+    "line": "L-8bb83e16cc7b104ab88b",
+    "low": 4.0,
+    "note": "",
+    "part_m": 4.0,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": null
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "RELEASED",
+    "census": "",
+    "element_id": "",
+    "floor": "2F",
+    "high": null,
+    "host_after": "L-d52c4f763b19aedf8b8b",
+    "host_after_state": "RELEASED",
+    "host_now": "BLANK",
+    "id": "W26#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 4.0709,
+    "line": "L-d52c4f763b19aedf8b8b",
+    "low": null,
+    "note": "",
+    "part_m": 4.0709,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": 4.0709
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "RELEASED",
+    "census": "",
+    "element_id": "",
+    "floor": "2F",
+    "high": null,
+    "host_after": "L-d52c4f763b19aedf8b8b",
+    "host_after_state": "RELEASED",
+    "host_now": "BLANK",
+    "id": "W27#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 4.0,
+    "line": "L-d52c4f763b19aedf8b8b",
+    "low": null,
+    "note": "",
+    "part_m": 4.0,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": 4.0
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "RELEASED",
+    "census": "",
+    "element_id": "",
+    "floor": "2F",
+    "high": null,
+    "host_after": "L-d52c4f763b19aedf8b8b",
+    "host_after_state": "RELEASED",
+    "host_now": "BLANK",
+    "id": "W28#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 2.2,
+    "line": "L-d52c4f763b19aedf8b8b",
+    "low": null,
+    "note": "",
+    "part_m": 2.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": 2.2
+   },
+   {
+    "bead_class": "WINDOW_JAMB_HEAD",
+    "bead_state_after": "RELEASED",
+    "census": "",
+    "element_id": "",
+    "floor": "2F",
+    "high": null,
+    "host_after": "L-d52c4f763b19aedf8b8b",
+    "host_after_state": "RELEASED",
+    "host_now": "BLANK",
+    "id": "W29#OUT",
+    "kind": "BEAD",
+    "ledger_high": null,
+    "ledger_low": null,
+    "ledger_m": 4.2,
+    "line": "L-d52c4f763b19aedf8b8b",
+    "low": null,
+    "note": "",
+    "part_m": 4.2,
+    "split": "ONE_HOST",
+    "stage_action": "",
+    "stage_after": "",
+    "value": 4.2
+   }
+  ],
+  "rows_in": 43,
+  "rows_out": 51,
+  "splits": {
+   "EXT#1F-CONVEX": {
+    "by_line": {
+     "L-8bb83e16cc7b104ab88b": 37.8,
+     "L-b05f70c92405dbcfbe62": 1.2
+    },
+    "corners": [
+     {
+      "corner": "NW-1/NW-2",
+      "segments": [
+       [
+        5.5,
+        9.7,
+        "L-8bb83e16cc7b104ab88b",
+        4.2
+       ]
+      ],
+      "span": [
+       5.5,
+       9.7
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NW-2/NW-3",
+      "segments": [
+       [
+        5.5,
+        9.7,
+        "L-8bb83e16cc7b104ab88b",
+        4.2
+       ]
+      ],
+      "span": [
+       5.5,
+       9.7
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NW-3/NE-1",
+      "segments": [
+       [
+        5.5,
+        9.7,
+        "L-8bb83e16cc7b104ab88b",
+        4.2
+       ]
+      ],
+      "span": [
+       5.5,
+       9.7
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SW-1/NW-5",
+      "segments": [
+       [
+        5.5,
+        9.7,
+        "L-8bb83e16cc7b104ab88b",
+        4.2
+       ]
+      ],
+      "span": [
+       5.5,
+       9.7
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NW-5/NE-2",
+      "segments": [
+       [
+        5.5,
+        9.7,
+        "L-8bb83e16cc7b104ab88b",
+        4.2
+       ]
+      ],
+      "span": [
+       5.5,
+       9.7
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NE-2/SE-1",
+      "segments": [
+       [
+        4.3,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        1.2
+       ],
+       [
+        5.5,
+        9.7,
+        "L-8bb83e16cc7b104ab88b",
+        4.2
+       ]
+      ],
+      "span": [
+       4.3,
+       9.7
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SE-1/SW-2",
+      "segments": [
+       [
+        5.5,
+        9.7,
+        "L-8bb83e16cc7b104ab88b",
+        4.2
+       ]
+      ],
+      "span": [
+       5.5,
+       9.7
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SE-2/SW-3",
+      "segments": [
+       [
+        5.5,
+        9.7,
+        "L-8bb83e16cc7b104ab88b",
+        4.2
+       ]
+      ],
+      "span": [
+       5.5,
+       9.7
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SW-3/NW-1",
+      "segments": [
+       [
+        5.5,
+        9.7,
+        "L-8bb83e16cc7b104ab88b",
+        4.2
+       ]
+      ],
+      "span": [
+       5.5,
+       9.7
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     }
+    ],
+    "ledger": 39.0,
+    "sum": 39.0
+   },
+   "EXT#1F-CONVEX-PARAPET-ENDS": {
+    "by_line": {
+     "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70": 9.288,
+     "None": 2.612
+    },
+    "corners": [
+     {
+      "corner": "NW-1/NW-2",
+      "segments": [
+       [
+        9.7,
+        11.0,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+        1.3
+       ],
+       [
+        11.0,
+        11.3,
+        null,
+        0.3
+       ]
+      ],
+      "span": [
+       9.7,
+       11.3
+      ],
+      "state": "PARTIAL",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NW-2/NW-3",
+      "segments": [
+       [
+        9.7,
+        11.0,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+        1.3
+       ],
+       [
+        11.0,
+        11.3,
+        null,
+        0.3
+       ]
+      ],
+      "span": [
+       9.7,
+       11.3
+      ],
+      "state": "PARTIAL",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NW-3/NE-1",
+      "segments": [
+       [
+        9.7,
+        10.999,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+        1.299
+       ],
+       [
+        10.999,
+        11.3,
+        null,
+        0.301
+       ]
+      ],
+      "span": [
+       9.7,
+       11.3
+      ],
+      "state": "PARTIAL",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SW-1/NW-5",
+      "segments": [
+       [
+        9.7,
+        10.148,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+        0.448
+       ],
+       [
+        10.148,
+        11.3,
+        null,
+        1.152
+       ]
+      ],
+      "span": [
+       9.7,
+       11.3
+      ],
+      "state": "PARTIAL",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NW-5/NE-2",
+      "segments": [
+       [
+        9.7,
+        11.0,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+        1.3
+       ]
+      ],
+      "span": [
+       9.7,
+       11.0
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NE-2/SE-1",
+      "segments": [
+       [
+        9.7,
+        11.0,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+        1.3
+       ]
+      ],
+      "span": [
+       9.7,
+       11.0
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SE-1/SW-2",
+      "segments": [
+       [
+        9.7,
+        10.741,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+        1.041
+       ],
+       [
+        10.741,
+        11.3,
+        null,
+        0.559
+       ]
+      ],
+      "span": [
+       9.7,
+       11.3
+      ],
+      "state": "PARTIAL",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SW-3/NW-1",
+      "segments": [
+       [
+        9.7,
+        11.0,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+        1.3
+       ]
+      ],
+      "span": [
+       9.7,
+       11.0
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     }
+    ],
+    "ledger": 11.9,
+    "note": "parts above the stage faces' low tops are the HELD parapet end heights (the stage line is bounded on them), not a missing host",
+    "sum": 11.9
+   },
+   "EXT#2F-CONVEX": {
+    "by_line": {
+     "L-d52c4f763b19aedf8b8b": 16.8,
+     "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90": 2.0
+    },
+    "corners": [
+     {
+      "corner": "NW-1/NE-1",
+      "segments": [
+       [
+        9.7,
+        13.9,
+        "L-d52c4f763b19aedf8b8b",
+        4.2
+       ],
+       [
+        13.9,
+        14.4,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+        0.5
+       ]
+      ],
+      "span": [
+       9.7,
+       14.4
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NE-1/SE-1",
+      "segments": [
+       [
+        9.7,
+        13.9,
+        "L-d52c4f763b19aedf8b8b",
+        4.2
+       ],
+       [
+        13.9,
+        14.4,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+        0.5
+       ]
+      ],
+      "span": [
+       9.7,
+       14.4
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SE-1/SW-1",
+      "segments": [
+       [
+        9.7,
+        13.9,
+        "L-d52c4f763b19aedf8b8b",
+        4.2
+       ],
+       [
+        13.9,
+        14.4,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+        0.5
+       ]
+      ],
+      "span": [
+       9.7,
+       14.4
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SW-1/NW-1",
+      "segments": [
+       [
+        9.7,
+        13.9,
+        "L-d52c4f763b19aedf8b8b",
+        4.2
+       ],
+       [
+        13.9,
+        14.4,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+        0.5
+       ]
+      ],
+      "span": [
+       9.7,
+       14.4
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     }
+    ],
+    "ledger": 18.8,
+    "sum": 18.8
+   },
+   "EXT#GF-CONVEX": {
+    "by_line": {
+     "L-b05f70c92405dbcfbe62": 57.5,
+     "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30": 1.0,
+     "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50": 1.0,
+     "NEW FIN.EXT.FINISH PLINTH GF": 7.4
+    },
+    "corners": [
+     {
+      "corner": "SE-1/SW-1",
+      "segments": [
+       [
+        0.15,
+        0.3,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.15
+       ],
+       [
+        0.3,
+        4.3,
+        "L-b05f70c92405dbcfbe62",
+        4.0
+       ],
+       [
+        4.3,
+        4.8,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+        0.5
+       ]
+      ],
+      "span": [
+       0.15,
+       4.8
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NE-1/SE-3",
+      "segments": [
+       [
+        0.15,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.85
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SE-3/SW-6",
+      "segments": [
+       [
+        0.15,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.85
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SE-4/SW-7",
+      "segments": [
+       [
+        0.15,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.85
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SW-7/NW-2",
+      "segments": [
+       [
+        0.15,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.85
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NW-2/NE-2",
+      "segments": [
+       [
+        0.15,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.85
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NE-2/SE-5",
+      "segments": [
+       [
+        0.15,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.85
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NW-3/NW-4",
+      "segments": [
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       1.0,
+       5.5
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NW-4/NW-5",
+      "segments": [
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       1.0,
+       5.5
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SW-8/NW-6",
+      "segments": [
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       1.0,
+       5.5
+      ],
+      "state": "ONE_HOST",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "SW-9/NW-7",
+      "segments": [
+       [
+        0.15,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.85
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ],
+       [
+        5.5,
+        6.0,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+        0.5
+       ]
+      ],
+      "span": [
+       0.15,
+       6.0
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NW-7/NE-4",
+      "segments": [
+       [
+        0.0,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        1.0
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ],
+       [
+        5.5,
+        6.0,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+        0.5
+       ]
+      ],
+      "span": [
+       0.0,
+       6.0
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     },
+     {
+      "corner": "NE-6/SE-1",
+      "segments": [
+       [
+        0.0,
+        0.3,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.3
+       ],
+       [
+        0.3,
+        4.3,
+        "L-b05f70c92405dbcfbe62",
+        4.0
+       ],
+       [
+        4.3,
+        4.8,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+        0.5
+       ]
+      ],
+      "span": [
+       0.0,
+       4.8
+      ],
+      "state": "SPLIT",
+      "type": "CONVEX (external arris)"
+     }
+    ],
+    "ledger": 66.9,
+    "sum": 66.9
+   },
+   "EXT#GF-MOUTHS": {
+    "by_line": {
+     "L-b05f70c92405dbcfbe62": 36.4,
+     "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30": 1.0,
+     "NEW FIN.EXT.FINISH PLINTH GF": 4.3,
+     "None": 1.4
+    },
+    "corners": [
+     {
+      "corner": "SW-3/SW-4",
+      "segments": [
+       [
+        0.15,
+        0.3,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.15
+       ],
+       [
+        0.3,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        5.2
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "MOUTH_END (facade-side arris)"
+     },
+     {
+      "corner": "SW-3/SW-4",
+      "segments": [
+       [
+        0.15,
+        0.3,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.15
+       ],
+       [
+        0.3,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        5.2
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "MOUTH_END (passage-side arris)"
+     },
+     {
+      "corner": "SW-4/SW-5",
+      "segments": [
+       [
+        0.15,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.85
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "MOUTH_END (facade-side arris)"
+     },
+     {
+      "corner": "SW-4/SW-5",
+      "segments": [
+       [
+        0.15,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.85
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "MOUTH_END (passage-side arris)"
+     },
+     {
+      "corner": "NE-4/NE-5",
+      "segments": [
+       [
+        0.0,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        1.0
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       0.0,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "MOUTH_END (facade-side arris)"
+     },
+     {
+      "corner": "NE-4/NE-5",
+      "segments": [
+       [
+        0.15,
+        1.0,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.85
+       ],
+       [
+        1.0,
+        5.5,
+        "L-b05f70c92405dbcfbe62",
+        4.5
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "SPLIT",
+      "type": "MOUTH_END (passage-side arris)"
+     },
+     {
+      "corner": "NE-5/NE-6",
+      "segments": [
+       [
+        0.0,
+        0.3,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.3
+       ],
+       [
+        0.3,
+        4.3,
+        "L-b05f70c92405dbcfbe62",
+        4.0
+       ],
+       [
+        4.3,
+        4.8,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+        0.5
+       ],
+       [
+        4.8,
+        5.5,
+        null,
+        0.7
+       ]
+      ],
+      "span": [
+       0.0,
+       5.5
+      ],
+      "state": "PARTIAL",
+      "type": "MOUTH_END (facade-side arris)"
+     },
+     {
+      "corner": "NE-5/NE-6",
+      "segments": [
+       [
+        0.15,
+        0.3,
+        "NEW FIN.EXT.FINISH PLINTH GF",
+        0.15
+       ],
+       [
+        0.3,
+        4.3,
+        "L-b05f70c92405dbcfbe62",
+        4.0
+       ],
+       [
+        4.3,
+        4.8,
+        "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+        0.5
+       ],
+       [
+        4.8,
+        5.5,
+        null,
+        0.7
+       ]
+      ],
+      "span": [
+       0.15,
+       5.5
+      ],
+      "state": "PARTIAL",
+      "type": "MOUTH_END (passage-side arris)"
+     }
+    ],
+    "ledger": 43.1,
+    "sum": 43.1
+   }
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.73",
+ "evidence": [
+  {
+   "file": "research/agents_t627/T-627_OPENING_AREA_EVIDENCE.md",
+   "id": "E1",
+   "lit": "W02 27.219: waits on D-53",
+   "note": "still HELD on D-53 (count 1 drawn vs 2 rendered)",
+   "row": "hole W02 (GF NW-7, 0 .. 28.485 m2 HELD)",
+   "sha256": "1c5fadd7",
+   "verdict": "AGREES"
+  },
+  {
+   "file": "research/agents_t682/T-682_CONCRETE_GATE_B6.md",
+   "id": "E2",
+   "lit": "D-GF-07 (head 2.50 PRINTED)",
+   "note": "lintel round: head 2.50 printed = 3.50 - 1.00",
+   "row": "hole D-GF-07 sill / head (+1.00 / +3.50, 2.50 m)",
+   "sha256": "533936e4",
+   "verdict": "AGREES"
+  },
+  {
+   "file": "research/agents_t713/T-713_MASONRY_REST.md",
+   "id": "E3",
+   "lit": "opening widths not drawn (L-GF-01, P-GF-01, D-GF-07",
+   "note": "masonry round still holds the D-GF-07 width",
+   "row": "hole D-GF-07 width (0 .. 5.000 m2 HELD)",
+   "sha256": "50f655af",
+   "verdict": "AGREES"
+  },
+  {
+   "file": "research/agents_t405/T-405_CORNER_BEADS.md",
+   "id": "E4",
+   "lit": "7.00 (D-GF-07, printed 2.50 x 2.00)",
+   "note": "T-405 / T-697 ring 7.00 m.l and T-313 reveal head 0.200 x 2.000 carry the 2.00 width DRAWING-CONFIRMED; T-305 / T-337 hold the same width (render single leaf vs plan 2.00 x 2.50, T-175, D-53). Carried as CONFLICT; decider: Lead ruling on the evidence hierarchy (printed plan tag vs render) or designer D-53",
+   "row": "D-GF-07 width: bead / reveal ledgers vs face ledger",
+   "sha256": "086788ef",
+   "verdict": "CONFLICT"
+  },
+  {
+   "file": "research/agents_t305/OPENING_HOLES_T305.csv",
+   "id": "E4b",
+   "lit": "leaf / hole width HELD",
+   "note": "the other side of E4",
+   "row": "D-GF-07 width (face ledger)",
+   "sha256": "316d5c47",
+   "verdict": "CONFLICT"
+  },
+  {
+   "file": "research/agents_t710/out/T710_WP_ROUND3.json",
+   "id": "E5",
+   "lit": "DOOR:D-GF-07-PANTRY",
+   "note": "the WP doorway 'D-GF-07' is the GF-07 pantry door (gap 1.000), not the main door on GF SE-2: an id collision, never a source for the facade hole",
+   "row": "name 'D-GF-07' in the WP round",
+   "sha256": "9aa528c5",
+   "verdict": "NOT_THE_SAME_ELEMENT"
+  },
+  {
+   "file": "research/agents_t722/T-722_CONCRETE_GATE_B9.md",
+   "id": "E6",
+   "lit": "V3.0.23 floors 1.799103 / 2.949453 / 1.6245",
+   "note": "top run x 0.30 upstand = concrete floor (checked in numbers below)",
+   "row": "parapet tops (4 roofs) vs the merged parapet concrete floors",
+   "sha256": "604ec558",
+   "verdict": "AGREES"
+  },
+  {
+   "file": "research/agents_t722/T-722_CONCRETE_GATE_B9.md",
+   "id": "E6b",
+   "lit": "5.592956 x 0.30 = 1.6778868",
+   "note": "same run as the stage GF parapet top low",
+   "row": "GF terrace parapet top",
+   "sha256": "604ec558",
+   "verdict": "AGREES"
+  },
+  {
+   "file": "tests/t199_formwork_metalwork/test_family_master_1_25_0.py",
+   "id": "E7",
+   "lit": "(T-655, F-T314-2)",
+   "note": "T-655 merged the helper fix: no r3 blocker",
+   "row": "F-T314-2 (t199 first-writer helper)",
+   "sha256": "98cafcb0",
+   "verdict": "FIXED"
+  }
+ ],
+ "host_history": {
+  "v61_to_v73": {
+   "added": 50,
+   "by_family": {
+    "FIN.PAINT": 5,
+    "FIN.PLASTER": 28,
+    "MAS.GLUE": 2,
+    "MAS.MORTAR": 35,
+    "MAS.UNITS": 8,
+    "STR.CONC": 104
+   },
+   "changed": 132,
+   "facade_lines_moved": [],
+   "removed": 0
+  },
+  "versions": [
+   {
+    "hosts": "first",
+    "lines": 5073,
+    "version": "V3.0.61"
+   },
+   {
+    "hosts": "same",
+    "lines": 5073,
+    "version": "V3.0.62"
+   },
+   {
+    "hosts": "same",
+    "lines": 5073,
+    "version": "V3.0.63"
+   },
+   {
+    "hosts": "same",
+    "lines": 5074,
+    "version": "V3.0.64"
+   },
+   {
+    "hosts": "same",
+    "lines": 5075,
+    "version": "V3.0.65"
+   },
+   {
+    "hosts": "same",
+    "lines": 5076,
+    "version": "V3.0.66"
+   },
+   {
+    "hosts": "same",
+    "lines": 5076,
+    "version": "V3.0.67"
+   },
+   {
+    "hosts": "same",
+    "lines": 5105,
+    "version": "V3.0.68"
+   },
+   {
+    "hosts": "same",
+    "lines": 5123,
+    "version": "V3.0.69"
+   },
+   {
+    "hosts": "same",
+    "lines": 5123,
+    "version": "V3.0.70"
+   },
+   {
+    "hosts": "same",
+    "lines": 5123,
+    "version": "V3.0.71"
+   },
+   {
+    "hosts": "same",
+    "lines": 5123,
+    "version": "V3.0.72"
+   },
+   {
+    "hosts": "same",
+    "lines": 5123,
+    "version": "V3.0.73"
+   }
+  ]
+ },
+ "line_census": [
+  {
+   "action": "CHANGE",
+   "after": {
+    "high": 249.954348,
+    "low": 248.178057,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "census": "LIVE",
+   "element": "STOREY",
+   "element_id": "1F-FACADE:facade",
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "host_now": {
+    "class": "HELD",
+    "element_id": "1F-FACADE:facade",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.EXT.FINISH",
+    "measured_net": null,
+    "unit": "m2"
+   },
+   "key": "L-8bb83e16cc7b104ab88b",
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "net": [
+    248.178057,
+    249.954348
+   ],
+   "why": "host present, same state as the stage base"
+  },
+  {
+   "action": "CHANGE",
+   "after": {
+    "high": 410.179149,
+    "low": 376.694149,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "census": "LIVE",
+   "element": "STOREY",
+   "element_id": "GF-FACADE:facade",
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "host_now": {
+    "class": "HELD",
+    "element_id": "GF-FACADE:facade",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.EXT.FINISH",
+    "measured_net": null,
+    "unit": "m2"
+   },
+   "key": "L-b05f70c92405dbcfbe62",
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "net": [
+    376.694149,
+    410.179149
+   ],
+   "why": "host present, same state as the stage base"
+  },
+  {
+   "action": "CHANGE",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 117.305
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "census": "LIVE",
+   "element": "STOREY",
+   "element_id": "2F-FACADE:facade",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "2F",
+   "host_now": {
+    "class": "HELD",
+    "element_id": "2F-FACADE:facade",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.EXT.FINISH",
+    "measured_net": null,
+    "unit": "m2"
+   },
+   "key": "L-d52c4f763b19aedf8b8b",
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "net": [
+    117.305,
+    117.305
+   ],
+   "why": "host present, same state as the stage base"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 60.029307,
+    "low": 54.00748,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_OUTER",
+   "element_id": "1F-FACADE:PARAPET_OUTER:1F_ROOF",
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "host_now": null,
+   "key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "line_id": "L-5a04a3ec70ce025ddd95",
+   "net": [
+    54.00748,
+    60.029307
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 14.9
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_OUTER",
+   "element_id": "2F-FACADE:PARAPET_OUTER:2F_ROOF",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "host_now": null,
+   "key": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "line_id": "L-d503696a891174c1d837",
+   "net": [
+    14.9,
+    14.9
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 15.271022,
+    "low": 14.671022,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_OUTER",
+   "element_id": "GF-FACADE:PARAPET_OUTER:ANNEX_ROOF",
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "host_now": null,
+   "key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "line_id": "L-7c48b6a481d71ac57c54",
+   "net": [
+    14.671022,
+    15.271022
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 14.385
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_OUTER",
+   "element_id": "GF-FACADE:PARAPET_OUTER:GF_ROOF",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "host_now": null,
+   "key": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+   "line_id": "L-5816ca234f93f8947eb9",
+   "net": [
+    14.385,
+    14.385
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 72.749795,
+    "low": 71.68859,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PLINTH",
+   "element_id": "GF-FACADE:PLINTH",
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "host_now": null,
+   "key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "line_id": "L-0a6d30ea444e90e119bb",
+   "net": [
+    71.68859,
+    72.749795
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "SLAB_EDGE",
+   "element_id": "1F-FACADE:SLAB_EDGE",
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "host_now": null,
+   "key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "line_id": "L-22e75c3942faeeb6718a",
+   "net": null,
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 4.30924,
+    "low": 1.85426,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "SLAB_EDGE",
+   "element_id": "GF-FACADE:SLAB_EDGE",
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "host_now": null,
+   "key": "NEW FIN.EXT.FINISH SLAB-EDGE GF",
+   "line_id": "L-e3ee1b7f7603762da446",
+   "net": [
+    1.85426,
+    4.30924
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 56.608545,
+    "low": 41.82353,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_INNER",
+   "element_id": "1F-FACADE:PARAPET_INNER:1F_ROOF",
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "host_now": null,
+   "key": "NEW FIN.EXT.PARAPET-INNER 1F +9.70",
+   "line_id": "L-d4178f2108229818b472",
+   "net": [
+    41.82353,
+    56.608545
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 14.15,
+    "low": 8.49,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_INNER",
+   "element_id": "2F-FACADE:PARAPET_INNER:2F_ROOF",
+   "evidence_status": "HELD",
+   "floor": "2F",
+   "host_now": null,
+   "key": "NEW FIN.EXT.PARAPET-INNER 2F +13.90",
+   "line_id": "L-fbda06a1ad25128c6a63",
+   "net": [
+    8.49,
+    14.15
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 14.91405,
+    "low": 8.88843,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_INNER",
+   "element_id": "GF-FACADE:PARAPET_INNER:ANNEX_ROOF",
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "host_now": null,
+   "key": "NEW FIN.EXT.PARAPET-INNER ANNEX +4.30",
+   "line_id": "L-c79492a8ed9c2c310d37",
+   "net": [
+    8.88843,
+    14.91405
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 13.88495,
+    "low": 8.209433,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_INNER",
+   "element_id": "GF-FACADE:PARAPET_INNER:GF_ROOF",
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "host_now": null,
+   "key": "NEW FIN.EXT.PARAPET-INNER GF +5.50",
+   "line_id": "L-60877480b3303b0be233",
+   "net": [
+    8.209433,
+    13.88495
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 9.84653,
+    "low": 9.83151,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_TOP",
+   "element_id": "1F-FACADE:PARAPET_TOP:1F_ROOF",
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "host_now": null,
+   "key": "NEW FIN.EXT.PARAPET-TOP 1F +9.70",
+   "line_id": "L-757343d535ae19b589bf",
+   "net": [
+    9.83151,
+    9.84653
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 5.415
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_TOP",
+   "element_id": "2F-FACADE:PARAPET_TOP:2F_ROOF",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "host_now": null,
+   "key": "NEW FIN.EXT.PARAPET-TOP 2F +13.90",
+   "line_id": "L-89d750dd0e9ced13f5ca",
+   "net": [
+    5.415,
+    5.415
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 6.03701,
+    "low": 5.99701,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_TOP",
+   "element_id": "GF-FACADE:PARAPET_TOP:ANNEX_ROOF",
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "host_now": null,
+   "key": "NEW FIN.EXT.PARAPET-TOP ANNEX +4.30",
+   "line_id": "L-54e708d3940d1932607c",
+   "net": [
+    5.99701,
+    6.03701
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 5.67398,
+    "low": 5.592956,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "census": "LIVE_NEW",
+   "element": "PARAPET_TOP",
+   "element_id": "GF-FACADE:PARAPET_TOP:GF_ROOF",
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "host_now": null,
+   "key": "NEW FIN.EXT.PARAPET-TOP GF +5.50",
+   "line_id": "L-490fdc0ff59a0e66ca13",
+   "net": [
+    5.592956,
+    5.67398
+   ],
+   "why": "element id free in the target index (line added at r3)"
+  }
+ ],
+ "line_census_counts": {
+  "LIVE": 3,
+  "LIVE_NEW": 15
+ },
+ "missing_items": [
+  {
+   "key": "FIN.EXT.CORNERS (all floors)",
+   "status": "HELD (bounded)",
+   "unit": "lm",
+   "why": "external arrises: own m.l line; needs an item code with a registry family (T-337 FILL_ITEMS 710.171878 .. 821.858800 m.l with blank slab-edge arris)"
+  },
+  {
+   "key": "FIN.EXT.COPING",
+   "status": "UNKNOWN",
+   "unit": "lm",
+   "why": "none printed"
+  },
+  {
+   "key": "FIN.EXT.DRIP",
+   "status": "UNKNOWN",
+   "unit": "lm",
+   "why": "nothing drawn; owner not answered"
+  },
+  {
+   "key": "FIN.EXT.CORNERS accessory (beads)",
+   "status": "UNKNOWN",
+   "unit": "lm",
+   "why": "accessory on the same arrises, never a second edge"
+  },
+  {
+   "key": "FIN.EXT.FRAME",
+   "status": "HELD",
+   "unit": "m2",
+   "why": "frame / band profile not detailed (designer)"
+  },
+  {
+   "key": "FIN.EXT.FINISH DIVIDER",
+   "status": "UNKNOWN",
+   "unit": "m2",
+   "why": "no top level printed (T-324)"
+  },
+  {
+   "key": "FIN.WP.UPTURN-ZONE-FACE (4 roofs)",
+   "status": "HELD",
+   "unit": "m2",
+   "why": "waterproofing trade's face below the parapet inner finish; with the inner face ONE face 94.123 .. 99.558 m2, never summed high + high"
+  }
+ ],
+ "parapet_tops": [
+  {
+   "concrete_floor_m3": 1.799103,
+   "line": "NEW FIN.EXT.PARAPET-TOP ANNEX +4.30",
+   "top_run_low_m": 5.99701,
+   "verdict": "AGREES",
+   "x_0_30_m3": 1.799103
+  },
+  {
+   "concrete_floor_m3": 1.677886,
+   "line": "NEW FIN.EXT.PARAPET-TOP GF +5.50",
+   "top_run_low_m": 5.592956,
+   "verdict": "AGREES",
+   "x_0_30_m3": 1.677887
+  },
+  {
+   "concrete_floor_m3": 2.949453,
+   "line": "NEW FIN.EXT.PARAPET-TOP 1F +9.70",
+   "top_run_low_m": 9.83151,
+   "verdict": "AGREES",
+   "x_0_30_m3": 2.949453
+  },
+  {
+   "concrete_floor_m3": 1.6245,
+   "line": "NEW FIN.EXT.PARAPET-TOP 2F +13.90",
+   "top_run_low_m": 5.415,
+   "verdict": "AGREES",
+   "x_0_30_m3": 1.6245
+  }
+ ],
+ "pins": {
+  "research/agents_t172/VERTICAL_CORNERS_T172.csv": "c6f4f89bc2cf9196edcd7834c534762f2b27d8489c329f198d1fc5d186d43e60",
+  "research/agents_t337/BINDING_T337.csv": "c6c8ec03e27012e6f455f2f9ae3041cd704e18f6c1e4b8362508dd4017ff12b1",
+  "research/agents_t337/OPENINGS_T337.csv": "8866005a72e4dc8c83a6609f00999f3643b74f0f5759406ae90c44a7b670545e",
+  "research/agents_t655/out/LINE_INDEX_V3_0_61.json": "10e5f116d30af67f991a233388100c2575c87d9cbd9f8ce464fe78ee0ca1f0ec",
+  "research/agents_t661/out/LINE_INDEX_V3_0_62.json": "858eba3baca2e19450c8b78888ced615e8e68b34f0486717c1dd71e6b35a93df",
+  "research/agents_t665/out/LINE_INDEX_V3_0_63.json": "cd062bfe777af2393228f31893b71ae7032c8d0e6c1bcbe41b0194e36a8fe8d8",
+  "research/agents_t668/out/LINE_INDEX_V3_0_64.json": "4403697305f428b11c754e95af5258207d7ce3663fe7de1d687b5e2e5d879548",
+  "research/agents_t671/out/LINE_INDEX_V3_0_65.json": "e1887c34362b9d2f6558eab7bf825be958ee87206403995abef42be62a335ce1",
+  "research/agents_t672/out/LINE_INDEX_V3_0_68.json": "fc485958b2d1a51153409ca81a4f671b295766bc3bbfb27d9e1d43567df13e8d",
+  "research/agents_t677/out/LINE_INDEX_V3_0_66.json": "02065c41e79dd9df0873cd351e13801c809ca6fa1e62e8a04196af4af13724a7",
+  "research/agents_t682/out/LINE_INDEX_V3_0_67.json": "abe6d4988a76cece86ac60d6b13736aeda480eb7e98ce162b6adc0d8ed49ed03",
+  "research/agents_t687/out/LINE_INDEX_V3_0_69.json": "e908a5f105197d44277c8e1d2a2ef79c67b45681ca874d8c405e85d3b97602f1",
+  "research/agents_t693/out/LINE_INDEX_V3_0_70.json": "6c12da077200db176c6b81e0e869b21e731547f1e3265fb982c0be1ef7b7ec98",
+  "research/agents_t703/out/LINE_INDEX_V3_0_72.json": "8e753204d90ebf75d8fa5fe3de120f235bdb16e06a7d677e6aeb615e84ef5d2b",
+  "research/agents_t704/out/LINE_INDEX_V3_0_71.json": "eaea9f7e8cc838497bfe20a4454fab081af18717e1bc670a8473a74f5a81da6a",
+  "research/agents_t722/out/LINE_INDEX_V3_0_73.json": "af8d567d8a8ae8288ddf3c4c8207d2cbfcf2f322513af84e63a4448898ad7b23",
+  "research/agents_t728/out/T728_BEAD_ROWS.csv": "4905ddaeedd22c9eaec16e76470e9dedb71d3338d05bbdf7d10747126ac595f8",
+  "research/agents_t737/in/T314_STAGE_T737.json": "aa2701da225c274781bf5ff1c77335c6ddc661cad5b12db6c0a4672926ccdbb1"
+ },
+ "rule": "R-T737-1 1.0.0",
+ "schema": "URBAN_T737_EXTERIOR_READINESS_V1",
+ "sources": {
+  "research/agents_t305/FACE_LINE_LEDGER_T305.csv": "SAME",
+  "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv": "SAME",
+  "research/agents_t324/T-324_PARAPET_COMPONENTS.md": "SAME",
+  "research/agents_t337/BINDING_T337.csv": "SAME",
+  "research/agents_t337/FILL_ITEMS_T314_T337.csv": "SAME",
+  "research/agents_t337/FILL_T314_T337.csv": "SAME",
+  "research/agents_t337/ITEMS_T337.csv": "SAME",
+  "research/agents_t337/OPENINGS_T337.csv": "SAME",
+  "research/agents_t348/FACES_T348.csv": "SAME",
+  "research/agents_t348/FILL_T314_T348.csv": "SAME",
+  "research/agents_t349/CLOSURE_T349.csv": "SAME",
+  "research/agents_t567/out/FACES_T567.csv": "SAME"
+ },
+ "sources_changed": [],
+ "stage": {
+  "base": "ARCH_TAKEOFF_V3.0.61",
+  "base_short": "2bc99980",
+  "branch": "agents/task-T-314",
+  "commit": "080ccaa5",
+  "inputs_blob": "7c6cb3388b8425d16e8b20dd4a9c566ebbf6cc93",
+  "stage": "ARCH_TAKEOFF_V3.0.62 (stage; renumbered at claim)",
+  "stage_short": "6021be27",
+  "summary_blob": "040ed5f9a8766b1a779dc8c61d7daf22280e6c8a"
+ },
+ "stage_identity": {
+  "added": 15,
+  "base_lines": 5073,
+  "diff": {
+   "vs_base": {
+    "ADDED": 15,
+    "CHANGED": 3,
+    "SAME": 5070
+   }
+  },
+  "faces": {
+   "face_lines": 18,
+   "faces": 126,
+   "openings": 38
+  },
+  "outside_rows": 5070,
+  "outside_rows_identical_to_base": 5070,
+  "outside_rows_sha256": "bc504d29c92aeac3c5921264575352472141d407f4154d99b7b373bc1b0b6591",
+  "replaced": 3,
+  "v3_0_62_lines": 5088
+ },
+ "stale_lines": []
+}

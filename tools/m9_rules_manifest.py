@@ -100,12 +100,14 @@ AUTHORED = ("owner_decisions/URBAN_RULES_1.5.0.json", "materials/URBAN_MATERIAL_
             "coverage/BOQ_FAMILY_MASTER_1.72.0.json",   # T-704: 1.71.0 + ARCH_TAKEOFF_V3.0.71 (CONCRETE_GATE_B_V8: one-sided bounds beside the HELD blank STR.CONC.LINTEL lines from the merged T-699 ledger), pending on the task branch and promoted IN the merge (--promote); no quantity or owner change; read by no method
             "coverage/BOQ_FAMILY_MASTER_1.73.0.json",   # T-703: 1.72.0 + ARCH_TAKEOFF_V3.0.72 (MASONRY_GATE_B_V4: one-ended figures beside HELD blank masonry lines from the merged T-696 / T-713 ledgers, B9 held ranges restated with R-T696-1), pending on the task branch and promoted IN the merge (--promote); no quantity or owner change; read by no method
             "coverage/BOQ_FAMILY_MASTER_1.74.0.json",   # T-722: 1.73.0 + ARCH_TAKEOFF_V3.0.73 (CONCRETE_GATE_B_V9: held column lows raised by a one-plane slab-top transfer, lower-end figures beside HELD blank STR.CONC lines, holding items named, from the merged T-707 / T-711 / T-712 / T-721 ledgers as mapped by T-723), pending on the task branch and promoted IN the merge (--promote); no quantity or owner change; read by no method
+            "coverage/BOQ_FAMILY_MASTER_1.75.0.json",   # T-717: 1.74.0 + ARCH_TAKEOFF_V3.0.74 (FINISH_GATE_B_V2: annex plaster bounds, GF wet bands restated, return paint and stairwell bands added HELD from the merged T-701 / T-702 / T-709 ledgers as mapped by T-723), pending on the task branch and promoted IN the merge (--promote); no quantity or owner change; read by no method
             "owner_decisions/URBAN_RULES_1.6.0.json",   # T-158: owner stair rule UP-STAIR-015 over 1.5.0; rule_store not yet
             "owner_decisions/URBAN_RULES_1.7.0.json",   # T-267: owner stair finish-level rule UP-STAIR-016 over 1.6.0; rule_store not yet
             "rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json",  # T-448: Company Rulebook (owner 2026-11-02); read by company_rulebook_v1 only
             "owner_decisions/URBAN_RULES_1.8.0.json",  # T-461: UP-GEN-003 1.2.0 (Q-73 A) + UP-STAIR-017 (Q-53 C) over 1.7.0; rule_store_v2 only
             "conventions/URBAN_CONVENTIONS_1.0.0.json",  # T-599: UP-CONC-JOINT-001 LEAD_ADOPTED (Q-62 A delegated); read by no method
-            "rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json")  # T-615: 1.0.0 + UPC-BLACK-BLOCK-001 1.1.0 (Q-80: 0.15 m module 40 x 20); read by research/agents_t615 only
+            "rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json",  # T-615: 1.0.0 + UPC-BLACK-BLOCK-001 1.1.0 (Q-80: 0.15 m module 40 x 20); read by research/agents_t615 only
+            "rulebook/URBAN_COMPANY_RULEBOOK_1.2.0.json")  # T-740: 1.1.0 + UP-FIN-PAINT-002 1.0.0 (owner 2026-11-12: paint area = plaster area of the same faces); read by research/agents_t740 only
 REFERENCED = tuple(f"engine/profiles/URBAN_M{m}_GENERIC_CONVENTIONS_V{v}.json"
                    for m, v in ((2, 1), (3, 2), (4, 3), (5, 4), (7, 5), (8, 6)))
 
