@@ -1,0 +1,390 @@
+{
+ "align": [
+  {
+   "axis": "y",
+   "f1": "AC9",
+   "f2": "1274",
+   "gf": "2BC",
+   "gf_minus_1f_mm": 0.0,
+   "gf_minus_2f_mm": 0.0
+  },
+  {
+   "axis": "x",
+   "f1": "AF3",
+   "f2": "1287",
+   "gf": "9B",
+   "gf_minus_1f_mm": 1e-06,
+   "gf_minus_2f_mm": 2e-06
+  },
+  {
+   "axis": "x_minus_500",
+   "f1": "B62",
+   "gf": "2D6",
+   "gf_minus_1f_mm": 1e-06
+  }
+ ],
+ "engine": {
+  "1F": {
+   "categories_m2": {
+    "DOORWAY_STRIPS": 3.9736,
+    "EXTERNAL": 0.0,
+    "OPEN_PLAN_FLOOR": 0.0,
+    "ROOM_FLOOR": 148.6354,
+    "SHAFT": 3.24,
+    "SLIVERS": 0.0,
+    "STAIR_BELOW_SEEN": 6.7717,
+    "STAIR_FLIGHTS": 8.337,
+    "STAIR_LANDINGS_BOUND": 0.0,
+    "UNALLOCATED_MERGED": 0.0,
+    "UNALLOCATED_MIXED": 0.0,
+    "UNALLOCATED_UNLABELLED": 2.97,
+    "VOID": 16.005,
+    "WALL_AND_COLUMN_MASS": 20.5272
+   },
+   "gross_floor_plate_m2": 209.8017,
+   "internal_physical_floor_m2": 163.916,
+   "plate_components_m2": [
+    209.8017,
+    0.6581
+   ],
+   "plate_top_level_m2": 210.4598
+  },
+  "2F": {
+   "categories_m2": {
+    "DOORWAY_STRIPS": 1.19,
+    "EXTERNAL": 0.0,
+    "OPEN_PLAN_FLOOR": 0.0,
+    "ROOM_FLOOR": 24.9,
+    "SHAFT": 3.24,
+    "SLIVERS": 0.0,
+    "STAIR_BELOW_SEEN": 0.0,
+    "STAIR_FLIGHTS": 6.875,
+    "STAIR_LANDINGS_BOUND": 11.725,
+    "UNALLOCATED_MERGED": 0.0,
+    "UNALLOCATED_MIXED": 0.0,
+    "UNALLOCATED_UNLABELLED": 0.0,
+    "VOID": 0.0,
+    "WALL_AND_COLUMN_MASS": 7.8081
+   },
+   "gross_floor_plate_m2": 55.08,
+   "internal_physical_floor_m2": 44.69,
+   "plate_components_m2": [
+    55.08,
+    0.6581
+   ],
+   "plate_top_level_m2": 55.7381
+  },
+  "GF": {
+   "categories_m2": {
+    "DOORWAY_STRIPS": 9.8068,
+    "EXTERNAL": 9.101,
+    "OPEN_PLAN_FLOOR": 121.5333,
+    "ROOM_FLOOR": 75.443,
+    "SHAFT": 3.24,
+    "SLIVERS": 0.0,
+    "STAIR_BELOW_SEEN": 0.0,
+    "STAIR_FLIGHTS": 11.6194,
+    "STAIR_LANDINGS_BOUND": 9.05,
+    "UNALLOCATED_MERGED": 4.885,
+    "UNALLOCATED_MIXED": 0.0,
+    "UNALLOCATED_UNLABELLED": 14.5082,
+    "VOID": 0.0,
+    "WALL_AND_COLUMN_MASS": 25.618
+   },
+   "gross_floor_plate_m2": 284.1465,
+   "internal_physical_floor_m2": 246.8457,
+   "plate_components_m2": [
+    284.1465,
+    0.6581
+   ],
+   "plate_top_level_m2": 284.8046
+  }
+ },
+ "engine_rooms_outside_own_gross": [
+  {
+   "codes": [],
+   "m2": 3.6,
+   "outside_m2": 3.6,
+   "room_id": "GF-RF002DC"
+  },
+  {
+   "codes": [],
+   "m2": 1.56,
+   "outside_m2": 1.56,
+   "room_id": "GF-R7B7A5D"
+  }
+ ],
+ "frame_offset_dx_mm": 44852.655054,
+ "north_arrow": {
+  "1F": {
+   "block": "NR1",
+   "hull_m2": 6.228693,
+   "insert": "19A2",
+   "layer": "4",
+   "line_layers": [
+    "1",
+    "5"
+   ]
+  },
+  "2F": {
+   "block": "NR1",
+   "hull_m2": 6.228693,
+   "insert": "19A3",
+   "layer": "4",
+   "line_layers": [
+    "1",
+    "5"
+   ]
+  },
+  "GF": {
+   "block": "NR1",
+   "hull_m2": 6.228693,
+   "insert": "1612",
+   "layer": "4",
+   "line_layers": [
+    "1",
+    "5"
+   ]
+  }
+ },
+ "outlines": {
+  "1F": {
+   "arcs": [
+    {
+     "handle": "BD0+BCD",
+     "r_m": 1.935,
+     "sweep_deg": 104.473067
+    }
+   ],
+   "bbox_m": [
+    19.27,
+    12.0
+   ],
+   "handles": [
+    "AC9",
+    "AE3",
+    "AF3",
+    "AF4",
+    "B3A",
+    "B3B",
+    "B5D",
+    "B61",
+    "B62",
+    "B6C",
+    "BCD",
+    "BD0"
+   ],
+   "m2": 209.839104,
+   "perimeter_m": 63.008863,
+   "vertices": 425
+  },
+  "2F": {
+   "arcs": [],
+   "bbox_m": [
+    8.1,
+    6.8
+   ],
+   "handles": [
+    "1274",
+    "1281",
+    "1287",
+    "1288",
+    "1291"
+   ],
+   "m2": 55.08,
+   "perimeter_m": 29.8,
+   "vertices": 4
+  },
+  "GF_ANNEX": {
+   "arcs": [
+    {
+     "handle": "10D",
+     "r_m": 1.3,
+     "sweep_deg": 90.0
+    }
+   ],
+   "bbox_m": [
+    10.8,
+    6.7
+   ],
+   "handles": [
+    "107",
+    "10A",
+    "10D",
+    "120",
+    "12C",
+    "85",
+    "A2",
+    "A3"
+   ],
+   "m2": 60.477319,
+   "perimeter_m": 34.442034,
+   "vertices": 366
+  },
+  "GF_MAIN": {
+   "arcs": [
+    {
+     "bulged_polyline": true,
+     "bulges": [
+      0.86711
+     ],
+     "handle": "280"
+    }
+   ],
+   "bbox_m": [
+    19.37,
+    13.5
+   ],
+   "handles": [
+    "103",
+    "15A",
+    "26C",
+    "280",
+    "2B5",
+    "2BC",
+    "2D6",
+    "2F87",
+    "338",
+    "34C",
+    "34D",
+    "8B",
+    "94",
+    "9B",
+    "9C",
+    "9D",
+    "9E",
+    "A1",
+    "E2"
+   ],
+   "m2": 217.788972,
+   "perimeter_m": 71.844654,
+   "vertices": 673
+  },
+  "GF_PASSAGE": {
+   "arcs": [],
+   "bbox_m": [
+    1.2,
+    4.9
+   ],
+   "handles": [
+    "15A",
+    "86",
+    "9F",
+    "A1",
+    "A2",
+    "A3"
+   ],
+   "m2": 5.88,
+   "perimeter_m": 12.2,
+   "vertices": 4
+  },
+  "PLOT": {
+   "arcs": [],
+   "bbox_m": [
+    31.37,
+    15.0
+   ],
+   "handles": [
+    "107",
+    "85",
+    "8E",
+    "98"
+   ],
+   "m2": 470.55,
+   "perimeter_m": 92.74,
+   "vertices": 4
+  }
+ },
+ "overlay": {
+  "1F_outside_GF_and_passage_m2": 25.945133,
+  "1F_outside_plot_m2": 0.0,
+  "1F_over_outside_GF_m2": 30.025133,
+  "1F_over_outside_GF_pieces": [
+   {
+    "bbox_m": [
+     4.4,
+     7.5
+    ],
+    "in_passage_m2": 4.08,
+    "m2": 21.56
+   },
+   {
+    "bbox_m": [
+     2.58,
+     5.4
+    ],
+    "in_passage_m2": 0.0,
+    "m2": 8.465133
+   }
+  ],
+  "1F_roof_not_under_2F_m2": 154.759104,
+  "2F_outside_1F_m2": 0.0,
+  "GF_not_under_1F_m2": 98.452319,
+  "passage_under_1F_m2": 4.08,
+  "plot_outside_GF_envelope_m2": 192.28371,
+  "plot_outside_GF_not_under_1F_m2": 162.258577
+ },
+ "printed_dims": [
+  {
+   "diff_mm": 0.0,
+   "dim": "A67",
+   "faces": [
+    "107",
+    "9B"
+   ],
+   "own_m": 15.0,
+   "printed_m": 15.0
+  },
+  {
+   "diff_mm": 0.0,
+   "dim": "598",
+   "faces": [
+    "10A",
+    "98"
+   ],
+   "own_m": 8.3,
+   "printed_m": 8.3
+  },
+  {
+   "diff_mm": 0.0,
+   "dim": "5F9",
+   "faces": [
+    "298",
+    "B6"
+   ],
+   "own_m": 15.97,
+   "printed_m": 15.97
+  },
+  {
+   "diff_mm": -1e-06,
+   "dim": "D87",
+   "faces": [
+    "107",
+    "B3A"
+   ],
+   "own_m": 10.6,
+   "printed_m": 10.6
+  },
+  {
+   "diff_mm": 1e-06,
+   "dim": "143C",
+   "faces": [
+    "1291",
+    "B5D"
+   ],
+   "own_m": 6.77,
+   "printed_m": 6.77
+  }
+ ],
+ "reveal_1F_east": {
+  "depth_m": 0.08,
+  "handles": [
+   "B61",
+   "C37",
+   "2FD8"
+  ],
+  "length_m": 0.467302,
+  "m2": 0.037384
+ },
+ "unit_m": 0.001
+}
