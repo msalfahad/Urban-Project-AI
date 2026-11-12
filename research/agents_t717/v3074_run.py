@@ -84,7 +84,7 @@ def main(argv=None):
         L74.rebuild_ledgers()
         f.write_text(json.dumps(L74.build(), ensure_ascii=False, indent=1), encoding="utf-8")
         seen["out"] = o
-        return real(args)
+        return real(args + ["--v3074-inputs", str(f)])
     M.main = hub
     try:
         R73.main(argv)        # its own wrappers re-point V3.0.72 -> .73 and call this one (their asserts run)
