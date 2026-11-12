@@ -103,6 +103,9 @@ changed 1, B8-06 changed 1. Summary `out/T736_SUMMARY.json`.
   AT_LEAST; the row-level band stays in the ledger rows. Consistent with R-T730-1 (4) / R-T729-1 (c).
 - F-T736-3 (index stale block): the 1.77.0 pending registry still says B4-09 'not in candidate'; the census sees 14
   lines: the in-merge promotion rewrites the block (as every first-line family before).
+- F-T736-4 (rounding, immaterial): the exact band high is 115.81397437; R-T696-1 (highs round up) would print
+  115.813975, the record prints 115.813974. Wired as the record states (the integrator changes no Checker figure);
+  residual 0.000001 m2 named for the Checker.
 - Held / missing: 6 interior arrises blank by name; exterior beads (43 arrises, H2b) wait T-314 r3 / D-62: no line.
 - Downstream: none outside the three codes (asserted); bead lines bind their hosts by id and are never summed into m2.
 
