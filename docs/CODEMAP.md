@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 5825 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 5832 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 85 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2660 | pytest suites, one folder per round. |
+| `tests/` | 2661 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -1702,6 +1702,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t716_designer_census/` | 1 |
 | `tests/t718_stair_finish_bounds/` | 1 |
 | `tests/t719_void_register/` | 1 |
+| `tests/t720_gross_area/` | 1 |
 | `tests/t721_beam_blank_bounds/` | 1 |
 | `tests/t722_concrete_side/` | 3 |
 | `tests/t723_wiring_readiness_r4/` | 2 |
@@ -2417,6 +2418,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t716/` | 5 |
 | `research/agents_t718/` | 7 |
 | `research/agents_t719/` | 7 |
+| `research/agents_t720/` | 7 |
 | `research/agents_t721/` | 5 |
 | `research/agents_t722/` | 11 |
 | `research/agents_t723/` | 7 |
