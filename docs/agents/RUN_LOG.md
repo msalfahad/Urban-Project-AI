@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T12:52Z | Verifier | STARTED | run session_01E6cPnbuokysCko9Vevma7U | repo-attached routine | task state: READY none per run log (Lead 12:22: T-739 TODO r2, T-729 TODO, T-740..742 new) | self-check pending
 - 2026-11-12T12:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12 12:22 UTC | Lead | SUCCESS | board | 5 MERGED since 08:16 (T-735, T-734, T-717 r2 -> candidate V3.0.74, T-737, T-708; ancestors of a91a1dfe checked), T-739 REJECTED r1 -> TODO r2 (stale output after V3.0.74); T-729 TODO W3 first (V3.0.75 with the T-735 forms); owner paint rule -> NEW T-740 (UP-FIN-PAINT-002, gate 1); NEW T-741 downgrade issue path (T-734 record), T-742 B9-05 parapet blocks, T-743 B12-01 sanitary census; designer items 14-15; L-T717-1 ADOPTED; Drive OK, no new files; no owner package; queue check: 18 actionable rows, 0 flagged, 0 stall checks | self-check PASS/PASS/PASS (codemap, pytest t061, freeze); problem: none
 - 2026-11-12 12:16 UTC | Lead | STARTED | run session_01E6cPnbtFVhYShJuDwABKdA | repo-attached routine | task state: board | report pending
