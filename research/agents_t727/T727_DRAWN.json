@@ -1,0 +1,105 @@
+{
+ "junction_F1_F4": {
+  "F1_F4_union_m2": 7.486974,
+  "F1_footprint_m2": 4.094412,
+  "F1_last_quad_m2": 0.398468,
+  "F1_typical_quad_m2": 0.336031,
+  "F4_footprint_m2": 3.45,
+  "below_seen": {
+   "F1": true,
+   "F4": true,
+   "F6": true
+  },
+  "common_length_m": 1.15,
+  "engine_footprint_overlap_m2": 0.057438,
+  "engine_footprint_overlap_w_h_m": [
+   0.05,
+   1.15
+  ],
+  "engine_tread_quads_overlap_m2": 0.057438,
+  "gf_plan_same_place": {
+   "B43": [
+    [
+     "22F",
+     "5"
+    ]
+   ],
+   "B4E": [
+    [
+     "234",
+     "2"
+    ]
+   ]
+  },
+  "handles": {
+   "F1_last_line": "B4E",
+   "F4_first_riser": "B43"
+  },
+  "kinds": {
+   "F1": "RADIAL",
+   "F4": "STRAIGHT"
+  },
+  "layers": {
+   "B43": "5",
+   "B4E": "2"
+  },
+  "lengths_m": {
+   "B43": 1.15,
+   "B4E": 1.15
+  },
+  "overlap_equals_strip_m2": 6.2e-05,
+  "parallel_same_direction": true,
+  "spacing_m": 0.05,
+  "strip_by_handles_m2": 0.0575
+ },
+ "roof_over_well_2F": {
+  "east_dome_overlap_with_face_in_well_m2": 0.108438,
+  "east_dome_overlap_with_well_m2": 0.108438,
+  "entities_crossing_well_by_type_layer": {
+   "CIRCLE/5": 1,
+   "INSERT/4": 1,
+   "LINE/S-COL.BON": 1
+  },
+  "named_entities": [
+   {
+    "block": "ROOF",
+    "handle": "12AA",
+    "layer": "4",
+    "type": "INSERT"
+   },
+   {
+    "block": null,
+    "handle": "2F33",
+    "layer": "5",
+    "type": "CIRCLE"
+   }
+  ],
+  "opening_outline_found": false,
+  "own_flights_F2_F3_F5_gap_to_well_m": 3.686801,
+  "own_flights_F2_F3_F5_in_well_m2": 0.0,
+  "roofed_face_in_well_m2": 26.064062,
+  "west_dome_overlap_with_well_m2": 0.0
+ },
+ "unit_m": 0.001,
+ "well_pieces_1F": {
+  "below_seen_each_m2": {
+   "F1": 1.981668,
+   "F4": 3.41,
+   "F6": 1.38
+  },
+  "below_seen_sum_m2": 6.771668,
+  "below_seen_union_increments_m2": {
+   "F1": 1.981668,
+   "F4": 3.352562,
+   "F6": 1.38
+  },
+  "below_seen_union_m2": 6.71423,
+  "face_in_well_m2": 26.1725,
+  "overlap_inside_void_window_m2": 0.0,
+  "overlap_inside_well_m2": 0.057438,
+  "remainder_after_void_and_union_m2": 3.45327,
+  "sum_minus_union_m2": 0.057438,
+  "void_window_m2": 16.005,
+  "well_m2": 26.24
+ }
+}
