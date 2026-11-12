@@ -9,6 +9,7 @@ except the source statuses of the four ranges T-695 / T-700 newly bounded (named
   research/agents_t722/out/LINE_INDEX_V3_0_73.json   newest candidate line index (earthworks + ground-slab lines
                                              asserted equal to V3.0.69, T-700's record)
   research/agents_t687/out/LINE_INDEX_V3_0_69.json
+  research/agents_t717/out/LINE_INDEX_V3_0_74.json   newest at hand-in (T-717): the same lines, asserted
   research/agents_t505/summary_t505.json     merged T-505 result on the candidate of record (scenario A check)
 
     python3 -I research/agents_t708/t708_alsenan.py   -> RECON_Z2_T708.csv, BALANCE_T708.json, WIRING_T708.csv,
@@ -87,12 +88,14 @@ def _idx(rel):
 
 
 def lines_equal():
-    a, b = _idx("agents_t687/out/LINE_INDEX_V3_0_69.json"), _idx("agents_t722/out/LINE_INDEX_V3_0_73.json")
+    a = _idx("agents_t687/out/LINE_INDEX_V3_0_69.json")
     k = lambda i, c: sorted((x["element_id"], x["line_id"], x["class"], x["measured_net"], x["held_low"],  # noqa
                              x["held_high"]) for x in i["lines"] if x["item_code"].startswith(c))
-    for c in ("STR.EARTH.", "STR.CONC.GROUND_SLAB"):
-        assert k(a, c) == k(b, c), f"{c} lines moved between V3.0.69 and V3.0.73"
-    return b
+    for rel in ("agents_t722/out/LINE_INDEX_V3_0_73.json", "agents_t717/out/LINE_INDEX_V3_0_74.json"):
+        b = _idx(rel)
+        for c in ("STR.EARTH.", "STR.CONC.GROUND_SLAB"):
+            assert k(a, c) == k(b, c), f"{c} lines moved between V3.0.69 and {b['candidate_version']}"
+    return b                                       # the newest candidate (V3.0.74)
 
 
 # -------------------------------------------------------------------------------------------- (a) Z2 recon ----
@@ -181,7 +184,7 @@ def wiring_t509(resA, resB, cA, cB, beside_b):
     f = lambda e: "" if e["value"] is None else f"{e['value']:.6f}"  # noqa: E731
     q = lambda e: e["qualifier"]  # noqa: E731
     rows = []
-    for tag, res, c, pre in (("A", resA, cA, "candidate of record (V3.0.50 .. V3.0.73 earthworks lines unchanged): "
+    for tag, res, c, pre in (("A", resA, cA, "candidate of record (V3.0.50 .. V3.0.74 earthworks lines unchanged): "
                                               "T-509 as queued"),
                              ("B", resB, cB, "AFTER the T-695 / T-700 wiring rows land in the candidate (straps, "
                                              "annex, Z2 ranges, three calculated zeros); never before")):

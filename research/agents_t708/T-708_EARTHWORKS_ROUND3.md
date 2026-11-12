@@ -21,7 +21,7 @@ Files: `balance_restate.py` (pure, every villa: `reconcile_plan_x_depth` R-T708-
 - Own text census of the ST DXF (409 distinct texts, model space, layouts, blocks): 'T=10cm' (x2), 'B.C Kg/cm' /
   '2.20 kg/cm' (bearing capacity), nothing on fill density, compaction, Proctor, soil report or disposal. The densities
   therefore have no drawing source: HELD, the tests named (s.3).
-- Earthworks and ground-slab lines of the newest candidate V3.0.73 (T-722) equal V3.0.69 (T-700's record) and the
+- Earthworks and ground-slab lines of the newest candidate V3.0.73 (T-722) and V3.0.74 (T-717) equal V3.0.69 (T-700's record) and the
   V3.0.50 figures T-505 used (asserted line by line).
 
 ## 1. (a) Z2: owner plan x depth against the drawing-derived zone, term by term
@@ -59,7 +59,7 @@ it is larger; the owner figure stays beside as a check.
 
 DISPOSAL_BALANCE_V2 (T-505) run twice, unchanged, every density, the suitable share and both losses HELD:
 
-| | A: candidate of record (V3.0.73 = T-505) | B: T-695 / T-700 wiring rows taken |
+| | A: candidate of record (V3.0.74 = T-505) | B: T-695 / T-700 wiring rows taken |
 |---|---|---|
 | excavation E closed, in situ | 233.205833 .. 234.333083 (9 lines open) | 244.034031 .. 271.861583 (6 open) |
 | fill demand D closed, compacted | 119.963335 .. 128.643547 (6 open) | 256.864330 .. 292.123036 (3 open) |
