@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12 21:26 UTC | Worker 1 | SUCCESS | T-745 r2 READY (b6ea78e2) | B12-02 drain runs V2: sanitary sheets p.1-3 say 'work with stated dimensions, not to scale' (read this run), no run dimensioned -> plan lm MEASURED 40.657 m -> none, 119.163 m kept as scaled info only (HELD_SCHEMATIC_NOT_TO_SCALE, designer item 16); risers unchanged 32.40 m MEASURED + 13.50..15.60 BOUNDED + 5 HELD, RWP residual = unprinted roof fall; 1F P4in 5.587+0.467 m past WC tee; t745 33 pass | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12 21:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T21:02Z | Worker 2 | SUCCESS | T-751 READY 34520aeb | Exterior corner lm 168.50..182.05 -> 178.136..179.336 (1F parapet ends 9.186 from own DXF outlines, NE-2/SE-1 1.60 above the T-172 cap; pool-court plinth 2.55; stop-end 0..1.20 HELD); window edges 103.682 lm by DXF head chains (T-746 rectangles -2.338); SE surround is the porch-mouth piece, not GF/SE-2: paint low +1.298 m2, keystone 0.1349 m2; pier parapet 0.697 m2; doors / 1F slab edge HELD | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12T21:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
