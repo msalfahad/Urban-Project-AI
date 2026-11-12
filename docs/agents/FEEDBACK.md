@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-12 16:20 (since 12:20)
+
+- T-741 downgrade issue path: WORKED (MERGED 01f060bd; the Checker issued DG-a429c160, roof membrane L-636fd3ff RELEASED -> HELD).
+- T-740 paint rule UP-FIN-PAINT-002: WORKED (MERGED 0f0e0cd0; 3 faces AGREE; paint 841.261 .. 929.205 m2) -> opening edges lm by the owner rule: NEW T-746; exterior paint: NEW T-747; wiring NEW T-749.
+- T-739 r2 all-trade statement: WORKED (MERGED 0d3bf6a1; 5,155 lines, causes sha-pinned) -> restated on V3.0.75 in NEW T-748.
+- T-742 parapet blocks census: WORKED as a census (MERGED 1370c295; 4 lines HELD on Q-65 C / D-39, designer items; no new question).
+- T-743 sanitary census: READY (verdict pending); finding 9 phantom fixtures -> NEW T-744 after it; L-T743-1 PROPOSED.
+- T-729 formwork + C10 Gate B: READY (Checker running).
+
 ## Lead 2026-11-12 12:20 (since 08:16)
 
 - T-735 formwork conflict decider: WORKED (MERGED 870f15f5; 7 lines one live form each, Checker by hand AGREE) -> T-729 carries them.

@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-12 16:20; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) + owner paint rule 2026-11-12 in force)
+
+- Candidate of record V3.0.74 bea5be02 (NOT RELEASED). Since 12:20 MERGED: T-741 (01f060bd), T-740 (0f0e0cd0), T-739 r2 (0d3bf6a1), T-742 (1370c295); Checker record DG-a429c160 issued (roof membrane released -> HELD). READY 2: T-729 (Gate B, V3.0.75), T-743.
+- Hub order: T-729 (V3.0.75) -> T-736 (beads H2a + ceiling r3) -> T-749 (paint rule wiring, after T-746) -> T-738 (tiles H3 + stair finishes H3s) -> T-314 r3 exterior plaster -> H4 WP -> T-509 H5 earthworks. Gate A: T-746 opening edges lm (gate 1), T-744 tag-not-fixture fix, T-748 readiness R6 + scorecard on V3.0.75, T-747 exterior paint, T-745 drain runs census.
+- Confidence: formwork + C10 13 Nov MEDIUM-HIGH (in Gate B); scorecard on V3.0.75 13-14 Nov MEDIUM; beads 15 Nov MEDIUM; paint wiring 15 Nov MEDIUM; tiles / stair finishes 15-16 Nov MEDIUM; WP 16-17 Nov LOW-MEDIUM; 19-20 Nov blind test only when ready.
+
 ## Status (Lead, 2026-11-12 12:20; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) + owner paint rule 2026-11-12 in force)
 
 - Candidate of record V3.0.74 bea5be02 / master 1.75.0 (NOT RELEASED; T-717 r2 Gate B PASS, merge e6481b43, L4 0 fail). Since 08:16 MERGED: T-735 (870f15f5), T-734 (3d8185fe), T-717 r2 (e6481b43 + 10889521), T-737 (891c14ea), T-708 (a91a1dfe). REJECTED: T-739 r1 (output stale after V3.0.74). READY 0.

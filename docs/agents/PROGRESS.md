@@ -1,5 +1,30 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-12 16:20 UTC (Lead). Previous version: 2026-11-12 12:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched) except one correction: the roof membrane line that was 0.018 m2 above its own measured band is now held by
+the checker's correction record (115.832 m2 released -> held). Your measure: whole BOQ lines independently verified in
+the candidate: unchanged (concrete 1 of 8 compared lines, the slab); released: 0.
+
+Since 12:20 (newest first):
+- Your paint rule is now a rule version with its test. Paint measured by it: 841.26 .. 929.21 m2 (was 822.20 .. 927.22
+  by the old method, +2.3 / +0.2 %); every m2 between plaster and paint is explained by false-ceiling bands, tiled faces
+  and named causes, residual 0. Not yet in the candidate (wiring package after the beads package).
+- Window / door edges: your rule says metres, so they become lm items, not paint m2 (about 20.25 m2 leaves the area
+  line); task set. Exterior paint lines (blank today) will follow the exterior render faces; task set.
+- Formwork + small concrete round package handed in (formwork released 1,027.98 -> 1,061.10 m2 from verified fixes;
+  held ranges kept); the checker is running its full test now.
+- All-trade totals statement redone on the current candidate (5,155 lines; 2,797 held, each with a named cause;
+  nothing released); it will be restated once more when the formwork package lands.
+- Block parapets counted wall by wall (25 runs; 4 lines held 0 .. 101.46 m2 until the parapet material is confirmed
+  by the designer).
+- Sanitary count (count only, not in the BOQ yet): WC 12, basins 17, shower trays 3 + walk-in 3, floor drains 19;
+  kitchen sink and washing point held. It found 9 room labels the engine was reading as fixtures: fix task set.
+- Milestone: reconciled quantities + scorecard estimate 14-16 Nov stands: formwork 13 Nov (in check), totals 13 Nov,
+  beads 15 Nov, paint wiring 15 Nov, tiles 15-16 Nov; waterproofing after.
+
+Previous section (2026-11-12 12:20):
+
 Last update: 2026-11-12 12:20 UTC (Lead). Previous version: 2026-11-12 08:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared
