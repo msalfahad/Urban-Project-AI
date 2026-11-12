@@ -220,7 +220,8 @@ def test_roof_record_draft_is_downgrade_only(dev):
 
 def test_upturn_is_not_a_downgrade(dev):
     u = dev["roof"]["upturn"]
-    assert u["true_lm"] == "92.925396" and "NOT A DOWNGRADE" in u["class"]
+    assert u["true_lm"] == "92.925396" and "NOT A DOWNGRADE" in u["class"] and u["corrected_lm"] == "92.925"
+    assert u["residual_named"] == "0.000000"                 # 65.140 + 2 x 13.891 = 92.922 exactly
 
 
 def test_census_on_v3073(dev):

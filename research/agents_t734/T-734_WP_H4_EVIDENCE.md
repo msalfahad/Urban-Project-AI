@@ -40,8 +40,9 @@ goes to the audit rows; the H4 package then writes HELD 115.656474 .. 115.813974
 not released (its high end rests on the D-BAND reading).
 
 **Upturn L-5ce5ba49 92.922 -> 92.925396 lm: not a downgrade** (it raises a released value: a Gate B change, no record
-needed; the T-730 'WAITS T-734' blocker on it can go). Open: +0.000750 lm between 92.922 and the 105-chord
-reconstruction 92.921250, unnamed here. **Rolls 17 pcs** not named; sensitivity to the D-BAND not re-run.
+needed; the T-730 'WAITS T-734' blocker on it can go). Cause reconciled exactly: 65.140 + 2 x 13.891 = 92.922, the
+engine rounding each 105-chord ring 13.890625 to 3 decimals before summing (exterior_spaces.py); true rings 13.892698
+-> 92.925396 (-0.004146 chord + 0.000750 rounding = -0.003396 lm, residual 0). **Rolls 17 pcs** not named; sensitivity to the D-BAND not re-run.
 
 ## (b) Census on V3.0.73
 

@@ -184,9 +184,15 @@ def roof():
                    "class": "NOT A DOWNGRADE (R-T734-1 d): 92.922 -> 92.925 raises a released value; a Gate B "
                             "change with its own re-measure, needing no record; the T-730 H4 blocker 'WAITS T-734' on "
                             "this row can be lifted",
-                   "open": "a +0.000750 lm residual between the released 92.922 and the 105-chord reconstruction "
-                           "92.921250 is not named in this run (above the 0.0005 rounding half-step): the Gate B "
-                           "re-measure of the upturn change names it before wiring"},
+                   "engine_rounding": ("engine/source/exterior_spaces.py rounds each hole ring to 3 decimals "
+                                       "before summing (holes[...]['perimeter_lm'] = round(ring.length, 3); upturn = "
+                                       "perimeter + sum of OPENING rings): 65.140 + 2 x round(13.890625, 3) = 65.140 "
+                                       f"+ 2 x 13.891 = {R.q6(fd['perimeter_m'] + 2 * R.D(round(poly['ring_m'], 3)))}"),
+                   "residual_named": str(R.q6(R.D(ROOF["released_upturn_lm"])
+                                              - (fd["perimeter_m"] + 2 * R.D(round(poly["ring_m"], 3))))),
+                   "corrected_lm": str(up_true.quantize(Decimal("0.001"))),
+                   "cause": f"two 105-chord rings short {R.q6(R.D(true['ring_m']) - R.D(poly['ring_m']))} m each "
+                            "(R-T691-1) + per-ring rounding up 0.000375 each: -0.004146 + 0.000750 = -0.003396 lm"},
         "rolls": {"line": ROOF["rolls_line"], "released_pcs": ROOF["released_rolls_pcs"],
                   "statement": "not named by the record (another line, unit pcs): the procurement count is KEEP in "
                                "T-730; the strip count's sensitivity to the 0.075 D-BAND and to 0.018 m2 was not "
@@ -301,7 +307,8 @@ def md(d):
           "content):", "", "```", json.dumps(r["downgrade_record_draft"], indent=1, ensure_ascii=False), "```", "",
           "Which figure: " + r["which_figure_the_downgrade_keeps"] + ".", "",
           f"Upturn {r['upturn']['line']}: {r['upturn']['released_lm']} -> {r['upturn']['true_lm']} lm. "
-          f"{r['upturn']['class']}. Open: {r['upturn']['open']}.", "",
+          f"{r['upturn']['class']}. Cause: {r['upturn']['cause']}; {r['upturn']['engine_rounding']} "
+          f"(residual {r['upturn']['residual_named']}).", "",
           f"Rolls {r['rolls']['line']} {r['rolls']['released_pcs']} pcs: {r['rolls']['statement']}.", "",
           "## (b) Census on V3.0.73 (R-T734-3)", "",
           f"WP lines {c['wp_lines_v3070']} (V3.0.70) = {c['wp_lines_v3073']} (V3.0.73), ids equal "

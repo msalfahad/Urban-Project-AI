@@ -1396,13 +1396,16 @@
    "statement": "not named by the record (another line, unit pcs): the procurement count is KEEP in T-730; the strip count's sensitivity to the 0.075 D-BAND and to 0.018 m2 was not re-run here (the roof layout inputs live in the engine trace)"
   },
   "upturn": {
+   "cause": "two 105-chord rings short 0.002073 m each (R-T691-1) + per-ring rounding up 0.000375 each: -0.004146 + 0.000750 = -0.003396 lm",
    "chord_reconstruction_lm": "92.921250",
    "class": "NOT A DOWNGRADE (R-T734-1 d): 92.922 -> 92.925 raises a released value; a Gate B change with its own re-measure, needing no record; the T-730 H4 blocker 'WAITS T-734' on this row can be lifted",
+   "corrected_lm": "92.925",
    "dband_effect_lm": "0.000 (both readings give perimeter 65.140: the strip trades 12E6 0.075 for its 0.075 top edge)",
+   "engine_rounding": "engine/source/exterior_spaces.py rounds each hole ring to 3 decimals before summing (holes[...]['perimeter_lm'] = round(ring.length, 3); upturn = perimeter + sum of OPENING rings): 65.140 + 2 x round(13.890625, 3) = 65.140 + 2 x 13.891 = 92.922000",
    "line": "L-5ce5ba49792e8f9d1f6f",
-   "open": "a +0.000750 lm residual between the released 92.922 and the 105-chord reconstruction 92.921250 is not named in this run (above the 0.0005 rounding half-step): the Gate B re-measure of the upturn change names it before wiring",
    "released_lm": "92.922",
    "residual_lm": "0.000750",
+   "residual_named": "0.000000",
    "true_lm": "92.925396"
   },
   "which_figure_the_downgrade_keeps": "the record keeps NO figure of its own (owner 2026-10-24 23:57: never a Checker measurement). It binds the released 115.832 (engine_qty), which stays only in the audit rows ('Audit (unsupported basis)'). The line becomes HELD; the H4 package then writes the drawing band 115.656474 .. 115.813974 m2 (both ends measured; neither chosen). 115.813974 is NOT released: its high end rests on the unprinted D-BAND reading"
