@@ -74,6 +74,11 @@ gross, ENGINE_RIGHT on width / depth) unchanged.
 | GF NW corner | square 0.20 x 0.20 inside ARC 316 (r 0.231334) | 0.029309 | NAMED blank corner child |
 | 1F NW corner | square inside ARC 647 (same r, same offset) | 0.029309 | NAMED blank corner child |
 
+Neighbours checked on the DXF: the GF west strip is L-aba59a21 (BM-GF-061, 0.2 x 4.1): outer edge 2B6 / 2FB / 2B7 at
+0.200 from 2B5, from beam face 2AF to the y of 2C6 = 4.100 m (= its line 0.82 m2; ticks 2F9 / 2FA / 2FC inside it), so
+it ends at the corner square's south face; the 1F west strip L-a9d5e7dc (5E7 / 5E5, 7.500) ends at the y of 5E1. The
+route G band overlay (SH06 GF) shows BAND0031.1 / .2 with the 0.80 gap at the column and no band over the corner.
+
 R-T724-4 / R-CONC-OWN-1: no line's stated basis contains a piece (the span lines stop at the column faces; the north
 strip starts at the square's east face, the west strips end at its south face), and no two do; folding a piece into
 the neighbouring span line would be a choice, so each is named with its exact area. No double count: columns and beam

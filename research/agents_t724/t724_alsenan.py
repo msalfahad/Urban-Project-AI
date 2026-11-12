@@ -98,7 +98,8 @@ STRIPS = [
      "column": "366 (S-COL.BON, 0.80 x 0.25, north face = strip edge 2C6)", "length": 4.325, "col": (3.000, 3.800),
      "lines": {"L-634cefe5e8a7fb458e16": (0.0, 3.0005), "L-331d4bbef719a7f0bbca": (3.800, 4.3251)},
      "corner_arc": "316", "corner_between": "north strip BAND0031 (starts at the square's east face, 2C6 / 2C7 end "
-                                            "x = 2B5) and the GF west strip (2B7 / 2B5, ends at the square's south face)"},
+                                            "x = 2B5) and the GF west strip L-aba59a21 BM-GF-061 (2B6 / 2FB / 2B7 vs 2B5, "
+                                            "0.200 x 4.100 from 2AF to y of 2C6: ends at the square's south face)"},
     {"floor": "1F", "member": "BM-1F-033 projection BAND0013 (edges 5E1 / 5E6, 0.200 apart, unbroken 4.325 m)",
      "column": "68C (S-COL.BON, 0.80 x 0.25, north face = strip edge 5E1)", "length": 4.325, "col": (3.000, 3.800),
      "lines": {"L-67f3d325019e618328eb": (0.0, 2.9987), "L-54e397fe7b1485b2e8fe": (3.800, 4.3238)},

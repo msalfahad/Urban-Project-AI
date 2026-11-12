@@ -494,7 +494,7 @@
      "record_slivers_m2": {},
      "rule": "R-T724-4",
      "state": "NAMED_BLANK_CHILD",
-     "where": "north strip BAND0031 (starts at the square's east face, 2C6 / 2C7 end x = 2B5) and the GF west strip (2B7 / 2B5, ends at the square's south face)"
+     "where": "north strip BAND0031 (starts at the square's east face, 2C6 / 2C7 end x = 2B5) and the GF west strip L-aba59a21 BM-GF-061 (2B6 / 2FB / 2B7 vs 2B5, 0.200 x 4.100 from 2AF to y of 2C6: ends at the square's south face)"
     },
     {
      "area_m2": "0.16",
