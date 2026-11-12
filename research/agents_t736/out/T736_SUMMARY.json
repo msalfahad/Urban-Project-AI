@@ -1,0 +1,667 @@
+{
+ "census_after": {
+  "FIN.CEILING": {
+   "at_least_n": 0,
+   "at_least_sum_run_record_only": 0.0,
+   "blank": 4,
+   "bounded": 0,
+   "excluded": 1,
+   "high": 0.0,
+   "lines": 41,
+   "low": 0.0,
+   "released": 36,
+   "released_q": 411.337177,
+   "unit": "m2"
+  },
+  "FIN.PLASTER.BEAD": {
+   "at_least_n": 5,
+   "at_least_sum_run_record_only": 128.6328,
+   "blank": 5,
+   "bounded": 9,
+   "excluded": 0,
+   "high": 165.65,
+   "lines": 14,
+   "low": 165.45,
+   "released": 0,
+   "released_q": 0.0,
+   "unit": "lm"
+  },
+  "FIN.WP.ROOF": {
+   "at_least_n": 0,
+   "at_least_sum_run_record_only": 0.0,
+   "blank": 1,
+   "bounded": 2,
+   "excluded": 0,
+   "high": 116.453547,
+   "lines": 6,
+   "low": 115.656474,
+   "released": 3,
+   "released_q": 93.186867,
+   "unit": "m2"
+  }
+ },
+ "census_before": {
+  "FIN.CEILING": {
+   "at_least_n": 0,
+   "at_least_sum_run_record_only": 0.0,
+   "blank": 5,
+   "bounded": 0,
+   "excluded": 0,
+   "high": 0.0,
+   "lines": 41,
+   "low": 0.0,
+   "released": 36,
+   "released_q": 411.337177,
+   "unit": "m2"
+  },
+  "FIN.WP.ROOF": {
+   "at_least_n": 0,
+   "at_least_sum_run_record_only": 0.0,
+   "blank": 1,
+   "bounded": 1,
+   "excluded": 0,
+   "high": 0.639573,
+   "lines": 6,
+   "low": 0.0,
+   "released": 4,
+   "released_q": 209.018867,
+   "unit": "m2"
+  }
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.75",
+ "identity": {
+  "added": 14,
+  "base_lines": 5159,
+  "beads_ceiling": {
+   "BEAD_ADD:AT_LEAST": 5,
+   "BEAD_ADD:BOUND": 9,
+   "CEIL_EXCL:EXCLUDE": 1,
+   "DG_HOLD:HOLD": 1
+  },
+  "diff": {
+   "vs_base": {
+    "ADDED": 14,
+    "CHANGED": 2,
+    "SAME": 5157
+   },
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3581,
+    "QUANTITY_DIFFERS": 1054,
+    "SAME_QUANTITY": 538
+   }
+  },
+  "outside_rows": 5157,
+  "outside_rows_identical_to_base": 5157,
+  "outside_rows_sha256": "06bf11e5138ce9d23c93ce7e125b86dd9e1beebafdd5146c48f39b83a0c3ff91",
+  "replaced": 2,
+  "v3_0_76_lines": 5173
+ },
+ "lines_sha256": {
+  "V3_0_75": "a1eba08f9fac04c914aa3a5d7a88a9aee22d09d187709f008c5d956565372dc0",
+  "V3_0_76": "9b35725cf55ec092a321bb6000883f3480ef04e70c5445de02e42f4f77be59c0"
+ },
+ "method": "ARCH_TAKEOFF_V3.0.76",
+ "rows": [
+  {
+   "action": "BOUND",
+   "after_v3_0_76": {
+    "high": 28.85,
+    "low": 28.85,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": null,
+   "blank_arrises": [],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:GF_15#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-0d93f2209cd9bb827c0a",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-3f739ef6e0c69fb4f344",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "BOUND",
+   "after_v3_0_76": {
+    "high": 7.92,
+    "low": 7.92,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": null,
+   "blank_arrises": [],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:ST_1F#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-0eac839f9132da7bd116",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-c446c784ee4c1f2ad001",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "BOUND",
+   "after_v3_0_76": {
+    "high": 10.5,
+    "low": 10.5,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": null,
+   "blank_arrises": [],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:GF_04#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-1ddc23d5657b4c4e4d0d",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-768a147c329176650d9d",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "AT_LEAST",
+   "after_v3_0_76": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": {
+    "basis": "sum of the measured arrises' lower ends; 1 arris(es) blank: upper end open",
+    "kind": "AT_LEAST_LM",
+    "value": 5.3
+   },
+   "blank_arrises": [
+    "A-1F-01#1F-10"
+   ],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:1F_10#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-2ba8077ba9bb2e1ff0f6",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-ec2092fdff9ada938f71",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "AT_LEAST",
+   "after_v3_0_76": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": {
+    "basis": "sum of the measured arrises' lower ends; 1 arris(es) blank: upper end open",
+    "kind": "AT_LEAST_LM",
+    "value": 33.95
+   },
+   "blank_arrises": [
+    "W17#IN"
+   ],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:1F_11#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-31db3c83552682d92ca3",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-54081b3817663419369d",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "BOUND",
+   "after_v3_0_76": {
+    "high": 7.78,
+    "low": 7.58,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": null,
+   "blank_arrises": [],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:ST_2F#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-418121a4b223cb4e8646",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-cf7c0b342f8e973c08c5",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "BOUND",
+   "after_v3_0_76": {
+    "high": 10.5,
+    "low": 10.5,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": null,
+   "blank_arrises": [],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:2F_03#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-4ce74fc37a08d4bdf0d8",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-23c35b304a26aed28745",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "AT_LEAST",
+   "after_v3_0_76": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": {
+    "basis": "sum of the measured arrises' lower ends; 2 arris(es) blank: upper end open",
+    "kind": "AT_LEAST_LM",
+    "value": 64.8228
+   },
+   "blank_arrises": [
+    "OPEN#GF-08-OP003",
+    "W03#IN"
+   ],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:GF_08#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-8cecb1d010d5aafbf25d",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-775120ed864deb8f8442",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "AT_LEAST",
+   "after_v3_0_76": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": {
+    "basis": "sum of the measured arrises' lower ends; 1 arris(es) blank: upper end open",
+    "kind": "AT_LEAST_LM",
+    "value": 19.16
+   },
+   "blank_arrises": [
+    "OPEN#ST-GF-OP020"
+   ],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:ST_GF#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-95f2c45c2eccaaeccb08",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-752cd53001d7a989828d",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "BOUND",
+   "after_v3_0_76": {
+    "high": 17.3,
+    "low": 17.3,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": null,
+   "blank_arrises": [],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:1F_04#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-971f0bdaf68d7fd0966c",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-d61b82b6648b7fa64aaa",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "BOUND",
+   "after_v3_0_76": {
+    "high": 44.75,
+    "low": 44.75,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": null,
+   "blank_arrises": [],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:1F_13#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-9b4a7bab033d677e2017",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-375cb0fcabe370b9d763",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "BOUND",
+   "after_v3_0_76": {
+    "high": 14.05,
+    "low": 14.05,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": null,
+   "blank_arrises": [],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:2F_01#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-ae0cdd794cc5fdbe0c29",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-ad606e88798049fed932",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "BOUND",
+   "after_v3_0_76": {
+    "high": 24.0,
+    "low": 24.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": null,
+   "blank_arrises": [],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:1F_01#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-af9621f43bc316a871ea",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-40fd65121d1a0c76be0e",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "AT_LEAST",
+   "after_v3_0_76": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "beside": {
+    "basis": "sum of the measured arrises' lower ends; 1 arris(es) blank: upper end open",
+    "kind": "AT_LEAST_LM",
+    "value": 5.4
+   },
+   "blank_arrises": [
+    "A-GF-01#GF-01"
+   ],
+   "change": "ADD",
+   "class": [
+    null,
+    "HELD"
+   ],
+   "element_id": "HL:WALL_FINISH:GF_01#BEAD",
+   "evidence_status": "HELD",
+   "host_line_id": "L-b152995525ed123ddac9",
+   "item_code": "FIN.PLASTER.BEAD",
+   "line_id": "L-905765ed94a23ecea887",
+   "owner_line_id": null,
+   "piece": "BEAD_ADD",
+   "unit": "lm"
+  },
+  {
+   "action": "EXCLUDE",
+   "after_v3_0_76": {
+    "high": null,
+    "low": null,
+    "state": "EXCLUDED_WITH_REASON",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "blank_arrises": null,
+   "change": "CHANGE",
+   "class": [
+    "HELD",
+    "EXCLUDED"
+   ],
+   "element_id": "1F-R78C367:ceiling over void",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "host_line_id": null,
+   "item_code": "FIN.CEILING",
+   "line_id": "L-35341ff2e6a848b9436b",
+   "owner_line_id": "L-43bf1f869e1588f1d3bd",
+   "piece": "CEIL_EXCL",
+   "unit": "m2"
+  },
+  {
+   "action": "HOLD",
+   "after_v3_0_76": {
+    "high": 115.813974,
+    "low": 115.656474,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 115.832
+   },
+   "beside": null,
+   "blank_arrises": null,
+   "change": "CHANGE",
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "element_id": "2F-ROOF-AT379:wp_membrane",
+   "evidence_status": "HELD",
+   "host_line_id": null,
+   "item_code": "FIN.WP.ROOF",
+   "line_id": "L-636fd3ff1784a12e653b",
+   "owner_line_id": null,
+   "piece": "DG_HOLD",
+   "unit": "m2"
+  }
+ ],
+ "schema": "URBAN_T736_SUMMARY_V1",
+ "totals_moved_by_code": {
+  "FIN.CEILING|m2": {
+   "base": {
+    "blocked_lines": 5,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 41,
+    "released": 411.337177
+   },
+   "v3_0_76": {
+    "blocked_lines": 4,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 40,
+    "released": 411.337177
+   }
+  },
+  "FIN.PLASTER.BEAD|lm": {
+   "base": null,
+   "v3_0_76": {
+    "blocked_lines": 5,
+    "bounded_lines": 9,
+    "held_high": 165.65,
+    "held_low": 165.45,
+    "lines": 14,
+    "released": 0.0
+   }
+  },
+  "FIN.WP.ROOF|m2": {
+   "base": {
+    "blocked_lines": 1,
+    "bounded_lines": 1,
+    "held_high": 0.639573,
+    "held_low": 0.0,
+    "lines": 6,
+    "released": 209.018867
+   },
+   "v3_0_76": {
+    "blocked_lines": 1,
+    "bounded_lines": 2,
+    "held_high": 116.453547,
+    "held_low": 115.656474,
+    "lines": 6,
+    "released": 93.186867
+   }
+  }
+ }
+}

@@ -75,3 +75,25 @@ def test_adverse_real_rows():
             continue
         with pytest.raises(A.InputsError, match=msg):
             A.load_inputs(doc, "development-villa-t131")
+
+
+def test_line_index_v3_0_76_against_v3_0_75():
+    """the committed census index of the run of record: only the 2 named lines changed, 14 bead lines added; held
+    stays held (no bead released, none 0), every other line's index entry equal to V3.0.75's."""
+    i75 = {x["line_id"]: x for x in json.loads((ROOT / L.INDEX).read_text(encoding="utf-8"))["lines"]}
+    i76 = {x["line_id"]: x for x in json.loads((ROOT / "research/agents_t736/out/LINE_INDEX_V3_0_76.json").read_text(
+        encoding="utf-8"))["lines"]}
+    added = sorted(set(i76) - set(i75))
+    assert len(added) == 14 and not set(i75) - set(i76)
+    beads = [i76[k] for k in added]
+    assert all(b["item_code"] == "FIN.PLASTER.BEAD" and b["unit"] == "lm" and b["class"] == "HELD" and
+               b["measured_net"] is None for b in beads)
+    bounded = [b for b in beads if b["held_low"] is not None]
+    assert len(bounded) == 9 and all(b["held_low"] > 0 for b in bounded)
+    assert round(sum(b["held_low"] for b in bounded), 6) == 165.45
+    assert round(sum(b["held_high"] for b in bounded), 6) == 165.65
+    changed = sorted(k for k in i75 if i75[k] != i76[k])
+    assert changed == ["L-35341ff2e6a848b9436b", "L-636fd3ff1784a12e653b"]
+    assert i76["L-35341ff2e6a848b9436b"]["class"] == "EXCLUDED"
+    w = i76["L-636fd3ff1784a12e653b"]
+    assert (w["class"], w["held_low"], w["held_high"], w["measured_net"]) == ("HELD", 115.656474, 115.813974, None)
