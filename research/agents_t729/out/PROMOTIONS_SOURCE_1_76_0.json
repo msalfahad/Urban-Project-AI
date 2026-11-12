@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-729",
+  "merge_commit": "05ca1a46d71bd9c35d25192cc695b26e65158d54",
+  "verdict_time": "2026-11-12 16:45 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-12T16:45Z per `date -u`, run session_01E6cPndRu2x62YBGWB8KoeH, lock checker; GATE B PASS; merge 05ca1a46 (CODEMAP-only conflict: working-branch version, maps rebuilt by the tool, stale none, freeze 0)",
+  "board_commit": "b3fea8b1"
+ }
+]
