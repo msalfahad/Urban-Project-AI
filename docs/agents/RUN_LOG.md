@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T07:36Z | Worker 1 | SUCCESS | T-732 READY (agents/task-T-732 @ 02bbaf78) | column formwork of the moved 2F roof concrete restated on V3.0.73: 7/7 moved members re-derived (4 BOUNDED 14.9724..23.958633 m2, 3 AT_LEAST 8.836 m2; family BOUNDED 30 102.914777..127.151372, AT_LEAST 35 >=107.379697); T-707 FW lows were upper-bound method, not floors; D-04/D-44/D-66 keep open ends; 4 strip children NAMED; Drive ST DXF read (9f9d1179) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12T07:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12 07:13 UTC | Worker 3 | SUCCESS | T-730 READY (7d5efd9d) | Wiring readiness R5 on V3.0.73, research only: 1,174 rows stale 0; 36 T-723 rows wired by T-722; C10 concrete round 10 buildable (GB L-fb7a6431 capped blank 3.5256 m3, bounded high 5.096771->1.571171; stair -1e-6); T-729 formwork projection released +33.127058 m2, bounded 87.942377..103.192739 m2, blocked by 13 T-707/T-714 CONFLICT lines + 39 rows on moved members (T-732). Findings: T-714 cap 0 on L-867e155d; tread overlap waits T-733. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12 07:00 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
