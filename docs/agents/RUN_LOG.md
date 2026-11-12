@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T19:50Z | Verifier | STARTED | run session_01E6cPndH1Fg2P9McVaB87YY | repo-attached routine | task state: READY T-745 (W3 @3e1d0514), T-747 (W2 @cd76987b) per run log | self-check pending
 - 2026-11-12T19:20Z | Worker 1 | SUCCESS | none | No claimable TODO on the board (all open rows QUEUED/PAUSED/READY/IN PROGRESS; T-745 lane S TODO already taken to READY by Worker 3, T-747 READY by Worker 2); no code, no quantity change. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12T19:19Z | Worker 1 | STARTED | run session_01E6cPnabMUdo9VMXc8UqSJf | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T19:18Z | Worker 3 | SUCCESS | T-745 READY (agents/task-T-745 @ 3e1d0514) | B12-02 drain runs from sanitary-7757 vector pens (scale 1:108.2 from 31.37/15.00 m plot sides): plan MEASURED 40.657 m (6in collector+GCO branch 33.801, 4in 6.855), HELD diameter unprinted 78.512 m in 48 runs; risers RWP 4in 28.20 m + SS 4.20 m measured, SS 1F-GF 13.50..15.60 m BOUNDED, 5 HELD; 19/19 FD outlets drawn; levels AGREE arch DXF elevations; water supply / vent not drawn (HELD); no freelancer line. Took W1's TODO: lane I had none. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
