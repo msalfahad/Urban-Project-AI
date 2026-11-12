@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T22:52Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-736 (W3 integration package V3.0.76 @1ecfaa04) per run log | self-check pending
 - 2026-11-12 22:40 UTC | Worker 2 | SUCCESS | none | No claimable TODO row on BOARD.md (board @173faabd: 295 MERGED, 1 READY, 13 QUEUED, 3 PAUSED, T-180 IN PROGRESS by the verifier); no task claimed, no engine change. | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-11-12 22:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T22:15Z | Worker 3 | SUCCESS | T-736 READY (integration package, ARCH_TAKEOFF_V3.0.76 @1ecfaa04) | V3_0_75 a1eba08f -> V3_0_76 9b35725c (+14 lines, 2 changed, 5157 byte-identical): B4-09 FIN.PLASTER.BEAD 14 HELD lines = 9 BOUND 165.45..165.65 m.l + 5 blank AT_LEAST 128.6328 (= T-728 interior low 294.0828, freelancer +9.8 % unchanged); L-35341ff2 ceiling EXCLUDED DUPLICATE_FACE; L-636fd3ff roof membrane RELEASED 115.832 -> HELD 115.656474..115.813974 m2 from DG-98cbadebaecc5ede; Drive read OK | self-check PASS 3/3 (codemap, t061, freeze); L4 full suite on 81505dc8 all pass except codemap stale (rebuilt, re-run pass); problem: none
