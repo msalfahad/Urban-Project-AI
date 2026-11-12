@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T03:07Z | Worker 3 | SUCCESS | T-728 READY (478f3e55) | Bead ledger restated on V3.0.72 by R-T728-1: 116/116 arris rows, stale 0, all 18 hosts HELD -> 0 beads released; interior 67 HELD 294.0828..294.4828 m.l (reconciles exactly to T-697 285.03 - 5.40 + 14.4528) + 6 blank, exterior 43 blank pending T-314 r3 (310.6831 m.l text only); host m2 bound not transferable to m.l (F-T728-1) | self-check codemap PASS, t061 PASS, freeze PASS; problem: none
 - 2026-11-12T03:00Z | Worker 3 | STARTED | run session_01E6cPnbRUw3dHftSfadrjGY | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T02:56Z | Worker 2 | SUCCESS | T-726 READY (09085f42) | Shaft residual 13.50 m2: his 2.50x5.40 row is the continuation of his stair-house row (J 204.42, T-173 bridge closes +27.35); no drawn stair-house face is 2.50x5.40 (only exterior 5.40 intervals +0.15..+5.50 / +4.30..+9.70) -> UNRESOLVED on his side, ENGINE_RIGHT on scope; shaft faces carried once (1F +0.010, 2F +0.009 lm); engine 0 m2; like for like plaster -14.83..-8.82 % with the row apart | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: Drive connector saved the zip raw, decode needs base64 (re-encoded in scratchpad, then decoded by the wrapper)
 - 2026-11-12T02:52Z | Verifier | STARTED | run session_01E6cPnd1boTCdgLn15ZAk7E | repo-attached routine | task state: READY T-722 (W3 integration package V3.0.73) | self-check pending
