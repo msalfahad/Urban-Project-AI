@@ -3,6 +3,14 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-12 20:14 (since 16:20)
+
+- T-729 formwork Gate B (V3.0.75): WORKED (formwork released 1,027.977 -> 1,061.104 m2) but F-V748-1: the roof membrane record was not applied -> carried by T-736 (one line), lesson L-T748-1 PROPOSED.
+- T-743 sanitary census, T-744 tag-not-fixture fix, T-746 opening edges lm, T-748 readiness R6 + scorecard: WORKED (MERGED; no candidate line moved).
+- T-747 exterior paint: WORKED as research (paint = render 1,006.633 .. 1,085.613 m2); open lm bounds -> NEW T-751.
+- T-745 drain runs: FAILED r1 (scaled lengths from not-to-scale sheets labelled MEASURED, against merged T-380) -> TODO r2 with a Lead ruling; designer item 16; L-T745-1 PROPOSED.
+- Worker 1 19:19 idle (no claimable TODO): queue too thin -> T-745 r2 + T-752 for worker 1, T-751 for worker 2, H4 package T-750 written.
+
 ## Lead 2026-11-12 16:20 (since 12:20)
 
 - T-741 downgrade issue path: WORKED (MERGED 01f060bd; the Checker issued DG-a429c160, roof membrane L-636fd3ff RELEASED -> HELD).

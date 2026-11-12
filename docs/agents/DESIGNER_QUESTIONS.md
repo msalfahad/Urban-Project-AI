@@ -32,6 +32,7 @@ D-56 is out of the designer package (D_REMOVED_REVISED s.2) yet 3 stair lines ci
 | 13 | Missing sheets (site plan, top roof, door / window / finishes schedules) | D-62 | many families; listed per line by T-716 |
 | 14 | Ground-floor facade width printed twice with different values (2.00 against the plan dimension) | D-GF-07 (T-737, Lead 2026-11-12 12:20) | exterior plaster GF upper bound -5.000 m2 if 2.00 governs; line stays bounded, no figure picked |
 | 15 | Second-floor west wall feature: the roof waterproofing band against it (shape not dimensioned) | D-BAND (T-734, Lead 2026-11-12 12:20) | FIN.WP roof band 0.1575 m2 HELD |
+| 16 | Drainage and water-supply layout: plan run lengths not dimensioned, and the sanitary sheets print 'not to scale' (scaled lengths are not usable) | D-DRAIN (T-745, Lead 2026-11-12 20:14) | B12-02 plan runs: no candidate line; every plan run HELD (no length printed); risers by printed levels unaffected |
 
 Not on this list (they are not designer items): rebar (parked by the owner 2026-11-11, approximate tons at the end);
 owner questions (OWNER_QUESTIONS.md Open); method gaps the team closes itself.

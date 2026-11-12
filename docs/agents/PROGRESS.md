@@ -1,12 +1,23 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-12 16:20 UTC (Lead). Previous version: 2026-11-12 12:20 UTC. The released numbers did not change
+Last update: 2026-11-12 20:14 UTC (Lead). Previous version: 2026-11-12 16:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
-untouched) except one correction: the roof membrane line that was 0.018 m2 above its own measured band is now held by
-the checker's correction record (115.832 m2 released -> held). Your measure: whole BOQ lines independently verified in
-the candidate: unchanged (concrete 1 of 8 compared lines, the slab); released: 0.
+untouched). Correction to the 16:20 text: the roof membrane correction record exists, but the checker found the new
+candidate still shows 115.832 m2 as released; the next candidate package carries the correction (held 115.656 .. 115.814
+m2). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared lines,
+the slab); released: 0.
 
-Since 12:20 (newest first):
+Since 16:20 (newest first):
+- Exterior paint by your rule (paint = render on the same faces): 1,006.63 .. 1,085.61 m2 against the freelancer's
+  1,469.97 m2 (-31.5 .. -26.2 %; his figure is not explained by any face). Corners and window / door edges are in
+  metres and still bounded; a task closes them from the elevations. Not yet in the candidate.
+- Interior paint with window / door edges moved to metres: 821.01 .. 905.06 m2 (was 841.26 .. 929.21). Not yet in the
+  candidate.
+- Formwork joined the candidate: released 1,027.98 -> 1,061.10 m2 (+3.2 %); held lines stay held as ranges.
+- Sanitary fixtures counted (WC 12, basin 17, shower trays 3 + walk-in 3, floor drains 19); room-name labels are no
+  longer read as fixtures. Drain pipe lengths: not measured (the sheets say 'not to scale'; held, on the designer list).
+
+Earlier, since 12:20 (newest first):
 - Your paint rule is now a rule version with its test. Paint measured by it: 841.26 .. 929.21 m2 (was 822.20 .. 927.22
   by the old method, +2.3 / +0.2 %); every m2 between plaster and paint is explained by false-ceiling bands, tiled faces
   and named causes, residual 0. Not yet in the candidate (wiring package after the beads package).

@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-12 20:14; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) + owner paint rule 2026-11-12 in force)
+
+- Candidate of record V3.0.75 a1eba08f / master 1.76.0 (NOT RELEASED). Since 16:20 MERGED: T-729 Gate B (05ca1a46 + 0963e4a1), T-743 (e9c61254), T-746 (faf8afcd), T-744 (e22534af), T-748 (071dc837), T-747 (a3f62c52); T-745 REJECTED r1 -> TODO r2. F-V748-1: V3.0.75 did not apply the roof membrane record DG-98cbadebaecc5ede -> carried by T-736.
+- Hub order: T-736 (beads H2a + ceiling r3 + the record line) -> T-749 (paint rule wiring incl. T-747 exterior) -> T-738 (tiles H3 + H3s) -> T-314 r3 exterior plaster -> T-750 H4 WP -> T-509 H5 earthworks. Gate A: T-751 exterior paint edges (gate 1), T-745 r2, T-752 metalwork census.
+- Confidence: beads + ceiling 14 Nov MEDIUM; paint wiring 15 Nov MEDIUM; tiles / stair finishes 15-16 Nov MEDIUM; exterior plaster 16 Nov MEDIUM; WP 17 Nov LOW-MEDIUM; scorecard on each new candidate by the Checker; 19-20 Nov blind test only when ready (LOW for 19-20 Nov while rebar is parked and the hub is serial).
+
 ## Status (Lead, 2026-11-12 16:20; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) + owner paint rule 2026-11-12 in force)
 
 - Candidate of record V3.0.74 bea5be02 (NOT RELEASED). Since 12:20 MERGED: T-741 (01f060bd), T-740 (0f0e0cd0), T-739 r2 (0d3bf6a1), T-742 (1370c295); Checker record DG-a429c160 issued (roof membrane released -> HELD). READY 2: T-729 (Gate B, V3.0.75), T-743.

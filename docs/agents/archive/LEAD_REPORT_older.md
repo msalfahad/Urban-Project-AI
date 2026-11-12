@@ -1,3 +1,18 @@
+## LEAD REPORT 2026-11-12 08:16 UTC
+
+Drive read OK (no file in the private project folders modified since 16:00 UTC 10 Nov, no photo task). Training villa: candidate of record stays ARCH_TAKEOFF_V3.0.73 / master 1.74.0 (NOT RELEASED; released V2.9 + route G untouched). 5 pieces merged since 04:17 with the Checker's own re-measure; the plaster / paint package was rejected on one bookkeeping file only; no candidate line moved this period.
+- CONCRETE (m3; released / bounded / one-sided / blank never summed): released 317 lines = 291.476251 unchanged. Stair MS1-L read coherently from section A-A (GF half landing +3.50: 16 risers x 0.15625 + 12 x 0.1667): high only 1.037005 -> 1.023763; low unchanged; Checker counted the 16 risers by handle. Concrete round 10 (ground-beam band high 5.096771 -> 1.571171, cap 3.5256 beside) is buildable and joins the formwork package.
+- FORMWORK (m2): the 7 roof columns whose concrete moved are restated: 4 bounded, 3 at least; family beside 102.914777 .. 127.151372 (held). Earlier 'low' figures were an upper-bound method, not floors (corrected). 6 more column lines carry two disagreeing merged figures and one beam side has a cap of 0: new decider task before they are wired (never picked, never 0).
+- FINISHES (m2): gross floor area per storey VERIFIED by the Checker: GF 278.266 (house 217.789 + annex 60.477), 1F 209.839, 2F 55.080 (a register figure, no BOQ line). Stair treads F1 4.094412 / F4 3.45 are RIGHT (one layer set, sum = union 7.544412); the 2F slab over the dome is continuous (not a void): 2F ceilings 19.35 / 5.55 RIGHT. Plaster / paint package: all 36 changed lines agreed by hand (plaster held -25.017279 / +1.474537, paint held +3.344721 / +27.675121; released unchanged); redo r2 rebuilds one test-binding file, then merges. Like-for-like plaster stays -14.83 .. -8.82 % with his 13.50 m2 row apart (not yet in the candidate).
+- REBAR: parked by your decision; nothing done.
+- Learned: every integration package must rebuild by its tool every file that lists the candidate modules (proposed L-T717-1); a stair reading from one coherent section (F-T725-1 adopted); a later piece that blanks a line must declare it supersedes the earlier figure (F-T730-1, proposed with R-T730-1).
+- Team health: 16 runs since 04:17, every one closed with a final line; self-check PASS everywhere; Checker 5 Gate A + 1 Gate B (reject) in 4 h. Board: 6 TODO (S 2, A 2, I 2) + 3 queued hub packages; queue check 19 actionable, 0 flagged, 0 stall.
+- Gates: lowest open gate 1 (formwork conflict T-735). M3 (reconciled + scorecard): plaster / paint in the candidate 13 Nov (HIGH: one-file redo), formwork + concrete round 10 14 Nov (MEDIUM), beads 15 Nov, tiles / stair finishes 15-16 Nov (MEDIUM), WP after its record (LOW-MEDIUM). All-trade totals statement for the scorecard started (T-739).
+
+OWNER PACKAGE: none today (no item meets section 2.7). DESIGNER_QUESTIONS.md unchanged; send it when you choose.
+
+NEEDS FIXING (owner only): (1) Decode fix PR #6 still open: Drive downloads arrive raw and the wrapper refuses them; workers re-encode by hand each run (works, costs minutes). (2) Approved scheduled-task edits still not possible under the repository settings (no change since 11 Nov).
+
 ## LEAD REPORT 2026-11-12 04:17 UTC
 
 Drive read OK (no file in the private project folders modified since 16:00 UTC 10 Nov, no photo task). Training villa: candidate of record now ARCH_TAKEOFF_V3.0.73 / master 1.74.0 (NOT RELEASED; released V2.9 + route G untouched). 6 pieces merged since 00:16, all with the Checker's own re-measure; READY 0, REJECTED 0.
