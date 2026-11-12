@@ -2668,6 +2668,18 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
+(Lead 2026-11-12 00:16)
+- Candidate (not released) moved one step: the masonry walls with no figure now carry a one-ended limit beside them
+  (18 lines; e.g. a 2F wall at most 1.965 m2, a GF wall at least 12.93 m2), and 10 held masonry ranges were rounded
+  outward by a written rule; checked by hand line by line; no total moved. Released BOQ unchanged.
+- Checked tonight, not yet wired: ground beams (17 lines at least 5.10 m3 together; 3 court lines with no landing level
+  printed); the blank roof beams (east dome ring at least 0.115 m3, 11 roof-edge strips with no depth printed); the
+  stair skirting 2.25 vs 2.20 m explained (the 0.05 m nosing); formwork limits that follow their concrete members;
+  the floor voids drawn by floor (light well 26.24 m2, two domes 15.36 m2 each, lift shaft 3.24 m2 per floor).
+- Found: the 1F living floor deducts 0.057 m2 of the light well twice (floor 33.41 should read 33.47 m2, not yet
+  changed); a ceiling line over the light well risks counting 16.0 m2 twice; both go to the next floor / ceiling task.
+- Next: the concrete limits into the candidate, then plaster / paint; the four open checker remarks on concrete and
+  formwork; stair formwork; plaster inside the lift / stair shafts (13.50 m2 still unexplained); gross floor area.
 (Lead 2026-11-11 20:25)
 - Candidate (not released) moved one step: the 16 lintels with no figure now carry a drawn upper limit beside them
   (all of them together at most 1.322 m3), measured end to end on one drawing; no total moved. Released BOQ unchanged.

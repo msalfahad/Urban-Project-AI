@@ -3,6 +3,18 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-12 00:16 (since 20:17)
+
+- T-712 ground beams: WORKED (MERGED dfeb0240; 17 AT_LEAST 5.099845 m3 + 3 court blanks, hand AGREE).
+- T-716 designer census: WORKED (MERGED 17aaab4b; per-item counts -> DESIGNER_QUESTIONS.md; F-V716-1 court lines -> D-35).
+- T-721 blank beams: WORKED (MERGED 9e1ed6c5; ring AT_LEAST 0.115155 m3; F-V721-1 two drawn levels -> T-724; 0.378618 m2 strip in no line -> T-724).
+- T-718 stair finishes r2: WORKED (MERGED 8052ca51; F-V715-1 closed, nosing datum).
+- T-703 masonry Gate B: WORKED (MERGED da1a8906; V3.0.72, 28 / 28 by hand, L4 0 fail; F-T703-1 master left pending by T-704 -> lesson L-T703-1).
+- T-714 formwork limits: PARTIAL (MERGED e6ebe28a; worker opened no drawing; F-V714-1 soffit ratio 0.2502 vs 0.250) -> T-724 (2); 20 stair formwork lines out of scope -> T-725.
+- T-723 wiring readiness r4: WORKED (MERGED 5d00f738; F-T723-1..3 -> T-722 scope; 116 bead rows blocked -> T-728).
+- T-719 voids: WORKED (MERGED 302e002d; floor 0.057 m2 double deduction + ceiling 16.005 m2 risk -> T-727; shaft -> T-726).
+- Recurring cause: workers restating merged ledgers without a drawing read (T-714, earlier T-715); T-724 / T-725 acceptance asks for a drawing handle per figure.
+
 ## Lead 2026-11-11 20:25 (since 16:22)
 
 - T-711 concrete blank tail: WORKED (MERGED 1e06f656; 11 AT_LEAST, 4 blanks named; lift pit walls >= 1.903 m3, freelancer 1.65 below the drawn floor).
