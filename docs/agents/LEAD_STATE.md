@@ -26,7 +26,7 @@ rows changed since), then rewrite. Check every MERGED claim with `git merge-base
 - MAS: 18 blank lines one-ended beside. FIN.PLASTER like for like -14.83 .. -8.82 % with his 13.50 row apart
   (NO_FACE). Floor 1F L-b06400d4 33.411036 ENGINE_RIGHT. WP 53 HELD + 5 MISSING. Beads 116 HELD.
 
-## Live rows (04:20)
+## Live rows (04:17)
 - READY: none. CLAIMED: none.
 - TODO: S: T-731 (W1 FIRST), T-732, T-708; A: T-720 (W2 FIRST), T-733, T-734; I: T-717 (W3 FIRST), T-730.
   QUEUED: T-729 (after T-717, T-732), T-363, T-424, T-314, T-364, T-513, T-502, T-509. PARKED: T-664, T-382.
@@ -49,10 +49,10 @@ rows changed since), then rewrite. Check every MERGED claim with `git merge-base
   concrete + its formwork = S, stair finish faces = A; voids B2-05 owned by the register (A), deducted once (union);
   blank-beam bounds below the slab soffit only (R-CONC-OWN-1).
 - Rulings: R-T704-2; F-T705-1; F-T705-2 roof downgrade only by Checker record; rule conflict moves no quantity;
-  scoreboard like for like; a removed D-id is never cited; 2026-11-12 04:20: plaster like-for-like shows his 13.50
+  scoreboard like for like; a removed D-id is never cited; 2026-11-12 04:17: plaster like-for-like shows his 13.50
   NO_FACE row apart (never added, never removed from his total); an incoherent alternative reading is never a
   designer candidate.
-- Lessons: union-not-sum and L-T703-1 ADOPTED 04:20; L-T727-1 (check the live record) and F-T725-1 (one coherent
+- Lessons: union-not-sum and L-T703-1 ADOPTED 04:17; L-T727-1 (check the live record) and F-T725-1 (one coherent
   stair reading) PROPOSED.
 - Materials: FINISH V7, PLASTER V3; UPC-BLACK-BLOCK-001 1.1.0 (Q-80).
 

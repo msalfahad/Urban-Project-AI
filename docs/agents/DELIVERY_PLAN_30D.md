@@ -46,7 +46,7 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-11-12 04:20; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) in force)
+## Status (Lead, 2026-11-12 04:17; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) in force)
 
 - Candidate of record V3.0.73 c5a0b128 / master 1.74.0 (NOT RELEASED; T-722 Gate B PASS, merge 931dc8d9 + fa186f4d, L4 23,712 pass 0 fail). Since 00:16 MERGED: T-724 (cfca9394), T-727 (8ea912b5), T-722 (931dc8d9), T-725 (b20fe25c), T-726 (63720169), T-728 (80e27c10). READY 0. 0 REJECTED.
 - Next hub: T-717 plaster / paint + bands + voids + the shaft row apart (V3.0.74) -> T-729 formwork (T-714 + T-724 + T-725 + T-732, V3.0.75) -> beads (T-728 ledger) / tiles H3 (T-733) / WP + roof H4 (T-734 downgrade record) / earthworks (T-708). Gate A: T-731 stair coherent reading, T-732 moved-member formwork, T-720 gross floor area, T-730 wiring map r5.

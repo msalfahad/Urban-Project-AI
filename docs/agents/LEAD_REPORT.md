@@ -1,6 +1,6 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
-## LEAD REPORT 2026-11-12 04:20 UTC
+## LEAD REPORT 2026-11-12 04:17 UTC
 
 Drive read OK (no file in the private project folders modified since 16:00 UTC 10 Nov, no photo task). Training villa: candidate of record now ARCH_TAKEOFF_V3.0.73 / master 1.74.0 (NOT RELEASED; released V2.9 + route G untouched). 6 pieces merged since 00:16, all with the Checker's own re-measure; READY 0, REJECTED 0.
 - CONCRETE (m3; released / bounded / one-sided / blank never summed): concrete limits package PASSED (full suite 23,712 pass 0 fail; 33 lines by hand). Released 317 lines = 291.476251 unchanged. Only held figure moved: COLUMN held low 11.67283 -> 11.80007 (+0.12724, one-plane 2F roof slab top on 5 column sections), high 15.5015 kept. Beside blank lines now: ground beams at least 5.099845, lift pit at least 1.903, east dome ring at least 0.115155 (the 0.140345 alternative is incoherent and is never a designer candidate), parapet floor restated 1.677887 -> 1.677886 (rounding rule). Lift: freelancer 1.650 < drawn 1.903, ENGINE_RIGHT. Stair MS1-L: one reading mixed 28 risers with a 27-riser rise; coherent reading lowers its high 1.054813 -> 1.037005 (new task, highs only).

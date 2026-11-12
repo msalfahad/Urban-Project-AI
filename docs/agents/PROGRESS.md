@@ -1,6 +1,6 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-12 04:20 UTC (Lead). Previous version: 2026-11-12 00:16 UTC. The released numbers did not change
+Last update: 2026-11-12 04:17 UTC (Lead). Previous version: 2026-11-12 00:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared
 lines, the slab); released: 0. No candidate line changed since 12:25.
@@ -2668,7 +2668,7 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-11-12 04:20)
+(Lead 2026-11-12 04:17)
 - Candidate (not released) moved one step: the concrete limits are in it. Only one held figure moved: the held columns'
   low end rose from 11.67 to 11.80 m3 (the one-plane roof slab top, read on the column sections); every other changed
   line carries a limit or a named reason beside a blank (ground beams at least 5.10 m3, east dome ring at least
