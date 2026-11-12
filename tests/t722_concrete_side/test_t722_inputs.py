@@ -31,11 +31,14 @@ def test_ledgers_rebuild_and_pins():
 
 def test_counts_and_actions(doc):
     s = T.summary(doc)
-    assert s["entries"] == 36 and s["confirm"] == 18
-    assert s["by_action"] == {"NARROW": 5, "AT_LEAST": 13, "NAMED": 18}
-    assert [list(x) for x in s["restates"]] == [["L-e16c98075f69532a3dc7", "0.135473", "0.135481"],
+    assert s["entries"] == 33 and s["confirm"] == 21
+    assert s["by_action"] == {"NARROW": 5, "AT_LEAST": 10, "NAMED": 18}
+    assert [list(x) for x in s["restates"]] == [["L-b5ffc172a354375ca107", "1.677887", "1.677886"],
+                                                ["L-e16c98075f69532a3dc7", "0.135473", "0.135481"],
                                                 ["L-0bb78accf8c0a0fbdbaf", "0.242309", "0.242308"],
                                                 ["L-d53e5eb08e2c6c668254", "0.147657", "0.147656"]]
+    v23 = [c for c in doc["confirm"] if c.get("record") == T.V23]
+    assert sorted(c["value"] for c in v23) == [1.6245, 1.799103, 2.949453]   # V3.0.23 floors equal to T-711
 
 
 def test_module_recomputes_every_figure(doc):
@@ -48,6 +51,7 @@ def test_module_recomputes_every_figure(doc):
     assert inc == pytest.approx(0.12724, abs=1e-9)
     al = {e["line_id"][:10]: e["_value"] for e in d["_entries"] if e["action"] == "AT_LEAST"}
     assert al["L-ab37afa1"] == 0.115155 and al["L-684fcad3"] == 1.903 and al["L-0ede77cf"] == 0.3287
+    assert al["L-b5ffc172"] == 1.677886           # 5.592956 x 0.30 = 1.6778868, floored (V3.0.23 printed 1.677887)
     gb = [e for e in doc["entries"] if e["expect"]["item_code"] == "STR.CONC.GROUND_BEAM" and e["action"] == "AT_LEAST"]
     kept = [c for c in doc["confirm"] if c["source_task"] == "T-712"]
     assert len(gb) == 4 and len(kept) == 13

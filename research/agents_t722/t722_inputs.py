@@ -69,6 +69,12 @@ CHECKER = {
 SCHEMA = "URBAN_V3073_INPUTS_V1"
 HUB = "T-722"
 V63 = "concrete_ledger_v3063"          # the record carrying the T-665 (V3.0.63) figures F-T723-1 names
+V23 = "parapet_rc_v3023"               # the V3.0.23 parapet record: its floor_at_least_m3 IS a lower-end figure beside
+# the floor each V3.0.23 parapet record carries on the candidate of record (read on the live V3_0_72 run, T-723 flag
+# CONFIRM_ON_LIVE; the module asserts each against the live line and refuses a stale one). T-711 restates the same
+# floor: equal -> confirmed; different -> restated, never a second statement.
+PARAPET_V3023 = {"L-1d419b64e8ca1af30fb4": "1.799103", "L-b5ffc172a354375ca107": "1.677887",
+                 "L-9a2c81164ec6499cc28c": "2.949453", "L-030538dda6a32c601c4c": "1.624500"}
 RESTATE_RE = re.compile(r"^beside AT_LEAST ([0-9.]+) -> AT_LEAST ([0-9.]+)$")
 X = Decimal
 
@@ -193,6 +199,18 @@ def build(project_id=None):
             e = dict(base, action="AT_LEAST", basis=basis, beside={"value": v, "basis": basis[:400], "hand": hand})
             if L.get("freelancer"):
                 e["freelancer_beside"] = L["freelancer"]
+            if lid in PARAPET_V3023:
+                if act != "BESIDE":
+                    raise SystemExit(f"{lid}: parapet row {act}")
+                old = X(PARAPET_V3023[lid])
+                if old == X(str(v)):
+                    confirm.append({"line_id": lid, "kind": "AT_LEAST_M3", "value": float(old), "source_task": task,
+                                    "record": V23})
+                    continue
+                e["restates"] = {"record": V23, "value": PARAPET_V3023[lid],
+                                 "why": f"V3.0.23 printed the floor {PARAPET_V3023[lid]} rounded half-up; the exact "
+                                        f"floor {hand} is {v} at 6 dp rounded DOWN (R-T696-1: a lower end never "
+                                        f"exceeds the exact quantity)"}
             if act == "RESTATE_BESIDE":
                 m = RESTATE_RE.match(r["action_reason"])
                 if not m or X(m.group(2)) != X(str(v)):

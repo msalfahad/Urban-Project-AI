@@ -67,6 +67,9 @@ line_class = A3063.line_class
 RULE_ID, RULE_VERSION = "R-T722-1", "T-722"
 REC_KEY = "concrete_ledger_v3073"
 EARLIER_KEYS = A3070.EARLIER_KEYS + (A3070.REC_KEY, A3071.REC_KEY)
+# records of earlier (non-concrete-round) versions that carry a one-sided m3 figure beside a STR.CONC line; they hold
+# other readings too, so they are never popped: a restatement names them and its own record becomes the live one
+OTHER_FIGURES = {"parapet_rc_v3023": ("AT_LEAST_M3", ("bound", "floor_at_least_m3"))}      # V3.0.23 parapet floor
 P_CS = "CONC_SIDE"
 ACTIONS = ("NARROW", "AT_LEAST", "NAMED")
 CODE_PREFIX, UNIT = A3063.CODE_PREFIX, A3063.UNIT
@@ -147,14 +150,26 @@ def narrow_low(terms, w="NARROW"):
 
 
 def figures_beside(ln):
-    """the one-sided figures an earlier concrete version carries beside a line: [(record key, kind, value)]"""
+    """the one-sided figure the LIVE record carries beside a line: [(record key, kind, value)] or [].
+    The live record is the latest version that restated the line (V3.0.23 parapet, then the concrete rounds, then
+    this version, in version order): a later restatement replaces an earlier one (a later range, value or blank
+    clears an earlier figure, T-723), so an earlier record left in the inputs is history, not a second statement."""
     inp = (ln.get("calculation") or {}).get("inputs") or {}
-    out = []
-    for k in EARLIER_KEYS:
-        b = (inp.get(k) or {}).get("beside") or {}
-        if b.get("kind") in FIGURE_KINDS and b.get("value") is not None:
-            out.append((k, b["kind"], float(b["value"])))
-    return out
+    order = tuple(OTHER_FIGURES) + EARLIER_KEYS + (REC_KEY,)
+    live = [k for k in order if isinstance(inp.get(k), dict)]
+    if not live:
+        return []
+    k = live[-1]
+    if k in OTHER_FIGURES:
+        kind, path = OTHER_FIGURES[k]
+        v = inp[k]
+        for p in path:
+            v = (v or {}).get(p) if isinstance(v, dict) else None
+        return [] if v is None else [(k, kind, float(v))]
+    b = inp[k].get("beside") or {}
+    if b.get("kind") in FIGURE_KINDS and b.get("value") is not None:
+        return [(k, b["kind"], float(b["value"]))]
+    return []
 
 
 # ================================================================================================ inputs
@@ -204,7 +219,7 @@ def _entry(x, srcs):
         rs = x.get("restates")
         if rs is not None:
             A3063._need(rs, ("record", "value", "why"), f"{w} restates")
-            if rs["record"] not in EARLIER_KEYS:
+            if rs["record"] not in tuple(OTHER_FIGURES) + EARLIER_KEYS:
                 raise InputsError(f"{w}: restates an unknown record {rs['record']!r}")
         e.update(_value=float(v))
     else:                                               # NAMED
@@ -239,7 +254,7 @@ def load_inputs(doc, project_id=None):
     conf = [dict(c) for c in doc.get("confirm") or ()]
     for c in conf:
         if c.get("kind") not in FIGURE_KINDS or not A3063.LINE_ID_RE.match(str(c.get("line_id"))) or \
-                c.get("record") not in (None,) + EARLIER_KEYS:
+                c.get("record") not in (None,) + tuple(OTHER_FIGURES) + EARLIER_KEYS:
             raise InputsError(f"confirm {c.get('line_id')}: kind / record / line id")
         _d(c.get("value"), f"confirm {c['line_id']}")
     ids = [e["line_id"] for e in ents] + [c["line_id"] for c in conf]
@@ -322,13 +337,16 @@ def _restate(b, e, srcs):
         body = beside["basis"]
         if e.get("restates"):
             body += f"; restates the earlier figure {_fmt(float(e['restates']['value']))} ({e['restates']['why']})"
+            if e["restates"]["record"] in OTHER_FIGURES:
+                body += f"; the record {e['restates']['record']} stays as history, its other readings unchanged"
         after = {"beside": beside}
     else:                                               # NAMED
         ln["evidence_state"], ln["measured_net"], ln["gross"], ln["bounded_range"] = BLANK, None, None, None
         head = "HELD BLANK, ITEM NAMED: no figure is formed"
         body = str(e["why"])[:400]
         if e.get("per_unit"):
-            body += f"; per unit of the missing datum (information, never a bound): {str(e['per_unit'])[:200]}"
+            pu = str(e["per_unit"])[:200].replace("=", "gives")       # information text never ends on a figure
+            body += f"; per unit of the missing datum (information, never a bound): {pu}"
     ln["rfi"] = {"question": str(e["question"])[:400], "blocks": [b["line_id"]]}
     ln["deductions"], ln["additions"] = [], []
     ln["calculation"] = dict(ln["calculation"], formula=(
@@ -436,8 +454,10 @@ def check_concrete(lines, before=None):
         a = rec["action"]
         ok = ln["item_code"].startswith(CODE_PREFIX) and ln["unit"] == UNIT and line_class(ln) == "HELD" and \
             ln.get("measured_net") is None and bool((ln.get("rfi") or {}).get("question")) and \
-            rec["was"]["class"] == "HELD" and not figures_beside(ln)
+            rec["was"]["class"] == "HELD"
+        figs = figures_beside(ln)
         if a == "NARROW":
+            ok = ok and not figs
             r = A3063._range(ln)
             w = rec["was"]["bounded_range"] or {}
             ok = ok and r is not None and 0 < r[0] <= r[1] + 1e-9 and w.get("low") is not None and \
@@ -445,9 +465,11 @@ def check_concrete(lines, before=None):
         elif a == "AT_LEAST":
             bs = rec.get("beside") or {}
             ok = ok and ln["evidence_state"] == BLANK and ln.get("bounded_range") is None and \
-                bs.get("kind") == "AT_LEAST_M3" and float(bs.get("value") or 0) > 0
+                bs.get("kind") == "AT_LEAST_M3" and float(bs.get("value") or 0) > 0 and \
+                figs == [(REC_KEY, "AT_LEAST_M3", float(bs["value"]))]
         elif a == "NAMED":
-            ok = ok and ln["evidence_state"] == BLANK and ln.get("bounded_range") is None and rec.get("beside") is None
+            ok = ok and ln["evidence_state"] == BLANK and ln.get("bounded_range") is None and \
+                rec.get("beside") is None and not figs
         else:
             ok = False
         if ok and old is not None:
@@ -532,11 +554,7 @@ def census(lines, codes=None):
             z["bounded_high_m3"] += r[1]
         else:
             z["blank"] += 1
-            rec = ((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY) or {}
-            figs = [(x[1], x[2]) for x in figures_beside(ln)]
-            if (rec.get("beside") or {}).get("kind") in FIGURE_KINDS:
-                figs.append((rec["beside"]["kind"], float(rec["beside"]["value"])))
-            for kind, v in figs:
+            for _k, kind, v in figures_beside(ln):
                 kk = kind.replace("_M3", "")
                 z["blank_with_beside"][kk] = z["blank_with_beside"].get(kk, 0) + 1
                 z["beside_sum_m3_run_record_only"][kk] = z["beside_sum_m3_run_record_only"].get(kk, 0.0) + v

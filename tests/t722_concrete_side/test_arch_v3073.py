@@ -9,6 +9,9 @@ figures, no drawing; every figure below by hand):
   G2  ground beam, blank, V3.0.63 AT_LEAST 0.400 beside; the ledger says the same 0.400: CONFIRMED, never restated.
   B1  beam projection, blank, no figure: NAMED (D-26 analogue), 0.435 m3 per m of depth (information only).
   B9  beam, blank, V3.0.63 AT_LEAST 0.200 beside: a NAMED entry on it is refused (text never removes a figure).
+  P1  RC parapet, blank, its V3.0.23 record prints the floor 5.592956 m2 x 0.30 = 1.6778868 rounded half-UP to
+      1.677887 (above the exact lower end): RESTATED to 1.677886 (R-T696-1), the V3.0.23 record kept as history.
+  P2  RC parapet, blank, V3.0.23 floor 1.6245 = the ledger's 5.415 x 0.30: CONFIRMED, never restated.
   R1  released column 2.000 m3 and a plaster line: byte-identical; released never moves; no code total but COLUMN moves.
 Adverse: mirror order of entries, units (cm2 / mm), a range from 0, a moved high, a widened low, a stale binding, a
 released line, a non-concrete code, applied twice, an undeclared second figure, a restatement of the same figure."""
@@ -30,8 +33,8 @@ from engine.source import arch_v3073 as A  # noqa: E402
 from engine.source import boq_line as BL  # noqa: E402
 
 PID, REV = "C722-SYNTHETIC", "e" * 64
-COL, GB, BM = "STR.CONC.COLUMN", "STR.CONC.GROUND_BEAM", "STR.CONC.BEAM"
-V63 = "concrete_ledger_v3063"
+COL, GB, BM, PP = "STR.CONC.COLUMN", "STR.CONC.GROUND_BEAM", "STR.CONC.BEAM", "STR.CONC.PARAPET"
+V63, V23 = "concrete_ledger_v3063", "parapet_rc_v3023"
 
 
 def _ln(code, eid, state, net=None, unit="m3", rec=None, rng=None, floor="2F"):
@@ -51,6 +54,10 @@ def _v63(v):
                   "beside": {"kind": "AT_LEAST_M3", "value": v, "basis": "drawn area x least depth"}}}
 
 
+def _v23(v):
+    return {V23: {"bound": {"floor_at_least_m3": v, "all_rc_printed_part_m3": [2.8, 2.84]}}}
+
+
 def base():
     return [
         _ln(COL, "COL:C1", "BOUNDED_EXPOSURE", rng=(0.30, 0.45)),
@@ -60,6 +67,8 @@ def base():
         _ln(GB, "GB:G2", "BLOCKED_RFI", rec=_v63(0.4), floor="GROUND"),
         _ln(BM, "BM:B1", "BLOCKED_RFI", floor="1F"),
         _ln(BM, "BM:B9", "BLOCKED_RFI", rec=_v63(0.2), floor="1F"),
+        _ln(PP, "PP:P1", "BLOCKED_RFI", rec=_v23(1.677887), floor="GF"),
+        _ln(PP, "PP:P2", "BLOCKED_RFI", rec=_v23(1.6245), floor="2F"),
         _ln(COL, "COL:R1", "MEASURED", net=2.0),
         _ln("FIN.PLASTER", "R1:PLASTER", "PROVISIONAL", net=44.31, unit="m2"),
     ]
@@ -72,7 +81,8 @@ SRC = {"task": "T-P", "file": "research/c722/T-P.json", "sha256": "a" * 64, "mer
 
 
 def _x(k, code, rng=None):
-    return {"item_code": code, "element_id": f"{code.split('.')[-1].replace('GROUND_BEAM', 'GB').replace('COLUMN', 'COL').replace('BEAM', 'BM')}:{k}",
+    pre = {COL: "COL", GB: "GB", BM: "BM", PP: "PP"}.get(code, code.split(".")[-1])
+    return {"item_code": code, "element_id": f"{pre}:{k}",
             "unit": "m3", "class": "HELD", "low": None if rng is None else rng[0],
             "high": None if rng is None else rng[1]}
 
@@ -99,13 +109,17 @@ def entries():
                                          "hand": "0.541924 x 0.25"},
            restates={"record": V63, "value": "0.135473", "why": "re-measured area"}),
         _e("NAMED", "B1", BM, why="no section printed", per_unit="0.435 m3 per m of depth"),
+        _e("AT_LEAST", "P1", PP, beside={"value": "1.677886", "basis": "tops x upstand", "hand": "5.592956 x 0.30"},
+           restates={"record": V23, "value": "1.677887", "why": "half-up floor above the exact lower end"}),
     ]
 
 
 def doc(ents=None, confirm=None):
     return {"schema": A.INPUTS_SCHEMA, "project_id": PID, "sources": [dict(SRC)],
             "entries": entries() if ents is None else ents,
-            "confirm": [{"line_id": ID["G2"], "kind": "AT_LEAST_M3", "value": 0.4}] if confirm is None else confirm}
+            "confirm": [{"line_id": ID["G2"], "kind": "AT_LEAST_M3", "value": 0.4},
+                        {"line_id": ID["P2"], "kind": "AT_LEAST_M3", "value": 1.6245, "record": V23}]
+            if confirm is None else confirm}
 
 
 def run(d=None, prev=None):
@@ -133,14 +147,17 @@ def test_normal_hand_figures():
     g1 = n[ID["G1"]]
     rec = g1["calculation"]["inputs"][A.REC_KEY]
     assert rec["beside"]["value"] == pytest.approx(0.135481) and V63 in rec["superseded"]
-    assert A.figures_beside(g1) == []                           # one live statement (the new record only)
+    assert A.figures_beside(g1) == [(A.REC_KEY, "AT_LEAST_M3", 0.135481)]   # one live statement (the new record)
     assert rec["was"]["beside"] == [{"record": V63, "kind": "AT_LEAST_M3", "value": 0.135473}]
     b1 = n[ID["B1"]]
     assert b1["calculation"]["inputs"][A.REC_KEY]["beside"] is None and b1["bounded_range"] is None
     assert "information, never a bound" in b1["calculation"]["formula"]
-    assert ident["concrete"] == {"NARROW": 2, "AT_LEAST": 2, "NAMED": 1}
-    assert ident["replaced"] == 5 and ident["outside_rows"] == 4
-    assert log["confirmed_unchanged"][0]["record"] == V63 and log["restated"][0]["from"] == 0.135473
+    p1 = n[ID["P1"]]["calculation"]["inputs"]
+    assert V23 in p1 and A.figures_beside(n[ID["P1"]]) == [(A.REC_KEY, "AT_LEAST_M3", 1.677886)]
+    assert p1[V23]["bound"]["all_rc_printed_part_m3"] == [2.8, 2.84]        # its other readings stay
+    assert ident["concrete"] == {"NARROW": 2, "AT_LEAST": 3, "NAMED": 1}
+    assert ident["replaced"] == 6 and ident["outside_rows"] == 5
+    assert [c["record"] for c in log["confirmed_unchanged"]] == [V63, V23] and log["restated"][0]["from"] == 0.135473
 
 
 def test_totals_move_only_column_low():
@@ -152,12 +169,12 @@ def test_totals_move_only_column_low():
     assert z1["held_low"] - z0["held_low"] == pytest.approx(0.025 + 0.00051, abs=1e-9)
     assert z1["held_high"] == pytest.approx(z0["held_high"]) and z1["released"] == pytest.approx(2.0)
     assert z1["blocked_lines"] == z0["blocked_lines"] and z1["bounded_lines"] == z0["bounded_lines"]
-    assert t1[f"{GB}|m3"] == t0[f"{GB}|m3"] and t1[f"{BM}|m3"] == t0[f"{BM}|m3"]
+    assert t1[f"{GB}|m3"] == t0[f"{GB}|m3"] and t1[f"{BM}|m3"] == t0[f"{BM}|m3"] and t1[f"{PP}|m3"] == t0[f"{PP}|m3"]
 
 
 def test_outside_lines_byte_identical_and_mirror_order():
     prev, _c, _l, new, _i = run()
-    for k in ("R1", "PLASTER", "G2", "B9"):
+    for k in ("R1", "PLASTER", "G2", "B9", "P2"):
         lid = ID[k]
         assert A30.line_sha(_by(prev)[lid]) == A30.line_sha(_by(new)[lid])
     _p, _c2, _l2, new2, _i2 = run(doc(list(reversed(entries()))))
@@ -173,6 +190,8 @@ def test_census_counts_beside_never_summed():
     assert c1[GB]["beside_sum_m3_run_record_only"]["AT_LEAST"] == pytest.approx(0.135481 + 0.4)
     assert c1[GB]["blank_with_beside"] == {"AT_LEAST": 2}               # restated, not a second figure
     assert c1[BM]["blank"] == 2 and c1[BM]["blank_with_beside"] == {"AT_LEAST": 1}
+    assert c0[PP]["beside_sum_m3_run_record_only"]["AT_LEAST"] == pytest.approx(1.677887 + 1.6245)
+    assert c1[PP]["beside_sum_m3_run_record_only"]["AT_LEAST"] == pytest.approx(1.677886 + 1.6245)
 
 
 def test_write_files(tmp_path):
@@ -180,8 +199,8 @@ def test_write_files(tmp_path):
     inp = A.load_inputs(doc(), PID)
     ch, log = A.changes_for(inp, prev)
     names, ident, led = A.write(tmp_path, prev, ch, log)
-    assert "V3_0_73_BOQ_LINES.json" in names and len(led["rows"]) == 5
-    assert ident["diff"]["vs_base"] == {"CHANGED": 5, "SAME": 4}
+    assert "V3_0_73_BOQ_LINES.json" in names and len(led["rows"]) == 6
+    assert ident["diff"]["vs_base"] == {"CHANGED": 6, "SAME": 5}
     run_doc = json.loads((tmp_path / "V3_0_73_RUN.json").read_text())
     assert sorted(run_doc["totals_moved_by_code"]) == [f"{COL}|m3"]
     assert run_doc["identity"]["conc_census_after"][COL]["bounded_low_m3"] == pytest.approx(0.30 + 0.28 + 0.02551)
@@ -324,3 +343,22 @@ def test_check_concrete_catches_a_tampered_line():
             ln["evidence_state"] = "BOUNDED_EXPOSURE"
     with pytest.raises(ValueError, match="not in its state"):
         A.check_concrete(bad)
+
+
+def test_v3023_figure_restated_only_when_named():
+    e = entries()
+    e[5] = {k: v for k, v in e[5].items() if k != "restates"}
+    with pytest.raises(A.InputsError, match="one live statement"):
+        run(doc(e))
+    e = entries() + [_e("AT_LEAST", "P2", PP, beside={"value": "1.6245", "basis": "same"})]
+    with pytest.raises(A.InputsError, match="confirm it, never restate it"):
+        run(doc(e, confirm=[{"line_id": ID["G2"], "kind": "AT_LEAST_M3", "value": 0.4}]))
+
+
+def test_later_concrete_record_is_the_live_one():
+    ln = copy.deepcopy(LN[[x["line_id"] for x in LN].index(ID["G1"])])
+    ln["calculation"]["inputs"]["concrete_ledger_v3064"] = {"action": "LOWER_ONLY",
+                                                            "beside": {"kind": "AT_LEAST_M3", "value": 0.1125}}
+    assert A.figures_beside(ln) == [("concrete_ledger_v3064", "AT_LEAST_M3", 0.1125)]
+    ln["calculation"]["inputs"]["concrete_ledger_v3070"] = {"action": "BOUND"}      # a later range clears it
+    assert A.figures_beside(ln) == []
