@@ -65,7 +65,31 @@ face by face; moved columns floored at P_min x (least panel top - base - D_max) 
 
 ## 4. Run of record, census, diff
 
-RUN_SECTION
+Drive 'Alsenan chalet project' copies 'P7757_DXF_COMPRESSED.zip' (inner P7757.dxf ab54dd55) and 'ST7757 dxf.dxf'
+(9f9d1179), decoded by the wrapper into the private folder only: own fresh t167 `v304_run.py` -> `v3075_run.py` (exit
+0): every earlier version re-run and asserted by its own wrapper (V3_0_73 c5a0b128, REGION_CHECK PASS), **V3_0_74
+bea5be02 (asserted = the T-717 run of record by its line index) -> V3_0_75 a1eba08f**, 5,159 lines; replaced 392, added
+4, outside 4,763 byte-identical (asserted). Diff vs V3.0.74: CHANGED 392, ADDED 4, SAME 4,763. vs released V2.9 +
+route G: NOT_IN_RELEASED 3,567 (+4), QUANTITY_DIFFERS 1,054, SAME_QUANTITY 538 (unchanged). Census
+`t479_registry_census.py` (verdicts V3.0.44 b3b08dd7, downgrades 81732639): on V3_0_74 it reproduces
+`research/agents_t717/out/LINE_INDEX_V3_0_74.json` byte for byte; on V3_0_75 -> `out/LINE_INDEX_V3_0_75.json`
+(498c36bc), issues {}, complete map, 0 stale blocks. `t729_package_families.py` (chain 74 -> 75): B10-13 changed 86 +
+record 284; B7-13 changed 2 + record 18; B10-04 changed 1; B10-07 added 4; B7-12 record 1. The run's own module dry
+run on the V3_0_74 lines gives the same totals. Summary `out/T729_SUMMARY.json`.
+
+| code | V3.0.74 released / bounded / blank | V3.0.75 released | bounded (low .. high) | beside (never summed) | blank |
+|---|---|---|---|---|---|
+| STR.FORMWORK m2 (614) | 244 / 1,027.977403; 0; 370 | **298 / 1,061.104461** (+33.127058) | **32, 107.200712 .. 132.785507** | AT_LEAST 40 >= 122.484697; caps 58 <= 59.379875 | 284 |
+| STR.FORMWORK.STAIR m2 (31) | 10 / 36.927436; 0; 20 | 10 / 36.927436 | **2, 2.583193 .. 3.223465** | AT_LEAST 2 >= 7.872094; caps 12 <= 6.261899 | 18 |
+| STR.CONC.GROUND_BEAM m3 | 32 / 23.760555; 8, 1.178378 .. 1.571171 | unchanged | unchanged (the 0 .. 3.5256 line was counted blocked) | + AT_MOST 3.5256 (L-fb7a6431) | 21 |
+| STR.CONC.STAIR m3 | 6 / 5.368881 | unchanged | - | AT_LEAST 2: 1.568446 -> **1.568445** | 5 |
+| STR.CONC.BEAM m3 | 112 / 66.920677; 14 | unchanged | unchanged | unchanged | 12 -> **16** (4 named children) |
+
+Code totals (A304): STR.FORMWORK released +33.127058, held 0 .. 0 -> 107.200712 .. 132.785507, bounded +32, blocked
+-86; STR.FORMWORK.STAIR held +2.583193 .. +3.223465, bounded +2, blocked -2; STR.CONC.BEAM lines +4, blocked +4; no
+other code moves; released concrete never moves (asserted). The T-730 projection (index convention) said GROUND_BEAM
+'bounded 9 -> 8, high 5.096771 -> 1.571171': the index reads L-fb7a6431's 0 .. 3.5256 record, while the code totals
+and the census already counted that BLOCKED_RFI line blocked; both now carry it as a capped blank, consistent.
 
 ## 5. Findings, held / missing, downstream, verdicts
 
