@@ -3,7 +3,7 @@
 Worker 1, lane S, 2026-11-12, branch `agents/task-T-735`. Files: `t735_rules.py` (R-T735-1 / R-T735-2 1.0.0, every
 villa), `t735_alsenan.py` (builder; committed inputs sha256-pinned in `PINS.json`, T-732's builder reused read-only;
 `--check` rebuilds byte for byte), `out/T735_DECIDER.json`, `out/T735_DECIDER.md`, `out/T735_OWN_READ.json`, tests
-`tests/t735_formwork_conflict` (20). No engine, candidate, rule / knowledge version, registry or frozen file changed;
+`tests/t735_formwork_conflict` (18). No engine, candidate, rule / knowledge version, registry or frozen file changed;
 R-T732-1 / R-T714-1 / R-T707-1 / R-T730-1 not edited; nothing wired, released or VERIFIED. Own read this run: Drive
 'Alsenan chalet project' / 'ST7757 dxf.dxf' (sha256 9f9d1179 = manifest), decoded by the wrapper into the private folder
 only; sizes, handles and edge directions recorded, no coordinate.
