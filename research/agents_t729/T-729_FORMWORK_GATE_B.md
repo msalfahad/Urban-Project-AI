@@ -121,3 +121,14 @@ applied twice, restatement mismatch, same figure, release without companion / fi
 not the range's high, formwork action on a concrete line, held never 0); development villa (rebuild equal, family =
 T-735, precedence on named lines, stale 0, coverage, inputs load; adverse stale pin, cap 0 re-entered, dropped entry,
 a T-714 form picked over a declared restatement).
+
+## 6. Validation (worker; the Checker's Gate B L4 is its own)
+
+L4 full suite to the end (936 items `ls -d tests/*/ tests/test_*.py`, 78 chunks of 12 through the wrapper): first pass
+on 60632c6b: 77 chunks exit 0, chunk 14 two failures in tests/t146_arch_v3012/test_family_master_1_7_0 ('the head
+carries arch_v3075.py, newer than the registry's candidate': the pending registry 1.76.0 was not yet written); fixed by
+writing BOQ_FAMILY_MASTER_1.76.0 pending with its builder (9c18e79c, --check True, 0 problems) + manifest by its tool;
+chunks 1 .. 14 re-run on 6bf1d697: all exit 0. Totals: **24,051 pass, 0 fail, 692 skip, 105 xfail** (T-717 r2 baseline
+23,915 pass / 700 skip / 105 xfail; +136 = the 25 T-729 tests and the merged pieces since). Engine / tools files are
+identical across the L4 commits (only rules/coverage, the manifest, research/agents_t729 and docs moved). Freeze 0
+differing; codemap stale none; tests/t729_formwork_gate_b 25 pass.
