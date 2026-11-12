@@ -1,0 +1,1543 @@
+{
+ "schema": "URBAN_T717_SUMMARY_V1",
+ "task": "T-717",
+ "method": "ARCH_TAKEOFF_V3.0.74",
+ "extends": "ARCH_TAKEOFF_V3.0.73",
+ "lines_sha256": {
+  "V3_0_73": "c5a0b1281cdb6149a5650d790ad325bc50fcbe0cb8d1bec89760f70c01fd85e8",
+  "V3_0_74": "bea5be02fcbfdbc99bd38b5c1c0d982246eaa7c8717b4974ebbfbdf5dc5d690c"
+ },
+ "identity": {
+  "base_lines": 5123,
+  "v3_0_74_lines": 5155,
+  "replaced": 4,
+  "added": 32,
+  "outside_rows": 5119,
+  "outside_rows_identical_to_base": 5119,
+  "diff": {
+   "vs_base": {
+    "ADDED": 32,
+    "CHANGED": 4,
+    "SAME": 5119
+   },
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3563,
+    "QUANTITY_DIFFERS": 1054,
+    "SAME_QUANTITY": 538
+   }
+  },
+  "finishes": {
+   "BOUND": 4,
+   "band": 2,
+   "return_blank": 3,
+   "return_bound": 27
+  },
+  "fin_census_before": {
+   "FIN.PAINT": {
+    "blank": 0,
+    "bounded": 10,
+    "excluded": 31,
+    "high": 682.3313,
+    "low": 601.645338,
+    "released": 4,
+    "released_m2": 217.2081
+   },
+   "FIN.PLASTER": {
+    "blank": 3,
+    "bounded": 34,
+    "excluded": 13,
+    "high": 1300.69428,
+    "low": 1131.965876,
+    "released": 43,
+    "released_m2": 388.58436
+   }
+  },
+  "fin_census_after": {
+   "FIN.PAINT": {
+    "blank": 3,
+    "bounded": 38,
+    "excluded": 31,
+    "high": 710.006421,
+    "low": 604.990059,
+    "released": 4,
+    "released_m2": 217.2081
+   },
+   "FIN.PLASTER": {
+    "blank": 3,
+    "bounded": 35,
+    "excluded": 13,
+    "high": 1302.168817,
+    "low": 1106.948597,
+    "released": 43,
+    "released_m2": 388.58436
+   }
+  }
+ },
+ "totals_moved": {
+  "FIN.PAINT|m2": {
+   "released": 0.0,
+   "held_low": 3.344721,
+   "held_high": 27.675121,
+   "lines": 31,
+   "bounded_lines": 28,
+   "blocked_lines": 3
+  },
+  "FIN.PLASTER|m2": {
+   "released": 0.0,
+   "held_low": -25.017279,
+   "held_high": 1.474537,
+   "lines": 1,
+   "bounded_lines": 1,
+   "blocked_lines": 0
+  }
+ },
+ "added_sums": {
+  "RETURN_PAINT|FIN.PAINT": {
+   "lines": 30,
+   "low": 0.0,
+   "high": 24.15,
+   "blank": 3
+  },
+  "DH_BAND|FIN.PLASTER": {
+   "lines": 1,
+   "low": 0.839412,
+   "high": 0.870912,
+   "blank": 0
+  },
+  "DH_BAND|FIN.PAINT": {
+   "lines": 1,
+   "low": 3.344721,
+   "high": 3.525121,
+   "blank": 0
+  }
+ },
+ "rows": [
+  {
+   "piece": "FIN_RESTATE",
+   "action": "BOUND",
+   "change": "CHANGE",
+   "line_id": "L-b152995525ed123ddac9",
+   "item_code": "FIN.PLASTER",
+   "floor": "GF",
+   "element_id": "HL:WALL_FINISH:GF_01:PLASTER",
+   "unit": "m2",
+   "host_line_id": null,
+   "before_base": {
+    "high": 65.25433,
+    "low": 61.46433,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 66.249856,
+    "low": 47.949844,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "flag": null,
+   "correction": {
+    "delta_m2": -0.010824,
+    "finding": "F-T709-1",
+    "why": "W12 deduction 4.2900 -> 4.300824 m2 (1.95492 x 2.20); both ends -0.010824"
+   },
+   "map_row": "T-701:GF-01",
+   "verification": {
+    "merge_commits": [
+     "65083ee7",
+     "5d00f738",
+     "fe461c6e"
+    ],
+    "task": "T-701 + T-723 + T-709"
+   }
+  },
+  {
+   "piece": "FIN_RESTATE",
+   "action": "BOUND",
+   "change": "CHANGE",
+   "line_id": "L-1ddc23d5657b4c4e4d0d",
+   "item_code": "FIN.PLASTER",
+   "floor": "GF",
+   "element_id": "HL:WALL_FINISH:GF_04:PLASTER",
+   "unit": "m2",
+   "host_line_id": null,
+   "before_base": {
+    "high": 43.155,
+    "low": 43.155,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 43.78,
+    "low": 34.33,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-701:GF-04",
+   "verification": {
+    "merge_commits": [
+     "65083ee7",
+     "5d00f738"
+    ],
+    "task": "T-701 + T-723"
+   }
+  },
+  {
+   "piece": "FIN_RESTATE",
+   "action": "BOUND",
+   "change": "CHANGE",
+   "line_id": "L-ea586fea86188a18bb67",
+   "item_code": "FIN.PLASTER",
+   "floor": "GF",
+   "element_id": "GF-RC06FED:plaster band above ceiling",
+   "unit": "m2",
+   "host_line_id": null,
+   "before_base": {
+    "high": 6.918815,
+    "low": 2.853686,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 6.186806,
+    "low": 0.499037,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-702:GF-07",
+   "verification": {
+    "merge_commits": [
+     "b90d85af",
+     "5d00f738"
+    ],
+    "task": "T-702 + T-723"
+   }
+  },
+  {
+   "piece": "FIN_RESTATE",
+   "action": "BOUND",
+   "change": "CHANGE",
+   "line_id": "L-ef7a16664d12b68a6e71",
+   "item_code": "FIN.PLASTER",
+   "floor": "GF",
+   "element_id": "GF-RDBD4F9:plaster band above ceiling",
+   "unit": "m2",
+   "host_line_id": null,
+   "before_base": {
+    "high": 5.29088,
+    "low": 5.05488,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 5.005988,
+    "low": 3.892324,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-702:GF-14",
+   "verification": {
+    "merge_commits": [
+     "b90d85af",
+     "5d00f738"
+    ],
+    "task": "T-702 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-2b4e45da29a5b2dd7981",
+   "item_code": "FIN.PAINT",
+   "floor": "1F",
+   "element_id": "1F-OPENING-OP-004:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-54b2eb0ad40cc47b9be5",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:1F-OPENING-OP-004:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-37cdb8db76a870eff3fe",
+   "item_code": "FIN.PAINT",
+   "floor": "1F",
+   "element_id": "1F-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-a85b83a93486fdc400f8",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.795,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:1F-OPENING-OP-005:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-56b08dbf65e47a26c561",
+   "item_code": "FIN.PAINT",
+   "floor": "1F",
+   "element_id": "1F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-5d309e25e8b180283606",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.795,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:1F-OPENING-OP-006:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-da69c4bd2954b31c0fb7",
+   "item_code": "FIN.PAINT",
+   "floor": "1F",
+   "element_id": "1F-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-f3590fade6406f912d2e",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 1.06,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:1F-OPENING-OP-008:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-d7409e4cefc3ee62aaf6",
+   "item_code": "FIN.PAINT",
+   "floor": "1F",
+   "element_id": "1F-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-f8a0d9bfc3e6a3f113b2",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": "NOT_ESTABLISHED (wet rooms both sides)",
+   "correction": null,
+   "map_row": "T-709:1F-OPENING-OP-010:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-762c50f64c3b6b6b9999",
+   "item_code": "FIN.PAINT",
+   "floor": "1F",
+   "element_id": "1F-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-537fc3896f24cf408fe6",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:1F-OPENING-OP-018:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-f430f55002cce63efb40",
+   "item_code": "FIN.PAINT",
+   "floor": "1F",
+   "element_id": "1F-OPENING-OP-019:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-f38f6ecefecd7e617cac",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:1F-OPENING-OP-019:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-c74cb759ac5ff7e6cfa0",
+   "item_code": "FIN.PAINT",
+   "floor": "1F",
+   "element_id": "1F-OPENING-OP-020:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-0bc19199447147ca226a",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.81,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:1F-OPENING-OP-020:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BLANK",
+   "change": "ADD",
+   "line_id": "L-6d2b3f8c5c33dd795433",
+   "item_code": "FIN.PAINT",
+   "floor": "1F",
+   "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-64cb94b4b8dc2cb17608",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": "HELD by name (plaster return blank)",
+   "correction": null,
+   "map_row": "T-709:1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-d086b605ac0e50af082a",
+   "item_code": "FIN.PAINT",
+   "floor": "1F",
+   "element_id": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-f0668097e8d872925fdf",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.81,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-c17b547dd9cdad8faf26",
+   "item_code": "FIN.PAINT",
+   "floor": "1F",
+   "element_id": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-34f4545187c3c764d174",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-d9d0cb88542f719484f7",
+   "item_code": "FIN.PAINT",
+   "floor": "2F",
+   "element_id": "2F-OPENING-OP-001:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-ca7d121f07fd1a73536d",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.81,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:2F-OPENING-OP-001:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-b12d7eb43e52a3d98ab4",
+   "item_code": "FIN.PAINT",
+   "floor": "2F",
+   "element_id": "2F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-833ba74bab1404d1f6cc",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:2F-OPENING-OP-006:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-4e7e711e5c8abc074414",
+   "item_code": "FIN.PAINT",
+   "floor": "2F",
+   "element_id": "2F-OPENING-OP-007:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-39497d7b7639a776f8f2",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 1.06,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:2F-OPENING-OP-007:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-897dca14b0b8c45be725",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-9cf5a4b4db78cf57cf7f",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 1.06,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:GF-OPENING-OP-005:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-7969458ba9185391c684",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-e11de0ecd42fcb0b5756",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 1.08,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:GF-OPENING-OP-008:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-6777e02aa04439148278",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-OPENING-OP-009:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-f4175f9915208dc5f9f7",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 1.08,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:GF-OPENING-OP-009:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-ba30cda374ebb4a8c7da",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-1f443fe4e172a90ddd7c",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 1.08,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:GF-OPENING-OP-010:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-65c1d5f9695ad983d89f",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-OPENING-OP-012:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-61825a3103a391956d70",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.81,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:GF-OPENING-OP-012:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-91dfc7c4d8ea4c86a547",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-OPENING-OP-013:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-3c21b044ce980ec0ee75",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 1.06,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:GF-OPENING-OP-013:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-9df1fbe948884e7c4d2a",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-OPENING-OP-017:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-7dcb2bab84655929f7e8",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": "NOT_ESTABLISHED (wet rooms both sides)",
+   "correction": null,
+   "map_row": "T-709:GF-OPENING-OP-017:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-0ea62c4cef8e2ce5a244",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-672329032e0d70329d5f",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": "NOT_ESTABLISHED (wet rooms both sides)",
+   "correction": null,
+   "map_row": "T-709:GF-OPENING-OP-018:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-7f8d0739849d36a7e832",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-OPENING-OP-021:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-2f94dca4dd5f2ec05822",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 1.4,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:GF-OPENING-OP-021:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-78d0a48c8bf5af4b21c4",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-OPENING-OP-025:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-3ae66decd178e43c61e0",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 1.08,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:GF-OPENING-OP-025:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-26efbd99ac40f2435692",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-OPENING-OP-026:door jambs and head:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-f4e9614350ce4659d186",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:GF-OPENING-OP-026:door jambs and head",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BLANK",
+   "change": "ADD",
+   "line_id": "L-eab5536cbc5b1f7829dd",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-3e19506bd9e093dfb7be",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": "HELD by name (plaster return blank)",
+   "correction": null,
+   "map_row": "T-709:GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-8dd621261ceb5b8e3919",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-6ebb9be39b8c4ff4693a",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": "NOT_ESTABLISHED (wet rooms both sides)",
+   "correction": null,
+   "map_row": "T-709:GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-dc8b92788150cda368a1",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-698dfa14c60ff86b5c60",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": "NOT_ESTABLISHED (wet rooms both sides)",
+   "correction": null,
+   "map_row": "T-709:GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-f3270cd391188bcf433c",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-8a038e1ca7c2d73d5b13",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.78,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "RETURN_PAINT",
+   "action": "BLANK",
+   "change": "ADD",
+   "line_id": "L-2d7f8ab2fb489d7f0963",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "unit": "m2",
+   "host_line_id": "L-e70e7e48b4c15b4f5a21",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": "HELD by name (plaster return blank)",
+   "correction": null,
+   "map_row": "T-709:GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-723"
+   }
+  },
+  {
+   "piece": "DH_BAND",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-b10c1b356670f749cc23",
+   "item_code": "FIN.PLASTER",
+   "floor": "GF",
+   "element_id": "PLASTER-BAND@L-8cecb1d010d5aafbf25d",
+   "unit": "m2",
+   "host_line_id": "L-8cecb1d010d5aafbf25d",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 0.870912,
+    "low": 0.839412,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:band:plaster",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "302e002d",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-719 + T-723"
+   }
+  },
+  {
+   "piece": "DH_BAND",
+   "action": "BOUND",
+   "change": "ADD",
+   "line_id": "L-ab4ed4328ee652456117",
+   "item_code": "FIN.PAINT",
+   "floor": "GF",
+   "element_id": "PAINT-BAND@L-c0ac22c964a42e7d71b1",
+   "unit": "m2",
+   "host_line_id": "L-c0ac22c964a42e7d71b1",
+   "before_base": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after_v3_0_74": {
+    "high": 3.525121,
+    "low": 3.344721,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    null,
+    "HELD"
+   ],
+   "flag": null,
+   "correction": null,
+   "map_row": "T-709:band:paint",
+   "verification": {
+    "merge_commits": [
+     "fe461c6e",
+     "302e002d",
+     "5d00f738"
+    ],
+    "task": "T-709 + T-719 + T-723"
+   }
+  }
+ ],
+ "like_for_like": {
+  "plaster": {
+   "engine_net_t701": [
+    "984.249810",
+    "1053.666410"
+   ],
+   "moved_lines": [
+    {
+     "room": "GF-01",
+     "line_id": "L-b152995525ed123ddac9",
+     "v3_0_73": [
+      61.46433,
+      65.25433
+     ],
+     "v3_0_74": [
+      47.949844,
+      66.249856
+     ],
+     "delta": [
+      -13.514486,
+      0.995526
+     ]
+    },
+    {
+     "room": "GF-04",
+     "line_id": "L-1ddc23d5657b4c4e4d0d",
+     "v3_0_73": [
+      43.155,
+      43.155
+     ],
+     "v3_0_74": [
+      34.33,
+      43.78
+     ],
+     "delta": [
+      -8.825,
+      0.625
+     ]
+    }
+   ],
+   "engine_net_v3_0_74": [
+    961.910324,
+    1055.286936
+   ],
+   "his_gross": 1169.125,
+   "his_row_apart_no_face": 13.5,
+   "his_like_for_like": 1155.625,
+   "pct_vs_his_gross": [
+    -17.72,
+    -9.74
+   ],
+   "pct_vs_his_with_row_apart": [
+    -16.76,
+    -8.68
+   ],
+   "not_in_this_line": "the stairwell band and the return-paint lines are new elements the T-701 like-for-like set (11 dry rooms + 3 shaft lines) does not hold: shown beside, never added to his comparison"
+  },
+  "paint": {
+   "engine_net_t701": [
+    "818.853438",
+    "899.539400"
+   ],
+   "moved_lines": [],
+   "engine_net_v3_0_74": [
+    818.853438,
+    899.5394
+   ],
+   "his_gross": 1169.125,
+   "his_row_apart_no_face": 13.5,
+   "his_like_for_like": 1155.625,
+   "pct_vs_his_gross": [
+    -29.96,
+    -23.06
+   ],
+   "pct_vs_his_with_row_apart": [
+    -29.14,
+    -22.16
+   ],
+   "not_in_this_line": "the stairwell band and the return-paint lines are new elements the T-701 like-for-like set (11 dry rooms + 3 shaft lines) does not hold: shown beside, never added to his comparison"
+  }
+ },
+ "waiting": {
+  "T717_BAND_BEAMS": "the beam faces under the 1F well walls (south 3.020 lm, west 4.000 lm, below +5.50) stay HELD by name: beam depth on the structural GF roof slab plan (T-709 (a)); no line is opened for them",
+  "T717_F_V709_1": "Checker re-measure of the GF solid run 4.000 m vs the ledger 3.997201 m (2.8 mm frame offset, immaterial): the band is wired as merged; the residual is named, not applied",
+  "T717_PAINT_GF01_W12": "F-T709-1 also puts the GF-01 PAINT line 0.010824 m2 high (same W12 deduction): it is not in the T-723 H1 map; it moves with the next GF-01 paint restatement (lane I), named here",
+  "T717_RETURN_LOW": "every return-paint low stays 0 until the frame-covered jamb depth is printed (frame / casing detail, designer datum); 5 faces between two wet rooms are NOT_ESTABLISHED (R-T701-3)",
+  "T717_SHAFT_ROW": "the freelancer's 2.50 x 5.40 = 13.50 m2 plaster row (paint row the same) is NO_FACE (T-726 R-T726-1..3): shown apart in the like-for-like line, never added, never removed from his total"
+ }
+}
