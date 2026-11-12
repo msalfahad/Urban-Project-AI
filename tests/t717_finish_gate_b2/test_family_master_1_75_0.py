@@ -71,7 +71,7 @@ def test_only_the_named_top_fields_move_while_pending(docs):
     assert new["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.73"
 
 
-def test_only_the_six_concrete_families_move(docs):
+def test_only_the_two_finish_families_move(docs):
     old, new = docs
     ob, nb = {f["code"]: f for f in old["families"]}, {f["code"]: f for f in new["families"]}
     assert list(nb) == list(ob)
@@ -97,7 +97,7 @@ def test_pending_package(docs):
     assert [(x["task"], x["method_version"], x["module"], x["status"]) for x in q] == [
         ("T-717", A.METHOD, "engine/source/arch_v3074.py", FMC.PENDING_STATUS)]
     assert "merge_commit" not in q[0] and FMC.SHA40.match(q[0]["task_commit"])
-    assert q[0]["integrates"] == ["T-707", "T-711", "T-712", "T-721", "T-723"]
+    assert q[0]["integrates"] == ["T-701", "T-702", "T-709", "T-719", "T-723"]
 
 
 def test_adverse_builder_refuses_a_base_with_a_pending_package(docs, monkeypatch, tmp_path):
