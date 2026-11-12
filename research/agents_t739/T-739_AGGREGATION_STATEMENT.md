@@ -33,10 +33,10 @@ with any HELD line prints no single total. Register codes (ARCH.WALL_PANEL / VOL
 ## Findings
 
 - F-T739-1: HELD lines with no committed cause: 0 (34 are caused only by the T-716 class bucket, no detailed text).
-- F-T739-2: STR.CONC.GROUND_BEAM: the T-722 printed census counts L-fb7a6431 (index 0 .. 3.5256 m3, the T-724 cap) as
-  blank while the index carries both bounds; the index reading (bounded 1.178378 .. 5.096771 on 9 lines + 20 BLANK)
-  equals SCOREBOARD v2; a 0 low on a HELD line is a cap, not a measured lower end (proposal: the census convention
-  should say which).
+- F-T739-2: STR.CONC.GROUND_BEAM L-fb7a6431 carries 0 .. 3.5256 m3 in the index, but the merged Checker ruling
+  F-T723-3 / T-724 gives it one state, HELD BLANK with an AT_MOST cap 3.5256 beside (restatement listed for concrete
+  round 10, T-730). This statement reads the index (bounded 1.178378 .. 5.096771 on 9 + 20 BLANK, = SCOREBOARD v2) and
+  prints the ruled reading beside (1.178378 .. 1.571171 on 8 + 21 BLANK, cap beside), which is the T-722 census figure.
 - F-T739-3: the T-662 per-line 'cause' field is the rebar ratio route, not a hold reason; it is not used as a cause.
 - Component layer: only the T-722 rows carry a committed per-line component record; every other line's gross /
   deductions / additions live only in the private V3_0_73_BOQ_LINES (c5a0b128) and are NOT re-added here.

@@ -59,6 +59,10 @@ CAUSE_KEYS = ("cause", "causes", "why", "why_no_low", "why_no_bound", "why_no_at
 ID_IN_TEXT = re.compile(r"\b(D-\d+|Q-\d+|OQ-\d+|C-ST-\d+|F-T\d+-\d+)\b")
 TASK_DIR = re.compile(r"research/agents_t(\d{3})/")
 ADDED_SINCE_T654 = 654   # T-654 trial BOQ r4 is the base cause register; records of later tasks overrule it
+# merged Checker rulings on a line's FORM that the index does not carry yet (printed beside, never applied here)
+RULED_BESIDE = {"L-fb7a6431fede62e93fd5": "F-T723-3 / T-724 (MERGED, Checker): one state = HELD BLANK with an AT_MOST "
+                "cap 3.5256 m3 beside (index still 0 .. 3.5256; restatement listed for concrete round 10, T-730); "
+                "ruled reading: GROUND_BEAM bounded 1.178378 .. 1.571171 (8) + 21 BLANK, cap beside"}
 HAND_CELLS = (("B7 Stairs", "m3"), ("B9 Masonry", "m2"), ("B4 Walls", "lm"))
 # outputs whose per-line 'cause' field states something other than why the line is held (read, never used as a cause)
 NOT_A_HOLD_CAUSE = {662: "T-662 rebar ratio: its 'cause' is the ratio route taken (detailed kept / no calibration), "
@@ -377,7 +381,7 @@ def build():
         "inputs": {k: {"path": v[0], "sha256": v[1]} for k, v in PIN.items()},
         "line_count": len(lines), "state_count": dict(Counter(R.state_of(l) for l in lines)),
         "trades": trades, "item_codes": codes, "chain_readd_v3_0_72_to_v3_0_73": chain,
-        "component_coverage": comp_cover, "concrete_census_crosscheck_t722": cc,
+        "component_coverage": comp_cover, "ruled_form_beside": RULED_BESIDE, "concrete_census_crosscheck_t722": cc,
         "held": {"lines": len(held), "with_cause": len(causes), "findings_F_T739_1": len(findings),
                  "cause_source_counts": dict(sorted(src_count.items())), "records_read_by_task": dict(sorted(used.items())),
                  "applied_downgrades_on_index": applied,
@@ -421,6 +425,8 @@ def render_md(b):
                     f" released {x['released_m3']} m3, bounded {x['bounded']}, blank {x['blank']}"
                     + (f", beside (run record only, not in the index) {x['beside_run_record_only']}"
                        if x['beside_run_record_only'] else "") for x in b["concrete_census_crosscheck_t722"]),
+          "- F-T739-2 (form ruled, not yet in the index): " + "; ".join(f"{k} {v}" for k, v in
+                                                                      sorted(b["ruled_form_beside"].items())) + ".",
           "- Component layer: only the T-722 package rows carry a committed per-line component record (before / after);"
           " every other line's gross / deductions / additions live in the private run output (V3_0_73_BOQ_LINES "
           "c5a0b128), NOT re-added here:", "",

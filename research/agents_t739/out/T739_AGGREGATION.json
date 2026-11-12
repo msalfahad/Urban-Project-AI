@@ -47895,6 +47895,9 @@
   "source": "T-469 committed side A (BOQ lines 1eff0920, 1,455 lines)"
  },
  "rule": "R-T739-1 1.0.0",
+ "ruled_form_beside": {
+  "L-fb7a6431fede62e93fd5": "F-T723-3 / T-724 (MERGED, Checker): one state = HELD BLANK with an AT_MOST cap 3.5256 m3 beside (index still 0 .. 3.5256; restatement listed for concrete round 10, T-730); ruled reading: GROUND_BEAM bounded 1.178378 .. 1.571171 (8) + 21 BLANK, cap beside"
+ },
  "schema": "URBAN_T739_AGGREGATION_V1",
  "state_count": {
   "BLANK": 1602,
