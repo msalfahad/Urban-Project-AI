@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12 21:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T21:02Z | Worker 2 | SUCCESS | T-751 READY 34520aeb | Exterior corner lm 168.50..182.05 -> 178.136..179.336 (1F parapet ends 9.186 from own DXF outlines, NE-2/SE-1 1.60 above the T-172 cap; pool-court plinth 2.55; stop-end 0..1.20 HELD); window edges 103.682 lm by DXF head chains (T-746 rectangles -2.338); SE surround is the porch-mouth piece, not GF/SE-2: paint low +1.298 m2, keystone 0.1349 m2; pier parapet 0.697 m2; doors / 1F slab edge HELD | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12T21:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12T20:58Z | Verifier | SUCCESS | none (READY 0: T-751 CLAIMED W2 20:40; T-745 r2, T-736 TODO; T-752, T-749 QUEUED) | Light run: no task to gate, no merge, no quantity change; engine head a3f62c52 unchanged since the 20:00 run, candidate of record ARCH_TAKEOFF_V3.0.75 a1eba08f (NOT RELEASED), released V2.9 + route G untouched; SCOREBOARD v2 restatement stands (roof membrane L-636fd3ff awaits T-736 under DG-98cbadebaecc5ede). T-180 slot not used: CLOSABLE LINES unchanged since 20:00, no row CLOSABLE NOW; Drive not read. No owner question. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
