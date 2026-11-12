@@ -63,6 +63,14 @@ printed: the neighbour spaces print +0.30 and +1.00, so 1F +5.50 down to GF is 4
 released). The stack foot below the GF floor to the branch invert (inverts not printed), the high level of stack D and
 its drop at the offset are HELD.
 
+Level cross-check against the architectural drawing (Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip,
+own decode, all TEXT / MTEXT / block texts): 51 level texts, the same set as the sanitary sheets (+-0.00, +0.15,
++0.30, +1.00, +4.30, +5.50, +9.70); on the NORTH WEST ELEVATION the marks +1.00 and +5.50 stand 4.500 m apart and on
+the SOUTH EAST ELEVATION +0.30 and +4.30 stand 4.000 m apart (insert heights), so GF +1.00 / 1F +5.50 and the low
+wing +0.30 / roof +4.30 used by the risers AGREE between plan and elevation. +9.70 is printed on the 2F plan only (no
+elevation mark). No level is printed inside the GF wet rooms of stacks A / B / C in either source (nearest: stair
+landing +0.30, lobby +1.00), so their 1F to GF crossing stays BOUNDED.
+
 End points (T-743 census): every floor-drain square inside the plot (GF 11, 1F 7, 2F 1 = 19 = the T-743 count) has a
 drawn pipe ending at or passing through it (0 without). Printed diameter labels: 3 placed, 0 refused.
 
@@ -103,5 +111,5 @@ plan and riser never summed; committed output re-adds row by row and holds no co
 - Not wired: B12-02 has no candidate line; a later Gate B row adds it from this census.
 - Branch / waste diameters (78.512 m), GF FFL at the stack rooms, stack inverts and the stack D high level are not
   printed: designer items. Water supply is not drawn anywhere in the set (no supply sheet in the folder).
-- Riser levels are read from the plan level marks of this sheet; a cross-check against the architectural sections was
-  not done this run. Fittings (bends, tees, clean-outs, GCO, manhole) are pcs items, not counted here.
+- Riser levels: plan marks cross-checked against the architectural elevations (above); the sections (sheets 9 / 10)
+  were not read this run, and the roof outlet bodies / bends at the riser tops are not measured. Fittings (bends, tees, clean-outs, GCO, manhole) are pcs items, not counted here.
