@@ -3,7 +3,7 @@
 No candidate line, hub, registry, rule / knowledge version file or default moves (wiring: T-749 / T-314 r3). Rules
 R-T751-1 .. -4 1.0.0 (`t751_rules.py`, every villa); own DXF census `t751_census.py` (private input, writes
 `in/T751_CENSUS.json`: handles, layers, levels and lengths only); application `t751_alsenan.py` (`--check` rebuilds
-from the committed, sha-pinned inputs) -> `out/T751_EDGE_BOUNDS.{json,md}`; tests `tests/t751_edge_bounds` (40).
+from the committed, sha-pinned inputs) -> `out/T751_EDGE_BOUNDS.{json,md}`; tests `tests/t751_edge_bounds` (34).
 Drawing read this run: Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf sha256 ab54dd55, the
 SOUTH EAST and NORTH WEST elevation frames, datum blocks 2439 / 2A42 checked on 244A / 244C / 2886 / 2888) and
 p7757_arch_sheet09.pdf (NE elevation, raster: read for topology only, nothing scaled). ERS read: s.2.1, 2.4, 3, 7.
