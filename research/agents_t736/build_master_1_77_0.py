@@ -49,7 +49,7 @@ NOTE_ONLY = {}
 NEW_CODES = {"B4-09": ("FIN.PLASTER.BEAD",)}
 PENDING = {
     "task": "T-736", "method_version": CAND, "module": MOD, "status": FMC.PENDING_STATUS,
-    "integrates": ["T-727", "T-728", "T-730", "DG-98cbadebaecc5ede"],
+    "integrates": ["T-727", "T-728", "T-730", "T-734"],   # T-734: the evidence pack of the Checker record DG-98cbadebaecc5ede
     "tests": ["tests/t736_beads_ceiling"],
     "changes_families_by_item_code": ["FIN.CEILING", "FIN.PLASTER.BEAD", "FIN.WP.ROOF"],
     "note": "T-736 (research/agents_t736/T-736_BEADS_CEILING_GATE_B.md): BEADS_GATE_B_V1 + CEILING_GATE_B_V3 + "
