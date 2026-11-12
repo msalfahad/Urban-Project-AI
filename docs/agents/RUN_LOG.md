@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T04:53Z | Verifier | STARTED | run session_01E6cPnduLXvYB5NJWaEQFU2 | repo-attached routine | task state: READY 0 per Lead 04:17 (re-checking board) | self-check pending
 - 2026-11-12T04:40Z | Worker 2 | STARTED | run session_01E6cPnesPk4JUqP9qWnivzg | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12 04:17 UTC | Lead | SUCCESS | board | 6 MERGED since 00:18 (T-724, T-727, T-722 Gate B -> candidate V3.0.73 / master 1.74.0, T-725 PARTIAL, T-726, T-728; ancestors of 80e27c10 checked), READY 0; T-717 plaster / paint TODO W3 first (V3.0.74); new T-729 formwork Gate B (V3.0.75, queued), T-730 wiring map r5, T-731 MS1-L coherent stair reading (F-T725-1), T-732 formwork of moved members, T-733 tiles H3 readiness, T-734 WP roof downgrade record; ruling: plaster like-for-like shows his 13.50 NO_FACE row apart; lessons union-not-sum + L-T703-1 ADOPTED, L-T727-1 + F-T725-1 PROPOSED; Drive OK, no new files, no photos; no owner package; queue check: 19 actionable rows, 0 flagged, 0 stall checks | self-check PASS (codemap, t061, freeze); problem: none
 - 2026-11-12 04:13 UTC | Lead | STARTED | run session_01E6cPnc3uB4cgfr1fx9Jyw1 | repo-attached routine | task state: board | report pending
