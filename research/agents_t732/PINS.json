@@ -1,0 +1,16 @@
+{
+ "research/agents_t110/BEAM_MEMBER_REGISTER.csv": "368d0fa2d690fb02",
+ "research/agents_t119/COLUMNS_TO_CONTROLLING_MEMBER.csv": "dbe1ce155c7d7356",
+ "research/agents_t332/FORMWORK_T332_BY_FACE.csv": "15c188724a60d580",
+ "research/agents_t402/HELD_LINES_T402.csv": "e7a8f8a4d3de89f2",
+ "research/agents_t638/out/FORMWORK_HOLD_CENSUS_T638.json": "a75276c82547c7cc",
+ "research/agents_t693/out/LINE_INDEX_V3_0_70.json": "6c12da077200db17",
+ "research/agents_t707/out/T707_COLUMN_TAIL.json": "f8feb9bfbbc4e969",
+ "research/agents_t711/out/T711_LEDGER.json": "36cd106334645d92",
+ "research/agents_t712/out/T712_LEDGER.json": "9d2bbd78d5a40b16",
+ "research/agents_t714/out/T714_FORMWORK_BOUNDS.json": "17959a8de65c4707",
+ "research/agents_t721/out/T721_LEDGER.json": "76b09766541b9049",
+ "research/agents_t722/out/LINE_INDEX_V3_0_73.json": "af8d567d8a8ae828",
+ "research/agents_t722/out/T722_SUMMARY.json": "e6d8906cbb5343bd",
+ "research/agents_t724/out/T724_FINDINGS.json": "9bba4b7414d58ca1"
+}
