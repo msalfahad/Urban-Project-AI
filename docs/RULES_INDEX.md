@@ -130,6 +130,22 @@ Proposed, not in force: UP-WP-004 (A shower takes the wet-room floor and the UP-
 |---|---|---|---|---|---|---|
 | UP-CONC-JOINT-001 | 1.0.0 | LEAD_ADOPTED | Column-beam joint: the column owns the joint prism to the slab top; every beam is net of the column solid (ea… | - | Q-62 A cond (owner directive 2026-10-20 12:02 UTC, OWNER_QUESTIONS_AN… | `tests/t599/test_t599.py` |
 
+## Company rulebook `rules/rulebook/URBAN_COMPANY_RULEBOOK_1.2.0.json` (1.2.0; 11; earlier versions kept unchanged)
+
+| Rule | Version | Status | Level | Title | Supersedes (in scope) | Tests |
+|---|---|---|---|---|---|---|
+| UPC-LINTEL-001 | 1.0.0 | OWNER_CONFIRMED | 3 | Precast lintel (atab, عتب) stock length and count | - | - |
+| UPC-ADHESIVE-001 | 1.0.0 | OWNER_CONFIRMED | 3 | Tile adhesive (لاصق) bags by tile size | - | - |
+| UPC-AAC-GLUE-001 | 1.0.0 | OWNER_CONFIRMED | 3 | White AAC block glue (مونة طابوق أبيض) consumption | - | - |
+| UPC-BLACK-BLOCK-001 | 1.1.0 | OWNER_CONFIRMED | 3 | Black (cement) block count per m2 of wall | - | - |
+| UPC-BLACK-MORTAR-001 | 1.0.0 | OWNER_CONFIRMED | 3 | Black-block laying mortar mix and materials per m3 | - | - |
+| UPC-TILE-BED-001 | 1.0.0 | OWNER_CONFIRMED | 3 | Cement-sand bed under floor tiles | - | - |
+| UPC-WETWALL-001 | 1.0.0 | OWNER_CONFIRMED | 3 | Wet-area wall build-up: three separate operations | - | - |
+| UPC-HEIGHT-001 | 1.0.0 | OWNER_CONFIRMED | 3 | Plaster and paint heights | - | - |
+| UPC-BLOCK-OPENINGS-001 | 1.0.0 | OWNER_CONFIRMED | 3 | Opening deduction from blockwork | - | - |
+| UPC-CEMENT-LAYERS-METHOD-001 | 1.0.0 | METHOD_ONLY_VALUES_HELD | 4 | Spatter dash, levelling render, wall plaster and water: documented estimating method (values NOT owner-given) | - | - |
+| UP-FIN-PAINT-002 | 1.0.0 | OWNER_CONFIRMED | 3 | Paint area = plaster area of the same faces, less the band above a false ceiling and the tiled part | UP-FIN-PAINT-001@1.0.0 | `tests/t740_paint_area_rule/test_t740.py` |
+
 ## Method register V3 (`rules/methods/`) (8)
 
 | Method id | Applies to | Statement |

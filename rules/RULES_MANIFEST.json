@@ -349,6 +349,10 @@
   "rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json": {
    "kind": "AUTHORED",
    "sha256": "da38d121eec33c00ff3c8b524ed022be6a66f5789fdd9a0cd37f216f84dcde35"
+  },
+  "rulebook/URBAN_COMPANY_RULEBOOK_1.2.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "baf602108b825884188e0cf5b0e42e7beebfc4b0dc9f909f1eb8832d6a900bb6"
   }
  },
  "latest_owner_approved": "1.5.0",
