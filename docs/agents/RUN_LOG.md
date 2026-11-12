@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T09:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-734 (W2 @80609efe), T-735 (W1 @51baa9d7) per run log | self-check pending
 - 2026-11-12 09:32 UTC | Worker 1 | SUCCESS | T-735 READY (51baa9d7) | Formwork conflict decider, 7 lines one live form each on V3.0.73: 412 BOUNDED 4.183916..5.532116 m2; 415 AT_LEAST 2.8938 (D-04 BM-2F-015 open to 1.20); annex 34A/34D/356/350 AT_LEAST 3.0528 each; L-867e155d cap 0 -> 0.102019 m2 (walk held D; 0.300056 x (0.50-0.16)). T-707 P x (h-t) not a floor, T-714 BLANK had a positive floor: both superseded by name (R-T735-1/-2). B10-13 BOUNDED 32 107.200712..132.785507, AT_LEAST 40 >=122.484697, BLANK 244; released untouched; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12 09:21 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12 09:00 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
