@@ -1,0 +1,4732 @@
+{
+ "schema": "URBAN_T740_PAINT_RULE_V1",
+ "candidate": "ARCH_TAKEOFF_V3.0.74",
+ "rule": {
+  "id": "UP-FIN-PAINT-002",
+  "version": "1.0.0",
+  "file": "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.2.0.json"
+ },
+ "inputs_sha256_16": {
+  "research/agents_t717/out/LINE_INDEX_V3_0_74.json": "6733cbc143cdfffd",
+  "research/agents_t292/OPENING_DEDUCTIONS_T292.csv": "4d75de86848509e4",
+  "research/agents_t709/out/T709_RESIDUALS.json": "fcbd5aa7d9a12018"
+ },
+ "census_board": {
+  "FIN.PLASTER": {
+   "lines": 94,
+   "released": "388.584360",
+   "held": [
+    "1106.948597",
+    "1302.168817"
+   ],
+   "blank": 3,
+   "excluded": 13,
+   "total": [
+    "1495.532957",
+    "1690.753177"
+   ]
+  },
+  "FIN.PAINT": {
+   "lines": 76,
+   "released": "217.208100",
+   "held": [
+    "604.990059",
+    "710.006421"
+   ],
+   "blank": 3,
+   "excluded": 31,
+   "total": [
+    "822.198159",
+    "927.214521"
+   ]
+  }
+ },
+ "totals": {
+  "plaster": [
+   "1495.532957",
+   "1690.753177"
+  ],
+  "engine_paint": [
+   "822.198159",
+   "927.214521"
+  ],
+  "rule_paint": [
+   "841.260635",
+   "929.204847"
+  ]
+ },
+ "paint_by_engine_class": {
+  "RELEASED": {
+   "lines": 4,
+   "engine_paint": [
+    "217.208100",
+    "217.208100"
+   ],
+   "rule_paint": [
+    "217.208150",
+    "217.208150"
+   ]
+  },
+  "HELD": {
+   "lines": 38,
+   "engine_paint": [
+    "604.990059",
+    "710.006421"
+   ],
+   "rule_paint": [
+    "624.052485",
+    "711.996697"
+   ]
+  }
+ },
+ "blank_faces": {
+  "plaster": 14,
+  "engine_paint": 14,
+  "rule_paint": 14
+ },
+ "by_floor": {
+  "1F": {
+   "plaster": [
+    "654.887610",
+    "678.321310"
+   ],
+   "engine_paint": [
+    "370.157300",
+    "386.529400"
+   ],
+   "rule_paint": [
+    "376.685650",
+    "390.834550"
+   ]
+  },
+  "2F": {
+   "plaster": [
+    "181.164910",
+    "189.910910"
+   ],
+   "engine_paint": [
+    "125.817200",
+    "133.247200"
+   ],
+   "rule_paint": [
+    "128.307150",
+    "133.247150"
+   ]
+  },
+  "EXT": {},
+  "GF": {
+   "plaster": [
+    "659.480437",
+    "822.520957"
+   ],
+   "engine_paint": [
+    "326.223659",
+    "407.437921"
+   ],
+   "rule_paint": [
+    "336.267835",
+    "405.123147"
+   ]
+  }
+ },
+ "by_class": {
+  "DOUBLE_HEIGHT": {
+   "plaster": [
+    "0.839412",
+    "0.870912"
+   ],
+   "engine_paint": [
+    "3.344721",
+    "3.525121"
+   ],
+   "rule_paint": [
+    "3.344721",
+    "3.525121"
+   ],
+   "band": [
+    "-2.505309",
+    "-2.654209"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ]
+  },
+  "DRY": {
+   "plaster": [
+    "818.306324",
+    "897.516936"
+   ],
+   "engine_paint": [
+    "677.199438",
+    "743.719400"
+   ],
+   "rule_paint": [
+    "676.011914",
+    "745.709726"
+   ],
+   "band": [
+    "142.294410",
+    "151.807210"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ]
+  },
+  "EXCLUDED": {},
+  "EXTERIOR": {},
+  "RETURN": {
+   "plaster": [
+    "24.150000",
+    "24.150000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "24.150000"
+   ],
+   "rule_paint": [
+    "20.250000",
+    "24.150000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "3.900000",
+    "0.000000"
+   ]
+  },
+  "SHAFT": {
+   "plaster": [
+    "143.604000",
+    "157.770000"
+   ],
+   "engine_paint": [
+    "141.654000",
+    "155.820000"
+   ],
+   "rule_paint": [
+    "141.654000",
+    "155.820000"
+   ],
+   "band": [
+    "1.950000",
+    "1.950000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ]
+  },
+  "WET_BAND": {
+   "plaster": [
+    "75.314715",
+    "122.008029"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "75.314715",
+    "122.008029"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ]
+  },
+  "WET_RENDER": {
+   "plaster": [
+    "433.318506",
+    "488.437300"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "433.318506",
+    "488.437300"
+   ]
+  }
+ },
+ "allocation": {
+  "low": {
+   "gap": "673.334798",
+   "band_incl_void_credit": "217.053816",
+   "tiled": "437.218506",
+   "engine_minus_rule": "-19.062476",
+   "engine_minus_rule_by_cause": {
+    "BEAM_END_BELOW_CEILING": "0.315000",
+    "LEDGER_ROUNDING": "0.000250",
+    "OPENING_BASIS_MISMATCH": "0.872274",
+    "RETURN_RULE_RESTATED": "-20.250000"
+   },
+   "residual": "0.000000"
+  },
+  "high": {
+   "gap": "763.538656",
+   "band_incl_void_credit": "273.111030",
+   "tiled": "488.437300",
+   "engine_minus_rule": "-1.990326",
+   "engine_minus_rule_by_cause": {
+    "LEDGER_ROUNDING": "0.000250",
+    "OPENING_BASIS_MISMATCH": "-1.990576"
+   },
+   "residual": "0.000000"
+  }
+ },
+ "dry_rooms": [
+  {
+   "room": "GF-01",
+   "floor": "GF",
+   "face_lm": "20.127",
+   "plaster_line": "L-b152995525ed123ddac9",
+   "paint_line": "L-cdf7f5cd2789b67004f1",
+   "plaster": [
+    "47.949844",
+    "66.249856"
+   ],
+   "engine_paint": [
+    "36.911738",
+    "56.925700"
+   ],
+   "paint_class": "HELD",
+   "rule_paint": [
+    "36.900914",
+    "54.610926"
+   ],
+   "ends": [
+    {
+     "end": "low",
+     "plaster_top": "3.084",
+     "paint_top": "2.494",
+     "band_gross": "11.874930",
+     "gap": "11.038106",
+     "rule_paint": "36.900914",
+     "band": "11.048930",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "OPENING_BASIS_MISMATCH",
+       "m2": "0.010824",
+       "what": "W11 + W12"
+      }
+     ],
+     "items": [
+      {
+       "item": "W11 + W12",
+       "plaster_ded": "8.601824",
+       "band_part": "0.000000",
+       "rule_paint_ded": "8.601824",
+       "engine_paint_ded": "8.591000",
+       "source": "back-derived from the paint line (L x H - line - the other items): the paint line still carries W12 4.29 at its low end (F-T717-1) and the pre-T-207 window basis at its high end"
+      },
+      {
+       "item": "D-GF-01",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger GF-01 D-GF-01: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "A-GF-01",
+       "plaster_ded": "3.084000",
+       "band_part": "0.590000",
+       "rule_paint_ded": "2.494000",
+       "engine_paint_ded": "2.494000",
+       "source": "width 1.0, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "beam CB6",
+       "plaster_ded": "0.236000",
+       "band_part": "0.236000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS CB6 b 0.2 x depth below the soffit 0.59, 2 ends; the paint line deducts no beam end"
+      }
+     ]
+    },
+    {
+     "end": "high",
+     "plaster_top": "3.84",
+     "paint_top": "3.25",
+     "band_gross": "11.874930",
+     "gap": "9.324156",
+     "rule_paint": "54.610926",
+     "band": "11.638930",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "OPENING_BASIS_MISMATCH",
+       "m2": "2.314774",
+       "what": "W11 + W12"
+      }
+     ],
+     "items": [
+      {
+       "item": "W11 + W12",
+       "plaster_ded": "8.601824",
+       "band_part": "0.000000",
+       "rule_paint_ded": "8.601824",
+       "engine_paint_ded": "6.287050",
+       "source": "back-derived from the paint line (L x H - line - the other items): the paint line still carries W12 4.29 at its low end (F-T717-1) and the pre-T-207 window basis at its high end"
+      },
+      {
+       "item": "D-GF-01",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger GF-01 D-GF-01: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "A-GF-01",
+       "plaster_ded": "0.000000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "width 1.0, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "beam CB6",
+       "plaster_ded": "0.236000",
+       "band_part": "0.236000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS CB6 b 0.2 x depth below the soffit 0.59, 2 ends; the paint line deducts no beam end"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "room": "GF-04",
+   "floor": "GF",
+   "face_lm": "12.5",
+   "plaster_line": "L-1ddc23d5657b4c4e4d0d",
+   "paint_line": "L-d7d6d2f765489a95c408",
+   "plaster": [
+    "34.330000",
+    "43.780000"
+   ],
+   "engine_paint": [
+    "26.958600",
+    "36.405000"
+   ],
+   "paint_class": "HELD",
+   "rule_paint": [
+    "26.958600",
+    "36.405000"
+   ],
+   "ends": [
+    {
+     "end": "low",
+     "plaster_top": "3.084",
+     "paint_top": "2.494",
+     "band_gross": "7.375000",
+     "gap": "7.371400",
+     "rule_paint": "26.958600",
+     "band": "7.371400",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [],
+     "items": [
+      {
+       "item": "W04",
+       "plaster_ded": "0.480000",
+       "band_part": "0.003600",
+       "rule_paint_ded": "0.476400",
+       "engine_paint_ded": "0.476400",
+       "source": "T-292 ledger GF-04 W04: w 0.6 sill 1.7 head 2.5 (T-201 heads)"
+      },
+      {
+       "item": "D-GF-03",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger GF-04 D-GF-03: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-GF-04",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger GF-04 D-GF-04: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      }
+     ]
+    },
+    {
+     "end": "high",
+     "plaster_top": "3.84",
+     "paint_top": "3.25",
+     "band_gross": "7.375000",
+     "gap": "7.375000",
+     "rule_paint": "36.405000",
+     "band": "7.375000",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [],
+     "items": [
+      {
+       "item": "W04",
+       "plaster_ded": "0.480000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.480000",
+       "engine_paint_ded": "0.480000",
+       "source": "T-292 ledger GF-04 W04: w 0.6 sill 1.7 head 2.5 (T-201 heads)"
+      },
+      {
+       "item": "D-GF-03",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger GF-04 D-GF-03: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-GF-04",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger GF-04 D-GF-04: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "room": "GF-15",
+   "floor": "GF",
+   "face_lm": "21.537",
+   "plaster_line": "L-0d93f2209cd9bb827c0a",
+   "paint_line": "L-7f083d3e2c2702d14356",
+   "plaster": [
+    "66.528990",
+    "66.528990"
+   ],
+   "engine_paint": [
+    "56.013100",
+    "56.013100"
+   ],
+   "paint_class": "RELEASED",
+   "rule_paint": [
+    "56.013150",
+    "56.013150"
+   ],
+   "ends": [
+    {
+     "end": "low",
+     "plaster_top": "4.29",
+     "paint_top": "3.65",
+     "band_gross": "13.783680",
+     "gap": "10.515890",
+     "rule_paint": "56.013150",
+     "band": "10.515840",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "LEDGER_ROUNDING",
+       "m2": "-0.000050",
+       "what": "paint line vs its own ledger (L x H - deductions)"
+      }
+     ],
+     "items": [
+      {
+       "item": "D-GF-14",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger GF-15 D-GF-14: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W03",
+       "plaster_ded": "21.904740",
+       "band_part": "3.267840",
+       "rule_paint_ded": "18.636900",
+       "engine_paint_ded": "18.636900",
+       "source": "T-292 ledger GF-15 W03: w 5.106 sill 0.0 head 4.3 (T-175 hosts)"
+      },
+      {
+       "item": "D-GF-13",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger GF-15 D-GF-13: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      }
+     ]
+    },
+    {
+     "end": "high",
+     "plaster_top": "4.29",
+     "paint_top": "3.65",
+     "band_gross": "13.783680",
+     "gap": "10.515890",
+     "rule_paint": "56.013150",
+     "band": "10.515840",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "LEDGER_ROUNDING",
+       "m2": "-0.000050",
+       "what": "paint line vs its own ledger (L x H - deductions)"
+      }
+     ],
+     "items": [
+      {
+       "item": "D-GF-14",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger GF-15 D-GF-14: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W03",
+       "plaster_ded": "21.904740",
+       "band_part": "3.267840",
+       "rule_paint_ded": "18.636900",
+       "engine_paint_ded": "18.636900",
+       "source": "T-292 ledger GF-15 W03: w 5.106 sill 0.0 head 4.3 (T-175 hosts)"
+      },
+      {
+       "item": "D-GF-13",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger GF-15 D-GF-13: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "room": "GF-08",
+   "floor": "GF",
+   "face_lm": "53.188",
+   "plaster_line": "L-8cecb1d010d5aafbf25d",
+   "paint_line": "L-c0ac22c964a42e7d71b1",
+   "plaster": [
+    "178.220570",
+    "211.805270"
+   ],
+   "engine_paint": [
+    "152.050500",
+    "178.805000"
+   ],
+   "paint_class": "HELD",
+   "rule_paint": [
+    "151.895450",
+    "178.804950"
+   ],
+   "ends": [
+    {
+     "end": "low",
+     "plaster_top": "4.29",
+     "paint_top": "3.65",
+     "band_gross": "34.040320",
+     "gap": "26.170070",
+     "rule_paint": "151.895450",
+     "band": "26.325120",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "BEAM_END_BELOW_CEILING",
+       "m2": "0.065000",
+       "what": "beam B26"
+      },
+      {
+       "cause": "BEAM_END_BELOW_CEILING",
+       "m2": "0.090000",
+       "what": "beam B27"
+      },
+      {
+       "cause": "LEDGER_ROUNDING",
+       "m2": "0.000050",
+       "what": "paint line vs its own ledger (L x H - deductions)"
+      }
+     ],
+     "items": [
+      {
+       "item": "D-GF-08",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger GF-08 D-GF-08: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "L-GF-01",
+       "plaster_ded": "4.290000",
+       "band_part": "0.640000",
+       "rule_paint_ded": "3.650000",
+       "engine_paint_ded": "3.650000",
+       "source": "width 1.0, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "D-GF-13",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger GF-08 D-GF-13: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W03",
+       "plaster_ded": "6.971250",
+       "band_part": "1.040000",
+       "rule_paint_ded": "5.931250",
+       "engine_paint_ded": "5.931250",
+       "source": "T-292 ledger GF-08 W03: w 1.625 sill 0.0 head 4.3 (T-175 hosts)"
+      },
+      {
+       "item": "W02",
+       "plaster_ded": "27.155700",
+       "band_part": "4.051200",
+       "rule_paint_ded": "23.104500",
+       "engine_paint_ded": "23.104500",
+       "source": "width 6.33, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "D-GF-07",
+       "plaster_ded": "5.000000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "5.000000",
+       "engine_paint_ded": "5.000000",
+       "source": "T-292 ledger GF-08 D-GF-07: w 2.0 sill 0.0 head 2.5 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "beam B26",
+       "plaster_ded": "0.897000",
+       "band_part": "0.832000",
+       "rule_paint_ded": "0.065000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B26 b 0.65 x depth below the soffit 0.69, 2 ends; the paint line deducts no beam end"
+      },
+      {
+       "item": "beam B27",
+       "plaster_ded": "1.242000",
+       "band_part": "1.152000",
+       "rule_paint_ded": "0.090000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B27 b 0.9 x depth below the soffit 0.69, 2 ends; the paint line deducts no beam end"
+      }
+     ]
+    },
+    {
+     "end": "high",
+     "plaster_top": "4.29",
+     "paint_top": "3.65",
+     "band_gross": "34.040320",
+     "gap": "33.000270",
+     "rule_paint": "178.804950",
+     "band": "33.000320",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "LEDGER_ROUNDING",
+       "m2": "0.000050",
+       "what": "paint line vs its own ledger (L x H - deductions)"
+      }
+     ],
+     "items": [
+      {
+       "item": "D-GF-08",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger GF-08 D-GF-08: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "L-GF-01",
+       "plaster_ded": "0.000000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "width 1.0, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "D-GF-13",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger GF-08 D-GF-13: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W03",
+       "plaster_ded": "6.971250",
+       "band_part": "1.040000",
+       "rule_paint_ded": "5.931250",
+       "engine_paint_ded": "5.931250",
+       "source": "T-292 ledger GF-08 W03: w 1.625 sill 0.0 head 4.3 (T-175 hosts)"
+      },
+      {
+       "item": "W02",
+       "plaster_ded": "0.000000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "width 6.33, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "D-GF-07",
+       "plaster_ded": "5.000000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "5.000000",
+       "engine_paint_ded": "5.000000",
+       "source": "T-292 ledger GF-08 D-GF-07: w 2.0 sill 0.0 head 2.5 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "beam B26",
+       "plaster_ded": "0.000000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B26 b 0.65 x depth below the soffit 0.69, 0 ends; the paint line deducts no beam end"
+      },
+      {
+       "item": "beam B27",
+       "plaster_ded": "0.000000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B27 b 0.9 x depth below the soffit 0.69, 0 ends; the paint line deducts no beam end"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "room": "1F-01",
+   "floor": "1F",
+   "face_lm": "17.7",
+   "plaster_line": "L-af9621f43bc316a871ea",
+   "paint_line": "L-ade6f0567f690a869499",
+   "plaster": [
+    "62.573000",
+    "62.607000"
+   ],
+   "engine_paint": [
+    "51.415000",
+    "51.415000"
+   ],
+   "paint_class": "RELEASED",
+   "rule_paint": [
+    "51.415000",
+    "51.415000"
+   ],
+   "ends": [
+    {
+     "end": "low",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "11.328000",
+     "gap": "11.158000",
+     "rule_paint": "51.415000",
+     "band": "11.158000",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [],
+     "items": [
+      {
+       "item": "D-1F-02",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger 1F-01 D-1F-02: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-1F-01",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger 1F-01 D-1F-01: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W14",
+       "plaster_ded": "3.920000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "3.920000",
+       "engine_paint_ded": "3.920000",
+       "source": "T-292 ledger 1F-01 W14: w 2.45 sill 1.4 head 3.0 (T-175 hosts)"
+      },
+      {
+       "item": "beam B6",
+       "plaster_ded": "0.170000",
+       "band_part": "0.170000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B6 b 0.25 x depth below the soffit 0.34, 2 ends; the paint line deducts no beam end"
+      }
+     ]
+    },
+    {
+     "end": "high",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "11.328000",
+     "gap": "11.192000",
+     "rule_paint": "51.415000",
+     "band": "11.192000",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [],
+     "items": [
+      {
+       "item": "D-1F-02",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger 1F-01 D-1F-02: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-1F-01",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger 1F-01 D-1F-01: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W14",
+       "plaster_ded": "3.920000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "3.920000",
+       "engine_paint_ded": "3.920000",
+       "source": "T-292 ledger 1F-01 W14: w 2.45 sill 1.4 head 3.0 (T-175 hosts)"
+      },
+      {
+       "item": "beam B6",
+       "plaster_ded": "0.136000",
+       "band_part": "0.136000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B6 b 0.2 x depth below the soffit 0.34, 2 ends; the paint line deducts no beam end"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "room": "1F-04",
+   "floor": "1F",
+   "face_lm": "17.4",
+   "plaster_line": "L-971f0bdaf68d7fd0966c",
+   "paint_line": "L-d9f4ecdb6ef9a42d0220",
+   "plaster": [
+    "63.141000",
+    "63.141000"
+   ],
+   "engine_paint": [
+    "52.005000",
+    "52.005000"
+   ],
+   "paint_class": "RELEASED",
+   "rule_paint": [
+    "52.005000",
+    "52.005000"
+   ],
+   "ends": [
+    {
+     "end": "low",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "11.136000",
+     "gap": "11.136000",
+     "rule_paint": "52.005000",
+     "band": "11.136000",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [],
+     "items": [
+      {
+       "item": "D-1F-03",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger 1F-04 D-1F-03: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W24",
+       "plaster_ded": "2.325000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.325000",
+       "engine_paint_ded": "2.325000",
+       "source": "T-292 ledger 1F-04 W24: w 1.55 sill 1.0 head 2.5 (T-201 heads)"
+      },
+      {
+       "item": "D-1F-04",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger 1F-04 D-1F-04: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      }
+     ]
+    },
+    {
+     "end": "high",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "11.136000",
+     "gap": "11.136000",
+     "rule_paint": "52.005000",
+     "band": "11.136000",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [],
+     "items": [
+      {
+       "item": "D-1F-03",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger 1F-04 D-1F-03: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W24",
+       "plaster_ded": "2.325000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.325000",
+       "engine_paint_ded": "2.325000",
+       "source": "T-292 ledger 1F-04 W24: w 1.55 sill 1.0 head 2.5 (T-201 heads)"
+      },
+      {
+       "item": "D-1F-04",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger 1F-04 D-1F-04: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "room": "1F-10",
+   "floor": "1F",
+   "face_lm": "16.2",
+   "plaster_line": "L-2ba8077ba9bb2e1ff0f6",
+   "paint_line": "L-f53c1329983ad689b7ae",
+   "plaster": [
+    "58.026000",
+    "62.050000"
+   ],
+   "engine_paint": [
+    "48.940000",
+    "52.290000"
+   ],
+   "paint_class": "HELD",
+   "rule_paint": [
+    "48.940000",
+    "52.290000"
+   ],
+   "ends": [
+    {
+     "end": "low",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "10.368000",
+     "gap": "9.086000",
+     "rule_paint": "48.940000",
+     "band": "9.086000",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [],
+     "items": [
+      {
+       "item": "D-1F-08",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 1F-10 D-1F-08: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "A-1F-01",
+       "plaster_ded": "3.990000",
+       "band_part": "0.640000",
+       "rule_paint_ded": "3.350000",
+       "engine_paint_ded": "3.350000",
+       "source": "width 1.0, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "beam B19",
+       "plaster_ded": "0.472000",
+       "band_part": "0.472000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B19 b 0.4 x depth below the soffit 0.59, 2 ends; the paint line deducts no beam end"
+      },
+      {
+       "item": "beam B6",
+       "plaster_ded": "0.170000",
+       "band_part": "0.170000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B6 b 0.25 x depth below the soffit 0.34, 2 ends; the paint line deducts no beam end"
+      }
+     ]
+    },
+    {
+     "end": "high",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "10.368000",
+     "gap": "9.760000",
+     "rule_paint": "52.290000",
+     "band": "9.760000",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [],
+     "items": [
+      {
+       "item": "D-1F-08",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 1F-10 D-1F-08: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "A-1F-01",
+       "plaster_ded": "0.000000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "width 1.0, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "beam B19",
+       "plaster_ded": "0.472000",
+       "band_part": "0.472000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B19 b 0.4 x depth below the soffit 0.59, 2 ends; the paint line deducts no beam end"
+      },
+      {
+       "item": "beam B6",
+       "plaster_ded": "0.136000",
+       "band_part": "0.136000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B6 b 0.2 x depth below the soffit 0.34, 2 ends; the paint line deducts no beam end"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "room": "1F-11",
+   "floor": "1F",
+   "face_lm": "22.149",
+   "plaster_line": "L-31db3c83552682d92ca3",
+   "paint_line": "L-349db74a70e1eecda2d2",
+   "plaster": [
+    "74.776510",
+    "80.198410"
+   ],
+   "engine_paint": [
+    "61.462600",
+    "61.717700"
+   ],
+   "paint_class": "HELD",
+   "rule_paint": [
+    "60.601150",
+    "66.023050"
+   ],
+   "ends": [
+    {
+     "end": "low",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "14.175360",
+     "gap": "13.313910",
+     "rule_paint": "60.601150",
+     "band": "14.175360",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "OPENING_BASIS_MISMATCH",
+       "m2": "0.861450",
+       "what": "W17"
+      }
+     ],
+     "items": [
+      {
+       "item": "W17",
+       "plaster_ded": "9.858000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "9.858000",
+       "engine_paint_ded": "8.996550",
+       "source": "back-derived from the paint line: the paint line still deducts W17 on the pre-Q-76 outline (T-292 owner G1 basis), not the 4.4361 .. 9.858 bound"
+      },
+      {
+       "item": "D-1F-10",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger 1F-11 D-1F-10: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-1F-09",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 1F-11 D-1F-09: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      }
+     ]
+    },
+    {
+     "end": "high",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "14.175360",
+     "gap": "18.480710",
+     "rule_paint": "66.023050",
+     "band": "14.175360",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "OPENING_BASIS_MISMATCH",
+       "m2": "-4.305350",
+       "what": "W17"
+      }
+     ],
+     "items": [
+      {
+       "item": "W17",
+       "plaster_ded": "4.436100",
+       "band_part": "0.000000",
+       "rule_paint_ded": "4.436100",
+       "engine_paint_ded": "8.741450",
+       "source": "back-derived from the paint line: the paint line still deducts W17 on the pre-Q-76 outline (T-292 owner G1 basis), not the 4.4361 .. 9.858 bound"
+      },
+      {
+       "item": "D-1F-10",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger 1F-11 D-1F-10: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-1F-09",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 1F-11 D-1F-09: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "room": "1F-13",
+   "floor": "1F",
+   "face_lm": "39.45",
+   "plaster_line": "L-9b4a7bab033d677e2017",
+   "paint_line": "L-be48ea84285be20645af",
+   "plaster": [
+    "135.625500",
+    "139.615500"
+   ],
+   "engine_paint": [
+    "111.017700",
+    "114.367700"
+   ],
+   "paint_class": "HELD",
+   "rule_paint": [
+    "111.017500",
+    "114.367500"
+   ],
+   "ends": [
+    {
+     "end": "low",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "25.248000",
+     "gap": "24.607800",
+     "rule_paint": "111.017500",
+     "band": "24.608000",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "LEDGER_ROUNDING",
+       "m2": "0.000200",
+       "what": "paint line vs its own ledger (L x H - deductions)"
+      }
+     ],
+     "items": [
+      {
+       "item": "L-1F-01",
+       "plaster_ded": "3.990000",
+       "band_part": "0.640000",
+       "rule_paint_ded": "3.350000",
+       "engine_paint_ded": "3.350000",
+       "source": "width 1.0, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "D-1F-05",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 1F-13 D-1F-05: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-1F-08",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 1F-13 D-1F-08: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-1F-09",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 1F-13 D-1F-09: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W15 + W16",
+       "plaster_ded": "8.726000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "8.726000",
+       "engine_paint_ded": "8.726000",
+       "source": "arched outlines 4.363 each (T-238 delta), head 3.10 below the paint top"
+      },
+      {
+       "item": "D-1F-03",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger 1F-13 D-1F-03: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-1F-02",
+       "plaster_ded": "0.924000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.924000",
+       "engine_paint_ded": "0.924000",
+       "source": "door part on this face (T-556 ledger)"
+      }
+     ]
+    },
+    {
+     "end": "high",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "25.248000",
+     "gap": "25.247800",
+     "rule_paint": "114.367500",
+     "band": "25.248000",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "LEDGER_ROUNDING",
+       "m2": "0.000200",
+       "what": "paint line vs its own ledger (L x H - deductions)"
+      }
+     ],
+     "items": [
+      {
+       "item": "L-1F-01",
+       "plaster_ded": "0.000000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "width 1.0, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "D-1F-05",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 1F-13 D-1F-05: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-1F-08",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 1F-13 D-1F-08: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-1F-09",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 1F-13 D-1F-09: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W15 + W16",
+       "plaster_ded": "8.726000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "8.726000",
+       "engine_paint_ded": "8.726000",
+       "source": "arched outlines 4.363 each (T-238 delta), head 3.10 below the paint top"
+      },
+      {
+       "item": "D-1F-03",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger 1F-13 D-1F-03: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-1F-02",
+       "plaster_ded": "0.924000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.924000",
+       "engine_paint_ded": "0.924000",
+       "source": "door part on this face (T-556 ledger)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "room": "2F-03",
+   "floor": "2F",
+   "face_lm": "18.9",
+   "plaster_line": "L-4ce74fc37a08d4bdf0d8",
+   "paint_line": "L-5410f9045c80dd5933f0",
+   "plaster": [
+    "69.775000",
+    "69.775000"
+   ],
+   "engine_paint": [
+    "57.775000",
+    "57.775000"
+   ],
+   "paint_class": "RELEASED",
+   "rule_paint": [
+    "57.775000",
+    "57.775000"
+   ],
+   "ends": [
+    {
+     "end": "low",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "12.096000",
+     "gap": "12.000000",
+     "rule_paint": "57.775000",
+     "band": "12.000000",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [],
+     "items": [
+      {
+       "item": "D-2F-02",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 2F-03 D-2F-02: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-2F-03",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger 2F-03 D-2F-03: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W29",
+       "plaster_ded": "1.800000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.800000",
+       "engine_paint_ded": "1.800000",
+       "source": "T-292 ledger 2F-03 W29: w 1.2 sill 1.0 head 2.5 (T-201 heads)"
+      },
+      {
+       "item": "beam B2",
+       "plaster_ded": "0.096000",
+       "band_part": "0.096000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B2 b 0.2 x depth below the soffit 0.24, 2 ends; the paint line deducts no beam end"
+      }
+     ]
+    },
+    {
+     "end": "high",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "12.096000",
+     "gap": "12.000000",
+     "rule_paint": "57.775000",
+     "band": "12.000000",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [],
+     "items": [
+      {
+       "item": "D-2F-02",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 2F-03 D-2F-02: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-2F-03",
+       "plaster_ded": "1.760000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.760000",
+       "engine_paint_ded": "1.760000",
+       "source": "T-292 ledger 2F-03 D-2F-03: w 0.8 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "W29",
+       "plaster_ded": "1.800000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.800000",
+       "engine_paint_ded": "1.800000",
+       "source": "T-292 ledger 2F-03 W29: w 1.2 sill 1.0 head 2.5 (T-201 heads)"
+      },
+      {
+       "item": "beam B2",
+       "plaster_ded": "0.096000",
+       "band_part": "0.096000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B2 b 0.2 x depth below the soffit 0.24, 2 ends; the paint line deducts no beam end"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "room": "2F-01",
+   "floor": "2F",
+   "face_lm": "9.009",
+   "plaster_line": "L-ae0cdd794cc5fdbe0c29",
+   "paint_line": "L-c74cfb4e07bcc47bc5d6",
+   "plaster": [
+    "27.359910",
+    "31.765910"
+   ],
+   "engine_paint": [
+    "22.650200",
+    "26.000200"
+   ],
+   "paint_class": "HELD",
+   "rule_paint": [
+    "22.490150",
+    "26.000150"
+   ],
+   "ends": [
+    {
+     "end": "low",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "5.765760",
+     "gap": "4.709710",
+     "rule_paint": "22.490150",
+     "band": "4.869760",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "BEAM_END_BELOW_CEILING",
+       "m2": "0.160000",
+       "what": "beam B15"
+      },
+      {
+       "cause": "LEDGER_ROUNDING",
+       "m2": "0.000050",
+       "what": "paint line vs its own ledger (L x H - deductions)"
+      }
+     ],
+     "items": [
+      {
+       "item": "L-2F-01",
+       "plaster_ded": "3.990000",
+       "band_part": "0.640000",
+       "rule_paint_ded": "3.350000",
+       "engine_paint_ded": "3.350000",
+       "source": "width 1.0, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "D-2F-02",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 2F-01 D-2F-02: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-2F-01",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger 2F-01 D-2F-01: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "beam B15",
+       "plaster_ded": "0.416000",
+       "band_part": "0.256000",
+       "rule_paint_ded": "0.160000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B15 b 0.2 x depth below the soffit 1.04, 2 ends; the paint line deducts no beam end"
+      }
+     ]
+    },
+    {
+     "end": "high",
+     "plaster_top": "3.99",
+     "paint_top": "3.35",
+     "band_gross": "5.765760",
+     "gap": "5.765710",
+     "rule_paint": "26.000150",
+     "band": "5.765760",
+     "tiled": "0.000000",
+     "residual": "0.000000",
+     "named": [
+      {
+       "cause": "LEDGER_ROUNDING",
+       "m2": "0.000050",
+       "what": "paint line vs its own ledger (L x H - deductions)"
+      }
+     ],
+     "items": [
+      {
+       "item": "L-2F-01",
+       "plaster_ded": "0.000000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "width 1.0, no printed height (T-292 'h HELD'): full at the low end, 0 high"
+      },
+      {
+       "item": "D-2F-02",
+       "plaster_ded": "1.980000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "1.980000",
+       "engine_paint_ded": "1.980000",
+       "source": "T-292 ledger 2F-01 D-2F-02: w 0.9 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "D-2F-01",
+       "plaster_ded": "2.200000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "2.200000",
+       "engine_paint_ded": "2.200000",
+       "source": "T-292 ledger 2F-01 D-2F-01: w 1.0 sill 0.0 head 2.2 (T-128 r3 face (Q-55 C door head))"
+      },
+      {
+       "item": "beam B15",
+       "plaster_ded": "0.000000",
+       "band_part": "0.000000",
+       "rule_paint_ded": "0.000000",
+       "engine_paint_ded": "0.000000",
+       "source": "T-556 BEAM_ENDS B15 b 0.2 x depth below the soffit 1.04, 0 ends; the paint line deducts no beam end"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "faces": [
+  {
+   "class": "DRY",
+   "floor": "GF",
+   "plaster_element": "HL:WALL_FINISH:GF_01:PLASTER",
+   "paint_element": "HL:WALL_FINISH:GF_01:PAINT",
+   "plaster_line": "L-b152995525ed123ddac9",
+   "paint_line": "L-cdf7f5cd2789b67004f1",
+   "plaster": [
+    "47.949844",
+    "66.249856"
+   ],
+   "engine_paint": [
+    "36.911738",
+    "56.925700"
+   ],
+   "rule_paint": [
+    "36.900914",
+    "54.610926"
+   ],
+   "band": [
+    "11.048930",
+    "11.638930"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "OPENING_BASIS_MISMATCH",
+     "m2": "0.010824",
+     "what": "W11 + W12"
+    },
+    {
+     "end": "high",
+     "cause": "OPENING_BASIS_MISMATCH",
+     "m2": "2.314774",
+     "what": "W11 + W12"
+    }
+   ],
+   "note": "face 20.127 lm; residual 0.000000 / 0.000000"
+  },
+  {
+   "class": "DRY",
+   "floor": "GF",
+   "plaster_element": "HL:WALL_FINISH:GF_04:PLASTER",
+   "paint_element": "HL:WALL_FINISH:GF_04:PAINT",
+   "plaster_line": "L-1ddc23d5657b4c4e4d0d",
+   "paint_line": "L-d7d6d2f765489a95c408",
+   "plaster": [
+    "34.330000",
+    "43.780000"
+   ],
+   "engine_paint": [
+    "26.958600",
+    "36.405000"
+   ],
+   "rule_paint": [
+    "26.958600",
+    "36.405000"
+   ],
+   "band": [
+    "7.371400",
+    "7.375000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "face 12.5 lm; residual 0.000000 / 0.000000"
+  },
+  {
+   "class": "DRY",
+   "floor": "GF",
+   "plaster_element": "HL:WALL_FINISH:GF_15:PLASTER",
+   "paint_element": "HL:WALL_FINISH:GF_15:PAINT",
+   "plaster_line": "L-0d93f2209cd9bb827c0a",
+   "paint_line": "L-7f083d3e2c2702d14356",
+   "plaster": [
+    "66.528990",
+    "66.528990"
+   ],
+   "engine_paint": [
+    "56.013100",
+    "56.013100"
+   ],
+   "rule_paint": [
+    "56.013150",
+    "56.013150"
+   ],
+   "band": [
+    "10.515840",
+    "10.515840"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "LEDGER_ROUNDING",
+     "m2": "-0.000050",
+     "what": "paint line vs its own ledger (L x H - deductions)"
+    },
+    {
+     "end": "high",
+     "cause": "LEDGER_ROUNDING",
+     "m2": "-0.000050",
+     "what": "paint line vs its own ledger (L x H - deductions)"
+    }
+   ],
+   "note": "face 21.537 lm; residual 0.000000 / 0.000000"
+  },
+  {
+   "class": "DRY",
+   "floor": "GF",
+   "plaster_element": "HL:WALL_FINISH:GF_08:PLASTER",
+   "paint_element": "HL:WALL_FINISH:GF_08:PAINT",
+   "plaster_line": "L-8cecb1d010d5aafbf25d",
+   "paint_line": "L-c0ac22c964a42e7d71b1",
+   "plaster": [
+    "178.220570",
+    "211.805270"
+   ],
+   "engine_paint": [
+    "152.050500",
+    "178.805000"
+   ],
+   "rule_paint": [
+    "151.895450",
+    "178.804950"
+   ],
+   "band": [
+    "26.325120",
+    "33.000320"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "BEAM_END_BELOW_CEILING",
+     "m2": "0.065000",
+     "what": "beam B26"
+    },
+    {
+     "end": "low",
+     "cause": "BEAM_END_BELOW_CEILING",
+     "m2": "0.090000",
+     "what": "beam B27"
+    },
+    {
+     "end": "low",
+     "cause": "LEDGER_ROUNDING",
+     "m2": "0.000050",
+     "what": "paint line vs its own ledger (L x H - deductions)"
+    },
+    {
+     "end": "high",
+     "cause": "LEDGER_ROUNDING",
+     "m2": "0.000050",
+     "what": "paint line vs its own ledger (L x H - deductions)"
+    }
+   ],
+   "note": "face 53.188 lm; residual 0.000000 / 0.000000"
+  },
+  {
+   "class": "DRY",
+   "floor": "1F",
+   "plaster_element": "HL:WALL_FINISH:1F_01:PLASTER",
+   "paint_element": "HL:WALL_FINISH:1F_01:PAINT",
+   "plaster_line": "L-af9621f43bc316a871ea",
+   "paint_line": "L-ade6f0567f690a869499",
+   "plaster": [
+    "62.573000",
+    "62.607000"
+   ],
+   "engine_paint": [
+    "51.415000",
+    "51.415000"
+   ],
+   "rule_paint": [
+    "51.415000",
+    "51.415000"
+   ],
+   "band": [
+    "11.158000",
+    "11.192000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "face 17.7 lm; residual 0.000000 / 0.000000"
+  },
+  {
+   "class": "DRY",
+   "floor": "1F",
+   "plaster_element": "HL:WALL_FINISH:1F_04:PLASTER",
+   "paint_element": "HL:WALL_FINISH:1F_04:PAINT",
+   "plaster_line": "L-971f0bdaf68d7fd0966c",
+   "paint_line": "L-d9f4ecdb6ef9a42d0220",
+   "plaster": [
+    "63.141000",
+    "63.141000"
+   ],
+   "engine_paint": [
+    "52.005000",
+    "52.005000"
+   ],
+   "rule_paint": [
+    "52.005000",
+    "52.005000"
+   ],
+   "band": [
+    "11.136000",
+    "11.136000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "face 17.4 lm; residual 0.000000 / 0.000000"
+  },
+  {
+   "class": "DRY",
+   "floor": "1F",
+   "plaster_element": "HL:WALL_FINISH:1F_10:PLASTER",
+   "paint_element": "HL:WALL_FINISH:1F_10:PAINT",
+   "plaster_line": "L-2ba8077ba9bb2e1ff0f6",
+   "paint_line": "L-f53c1329983ad689b7ae",
+   "plaster": [
+    "58.026000",
+    "62.050000"
+   ],
+   "engine_paint": [
+    "48.940000",
+    "52.290000"
+   ],
+   "rule_paint": [
+    "48.940000",
+    "52.290000"
+   ],
+   "band": [
+    "9.086000",
+    "9.760000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "face 16.2 lm; residual 0.000000 / 0.000000"
+  },
+  {
+   "class": "DRY",
+   "floor": "1F",
+   "plaster_element": "HL:WALL_FINISH:1F_11:PLASTER",
+   "paint_element": "HL:WALL_FINISH:1F_11:PAINT",
+   "plaster_line": "L-31db3c83552682d92ca3",
+   "paint_line": "L-349db74a70e1eecda2d2",
+   "plaster": [
+    "74.776510",
+    "80.198410"
+   ],
+   "engine_paint": [
+    "61.462600",
+    "61.717700"
+   ],
+   "rule_paint": [
+    "60.601150",
+    "66.023050"
+   ],
+   "band": [
+    "14.175360",
+    "14.175360"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "OPENING_BASIS_MISMATCH",
+     "m2": "0.861450",
+     "what": "W17"
+    },
+    {
+     "end": "high",
+     "cause": "OPENING_BASIS_MISMATCH",
+     "m2": "-4.305350",
+     "what": "W17"
+    }
+   ],
+   "note": "face 22.149 lm; residual 0.000000 / 0.000000"
+  },
+  {
+   "class": "DRY",
+   "floor": "1F",
+   "plaster_element": "HL:WALL_FINISH:1F_13:PLASTER",
+   "paint_element": "HL:WALL_FINISH:1F_13:PAINT",
+   "plaster_line": "L-9b4a7bab033d677e2017",
+   "paint_line": "L-be48ea84285be20645af",
+   "plaster": [
+    "135.625500",
+    "139.615500"
+   ],
+   "engine_paint": [
+    "111.017700",
+    "114.367700"
+   ],
+   "rule_paint": [
+    "111.017500",
+    "114.367500"
+   ],
+   "band": [
+    "24.608000",
+    "25.248000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "LEDGER_ROUNDING",
+     "m2": "0.000200",
+     "what": "paint line vs its own ledger (L x H - deductions)"
+    },
+    {
+     "end": "high",
+     "cause": "LEDGER_ROUNDING",
+     "m2": "0.000200",
+     "what": "paint line vs its own ledger (L x H - deductions)"
+    }
+   ],
+   "note": "face 39.45 lm; residual 0.000000 / 0.000000"
+  },
+  {
+   "class": "DRY",
+   "floor": "2F",
+   "plaster_element": "HL:WALL_FINISH:2F_03:PLASTER",
+   "paint_element": "HL:WALL_FINISH:2F_03:PAINT",
+   "plaster_line": "L-4ce74fc37a08d4bdf0d8",
+   "paint_line": "L-5410f9045c80dd5933f0",
+   "plaster": [
+    "69.775000",
+    "69.775000"
+   ],
+   "engine_paint": [
+    "57.775000",
+    "57.775000"
+   ],
+   "rule_paint": [
+    "57.775000",
+    "57.775000"
+   ],
+   "band": [
+    "12.000000",
+    "12.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "face 18.9 lm; residual 0.000000 / 0.000000"
+  },
+  {
+   "class": "DRY",
+   "floor": "2F",
+   "plaster_element": "HL:WALL_FINISH:2F_01:PLASTER",
+   "paint_element": "HL:WALL_FINISH:2F_01:PAINT",
+   "plaster_line": "L-ae0cdd794cc5fdbe0c29",
+   "paint_line": "L-c74cfb4e07bcc47bc5d6",
+   "plaster": [
+    "27.359910",
+    "31.765910"
+   ],
+   "engine_paint": [
+    "22.650200",
+    "26.000200"
+   ],
+   "rule_paint": [
+    "22.490150",
+    "26.000150"
+   ],
+   "band": [
+    "4.869760",
+    "5.765760"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "BEAM_END_BELOW_CEILING",
+     "m2": "0.160000",
+     "what": "beam B15"
+    },
+    {
+     "end": "low",
+     "cause": "LEDGER_ROUNDING",
+     "m2": "0.000050",
+     "what": "paint line vs its own ledger (L x H - deductions)"
+    },
+    {
+     "end": "high",
+     "cause": "LEDGER_ROUNDING",
+     "m2": "0.000050",
+     "what": "paint line vs its own ledger (L x H - deductions)"
+    }
+   ],
+   "note": "face 9.009 lm; residual 0.000000 / 0.000000"
+  },
+  {
+   "class": "SHAFT",
+   "floor": "GF",
+   "plaster_element": "HL:WALL_FINISH:ST_GF:PLASTER",
+   "paint_element": "HL:WALL_FINISH:ST_GF:PAINT",
+   "plaster_line": "L-95f2c45c2eccaaeccb08",
+   "paint_line": "L-145bd2394f2907558243",
+   "plaster": [
+    "50.945000",
+    "62.434000"
+   ],
+   "engine_paint": [
+    "50.945000",
+    "62.434000"
+   ],
+   "rule_paint": [
+    "50.945000",
+    "62.434000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "Q-72: full exposed height through the shaft, no false ceiling: no band"
+  },
+  {
+   "class": "SHAFT",
+   "floor": "1F",
+   "plaster_element": "HL:WALL_FINISH:ST_1F:PLASTER",
+   "paint_element": "HL:WALL_FINISH:ST_1F:PAINT",
+   "plaster_line": "L-0eac839f9132da7bd116",
+   "paint_line": "L-2ab93d5029a4b7cc4dca",
+   "plaster": [
+    "45.317000",
+    "46.564000"
+   ],
+   "engine_paint": [
+    "45.317000",
+    "46.564000"
+   ],
+   "rule_paint": [
+    "45.317000",
+    "46.564000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "Q-72: full exposed height through the shaft, no false ceiling: no band"
+  },
+  {
+   "class": "SHAFT",
+   "floor": "2F",
+   "plaster_element": "HL:WALL_FINISH:ST_2F:PLASTER",
+   "paint_element": "HL:WALL_FINISH:ST_2F:PAINT",
+   "plaster_line": "L-418121a4b223cb4e8646",
+   "paint_line": "L-5a7a5c6f070ec7142ca5",
+   "plaster": [
+    "47.342000",
+    "48.772000"
+   ],
+   "engine_paint": [
+    "45.392000",
+    "46.822000"
+   ],
+   "rule_paint": [
+    "45.392000",
+    "46.822000"
+   ],
+   "band": [
+    "1.950000",
+    "1.950000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "decor band under the roof 0.15 x 12.90 lm (T-173 faces W 5.20 + E 5.20 + N 2.50) + pier returns 0.015 (T-680)"
+  },
+  {
+   "class": "DOUBLE_HEIGHT",
+   "floor": "GF",
+   "plaster_element": "PLASTER-BAND@L-8cecb1d010d5aafbf25d",
+   "paint_element": "PAINT-BAND@L-c0ac22c964a42e7d71b1",
+   "plaster_line": "L-b10c1b356670f749cc23",
+   "paint_line": "L-ab4ed4328ee652456117",
+   "plaster": [
+    "0.839412",
+    "0.870912"
+   ],
+   "engine_paint": [
+    "3.344721",
+    "3.525121"
+   ],
+   "rule_paint": [
+    "3.344721",
+    "3.525121"
+   ],
+   "band": [
+    "-2.505309",
+    "-2.654209"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "VOID_NO_CEILING",
+     "m2": "-2.505309",
+     "what": "GF-08 band strip over the void returned as paint (no false ceiling over a void)",
+     "residual": "0.000000"
+    },
+    {
+     "end": "high",
+     "cause": "VOID_NO_CEILING",
+     "m2": "-2.654209",
+     "what": "GF-08 band strip over the void returned as paint (no false ceiling over a void)",
+     "residual": "0.000000"
+    }
+   ],
+   "note": "void strip 3.997201 .. 4.147201 lm x 0.64 (GF plaster 4.29 - paint 3.65); low end less the ST-02 landing contact 0.0529 (T-709, 0 .. 0.0529 bound: its low end), high end with the 0.15 lm column returns"
+  },
+  {
+   "class": "EXTERIOR",
+   "floor": "EXT",
+   "plaster_element": "1F-FACADE:facade",
+   "paint_element": null,
+   "plaster_line": "L-8bb83e16cc7b104ab88b",
+   "paint_line": null,
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "one facade line per floor, finish and quantity HELD blank; Sigma = the exterior plaster area (owner notes 2026-10-21): external paint follows the external plaster face by face"
+  },
+  {
+   "class": "RETURN",
+   "floor": "1F",
+   "plaster_element": "1F-OPENING-OP-004:door jambs and head",
+   "paint_element": "1F-OPENING-OP-004:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-54b2eb0ad40cc47b9be5",
+   "paint_line": "L-2b4e45da29a5b2dd7981",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.780000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.780000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "1F",
+   "plaster_element": "1F-OPENING-OP-005:door jambs and head",
+   "paint_element": "1F-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-a85b83a93486fdc400f8",
+   "paint_line": "L-37cdb8db76a870eff3fe",
+   "plaster": [
+    "0.795000",
+    "0.795000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.795000"
+   ],
+   "rule_paint": [
+    "0.795000",
+    "0.795000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.795000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "1F",
+   "plaster_element": "1F-OPENING-OP-006:door jambs and head",
+   "paint_element": "1F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-5d309e25e8b180283606",
+   "paint_line": "L-56b08dbf65e47a26c561",
+   "plaster": [
+    "0.795000",
+    "0.795000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.795000"
+   ],
+   "rule_paint": [
+    "0.795000",
+    "0.795000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.795000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "1F",
+   "plaster_element": "1F-OPENING-OP-008:door jambs and head",
+   "paint_element": "1F-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-f3590fade6406f912d2e",
+   "paint_line": "L-da69c4bd2954b31c0fb7",
+   "plaster": [
+    "1.060000",
+    "1.060000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "1.060000"
+   ],
+   "rule_paint": [
+    "1.060000",
+    "1.060000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-1.060000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "1F",
+   "plaster_element": "1F-OPENING-OP-010:door jambs and head",
+   "paint_element": "1F-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-f8a0d9bfc3e6a3f113b2",
+   "paint_line": "L-d7409e4cefc3ee62aaf6",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.780000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "TILED",
+     "m2": "0.780000",
+     "what": "wet rooms on both sides: the reveal may be tiled (not established), HELD"
+    }
+   ],
+   "note": "reading A; HELD 0 .. plaster (tiled part not established)"
+  },
+  {
+   "class": "RETURN",
+   "floor": "1F",
+   "plaster_element": "1F-OPENING-OP-018:door jambs and head",
+   "paint_element": "1F-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-537fc3896f24cf408fe6",
+   "paint_line": "L-762c50f64c3b6b6b9999",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.780000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.780000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "1F",
+   "plaster_element": "1F-OPENING-OP-019:door jambs and head",
+   "paint_element": "1F-OPENING-OP-019:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-f38f6ecefecd7e617cac",
+   "paint_line": "L-f430f55002cce63efb40",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.780000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.780000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "1F",
+   "plaster_element": "1F-OPENING-OP-020:door jambs and head",
+   "paint_element": "1F-OPENING-OP-020:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-0bc19199447147ca226a",
+   "paint_line": "L-c74cb759ac5ff7e6cfa0",
+   "plaster": [
+    "0.810000",
+    "0.810000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.810000"
+   ],
+   "rule_paint": [
+    "0.810000",
+    "0.810000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.810000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "1F",
+   "plaster_element": "1F-R0E919A:plaster",
+   "paint_element": "1F-R0E919A:paint",
+   "plaster_line": "L-6171609d7fbe427cba07",
+   "paint_line": "L-22901c55ce6658640639",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "1F",
+   "plaster_element": "1F-R26FA0D:plaster",
+   "paint_element": "1F-R26FA0D:paint above wall tile",
+   "plaster_line": "L-2948639faa08fa1cff81",
+   "paint_line": "L-7878bf61681466dee87e",
+   "plaster": [
+    "52.529000",
+    "52.529000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "52.529000",
+    "52.529000"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "1F",
+   "plaster_element": "1F-R26FA0D:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-be4e20be1c791ad6864e",
+   "paint_line": null,
+   "plaster": [
+    "10.841600",
+    "10.841600"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "10.841600",
+    "10.841600"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "1F",
+   "plaster_element": "1F-R3CFCFD:plaster",
+   "paint_element": "1F-R3CFCFD:paint",
+   "plaster_line": "L-7301f9ff1fd78401329f",
+   "paint_line": "L-3b571e7f4455eaf44520",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "1F",
+   "plaster_element": "1F-R48AA46:plaster",
+   "paint_element": "1F-R48AA46:paint above wall tile",
+   "plaster_line": "L-9473c0c6ce4e11e4d162",
+   "paint_line": "L-43134b281f14a8bee79e",
+   "plaster": [
+    "27.910000",
+    "27.910000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "27.910000",
+    "27.910000"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "1F",
+   "plaster_element": "1F-R48AA46:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-fccef7ef809c5bc21a23",
+   "paint_line": null,
+   "plaster": [
+    "3.510000",
+    "6.210000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "3.510000",
+    "6.210000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "1F",
+   "plaster_element": "1F-R48CDA5:plaster",
+   "paint_element": "1F-R48CDA5:paint above wall tile",
+   "plaster_line": "L-12b83d399be186804faf",
+   "paint_line": "L-d8707985856b2cfbe5a2",
+   "plaster": [
+    "26.305100",
+    "26.305100"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "26.305100",
+    "26.305100"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "1F",
+   "plaster_element": "1F-R48CDA5:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-ff2a3a31df4c48599b73",
+   "paint_line": null,
+   "plaster": [
+    "3.393000",
+    "6.003000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "3.393000",
+    "6.003000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "1F",
+   "plaster_element": "1F-R52AC05:plaster",
+   "paint_element": "1F-R52AC05:paint above wall tile",
+   "plaster_line": "L-005cb3310fbebd97d563",
+   "paint_line": "L-3621a14bd1e193739089",
+   "plaster": [
+    "19.669100",
+    "19.669100"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "19.669100",
+    "19.669100"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "1F",
+   "plaster_element": "1F-R52AC05:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-aa45baf044e3abc14f92",
+   "paint_line": null,
+   "plaster": [
+    "4.185600",
+    "4.185600"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "4.185600",
+    "4.185600"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "1F",
+   "plaster_element": "1F-R78C367:plaster",
+   "paint_element": "1F-R78C367:paint",
+   "plaster_line": "L-47317d02e1a6402e3370",
+   "paint_line": "L-735d4ea61db2276a8496",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "1F",
+   "plaster_element": "1F-R8BDA49:plaster",
+   "paint_element": "1F-R8BDA49:paint above wall tile",
+   "plaster_line": "L-3eba04f2458578e7dc19",
+   "paint_line": "L-c60782dc0946127b7e94",
+   "plaster": [
+    "27.910100",
+    "27.910100"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "27.910100",
+    "27.910100"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "1F",
+   "plaster_element": "1F-R8BDA49:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-6bcf9406e3ff0b96da6b",
+   "paint_line": null,
+   "plaster": [
+    "3.510000",
+    "6.210000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "3.510000",
+    "6.210000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "1F",
+   "plaster_element": "1F-RB72F22:plaster",
+   "paint_element": "1F-RB72F22:paint",
+   "plaster_line": "L-4c59e238e753faa61ee7",
+   "paint_line": "L-5113d7b0e638a6886d2f",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "1F",
+   "plaster_element": "1F-RED0D19:plaster",
+   "paint_element": "1F-RED0D19:paint",
+   "plaster_line": "L-5f35942de5e9c9acb98c",
+   "paint_line": "L-889a14b5495001f9dfb4",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "1F",
+   "plaster_element": "1F-RED23B8:plaster",
+   "paint_element": "1F-RED23B8:paint above wall tile",
+   "plaster_line": "L-5e5e62e91688eebfb285",
+   "paint_line": "L-561e8611d7ba1bf514d3",
+   "plaster": [
+    "23.220100",
+    "23.220100"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "23.220100",
+    "23.220100"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "1F",
+   "plaster_element": "1F-RED23B8:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-79b6a45ab31f122546a9",
+   "paint_line": null,
+   "plaster": [
+    "4.275000",
+    "4.981800"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "4.275000",
+    "4.981800"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "RETURN",
+   "floor": "1F",
+   "plaster_element": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+   "paint_element": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "plaster_line": "L-64cb94b4b8dc2cb17608",
+   "paint_line": "L-6d2b3f8c5c33dd795433",
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "plaster return blank: paint HELD by name"
+  },
+  {
+   "class": "RETURN",
+   "floor": "1F",
+   "plaster_element": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED",
+   "paint_element": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "plaster_line": "L-f0668097e8d872925fdf",
+   "paint_line": "L-d086b605ac0e50af082a",
+   "plaster": [
+    "0.810000",
+    "0.810000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.810000"
+   ],
+   "rule_paint": [
+    "0.810000",
+    "0.810000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.810000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "1F",
+   "plaster_element": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED",
+   "paint_element": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "plaster_line": "L-34f4545187c3c764d174",
+   "paint_line": "L-c17b547dd9cdad8faf26",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.780000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.780000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "EXTERIOR",
+   "floor": "EXT",
+   "plaster_element": "2F-FACADE:facade",
+   "paint_element": null,
+   "plaster_line": "L-d52c4f763b19aedf8b8b",
+   "paint_line": null,
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "one facade line per floor, finish and quantity HELD blank; Sigma = the exterior plaster area (owner notes 2026-10-21): external paint follows the external plaster face by face"
+  },
+  {
+   "class": "RETURN",
+   "floor": "2F",
+   "plaster_element": "2F-OPENING-OP-001:door jambs and head",
+   "paint_element": "2F-OPENING-OP-001:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-ca7d121f07fd1a73536d",
+   "paint_line": "L-d9d0cb88542f719484f7",
+   "plaster": [
+    "0.810000",
+    "0.810000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.810000"
+   ],
+   "rule_paint": [
+    "0.810000",
+    "0.810000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.810000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "2F",
+   "plaster_element": "2F-OPENING-OP-006:door jambs and head",
+   "paint_element": "2F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-833ba74bab1404d1f6cc",
+   "paint_line": "L-b12d7eb43e52a3d98ab4",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.780000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.780000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "2F",
+   "plaster_element": "2F-OPENING-OP-007:door jambs and head",
+   "paint_element": "2F-OPENING-OP-007:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-39497d7b7639a776f8f2",
+   "paint_line": "L-4e7e711e5c8abc074414",
+   "plaster": [
+    "1.060000",
+    "1.060000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "1.060000"
+   ],
+   "rule_paint": [
+    "1.060000",
+    "1.060000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-1.060000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "2F",
+   "plaster_element": "2F-R1DB2D2:plaster",
+   "paint_element": "2F-R1DB2D2:paint",
+   "plaster_line": "L-8d487acc15ffa6bc2fff",
+   "paint_line": "L-5f7c33761a4635d2f326",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "2F",
+   "plaster_element": "2F-R4D1B62:stair hall plaster",
+   "paint_element": "2F-R4D1B62:stair hall paint",
+   "plaster_line": "L-7afc2b10a88c0d2c0462",
+   "paint_line": "L-bacbf7fdc3454348b101",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "2F",
+   "plaster_element": "2F-RE83BED:plaster",
+   "paint_element": "2F-RE83BED:paint above wall tile",
+   "plaster_line": "L-bec624729c89553f720f",
+   "paint_line": "L-5b91ae8508c9162b1e04",
+   "plaster": [
+    "30.255000",
+    "30.255000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "30.255000",
+    "30.255000"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "2F",
+   "plaster_element": "2F-RE83BED:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-c6ffb2cc0e02828f0939",
+   "paint_line": null,
+   "plaster": [
+    "3.783000",
+    "6.693000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "3.783000",
+    "6.693000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "EXTERIOR",
+   "floor": "EXT",
+   "plaster_element": "FENCE:F-LOWER:FACE:OUTSIDE:PLASTER",
+   "paint_element": "FENCE:F-LOWER:FACE:OUTSIDE:PAINT",
+   "plaster_line": "L-52d8589716c7724358ca",
+   "paint_line": "L-1c6a9f23a2f8320764a0",
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "fence face: paint = plaster face by face; both HELD blank"
+  },
+  {
+   "class": "EXTERIOR",
+   "floor": "EXT",
+   "plaster_element": "FENCE:F-LOWER:FACE:PLOT:PLASTER",
+   "paint_element": "FENCE:F-LOWER:FACE:PLOT:PAINT",
+   "plaster_line": "L-e802015729d4df311c0c",
+   "paint_line": "L-8c90675aafd8738b1e26",
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "fence face: paint = plaster face by face; both HELD blank"
+  },
+  {
+   "class": "EXTERIOR",
+   "floor": "EXT",
+   "plaster_element": "FENCE:F-NORTH:FACE:OUTSIDE:PLASTER",
+   "paint_element": "FENCE:F-NORTH:FACE:OUTSIDE:PAINT",
+   "plaster_line": "L-b1c2e0b93312e521d699",
+   "paint_line": "L-1e9a80dbea82741116cf",
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "fence face: paint = plaster face by face; both HELD blank"
+  },
+  {
+   "class": "EXTERIOR",
+   "floor": "EXT",
+   "plaster_element": "FENCE:F-NORTH:FACE:PLOT:PLASTER",
+   "paint_element": "FENCE:F-NORTH:FACE:PLOT:PAINT",
+   "plaster_line": "L-36726588eba347a4c783",
+   "paint_line": "L-bac8095037312e3e90f4",
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "fence face: paint = plaster face by face; both HELD blank"
+  },
+  {
+   "class": "EXTERIOR",
+   "floor": "EXT",
+   "plaster_element": "FENCE:F-SEA:FACE:OUTSIDE:PLASTER",
+   "paint_element": "FENCE:F-SEA:FACE:OUTSIDE:PAINT",
+   "plaster_line": "L-639e70724813476c31d3",
+   "paint_line": "L-0a2fbaa46f6a6b23323e",
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "fence face: paint = plaster face by face; both HELD blank"
+  },
+  {
+   "class": "EXTERIOR",
+   "floor": "EXT",
+   "plaster_element": "FENCE:F-SEA:FACE:PLOT:PLASTER",
+   "paint_element": "FENCE:F-SEA:FACE:PLOT:PAINT",
+   "plaster_line": "L-b7cf09f5c8966460da56",
+   "paint_line": "L-2246f2ea8b345ac80584",
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "fence face: paint = plaster face by face; both HELD blank"
+  },
+  {
+   "class": "EXTERIOR",
+   "floor": "EXT",
+   "plaster_element": "FENCE:F-STREET:FACE:OUTSIDE:PLASTER",
+   "paint_element": "FENCE:F-STREET:FACE:OUTSIDE:PAINT",
+   "plaster_line": "L-eb19e5f5365e81dcedeb",
+   "paint_line": "L-8502adc8f55776e67a28",
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "fence face: paint = plaster face by face; both HELD blank"
+  },
+  {
+   "class": "EXTERIOR",
+   "floor": "EXT",
+   "plaster_element": "FENCE:F-STREET:FACE:PLOT:PLASTER",
+   "paint_element": "FENCE:F-STREET:FACE:PLOT:PAINT",
+   "plaster_line": "L-e46d3f1324eb8625cbdc",
+   "paint_line": "L-4465d1e72082b5678e4a",
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "fence face: paint = plaster face by face; both HELD blank"
+  },
+  {
+   "class": "EXTERIOR",
+   "floor": "EXT",
+   "plaster_element": "GF-FACADE:facade",
+   "paint_element": null,
+   "plaster_line": "L-b05f70c92405dbcfbe62",
+   "paint_line": null,
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "one facade line per floor, finish and quantity HELD blank; Sigma = the exterior plaster area (owner notes 2026-10-21): external paint follows the external plaster face by face"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-OPENING-OP-005:door jambs and head",
+   "paint_element": "GF-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-9cf5a4b4db78cf57cf7f",
+   "paint_line": "L-897dca14b0b8c45be725",
+   "plaster": [
+    "1.060000",
+    "1.060000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "1.060000"
+   ],
+   "rule_paint": [
+    "1.060000",
+    "1.060000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-1.060000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-OPENING-OP-008:door jambs and head",
+   "paint_element": "GF-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-e11de0ecd42fcb0b5756",
+   "paint_line": "L-7969458ba9185391c684",
+   "plaster": [
+    "1.080000",
+    "1.080000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "1.080000"
+   ],
+   "rule_paint": [
+    "1.080000",
+    "1.080000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-1.080000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-OPENING-OP-009:door jambs and head",
+   "paint_element": "GF-OPENING-OP-009:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-f4175f9915208dc5f9f7",
+   "paint_line": "L-6777e02aa04439148278",
+   "plaster": [
+    "1.080000",
+    "1.080000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "1.080000"
+   ],
+   "rule_paint": [
+    "1.080000",
+    "1.080000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-1.080000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-OPENING-OP-010:door jambs and head",
+   "paint_element": "GF-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-1f443fe4e172a90ddd7c",
+   "paint_line": "L-ba30cda374ebb4a8c7da",
+   "plaster": [
+    "1.080000",
+    "1.080000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "1.080000"
+   ],
+   "rule_paint": [
+    "1.080000",
+    "1.080000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-1.080000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-OPENING-OP-012:door jambs and head",
+   "paint_element": "GF-OPENING-OP-012:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-61825a3103a391956d70",
+   "paint_line": "L-65c1d5f9695ad983d89f",
+   "plaster": [
+    "0.810000",
+    "0.810000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.810000"
+   ],
+   "rule_paint": [
+    "0.810000",
+    "0.810000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.810000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-OPENING-OP-013:door jambs and head",
+   "paint_element": "GF-OPENING-OP-013:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-3c21b044ce980ec0ee75",
+   "paint_line": "L-91dfc7c4d8ea4c86a547",
+   "plaster": [
+    "1.060000",
+    "1.060000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "1.060000"
+   ],
+   "rule_paint": [
+    "1.060000",
+    "1.060000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-1.060000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-OPENING-OP-017:door jambs and head",
+   "paint_element": "GF-OPENING-OP-017:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-7dcb2bab84655929f7e8",
+   "paint_line": "L-9df1fbe948884e7c4d2a",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.780000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "TILED",
+     "m2": "0.780000",
+     "what": "wet rooms on both sides: the reveal may be tiled (not established), HELD"
+    }
+   ],
+   "note": "reading A; HELD 0 .. plaster (tiled part not established)"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-OPENING-OP-018:door jambs and head",
+   "paint_element": "GF-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-672329032e0d70329d5f",
+   "paint_line": "L-0ea62c4cef8e2ce5a244",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.780000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "TILED",
+     "m2": "0.780000",
+     "what": "wet rooms on both sides: the reveal may be tiled (not established), HELD"
+    }
+   ],
+   "note": "reading A; HELD 0 .. plaster (tiled part not established)"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-OPENING-OP-021:door jambs and head",
+   "paint_element": "GF-OPENING-OP-021:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-2f94dca4dd5f2ec05822",
+   "paint_line": "L-7f8d0739849d36a7e832",
+   "plaster": [
+    "1.400000",
+    "1.400000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "1.400000"
+   ],
+   "rule_paint": [
+    "1.400000",
+    "1.400000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-1.400000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-OPENING-OP-025:door jambs and head",
+   "paint_element": "GF-OPENING-OP-025:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-3ae66decd178e43c61e0",
+   "paint_line": "L-78d0a48c8bf5af4b21c4",
+   "plaster": [
+    "1.080000",
+    "1.080000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "1.080000"
+   ],
+   "rule_paint": [
+    "1.080000",
+    "1.080000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-1.080000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-OPENING-OP-026:door jambs and head",
+   "paint_element": "GF-OPENING-OP-026:door jambs and head:RETURN_PAINT",
+   "plaster_line": "L-f4e9614350ce4659d186",
+   "paint_line": "L-26efbd99ac40f2435692",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.780000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.780000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "GF",
+   "plaster_element": "GF-R31F8AE:stair hall plaster",
+   "paint_element": "GF-R31F8AE:stair hall paint",
+   "plaster_line": "L-acc2563d9293de219c3a",
+   "paint_line": "L-83f2ef175321e6b61f54",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "GF",
+   "plaster_element": "GF-R51E127:plaster",
+   "paint_element": "GF-R51E127:paint",
+   "plaster_line": "L-37a862c12cdcbb113486",
+   "paint_line": "L-b2bfdc6c65e21f4b5062",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "GF",
+   "plaster_element": "GF-R7512EA:plaster",
+   "paint_element": "GF-R7512EA:paint",
+   "plaster_line": "L-2d034d6592850b456295",
+   "paint_line": "L-43a30919b89a61998e8c",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "GF",
+   "plaster_element": "GF-R75FBAE:plaster",
+   "paint_element": "GF-R75FBAE:paint",
+   "plaster_line": "L-823f8b28e3aefb931fad",
+   "paint_line": "L-cd4c2de772f4ee4ef2bf",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "GF",
+   "plaster_element": "GF-R8496F0:plaster",
+   "paint_element": "GF-R8496F0:paint above wall tile",
+   "plaster_line": "L-2211463bba5eeb2e4282",
+   "paint_line": "L-4f330b1b31bc4ec620ab",
+   "plaster": [
+    "13.702800",
+    "21.640000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "13.702800",
+    "21.640000"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "GF",
+   "plaster_element": "GF-R8496F0:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-0d72630e929dd193c181",
+   "paint_line": null,
+   "plaster": [
+    "3.658000",
+    "4.248000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "3.658000",
+    "4.248000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "GF",
+   "plaster_element": "GF-RA3AD49:plaster",
+   "paint_element": "GF-RA3AD49:paint above wall tile",
+   "plaster_line": "L-595181aa140e7efb2ac7",
+   "paint_line": "L-5587711f87b2fd35c076",
+   "plaster": [
+    "31.720506",
+    "42.673500"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "31.720506",
+    "42.673500"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "GF",
+   "plaster_element": "GF-RA3AD49:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-5f10df2be91ae985d170",
+   "paint_line": null,
+   "plaster": [
+    "8.545994",
+    "8.555000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "8.545994",
+    "8.555000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "GF",
+   "plaster_element": "GF-RB28769:plaster",
+   "paint_element": "GF-RB28769:paint above wall tile",
+   "plaster_line": "L-302f7235046bbe0b6c09",
+   "paint_line": "L-f0047fe1e4a14e6528ed",
+   "plaster": [
+    "22.616500",
+    "22.616500"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "22.616500",
+    "22.616500"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "GF",
+   "plaster_element": "GF-RB28769:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-477f92690d1b141f67c5",
+   "paint_line": null,
+   "plaster": [
+    "4.358400",
+    "4.358400"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "4.358400",
+    "4.358400"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "GF",
+   "plaster_element": "GF-RB62B55:plaster",
+   "paint_element": "GF-RB62B55:paint above wall tile",
+   "plaster_line": "L-f43782d52f32b53a6f1e",
+   "paint_line": "L-b6c5050566e308e1d4b1",
+   "plaster": [
+    "16.945000",
+    "22.615000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "16.945000",
+    "22.615000"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "GF",
+   "plaster_element": "GF-RB62B55:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-9fc0022e1cd4a65e0f38",
+   "paint_line": null,
+   "plaster": [
+    "4.425000",
+    "4.425000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "4.425000",
+    "4.425000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "GF",
+   "plaster_element": "GF-RC06FED:plaster",
+   "paint_element": "GF-RC06FED:paint",
+   "plaster_line": "L-6470c6f20f86e542a5ce",
+   "paint_line": "L-d2134defaa68a3aeccc5",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "GF",
+   "plaster_element": "GF-RC06FED:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-ea586fea86188a18bb67",
+   "paint_line": null,
+   "plaster": [
+    "0.499037",
+    "6.186806"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.499037",
+    "6.186806"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "EXCLUDED",
+   "floor": "GF",
+   "plaster_element": "GF-RC99C2A:plaster",
+   "paint_element": "GF-RC99C2A:paint",
+   "plaster_line": "L-6094c3f914c57ab4f361",
+   "paint_line": "L-f8317f880c9c62324604",
+   "plaster": "EXCLUDED",
+   "engine_paint": "EXCLUDED",
+   "rule_paint": "EXCLUDED",
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "superseded room-route line (EXCLUDED in the candidate)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "GF",
+   "plaster_element": "GF-RD36087:plaster",
+   "paint_element": "GF-RD36087:paint above wall tile",
+   "plaster_line": "L-a636dabcd4bc7e59169a",
+   "paint_line": "L-34d47612540e192f451c",
+   "plaster": [
+    "7.040000",
+    "19.555000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "7.040000",
+    "19.555000"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "GF",
+   "plaster_element": "GF-RD36087:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-85676275dc71d09ffcf2",
+   "paint_line": null,
+   "plaster": [
+    "2.560000",
+    "13.671000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "2.560000",
+    "13.671000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "GF",
+   "plaster_element": "GF-RD6F891:plaster",
+   "paint_element": "GF-RD6F891:paint above wall tile",
+   "plaster_line": "L-ccc97166c57999d5a303",
+   "paint_line": "L-8f50fe9bb5760f61c78a",
+   "plaster": [
+    "25.591200",
+    "25.591200"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "25.591200",
+    "25.591200"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "GF",
+   "plaster_element": "GF-RD6F891:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-6e94267143f7df16bac4",
+   "paint_line": null,
+   "plaster": [
+    "2.244800",
+    "5.085875"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "2.244800",
+    "5.085875"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "GF",
+   "plaster_element": "GF-RDBD4F9:plaster",
+   "paint_element": "GF-RDBD4F9:paint above wall tile",
+   "plaster_line": "L-910672305a87544d4d72",
+   "paint_line": "L-2e7ba2852011a8412e25",
+   "plaster": [
+    "26.654400",
+    "26.654400"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "26.654400",
+    "26.654400"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "GF",
+   "plaster_element": "GF-RDBD4F9:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-ef7a16664d12b68a6e71",
+   "paint_line": null,
+   "plaster": [
+    "3.892324",
+    "5.005988"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "3.892324",
+    "5.005988"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "GF",
+   "plaster_element": "GF-RDF7D28:plaster",
+   "paint_element": "GF-RDF7D28:paint above wall tile",
+   "plaster_line": "L-3f7fb1b37e68e6d6c7b7",
+   "paint_line": "L-c555e556ccad6e32b0ba",
+   "plaster": [
+    "11.400000",
+    "25.210000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "11.400000",
+    "25.210000"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "GF",
+   "plaster_element": "GF-RDF7D28:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-8d82373c9e2c2f2acd3b",
+   "paint_line": null,
+   "plaster": [
+    "3.584000",
+    "17.298000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "3.584000",
+    "17.298000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+   "paint_element": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "plaster_line": "L-3e19506bd9e093dfb7be",
+   "paint_line": "L-eab5536cbc5b1f7829dd",
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "plaster return blank: paint HELD by name"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED",
+   "paint_element": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "plaster_line": "L-6ebb9be39b8c4ff4693a",
+   "paint_line": "L-8dd621261ceb5b8e3919",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.780000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "TILED",
+     "m2": "0.780000",
+     "what": "wet rooms on both sides: the reveal may be tiled (not established), HELD"
+    }
+   ],
+   "note": "reading A; HELD 0 .. plaster (tiled part not established)"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED",
+   "paint_element": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "plaster_line": "L-698dfa14c60ff86b5c60",
+   "paint_line": "L-dc8b92788150cda368a1",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.780000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "TILED",
+     "m2": "0.780000",
+     "what": "wet rooms on both sides: the reveal may be tiled (not established), HELD"
+    }
+   ],
+   "note": "reading A; HELD 0 .. plaster (tiled part not established)"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED",
+   "paint_element": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+   "plaster_line": "L-8a038e1ca7c2d73d5b13",
+   "paint_line": "L-f3270cd391188bcf433c",
+   "plaster": [
+    "0.780000",
+    "0.780000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.780000"
+   ],
+   "rule_paint": [
+    "0.780000",
+    "0.780000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [
+    {
+     "end": "low",
+     "cause": "RETURN_RULE_RESTATED",
+     "m2": "-0.780000",
+     "what": "engine low end 0 (frame-covered depth); under the rule the reveal paint = its plaster"
+    }
+   ],
+   "note": "reading A (owner words: 'the Area is the same'); reading B (board paraphrase 'reveals' as lm) would give 0 m2 + lm: HELD for the Checker / Lead reading"
+  },
+  {
+   "class": "RETURN",
+   "floor": "GF",
+   "plaster_element": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+   "paint_element": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+   "plaster_line": "L-e70e7e48b4c15b4f5a21",
+   "paint_line": "L-2d7f8ab2fb489d7f0963",
+   "plaster": null,
+   "engine_paint": null,
+   "rule_paint": null,
+   "band": null,
+   "tiled": null,
+   "named": [],
+   "note": "plaster return blank: paint HELD by name"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "GF",
+   "plaster_element": "GF-RF38DAF:plaster",
+   "paint_element": "GF-RF38DAF:paint above wall tile",
+   "plaster_line": "L-2b9a85e1bedf161c0c21",
+   "paint_line": "L-a05ce0360adda3a26c4a",
+   "plaster": [
+    "25.301100",
+    "25.301100"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "25.301100",
+    "25.301100"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "GF",
+   "plaster_element": "GF-RF38DAF:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-4ad6cf526013266c2125",
+   "paint_line": null,
+   "plaster": [
+    "4.744960",
+    "4.744960"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "4.744960",
+    "4.744960"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "GF",
+   "plaster_element": "GF-RFAD3C4:plaster",
+   "paint_element": "GF-RFAD3C4:paint above wall tile",
+   "plaster_line": "L-f179fc08a266294ad4a4",
+   "paint_line": "L-e70a851d21853b62afeb",
+   "plaster": [
+    "12.206400",
+    "16.440000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "12.206400",
+    "16.440000"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  },
+  {
+   "class": "WET_BAND",
+   "floor": "GF",
+   "plaster_element": "GF-RFAD3C4:plaster band above ceiling",
+   "paint_element": null,
+   "plaster_line": "L-d2923b89f8c35723fe00",
+   "paint_line": null,
+   "plaster": [
+    "3.304000",
+    "3.304000"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "3.304000",
+    "3.304000"
+   ],
+   "tiled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "named": [],
+   "note": "band above the ceiling: no paint (Q-72 / T-690)"
+  },
+  {
+   "class": "WET_RENDER",
+   "floor": "GF",
+   "plaster_element": "HL:WALL_FINISH:GF_07:PLASTER",
+   "paint_element": "HL:WALL_FINISH:GF_07:PAINT",
+   "plaster_line": "L-721a0f1441436193978c",
+   "paint_line": "L-c3f7e68ce91a436802e2",
+   "plaster": [
+    "32.342200",
+    "32.342200"
+   ],
+   "engine_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "rule_paint": [
+    "0.000000",
+    "0.000000"
+   ],
+   "band": [
+    "0.000000",
+    "0.000000"
+   ],
+   "tiled": [
+    "32.342200",
+    "32.342200"
+   ],
+   "named": [],
+   "note": "levelling render under full-height porcelain (UP-FIN-WALL-001 1.8.0, Q-48 A: tile to the ceiling; R-T701-3): the whole face is tiled, no paint face"
+  }
+ ]
+}
