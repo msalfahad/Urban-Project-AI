@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 5971 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 5977 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 88 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2705 | pytest suites, one folder per round. |
+| `tests/` | 2707 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -1729,6 +1729,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t742_parapet_blocks/` | 1 |
 | `tests/t743_sanitary_count/` | 1 |
 | `tests/t744_tag_not_fixture/` | 1 |
+| `tests/t745_drain_runs/` | 1 |
 | `tests/t746_paint_edges_lm/` | 1 |
 | `tests/t747_ext_paint/` | 1 |
 | `tests/t748_readiness_r6/` | 2 |
@@ -2465,6 +2466,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t742/` | 7 |
 | `research/agents_t743/` | 5 |
 | `research/agents_t744/` | 3 |
+| `research/agents_t745/` | 6 |
 | `research/agents_t746/` | 7 |
 | `research/agents_t747/` | 7 |
 | `research/agents_t748/` | 10 |
