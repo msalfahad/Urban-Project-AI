@@ -1,0 +1,1547 @@
+{
+ "conc_census_after": {
+  "STR.CONC.BEAM": {
+   "beside_sum_m3_run_record_only": {
+    "AT_LEAST": 0.115155
+   },
+   "blank": 12,
+   "blank_with_beside": {
+    "AT_LEAST": 1
+   },
+   "bounded": 14,
+   "bounded_high_m3": 8.41271,
+   "bounded_low_m3": 5.983229,
+   "excluded": 54,
+   "lines": 192,
+   "released": 112,
+   "released_m3": 66.920677
+  },
+  "STR.CONC.COLUMN": {
+   "beside_sum_m3_run_record_only": {
+    "AT_LEAST": 0.6574
+   },
+   "blank": 2,
+   "blank_with_beside": {
+    "AT_LEAST": 2
+   },
+   "bounded": 27,
+   "bounded_high_m3": 15.5015,
+   "bounded_low_m3": 11.80007,
+   "excluded": 13,
+   "lines": 72,
+   "released": 30,
+   "released_m3": 19.7765
+  },
+  "STR.CONC.GROUND_BEAM": {
+   "beside_sum_m3_run_record_only": {
+    "AT_LEAST": 5.099845
+   },
+   "blank": 21,
+   "blank_with_beside": {
+    "AT_LEAST": 17
+   },
+   "bounded": 8,
+   "bounded_high_m3": 1.571171,
+   "bounded_low_m3": 1.178378,
+   "excluded": 0,
+   "lines": 61,
+   "released": 32,
+   "released_m3": 23.760555
+  },
+  "STR.CONC.LIFT": {
+   "beside_sum_m3_run_record_only": {
+    "AT_LEAST": 1.903
+   },
+   "blank": 2,
+   "blank_with_beside": {
+    "AT_LEAST": 1
+   },
+   "bounded": 0,
+   "bounded_high_m3": 0.0,
+   "bounded_low_m3": 0.0,
+   "excluded": 0,
+   "lines": 2,
+   "released": 0,
+   "released_m3": 0.0
+  },
+  "STR.CONC.PARAPET": {
+   "beside_sum_m3_run_record_only": {
+    "AT_LEAST": 8.050942
+   },
+   "blank": 4,
+   "blank_with_beside": {
+    "AT_LEAST": 4
+   },
+   "bounded": 0,
+   "bounded_high_m3": 0.0,
+   "bounded_low_m3": 0.0,
+   "excluded": 0,
+   "lines": 4,
+   "released": 0,
+   "released_m3": 0.0
+  },
+  "STR.CONC.STAIR": {
+   "beside_sum_m3_run_record_only": {
+    "AT_LEAST": 1.568446
+   },
+   "blank": 5,
+   "blank_with_beside": {
+    "AT_LEAST": 2
+   },
+   "bounded": 0,
+   "bounded_high_m3": 0.0,
+   "bounded_low_m3": 0.0,
+   "excluded": 1,
+   "lines": 12,
+   "released": 6,
+   "released_m3": 5.368881
+  }
+ },
+ "conc_census_before": {
+  "STR.CONC.BEAM": {
+   "beside_sum_m3_run_record_only": {},
+   "blank": 12,
+   "blank_with_beside": {},
+   "bounded": 14,
+   "bounded_high_m3": 8.41271,
+   "bounded_low_m3": 5.983229,
+   "excluded": 54,
+   "lines": 192,
+   "released": 112,
+   "released_m3": 66.920677
+  },
+  "STR.CONC.COLUMN": {
+   "beside_sum_m3_run_record_only": {},
+   "blank": 2,
+   "blank_with_beside": {},
+   "bounded": 27,
+   "bounded_high_m3": 15.5015,
+   "bounded_low_m3": 11.67283,
+   "excluded": 13,
+   "lines": 72,
+   "released": 30,
+   "released_m3": 19.7765
+  },
+  "STR.CONC.GROUND_BEAM": {
+   "beside_sum_m3_run_record_only": {
+    "AT_LEAST": 5.092339
+   },
+   "blank": 21,
+   "blank_with_beside": {
+    "AT_LEAST": 16
+   },
+   "bounded": 8,
+   "bounded_high_m3": 1.571171,
+   "bounded_low_m3": 1.178378,
+   "excluded": 0,
+   "lines": 61,
+   "released": 32,
+   "released_m3": 23.760555
+  },
+  "STR.CONC.LIFT": {
+   "beside_sum_m3_run_record_only": {},
+   "blank": 2,
+   "blank_with_beside": {},
+   "bounded": 0,
+   "bounded_high_m3": 0.0,
+   "bounded_low_m3": 0.0,
+   "excluded": 0,
+   "lines": 2,
+   "released": 0,
+   "released_m3": 0.0
+  },
+  "STR.CONC.PARAPET": {
+   "beside_sum_m3_run_record_only": {
+    "AT_LEAST": 8.050943
+   },
+   "blank": 4,
+   "blank_with_beside": {
+    "AT_LEAST": 4
+   },
+   "bounded": 0,
+   "bounded_high_m3": 0.0,
+   "bounded_low_m3": 0.0,
+   "excluded": 0,
+   "lines": 4,
+   "released": 0,
+   "released_m3": 0.0
+  },
+  "STR.CONC.STAIR": {
+   "beside_sum_m3_run_record_only": {
+    "AT_LEAST": 0.355017
+   },
+   "blank": 5,
+   "blank_with_beside": {
+    "AT_LEAST": 1
+   },
+   "bounded": 0,
+   "bounded_high_m3": 0.0,
+   "bounded_low_m3": 0.0,
+   "excluded": 1,
+   "lines": 12,
+   "released": 6,
+   "released_m3": 5.368881
+  }
+ },
+ "confirmed_unchanged": [
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-12f3d8b9375cac407bca",
+   "line_sha": "7338f2b1ad7627b126d7020e6bc7737e46c18edc98cb6a2f56eb90762be993d4",
+   "record": "concrete_ledger_v3062",
+   "value": 0.173
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-dd6d11415961b554e906",
+   "line_sha": "26b7d4d4267ccac6f998780f6aa56dddf9c16a0c5d097a0535d13e2e2902b549",
+   "record": "concrete_ledger_v3062",
+   "value": 0.173
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-8eb74a02fcf5ae4465f8",
+   "line_sha": "7f78684f0aa90bfe2f208b35208c3203ba16d2d9b2cae7e87464a128f5803050",
+   "record": "concrete_ledger_v3062",
+   "value": 0.173
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-953e87a3e9d0425d404e",
+   "line_sha": "439eca4f68a5919e08887400cc1860cd77b4d3cf4145e46a9bf923d4ea0329bd",
+   "record": "concrete_ledger_v3062",
+   "value": 0.4325
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-1d419b64e8ca1af30fb4",
+   "line_sha": "9dd40189ed024a84e786234c6c0b4756103a03e8f8eb91780b930ef183aa53bc",
+   "record": "parapet_rc_v3023",
+   "value": 1.799103
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-9a2c81164ec6499cc28c",
+   "line_sha": "493c8a75a17ed84d2e87c468aa46e0525cf2cac3da47baf5fea1df7ca85c200b",
+   "record": "parapet_rc_v3023",
+   "value": 2.949453
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-030538dda6a32c601c4c",
+   "line_sha": "776905eda04cc5378d204b856946bde5196c16de082a57654c504cdb66f70513",
+   "record": "parapet_rc_v3023",
+   "value": 1.6245
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-061e18cf35a4b6b33d68",
+   "line_sha": "30b1bf11cb51c4a48cff2ed7102339cebb7ae75fd5156f6b882d4b25190bcce8",
+   "record": "concrete_ledger_v3066",
+   "value": 0.355017
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-402dbe61d1c924144a3c",
+   "line_sha": "38943a91c818d648d5a02f173b274576656ecd5b58a9f679491c6ae5e611ca7c",
+   "record": "concrete_ledger_v3063",
+   "value": 0.7275
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-6bf14711798e5af93594",
+   "line_sha": "03f9ed158df9e67dfff21a14b0e3bcca995880e3ba3b8e9b02fd7818b4dc8c7a",
+   "record": "concrete_ledger_v3064",
+   "value": 0.1125
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-3284f44000c02179ace7",
+   "line_sha": "d6bb91a8f353d927444ee9e1793ba0c751f706c9c44aa605d615ee9e8f2c0880",
+   "record": "concrete_ledger_v3063",
+   "value": 0.1725
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-4783c6e18002c3a8a37e",
+   "line_sha": "0464da5033003b372d20f3199562274e6acb093fc9ab058b1b7b2cc0ea509396",
+   "record": "concrete_ledger_v3063",
+   "value": 0.45
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-00465df980165c529476",
+   "line_sha": "f9a5395e4effe1075e028b581741a5b076ee73472b3f2ac1a1b5db1faabbca9d",
+   "record": "concrete_ledger_v3063",
+   "value": 0.18
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-b4a13a43967ee4765662",
+   "line_sha": "6b3d11b2fb5c06aa0aa9fca4b92447c1893538b422c8f56f0cf12a27c8e60b65",
+   "record": "concrete_ledger_v3063",
+   "value": 0.0375
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-d8b98b143e293d30833b",
+   "line_sha": "29590c60edab64502daecf7d3592bb2adf6e725da6ad75a09440ddbdc057f62c",
+   "record": "concrete_ledger_v3063",
+   "value": 0.435
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-a8c5c32c7a785c1e3f05",
+   "line_sha": "044308593e37924c4ac53ccb6e5fd7ffbc98b34627440c8ff28b13afee7151ef",
+   "record": "concrete_ledger_v3063",
+   "value": 0.189
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-1487bdda099006e0c4ba",
+   "line_sha": "4d327e060b941642fbb27c5ecc92bb1921a42bde25630644cb7b205c140985dc",
+   "record": "concrete_ledger_v3063",
+   "value": 0.2205
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-5af89b9f1e5b90daf8f5",
+   "line_sha": "eac16e3fc542461608e37922df1d3b4954fb5e790f80b6aeb26f57d841e190d6",
+   "record": "concrete_ledger_v3063",
+   "value": 0.6
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-e24946df436cbc25fca6",
+   "line_sha": "d158e01745f311758ad12be45a42fc5832e824efb1f6424cee558067e81c57c4",
+   "record": "concrete_ledger_v3063",
+   "value": 0.5964
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-95a1f198cfe7f398d6ae",
+   "line_sha": "f5da4b8b709d847cb40859fbc0af2674d55f27d66a0f3ec4e6577c44c7a852e8",
+   "record": "concrete_ledger_v3063",
+   "value": 0.423
+  },
+  {
+   "kind": "AT_LEAST_M3",
+   "line_id": "L-cfb4555cb26b39934bff",
+   "line_sha": "8c051cb0baed4d4cb28bcd5314424db467eca0b43dd7ca82bd71b4adc94fe1a7",
+   "record": "concrete_ledger_v3063",
+   "value": 0.423
+  }
+ ],
+ "extends": "ARCH_TAKEOFF_V3.0.72",
+ "identity": {
+  "added": 0,
+  "base_lines": 5123,
+  "concrete": {
+   "AT_LEAST": 10,
+   "NAMED": 18,
+   "NARROW": 5
+  },
+  "diff": {
+   "vs_base": {
+    "CHANGED": 33,
+    "SAME": 5090
+   },
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3531,
+    "QUANTITY_DIFFERS": 1054,
+    "SAME_QUANTITY": 538
+   }
+  },
+  "outside_rows": 5090,
+  "outside_rows_identical_to_base": 5090,
+  "outside_rows_sha256": "0d57b2b330b1340dae62c0169f8acea75e6f617034c91dafcf4008e24525d8c8",
+  "replaced": 33,
+  "v3_0_73_lines": 5123
+ },
+ "lines_sha256": {
+  "V3_0_72": "f95787445eb78597ec8bca6c46d90e5d17b4fb4d9ad417e9ef0463c7b3be53ae",
+  "V3_0_73": "c5a0b1281cdb6149a5650d790ad325bc50fcbe0cb8d1bec89760f70c01fd85e8"
+ },
+ "method": "ARCH_TAKEOFF_V3.0.73",
+ "restated": [
+  {
+   "from": 1.677887,
+   "line_id": "L-b5ffc172a354375ca107",
+   "to": 1.677886
+  },
+  {
+   "from": 0.135473,
+   "line_id": "L-e16c98075f69532a3dc7",
+   "to": 0.135481
+  },
+  {
+   "from": 0.242309,
+   "line_id": "L-0bb78accf8c0a0fbdbaf",
+   "to": 0.242308
+  },
+  {
+   "from": 0.147657,
+   "line_id": "L-d53e5eb08e2c6c668254",
+   "to": 0.147656
+  }
+ ],
+ "rows": [
+  {
+   "action": "NARROW",
+   "after": {
+    "high": 0.595,
+    "low": 0.45738,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": 0.595,
+    "low": 0.4242,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-39 (2F roof slab top) high end",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-53f223b06db14ac41d47",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3065"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.588
+   }
+  },
+  {
+   "action": "NARROW",
+   "after": {
+    "high": 0.425,
+    "low": 0.3287,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": 0.425,
+    "low": 0.303,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-39 (2F roof slab top) high end",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-26f6b6f2365c72e42291",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3065"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   }
+  },
+  {
+   "action": "NARROW",
+   "after": {
+    "high": 0.425,
+    "low": 0.3267,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": 0.425,
+    "low": 0.303,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-39 (2F roof slab top) high end",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-33a9b7728781fcba12e2",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3065"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   }
+  },
+  {
+   "action": "NARROW",
+   "after": {
+    "high": 0.425,
+    "low": 0.3287,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": 0.425,
+    "low": 0.303,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-39 (2F roof slab top) high end",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3065"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   }
+  },
+  {
+   "action": "NARROW",
+   "after": {
+    "high": 0.35,
+    "low": 0.20136,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": 0.35,
+    "low": 0.1824,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-39 (2F roof slab top) high end",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3067"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "AT_LEAST",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": 0.3287,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-44 (B15 20x120 up / down-stand)",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-0ede77cfd0badc4c7d62",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   }
+  },
+  {
+   "action": "AT_LEAST",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": 0.3287,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-44 (B15 20x120 up / down-stand); section CONFLICT D-66",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-c10e2945d582b5a03126",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   }
+  },
+  {
+   "action": "AT_LEAST",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": 1.903,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-43 (upper end open: supplier pit depth)",
+   "item_code": "STR.CONC.LIFT",
+   "line_id": "L-684fcad323adc0c8a267",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-43 (tie-beam section not printed; ST p.8 note 19 gives only the level 3.00 m)",
+   "item_code": "STR.CONC.LIFT",
+   "line_id": "L-5ae06fda7d729d54c033",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "AT_LEAST",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": 1.677886,
+   "beside_before": [
+    {
+     "kind": "AT_LEAST_M3",
+     "record": "parapet_rc_v3023",
+     "value": 1.677887
+    }
+   ],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "Q-65 C (material above the upstand) + D-39 (b_edge, roof build-up)",
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": "L-b5ffc172a354375ca107",
+   "restates": {
+    "record": "parapet_rc_v3023",
+    "value": "1.677887",
+    "why": "V3.0.23 printed the floor 1.677887 rounded half-up; the exact floor sum of smallest drawn tops 5.592956 m2 x upstand 0.30 is 1.677886 at 6 dp rounded DOWN (R-T696-1: a lower end never exceeds the exact quantity)"
+   },
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "AT_LEAST",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": 1.213429,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "C-ST-4 / RFI-A04 (MS1-L 10 vs 12 fronts), D-67 / C-ST-3 (winders, turn soffit)",
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-7863355dfcb68a681d2d",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 2.785981
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "C-ST-3 (section through the MS2 half-landing junction)",
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-659243ed9fc2831c3ae8",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "S-9 (D1 waist thickness / support)",
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-821032bc04a0b0d02133",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-08 / owner Q-50 / Q-51 (curved parts HELD), C-ST-3",
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.769462
+   }
+  },
+  {
+   "action": "AT_LEAST",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": 0.135481,
+   "beside_before": [
+    {
+     "kind": "AT_LEAST_M3",
+     "record": "concrete_ledger_v3063",
+     "value": 0.135473
+    }
+   ],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-35 (exterior ground-beam depth 'FOLLOW ARCH.'; annex literal +0.25 -> N.G. 0.00 cannot hold the printed bars)",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-e16c98075f69532a3dc7",
+   "restates": {
+    "record": "concrete_ledger_v3063",
+    "value": "0.135473",
+    "why": "F-T723-1: T-712 re-measured the same member (0.135473 -> 0.135481 m3; R-T696-1 floors an AT_LEAST / re-measured area)"
+   },
+   "superseded_record_keys": [
+    "concrete_ledger_v3063"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.162577
+   }
+  },
+  {
+   "action": "AT_LEAST",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": 0.0075,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-35 (exterior ground-beam depth 'FOLLOW ARCH.'; annex literal +0.25 -> N.G. 0.00 cannot hold the printed bars)",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-be6708e07b40efa02779",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.009
+   }
+  },
+  {
+   "action": "AT_LEAST",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": 0.242308,
+   "beside_before": [
+    {
+     "kind": "AT_LEAST_M3",
+     "record": "concrete_ledger_v3063",
+     "value": 0.242309
+    }
+   ],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-33 (run carrying a landing beam; ST p.13 prints sections only 'without concentrated load')",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-0bb78accf8c0a0fbdbaf",
+   "restates": {
+    "record": "concrete_ledger_v3063",
+    "value": "0.242309",
+    "why": "F-T723-1: T-712 re-measured the same member (0.242309 -> 0.242308 m3; R-T696-1 floors an AT_LEAST / re-measured area)"
+   },
+   "superseded_record_keys": [
+    "concrete_ledger_v3063"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.291231
+   }
+  },
+  {
+   "action": "AT_LEAST",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": 0.147656,
+   "beside_before": [
+    {
+     "kind": "AT_LEAST_M3",
+     "record": "concrete_ledger_v3063",
+     "value": 0.147657
+    }
+   ],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-33 (run carrying a landing beam; ST p.13 prints sections only 'without concentrated load')",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-d53e5eb08e2c6c668254",
+   "restates": {
+    "record": "concrete_ledger_v3063",
+    "value": "0.147657",
+    "why": "F-T723-1: T-712 re-measured the same member (0.147657 -> 0.147656 m3; R-T696-1 floors an AT_LEAST / re-measured area)"
+   },
+   "superseded_record_keys": [
+    "concrete_ledger_v3063"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.1383
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-35 court stretch (exterior section; neither the slab / landing level it carries nor the yard ground under it is printed; GB.EXTERIOR.DEPTH_BASIS.COURT not declared)",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-62243c74c430d383be86",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.054
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-35 court stretch (exterior section; neither the slab / landing level it carries nor the yard ground under it is printed; GB.EXTERIOR.DEPTH_BASIS.COURT not declared)",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-21795b350fbd09150c43",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.456
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-35 court stretch (exterior section; neither the slab / landing level it carries nor the yard ground under it is printed; GB.EXTERIOR.DEPTH_BASIS.COURT not declared)",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-a55bfa01b726ef11650c",
+   "restates": null,
+   "superseded_record_keys": [],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.117
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-17c4238c0ef76656d06e",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-331d4bbef719a7f0bbca",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-377cb988b2271c2e2e4d",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-54e397fe7b1485b2e8fe",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-56d278bedc8dda2837a9",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-634cefe5e8a7fb458e16",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-67f3d325019e618328eb",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-a9d5e7dc22013e24d691",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": 1.8,
+    "low": 0.6,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   }
+  },
+  {
+   "action": "AT_LEAST",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": 0.115155,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-28 (east dome-opening ring: no mark; ST p.7 ring depth 'AS PER ARCH'; architect's sections draw no ring) - AT_LEAST from the printed bar stack, upper end open",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-ab37afa17f2ac5b0efd1",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-aba59a2157a48a69e2fb",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-05/D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-bb49e831f053bd30a6ce",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": 0.2025,
+    "low": 0.135,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   }
+  },
+  {
+   "action": "NAMED",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "beside": null,
+   "beside_before": [],
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "item": "D-26 (PROJECTION: no section / mark / bars / material printed)",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-fbb65dfd2a66a16714ac",
+   "restates": null,
+   "superseded_record_keys": [
+    "concrete_ledger_v3062"
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  }
+ ],
+ "task": "T-722",
+ "totals_moved_by_code": {
+  "STR.CONC.COLUMN|m3": {
+   "base": {
+    "blocked_lines": 2,
+    "bounded_lines": 27,
+    "held_high": 15.5015,
+    "held_low": 11.67283,
+    "lines": 59,
+    "released": 19.7765
+   },
+   "v3_0_73": {
+    "blocked_lines": 2,
+    "bounded_lines": 27,
+    "held_high": 15.5015,
+    "held_low": 11.80007,
+    "lines": 59,
+    "released": 19.7765
+   }
+  }
+ }
+}
