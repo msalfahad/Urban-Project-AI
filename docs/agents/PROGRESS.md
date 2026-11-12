@@ -1,5 +1,35 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-12 12:20 UTC (Lead). Previous version: 2026-11-12 08:16 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared
+lines, the slab); released: 0. Candidate lines changed since 08:16: plaster and paint held ranges only (below).
+
+Since 08:16 (newest first):
+- Plaster / paint is in the candidate (not released): plaster held 1,106.95 .. 1,302.17 m2 (against your freelancer
+  -16.8 .. -8.7 %, his 13.50 m2 shaft row shown apart), paint held 604.99 .. 710.01 m2 (-31.3 .. -24.5 %); measured
+  figures unchanged. It passed the full test run and a line-by-line hand check.
+- Your paint rule of today (paint = plaster of the same faces, minus the band above false ceilings and tiled faces;
+  corners and window / door edges in metres) is set as a new rule version with a normal and an adverse test. The about
+  500 m2 between plaster and paint must be explained face by face by those causes; paint before / after will be shown in
+  m2.
+- Formwork: the 7 lines that had two disagreeing figures are settled from the drawing, one figure each (one beam side
+  that read 0 is 0.102 m2); they go into the candidate with the next package, together with the small concrete round.
+- Exterior plaster is ready against the current candidate (second-floor gross 125.16 m2 checked by hand); one facade
+  width printed two ways (up to 5.00 m2 on the ground floor) is on the designer list.
+- Roof waterproofing: the released 115.832 m2 is 0.018 m2 above its own measured band (dome chord); the correction
+  record is ready; the checker needs a small tool path to issue it (task set).
+- Earthworks: your plan x depth 183.95 m3 against the engine 136.90 .. 163.48 m3 is explained term by term from the
+  drawings (annex, unprinted lobby / court levels, beam columns; residual 0.000002 m3); every soil density held (none
+  printed).
+- The statement of all trade totals for the scorecard must be redone on the new candidate (it was built just before the
+  plaster / paint package landed); due 13 Nov.
+- New work from the missing families: block parapets and a sanitary fixtures / floor drains count (count only).
+- Milestone: reconciled quantities + scorecard estimate 14-16 Nov stands: plaster / paint done, formwork 13-14 Nov,
+  totals statement 13 Nov, beads 15 Nov, tiles 15-16 Nov; waterproofing after its record.
+
+Previous section (2026-11-12 08:16):
+
 Last update: 2026-11-12 08:16 UTC (Lead). Previous version: 2026-11-12 04:17 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared

@@ -1,3 +1,19 @@
+## LEAD REPORT 2026-11-12 00:16 UTC
+
+Drive read OK (no file in the private project folders modified since 16:00 UTC 10 Nov, no photo task). Training villa: candidate of record now ARCH_TAKEOFF_V3.0.72 / master 1.73.0 (NOT RELEASED; released V2.9 + route G untouched). 8 pieces merged since 20:17, all checked by own re-measure; READY 0.
+- MASONRY (m2 / pcs / m3): in the candidate: 18 blank lines carry a one-ended limit beside (2F 0.15 parent at most 1.965 m2; GF 0.15 parent at least 12.9311 m2; 2F part-host units at most 118.375 pcs, mortar at most 0.104762 m3); 10 held ranges rounded outward by rule (<= 4e-6 m3). 28 lines changed, 5,095 identical, 28 / 28 AGREE by hand, full suite 23,482 pass 0 fail. No total moved.
+- CONCRETE (m3; released / bounded / one-sided / blank never summed): released 317 = 291.476251 unchanged. Checked, waiting for the concrete package: ground beams 17 lines at least 5.099845 (3 court lines blank, landing / yard level not printed, D-35; freelancer 0.30 x 0.60 gives 11.12 on the same plans, UNRESOLVED on D-33 / D-35); east dome ring at least 0.115155 (may tighten to 0.140345 if the detail's two levels define the depth: new task); 11 roof-edge strips blank (no depth printed, 6.9471 m2 per m depth); 0.378618 m2 of drawn strip in no line (new task).
+- FORMWORK (m2): 370 B10-13 lines classed on their members: 26 bounded 87.94 .. 103.19, 32 at least 98.54, 54 fix rows 33.127, 258 blank by cause; soffit width ratio 0.2502 vs drawn 0.250 (-0.000555 m2 on one line, loose low end): new task; 20 stair formwork lines not yet classed: new task.
+- FINISHES (m2): stair skirting 2.25 vs 2.20 m explained (0.05 m nosing; F-V715-1 closed); MS1-T / RS-C ceilings bounded. Voids drawn by floor (light well 26.240, domes 15.359 x 2, lift shaft 3.24 per floor, oval 3.824 exterior). ENGINE_WRONG candidate: 1F living porcelain 33.411 -> 33.468 m2 (+0.17 %, light well deducted twice by overlapping room pieces); a ceiling line over the void risks 16.005 m2 twice. Plaster like for like -15.81 .. -9.88 % unchanged; shaft 13.50 m2 unresolved (new task with the void register).
+- REBAR: parked by your decision; nothing done.
+- Learned: deduct a void once as the union of the pieces that cut it; a merge that adds a master version must promote it in the same merge; restatements without a drawing read keep leaving loose figures (new rows ask for a handle per figure).
+- Team health: 10 runs since 20:17, all closed (one Checker run correctly stood down by its overlap guard); self-check PASS everywhere; Checker 7 Gate A + 1 Gate B in 4 h. Board: 8 TODO (S 3, A 3, I 2), queue check 19 actionable, 0 flagged, 0 stall.
+- Gates: lowest open gate 1 (concrete limits package T-722 next, V3.0.73). M3 (reconciled + scorecard): masonry limits in the candidate a day ahead of estimate; concrete 13 Nov MEDIUM-HIGH, plaster / paint 14-15 Nov MEDIUM.
+
+OWNER PACKAGE: none today (no item meets section 2.7). The designer list (DESIGNER_QUESTIONS.md) is now per item: the roof datum D-39 holds the most lines (92 alone; plaster 1,115 .. 1,251 m2 bounded + 18 blank); send it when you choose.
+
+NEEDS FIXING (owner only): (1) Decode fix PR #6 still open: the Drive download arrives as raw binary and the wrapper refuses it; two worker runs tonight re-encoded it by hand to read the drawing (works, costs time; one earlier run skipped the drawing). (2) Approved scheduled-task edits still not possible under the repository settings (no change since 11 Nov).
+
 ## LEAD REPORT 2026-11-11 20:25 UTC
 
 Drive read OK (no file in the private project folders modified since 16:00 UTC 10 Nov, no photo task). Training villa: candidate of record now ARCH_TAKEOFF_V3.0.71 / master 1.72.0 (NOT RELEASED; released default V2.9 + route G untouched). Whole lines verified: 1 (CONC.SLAB), unchanged; scoreboard restated 20:04, no cell changed.

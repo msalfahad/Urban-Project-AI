@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-12 12:20 (since 08:16)
+
+- T-735 formwork conflict decider: WORKED (MERGED 870f15f5; 7 lines one live form each, Checker by hand AGREE) -> T-729 carries them.
+- T-734 WP H4 evidence + roof membrane record: PARTIAL (band and +0.018026 m2 excess AGREE; record not issued: wrapper refuses tools/boq_export_v1.py) -> NEW T-741 issue path for the Checker; D-BAND -> designer item 15.
+- T-717 plaster / paint Gate B r2: WORKED (MERGED e6481b43, V3.0.74; plaster held 1,106.949 .. 1,302.169, paint 604.990 .. 710.006 m2).
+- T-737 exterior plaster readiness: WORKED (MERGED 891c14ea; 2F gross 125.160 m2 AGREE; 43 bead rows re-bound) -> T-314 r3 after T-736; D-GF-07 -> designer item 14.
+- T-708 earthworks round 3: WORKED (MERGED a91a1dfe; Z2 reconciled over 90 terms, residual 2e-6; densities HELD) -> T-509 (H5).
+- T-739 all-trade aggregation r1: FAILED on one gate (output stale after V3.0.74 merged; 4 hand cells AGREE) -> TODO r2 with the exact fault; L-T717-1 ADOPTED.
+
 ## Lead 2026-11-12 08:16 (since 04:17)
 
 - T-731 stair MS1-L coherent reading: WORKED (MERGED in 067b0035; 16 risers by handle AGREE; highs only; F-T725-1 adopted).

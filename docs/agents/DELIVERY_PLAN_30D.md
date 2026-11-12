@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-12 12:20; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) + owner paint rule 2026-11-12 in force)
+
+- Candidate of record V3.0.74 bea5be02 / master 1.75.0 (NOT RELEASED; T-717 r2 Gate B PASS, merge e6481b43, L4 0 fail). Since 08:16 MERGED: T-735 (870f15f5), T-734 (3d8185fe), T-717 r2 (e6481b43 + 10889521), T-737 (891c14ea), T-708 (a91a1dfe). REJECTED: T-739 r1 (output stale after V3.0.74). READY 0.
+- Hub order: T-729 (V3.0.75, formwork + concrete round 10 + the T-735 forms) -> T-736 (V3.0.76, beads H2a + ceiling r3) -> T-738 (V3.0.77, tiles H3 + stair finishes H3s) -> T-314 r3 exterior plaster -> H4 WP -> T-509 H5 earthworks; paint rule wiring after T-740. Gate A: T-740 paint rule version (gate 1), T-739 r2 all-trade statement, T-741 downgrade issue path, T-742 parapet blocks, T-743 sanitary census.
+- Confidence: plaster / paint in the candidate DONE (12 Nov 11:30, a day ahead); formwork + C10 13-14 Nov MEDIUM; scorecard statement (T-739 r2) 13 Nov MEDIUM-HIGH; paint rule restatement 13 Nov MEDIUM; beads 15 Nov MEDIUM; tiles / stair finishes 15-16 Nov MEDIUM; WP 16-17 Nov LOW-MEDIUM; 19-20 Nov blind test only when ready.
+
 ## Status (Lead, 2026-11-12 08:16; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) in force)
 
 - Candidate of record V3.0.73 c5a0b128 / master 1.74.0 (NOT RELEASED), unchanged. Since 04:17 MERGED: T-731, T-720 (067b0035), T-732 (35c0c09e), T-733 (7146583d), T-730 (6143f30d). REJECTED: T-717 r1 (one L4 test-binding file; 36/36 lines AGREE). READY 0.
