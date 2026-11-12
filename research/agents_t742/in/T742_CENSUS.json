@@ -1,0 +1,772 @@
+{
+ "registration": {
+  "ANNEX+GF": {
+   "outline_floor": "GF",
+   "plan": "1F_PLAN",
+   "vertices": 18,
+   "on_entity_end_points": 13
+  },
+  "1F": {
+   "outline_floor": "1F",
+   "plan": "2F_PLAN",
+   "vertices": 22,
+   "on_entity_end_points": 9
+  },
+  "2F": {
+   "outline_floor": "2F",
+   "plan": "2F_PLAN",
+   "vertices": 8,
+   "on_entity_end_points": 8
+  }
+ },
+ "runs": [
+  {
+   "chain": "ANNEX",
+   "side": "NE-6",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 10.8,
+   "outer_handles": [
+    {
+     "handle": "AC7",
+     "layer": "5",
+     "overlap_m": 10.7997
+    }
+   ],
+   "outer_drawn_m": 10.7997,
+   "inner_handles": [
+    {
+     "handle": "B34",
+     "layer": "5",
+     "overlap_m": 10.7997
+    }
+   ],
+   "inner_drawn_m": 10.7997
+  },
+  {
+   "chain": "ANNEX",
+   "side": "SE-1",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 6.7,
+   "outer_handles": [
+    {
+     "handle": "B2C",
+     "layer": "5",
+     "overlap_m": 6.7
+    }
+   ],
+   "outer_drawn_m": 6.7,
+   "inner_handles": [
+    {
+     "handle": "B37",
+     "layer": "5",
+     "overlap_m": 6.3
+    }
+   ],
+   "inner_drawn_m": 6.3
+  },
+  {
+   "chain": "ANNEX",
+   "side": "SW-1",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 3.1,
+   "outer_handles": [
+    {
+     "handle": "B26",
+     "layer": "5",
+     "overlap_m": 3.0997
+    }
+   ],
+   "outer_drawn_m": 3.0997,
+   "inner_handles": [
+    {
+     "handle": "B41",
+     "layer": "5",
+     "overlap_m": 2.9
+    }
+   ],
+   "inner_drawn_m": 2.9
+  },
+  {
+   "chain": "ANNEX",
+   "side": "SW-2",
+   "kind": "ARC",
+   "t_m": 0.2,
+   "outer_line_m": 2.042,
+   "outer_handles": [
+    {
+     "handle": "B29",
+     "layer": "5",
+     "overlap_m": 2.042
+    }
+   ],
+   "outer_drawn_m": 2.042,
+   "inner_handles": [
+    {
+     "handle": "B2B",
+     "layer": "5",
+     "overlap_m": 1.7279
+    }
+   ],
+   "inner_drawn_m": 1.7279
+  },
+  {
+   "chain": "ANNEX",
+   "side": "NW-1",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 0.5,
+   "outer_handles": [
+    {
+     "handle": "B39",
+     "layer": "5",
+     "overlap_m": 0.5
+    }
+   ],
+   "outer_drawn_m": 0.5,
+   "inner_handles": [
+    {
+     "handle": "B38",
+     "layer": "5",
+     "overlap_m": 0.7
+    }
+   ],
+   "inner_drawn_m": 0.7
+  },
+  {
+   "chain": "ANNEX",
+   "side": "SW-3",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 6.2001,
+   "outer_handles": [
+    {
+     "handle": "B36",
+     "layer": "5",
+     "overlap_m": 6.0
+    }
+   ],
+   "outer_drawn_m": 6.0,
+   "inner_handles": [
+    {
+     "handle": "B35",
+     "layer": "5",
+     "overlap_m": 6.2
+    }
+   ],
+   "inner_drawn_m": 6.2
+  },
+  {
+   "chain": "GF",
+   "side": "SW-9",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 1.4999,
+   "outer_handles": [
+    {
+     "handle": "BDC",
+     "layer": "5",
+     "overlap_m": 0.8948
+    }
+   ],
+   "outer_drawn_m": 0.8948,
+   "inner_handles": [
+    {
+     "handle": "BDB",
+     "layer": "5",
+     "overlap_m": 0.8948
+    }
+   ],
+   "inner_drawn_m": 0.8948
+  },
+  {
+   "chain": "GF",
+   "side": "NW-7",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 7.9,
+   "outer_handles": [
+    {
+     "handle": "B30",
+     "layer": "5",
+     "overlap_m": 7.9
+    }
+   ],
+   "outer_drawn_m": 7.9,
+   "inner_handles": [
+    {
+     "handle": "B32",
+     "layer": "5",
+     "overlap_m": 0.2
+    },
+    {
+     "handle": "B33",
+     "layer": "5",
+     "overlap_m": 7.7
+    }
+   ],
+   "inner_drawn_m": 7.9
+  },
+  {
+   "chain": "GF",
+   "side": "NE-4",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 19.37,
+   "outer_handles": [
+    {
+     "handle": "AC7",
+     "layer": "5",
+     "overlap_m": 19.37
+    }
+   ],
+   "outer_drawn_m": 19.37,
+   "inner_handles": [
+    {
+     "handle": "B25",
+     "layer": "5",
+     "overlap_m": 18.97
+    },
+    {
+     "handle": "B34",
+     "layer": "5",
+     "overlap_m": 0.2003
+    }
+   ],
+   "inner_drawn_m": 19.1703
+  },
+  {
+   "chain": "1F",
+   "side": "SW-3",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 6.7699,
+   "outer_handles": [
+    {
+     "handle": "1273",
+     "layer": "5",
+     "overlap_m": 6.7697
+    }
+   ],
+   "outer_drawn_m": 6.7697,
+   "inner_handles": [
+    {
+     "handle": "1278",
+     "layer": "5",
+     "overlap_m": 6.57
+    }
+   ],
+   "inner_drawn_m": 6.57
+  },
+  {
+   "chain": "1F",
+   "side": "NW-1",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 1.1703,
+   "outer_handles": [],
+   "outer_drawn_m": 0.0,
+   "inner_handles": [
+    {
+     "handle": "12A7",
+     "layer": "5",
+     "overlap_m": 1.1703
+    }
+   ],
+   "inner_drawn_m": 1.1703
+  },
+  {
+   "chain": "1F",
+   "side": "NW-2",
+   "kind": "ARC",
+   "t_m": 0.2,
+   "outer_line_m": 3.5283,
+   "outer_handles": [],
+   "outer_drawn_m": 0.0,
+   "inner_handles": [],
+   "inner_drawn_m": 0.0
+  },
+  {
+   "chain": "1F",
+   "side": "NW-3",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 0.578,
+   "outer_handles": [],
+   "outer_drawn_m": 0.0,
+   "inner_handles": [
+    {
+     "handle": "12A7",
+     "layer": "5",
+     "overlap_m": 0.978
+    }
+   ],
+   "inner_drawn_m": 0.978
+  },
+  {
+   "chain": "1F",
+   "side": "NE-1",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 0.08,
+   "outer_handles": [
+    {
+     "handle": "1311",
+     "layer": "5",
+     "overlap_m": 0.08
+    }
+   ],
+   "outer_drawn_m": 0.08,
+   "inner_handles": [],
+   "inner_drawn_m": 0.0
+  },
+  {
+   "chain": "1F",
+   "side": "NW-4",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 0.4673,
+   "outer_handles": [],
+   "outer_drawn_m": 0.0,
+   "inner_handles": [],
+   "inner_drawn_m": 0.0
+  },
+  {
+   "chain": "1F",
+   "side": "SW-1",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 0.08,
+   "outer_handles": [],
+   "outer_drawn_m": 0.0,
+   "inner_handles": [],
+   "inner_drawn_m": 0.0
+  },
+  {
+   "chain": "1F",
+   "side": "NW-5",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 6.725,
+   "outer_handles": [
+    {
+     "handle": "12A6",
+     "layer": "5",
+     "overlap_m": 0.0327
+    }
+   ],
+   "outer_drawn_m": 0.0327,
+   "inner_handles": [
+    {
+     "handle": "12A7",
+     "layer": "5",
+     "overlap_m": 6.725
+    }
+   ],
+   "inner_drawn_m": 6.725
+  },
+  {
+   "chain": "1F",
+   "side": "NE-2",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 19.27,
+   "outer_handles": [
+    {
+     "handle": "127F",
+     "layer": "5",
+     "overlap_m": 18.27
+    }
+   ],
+   "outer_drawn_m": 18.27,
+   "inner_handles": [
+    {
+     "handle": "1285",
+     "layer": "5",
+     "overlap_m": 18.87
+    }
+   ],
+   "inner_drawn_m": 18.87
+  },
+  {
+   "chain": "1F",
+   "side": "SE-1",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 7.5,
+   "outer_handles": [
+    {
+     "handle": "12C7",
+     "layer": "5",
+     "overlap_m": 7.5
+    }
+   ],
+   "outer_drawn_m": 7.5,
+   "inner_handles": [
+    {
+     "handle": "12C9",
+     "layer": "5",
+     "overlap_m": 7.1
+    }
+   ],
+   "inner_drawn_m": 7.1
+  },
+  {
+   "chain": "1F",
+   "side": "SW-2",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 4.4,
+   "outer_handles": [
+    {
+     "handle": "12A8",
+     "layer": "5",
+     "overlap_m": 2.4949
+    }
+   ],
+   "outer_drawn_m": 2.4949,
+   "inner_handles": [
+    {
+     "handle": "12B9",
+     "layer": "5",
+     "overlap_m": 4.125
+    }
+   ],
+   "inner_drawn_m": 4.125
+  },
+  {
+   "chain": "2F",
+   "side": "NW-1",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 6.8,
+   "outer_handles": [
+    {
+     "handle": "1291",
+     "layer": "1",
+     "overlap_m": 6.8
+    }
+   ],
+   "outer_drawn_m": 6.8,
+   "inner_handles": [
+    {
+     "handle": "1292",
+     "layer": "1",
+     "overlap_m": 6.45
+    }
+   ],
+   "inner_drawn_m": 6.45
+  },
+  {
+   "chain": "2F",
+   "side": "NE-1",
+   "kind": "STRAIGHT",
+   "t_m": 0.15,
+   "outer_line_m": 8.1,
+   "outer_handles": [
+    {
+     "handle": "1280",
+     "layer": "1",
+     "overlap_m": 0.6158
+    },
+    {
+     "handle": "1281",
+     "layer": "1",
+     "overlap_m": 6.4842
+    }
+   ],
+   "outer_drawn_m": 7.1,
+   "inner_handles": [
+    {
+     "handle": "1282",
+     "layer": "1",
+     "overlap_m": 0.4158
+    },
+    {
+     "handle": "1283",
+     "layer": "1",
+     "overlap_m": 3.0842
+    },
+    {
+     "handle": "1284",
+     "layer": "1",
+     "overlap_m": 3.0
+    }
+   ],
+   "inner_drawn_m": 6.5
+  },
+  {
+   "chain": "2F",
+   "side": "SE-1",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 6.8,
+   "outer_handles": [
+    {
+     "handle": "1287",
+     "layer": "1",
+     "overlap_m": 1.25
+    },
+    {
+     "handle": "1288",
+     "layer": "1",
+     "overlap_m": 4.35
+    }
+   ],
+   "outer_drawn_m": 5.6,
+   "inner_handles": [
+    {
+     "handle": "1286",
+     "layer": "1",
+     "overlap_m": 0.3426
+    },
+    {
+     "handle": "12B7",
+     "layer": "1",
+     "overlap_m": 4.2
+    },
+    {
+     "handle": "12B8",
+     "layer": "1",
+     "overlap_m": 1.05
+    }
+   ],
+   "inner_drawn_m": 5.5926
+  },
+  {
+   "chain": "2F",
+   "side": "SW-1",
+   "kind": "STRAIGHT",
+   "t_m": 0.2,
+   "outer_line_m": 8.1,
+   "outer_handles": [
+    {
+     "handle": "1274",
+     "layer": "1",
+     "overlap_m": 1.73
+    },
+    {
+     "handle": "1275",
+     "layer": "1",
+     "overlap_m": 1.295
+    },
+    {
+     "handle": "1276",
+     "layer": "1",
+     "overlap_m": 0.675
+    },
+    {
+     "handle": "1277",
+     "layer": "1",
+     "overlap_m": 1.6
+    }
+   ],
+   "outer_drawn_m": 5.3,
+   "inner_handles": [
+    {
+     "handle": "1279",
+     "layer": "1",
+     "overlap_m": 1.53
+    },
+    {
+     "handle": "127A",
+     "layer": "1",
+     "overlap_m": 0.27
+    },
+    {
+     "handle": "127B",
+     "layer": "1",
+     "overlap_m": 0.875
+    },
+    {
+     "handle": "127C",
+     "layer": "1",
+     "overlap_m": 0.375
+    },
+    {
+     "handle": "127D",
+     "layer": "1",
+     "overlap_m": 0.1
+    },
+    {
+     "handle": "127E",
+     "layer": "1",
+     "overlap_m": 1.4
+    }
+   ],
+   "inner_drawn_m": 4.55
+  }
+ ],
+ "outer_profiles": {
+  "BDB": {
+   "chain": "GF",
+   "first_side": "SW-9",
+   "inner_face_m": 0.8948,
+   "profile": [
+    {
+     "handle": "BDC",
+     "layer": "5",
+     "depth_m": 0.2,
+     "overlap_m": 0.8948,
+     "from_m": 0.0
+    }
+   ]
+  },
+  "12A7": {
+   "chain": "1F",
+   "first_side": "NW-1",
+   "inner_face_m": 11.6,
+   "profile": [
+    {
+     "handle": "1308",
+     "layer": "5",
+     "depth_m": 0.3,
+     "overlap_m": 5.4871,
+     "from_m": 0.0
+    },
+    {
+     "handle": "1322",
+     "layer": "5",
+     "depth_m": 0.125,
+     "overlap_m": 4.9211,
+     "from_m": 0.566
+    },
+    {
+     "handle": "1323",
+     "layer": "5",
+     "depth_m": 0.175,
+     "overlap_m": 4.9211,
+     "from_m": 0.566
+    },
+    {
+     "handle": "130E",
+     "layer": "5",
+     "depth_m": 0.6052,
+     "overlap_m": 0.6,
+     "from_m": 5.7923
+    },
+    {
+     "handle": "12A6",
+     "layer": "5",
+     "depth_m": 0.2,
+     "overlap_m": 0.5,
+     "from_m": 6.4923
+    },
+    {
+     "handle": "1315",
+     "layer": "5",
+     "depth_m": 0.4983,
+     "overlap_m": 0.428,
+     "from_m": 6.9923
+    },
+    {
+     "handle": "1316",
+     "layer": "5",
+     "depth_m": 0.5483,
+     "overlap_m": 0.05,
+     "from_m": 7.4203
+    },
+    {
+     "handle": "1319",
+     "layer": "5",
+     "depth_m": 0.4983,
+     "overlap_m": 4.0594,
+     "from_m": 7.4203
+    },
+    {
+     "handle": "1318",
+     "layer": "5",
+     "depth_m": 0.5483,
+     "overlap_m": 3.9594,
+     "from_m": 7.4703
+    },
+    {
+     "handle": "130D",
+     "layer": "5",
+     "depth_m": 0.5483,
+     "overlap_m": 0.05,
+     "from_m": 11.4297
+    },
+    {
+     "handle": "130C",
+     "layer": "5",
+     "depth_m": 0.4983,
+     "overlap_m": 0.022,
+     "from_m": 11.4797
+    }
+   ]
+  },
+  "12B9": {
+   "chain": "1F",
+   "first_side": "SW-2",
+   "inner_face_m": 4.125,
+   "profile": [
+    {
+     "handle": "12C5",
+     "layer": "5",
+     "depth_m": 0.4,
+     "overlap_m": 4.125,
+     "from_m": 0.0
+    },
+    {
+     "handle": "12A8",
+     "layer": "5",
+     "depth_m": 0.2,
+     "overlap_m": 2.2949,
+     "from_m": 1.8301
+    },
+    {
+     "handle": "12A9",
+     "layer": "5",
+     "depth_m": 0.15,
+     "overlap_m": 2.2949,
+     "from_m": 1.8301
+    }
+   ]
+  },
+  "1283": {
+   "chain": "2F",
+   "first_side": "NE-1",
+   "inner_face_m": 3.0842,
+   "profile": [
+    {
+     "handle": "1281",
+     "layer": "1",
+     "depth_m": 0.15,
+     "overlap_m": 3.0842,
+     "from_m": 0.0
+    }
+   ]
+  },
+  "12B7": {
+   "chain": "2F",
+   "first_side": "SE-1",
+   "inner_face_m": 4.2,
+   "profile": [
+    {
+     "handle": "1288",
+     "layer": "1",
+     "depth_m": 0.2,
+     "overlap_m": 4.2,
+     "from_m": 0.0
+    }
+   ]
+  },
+  "1279": {
+   "chain": "2F",
+   "first_side": "SW-1",
+   "inner_face_m": 1.53,
+   "profile": [
+    {
+     "handle": "1274",
+     "layer": "1",
+     "depth_m": 0.2,
+     "overlap_m": 1.53,
+     "from_m": 0.0
+    }
+   ]
+  }
+ }
+}
