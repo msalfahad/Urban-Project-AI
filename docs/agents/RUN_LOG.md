@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-12T10:56Z | Worker 2 | SUCCESS | T-737 READY f53bb2d9 | T-314 r2 exterior-face stage restated on V3.0.73: 3 facade hosts LIVE, 15 new lines free, stale 0 (hosts unchanged V3.0.61-73, sources same blobs; own DXF 2F 125.160 m2 AGREE). 43 exterior bead rows re-bound to 51 on the stage lines, 310.6831 m.l = 39.6709 released + 269.6122 held + 1.4 no host. D-GF-07 width CONFLICT named (GF high -5.000 m2 if 2.00 governs); nothing wired | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-12T10:50Z | Verifier | STARTED | run session_01E6cPnf7xqvmmWpQDuZeQWj | repo-attached routine | task state: READY T-717 r2 (W3 integration package @25566c28) per run log | self-check pending
 - 2026-11-12T10:41Z | Worker 2 | STARTED | run session_01E6cPncpez72BMZk29m2eLk | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-12 10:02 UTC | Worker 3 | SUCCESS | T-717 r2 READY (integration package, ARCH_TAKEOFF_V3.0.74, head 25566c28) | r1 L4 fault fixed: T459 candidate binding rebuilt by its own tool (+arch_v3074, no lap tokens); L4 931 items 23,915 pass / 0 fail / 700 skip / 105 xfail; own Drive chain reproduces V3_0_74 bea5be02 (4 changed, 32 added, 5,119 identical), FIN.PLASTER bounded 1,106.95..1,302.17 m2, FIN.PAINT 604.99..710.01 m2, released unchanged; no quantity moved | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
