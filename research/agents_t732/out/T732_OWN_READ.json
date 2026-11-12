@@ -1,0 +1,36 @@
+{
+ "drawing": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' sha256 9f9d1179",
+ "notes": [
+  "418 / 41E: the 0.20 band below each column (edges 39C / 399 and 3A1 / 39E, 1.20 m from the column face to the inner face of the 0.20 band 394 / 393) carries no mark or text inside it (B1 / B2 texts 78E / 78F sit in the horizontal band): the unlabelled framing pieces BM-2F-017 / BM-2F-018, depth not printed (D-04)"
+ ],
+ "outlines_mm": {
+  "40F": [
+   200,
+   500
+  ],
+  "418": [
+   200,
+   700
+  ],
+  "41B": [
+   200,
+   500
+  ],
+  "41E": [
+   200,
+   500
+  ],
+  "421": [
+   200,
+   500
+  ],
+  "424": [
+   250,
+   500
+  ],
+  "778": [
+   200,
+   400
+  ]
+ }
+}
