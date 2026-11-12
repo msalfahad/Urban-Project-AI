@@ -1,0 +1,763 @@
+{
+ "beam_side": {
+  "candidates": [
+   [
+    "0.25",
+    "0.50",
+    "2.301",
+    "0.2875"
+   ],
+   [
+    "0.3",
+    "0.50",
+    "2.301",
+    "0.345"
+   ],
+   [
+    "0.25",
+    "0.50",
+    "3.651",
+    "0.4563"
+   ],
+   [
+    "0.3",
+    "0.50",
+    "3.651",
+    "0.5475"
+   ]
+  ],
+  "d": "0.50",
+  "dep": "INDEPENDENT",
+  "element_id": "FW:FACE:R4-282.1F-072~REST.BEAM_SIDE",
+  "exact_m2": "0.10201887102",
+  "held_len_beside_slab_m": "0.300055503",
+  "line_id": "L-867e155d6f8f0a452eba",
+  "live": {
+   "cls": "BOUNDED",
+   "high": "0.102019",
+   "low": "0.102019"
+  },
+  "member": "BM-1F-031 (CB10 span 1 / 2, width 0.25 schedule vs 0.30 drawn, D-02)",
+  "member_lines": [
+   "L-43e804ba4a4c07529fd5",
+   "L-50667f69855b6d588011"
+  ],
+  "not_in_this_line": [
+   "BEAM_SIDE_HELD_LEN:HELD_EDGE 3.1e-05 m",
+   "BEAM_SIDE_HELD_LEN:RING_MIX 0.598887 m",
+   "JUNCTION_HELD_LEN 0.099989 m"
+  ],
+  "superseded": [
+   {
+    "cause": "CAP_ZERO_FROM_HELD_DEPTH",
+    "form": {
+     "cap": "0.000000",
+     "cls": "BLANK_NAMED",
+     "high": null,
+     "low": null
+    },
+    "note": "the 0 .. 0 face is the walk's held-depth convention (D None -> 0 m2 + held length 0.300056 m), not a measured zero; no ZERO_BY_GEOMETRY: the band is 0.50 deep under a 0.16 slab along that length",
+    "piece": "T-714"
+   }
+  ],
+  "t": "0.16"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.73",
+ "columns": [
+  {
+   "base": "0.25",
+   "column": "COL-GF-15",
+   "concrete_line": "L-9f5a647014bbf83359f9",
+   "d_ctrl": [
+    "0.75",
+    "0.75"
+   ],
+   "d_open_by": [],
+   "element_id": "FW:L-9f5a647014bbf83359f9:FACES:HELD:-:G",
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": "4.620000",
+     "low": "3.052800"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-273.GF-093.JOINT_FACE",
+     "high": null,
+     "low": "0.000000"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-274.GF-093.EDGE_BAND",
+     "high": null,
+     "low": "0.000000"
+    }
+   ],
+   "h_conc": [
+    "3.294",
+    "4.05"
+   ],
+   "handle": "34A",
+   "line_id": "L-6cba8c04e5f32a060b06",
+   "live": {
+    "cls": "AT_LEAST",
+    "high": null,
+    "low": "3.052800"
+   },
+   "member": [
+    "BOUNDED",
+    "0.26352",
+    "0.405"
+   ],
+   "panels": [
+    "ANNEX (one plane, R-T678-2)"
+   ],
+   "perimeter_envelope_beside": "5.446000",
+   "perimeter_m": [
+    "1.20",
+    "1.40"
+   ],
+   "sections_m": [
+    [
+     "0.20",
+     "0.40"
+    ],
+    [
+     "0.20",
+     "0.50"
+    ]
+   ],
+   "shaft_h_lo": "2.544",
+   "single_section": false,
+   "superseded": [
+    {
+     "cause": "UPPER_BOUND_METHOD_NOT_A_FLOOR",
+     "form": {
+      "cls": "BOUNDED",
+      "high": "5.446000",
+      "low": "3.760800"
+     },
+     "note": "low 3.760800 = P x (h_lo - t) (UP-FW-001: includes the faces under framing members, F-T732-1); high 5.446000 = P_max x (h_hi - t) = the perimeter envelope (ENVELOPE_NOT_LINE_HIGH: leaves out the slab-edge band outside the column)",
+     "piece": "T-707"
+    },
+    {
+     "cause": "BLANK_WITH_POSITIVE_FLOOR",
+     "form": {
+      "cap": null,
+      "cls": "BLANK_NAMED",
+      "high": null,
+      "low": null
+     },
+     "note": "T-714 'no positive floor: every face is 0 .. x or follows an unstated reading': it read the shaft as DEPENDENT on the column reading; R-T732-1 floors the shaft at P_min x (least panel top - base - D_max) = 3.052800 for every reading",
+     "piece": "T-714"
+    }
+   ],
+   "top_lo_shaft": "3.544"
+  },
+  {
+   "base": "9.65",
+   "column": "COL-2F-51",
+   "concrete_line": "L-919a5749ef79759e01ca",
+   "d_ctrl": [
+    "0.75",
+    "0.75"
+   ],
+   "d_open_by": [],
+   "element_id": "FW:L-919a5749ef79759e01ca:FACES:HELD:-:G",
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": "4.900000",
+     "low": "3.551800"
+    },
+    {
+     "dep": "INDEPENDENT",
+     "face_id": "R4-309.COL-2F-51",
+     "high": "0.596100",
+     "low": "0.596100"
+    },
+    {
+     "dep": "INDEPENDENT",
+     "face_id": "R4-312.2F-003.EDGE_BAND",
+     "high": "0.036016",
+     "low": "0.036016"
+    }
+   ],
+   "h_conc": [
+    "3.287",
+    "4.25"
+   ],
+   "handle": "412",
+   "line_id": "L-6f83fc39933954d0e3e6",
+   "live": {
+    "cls": "BOUNDED",
+    "high": "5.532116",
+    "low": "4.183916"
+   },
+   "member": [
+    "BOUNDED",
+    "0.3287",
+    "0.425"
+   ],
+   "panels": [
+    "P1",
+    "P2"
+   ],
+   "perimeter_envelope_beside": "5.698000",
+   "perimeter_m": [
+    "1.40",
+    "1.40"
+   ],
+   "sections_m": [
+    [
+     "0.20",
+     "0.50"
+    ]
+   ],
+   "shaft_h_lo": "2.537000",
+   "single_section": true,
+   "superseded": [
+    {
+     "cause": "UPPER_BOUND_METHOD_NOT_A_FLOOR",
+     "form": {
+      "cls": "BOUNDED",
+      "high": "5.698000",
+      "low": "4.349800"
+     },
+     "note": "low 4.349800 = P x (h_lo - t) (UP-FW-001: includes the faces under framing members, F-T732-1); high 5.698000 = P_max x (h_hi - t) = the perimeter envelope (ENVELOPE_NOT_LINE_HIGH: leaves out the slab-edge band outside the column)",
+     "piece": "T-707"
+    },
+    {
+     "cause": "BLANK_WITH_POSITIVE_FLOOR",
+     "form": {
+      "cap": null,
+      "cls": "BLANK_NAMED",
+      "high": null,
+      "low": null
+     },
+     "note": "T-714 'no positive floor: every face is 0 .. x or follows an unstated reading': it read the shaft as DEPENDENT on the column reading; R-T732-1 floors the shaft at P_min x (least panel top - base - D_max) = 3.551800 for every reading",
+     "piece": "T-714"
+    }
+   ],
+   "top_lo_shaft": "12.937000"
+  },
+  {
+   "base": "0.25",
+   "column": "COL-GF-29",
+   "concrete_line": "L-694a75c84dd6e4bb4491",
+   "d_ctrl": [
+    "0.75",
+    "0.75"
+   ],
+   "d_open_by": [],
+   "element_id": "FW:L-694a75c84dd6e4bb4491:FACES:HELD:-:G",
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": "4.950000",
+     "low": "3.052800"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-273.GF-182.JOINT_FACE",
+     "high": null,
+     "low": "0.000000"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-274.GF-182.EDGE_BAND",
+     "high": null,
+     "low": "0.000000"
+    }
+   ],
+   "h_conc": [
+    "3.294",
+    "4.05"
+   ],
+   "handle": "350",
+   "line_id": "L-7fe93376cb482ad01860",
+   "live": {
+    "cls": "AT_LEAST",
+    "high": null,
+    "low": "3.052800"
+   },
+   "member": [
+    "BOUNDED",
+    "0.26352",
+    "0.50625"
+   ],
+   "panels": [
+    "ANNEX (one plane, R-T678-2)"
+   ],
+   "perimeter_envelope_beside": "5.835000",
+   "perimeter_m": [
+    "1.20",
+    "1.50"
+   ],
+   "sections_m": [
+    [
+     "0.20",
+     "0.40"
+    ],
+    [
+     "0.25",
+     "0.50"
+    ]
+   ],
+   "shaft_h_lo": "2.544",
+   "single_section": false,
+   "superseded": [
+    {
+     "cause": "UPPER_BOUND_METHOD_NOT_A_FLOOR",
+     "form": {
+      "cls": "BOUNDED",
+      "high": "5.835000",
+      "low": "3.760800"
+     },
+     "note": "low 3.760800 = P x (h_lo - t) (UP-FW-001: includes the faces under framing members, F-T732-1); high 5.835000 = P_max x (h_hi - t) = the perimeter envelope (ENVELOPE_NOT_LINE_HIGH: leaves out the slab-edge band outside the column)",
+     "piece": "T-707"
+    },
+    {
+     "cause": "BLANK_WITH_POSITIVE_FLOOR",
+     "form": {
+      "cap": null,
+      "cls": "BLANK_NAMED",
+      "high": null,
+      "low": null
+     },
+     "note": "T-714 'no positive floor: every face is 0 .. x or follows an unstated reading': it read the shaft as DEPENDENT on the column reading; R-T732-1 floors the shaft at P_min x (least panel top - base - D_max) = 3.052800 for every reading",
+     "piece": "T-714"
+    }
+   ],
+   "top_lo_shaft": "3.544"
+  },
+  {
+   "base": "9.65",
+   "column": "COL-2F-49",
+   "concrete_line": "L-bc01297b1c4a4c45a15f",
+   "d_ctrl": [
+    "0.75",
+    "1.2"
+   ],
+   "d_open_by": [
+    "BM-2F-015"
+   ],
+   "element_id": "FW:L-bc01297b1c4a4c45a15f:FACES:HELD:-:G",
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": "5.600000",
+     "low": "2.893800"
+    },
+    {
+     "dep": "CAP_ONLY",
+     "face_id": "R4-305.2F-005.JOINT_HELD_M2",
+     "high": "0.117974",
+     "low": "0.000000"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-311.2F-005.JOINT_FACE",
+     "high": null,
+     "low": "0.000000"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-312.2F-005.EDGE_BAND",
+     "high": null,
+     "low": "0.000000"
+    }
+   ],
+   "h_conc": [
+    "3.287",
+    "4.25"
+   ],
+   "handle": "415",
+   "line_id": "L-b35c1688058336adc729",
+   "live": {
+    "cls": "AT_LEAST",
+    "high": null,
+    "low": "2.893800"
+   },
+   "member": [
+    "BOUNDED",
+    "0.3287",
+    "0.51"
+   ],
+   "panels": [
+    "P4"
+   ],
+   "perimeter_envelope_beside": "6.544000",
+   "perimeter_m": [
+    "1.40",
+    "1.60"
+   ],
+   "sections_m": [
+    [
+     "0.20",
+     "0.50"
+    ],
+    [
+     "0.20",
+     "0.60"
+    ]
+   ],
+   "shaft_h_lo": "2.067000",
+   "single_section": false,
+   "superseded": [
+    {
+     "cause": "UPPER_BOUND_METHOD_NOT_A_FLOOR",
+     "form": {
+      "cls": "BOUNDED",
+      "high": "6.544000",
+      "low": "4.377800"
+     },
+     "note": "low 4.377800 = P x (h_lo - t) (UP-FW-001: includes the faces under framing members, F-T732-1); high 6.544000 = P_max x (h_hi - t) = the perimeter envelope (ENVELOPE_NOT_LINE_HIGH: leaves out the slab-edge band outside the column)",
+     "piece": "T-707"
+    },
+    {
+     "cause": "BLANK_WITH_POSITIVE_FLOOR",
+     "form": {
+      "cap": null,
+      "cls": "BLANK_NAMED",
+      "high": null,
+      "low": null
+     },
+     "note": "T-714 'no positive floor: every face is 0 .. x or follows an unstated reading': it read the shaft as DEPENDENT on the column reading; R-T732-1 floors the shaft at P_min x (least panel top - base - D_max) = 2.893800 for every reading",
+     "piece": "T-714"
+    }
+   ],
+   "top_lo_shaft": "12.917000"
+  },
+  {
+   "base": "0.25",
+   "column": "COL-GF-16",
+   "concrete_line": "L-c0b3340a906c2c7650f8",
+   "d_ctrl": [
+    "0.75",
+    "0.75"
+   ],
+   "d_open_by": [],
+   "element_id": "FW:L-c0b3340a906c2c7650f8:FACES:HELD:-:G",
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": "4.620000",
+     "low": "3.052800"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-273.GF-090.JOINT_FACE",
+     "high": null,
+     "low": "0.000000"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-274.GF-090.EDGE_BAND",
+     "high": null,
+     "low": "0.000000"
+    }
+   ],
+   "h_conc": [
+    "3.294",
+    "4.05"
+   ],
+   "handle": "34D",
+   "line_id": "L-ddec0b3f3436cdbdbf8b",
+   "live": {
+    "cls": "AT_LEAST",
+    "high": null,
+    "low": "3.052800"
+   },
+   "member": [
+    "BOUNDED",
+    "0.26352",
+    "0.405"
+   ],
+   "panels": [
+    "ANNEX (one plane, R-T678-2)"
+   ],
+   "perimeter_envelope_beside": "5.446000",
+   "perimeter_m": [
+    "1.20",
+    "1.40"
+   ],
+   "sections_m": [
+    [
+     "0.20",
+     "0.40"
+    ],
+    [
+     "0.20",
+     "0.50"
+    ]
+   ],
+   "shaft_h_lo": "2.544",
+   "single_section": false,
+   "superseded": [
+    {
+     "cause": "UPPER_BOUND_METHOD_NOT_A_FLOOR",
+     "form": {
+      "cls": "BOUNDED",
+      "high": "5.446000",
+      "low": "3.760800"
+     },
+     "note": "low 3.760800 = P x (h_lo - t) (UP-FW-001: includes the faces under framing members, F-T732-1); high 5.446000 = P_max x (h_hi - t) = the perimeter envelope (ENVELOPE_NOT_LINE_HIGH: leaves out the slab-edge band outside the column)",
+     "piece": "T-707"
+    },
+    {
+     "cause": "BLANK_WITH_POSITIVE_FLOOR",
+     "form": {
+      "cap": null,
+      "cls": "BLANK_NAMED",
+      "high": null,
+      "low": null
+     },
+     "note": "T-714 'no positive floor: every face is 0 .. x or follows an unstated reading': it read the shaft as DEPENDENT on the column reading; R-T732-1 floors the shaft at P_min x (least panel top - base - D_max) = 3.052800 for every reading",
+     "piece": "T-714"
+    }
+   ],
+   "top_lo_shaft": "3.544"
+  },
+  {
+   "base": "0.25",
+   "column": "COL-GF-28",
+   "concrete_line": "L-e6c1c9a7feec10f64975",
+   "d_ctrl": [
+    "0.75",
+    "0.75"
+   ],
+   "d_open_by": [],
+   "element_id": "FW:L-e6c1c9a7feec10f64975:FACES:HELD:-:G",
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": "4.620000",
+     "low": "3.052800"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-273.GF-179.JOINT_FACE",
+     "high": null,
+     "low": "0.000000"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-274.GF-179.EDGE_BAND",
+     "high": null,
+     "low": "0.000000"
+    }
+   ],
+   "h_conc": [
+    "3.294",
+    "4.05"
+   ],
+   "handle": "356",
+   "line_id": "L-f9836bd6176bc3f9cc84",
+   "live": {
+    "cls": "AT_LEAST",
+    "high": null,
+    "low": "3.052800"
+   },
+   "member": [
+    "BOUNDED",
+    "0.26352",
+    "0.405"
+   ],
+   "panels": [
+    "ANNEX (one plane, R-T678-2)"
+   ],
+   "perimeter_envelope_beside": "5.446000",
+   "perimeter_m": [
+    "1.20",
+    "1.40"
+   ],
+   "sections_m": [
+    [
+     "0.20",
+     "0.40"
+    ],
+    [
+     "0.20",
+     "0.50"
+    ]
+   ],
+   "shaft_h_lo": "2.544",
+   "single_section": false,
+   "superseded": [
+    {
+     "cause": "UPPER_BOUND_METHOD_NOT_A_FLOOR",
+     "form": {
+      "cls": "BOUNDED",
+      "high": "5.446000",
+      "low": "3.760800"
+     },
+     "note": "low 3.760800 = P x (h_lo - t) (UP-FW-001: includes the faces under framing members, F-T732-1); high 5.446000 = P_max x (h_hi - t) = the perimeter envelope (ENVELOPE_NOT_LINE_HIGH: leaves out the slab-edge band outside the column)",
+     "piece": "T-707"
+    },
+    {
+     "cause": "BLANK_WITH_POSITIVE_FLOOR",
+     "form": {
+      "cap": null,
+      "cls": "BLANK_NAMED",
+      "high": null,
+      "low": null
+     },
+     "note": "T-714 'no positive floor: every face is 0 .. x or follows an unstated reading': it read the shaft as DEPENDENT on the column reading; R-T732-1 floors the shaft at P_min x (least panel top - base - D_max) = 3.052800 for every reading",
+     "piece": "T-714"
+    }
+   ],
+   "top_lo_shaft": "3.544"
+  }
+ ],
+ "family": {
+  "at_least_m2": "122.484697",
+  "bounded_high_m2": "132.785507",
+  "bounded_low_m2": "107.200712",
+  "by_class": {
+   "AT_LEAST": 40,
+   "BLANK_NAMED": 244,
+   "BOUNDED": 32,
+   "FIX_ROW": 54
+  },
+  "t714": {
+   "at_least": "98.543697",
+   "bounded": [
+    "87.941284",
+    "103.192739"
+   ],
+   "by_class": {
+    "AT_LEAST": 32,
+    "BLANK_NAMED": 258,
+    "BOUNDED": 26,
+    "FIX_ROW": 54
+   }
+  },
+  "t724_restated_lines": [
+   "L-030e2ec62b20bcc5267d",
+   "L-3280c42cb578a211045e",
+   "L-59f0c115e7db8fa87f58",
+   "L-b496828905921760d1ee"
+  ],
+  "t732": {
+   "at_least": "107.379697",
+   "bounded": [
+    "102.914777",
+    "127.151372"
+   ],
+   "by_class": {
+    "AT_LEAST": 35,
+    "BLANK_NAMED": 251,
+    "BOUNDED": 30,
+    "FIX_ROW": 54
+   }
+  }
+ },
+ "not_claimed": "development villa; nothing wired, released or VERIFIED; no freelancer formwork row (FREELANCER_NO_ROW): no %; V2.9 + route G unchanged",
+ "pins": {
+  "research/agents_t110/BEAM_MEMBER_REGISTER.csv": "368d0fa2d690fb02",
+  "research/agents_t139/PANELS.csv": "13d5d9ad69528ae5",
+  "research/agents_t293/T293P2_WALK_RECORDS.json": "93d5d5fc060adaad",
+  "research/agents_t689/out/T689_HELD_RANGES.json": "2c9bf8ff49f0ea9c",
+  "research/agents_t707/out/T707_COLUMN_TAIL.json": "f8feb9bfbbc4e969",
+  "research/agents_t714/out/T714_FORMWORK_BOUNDS.json": "17959a8de65c4707",
+  "research/agents_t722/out/LINE_INDEX_V3_0_73.json": "af8d567d8a8ae828",
+  "research/agents_t730/out/T730_ROWS.csv": "737bdb55966b6ebd",
+  "research/agents_t732/PINS.json": "3bcba50f526e5bcc",
+  "research/agents_t732/out/T732_FORMWORK_MOVED.json": "0a0991489622e886"
+ },
+ "rules": {
+  "R-T732-1": "1.0.0",
+  "R-T732-2": "1.0.0",
+  "R-T735-1": "1.0.0",
+  "R-T735-2": "1.0.0"
+ },
+ "schema": "URBAN_T735_FORMWORK_DECIDER_V1",
+ "t730_rows": [
+  {
+   "line_id": "L-6f83fc39933954d0e3e6",
+   "source": "T-707",
+   "state": "CONFLICT",
+   "value": "BOUND 4.3498 .. 5.698"
+  },
+  {
+   "line_id": "L-6cba8c04e5f32a060b06",
+   "source": "T-707",
+   "state": "CONFLICT",
+   "value": "BOUND 3.7608 .. 5.446"
+  },
+  {
+   "line_id": "L-ddec0b3f3436cdbdbf8b",
+   "source": "T-707",
+   "state": "CONFLICT",
+   "value": "BOUND 3.7608 .. 5.446"
+  },
+  {
+   "line_id": "L-f9836bd6176bc3f9cc84",
+   "source": "T-707",
+   "state": "CONFLICT",
+   "value": "BOUND 3.7608 .. 5.446"
+  },
+  {
+   "line_id": "L-7fe93376cb482ad01860",
+   "source": "T-707",
+   "state": "CONFLICT",
+   "value": "BOUND 3.7608 .. 5.835"
+  },
+  {
+   "line_id": "L-b35c1688058336adc729",
+   "source": "T-707",
+   "state": "CONFLICT",
+   "value": "BOUND 4.3778 .. 6.544"
+  },
+  {
+   "line_id": "L-6cba8c04e5f32a060b06",
+   "source": "T-714",
+   "state": "CONFLICT",
+   "value": "BLANK"
+  },
+  {
+   "line_id": "L-6f83fc39933954d0e3e6",
+   "source": "T-714",
+   "state": "CONFLICT",
+   "value": "BLANK"
+  },
+  {
+   "line_id": "L-7fe93376cb482ad01860",
+   "source": "T-714",
+   "state": "CONFLICT",
+   "value": "BLANK"
+  },
+  {
+   "line_id": "L-867e155d6f8f0a452eba",
+   "source": "T-714",
+   "state": "LIVE",
+   "value": "BLANK"
+  },
+  {
+   "line_id": "L-b35c1688058336adc729",
+   "source": "T-714",
+   "state": "CONFLICT",
+   "value": "BLANK"
+  },
+  {
+   "line_id": "L-ddec0b3f3436cdbdbf8b",
+   "source": "T-714",
+   "state": "CONFLICT",
+   "value": "BLANK"
+  },
+  {
+   "line_id": "L-f9836bd6176bc3f9cc84",
+   "source": "T-714",
+   "state": "CONFLICT",
+   "value": "BLANK"
+  }
+ ],
+ "task": "T-735"
+}
