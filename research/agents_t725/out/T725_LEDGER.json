@@ -1,0 +1,1224 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.72",
+ "census": {
+  "AT_LEAST": 2,
+  "BLANK_NAMED": 16,
+  "BOUNDED": 2
+ },
+ "drawn": {
+  "dxf_sha256_16": "9f9d1179a5d2a663",
+  "e1_179_in_gb_band": 0.05,
+  "e1_levels": [
+   0.15,
+   1.0
+  ],
+  "e1_riser_lines": {
+   "179": 2.8,
+   "17A": 2.8,
+   "188": 2.8,
+   "189": 2.8,
+   "18A": 2.8
+  },
+  "g": 0.3,
+  "lane": 1.2,
+  "ms1l_A_offset": 0.6,
+  "ms1l_col36B_m2": 0.025,
+  "ms1l_run_B": 3.3,
+  "ms2l_5E2_to_632": 0.15,
+  "ms2tr_step_5E2": 1.15,
+  "t": 0.16,
+  "turn_region": [
+   1.3,
+   1.15
+  ],
+  "winder_lines_B": {
+   "2F3": 1.15,
+   "2F4": 1.6263,
+   "2F5": 1.2587,
+   "2F6": 1.2587
+  }
+ },
+ "findings": {
+  "F-T725-1": {
+   "effect_highs_only": {
+    "MS1-L concrete hi m3 (side x 1.20)": [
+     1.054812,
+     1.037005
+    ],
+    "MS1-L soffit true D hi": [
+     4.049212,
+     4.002826
+    ],
+    "MS1-L soffit true O hi": [
+     4.501478,
+     4.464083
+    ],
+    "T352-01 hi": [
+     0.869164,
+     0.854426
+    ],
+    "T352-03 cap": [
+     0.87901,
+     0.864171
+    ]
+   },
+   "floors_moved": 0,
+   "refused": "R-T725-1: reading B-as-recorded counts 28 risers (structural p.4) but takes its rise from a total of 27 (section A-A 27): not one stair",
+   "what": "MS1-L reading B (structural 12 + 4 + 12 = 28 risers) carried at the section's rise 4.50 / 27 in T-258 / T-281 / T-352 (and T-711's MS1-L part); coherent B uses 4.50 / 28 (R-T725-1)"
+  },
+  "F-T725-2": "Lead ruling 2026-11-12 moves the 3 D-56 lines to D-67 / D-68: D-67 is the GF winder turn and D-68 is WITHDRAWN; neither describes E1. The live item holding E1 is RFI-S26 (designer item 7); the riser line is no longer held by any designer dimension except the ground-beam top level",
+  "F-T725-3": "T-718 bounds the RS-C marble risers with 4.50 / 28 on the curved part, which Q-50 A cond holds ('curved parts HELD') and T-711 keeps blank; the RS-C formwork line stays blank here"
+ },
+ "inputs": {
+  "research/agents_t248/LEDGER_T248.csv": "2eebd00ddb0bfaa1",
+  "research/agents_t281/LEDGER_T281.csv": "bc8c29a7e70fd42c",
+  "research/agents_t352/EXISTING_STAIR_FACES_T332.csv": "b5de40619cfa0bfe",
+  "research/agents_t352/STAIR_FORMWORK_T352_BY_FACE.csv": "049fbd000f6614d9",
+  "research/agents_t474/out/FORMWORK_LINE_MAP_T474.csv": "7a3bfa6a56628172",
+  "research/agents_t703/out/LINE_INDEX_V3_0_72.json": "8e753204d90ebf75",
+  "research/agents_t711/out/T711_LEDGER.json": "36cd106334645d92"
+ },
+ "lines": [
+  {
+   "cap": "0.045379",
+   "cause": "column section CONFLICT (outline vs schedule, T-248): which side the schedule section loses is not printed, so the lane strip is column or soffit",
+   "cited": [
+    "D-16"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-056402f98a6dbbcde0a0:FACES:HELD:-:G",
+   "face_ids_t474": [
+    "R4-335.COL380"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "lane strip 0.040000 m2 plan x sec; column C8 a 0.2 .. 0.225 m2",
+      "contact": "CAP_ONLY",
+      "face_id": "R4-335.COL380",
+      "hi": 0.04537822906933883,
+      "kind": "SOFFIT",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-056402f98a6dbbcde0a0",
+   "host_state": "RELEASED (host flight)",
+   "line_id": "L-1b5c40deb5c9a27da420",
+   "low": null,
+   "note": "drawn outline: the strip is column (0); schedule section: soffit only if the lost side is the lane side",
+   "readings": {
+    "one": [
+     0.0,
+     0.045378
+    ]
+   }
+  },
+  {
+   "cap": "0.028654",
+   "cause": "column section CONFLICT (outline vs schedule, T-248): which side the schedule section loses is not printed, so the lane strip is column or soffit",
+   "cited": [
+    "D-16"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-67e4b0485135f84acc46:FACES:HELD:-:G",
+   "face_ids_t474": [
+    "R4-324.COL691"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "lane strip 0.025000 m2 plan x sec; column C3 a 0.1 .. 0.125 m2",
+      "contact": "CAP_ONLY",
+      "face_id": "R4-324.COL691",
+      "hi": 0.028653097563788806,
+      "kind": "SOFFIT",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-67e4b0485135f84acc46",
+   "host_state": "RELEASED (host flight)",
+   "line_id": "L-24da5c2af3a315778442",
+   "low": null,
+   "note": "drawn outline: the strip is column (0); schedule section: soffit only if the lost side is the lane side",
+   "readings": {
+    "one": [
+     0.0,
+     0.028653
+    ]
+   }
+  },
+  {
+   "cap": "1.215293",
+   "cause": "contact with a block wall / member whose construction sequence is not printed (formed, or cast against it): contractor's sequence, not a designer dimension (T-352 s.1, ST p.8 notes 17 / 19 / 23)",
+   "cited": [
+    "SEQ"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-e37d81a8be8e0aa0010c:SIDE:HELD:-:G",
+   "face_ids_t474": [
+    "T352-05",
+    "T352-06",
+    "T352-07"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "WALL: construction sequence not printed",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-05",
+      "hi": 0.831293,
+      "kind": "FLIGHT_SIDE",
+      "lo": 0.0
+     },
+     {
+      "basis": "MEMBER: 1.200 x 0.16: 'B3 (With Stair)' band 274 / 279 (Q-61 C)",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-06",
+      "hi": 0.192,
+      "kind": "LANDING_EDGE",
+      "lo": 0.0
+     },
+     {
+      "basis": "WALL: 1.200 x 0.16: lift-shaft wall line (blockwork, D-43 lift walls; T-173 shaft walls)",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-07",
+      "hi": 0.192,
+      "kind": "LANDING_EDGE",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-e37d81a8be8e0aa0010c",
+   "host_state": "RELEASED 1.227952 m3 (MS1-LD + MS1-U)",
+   "line_id": "L-39d830b14a64c52bc7ec",
+   "low": null,
+   "note": "every face beside a block wall, a 'B3 (With Stair)' band, a column or a held junction; a member-member interface is formed at most once (its cap is shared with the member's own 'next to STAIR' face, R-T725-2 (e))",
+   "readings": {
+    "one": [
+     0.0,
+     1.215293
+    ]
+   }
+  },
+  {
+   "cap": "0.871015",
+   "cause": "contact with a block wall / member whose construction sequence is not printed (formed, or cast against it): contractor's sequence, not a designer dimension (T-352 s.1, ST p.8 notes 17 / 19 / 23)",
+   "cited": [
+    "SEQ"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-67e4b0485135f84acc46:SIDE:HELD:-:G",
+   "face_ids_t474": [
+    "T352-09",
+    "T352-10"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "JUNCTION: s 3.250 .. 3.300 beside the 0.100 x 0.050 well end (held in MS2-TR)",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-09",
+      "hi": 0.009869,
+      "kind": "JUNCTION_STRIP",
+      "lo": 0.0
+     },
+     {
+      "basis": "WALL: block wall / column 691 (T-248 D-16 CONFLICT) beside the flight: sequence not printed",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-10",
+      "hi": 0.861146,
+      "kind": "FLIGHT_SIDE",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-67e4b0485135f84acc46",
+   "host_state": "RELEASED 1.033445 m3 (MS2-L)",
+   "line_id": "L-4c0e72c44c32c35b1f37",
+   "low": null,
+   "note": "every face beside a block wall, a 'B3 (With Stair)' band, a column or a held junction; a member-member interface is formed at most once (its cap is shared with the member's own 'next to STAIR' face, R-T725-2 (e))",
+   "readings": {
+    "one": [
+     0.0,
+     0.871015
+    ]
+   }
+  },
+  {
+   "cap": "0.834477",
+   "cause": "contact with a block wall / member whose construction sequence is not printed (formed, or cast against it): contractor's sequence, not a designer dimension (T-352 s.1, ST p.8 notes 17 / 19 / 23)",
+   "cited": [
+    "SEQ"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-bb0e57b1948175a3d5b8:SIDE:HELD:-:G",
+   "face_ids_t474": [
+    "T352-16"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "WALL: construction sequence not printed",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-16",
+      "hi": 0.834477,
+      "kind": "FLIGHT_SIDE",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-bb0e57b1948175a3d5b8",
+   "host_state": "RELEASED 1.001373 m3 (MS2-U)",
+   "line_id": "L-57fc16524398c58c45cd",
+   "low": null,
+   "note": "every face beside a block wall, a 'B3 (With Stair)' band, a column or a held junction; a member-member interface is formed at most once (its cap is shared with the member's own 'next to STAIR' face, R-T725-2 (e))",
+   "readings": {
+    "one": [
+     0.0,
+     0.834477
+    ]
+   }
+  },
+  {
+   "cap": "0.136135",
+   "cause": "unmarked layer-5 pair under the soffit (member not identified): a wall below (bears, 0), a downstand (its own soffit) or nothing (stair soffit)",
+   "cited": [
+    "F-T281-03",
+    "RFI-A07"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:FACE:R4-338.HIDDEN_2CC_2CD",
+   "face_ids_t474": [
+    "R4-338.HIDDEN_2CC_2CD"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "RS-A waist soffit",
+      "contact": "CAP_ONLY",
+      "face_id": "R4-338.HIDDEN_2CC_2CD",
+      "hi": 0.136135,
+      "kind": "SOFFIT",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": null,
+   "host_state": "no host line (member not identified)",
+   "line_id": "L-7380736269ecfe6ce8a6",
+   "low": null,
+   "note": "0 only if the pair is a wall the stair bears on (space under ST-02, RFI-A07); otherwise formed by the stair or the downstand: the cap stays beside, never a floor",
+   "readings": {
+    "one": [
+     0.0,
+     0.136135
+    ]
+   }
+  },
+  {
+   "cap": null,
+   "cause": "MS2-TR junction between the plates 0.168 apart: thickness / depth not drawn (C-ST-3); designer item 7",
+   "cited": [
+    "RFI-S25",
+    "C-ST-3"
+   ],
+   "class_after": "AT_LEAST",
+   "element_id": "FW:L-659243ed9fc2831c3ae8:FACES:HELD:-:G",
+   "face_ids_t474": [
+    "R4-325"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "5E2 1.150 x 0.168 (25 risers, the turn riser is in neither 12-riser flight row)",
+      "contact": "FORMED",
+      "face_id": "R4-325.RISER",
+      "hi": 0.1932,
+      "kind": "RISER",
+      "lo": 0.1932
+     },
+     {
+      "basis": "junction soffit step + well end 0.100 x 0.050: build-up not drawn (C-ST-3)",
+      "contact": "FORMED",
+      "face_id": "R4-325.JUNCTION",
+      "hi": null,
+      "kind": "SOFFIT",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-659243ed9fc2831c3ae8",
+   "host_state": "BLANK (T-711, C-ST-3)",
+   "line_id": "L-739ee9feb2a4c3aa6fa7",
+   "low": "0.193200",
+   "note": "the face between the lower plate top +7.516 and the upper top +7.684 is exposed whatever the junction member is; MS2-LD-E's edge along 5E2 is in no T-352 edge row (no double count)",
+   "readings": {
+    "one": [
+     0.1932,
+     null
+    ]
+   }
+  },
+  {
+   "cap": null,
+   "cause": null,
+   "cited": [
+    "RFI-S26",
+    "GB-LEVEL"
+   ],
+   "class_after": "BOUNDED",
+   "element_id": "FW:L-061e18cf35a4b6b33d68:FACES:HELD:-:G",
+   "face_ids_t474": [
+    "R4-329"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "18A / 189 / 188 / 17A 4 x 2.800 x 0.170",
+      "contact": "FORMED",
+      "face_id": "R4-329.1-4",
+      "hi": 1.9039999999999997,
+      "kind": "RISER",
+      "lo": 1.9039999999999997
+     },
+     {
+      "basis": "179 lies 0.050 inside the ground-beam band 178 / 7DB: the face above tread 4 is the stair's or the ground beam's side (GB top level not printed, T-242 / T-253); formed once, owner open",
+      "contact": "CAP_ONLY",
+      "face_id": "R4-329.5",
+      "hi": 0.4759999999999999,
+      "kind": "RISER",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": "2.380000",
+   "host_concrete": "L-061e18cf35a4b6b33d68",
+   "host_state": "AT_LEAST 0.355017 m3 (T-711; waist RFI-S26)",
+   "line_id": "L-77ecb282cecee46e23f3",
+   "low": "1.904000",
+   "note": "riser faces do not contain the held waist (R-T714-1 INDEPENDENT); D-56 is removed from the package (drawn 5 x 0.170 kept): cited RFI-S26 / designer item 7 instead",
+   "readings": {
+    "one": [
+     1.904,
+     2.38
+    ]
+   }
+  },
+  {
+   "cap": "0.979355",
+   "cause": "contact with a block wall / member whose construction sequence is not printed (formed, or cast against it): contractor's sequence, not a designer dimension (T-352 s.1, ST p.8 notes 17 / 19 / 23)",
+   "cited": [
+    "SEQ"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-056402f98a6dbbcde0a0:SIDE:HELD:-:G",
+   "face_ids_t474": [
+    "T352-22",
+    "T352-23",
+    "T352-25"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "JUNCTION: s 2.950 .. 3.000 beside the 0.050 strip between 2CF and 2C4 (what fills it is not drawn)",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-22",
+      "hi": 0.009745,
+      "kind": "JUNCTION_STRIP",
+      "lo": 0.0
+     },
+     {
+      "basis": "MEMBER: stair beam (Q-61 C HELD) and column 380 (D-16) beside the flight",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-23",
+      "hi": 0.78561,
+      "kind": "FLIGHT_SIDE",
+      "lo": 0.0
+     },
+     {
+      "basis": "MEMBER: 1.150 x 0.16: B3 'With Stair' band 0.600 + column 374 corner 0.550",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-25",
+      "hi": 0.184,
+      "kind": "LANDING_EDGE",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-056402f98a6dbbcde0a0",
+   "host_state": "RELEASED 1.536225 m3 (RS-S / RS-LD / RS-A)",
+   "line_id": "L-7db84872f4e871c558b8",
+   "low": null,
+   "note": "every face beside a block wall, a 'B3 (With Stair)' band, a column or a held junction; a member-member interface is formed at most once (its cap is shared with the member's own 'next to STAIR' face, R-T725-2 (e))",
+   "readings": {
+    "one": [
+     0.0,
+     0.979355
+    ]
+   }
+  },
+  {
+   "cap": null,
+   "cause": "RS-C curved part: rise (Q-50 A cond holds curved parts), helicoid soffit and thickness not printed (D-08); designer item 7",
+   "cited": [
+    "RFI-S27",
+    "D-08",
+    "Q-50",
+    "Q-51"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-b6b0354b7842f0ed6e41:FACES:HELD:-:G",
+   "face_ids_t474": [
+    "R4-333"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "RS-C curved faces",
+      "contact": "BLOCK",
+      "face_id": "R4-333",
+      "hi": null,
+      "kind": "SIDE",
+      "lo": null
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-b6b0354b7842f0ed6e41",
+   "host_state": "BLANK (T-711)",
+   "line_id": "L-997777b321ab95220878",
+   "low": null,
+   "note": "information only (not valued): 12 drawn riser faces 13.798024 lm (T-718) per m of rise",
+   "readings": {
+    "one": [
+     null,
+     null
+    ]
+   }
+  },
+  {
+   "cap": null,
+   "cause": null,
+   "cited": [],
+   "class_after": "BOUNDED",
+   "element_id": "FW:L-7863355dfcb68a681d2d:SIDE:CONFLICT:-:G",
+   "face_ids_t474": [
+    "T352-01"
+   ],
+   "faces": {
+    "AD": [
+     {
+      "basis": "well side A method D: profile 0.689039 - head strip 0.009846",
+      "contact": "FORMED",
+      "face_id": "T352-01",
+      "hi": 0.6791930199753873,
+      "kind": "FLIGHT_SIDE",
+      "lo": 0.6791930199753873
+     }
+    ],
+    "AO": [
+     {
+      "basis": "well side A method O: profile 0.719190 - head strip 0.009846",
+      "contact": "FORMED",
+      "face_id": "T352-01",
+      "hi": 0.7093441310864983,
+      "kind": "FLIGHT_SIDE",
+      "lo": 0.7093441310864983
+     }
+    ],
+    "BD": [
+     {
+      "basis": "well side B method D: profile 0.833421 - head strip 0.009745",
+      "contact": "FORMED",
+      "face_id": "T352-01",
+      "hi": 0.8236754302823573,
+      "kind": "FLIGHT_SIDE",
+      "lo": 0.8236754302823573
+     }
+    ],
+    "BO": [
+     {
+      "basis": "well side B method O: profile 0.864171 - head strip 0.009745",
+      "contact": "FORMED",
+      "face_id": "T352-01",
+      "hi": 0.8544259064728333,
+      "kind": "FLIGHT_SIDE",
+      "lo": 0.8544259064728333
+     }
+    ]
+   },
+   "high": "0.854426",
+   "host_concrete": "L-7863355dfcb68a681d2d",
+   "host_state": "AT_LEAST 1.213429 m3 (T-711, reading A)",
+   "line_id": "L-9c3643da524267bf47f6",
+   "low": "0.679193",
+   "note": "T-352 range 0.709344 .. 0.869164 restated: low = reading A method D (foot clipped at the GF floor top), high = coherent reading B (4.50 / 28) method O; T-352's high used 4.50 / 27 with 12 lines (F-T725-1)",
+   "readings": {
+    "AD": [
+     0.679193,
+     0.679193
+    ],
+    "AO": [
+     0.709344,
+     0.709344
+    ],
+    "BD": [
+     0.823675,
+     0.823675
+    ],
+    "BO": [
+     0.854426,
+     0.854426
+    ]
+   }
+  },
+  {
+   "cap": "0.306303",
+   "cause": "unmarked layer-5 pair under the soffit (member not identified): a wall below (bears, 0), a downstand (its own soffit) or nothing (stair soffit)",
+   "cited": [
+    "F-T281-03",
+    "RFI-A07"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:FACE:R4-335.HIDDEN_535_536",
+   "face_ids_t474": [
+    "R4-335.HIDDEN_535_536"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "RS-S waist soffit",
+      "contact": "CAP_ONLY",
+      "face_id": "R4-335.HIDDEN_535_536",
+      "hi": 0.306303,
+      "kind": "SOFFIT",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": null,
+   "host_state": "no host line (member not identified)",
+   "line_id": "L-c7b17d201affddad4ed5",
+   "low": null,
+   "note": "0 only if the pair is a wall the stair bears on (space under ST-02, RFI-A07); otherwise formed by the stair or the downstand: the cap stays beside, never a floor",
+   "readings": {
+    "one": [
+     0.0,
+     0.306303
+    ]
+   }
+  },
+  {
+   "cap": null,
+   "cause": "E1 / D1 waist or support not printed (steps on fill or self-supporting waist; section B-B draws E1 on fill); designer item 7",
+   "cited": [
+    "RFI-S26"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-061e18cf35a4b6b33d68:SIDE:HELD:-:G",
+   "face_ids_t474": [
+    "T352-19",
+    "T352-20"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "waist / support not printed (T-258 E1-WAIST); section B-B draws the flight on fill",
+      "contact": "BLOCK",
+      "face_id": "T352-19",
+      "hi": null,
+      "kind": "FLIGHT_SIDE",
+      "lo": null
+     },
+     {
+      "basis": "waist / support not printed (T-258 E1-WAIST); section B-B draws the flight on fill",
+      "contact": "BLOCK",
+      "face_id": "T352-20",
+      "hi": null,
+      "kind": "FLIGHT_SIDE",
+      "lo": null
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-061e18cf35a4b6b33d68",
+   "host_state": "AT_LEAST 0.355017 m3 (T-711)",
+   "line_id": "L-caa721ed972e7905d5e6",
+   "low": null,
+   "note": "D-56 (removed) restated: the ends' profile below the steps is the unprinted waist / support",
+   "readings": {
+    "one": [
+     null,
+     null
+    ]
+   }
+  },
+  {
+   "cap": "0.087731",
+   "cause": "unmarked layer-5 pair under the soffit (member not identified): a wall below (bears, 0), a downstand (its own soffit) or nothing (stair soffit)",
+   "cited": [
+    "F-T281-03",
+    "RFI-A07"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:FACE:R4-336.HIDDEN_535_536",
+   "face_ids_t474": [
+    "R4-336.HIDDEN_535_536"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "RS-LD landing soffit",
+      "contact": "CAP_ONLY",
+      "face_id": "R4-336.HIDDEN_535_536",
+      "hi": 0.087731,
+      "kind": "SOFFIT",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": null,
+   "host_state": "no host line (member not identified)",
+   "line_id": "L-cd188fe35575602f2ac7",
+   "low": null,
+   "note": "0 only if the pair is a wall the stair bears on (space under ST-02, RFI-A07); otherwise formed by the stair or the downstand: the cap stays beside, never a floor",
+   "readings": {
+    "one": [
+     0.0,
+     0.087731
+    ]
+   }
+  },
+  {
+   "cap": "0.118750",
+   "cause": "unmarked layer-5 pair under the soffit (member not identified): a wall below (bears, 0), a downstand (its own soffit) or nothing (stair soffit)",
+   "cited": [
+    "F-T281-03",
+    "RFI-A07"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:FACE:R4-336.HIDDEN_2CC_2CD",
+   "face_ids_t474": [
+    "R4-336.HIDDEN_2CC_2CD"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "RS-LD landing soffit",
+      "contact": "CAP_ONLY",
+      "face_id": "R4-336.HIDDEN_2CC_2CD",
+      "hi": 0.11875,
+      "kind": "SOFFIT",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": null,
+   "host_state": "no host line (member not identified)",
+   "line_id": "L-cf06e7fa27a540eedd0f",
+   "low": null,
+   "note": "0 only if the pair is a wall the stair bears on (space under ST-02, RFI-A07); otherwise formed by the stair or the downstand: the cap stays beside, never a floor",
+   "readings": {
+    "one": [
+     0.0,
+     0.11875
+    ]
+   }
+  },
+  {
+   "cap": "0.873917",
+   "cause": "contact with a block wall / member whose construction sequence is not printed (formed, or cast against it): contractor's sequence, not a designer dimension (T-352 s.1, ST p.8 notes 17 / 19 / 23)",
+   "cited": [
+    "SEQ"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-7863355dfcb68a681d2d:SIDE:HELD:-:G",
+   "face_ids_t474": [
+    "T352-02",
+    "T352-03"
+   ],
+   "faces": {
+    "A": [
+     {
+      "basis": "well end at the turn (MS1-T strip, HELD)",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-02",
+      "hi": 0.00984611568087751,
+      "kind": "JUNCTION_STRIP",
+      "lo": 0.0
+     },
+     {
+      "basis": "shaft wall 284, sequence not printed",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-03",
+      "hi": 0.7191902467673759,
+      "kind": "FLIGHT_SIDE",
+      "lo": 0.0
+     }
+    ],
+    "B": [
+     {
+      "basis": "well end at the turn (MS1-T strip, HELD)",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-02",
+      "hi": 0.009745288671010585,
+      "kind": "JUNCTION_STRIP",
+      "lo": 0.0
+     },
+     {
+      "basis": "shaft wall 284, sequence not printed",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-03",
+      "hi": 0.8641711951438439,
+      "kind": "FLIGHT_SIDE",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-7863355dfcb68a681d2d",
+   "host_state": "AT_LEAST 1.213429 m3 (T-711)",
+   "line_id": "L-d9790e457fd530487553",
+   "low": null,
+   "note": "cap = coherent reading B method O (T-352 cap 0.888856 used 4.50 / 27, F-T725-1)",
+   "readings": {
+    "A": [
+     0.0,
+     0.729036
+    ],
+    "B": [
+     0.0,
+     0.873916
+    ]
+   }
+  },
+  {
+   "cap": null,
+   "cause": "E1 / D1 waist or support not printed (steps on fill or self-supporting waist; section B-B draws E1 on fill); designer item 7",
+   "cited": [
+    "RFI-S26"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-85f64587588af8537b4b:SIDE:HELD:-:G",
+   "face_ids_t474": [
+    "T352-17",
+    "T352-18"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "waist / support not printed (T-258 D1-WAIST): the side profile below the step triangles is not established",
+      "contact": "BLOCK",
+      "face_id": "T352-17",
+      "hi": null,
+      "kind": "FLIGHT_SIDE",
+      "lo": null
+     },
+     {
+      "basis": "waist / support not printed (T-258 D1-WAIST): the side profile below the step triangles is not established",
+      "contact": "BLOCK",
+      "face_id": "T352-18",
+      "hi": null,
+      "kind": "FLIGHT_SIDE",
+      "lo": null
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-85f64587588af8537b4b",
+   "host_state": "RELEASED 0.100286 m3 (D1 steps)",
+   "line_id": "L-e01bb929444556887537",
+   "low": null,
+   "note": "",
+   "readings": {
+    "one": [
+     null,
+     null
+    ]
+   }
+  },
+  {
+   "cap": null,
+   "cause": "E1 / D1 waist or support not printed (steps on fill or self-supporting waist; section B-B draws E1 on fill); designer item 7",
+   "cited": [
+    "RFI-S26"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-821032bc04a0b0d02133:FACES:HELD:-:G",
+   "face_ids_t474": [
+    "R4-332"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "D1 waist soffit",
+      "contact": "BLOCK",
+      "face_id": "R4-332",
+      "hi": null,
+      "kind": "SOFFIT",
+      "lo": null
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-821032bc04a0b0d02133",
+   "host_state": "BLANK (D1 waist)",
+   "line_id": "L-f19a44ba871f6020d965",
+   "low": null,
+   "note": "steps on fill (no soffit form) or a waist over a void: not printed",
+   "readings": {
+    "one": [
+     null,
+     null
+    ]
+   }
+  },
+  {
+   "cap": "0.776000",
+   "cause": "contact with a block wall / member whose construction sequence is not printed (formed, or cast against it): contractor's sequence, not a designer dimension (T-352 s.1, ST p.8 notes 17 / 19 / 23)",
+   "cited": [
+    "SEQ"
+   ],
+   "class_after": "BLANK_NAMED",
+   "element_id": "FW:L-2416e65f053a14199cfc:SIDE:HELD:-:G",
+   "face_ids_t474": [
+    "T352-11",
+    "T352-12",
+    "T352-13",
+    "T352-14"
+   ],
+   "faces": {
+    "one": [
+     {
+      "basis": "WALL: 1.150 x 0.16: stair-shaft wall line (blockwork, T-173)",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-11",
+      "hi": 0.184,
+      "kind": "LANDING_EDGE",
+      "lo": 0.0
+     },
+     {
+      "basis": "MEMBER: 1.300 x 0.16: band 5BE / 5C0 ('B3 (With Stair)' at the landing north edge, Q-61 C)",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-12",
+      "hi": 0.208,
+      "kind": "LANDING_EDGE",
+      "lo": 0.0
+     },
+     {
+      "basis": "MEMBER: 1.200 x 0.16: band 5BE / 5C0 (Q-61 C)",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-13",
+      "hi": 0.192,
+      "kind": "LANDING_EDGE",
+      "lo": 0.0
+     },
+     {
+      "basis": "WALL: 1.200 x 0.16: lift-shaft wall line (blockwork, D-43)",
+      "contact": "CAP_ONLY",
+      "face_id": "T352-14",
+      "hi": 0.192,
+      "kind": "LANDING_EDGE",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-2416e65f053a14199cfc",
+   "host_state": "RELEASED 0.4696 m3 (MS2-LD)",
+   "line_id": "L-f93c7248b948b757aefb",
+   "low": null,
+   "note": "every face beside a block wall, a 'B3 (With Stair)' band, a column or a held junction; a member-member interface is formed at most once (its cap is shared with the member's own 'next to STAIR' face, R-T725-2 (e))",
+   "readings": {
+    "one": [
+     0.0,
+     0.776
+    ]
+   }
+  },
+  {
+   "cap": null,
+   "cause": null,
+   "cited": [],
+   "class_after": "AT_LEAST",
+   "element_id": "FW:L-7863355dfcb68a681d2d:FACES:HELD:-:G",
+   "face_ids_t474": [
+    "R4-316",
+    "R4-317",
+    "R4-318",
+    "R4-319"
+   ],
+   "faces": {
+    "AD": [
+     {
+      "basis": "10 x 1.2 x 0.166667",
+      "contact": "FORMED",
+      "face_id": "R4-317",
+      "hi": 1.9999999999999996,
+      "kind": "RISER",
+      "lo": 1.9999999999999996
+     },
+     {
+      "basis": "method D, plan 3.215000 (run 2.700 x 1.2 - col 36B)",
+      "contact": "FORMED",
+      "face_id": "R4-318",
+      "hi": 3.2255612114748007,
+      "kind": "SOFFIT",
+      "lo": 3.2255612114748007
+     },
+     {
+      "basis": "warped winder soffit not drawn (C-ST-3): floor = drawn region 1.300 x 1.150",
+      "contact": "FORMED",
+      "face_id": "R4-316",
+      "hi": null,
+      "kind": "SOFFIT",
+      "lo": 1.4949999999999999
+     },
+     {
+      "basis": "5 fronts not drawn (D-67), each >= the drawn region's narrow side 1.150 (R-T718-2) x 0.166667",
+      "contact": "FORMED",
+      "face_id": "R4-319.RISERS",
+      "hi": null,
+      "kind": "RISER",
+      "lo": 0.9583333333333333
+     },
+     {
+      "basis": "turn sides on walls 284 / north: sequence not printed, open",
+      "contact": "CAP_ONLY",
+      "face_id": "R4-319.SIDES",
+      "hi": null,
+      "kind": "SIDE",
+      "lo": 0.0
+     }
+    ],
+    "AO": [
+     {
+      "basis": "10 x 1.2 x 0.166667",
+      "contact": "FORMED",
+      "face_id": "R4-317",
+      "hi": 1.9999999999999996,
+      "kind": "RISER",
+      "lo": 1.9999999999999996
+     },
+     {
+      "basis": "method O, plan 3.215000 (run 2.700 x 1.2 - col 36B)",
+      "contact": "FORMED",
+      "face_id": "R4-318",
+      "hi": 3.6778278781414673,
+      "kind": "SOFFIT",
+      "lo": 3.6778278781414673
+     },
+     {
+      "basis": "warped winder soffit not drawn (C-ST-3): floor = drawn region 1.300 x 1.150",
+      "contact": "FORMED",
+      "face_id": "R4-316",
+      "hi": null,
+      "kind": "SOFFIT",
+      "lo": 1.4949999999999999
+     },
+     {
+      "basis": "5 fronts not drawn (D-67), each >= the drawn region's narrow side 1.150 (R-T718-2) x 0.166667",
+      "contact": "FORMED",
+      "face_id": "R4-319.RISERS",
+      "hi": null,
+      "kind": "RISER",
+      "lo": 0.9583333333333333
+     },
+     {
+      "basis": "turn sides on walls 284 / north: sequence not printed, open",
+      "contact": "CAP_ONLY",
+      "face_id": "R4-319.SIDES",
+      "hi": null,
+      "kind": "SIDE",
+      "lo": 0.0
+     }
+    ],
+    "BD": [
+     {
+      "basis": "12 x 1.2 x 0.160714",
+      "contact": "FORMED",
+      "face_id": "R4-317",
+      "hi": 2.314285714285714,
+      "kind": "RISER",
+      "lo": 2.314285714285714
+     },
+     {
+      "basis": "method D, plan 3.935000 (run 3.300 x 1.2 - col 36B)",
+      "contact": "FORMED",
+      "face_id": "R4-318",
+      "hi": 4.002826141839064,
+      "kind": "SOFFIT",
+      "lo": 4.002826141839064
+     },
+     {
+      "basis": "warped winder soffit not drawn (C-ST-3): floor = drawn region 1.300 x 1.150",
+      "contact": "FORMED",
+      "face_id": "R4-316",
+      "hi": null,
+      "kind": "SOFFIT",
+      "lo": 1.4949999999999999
+     },
+     {
+      "basis": "drawn 2F6 / 2F4 / 2F5 / 2F3 = 5.2937 m x 0.160714",
+      "contact": "FORMED",
+      "face_id": "R4-319.RISERS",
+      "hi": null,
+      "kind": "RISER",
+      "lo": 0.8507732142857143
+     },
+     {
+      "basis": "turn sides on walls 284 / north: sequence not printed, open",
+      "contact": "CAP_ONLY",
+      "face_id": "R4-319.SIDES",
+      "hi": null,
+      "kind": "SIDE",
+      "lo": 0.0
+     }
+    ],
+    "BO": [
+     {
+      "basis": "12 x 1.2 x 0.160714",
+      "contact": "FORMED",
+      "face_id": "R4-317",
+      "hi": 2.314285714285714,
+      "kind": "RISER",
+      "lo": 2.314285714285714
+     },
+     {
+      "basis": "method O, plan 3.935000 (run 3.300 x 1.2 - col 36B)",
+      "contact": "FORMED",
+      "face_id": "R4-318",
+      "hi": 4.464083284696207,
+      "kind": "SOFFIT",
+      "lo": 4.464083284696207
+     },
+     {
+      "basis": "warped winder soffit not drawn (C-ST-3): floor = drawn region 1.300 x 1.150",
+      "contact": "FORMED",
+      "face_id": "R4-316",
+      "hi": null,
+      "kind": "SOFFIT",
+      "lo": 1.4949999999999999
+     },
+     {
+      "basis": "drawn 2F6 / 2F4 / 2F5 / 2F3 = 5.2937 m x 0.160714",
+      "contact": "FORMED",
+      "face_id": "R4-319.RISERS",
+      "hi": null,
+      "kind": "RISER",
+      "lo": 0.8507732142857143
+     },
+     {
+      "basis": "turn sides on walls 284 / north: sequence not printed, open",
+      "contact": "CAP_ONLY",
+      "face_id": "R4-319.SIDES",
+      "hi": null,
+      "kind": "SIDE",
+      "lo": 0.0
+     }
+    ]
+   },
+   "high": null,
+   "host_concrete": "L-7863355dfcb68a681d2d",
+   "host_state": "AT_LEAST 1.213429 m3 (T-711)",
+   "line_id": "L-ffd491ad529ee2251982",
+   "low": "7.678894",
+   "note": "T-332 held_from 5.706 (2.000 + 3.706) restated: risers at both readings, soffit by T-281 methods O / D, turn soffit floor 1.495 (F-T352-1), winder risers floor; high open (warped soffit, turn sides)",
+   "readings": {
+    "AD": [
+     7.678895,
+     null
+    ],
+    "AO": [
+     8.131161,
+     null
+    ],
+    "BD": [
+     8.662885,
+     null
+    ],
+    "BO": [
+     9.124142,
+     null
+    ]
+   }
+  }
+ ],
+ "readings": {
+  "1F": {
+   "pieces": [
+    [
+     "MS2-L",
+     12
+    ],
+    [
+     "MS2-TR",
+     1
+    ],
+    [
+     "MS2-U",
+     12
+    ]
+   ],
+   "rise": 0.168,
+   "total": 25
+  },
+  "A": {
+   "pieces": [
+    [
+     "MS1-L",
+     10
+    ],
+    [
+     "MS1-T",
+     5
+    ],
+    [
+     "MS1-U",
+     12
+    ]
+   ],
+   "rise": 0.166666667,
+   "total": 27
+  },
+  "B": {
+   "pieces": [
+    [
+     "MS1-L",
+     12
+    ],
+    [
+     "MS1-T",
+     4
+    ],
+    [
+     "MS1-U",
+     12
+    ]
+   ],
+   "rise": 0.160714286,
+   "total": 28
+  }
+ },
+ "rules": {
+  "R-T725-1": "1.0.0",
+  "R-T725-2": "1.0.0",
+  "R-T725-3": "1.0.0"
+ },
+ "schema": "URBAN_T725_STAIR_FORMWORK_V1",
+ "sum_of_lows_m2_beside": 10.455287,
+ "task": "T-725"
+}
