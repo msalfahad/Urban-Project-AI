@@ -1,0 +1,192 @@
+{
+ "junction": {
+  "far_end_gap_to_void_edge_m": {
+   "set_layer2": 0.0,
+   "set_layer5": 0.05
+  },
+  "far_end_on_outline": {
+   "set_layer2": true,
+   "set_layer5": false
+  },
+  "gf_plan_pair": {
+   "22F": [
+    "5",
+    1.15
+   ],
+   "234": [
+    "2",
+    1.15
+   ]
+  },
+  "gf_plan_pair_offset_m": 0.05,
+  "handles": {
+   "F1_layer2": [
+    "BBA",
+    "BB8",
+    "BB6",
+    "BB4",
+    "BB2",
+    "BB0",
+    "BAE",
+    "BAC",
+    "BAA",
+    "BA8",
+    "BA6",
+    "BA4"
+   ],
+   "F1_layer5": [
+    "BB9",
+    "BB7",
+    "BB5",
+    "BB3",
+    "BB1",
+    "BAF",
+    "BAD",
+    "BAB",
+    "BA9",
+    "BA7",
+    "BA5",
+    "BA3"
+   ],
+   "F4_layer2": [
+    "B4E",
+    "B55",
+    "B54",
+    "B53",
+    "B52",
+    "B51",
+    "B50",
+    "B4F",
+    "B56",
+    "B57",
+    "B58"
+   ],
+   "F4_layer5": [
+    "B43",
+    "B4A",
+    "B49",
+    "B48",
+    "B47",
+    "B46",
+    "B45",
+    "B44",
+    "B4B",
+    "B4C",
+    "B4D"
+   ],
+   "outline": {
+    "arrival_edge": "D24",
+    "inner_stringer": "B76",
+    "void_edge_east": "B75"
+   }
+  },
+  "layers": {
+   "F1_layer2": [
+    "2"
+   ],
+   "F1_layer5": [
+    "5"
+   ],
+   "F4_layer2": [
+    "2"
+   ],
+   "F4_layer5": [
+    "5"
+   ]
+  },
+  "pair_offset_straight_m": [
+   0.05
+  ],
+  "radial_line_lengths_m": {
+   "BA3": 1.15,
+   "BA4": 1.15,
+   "BB9": 1.2,
+   "BBA": 1.149742
+  },
+  "radial_top_line_radii_m": {
+   "BB9": [
+    1.580511,
+    2.780511
+   ],
+   "BBA": [
+    1.581559,
+    2.730969
+   ]
+  },
+  "readings": {
+   "mixed_engine": {
+    "F1_first_quad_m2": 0.335819,
+    "F1_last_quad_m2": 0.398468,
+    "F1_m2": 4.094412,
+    "F1_quads": 12,
+    "F4_m2": 3.45,
+    "overlap_m2": 0.057438,
+    "sum_m2": 7.544412,
+    "union_m2": 7.486974
+   },
+   "set_layer2": {
+    "F1_first_quad_m2": 0.335819,
+    "F1_last_quad_m2": 0.398468,
+    "F1_m2": 4.094412,
+    "F1_quads": 12,
+    "F4_m2": 3.45,
+    "overlap_m2": 0.0,
+    "sum_m2": 7.544412,
+    "union_m2": 7.544412
+   },
+   "set_layer5": {
+    "F1_first_quad_m2": 0.345285,
+    "F1_last_quad_m2": 0.398468,
+    "F1_m2": 4.104061,
+    "F1_quads": 12,
+    "F4_m2": 3.45,
+    "overlap_m2": 0.0,
+    "sum_m2": 7.554061,
+    "union_m2": 7.554061
+   }
+  }
+ },
+ "unit_m": 0.001,
+ "v07": {
+  "beam_line_lengths_inside_dome_m": [
+   0.065296,
+   1.208987,
+   1.25526,
+   1.578251,
+   2.371752,
+   3.935265,
+   4.113242
+  ],
+  "beam_lines_crossing_dome": 7,
+  "dome_disc_m2": 15.274758,
+  "dome_handle": "1300",
+  "dome_layer": "2",
+  "dome_radius_m": 2.205018,
+  "hatches_on_sheet_by_layer": {
+   "S-COL.HAT": 9,
+   "S-HAT.BAT": 3
+  },
+  "inside_dome_footprint_by_type_layer": {
+   "HATCH/S-COL.HAT": 2,
+   "LINE/1": 7,
+   "LINE/S-COL.BON": 2,
+   "LINE/S-REIN-SLAB": 3,
+   "LWPOLYLINE/REIN": 1,
+   "LWPOLYLINE/S-COL.BON": 2,
+   "LWPOLYLINE/S-TEXT.D": 1
+  },
+  "opening_drawn": false,
+  "overlay": {
+   "arch_2F_block_columns": 9,
+   "matched_st": 9,
+   "worst_corner_residual_mm": 0.495909
+  },
+  "s_opening_entities_on_sheet": 0,
+  "st_sheet_beam_line_extent_m": [
+   8.175,
+   6.8
+  ],
+  "st_sheet_beam_line_extent_m2": 55.59,
+  "st_sheet_columns": 9
+ }
+}
