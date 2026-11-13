@@ -1,0 +1,426 @@
+{
+ "schema": "MAIN_CHAT_FIX_ROWS_V1",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.78",
+ "source": "T556_PLASTER_HEIGHT.json rows + owner heights 2026-11-13",
+ "rows": [
+  {
+   "set": "PLASTER_DRY",
+   "line_id": "L-b152995525ed123ddac9",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:GF_01:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 47.949844,
+    "high": 66.249856
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 64.0607
+   },
+   "label": "DEFAULT",
+   "basis": "GF-01: face 20.127 lm x H 3.84 (storey 4.00 - slab 0.16) = 77.288 - openings 12.991 [W11 4.30100; W12 4.2900; D-GF-01 2.20; A-GF-01 1.000 m wide x 2.20 head (default)] - beam ends 0.236 (midpoint)"
+  },
+  {
+   "set": "PAINT_DRY",
+   "line_id": "L-cdf7f5cd2789b67004f1",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:GF_01:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 36.900914,
+    "high": 54.610926
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 49.0465
+   },
+   "label": "ESTIMATE",
+   "basis": "GF-01: plaster 64.061 x ceiling height 2.94 / 3.84 (false ceiling = clear height - 0.90 default; openings taken proportionally)"
+  },
+  {
+   "set": "PLASTER_DRY",
+   "line_id": "L-1ddc23d5657b4c4e4d0d",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:GF_04:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 34.33,
+    "high": 43.78
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 43.78
+   },
+   "label": "DEFAULT",
+   "basis": "GF-04: face 12.5 lm x H 3.84 (storey 4.00 - slab 0.16) = 48.000 - openings 4.220 [W04 0.48; D-GF-03 1.98; D-GF-04 1.76] - beam ends 0.000 (midpoint)"
+  },
+  {
+   "set": "PAINT_DRY",
+   "line_id": "L-d7d6d2f765489a95c408",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:GF_04:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 26.9586,
+    "high": 36.405
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 33.5191
+   },
+   "label": "ESTIMATE",
+   "basis": "GF-04: plaster 43.780 x ceiling height 2.94 / 3.84 (false ceiling = clear height - 0.90 default; openings taken proportionally)"
+  },
+  {
+   "set": "PLASTER_DRY",
+   "line_id": "L-0d93f2209cd9bb827c0a",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:GF_15:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 66.52899,
+    "high": 66.52899
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 67.6058
+   },
+   "label": "DEFAULT",
+   "basis": "GF-15: face 21.537 lm x H 4.34 (storey 4.50 - slab 0.16) = 93.471 - openings 25.865 [D-GF-14 1.76; W03 21.90474; D-GF-13 2.20] - beam ends 0.000 (midpoint)"
+  },
+  {
+   "set": "PAINT_DRY",
+   "line_id": "L-7f083d3e2c2702d14356",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:GF_15:PAINT",
+   "before": {
+    "class": "RELEASED",
+    "net": 56.0131,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 53.5862
+   },
+   "label": "ESTIMATE",
+   "basis": "GF-15: plaster 67.606 x ceiling height 3.44 / 4.34 (false ceiling = clear height - 0.90 default; openings taken proportionally)"
+  },
+  {
+   "set": "PLASTER_DRY",
+   "line_id": "L-8cecb1d010d5aafbf25d",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:GF_08:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 178.22057,
+    "high": 211.80527
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 184.0395
+   },
+   "label": "DEFAULT",
+   "basis": "GF-08: face 53.188 lm x H 4.34 (storey 4.50 - slab 0.16) = 230.836 - openings 45.727 [D-GF-08 2.20; L-GF-01 1.000 m wide x 2.20 head (default); D-GF-13 2.20; W03 6.97125; W02 drawn outline 27.1557 m2 (default: full outline); D-GF-07 5.00] - beam ends 1.070 (midpoint)"
+  },
+  {
+   "set": "PAINT_DRY",
+   "line_id": "L-c0ac22c964a42e7d71b1",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:GF_08:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 151.89545,
+    "high": 178.80495
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 145.8746
+   },
+   "label": "ESTIMATE",
+   "basis": "GF-08: plaster 184.039 x ceiling height 3.44 / 4.34 (false ceiling = clear height - 0.90 default; openings taken proportionally)"
+  },
+  {
+   "set": "PLASTER_DRY",
+   "line_id": "L-af9621f43bc316a871ea",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:1F_01:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 62.573,
+    "high": 62.607
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 63.475
+   },
+   "label": "DEFAULT",
+   "basis": "1F-01: face 17.7 lm x H 4.04 (storey 4.20 - slab 0.16) = 71.508 - openings 7.880 [D-1F-02 2.20; D-1F-01 1.76; W14 3.920] - beam ends 0.153 (midpoint)"
+  },
+  {
+   "set": "PAINT_DRY",
+   "line_id": "L-ade6f0567f690a869499",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:1F_01:PAINT",
+   "before": {
+    "class": "RELEASED",
+    "net": 51.415,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 49.3345
+   },
+   "label": "ESTIMATE",
+   "basis": "1F-01: plaster 63.475 x ceiling height 3.14 / 4.04 (false ceiling = clear height - 0.90 default; openings taken proportionally)"
+  },
+  {
+   "set": "PLASTER_DRY",
+   "line_id": "L-971f0bdaf68d7fd0966c",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:1F_04:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 63.141,
+    "high": 63.141
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 64.011
+   },
+   "label": "DEFAULT",
+   "basis": "1F-04: face 17.4 lm x H 4.04 (storey 4.20 - slab 0.16) = 70.296 - openings 6.285 [D-1F-03 2.20; W24 2.325; D-1F-04 1.76] - beam ends 0.000 (midpoint)"
+  },
+  {
+   "set": "PAINT_DRY",
+   "line_id": "L-d9f4ecdb6ef9a42d0220",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:1F_04:PAINT",
+   "before": {
+    "class": "RELEASED",
+    "net": 52.005,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 49.7511
+   },
+   "label": "ESTIMATE",
+   "basis": "1F-04: plaster 64.011 x ceiling height 3.14 / 4.04 (false ceiling = clear height - 0.90 default; openings taken proportionally)"
+  },
+  {
+   "set": "PLASTER_DRY",
+   "line_id": "L-2ba8077ba9bb2e1ff0f6",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:1F_10:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 58.026,
+    "high": 62.05
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 60.643
+   },
+   "label": "DEFAULT",
+   "basis": "1F-10: face 16.2 lm x H 4.04 (storey 4.20 - slab 0.16) = 65.448 - openings 4.180 [D-1F-08 1.98; A-1F-01 1.000 m wide x 2.20 head (default)] - beam ends 0.625 (midpoint)"
+  },
+  {
+   "set": "PAINT_DRY",
+   "line_id": "L-f53c1329983ad689b7ae",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:1F_10:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 48.94,
+    "high": 52.29
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 47.1334
+   },
+   "label": "ESTIMATE",
+   "basis": "1F-10: plaster 60.643 x ceiling height 3.14 / 4.04 (false ceiling = clear height - 0.90 default; openings taken proportionally)"
+  },
+  {
+   "set": "PLASTER_DRY",
+   "line_id": "L-31db3c83552682d92ca3",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:1F_11:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 74.77651,
+    "high": 80.19841
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 78.5949
+   },
+   "label": "DEFAULT",
+   "basis": "1F-11: face 22.149 lm x H 4.04 (storey 4.20 - slab 0.16) = 89.482 - openings 10.887 [W17 outline range midpoint 7.147; D-1F-10 1.76; D-1F-09 1.98] - beam ends 0.000 (midpoint)"
+  },
+  {
+   "set": "PAINT_DRY",
+   "line_id": "L-349db74a70e1eecda2d2",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:1F_11:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 60.60115,
+    "high": 66.02305
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 61.0861
+   },
+   "label": "ESTIMATE",
+   "basis": "1F-11: plaster 78.595 x ceiling height 3.14 / 4.04 (false ceiling = clear height - 0.90 default; openings taken proportionally)"
+  },
+  {
+   "set": "PLASTER_DRY",
+   "line_id": "L-9b4a7bab033d677e2017",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:1F_13:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 135.6255,
+    "high": 139.6155
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 139.388
+   },
+   "label": "DEFAULT",
+   "basis": "1F-13: face 39.45 lm x H 4.04 (storey 4.20 - slab 0.16) = 159.378 - openings 19.990 [L-1F-01 1.000 m wide x 2.20 head (default); D-1F-05 1.98; D-1F-08 1.98; D-1F-09 1.98; W15 4.363; W16 4.363; D-1F-03 2.20; D-1F-02 0.924] - beam ends 0.000 (midpoint)"
+  },
+  {
+   "set": "PAINT_DRY",
+   "line_id": "L-be48ea84285be20645af",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:1F_13:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 111.0175,
+    "high": 114.3675
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 108.3362
+   },
+   "label": "ESTIMATE",
+   "basis": "1F-13: plaster 139.388 x ceiling height 3.14 / 4.04 (false ceiling = clear height - 0.90 default; openings taken proportionally)"
+  },
+  {
+   "set": "PLASTER_DRY",
+   "line_id": "L-4ce74fc37a08d4bdf0d8",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:2F_03:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 69.775,
+    "high": 69.775
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 70.72
+   },
+   "label": "DEFAULT",
+   "basis": "2F-03: face 18.9 lm x H 4.04 (storey 4.20 - slab 0.16) = 76.356 - openings 5.540 [D-2F-02 1.98; D-2F-03 1.76; W29 1.80] - beam ends 0.096 (midpoint)"
+  },
+  {
+   "set": "PAINT_DRY",
+   "line_id": "L-5410f9045c80dd5933f0",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:2F_03:PAINT",
+   "before": {
+    "class": "RELEASED",
+    "net": 57.775,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 54.9655
+   },
+   "label": "ESTIMATE",
+   "basis": "2F-03: plaster 70.720 x ceiling height 3.14 / 4.04 (false ceiling = clear height - 0.90 default; openings taken proportionally)"
+  },
+  {
+   "set": "PLASTER_DRY",
+   "line_id": "L-ae0cdd794cc5fdbe0c29",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:2F_01:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 27.35991,
+    "high": 31.76591
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 29.8084
+   },
+   "label": "DEFAULT",
+   "basis": "2F-01: face 9.009 lm x H 4.04 (storey 4.20 - slab 0.16) = 36.396 - openings 6.380 [L-2F-01 1.000 m wide x 2.20 head (default); D-2F-02 1.98; D-2F-01 2.20] - beam ends 0.208 (midpoint)"
+  },
+  {
+   "set": "PAINT_DRY",
+   "line_id": "L-c74cfb4e07bcc47bc5d6",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "element_id": "HL:WALL_FINISH:2F_01:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 22.49015,
+    "high": 26.00015
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 23.1679
+   },
+   "label": "ESTIMATE",
+   "basis": "2F-01: plaster 29.808 x ceiling height 3.14 / 4.04 (false ceiling = clear height - 0.90 default; openings taken proportionally)"
+  }
+ ],
+ "not_filled": []
+}
