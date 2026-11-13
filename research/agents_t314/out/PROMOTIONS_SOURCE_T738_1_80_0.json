@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-738",
+  "merge_commit": "208c568914d2d90eb383ddc66de5faca495a7b88",
+  "verdict_time": "2026-11-13 13:50 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED r2 (Verifier 2026-11-13T13:50Z per `date -u`, run session_01E6cPncjp2ZuHMjUH2zr8Rk, lock checker; GATE B PASS; merge 208c56891 published by engine push; CODEMAP conflict only, took working-branch version rebuilt by tool, stale none, freeze 0; candidate ARCH_TAKEOFF_V3.0.77 b8524d5c -> V3.0.78, master 1.79.0; no RELEASED line moved)",
+  "board_commit": "98fa7e86"
+ }
+]
