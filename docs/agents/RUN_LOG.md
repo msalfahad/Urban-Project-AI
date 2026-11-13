@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T09:52Z | Verifier | STARTED | run session_01E6cPnempse2wFh8LTJGZA9 | repo-attached routine | task state: READY T-738 r2 (W3 Gate B, 49d21678), T-756 (W2, 5e4c1355) per run log | self-check pending
 - 2026-11-13T09:46Z | Worker 3 | SUCCESS | T-738 r2 READY (integration package, Gate B, agents/task-T-738 @ 49d21678) | Gate B (b) fault fixed: T459_CANDIDATE_BINDING.json rebuilt by its tool (+arch_v3078.py: [], 0 lap tokens, no rebar effect); quantities unchanged (V3.0.78: tile 18.44..44.765 m2, risers 13.087..13.740 m2 as r1). L4 24,683 pass / 0 fail / 706 skip / 105 xfail. L-T738-1: only t459_census persists an arch_v30*.py glob. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T09:19Z | Worker 1 | STARTED | run session_01E6cPnaiHSTSS39wMP5XCdz | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T09:01Z | Worker 3 | STARTED | run session_01E6cPnaY9kKz35QXzpHnsLS | repo-attached routine | task state: none yet | self-check pending
