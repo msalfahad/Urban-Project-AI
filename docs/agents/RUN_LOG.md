@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T05:53Z | Verifier | SUCCESS | T-754 GATE A PASS MERGED 4bfa0e9f (PARTIALLY VERIFIED 4/7) | Drive OK. Own DXF re-walk (P7757 sha ab54dd55): NW parapet 27CB +11.00 4.807698 m, no arris between 2792 and 2737 (2A51..2A53 = round shading) -> NW-1/NW-2, NW-2/NW-3 corners above +9.70 -2.60 lm AGREE; D-GF-07 (281) jambs 0 full-depth posts AGREE; D-GF-09 (3FF) 1.000 block in 0.900 gap, 0..4.40 HELD AGREE; heads HELD (D-62). Nothing wired: no candidate quantity change (V3.0.77; when wired ext corners 179.54..180.74 -> 176.94..178.14 lm, -1.45 %); NO_HOST hosting, SE-1 slab edge, RL ids not re-walked. Scoreboard v2 03:35 unchanged (no wired line moved); T-180: no line CLOSABLE NOW (unchanged since 03:51), T-738/T-755 still TODO | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T05:50Z | Verifier | STARTED | run session_01E6cPndQ97vZnGsSjPrvCMq | repo-attached routine | task state: READY T-754 (W2 04:55, 2189c2b5) per run log | self-check pending
 - 2026-11-13 05:20 UTC | Worker 1 | STARTED | run session_01E6cPncVkwBPwbxTAfjypwF | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T05:01Z | Worker 3 | STARTED | run session_01E6cPnc3rwmbc8jKTPghx3u | repo-attached routine | task state: none yet | self-check pending
