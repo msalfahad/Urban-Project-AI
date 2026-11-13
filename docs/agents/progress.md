@@ -46,6 +46,11 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
 
 ## 2. Decisions by date
 
+### 2026-11-13 (delivery reset)
+- Owner on progress: "I dont think there is a progress in here its been 2 weeks nearly with agents". Main chat found 3 -> 13 Nov: concrete +1.6 m3, formwork +33 m2, masonry materials added, plaster height corrected, verified lines unchanged.
+- MATERIALITY: "If we ignore the 0.1m3 once its fine twice is also fine, 5-6 times is also fine as long as we add at the end a safety of 1m^3. the 0.01 is useless so less than 0.1 we can if we can add later the sum of the missing or ignored." Rule: concrete pieces / differences < 0.1 m3 ignored (logged), one safety allowance line at the end = max(1 m3, sum ignored); other units: nothing below 1 %.
+- "And lets work with your suggestions." = (1) materiality, (2) company default values for unprinted dimensions (values from the owner), (3) the owner sends the designer list, (6) the main chat builds the full BOQ workbook now; agents only fix the gaps it lists.
+
 ### 2026-11-12
 - PAINT RULE: "Paint, technically would be close enough to plastering (inside the building) outside will also should be the same, the difference is with the corners outside maybe only and lm for windows doors and corners, so the Area is the same." Confirmed: paint stops at the false ceiling (Q-72 kept); no paint on tiled faces. Paint m2 = plaster m2 of the same faces minus those two; corners / openings are lm items.
 - "why do i merge, its your role" / "Push and merge for Urban project AI and not urbanprojectmanager": merging is
