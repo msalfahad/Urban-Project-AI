@@ -1,4 +1,4 @@
-"""T-770 R-T770-1: fix-row wiring by line id (synthetic lines, no project data)."""
+"""T-770 R-T770-1 / R-T770-2: fix-row wiring by line id (synthetic lines, no project data)."""
 import copy
 import json
 
@@ -76,7 +76,8 @@ def test_normal_index_apply_and_outside_identical():
     (lambda r: r["rows"][3].update(after={"class": "HELD", "low": None, "high": None}), "low <= high"),
     (lambda r: r["rows"][3].update(after={"class": "HELD", "low": 9.0, "high": 1.0}), "low <= high"),
     (lambda r: r["rows"][1].update(after={"class": "RELEASED", "net": None}), "figure"),
-    (lambda r: r["rows"][1].update(after={"class": "RELEASED", "net": -1.0}), "figure"),
+    (lambda r: r["rows"][1].update(after={"class": "RELEASED", "net": -1.0}), "no positive host"),   # R-T770-2 f
+    (lambda r: r["rows"][2].update(after={"class": "RELEASED", "net": -1.0}), "only a STR.FORMWORK"),
     (lambda r: r.update(candidate_version="ARCH_TAKEOFF_V3.0.77"), "rebuild"),
 ])
 def test_adverse_rows_refused(mutate, msg):
@@ -122,3 +123,141 @@ def test_boq_line_view_stale_blank_vs_range():
     rows = _rows(_normal()["rows"][0])
     with pytest.raises(A.FillError, match="stale"):
         A.apply_boq_lines(lines, rows, BASE)
+
+
+# ------------------------------------------------------------------------------------------------ R-T770-2 (r2)
+def _index2():
+    return {"schema": A.INDEX_SCHEMA, "candidate_version": BASE, "lines": [
+        _ix("L-a", "STR.FORMWORK", "m2", "HELD", el="FW:L-host1:FACES:G"),
+        _ix("L-b", "STR.FORMWORK", "m2", "HELD", el="FW:L-host1:OQ10:G"),
+        _ix("L-c", "STR.FORMWORK", "m2", "HELD", el="FW:L-host1:COVER:G"),
+        _ix("L-d", "STR.CONC.BEAM", "m3", "HELD", el="BM-1#corner"),
+        _ix("L-e", "STR.CONC.BEAM", "m3", "HELD", el="BM-2#corner"),
+        _ix("L-f", "STR.CONC.BEAM", "m3", "HELD", el="BM-3"),
+        _ix("L-g", "FIN.PAINT", "m2", "RELEASED", net=10.0, el="R"),
+    ]}
+
+
+BLANK = {"class": "HELD", "net": None, "low": None, "high": None}
+
+
+def _set2(**over):
+    rows = [
+        # host faces 2 x (0.45 + 0.30) x 4.00 = 6.00 m2; a second face 1.50 m2; a cover deduction -0.12 m2
+        _row("L-a", "STR.FORMWORK", "m2", BLANK, {"class": "RELEASED", "net": 6.0}, "ESTIMATE", "FW:L-host1:FACES:G"),
+        _row("L-b", "STR.FORMWORK", "m2", BLANK, {"class": "RELEASED", "net": 1.5}, "ESTIMATE", "FW:L-host1:OQ10:G"),
+        _row("L-c", "STR.FORMWORK", "m2", BLANK, {"class": "RELEASED", "net": -0.12}, "ESTIMATE",
+             "FW:L-host1:COVER:G"),
+        # two known corner pieces 0.0176 + 0.0300 m3 (< 0.05) under one safety line of max(1, 0.0476) = 1 m3
+        _row("L-d", "STR.CONC.BEAM", "m3", BLANK, {"class": "IGNORED_SMALL", "size_m3": 0.0176,
+                                                   "covered_by": "NEW:STR.CONC.SAFETY"}, el="BM-1#corner"),
+        _row("L-e", "STR.CONC.BEAM", "m3", BLANK, {"class": "IGNORED_SMALL", "size_m3": 0.03,
+                                                   "covered_by": "NEW:STR.CONC.SAFETY"}, el="BM-2#corner"),
+        # 0.20 x 0.60 x 3.00 = 0.36 m3
+        _row("L-f", "STR.CONC.BEAM", "m3", BLANK, {"class": "RELEASED", "net": 0.36}, el="BM-3"),
+    ]
+    d = {"schema": "DELIVERY_FIX_ROWS_V1", "task": "T-X", "candidate_version": BASE, "rows": rows,
+         "safety_line": {"line_id": "NEW:STR.CONC.SAFETY", "item_code": "STR.CONC.SAFETY", "unit": "m3",
+                         "after": {"class": "RELEASED", "net": 1.0}, "label": "SAFETY",
+                         "basis": "ignored 0.0476 m3 < 1 m3 -> 1 m3"}}
+    d.update(over)
+    return d
+
+
+def test_normal_netting_and_safety_line():
+    base = _index2()
+    new, applied = A.apply_index(base, _set2())
+    by = {ln["line_id"]: ln for ln in new["lines"]}
+    assert by["L-a"]["measured_net"] == pytest.approx(5.88) and "nets L-c -0.12" in by["L-a"]["fill_basis"]
+    assert by["L-b"]["measured_net"] == 1.5                                   # the smaller host row is untouched
+    assert by["L-c"]["class"] == "EXCLUDED" and "NETTED_INTO_HOST" in by["L-c"]["excluded_reason"]
+    assert by["L-d"]["class"] == "EXCLUDED" and "IGNORED_SMALL" in by["L-d"]["excluded_reason"]
+    assert by["L-d"]["measured_net"] is None                                  # never written as 0
+    t = A.totals_by_code(new["lines"])
+    assert t[("STR.FORMWORK", "m2")]["released"] == pytest.approx(6.0 + 1.5 - 0.12)   # trade sum unchanged by netting
+    assert t[("STR.FORMWORK", "m2")]["lines"] == 2 and t[("STR.FORMWORK", "m2")]["blank"] == 0
+    safety = [ln for ln in new["lines"] if ln["item_code"] == "STR.CONC.SAFETY"]
+    assert len(safety) == 1 and safety[0]["measured_net"] == 1.0 and safety[0]["method_label"] == "SAFETY"
+    assert by["L-d"]["excluded_reason"].endswith("logged in IGNORED_SMALL") and safety[0]["line_id"] in \
+        by["L-d"]["excluded_reason"]
+    assert len(new["lines"]) == len(base["lines"]) + 1 and by["L-g"] == base["lines"][6]
+    assert all(min(x["measured_net"] or 0, 0) == 0 for x in new["lines"])  # no negative line anywhere
+
+
+def _mut_net(lid, net):
+    def f(d):
+        for r in d["rows"]:
+            if r["line_id"] == lid:
+                r["after"] = dict(r["after"], net=net)
+    return f
+
+
+def _mut_after(lid, after):
+    def f(d):
+        for r in d["rows"]:
+            if r["line_id"] == lid:
+                r["after"] = after
+    return f
+
+
+@pytest.mark.parametrize("mutate, msg", [
+    (_mut_net("L-c", -9.0), "below 0"),                                        # deduction larger than its host
+    (lambda d: d["rows"].__setitem__(0, dict(d["rows"][0], element_id="FW:L-other:FACES:G")), "stale"),
+    (_mut_after("L-d", {"class": "IGNORED_SMALL", "size_m3": 0.06, "covered_by": "NEW:STR.CONC.SAFETY"}), "0 < size"),
+    (_mut_after("L-d", {"class": "IGNORED_SMALL", "size_m3": 0.0, "covered_by": "NEW:STR.CONC.SAFETY"}), "0 < size"),
+    (_mut_after("L-d", {"class": "IGNORED_SMALL", "size_m3": 0.0176, "covered_by": "NEW:OTHER"}), "not a line"),
+    (_mut_after("L-d", {"class": "IGNORED_SMALL", "size_m3": 0.0176}), "no added safety"),
+    (lambda d: d["safety_line"]["after"].update(net=0.0476), "max\\(1 m3"),  # a safety line below 1 m3
+    (lambda d: d.update(safety_line=None), "not a line"),                     # ignored pieces with no cover
+])
+def test_adverse_r_t770_2_refused(mutate, msg):
+    d = _set2()
+    mutate(d)
+    with pytest.raises(A.FillError, match=msg):
+        A.apply_index(_index2(), d)
+
+
+def test_adverse_two_safety_lines_and_stale_package_base():
+    a = _set2()
+    b = {"schema": "DELIVERY_FIX_ROWS_V1", "task": "T-Y", "candidate_version": BASE,
+         "rows": [_row("L-g", "FIN.PAINT", "m2", {"class": "RELEASED", "net": 10.0, "low": None, "high": None},
+                       {"class": "RELEASED", "net": 9.0}, "ESTIMATE", "R")],
+         "safety_line": dict(a["safety_line"])}
+    pkg = {"schema": A.PACKAGE_SCHEMA, "base": "ARCH_TAKEOFF_V3.0.79", "row_bases": [BASE], "sets": [a, b]}
+    with pytest.raises(A.FillError, match="second safety line"):
+        A.check_package(pkg, "ARCH_TAKEOFF_V3.0.79")
+    pkg["sets"] = [a]
+    with pytest.raises(A.FillError, match="package built for"):
+        A.check_package(pkg, "ARCH_TAKEOFF_V3.0.80")
+    pkg["row_bases"] = []                                                    # a set on an undeclared older base
+    with pytest.raises(A.FillError, match="rebuild"):
+        A.check_package(pkg, "ARCH_TAKEOFF_V3.0.79")
+
+
+def test_package_on_newer_base_rechecks_each_line():
+    """normal: a set built on V3.0.78 applies on V3.0.79 when its lines did not move; adverse: one moved -> stale"""
+    base = _index2()
+    base["candidate_version"] = "ARCH_TAKEOFF_V3.0.79"
+    pkg = {"schema": A.PACKAGE_SCHEMA, "base": "ARCH_TAKEOFF_V3.0.79", "row_bases": [BASE], "sets": [_set2()]}
+    new, applied = A.apply_index(base, pkg)
+    assert len(applied) == 6 and new["extends"] == "ARCH_TAKEOFF_V3.0.79"
+    base["lines"][5].update({"class": "RELEASED", "measured_net": 0.30})     # the newer base moved L-f
+    with pytest.raises(A.FillError, match="stale"):
+        A.apply_index(base, pkg)
+
+
+def _boq2(lid, code, unit, el):
+    return {"line_id": lid, "item_code": code, "unit": unit, "evidence_state": "BLOCKED_RFI", "measured_net": None,
+            "gross": None, "bounded_range": None, "location": {"element_id": el}, "notes": ""}
+
+
+def test_boq_line_view_netting_and_safety():
+    lines = [_boq2(x["line_id"], x["item_code"], x["unit"], x["element_id"]) for x in _index2()["lines"][:6]]
+    new, applied = A.apply_boq_lines(lines, _set2(), BASE)
+    by = {ln["line_id"]: ln for ln in new}
+    assert by["L-a"]["evidence_state"] == "PROVISIONAL" and by["L-a"]["measured_net"] == pytest.approx(5.88)
+    assert by["L-c"]["evidence_state"] == "EXCLUDED_WITH_REASON" and by["L-c"]["measured_net"] is None
+    assert by["L-d"]["evidence_state"] == "EXCLUDED_WITH_REASON" and "IGNORED_SMALL" in by["L-d"]["notes"]
+    s = new[-1]
+    assert len(new) == 7 and s["item_code"] == "STR.CONC.SAFETY" and s["measured_net"] == 1.0
+    assert s["evidence_state"] == "PROVISIONAL" and s["method_label"] == "SAFETY"
