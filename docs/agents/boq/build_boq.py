@@ -193,6 +193,7 @@ if STMT and KEYMAP and BENCH:
     by_code=collections.defaultdict(lambda:dict(rel=0.0,lo=0.0,hi=0.0,nb=0,blank=0,lo1=0.0,n1=0,n=0))
     for l in L['lines']:
         if l['class']=='EXCLUDED': continue
+        if l['item_code']=='ARCH.FACADE' and 'plinth' not in str(l.get('element_id')): continue  # same faces as FIN.EXT.FINISH: count once (plinth only)
         a=by_code[(l['item_code'],l['unit'])]; a['n']+=1
         if l['class']=='RELEASED': a['rel']+=l['measured_net'] or 0
         elif l['class']=='HELD':
