@@ -1547,7 +1547,7 @@
     "engine/source/arch_v3061.py:260 changes_for(): PLASTER_HEIGHT by line id, stale bindings and a paint change refused; engine/source/arch_v3061.py:322 check_plaster_height(); engine/source/arch_v3061.py:363 check_totals(); tests/t563_plaster_height/test_arch_v3061.py:118 (villa V563 by hand)",
     "engine/source/arch_v3069.py:147 _restate_entry() / engine/source/arch_v3069.py:147 _restate(): held finish lines restated from the merged ledgers; engine/source/arch_v3069.py:182 band_figure(); engine/source/arch_v3069.py:470 check_finishes(); tests/t687_finish_gate_b1/test_arch_v3069.py:126 (villa K687 by hand)",
     "engine/source/arch_v3074.py:178 _restate_entry() / engine/source/arch_v3074.py:369 _restate(): held plaster lines restated to merged bounds; engine/source/arch_v3074.py:405 _return_line(); engine/source/arch_v3074.py:238 band_figure(); engine/source/arch_v3074.py:562 check_finishes(); tests/t717_finish_gate_b2/test_arch_v3074.py:165 (villa F717 by hand)",
-    "engine/source/arch_v3077.py:152 _entry() / engine/source/arch_v3077.py:315 _restate(): paint range restated / return line excluded EDGE_AS_LM; engine/source/arch_v3077.py:273 _edge_line(); engine/source/arch_v3077.py:437 check_lines(); tests/t749_paint_wiring/test_arch_v3077.py:165 (villa W749 by hand)"
+    "engine/source/arch_v3077.py:152 _entry() / engine/source/arch_v3077.py:315 _restate(): paint range restated / return line excluded EDGE_AS_LM; engine/source/arch_v3077.py:273 _edge_line(); engine/source/arch_v3077.py:439 check_lines(); tests/t749_paint_wiring/test_arch_v3077.py:165 (villa W749 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.PAINT",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0.32 (engine/source/arch_v3032.py: FIN.PAINT.CEILING, opt-in candidate; pending Gate B, T-284) | ARCH_TAKEOFF_V3.0.41 (engine/source/arch_v3041.py, opt-in candidate; pending Gate B, T-431) | ARCH_TAKEOFF_V3.0.61 (engine/source/arch_v3061.py, opt-in candidate; pending Gate B, T-563) | ARCH_TAKEOFF_V3.0.69 (engine/source/arch_v3069.py, opt-in candidate; Gate B package T-687) | ARCH_TAKEOFF_V3.0.74 (engine/source/arch_v3074.py, opt-in candidate; Gate B package T-717) | ARCH_TAKEOFF_V3.0.77 (engine/source/arch_v3077.py, opt-in candidate; Gate B package T-749)",
@@ -1622,7 +1622,7 @@
    "next_slice": "S4",
    "evidence": [
     "tools/urban_boq_m9.py:1274 _v29_facade(): FIN.EXT.FINISH line per floor, held without a specification",
-    "engine/source/arch_v3077.py:152 _entry() / engine/source/arch_v3077.py:315 _restate(): paint range restated / return line excluded EDGE_AS_LM; engine/source/arch_v3077.py:273 _edge_line(); engine/source/arch_v3077.py:437 check_lines(); tests/t749_paint_wiring/test_arch_v3077.py:165 (villa W749 by hand)"
+    "engine/source/arch_v3077.py:152 _entry() / engine/source/arch_v3077.py:315 _restate(): paint range restated / return line excluded EDGE_AS_LM; engine/source/arch_v3077.py:273 _edge_line(); engine/source/arch_v3077.py:439 check_lines(); tests/t749_paint_wiring/test_arch_v3077.py:165 (villa W749 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.EXT.FINISH (held)",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0 passage piece (merged b1a6d6d, run length only) | ARCH_TAKEOFF_V3.0.77 (engine/source/arch_v3077.py, opt-in candidate; Gate B package T-749)",
@@ -8336,7 +8336,7 @@
     "FIN.PAINT.EDGE"
    ],
    "note": "T-749 (research/agents_t749/T-749_PAINT_WIRING_GATE_B.md): PAINT_GATE_B_V1 + PAINT_EDGE_GATE_B_V1 + EXT_PAINT_EDGE_GATE_B_V1 from the merged T-740 / T-746 / T-747 / T-751 ledgers as mapped by T-748 (hub H1P, OWNER RULE PAINT 2026-11-12): 5 HELD room paint lines restated by UP-FIN-PAINT-002, 30 return paint m2 lines EXCLUDED EDGE_AS_LM with 30 FIN.PAINT.EDGE lm lines added HELD (27 bounded 0 .. 33.80, 3 blank), 38 FIN.EXT.PAINT.EDGE lm lines added HELD (window edges 103.682251 by opening id, 3 windows blank; corner groups 179.535812 .. 180.735812 with the NO_HOST mouth arris); exterior door reveals once, under their return lines; every other line byte-identical; the Gate B integration package",
-   "task_commit": "2ced9bc9318128f3af8ba9bd11c125d4dc6a6af1"
+   "task_commit": "3886c03c75865565bab0f7ba339cc5c4cc2b9f7e"
   }
  ],
  "not_a_boq_line_codes": {

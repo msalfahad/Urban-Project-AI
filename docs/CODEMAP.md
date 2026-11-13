@@ -18,7 +18,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 5997 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 6002 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 90 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
@@ -479,7 +479,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3074.py` | 793 | MEDIUM | 6 | ARCH_TAKEOFF_V3.0.74 (T-717, lane I, PLASTER / PAINT GATE B ROUND 2 integration package, hub H1): the SAME opt-in BOQ |
 | `arch_v3075.py` | 738 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.75 (T-729, lane I, FORMWORK GATE B + CONCRETE ROUND 10 integration package, hub H5f + C10): the |
 | `arch_v3076.py` | 719 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.76 (T-736, lane I, BEADS + CEILING ROUND 3 integration package, hubs H2a / H1R + one Checker |
-| `arch_v3077.py` | 691 | MEDIUM | 2 | ARCH_TAKEOFF_V3.0.77 (T-749, lane I, PAINT RULE WIRING integration package, hub H1P; OWNER RULE PAINT 2026-11-12): |
+| `arch_v3077.py` | 693 | MEDIUM | 2 | ARCH_TAKEOFF_V3.0.77 (T-749, lane I, PAINT RULE WIRING integration package, hub H1P; OWNER RULE PAINT 2026-11-12): |
 | `arch_v308.py` | 680 | MEDIUM | 8 | ARCH_TAKEOFF_V3.0.8 (T-231): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.7 (engine.source.arch_v30, |
 | `arch_v309.py` | 591 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.9 (T-211, package V3.0.9a): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.8 |
 | `arch_walls.py` | 236 | HIGH | 5 | WALL RUNS AND THE ROOM GRAPH (M9 S3) - the walls of one floor plan by thickness, and which spaces each wall and |
@@ -2475,7 +2475,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t746/` | 7 |
 | `research/agents_t747/` | 7 |
 | `research/agents_t748/` | 10 |
-| `research/agents_t749/` | 7 |
+| `research/agents_t749/` | 12 |
 | `research/agents_t751/` | 7 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
