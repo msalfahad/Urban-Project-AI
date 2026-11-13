@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-314",
+  "merge_commit": "57e4a49f1ee260cb2f084fb1ea5f329512ec14c1",
+  "verdict_time": "2026-11-13 18:45 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED r4 (Verifier 2026-11-13T18:45Z per `date -u`, run session_01E6cPnevEPXrxckxv7c6ZAC, lock checker; GATE B PASS; merge 57e4a49f published by engine push, ls-remote confirmed; CODEMAP conflict only, rebuilt by tool, stale none, freeze 0; candidate ARCH_TAKEOFF_V3.0.78 f0c3a619 -> V3.0.79 aa0ec38a, master 1.80.0; no RELEASED line moved)",
+  "board_commit": "421b76ab"
+ }
+]
