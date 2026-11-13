@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T16:17Z | Verifier | SUCCESS | T-761 (Gate A), T-314 r3 (Gate B) | Drive OK. T-761 GATE A PASS MERGED 8d3bbf1c (fix rows, unwired until T-770): 80 blank STR.CONC -> 0, +58.42 m3 + 1.00 SAFETY; 3 own re-measures AGREE (parapet 1F 12.8892 m3 with NE-2 19.07 x 0.20 from DXF; beam strip 3.000 x 0.20 x 0.60 = 0.360; GB quarter ring 0.5419 m2 x 0.30); flags F-V761-1 lintel MIN 40 cm vs 0.15 (+0.24 m3), F-V761-2 edge strips 0.60 default. T-314 r3 GATE B REJECTED: content verified but its build_master_1_80_0 refuses (1.79.0 still pending T-738, T-738 merge skipped --promote); fix r4 = promote T-738 + T-314 together in 1.80.0. No candidate quantity change; no owner question. Delivery mode: T-180 slot not used. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T16:09Z | Worker 1 | STARTED | run session_01E6cPnaoCs3xtybW4TPPqEn | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T16:10Z | Verifier | STARTED | run session_01E6cPncoDue62LZ9QSUUVe3 | repo-attached routine | task state: per run log T-314 r3 READY (Gate B), T-761 READY (W1) | self-check pending
 - 2026-11-13 16:03 UTC | Worker 3 | STARTED | run session_01E6cPnaxJZLEvgVYkNFtWYm | repo-attached routine | task state: none yet | self-check pending
