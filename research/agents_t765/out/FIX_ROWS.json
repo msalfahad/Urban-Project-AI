@@ -1,0 +1,1759 @@
+{
+ "base": "agents/task-T-770 c4005ffa (V3.0.81)",
+ "blank_or_ranged_before": 91,
+ "candidate_version": "ARCH_TAKEOFF_V3.0.81",
+ "index_sha16": "3976b262611bc3bd",
+ "left_after": 0,
+ "overlap_with_MAIN_FILL_ALL": 0,
+ "rows": [
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 101.0064
+   },
+   "basis": "sum of the T-713 components = 101.0064 m2: GF-W22 12.9311 (2.9825 x 4.34, the T-488 printed figure of the D-27 pair [12.9311, 12.9439] (spread 0.1 %: below materiality)); GF-W20 3.9604 (drop wall U 4.239672 - 0.9308 x 0.30 (D-41 recess default)); GF-W31 5.3216 (drop wall U 5.630974 - 1.0311 x 0.30); GF-W32 8.8904 (drop wall U 9.127727 (D-GF-11 / -12 deducted) - 0.7911 x 0.30); GF-W34 9.8773 (drop wall U 10.4121 (T-482) - 1.7827 x 0.30); GF-W23 4.9920 (annex 1.30 x 3.84 (slab GF-139; annex storey 4.00 - 0.16)); GF-W24 15.5200 (annex 4.50 x 3.84 - D-GF-04 0.80 x 2.20); GF-W25 17.2800 (annex 4.50 x 3.84 (slab GF-137)); GF-W26 13.3750 (annex 4.45 x (4.00 - B4 0.50) - A-GF-01 1.00 x head 2.20); GF-W27 4.0000 (annex (0.0489 + 0.0011 + 1.45) x 3.84 - D-GF-02 0.80 x 2.20 (B4 slivers 0.05 m at 3.84: below materiality)); GF-W30 4.8585 (stub run 1.525 (T-103 hand) x 4.34 under the slab (no band bound, T-125 D) - D-GF-14 0.80 x 2.20)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-WALLS:walls t=0.15",
+   "item_code": "MAS.BLOCK",
+   "label": "ESTIMATE",
+   "line_id": "L-0d9b9e89bb6455da475d",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1262.5795
+   },
+   "basis": "GF-WALLS:walls t=0.15 parent: black face 101.0064 m2 x 12.5 / m2 (Q-75)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-dc7b4e20a2f54668b179",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.117383
+   },
+   "basis": "GF-WALLS:walls t=0.15 parent: black face 101.0064 m2 x 0.0110625 m3/m2 (1:4, Q-78; the released lines' rate)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-39a62186ff15c48d51d5",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.034983
+   },
+   "basis": "GF-WALLS:walls t=0.15 parent: black face 101.0064 m2 x 0.0003463 m3/m2 (this villa's released 0.15 black perimeter / face)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-a229ef96563932929757",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "GF-WALLS:walls t=0.15 parent: no white (AAC) wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-3594af8e0405355d51c4",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "GF-WALLS:walls t=0.15 parent: no white (AAC) wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-c9b56cb8453e5f67a334",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 181.8837
+   },
+   "basis": "sum of the T-713 components = 181.8837 m2: GF-W00 32.1750 (annex (5.45 + 4.45) x (4.00 - CB7 0.75); no opening); GF-W02 6.3360 (annex 1.65 x 3.84 (slab GF-139)); GF-W04 14.3025 (annex 5.85 x (4.00 - CB6 0.75) - D-GF-03 0.90 x 2.20 - W04 0.60 x 0.80 - W08 1.50 x 1.50 (T-201 elevations)); GF-W06 6.8000 (annex 2.50 x (4.00 - B2 0.40) - D-GF-01 1.00 x 2.20); GF-W17 11.1200 (annex 3.70 x (4.00 - CB5 / B1 0.40) - D-GF-05 1.00 x 2.20 (CB7 sliver 0.10 m at 3.60: below materiality)); GF-W18 13.5850 (annex 6.10 x (4.00 - B9 0.75) - W11 / W12 1.95 x (head 2.50 - sill 0.90) (elevation not readable, T-201)); GF-W35 6.2536 (annex 1.29 x 3.84 (slab GF-105) + 0.40 x (4.00 - B7 0.75)); GF-W36 1.7000 (member face 0.50 x (annex 4.00 - 0.60 default member)); GF-W08 11.9146 (lift wall 2.44 x 4.34 + 1.86 x 3.75 (B14) - D-GF-08 1.00 x 2.20 - L-GF-01 1.00 x 2.10 - tie face 0.75 x 1.80 (T-761 B14 section)); GF-W09 6.6600 (lift wall 1.80 x (4.50 - B1 0.40) - tie face 0.40 x 1.80 (T-761 B1)); GF-W13 2.5900 (lift wall 0.70 x (4.50 - B1 0.40) - tie face 0.40 x 0.70 (T-761 B1)); GF-W14 12.6760 (lift wall 2.66 x 4.10 (B2) + 1.24 x 3.75 (B7) - P-GF-01 0.90 x 2.20 - tie face 0.75 x 1.20 (T-761 B7)); GF-W15 21.2320 (run 7.10 gross 28.632 (CB4 / B2 / B1 / B20 heights) - W01 2.40 - D-GF-07 2.00 x 2.50 printed); GF-W10 8.2700 (stair-shaft piece 2.50 x (4.50 - B3 0.40) - D-GF-09 0.90 x 2.20 (the run's opening not in its established part)); GF-W03 9.9000 (2.64 x (4.50 - CB3 0.75): the slab-level beam of the 'CB3 and B3' pair (D-03; B3 0.40 would give 10.82)); GF-W12 1.8180 (drop wall U 1.953 - 0.45 x 0.30); GF-W16 14.5510 (drop wall U 15.435626 (W09 / W10 deducted) - 2.9489 x 0.30)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-WALLS:walls t=0.20",
+   "item_code": "MAS.BLOCK",
+   "label": "ESTIMATE",
+   "line_id": "L-4165954ce4871eda30cc",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1028.145
+   },
+   "basis": "GF-WALLS:walls t=0.20 parent: black face 82.2516 m2 x 12.5 / m2 (Q-75)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-e812502cb3615c2b9a56",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.213211
+   },
+   "basis": "GF-WALLS:walls t=0.20 parent: black face 82.2516 m2 x 0.01475 m3/m2 (1:4, Q-78; the released lines' rate)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-a6e9b9d47f2b81204b1e",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.093797
+   },
+   "basis": "GF-WALLS:walls t=0.20 parent: black face 82.2516 m2 x 0.0011404 m3/m2 (this villa's released 0.2 black perimeter / face)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-d69e452a4a19c1416858",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 448.3443
+   },
+   "basis": "GF-WALLS:walls t=0.20 parent: white face 99.6321 m2 x 4.5 kg/m2 (owner 2026-11-02)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "DEFAULT",
+   "line_id": "L-0e1c62793fcfd587bd78",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 637.6452
+   },
+   "basis": "GF-WALLS:walls t=0.20 parent: white face 99.6321 m2 x 6.4 / m2 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-1a2a8192895b1cb3a201",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 18.121
+   },
+   "basis": "sum of the T-713 components = 18.1210 m2: 1F-W04 2.8800 (BM-1F-032 piece 0.80 x (4.20 - 0.60 default member)); 1F-W07 7.2410 (lift wall gross 11.321 (B7 / B19 / slab) - D-1F-05 0.90 x 2.20 - L-1F-01 1.00 x 2.10); 1F-W10 8.0000 (stair-shaft piece 2.50 x (4.20 - B3 0.40) - W25 1.00 x 1.50 (T-201))",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "1F-WALLS:walls t=0.20",
+   "item_code": "MAS.BLOCK",
+   "label": "DEFAULT",
+   "line_id": "L-5ffa7157a2fe483dd008",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 90.5125
+   },
+   "basis": "1F-WALLS:walls t=0.20 parent: black face 7.2410 m2 x 12.5 / m2 (Q-75)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-4b1429e0aedd15f625fd",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.106805
+   },
+   "basis": "1F-WALLS:walls t=0.20 parent: black face 7.2410 m2 x 0.01475 m3/m2 (1:4, Q-78; the released lines' rate)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-298e323d027a4723652d",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.008257
+   },
+   "basis": "1F-WALLS:walls t=0.20 parent: black face 7.2410 m2 x 0.0011404 m3/m2 (this villa's released 0.2 black perimeter / face)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-0af727d388db346cacdf",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 48.96
+   },
+   "basis": "1F-WALLS:walls t=0.20 parent: white face 10.8800 m2 x 4.5 kg/m2 (owner 2026-11-02)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "DEFAULT",
+   "line_id": "L-5adcc762eca024e4cd94",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 69.632
+   },
+   "basis": "1F-WALLS:walls t=0.20 parent: white face 10.8800 m2 x 6.4 / m2 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-90c7f0aecafe7b4a51a1",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 64.8492
+   },
+   "basis": "sum of the T-713 components = 64.8492 m2: 1F-W11 13.9650 (2 x 0.12 x 3.70 + dome piece 4.01 x 3.70 (ring soffit, B4 0.50) - D-1F-01 0.80 x 2.20 in full (Q-73)); 1F-W13 10.8786 (dome pieces 3.4753 x 3.70 (east ring B4 same mark) - D-1F-09 0.90 x 2.20); 1F-W17 1.7187 (dome pieces 0.4645 x 3.70); 1F-W24 3.9135 (dome piece 1.0577 x 3.70); 1F-W14+W15 16.5255 (4.0927 x 4.04 (slab 1F-025, T-222 junction): P-1F-01 1.30 is outside the run (T-175)); 1F-W16 17.8480 (5.16 x 4.04 + 0.26 x (4.20 - B6 0.50 same mark) - D-1F-06 0.80 x 2.20 - A-1F-01 1.00 x 2.20)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "1F-WALLS:walls t=0.15",
+   "item_code": "MAS.BLOCK",
+   "label": "DEFAULT",
+   "line_id": "L-c22e309433e7b671cf2d",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 810.6156
+   },
+   "basis": "1F-WALLS:walls t=0.15 parent: black face 64.8492 m2 x 12.5 / m2 (Q-75)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-e5a117db55cf7c5caaab",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.717395
+   },
+   "basis": "1F-WALLS:walls t=0.15 parent: black face 64.8492 m2 x 0.0110625 m3/m2 (1:4, Q-78; the released lines' rate)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-fdbe5743c95c05ae9c19",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.02246
+   },
+   "basis": "1F-WALLS:walls t=0.15 parent: black face 64.8492 m2 x 0.0003463 m3/m2 (this villa's released 0.15 black perimeter / face)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-46ec36d9f39b1a93164e",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "1F-WALLS:walls t=0.15 parent: no white (AAC) wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-8e250abdcadfdbf33951",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "1F-WALLS:walls t=0.15 parent: no white (AAC) wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-d4c62b9df1e162be5e8b",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.765
+   },
+   "basis": "sum of the T-713 components = 1.7650 m2: 2F-W03 1.7650 (0.10 x (4.25 - 1.20 B15 adjacent span) + 2 x 0.20 x (4.25 - 0.60 default); gap 9.65 .. 13.90 (b_r 0))",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "2F-WALLS:walls t=0.15",
+   "item_code": "MAS.BLOCK",
+   "label": "DEFAULT",
+   "line_id": "L-246f3c09de4c6b90efe5",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "2F-WALLS:walls t=0.15 parent: no black wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-318e6311ab5e01c0fa3e",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "2F-WALLS:walls t=0.15 parent: no black wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-cdb8d54311c5c841528f",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "2F-WALLS:walls t=0.15 parent: no black wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-c10db6d6a0726d12b9b8",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 6.1775
+   },
+   "basis": "2F-WALLS:walls t=0.15 parent: white face 1.7650 m2 x 3.5 kg/m2 (owner 2026-11-02)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "DEFAULT",
+   "line_id": "L-d6373b9f427e4b599a5d",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 11.296
+   },
+   "basis": "2F-WALLS:walls t=0.15 parent: white face 1.7650 m2 x 6.4 / m2 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-6d9df440e35bc7c5551c",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 28.3687
+   },
+   "basis": "sum of the T-713 components = 28.3687 m2: 2F-W00 4.8300 (lift wall 1.80 x (4.25 - B2 0.40) - L-2F-01 1.00 x 2.10); 2F-W02s 8.1250 (stair-shaft piece 2.50 x (4.25 - B3 0.40) - W27 1.00 x 1.50 (T-201)); 2F-W02h 3.2655 (BM-2F-015 0.933 x (4.25 - B8 0.75 adjacent span)); 2F-W02r 0.3395 (length residual 0.097 x (4.25 - B8 0.75)); 2F-W05 2.5825 (BM-2F-017 1.20 + 0.05 x (4.25 - 0.60) - D-2F-02 0.90 x 2.20 (not in the established part)); 2F-W07 9.2262 (BM-2F-016 3.025 x (4.25 - B15 1.20 adjacent span))",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "2F-WALLS:walls t=0.20",
+   "item_code": "MAS.BLOCK",
+   "label": "ESTIMATE",
+   "line_id": "L-afe984a62285e133ec2f",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 92.6562
+   },
+   "basis": "2F-WALLS:walls t=0.20 parent: black face 7.4125 m2 x 12.5 / m2 (Q-75)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-c7e5807d75a4b93bf229",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.109334
+   },
+   "basis": "2F-WALLS:walls t=0.20 parent: black face 7.4125 m2 x 0.01475 m3/m2 (1:4, Q-78; the released lines' rate)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-4631ba5deb8ca9a53491",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.008453
+   },
+   "basis": "2F-WALLS:walls t=0.20 parent: black face 7.4125 m2 x 0.0011404 m3/m2 (this villa's released 0.2 black perimeter / face)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-2fc617d78b42e0735e64",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 94.3031
+   },
+   "basis": "2F-WALLS:walls t=0.20 parent: white face 20.9562 m2 x 4.5 kg/m2 (owner 2026-11-02)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "DEFAULT",
+   "line_id": "L-1023c410bd8c6ab7fade",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 134.12
+   },
+   "basis": "2F-WALLS:walls t=0.20 parent: white face 20.9562 m2 x 6.4 / m2 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-5245ce2427156823ff3b",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "GF-H01 0.60 m strip under B20: NO_PIECE (glazed line / strip; material, base, top not drawn, T-228): 0 blockwork per the main-chat default 2026-11-13 17:30",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-WALLS:walls t=0.40",
+   "item_code": "MAS.BLOCK",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-ff06449b7f61f19c418d",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "host NOT_APPLICABLE: no black wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.40",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-43f32c104c36f9bd85be",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "host NOT_APPLICABLE: no black wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.40",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-07e80def32e147b160ac",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "host NOT_APPLICABLE: no black wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.40#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-f57d9679c2acf87dc06b",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "host NOT_APPLICABLE: no white (AAC) wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.40",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-24d4696063cef72b0ddb",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "host NOT_APPLICABLE: no white (AAC) wall in this host (T-225 colour by wall, Q-60 fallback outer white / inner black)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.40",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-ee1c4e34adec6ee5813d",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 9.47
+   },
+   "basis": "W08 9.79 - D-2F-03 face 0.32 (T-696 U at b_r = 0); roof structural top +13.90 = the owner's 2F height datum (4.20 storey, plaster 4.04)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "item_code": "MAS.BLOCK",
+   "label": "DEFAULT",
+   "line_id": "L-e1e06ec149b44d4f6f8a",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 118.375
+   },
+   "basis": "2F part host: black face 9.4700 m2 x 12.5 / m2 (Q-75)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-c76dd0d11a5776939008",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.104762
+   },
+   "basis": "2F part host: black face 9.4700 m2 x 0.0110625 m3/m2 (1:4, Q-78; the released lines' rate)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-b765c24ac4b275c661bc",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.00328
+   },
+   "basis": "2F part host: black face 9.4700 m2 x 0.0003463 m3/m2 (this villa's released 0.15 black perimeter / face)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-d6c5a1c1ac4213684f49",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.85
+   },
+   "basis": "W05 part 1.00 x 3.85 (T-696 U at b_r = 0); roof structural top +13.90 = the owner's 2F height datum (4.20 storey, plaster 4.04)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "item_code": "MAS.BLOCK",
+   "label": "DEFAULT",
+   "line_id": "L-a6eedf5e4adec6d07618",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 48.125
+   },
+   "basis": "2F part host: black face 3.8500 m2 x 12.5 / m2 (Q-75)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-a9876502e10fb732bc6c",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.056787
+   },
+   "basis": "2F part host: black face 3.8500 m2 x 0.01475 m3/m2 (1:4, Q-78; the released lines' rate)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-3cdc29f2fadd13ef35d4",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.00439
+   },
+   "basis": "2F part host: black face 3.8500 m2 x 0.0011404 m3/m2 (this villa's released 0.2 black perimeter / face)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-5828bb6c90125f4ac3e4",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 21.945
+   },
+   "basis": "W01 6.93 + W06 15.015 (T-696 U at b_r = 0); roof structural top +13.90 = the owner's 2F height datum (4.20 storey, plaster 4.04)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "item_code": "MAS.BLOCK",
+   "label": "DEFAULT",
+   "line_id": "L-76a4d8e50423fb02b914",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 274.3125
+   },
+   "basis": "2F part host: black face 21.9450 m2 x 12.5 / m2 (Q-75)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-8075d1bd45ac1b2c5e77",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.323689
+   },
+   "basis": "2F part host: black face 21.9450 m2 x 0.01475 m3/m2 (1:4, Q-78; the released lines' rate)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-539af3a600dcf190cd01",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.025025
+   },
+   "basis": "2F part host: black face 21.9450 m2 x 0.0011404 m3/m2 (this villa's released 0.2 black perimeter / face)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-083709069040ee974c34",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 25.895
+   },
+   "basis": "W03 part 26.255 - D-2F-01 face 0.36 (T-696 U at b_r = 0); roof structural top +13.90 = the owner's 2F height datum (4.20 storey, plaster 4.04)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "item_code": "MAS.BLOCK",
+   "label": "DEFAULT",
+   "line_id": "L-9056ebed77701b50abfc",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 90.6325
+   },
+   "basis": "2F part host: white face 25.8950 m2 x 3.5 kg/m2 (owner 2026-11-02)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "DEFAULT",
+   "line_id": "L-bd48d897f8f11b6377ef",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 165.728
+   },
+   "basis": "2F part host: white face 25.8950 m2 x 6.4 / m2 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-25ee426cc7cc99a0fdff",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 16.225
+   },
+   "basis": "W02 9.865 + W07 6.36 parts (T-696 U at b_r = 0); roof structural top +13.90 = the owner's 2F height datum (4.20 storey, plaster 4.04)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "item_code": "MAS.BLOCK",
+   "label": "DEFAULT",
+   "line_id": "L-bbb82de298fecbafa11d",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 73.0125
+   },
+   "basis": "2F part host: white face 16.2250 m2 x 4.5 kg/m2 (owner 2026-11-02)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "DEFAULT",
+   "line_id": "L-4ccc5dc26bd2472b03ad",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 103.84
+   },
+   "basis": "2F part host: white face 16.2250 m2 x 6.4 / m2 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-45b7623964da3bbafd91",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 21.7875
+   },
+   "basis": "W04 21.7875 (T-696 U at b_r = 0); roof structural top +13.90 = the owner's 2F height datum (4.20 storey, plaster 4.04)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "item_code": "MAS.BLOCK",
+   "label": "DEFAULT",
+   "line_id": "L-e90c9dd5ca08ffb64728",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 98.0438
+   },
+   "basis": "2F part host: white face 21.7875 m2 x 4.5 kg/m2 (owner 2026-11-02)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "DEFAULT",
+   "line_id": "L-320814d3876198a0e9a1",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 139.44
+   },
+   "basis": "2F part host: white face 21.7875 m2 x 6.4 / m2 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-128f47fcdb032a1f2ddb",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 11.389
+   },
+   "basis": "MAIN_S run x 0.70 m, the only printed depth (T-407 / T-675); formation unprinted (Q-21 C)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "HOUSE_BELOW_NG:MAIN_S",
+   "item_code": "MAS.BLOCK",
+   "label": "ESTIMATE",
+   "line_id": "L-7503af7cc1eea4e6735d",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 142.3625
+   },
+   "basis": "below-ground run: black face 11.3890 m2 x 12.5 / m2 (Q-75)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:MAIN_S",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-bd21b0ea1ce4e1c8dabd",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.125991
+   },
+   "basis": "below-ground run: black face 11.3890 m2 x 0.0110625 m3/m2 (1:4, Q-78; the released lines' rate)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:MAIN_S",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-cf220ce7edefedd935b4",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.003945
+   },
+   "basis": "below-ground run: black face 11.3890 m2 x 0.0003463 m3/m2 (this villa's released 0.15 black perimeter / face)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:MAIN_S#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-b24efc9b17d005f76ce7",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 7.0
+   },
+   "basis": "ANNEX_S run 10.000 net x 0.70 m (reading L, D-35 open); one 0.15 leaf as MAIN_S",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "HOUSE_BELOW_NG:ANNEX_S",
+   "item_code": "MAS.BLOCK",
+   "label": "ESTIMATE",
+   "line_id": "L-ee857398614d817e6917",
+   "set": "MAS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 87.5
+   },
+   "basis": "below-ground run: black face 7.0000 m2 x 12.5 / m2 (Q-75)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-8971f07e8552cf3831c0",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.077437
+   },
+   "basis": "below-ground run: black face 7.0000 m2 x 0.0110625 m3/m2 (1:4, Q-78; the released lines' rate)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-17cea41ab1b8f2bdb19e",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.002424
+   },
+   "basis": "below-ground run: black face 7.0000 m2 x 0.0003463 m3/m2 (this villa's released 0.15 black perimeter / face)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-40e2063e8fc129aab6cb",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000556
+   },
+   "basis": "D-1F-03 w 0.80: precast 1.20 m (shortest standard >= w + 2 x 0.15) -> bearing 0.40 m x 0.001389375",
+   "before": {
+    "class": "HELD",
+    "high": 0.000888,
+    "low": 0.000555,
+    "net": null
+   },
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-03",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "label": "DEFAULT",
+   "line_id": "L-5b8280807d1cabdbe720",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000556
+   },
+   "basis": "D-1F-07 w 0.80: precast 1.20 m (shortest standard >= w + 2 x 0.15) -> bearing 0.40 m x 0.001389375",
+   "before": {
+    "class": "HELD",
+    "high": 0.000917,
+    "low": 0.000555,
+    "net": null
+   },
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-07",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "label": "DEFAULT",
+   "line_id": "L-ae1d4bef41f3c27ec8ad",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000556
+   },
+   "basis": "D-1F-10 w 0.80: precast 1.20 m (shortest standard >= w + 2 x 0.15) -> bearing 0.40 m x 0.001389375",
+   "before": {
+    "class": "HELD",
+    "high": 0.000917,
+    "low": 0.000555,
+    "net": null
+   },
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-10",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "label": "DEFAULT",
+   "line_id": "L-ba28032b9e9df2926781",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000556
+   },
+   "basis": "D-GF-10 w 0.80: precast 1.20 m (shortest standard >= w + 2 x 0.15) -> bearing 0.40 m x 0.001389375",
+   "before": {
+    "class": "HELD",
+    "high": 0.000908,
+    "low": 0.000555,
+    "net": null
+   },
+   "element_id": "MATERIAL:LINTEL_BEARING:D-GF-10",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "label": "DEFAULT",
+   "line_id": "L-dc668eb5431a839c451e",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000556
+   },
+   "basis": "D-1F-04 w 0.80: precast 1.20 m (shortest standard >= w + 2 x 0.15) -> bearing 0.40 m x 0.001389375",
+   "before": {
+    "class": "HELD",
+    "high": 0.000667,
+    "low": 0.000555,
+    "net": null
+   },
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-04",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "label": "DEFAULT",
+   "line_id": "L-e5cefb37cd4e0ab67fc5",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000417
+   },
+   "basis": "D-1F-09 w 0.90: precast 1.20 m (shortest standard >= w + 2 x 0.15) -> bearing 0.30 m x 0.001389375",
+   "before": {
+    "class": "HELD",
+    "high": 0.001112,
+    "low": 0.0,
+    "net": null
+   },
+   "element_id": "MATERIAL:LINTEL_BEARING:D-1F-09",
+   "item_code": "MAS.MORTAR.BLACK.LINTEL_BEARING",
+   "label": "DEFAULT",
+   "line_id": "L-686a15f1996005bed645",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 444.8295
+   },
+   "basis": "base 100.271 - default lintel faces 1.42 (W16 0.47, W19 0.24, W20 0.24, W24 0.47; 0.20 x shortest standard length, capped at the T-670 maximum) x 4.5",
+   "before": {
+    "class": "HELD",
+    "high": 451.2195,
+    "low": 444.4695,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "DEFAULT",
+   "line_id": "L-4b9a29d424ea40e0af8a",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 195.0187
+   },
+   "basis": "base 44.2975 - default lintel faces 0.96 (D-GF-09 0.24, W05 0.24, W06 0.24, W07 0.24; 0.20 x shortest standard length, capped at the T-670 maximum) x 4.5",
+   "before": {
+    "class": "HELD",
+    "high": 199.33875,
+    "low": 194.02875,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "DEFAULT",
+   "line_id": "L-6989349aef1cd4fa0940",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 204.822
+   },
+   "basis": "base 46.836 - default lintel faces 1.32 (W13 0.3, W21 0.24, W22 0.24, W23 0.24, W25 0.3; 0.20 x shortest standard length, capped at the T-670 maximum) x 4.5",
+   "before": {
+    "class": "HELD",
+    "high": 210.762,
+    "low": 203.562,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "item_code": "MAS.GLUE.AAC",
+   "label": "DEFAULT",
+   "line_id": "L-aa5532bb971eceac1b76",
+   "set": "MAS",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 699.9112
+   },
+   "basis": "base 56.2329 - D-1F-09 lintel face 1.20 x 0.20 = 55.9929 m2 x 12.5",
+   "before": {
+    "class": "HELD",
+    "high": 702.91125,
+    "low": 698.66125,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "item_code": "MAS.UNITS.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-1e61a4aaeb00aa711dcd",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.619421
+   },
+   "basis": "base 55.9929 m2 x 0.0110625",
+   "before": {
+    "class": "HELD",
+    "high": 0.622077,
+    "low": 0.618315,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "item_code": "MAS.MORTAR.BLACK",
+   "label": "DEFAULT",
+   "line_id": "L-866a6602ffa70d03f210",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 632.6464
+   },
+   "basis": "valued white host, base 98.8510 m2 x 6.4 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-54ba4f569a7c37de7c4c",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 277.36
+   },
+   "basis": "valued white host, base 43.3375 m2 x 6.4 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-356dacfc4b7952007c7d",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 291.3024
+   },
+   "basis": "valued white host, base 45.5160 m2 x 6.4 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-f78bc052b5ce391b2cac",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 28.5312
+   },
+   "basis": "valued white host, base 4.4580 m2 x 6.4 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-6444a86319689e07512c",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 35.776
+   },
+   "basis": "valued white host, base 5.5900 m2 x 6.4 (Q-60 supplier list 62.5 x 25 face; face not chosen)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "item_code": "MAS.UNITS.WHITE",
+   "label": "ESTIMATE",
+   "line_id": "L-859f0937ec4a656a21f7",
+   "set": "MAS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.018728
+   },
+   "basis": "low end of the T-696 pair: 0 held bands / pieces: the spread is the bound rounding (0.0012 m3, below materiality)",
+   "before": {
+    "class": "HELD",
+    "high": 0.019897,
+    "low": 0.018728,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-3b5eff6cf7e4128fa4c6",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.01036
+   },
+   "basis": "low end of the T-696 pair: 2 held bands, spread 0.0008 m3 (below materiality): the drawn joints",
+   "before": {
+    "class": "HELD",
+    "high": 0.011195,
+    "low": 0.01036,
+    "net": null
+   },
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-dfe9524c3d14b0030c36",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.027441
+   },
+   "basis": "high end of the T-696 pair: the held band and piece are valued by this set's dome default (top = ring soffit): their joints are built",
+   "before": {
+    "class": "HELD",
+    "high": 0.027441,
+    "low": 0.014744,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-43e616eea98ad2c1902e",
+   "set": "MAS",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.049797
+   },
+   "basis": "high end of the T-696 pair: the 18 held bands / 5 pieces are valued by this set's defaults (dome, lintel bearings): their joints are built",
+   "before": {
+    "class": "HELD",
+    "high": 0.049797,
+    "low": 0.028342,
+    "net": null
+   },
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#PERIMETER_JOINT",
+   "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+   "label": "ESTIMATE",
+   "line_id": "L-c596929191d328f3878c",
+   "set": "MAS",
+   "unit": "m3"
+  }
+ ],
+ "summary": {
+  "MAS.BLOCK_m2_after": 981.35,
+  "MAS.BLOCK_m2_released_before": 467.79,
+  "MAS.UNITS.BLACK_pcs_after": 7226.4,
+  "MAS.UNITS.BLACK_pcs_before": 2571.3,
+  "freelancer_blockwork_m2": 1260.69
+ }
+}
