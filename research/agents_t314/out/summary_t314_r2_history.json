@@ -1,0 +1,784 @@
+{
+ "base_v3_0_61": "2bc99980",
+ "identity": {
+  "added": 15,
+  "base_lines": 5073,
+  "diff": {
+   "vs_base": {
+    "ADDED": 15,
+    "CHANGED": 3,
+    "SAME": 5070
+   }
+  },
+  "faces": {
+   "face_lines": 18,
+   "faces": 126,
+   "openings": 38
+  },
+  "outside_rows": 5070,
+  "outside_rows_identical_to_base": 5070,
+  "outside_rows_sha256": "bc504d29c92aeac3c5921264575352472141d407f4154d99b7b373bc1b0b6591",
+  "replaced": 3,
+  "v3_0_62_lines": 5088
+ },
+ "log": {
+  "added": 15,
+  "by_state": {
+   "ASSUMED — OWNER-APPROVED": 1,
+   "DRAWING-CONFIRMED": 3,
+   "HELD": 14
+  },
+  "changed": 3,
+  "missing_items": [
+   {
+    "key": "FIN.EXT.CORNERS (all floors)",
+    "status": "HELD (bounded)",
+    "unit": "lm",
+    "why": "external arrises: own m.l line; needs an item code with a registry family (T-337 FILL_ITEMS 710.171878 .. 821.858800 m.l with blank slab-edge arris)"
+   },
+   {
+    "key": "FIN.EXT.COPING",
+    "status": "UNKNOWN",
+    "unit": "lm",
+    "why": "none printed"
+   },
+   {
+    "key": "FIN.EXT.DRIP",
+    "status": "UNKNOWN",
+    "unit": "lm",
+    "why": "nothing drawn; owner not answered"
+   },
+   {
+    "key": "FIN.EXT.CORNERS accessory (beads)",
+    "status": "UNKNOWN",
+    "unit": "lm",
+    "why": "accessory on the same arrises, never a second edge"
+   },
+   {
+    "key": "FIN.EXT.FRAME",
+    "status": "HELD",
+    "unit": "m2",
+    "why": "frame / band profile not detailed (designer)"
+   },
+   {
+    "key": "FIN.EXT.FINISH DIVIDER",
+    "status": "UNKNOWN",
+    "unit": "m2",
+    "why": "no top level printed (T-324)"
+   },
+   {
+    "key": "FIN.WP.UPTURN-ZONE-FACE (4 roofs)",
+    "status": "HELD",
+    "unit": "m2",
+    "why": "waterproofing trade's face below the parapet inner finish; with the inner face ONE face 94.123 .. 99.558 m2, never summed high + high"
+   }
+  ],
+  "piece": "FACADE_FACES"
+ },
+ "rows": [
+  {
+   "action": "CHANGE",
+   "after": {
+    "high": 249.954348,
+    "low": 248.178057,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "deduct_fixed": 30.783772,
+   "deduct_held": null,
+   "element": "STOREY",
+   "element_id": "1F-FACADE:facade",
+   "evidence_status": "HELD",
+   "faces": 18,
+   "faces_blank": 0,
+   "floor": "1F",
+   "gross": [
+    278.961829,
+    280.73812
+   ],
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "line_key": "L-8bb83e16cc7b104ab88b",
+   "net": [
+    248.178057,
+    249.954348
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 13,
+   "owner_q07_beside": 278.961829
+  },
+  {
+   "action": "CHANGE",
+   "after": {
+    "high": 410.179149,
+    "low": 376.694149,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "deduct_fixed": 59.150029,
+   "deduct_held": [
+    0.0,
+    33.485
+   ],
+   "element": "STOREY",
+   "element_id": "GF-FACADE:facade",
+   "evidence_status": "HELD",
+   "faces": 30,
+   "faces_blank": 0,
+   "floor": "GF",
+   "gross": [
+    469.329178,
+    469.329178
+   ],
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "line_key": "L-b05f70c92405dbcfbe62",
+   "net": [
+    376.694149,
+    410.179149
+   ],
+   "of_which_assumed": 10.56,
+   "openings": 20,
+   "owner_q07_beside": 469.329178
+  },
+  {
+   "action": "CHANGE",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 117.305
+   },
+   "after_state": "PROVISIONAL",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "deduct_fixed": 7.855,
+   "deduct_held": null,
+   "element": "STOREY",
+   "element_id": "2F-FACADE:facade",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "faces": 4,
+   "faces_blank": 0,
+   "floor": "2F",
+   "gross": [
+    125.16,
+    125.16
+   ],
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "line_key": "L-d52c4f763b19aedf8b8b",
+   "net": [
+    117.305,
+    117.305
+   ],
+   "of_which_assumed": 2.2,
+   "openings": 5,
+   "owner_q07_beside": 125.16
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 60.029307,
+    "low": 54.00748,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_OUTER",
+   "element_id": "1F-FACADE:PARAPET_OUTER:1F_ROOF",
+   "evidence_status": "HELD",
+   "faces": 14,
+   "faces_blank": 0,
+   "floor": "1F",
+   "gross": [
+    54.00748,
+    60.029307
+   ],
+   "line_id": "L-5a04a3ec70ce025ddd95",
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+   "net": [
+    54.00748,
+    60.029307
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": 48.106656
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 14.9
+   },
+   "after_state": "MEASURED",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_OUTER",
+   "element_id": "2F-FACADE:PARAPET_OUTER:2F_ROOF",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "faces": 4,
+   "faces_blank": 0,
+   "floor": "2F",
+   "gross": [
+    14.9,
+    14.9
+   ],
+   "line_id": "L-d503696a891174c1d837",
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+   "net": [
+    14.9,
+    14.9
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": 14.9
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 15.271022,
+    "low": 14.671022,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_OUTER",
+   "element_id": "GF-FACADE:PARAPET_OUTER:ANNEX_ROOF",
+   "evidence_status": "HELD",
+   "faces": 7,
+   "faces_blank": 0,
+   "floor": "GF",
+   "gross": [
+    14.671022,
+    15.271022
+   ],
+   "line_id": "L-7c48b6a481d71ac57c54",
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+   "net": [
+    14.671022,
+    15.271022
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": 14.671022
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 14.385
+   },
+   "after_state": "MEASURED",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_OUTER",
+   "element_id": "GF-FACADE:PARAPET_OUTER:GF_ROOF",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "faces": 3,
+   "faces_blank": 0,
+   "floor": "GF",
+   "gross": [
+    14.385,
+    14.385
+   ],
+   "line_id": "L-5816ca234f93f8947eb9",
+   "line_key": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+   "net": [
+    14.385,
+    14.385
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": 14.385
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 72.749795,
+    "low": 71.68859,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PLINTH",
+   "element_id": "GF-FACADE:PLINTH",
+   "evidence_status": "HELD",
+   "faces": 29,
+   "faces_blank": 0,
+   "floor": "GF",
+   "gross": [
+    71.68859,
+    72.749795
+   ],
+   "line_id": "L-0a6d30ea444e90e119bb",
+   "line_key": "NEW FIN.EXT.FINISH PLINTH GF",
+   "net": [
+    71.68859,
+    72.749795
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": null
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "after_state": "BLOCKED_RFI",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "SLAB_EDGE",
+   "element_id": "1F-FACADE:SLAB_EDGE",
+   "evidence_status": "HELD",
+   "faces": 7,
+   "faces_blank": 6,
+   "floor": "1F",
+   "gross": null,
+   "line_id": "L-22e75c3942faeeb6718a",
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE 1F",
+   "net": null,
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": null
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 4.30924,
+    "low": 1.85426,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "SLAB_EDGE",
+   "element_id": "GF-FACADE:SLAB_EDGE",
+   "evidence_status": "HELD",
+   "faces": 2,
+   "faces_blank": 0,
+   "floor": "GF",
+   "gross": [
+    1.85426,
+    4.30924
+   ],
+   "line_id": "L-e3ee1b7f7603762da446",
+   "line_key": "NEW FIN.EXT.FINISH SLAB-EDGE GF",
+   "net": [
+    1.85426,
+    4.30924
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": null
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 56.608545,
+    "low": 41.82353,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_INNER",
+   "element_id": "1F-FACADE:PARAPET_INNER:1F_ROOF",
+   "evidence_status": "HELD",
+   "faces": 1,
+   "faces_blank": 0,
+   "floor": "1F",
+   "gross": [
+    41.82353,
+    56.608545
+   ],
+   "line_id": "L-d4178f2108229818b472",
+   "line_key": "NEW FIN.EXT.PARAPET-INNER 1F +9.70",
+   "net": [
+    41.82353,
+    56.608545
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": null
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 14.15,
+    "low": 8.49,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_INNER",
+   "element_id": "2F-FACADE:PARAPET_INNER:2F_ROOF",
+   "evidence_status": "HELD",
+   "faces": 1,
+   "faces_blank": 0,
+   "floor": "2F",
+   "gross": [
+    8.49,
+    14.15
+   ],
+   "line_id": "L-fbda06a1ad25128c6a63",
+   "line_key": "NEW FIN.EXT.PARAPET-INNER 2F +13.90",
+   "net": [
+    8.49,
+    14.15
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": null
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 14.91405,
+    "low": 8.88843,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_INNER",
+   "element_id": "GF-FACADE:PARAPET_INNER:ANNEX_ROOF",
+   "evidence_status": "HELD",
+   "faces": 1,
+   "faces_blank": 0,
+   "floor": "GF",
+   "gross": [
+    8.88843,
+    14.91405
+   ],
+   "line_id": "L-c79492a8ed9c2c310d37",
+   "line_key": "NEW FIN.EXT.PARAPET-INNER ANNEX +4.30",
+   "net": [
+    8.88843,
+    14.91405
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": null
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 13.88495,
+    "low": 8.209433,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_INNER",
+   "element_id": "GF-FACADE:PARAPET_INNER:GF_ROOF",
+   "evidence_status": "HELD",
+   "faces": 1,
+   "faces_blank": 0,
+   "floor": "GF",
+   "gross": [
+    8.209433,
+    13.88495
+   ],
+   "line_id": "L-60877480b3303b0be233",
+   "line_key": "NEW FIN.EXT.PARAPET-INNER GF +5.50",
+   "net": [
+    8.209433,
+    13.88495
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": null
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 9.84653,
+    "low": 9.83151,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_TOP",
+   "element_id": "1F-FACADE:PARAPET_TOP:1F_ROOF",
+   "evidence_status": "HELD",
+   "faces": 1,
+   "faces_blank": 0,
+   "floor": "1F",
+   "gross": [
+    9.83151,
+    9.84653
+   ],
+   "line_id": "L-757343d535ae19b589bf",
+   "line_key": "NEW FIN.EXT.PARAPET-TOP 1F +9.70",
+   "net": [
+    9.83151,
+    9.84653
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": null
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 5.415
+   },
+   "after_state": "MEASURED",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_TOP",
+   "element_id": "2F-FACADE:PARAPET_TOP:2F_ROOF",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "faces": 1,
+   "faces_blank": 0,
+   "floor": "2F",
+   "gross": [
+    5.415,
+    5.415
+   ],
+   "line_id": "L-89d750dd0e9ced13f5ca",
+   "line_key": "NEW FIN.EXT.PARAPET-TOP 2F +13.90",
+   "net": [
+    5.415,
+    5.415
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": null
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 6.03701,
+    "low": 5.99701,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_TOP",
+   "element_id": "GF-FACADE:PARAPET_TOP:ANNEX_ROOF",
+   "evidence_status": "HELD",
+   "faces": 1,
+   "faces_blank": 0,
+   "floor": "GF",
+   "gross": [
+    5.99701,
+    6.03701
+   ],
+   "line_id": "L-54e708d3940d1932607c",
+   "line_key": "NEW FIN.EXT.PARAPET-TOP ANNEX +4.30",
+   "net": [
+    5.99701,
+    6.03701
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": null
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "high": 5.67398,
+    "low": 5.592956,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after_state": "BOUNDED_EXPOSURE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "deduct_fixed": 0.0,
+   "deduct_held": null,
+   "element": "PARAPET_TOP",
+   "element_id": "GF-FACADE:PARAPET_TOP:GF_ROOF",
+   "evidence_status": "HELD",
+   "faces": 1,
+   "faces_blank": 0,
+   "floor": "GF",
+   "gross": [
+    5.592956,
+    5.67398
+   ],
+   "line_id": "L-490fdc0ff59a0e66ca13",
+   "line_key": "NEW FIN.EXT.PARAPET-TOP GF +5.50",
+   "net": [
+    5.592956,
+    5.67398
+   ],
+   "of_which_assumed": 0.0,
+   "openings": 0,
+   "owner_q07_beside": null
+  }
+ ],
+ "totals_moved": {
+  "FIN.EXT.FINISH|m2": {
+   "base": {
+    "blocked_lines": 3,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 0.0
+   },
+   "v3_0_62": {
+    "blocked_lines": 1,
+    "bounded_lines": 13,
+    "held_high": 933.607926,
+    "held_low": 855.926427,
+    "lines": 18,
+    "released": 152.005
+   },
+   "view_base": {
+    "blank_lines": 3,
+    "bounded_lines": 0,
+    "held_range": null,
+    "lines": 3,
+    "released": null,
+    "status": "HELD",
+    "text": "HELD (3 blank lines)",
+    "valued_lines": 0
+   },
+   "view_v3_0_62": {
+    "blank_lines": 1,
+    "bounded_lines": 13,
+    "held_range": null,
+    "lines": 18,
+    "released": 152.005,
+    "status": "PARTIAL",
+    "text": "AT_LEAST 152.005 + HELD (14 lines: 13 bounded, 1 blank)",
+    "valued_lines": 4
+   }
+  }
+ },
+ "v3_0_62": "6021be27"
+}
