@@ -1,0 +1,266 @@
+{
+ "door_gf07_se": {
+  "1BFE": {
+   "dx": 1.9,
+   "handle": "1BFE",
+   "layer": "5",
+   "lv_hi": 1.0,
+   "lv_lo": 1.0,
+   "offset_from_jamb_1C00": -0.9
+  },
+  "1C00": {
+   "dx": 0.0,
+   "handle": "1C00",
+   "layer": "5",
+   "lv_hi": 3.5,
+   "lv_lo": 1.0,
+   "offset_from_jamb_1C00": 0.0
+  },
+  "1CF1": {
+   "dx": 0.0,
+   "handle": "1CF1",
+   "layer": "5",
+   "lv_hi": 3.483503,
+   "lv_lo": 1.0,
+   "offset_from_jamb_1C00": 0.035047
+  },
+  "1CF3": {
+   "dx": 0.0,
+   "handle": "1CF3",
+   "layer": "5",
+   "lv_hi": 3.479783,
+   "lv_lo": 1.0,
+   "offset_from_jamb_1C00": 0.039252
+  },
+  "220F": {
+   "dx": 1.0,
+   "handle": "220F",
+   "layer": "5",
+   "lv_hi": 3.5,
+   "lv_lo": 3.5,
+   "offset_from_jamb_1C00": 0.0
+  },
+  "2234": {
+   "dx": 0.964953,
+   "handle": "2234",
+   "layer": "5",
+   "lv_hi": 3.483503,
+   "lv_lo": 3.483503,
+   "offset_from_jamb_1C00": 0.035047
+  },
+  "223A": {
+   "dx": 0.960748,
+   "handle": "223A",
+   "layer": "5",
+   "lv_hi": 3.479783,
+   "lv_lo": 3.479783,
+   "offset_from_jamb_1C00": 0.039252
+  }
+ },
+ "dxf_sha16": "ab54dd554c31fe4a",
+ "nw_bands": {
+  "27B1": {
+   "dx": 1.238001,
+   "handle": "27B1",
+   "layer": "1",
+   "lv_hi": 5.5,
+   "lv_lo": 5.5
+  },
+  "27D6": {
+   "dx": 0.0,
+   "handle": "27D6",
+   "layer": "1",
+   "lv_hi": 5.3,
+   "lv_lo": 0.95
+  },
+  "27D7": {
+   "dx": 0.0,
+   "handle": "27D7",
+   "layer": "1",
+   "lv_hi": 6.0,
+   "lv_lo": 5.45
+  },
+  "27DF": {
+   "dx": 0.0,
+   "handle": "27DF",
+   "layer": "1",
+   "lv_hi": 6.0,
+   "lv_lo": 5.45
+  },
+  "27E0": {
+   "dx": 0.0,
+   "handle": "27E0",
+   "layer": "1",
+   "lv_hi": 5.3,
+   "lv_lo": 0.95
+  },
+  "27E2": {
+   "dx": 7.5,
+   "handle": "27E2",
+   "layer": "5",
+   "lv_hi": 5.5,
+   "lv_lo": 5.5
+  },
+  "27E4": {
+   "dx": 7.5,
+   "handle": "27E4",
+   "layer": "1",
+   "lv_hi": 5.3,
+   "lv_lo": 5.3
+  },
+  "27E5": {
+   "dx": 7.5,
+   "handle": "27E5",
+   "layer": "1",
+   "lv_hi": 5.45,
+   "lv_lo": 5.45
+  },
+  "27E6": {
+   "dx": 0.2,
+   "handle": "27E6",
+   "layer": "1",
+   "lv_hi": 4.95,
+   "lv_lo": 4.95
+  },
+  "27E9": {
+   "dx": 0.2,
+   "handle": "27E9",
+   "layer": "1",
+   "lv_hi": 4.95,
+   "lv_lo": 4.95
+  },
+  "2840": {
+   "dx": 1.238057,
+   "handle": "2840",
+   "layer": "1",
+   "lv_hi": 5.3,
+   "lv_lo": 5.3
+  },
+  "2841": {
+   "dx": 1.638057,
+   "handle": "2841",
+   "layer": "1",
+   "lv_hi": 5.3,
+   "lv_lo": 5.3
+  },
+  "2842": {
+   "dx": 1.638057,
+   "handle": "2842",
+   "layer": "1",
+   "lv_hi": 5.5,
+   "lv_lo": 5.5
+  },
+  "2843": {
+   "dx": 0.0,
+   "handle": "2843",
+   "layer": "1",
+   "lv_hi": 5.5,
+   "lv_lo": 5.3
+  },
+  "2844": {
+   "dx": 0.0,
+   "handle": "2844",
+   "layer": "1",
+   "lv_hi": 5.5,
+   "lv_lo": 5.3
+  },
+  "2845": {
+   "dx": 2.523886,
+   "handle": "2845",
+   "layer": "5",
+   "lv_hi": 5.3,
+   "lv_lo": 5.3
+  },
+  "2846": {
+   "dx": 2.523886,
+   "handle": "2846",
+   "layer": "5",
+   "lv_hi": 5.5,
+   "lv_lo": 5.5
+  }
+ },
+ "nw_parapet_band": {
+  "end_lines": [
+   {
+    "dx": 0.0,
+    "handle": "2792",
+    "layer": "1",
+    "lv_hi": 11.0,
+    "lv_lo": 5.5
+   },
+   {
+    "dx": 0.0,
+    "handle": "27B0",
+    "layer": "1",
+    "lv_hi": 11.0,
+    "lv_lo": 2.65
+   }
+  ],
+  "top_line": {
+   "dx": 4.807698,
+   "handle": "27CB",
+   "layer": "1",
+   "lv_hi": 11.0,
+   "lv_lo": 11.0
+  },
+  "verticals_inside_band": [
+   {
+    "handle": "2737",
+    "lv_hi": 11.0,
+    "lv_lo": 5.5,
+    "offset_from_27CB_start": 4.509439
+   },
+   {
+    "handle": "2A53",
+    "lv_hi": 11.0,
+    "lv_lo": 5.49065,
+    "offset_from_27CB_start": 4.666929
+   },
+   {
+    "handle": "2A52",
+    "lv_hi": 11.0,
+    "lv_lo": 5.444059,
+    "offset_from_27CB_start": 4.746112
+   },
+   {
+    "handle": "2A51",
+    "lv_hi": 11.0,
+    "lv_lo": 5.399187,
+    "offset_from_27CB_start": 4.781304
+   }
+  ]
+ },
+ "schema": "URBAN_T754_CENSUS_V1",
+ "se_over_mouth": {
+  "horizontals_4p70_5p60": [
+   {
+    "handle": "23EC",
+    "layer": "2",
+    "len": 2.2138,
+    "lv": 5.5,
+    "overlaps_mouth_span": false
+   },
+   {
+    "handle": "241B",
+    "layer": "1",
+    "len": 0.2,
+    "lv": 4.8,
+    "overlaps_mouth_span": false
+   },
+   {
+    "handle": "2428",
+    "layer": "5",
+    "len": 1.949685,
+    "lv": 4.8,
+    "overlaps_mouth_span": false
+   }
+  ],
+  "mouth_top": {
+   "dx": 2.3,
+   "handle": "2232",
+   "layer": "1",
+   "lv_hi": 4.7,
+   "lv_lo": 4.7
+  }
+ }
+}
