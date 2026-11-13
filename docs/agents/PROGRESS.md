@@ -1,5 +1,25 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-13 00:13 UTC (Lead). Previous version: 2026-11-12 20:14 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared
+lines, the slab); released: 0.
+
+Since 20:14 (newest first):
+- New candidate (not released): plaster corner beads joined it as their own lines, in metres, all held as ranges
+  (165.45 .. 165.65 m plus at least 128.63 m where an edge is not drawn; never 0). One duplicated ceiling face removed
+  (no quantity moved). The roof membrane correction is now applied: 115.832 m2 released -> held 115.66 .. 115.81 m2,
+  so released roof waterproofing reads 93.19 m2 (was 209.02); the held figure is kept beside it.
+- Exterior paint corners narrowed: 168.5 .. 182.1 m -> 178.1 .. 179.3 m; window edges outside 103.68 m (arched heads
+  walked along their curve; the earlier 106.02 m counted them as rectangles). Door edges and the first-floor slab edge
+  still held; a task closes them.
+- Drain pipes: the sanitary sheets say 'not to scale', so plan pipe lengths stay held (designer list); vertical pipes
+  from printed levels 32.40 m measured, one stack 13.50 .. 15.60 m bounded.
+- Next: paint by your rule into the candidate (now first), then tiles + stair finishes, exterior render, waterproofing,
+  earthworks. Idle slots count joinery and special metalwork (census only, nothing priced or released).
+
+Previous section (2026-11-12 20:14):
+
 Last update: 2026-11-12 20:14 UTC (Lead). Previous version: 2026-11-12 16:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Correction to the 16:20 text: the roof membrane correction record exists, but the checker found the new

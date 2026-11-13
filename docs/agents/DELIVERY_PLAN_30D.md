@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-13 00:13; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) + owner paint rule 2026-11-12 in force)
+
+- Candidate of record V3.0.76 9b35725c / master 1.77.0 (NOT RELEASED). Since 20:14 MERGED: T-751 (79766703), T-745 r2 (a650be13), T-736 Gate B (166fb1fd + f2eb70da: beads H2a 14 HELD lines, ceiling L-35341ff2 EXCLUDED, roof membrane L-636fd3ff RELEASED -> HELD by record DG-98cbadebaecc5ede).
+- Hub order: T-749 (paint rule wiring, interior + exterior incl. T-751 bounds; TODO W3) -> T-738 (tiles H3 + H3s) -> T-314 r3 exterior plaster -> T-750 H4 WP -> T-509 H5 earthworks. Gate A: T-752 metalwork census (W1), T-753 joinery census (W2), T-754 exterior paint edge residuals (W2 after T-753).
+- Confidence: beads + ceiling DONE 13 Nov (a day ahead of 14 Nov); paint wiring 14-15 Nov MEDIUM; tiles / stair finishes 15-16 Nov MEDIUM; exterior plaster 16-17 Nov MEDIUM; WP 17-18 Nov LOW-MEDIUM; 19-20 Nov blind test LOW while rebar is parked and the hub is serial.
+
 ## Status (Lead, 2026-11-12 20:14; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) + owner paint rule 2026-11-12 in force)
 
 - Candidate of record V3.0.75 a1eba08f / master 1.76.0 (NOT RELEASED). Since 16:20 MERGED: T-729 Gate B (05ca1a46 + 0963e4a1), T-743 (e9c61254), T-746 (faf8afcd), T-744 (e22534af), T-748 (071dc837), T-747 (a3f62c52); T-745 REJECTED r1 -> TODO r2. F-V748-1: V3.0.75 did not apply the roof membrane record DG-98cbadebaecc5ede -> carried by T-736.

@@ -1,5 +1,21 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-13 00:13 UTC
+
+Drive read OK (no file in the private project folders modified since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.76 / master 1.77.0 (NOT RELEASED; released V2.9 + route G untouched). 3 pieces merged since 20:14, each with the Checker's own re-measure on the drawings.
+- WATERPROOFING (m2): roof membrane correction now applied in the candidate: 115.832 released -> HELD 115.656 .. 115.814 (Checker re-measured the dome circles r 2.211 and the roof outline 146.375 AGREE); released roof WP 209.019 -> 93.187. No freelancer verdict moves.
+- PLASTER BEADS (m.l): new family in the candidate, 14 lines all HELD: 165.45 .. 165.65 bounded + at least 128.63 where an arris is not drawn (never closed, never 0); vs freelancer +9.8 % like for like unchanged. Ceiling: one duplicated face excluded (0 m2 moves; released ceiling 411.337 unchanged).
+- EXTERIOR PAINT EDGES (lm, research): corners 168.50 .. 182.05 -> 178.14 .. 179.34; window edges 103.68 (arched heads along their curve; 106.02 was rectangles, -2.34 ENGINE_RIGHT); entrance stone surround is not on the painted face (paint deduction 0). Door edges 0 .. 12.20 and 1F slab edge still HELD -> new task. Not yet wired.
+- DRAINAGE (lm, research): plan runs HELD (sheets print 'not to scale'); risers 32.40 MEASURED + 13.50 .. 15.60 BOUNDED.
+- Learned (section 7 ADOPTED): an opening edge is walked along its drawn outline, never its bounding box; a hub version reads the Checker record file before building its index, and a line with a blank part is AT_LEAST; a sheet that disclaims its scale yields no MEASURED length; a symbol is classified by content, not its block name.
+- Missing: paint by the owner rule not in the candidate yet (next package, now TODO); tiles, exterior plaster, WP after it. Idle slots: special-metalwork and joinery censuses (nothing priced, nothing released).
+- Team health: 12 runs since 20:14, all closed with a final line; self-check PASS everywhere incl. this run. Three idle worker runs (21:00-23:20) because every next row waited on a READY task; fixed by releasing T-749 / T-752 and two new lane A rows. Queue check 16 actionable, 0 flagged, 0 stall.
+- Gates: lowest open gate 1 (paint wiring, exterior edge residuals). M3 estimate 14-17 Nov (beads + ceiling landed a day early).
+
+OWNER PACKAGE: none today (no item meets section 2.7).
+
+NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
+
 ## LEAD REPORT 2026-11-12 20:14 UTC
 
 Drive read OK (no file in the private project folders modified since 12:00 UTC today, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.75 / master 1.76.0 (NOT RELEASED; released V2.9 + route G untouched). 7 MERGED since 16:20 (formwork + concrete package, sanitary census, label fix, opening edges, readiness, exterior paint); 1 rejected.
@@ -30,19 +46,3 @@ Drive read OK (no file in the private project folders modified since 12:00 UTC t
 OWNER PACKAGE: none today (no item meets section 2.7).
 
 NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
-
-## LEAD REPORT 2026-11-12 12:20 UTC
-
-Drive read OK (no file in the private project folders modified since 16:00 UTC 10 Nov, no photo task). Training villa: candidate of record now ARCH_TAKEOFF_V3.0.74 / master 1.75.0 (NOT RELEASED; released V2.9 + route G untouched). Development project 2 paused.
-- PLASTER / PAINT (m2): package PASSED Gate B (full suite to the end, 0 fail; own chain reproduced). FIN.PLASTER held 1,106.949 .. 1,302.169 (like for like -16.76 .. -8.68 % vs his figure, his 13.50 row apart); FIN.PAINT held 604.990 .. 710.006 (like for like -31.25 .. -24.48 %, unchanged); released figures unchanged. Your paint rule of today (paint = plaster of the same faces minus the band above false ceilings and minus tiled faces) becomes a new rule version with a normal and an adverse test; the about 500 m2 plaster-paint gap must be explained in full by bands, tiles, omissions and exterior faces (gate 1, first in finishes).
-- CONCRETE (m3): released 317 lines = 291.476251 unchanged. The 7 formwork lines with two disagreeing figures are settled from the drawing, one figure each (e.g. column 412 4.183916 .. 5.532116 m2; beam band 0.102019 m2 instead of 0); formwork + concrete round 10 is next in the candidate (V3.0.75).
-- EXTERIOR PLASTER (m2): ready against the current candidate (3 facade hosts live; 2F gross 125.160 checked by hand); one facade width printed two ways (GF upper bound -5.000 m2 if 2.00 governs) goes on the designer list.
-- WATERPROOFING (m2): roof membrane released 115.832 is 0.018026 above its own measured band (dome chord); a correction record is ready but the Checker's tool path refuses it: a small task gives the Checker that path.
-- EARTHWORKS (m3): your plan x depth 183.948 against engine 136.901 .. 163.479 reconciled over 90 terms to drawn causes (annex -31.560, unprinted lobby / court levels -18.522 .. 0, beam columns +3.036 .. +11.092; residual 0.000002); every density HELD (none printed).
-- Learned: any output rebuilt from candidate records must be rebuilt on the latest head just before hand-in (lesson adopted after its second occurrence).
-- Team health: 18 runs since 08:16, every one closed with a final line; self-check PASS everywhere; Checker 4 Gate A + 1 Gate B passed, 1 reject in 4 h. Board: queue check 18 actionable, 0 flagged, 0 stall.
-- Gates: lowest open gate 1 (formwork package, paint rule). M3 (reconciled quantities + scorecard): plaster / paint in the candidate today (done); formwork 13-14 Nov; all-trade statement redo 13 Nov; beads, tiles 15-16 Nov. Estimate 14-16 Nov stands.
-
-OWNER PACKAGE: none today (no item meets section 2.7). Two items added to DESIGNER_QUESTIONS.md (14, 15); send it when you choose.
-
-NEEDS FIXING (owner only): none new. PR #6 (decode) is merged, thank you: workers no longer re-encode by hand. Approved scheduled-task edits remain impossible under the repository settings (unchanged).

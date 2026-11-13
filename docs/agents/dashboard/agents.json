@@ -12,46 +12,46 @@
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-11-12T20:12:00Z",
+  "last_run": "2026-11-13T00:13:00Z",
   "result": "running",
-  "working_on": "Next candidate package (beads + ceiling) now open, carrying the roof membrane correction; exterior paint edges closure; drain runs rework (no scaled lengths); waterproofing package written",
-  "as_of": "2026-11-12T20:14:00Z"
+  "working_on": "Released paint wiring (first) and metalwork count; new joinery count and exterior paint edge residuals; lessons register updated",
+  "as_of": "2026-11-13T00:13:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-12T19:19:00Z",
+  "last_run": "2026-11-12T23:19:00Z",
   "result": "ok",
-  "working_on": "19:19 nothing to claim (queue thin, fixed); 17:20 room-label fix (merged); next: drain runs rework, then special-metalwork count",
-  "as_of": "2026-11-12T20:14:00Z"
+  "working_on": "23:19 nothing to claim (queue empty after merges; fixed); 21:20 drain runs rework (merged); next: special-metalwork count",
+  "as_of": "2026-11-13T00:13:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-12T18:40:00Z",
+  "last_run": "2026-11-12T22:41:00Z",
   "result": "ok",
-  "working_on": "18:40 exterior paint faces (merged); 16:40 window / door paint edges in metres (merged); next: exterior corner and edge lengths closure",
-  "as_of": "2026-11-12T20:14:00Z"
+  "working_on": "22:41 nothing to claim (fixed); 20:40 exterior corner and edge lengths (merged); next: joinery count, then exterior door / slab edges",
+  "as_of": "2026-11-13T00:13:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-11-12T19:01:00Z",
+  "last_run": "2026-11-12T23:00:00Z",
   "result": "ok",
-  "working_on": "19:01 drain runs count (sent back: sheets not to scale); 17:00 readiness + scorecard (merged); next: beads + ceiling package with the roof membrane correction",
-  "as_of": "2026-11-12T20:14:00Z"
+  "working_on": "23:00 nothing to claim (own package in check, merged 23:47); 21:00 beads + ceiling package with roof membrane correction (merged, V3.0.76); next: paint by your rule into the candidate",
+  "as_of": "2026-11-13T00:13:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-11-12T19:50:00Z",
+  "last_run": "2026-11-12T23:51:00Z",
   "result": "ok",
-  "working_on": "19:50 exterior paint merged, drain runs sent back; 17:51 three pieces merged; 15:51 formwork package merged (candidate V3.0.75)",
-  "as_of": "2026-11-12T20:14:00Z"
+  "working_on": "23:51 light run; 22:52 beads + ceiling package merged (candidate V3.0.76); 21:51 exterior paint edges and drain runs merged",
+  "as_of": "2026-11-13T00:13:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
