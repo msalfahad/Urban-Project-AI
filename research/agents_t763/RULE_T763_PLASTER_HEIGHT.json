@@ -1,0 +1,20 @@
+{
+ "schema": "URBAN_RESEARCH_RULE_V1",
+ "rule_id": "R-T763-1",
+ "revision": "r2 (2026-11-13, after the Checker's Gate A findings: the wet-room 2.70 ceiling default is kept, the split moves to the 3.00 m tile top; drawn openings; no midpoint of a bound whose causes have defaults)",
+ "title": "Interior plaster height = storey - slab; wet-room render / band split at the 3.00 m tile top under the 2.70 ceiling",
+ "scope": "every villa (values below are the owner's 2026-11-13 company figures; printed FFLs govern the storey; a printed ceiling, sill or head replaces the default)",
+ "provenance": "owner 2026-11-13 (DELIVERY_MODE.md s.3 heights; AGENT_BRIEF 'Heights', 'Company defaults' (false ceiling = clear height - 0.90, wet rooms / kitchen 2.70; head 2.20; sill wet 1.60), 'Wet-room wall tiles' 3.00 m for tile height only); Checker T-763 r1 finding (1) reading that honours both defaults",
+ "supersedes": "R-T556-1 roof-scenario plaster height (the D-39 / DCR-6 build-up bound) for the height of interior plaster",
+ "rule": {
+  "plaster_height_m": "H = storey (printed FFL to FFL) - slab 0.16: 4.34 GF, 4.04 upper floors, 3.84 GF annex (+0.30 .. +4.30)",
+  "false_ceiling_m": "dry rooms Hc = H - 0.90; wet rooms and kitchen 2.70 (company defaults, both kept as stated; never replaced by a derived physical bound)",
+  "wet_room": "render behind the tiles (FIN.PLASTER 'plaster') = run x 3.00 - drawn openings; band (FIN.PLASTER 'band above ceiling') = run x (H - 3.00), all above the 2.70 ceiling and unpainted; render + band = run x H - openings",
+  "openings": "drawn widths govern (door / passage gaps on the plan, window openings); head 2.20 default where none is printed; window sill / head from the vector elevations, else sill 1.60 wet / 0.90 dry and head 2.20",
+  "dry_room": "plaster = face run x H - openings - beam ends (MAIN_FILL_2)",
+  "stair_shaft": "full exposed height (Q-72), faces from F.F.L. to the slab soffit = F.F.L. - 0.16 (no floor build-up between, as the room rule)",
+  "labels": "DEFAULT where H / ceiling / heads come from the company defaults; DRAWING-READ replaces a figure when the designer prints it; ESTIMATE where a reading is chosen among drawn alternatives"
+ },
+ "never": ["a missing wall run or unread openings valued as 0", "one 1.00 x 2.20 doorway assumed where the drawing shows the openings", "the wet-room ceiling default replaced by max(H - 0.90, 3.00)", "the midpoint of a bound whose causes have owner defaults"],
+ "test": "tests/t763_plaster_height/test_t763_fill.py (normal + adverse, synthetic non-Alsenan rooms)"
+}
