@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T08:51Z | Verifier | STARTED | run session_01E6cPne27azJEEA6HAsZHsG | repo-attached routine | task state: READY none known (T-738 / T-755 rejected r1 -> TODO r2) | self-check pending
 - 2026-11-13 08:40 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13 08:30 UTC | Lead | SUCCESS | board | Since 04:17: T-754 MERGED 4bfa0e9f (PARTIAL 4/7, research); T-738 Gate B and T-755 Gate A REJECTED r1 -> TODO r2 with exact faults (t459 binding rebuild; live cause fields only); NEW T-756 exterior render/paint face ledger re-based for T-314 r3 (W2); 3 idle worker runs fixed; L-T738-1 / L-T755-1 PROPOSED; register: flush parapet screen = one face; candidate V3.0.77 unchanged; Drive OK, no new files; no owner package; queue check: 14 actionable rows, 0 flagged, 0 stall checks | self-check PASS/PASS/PASS (codemap, pytest t061, freeze); problem: none
 - 2026-11-13 08:14 UTC | Lead | STARTED | run session_01E6cPnd6BNiHNAjcy3bRpFs | repo-attached routine | task state: board | report pending
