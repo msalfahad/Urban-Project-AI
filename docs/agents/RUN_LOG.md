@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T10:51Z | Verifier | INCOMPLETE | none (overlap guard: run session_01E6cPnempse2wFh8LTJGZA9 STARTED 09:52Z, no final line, <75 min) | no check, no merge, no quantity change | self-check not run; problem: SUCCESS line refused: 'AGENT_ENV FAIL: run lock NOLOCK: a SUCCESS final line is refused; write the final line INCOMPLETE (lock NOLOCK) and end'
 - 2026-11-13 10:40 UTC | Worker 2 | SUCCESS | none | No claimable TODO row: board holds only MERGED / QUEUED (Lead-sequenced lane I packages T-314, T-363, T-364, T-424, T-502, T-509, T-513, T-750; rebar T-382 / T-664 parked) / PAUSED (T-450, T-451, T-472) / READY T-738 / IN PROGRESS T-180 / CLAIMED T-755 (worker 1); no REJECTED lane A work to rework. No quantity changed; no owner question. | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-11-13 10:40 UTC | Worker 2 | STARTED | run session_01E6cPncC4omx2xbAxscnyfL | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T09:52Z | Verifier | STARTED | run session_01E6cPnempse2wFh8LTJGZA9 | repo-attached routine | task state: READY T-738 r2 (W3 Gate B, 49d21678), T-756 (W2, 5e4c1355) per run log | self-check pending
