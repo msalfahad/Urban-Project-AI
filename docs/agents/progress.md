@@ -6,6 +6,8 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
 
 ## 0. For a fresh main-chat session (read this first)
 
+- DELIVERY MODE (owner 2026-11-13): docs/agents/DELIVERY_MODE.md is the operating document; the board was rebuilt around rows T-760 .. T-775 (FILL -> GENERALISE -> SECOND VILLA); the workbook docs/agents/boq/ is the scoreboard.
+
 - Role: the main chat is the owner's single point of contact and auditor for the agent team (Lead, Workers 1-3,
   Checker / Verifier; Scout paused). It records owner decisions on the board, writes the daily update (scheduled task
   trig_01QAPf5hzouxE6bZh9PAbEJ6, 07:31 Kuwait: run ledger + scorecard), keeps RUN_LOG.md to 24 h (older entries to
@@ -47,6 +49,7 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
 ## 2. Decisions by date
 
 ### 2026-11-13 (delivery reset)
+- OWNER: "we have been working on the project for more than 2 weeks and we havent reach a good progress ... reaching the level where i can send a project in pdf, dxf, dwg and i get the boq closer or more accurate to the freelancer excels. Fix the issues and re arrange". Main chat wrote DELIVERY_MODE.md, rebuilt AGENT_BRIEF.md, archived the board header notes and 301 MERGED rows, replaced the backlog with T-760 .. T-775, lightened the Checker gates, and asked the owner to halve the agent frequency (owner-only).
 - PLASTER HEIGHT: "4.5 and 4.2 is from slab to slab as we measured correct? which means depends on slab thickness for example 16cm. minus 4.2 so we get 4.04 plastering correct, check it." Checked: levels are finished-floor levels; engine used storey - 0.05 build-up - 0.16 slab = 4.29 / 3.99; owner rule = storey - slab = 4.34 (GF) / 4.04 (1F, 2F). Adopted; about +1 % plaster.
 - CLARIFIED: "5, not maxed 1m^2 for ignored i mean if there was an ignored (calculate by calculator the area manually) and for small peices if you know its under 0.05m^3 ignore them and add a safety of 1m^3 if they do not even reach 1m^3." -> ignore only pieces known < 0.05 m3; anything larger hand-calculated; safety 1 m3 if the ignored sum < 1 m3, else the sum.
 - HEIGHTS: "3. company default is correct however alsenan is 4m and 4.5m which will increase concrete, walls blocks, plastering, paint, ceramic on bathroom and walls etc." -> printed levels govern (GF 4.50, 1F / 2F 4.20 storeys on the drawings); false ceiling default = clear height - 0.90 m (GF ~3.40, 1F ~3.10), wet rooms 2.70 m.

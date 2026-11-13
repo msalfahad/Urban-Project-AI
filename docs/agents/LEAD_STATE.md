@@ -1,3 +1,5 @@
+> DELIVERY MODE (owner 2026-11-13): docs/agents/DELIVERY_MODE.md governs and wins over this document wherever they differ. Read it first.
+
 # LEAD STATE (at most 5 KB; the Lead rewrites it at the end of every run)
 
 Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log e121e0b4..`,

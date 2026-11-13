@@ -1,3 +1,5 @@
+> DELIVERY MODE (owner 2026-11-13): docs/agents/DELIVERY_MODE.md governs and wins over this document wherever they differ. Read it first.
+
 # Team: who leads, who does what, who checks (owner, 2026-10-18)
 
 The owner put the Lead in charge of the **whole engine**: the BOQ engine, the 17 product agents in `agents/`, and the

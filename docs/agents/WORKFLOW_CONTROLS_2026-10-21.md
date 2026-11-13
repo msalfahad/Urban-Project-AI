@@ -1,3 +1,5 @@
+> DELIVERY MODE (owner 2026-11-13): docs/agents/DELIVERY_MODE.md governs and wins over this document wherever they differ. Read it first.
+
 # Workflow controls (owner approval, 2026-10-21)
 
 Owner approved these controls in his main chat on 2026-10-21. They bind every agent from their next run, with or

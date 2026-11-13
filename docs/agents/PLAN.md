@@ -1,3 +1,5 @@
+> DELIVERY MODE (owner 2026-11-13): docs/agents/DELIVERY_MODE.md governs and wins over this document wherever they differ. Read it first.
+
 # Plan: an engine that is right on any Kuwait villa (owner, 2026-10-18)
 
 Every scheduled agent reads this file after MISSION.md and TEAM.md. MISSION.md says WHAT (gates, scoring, who is

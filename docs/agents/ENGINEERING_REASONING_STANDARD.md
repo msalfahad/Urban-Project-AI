@@ -1,3 +1,5 @@
+> DELIVERY MODE (owner 2026-11-13): docs/agents/DELIVERY_MODE.md governs and wins over this document wherever they differ. Read it first.
+
 # Engineering reasoning and problem-solving standard (owner directive, 2026-10-22)
 
 Permanent methodology for the Lead, Workers 1-3, the Checker and the audit done by the owner's main chat. ONE authoritative

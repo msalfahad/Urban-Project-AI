@@ -1,3 +1,5 @@
+> DELIVERY MODE (owner 2026-11-13): docs/agents/DELIVERY_MODE.md governs and wins over this document wherever they differ. Read it first.
+
 # Mission: an Urban BOQ engine a QS can trust
 
 North star (owner's master study, 17 Oct 2026, `URBAN_PROJECT_AI_MASTER_95PLUS`): from Kuwait villa drawings
@@ -369,14 +371,12 @@ Flow per trade: plan reader lists what is on the drawings -> worker makes the en
 compares engine vs plan-reader census vs freelancer -> every mismatch becomes a fix task or an owner question -> lead
 picks the next trade by gate, then by money at risk (rebar, concrete, waterproofing, aluminium first within a gate).
 
-## Gates a task must pass before the verifier merges it
+## Gates a task must pass before the verifier merges it (replaced 2026-11-13 by DELIVERY_MODE.md section 5)
 
-1. The scoreboard does not get worse on any trade (coverage down, silent omissions up or WAPE up all count as worse).
-2. Tests at the level `python3 -I tools/codemap.py impact <file>` recommends (L1-L4, CLAUDE.md) pass on the task head.
-3. Freeze check: `frozen artefacts differing from the index: 0`.
-4. No client drawing or client data is committed to this public repository.
-5. Definition of done (study §12): real code; a hand-calculated fixture with adversarial cases (mirror, rotation,
-   units, missing data); no historical regression; released / held / unsupported handled; missing never becomes 0.
+Gate A (a fix-row set): no frozen or version-file edit, no weakened test, no client data; freeze check 0; a label and a
+basis on every line; three lines re-measured by hand. Gate B (a wiring package): freeze 0; targeted tests of the changed
+modules; every line outside the package byte-identical; the export tool runs; the workbook rebuilt. The full suite runs
+once a day. Differences below materiality (0.05 m3 known pieces, 1 % of a line) are never rework.
 
 ## Reporting results to the owner (owner, 2026-10-19; applies to every agent)
 
@@ -393,7 +393,7 @@ docs/agents/PROGRESS.md in this form; the Verifier's SCOREBOARD.md supplies the 
 numbers of their task in their handoff in the same terms. Nothing is estimated: a number the run did not measure is
 written "not measured".
 
-## No assumptions (owner, 2026-10-18; applies to every agent)
+## No assumptions (owner, 2026-10-18) — SUPERSEDED 2026-11-13 by the fallback order in DELIVERY_MODE.md section 3 (defaults and allowances are allowed and labelled; a line is never left blank)
 
 Every measurement, count, quantity or classification follows the Urban rules the owner has set: the rule registry
 (`rules/`, 1.5.0), the knowledge registry, `research/urban_m9_n10/OWNER_DECISIONS_REGISTER.md` and every "Answered"
