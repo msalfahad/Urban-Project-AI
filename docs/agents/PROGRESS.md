@@ -1,5 +1,28 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-13 20:20 UTC (Lead). Previous version: 2026-11-13 08:25 UTC. Released default V2.9 + route G
+untouched. Candidate now V3.0.79 (exterior render / paint in); V3.0.81 with the main fill, formwork and concrete figures
+is with the checker. Progress is now counted your way: lines with no figure, and each trade against the freelancer.
+
+Since 08:25 (newest first):
+- Lines with no figure (not rebar): 691 in the candidate today; 295 once the package with the checker merges. The
+  earthworks, waterproofing and fence / site figures (all checked and merged as fix rows) go in with the next package.
+- Concrete: every blank line now has a figure (+58.42 m3 by defaults and hand calculation, 1.00 m3 safety line for small
+  pieces). Beams 78.2 .. 80.6 vs freelancer 66.09 m3 (+18 %): not explained yet; a task now splits it beam by beam.
+- Formwork: 1,098.0 -> 2,226.9 m2; no freelancer line to compare. The main-fill formwork figures counted some
+  members two to four times (checker confirmed on a beam by hand), so the face-by-face set is used instead.
+- Exterior render and paint: 1,008.6 .. 1,085.6 m2 each, in the candidate, vs freelancer 1,469.97 m2 (-26 .. -31 %,
+  measured face by face vs his run x height).
+- Roof finish 248.8 vs freelancer 285 m2 (-12.7 %). Waterproofing wet floors 85.58 vs 72.01 m2 (pantry 13.46 m2 is
+  the rule difference; the rest agrees within 0.2 %). Earthworks: excavation 336.5 m3, disposal 9.0 m3 (no freelancer
+  line). Fence block 95.44 vs 74.40 m2 (+28.3 %): cause being found.
+- Found: the boundary-wall foundation under the free fence runs is drawn 0.90 m wide (structural sheet 14), not the
+  0.40 m used for digging; this may add up to about 58.9 m3 of excavation. A task now splits the boundary into
+  under-building and fence runs before anything changes.
+- Plaster / paint fill sent back once (wet-room ceiling default and door widths); being redone now.
+
+Previous section (2026-11-13 08:25):
+
 Last update: 2026-11-13 08:25 UTC (Lead). Previous version: 2026-11-13 04:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). The candidate did not change either (still the 04:15 one). Your measure: whole BOQ lines independently
