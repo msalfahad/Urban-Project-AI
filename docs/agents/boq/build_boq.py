@@ -105,6 +105,57 @@ for row in mi.iter_rows(min_row=2):
     for c in row: c.font=F
 for i,w in enumerate([8,16,34,26,6,50,30],1): mi.column_dimensions[get_column_letter(i)].width=w
 
+# Key quantities sheet (shape of the QS office samples, owner upload 2026-11-13) + plausibility ratios
+def _agg(pred):
+    t=dict(rel=0.0,lo=0.0,hi=0.0,blank=0,n=0)
+    for l in L['lines']:
+        if l['class']=='EXCLUDED' or not pred(l): continue
+        t['n']+=1
+        if l['class']=='RELEASED': t['rel']+=l['measured_net'] or 0
+        elif l['class']=='HELD':
+            if l['held_low'] is None and l['held_high'] is None: t['blank']+=1
+            else: t['lo']+=float(l['held_low'] or 0); t['hi']+=float(l['held_high'] or l['held_low'] or 0)
+    return t
+KQ=[('Concrete (structural, all elements)','m3',lambda l:l['item_code'].startswith('STR.CONC')),
+    ('Rebar (detailed takeoff only; parked, approximate tons at the end)','kg',lambda l:l['item_code']=='STR.REBAR'),
+    ('Formwork','m2',lambda l:l['item_code'].startswith('STR.FORMWORK')),
+    ('Blockwork walls (net)','m2',lambda l:l['item_code']=='MAS.BLOCK'),
+    ('Blocks (black, count)','pcs',lambda l:l['item_code']=='MAS.UNITS.BLACK'),
+    ('Block mortar','m3',lambda l:l['item_code'].startswith('MAS.MORTAR')),
+    ('Floor finishes internal (porcelain + wet tile + marble)','m2',lambda l:l['item_code'] in ('FIN.FLOOR.PORCELAIN','FIN.FLOOR.WET_TILE','FIN.FLOOR.FINISH_HELD') or l['item_code'].startswith('FIN.MARBLE.') and l['unit']=='m2'),
+    ('Wall tiles','m2',lambda l:l['item_code']=='FIN.WALL.TILE'),
+    ('External floors (paving, porcelain, outdoor)','m2',lambda l:l['item_code'].startswith('EXT.FLOOR') or l['item_code']=='EXT.PAVING.INTERLOCK'),
+    ('Skirting (floor + stair)','lm',lambda l:l['item_code']=='FIN.SKIRTING' or l['item_code'].startswith('FIN.STAIR.SKIRTING')),
+    ('Plaster internal (dry rooms + wet-room backing + bands + reveals)','m2',lambda l:l['item_code']=='FIN.PLASTER' and l['unit']=='m2'),
+    ('Plaster / render external (facade + fence)','m2',lambda l:l['item_code'] in ('FIN.EXT.FINISH','ARCH.FACADE','EXT.FENCE.PLASTER')),
+    ('Corners and edges (beads, paint edges, exterior edges)','lm',lambda l:l['item_code'] in ('FIN.PLASTER.BEAD','FIN.PAINT.EDGE','FIN.EXT.PAINT.EDGE')),
+    ('Paint walls internal','m2',lambda l:l['item_code']=='FIN.PAINT'),
+    ('Paint ceilings','m2',lambda l:l['item_code']=='FIN.PAINT.CEILING'),
+    ('Ceilings (gypsum / decor)','m2',lambda l:l['item_code'] in ('FIN.CEILING','FIN.CEILING.BULKHEAD')),
+    ('Waterproofing membranes (wet rooms + roofs + foundations + pool)','m2',lambda l:(l['item_code'].startswith('FIN.WP') or l['item_code'].startswith('WP.')) and l['unit']=='m2'),
+    ('Roof layers (insulation + protection)','m2',lambda l:l['item_code'] in ('FIN.ROOF.INSULATION','FIN.ROOF.PROTECTION')),
+    ('Earthworks excavation','m3',lambda l:l['item_code']=='STR.EARTH.EXCAVATION'),
+    ('Earthworks backfill','m3',lambda l:l['item_code']=='STR.EARTH.BACKFILL'),
+    ('Openings: windows','m2',lambda l:l['item_code']=='ARCH.WINDOW' and l['unit']=='m2'),
+    ('Openings: doors (all kinds)','pcs',lambda l:l['item_code'].startswith('DOOR.') and l['unit']=='pcs'),
+    ('Sanitary fixtures (count)','pcs',lambda l:l['item_code'].startswith('MEP.') or 'SANITARY' in l['item_code'])]
+k=wb.create_sheet('Key quantities',1)
+k.append([f'Key quantities of {ver} in the shape of the QS office samples (owner upload 2026-11-13). Calculated = measured or filled with a label; held = ranges; blank = still no figure. Nothing priced.']); k['A1'].font=FB
+k.append([])
+k.append(['Quantity','Unit','Calculated','Held low','Held high','Blank lines','Lines','Per m2 internal floor','Sample band (OUTPUT_FORMAT_REFERENCE.md)'])
+for x in k[3]: x.font=FH; x.fill=HF; x.border=BR; x.alignment=Alignment(wrap_text=True,vertical='center')
+floor=_agg(KQ[6][2])['rel'] or 1.0
+BAND={'Concrete (structural, all elements)':'0.5 .. 0.9 m3/m2','Blockwork walls (net)':'2.5 .. 3.2','Plaster internal (dry rooms + wet-room backing + bands + reveals)':'with external: 5 .. 7','Paint walls internal':'3 .. 4 (walls + ceilings)','Corners and edges (beads, paint edges, exterior edges)':'about 2.5','Waterproofing membranes (wet rooms + roofs + foundations + pool)':'0.6 .. 0.9','Skirting (floor + stair)':'0.75 .. 1.0','Rebar (detailed takeoff only; parked, approximate tons at the end)':'120 .. 140 kg per m3 concrete (3 Kuwait villas)'}
+for name,unit,pred in KQ:
+    t=_agg(pred); i=k.max_row+1
+    k.append([name,unit,round(t['rel'],2),round(t['lo'],2) if t['lo'] else None,round(t['hi'],2) if t['hi'] else None,t['blank'],t['n'],f"=IFERROR(C{i}/{floor:.4f},0)",BAND.get(name,'')])
+k.append(['Rebar ratio check (detailed kg per m3 of calculated concrete)','kg/m3',f"=IFERROR(C5/C4,0)",None,None,None,None,None,'120 .. 140 expected; a low figure = the detailed takeoff is still partial'])
+for rw in k.iter_rows(min_row=4,max_row=k.max_row):
+    for x in rw: x.font=F; x.border=BR
+    for x in rw[2:5]: x.number_format='#,##0.00;-#,##0.00;-'
+    rw[7].number_format='0.00'
+for i,w in enumerate([58,6,13,12,12,10,7,16,44],1): k.column_dimensions[get_column_letter(i)].width=w
+
 # Compare sheet: candidate vs freelancer per trade section (owner 2026-11-13: reference comparison, never verification)
 if STMT and KEYMAP and BENCH:
     by_code=collections.defaultdict(lambda:dict(rel=0.0,lo=0.0,hi=0.0,nb=0,blank=0,lo1=0.0,n1=0,n=0))
