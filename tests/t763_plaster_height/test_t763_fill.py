@@ -85,6 +85,12 @@ def test_committed_fix_rows_are_labelled():
     ids = [r["line_id"] for r in d["rows"]]
     assert len(ids) == len(set(ids))
     for r in d["rows"]:
-        assert r["label"] in M.LABELS and r["basis"] and r["after"]["net"] > 0 and r["after"]["class"] == "RELEASED"
+        assert r["label"] in M.LABELS and r["basis"] and r["after"]["class"] == "RELEASED"
+        # a 0 is only a PAINT_EDGE determined zero naming its physical cause; nothing else is ever 0
+        assert r["after"]["net"] > 0 or (r["set"] == "PAINT_EDGE" and " 0: " in r["basis"])
+    # the wet-room render lines are never the old one-doorway default: every one names its drawn openings
+    for r in d["rows"]:
+        if r["set"] in ("PLASTER_WET", "RENDER_RESTATE"):
+            assert "doors" in r["basis"] and "1.00 x 2.20" not in r["basis"]
     for fam in M.FAMILIES:
         assert d["summary"][fam]["held_after"] == 0

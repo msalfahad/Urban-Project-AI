@@ -35,7 +35,8 @@ OUT = os.path.join(HERE, "out", "FIX_ROWS.json")
 OUT_MD = os.path.join(HERE, "out", "FIX_ROWS.md")
 T728 = os.path.join(HERE, "..", "agents_t728", "out", "T728_BEAD_RESTATEMENT.json")
 INDEX_SHA16 = "3976b262611bc3bd"     # sha256[:16] of LINE_INDEX_V3_0_81.json at agents/task-T-770 c4005ffa (r2)
-FAMILIES = ("FIN.PLASTER", "FIN.PAINT", "FIN.PLASTER.BEAD")
+FAMILIES = ("FIN.PLASTER", "FIN.PAINT", "FIN.PLASTER.BEAD", "FIN.PAINT.EDGE")
+T746 = os.path.join(HERE, "..", "agents_t746", "out", "T746_PAINT_EDGES.json")
 LABELS = ("MEASURED", "DRAWING-READ", "DEFAULT", "ESTIMATE", "SAFETY")
 
 SLAB = 0.16
@@ -239,6 +240,46 @@ def build(index_path, t728_path=T728):
                              f"{eid.split(':')[0]}: (2 x 2.20 head default + {head_len:.4f}) = {perim:.4f} lm x depth 0.15 "
                              f"(as the released THROUGH reveals); {why}", "REVEAL"))
 
+    # 5. interior paint edges (lm, UP-FIN-PAINT-002 'edges' reading B, merged T-746 per-part causes): each open part closed
+    #    by one physical reading; a determined 0 carries its cause, a part without a size takes the reveal defaults above
+    t746 = {x["paint_element"].rsplit(":", 1)[0]: x for x in json.load(open(T746))["return_rows"]}
+    held_size = {"GF-REVEAL-A-GF-01": (1.223795, "arch A-GF-01: head = the drawn arc 1.2238 (T-238) + 2 jambs x 2.20 head default"),
+                 "1F-REVEAL-A-1F-01": (1.00, "arch A-1F-01: width 1.00, drawn on no view: straight head + 2 jambs x 2.20 default"),
+                 "GF-REVEAL-D-GF-15": (1.00, "gate D-GF-15: width 1.00 (T-602 drawn) + 2 jambs x 2.20 head default")}
+    for l in L:
+        if l["item_code"] != "FIN.PAINT.EDGE" or l["class"] != "HELD":
+            continue
+        k = l["element_id"].rsplit(":", 1)[0]
+        x = t746.get(k)
+        if x is None:
+            raise ValueError(f"{l['element_id']}: no T-746 return row")
+        if x["status"] == "HELD":
+            key = next(h for h in held_size if l["element_id"].startswith(h))
+            w, why = held_size[key]
+            rows.append(line_row(l, w + 2 * HEAD, "DEFAULT", f"{x['opening']}: no frame drawn, painted return = 2 x h + w: {why}",
+                                 "PAINT_EDGE"))
+            continue
+        parts = {p["part"]: p for p in x["parts"]}
+        if abs(sum(float(p["lm"][1]) for p in x["parts"]) - l["held_high"]) > 1e-6:
+            raise ValueError(f"{l['element_id']}: T-746 parts differ from the line bound (stale ledger)")
+        v, why, lab = 0.0, [], "ESTIMATE"
+        jc = parts["JAMBS"]["cause"]
+        for name, p in parts.items():
+            lo, hi = float(p["lm"][0]), float(p["lm"][1])
+            if lo == hi:
+                v += lo; why.append(f"{name} {lo:g} ({p['cause']}, merged)")
+            elif p["cause"] == "WET_BOTH_SIDES_TILE_NOT_ESTABLISHED":
+                lab = "DEFAULT"
+                why.append(f"{name} 0: tiled to 3.00 m on both sides (owner 2026-11-13) over the 2.20 head, a determined zero")
+            elif p["cause"] == "FRAME_COVERAGE_NOT_PRINTED" and name == "HEAD" and jc == "FRAME_COVERS_RETURN_DRAWN":
+                why.append("HEAD 0: the frame drawn over the full wall depth at both jambs is one three-sided lining, so it covers "
+                           "the head return too (determined zero by the drawn frame)")
+            elif p["cause"] == "FRAME_COVERAGE_NOT_PRINTED" and jc == "FRAME_COVERAGE_NOT_PRINTED":
+                v += hi; why.append(f"{name} {hi:g}: no frame posts drawn over the wall depth, the return is plastered and painted")
+            else:
+                raise ValueError(f"{l['element_id']}: part {name} cause {p['cause']} has no closing reading")
+        rows.append(line_row(l, v, lab, f"{x['opening']} ({x['rooms']}): " + "; ".join(why), "PAINT_EDGE"))
+
     # 4. corner beads: one line per host, its own arrises (T-728 restatement, merged), blank arrises by default
     hosts = bead_hosts(t728_path)
     for l in L:
@@ -257,7 +298,9 @@ def build(index_path, t728_path=T728):
     assert len(ids) == len(set(ids)), "a line written twice"
     held_left = [l["line_id"] for l in L if l["item_code"] in FAMILIES and l["class"] == "HELD" and l["line_id"] not in ids]
     assert not held_left, f"held lines left without a figure: {held_left}"
-    assert all(r["label"] in LABELS and r["basis"] and r["after"]["net"] > 0 for r in rows)
+    assert all(r["label"] in LABELS and r["basis"] for r in rows)
+    # a figure is > 0, except a PAINT_EDGE determined zero that names its physical cause
+    assert all(r["after"]["net"] > 0 or (r["set"] == "PAINT_EDGE" and " 0: " in r["basis"]) for r in rows)
     return sha, idx.get("candidate_version"), rows, L
 
 
