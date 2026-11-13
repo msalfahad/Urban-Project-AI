@@ -1,0 +1,141 @@
+{
+ "schema": "MAIN_CHAT_FIX_ROWS_V1",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.78",
+ "source": "released ARCH.FACADE_RUN x owner storey heights - opening areas",
+ "rows": [
+  {
+   "set": "FACADE",
+   "line_id": "L-348c4d8d32f3f6d35fe5",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "element_id": "2F-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 117.14
+   },
+   "label": "ESTIMATE",
+   "basis": "2F facade run 29.8 lm x storey 4.2 (slab to slab) = 125.16 - openings 8.02 [arch_window 5.82; door_external_aluminium 2.20] (sample QS method; parapets and returns not included)"
+  },
+  {
+   "set": "FACADE",
+   "line_id": "L-43527ae4e8ec75c56636",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "element_id": "1F-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 231.3317
+   },
+   "label": "ESTIMATE",
+   "basis": "1F facade run 63.168865 lm x storey 4.2 (slab to slab) = 265.31 - openings 33.98 [arch_window 10.69; arch_window 23.29] (sample QS method; parapets and returns not included)"
+  },
+  {
+   "set": "FACADE",
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "1F-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 231.3317
+   },
+   "label": "ESTIMATE",
+   "basis": "1F facade run 63.168865 lm x storey 4.2 (slab to slab) = 265.31 - openings 33.98 [arch_window 10.69; arch_window 23.29] (sample QS method; parapets and returns not included)"
+  },
+  {
+   "set": "FACADE",
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "GF-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 413.7791
+   },
+   "label": "ESTIMATE",
+   "basis": "GF facade run 105.886694 lm x storey 4.5 (slab to slab) = 476.49 - openings 62.71 [arch_window 47.15; door_main_entrance 5.00; door_external_aluminium 10.56] (sample QS method; parapets and returns not included)"
+  },
+  {
+   "set": "FACADE",
+   "line_id": "L-c0e9a4c62171de1f369b",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "element_id": "GF-FACADE:facade below F.F.L. (plinth)",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 105.8867
+   },
+   "label": "ESTIMATE",
+   "basis": "plinth: GF facade run 105.886694 lm x 1.0 m (printed F.F.L. +1.00 above ground; no openings)"
+  },
+  {
+   "set": "FACADE",
+   "line_id": "L-cc7dc0a51f3319a99482",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "element_id": "GF-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 413.7791
+   },
+   "label": "ESTIMATE",
+   "basis": "GF facade run 105.886694 lm x storey 4.5 (slab to slab) = 476.49 - openings 62.71 [arch_window 47.15; door_main_entrance 5.00; door_external_aluminium 10.56] (sample QS method; parapets and returns not included)"
+  },
+  {
+   "set": "FACADE",
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "2F-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 117.14
+   },
+   "label": "ESTIMATE",
+   "basis": "2F facade run 29.8 lm x storey 4.2 (slab to slab) = 125.16 - openings 8.02 [arch_window 5.82; door_external_aluminium 2.20] (sample QS method; parapets and returns not included)"
+  }
+ ],
+ "not_filled": []
+}

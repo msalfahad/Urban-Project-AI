@@ -127,7 +127,7 @@ KQ=[('Concrete (structural, all elements)','m3',lambda l:l['item_code'].startswi
     ('External floors (paving, porcelain, outdoor)','m2',lambda l:l['item_code'].startswith('EXT.FLOOR') or l['item_code']=='EXT.PAVING.INTERLOCK'),
     ('Skirting (floor + stair)','lm',lambda l:l['item_code']=='FIN.SKIRTING' or l['item_code'].startswith('FIN.STAIR.SKIRTING')),
     ('Plaster internal (dry rooms + wet-room backing + bands + reveals)','m2',lambda l:l['item_code']=='FIN.PLASTER' and l['unit']=='m2'),
-    ('Plaster / render external (facade + fence)','m2',lambda l:l['item_code'] in ('FIN.EXT.FINISH','ARCH.FACADE','EXT.FENCE.PLASTER')),
+    ('Plaster / render external (facade + plinth + fence)','m2',lambda l:l['item_code'] in ('FIN.EXT.FINISH','EXT.FENCE.PLASTER') or (l['item_code']=='ARCH.FACADE' and 'plinth' in str(l.get('element_id')))),
     ('Corners and edges (beads, paint edges, exterior edges)','lm',lambda l:l['item_code'] in ('FIN.PLASTER.BEAD','FIN.PAINT.EDGE','FIN.EXT.PAINT.EDGE')),
     ('Paint walls internal','m2',lambda l:l['item_code']=='FIN.PAINT'),
     ('Paint ceilings','m2',lambda l:l['item_code']=='FIN.PAINT.CEILING'),
@@ -155,6 +155,37 @@ for rw in k.iter_rows(min_row=4,max_row=k.max_row):
     for x in rw[2:5]: x.number_format='#,##0.00;-#,##0.00;-'
     rw[7].number_format='0.00'
 for i,w in enumerate([58,6,13,12,12,10,7,16,44],1): k.column_dimensions[get_column_letter(i)].width=w
+
+# Cross-check sheet: our figure vs the owner's parallel run of the same engine (13 Nov 2026, "blind BOQ" PDF) vs the freelancer
+XC=[('Concrete total (all elements)','m3',lambda l:l['item_code'].startswith('STR.CONC'),323.20,'+14.6..42.5 range',352.44),
+    ('Blinding','m3',lambda l:l['item_code']=='STR.CONC.BLINDING',None,'7.28..16.89 range (footings only)',47.06),
+    ('Footings','m3',lambda l:l['item_code']=='STR.CONC.FOOTING',66.26,'',77.63),
+    ('Suspended beams','m3',lambda l:l['item_code']=='STR.CONC.BEAM',69.00,'+4.27..10.25 range',65.97),
+    ('Suspended slabs','m3',lambda l:l['item_code']=='STR.CONC.SLAB',64.29,'',59.82),
+    ('Rebar (detailed, t)','t',lambda l:l['item_code']=='STR.REBAR',16.39,'partial extract',44.19),
+    ('Blockwork net','m2',lambda l:l['item_code']=='MAS.BLOCK',1092.1,'wall band x height - openings, all walls',1260.7),
+    ('Floor tiles internal (+ unallocated)','m2',lambda l:l['item_code'] in ('FIN.FLOOR.PORCELAIN','FIN.FLOOR.WET_TILE','FIN.FLOOR.FINISH_HELD') or l['item_code'].startswith('FIN.MARBLE.') and l['unit']=='m2',376.3,'254.8 + 121.5 unallocated',409.6),
+    ('Skirting','lm',lambda l:l['item_code']=='FIN.SKIRTING',185.5,'',282.9),
+    ('Wet-wall porcelain','m2',lambda l:l['item_code']=='FIN.WALL.TILE',308.3,'at 2.70 m',433.8),
+    ('Wet floor membrane','m2',lambda l:l['item_code']=='FIN.WP.FLOOR',62.8,'',72.0),
+    ('Roof membrane','m2',lambda l:l['item_code']=='FIN.WP.ROOF',138.6,'main roof +9.70 only',285.0),
+    ('Windows area','m2',lambda l:l['item_code']=='ARCH.WINDOW' and l['unit']=='m2',48.7,'default heights',116.9),
+    ('Internal dry plaster','m2',lambda l:l['item_code']=='FIN.PLASTER' and l['unit']=='m2',732.8,'clear height (lower than the owner rule)',1209.4),
+    ('External render','m2',lambda l:l['item_code']=='FIN.EXT.FINISH' or (l['item_code']=='ARCH.FACADE' and 'plinth' in str(l.get('element_id'))),769.2,'primary facade, no plinth / parapets',1502.8),
+    ('Internal wall paint','m2',lambda l:l['item_code']=='FIN.PAINT',553.8,'dry rooms only',1249.4)]
+x=wb.create_sheet('Cross-check',2)
+x.append([f'Three-way check: this workbook ({ver} with fills) vs the parallel run of the same engine on 13 Nov 2026 vs the freelancer. Nothing here is verified; a difference is a question, not an error.']); x['A1'].font=FB
+x.append([])
+x.append(['Item','Unit','Ours calculated','Ours held low','Ours held high','Ours blank lines','Parallel run 13 Nov','Parallel run note','Freelancer','Ours vs freelancer %','Parallel vs freelancer %'])
+for c in x[3]: c.font=FH; c.fill=HF; c.border=BR; c.alignment=Alignment(wrap_text=True,vertical='center')
+for name,unit,pred,par,note,fr in XC:
+    t=_agg(pred); i=x.max_row+1; div=1000.0 if unit=='t' else 1.0
+    x.append([name,unit,round(t['rel']/div,2),round(t['lo']/div,2) if t['lo'] else None,round(t['hi']/div,2) if t['hi'] else None,t['blank'],par,note,fr,f"=IFERROR((C{i}-I{i})/I{i},\"\")",f"=IFERROR((G{i}-I{i})/I{i},\"\")"])
+for rw in x.iter_rows(min_row=4,max_row=x.max_row):
+    for c in rw: c.font=F; c.border=BR
+    for c in (rw[2],rw[3],rw[4],rw[6],rw[8]): c.number_format='#,##0.00;-#,##0.00;-'
+    rw[9].number_format='0%'; rw[10].number_format='0%'
+for i,w in enumerate([36,6,13,12,12,10,14,36,12,14,14],1): x.column_dimensions[get_column_letter(i)].width=w
 
 # Compare sheet: candidate vs freelancer per trade section (owner 2026-11-13: reference comparison, never verification)
 if STMT and KEYMAP and BENCH:

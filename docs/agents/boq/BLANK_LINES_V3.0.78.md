@@ -13,7 +13,7 @@ make it DRAWING-READ instead of DEFAULT.
 | Blockwork | 102 | 15 | confirm the blockwork wall height rule: storey - slab - beam depth (beam 0.60 default), or slab to slab minus beam only; same as blockwork; same as white blocks; which walls are white AAC and the AAC block face size |
 | Plaster | 8 | 33 | none (counted from the plan); the opening heights A-GF-01, A-1F-01, D-GF-15 |
 | Paint | 3 | 31 | same opening heights |
-| External render | 13 | 35 | confirm external render = outer perimeter x slab-to-slab height - openings, parapets both faces; same + plinth height below F.F.L.; same opening sizes |
+| External render | 6 | 35 | same opening sizes |
 | Tiles | 4 | 5 | confirm wall-tile height: to the decor ceiling (Q-48) = 2.70 default; finish of the room |
 | Ceilings | 7 | 0 | confirm stairwell ceilings are gypsum (or plaster + paint only); dome radius / rise (same as the concrete) |
 | Waterproofing | 34 | 19 | DECIDE: is foundation waterproofing in scope? (freelancer has none); door widths OP-010 / 017 / 018; roll size you buy; same decision; the sanitary fixture count per bathroom (or the sanitary schedule) |
@@ -623,16 +623,9 @@ make it DRAWING-READ instead of DEFAULT.
 | Paint | FIN.PAINT.EDGE | lm | GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED:PAINT_EDGE | HELD range | 0.0 | 0.8 | edge of a reveal with no height | jambs + head lm | same opening heights |
 | Paint | FIN.PAINT.EDGE | lm | GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED:PAINT_EDGE | HELD range | 0.0 | 0.8 | edge of a reveal with no height | jambs + head lm | same opening heights |
 | Paint | FIN.PAINT.EDGE | lm | GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED:PAINT_EDGE | HELD range | 0.0 | 5.2 | edge of a reveal with no height | jambs + head lm | same opening heights |
-| External render | ARCH.FACADE | m2 | 1F-FACADE:facade | BLANK |  |  | facade area not computed (plinth too) | same | same + plinth height below F.F.L. |
-| External render | ARCH.FACADE | m2 | 2F-FACADE:facade | BLANK |  |  | facade area not computed (plinth too) | same | same + plinth height below F.F.L. |
-| External render | ARCH.FACADE | m2 | GF-FACADE:facade | BLANK |  |  | facade area not computed (plinth too) | same | same + plinth height below F.F.L. |
-| External render | ARCH.FACADE | m2 | GF-FACADE:facade below F.F.L. (plinth) | BLANK |  |  | facade area not computed (plinth too) | same | same + plinth height below F.F.L. |
 | External render | ARCH.FACADE_RUN | lm | 1F-FACADE:facade outline 2 | BLANK |  |  | facade outline length not computed | outer perimeter per floor | none |
 | External render | ARCH.FACADE_RUN | lm | 2F-FACADE:facade outline 2 | BLANK |  |  | facade outline length not computed | outer perimeter per floor | none |
 | External render | ARCH.FACADE_RUN | lm | GF-FACADE:facade outline 2 | BLANK |  |  | facade outline length not computed | outer perimeter per floor | none |
-| External render | FIN.EXT.FINISH | m2 | 1F-FACADE:facade | BLANK |  |  | facade with no outline x height | facade perimeter x storey height - openings (sample method) | confirm external render = outer perimeter x slab-to-slab height - openings, parapets both faces |
-| External render | FIN.EXT.FINISH | m2 | 2F-FACADE:facade | BLANK |  |  | facade with no outline x height | facade perimeter x storey height - openings (sample method) | confirm external render = outer perimeter x slab-to-slab height - openings, parapets both faces |
-| External render | FIN.EXT.FINISH | m2 | GF-FACADE:facade | BLANK |  |  | facade with no outline x height | facade perimeter x storey height - openings (sample method) | confirm external render = outer perimeter x slab-to-slab height - openings, parapets both faces |
 | External render | FIN.EXT.PAINT.EDGE | lm | 1F-FACADE:PAINT_EDGE:W17 | BLANK |  |  | external edge lm of an opening with no height | jambs + head + sill lm | same opening sizes |
 | External render | FIN.EXT.PAINT.EDGE | lm | GF-FACADE:PAINT_EDGE:W02 | BLANK |  |  | external edge lm of an opening with no height | jambs + head + sill lm | same opening sizes |
 | External render | FIN.EXT.PAINT.EDGE | lm | GF-FACADE:PAINT_EDGE:W03 | BLANK |  |  | external edge lm of an opening with no height | jambs + head + sill lm | same opening sizes |

@@ -158,3 +158,12 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
   V3.0.78 with fill: concrete 291.5 + 44.6..66.3 held (0.68 m3/m2, in band); blockwork 467.8 net with 15 blank lines
   (1.10/m2 vs band 2.5..3.2 = the biggest hole); external plaster 0 (15 blank); corners 0 calc; backfill 0 calc;
   sanitary count 0. These four are the next fills.
+
+### 2026-11-13 evening: owner's parallel run ("blind BOQ" PDF, 11 pages, 13 Nov) and the facade fill
+- Owner ran the same engine (V2.9 + route G) through ChatGPT on the Alsenan drawings and did a fill pass on top; not blind
+  (it admitted having seen benchmark totals). Its figures are now the "Parallel run" column of the Cross-check sheet.
+  Where it is close to the freelancer it used the same fill-by-default approach we are running (blockwork 1,092 by wall
+  band x height - openings = T-765). Where it is low (plaster 733, paint 554) it used clear heights below the owner rule.
+- MAIN FILL 3 (fill3_facade.py): facade render from the released facade runs (GF 105.89 / 1F 63.17 / 2F 29.8 lm) x
+  storey heights - openings = 762.3 m2 + plinth 105.9 (GF run x printed F.F.L. +1.00) = 868.1 m2 ESTIMATE. The parallel
+  run got 769.2 by the same method with 98.9 lm on GF. MAIN_FILL_ALL now 214 rows.
