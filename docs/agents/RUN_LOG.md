@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T07:53Z | Verifier | INCOMPLETE | none (overlap guard: run session_01E6cPnctaY9ZbmhJ8ifGa8C-unknown STARTED 06:53Z, no final line, <75 min) | no check, no merge, no quantity change | self-check not run; problem: SUCCESS line refused: 'AGENT_ENV FAIL: run lock NOLOCK: a SUCCESS final line is refused; write the final line INCOMPLETE (lock NOLOCK) and end'
 - 2026-11-13T07:20Z | Worker 1 | SUCCESS | none | No claimable TODO row on the board (open rows are QUEUED behind the T-738 Gate B serial hub, PAUSED, IN PROGRESS T-180, or READY T-738 / T-755); no quantity changed this run | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-11-13T07:20Z | Worker 1 | STARTED | run session_01E6cPnbBmvKLW2c6GyCPpwt | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13 07:01 UTC | Worker 3 | SUCCESS | none | No claimable TODO row: board has 0 TODO (10 QUEUED after T-738 / T-314 hub order or rebar-parked, 3 PAUSED, T-180 Checker in progress); own T-738 (tiles H3 + stair finishes H3s integration package) stays READY for Checker Gate B; no quantity changed this run. | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
