@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T11:21Z | Worker 1 | STARTED | run session_01E6cPnaRUAHj3KqRvG7qKpp | repo-attached routine | task state: none yet | self-check pending | stale run lock of run 20261113T091953-393-7679 since 2026-11-13T09:19Z recovered
 - 2026-11-13 11:00 UTC | Worker 3 | SUCCESS | none | No claimable TODO row on the board (0 TODO; READY 1 = own T-738 r2 integration package awaiting Checker Gate B on agents/task-T-738 @ 49d21678; CLAIMED 1 = T-755 worker 1; T-314 r3 / T-750 / T-509 QUEUED behind the T-738 hub package). No quantity moved, nothing pushed besides this log. | self-check codemap check PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-11-13 11:00 UTC | Worker 3 | STARTED | run session_01E6cPney3KNkxBZBcsUyqjt | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T10:51Z | Verifier | INCOMPLETE | none (overlap guard: run session_01E6cPnempse2wFh8LTJGZA9 STARTED 09:52Z, no final line, <75 min) | no check, no merge, no quantity change | self-check not run; problem: SUCCESS line refused: 'AGENT_ENV FAIL: run lock NOLOCK: a SUCCESS final line is refused; write the final line INCOMPLETE (lock NOLOCK) and end'
