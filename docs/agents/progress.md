@@ -28,7 +28,7 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
 - Merging: "You can merge everything related to boq" (2026-11-08); "why do i merge, its your role" and "Push and
   merge for Urban project AI and not urbanprojectmanager" (2026-11-12). The main chat pushes and merges in
   Urban-Project-AI only, never in UrbanProjectsManager. Direct pushes to main stay denied; main changes through
-  merged PRs. PR #7 removes the merge block (the owner merges that one last PR; afterwards the main chat merges).
+  merged PRs. PR #7 (merged by the owner 2026-11-12) removed the merge block: the main chat now merges.
 - No assumptions: only the owner's rules and what the drawings print; unresolved stays HELD as a range or blank,
   never 0. "do not assume" (2026-11-11).
 - Never copy client drawings, client data, names or personal data into the repository (it is public). Google Drive
@@ -116,7 +116,6 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
 
 ## 4. Open owner actions (not yet confirmed)
 
-- Merge PR #7 (the last PR needing the owner; it lets the main chat merge): https://github.com/msalfahad/Urban-Project-AI/pull/7
 - Make the repository private.
 - Upload the freelancer floors / railings workbooks and the 1990 specification (not blockers).
 - Send the designer question list once the Lead has compiled it.

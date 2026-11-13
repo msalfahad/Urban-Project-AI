@@ -1592,3 +1592,73 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 11-12 03:21 | Worker 1 | SUCCESS | STARTED 03:21, final 03:35; T-725 READY (agents/task-T-725 @ 0ea20400) / 20 HELD stair formwork lines on V3.0.72: BOUNDED 2 (MS1-L well side 0.679193..0.854426, E1 risers 1.904.. |
 | 11-12 03:52 | Verifier | SUCCESS | STARTED 03:52, final 03:53; none (READY 0: T-722/T-725/T-726/T-728 merged by the 02:52 run at 03:49; T-708/T-720 TODO, T-717 QUEUED) / Light run: no task to gate, no merge, no qu |
 | 11-12 04:13 | Lead | SUCCESS | STARTED 04:13, final 04:17; board / 6 MERGED since 00:18 (T-724, T-727, T-722 Gate B -> candidate V3.0.73 / master 1.74.0, T-725 PARTIAL, T-726, T-728; ancestors of 80e27c10 chec |
+
+## 2026-11-12 04:31 -> 2026-11-13 04:31 UTC (65 runs: 60 SUCCESS, 4 NO FINAL LINE, 1 INCOMPLETE; no lost work)
+
+| Slot (UTC) | Agent | Result | Evidence |
+|---|---|---|---|
+| 11-12 04:40 | Worker 2 | SUCCESS | STARTED 04:40, final 04:58; T-720 READY (agents/task-T-720 @06b1638c) / B2-03 gross to outer face, own handle read: GF 278.266 (house 217.789 + annex 60.477), 1F 209.839, 2F 55.0 |
+| 11-12 04:53 | Verifier | SUCCESS | STARTED 04:53, final 05:00; none (READY 0; T-720 CLAIMED by W2, T-717/T-731/T-732 TODO) / Light run: no task to gate, no merge, no quantity change; candidate of record ARCH_TAKEO |
+| 11-12 05:00 | Worker 3 | SUCCESS | STARTED 05:00, final 05:55; T-717 READY (integration package, agents/task-T-717 @ 9b998fc8) / ARCH_TAKEOFF_V3.0.74 bea5be02 from V3_0_73 c5a0b128 (own Drive chain): 4 HELD plaste |
+| 11-12 05:21 | Worker 1 | SUCCESS | STARTED 05:21, final 05:32; T-731 READY (agents/task-T-731 @ 4a378456) / Section A-A prints the GF half landing +3.50 (320 over +0.30): coherent ST reading = 16 x 0.15625 + 12 x  |
+| 11-12 05:51 | Verifier | SUCCESS | STARTED 05:51, final 06:02; T-731 GATE A PASS MERGED, T-720 GATE A PASS MERGED (published 067b0035) / Drive OK. T-731 own: MS1-L 16 risers by handle (12 + 3 winders + 2F3), sect  |
+| 11-12 06:41 | Worker 2 | SUCCESS | STARTED 06:41, final 06:54; T-733 READY (agents/task-T-733 @272d7ae5) / Tread highs F1 4.094413 / F4 3.45 m2 ENGINE_RIGHT: own read shows the 0.057438 m2 overlap is the engine re |
+| 11-12 06:52 | Verifier | NO FINAL LINE | STARTED 06:52; no final line; session not checked, cause NOT KNOWN |
+| 11-12 07:00 | Worker 3 | SUCCESS | STARTED 07:00, final 07:13; T-730 READY (7d5efd9d) / Wiring readiness R5 on V3.0.73, research only: 1,174 rows stale 0; 36 T-723 rows wired by T-722; C10 concrete round 10 builda |
+| 11-12 07:21 | Worker 1 | SUCCESS | STARTED 07:21, final 07:36; T-732 READY (agents/task-T-732 @ 02bbaf78) / column formwork of the moved 2F roof concrete restated on V3.0.73: 7/7 moved members re-derived (4 BOUNDE |
+| 11-12 07:50 | Verifier | SUCCESS | STARTED 07:50, final 07:51; T-717 GATE B REJECTED r1 (no merge, nothing published to the engine) / Drive OK. L4 to the end on 9b998fc8: 23,827 pass, 1 FAIL tests/t459_lap_rule::t |
+| 11-12 08:14 | Lead | SUCCESS | STARTED 08:14, final 08:20; board / 5 MERGED since 04:17 (T-731, T-720, T-732, T-733, T-730; ancestors of 6143f30d checked), T-717 Gate B REJECTED r1 on one file (t459 binding) - |
+| 11-12 08:40 | Worker 2 | SUCCESS | STARTED 08:40, final 08:55; T-734 READY (agents/task-T-734 @ 80609efe) / Roof membrane L-636fd3ff released 115.832 m2 sits +0.018026 m2 (0.016 %) above its own band 115.656474..1 |
+| 11-12 08:53 | Verifier | SUCCESS | STARTED 08:53, final 08:58; none (READY 0: T-734 CLAIMED W2, T-717 r2 / T-735 / T-737 / T-739 TODO) / Light run: no task to gate, no merge, no quantity change; candidate of recor |
+| 11-12 09:00 | Worker 3 | SUCCESS | STARTED 09:00, final 10:02; T-717 r2 READY (integration package, ARCH_TAKEOFF_V3.0.74, head 25566c28) / r1 L4 fault fixed: T459 candidate binding rebuilt by its own tool (+arch_v |
+| 11-12 09:21 | Worker 1 | SUCCESS | STARTED 09:21, final 09:32; T-735 READY (51baa9d7) / Formwork conflict decider, 7 lines one live form each on V3.0.73: 412 BOUNDED 4.183916..5.532116 m2; 415 AT_LEAST 2.8938 (D-0 |
+| 11-12 09:51 | Verifier | SUCCESS | STARTED 09:51, final 10:00; T-735 GATE A PASS MERGED, T-734 GATE A PASS MERGED (published 3d8185fe) / Drive OK. T-735 own: ST outlines 6/6 by handle, 412 4.183916..5.532116 / 350 |
+| 11-12 10:41 | Worker 2 | SUCCESS | STARTED 10:41, final 10:56; T-737 READY f53bb2d9 / T-314 r2 exterior-face stage restated on V3.0.73: 3 facade hosts LIVE, 15 new lines free, stale 0 (hosts unchanged V3.0.61-73,  |
+| 11-12 10:50 | Verifier | SUCCESS | STARTED 10:50, final 11:30; T-717 r2 GATE B PASS MERGED e6481b43, master 1.75.0 promoted 10889521 (published) / Drive OK. L4 to the end on 25566c28 (933 items, 78 chunks, all exi |
+| 11-12 11:00 | Worker 3 | SUCCESS | STARTED 11:00, final 11:12; T-739 READY 722cb84c / All-trade aggregation statement on V3.0.73 (research, nothing wired): 5,123 lines = 1,515 released / 1,163 bounded / 1,602 blan |
+| 11-12 11:21 | Worker 1 | SUCCESS | STARTED 11:21, final 11:31; T-708 READY dc0193ca / Z2 owner plan x depth 183.948 m3 vs engine 136.901..163.479 reconciled over 90 terms to drawn causes (annex +0.30 -31.560, unpr |
+| 11-12 11:51 | Verifier | SUCCESS | STARTED 11:51, final 12:00; T-737 GATE A PASS MERGED, T-708 GATE A PASS MERGED (published a91a1dfe), T-739 REJECTED r1 / Drive OK. T-737 own: 2F box 8.100 x 6.800 by handle, shee |
+| 11-12 12:16 | Lead | SUCCESS | STARTED 12:16, final 12:22; board / 5 MERGED since 08:16 (T-735, T-734, T-717 r2 -> candidate V3.0.74, T-737, T-708; ancestors of a91a1dfe checked), T-739 REJECTED r1 -> TODO r2  |
+| 11-12 12:41 | Worker 2 | SUCCESS | STARTED 12:41, final 12:58; T-740 READY @49c6df83 / Paint area rule UP-FIN-PAINT-002 (rulebook 1.2.0) restated face by face on V3.0.74: paint engine 822.198..927.215 -> rule 841. |
+| 11-12 12:52 | Verifier | SUCCESS | STARTED 12:52, final 12:54; none (READY 0: T-740 CLAIMED W2; T-729, T-739 r2, T-741..743 TODO) / Light run: no task to gate, no merge, no quantity change; engine head a91a1dfe un |
+| 11-12 13:01 | Worker 3 | SUCCESS | STARTED 13:01, final 14:33; T-729 READY (integration package, ARCH_TAKEOFF_V3.0.75, agents/task-T-729 @ 9d012d6e) / formwork Gate B + concrete round 10 wired from merged T-714/72 |
+| 11-12 13:22 | Worker 1 | SUCCESS | STARTED 13:22, final 13:29; T-741 READY (agents/task-T-741 @ 821735bd) / Checker downgrade-only issue path: research/agents_t741/downgrade_add.py wraps boq_export_v1 downgrade-ad |
+| 11-12 13:53 | Verifier | INCOMPLETE | STARTED 13:53, final 14:51; none (overlap guard: run session_01E6cPnbViRyHAG6PKLTn5pu active since 2026-11-12T13:53Z) / no check, no merge, no quantity change / self-check not ru |
+| 11-12 14:51 | Worker 2 | SUCCESS | STARTED 14:51, final 15:06; T-742 READY (agents/task-T-742 @ 467ffd96) / B9-05 parapet blocks drafted: 25 runs censused by DXF handle, 4 lines HELD 0 .. 101.464 m2 (P1 reading 55 |
+| 11-12 15:01 | Worker 3 | SUCCESS | STARTED 15:01, final 15:06; T-739 r2 READY (agents/task-T-739 f398b37d) / All-trade aggregation restated on V3.0.74 only: 5,155 lines, chain V3.0.73 + 36 T-717 rows = V3.0.74 (5, |
+| 11-12 15:22 | Worker 1 | SUCCESS | STARTED 15:22, final 15:42; T-743 READY c18ed1ec (B12-01 sanitary census, research only) / Alsenan per room, both sheets side by side: WC 12, basin 17 (5 on both sheets, 12 sanit |
+| 11-12 15:51 | Verifier | SUCCESS | STARTED 15:51, final 16:48; T-729 GATE B PASS MERGED 05ca1a46 (+ master 1.76.0 promoted 0963e4a1), T-743 GATE A PASS MERGED e9c61254 (published e9c61254) / Drive OK. T-729: L4 to |
+| 11-12 16:14 | Lead | SUCCESS | STARTED 16:14, final 16:20; board / 4 MERGED since 12:20 (T-741, T-740, T-739 r2, T-742; ancestors of 1370c295 checked), DG-a429c160 roof membrane RELEASED -> HELD; READY 2 (T-72 |
+| 11-12 16:40 | Worker 2 | SUCCESS | STARTED 16:40, final 16:52; T-746 READY @3311d39d / Door/window return paint as lm (reading B): 30 return lines paint m2 0..24.15 -> 0, edge lm 0..33.80 (jambs 0 on 25 doors: pla |
+| 11-12 16:50 | Verifier | SUCCESS | STARTED 16:50, final 16:51; none (READY 0: T-729 / T-743 MERGED 16:48; T-746 CLAIMED W2; T-744, T-745, T-747, T-748, T-736 TODO) / Light run: no task to gate, no merge, no quanti |
+| 11-12 17:00 | Worker 3 | SUCCESS | STARTED 17:00, final 17:13; T-748 READY aa09b3ff / Readiness R6 on V3.0.75: 1,366 rows by line id, stale 0, double count 0 across hubs, unwired-after-merge 0; queued packages siz |
+| 11-12 17:20 | Worker 1 | SUCCESS | STARTED 17:20, final 17:34; T-744 READY @4e65b9ba / Wet-room evidence now types fixture blocks by content (WET_ROOM_EVIDENCE_V2, unwired; V1 unchanged): the 9 text-only room-tag  |
+| 11-12 17:51 | Verifier | SUCCESS | STARTED 17:51, final 17:59; T-746 GATE A PASS MERGED faf8afcd, T-744 GATE A PASS MERGED e22534af, T-748 GATE A PASS MERGED 071dc837 (published 071dc837) / Drive OK (own DXF re-me |
+| 11-12 18:40 | Worker 2 | SUCCESS | STARTED 18:40, final 18:54; T-747 READY (agents/task-T-747 @ cd76987b) / Exterior paint = render of the same face on the T-314 stage: 1,006.633..1,085.613 m2 (render 1,007.931..1 |
+| 11-12 18:51 | Verifier | SUCCESS | STARTED 18:51, final 18:51; none (READY 0: T-746 / T-744 / T-748 MERGED 17:59; T-747 CLAIMED W2 18:40; T-745 TODO) / Light run: no task to gate, no merge, no quantity change; eng |
+| 11-12 19:01 | Worker 3 | SUCCESS | STARTED 19:01, final 19:18; T-745 READY (agents/task-T-745 @ 3e1d0514) / B12-02 drain runs from sanitary-7757 vector pens (scale 1:108.2 from 31.37/15.00 m plot sides): plan MEAS |
+| 11-12 19:19 | Worker 1 | SUCCESS | STARTED 19:19, final 19:20; none / No claimable TODO on the board (all open rows QUEUED/PAUSED/READY/IN PROGRESS; T-745 lane S TODO already taken to READY by Worker 3, T-747 READ |
+| 11-12 19:50 | Verifier | SUCCESS | STARTED 19:50, final 20:00; T-747 GATE A PASS MERGED a3f62c52 (published), T-745 REJECTED r1 / Drive OK (own decode). T-747: 2F/SE-1 gross 28.560 m2 AGREE by handle, paint = rend |
+| 11-12 20:12 | Lead | SUCCESS | STARTED 20:12, final 20:17; board / 7 MERGED since 16:20 (T-729 Gate B V3.0.75, T-743, T-746, T-744, T-748, T-747; ancestors of a3f62c52 checked), T-745 REJECTED r1 -> TODO r2 wi |
+| 11-12 20:40 | Worker 2 | SUCCESS | STARTED 20:40, final 21:02; T-751 READY 34520aeb / Exterior corner lm 168.50..182.05 -> 178.136..179.336 (1F parapet ends 9.186 from own DXF outlines, NE-2/SE-1 1.60 above the T- |
+| 11-12 20:52 | Verifier | SUCCESS | STARTED 20:52, final 20:58; none (READY 0: T-751 CLAIMED W2 20:40; T-745 r2, T-736 TODO; T-752, T-749 QUEUED) / Light run: no task to gate, no merge, no quantity change; engine h |
+| 11-12 21:00 | Worker 3 | SUCCESS | STARTED 21:00, final 22:15; T-736 READY (integration package, ARCH_TAKEOFF_V3.0.76 @1ecfaa04) / V3_0_75 a1eba08f -> V3_0_76 9b35725c (+14 lines, 2 changed, 5157 byte-identical):  |
+| 11-12 21:20 | Worker 1 | SUCCESS | STARTED 21:20, final 21:26; T-745 r2 READY (b6ea78e2) / B12-02 drain runs V2: sanitary sheets p.1-3 say 'work with stated dimensions, not to scale' (read this run), no run dimens |
+| 11-12 21:51 | Verifier | SUCCESS | STARTED 21:51, final 22:08; T-751 GATE A PASS MERGED 79766703, T-745 r2 GATE A PASS MERGED a650be13 (published a650be13) / Drive OK (own DXF + sanitary decode). T-751: corners NW |
+| 11-12 22:41 | Worker 2 | NO FINAL LINE | STARTED 22:41; no final line; session not checked, cause NOT KNOWN |
+| 11-12 22:52 | Verifier | SUCCESS | STARTED 22:52, final 23:47; T-736 GATE B PASS MERGED 166fb1fd + master 1.77.0 promoted f2eb70da (published f2eb70da) / Drive OK (own chain V3_0_75 a1eba08f -> V3_0_76 9b35725c; o |
+| 11-12 23:00 | Worker 3 | SUCCESS | STARTED 23:00, final 23:00; none / no claimable TODO row on the board (every open row is QUEUED, PAUSED, IN PROGRESS or READY); my T-736 integration package (beads + ceiling roun |
+| 11-12 23:19 | Worker 1 | SUCCESS | STARTED 23:19, final 23:20; none / No claimable TODO row on BOARD.md (board @d1dab9d3: every open row is QUEUED, PAUSED, IN PROGRESS or READY; no lane S TODO, none in other lanes |
+| 11-12 23:51 | Verifier | SUCCESS | STARTED 23:51, final 23:51; none (READY 0: T-736 / T-751 / T-745 r2 merged by earlier runs; T-752, T-749, T-738, T-314 r3, T-750 QUEUED) / Light run: no task to gate, no merge, n |
+| 11-13 00:13 | Lead | SUCCESS | STARTED 00:13, final 00:17; board / 3 MERGED since 20:17 (T-751, T-745 r2, T-736 Gate B -> candidate V3.0.76: beads 14 HELD lines, roof membrane 115.832 RELEASED -> HELD, ceiling |
+| 11-13 00:40 | Worker 2 | SUCCESS | STARTED 00:40, final 00:59; T-753 READY 7e8cc3ab / B13-06 joinery census on P7757 by handle: base runs 3 pcs 11.616 lm / 6.513 m2 worktop, vanities 3 pcs 5.973 lm / 2.861 m2 (5 b |
+| 11-13 00:51 | Verifier | NO FINAL LINE | STARTED 00:51; no final line; session not checked, cause NOT KNOWN |
+| 11-13 01:00 | Worker 3 | SUCCESS | STARTED 01:00, final 02:10; T-749 READY (integration package, agents/task-T-749 b2bc7e7a, ARCH_TAKEOFF_V3.0.77 + master 1.78.0 pending) / paint rule wired: V3_0_76 9b35725c -> V3 |
+| 11-13 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 01:34; T-752 READY 3d0ca771 / B13-07 special metalwork census: every arch + struct sheet read, canopy / pergola / screen / frame NOT_DRAWN; 9 beam ends no fa |
+| 11-13 01:52 | Verifier | SUCCESS | STARTED 01:52, final 01:56; T-752 GATE A PASS MERGED cb9b1444, T-753 GATE A PASS MERGED e771a5b2 (published e771a5b2) / Drive OK (own DXF + p.12 decode). T-752: 1F stubs C4A..C52 |
+| 11-13 02:40 | Worker 2 | SUCCESS | STARTED 02:40, final 02:41; none / No claimable TODO or REJECTED row on BOARD.md (board @667399f9c: READY 1 = T-749, QUEUED 12 incl. T-754 'after T-753' which the Lead has not ye |
+| 11-13 02:51 | Verifier | SUCCESS | STARTED 02:51, final 03:29; T-749 GATE B PASS MERGED 8dc7c0f6 + master 1.78.0 promoted c2106988 (published c2106988) / Drive OK (own chain V3_0_76 9b35725c -> V3_0_77 b8524d5c; o |
+| 11-13 03:01 | Worker 3 | SUCCESS | STARTED 03:01, final 03:04; none / No claimable TODO row on the board (all open rows QUEUED, PAUSED, IN PROGRESS or READY; T-738 queued after T-749, which is READY for Checker Ga |
+| 11-13 03:21 | Worker 1 | NO FINAL LINE | STARTED 03:21; no final line; session not checked, cause NOT KNOWN |
+| 11-13 03:51 | Verifier | SUCCESS | STARTED 03:51, final 03:51; none (light run: READY 0; T-749/T-752/T-753 already merged by earlier runs; T-754 still QUEUED) / No gate run, no merge, no quantity change; SCOREBOAR |
+| 11-13 04:14 | Lead | SUCCESS | STARTED 04:14, final 04:17; board / 3 MERGED since 00:17 (T-749 Gate B -> candidate V3.0.77: FIN.PAINT held 604.990..710.006 -> 603.802..687.847 m2, edges as lm lines; T-752 / T- |
