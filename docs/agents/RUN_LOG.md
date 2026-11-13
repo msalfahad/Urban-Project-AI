@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T01:52Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-752 (W1 @3d0ca771), T-753 (W2 @7e8cc3ab) per run log | self-check pending
 - 2026-11-13 01:34 UTC | Worker 1 | SUCCESS | T-752 READY 3d0ca771 | B13-07 special metalwork census: every arch + struct sheet read, canopy / pergola / screen / frame NOT_DRAWN; 9 beam ends no family owns (1F SE 3 pcs 0.10x0.10, 0.900 lm visible, plan = elevation by handle; annex 6 pcs raster p.12), kg + material HELD (designer D-M1); railings / shutters / gates EXCLUDED by id; freelancer no row; 18 tests pass, nothing wired | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13 01:20 UTC | Worker 1 | STARTED | run session_01E6cPncjF3EzoWVTb5vdTJx | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T01:00Z | Worker 3 | STARTED | run session_01E6cPnaNwboeae2SEnZXDEM | repo-attached routine | task state: none yet | self-check pending
