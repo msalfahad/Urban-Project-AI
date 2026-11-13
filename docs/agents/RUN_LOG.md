@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T17:27Z | Worker 1 | SUCCESS | T-767 READY r1 @ e1a7b15e | WP lines without a figure 50 -> 0 (fix rows, not wired): penetrations 55 pcs, door transitions 2.30 m2, terminations 3.16 lm, fdn WP 1B1B 4.55 m2 + sides 86.88 + buried liquid 462.72 + lift walls 8.84 m2; wet floor 85.58 vs freelancer 72.01 m2 = pantry 13.46 RULE_DIFFERENCE, rest +0.15 %; boundary coat 138.38 m2 flagged (p.14 prints none) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T17:20Z | Worker 1 | STARTED | run session_01E6cPnaLktZDPWrDnXNxbZm | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T17:07Z | Worker 3 | SUCCESS | T-764 READY r1 @ a8fd15fa | Earthworks B1: 20 lines, 18 without figure -> 0 (excavation 336.5 m3, backfill Z1 177.3 + Z2 150.2, disposal 9.0 m3 net, replaces MAIN_FILL 105.6..115.5 that left out Z2); working space 0.30 kept beside (95.7 m3), not in lines; top-roof WP 3 lines (115.8 m2, 29.8 lm, 7 rolls). No freelancer earthworks line; roof 248.8 vs freelancer 285 m2 (-12.7 %). T-770 r2 not claimable (waits T-314 r4 MERGED). | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T17:00Z | Worker 3 | STARTED | run session_01E6cPnePXgp56BuxesdjE9R | repo-attached routine | task state: none yet | self-check pending
