@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 20 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 744 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 745 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 6053 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 6058 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 91 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2725 | pytest suites, one folder per round. |
+| `tests/` | 2726 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (391 modules)
+## `engine/source/` (392 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -482,6 +482,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3077.py` | 693 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.77 (T-749, lane I, PAINT RULE WIRING integration package, hub H1P; OWNER RULE PAINT 2026-11-12): |
 | `arch_v3078.py` | 758 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.78 (T-738, lane I, TILES H3 + STAIR FINISHES H3s integration package; owner order step 5): the SAME |
 | `arch_v308.py` | 680 | MEDIUM | 8 | ARCH_TAKEOFF_V3.0.8 (T-231): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.7 (engine.source.arch_v30, |
+| `arch_v3081.py` | 254 | MEDIUM | 1 | ARCH_TAKEOFF_V3.0.81 (T-770 round 1, lane I, DELIVERY MODE wiring package): the SAME opt-in BOQ candidate as |
 | `arch_v309.py` | 591 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.9 (T-211, package V3.0.9a): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.8 |
 | `arch_walls.py` | 236 | HIGH | 5 | WALL RUNS AND THE ROOM GRAPH (M9 S3) - the walls of one floor plan by thickness, and which spaces each wall and |
 | `authority_decisions.py` | 206 | CRITICAL | 2 | AUTHORITY DECISIONS - owner authority rulings, provenance classes and facet-state errata (generic, stdlib only). |
@@ -1745,6 +1746,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t754_edge_residuals/` | 1 |
 | `tests/t755_designer_recensus/` | 1 |
 | `tests/t756_face_ledger_rebase/` | 1 |
+| `tests/t770_fill_wire/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -2491,6 +2493,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t755/` | 8 |
 | `research/agents_t756/` | 10 |
 | `research/agents_t760/` | 3 |
+| `research/agents_t770/` | 5 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
