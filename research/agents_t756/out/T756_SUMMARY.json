@@ -1,0 +1,163 @@
+{
+ "A_components": {
+  "rows_out": 66,
+  "states": {
+   "LIVE": 36,
+   "MISSING": 9,
+   "NEW_FREE": 15,
+   "OTHER_TRADE": 2,
+   "PARKED": 4
+  },
+  "t311_rows": 46
+ },
+ "A_faces": {
+  "not_a_face": [
+   "1F/NW-1/SLAB_EDGE_BELOW/slab_edge",
+   "1F/NW-3/SLAB_EDGE_BELOW/slab_edge"
+  ],
+  "rows_out": 128,
+  "stage_added": 20,
+  "states": {
+   "LIVE": 52,
+   "NEW_FREE": 74,
+   "NOT_A_FACE": 2
+  },
+  "t305_named_differences": [
+   "1F/NW-2/PARAPET/parapet",
+   "1F/NW-2/SLAB_EDGE_BELOW/slab_edge"
+  ],
+  "t305_rows": 98
+ },
+ "A_openings": {
+  "rows": 39
+ },
+ "B_edges": {
+  "changed": [
+   "L-d8a40db59611b0508dbc"
+  ],
+  "corners_after": [
+   "176.935812",
+   "178.135812"
+  ],
+  "corners_before": [
+   "179.535812",
+   "180.735812"
+  ],
+  "edge_total_after": [
+   "280.618063",
+   "281.818063"
+  ],
+  "edge_total_before": [
+   "283.218063",
+   "284.418063"
+  ],
+  "lines": 38,
+  "rehosted_no_qty": [
+   "L-b15852d929ba95ce8797"
+  ],
+  "residual": "0.000000",
+  "windows_lm": "103.682251"
+ },
+ "C_faces": {
+  "blank": [
+   "1F/NE-1/SLAB_EDGE_BELOW/slab_edge",
+   "1F/NW-4/SLAB_EDGE_BELOW/slab_edge",
+   "1F/SW-1/SLAB_EDGE_BELOW/slab_edge",
+   "1F/NW-5/SLAB_EDGE_BELOW/slab_edge",
+   "1F/SE-1/SLAB_EDGE_BELOW/slab_edge",
+   "1F/SW-2/SLAB_EDGE_BELOW/slab_edge"
+  ],
+  "faces": 126,
+  "paint": [
+   "1009.110254",
+   "1087.619176"
+  ],
+  "render": [
+   "1009.110254",
+   "1087.619176"
+  ],
+  "render_minus_paint": [
+   "0.000000",
+   "0.000000"
+  ]
+ },
+ "D_wire": {
+  "add": 15,
+  "blank_line_valued_part": [
+   "0.535000",
+   "2.006250"
+  ],
+  "change": 3,
+  "edge_change": 1,
+  "edge_lines": 38,
+  "freelancer_sigma_m2": "1469.967500",
+  "paint_vs_freelancer_pct": [
+   "-31.351526",
+   "-26.010665"
+  ],
+  "render_lines": 18,
+  "valued_lines_m2": [
+   "1008.575254",
+   "1085.612926"
+  ]
+ },
+ "E_recheck": {
+  "after_T738": "PENDING: T-738 not merged at this run; run --recheck on LINE_INDEX_V3_0_78.json",
+  "by_index": {
+   "V3.0.73": {
+    "absent": 45,
+    "changed": [],
+    "new_taken": []
+   },
+   "V3.0.74": {
+    "absent": 45,
+    "changed": [],
+    "new_taken": []
+   },
+   "V3.0.75": {
+    "absent": 45,
+    "changed": [],
+    "new_taken": []
+   },
+   "V3.0.76": {
+    "absent": 45,
+    "changed": [],
+    "new_taken": []
+   },
+   "V3.0.77": {
+    "absent": 0,
+    "changed": [],
+    "new_taken": []
+   }
+  },
+  "ids": 81,
+  "new_ids": 15
+ },
+ "pins": {
+  "research/agents_t305/FACE_LINE_LEDGER_T305.csv": "735316bdf5f45ffe",
+  "research/agents_t305/OPENING_HOLES_T305.csv": "316d5c4701291127",
+  "research/agents_t311/COMPONENT_OWNER_T311.csv": "970032a8f8e6638d",
+  "research/agents_t717/out/LINE_INDEX_V3_0_74.json": "6733cbc143cdfffd",
+  "research/agents_t722/out/LINE_INDEX_V3_0_73.json": "af8d567d8a8ae828",
+  "research/agents_t729/out/LINE_INDEX_V3_0_75.json": "498c36bc6647a853",
+  "research/agents_t736/out/LINE_INDEX_V3_0_76.json": "184e0e3c5cf381af",
+  "research/agents_t737/in/T314_STAGE_T737.json": "aa2701da225c2747",
+  "research/agents_t737/out/T737_ROWS.csv": "ca61f5e3b7e9789d",
+  "research/agents_t747/in/T314_FACES_T747.json": "8b3a7ada443750fb",
+  "research/agents_t747/out/T747_FACES.csv": "1a7897d326959ee9",
+  "research/agents_t749/out/LINE_INDEX_V3_0_77.json": "60982bb727c89369",
+  "research/agents_t749/out/V3_0_77_INTEGRATION_LEDGER.csv": "59ae295e70a04a2c",
+  "research/agents_t751/out/T751_EDGE_BOUNDS.json": "1964beae4be55fbb",
+  "research/agents_t754/out/T754_EDGE_RESIDUALS.json": "0c329e6b9d0e3f79"
+ },
+ "rules": [
+  "R-T756-1",
+  "R-T756-2",
+  "R-T756-3",
+  "R-T756-4"
+ ],
+ "schema": "URBAN_T756_FACE_LEDGER_REBASE_V1",
+ "stale_or_collision": 0,
+ "target": "ARCH_TAKEOFF_V3.0.77",
+ "version": "1.0.0"
+}
