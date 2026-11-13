@@ -1,0 +1,1109 @@
+{
+ "candidate_index": "research/agents_t314/out/LINE_INDEX_V3_0_79.json",
+ "d41": {
+  "designer_item": "DESIGNER_QUESTIONS.md item 9 'Sunken wet-room slab panels: membrane position' (D-41): membrane on the structural slab (tray: + loop x d) or on the fill under the tile (+0); d unprinted, bounded by the boundary beams (d_max 0.24 / 0.34 m)",
+  "high_m2": "13.335040",
+  "hosts": [
+   {
+    "class": "RELEASED",
+    "m2": 1.36,
+    "restate": "LIVE",
+    "room": "1F-RED23B8",
+    "upturn_line": "L-a93486d24647a9e14445"
+   },
+   {
+    "class": "RELEASED",
+    "m2": 1.148,
+    "restate": "LIVE",
+    "room": "1F-R52AC05",
+    "upturn_line": "L-ace6533512ada47d1352"
+   },
+   {
+    "class": "RELEASED",
+    "m2": 1.64,
+    "restate": "LIVE",
+    "room": "1F-R48AA46",
+    "upturn_line": "L-ba15212ec9887e6d4f73"
+   },
+   {
+    "class": "RELEASED",
+    "m2": 1.64,
+    "restate": "LIVE",
+    "room": "1F-R8BDA49",
+    "upturn_line": "L-6e6daedebef2db6a83bd"
+   },
+   {
+    "class": "RELEASED",
+    "m2": 1.58,
+    "restate": "LIVE",
+    "room": "1F-R48CDA5",
+    "upturn_line": "L-60f100105399a9bdfb08"
+   },
+   {
+    "class": "RELEASED",
+    "m2": 1.78,
+    "restate": "LIVE",
+    "room": "2F-RE83BED",
+    "upturn_line": "L-b842beb71b67af783cd7"
+   }
+  ],
+  "hosts_released_m2": "9.148000",
+  "low_m2": "0",
+  "recess_loop_m": "51.8980",
+  "statement": "no candidate line: a HELD component beside the six released wall-upturn hosts (all LIVE on V3.0.73); low 0 is a physical alternative (membrane on the fill), never a default; nothing moves in this task",
+  "status": "HELD"
+ },
+ "pins": {
+  "research/agents_t314/out/LINE_INDEX_V3_0_79.json": "0582aac58defff74c13bc23512832b258754dc4cffceff759fcbbda3e71011fb",
+  "research/agents_t691/out/T691_WP_ROUND2.json": "2e190feefd0bd16c2c7626f530b0999495ab39bdce2ded7836099f0be841c589",
+  "research/agents_t702/out/T702_TILES_ROUND3.json": "ae5b37e75a1635cbcc6e6214c64566e1e831c7d0b62e3b988596f0f0fcbc72bd",
+  "research/agents_t710/out/T710_WP_ROUND3.json": "9aa528c5d47b115c72653e6505e9b7591b03c3b4df181d9b6fa2c73e73b2db85",
+  "research/agents_t734/out/T734_WP_H4_EVIDENCE.json": "d39d93fd0eda75549cfbb5893e86192c10055c78011e420a212e3b596ab2bf13",
+  "research/agents_t748/out/T748_ROWS.csv": "f403d34bac9567207893bc3b0af954fe688e8e49b7b764812a4cb4b6271e605e"
+ },
+ "rows": [
+  {
+   "action": "POINT",
+   "after": [
+    1.0,
+    1.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-6375385673176b8b2c9c",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748",
+    "T-734"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "unit": "pcs"
+  },
+  {
+   "action": "POINT",
+   "after": [
+    1.0,
+    1.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-229e7bf9e837e1d838bd",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748",
+    "T-734"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.0,
+    2.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-bcda623f9ad89eba41db",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.0,
+    2.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-f650522e7882dddccdfa",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "POINT",
+   "after": [
+    1.0,
+    1.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-a4bbc2efdb8425554344",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748",
+    "T-734"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.0,
+    2.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-20dfb3cd1232128b3cb6",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "POINT",
+   "after": [
+    1.0,
+    1.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-0db07ac89503dd3f5980",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748",
+    "T-734"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.0,
+    2.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-657bff4f4cc8e417bc6c",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.0,
+    2.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-5f41701522d675c37b10",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.0,
+    2.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-345e907e572a363fb615",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "POINT",
+   "after": [
+    1.0,
+    1.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-9971bd68a5150abebe0a",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748",
+    "T-734"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.0,
+    2.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-fb8f6c4b9b3044505557",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.0,
+    2.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-2af93ddb70a431b92800",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.0,
+    2.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-a5f885a2f86ee05d5b8b",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.0,
+    2.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-3e6dbcb5614746978a87",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    2.0,
+    3.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-2253a7ed9e80ac00c728",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.0,
+    2.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "L-faa7232880f13c1e4a99",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "pcs"
+  },
+  {
+   "action": "BOUND",
+   "after": [
+    1.4,
+    1.9
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line": "L-8090ff20f2b547d1bc96",
+   "rule": "R-T691-2",
+   "sources": [
+    "T-691",
+    "T-734",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "m2"
+  },
+  {
+   "action": "ADD_POINT",
+   "after": [
+    0.2,
+    0.2
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line": "ADD FIN.WP.DOORWAY GF-RC99C2A#DOORWAY",
+   "rule": "R-T691-2",
+   "sources": [
+    "T-691",
+    "T-734",
+    "T-748"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "unit": "m2"
+  },
+  {
+   "action": "ADD_POINT",
+   "after": [
+    1.0,
+    1.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line": "ADD FIN.WP.DOORWAY_TRANSITION_NR GF-RC99C2A#TRANSITION_NR",
+   "rule": "R-T691-2 (Q-35 C)",
+   "sources": [
+    "T-691",
+    "T-734",
+    "T-748"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "unit": "pcs"
+  },
+  {
+   "action": "ADD_POINT",
+   "after": [
+    4.5,
+    4.5
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.TERMINATION",
+   "line": "ADD FIN.WP.TERMINATION GF-RC99C2A#TERMINATION",
+   "rule": "R-T691-2 (Q-37 A)",
+   "sources": [
+    "T-691",
+    "T-734",
+    "T-748"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_POINT",
+   "after": [
+    1.0,
+    1.0
+   ],
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "line": "ADD FIN.WP.PENETRATION GF-RC99C2A#PENETRATION",
+   "rule": "R-T691-3",
+   "sources": [
+    "T-691",
+    "T-734",
+    "T-748"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "unit": "pcs"
+  },
+  {
+   "action": "ADD_NAMED",
+   "after": null,
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line": "ADD FIN.WP.DOORWAY_TRANSITION GF-RC99C2A#TRANSITION",
+   "rule": "Q-35 C (R-T734-3)",
+   "sources": [
+    "T-710",
+    "T-734"
+   ],
+   "status": "HELD",
+   "unit": "m2"
+  },
+  {
+   "action": "NAMED",
+   "after": null,
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.ROOF.SCREED",
+   "line": "L-b016c961ddf9e530e3c1",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "m3"
+  },
+  {
+   "action": "NAMED",
+   "after": null,
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.ROOF.FINISH",
+   "line": "L-ab79aa46b9647f63b54a",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "m2"
+  },
+  {
+   "action": "NAMED",
+   "after": null,
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.ROOF.INSULATION",
+   "line": "L-19912fbc18556b65ccf6",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "m2"
+  },
+  {
+   "action": "NAMED",
+   "after": null,
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.ROOF.PROTECTION",
+   "line": "L-c5c48bba5d23fa70e9ad",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "m2"
+  },
+  {
+   "action": "AT_LEAST",
+   "after": null,
+   "before": null,
+   "beside_at_least": 3.324832,
+   "item_code": "FIN.ROOF.SCREED",
+   "line": "L-bec94500648a90fb2f2a",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "unit": "m3"
+  },
+  {
+   "action": "NAMED",
+   "after": null,
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.ROOF.INSULATION",
+   "line": "L-8a5192a5ee3e40b61b08",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "m2"
+  },
+  {
+   "action": "NAMED",
+   "after": null,
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.ROOF.PROTECTION",
+   "line": "L-0cb71da74613f446eee9",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "m2"
+  },
+  {
+   "action": "AT_LEAST",
+   "after": null,
+   "before": null,
+   "beside_at_least": 4.791492,
+   "item_code": "FIN.ROOF.SCREED",
+   "line": "L-f4ae7151a6e2b93dd7ad",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "unit": "m3"
+  },
+  {
+   "action": "NAMED",
+   "after": null,
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.ROOF.INSULATION",
+   "line": "L-122cbab32ca719527de8",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "m2"
+  },
+  {
+   "action": "NAMED",
+   "after": null,
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.ROOF.PROTECTION",
+   "line": "L-e0dc4455bc0c6ee4fa9b",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "m2"
+  },
+  {
+   "action": "AT_LEAST",
+   "after": null,
+   "before": null,
+   "beside_at_least": 2.512672,
+   "item_code": "FIN.ROOF.SCREED",
+   "line": "L-5f018cfc13aaa9ae2210",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "unit": "m3"
+  },
+  {
+   "action": "NAMED",
+   "after": null,
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.ROOF.INSULATION",
+   "line": "L-940b7a65d7e79bc0ec33",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "m2"
+  },
+  {
+   "action": "NAMED",
+   "after": null,
+   "before": null,
+   "beside_at_least": null,
+   "item_code": "FIN.ROOF.PROTECTION",
+   "line": "L-f9e6d4f8c099f6a6cc8e",
+   "rule": "R-T702-3",
+   "sources": [
+    "T-702",
+    "T-748"
+   ],
+   "status": "HELD",
+   "unit": "m2"
+  }
+ ],
+ "schema": "URBAN_T750_WIRE_TABLE_V1",
+ "statements": [
+  {
+   "action": "KEEP",
+   "line_id": "L-702487d5998861c463c1",
+   "why": "T-702 finish area MEASURED, released"
+  },
+  {
+   "action": "KEEP",
+   "line_id": "L-e005eb9041acb08d8b87",
+   "why": "T-702 finish area MEASURED, released"
+  },
+  {
+   "action": "KEEP",
+   "line_id": "L-a6ce29981d037284ec84",
+   "why": "T-702 finish area MEASURED, released"
+  },
+  {
+   "action": "CARRIED",
+   "line_id": "L-636fd3ff1784a12e653b",
+   "row": "T-691:roof membrane 2F",
+   "why": "T-691 band already on V3.0.79 (V3.0.76 carried it)"
+  },
+  {
+   "action": "IGNORED_SMALL",
+   "line_id": "L-5ce5ba49792e8f9d1f6f",
+   "row": "T-691:roof upturn 2F",
+   "why": "roof upturn 2F 92.922 -> 92.925396 lm (+0.003396 lm, 0.004 %; a raise of a released value, no record): stays RELEASED 92.922"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-2ecffd1f396ede3b5eb4",
+   "row": "T-691:roof rolls 2F",
+   "why": "NO_PROPOSAL FIN.WP.MEMBRANE_ROLLS 17 pcs: strips by length into whole 1.00 x 10.00 rolls (Q-49 A); a 0.018 m2 ch"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-689197a4778b786de143",
+   "row": "T-710:L-689197a4778b786de143",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-bec3b3df8ec830a46447",
+   "row": "T-710:L-bec3b3df8ec830a46447",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-aed6f48195f99648c3f3",
+   "row": "T-710:L-aed6f48195f99648c3f3",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-dfc4e74604047cb21407",
+   "row": "T-710:L-dfc4e74604047cb21407",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-07b084a5187a64634108",
+   "row": "T-710:L-07b084a5187a64634108",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-19f6405a5e60a99c29f7",
+   "row": "T-710:L-19f6405a5e60a99c29f7",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-b5a04e7c058346b6f734",
+   "row": "T-710:L-b5a04e7c058346b6f734",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-b46013c737051e5441fe",
+   "row": "T-710:L-b46013c737051e5441fe",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-65194e5d4497f0882024",
+   "row": "T-710:L-65194e5d4497f0882024",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-1c36054a8cadc0726e65",
+   "row": "T-710:L-1c36054a8cadc0726e65",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-77a630d7e60ca6c404ba",
+   "row": "T-710:L-77a630d7e60ca6c404ba",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-20400ca6dc38abb30c33",
+   "row": "T-710:L-20400ca6dc38abb30c33",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-19908ce0b9a2bcadff80",
+   "row": "T-710:L-19908ce0b9a2bcadff80",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-b4a23dc5fc953bc5a163",
+   "row": "T-710:L-b4a23dc5fc953bc5a163",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-90b40877c8c3da54ba1b",
+   "row": "T-710:L-90b40877c8c3da54ba1b",
+   "why": "NO_PROPOSAL NEEDS_OWNER_RULE: state only"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-9971bd68a5150abebe0a",
+   "row": "T-710:L-9971bd68a5150abebe0a",
+   "why": "VALUE value 1.0 1 .. 1 pcs (FD 1 firm + W.C. 0 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-3e6dbcb5614746978a87",
+   "row": "T-710:L-3e6dbcb5614746978a87",
+   "why": "BOUND low 1.0 high 2.0 1 .. 2 pcs (FD 1 firm + W.C. 1 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-a5f885a2f86ee05d5b8b",
+   "row": "T-710:L-a5f885a2f86ee05d5b8b",
+   "why": "BOUND low 1.0 high 2.0 1 .. 2 pcs (FD 1 firm + W.C. 1 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-fb8f6c4b9b3044505557",
+   "row": "T-710:L-fb8f6c4b9b3044505557",
+   "why": "BOUND low 1.0 high 2.0 1 .. 2 pcs (FD 1 firm + W.C. 1 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-2253a7ed9e80ac00c728",
+   "row": "T-710:L-2253a7ed9e80ac00c728",
+   "why": "BOUND low 2.0 high 3.0 2 .. 3 pcs (FD 2 firm + W.C. 1 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-2af93ddb70a431b92800",
+   "row": "T-710:L-2af93ddb70a431b92800",
+   "why": "BOUND low 1.0 high 2.0 1 .. 2 pcs (FD 1 firm + W.C. 1 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-faa7232880f13c1e4a99",
+   "row": "T-710:L-faa7232880f13c1e4a99",
+   "why": "BOUND low 1.0 high 2.0 1 .. 2 pcs (FD 1 firm + W.C. 1 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-6375385673176b8b2c9c",
+   "row": "T-710:L-6375385673176b8b2c9c",
+   "why": "VALUE value 1.0 1 .. 1 pcs (FD 1 firm + W.C. 0 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-229e7bf9e837e1d838bd",
+   "row": "T-710:L-229e7bf9e837e1d838bd",
+   "why": "VALUE value 1.0 1 .. 1 pcs (FD 1 firm + W.C. 0 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-bcda623f9ad89eba41db",
+   "row": "T-710:L-bcda623f9ad89eba41db",
+   "why": "BOUND low 1.0 high 2.0 1 .. 2 pcs (FD 1 firm + W.C. 1 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-f650522e7882dddccdfa",
+   "row": "T-710:L-f650522e7882dddccdfa",
+   "why": "BOUND low 1.0 high 2.0 1 .. 2 pcs (FD 1 firm + W.C. 1 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-a4bbc2efdb8425554344",
+   "row": "T-710:L-a4bbc2efdb8425554344",
+   "why": "VALUE value 1.0 1 .. 1 pcs (FD 1 firm + W.C. 0 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-20dfb3cd1232128b3cb6",
+   "row": "T-710:L-20dfb3cd1232128b3cb6",
+   "why": "BOUND low 1.0 high 2.0 1 .. 2 pcs (FD 1 firm + W.C. 1 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-0db07ac89503dd3f5980",
+   "row": "T-710:L-0db07ac89503dd3f5980",
+   "why": "VALUE value 1.0 1 .. 1 pcs (FD 1 firm + W.C. 0 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-657bff4f4cc8e417bc6c",
+   "row": "T-710:L-657bff4f4cc8e417bc6c",
+   "why": "BOUND low 1.0 high 2.0 1 .. 2 pcs (FD 1 firm + W.C. 1 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-5f41701522d675c37b10",
+   "row": "T-710:L-5f41701522d675c37b10",
+   "why": "BOUND low 1.0 high 2.0 1 .. 2 pcs (FD 1 firm + W.C. 1 open)"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-345e907e572a363fb615",
+   "row": "T-710:L-345e907e572a363fb615",
+   "why": "BOUND low 1.0 high 2.0 1 .. 2 pcs (FD 1 firm + W.C. 1 open)"
+  },
+  {
+   "action": "IGNORED_SMALL",
+   "line_id": "L-2361d6ec13c952bd2ae3",
+   "row": "T-710:L-2361d6ec13c952bd2ae3",
+   "why": "pool-court ledge membrane 0 .. 0.639573 m2 (T-529 0.639573): left as it is"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-3e8fe55da71851816dd4",
+   "row": "T-710:L-3e8fe55da71851816dd4",
+   "why": "NO_PROPOSAL NEEDS_OWNER_RULE: state only"
+  },
+  {
+   "action": "IGNORED_SMALL",
+   "line_id": "L-d7d1bf8c5991ccf69ea2",
+   "row": "T-710:L-d7d1bf8c5991ccf69ea2",
+   "why": "pool-court ledge upturn 0 .. 3.528277 lm (T-522 / T-529 0.551614): left as it is"
+  },
+  {
+   "action": "IGNORED_SMALL",
+   "line_id": "L-1954878bb02c91139e1b",
+   "row": "T-710:L-1954878bb02c91139e1b",
+   "why": "pool-court window-run upturn 0 .. 0.500002 lm (T-522 0.500002): left as it is"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-aac1f35e08f85b643692",
+   "row": "T-710:L-aac1f35e08f85b643692",
+   "why": "NO_PROPOSAL NEEDS_OWNER_RULE: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-9592048116294937ab6f",
+   "row": "T-710:L-9592048116294937ab6f",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-f78da96a7d31f7b72068",
+   "row": "T-710:L-f78da96a7d31f7b72068",
+   "why": "NO_PROPOSAL NO_PHYSICAL_ELEMENT: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-c57860d79f54a4c1c4b3",
+   "row": "T-710:L-c57860d79f54a4c1c4b3",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-a4df8fc50fbab4bef48f",
+   "row": "T-710:L-a4df8fc50fbab4bef48f",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "CHANGE/DUPLICATE",
+   "line_id": "L-8090ff20f2b547d1bc96",
+   "row": "T-710:L-8090ff20f2b547d1bc96",
+   "why": "BOUND low 1.4 high 1.9 OPEN_BOUND (W09 / W10 sills, D-45)"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-4f4e4c930e33ed6dafa3",
+   "row": "T-710:L-4f4e4c930e33ed6dafa3",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-eba4599c26b0d24de873",
+   "row": "T-710:L-eba4599c26b0d24de873",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-12aca7f853626262bd07",
+   "row": "T-710:L-12aca7f853626262bd07",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-84a874dedb35cbe2bafb",
+   "row": "T-710:L-84a874dedb35cbe2bafb",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-f7da4df288b4e006c0e7",
+   "row": "T-710:L-f7da4df288b4e006c0e7",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-46cee803214ff2d964fa",
+   "row": "T-710:L-46cee803214ff2d964fa",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-79bc828150bbfe63ce8e",
+   "row": "T-710:L-79bc828150bbfe63ce8e",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-13b1d3c202bc08fb65c2",
+   "row": "T-710:L-13b1d3c202bc08fb65c2",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-f0aadf70513eb21d5671",
+   "row": "T-710:L-f0aadf70513eb21d5671",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-302b401eff698289c54e",
+   "row": "T-710:L-302b401eff698289c54e",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "KEEP/STATEMENT",
+   "line_id": "L-d2488bbb7103c8cd2980",
+   "row": "T-710:L-d2488bbb7103c8cd2980",
+   "why": "NO_PROPOSAL DESIGNER: state only"
+  },
+  {
+   "action": "ADD/DUPLICATE",
+   "line_id": "MISSING FIN.WP.DOORWAY D-GF-07",
+   "row": "T-710:MISSING:FIN.WP.DOORWAY[m2]/DOOR:D-GF-07-PANTRY/THRESHOLD_FLOOR",
+   "why": "VALUE value 0.2 0.200"
+  },
+  {
+   "action": "ADD/DUPLICATE",
+   "line_id": "MISSING FIN.WP.DOORWAY_TRANSITION_NR D-GF-07",
+   "row": "T-710:MISSING:FIN.WP.DOORWAY_TRANSITION_NR[pcs]/DOOR:D-GF-07-PANTRY/TRANSITION",
+   "why": "VALUE value 1.0 1"
+  },
+  {
+   "action": "ADD/DUPLICATE",
+   "line_id": "MISSING FIN.WP.TERMINATION GF-07 open side",
+   "row": "T-710:MISSING:FIN.WP.TERMINATION[lm]/GF-07:OPEN_SIDE_DINING/MEMBRANE_EDGE",
+   "why": "VALUE value 4.5 4.500"
+  },
+  {
+   "action": "ADD/DUPLICATE",
+   "line_id": "MISSING FIN.WP.PENETRATION GF-07",
+   "row": "T-710:MISSING:FIN.WP.PENETRATION[pcs]/GF-07/FLOOR_PENETRATIONS",
+   "why": "VALUE value 1.0 1 .. 1 (T-691: 1 FD, no W.C.)"
+  },
+  {
+   "action": "IGNORED_SMALL",
+   "line_id": "L-2361d6ec13c952bd2ae3",
+   "row": "T-734:1F-POOLCOURT-550-LEDGE:wp_membrane",
+   "why": "pool-court ledge membrane 0 .. 0.639573 m2 (T-529 0.639573): left as it is"
+  },
+  {
+   "action": "IGNORED_SMALL",
+   "line_id": "L-d7d1bf8c5991ccf69ea2",
+   "row": "T-734:1F-POOLCOURT-550-LEDGE:wp_upturn",
+   "why": "pool-court ledge upturn 0 .. 3.528277 lm (T-522 / T-529 0.551614): left as it is"
+  },
+  {
+   "action": "IGNORED_SMALL",
+   "line_id": "L-1954878bb02c91139e1b",
+   "row": "T-734:1F-POOLCOURT-550:wp_upturn window_face",
+   "why": "pool-court window-run upturn 0 .. 0.500002 lm (T-522 0.500002): left as it is"
+  },
+  {
+   "action": "CARRIED",
+   "line_id": "L-636fd3ff1784a12e653b",
+   "row": "DG-98cbadebaecc5ede:L-636fd3ff1784a12e653b",
+   "why": "Checker downgrade record carried by V3.0.76: HELD 115.656474 .. 115.813974 m2 on V3.0.79 (T-691 band)"
+  }
+ ],
+ "summary": {
+  "by_action": {
+   "ADD_NAMED": 1,
+   "ADD_POINT": 4,
+   "AT_LEAST": 3,
+   "BOUND": 13,
+   "NAMED": 10,
+   "POINT": 5
+  },
+  "entries": 36,
+  "penetration_pcs": [
+   19.0,
+   31.0
+  ],
+  "screed_at_least_m3": 10.628996,
+  "statements": 67,
+  "statements_by_action": {
+   "ADD/DUPLICATE": 4,
+   "CARRIED": 2,
+   "CHANGE/DUPLICATE": 18,
+   "IGNORED_SMALL": 7,
+   "KEEP": 3,
+   "KEEP/STATEMENT": 33
+  }
+ }
+}
