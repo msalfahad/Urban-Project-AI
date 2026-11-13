@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13 20:17 UTC | Lead | SUCCESS | board | T-769/T-767/T-764/T-762/T-314 r4 MERGED WORKED, T-763 r1 REJECTED -> r2 W2 first; T-770 r2 READY (blank 691->295) with Checker; T-770 r3 = T-764+T-767+T-769 sets (V3.0.82), T-750 folded; NEW T-776 boundary foundation 0.90 vs 0.40 dig (F-V764-1) + fence +28.3 %, T-777 beams +18 %; T-757 restated on the 0.05 rule; Drive OK, no new files; no owner package; queue check: 20 actionable rows, 0 flagged, 0 stall checks | self-check PASS (codemap, t061, freeze 0); problem: none
 - 2026-11-13 20:13 UTC | Lead | STARTED | run session_01E6cPndvE82FTgmHLajsoee | repo-attached routine | task state: board | report pending
 - 2026-11-13T19:51Z | Verifier | STARTED | run session_01E6cPneJwccoSRJBK57M87m | repo-attached routine | task state: per run log T-770 r2 READY (Gate B, W3), T-769 r1 READY (W1) | self-check pending
 - 2026-11-13T19:34Z | Worker 3 | SUCCESS | T-770 r2 READY (Gate B integration package, agents/task-T-770 @ c4005ffa) | V3.0.81 on V3.0.79 + master 1.81.0: MAIN_FILL 81 non-formwork rows + T-762 formwork 336 (33 deductions netted) + T-761 concrete 80 (13 ignored-small -> 1 SAFETY 1.00 m3); blank non-rebar 691->295; concrete +58.42 m3, formwork 1098.0->2226.9 m2, roof finish 248.8 vs freelancer 285 m2 (-12.7 %). Drive OK; Drive chain run not finished in the slot (Checker runs v3081_run.py) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
