@@ -1,0 +1,3067 @@
+{
+ "inputs": {
+  "entries": [
+   {
+    "action": "RANGE",
+    "band": [
+     14.17536,
+     14.17536
+    ],
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:1F_11:PAINT",
+     "high": 61.7177,
+     "item_code": "FIN.PAINT",
+     "low": 61.4626,
+     "unit": "m2"
+    },
+    "high": 66.02305,
+    "line_id": "L-349db74a70e1eecda2d2",
+    "low": 60.60115,
+    "piece": "PAINT_RESTATE",
+    "plaster": [
+     74.77651,
+     80.19841
+    ],
+    "plaster_line_id": "L-31db3c83552682d92ca3",
+    "rule": "UP-FIN-PAINT-002 1.0.0 (R-T740-1)",
+    "source_tasks": [
+     "T-740",
+     "T-748"
+    ],
+    "status": "HELD",
+    "tiled": [
+     0.0,
+     0.0
+    ],
+    "why": "paint = plaster of the same face 74.776510 .. 80.198410 - band 14.175360 .. 14.175360 - tiled 0.000000 .. 0.000000 m2; engine line differed by the named item(s): low OPENING_BASIS_MISMATCH 0.861450 (W17); high OPENING_BASIS_MISMATCH -4.305350 (W17)"
+   },
+   {
+    "action": "RANGE",
+    "band": [
+     24.608,
+     25.248
+    ],
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:1F_13:PAINT",
+     "high": 114.3677,
+     "item_code": "FIN.PAINT",
+     "low": 111.0177,
+     "unit": "m2"
+    },
+    "high": 114.3675,
+    "line_id": "L-be48ea84285be20645af",
+    "low": 111.0175,
+    "piece": "PAINT_RESTATE",
+    "plaster": [
+     135.6255,
+     139.6155
+    ],
+    "plaster_line_id": "L-9b4a7bab033d677e2017",
+    "rule": "UP-FIN-PAINT-002 1.0.0 (R-T740-1)",
+    "source_tasks": [
+     "T-740",
+     "T-748"
+    ],
+    "status": "HELD",
+    "tiled": [
+     0.0,
+     0.0
+    ],
+    "why": "paint = plaster of the same face 135.625500 .. 139.615500 - band 24.608000 .. 25.248000 - tiled 0.000000 .. 0.000000 m2; engine line differed by the named item(s): low LEDGER_ROUNDING 0.000200 (paint line vs its own ledger (L x H - deductions)); high LEDGER_ROUNDING 0.000200 (paint line vs its own ledger (L x H - deductions))"
+   },
+   {
+    "action": "RANGE",
+    "band": [
+     26.32512,
+     33.00032
+    ],
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:GF_08:PAINT",
+     "high": 178.805,
+     "item_code": "FIN.PAINT",
+     "low": 152.0505,
+     "unit": "m2"
+    },
+    "high": 178.80495,
+    "line_id": "L-c0ac22c964a42e7d71b1",
+    "low": 151.89545,
+    "piece": "PAINT_RESTATE",
+    "plaster": [
+     178.22057,
+     211.80527
+    ],
+    "plaster_line_id": "L-8cecb1d010d5aafbf25d",
+    "rule": "UP-FIN-PAINT-002 1.0.0 (R-T740-1)",
+    "source_tasks": [
+     "T-740",
+     "T-748"
+    ],
+    "status": "HELD",
+    "tiled": [
+     0.0,
+     0.0
+    ],
+    "why": "paint = plaster of the same face 178.220570 .. 211.805270 - band 26.325120 .. 33.000320 - tiled 0.000000 .. 0.000000 m2; engine line differed by the named item(s): low BEAM_END_BELOW_CEILING 0.065000 (beam B26); low BEAM_END_BELOW_CEILING 0.090000 (beam B27); low LEDGER_ROUNDING 0.000050 (paint line vs its own ledger (L x H - deductions)); high LEDGER_ROUNDING 0.000050 (paint line vs its own ledge"
+   },
+   {
+    "action": "RANGE",
+    "band": [
+     4.86976,
+     5.76576
+    ],
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:2F_01:PAINT",
+     "high": 26.0002,
+     "item_code": "FIN.PAINT",
+     "low": 22.6502,
+     "unit": "m2"
+    },
+    "high": 26.00015,
+    "line_id": "L-c74cfb4e07bcc47bc5d6",
+    "low": 22.49015,
+    "piece": "PAINT_RESTATE",
+    "plaster": [
+     27.35991,
+     31.76591
+    ],
+    "plaster_line_id": "L-ae0cdd794cc5fdbe0c29",
+    "rule": "UP-FIN-PAINT-002 1.0.0 (R-T740-1)",
+    "source_tasks": [
+     "T-740",
+     "T-748"
+    ],
+    "status": "HELD",
+    "tiled": [
+     0.0,
+     0.0
+    ],
+    "why": "paint = plaster of the same face 27.359910 .. 31.765910 - band 4.869760 .. 5.765760 - tiled 0.000000 .. 0.000000 m2; engine line differed by the named item(s): low BEAM_END_BELOW_CEILING 0.160000 (beam B15); low LEDGER_ROUNDING 0.000050 (paint line vs its own ledger (L x H - deductions)); high LEDGER_ROUNDING 0.000050 (paint line vs its own ledger (L x H - deductions))"
+   },
+   {
+    "action": "RANGE",
+    "band": [
+     11.04893,
+     11.63893
+    ],
+    "expect": {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:GF_01:PAINT",
+     "high": 56.9257,
+     "item_code": "FIN.PAINT",
+     "low": 36.911738,
+     "unit": "m2"
+    },
+    "high": 54.610926,
+    "line_id": "L-cdf7f5cd2789b67004f1",
+    "low": 36.900914,
+    "piece": "PAINT_RESTATE",
+    "plaster": [
+     47.949844,
+     66.249856
+    ],
+    "plaster_line_id": "L-b152995525ed123ddac9",
+    "rule": "UP-FIN-PAINT-002 1.0.0 (R-T740-1)",
+    "source_tasks": [
+     "T-740",
+     "T-748"
+    ],
+    "status": "HELD",
+    "tiled": [
+     0.0,
+     0.0
+    ],
+    "why": "paint = plaster of the same face 47.949844 .. 66.249856 - band 11.048930 .. 11.638930 - tiled 0.000000 .. 0.000000 m2; engine line differed by the named item(s): low OPENING_BASIS_MISMATCH 0.010824 (W11 + W12); high OPENING_BASIS_MISMATCH 2.314774 (W11 + W12)"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+    "element_id": "GF-OPENING-OP-018:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block D315 handle 320: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.8,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-OPENING-OP-018:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-672329032e0d70329d5f",
+    "kind": "DOOR",
+    "line_id": "L-0ea62c4cef8e2ce5a244",
+    "low": 0.0,
+    "opening": "D-GF-12",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-12 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "GF-OPENING-OP-026:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-026:door jambs and head:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block D315 handle 19E: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.8,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-OPENING-OP-026:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-f4e9614350ce4659d186",
+    "kind": "DOOR",
+    "line_id": "L-26efbd99ac40f2435692",
+    "low": 0.0,
+    "opening": "D-GF-04",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-04 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "1F-OPENING-OP-004:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-004:door jambs and head:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "1F",
+    "frame": "plan block D315 handle C2B: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.8,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "1F-OPENING-OP-004:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-54b2eb0ad40cc47b9be5",
+    "kind": "DOOR",
+    "line_id": "L-2b4e45da29a5b2dd7981",
+    "low": 0.0,
+    "opening": "D-1F-01",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-1F-01 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE_BLANK",
+    "cause": "SIZE_NOT_ESTABLISHED",
+    "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+     "high": null,
+     "item_code": "FIN.PAINT",
+     "low": null,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "handle 2D8: masonry jamb not found on both faces",
+    "high": null,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-e70e7e48b4c15b4f5a21",
+    "kind": "GATE",
+    "line_id": "L-2d7f8ab2fb489d7f0963",
+    "low": null,
+    "opening": "D-GF-15",
+    "parts": [],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "HELD",
+    "why": "D-GF-15 (GATE): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; width or height not established: the edge lm is HELD (blank), never 0; SIZE_NOT_ESTABLISHED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "1F-OPENING-OP-005:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+     "high": 0.795,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "1F",
+    "frame": "plan block D215 handle C18: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.9,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "1F-OPENING-OP-005:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-a85b83a93486fdc400f8",
+    "kind": "DOOR",
+    "line_id": "L-37cdb8db76a870eff3fe",
+    "low": 0.0,
+    "opening": "D-1F-08",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.900000",
+      "lm": [
+       "0.000000",
+       "0.900000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-1F-08 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.900000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "2F-OPENING-OP-007:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "2F-OPENING-OP-007:door jambs and head:RETURN_PAINT",
+     "high": 1.06,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "2F",
+    "frame": "plan block d220 handle 12C2: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.9,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "2F-OPENING-OP-007:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-39497d7b7639a776f8f2",
+    "kind": "DOOR",
+    "line_id": "L-4e7e711e5c8abc074414",
+    "low": 0.0,
+    "opening": "D-2F-02",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.900000",
+      "lm": [
+       "0.000000",
+       "0.900000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-2F-02 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.900000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "1F-OPENING-OP-006:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+     "high": 0.795,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "1F",
+    "frame": "plan block D215 handle BEF: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.9,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "1F-OPENING-OP-006:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-5d309e25e8b180283606",
+    "kind": "DOOR",
+    "line_id": "L-56b08dbf65e47a26c561",
+    "low": 0.0,
+    "opening": "D-1F-09",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.900000",
+      "lm": [
+       "0.000000",
+       "0.900000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-1F-09 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.900000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "GF-OPENING-OP-012:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-012:door jambs and head:RETURN_PAINT",
+     "high": 0.81,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block D115 handle 2F2: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 1.0,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-OPENING-OP-012:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-61825a3103a391956d70",
+    "kind": "DOOR",
+    "line_id": "L-65c1d5f9695ad983d89f",
+    "low": 0.0,
+    "opening": "D-GF-13",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "1.000000",
+      "lm": [
+       "0.000000",
+       "1.000000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-13 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "GF-OPENING-OP-009:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-009:door jambs and head:RETURN_PAINT",
+     "high": 1.08,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block D120 handle 15E: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 1.0,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-OPENING-OP-009:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-f4175f9915208dc5f9f7",
+    "kind": "DOOR",
+    "line_id": "L-6777e02aa04439148278",
+    "low": 0.0,
+    "opening": "D-GF-01",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "1.000000",
+      "lm": [
+       "0.000000",
+       "1.000000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-01 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE_BLANK",
+    "cause": "SIZE_NOT_ESTABLISHED",
+    "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+     "high": null,
+     "item_code": "FIN.PAINT",
+     "low": null,
+     "unit": "m2"
+    },
+    "floor": "1F",
+    "frame": "handle -: no census symbol",
+    "high": null,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-64cb94b4b8dc2cb17608",
+    "kind": "ARCH",
+    "line_id": "L-6d2b3f8c5c33dd795433",
+    "low": null,
+    "opening": "A-1F-01",
+    "parts": [],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "HELD",
+    "why": "A-1F-01 (ARCH): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; width or height not established: the edge lm is HELD (blank), never 0; SIZE_NOT_ESTABLISHED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "1F-OPENING-OP-018:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "1F",
+    "frame": "plan block D315 handle C12: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.8,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "1F-OPENING-OP-018:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-537fc3896f24cf408fe6",
+    "kind": "DOOR",
+    "line_id": "L-762c50f64c3b6b6b9999",
+    "low": 0.0,
+    "opening": "D-1F-10",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-1F-10 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "GF-OPENING-OP-025:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-025:door jambs and head:RETURN_PAINT",
+     "high": 1.08,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block D120 handle 192: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 1.0,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-OPENING-OP-025:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-3ae66decd178e43c61e0",
+    "kind": "DOOR",
+    "line_id": "L-78d0a48c8bf5af4b21c4",
+    "low": 0.0,
+    "opening": "D-GF-05",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "1.000000",
+      "lm": [
+       "0.000000",
+       "1.000000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-05 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "GF-OPENING-OP-008:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+     "high": 1.08,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block D120 handle 33E: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 1.0,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-OPENING-OP-008:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-e11de0ecd42fcb0b5756",
+    "kind": "DOOR",
+    "line_id": "L-7969458ba9185391c684",
+    "low": 0.0,
+    "opening": "D-GF-06",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "1.000000",
+      "lm": [
+       "0.000000",
+       "1.000000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-06 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "GF-OPENING-OP-021:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-021:door jambs and head:RETURN_PAINT",
+     "high": 1.4,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block D200 handle 281: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 2.0,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-OPENING-OP-021:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-2f94dca4dd5f2ec05822",
+    "kind": "DOOR",
+    "line_id": "L-7f8d0739849d36a7e832",
+    "low": 0.0,
+    "opening": "D-GF-07",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "5.000000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "2.000000",
+      "lm": [
+       "0.000000",
+       "2.000000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-07 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 2.000000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "GF-OPENING-OP-005:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+     "high": 1.06,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block d220 handle 1B5: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.9,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-OPENING-OP-005:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-9cf5a4b4db78cf57cf7f",
+    "kind": "DOOR",
+    "line_id": "L-897dca14b0b8c45be725",
+    "low": 0.0,
+    "opening": "D-GF-03",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.900000",
+      "lm": [
+       "0.000000",
+       "0.900000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-03 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.900000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+    "element_id": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block D315 handle 1EF: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.8,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-6ebb9be39b8c4ff4693a",
+    "kind": "DOOR",
+    "line_id": "L-8dd621261ceb5b8e3919",
+    "low": 0.0,
+    "opening": "D-GF-02",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-02 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERAGE_NOT_PRINTED; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "GF-OPENING-OP-013:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-013:door jambs and head:RETURN_PAINT",
+     "high": 1.06,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "handle 3FF: POSITION CONFLICT: the block's frame posts are not at the drawn masonry jambs (block width vs wall gap) (block 1.000 m vs masonry 0.900 m)",
+    "high": 5.3,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-OPENING-OP-013:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-3c21b044ce980ec0ee75",
+    "kind": "DOOR",
+    "line_id": "L-91dfc7c4d8ea4c86a547",
+    "low": 0.0,
+    "opening": "D-GF-09",
+    "parts": [
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "4.400000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.900000",
+      "lm": [
+       "0.000000",
+       "0.900000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-09 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 4.400000, HEAD 0.000000 .. 0.900000; JAMBS FRAME_COVERAGE_NOT_PRINTED; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+    "element_id": "GF-OPENING-OP-017:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-017:door jambs and head:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block D315 handle 321: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.8,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-OPENING-OP-017:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-7dcb2bab84655929f7e8",
+    "kind": "DOOR",
+    "line_id": "L-9df1fbe948884e7c4d2a",
+    "low": 0.0,
+    "opening": "D-GF-11",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-11 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "2F-OPENING-OP-006:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "2F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "2F",
+    "frame": "plan block D315 handle 12BB: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.8,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "2F-OPENING-OP-006:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-833ba74bab1404d1f6cc",
+    "kind": "DOOR",
+    "line_id": "L-b12d7eb43e52a3d98ab4",
+    "low": 0.0,
+    "opening": "D-2F-03",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-2F-03 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "GF-OPENING-OP-010:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+     "high": 1.08,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block D120 handle 2C7: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 1.0,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-OPENING-OP-010:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-1f443fe4e172a90ddd7c",
+    "kind": "DOOR",
+    "line_id": "L-ba30cda374ebb4a8c7da",
+    "low": 0.0,
+    "opening": "D-GF-08",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "1.000000",
+      "lm": [
+       "0.000000",
+       "1.000000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-08 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "1F",
+    "frame": "plan block D315 handle C2E: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.8,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-34f4545187c3c764d174",
+    "kind": "DOOR",
+    "line_id": "L-c17b547dd9cdad8faf26",
+    "low": 0.0,
+    "opening": "D-1F-04",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-1F-04 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "1F-OPENING-OP-020:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-020:door jambs and head:RETURN_PAINT",
+     "high": 0.81,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "1F",
+    "frame": "plan block D115 handle C31: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 1.0,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "1F-OPENING-OP-020:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-0bc19199447147ca226a",
+    "kind": "DOOR",
+    "line_id": "L-c74cb759ac5ff7e6cfa0",
+    "low": 0.0,
+    "opening": "D-1F-02",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "1.000000",
+      "lm": [
+       "0.000000",
+       "1.000000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-1F-02 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "high": 0.81,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "1F",
+    "frame": "plan block D115 handle C32: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 1.0,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-f0668097e8d872925fdf",
+    "kind": "DOOR",
+    "line_id": "L-d086b605ac0e50af082a",
+    "low": 0.0,
+    "opening": "D-1F-03",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "1.000000",
+      "lm": [
+       "0.000000",
+       "1.000000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-1F-03 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+    "element_id": "1F-OPENING-OP-010:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "1F",
+    "frame": "plan block D315 handle 11B4: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.8,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "1F-OPENING-OP-010:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-f8a0d9bfc3e6a3f113b2",
+    "kind": "DOOR",
+    "line_id": "L-d7409e4cefc3ee62aaf6",
+    "low": 0.0,
+    "opening": "D-1F-06",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-1F-06 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "2F-OPENING-OP-001:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "2F-OPENING-OP-001:door jambs and head:RETURN_PAINT",
+     "high": 0.81,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "2F",
+    "frame": "plan block D115 handle 12BA: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 1.0,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "2F-OPENING-OP-001:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-ca7d121f07fd1a73536d",
+    "kind": "DOOR",
+    "line_id": "L-d9d0cb88542f719484f7",
+    "low": 0.0,
+    "opening": "D-2F-01",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "1.000000",
+      "lm": [
+       "0.000000",
+       "1.000000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-2F-01 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 1.000000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "1F-OPENING-OP-008:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+     "high": 1.06,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "1F",
+    "frame": "plan block d220 handle C1A: frame posts 0.050 m over the full wall depth 0.200 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.9,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "1F-OPENING-OP-008:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-f3590fade6406f912d2e",
+    "kind": "DOOR",
+    "line_id": "L-da69c4bd2954b31c0fb7",
+    "low": 0.0,
+    "opening": "D-1F-05",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.900000",
+      "lm": [
+       "0.000000",
+       "0.900000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-1F-05 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.900000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+    "element_id": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "plan block D315 handle 339: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 3.0 3.0 0.0 0.0 mm)",
+    "high": 0.8,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-698dfa14c60ff86b5c60",
+    "kind": "DOOR",
+    "line_id": "L-dc8b92788150cda368a1",
+    "low": 0.0,
+    "opening": "D-GF-10",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "WET_BOTH_SIDES_TILE_NOT_ESTABLISHED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-10 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD WET_BOTH_SIDES_TILE_NOT_ESTABLISHED"
+   },
+   {
+    "action": "EDGE_BLANK",
+    "cause": "SIZE_NOT_ESTABLISHED",
+    "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+     "high": null,
+     "item_code": "FIN.PAINT",
+     "low": null,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "handle -: no census symbol",
+    "high": null,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-3e19506bd9e093dfb7be",
+    "kind": "ARCH",
+    "line_id": "L-eab5536cbc5b1f7829dd",
+    "low": null,
+    "opening": "A-GF-01",
+    "parts": [],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "HELD",
+    "why": "A-GF-01 (ARCH): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; width or height not established: the edge lm is HELD (blank), never 0; SIZE_NOT_ESTABLISHED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERAGE_NOT_PRINTED; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "GF",
+    "frame": "handle 334: not a door block: no frame drawn",
+    "high": 5.2,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8a038e1ca7c2d73d5b13",
+    "kind": "DOOR",
+    "line_id": "L-f3270cd391188bcf433c",
+    "low": 0.0,
+    "opening": "D-GF-14",
+    "parts": [
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "4.400000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-GF-14 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 4.400000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERAGE_NOT_PRINTED; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "EDGE",
+    "cause": "JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED",
+    "element_id": "1F-OPENING-OP-019:door jambs and head:PAINT_EDGE",
+    "expect": {
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-019:door jambs and head:RETURN_PAINT",
+     "high": 0.78,
+     "item_code": "FIN.PAINT",
+     "low": 0.0,
+     "unit": "m2"
+    },
+    "floor": "1F",
+    "frame": "plan block D315 handle BEE: frame posts 0.050 m over the full wall depth 0.150 m at the drawn masonry jambs (offsets 0.0 0.0 0.0 0.0 mm)",
+    "high": 0.8,
+    "host_expect": {
+     "class": "RELEASED",
+     "element_id": "1F-OPENING-OP-019:door jambs and head",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-f38f6ecefecd7e617cac",
+    "kind": "DOOR",
+    "line_id": "L-f430f55002cce63efb40",
+    "low": 0.0,
+    "opening": "D-1F-07",
+    "parts": [
+     {
+      "cause": "FRAME_COVERS_RETURN_DRAWN",
+      "gross": "4.400000",
+      "lm": [
+       "0.000000",
+       "0.000000"
+      ],
+      "part": "JAMBS"
+     },
+     {
+      "cause": "FRAME_COVERAGE_NOT_PRINTED",
+      "gross": "0.800000",
+      "lm": [
+       "0.000000",
+       "0.800000"
+      ],
+      "part": "HEAD"
+     }
+    ],
+    "piece": "RETURN_LM",
+    "rule": "R-T746-1 / R-T746-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA, Lead ruling reading B)",
+    "source_tasks": [
+     "T-746",
+     "T-748"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "D-1F-07 (DOOR): the painted return is an lm item per opening (owner paint rule, reading B), never paint m2; per component: JAMBS 0.000000 .. 0.000000, HEAD 0.000000 .. 0.800000; JAMBS FRAME_COVERS_RETURN_DRAWN; HEAD FRAME_COVERAGE_NOT_PRINTED"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "1F-FACADE:PAINT_EDGE:W19",
+    "face_id": "1F/NE-2/STOREY/storey",
+    "floor": "1F",
+    "high": 2.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 2.2,
+    "opening": "W19",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "1F-FACADE:PAINT_EDGE:W20",
+    "face_id": "1F/NE-2/STOREY/storey",
+    "floor": "1F",
+    "high": 2.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 2.2,
+    "opening": "W20",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "1F-FACADE:PAINT_EDGE:W24",
+    "face_id": "1F/NE-2/STOREY/storey",
+    "floor": "1F",
+    "high": 4.55,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 4.55,
+    "opening": "W24",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING_BLANK",
+    "basis": "HELD",
+    "element_id": "1F-FACADE:PAINT_EDGE:W17",
+    "face_id": "1F/NW-2/STOREY/storey",
+    "floor": "1F",
+    "high": null,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": null,
+    "opening": "W17",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "HELD",
+    "why": "window outside edge HELD (T-746 / T-751: height or curved frame not printed)"
+   },
+   {
+    "action": "OPENING",
+    "basis": "ARC_DEVELOPED (T-751 own chain walk)",
+    "element_id": "1F-FACADE:PAINT_EDGE:W15",
+    "face_id": "1F/NW-5/STOREY/storey",
+    "floor": "1F",
+    "high": 6.845844,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 6.845844,
+    "opening": "W15",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "arched head developed 2.524024 + jambs 4.321820 = 6.845844 m (T-751 R-T751-2: the arc governs, the rectangle 7.552320 refused; T-747 ledger 6.846100, diff -0.000256)"
+   },
+   {
+    "action": "OPENING",
+    "basis": "ARC_DEVELOPED (T-751 own chain walk)",
+    "element_id": "1F-FACADE:PAINT_EDGE:W16",
+    "face_id": "1F/NW-5/STOREY/storey",
+    "floor": "1F",
+    "high": 6.845844,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 6.845844,
+    "opening": "W16",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "arched head developed 2.524024 + jambs 4.321820 = 6.845844 m (T-751 R-T751-2: the arc governs, the rectangle 7.552320 refused; T-747 ledger 6.846100, diff -0.000256)"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "1F-FACADE:PAINT_EDGE:W14",
+    "face_id": "1F/SE-1/STOREY/storey",
+    "floor": "1F",
+    "high": 5.65,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 5.65,
+    "opening": "W14",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "1F-FACADE:PAINT_EDGE:W13",
+    "face_id": "1F/SE-2/STOREY/storey",
+    "floor": "1F",
+    "high": 5.8,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 5.8,
+    "opening": "W13",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "1F-FACADE:PAINT_EDGE:W25",
+    "face_id": "1F/SW-3/STOREY/storey",
+    "floor": "1F",
+    "high": 4.0,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 4.0,
+    "opening": "W25",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "1F-FACADE:PAINT_EDGE:W21",
+    "face_id": "1F/SW-3/STOREY/storey",
+    "floor": "1F",
+    "high": 2.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 2.2,
+    "opening": "W21",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "1F-FACADE:PAINT_EDGE:W22",
+    "face_id": "1F/SW-3/STOREY/storey",
+    "floor": "1F",
+    "high": 2.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 2.2,
+    "opening": "W22",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "1F-FACADE:PAINT_EDGE:W23",
+    "face_id": "1F/SW-3/STOREY/storey",
+    "floor": "1F",
+    "high": 2.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 2.2,
+    "opening": "W23",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "ARC_DEVELOPED (T-751 own chain walk)",
+    "element_id": "2F-FACADE:PAINT_EDGE:W26",
+    "face_id": "2F/SE-1/STOREY+PARAPET/storey",
+    "floor": "2F",
+    "high": 4.070563,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "2F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-d52c4f763b19aedf8b8b",
+    "kind": "WINDOW",
+    "low": 4.070563,
+    "opening": "W26",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "arched head developed 1.970563 + jambs 2.100000 = 4.070563 m (T-751 R-T751-2: the arc governs, the rectangle 4.600000 refused; T-747 ledger 4.070900, diff -0.000337)"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "2F-FACADE:PAINT_EDGE:W27",
+    "face_id": "2F/SW-1/STOREY+PARAPET/storey",
+    "floor": "2F",
+    "high": 4.0,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "2F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-d52c4f763b19aedf8b8b",
+    "kind": "WINDOW",
+    "low": 4.0,
+    "opening": "W27",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "2F-FACADE:PAINT_EDGE:W28",
+    "face_id": "2F/SW-1/STOREY+PARAPET/storey",
+    "floor": "2F",
+    "high": 2.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "2F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-d52c4f763b19aedf8b8b",
+    "kind": "WINDOW",
+    "low": 2.2,
+    "opening": "W28",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "2F-FACADE:PAINT_EDGE:W29",
+    "face_id": "2F/SW-1/STOREY+PARAPET/storey",
+    "floor": "2F",
+    "high": 4.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "2F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-d52c4f763b19aedf8b8b",
+    "kind": "WINDOW",
+    "low": 4.2,
+    "opening": "W29",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING_BLANK",
+    "basis": "HELD",
+    "element_id": "GF-FACADE:PAINT_EDGE:W02",
+    "face_id": "GF/NW-7/EDGE/storey",
+    "floor": "GF",
+    "high": null,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": null,
+    "opening": "W02",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "HELD",
+    "why": "window outside edge HELD (T-746 / T-751: height or curved frame not printed)"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "GF-FACADE:PAINT_EDGE:W09",
+    "face_id": "GF/P-2/COVERED/storey",
+    "floor": "GF",
+    "high": 4.5,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": 4.5,
+    "opening": "W09",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "GF-FACADE:PAINT_EDGE:W10",
+    "face_id": "GF/P-2/COVERED/storey",
+    "floor": "GF",
+    "high": 4.0,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": 4.0,
+    "opening": "W10",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "GF-FACADE:PAINT_EDGE:W11",
+    "face_id": "GF/SE-1/EDGE/storey",
+    "floor": "GF",
+    "high": 6.35,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": 6.35,
+    "opening": "W11",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "GF-FACADE:PAINT_EDGE:W12",
+    "face_id": "GF/SE-1/EDGE/storey",
+    "floor": "GF",
+    "high": 6.35,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": 6.35,
+    "opening": "W12",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "GF-FACADE:PAINT_EDGE:W01",
+    "face_id": "GF/SE-4/FLUSH/storey",
+    "floor": "GF",
+    "high": 5.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": 5.2,
+    "opening": "W01",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "GF-FACADE:PAINT_EDGE:W04",
+    "face_id": "GF/SW-3/EDGE/storey",
+    "floor": "GF",
+    "high": 2.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": 2.2,
+    "opening": "W04",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "GF-FACADE:PAINT_EDGE:W08",
+    "face_id": "GF/SW-3/EDGE/storey",
+    "floor": "GF",
+    "high": 4.5,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": 4.5,
+    "opening": "W08",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "GF-FACADE:PAINT_EDGE:W05",
+    "face_id": "GF/SW-7/FLUSH/storey",
+    "floor": "GF",
+    "high": 2.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": 2.2,
+    "opening": "W05",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "GF-FACADE:PAINT_EDGE:W06",
+    "face_id": "GF/SW-7/FLUSH/storey",
+    "floor": "GF",
+    "high": 2.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": 2.2,
+    "opening": "W06",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "GF-FACADE:PAINT_EDGE:W07",
+    "face_id": "GF/SW-7/FLUSH/storey",
+    "floor": "GF",
+    "high": 2.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": 2.2,
+    "opening": "W07",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING",
+    "basis": "RECTANGLE",
+    "element_id": "1F-FACADE:PAINT_EDGE:W18",
+    "face_id": "1F/NW-4/STOREY/storey",
+    "floor": "1F",
+    "high": 4.82,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "kind": "WINDOW",
+    "low": 4.82,
+    "opening": "W18",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "window outside jambs + head (T-313 / T-746 / T-747); sill is its own item"
+   },
+   {
+    "action": "OPENING_BLANK",
+    "basis": "HELD",
+    "element_id": "GF-FACADE:PAINT_EDGE:W03",
+    "face_id": "GF/NW-4/COVERED/storey",
+    "floor": "GF",
+    "high": null,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "kind": "WINDOW",
+    "low": null,
+    "opening": "W03",
+    "piece": "EXT_EDGE",
+    "rule": "R-T747-2 / R-T751-2 (UP-FIN-PAINT-002 edges LM_ITEMS_NOT_AREA)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "HELD",
+    "why": "window outside edge HELD (T-746 / T-751: height or curved frame not printed)"
+   },
+   {
+    "action": "CORNER",
+    "basis": "T-747 corner rows by host",
+    "corner_group": "L-8bb83e16cc7b104ab88b",
+    "element_id": "1F-FACADE:CORNER_EDGE:1F-STOREY",
+    "face_id": "L-8bb83e16cc7b104ab88b",
+    "floor": "1F",
+    "high": 37.8,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "low": 37.8,
+    "piece": "EXT_EDGE",
+    "rows": [
+     "EXT#1F-CONVEX EXTERNAL_CORNER HELD_BOUND"
+    ],
+    "rule": "R-T747-2 / R-T751-1 (corners lm, arris once)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "outside corner arrises of face group L-8bb83e16cc7b104ab88b once (T-697 / T-737 rows: EXT#1F-CONVEX EXTERNAL_CORNER HELD_BOUND)"
+   },
+   {
+    "action": "CORNER",
+    "basis": "T-747 corner rows by host",
+    "corner_group": "L-b05f70c92405dbcfbe62",
+    "element_id": "GF-FACADE:CORNER_EDGE:GF-STOREY",
+    "face_id": "L-b05f70c92405dbcfbe62",
+    "floor": "GF",
+    "high": 95.1,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "low": 95.1,
+    "piece": "EXT_EDGE",
+    "rows": [
+     "EXT#1F-CONVEX EXTERNAL_CORNER HELD_BOUND",
+     "EXT#GF-CONVEX EXTERNAL_CORNER HELD_BOUND",
+     "EXT#GF-MOUTHS MOUTH_WALL_END HELD_BOUND"
+    ],
+    "rule": "R-T747-2 / R-T751-1 (corners lm, arris once)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "outside corner arrises of face group L-b05f70c92405dbcfbe62 once (T-697 / T-737 rows: EXT#1F-CONVEX EXTERNAL_CORNER HELD_BOUND, EXT#GF-CONVEX EXTERNAL_CORNER HELD_BOUND, EXT#GF-MOUTHS MOUTH_WALL_END HELD_BOUND)"
+   },
+   {
+    "action": "CORNER",
+    "basis": "T-747 corner rows by host",
+    "corner_group": "L-d52c4f763b19aedf8b8b",
+    "element_id": "2F-FACADE:CORNER_EDGE:2F-STOREY",
+    "face_id": "L-d52c4f763b19aedf8b8b",
+    "floor": "2F",
+    "high": 16.8,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "2F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-d52c4f763b19aedf8b8b",
+    "low": 16.8,
+    "piece": "EXT_EDGE",
+    "rows": [
+     "EXT#2F-CONVEX EXTERNAL_CORNER RELEASED"
+    ],
+    "rule": "R-T747-2 / R-T751-1 (corners lm, arris once)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "outside corner arrises of face group L-d52c4f763b19aedf8b8b once (T-697 / T-737 rows: EXT#2F-CONVEX EXTERNAL_CORNER RELEASED)"
+   },
+   {
+    "action": "CORNER",
+    "basis": "T-747 corner rows by host; T-751 parapet ends 0.000000 .. 11.900000 -> 9.185812 (handles 1BFD 2228 2783 2792 27B0 27B6 27CB)",
+    "corner_group": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+    "element_id": "1F-FACADE:CORNER_EDGE:PARAPET-OUTER_1F_9.70",
+    "face_id": "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70",
+    "floor": "1F",
+    "high": 9.185812,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "1F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-8bb83e16cc7b104ab88b",
+    "low": 9.185812,
+    "piece": "EXT_EDGE",
+    "rows": [
+     "EXT#1F-CONVEX-PARAPET-ENDS EXTERNAL_CORNER HELD_BOUND"
+    ],
+    "rule": "R-T747-2 / R-T751-1 (corners lm, arris once)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "outside corner arrises of face group NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70 once (T-697 / T-737 rows: EXT#1F-CONVEX-PARAPET-ENDS EXTERNAL_CORNER HELD_BOUND); T-751 parapet ends 0.000000 .. 11.900000 -> 9.185812 (handles 1BFD 2228 2783 2792 27B0 27B6 27CB)"
+   },
+   {
+    "action": "CORNER",
+    "basis": "T-747 corner rows by host",
+    "corner_group": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+    "element_id": "2F-FACADE:CORNER_EDGE:PARAPET-OUTER_2F_13.90",
+    "face_id": "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90",
+    "floor": "2F",
+    "high": 2.0,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "2F-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-d52c4f763b19aedf8b8b",
+    "low": 2.0,
+    "piece": "EXT_EDGE",
+    "rows": [
+     "EXT#2F-CONVEX EXTERNAL_CORNER RELEASED"
+    ],
+    "rule": "R-T747-2 / R-T751-1 (corners lm, arris once)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "outside corner arrises of face group NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90 once (T-697 / T-737 rows: EXT#2F-CONVEX EXTERNAL_CORNER RELEASED)"
+   },
+   {
+    "action": "CORNER",
+    "basis": "T-747 corner rows by host",
+    "corner_group": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+    "element_id": "GF-FACADE:CORNER_EDGE:PARAPET-OUTER_ANNEX_4.30",
+    "face_id": "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30",
+    "floor": "GF",
+    "high": 2.0,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "low": 2.0,
+    "piece": "EXT_EDGE",
+    "rows": [
+     "EXT#GF-CONVEX EXTERNAL_CORNER HELD_BOUND",
+     "EXT#GF-MOUTHS MOUTH_WALL_END HELD_BOUND"
+    ],
+    "rule": "R-T747-2 / R-T751-1 (corners lm, arris once)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "outside corner arrises of face group NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30 once (T-697 / T-737 rows: EXT#GF-CONVEX EXTERNAL_CORNER HELD_BOUND, EXT#GF-MOUTHS MOUTH_WALL_END HELD_BOUND)"
+   },
+   {
+    "action": "CORNER",
+    "basis": "T-747 corner rows by host",
+    "corner_group": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+    "element_id": "GF-FACADE:CORNER_EDGE:PARAPET-OUTER_GF_5.50",
+    "face_id": "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50",
+    "floor": "GF",
+    "high": 2.2,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "low": 1.0,
+    "piece": "EXT_EDGE",
+    "rows": [
+     "EXT#GF-CONVEX EXTERNAL_CORNER RELEASED",
+     "EXT#GF-MOUTHS-STOP EXTERNAL_CORNER HELD_BOUND"
+    ],
+    "rule": "R-T747-2 / R-T751-1 (corners lm, arris once)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "HELD",
+    "why": "outside corner arrises of face group NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50 once (T-697 / T-737 rows: EXT#GF-CONVEX EXTERNAL_CORNER RELEASED, EXT#GF-MOUTHS-STOP EXTERNAL_CORNER HELD_BOUND); stop-end 0 .. 1.20 HELD (free or abutting end shown on no vector view, T-751)"
+   },
+   {
+    "action": "CORNER",
+    "basis": "T-747 corner rows by host; T-751 plinth corners 2.100000 .. 2.550000 -> 2.550000",
+    "corner_group": "NEW FIN.EXT.FINISH PLINTH GF",
+    "element_id": "GF-FACADE:CORNER_EDGE:PLINTH_GF",
+    "face_id": "NEW FIN.EXT.FINISH PLINTH GF",
+    "floor": "GF",
+    "high": 14.25,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "low": 14.25,
+    "piece": "EXT_EDGE",
+    "rows": [
+     "EXT#GF-CONVEX EXTERNAL_CORNER HELD_BOUND",
+     "EXT#GF-CONVEX-PLINTH EXTERNAL_CORNER HELD_BOUND",
+     "EXT#GF-MOUTHS MOUTH_WALL_END HELD_BOUND"
+    ],
+    "rule": "R-T747-2 / R-T751-1 (corners lm, arris once)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "outside corner arrises of face group NEW FIN.EXT.FINISH PLINTH GF once (T-697 / T-737 rows: EXT#GF-CONVEX EXTERNAL_CORNER HELD_BOUND, EXT#GF-CONVEX-PLINTH EXTERNAL_CORNER HELD_BOUND, EXT#GF-MOUTHS MOUTH_WALL_END HELD_BOUND); T-751 plinth corners 2.100000 .. 2.550000 -> 2.550000"
+   },
+   {
+    "action": "CORNER",
+    "basis": "T-751 corners.no_host",
+    "corner_group": "NO_HOST",
+    "element_id": "GF-FACADE:CORNER_EDGE:PASSAGE_MOUTH_NO_HOST",
+    "face_id": "GF passage-mouth wall end above the annex parapet top (+4.80 .. +5.50, T-737): face line not in the candidate",
+    "floor": "GF",
+    "high": 1.4,
+    "host_expect": {
+     "class": "HELD",
+     "element_id": "GF-FACADE:facade",
+     "high": null,
+     "item_code": "FIN.EXT.FINISH",
+     "low": null,
+     "unit": "m2"
+    },
+    "host_line_id": "L-b05f70c92405dbcfbe62",
+    "low": 1.4,
+    "piece": "EXT_EDGE",
+    "rows": [
+     "EXT#GF-MOUTHS -> NO_HOST"
+    ],
+    "rule": "R-T751-1 (an arris measured with no face line is wired on its own line, never dropped)",
+    "source_tasks": [
+     "T-747",
+     "T-751"
+    ],
+    "status": "DRAWING-CONFIRMED",
+    "why": "1.4 m of passage-mouth wall-end arris above the annex parapet top +4.80 to +5.50 (T-737): the arris is measured; only its host face line is missing (wiring, T-749); shown beside the hosted total, never 0"
+   }
+  ],
+  "exterior_doors_counted_once": [
+   {
+    "face_id": "2F/NE-1/STOREY+PARAPET/storey",
+    "lm": [
+     "0.000000",
+     "1.000000"
+    ],
+    "opening": "D-2F-01",
+    "under": "L-d9d0cb88542f719484f7"
+   },
+   {
+    "face_id": "GF/P-1/COVERED/storey",
+    "lm": [
+     "0.000000",
+     "1.000000"
+    ],
+    "opening": "D-GF-05",
+    "under": "L-78d0a48c8bf5af4b21c4"
+   },
+   {
+    "face_id": "GF/SE-2/COVERED/storey",
+    "lm": [
+     "0.000000",
+     "2.000000"
+    ],
+    "opening": "D-GF-07",
+    "under": "L-7f8d0739849d36a7e832"
+   },
+   {
+    "face_id": "GF/SW-1/EDGE/storey",
+    "lm": [
+     "0.000000",
+     "1.000000"
+    ],
+    "opening": "D-GF-01",
+    "under": "L-6777e02aa04439148278"
+   },
+   {
+    "face_id": "GF/SW-3/EDGE/storey",
+    "lm": [
+     "0.000000",
+     "0.900000"
+    ],
+    "opening": "D-GF-03",
+    "under": "L-897dca14b0b8c45be725"
+   },
+   {
+    "face_id": "GF/SW-5/COVERED/storey",
+    "lm": [
+     "0.000000",
+     "1.000000"
+    ],
+    "opening": "D-GF-06",
+    "under": "L-7969458ba9185391c684"
+   },
+   {
+    "face_id": "GF/SW-7/FLUSH/storey",
+    "lm": [
+     "0.000000",
+     "5.300000"
+    ],
+    "opening": "D-GF-09",
+    "under": "L-91dfc7c4d8ea4c86a547"
+   }
+  ],
+  "project_id": "development-villa-t131",
+  "schema": "URBAN_V3077_INPUTS_V1",
+  "sources": [
+   {
+    "checker_run": "Verifier 2026-11-12T14:29Z Gate A PASS on 49c6df83 (session_01E6cPnbViRyHAG6PKLTn5pu)",
+    "file": "research/agents_t740/out/T740_PAINT_RULE.json",
+    "merge_commit": "0f0e0cd0",
+    "sha256": "3918f7e4382728ea990b900cce5bdda059ede9d9356b4f24c7a24f6835efaff8",
+    "task": "T-740"
+   },
+   {
+    "checker_run": "Verifier 2026-11-12T17:53Z Gate A PASS on 3311d39d (lock checker)",
+    "file": "research/agents_t746/out/T746_PAINT_EDGES.json",
+    "merge_commit": "faf8afcd",
+    "sha256": "96595bd2593afd3e515d142ee0839d51f8d634b926347d4431558647a8766eb7",
+    "task": "T-746"
+   },
+   {
+    "checker_run": "Verifier 2026-11-12T20:20Z Gate A PASS on cd76987b (session_01E6cPndH1Fg2P9McVaB87YY)",
+    "file": "research/agents_t747/out/T747_EXT_PAINT.json",
+    "merge_commit": "a3f62c52",
+    "sha256": "3c1566a9a08435d7f6c773667307858f5f8a4d1f385e17d60a5abdced8f90204",
+    "task": "T-747"
+   },
+   {
+    "checker_run": "Verifier 2026-11-12T22:05Z Gate A PASS on 34520aeb (lock checker, PARTIALLY VERIFIED)",
+    "file": "research/agents_t751/out/T751_EDGE_BOUNDS.json",
+    "merge_commit": "79766703",
+    "sha256": "1964beae4be55fbb8322623787fd934c11e027a6af85e6640404331da43e02db",
+    "task": "T-751"
+   },
+   {
+    "checker_run": "Verifier 2026-11-12T17:58Z Gate A PASS on aa09b3ff (lock checker)",
+    "file": "research/agents_t748/out/T748_ROWS.csv",
+    "merge_commit": "071dc837",
+    "sha256": "f403d34bac9567207893bc3b0af954fe688e8e49b7b764812a4cb4b6271e605e",
+    "task": "T-748"
+   }
+  ]
+ },
+ "pins": {
+  "research/agents_t736/out/LINE_INDEX_V3_0_76.json": "184e0e3c5cf381afb60ac12d2a779b9779b7352b399be8c214c36516474c7b18",
+  "research/agents_t740/out/T740_PAINT_RULE.json": "3918f7e4382728ea990b900cce5bdda059ede9d9356b4f24c7a24f6835efaff8",
+  "research/agents_t746/out/T746_PAINT_EDGES.json": "96595bd2593afd3e515d142ee0839d51f8d634b926347d4431558647a8766eb7",
+  "research/agents_t747/out/T747_EXT_PAINT.json": "3c1566a9a08435d7f6c773667307858f5f8a4d1f385e17d60a5abdced8f90204",
+  "research/agents_t748/out/T748_ROWS.csv": "f403d34bac9567207893bc3b0af954fe688e8e49b7b764812a4cb4b6271e605e",
+  "research/agents_t751/out/T751_EDGE_BOUNDS.json": "1964beae4be55fbb8322623787fd934c11e027a6af85e6640404331da43e02db"
+ },
+ "projection": {
+  "EXT_EDGE:CORNER": {
+   "high": "180.735812",
+   "low": "179.535812",
+   "n": 9
+  },
+  "EXT_EDGE:OPENING": {
+   "high": "103.682251",
+   "low": "103.682251",
+   "n": 26
+  },
+  "EXT_EDGE:OPENING_BLANK": {
+   "high": "0",
+   "low": "0",
+   "n": 3
+  },
+  "PAINT_RESTATE:RANGE": {
+   "high": "439.806576",
+   "low": "382.905164",
+   "n": 5
+  },
+  "RETURN_LM:EDGE": {
+   "high": "33.8",
+   "low": "0.0",
+   "n": 27
+  },
+  "RETURN_LM:EDGE_BLANK": {
+   "high": "0",
+   "low": "0",
+   "n": 3
+  }
+ },
+ "schema": "URBAN_T749_ENTRIES_V1"
+}
