@@ -1,3 +1,19 @@
+## LEAD REPORT 2026-11-13 00:13 UTC
+
+Drive read OK (no file in the private project folders modified since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.76 / master 1.77.0 (NOT RELEASED; released V2.9 + route G untouched). 3 pieces merged since 20:14, each with the Checker's own re-measure on the drawings.
+- WATERPROOFING (m2): roof membrane correction now applied in the candidate: 115.832 released -> HELD 115.656 .. 115.814 (Checker re-measured the dome circles r 2.211 and the roof outline 146.375 AGREE); released roof WP 209.019 -> 93.187. No freelancer verdict moves.
+- PLASTER BEADS (m.l): new family in the candidate, 14 lines all HELD: 165.45 .. 165.65 bounded + at least 128.63 where an arris is not drawn (never closed, never 0); vs freelancer +9.8 % like for like unchanged. Ceiling: one duplicated face excluded (0 m2 moves; released ceiling 411.337 unchanged).
+- EXTERIOR PAINT EDGES (lm, research): corners 168.50 .. 182.05 -> 178.14 .. 179.34; window edges 103.68 (arched heads along their curve; 106.02 was rectangles, -2.34 ENGINE_RIGHT); entrance stone surround is not on the painted face (paint deduction 0). Door edges 0 .. 12.20 and 1F slab edge still HELD -> new task. Not yet wired.
+- DRAINAGE (lm, research): plan runs HELD (sheets print 'not to scale'); risers 32.40 MEASURED + 13.50 .. 15.60 BOUNDED.
+- Learned (section 7 ADOPTED): an opening edge is walked along its drawn outline, never its bounding box; a hub version reads the Checker record file before building its index, and a line with a blank part is AT_LEAST; a sheet that disclaims its scale yields no MEASURED length; a symbol is classified by content, not its block name.
+- Missing: paint by the owner rule not in the candidate yet (next package, now TODO); tiles, exterior plaster, WP after it. Idle slots: special-metalwork and joinery censuses (nothing priced, nothing released).
+- Team health: 12 runs since 20:14, all closed with a final line; self-check PASS everywhere incl. this run. Three idle worker runs (21:00-23:20) because every next row waited on a READY task; fixed by releasing T-749 / T-752 and two new lane A rows. Queue check 16 actionable, 0 flagged, 0 stall.
+- Gates: lowest open gate 1 (paint wiring, exterior edge residuals). M3 estimate 14-17 Nov (beads + ceiling landed a day early).
+
+OWNER PACKAGE: none today (no item meets section 2.7).
+
+NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
+
 ## LEAD REPORT 2026-11-12 20:14 UTC
 
 Drive read OK (no file in the private project folders modified since 12:00 UTC today, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.75 / master 1.76.0 (NOT RELEASED; released V2.9 + route G untouched). 7 MERGED since 16:20 (formwork + concrete package, sanitary census, label fix, opening edges, readiness, exterior paint); 1 rejected.

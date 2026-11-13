@@ -2820,6 +2820,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
+(Lead 2026-11-13 12:30)
+- Your delivery reset (13 Nov) is in force: the team now works only on the gaps of the trial BOQ workbook, in your order.
+- Outside render and paint (0 in the candidate today): measured face by face 1,009.11 .. 1,087.62 m2 (render = paint by
+  your rule), corners 176.94 .. 178.14 m; going into the candidate now.
+- Tiles and stair finishes: figures agreed by the Checker; one tooling fix waits for his next run.
+- Waterproofing: being prepared in parallel; earthworks next.
+- Concrete: your 0.1 m3 rule closes 72 of the 194 held lines (about 19.69 m3 more released, safety allowance 3.83 m3);
+  being applied now, not in the candidate yet. Released concrete 291.48 m3 unchanged.
+- Roof insulation and protection: not printed on any drawing; they wait for your company default values.
+
 (Lead 2026-11-12 04:17)
 - Candidate (not released) moved one step: the concrete limits are in it. Only one held figure moved: the held columns'
   low end rose from 11.67 to 11.80 m3 (the one-plane roof slab top, read on the column sections); every other changed

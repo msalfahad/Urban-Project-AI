@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-13 12:30; OWNER DECISION 2026-11-13 12:00 delivery reset + paint rule 2026-11-12 + rebar parked 2026-11-11 in force)
+
+- Candidate of record V3.0.77 b8524d5c / master 1.78.0 (NOT RELEASED), unchanged. Since 08:25 MERGED: T-756 (e121e0b4, research). READY: T-738 r2 (Gate B), T-755 r2 (Gate A).
+- Gap order (owner 13 Nov): external render / paint -> tiles + stairs -> WP -> earthworks -> roof layers -> missing families. Hub: T-738 r2 (V3.0.78) -> T-314 r3 (V3.0.79, built now on T-738) -> T-750 (V3.0.80, built now on T-738, rebased by tools) -> T-509. Non-hub: T-757 concrete materiality (72 lines, +19.69 m3 at low bounds, allowance 3.83 m3).
+- Confidence: tiles / stairs 13-14 Nov HIGH (waits one Checker run); exterior render + paint 14-15 Nov MEDIUM; WP 15-16 Nov MEDIUM; roof layers need owner default values; 19-20 Nov blind test LOW.
+
 ## Status (Lead, 2026-11-13 08:25; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) + owner paint rule 2026-11-12 in force)
 
 - Candidate of record V3.0.77 b8524d5c / master 1.78.0 (NOT RELEASED), unchanged. Since 04:15 MERGED: T-754 (4bfa0e9f, research, PARTIALLY VERIFIED 4/7). REJECTED r1: T-738 Gate B (quantities AGREE; t459 binding not rebuilt), T-755 Gate A (retired D-63 cause read as live).

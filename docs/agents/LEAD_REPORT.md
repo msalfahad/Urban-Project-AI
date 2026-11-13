@@ -1,5 +1,20 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-13 12:30 UTC
+
+Drive read OK (no file created or modified in the private project folders since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.77 / master 1.78.0 unchanged (NOT RELEASED; released V2.9 + route G untouched). Your delivery reset of 12:00 is applied on the board.
+- EXTERIOR RENDER / PAINT (m2, your gap no. 1, 0 in the candidate today): face ledger merged 10:00 (research, 2 of 126 faces re-measured by hand by the Checker): render = paint face by face 1,009.11 .. 1,087.62 m2, 6 first-floor slab-edge faces held; corners 176.94 .. 178.14 lm. Freelancer 1,469.97 m2 (-31 .. -26 %) stays a rule difference. It goes into the candidate in the next package (Worker 2, started now).
+- TILES + STAIR FINISHES (m2 / lm): tooling fix handed in 09:46; quantities already agreed by the Checker (stair-core wall tile 18.44 .. 44.77 m2, risers 13.09 .. 13.74 m2); waiting 2.7 h for the Checker (see team health).
+- CONCRETE (m3): released 291.48 unchanged. Your 0.1 m3 rule applies to 72 of the 194 held lines (range narrower than 0.1 m3): about +19.69 m3 would be released at their measured low bounds, 3.83 m3 of ignored ranges logged, safety allowance max(1.0, 3.83) = 3.83 m3. New task for Worker 1; not in the candidate yet. The other 122 held lines still wait for designer dimensions.
+- ROOF LAYERS: insulation and protection are printed nowhere; screed at least 10.63 m3. They need your company default values (approved in principle 13 Nov); no agent invents one.
+- Designer list correction handed in (38 lines re-filed to their live cause; no quantity moves); you send the list, the agents do not.
+- Waiting to go in: waterproofing (Worker 3, built in parallel now), earthworks after it. Rebar parked.
+- Team health: the Checker's 09:52 run merged the face ledger but wrote no final line (INCOMPLETE), and Worker 1's 09:19 run also has no final line (its work was taken up at 11:21); W2 10:40 and W3 11:00 were idle because the shared candidate takes one package at a time. Fix: two packages are now built side by side on the tiles package, with reserved version numbers, still checked one at a time. Self-check PASS 3/3.
+
+OWNER PACKAGE: none (no item meets section 2.7). Pending from you already, no new question: the company default values (roof insulation / protection first).
+
+NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
+
 ## LEAD REPORT 2026-11-13 08:25 UTC
 
 Drive read OK (no file created or modified in the private project folders since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.77 / master 1.78.0 unchanged (NOT RELEASED; released V2.9 + route G untouched). Since 04:15: 1 merged (exterior paint edges, research), 2 sent back with exact faults; no quantity moved in the candidate.
@@ -28,21 +43,5 @@ Drive read OK (no file created or modified in the private project folders since 
 - Gates: lowest open gate 1 (exterior edge residuals, designer re-census, tiles package). M3 estimate 15-17 Nov.
 
 OWNER PACKAGE: none today (no item meets section 2.7). The designer list now has 18 items (for you to send when you choose; agents never send it).
-
-NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
-
-## LEAD REPORT 2026-11-13 00:13 UTC
-
-Drive read OK (no file in the private project folders modified since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.76 / master 1.77.0 (NOT RELEASED; released V2.9 + route G untouched). 3 pieces merged since 20:14, each with the Checker's own re-measure on the drawings.
-- WATERPROOFING (m2): roof membrane correction now applied in the candidate: 115.832 released -> HELD 115.656 .. 115.814 (Checker re-measured the dome circles r 2.211 and the roof outline 146.375 AGREE); released roof WP 209.019 -> 93.187. No freelancer verdict moves.
-- PLASTER BEADS (m.l): new family in the candidate, 14 lines all HELD: 165.45 .. 165.65 bounded + at least 128.63 where an arris is not drawn (never closed, never 0); vs freelancer +9.8 % like for like unchanged. Ceiling: one duplicated face excluded (0 m2 moves; released ceiling 411.337 unchanged).
-- EXTERIOR PAINT EDGES (lm, research): corners 168.50 .. 182.05 -> 178.14 .. 179.34; window edges 103.68 (arched heads along their curve; 106.02 was rectangles, -2.34 ENGINE_RIGHT); entrance stone surround is not on the painted face (paint deduction 0). Door edges 0 .. 12.20 and 1F slab edge still HELD -> new task. Not yet wired.
-- DRAINAGE (lm, research): plan runs HELD (sheets print 'not to scale'); risers 32.40 MEASURED + 13.50 .. 15.60 BOUNDED.
-- Learned (section 7 ADOPTED): an opening edge is walked along its drawn outline, never its bounding box; a hub version reads the Checker record file before building its index, and a line with a blank part is AT_LEAST; a sheet that disclaims its scale yields no MEASURED length; a symbol is classified by content, not its block name.
-- Missing: paint by the owner rule not in the candidate yet (next package, now TODO); tiles, exterior plaster, WP after it. Idle slots: special-metalwork and joinery censuses (nothing priced, nothing released).
-- Team health: 12 runs since 20:14, all closed with a final line; self-check PASS everywhere incl. this run. Three idle worker runs (21:00-23:20) because every next row waited on a READY task; fixed by releasing T-749 / T-752 and two new lane A rows. Queue check 16 actionable, 0 flagged, 0 stall.
-- Gates: lowest open gate 1 (paint wiring, exterior edge residuals). M3 estimate 14-17 Nov (beads + ceiling landed a day early).
-
-OWNER PACKAGE: none today (no item meets section 2.7).
 
 NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
