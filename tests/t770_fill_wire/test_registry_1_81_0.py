@@ -79,3 +79,19 @@ def test_index_rule_downgrade_holds_released_lines_and_never_promotes():
     assert set(held) == {"L-a", "L-b"}
     held2, status2 = T469.applied_downgrades(lines, [dict(rec, engine_qty=99.0)])
     assert held2 == {} and status2[0]["status"].startswith("STALE_QTY")
+
+
+def test_run_check_normal_and_adverse():
+    import v3081_run as R
+    lines = [_line("L-x", 1.0)]
+    idx = {"lines": [{"line_id": "L-x", "class": "RELEASED", "measured_net": 1.0}], "downgrades": []}
+    assert R.check(lines, idx) == ([], [])
+    # adverse: a figure that moved, a class that differs, a downgrade the index applies but the run does not bind
+    assert R.check(lines, dict(idx, lines=[{"line_id": "L-x", "class": "RELEASED", "measured_net": 2.0}]))[0]
+    assert R.check(lines, dict(idx, lines=[{"line_id": "L-x", "class": "HELD", "measured_net": None}]))[0]
+    bad, _ = R.check(lines, dict(idx, downgrades=[{"downgrade_id": "DG-1b0eacce2d68f2a5", "status": "APPLIED"}]))
+    assert bad and bad[0][0] == "DG-1b0eacce2d68f2a5"
+    # the one named re-binding downgrade covers exactly its 3 court ground-beam lines (0.627 m3)
+    snap = {d["downgrade_id"]: d for d in R._snapshot()}
+    d = snap["DG-38971e0d1d5de81c"]
+    assert tuple(d["line_ids"]) == R.REBINDING["DG-38971e0d1d5de81c"] and d["engine_qty"] == 0.627
