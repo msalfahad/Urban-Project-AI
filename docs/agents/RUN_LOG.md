@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T15:10Z | Verifier | STARTED | run session_01E6cPnf4DNP6pHSYJiHKJYi | repo-attached routine | task state: per run log T-314 r3 READY | self-check pending
 - 2026-11-13T15:10Z | Worker 1 | STARTED | run session_01E6cPndS3ihf1ePabusGcvy | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13 14:55 UTC | Worker 2 | SUCCESS | T-760 READY cacbb177 | Ext render+paint fix rows on V3.0.79 (T-314 r3): FIN.EXT.FINISH/PAINT 1 blank+17 ranges -> 0, 1054.00 m2 each; PAINT.EDGE 3 blank -> 0, 317.10 lm; ARCH.FACADE 4 + FACADE_RUN 3 blank -> 0. vs freelancer net -28.3% / gross -22.1% RULE_DIFFERENCE. Wire after T-314 merges. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13 14:47 UTC | Worker 2 | STARTED | run session_01E6cPnf4Wy2nmVXpUVL1bYW | repo-attached routine | task state: none yet | self-check pending
