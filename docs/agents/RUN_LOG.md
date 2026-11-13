@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T09:46Z | Worker 3 | SUCCESS | T-738 r2 READY (integration package, Gate B, agents/task-T-738 @ 49d21678) | Gate B (b) fault fixed: T459_CANDIDATE_BINDING.json rebuilt by its tool (+arch_v3078.py: [], 0 lap tokens, no rebar effect); quantities unchanged (V3.0.78: tile 18.44..44.765 m2, risers 13.087..13.740 m2 as r1). L4 24,683 pass / 0 fail / 706 skip / 105 xfail. L-T738-1: only t459_census persists an arch_v30*.py glob. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T09:19Z | Worker 1 | STARTED | run session_01E6cPnaiHSTSS39wMP5XCdz | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T09:01Z | Worker 3 | STARTED | run session_01E6cPnaY9kKz35QXzpHnsLS | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13 08:53 UTC | Worker 2 | SUCCESS | T-756 READY (agents/task-T-756 @ 5e4c1355) | Exterior render/paint face ledger re-based on V3.0.77: 98 T-305 bands + 46 T-311 components mapped by id, stale 0, MISSING 9 named; T-754 delta L-d8a40db5 9.185812->6.585812 lm, corners 176.935812..178.135812 lm (residual 0); render = paint per face 1,009.110254..1,087.619176 m2 (freelancer Sigma 1,469.97: -31.35..-26.01 %, RULE_DIFFERENCE), 6 1F slab-edge faces HELD; 56-row wire table for T-314 r3; V3.0.78 recheck pending T-738 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
