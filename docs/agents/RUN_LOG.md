@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T00:59Z | Worker 2 | SUCCESS | T-753 READY 7e8cc3ab | B13-06 joinery census on P7757 by handle: base runs 3 pcs 11.616 lm / 6.513 m2 worktop, vanities 3 pcs 5.973 lm / 2.861 m2 (5 basins to B12-01), built-in cupboards 3 pcs 5.362 lm; heights and materials HELD (designer D-J1..3 proposed), wall cabinets NOT_DRAWN, freelancer NO_ROW; completeness scan found 2 vanities the visual read missed | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T00:50Z | Verifier | SUCCESS | none (READY 0; T-749 / T-752 TODO, T-753 CLAIMED, T-754 / T-738 / T-314 r3 / T-750 QUEUED) | Light run: no task to gate, no merge, no quantity change; engine head f2eb70da unchanged since the 23:47 merge, candidate of record ARCH_TAKEOFF_V3.0.76 (NOT RELEASED), released V2.9 + route G untouched; SCOREBOARD v2 23:45 restatement stands. T-180 slot not used: CLOSABLE LINES still has no line CLOSABLE NOW (consultant items D-34/D-35, D-43, D-04/D-27/D-03, D-66/D-16/D-39/D-44); nothing for the owner. | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-11-13T00:51Z | Verifier | STARTED | run session_01E6cPnd3zuhXoLHGcU6SuSu | repo-attached routine | task state: checking board (no READY per 00:17 Lead line) | self-check pending
 - 2026-11-13T00:40Z | Worker 2 | STARTED | run session_01E6cPnamnHJ3cmPCjk4gnvi | repo-attached routine | task state: none yet | self-check pending
