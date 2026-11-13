@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-13 08:25; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) + owner paint rule 2026-11-12 in force)
+
+- Candidate of record V3.0.77 b8524d5c / master 1.78.0 (NOT RELEASED), unchanged. Since 04:15 MERGED: T-754 (4bfa0e9f, research, PARTIALLY VERIFIED 4/7). REJECTED r1: T-738 Gate B (quantities AGREE; t459 binding not rebuilt), T-755 Gate A (retired D-63 cause read as live).
+- Hub order: T-738 r2 (TODO W3, small fix) -> T-314 r3 exterior plaster + exterior paint m2 (prepared by NEW T-756 face ledger, W2) -> T-750 H4 WP -> T-509 H5 earthworks. Gate A: T-755 r2 (W1), T-756 (W2).
+- Confidence: tiles / stair finishes 13-14 Nov HIGH (rework is mechanical); exterior plaster 15-16 Nov MEDIUM (T-756 shortens it); WP 16-17 Nov MEDIUM; 19-20 Nov blind test LOW while rebar is parked and the hub is serial.
+
 ## Status (Lead, 2026-11-13 04:15; owner change of focus 2026-11-09 18:30 + owner decision 2026-11-11 15:30 (rebar parked) + owner paint rule 2026-11-12 in force)
 
 - Candidate of record V3.0.77 b8524d5c / master 1.78.0 (NOT RELEASED). Since 00:13 MERGED: T-752 (cb9b1444) and T-753 (e771a5b2) censuses, T-749 Gate B paint rule (8dc7c0f6 + c2106988: FIN.PAINT held 603.802 .. 687.847 m2, edges lm).

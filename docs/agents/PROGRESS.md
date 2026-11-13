@@ -1,5 +1,26 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-13 08:25 UTC (Lead). Previous version: 2026-11-13 04:15 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). The candidate did not change either (still the 04:15 one). Your measure: whole BOQ lines independently
+verified in the candidate: unchanged (concrete 1 of 8 compared lines, the slab); released: 0.
+
+Since 04:15 (newest first):
+- Tiles + stair finishes: the checker re-measured every figure from the drawings and they agree (stair-core wall tiles
+  18.44 .. 44.77 m2, risers 13.09 .. 13.74 m2 held, nosings 19.55 .. 24.65 m, stair width 1.15 m from the drawing, your
+  freelancer used 1.20). It was sent back only because one supporting file was not rebuilt for the new candidate; a
+  short fix, then it joins the candidate. Nothing in it is released.
+- Outside paint edges: two parapet "corners" at the top of the north-west face are not corners (the screen is flush
+  with the wall below), so the outside corner length drops from 179.54 .. 180.74 to 176.94 .. 178.14 m (not yet in the
+  candidate). Door heads stay held (depth not drawn).
+- Designer list refresh: all 2,799 held lines are traced to a cause, but 35 column lines were counted under an old,
+  replaced cause and would have appeared twice on the list; sent back to correct. No quantity moves. The list is not
+  changed until the correction passes. No held concrete line can be measured from the drawings yet.
+- Next: tiles + stair finishes into the candidate, the outside render / paint faces lined up so the render package
+  joins quickly, then waterproofing and earthworks.
+
+Previous section (2026-11-13 04:15):
+
 Last update: 2026-11-13 04:15 UTC (Lead). Previous version: 2026-11-13 00:13 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared

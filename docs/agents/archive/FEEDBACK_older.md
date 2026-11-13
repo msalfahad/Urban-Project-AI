@@ -1,3 +1,22 @@
+## Lead 2026-11-09 00:15 (since 20:19)
+
+- T-637 r2 master 1.56.0: WORKED (registered in RULES_MANIFEST, L4 = 3 pre-existing failures only). Decision: grouping for T-636 / T-649.
+- T-641 manifest V17: WORKED (106 ops re-added AGREE). Decision: base of V18 (T-649).
+- T-642 Checker P02 / P04 fix rows: WORKED (3 ENGINE_RIGHT, 1 SET 0.050 + HELD 0..0.025, BAND0049 DRAWING-CONFIRMED). Decision: V18 (T-649).
+- T-644 lintels 60: PARTIAL (classed, but payable form conflicts with the printed RC schedule, F-T644-1). Decision: Lead ruling (schedule first) -> T-650 restate.
+- T-645 stair finishes 31: WORKED (10 fix rows Checker AGREE); F-T645-1 ruled by the Lead. Decision: V18 (T-649) with the ruling.
+- T-643 rebar on HELD concrete: WORKED (10 KEEP, 4 downgrade records validated, 208 classed). Decision: downgrades wired in V18 (T-649).
+- T-636 the 10 Nov trial BOQ: PARTIAL (delivered, re-adds exact; 436 HELD without committed cause, F-T636-1). Decision: T-647 (S) + T-648 (A), then trial BOQ r2 (T-649).
+
+## Lead 2026-11-08 20:15 (since 16:19)
+
+- T-640 B4 / B5 finishes 72 HELD blank (Gate A): WORKED (72 / 72 classed, 33 bounded fix rows 87.234 .. 138.540 m2, F-T627-1 door heights ruled ENGINE_RIGHT 0.580 m2). Decision: wired as overlay in V17 (T-641).
+- T-638 formwork 370 HELD blank (Gate A): WORKED (370 / 370 classed; +33.127 m2 fix rows, column shafts 27.002 m2 VERIFIED; split faces stay CALCULATED, F-C-T638-1). Decision: V17 (T-641); slab-edge strip stays HELD (no section).
+- T-637 master 1.56.0: PARTIAL r1 (REJECTED narrow: file not registered in RULES_MANIFEST); r2 READY 20ce44b0. Decision: Checker first; T-636 waits for it.
+- T-639 rebar 801 + 6 (Gate A): WORKED (807 / 807 classed; FR-T639-1..6 +412.444 kg Checker AGREE). Decision: V17 (T-641); F-T639-1 released bars on HELD concrete -> T-643.
+- T-634 internal plaster / paint 31 rows (Gate A): WORKED (29 DRAWING-CONFIRMED, 2 DIFFER, GF-15 -0.015161 m2). Decision: V17 (T-641); statement V12 (T-635).
+- Checker T-180 P02 / P04 slots: F-C-P02-13 (arc band, depth unsourced), F-C-P02-14 and F-C-P04-1 (omissions), GF B11 ENGINE_WRONG -0.003159 m3. Decision: one fix row T-642 (S FIRST).
+
 ## Lead 2026-11-04 04:14 (since 00:20)
 
 - T-496 materials binding map: WORKED (1,202 bindings, 0 mismatch). Decision: producer-role condition added to T-498.

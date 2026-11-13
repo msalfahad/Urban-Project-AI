@@ -3,6 +3,13 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-13 08:25 (since 04:15)
+
+- T-754 exterior paint edge residuals: PARTIAL (MERGED, 4/7 re-walked AGREE: corners 179.54 .. 180.74 -> 176.94 .. 178.14 lm research, not wired) -> NEW T-756 face ledger re-based for T-314 r3; the 3 unverified items re-walked there.
+- T-738 tiles + stair finishes Gate B: PARTIAL (quantities AGREE by the Checker's own chain; FAIL only on the t459 binding not rebuilt) -> rework r2 with the exact fault; L-T738-1 PROPOSED.
+- T-755 designer re-census: PARTIAL (coverage AGREE; 35 lines on a retired D-63 cause) -> rework r2 (live cause fields only); L-T755-1 PROPOSED; designer list counts not refreshed until it merges.
+- Three idle worker runs 06:41-07:20 (each lane's only row READY) -> two reworks + T-756 give every lane a claimable row.
+
 ## Lead 2026-11-13 04:15 (since 00:13)
 
 - T-749 paint rule Gate B (V3.0.77): WORKED (FIN.PAINT bounded 604.990 .. 710.006 -> 603.802 .. 687.847 m2; edges as lm lines; released unchanged); L-T749-1 ADOPTED.
@@ -181,25 +188,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-647 structural HELD causes 183: PARTIAL (REJECTED narrow: 17 B11 fix rows 51.574 kg called DRAWING-CONFIRMED on a count the drawing does not print). Decision: r2 TODO W1 FIRST, those 17 rows HELD as a count-convention gap with an adverse test; the rest of ec383e02 kept.
 - T-633 blockwork 39 UNKNOWN rows: WORKED (own 231.6726 vs stated 231.6737 m2, residual -0.0011 TOLERANCE; D-GF-06 head class RD -> ER proposed). Decision: class move into statement V12 (T-635).
 - T-498 blockwork materials (Gate B, owner order 2nd): CLAIMED W3 03:01, still running at 04:15. Decision: Checker's first Gate B slot when READY; T-423 r2 waits on its files.
-
-## Lead 2026-11-09 00:15 (since 20:19)
-
-- T-637 r2 master 1.56.0: WORKED (registered in RULES_MANIFEST, L4 = 3 pre-existing failures only). Decision: grouping for T-636 / T-649.
-- T-641 manifest V17: WORKED (106 ops re-added AGREE). Decision: base of V18 (T-649).
-- T-642 Checker P02 / P04 fix rows: WORKED (3 ENGINE_RIGHT, 1 SET 0.050 + HELD 0..0.025, BAND0049 DRAWING-CONFIRMED). Decision: V18 (T-649).
-- T-644 lintels 60: PARTIAL (classed, but payable form conflicts with the printed RC schedule, F-T644-1). Decision: Lead ruling (schedule first) -> T-650 restate.
-- T-645 stair finishes 31: WORKED (10 fix rows Checker AGREE); F-T645-1 ruled by the Lead. Decision: V18 (T-649) with the ruling.
-- T-643 rebar on HELD concrete: WORKED (10 KEEP, 4 downgrade records validated, 208 classed). Decision: downgrades wired in V18 (T-649).
-- T-636 the 10 Nov trial BOQ: PARTIAL (delivered, re-adds exact; 436 HELD without committed cause, F-T636-1). Decision: T-647 (S) + T-648 (A), then trial BOQ r2 (T-649).
-
-## Lead 2026-11-08 20:15 (since 16:19)
-
-- T-640 B4 / B5 finishes 72 HELD blank (Gate A): WORKED (72 / 72 classed, 33 bounded fix rows 87.234 .. 138.540 m2, F-T627-1 door heights ruled ENGINE_RIGHT 0.580 m2). Decision: wired as overlay in V17 (T-641).
-- T-638 formwork 370 HELD blank (Gate A): WORKED (370 / 370 classed; +33.127 m2 fix rows, column shafts 27.002 m2 VERIFIED; split faces stay CALCULATED, F-C-T638-1). Decision: V17 (T-641); slab-edge strip stays HELD (no section).
-- T-637 master 1.56.0: PARTIAL r1 (REJECTED narrow: file not registered in RULES_MANIFEST); r2 READY 20ce44b0. Decision: Checker first; T-636 waits for it.
-- T-639 rebar 801 + 6 (Gate A): WORKED (807 / 807 classed; FR-T639-1..6 +412.444 kg Checker AGREE). Decision: V17 (T-641); F-T639-1 released bars on HELD concrete -> T-643.
-- T-634 internal plaster / paint 31 rows (Gate A): WORKED (29 DRAWING-CONFIRMED, 2 DIFFER, GF-15 -0.015161 m2). Decision: V17 (T-641); statement V12 (T-635).
-- Checker T-180 P02 / P04 slots: F-C-P02-13 (arc band, depth unsourced), F-C-P02-14 and F-C-P04-1 (omissions), GF B11 ENGINE_WRONG -0.003159 m3. Decision: one fix row T-642 (S FIRST).
-
-
-

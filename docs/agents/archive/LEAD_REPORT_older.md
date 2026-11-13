@@ -1,3 +1,18 @@
+## LEAD REPORT 2026-11-12 20:14 UTC
+
+Drive read OK (no file in the private project folders modified since 12:00 UTC today, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.75 / master 1.76.0 (NOT RELEASED; released V2.9 + route G untouched). 7 MERGED since 16:20 (formwork + concrete package, sanitary census, label fix, opening edges, readiness, exterior paint); 1 rejected.
+- FORMWORK (m2): in the candidate: released 1,027.977 -> 1,061.104 (+33.127, +3.2 %); 32 lines bounded 107.201 .. 132.786; no freelancer formwork row (not comparable). Concrete released 291.476 m3 unchanged.
+- WATERPROOFING (m2): the Checker found the new candidate still shows the roof membrane 115.832 as released; the correction record exists (band 115.656 .. 115.814). The next candidate package carries it; the full waterproofing package is now written as its own task.
+- PAINT (m2, research, not wired): interior by your rule 821.011 .. 905.055 (window / door edges moved to metres); exterior = render of the same faces 1,006.633 .. 1,085.613 vs freelancer 1,469.97 (-31.5 .. -26.2 %, rule difference: his figure is not explained by faces); exterior edges in lm still bounded (corners 168.5 .. 182.05, windows 103.683 vs 106.020): a closure task is set.
+- DRAINAGE (lm): the sanitary sheets say 'not to scale' and an earlier ruling forbids scaled pipe lengths, so plan runs stay HELD (designer list item 16); risers from printed levels are kept. Learned: a sheet that disclaims its scale gives no measured length.
+- Missing families: the measurable ones are all drafted; next idle slot is the special-metalwork census (canopies, pergolas, gates).
+- Team health: 13 runs since 16:20, all closed with a final line; self-check PASS everywhere incl. this run; one idle Worker 1 run (queue too thin; fixed). Checker wrote two verdict times later than its own run end: told to correct. Queue check 17 actionable, 0 flagged, 0 stall.
+- Gates: lowest open gate 1 (beads + ceiling package, exterior edges). M3 (reconciled quantities + scorecard) estimate 14-16 Nov stands; hub chain beads -> paint -> tiles -> exterior plaster -> waterproofing -> disposal.
+
+OWNER PACKAGE: none today (no item meets section 2.7).
+
+NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
+
 ## LEAD REPORT 2026-11-12 12:20 UTC
 
 Drive read OK (no file in the private project folders modified since 16:00 UTC 10 Nov, no photo task). Training villa: candidate of record now ARCH_TAKEOFF_V3.0.74 / master 1.75.0 (NOT RELEASED; released V2.9 + route G untouched). Development project 2 paused.
