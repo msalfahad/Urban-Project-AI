@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T11:50Z | Verifier | IDLE | none (run lock held by run 20261113T095152-419-16639 since 2026-11-13T09:51Z) | overlap lock: another Verifier run is active; no claim, no change, no quantity | lock
 - 2026-11-13T11:21Z | Worker 1 | STARTED | run session_01E6cPnaRUAHj3KqRvG7qKpp | repo-attached routine | task state: none yet | self-check pending | stale run lock of run 20261113T091953-393-7679 since 2026-11-13T09:19Z recovered
 - 2026-11-13 11:00 UTC | Worker 3 | SUCCESS | none | No claimable TODO row on the board (0 TODO; READY 1 = own T-738 r2 integration package awaiting Checker Gate B on agents/task-T-738 @ 49d21678; CLAIMED 1 = T-755 worker 1; T-314 r3 / T-750 / T-509 QUEUED behind the T-738 hub package). No quantity moved, nothing pushed besides this log. | self-check codemap check PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-11-13 11:00 UTC | Worker 3 | STARTED | run session_01E6cPney3KNkxBZBcsUyqjt | repo-attached routine | task state: none yet | self-check pending
