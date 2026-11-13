@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13 16:54 UTC | Worker 2 | SUCCESS | T-314 r4 READY b3d2b72f | Registry-only rework, no quantity change: BOQ_FAMILY_MASTER_1.80.0 promotes merged-pending T-738 (merge 208c5689, candidate V3.0.77->V3.0.78, census 5242 lines 0 issues) and carries T-314 V3.0.79 pending; unmerged pending refused (3 adverse tests); --promote in the merge still needs T314_PACKAGE_FAMILIES from the Drive chain | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T16:54Z | Verifier | STARTED | run session_01E6cPnajEjkwZZEwL6eZyhZ | repo-attached routine | task state: per run log T-762 READY (W1); T-770 r1 sent back to TODO by Lead | self-check pending
 - 2026-11-13 16:47 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13 16:34 UTC | Lead | SUCCESS | board | T-314 r3 REJECTED (registry) -> TODO r4 W2 first; T-770 r1 -> TODO r2 after T-314 r4 (hub serial, 1.79.0 PENDING) with formwork per Checker ruling on W1 double-count claim (MAIN_FILL 472.8 vs T-762 240.6 m2 on 126 lines; owner pushed); T-750 reservation lapsed, after T-764; T-763 trimmed to non-MAIN_FILL lines; T-761 MERGED WORKED, T-762 READY; Drive OK, no new files; queue check: 24 actionable rows, 0 flagged, 0 stall checks | self-check PASS (codemap, t061, freeze 0); problem: none
