@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T18:40Z | Worker 2 | STARTED | run session_01E6cPneXj4bHecH3qohMvqJ | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T17:50Z | Verifier | STARTED | run session_01E6cPnevEPXrxckxv7c6ZAC | repo-attached routine | task state: per run log T-767 READY (W1), T-764 READY (W3), T-314 r4 READY (W2) | self-check pending
 - 2026-11-13T17:27Z | Worker 1 | SUCCESS | T-767 READY r1 @ e1a7b15e | WP lines without a figure 50 -> 0 (fix rows, not wired): penetrations 55 pcs, door transitions 2.30 m2, terminations 3.16 lm, fdn WP 1B1B 4.55 m2 + sides 86.88 + buried liquid 462.72 + lift walls 8.84 m2; wet floor 85.58 vs freelancer 72.01 m2 = pantry 13.46 RULE_DIFFERENCE, rest +0.15 %; boundary coat 138.38 m2 flagged (p.14 prints none) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T17:20Z | Worker 1 | STARTED | run session_01E6cPnaLktZDPWrDnXNxbZm | repo-attached routine | task state: none yet | self-check pending
