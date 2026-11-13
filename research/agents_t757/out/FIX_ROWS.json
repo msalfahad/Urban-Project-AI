@@ -1,0 +1,2909 @@
+{
+ "schema": "T757_FIX_ROWS_V1",
+ "task": "T-757",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.79",
+ "index": "research/agents_t314/out/LINE_INDEX_V3_0_79.json",
+ "rule": {
+  "materiality_m3": 0.05,
+  "safety_floor_m3": 1.0,
+  "source": "owner 2026-11-13 14:00 (DELIVERY_MODE s.3), Lead T-757 r2: no new rule file"
+ },
+ "defaults_used": {
+  "roof_buildup_m": 0.175,
+  "h_GF": 4.5,
+  "h_1F": 4.2,
+  "h_2F_roof": 4.075,
+  "h_annex": 3.875,
+  "column_section": "schedule CGT governs (owner company default); drawn outline only at the two mark-CONFLICT positions 10AE / 10E0"
+ },
+ "counts": {
+  "ranged_before": 114,
+  "ranged_after": 0,
+  "points": 80,
+  "low_by_materiality": 34,
+  "family_points_dropped_as_narrow": [
+   "L-3f7b9501a902579e7406",
+   "L-46f2b70254f074885dfc",
+   "L-486cd9a0bf52e4b32abb",
+   "L-48f2e06e5c946eb1e5a7",
+   "L-516989b817e0ccc7cb80",
+   "L-5aec8a0055215ee5a711",
+   "L-5efd9ac69d4cfd9b9a6e",
+   "L-ae1bd9cb228d57594e46",
+   "L-efe50185c0da4244e158"
+  ]
+ },
+ "ranged_by_item": {
+  "STR.CONC.BEAM": {
+   "lines": 14,
+   "low": 5.9832,
+   "high": 8.4127,
+   "after": 7.0631,
+   "points": 13,
+   "low_by_rule": 1
+  },
+  "STR.CONC.BLINDING": {
+   "lines": 5,
+   "low": 7.6404,
+   "high": 13.4662,
+   "after": 13.1432,
+   "points": 5,
+   "low_by_rule": 0
+  },
+  "STR.CONC.BOUNDARY_WALL": {
+   "lines": 1,
+   "low": 5.6392,
+   "high": 11.0328,
+   "after": 8.4588,
+   "points": 1,
+   "low_by_rule": 0
+  },
+  "STR.CONC.COLUMN": {
+   "lines": 27,
+   "low": 11.8001,
+   "high": 15.5015,
+   "after": 13.3079,
+   "points": 27,
+   "low_by_rule": 0
+  },
+  "STR.CONC.FOOTING": {
+   "lines": 1,
+   "low": 2.176,
+   "high": 2.275,
+   "after": 2.275,
+   "points": 1,
+   "low_by_rule": 0
+  },
+  "STR.CONC.GROUND_BEAM": {
+   "lines": 8,
+   "low": 1.1784,
+   "high": 1.5712,
+   "after": 1.1784,
+   "points": 3,
+   "low_by_rule": 5
+  },
+  "STR.CONC.LINTEL": {
+   "lines": 24,
+   "low": 1.361,
+   "high": 2.0506,
+   "after": 1.361,
+   "points": 5,
+   "low_by_rule": 19
+  },
+  "STR.CONC.NECK": {
+   "lines": 32,
+   "low": 8.7724,
+   "high": 11.346,
+   "after": 8.8788,
+   "points": 23,
+   "low_by_rule": 9
+  },
+  "STR.CONC.STRAP": {
+   "lines": 2,
+   "low": 0.0295,
+   "high": 0.6533,
+   "after": 0.0295,
+   "points": 2,
+   "low_by_rule": 0
+  }
+ },
+ "after_by_label": {
+  "DEFAULT": 29.3517,
+  "DRAWING-READ": 25.4313,
+  "ESTIMATE": 0.9127
+ },
+ "concrete_totals_m3": {
+  "by_item": {
+   "STR.CONC.BEAM": {
+    "released_index": 66.9207,
+    "t761_fill": 5.26,
+    "t757_ranged_low": 5.9832,
+    "t757_ranged_high": 8.4127,
+    "t757_points": 7.0631,
+    "before_low": 78.1639,
+    "before_high": 80.5934,
+    "after": 79.2438
+   },
+   "STR.CONC.BLINDING": {
+    "released_index": 12.7344,
+    "t761_fill": 1.956,
+    "t757_ranged_low": 7.6404,
+    "t757_ranged_high": 13.4662,
+    "t757_points": 13.1432,
+    "before_low": 22.3308,
+    "before_high": 28.1566,
+    "after": 27.8336
+   },
+   "STR.CONC.BOUNDARY_PAD": {
+    "released_index": 0.0,
+    "t761_fill": 3.12,
+    "t757_ranged_low": 0.0,
+    "t757_ranged_high": 0.0,
+    "t757_points": 0.0,
+    "before_low": 3.12,
+    "before_high": 3.12,
+    "after": 3.12
+   },
+   "STR.CONC.BOUNDARY_WALL": {
+    "released_index": 0.0,
+    "t761_fill": 0.0,
+    "t757_ranged_low": 5.6392,
+    "t757_ranged_high": 11.0328,
+    "t757_points": 8.4588,
+    "before_low": 5.6392,
+    "before_high": 11.0328,
+    "after": 8.4588
+   },
+   "STR.CONC.COLUMN": {
+    "released_index": 19.7765,
+    "t761_fill": 0.84,
+    "t757_ranged_low": 11.8001,
+    "t757_ranged_high": 15.5015,
+    "t757_points": 13.3079,
+    "before_low": 32.4166,
+    "before_high": 36.118,
+    "after": 33.9244
+   },
+   "STR.CONC.DOME": {
+    "released_index": 5.0814,
+    "t761_fill": 2.541,
+    "t757_ranged_low": 0.0,
+    "t757_ranged_high": 0.0,
+    "t757_points": 0.0,
+    "before_low": 7.6224,
+    "before_high": 7.6224,
+    "after": 7.6224
+   },
+   "STR.CONC.FOOTING": {
+    "released_index": 64.304,
+    "t761_fill": 0.0,
+    "t757_ranged_low": 2.176,
+    "t757_ranged_high": 2.275,
+    "t757_points": 2.275,
+    "before_low": 66.48,
+    "before_high": 66.579,
+    "after": 66.579
+   },
+   "STR.CONC.GROUND_BEAM": {
+    "released_index": 23.7606,
+    "t761_fill": 11.963,
+    "t757_ranged_low": 1.1784,
+    "t757_ranged_high": 1.5712,
+    "t757_points": 1.1784,
+    "before_low": 36.902,
+    "before_high": 37.2948,
+    "after": 36.902
+   },
+   "STR.CONC.GROUND_SLAB": {
+    "released_index": 21.6409,
+    "t761_fill": 0.0,
+    "t757_ranged_low": 0.0,
+    "t757_ranged_high": 0.0,
+    "t757_points": 0.0,
+    "before_low": 21.6409,
+    "before_high": 21.6409,
+    "after": 21.6409
+   },
+   "STR.CONC.LIFT": {
+    "released_index": 0.0,
+    "t761_fill": 2.3,
+    "t757_ranged_low": 0.0,
+    "t757_ranged_high": 0.0,
+    "t757_points": 0.0,
+    "before_low": 2.3,
+    "before_high": 2.3,
+    "after": 2.3
+   },
+   "STR.CONC.LINTEL": {
+    "released_index": 1.016,
+    "t761_fill": 0.728,
+    "t757_ranged_low": 1.361,
+    "t757_ranged_high": 2.0506,
+    "t757_points": 1.361,
+    "before_low": 3.105,
+    "before_high": 3.7946,
+    "after": 3.105
+   },
+   "STR.CONC.NECK": {
+    "released_index": 0.0,
+    "t761_fill": 1.462,
+    "t757_ranged_low": 8.7724,
+    "t757_ranged_high": 11.346,
+    "t757_points": 8.8788,
+    "before_low": 10.2344,
+    "before_high": 12.808,
+    "after": 10.3408
+   },
+   "STR.CONC.PARAPET": {
+    "released_index": 0.0,
+    "t761_fill": 24.368,
+    "t757_ranged_low": 0.0,
+    "t757_ranged_high": 0.0,
+    "t757_points": 0.0,
+    "before_low": 24.368,
+    "before_high": 24.368,
+    "after": 24.368
+   },
+   "STR.CONC.POOL": {
+    "released_index": 7.2023,
+    "t761_fill": 0.228,
+    "t757_ranged_low": 0.0,
+    "t757_ranged_high": 0.0,
+    "t757_points": 0.0,
+    "before_low": 7.4303,
+    "before_high": 7.4303,
+    "after": 7.4303
+   },
+   "STR.CONC.SLAB": {
+    "released_index": 60.2802,
+    "t761_fill": 0.0,
+    "t757_ranged_low": 0.0,
+    "t757_ranged_high": 0.0,
+    "t757_points": 0.0,
+    "before_low": 60.2802,
+    "before_high": 60.2802,
+    "after": 60.2802
+   },
+   "STR.CONC.STAIR": {
+    "released_index": 5.3689,
+    "t761_fill": 3.657,
+    "t757_ranged_low": 0.0,
+    "t757_ranged_high": 0.0,
+    "t757_points": 0.0,
+    "before_low": 9.0259,
+    "before_high": 9.0259,
+    "after": 9.0259
+   },
+   "STR.CONC.STRAP": {
+    "released_index": 3.3905,
+    "t761_fill": 0.0,
+    "t757_ranged_low": 0.0295,
+    "t757_ranged_high": 0.6533,
+    "t757_points": 0.0295,
+    "before_low": 3.42,
+    "before_high": 4.0438,
+    "after": 3.42
+   }
+  },
+  "before_low": 394.4796,
+  "before_high": 416.2087,
+  "after_without_safety": 405.5951,
+  "safety_before": 1.0,
+  "safety_after": 1.199706,
+  "after_with_safety": 406.7948,
+  "note": "released lines of the V3.0.79 index + T-761 blank-line fill (merged, unwired) + the 114 ranged lines (this row); MAIN_FILL and other fix-row sets carry no STR.CONC line"
+ },
+ "beam_vs_freelancer": {
+  "engine_beam_m3": 79.2438,
+  "freelancer_beam_m3": 66.09,
+  "diff_m3": 13.1538,
+  "diff_pct": 19.9,
+  "label": "UNRESOLVED (T-777 splits it by cause)"
+ },
+ "ignored_small": {
+  "t761_lines": 13,
+  "t761_sum_m3": 0.4282,
+  "t757_lines": 34,
+  "t757_width_sum_m3": 0.771506,
+  "total_m3": 1.199706,
+  "rows": [
+   {
+    "line_id": "L-bef35462630d4b76596f",
+    "item_code": "STR.CONC.BEAM",
+    "element_id": "U-C:BEAMS:GF:BAND0030.2~T642_DEPTH_B4_B7",
+    "low": 0.0,
+    "high": 0.025,
+    "width": 0.025,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-81444e222487437e257e",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0020",
+    "low": 0.1305,
+    "high": 0.174,
+    "width": 0.0435,
+    "cause": "D-34"
+   },
+   {
+    "line_id": "L-e2134034441cb7db7bd7",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0021",
+    "low": 0.108,
+    "high": 0.144,
+    "width": 0.036,
+    "cause": "D-34"
+   },
+   {
+    "line_id": "L-f0e25ad2cf73bf2a35ea",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0030",
+    "low": 0.108,
+    "high": 0.144,
+    "width": 0.036,
+    "cause": "D-34"
+   },
+   {
+    "line_id": "L-0c5ede7fd2c9e425aa8d",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0034",
+    "low": 0.1125,
+    "high": 0.15,
+    "width": 0.0375,
+    "cause": "D-34"
+   },
+   {
+    "line_id": "L-970bac563cbcd69e2a30",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0038",
+    "low": 0.098008,
+    "high": 0.130678,
+    "width": 0.03267,
+    "cause": "D-34"
+   },
+   {
+    "line_id": "L-a7b8b292503ae1bf6c77",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:D-1F-05",
+    "low": 0.036,
+    "high": 0.0628,
+    "width": 0.0268,
+    "cause": "Q-55"
+   },
+   {
+    "line_id": "L-1a07849115af938b4a72",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:D-GF-01",
+    "low": 0.056,
+    "high": 0.066716,
+    "width": 0.010716,
+    "cause": "Q-55"
+   },
+   {
+    "line_id": "L-71998da6340be871d0af",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:D-GF-02",
+    "low": 0.036,
+    "high": 0.042708,
+    "width": 0.006708,
+    "cause": "Q-55"
+   },
+   {
+    "line_id": "L-a7848a35fb4329e09d10",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:D-GF-03",
+    "low": 0.052,
+    "high": 0.058,
+    "width": 0.006,
+    "cause": "Q-55"
+   },
+   {
+    "line_id": "L-fd68db051119ea0266ee",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:D-GF-07",
+    "low": 0.096,
+    "high": 0.108,
+    "width": 0.012,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-3af715c6e83364208ad0",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W01",
+    "low": 0.08,
+    "high": 0.108,
+    "width": 0.028,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-441ae5fe85351347aff0",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W05",
+    "low": 0.04,
+    "high": 0.055,
+    "width": 0.015,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-f269fabb74f505755492",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W06",
+    "low": 0.04,
+    "high": 0.04,
+    "width": 0.0,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-786344670c0002b31478",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W09",
+    "low": 0.092,
+    "high": 0.118,
+    "width": 0.026,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-882717b0c35a87e363ef",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W10",
+    "low": 0.056,
+    "high": 0.06,
+    "width": 0.004,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-47882fa3a0d9cdcc122e",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W13",
+    "low": 0.08,
+    "high": 0.108,
+    "width": 0.028,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-53ef44d8c490d1341b93",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W16",
+    "low": 0.078,
+    "high": 0.081732,
+    "width": 0.003732,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-6057028f3f666538a007",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W19",
+    "low": 0.056,
+    "high": 0.069,
+    "width": 0.013,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-7d90a0feed2537221f16",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W19+W20:PIER_REMAINDER",
+    "low": 0.0,
+    "high": 0.003,
+    "width": 0.003,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-6692d02cd6cd25120300",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W20",
+    "low": 0.056,
+    "high": 0.08048,
+    "width": 0.02448,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-dd5b41a7af885e96f797",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W21",
+    "low": 0.04,
+    "high": 0.055,
+    "width": 0.015,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-f68444edf483bc1d87d4",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W22",
+    "low": 0.04,
+    "high": 0.04,
+    "width": 0.0,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-005334b6998987164a5d",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W28",
+    "low": 0.04,
+    "high": 0.055,
+    "width": 0.015,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-aca2db3c2b29719328c7",
+    "item_code": "STR.CONC.LINTEL",
+    "element_id": "LINTEL:W29",
+    "low": 0.064,
+    "high": 0.064,
+    "width": 0.0,
+    "cause": "DESIGNER_TAG"
+   },
+   {
+    "line_id": "L-3f7b9501a902579e7406",
+    "item_code": "STR.CONC.NECK",
+    "element_id": "P-C:NECK:COL:SH10:C2@209843,64560",
+    "low": 0.2895,
+    "high": 0.3225,
+    "width": 0.033,
+    "cause": "NO_SINGLE_VALUE"
+   },
+   {
+    "line_id": "L-5aec8a0055215ee5a711",
+    "item_code": "STR.CONC.NECK",
+    "element_id": "P-C:NECK:COL:SH10:C2@212578,64533",
+    "low": 0.2895,
+    "high": 0.3225,
+    "width": 0.033,
+    "cause": "NO_SINGLE_VALUE"
+   },
+   {
+    "line_id": "L-ae1bd9cb228d57594e46",
+    "item_code": "STR.CONC.NECK",
+    "element_id": "P-C:NECK:COL:SH10:C3@209914,60584",
+    "low": 0.237,
+    "high": 0.27,
+    "width": 0.033,
+    "cause": "NO_SINGLE_VALUE"
+   },
+   {
+    "line_id": "L-516989b817e0ccc7cb80",
+    "item_code": "STR.CONC.NECK",
+    "element_id": "P-C:NECK:COL:SH10:C3@217138,51213",
+    "low": 0.267,
+    "high": 0.3,
+    "width": 0.033,
+    "cause": "NO_SINGLE_VALUE"
+   },
+   {
+    "line_id": "L-48f2e06e5c946eb1e5a7",
+    "item_code": "STR.CONC.NECK",
+    "element_id": "P-C:NECK:COL:SH10:C3@226007,58025",
+    "low": 0.267,
+    "high": 0.3,
+    "width": 0.033,
+    "cause": "NO_SINGLE_VALUE"
+   },
+   {
+    "line_id": "L-46f2b70254f074885dfc",
+    "item_code": "STR.CONC.NECK",
+    "element_id": "P-C:NECK:COL:SH10:C4@220308,64637",
+    "low": 0.282,
+    "high": 0.315,
+    "width": 0.033,
+    "cause": "NO_SINGLE_VALUE"
+   },
+   {
+    "line_id": "L-5efd9ac69d4cfd9b9a6e",
+    "item_code": "STR.CONC.NECK",
+    "element_id": "P-C:NECK:COL:SH10:C5@216447,64629",
+    "low": 0.3384,
+    "high": 0.378,
+    "width": 0.0396,
+    "cause": "NO_SINGLE_VALUE"
+   },
+   {
+    "line_id": "L-486cd9a0bf52e4b32abb",
+    "item_code": "STR.CONC.NECK",
+    "element_id": "P-C:NECK:COL:SH10:C5@220440,52886",
+    "low": 0.3384,
+    "high": 0.378,
+    "width": 0.0396,
+    "cause": "NO_SINGLE_VALUE"
+   },
+   {
+    "line_id": "L-efe50185c0da4244e158",
+    "item_code": "STR.CONC.NECK",
+    "element_id": "P-C:NECK:COL:SH10:C6@209970,56575",
+    "low": 0.3738,
+    "high": 0.42,
+    "width": 0.0462,
+    "cause": "NO_SINGLE_VALUE"
+   }
+  ]
+ },
+ "safety_line": {
+  "line_id": "NEW:STR.CONC.SAFETY",
+  "item_code": "STR.CONC.SAFETY",
+  "unit": "m3",
+  "label": "SAFETY",
+  "before": 1.0,
+  "after": 1.199706,
+  "basis": "ONE safety line restated (replaces T-761's 1.00, never a second line): ignored known pieces T-761 0.4282 m3 on 13 lines + T-757 unresolved widths 0.7715 m3 on 34 ranged lines = 1.1997 m3 -> max(1.00, sum) = 1.1997 m3"
+ },
+ "rows": [
+  {
+   "line_id": "L-39ca5340879eafc35355",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-030#BAND0009",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.44255,
+    "high": 0.55323
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.44255
+   },
+   "width": 0.11068,
+   "label": "DRAWING-READ",
+   "basis": "B6 1F: drawn width 0.2 (DXF edges [\"5CC\", \"5CD\"]; geometry first, DELIVERY_MODE s.3) x L 4.4153 x D 0.5 less junctions (T-277 ledger) = 0.4425 m3; schedule 0.25 gives 0.5532; owner Q-61: never the schedule only because printed; D-27 answer replaces it",
+   "designer_item": "D-27",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-50667f69855b6d588011",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.1",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.2875,
+    "high": 0.345
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.345
+   },
+   "width": 0.0575,
+   "label": "DRAWING-READ",
+   "basis": "CB10 1F: drawn width 0.3 (DXF edges [\"5E8\", \"5E7\"]; geometry first, DELIVERY_MODE s.3) x L 2.301 x D 0.5 less junctions (T-277 ledger) = 0.3450 m3; schedule 0.25 gives 0.2875; owner Q-61: never the schedule only because printed; D-02 answer replaces it",
+   "designer_item": "D-02",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-43e804ba4a4c07529fd5",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.2",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.4563,
+    "high": 0.5475
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.5475
+   },
+   "width": 0.0912,
+   "label": "DRAWING-READ",
+   "basis": "CB10 1F: drawn width 0.3 (DXF edges [\"5E8\", \"5E7\"]; geometry first, DELIVERY_MODE s.3) x L 3.651 x D 0.5 less junctions (T-277 ledger) = 0.5475 m3; schedule 0.25 gives 0.4563; owner Q-61: never the schedule only because printed; D-02 answer replaces it",
+   "designer_item": "D-02",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-8d031491396379f0cbb1",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-015#BAND0001.3",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.0904,
+    "high": 0.2712
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1695
+   },
+   "width": 0.1808,
+   "label": "DEFAULT",
+   "basis": "plan 0.226 m2 x depth 0.75: company default beam depth = adjacent span: B8 20x75 = BAND0001.2, the adjacent span on the same 2F perimeter line (T-559: .1 B3 / .2 B8 / .3 unlabelled 1.13 m x 0.20) = 0.1695 m3; D-04 answer replaces it",
+   "designer_item": "D-04",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-9e4895663f76d7f03ac9",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-054#BAND0008",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 1.013607,
+    "high": 1.266989
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.013607
+   },
+   "width": 0.253382,
+   "label": "DRAWING-READ",
+   "basis": "B29 GF: drawn width 0.2 (DXF edges [\"2CE\", \"463\"]; geometry first, DELIVERY_MODE s.3) x L 6.7412 x D 0.75 less junctions (T-277 ledger) = 1.0136 m3; schedule 0.25 gives 1.2670; owner Q-61: never the schedule only because printed; D-27 answer replaces it",
+   "designer_item": "D-27",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-2c7b0b1e1a439d9ffd1e",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.1",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.347,
+    "high": 0.4338
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.4338
+   },
+   "width": 0.0868,
+   "label": "DRAWING-READ",
+   "basis": "CB2 GF: drawn width 0.25 (DXF edges [\"278\", \"274\"]; geometry first, DELIVERY_MODE s.3) x L 3.47 x D 0.5 less junctions (T-277 ledger) = 0.4338 m3; schedule 0.2 gives 0.3470; owner Q-61: never the schedule only because printed; D-27 answer replaces it",
+   "designer_item": "D-27",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-60f09eece6568b15f6ce",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.2",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.335,
+    "high": 0.4188
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.4188
+   },
+   "width": 0.0838,
+   "label": "DRAWING-READ",
+   "basis": "CB2 GF: drawn width 0.25 (DXF edges [\"278\", \"274\"]; geometry first, DELIVERY_MODE s.3) x L 3.35 x D 0.5 less junctions (T-277 ledger) = 0.4188 m3; schedule 0.2 gives 0.3350; owner Q-61: never the schedule only because printed; D-27 answer replaces it",
+   "designer_item": "D-27",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-1fd49f3e7c5a7dd19d4d",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-056#BAND0042",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 2.262872,
+    "high": 2.545691
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.262872
+   },
+   "width": 0.282819,
+   "label": "DRAWING-READ",
+   "basis": "B21 GF: drawn width 0.4 (DXF edges [\"434\", \"433\"]; geometry first, DELIVERY_MODE s.3) x L 7.4802 x D 0.75 less junctions (T-277 ledger) = 2.2629 m3; schedule 0.45 gives 2.5457; owner Q-61: never the schedule only because printed; D-27 answer replaces it",
+   "designer_item": "D-27",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-88ccf8d4505411deb9e5",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-057#BAND0019.2",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.212,
+    "high": 0.3975
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3975
+   },
+   "width": 0.1855,
+   "label": "DEFAULT",
+   "basis": "plan 0.530 m2 x depth 0.75: company default beam depth = adjacent span: CB3 20x75 = BAND0019.1 and BAND0019.3 on both sides (T-241 / T-110 schedule); marks 'CB3 and B3 (with stair)' D-03, one beam counted once (Q-61 (2)) = 0.3975 m3; D-03 answer replaces it",
+   "designer_item": "D-03",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-f83c4a469845c7e14dfa",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:1F:BAND0005.1",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.064,
+    "high": 0.192
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.064
+   },
+   "width": 0.128,
+   "label": "DEFAULT",
+   "basis": "plan 0.160 m2 x depth 0.40: company default beam depth = adjacent span: B2 20x40 inherited along line (route G, SH04 faces 1478 / 1507) = 0.0640 m3; D-04 answer replaces it",
+   "designer_item": "D-04",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-d62d2fcf3d0023ad1ad1",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:2F:BAND0006.1",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.248,
+    "high": 0.744
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.744
+   },
+   "width": 0.496,
+   "label": "DEFAULT",
+   "basis": "plan 0.620 m2 x depth 1.20: company default beam depth = adjacent span: B15 20x120 adjacent span on the same line (route G, SH02 faces 918 / 919; B15 stand = D-44) = 0.7440 m3; D-04 answer replaces it",
+   "designer_item": "D-04",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-dc8cbfc119d006ff3927",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:2F:BAND0008.1",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.112,
+    "high": 0.336
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.112
+   },
+   "width": 0.224,
+   "label": "DEFAULT",
+   "basis": "plan 0.280 m2 x depth 0.40: company default beam depth = adjacent span: B1 20x40 adjacent span on the same line (route G, SH02 faces 921 / 924) = 0.1120 m3; D-04 answer replaces it",
+   "designer_item": "D-04",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-7c3edce23ec8faa3d674",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:2F:BAND0011.1",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.112,
+    "high": 0.336
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.112
+   },
+   "width": 0.224,
+   "label": "DEFAULT",
+   "basis": "plan 0.280 m2 x depth 0.40: company default beam depth = adjacent span: B1 20x40 adjacent span on the same line (route G, SH02 faces 926 / 929) = 0.1120 m3; D-04 answer replaces it",
+   "designer_item": "D-04",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-bef35462630d4b76596f",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:GF:BAND0030.2~T642_DEPTH_B4_B7",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.0,
+    "high": 0.025
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "width": 0.025,
+   "label": "DEFAULT",
+   "basis": "width 0.0250 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-10032bf9a60368473a7b",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BEYOND_PLOT_LINE",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.0,
+    "high": 0.189
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "width": 0.189,
+   "label": "DEFAULT",
+   "basis": "projection past the plot line not built: blinding clipped at the plot line, as the merged T-761 pool blinding (T-667); 0.0000 m3 (D-14 answer could add up to 0.189)",
+   "designer_item": "D-14",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-16b95607fc88cda3844a",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_LIFT_RAFT_FF",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 2.256,
+    "high": 2.352
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.256
+   },
+   "width": 0.096,
+   "label": "DRAWING-READ",
+   "basis": "FF lift-raft blinding at the project's printed projection 0.10 (every dimensioned blinding detail: ST p.13 '10 | L x W | 10', p.14 A-A '10', pool wrap 0.10) = 2.2560 m3; the scaled 0.15 reading (2.352) is a scale measurement, not a print (RFI S08 / S23)",
+   "designer_item": "RFI-S08+RFI-S23",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-080c97f5f6a92452cd04",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTING:FTG:SH10:T652:10A5",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.435,
+    "high": 0.59
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.552
+   },
+   "width": 0.155,
+   "label": "DEFAULT",
+   "basis": "F10 + F blinding follows its footing reading (Q-31 bigger area): (3.25 + 2 x 0.10) x (1.40 + 2 x 0.10) x 0.10 printed '10 | L x W | 10' (ST p.13) = 0.5520 m3",
+   "designer_item": "Q-31",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-7a5214a334ea3559fa2d",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_GROUND_BEAM",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 4.949374,
+    "high": 9.422514
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.422514
+   },
+   "width": 4.47314,
+   "label": "DRAWING-READ",
+   "basis": "ground-beam blinding reading R 9.4225 m3 (own layer under each drawn beam: every GB soffit >= 0.28 m above every footing top, T-230 / T-233 finding 2); reading L 4.9494 needs a beam at footing level that no plan draws; the second GB row (formation below ~-1.67) is a design change, not drawn",
+   "designer_item": "FOOTING_DETAIL_CHOICE_OPEN",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-35382b18e2e362df3ae6",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_STRAP",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.0,
+    "high": 0.912684
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.912684
+   },
+   "width": 0.912684,
+   "label": "ESTIMATE",
+   "basis": "strap blinding not printed (D-15; ST p.13 prints no strap section): straps own strip 0.912684 m3 at the printed 10 cm plain concrete every other foundation member stands on (footings, ground beams, pool, boundary A-A) (T-356); D-15 replaces it",
+   "designer_item": "STRAP_BLINDING_NOT_PRINTED",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-6290a9f3d93f38cd46d6",
+   "item_code": "STR.CONC.BOUNDARY_WALL",
+   "element_id": "P-C:SCOPE:BOUNDARY_WALL:FOUNDATION:CC-9fd936ab60:BEAM",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 5.6392,
+    "high": 11.0328
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.4588
+   },
+   "width": 5.3936,
+   "label": "DEFAULT",
+   "basis": "boundary band = B.W beam 0.20 x 0.60 not counted again inside footings: (91.94 - 21.45) x 0.20 x 0.60 = 8.4588 m3 (owner Q-28 answer A, PROVISIONAL); T-776 restates it per run type (under-building vs fence runs)",
+   "designer_item": "Q-28",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "HL:PLANTED_COLUMN:PC-2F:CONCRETE",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.20136,
+    "high": 0.35
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3325
+   },
+   "width": 0.14864,
+   "label": "DEFAULT",
+   "basis": "PC-2F planted on the 0.75 support: section = its printed size text 'P.C 20x50' 0.10 m2 (company default: the printed size governs a column; drawn 0.20 x 0.40 = 0.08, D-66) x h 3.325 = roof slab top (+13.90 finished - 0.175 roof build-up default) - 9.65 - 0.75 = 0.3325 m3; D-39 / D-66 answer replaces it",
+   "designer_item": "D-39",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C1@251701,62344|2F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.3287,
+    "high": 0.425
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.4075
+   },
+   "width": 0.0963,
+   "label": "DEFAULT",
+   "basis": "C1 2F: schedule CGT 2ND 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 2F h 4.075 = +13.90 printed finished - 0.175 roof build-up default - base +9.65 = 0.4075 m3",
+   "designer_item": "D-39",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-33a9b7728781fcba12e2",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C2@251723,58368|2F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.3267,
+    "high": 0.425
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.4075
+   },
+   "width": 0.0983,
+   "label": "DEFAULT",
+   "basis": "C2 2F: schedule CGT 2ND 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 2F h 4.075 = +13.90 printed finished - 0.175 roof build-up default - base +9.65 = 0.4075 m3",
+   "designer_item": "D-39",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-919a5749ef79759e01ca",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C2@252679,64225|2F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.3287,
+    "high": 0.425
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.4075
+   },
+   "width": 0.0963,
+   "label": "DEFAULT",
+   "basis": "C2 2F: schedule CGT 2ND 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 2F h 4.075 = +13.90 printed finished - 0.175 roof build-up default - base +9.65 = 0.4075 m3",
+   "designer_item": "D-39",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-26f6b6f2365c72e42291",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C2@254644,61274|2F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.3287,
+    "high": 0.425
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.4075
+   },
+   "width": 0.0963,
+   "label": "DEFAULT",
+   "basis": "C2 2F: schedule CGT 2ND 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 2F h 4.075 = +13.90 printed finished - 0.175 roof build-up default - base +9.65 = 0.4075 m3",
+   "designer_item": "D-39",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-fad18af6e7139a5e99d1",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@238374,54773|GF",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.41175,
+    "high": 0.50625
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.484375
+   },
+   "width": 0.0945,
+   "label": "DEFAULT",
+   "basis": "C3 GF: schedule CGT GR 25x50 = 0.125 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x annex h 3.875 = +4.30 printed finished - 0.175 roof build-up default - base +0.25 = 0.4844 m3",
+   "designer_item": "D-39",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-694a75c84dd6e4bb4491",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@241094,51256|GF",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.26352,
+    "high": 0.50625
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.31
+   },
+   "width": 0.24273,
+   "label": "DEFAULT",
+   "basis": "10AE GF: drawn 0.20 x 0.40 (GFRS 350); marks C3 vs C in CONFLICT, outline fits neither GR band (T-566): 0.080 m2 x annex h 3.875 = +4.30 printed finished - 0.175 roof build-up default - base +0.25 = 0.3100 m3; designer mark answer replaces it",
+   "designer_item": "D-39+D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-cc702b8541c15fdfd98c",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@247476,61310|1F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.42,
+    "high": 0.525
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.42
+   },
+   "width": 0.105,
+   "label": "DEFAULT",
+   "basis": "C3 1F: schedule CGT 1ST 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 1F h 4.20 (+5.45 .. +9.65) = 0.4200 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-8de64040a1c3ae6cf137",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@265215,57750|GF",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.45,
+    "high": 0.5625
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.5625
+   },
+   "width": 0.1125,
+   "label": "DEFAULT",
+   "basis": "C3 GF: schedule CGT GR 25x50 = 0.125 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x GF h 4.50 (slab tops +0.95 .. +5.45) = 0.5625 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-e112e2add2f8979a6c39",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C4@259526,63482|1F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.42,
+    "high": 0.525
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.42
+   },
+   "width": 0.105,
+   "label": "DEFAULT",
+   "basis": "C4 1F: schedule CGT 1ST 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 1F h 4.20 (+5.45 .. +9.65) = 0.4200 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-8f8ad257d9b2cb9e027f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C4@264812,63850|1F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.42,
+    "high": 0.525
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.42
+   },
+   "width": 0.105,
+   "label": "DEFAULT",
+   "basis": "C4 1F: schedule CGT 1ST 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 1F h 4.20 (+5.45 .. +9.65) = 0.4200 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-291ba2ddf4bbe4f14cf7",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@243102,55481|1F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.42,
+    "high": 0.504
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.42
+   },
+   "width": 0.084,
+   "label": "DEFAULT",
+   "basis": "C5 1F: schedule CGT 1ST 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 1F h 4.20 (+5.45 .. +9.65) = 0.4200 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-c677b628a776d3b87b02",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@255627,63526|1F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.42,
+    "high": 0.63
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.42
+   },
+   "width": 0.21,
+   "label": "DEFAULT",
+   "basis": "C5 1F: schedule CGT 1ST 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 1F h 4.20 (+5.45 .. +9.65) = 0.4200 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-bc01297b1c4a4c45a15f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@255627,63526|2F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.3287,
+    "high": 0.51
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.4075
+   },
+   "width": 0.1813,
+   "label": "DEFAULT",
+   "basis": "C5 2F: schedule CGT 2ND 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 2F h 4.075 = +13.90 printed finished - 0.175 roof build-up default - base +9.65 = 0.4075 m3",
+   "designer_item": "D-39+D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-831f6fe3de133294bb8f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@259715,51786|1F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.42,
+    "high": 0.63
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.42
+   },
+   "width": 0.21,
+   "label": "DEFAULT",
+   "basis": "C5 1F: schedule CGT 1ST 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 1F h 4.20 (+5.45 .. +9.65) = 0.4200 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-a87ea657a42a311cb851",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C6@250087,56100|1F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.504,
+    "high": 0.735
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.504
+   },
+   "width": 0.231,
+   "label": "DEFAULT",
+   "basis": "C6 1F: schedule CGT 1ST 20x60 = 0.120 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 1F h 4.20 (+5.45 .. +9.65) = 0.5040 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-85809d3db52bb93dfe96",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C7@247954,58915|1F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.672,
+    "high": 0.84
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.672
+   },
+   "width": 0.168,
+   "label": "DEFAULT",
+   "basis": "C7 1F: schedule CGT 1ST 20x80 = 0.160 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 1F h 4.20 (+5.45 .. +9.65) = 0.6720 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-1dc713c83bf62e525ff2",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C8@256160,53630|1F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.756,
+    "high": 0.84
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.84
+   },
+   "width": 0.084,
+   "label": "DRAWING-READ",
+   "basis": "10E0 1F: drawn 0.25 x 0.80 (GFRS 380 / FFRS 69A); marks C8 (FP, CAP) vs C7 (GBP) in CONFLICT, every printed size fits C7 (T-566): 0.200 m2 x 1F h 4.20 (+5.45 .. +9.65) = 0.8400 m3; designer mark answer replaces it",
+   "designer_item": "D-16",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-4c4496579e5bfa20ae9f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C8@256160,53630|GF",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.9,
+    "high": 1.0125
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.9
+   },
+   "width": 0.1125,
+   "label": "DRAWING-READ",
+   "basis": "10E0 GF: drawn 0.25 x 0.80 (GFRS 380 / FFRS 69A); marks C8 (FP, CAP) vs C7 (GBP) in CONFLICT, every printed size fits C7 (T-566): 0.200 m2 x GF h 4.50 (slab tops +0.95 .. +5.45) = 0.9000 m3; designer mark answer replaces it",
+   "designer_item": "D-16",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-755eb56b55e86301b488",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C9@254644,59429|1F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.756,
+    "high": 1.05
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.756
+   },
+   "width": 0.294,
+   "label": "DEFAULT",
+   "basis": "C9 1F: schedule CGT 1ST 20x90 = 0.180 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 1F h 4.20 (+5.45 .. +9.65) = 0.7560 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-53f223b06db14ac41d47",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C9@254644,59429|2F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.45738,
+    "high": 0.595
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.5705
+   },
+   "width": 0.13762,
+   "label": "DEFAULT",
+   "basis": "C9 2F: schedule CGT 2ND 20x70 = 0.140 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 2F h 4.075 = +13.90 printed finished - 0.175 roof build-up default - base +9.65 = 0.5705 m3",
+   "designer_item": "D-39",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-4aed92c117a7ab1c90ee",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C9@259284,59442|1F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.756,
+    "high": 0.84
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.756
+   },
+   "width": 0.084,
+   "label": "DEFAULT",
+   "basis": "C9 1F: schedule CGT 1ST 20x90 = 0.180 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x 1F h 4.20 (+5.45 .. +9.65) = 0.7560 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-c0b3340a906c2c7650f8",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@233893,56561|GF",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.26352,
+    "high": 0.405
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3875
+   },
+   "width": 0.14148,
+   "label": "DEFAULT",
+   "basis": "C GF: schedule CGT GR 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x annex h 3.875 = +4.30 printed finished - 0.175 roof build-up default - base +0.25 = 0.3875 m3",
+   "designer_item": "D-39+D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-e6c1c9a7feec10f64975",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@235241,51296|GF",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.26352,
+    "high": 0.405
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3875
+   },
+   "width": 0.14148,
+   "label": "DEFAULT",
+   "basis": "C GF: schedule CGT GR 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x annex h 3.875 = +4.30 printed finished - 0.175 roof build-up default - base +0.25 = 0.3875 m3",
+   "designer_item": "D-39+D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-9f5a647014bbf83359f9",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@238150,57853|GF",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.26352,
+    "high": 0.405
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3875
+   },
+   "width": 0.14148,
+   "label": "DEFAULT",
+   "basis": "C GF: schedule CGT GR 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x annex h 3.875 = +4.30 printed finished - 0.175 roof build-up default - base +0.25 = 0.3875 m3",
+   "designer_item": "D-39+D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-9cb26d86575a92694880",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@247429,51302|GF",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.36,
+    "high": 0.45
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.45
+   },
+   "width": 0.09,
+   "label": "DEFAULT",
+   "basis": "C GF: schedule CGT GR 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x GF h 4.50 (slab tops +0.95 .. +5.45) = 0.4500 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-43dae3d6dfec957b26a8",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@265272,52633|GF",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.36,
+    "high": 0.45
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.45
+   },
+   "width": 0.09,
+   "label": "DEFAULT",
+   "basis": "C GF: schedule CGT GR 20x50 = 0.100 m2 (company default: schedule governs a column; D-66 drawn outline differs where named) x GF h 4.50 (slab tops +0.95 .. +5.45) = 0.4500 m3",
+   "designer_item": "D-66",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-164ae9d338976be9e582",
+   "item_code": "STR.CONC.FOOTING",
+   "element_id": "P-C:FTG:SH10:T652:10A5",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 2.176,
+    "high": 2.275
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.275
+   },
+   "width": 0.099,
+   "label": "DEFAULT",
+   "basis": "F10 + F one drawn outline 1B1B 3.25 x 1.40 x 0.50 = 2.2750 m3: owner Q-31 answer C 'you can also choose the bigger area' = the drawn outline, PROVISIONAL and flagged (reading A schedule F10 1.96 + F 0.216 = 2.176)",
+   "designer_item": "Q-31",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-0e852cca42fb8b765c58",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0007",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.216,
+    "high": 0.288
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.216
+   },
+   "width": 0.072,
+   "label": "DEFAULT",
+   "basis": "clear span 2.40 < 2.50 -> ST p.13 typical 30x30 (class by clear span, as T-761 / route G): drawn plan 0.7200 m2 x 0.30 = 0.2160 m3; c/c reading gives 30x40 0.2880; D-34 answer replaces it",
+   "designer_item": "D-34",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-81444e222487437e257e",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0020",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.1305,
+    "high": 0.174
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1305
+   },
+   "width": 0.0435,
+   "label": "DEFAULT",
+   "basis": "width 0.0435 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "D-34",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-e2134034441cb7db7bd7",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0021",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.108,
+    "high": 0.144
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.108
+   },
+   "width": 0.036,
+   "label": "DEFAULT",
+   "basis": "width 0.0360 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "D-34",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-c0b7102a36344a0349f5",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0025.1",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.20925,
+    "high": 0.279
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.20925
+   },
+   "width": 0.06975,
+   "label": "DEFAULT",
+   "basis": "clear span 2.33 < 2.50 -> ST p.13 typical 30x30 (class by clear span, as T-761 / route G): drawn plan 0.6975 m2 x 0.30 = 0.2092 m3; c/c reading gives 30x40 0.2790; D-34 answer replaces it",
+   "designer_item": "D-34",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-f0e25ad2cf73bf2a35ea",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0030",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.108,
+    "high": 0.144
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.108
+   },
+   "width": 0.036,
+   "label": "DEFAULT",
+   "basis": "width 0.0360 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "D-34",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-0c5ede7fd2c9e425aa8d",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0034",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.1125,
+    "high": 0.15
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1125
+   },
+   "width": 0.0375,
+   "label": "DEFAULT",
+   "basis": "width 0.0375 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "D-34",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-970bac563cbcd69e2a30",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0038",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.098008,
+    "high": 0.130678
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.098008
+   },
+   "width": 0.03267,
+   "label": "DEFAULT",
+   "basis": "width 0.0327 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "D-34",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-f24cf117a9ce1e875785",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0039",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.19612,
+    "high": 0.261493
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.19612
+   },
+   "width": 0.065373,
+   "label": "DEFAULT",
+   "basis": "clear span 2.07 < 2.50 -> ST p.13 typical 30x30 (class by clear span, as T-761 / route G): drawn plan 0.6537 m2 x 0.30 = 0.1961 m3; c/c reading gives 30x40 0.2615; D-34 answer replaces it",
+   "designer_item": "D-34",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-4a12b89454e48ac510dc",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:A-1F-01",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.054,
+    "high": 0.1185
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.054
+   },
+   "width": 0.0645,
+   "label": "DRAWING-READ",
+   "basis": "A-1F-01: 0.15 x 0.20 (T-677 member) x (opening 1.00 + 2 x 0.40 printed 'MIN 40 cm' bearing) = 0.0540 m3; the 0.15 company default applies only where nothing is printed (T-761 lines: F-V761-1 / T-777)",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-a7b8b292503ae1bf6c77",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-1F-05",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.036,
+    "high": 0.0628
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.036
+   },
+   "width": 0.0268,
+   "label": "DEFAULT",
+   "basis": "width 0.0268 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "Q-55",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-1a07849115af938b4a72",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-01",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.056,
+    "high": 0.066716
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.056
+   },
+   "width": 0.010716,
+   "label": "DEFAULT",
+   "basis": "width 0.0107 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "Q-55",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-71998da6340be871d0af",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-02",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.036,
+    "high": 0.042708
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.036
+   },
+   "width": 0.006708,
+   "label": "DEFAULT",
+   "basis": "width 0.0067 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "Q-55",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-a7848a35fb4329e09d10",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-03",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.052,
+    "high": 0.058
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.052
+   },
+   "width": 0.006,
+   "label": "DEFAULT",
+   "basis": "width 0.0060 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "Q-55",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-fd68db051119ea0266ee",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-07",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.096,
+    "high": 0.108
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.096
+   },
+   "width": 0.012,
+   "label": "DEFAULT",
+   "basis": "width 0.0120 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-2efe48097978cae5fc99",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:P-1F-01",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.063,
+    "high": 0.12042
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.063
+   },
+   "width": 0.05742,
+   "label": "DRAWING-READ",
+   "basis": "P-1F-01: 0.15 x 0.20 (T-677 member) x (opening 1.30 + 2 x 0.40 printed 'MIN 40 cm' bearing) = 0.0630 m3; the 0.15 company default applies only where nothing is printed (T-761 lines: F-V761-1 / T-777)",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-3af715c6e83364208ad0",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W01",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.08,
+    "high": 0.108
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.08
+   },
+   "width": 0.028,
+   "label": "DEFAULT",
+   "basis": "width 0.0280 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-441ae5fe85351347aff0",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W05",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.04,
+    "high": 0.055
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.04
+   },
+   "width": 0.015,
+   "label": "DEFAULT",
+   "basis": "width 0.0150 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-f269fabb74f505755492",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W06",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.04,
+    "high": 0.04
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.04
+   },
+   "width": 0.0,
+   "label": "DEFAULT",
+   "basis": "width 0.0000 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-ed7aadd01d9daa9559a9",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W07",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.056,
+    "high": 0.134
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.056
+   },
+   "width": 0.078,
+   "label": "DRAWING-READ",
+   "basis": "W07: 0.20 x 0.20 (T-677 member) x (opening 0.60 + 2 x 0.40 printed 'MIN 40 cm' bearing) = 0.0560 m3; the 0.15 company default applies only where nothing is printed (T-761 lines: F-V761-1 / T-777)",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-786344670c0002b31478",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W09",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.092,
+    "high": 0.118
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.092
+   },
+   "width": 0.026,
+   "label": "DEFAULT",
+   "basis": "width 0.0260 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-882717b0c35a87e363ef",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W10",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.056,
+    "high": 0.06
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.056
+   },
+   "width": 0.004,
+   "label": "DEFAULT",
+   "basis": "width 0.0040 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-47882fa3a0d9cdcc122e",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W13",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.08,
+    "high": 0.108
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.08
+   },
+   "width": 0.028,
+   "label": "DEFAULT",
+   "basis": "width 0.0280 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-53ef44d8c490d1341b93",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W16",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.078,
+    "high": 0.081732
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.078
+   },
+   "width": 0.003732,
+   "label": "DEFAULT",
+   "basis": "width 0.0037 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-6057028f3f666538a007",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W19",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.056,
+    "high": 0.069
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.056
+   },
+   "width": 0.013,
+   "label": "DEFAULT",
+   "basis": "width 0.0130 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-7d90a0feed2537221f16",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W19+W20:PIER_REMAINDER",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.0,
+    "high": 0.003
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "width": 0.003,
+   "label": "DEFAULT",
+   "basis": "width 0.0030 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-6692d02cd6cd25120300",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W20",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.056,
+    "high": 0.08048
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.056
+   },
+   "width": 0.02448,
+   "label": "DEFAULT",
+   "basis": "width 0.0245 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-dd5b41a7af885e96f797",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W21",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.04,
+    "high": 0.055
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.04
+   },
+   "width": 0.015,
+   "label": "DEFAULT",
+   "basis": "width 0.0150 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-f68444edf483bc1d87d4",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W22",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.04,
+    "high": 0.04
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.04
+   },
+   "width": 0.0,
+   "label": "DEFAULT",
+   "basis": "width 0.0000 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-bf76c17309c92605e174",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W23",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.056,
+    "high": 0.134
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.056
+   },
+   "width": 0.078,
+   "label": "DRAWING-READ",
+   "basis": "W23: 0.20 x 0.20 (T-677 member) x (opening 0.60 + 2 x 0.40 printed 'MIN 40 cm' bearing) = 0.0560 m3; the 0.15 company default applies only where nothing is printed (T-761 lines: F-V761-1 / T-777)",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-40e8c2597de12644e8e2",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W24",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.094,
+    "high": 0.26828
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.094
+   },
+   "width": 0.17428,
+   "label": "DRAWING-READ",
+   "basis": "W24: 0.20 x 0.20 (T-677 member) x (opening 1.55 + 2 x 0.40 printed 'MIN 40 cm' bearing) = 0.0940 m3; the 0.15 company default applies only where nothing is printed (T-761 lines: F-V761-1 / T-777)",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-005334b6998987164a5d",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W28",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.04,
+    "high": 0.055
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.04
+   },
+   "width": 0.015,
+   "label": "DEFAULT",
+   "basis": "width 0.0150 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-aca2db3c2b29719328c7",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W29",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.064,
+    "high": 0.064
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.064
+   },
+   "width": 0.0,
+   "label": "DEFAULT",
+   "basis": "width 0.0000 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-b4c234c8a3873239f67f",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C11@207698,54876",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.5874,
+    "high": 0.66
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.5874
+   },
+   "width": 0.0726,
+   "label": "DRAWING-READ",
+   "basis": "neck C11 10BA: section 0.330 m2 (= schedule FOU 30x110) x h 1.780 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.5874 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-132cf60588a44f6af9d6",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C11@208990,51494",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.5874,
+    "high": 0.66
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.5874
+   },
+   "width": 0.0726,
+   "label": "DRAWING-READ",
+   "basis": "neck C11 10DD: section 0.330 m2 (= schedule FOU 30x110) x h 1.780 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.5874 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-3f7b9501a902579e7406",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C2@209843,64560",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.2895,
+    "high": 0.3225
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.2895
+   },
+   "width": 0.033,
+   "label": "DEFAULT",
+   "basis": "width 0.0330 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-5aec8a0055215ee5a711",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C2@212578,64533",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.2895,
+    "high": 0.3225
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.2895
+   },
+   "width": 0.033,
+   "label": "DEFAULT",
+   "basis": "width 0.0330 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-4ec473f7c0c712919823",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@199252,55820",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.192,
+    "high": 0.33
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.192
+   },
+   "width": 0.138,
+   "label": "DRAWING-READ",
+   "basis": "neck C3 10B1: section 0.150 m2 (= schedule FOU 30x50) x h 1.280 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1920 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-dd3c32e4340e7a823a6e",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@201132,51210",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.177,
+    "high": 0.315
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.177
+   },
+   "width": 0.138,
+   "label": "DRAWING-READ",
+   "basis": "neck C3 10AE: section 0.150 m2 (= schedule FOU 30x50) x h 1.180 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1770 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-f54b7b2acf11ebd2a585",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@205523,52938",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.192,
+    "high": 0.33
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.192
+   },
+   "width": 0.138,
+   "label": "DRAWING-READ",
+   "basis": "neck C3 10C5: section 0.150 m2 (= schedule FOU 30x50) x h 1.280 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1920 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-ae1bd9cb228d57594e46",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@209914,60584",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.237,
+    "high": 0.27
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.237
+   },
+   "width": 0.033,
+   "label": "DEFAULT",
+   "basis": "width 0.0330 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-516989b817e0ccc7cb80",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@217138,51213",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.267,
+    "high": 0.3
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.267
+   },
+   "width": 0.033,
+   "label": "DEFAULT",
+   "basis": "width 0.0330 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-48f2e06e5c946eb1e5a7",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@226007,58025",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.267,
+    "high": 0.3
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.267
+   },
+   "width": 0.033,
+   "label": "DEFAULT",
+   "basis": "width 0.0330 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-46f2b70254f074885dfc",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C4@220308,64637",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.282,
+    "high": 0.315
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.282
+   },
+   "width": 0.033,
+   "label": "DEFAULT",
+   "basis": "width 0.0330 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-05a99150a85e9185ae48",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C4@224310,64557",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.235,
+    "high": 0.315
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.282
+   },
+   "width": 0.08,
+   "label": "DRAWING-READ",
+   "basis": "neck C4 108D: schedule FOU 30x50 (company default: schedule governs; drawn 0.125 differs) x h 1.880 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.2820 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-c1e802184591eac927cf",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C5@205273,54905",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.1944,
+    "high": 0.36
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1944
+   },
+   "width": 0.1656,
+   "label": "DRAWING-READ",
+   "basis": "neck C5 10BD: section 0.180 m2 (= schedule FOU 30x60) x h 1.080 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1944 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-5efd9ac69d4cfd9b9a6e",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C5@216447,64629",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.3384,
+    "high": 0.378
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3384
+   },
+   "width": 0.0396,
+   "label": "DEFAULT",
+   "basis": "width 0.0396 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-486cd9a0bf52e4b32abb",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C5@220440,52886",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.3384,
+    "high": 0.378
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3384
+   },
+   "width": 0.0396,
+   "label": "DEFAULT",
+   "basis": "width 0.0396 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-efe50185c0da4244e158",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C6@209970,56575",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.3738,
+    "high": 0.42
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3738
+   },
+   "width": 0.0462,
+   "label": "DEFAULT",
+   "basis": "width 0.0462 m3 < 0.05 m3 (owner materiality 2026-11-13): low bound kept, width logged in IGNORED_SMALL and carried by STR.CONC.SAFETY",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "MATERIALITY_LOW"
+  },
+  {
+   "line_id": "L-995eca94ba8dc09a028f",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C7@209292,59069",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.3792,
+    "high": 0.432
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3792
+   },
+   "width": 0.0528,
+   "label": "DRAWING-READ",
+   "basis": "neck C7 10C8: section 0.240 m2 (= schedule FOU 30x80) x h 1.580 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.3792 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-15b8ad39d6b2250c9546",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C8@217457,52784",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.4272,
+    "high": 0.54
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.4272
+   },
+   "width": 0.1128,
+   "label": "DRAWING-READ",
+   "basis": "neck C8 10E0: drawn 30 x 80 = C7 FOU (mark C8 / C7 CONFLICT at 10E0, T-566; same reading as its GF / 1F column) x h 1.780 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.4272 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-fc622ff340ac65a544e3",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C8@224698,57859",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.4806,
+    "high": 0.54
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.4806
+   },
+   "width": 0.0594,
+   "label": "DRAWING-READ",
+   "basis": "neck C8 10D0: section 0.270 m2 (= schedule FOU 30x90) x h 1.780 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.4806 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-b21cbf6560f613b39bf0",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C9@220198,60706",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.519,
+    "high": 0.585
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.519
+   },
+   "width": 0.066,
+   "label": "DRAWING-READ",
+   "basis": "neck C9 10DA: section 0.300 m2 (= schedule FOU 30x100) x h 1.730 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.5190 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-85df35f17a205f919aa6",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@195866,57040",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.192,
+    "high": 0.33
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.192
+   },
+   "width": 0.138,
+   "label": "DRAWING-READ",
+   "basis": "neck C 10A8: section 0.150 m2 (= schedule FOU 30x50) x h 1.280 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1920 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-734ff1a78bbe6b7eb4c3",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@195972,51184",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.192,
+    "high": 0.33
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.192
+   },
+   "width": 0.138,
+   "label": "DRAWING-READ",
+   "basis": "neck C 10AB: section 0.150 m2 (= schedule FOU 30x50) x h 1.280 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1920 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-53d0b6af1a801c3db58e",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@198052,57874",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.192,
+    "high": 0.33
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.192
+   },
+   "width": 0.138,
+   "label": "DRAWING-READ",
+   "basis": "neck C 10B4: section 0.150 m2 (= schedule FOU 30x50) x h 1.280 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1920 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-bd741a3faf2318dd8409",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@207257,51203",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.2376,
+    "high": 0.33
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.297
+   },
+   "width": 0.0924,
+   "label": "DRAWING-READ",
+   "basis": "neck C 10B7: schedule FOU 30x50 (company default: schedule governs; drawn 0.120 differs) x h 1.980 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.2970 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "NO_SINGLE_VALUE",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-bbad8cdb4d26986776a6",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:C10@224867,51226",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.3738,
+    "high": 0.462
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3738
+   },
+   "width": 0.0882,
+   "label": "DRAWING-READ",
+   "basis": "neck C10 10E8: section 0.210 m2 (= schedule FOU 30x70) x h 1.780 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.3738 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-314946394d849141dda2",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:C@226940,50955",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.267,
+    "high": 0.33
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.267
+   },
+   "width": 0.063,
+   "label": "DRAWING-READ",
+   "basis": "neck C 10A4: section 0.150 m2 (= schedule FOU 30x50) x h 1.780 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.2670 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-34346cb438bffee6acec",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@216858,57078",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.1152,
+    "high": 0.198
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1152
+   },
+   "width": 0.0828,
+   "label": "DRAWING-READ",
+   "basis": "neck CN 10F6: section 0.090 m2 (drawn; no schedule row for this mark) x h 1.280 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1152 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-6a2040e0fe0bf7391b9c",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@222091,55786",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.1152,
+    "high": 0.198
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1152
+   },
+   "width": 0.0828,
+   "label": "DRAWING-READ",
+   "basis": "neck CN 10EE: section 0.090 m2 (drawn; no schedule row for this mark) x h 1.280 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1152 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-1a9e469651c32cce9b97",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@222815,61757",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.1152,
+    "high": 0.198
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1152
+   },
+   "width": 0.0828,
+   "label": "DRAWING-READ",
+   "basis": "neck CN 180A: section 0.090 m2 (drawn; no schedule row for this mark) x h 1.280 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1152 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-15d9da9b17fd373553f0",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@223972,59262",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.0972,
+    "high": 0.18
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0972
+   },
+   "width": 0.0828,
+   "label": "DRAWING-READ",
+   "basis": "neck CN 17C5: section 0.090 m2 (drawn; no schedule row for this mark) x h 1.080 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.0972 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-4ef35980fbb54366703d",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@224210,63411",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.1062,
+    "high": 0.189
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1062
+   },
+   "width": 0.0828,
+   "label": "DRAWING-READ",
+   "basis": "neck CN 17C8: section 0.090 m2 (drawn; no schedule row for this mark) x h 1.180 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1062 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-c8c07db4ac0d54d89bbf",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@225897,54910",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.1152,
+    "high": 0.198
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1152
+   },
+   "width": 0.0828,
+   "label": "DRAWING-READ",
+   "basis": "neck CN 10FE: section 0.090 m2 (drawn; no schedule row for this mark) x h 1.280 = top +0.95 + founding at the printed minimum 1.50 below EG (ST p.9 n.1, the only printed level) - 0.17 stack - footing H (T-657) = 0.1152 m3; deeper formation (second GB row, ST p.13) would be a design change",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-abd65e1b745315dd17c2",
+   "item_code": "STR.CONC.STRAP",
+   "element_id": "HL:STRAP_CONCRETE:SB1:IN_FOOTING:F10_F",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.0,
+    "high": 0.385
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "width": 0.385,
+   "label": "DEFAULT",
+   "basis": "SB1 end inside the F10 + F outline: under the Q-31 drawn-outline reading that volume is the footing's own concrete (counted once, T-233 / T-658): 0.0000 m3 here; reading A would give up to 0.385",
+   "designer_item": "Q-31",
+   "rule": "POINT"
+  },
+  {
+   "line_id": "L-c823e0dbd81e30c66aa5",
+   "item_code": "STR.CONC.STRAP",
+   "element_id": "HL:STRAP_CONCRETE:SB3:IN_FOOTING:F3",
+   "unit": "m3",
+   "before": {
+    "class": "HELD",
+    "low": 0.0295,
+    "high": 0.2683
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0295
+   },
+   "width": 0.2388,
+   "label": "DRAWING-READ",
+   "basis": "SB3 0.50 x 0.40 inside the F3 outline above the F3 top = 0.0295 m3; whatever the strap soffit (D-15), the part below the F3 top is F3's own concrete (one solid, counted once)",
+   "designer_item": "DESIGNER_TAG",
+   "rule": "POINT"
+  }
+ ]
+}
