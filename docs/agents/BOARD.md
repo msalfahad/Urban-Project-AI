@@ -16,6 +16,8 @@ Order: gate 0 = DELIVERY rows (T-760 .. T-775) first, then board order. Lanes: S
 
 OWNER SESSION 2026-11-13 15:00 (main chat; DELIVERY MODE queues; in-flight rows T-314 READY, T-738 READY, T-750 CLAIMED, T-755 READY finish first) WORKER 1 takes T-772 WORKER 1 takes T-769 WORKER 1 takes T-767 WORKER 1 takes T-762 WORKER 1 takes T-761 WORKER 1 takes T-757 WORKER 2 takes T-774 WORKER 2 takes T-768 WORKER 2 takes T-766 WORKER 2 takes T-765 WORKER 2 takes T-763 WORKER 2 takes T-760 WORKER 3 takes T-773 WORKER 3 takes T-775 WORKER 3 takes T-771 WORKER 3 takes T-764 WORKER 3 takes T-770
 
+OWNER SESSION 2026-11-13 16:30 (main chat; MAIN FILL 1): docs/agents/boq/fixrows/MAIN_FILL_1.json (185 rows on V3.0.78: floor bed m3 points by the 3.5 / 5 cm default, 126 formwork lines by this villa's own m2 / m3 ratios, roof insulation / protection / screed by zone area, top roof area from the 2F slab panels, disposal = excavation - backfill range) is READY TO WIRE: WORKER 3 wires it as the first T-770 package with the labels and bases as given (DEFAULT / ESTIMATE), the Checker spot-checks three rows; built by docs/agents/boq/fill_from_index.py (rebuild on any newer index). The workbook docs/agents/boq/Urban_trial_BOQ_V3.0.78_with_fill1.xlsx shows the state after wiring. 210 lines are listed as not fillable from the index (host concrete HELD, no host, no pair): T-761 / T-762 / T-764 take them.
+
 ## Open questions / owner items
 - Designer list DESIGNER_QUESTIONS.md (18 items): with the owner. Drive connection, repository privacy, freelancer workbooks: with the owner.
 

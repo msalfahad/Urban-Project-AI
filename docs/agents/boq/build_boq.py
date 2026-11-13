@@ -3,6 +3,17 @@ from openpyxl import Workbook
 from openpyxl.styles import Font,PatternFill,Alignment,Border,Side
 from openpyxl.utils import get_column_letter
 m=json.load(open(sys.argv[1])); L=json.load(open(sys.argv[2])); out=sys.argv[3]; ver=L.get('candidate_version','ARCH_TAKEOFF_V3.0.x')
+FILL=json.load(open(sys.argv[7])) if len(sys.argv)>7 else None
+if FILL:  # apply a main-chat fix-row set as an overlay before aggregation (shows the 'after fill' state; labels kept)
+    fr={r['line_id']:r for r in FILL['rows']}; applied=0
+    for l in L['lines']:
+        r=fr.get(l['line_id'])
+        if not r: continue
+        a=r['after']
+        if 'net' in a: l['class']='RELEASED'; l['measured_net']=a['net']; l['held_low']=l['held_high']=None
+        else: l['class']='HELD'; l['held_low']=a['low']; l['held_high']=a['high']
+        l['fill_label']=r['label']; applied+=1
+    ver=ver+' + '+FILL['schema'].replace('_V1','')+f' ({applied} rows)'
 STMT=json.load(open(sys.argv[4])) if len(sys.argv)>4 else None; KEYMAP=json.load(open(sys.argv[5])) if len(sys.argv)>5 else None; BENCH=json.load(open(sys.argv[6])) if len(sys.argv)>6 else None
 fams={f['code']:f for f in m['families']}
 ic={c:f['code'] for f in m['families'] for c in f.get('item_codes',[])}
