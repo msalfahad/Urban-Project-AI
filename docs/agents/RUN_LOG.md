@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T02:51Z | Verifier | STARTED | run session_01E6cPnc1ULBrvSJPnU5Quij | repo-attached routine | task state: READY T-749 (W3 integration package V3.0.77 @b2bc7e7a) per run log | self-check pending
 - 2026-11-13T02:41Z | Worker 2 | SUCCESS | none | No claimable TODO or REJECTED row on BOARD.md (board @667399f9c: READY 1 = T-749, QUEUED 12 incl. T-754 'after T-753' which the Lead has not yet moved to TODO, PAUSED 3, T-180 IN PROGRESS); no task claimed, no engine change, no quantity changed, no owner question. | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-11-13T02:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T02:10Z | Worker 3 | SUCCESS | T-749 READY (integration package, agents/task-T-749 b2bc7e7a, ARCH_TAKEOFF_V3.0.77 + master 1.78.0 pending) | paint rule wired: V3_0_76 9b35725c -> V3_0_77 b8524d5c (35 changed, 68 added, 5,138 byte-identical); FIN.PAINT held 604.990..710.006 -> 603.802..687.847 m2 (interior 821.011..905.055 = T-746 rule B, residual = GF_15 released rounding 0.00005); new HELD lm lines FIN.PAINT.EDGE 0..33.80 (30) and FIN.EXT.PAINT.EDGE 283.218..284.418 (38: windows 103.682 arcs developed, corners 179.536..180.736); 7 exterior door reveals counted once (F-T749-1); exterior paint m2 1,009.110..1,087.619 waits T-314 r3 render host | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
