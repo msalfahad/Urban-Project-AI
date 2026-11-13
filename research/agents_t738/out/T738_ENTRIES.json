@@ -1,0 +1,2464 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.77",
+ "entries": [
+  {
+   "action": "BOUND",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RDF7D28:wall_tile",
+    "high": null,
+    "item_code": "FIN.WALL.TILE",
+    "low": null,
+    "unit": "m2"
+   },
+   "high": 25.21,
+   "line_id": "L-1341e0410a469089c3be",
+   "low": 11.4,
+   "map_action": "CHANGE",
+   "map_after": "BOUND 11.4 .. 25.21",
+   "map_row": "T-702:GF-10",
+   "open": "floor level C-SH-2 (designer item) holds the range; tile top Q-55 C / Q-48 A owner-approved",
+   "piece": "TILE_BOUND",
+   "rule": "R-T686-3 / T-702 (b)",
+   "source_tasks": [
+    "T-702",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "OPEN BOUND (ASSUMED - OWNER-APPROVED Q-55 C head / Q-48 A top; floor level C-SH-2 designer item stays named)",
+   "why": "GF-10: 6.2000 m x tile top 2.2 .. 4.35 (R-T686-3: highest head 2.20 .. G1 +4.65 - floor +0.30) less 2.24 .. 1.76 m2 openings"
+  },
+  {
+   "action": "BOUND",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RD36087:wall_tile",
+    "high": null,
+    "item_code": "FIN.WALL.TILE",
+    "low": null,
+    "unit": "m2"
+   },
+   "high": 19.555,
+   "line_id": "L-de4088e7012e655bb071",
+   "low": 7.04,
+   "map_action": "CHANGE",
+   "map_after": "BOUND 7.04 .. 19.555",
+   "map_row": "T-702:GF-11",
+   "open": "floor level C-SH-2 (designer item) holds the range; tile top Q-55 C / Q-48 A owner-approved",
+   "piece": "TILE_BOUND",
+   "rule": "R-T686-3 / T-702 (b)",
+   "source_tasks": [
+    "T-702",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "OPEN BOUND (ASSUMED - OWNER-APPROVED Q-55 C head / Q-48 A top; floor level C-SH-2 designer item stays named)",
+   "why": "GF-11: 4.9000 m x tile top 2.2 .. 4.35 (R-T686-3: highest head 2.20 .. G1 +4.65 - floor +0.30) less 3.74 .. 1.76 m2 openings"
+  },
+  {
+   "action": "EXCLUDE",
+   "cause": "NO_PHYSICAL_ELEMENT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-R31F8AE:landings",
+    "high": 2.9225,
+    "item_code": "FIN.MARBLE.LANDING",
+    "low": 0.0,
+    "unit": "m2"
+   },
+   "line_id": "L-1983e89d8b619eade1db",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-1983e89d8b619eade1db",
+   "piece": "STAIR_WIRE",
+   "rule": "T-715 (merged T-493 / T-690 finding)",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-493 MERGED)",
+   "why": "T-493: the bound 0 .. 2.9225 holds no landing: 0.690 MS1-L / D1 treads (now in the released tread lines), 1.3225 winders (-> 1F flight 5 tread, R-T715-2), 0.680 divider, 0.230 unread strip"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 1",
+   "carrier_line_id": "L-913cda8eb6d73f6e28cc",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 1",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-1e36bc3c0893eeeb9c58",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-1e36bc3c0893eeeb9c58",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-C seen through the void from 1F (T-412 binding: exposure measured on GF F1); carrier GF-RC99C2A:flight 1 FIN.MARBLE.RISER (HELD)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 2",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-0f060e9951c28c4cf074",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 1.9044",
+   "map_row": "T-715:L-0f060e9951c28c4cf074",
+   "open": "not released: a drawn figure, released only by a Checker record (DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006))",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+   "value": 1.9044,
+   "why": "12 risers x 1.150 x (4.20/25 - 0.030)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 3",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-07e0855f961a839c1277",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 1.886",
+   "map_row": "T-715:L-07e0855f961a839c1277",
+   "open": "not released: a drawn figure, released only by a Checker record (DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006))",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+   "value": 1.886,
+   "why": "12 risers x 1.150 x (4.50/27 - 0.030)"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 2",
+   "carrier_line_id": "L-099fe9fcfa5667fb8b99",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 4",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-24792292e996c57c52d9",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-24792292e996c57c52d9",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-S seen through the void from 1F (T-412: exposure measured on GF F2); carrier GF-RC99C2A:flight 2 FIN.MARBLE.RISER (HELD)"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 4",
+   "carrier_line_id": "L-16e0c6682725260f28e7",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 6",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-f24a09f1b4117814e4c8",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-f24a09f1b4117814e4c8",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-A seen through the void from 1F (T-412: exposure measured on GF F4); carrier GF-RC99C2A:flight 4 FIN.MARBLE.RISER (HELD)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "2F-R4D1B62:flight 2",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-12f56cbfe750f8b30c41",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 1.9044",
+   "map_row": "T-715:L-12f56cbfe750f8b30c41",
+   "open": "not released: a drawn figure, released only by a Checker record (DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006))",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+   "value": 1.9044,
+   "why": "12 risers x 1.150 x (4.20/25 - 0.030)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-R31F8AE:flight 1",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-ecc450d6cc865617f8f6",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 1.571667",
+   "map_row": "T-715:L-ecc450d6cc865617f8f6",
+   "open": "not released: a drawn figure, released only by a Checker record (DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006))",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+   "value": 1.571667,
+   "why": "10 risers x 1.150 x (4.50/27 - 0.030)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-R31F8AE:flight 2",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-8938aa3b25bf605e4b9d",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 0.667",
+   "map_row": "T-715:L-8938aa3b25bf605e4b9d",
+   "open": "not released: a drawn figure, released only by a Checker record (DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006))",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+   "value": 0.667,
+   "why": "4 risers x 1.150 x (0.70/4 - 0.030)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 2",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-099fe9fcfa5667fb8b99",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 1.653536",
+   "map_row": "T-715:L-099fe9fcfa5667fb8b99",
+   "open": "not released: a drawn figure, released only by a Checker record (ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section); t ASSUMED - OWNER-APPROVED (UP-STAIR-006))",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section); t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+   "value": 1.653536,
+   "why": "11 risers x 1.150 x (4.50/28 - 0.030)"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 2",
+   "carrier_line_id": "L-099fe9fcfa5667fb8b99",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 3",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-2efa4a4f4cc2aad9a2f2",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-2efa4a4f4cc2aad9a2f2",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "the rest of the GF reading of RS-S (T-412 by elimination; its tread / step EXCLUDED); carrier GF-RC99C2A:flight 2 FIN.MARBLE.RISER (HELD)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 4",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-16e0c6682725260f28e7",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 0.751607",
+   "map_row": "T-715:L-16e0c6682725260f28e7",
+   "open": "not released: a drawn figure, released only by a Checker record (ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section); t ASSUMED - OWNER-APPROVED (UP-STAIR-006))",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section); t ASSUMED - OWNER-APPROVED (UP-STAIR-006)",
+   "value": 0.751607,
+   "why": "5 risers x 1.150 x (4.50/28 - 0.030)"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 1",
+   "carrier_line_id": "L-fa534ec5f9dc14947899",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 1",
+    "high": 4.094413,
+    "item_code": "FIN.MARBLE.TREAD",
+    "low": 0.0,
+    "unit": "m2"
+   },
+   "line_id": "L-6cf11c2d30387d0942b9",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-6cf11c2d30387d0942b9",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730",
+    "T-733"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-C seen through the void from 1F (T-412 binding: exposure measured on GF F1); carrier GF-RC99C2A:flight 1 FIN.MARBLE.TREAD (HELD)"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 2",
+   "carrier_line_id": "L-89c84fdd4964dec8a323",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 4",
+    "high": 3.45,
+    "item_code": "FIN.MARBLE.TREAD",
+    "low": 0.0,
+    "unit": "m2"
+   },
+   "line_id": "L-ea55ed317bc4de89aec1",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-ea55ed317bc4de89aec1",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730",
+    "T-733"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-S seen through the void from 1F (T-412: exposure measured on GF F2); carrier GF-RC99C2A:flight 2 FIN.MARBLE.TREAD (RELEASED)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 5",
+    "high": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-b4660de0ddd98ad0ffc2",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 1.3225",
+   "map_row": "T-715:L-b4660de0ddd98ad0ffc2",
+   "open": "not released: a drawn figure, released only by a Checker record (DRAWING-CONFIRMED (T-493 itemised region))",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-2",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-493 itemised region)",
+   "value": 1.3225,
+   "why": "the 5 winder treads tile the turn region 1.3225 m2 (1.150 x 1.150 inside the finishes) whatever the subdivision; D-67 holds the split, not the area"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 4",
+   "carrier_line_id": "L-1dac5d9b574d7608d80d",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 6",
+    "high": 1.38,
+    "item_code": "FIN.MARBLE.TREAD",
+    "low": 0.0,
+    "unit": "m2"
+   },
+   "line_id": "L-5d338389185d72a6fb16",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-5d338389185d72a6fb16",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-A seen through the void from 1F (T-412: exposure measured on GF F4); carrier GF-RC99C2A:flight 4 FIN.MARBLE.TREAD (RELEASED)"
+  },
+  {
+   "action": "NAMED",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 1",
+    "high": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-fa534ec5f9dc14947899",
+   "map_action": "TEXT",
+   "map_after": "BLANK",
+   "map_row": "T-715:L-fa534ec5f9dc14947899",
+   "open": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+   "piece": "STAIR_WIRE",
+   "rule": "T-715 BLANK_NAMED",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "HELD",
+   "status_text": "HELD",
+   "why": "marble edge (1.150 front edge vs 1.250 lane, curtail 0.090129 beyond the lane) not detailed; the drawn treads give no floor without the junction tread split"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 1",
+   "carrier_line_id": "L-30009d8eb01996ec6399",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 1",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-256e8ae3e15334092b5d",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-256e8ae3e15334092b5d",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-C seen through the void from 1F (T-412 binding: exposure measured on GF F1); carrier GF-RC99C2A:flight 1 FIN.STAIR.FLIGHT (HELD)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 2",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-a08d67ca292ab16ef9c3",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 3.782209",
+   "map_row": "T-715:L-a08d67ca292ab16ef9c3",
+   "open": "not released: a drawn figure, released only by a Checker record (DRAWING-CONFIRMED)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "value": 3.782209,
+   "why": "11 goings x hypot(0.300, 4.20/25)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 3",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-54eb280b9f7bf5eda65f",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 3.775064",
+   "map_row": "T-715:L-54eb280b9f7bf5eda65f",
+   "open": "not released: a drawn figure, released only by a Checker record (DRAWING-CONFIRMED)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "value": 3.775064,
+   "why": "11 goings x hypot(0.300, 4.50/27)"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 2",
+   "carrier_line_id": "L-509c6af3d162ae145108",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 4",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-23e0ff3c4f454647b2b5",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-23e0ff3c4f454647b2b5",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-S seen through the void from 1F (T-412: exposure measured on GF F2); carrier GF-RC99C2A:flight 2 FIN.STAIR.FLIGHT (HELD)"
+  },
+  {
+   "action": "NAMED",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 5",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-c6724654ee4ccdb0c508",
+   "map_action": "TEXT",
+   "map_after": "BLANK",
+   "map_row": "T-715:L-c6724654ee4ccdb0c508",
+   "open": "D-67 (winder subdivision not drawn; S-9, C-ST-3)",
+   "piece": "STAIR_WIRE",
+   "rule": "T-715 BLANK_NAMED",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "HELD",
+   "status_text": "HELD",
+   "why": "walking line of the turn not drawn: no pitch line (R-T715-2)"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 4",
+   "carrier_line_id": "L-406aae9a9854e015c45e",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 6",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-437643d5f8553a89a0cd",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-437643d5f8553a89a0cd",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-A seen through the void from 1F (T-412: exposure measured on GF F4); carrier GF-RC99C2A:flight 4 FIN.STAIR.FLIGHT (HELD)"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "1F-R78C367:flight 2",
+   "carrier_line_id": "L-a08d67ca292ab16ef9c3",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "2F-R4D1B62:flight 1",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-0c2df36a42803126d3b9",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-0c2df36a42803126d3b9",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "MS2-L stacked under 2F (T-184 R-STAIR-CONT-1, T-129; its tread / step / riser EXCLUDED); carrier 1F-R78C367:flight 2 FIN.STAIR.FLIGHT (HELD)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "2F-R4D1B62:flight 2",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-48bb13e2f1c94d852a03",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 3.782209",
+   "map_row": "T-715:L-48bb13e2f1c94d852a03",
+   "open": "not released: a drawn figure, released only by a Checker record (DRAWING-CONFIRMED)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "value": 3.782209,
+   "why": "11 goings x hypot(0.300, 4.20/25)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-R31F8AE:flight 1",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-a1a0ab49818d4b9621b5",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 3.088689",
+   "map_row": "T-715:L-a1a0ab49818d4b9621b5",
+   "open": "not released: a drawn figure, released only by a Checker record (DRAWING-CONFIRMED)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "value": 3.088689,
+   "why": "9 goings x hypot(0.300, 4.50/27)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-R31F8AE:flight 2",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-cccf54f717124cd750b3",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 1.041933",
+   "map_row": "T-715:L-cccf54f717124cd750b3",
+   "open": "not released: a drawn figure, released only by a Checker record (DRAWING-CONFIRMED)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "value": 1.041933,
+   "why": "3 goings x hypot(0.300, 0.70/4)"
+  },
+  {
+   "action": "NAMED",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 1",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-30009d8eb01996ec6399",
+   "map_action": "TEXT",
+   "map_after": "BLANK",
+   "map_row": "T-715:L-30009d8eb01996ec6399",
+   "open": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+   "piece": "STAIR_WIRE",
+   "rule": "T-715 BLANK_NAMED",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "HELD",
+   "status_text": "HELD",
+   "why": "curved pitch line on the walking line needs the junction tread (T-415 tread 12 curved + 0.0846 straight); curved parts HELD (Q-50 A cond)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 2",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-509c6af3d162ae145108",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 3.403367",
+   "map_row": "T-715:L-509c6af3d162ae145108",
+   "open": "not released: a drawn figure, released only by a Checker record (ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section))",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section)",
+   "value": 3.403367,
+   "why": "10 goings x hypot(0.300, 4.50/28)"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 2",
+   "carrier_line_id": "L-509c6af3d162ae145108",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 3",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-d827589991777fe63819",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-d827589991777fe63819",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "the rest of the GF reading of RS-S (T-412 by elimination; its tread / step EXCLUDED); carrier GF-RC99C2A:flight 2 FIN.STAIR.FLIGHT (HELD)"
+  },
+  {
+   "action": "POINT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 4",
+    "high": null,
+    "item_code": "FIN.STAIR.FLIGHT",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-406aae9a9854e015c45e",
+   "map_action": "CHANGE",
+   "map_after": "VALUE 1.361347",
+   "map_row": "T-715:L-406aae9a9854e015c45e",
+   "open": "not released: a drawn figure, released only by a Checker record (ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section))",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "ASSUMED - OWNER-APPROVED (Q-50 A cond: plan count 28, no section)",
+   "value": 1.361347,
+   "why": "4 goings x hypot(0.300, 4.50/28)"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:D1.E",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-775f62538c1f46077807",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.140175",
+   "map_row": "T-715:L-775f62538c1f46077807",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-4548e7ad947b07624e81",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.140175,
+   "why": "R-T715-4 sloped: plan 0.9 + 4 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:E1.S",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-b77a64fb9a941582f25c",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.470544",
+   "map_row": "T-715:L-b77a64fb9a941582f25c",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-add5acd610925402e0f5",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.470544,
+   "why": "R-T715-4 sloped: plan 1.2 + 5 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-L.W1",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-a43adc74906d8bcd7b1c",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 0.470071",
+   "map_row": "T-715:L-a43adc74906d8bcd7b1c",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-53f3b7f153af0e1f5538",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 0.470071,
+   "why": "R-T715-4 sloped: plan 0.4 + 2 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-L.W1B",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-ff51392df9e2c8c21efe",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 0.881382",
+   "map_row": "T-715:L-ff51392df9e2c8c21efe",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-9e5ed7164ee85f0fc196",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 0.881382,
+   "why": "R-T715-4 sloped: plan 0.75 + 3 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-L.W1C",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-aed4c2990437f767dc90",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 0.687588",
+   "map_row": "T-715:L-aed4c2990437f767dc90",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-c56a452218763d5e7bbf",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 0.687588,
+   "why": "R-T715-4 sloped: plan 0.5 + 1 risers, returns 0.1; never additive with its sibling form line"
+  },
+  {
+   "action": "EXCLUDE",
+   "cause": "NO_PHYSICAL_ELEMENT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-L.W2",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-18efa069acded71c81e7",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-18efa069acded71c81e7",
+   "piece": "STAIR_WIRE",
+   "rule": "T-715 (merged T-493 / T-690 finding)",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-690 MERGED, Checker AGREE)",
+   "why": "T-690: no wall face against the flight over this stretch (the shaft window reaches below the flight); unwired"
+  },
+  {
+   "action": "BOUND",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-T.N",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "high": 1.420192,
+   "line_id": "L-28c33cd0ab5d19426661",
+   "low": 1.15,
+   "map_action": "CHANGE",
+   "map_after": "BOUND 1.15 .. 1.420192",
+   "map_row": "T-715:L-28c33cd0ab5d19426661",
+   "open": "D-67 (which wall each winder riser meets) + ORR-007 (form)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (plan T-410, rise A-A 5 risers)",
+   "why": "R-T715-4 corner turn: this wall in [plan, plan + 5 x 4.50/27]; pair W + N zigzag 3.183333 exact, sloped pair 2.493380 .. 2.620192"
+  },
+  {
+   "action": "BOUND",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-T.W",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "high": 1.460974,
+   "line_id": "L-2fae5d35b21e97684844",
+   "low": 1.2,
+   "map_action": "CHANGE",
+   "map_after": "BOUND 1.2 .. 1.460974",
+   "map_row": "T-715:L-2fae5d35b21e97684844",
+   "open": "D-67 (which wall each winder riser meets) + ORR-007 (form)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (plan T-410, rise A-A 5 risers)",
+   "why": "R-T715-4 corner turn: this wall in [plan, plan + 5 x 4.50/27]; pair W + N zigzag 3.183333 exact, sloped pair 2.493380 .. 2.620192"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-U.E1",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-32f71724eeeaa46638c9",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.110854",
+   "map_row": "T-715:L-32f71724eeeaa46638c9",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-bc0e1e80ca50865ccd06",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.110854,
+   "why": "R-T715-4 sloped: plan 0.95 + 4 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "AT_MOST",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-U.E2",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-20c2640927e41626893d",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_MOST 1.052389",
+   "map_row": "T-715:L-20c2640927e41626893d",
+   "open": "designer (T-410): hidden opening 33C / 33D (0.90 m) in the lift wall above the cut: its sill against the flight (+4.0 .. +4.5) not printed (T-410)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "HELD",
+   "status_text": "HELD",
+   "value": 1.052389,
+   "why": "full-wall figure of this form; 0 if no wall face (open side)"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-U.E3a",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-cfecfcea2280155a6a74",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.344718",
+   "map_row": "T-715:L-cfecfcea2280155a6a74",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-9ec979f00305b8ae8049",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.344718,
+   "why": "R-T715-4 sloped: plan 1.15 + 4 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "AT_MOST",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-U.E3b",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-8e463d6ce740fc19e60c",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_MOST 0.350797",
+   "map_row": "T-715:L-8e463d6ce740fc19e60c",
+   "open": "CONFLICT: the top 0.300 of MS1-U (architectural plan vs ST p.4; T-508 / C-ST-4)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "HELD",
+   "status_text": "HELD",
+   "value": 0.350797,
+   "why": "full-wall figure of this form; 0 if no wall face (open side)"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-L.W1",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-9b1da1af7c162de2233c",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.17184",
+   "map_row": "T-715:L-9b1da1af7c162de2233c",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-656ab12cc9b9797d3b1a",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.17184,
+   "why": "R-T715-4 sloped: plan 1.0 + 4 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-L.W1B",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-caacb4c1425981b2585f",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 0.87888",
+   "map_row": "T-715:L-caacb4c1425981b2585f",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-20432b887f91dee03925",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 0.87888,
+   "why": "R-T715-4 sloped: plan 0.75 + 3 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-L.W1C",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-193f8e812d9ade5f9c41",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 0.68592",
+   "map_row": "T-715:L-193f8e812d9ade5f9c41",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-1c907e0a59c55204e430",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 0.68592,
+   "why": "R-T715-4 sloped: plan 0.5 + 1 risers, returns 0.1; never additive with its sibling form line"
+  },
+  {
+   "action": "EXCLUDE",
+   "cause": "NO_PHYSICAL_ELEMENT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-L.W2",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-4ff56def5b73b558afbe",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-4ff56def5b73b558afbe",
+   "piece": "STAIR_WIRE",
+   "rule": "T-715 (merged T-493 / T-690 finding)",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-690 MERGED, Checker AGREE)",
+   "why": "T-690: no wall face against the flight over this stretch (the shaft window reaches below the flight); unwired"
+  },
+  {
+   "action": "AT_LEAST",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-TR.N",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-76de75ce9a315998be99",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_LEAST 0.168",
+   "map_row": "T-715:L-76de75ce9a315998be99",
+   "open": "ORR-007 + UP-STAIR-011 at zero run",
+   "piece": "STAIR_WIRE",
+   "rule": "T-715 (merged T-281 / T-684 figure)",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "value": 0.168,
+   "why": "sloped rake undefined over a zero run; any form must rise the 0.168 step"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-U.E",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-4b902816d29b75fab7fc",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 3.867073",
+   "map_row": "T-715:L-4b902816d29b75fab7fc",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-c8dce28c50dabd7b17fb",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 3.867073,
+   "why": "R-T715-4 sloped: plan 3.3 + 12 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "AT_MOST",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:RS-C.OUT",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-1c082cc60442407ed517",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_MOST 4.910135",
+   "map_row": "T-715:L-1c082cc60442407ed517",
+   "open": "RFI-S27 / D-08: outer band 23D / 23E guard or string not established, curved flight (T-410)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "HELD",
+   "status_text": "HELD",
+   "value": 4.910135,
+   "why": "full-wall figure of this form; 0 if no wall face (open side)"
+  },
+  {
+   "action": "AT_MOST",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:RS-S.S0",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-ebe230d8c2fbc35332b8",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_MOST 0.232143",
+   "map_row": "T-715:L-ebe230d8c2fbc35332b8",
+   "open": "RFI-S27: the 0.050 outer band A7 / A9 (RL-09) guard or string not established; no wall face (T-410)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "HELD",
+   "status_text": "HELD",
+   "value": 0.232143,
+   "why": "full-wall figure of this form; 0 if no wall face (open side)"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:RS-S.S1",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-0ae4be232407b92343ef",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 0.978571",
+   "map_row": "T-715:L-0ae4be232407b92343ef",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-544b6b11bab9bbf037fb",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 0.978571,
+   "why": "R-T715-4 sloped: plan 0.8 + 3 risers, returns 0.05; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:RS-S.S2",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-d980ace38bdd63fa8de4",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 2.321429",
+   "map_row": "T-715:L-d980ace38bdd63fa8de4",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-8dde910ffeeb94a58323",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 2.321429,
+   "why": "R-T715-4 sloped: plan 2.0 + 7 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:D1.E",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-4548e7ad947b07624e81",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.6",
+   "map_row": "T-715:L-4548e7ad947b07624e81",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-775f62538c1f46077807",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.6,
+   "why": "R-T715-4 zigzag: plan 0.9 + 4 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:E1.S",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-add5acd610925402e0f5",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 2.05",
+   "map_row": "T-715:L-add5acd610925402e0f5",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-b77a64fb9a941582f25c",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 2.05,
+   "why": "R-T715-4 zigzag: plan 1.2 + 5 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-L.W1",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-53f3b7f153af0e1f5538",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 0.733333",
+   "map_row": "T-715:L-53f3b7f153af0e1f5538",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-a43adc74906d8bcd7b1c",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 0.733333,
+   "why": "R-T715-4 zigzag: plan 0.4 + 2 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-L.W1B",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-9e5ed7164ee85f0fc196",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.25",
+   "map_row": "T-715:L-9e5ed7164ee85f0fc196",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-ff51392df9e2c8c21efe",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.25,
+   "why": "R-T715-4 zigzag: plan 0.75 + 3 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-L.W1C",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-c56a452218763d5e7bbf",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 0.766667",
+   "map_row": "T-715:L-c56a452218763d5e7bbf",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-aed4c2990437f767dc90",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 0.766667,
+   "why": "R-T715-4 zigzag: plan 0.5 + 1 risers, returns 0.1; never additive with its sibling form line"
+  },
+  {
+   "action": "EXCLUDE",
+   "cause": "NO_PHYSICAL_ELEMENT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-L.W2",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-76748b7b62ab2d52b4e2",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-76748b7b62ab2d52b4e2",
+   "piece": "STAIR_WIRE",
+   "rule": "T-715 (merged T-493 / T-690 finding)",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-690 MERGED, Checker AGREE)",
+   "why": "T-690: no wall face against the flight over this stretch (the shaft window reaches below the flight); unwired"
+  },
+  {
+   "action": "BOUND",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-T.N",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "high": 1.983334,
+   "line_id": "L-5f0bd2b45c1718aeefc4",
+   "low": 1.15,
+   "map_action": "CHANGE",
+   "map_after": "BOUND 1.15 .. 1.983334",
+   "map_row": "T-715:L-5f0bd2b45c1718aeefc4",
+   "open": "D-67 (which wall each winder riser meets) + ORR-007 (form)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (plan T-410, rise A-A 5 risers)",
+   "why": "R-T715-4 corner turn: this wall in [plan, plan + 5 x 4.50/27]; pair W + N zigzag 3.183333 exact, sloped pair 2.493380 .. 2.620192"
+  },
+  {
+   "action": "BOUND",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-T.W",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "high": 2.033334,
+   "line_id": "L-5bc4cea35db33e41d78c",
+   "low": 1.2,
+   "map_action": "CHANGE",
+   "map_after": "BOUND 1.2 .. 2.033334",
+   "map_row": "T-715:L-5bc4cea35db33e41d78c",
+   "open": "D-67 (which wall each winder riser meets) + ORR-007 (form)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (plan T-410, rise A-A 5 risers)",
+   "why": "R-T715-4 corner turn: this wall in [plan, plan + 5 x 4.50/27]; pair W + N zigzag 3.183333 exact, sloped pair 2.493380 .. 2.620192"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-U.E1",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-bc0e1e80ca50865ccd06",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.616667",
+   "map_row": "T-715:L-bc0e1e80ca50865ccd06",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-32f71724eeeaa46638c9",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.616667,
+   "why": "R-T715-4 zigzag: plan 0.95 + 4 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "AT_MOST",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-U.E2",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-1ed4cfaa1c12054b401d",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_MOST 1.4",
+   "map_row": "T-715:L-1ed4cfaa1c12054b401d",
+   "open": "designer (T-410): hidden opening 33C / 33D (0.90 m) in the lift wall above the cut: its sill against the flight (+4.0 .. +4.5) not printed (T-410)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "HELD",
+   "status_text": "HELD",
+   "value": 1.4,
+   "why": "full-wall figure of this form; 0 if no wall face (open side)"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-U.E3a",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-9ec979f00305b8ae8049",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.816667",
+   "map_row": "T-715:L-9ec979f00305b8ae8049",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-cfecfcea2280155a6a74",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.816667,
+   "why": "R-T715-4 zigzag: plan 1.15 + 4 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "AT_MOST",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS1-U.E3b",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-984553ed0b69b0f77fe2",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_MOST 0.466667",
+   "map_row": "T-715:L-984553ed0b69b0f77fe2",
+   "open": "CONFLICT: the top 0.300 of MS1-U (architectural plan vs ST p.4; T-508 / C-ST-4)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "HELD",
+   "status_text": "HELD",
+   "value": 0.466667,
+   "why": "full-wall figure of this form; 0 if no wall face (open side)"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-L.W1",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-656ab12cc9b9797d3b1a",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.672",
+   "map_row": "T-715:L-656ab12cc9b9797d3b1a",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-9b1da1af7c162de2233c",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.672,
+   "why": "R-T715-4 zigzag: plan 1.0 + 4 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-L.W1B",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-20432b887f91dee03925",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.254",
+   "map_row": "T-715:L-20432b887f91dee03925",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-caacb4c1425981b2585f",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.254,
+   "why": "R-T715-4 zigzag: plan 0.75 + 3 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-L.W1C",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-1c907e0a59c55204e430",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 0.768",
+   "map_row": "T-715:L-1c907e0a59c55204e430",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-193f8e812d9ade5f9c41",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 0.768,
+   "why": "R-T715-4 zigzag: plan 0.5 + 1 risers, returns 0.1; never additive with its sibling form line"
+  },
+  {
+   "action": "EXCLUDE",
+   "cause": "NO_PHYSICAL_ELEMENT",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-L.W2",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-f45c2e6d46b0cc6a7e53",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-f45c2e6d46b0cc6a7e53",
+   "piece": "STAIR_WIRE",
+   "rule": "T-715 (merged T-493 / T-690 finding)",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-690 MERGED, Checker AGREE)",
+   "why": "T-690: no wall face against the flight over this stretch (the shaft window reaches below the flight); unwired"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-TR.N",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-5021b820dba41f631dde",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 0.168",
+   "map_row": "T-715:L-5021b820dba41f631dde",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-76de75ce9a315998be99",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-684 / T-690: riser position drawn on 1F + 2F; 4.20/25)",
+   "value": 0.168,
+   "why": "lone closing step on the north wall face: zigzag = 1 x 0.168 (plan 0)"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:MS2-U.E",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-c8dce28c50dabd7b17fb",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 5.316",
+   "map_row": "T-715:L-c8dce28c50dabd7b17fb",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-4b902816d29b75fab7fc",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 5.316,
+   "why": "R-T715-4 zigzag: plan 3.3 + 12 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "AT_MOST",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:RS-C.OUT",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-1a0d2ab50e42b0219eab",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_MOST 6.444104",
+   "map_row": "T-715:L-1a0d2ab50e42b0219eab",
+   "open": "RFI-S27 / D-08: outer band 23D / 23E guard or string not established, curved flight (T-410)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "HELD",
+   "status_text": "HELD",
+   "value": 6.444104,
+   "why": "full-wall figure of this form; 0 if no wall face (open side)"
+  },
+  {
+   "action": "AT_MOST",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:RS-S.S0",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-c074ce526885a44423d0",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_MOST 0.360715",
+   "map_row": "T-715:L-c074ce526885a44423d0",
+   "open": "RFI-S27: the 0.050 outer band A7 / A9 (RL-09) guard or string not established; no wall face (T-410)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "HELD",
+   "status_text": "HELD",
+   "value": 0.360715,
+   "why": "full-wall figure of this form; 0 if no wall face (open side)"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:RS-S.S1",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-544b6b11bab9bbf037fb",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 1.332143",
+   "map_row": "T-715:L-544b6b11bab9bbf037fb",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-0ae4be232407b92343ef",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 1.332143,
+   "why": "R-T715-4 zigzag: plan 0.8 + 3 risers, returns 0.05; never additive with its sibling form line"
+  },
+  {
+   "action": "CONDITIONAL",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR-SKIRT:RS-S.S2",
+    "high": null,
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "low": null,
+    "unit": "lm"
+   },
+   "line_id": "L-8dde910ffeeb94a58323",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED CONDITIONAL 3.125",
+   "map_row": "T-715:L-8dde910ffeeb94a58323",
+   "open": "ORR-007: payable stair skirting form (zigzag or sloped) not ruled; one form only",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-4 (ORR-007)",
+   "ruling": "ORR-007",
+   "sibling_line_id": "L-d980ace38bdd63fa8de4",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-410 / T-508 MERGED, recomputed)",
+   "value": 3.125,
+   "why": "R-T715-4 zigzag: plan 2.0 + 7 risers, returns 0.0; never additive with its sibling form line"
+  },
+  {
+   "action": "AT_LEAST",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR:ST-01:soffit",
+    "high": null,
+    "item_code": "FIN.STAIR.SOFFIT",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-1fcec3328ccd0ea243d4",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_LEAST 20.423364",
+   "map_row": "T-715:L-1fcec3328ccd0ea243d4",
+   "open": "C-ST-3 / D-67 (winder + junction 1.500 m2 plan), O vs D soffit method (no owner rule)",
+   "piece": "STAIR_WIRE",
+   "rule": "T-715 (merged T-281 / T-684 figure)",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (T-281 MERGED)",
+   "value": 20.423364,
+   "why": "min(O, D) of the measured rows 17.197803 + MS1-L CONFLICT smallest reading 3.225561; held rows >= 0"
+  },
+  {
+   "action": "AT_LEAST",
+   "expect": {
+    "class": "HELD",
+    "element_id": "STAIR:ST-02:soffit",
+    "high": null,
+    "item_code": "FIN.STAIR.SOFFIT",
+    "low": null,
+    "unit": "m2"
+   },
+   "line_id": "L-c77e3887f7e348b1461d",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_LEAST 4.460946",
+   "map_row": "T-715:L-c77e3887f7e348b1461d",
+   "open": "D-08 / RFI-S27 (RS-C waist not printed: helical soffit HELD)",
+   "piece": "STAIR_WIRE",
+   "rule": "T-715 (merged T-281 / T-684 figure)",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "ASSUMED - OWNER-APPROVED (riser 4.50/28) (T-281 MERGED)",
+   "value": 4.460946,
+   "why": "min(O, D) of the measured RS-S / RS-LD / RS-A rows; RS-C, members and unknown sub-pieces >= 0"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 1",
+   "carrier_line_id": "L-95b9555dd144951b071e",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 1",
+    "high": 13.7964,
+    "item_code": "FIN.STAIR.STEP_LM",
+    "low": 0.0,
+    "unit": "lm"
+   },
+   "line_id": "L-3a3aabb15b187e33e3da",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-3a3aabb15b187e33e3da",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-C seen through the void from 1F (T-412 binding: exposure measured on GF F1); carrier GF-RC99C2A:flight 1 FIN.STAIR.STEP_LM (HELD)"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 2",
+   "carrier_line_id": "L-59354cfe423b026db61a",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 4",
+    "high": 11.5,
+    "item_code": "FIN.STAIR.STEP_LM",
+    "low": 0.0,
+    "unit": "lm"
+   },
+   "line_id": "L-c955f6b3a3abca48d562",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-c955f6b3a3abca48d562",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-S seen through the void from 1F (T-412: exposure measured on GF F2); carrier GF-RC99C2A:flight 2 FIN.STAIR.STEP_LM (RELEASED)"
+  },
+  {
+   "action": "EXCLUDE",
+   "carrier_element_id": "GF-RC99C2A:flight 4",
+   "carrier_line_id": "L-f145a2d130cba9450a24",
+   "cause": "DUPLICATE_READING",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 6",
+    "high": 4.6,
+    "item_code": "FIN.STAIR.STEP_LM",
+    "low": 0.0,
+    "unit": "lm"
+   },
+   "line_id": "L-57202d2823270429cd80",
+   "map_action": "CHANGE",
+   "map_after": "EXCLUDED",
+   "map_row": "T-715:L-57202d2823270429cd80",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-3",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED",
+   "why": "RS-A seen through the void from 1F (T-412: exposure measured on GF F4); carrier GF-RC99C2A:flight 4 FIN.STAIR.STEP_LM (RELEASED)"
+  },
+  {
+   "action": "BOUND",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 5",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "high": 1.111337,
+   "line_id": "L-820baecf7f726b4d8f1e",
+   "low": 0.785833,
+   "map_action": "CHANGE",
+   "map_after": "BOUND 0.785833 .. 1.111337",
+   "map_row": "T-718:L-820baecf7f726b4d8f1e",
+   "open": "D-67 (winder subdivision not drawn; S-9, C-ST-3)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T718-2 / R-T718-3",
+   "source_tasks": [
+    "T-718",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "DRAWING-CONFIRMED (region 1.150 x 1.150: fan BE6 / BE8 / BEA ends on AF0 / ADE); r 4.50/27 (Q-46 A), t ASSUMED - OWNER-APPROVED",
+   "supersedes": {
+    "class": "AT_LEAST",
+    "low": "0.785833",
+    "task": "T-715",
+    "why": "T-718 declares the restatement (floor kept, ceiling added)"
+   },
+   "why": "floor kept (R-T715-2: 5 fronts >= 1.150); ceiling R-T718-2: every straight front of the turn lies inside the drawn square, so each <= its diameter hypot(1.150, 1.150) = 1.626346 (= BE6 drawn); 5 x that x (4.50/27 - 0.030)"
+  },
+  {
+   "action": "BOUND",
+   "expect": {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 5",
+    "high": null,
+    "item_code": "FIN.STAIR.STEP_LM",
+    "low": null,
+    "unit": "lm"
+   },
+   "high": 8.131728,
+   "line_id": "L-e085c168dee5fb19a7fb",
+   "low": 5.75,
+   "map_action": "CHANGE",
+   "map_after": "BOUND 5.75 .. 8.131728",
+   "map_row": "T-718:L-e085c168dee5fb19a7fb",
+   "open": "D-67 (winder subdivision not drawn; S-9, C-ST-3)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T718-2 / R-T718-3",
+   "source_tasks": [
+    "T-718",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (region 1.150 x 1.150: fan BE6 / BE8 / BEA ends on AF0 / ADE)",
+   "supersedes": {
+    "class": "AT_LEAST",
+    "low": "5.750000",
+    "task": "T-715",
+    "why": "T-718 declares the restatement (floor kept, ceiling added)"
+   },
+   "why": "floor kept (R-T715-2: 5 fronts >= 1.150); ceiling R-T718-2: every straight front of the turn lies inside the drawn square, so each <= its diameter hypot(1.150, 1.150) = 1.626346 (= BE6 drawn); 5 x that"
+  },
+  {
+   "action": "BOUND",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 1",
+    "high": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "low": null,
+    "unit": "m2"
+   },
+   "high": 2.131176,
+   "line_id": "L-913cda8eb6d73f6e28cc",
+   "low": 1.803598,
+   "map_action": "CHANGE",
+   "map_after": "BOUND 1.803598 .. 2.131176",
+   "map_row": "T-718:L-913cda8eb6d73f6e28cc",
+   "open": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T718-2 / R-T718-3",
+   "source_tasks": [
+    "T-718",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "ASSUMED - OWNER-APPROVED (riser 4.50/28, Q-50 A cond) on DRAWING-CONFIRMED riser faces (own read 257 .. 241 = ST 2EA .. 2DF, rigid fit 0.0 mm)",
+   "supersedes": {
+    "class": "AT_LEAST",
+    "low": "1.803386",
+    "task": "T-715",
+    "why": "T-718 declares the restatement (floor kept, ceiling added)"
+   },
+   "why": "floor R-T718-3: the 12 drawn riser faces sum 13.798023 lm (257 1.149742 / 255 1.148281 start on the curtails, ten 1.150) x (4.50/28 - 0.030); ceiling R-T718-2: each face line between the stair's outline arcs 23F r 1.530511 / 23E r 2.780511 (= ST S-OPENING 2DE / 2DD) = 1.250367, risers 1 / 2 from their drawn start to 23E + the curtail face arcs 259 0.840283 / 25B 0.562992: 16.304073 lm"
+  },
+  {
+   "action": "BOUND",
+   "expect": {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 1",
+    "high": null,
+    "item_code": "FIN.STAIR.STEP_LM",
+    "low": null,
+    "unit": "lm"
+   },
+   "high": 16.52144,
+   "line_id": "L-95b9555dd144951b071e",
+   "low": 13.8,
+   "map_action": "CHANGE",
+   "map_after": "BOUND 13.8 .. 16.52144",
+   "map_row": "T-718:L-95b9555dd144951b071e",
+   "open": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T718-2 / R-T718-3",
+   "source_tasks": [
+    "T-718",
+    "T-730"
+   ],
+   "status": "DRAWING-CONFIRMED",
+   "status_text": "DRAWING-CONFIRMED (own read: front edges 256 .. 240 layer 5, radial; curtail fronts 258 / 25A)",
+   "supersedes": {
+    "class": "AT_LEAST",
+    "low": "13.796400",
+    "task": "T-715",
+    "why": "T-718 declares the restatement (floor kept, ceiling added)"
+   },
+   "why": "floor R-T718-3: 12 drawn front edges inside the lane 1.150000 (11 x 1.150 + 256 1.200 of which 0.050 over the outer band, role open RFI-S27) = 13.800000; ceiling R-T718-2: radial fronts between 23F / 23E = 1.250 each, steps 1 / 2 + curtail front arcs 258 0.949440 / 25A 0.672000: 16.521440 lm"
+  },
+  {
+   "action": "ADD_POINT",
+   "add_key": "MS2-TR-closing-riser",
+   "element": "ST-01 MS2-TR closing riser (one riser, section A-A)",
+   "host_line_id": "L-12f56cbfe750f8b30c41",
+   "item": "FIN.MARBLE.RISER ST-01 MS2-TR closing riser (no candidate line)",
+   "item_code": "FIN.MARBLE.RISER",
+   "map_action": "ADD",
+   "map_after": "VALUE 0.1587",
+   "map_row": "T-715:FIN.MARBLE.RISER ST-01 MS2-TR closing riser (no candidate li",
+   "piece": "STAIR_WIRE",
+   "rule": "R-T715-1",
+   "source_tasks": [
+    "T-715",
+    "T-730"
+   ],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "status_text": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED",
+   "unit": "m2",
+   "value": 0.1587,
+   "why": "1 riser (A-A) x 1.150 (T-684 / T-690 drawn line) x (4.20/25 - 0.030)"
+  }
+ ],
+ "index": "research/agents_t749/out/LINE_INDEX_V3_0_77.json",
+ "schema": "URBAN_T738_ENTRIES_V1",
+ "sources": [
+  {
+   "checker_run": "Verifier 2026-11-11T12:01Z Gate A PASS (session_01E6cPncdZEPbJjz2ey34pSg)",
+   "file": "research/agents_t702/out/T702_TILES_ROUND3.json",
+   "merge_commit": "b90d85af",
+   "sha256": "ae5b37e75a1635cbcc6e6214c64566e1e831c7d0b62e3b988596f0f0fcbc72bd",
+   "task": "T-702"
+  },
+  {
+   "checker_run": "Verifier 2026-11-11T20:02Z Gate A PASS (session_01E6cPnej1TbCEeJXkapQmje)",
+   "file": "research/agents_t715/out/T715_LEDGER.json",
+   "merge_commit": "a4e4277a",
+   "sha256": "740ba1827841a6e781a52a60bc0f5916bf56a1f5e4d0fc9dc3a889598bd82d1e",
+   "task": "T-715"
+  },
+  {
+   "checker_run": "Verifier 2026-11-11T22:12Z Gate A PASS (lock checker; F-V715-1 closed)",
+   "file": "research/agents_t718/out/T718_LEDGER.json",
+   "merge_commit": "8052ca51",
+   "sha256": "f50b734d79959a2ed7b9de7f14a3989e8d5e398442fbc0f06bddcac9f5e181a4",
+   "task": "T-718"
+  },
+  {
+   "checker_run": "Verifier 2026-11-12T07:58Z Gate A PASS on 272d7ae5 (session_01E6cPneP2vRoV5ySBhUeVJ5)",
+   "file": "research/agents_t733/out/T733_H3_READINESS.json",
+   "merge_commit": "7146583d",
+   "sha256": "17cd75642a32fefb7eb89443cd99b97bf85e03a3984574a25be57698f6e2dc76",
+   "task": "T-733"
+  },
+  {
+   "checker_run": "Verifier 2026-11-12T07:58Z Gate A PASS on 7d5efd9d (session_01E6cPneP2vRoV5ySBhUeVJ5)",
+   "file": "research/agents_t730/out/T730_ROWS.csv",
+   "merge_commit": "6143f30d",
+   "sha256": "737bdb55966b6ebd71dd8775ef03fa17316e3d4e8e06b5a21f77388170880594",
+   "task": "T-730"
+  }
+ ],
+ "statements": [
+  {
+   "line_id": "L-5d2be30dd8d2ffeacc42",
+   "live": "STATEMENT",
+   "map_action": "KEEP",
+   "map_after": "NO_PROPOSAL",
+   "map_row": "T-715:L-5d2be30dd8d2ffeacc42",
+   "piece": "T-715",
+   "why": "the target line already states the after-state"
+  },
+  {
+   "line_id": "L-820baecf7f726b4d8f1e",
+   "live": "SUPERSEDED",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_LEAST 0.785833",
+   "map_row": "T-715:L-820baecf7f726b4d8f1e",
+   "piece": "T-715",
+   "why": "HELD blank: AT_LEAST 0.785833 beside, never in the line"
+  },
+  {
+   "line_id": "L-913cda8eb6d73f6e28cc",
+   "live": "SUPERSEDED",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_LEAST 1.803386",
+   "map_row": "T-715:L-913cda8eb6d73f6e28cc",
+   "piece": "T-715",
+   "why": "HELD blank: AT_LEAST 1.803386 beside, never in the line"
+  },
+  {
+   "line_id": "L-e085c168dee5fb19a7fb",
+   "live": "SUPERSEDED",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_LEAST 5.75",
+   "map_row": "T-715:L-e085c168dee5fb19a7fb",
+   "piece": "T-715",
+   "why": "HELD blank: AT_LEAST 5.75 beside, never in the line"
+  },
+  {
+   "line_id": "L-95b9555dd144951b071e",
+   "live": "SUPERSEDED",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_LEAST 13.7964",
+   "map_row": "T-715:L-95b9555dd144951b071e",
+   "piece": "T-715",
+   "why": "HELD blank: AT_LEAST 13.7964 beside, never in the line"
+  },
+  {
+   "line_id": "L-1fcec3328ccd0ea243d4",
+   "live": "DUPLICATE",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_LEAST 20.423364",
+   "map_row": "T-718:L-1fcec3328ccd0ea243d4",
+   "piece": "T-718",
+   "why": "HELD blank: AT_LEAST 20.423364 beside, never in the line"
+  },
+  {
+   "line_id": "L-c77e3887f7e348b1461d",
+   "live": "DUPLICATE",
+   "map_action": "BESIDE",
+   "map_after": "ONE_SIDED AT_LEAST 4.460946",
+   "map_row": "T-718:L-c77e3887f7e348b1461d",
+   "piece": "T-718",
+   "why": "HELD blank: AT_LEAST 4.460946 beside, never in the line"
+  }
+ ]
+}
