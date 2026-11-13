@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13 16:47 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13 16:34 UTC | Lead | SUCCESS | board | T-314 r3 REJECTED (registry) -> TODO r4 W2 first; T-770 r1 -> TODO r2 after T-314 r4 (hub serial, 1.79.0 PENDING) with formwork per Checker ruling on W1 double-count claim (MAIN_FILL 472.8 vs T-762 240.6 m2 on 126 lines; owner pushed); T-750 reservation lapsed, after T-764; T-763 trimmed to non-MAIN_FILL lines; T-761 MERGED WORKED, T-762 READY; Drive OK, no new files; queue check: 24 actionable rows, 0 flagged, 0 stall checks | self-check PASS (codemap, t061, freeze 0); problem: none
 - 2026-11-13 16:31 UTC | Lead | STARTED | run session_01E6cPnbKcxVkiLBmNh56Jcy | repo-attached routine | task state: board | report pending
 - 2026-11-13 16:25 UTC | Worker 3 | SUCCESS | T-770 r1 READY (agents/task-T-770 @ 20f6d37d, ARCH_TAKEOFF_V3.0.81) | MAIN_FILL_ALL 207 rows wired by line id on V3.0.78 (DEFAULT/ESTIMATE labels, non-measured = PROVISIONAL): blank non-rebar lines 692->551; formwork +444.0 m2 (284->166 blank); roof finish 248.8 m2 vs freelancer 285 (-12.7 %); disposal 105.6..115.5 m3 held. Next round: merged T-761 concrete set (IGNORED_SMALL state + safety line). Drive chain run not done. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
