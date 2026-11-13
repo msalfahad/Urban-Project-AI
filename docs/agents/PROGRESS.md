@@ -1,5 +1,26 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-13 04:15 UTC (Lead). Previous version: 2026-11-13 00:13 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared
+lines, the slab); released: 0.
+
+Since 00:13 (newest first):
+- New candidate (not released): paint now follows your rule (paint = plaster of the same faces, less the band above a
+  false ceiling and tiled faces). Held paint 604.99 .. 710.01 -> 603.80 .. 687.85 m2; released paint 217.21 m2 unchanged.
+  Door / window returns are no longer area: they are edge lines in metres (inside 0 .. 33.80 m, held; outside
+  283.22 .. 284.42 m, held). The checker re-did five rooms by hand: all agree. Exterior paint area waits for the
+  exterior render package (same faces).
+- Special metalwork count: no canopy, pergola or gate is drawn on any sheet; 9 projecting beam ends are drawn (3 at the
+  first-floor south-east, 6 on the annex street face) whose material and size are not printed: counted, not measured
+  (added to the designer list).
+- Joinery count: kitchen and pantry base runs 11.62 m (worktop 6.51 m2), vanities 5.97 m (2.86 m2), cupboards 5.36 m;
+  heights and materials not printed (designer list). Your freelancer has no joinery row to compare.
+- Next: tiles + stair finishes into the candidate (first), then exterior render, waterproofing, earthworks; a refresh
+  of the designer list on the newest candidate, and a check of whether any held concrete line can now be measured.
+
+Previous section (2026-11-13 00:13):
+
 Last update: 2026-11-13 00:13 UTC (Lead). Previous version: 2026-11-12 20:14 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (concrete 1 of 8 compared

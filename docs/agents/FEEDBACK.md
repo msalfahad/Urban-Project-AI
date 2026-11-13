@@ -3,6 +3,13 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-13 04:15 (since 00:13)
+
+- T-749 paint rule Gate B (V3.0.77): WORKED (FIN.PAINT bounded 604.990 .. 710.006 -> 603.802 .. 687.847 m2; edges as lm lines; released unchanged); L-T749-1 ADOPTED.
+- T-752 metalwork census: PARTIAL (9 beam ends counted, trade / kg HELD) -> designer item 17 (D-M1), register ruling; annex lattice railing id -> T-754.
+- T-753 joinery census: PARTIAL (geometry by handle, heights / material HELD) -> designer item 18 (D-J1..3); no new task until answered.
+- Three idle worker runs 02:40-03:21 (next rows all 'after' a just-READY task, lane S empty) -> T-738 and T-754 TODO, NEW T-755 designer re-census + concrete held-tail sweep for worker 1.
+
 ## Lead 2026-11-12 20:14 (since 16:20)
 
 - T-729 formwork Gate B (V3.0.75): WORKED (formwork released 1,027.977 -> 1,061.104 m2) but F-V748-1: the roof membrane record was not applied -> carried by T-736 (one line), lesson L-T748-1 PROPOSED.

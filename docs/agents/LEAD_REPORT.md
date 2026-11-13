@@ -1,5 +1,21 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-13 04:15 UTC
+
+Drive read OK (no file created or modified in the private project folders since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.77 / master 1.78.0 (NOT RELEASED; released V2.9 + route G untouched). 3 merged since 00:13 (paint package, metalwork and joinery censuses), each with the Checker's own re-measure.
+- PAINT (m2, your rule UP-FIN-PAINT-002 now in the candidate): held 604.990 .. 710.006 -> 603.802 .. 687.847 (low -1.19, high -22.16: 24.15 m2 of door / window returns left the area); released 217.208 unchanged. Checker re-did the 5 changed rooms by hand (plaster - band - tiled): AGREE; one room 1F_11 +4.31 high from a wall opening deducted on an outdated outline (ENGINE_WRONG fixed).
+- PAINT EDGES (lm, new lines, all HELD): inside 0 .. 33.80 (30 openings, 3 blank), outside 283.218 .. 284.418 (windows 103.68 along their arches, corners). Exterior paint m2 = render 1,009.11 .. 1,087.62 waits the exterior render package.
+- SPECIAL METALWORK (pcs): no canopy / pergola / gate drawn on any sheet; 9 projecting beam ends counted (3 + 6), material / size not printed -> designer list item 17. Freelancer: no row (not comparable).
+- JOINERY (lm / m2): base runs 11.616 lm, worktop 6.513 m2; vanities 5.973 lm / 2.861 m2; cupboards 5.362 lm, face m2 HELD (no height) -> designer list item 18. Freelancer: no row.
+- Learned (section 7 ADOPTED): a census closes with a completeness scan (0 unexplained); absence needs every sheet read and unowned drawn pieces are counted, never dropped; an opening edge is one lm line whichever face lists it.
+- Missing: tiles + stair finishes, exterior render, WP, earthworks still to join the candidate (serial hub, next TODO). The designer list quotes line counts from V3.0.70: new task refreshes it on V3.0.77 and checks whether any held concrete line is now measurable.
+- Team health: 13 runs since 00:13, all closed with a final line; self-check PASS everywhere incl. this run. Three idle worker runs (02:40-03:21) again because next rows waited on just-READY tasks and lane S had no own row; fixed (T-738, T-754 TODO; new lane S row). One Checker STARTED line had a mistyped run id (no effect). Queue check 14 actionable, 0 flagged, 0 stall.
+- Gates: lowest open gate 1 (exterior edge residuals, designer re-census, tiles package). M3 estimate 15-17 Nov.
+
+OWNER PACKAGE: none today (no item meets section 2.7). The designer list now has 18 items (for you to send when you choose; agents never send it).
+
+NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
+
 ## LEAD REPORT 2026-11-13 00:13 UTC
 
 Drive read OK (no file in the private project folders modified since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.76 / master 1.77.0 (NOT RELEASED; released V2.9 + route G untouched). 3 pieces merged since 20:14, each with the Checker's own re-measure on the drawings.
@@ -26,22 +42,6 @@ Drive read OK (no file in the private project folders modified since 12:00 UTC t
 - Missing families: the measurable ones are all drafted; next idle slot is the special-metalwork census (canopies, pergolas, gates).
 - Team health: 13 runs since 16:20, all closed with a final line; self-check PASS everywhere incl. this run; one idle Worker 1 run (queue too thin; fixed). Checker wrote two verdict times later than its own run end: told to correct. Queue check 17 actionable, 0 flagged, 0 stall.
 - Gates: lowest open gate 1 (beads + ceiling package, exterior edges). M3 (reconciled quantities + scorecard) estimate 14-16 Nov stands; hub chain beads -> paint -> tiles -> exterior plaster -> waterproofing -> disposal.
-
-OWNER PACKAGE: none today (no item meets section 2.7).
-
-NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
-
-## LEAD REPORT 2026-11-12 16:20 UTC
-
-Drive read OK (no file in the private project folders modified since 12:00 UTC today, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.74 (NOT RELEASED; released V2.9 + route G untouched). 4 MERGED since 12:20 (T-741, T-740, T-739 r2, T-742; ancestors of 1370c295 checked); READY 2 (T-729 Gate B in the running Checker run, T-743).
-- PAINT (m2): your rule as UP-FIN-PAINT-002 (rulebook 1.2.0, normal + adverse test): engine 822.198 .. 927.215 -> rule 841.261 .. 929.205 (+2.32 / +0.21 %); plaster-paint gap 673.335 / 763.539 allocated 100 % to bands, tiled faces and named causes (returns -20.25, 1F-11 W17 ENGINE_WRONG +0.861 / -4.305, GF-01 W11/W12, beam ends 0.315), residual 0. Checker 3 faces AGREE. Not wired. Opening edges ruled lm by your rule (no question) -> T-746; exterior paint -> T-747; wiring T-749.
-- WATERPROOFING (m2): roof membrane L-636fd3ff 115.832 RELEASED -> HELD by Checker record DG-a429c160 (+0.018026 above its band 115.656474 .. 115.813974, dome chord). First downgrade-only record issued by the new path (T-741).
-- FORMWORK / CONCRETE: T-729 package READY: STR.FORMWORK released 1,027.977 -> 1,061.104 m2 (54 verified fix rows), 32 bounded 107.201 .. 132.786, 40 at least >= 122.485; MS1-L 1.213428 m3; L4 24,051 pass 0 fail by the worker; Checker Gate B running.
-- ALL TRADES: statement on V3.0.74 MERGED: 5,155 lines, 2,797 HELD each with a pinned cause, B4 m2 released 1,353.36 + bounded 1,711.94 .. 2,012.18 + 27 blank; never summed across states. Restated on V3.0.75 in T-748.
-- MASONRY: parapet blocks 25 runs by handle, 4 lines HELD 0 .. 101.464 m2 (material Q-65 C / D-39); freelancer 172.93 m2 has an unresolved material, datum ENGINE_RIGHT.
-- MEP (census only): WC 12, basin 17, trays 3 + walk-in 3, FD 19; sink / washing point HELD; 9 phantom fixtures from room-name tag blocks -> T-744 fix; lesson L-T743-1 PROPOSED; F-T730-1/-2 ADOPTED.
-- Team health: 13 runs since 12:20, all closed (one Verifier INCOMPLETE by the overlap guard, correct); self-check PASS everywhere incl. this run; 0 rejects. Queue check 20 actionable, 0 flagged, 0 stall.
-- Gates: lowest open gate 1 (T-729, T-746, T-744). M3 estimate 14-16 Nov stands.
 
 OWNER PACKAGE: none today (no item meets section 2.7).
 

@@ -14,6 +14,22 @@ OWNER PACKAGE: none today (no item meets section 2.7). Two items added to DESIGN
 
 NEEDS FIXING (owner only): none new. PR #6 (decode) is merged, thank you: workers no longer re-encode by hand. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
 
+## LEAD REPORT 2026-11-12 16:20 UTC
+
+Drive read OK (no file in the private project folders modified since 12:00 UTC today, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.74 (NOT RELEASED; released V2.9 + route G untouched). 4 MERGED since 12:20 (T-741, T-740, T-739 r2, T-742; ancestors of 1370c295 checked); READY 2 (T-729 Gate B in the running Checker run, T-743).
+- PAINT (m2): your rule as UP-FIN-PAINT-002 (rulebook 1.2.0, normal + adverse test): engine 822.198 .. 927.215 -> rule 841.261 .. 929.205 (+2.32 / +0.21 %); plaster-paint gap 673.335 / 763.539 allocated 100 % to bands, tiled faces and named causes (returns -20.25, 1F-11 W17 ENGINE_WRONG +0.861 / -4.305, GF-01 W11/W12, beam ends 0.315), residual 0. Checker 3 faces AGREE. Not wired. Opening edges ruled lm by your rule (no question) -> T-746; exterior paint -> T-747; wiring T-749.
+- WATERPROOFING (m2): roof membrane L-636fd3ff 115.832 RELEASED -> HELD by Checker record DG-a429c160 (+0.018026 above its band 115.656474 .. 115.813974, dome chord). First downgrade-only record issued by the new path (T-741).
+- FORMWORK / CONCRETE: T-729 package READY: STR.FORMWORK released 1,027.977 -> 1,061.104 m2 (54 verified fix rows), 32 bounded 107.201 .. 132.786, 40 at least >= 122.485; MS1-L 1.213428 m3; L4 24,051 pass 0 fail by the worker; Checker Gate B running.
+- ALL TRADES: statement on V3.0.74 MERGED: 5,155 lines, 2,797 HELD each with a pinned cause, B4 m2 released 1,353.36 + bounded 1,711.94 .. 2,012.18 + 27 blank; never summed across states. Restated on V3.0.75 in T-748.
+- MASONRY: parapet blocks 25 runs by handle, 4 lines HELD 0 .. 101.464 m2 (material Q-65 C / D-39); freelancer 172.93 m2 has an unresolved material, datum ENGINE_RIGHT.
+- MEP (census only): WC 12, basin 17, trays 3 + walk-in 3, FD 19; sink / washing point HELD; 9 phantom fixtures from room-name tag blocks -> T-744 fix; lesson L-T743-1 PROPOSED; F-T730-1/-2 ADOPTED.
+- Team health: 13 runs since 12:20, all closed (one Verifier INCOMPLETE by the overlap guard, correct); self-check PASS everywhere incl. this run; 0 rejects. Queue check 20 actionable, 0 flagged, 0 stall.
+- Gates: lowest open gate 1 (T-729, T-746, T-744). M3 estimate 14-16 Nov stands.
+
+OWNER PACKAGE: none today (no item meets section 2.7).
+
+NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
+
 ## LEAD REPORT 2026-11-12 08:16 UTC
 
 Drive read OK (no file in the private project folders modified since 16:00 UTC 10 Nov, no photo task). Training villa: candidate of record stays ARCH_TAKEOFF_V3.0.73 / master 1.74.0 (NOT RELEASED; released V2.9 + route G untouched). 5 pieces merged since 04:17 with the Checker's own re-measure; the plaster / paint package was rejected on one bookkeeping file only; no candidate line moved this period.
