@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T21:31Z | Worker 1 | SUCCESS | T-757 READY r1 (agents/task-T-757 @ 27887ae7) | 114 ranged STR.CONC lines -> 0: 80 points by fallback order + 34 at low (widths 0.7715 m3 to IGNORED_SMALL, SAFETY 1.00 -> 1.20 m3); concrete 394.48..416.21 -> 405.60 m3 + safety; beam 79.24 vs freelancer 66.09 m3 (+19.9 %) UNRESOLVED for T-777 | self-check codemap PASS, t061 PASS, freeze PASS; problem: none
 - 2026-11-13T21:20Z | Worker 1 | STARTED | run session_01E6cPnePsXMf4xyE6wkCqFj | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T21:13Z | Verifier | SUCCESS | T-763 r2 (Gate A) | Drive OK. T-763 r2 GATE A PASS MERGED 2c6a2822 (plaster/paint/bead/paint-edge fix rows, unwired until T-770 r4): r1 findings closed (2.70 wet ceiling kept, split at 3.00 tile top, drawn openings, shaft points by defaults). 3 own DXF re-measures AGREE: largest 1F laundry 16.94 lm, doors 0.90+0.80, window 0.60 -> 46.60 + 17.62 m2; GF-RD36087 17.53; GF-RDF7D28 24.67 m2 (window 0.60 found; r1 ref corrected). Plaster ex wet render 1236.8 vs freelancer 1169.1 m2 (+5.8 %) UNRESOLVED; F-T763-2 wet tile -24.6 m2 to Lead. No candidate quantity change; scoreboard not restated (nothing wired since 18:46); no owner question; T-180 slot not used. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T21:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
