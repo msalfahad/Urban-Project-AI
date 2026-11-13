@@ -19,13 +19,52 @@ import build_master_1_81_0 as BM  # noqa: E402
 import t469_trade_scoreboard as T469  # noqa: E402
 
 
-def test_pending_registry_equals_its_builder_and_owns_the_safety_code_once():
-    doc = BM.build()
-    assert (ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.81.0.json").read_text(encoding="utf-8") == BM.text(doc)
-    assert [p["task"] for p in doc["pending_packages"]] == ["T-770"]
-    owners = [f["code"] for f in doc["families"] if "STR.CONC.SAFETY" in (f.get("item_codes") or ())]
+def _mode_and_builder_doc(cur, bm=BM):
+    """the mode the committed 1.81.0 was written in, and the builder's doc for that mode (as --check does): pending on
+    the task head (pending_packages == [T-770]), promoted after the merge (no pending package)."""
+    promoted = not cur.get("pending_packages")
+    return ("promoted", bm.build_promoted()) if promoted else ("pending", bm.build())
+
+
+def _assert_registry(committed_text, bm=BM):
+    cur = json.loads(committed_text)
+    mode, doc = _mode_and_builder_doc(cur, bm)
+    assert committed_text == bm.text(doc), f"committed 1.81.0 differs from its builder ({mode})"
+    if mode == "pending":
+        assert [p["task"] for p in doc["pending_packages"]] == ["T-770"]
+    else:
+        assert doc["pending_packages"] == []
+    owners = [f["code"] for f in cur["families"] if "STR.CONC.SAFETY" in (f.get("item_codes") or ())]
     assert owners == ["B9-02"]
-    assert BM.problems(doc) == []
+    assert bm.problems(cur) == []
+    return mode
+
+
+def test_committed_registry_equals_its_builder_in_its_mode_and_owns_the_safety_code_once():
+    # r4 (Verifier 2026-11-13 ~22:52): mode-aware as --check is; pending on the task head, promoted after the merge
+    _assert_registry((ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.81.0.json").read_text(encoding="utf-8"))
+
+
+def test_promoted_file_differing_from_build_promoted_fails(monkeypatch):
+    # normal: a promoted file equal to build_promoted() passes; adverse: one byte different fails (never compared
+    # with the pending builder)
+    doc = copy.deepcopy(BM.build())
+    doc["pending_packages"] = []
+    monkeypatch.setattr(BM, "build_promoted", lambda: copy.deepcopy(doc))
+    monkeypatch.setattr(BM, "problems", lambda d: [])
+    assert _assert_registry(BM.text(doc)) == "promoted"
+    bad = copy.deepcopy(doc)
+    bad["as_of"] = str(bad.get("as_of")) + " edited"
+    with pytest.raises(AssertionError, match="differs from its builder \\(promoted\\)"):
+        _assert_registry(BM.text(bad))
+    # adverse: a promoted file that lost the single B9-02 owner of STR.CONC.SAFETY fails even when it equals the builder
+    lost = copy.deepcopy(doc)
+    for f in lost["families"]:
+        if f["code"] == "B9-02":
+            f["item_codes"] = [c for c in f["item_codes"] if c != "STR.CONC.SAFETY"]
+    monkeypatch.setattr(BM, "build_promoted", lambda: copy.deepcopy(lost))
+    with pytest.raises(AssertionError):
+        _assert_registry(BM.text(lost))
 
 
 def test_promote_mode_exists_and_refuses_without_its_merge_sources(tmp_path, monkeypatch):
