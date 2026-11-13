@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T12:53Z | Verifier | STARTED | run session_01E6cPncjp2ZuHMjUH2zr8Rk | repo-attached routine | task state: per run log T-738 r2 / T-755 r2 READY, T-180 slot | self-check pending | stale run lock of run 20261113T095152-419-16639 since 2026-11-13T09:51Z recovered
 - 2026-11-13 12:41 UTC | Worker 2 | STARTED | run session_01E6cPndbSXCXP2odLuLp7M9 | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T12:21Z | Lead | SUCCESS | board | Owner reset 13 Nov applied: T-314 r3 (ext render+paint, V3.0.79, W2) and T-750 (WP, V3.0.80, W3) built stacked on T-738 r2, Gate B one at a time; NEW T-757 materiality (72 held concrete lines < 0.1 m3: +19.69 m3 at low bounds, allowance 3.83 m3, W1); T-756 MERGED WORKED; T-738 r2 / T-755 r2 READY; Verifier 09:52 and W1 09:19 UNCLOSED (INCOMPLETE); roof layers wait owner default values; Drive OK no new files; no owner package; queue check: 14 actionable rows, 0 flagged, 0 stall checks | self-check PASS/PASS/PASS (codemap, pytest t061, freeze); problem: none
 - 2026-11-13T12:16Z | Lead | STARTED | run session_01E6cPnab3smX4vFuS44KkfF | repo-attached routine | task state: board | report pending
