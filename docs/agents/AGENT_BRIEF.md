@@ -40,7 +40,8 @@ differ. Authoritative registers: OWNER_QUESTIONS_ANSWERED.md (grep the Q-id), OW
 | Wet-area walls | spatter dash + levelling render + adhesive and porcelain; no second bed; no paint or skirting on tiled faces | owner 2026-11-02 |
 | Openings | full deduction of every actual opening from blockwork | Q-73 |
 | Backfill | max 150 mm finished compacted lift, OWNER-PROVISIONAL; drawings / geotechnical spec govern where they differ | owner 2026-11-02 |
-| Rebar | PARKED; at the end one approximate ratio figure in tons (ESTIMATE, never VERIFIED); detailed 9.6 t kept | owner 2026-11-11 |
+| Wet-room wall tiles | 3.00 m high from F.F.L. in every wet room (replaces the decor-ceiling tie for tile height only) | owner 2026-11-13 |
+| Rebar | BOQ figure = ratio 120-140 kg per m3 of structural concrete (ESTIMATE, never VERIFIED); the detailed takeoff continues as a parallel check that must converge on it; no rebar rows for workers | owner 2026-11-11 / 2026-11-13 |
 
 ## Checker gates (DELIVERY_MODE.md section 5)
 - Gate A (fix-row set): no frozen / version-file edit, no weakened test, no client data; freeze 0; labels and bases on
@@ -54,6 +55,4 @@ differ. Authoritative registers: OWNER_QUESTIONS_ANSWERED.md (grep the Q-id), OW
   G / S after FILL. Each row: families, expected method step, acceptance "0 blank lines in <families>".
 - Queues 3 deep per worker; `board check` clean; LEAD_STATE.md <= 5 KB; report 15 lines = the two numbers per trade.
 
-## Drive (read-only)
-- "Urban BOQ private data": 1d24LO1eVm_g3mMtQzO4j4rzvh0VdPUsm; training villa: 1pemtCruL2WCXORJxst7Wc2Cesd1C4CXl
-- Reference books: 1AHjEuvxGd7DoMSiDs0CRfKVmXtISqmd0 and 1rr88a1tiLBnABebjhuUk_sfNxsYuCaIE
+## Drive (read-only): ids in progress.md section 1

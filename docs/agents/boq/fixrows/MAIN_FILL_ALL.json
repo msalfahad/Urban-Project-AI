@@ -4072,9 +4072,371 @@
    },
    "label": "ESTIMATE",
    "basis": "2F facade run 29.8 lm x storey 4.2 (slab to slab) = 125.16 - openings 8.02 [arch_window 5.82; door_external_aluminium 2.20] (sample QS method; parapets and returns not included)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-065bafe1b98e3a43881c",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "2F-RE83BED:wall_tile",
+   "before": {
+    "class": "RELEASED",
+    "net": 30.255,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 28.897
+   },
+   "label": "DEFAULT",
+   "basis": "2F-RE83BED: engine net 30.255 at decor-ceiling height 3.14 - run 9.7 lm x (3.14 - 3.0) = tiles to 3.0 m (owner 2026-11-13); openings unchanged (all below 3.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-086e72207311265f81ab",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "1F-RED23B8:wall_tile",
+   "before": {
+    "class": "RELEASED",
+    "net": 23.2201,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 22.1561
+   },
+   "label": "DEFAULT",
+   "basis": "1F-RED23B8: engine net 23.2201 at decor-ceiling height 3.14 - run 7.6 lm x (3.14 - 3.0) = tiles to 3.0 m (owner 2026-11-13); openings unchanged (all below 3.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-1090bb5c8226afec2235",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "1F-R52AC05:wall_tile",
+   "before": {
+    "class": "RELEASED",
+    "net": 19.6691,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 18.7535
+   },
+   "label": "DEFAULT",
+   "basis": "1F-R52AC05: engine net 19.6691 at decor-ceiling height 3.14 - run 6.54 lm x (3.14 - 3.0) = tiles to 3.0 m (owner 2026-11-13); openings unchanged (all below 3.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-1341e0410a469089c3be",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "GF-RDF7D28:wall_tile",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 11.4,
+    "high": 25.21
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 16.4
+   },
+   "label": "DEFAULT",
+   "basis": "GF-RDF7D28: run 6.2 lm x 3.0 m (owner 2026-11-13) - 1 doorway x 2.20 m2 (door 1.00 x 2.20 default; windows not read; was HELD 11.4..25.21 for the annex-height hold Q-54 B, now answered 4.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-82cd58d4a16fb94ddfc6",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "1F-R48CDA5:wall_tile",
+   "before": {
+    "class": "RELEASED",
+    "net": 26.3051,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 25.0871
+   },
+   "label": "DEFAULT",
+   "basis": "1F-R48CDA5: engine net 26.3051 at decor-ceiling height 3.14 - run 8.7 lm x (3.14 - 3.0) = tiles to 3.0 m (owner 2026-11-13); openings unchanged (all below 3.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-88c11c5d8dc1dfd7c27e",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "GF-RFAD3C4:wall_tile",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 14.6
+   },
+   "label": "DEFAULT",
+   "basis": "GF-RFAD3C4: run 5.6 lm x 3.0 m (owner 2026-11-13) - 1 doorway x 2.20 m2 (door 1.00 x 2.20 default; windows not read; was HELD None..None for the annex-height hold Q-54 B, now answered 4.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-88ed2535c1975adb702e",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "1F-R48AA46:wall_tile",
+   "before": {
+    "class": "RELEASED",
+    "net": 27.91,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 26.65
+   },
+   "label": "DEFAULT",
+   "basis": "1F-R48AA46: engine net 27.91 at decor-ceiling height 3.14 - run 9.0 lm x (3.14 - 3.0) = tiles to 3.0 m (owner 2026-11-13); openings unchanged (all below 3.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-96d9839bd3bca4c08a67",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "GF-RB62B55:wall_tile",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 20.3
+   },
+   "label": "DEFAULT",
+   "basis": "GF-RB62B55: run 7.5 lm x 3.0 m (owner 2026-11-13) - 1 doorway x 2.20 m2 (door 1.00 x 2.20 default; windows not read; was HELD None..None for the annex-height hold Q-54 B, now answered 4.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-a34d09209fb5aad3eb63",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "1F-R8BDA49:wall_tile",
+   "before": {
+    "class": "RELEASED",
+    "net": 27.9101,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 26.6501
+   },
+   "label": "DEFAULT",
+   "basis": "1F-R8BDA49: engine net 27.9101 at decor-ceiling height 3.14 - run 9.0 lm x (3.14 - 3.0) = tiles to 3.0 m (owner 2026-11-13); openings unchanged (all below 3.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-a3cb2c8a9b6080769ebc",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "GF-RB28769:wall_tile",
+   "before": {
+    "class": "RELEASED",
+    "net": 22.6165,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 19.6202
+   },
+   "label": "DEFAULT",
+   "basis": "GF-RB28769: engine net 22.6165 at decor-ceiling height 3.44 - run 6.809808 lm x (3.44 - 3.0) = tiles to 3.0 m (owner 2026-11-13); openings unchanged (all below 3.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-b2077eee5a71a975bd74",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "1F-R26FA0D:wall_tile",
+   "before": {
+    "class": "RELEASED",
+    "net": 52.529,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 50.1574
+   },
+   "label": "DEFAULT",
+   "basis": "1F-R26FA0D: engine net 52.529 at decor-ceiling height 3.14 - run 16.94 lm x (3.14 - 3.0) = tiles to 3.0 m (owner 2026-11-13); openings unchanged (all below 3.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-c330b8dc47261d5ada7e",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "GF-RA3AD49:wall_tile",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 41.3
+   },
+   "label": "DEFAULT",
+   "basis": "GF-RA3AD49: run 14.5 lm x 3.0 m (owner 2026-11-13) - 1 doorway x 2.20 m2 (door 1.00 x 2.20 default; windows not read; was HELD None..None for the annex-height hold Q-54 B, now answered 4.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-c34694477f67800ae2e3",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "GF-RF38DAF:wall_tile",
+   "before": {
+    "class": "RELEASED",
+    "net": 25.3011,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 22.0389
+   },
+   "label": "DEFAULT",
+   "basis": "GF-RF38DAF: engine net 25.3011 at decor-ceiling height 3.44 - run 7.414038 lm x (3.44 - 3.0) = tiles to 3.0 m (owner 2026-11-13); openings unchanged (all below 3.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-ca4e74c59364f665b102",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "GF-RD6F891:wall_tile",
+   "before": {
+    "class": "RELEASED",
+    "net": 25.5912,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 22.2363
+   },
+   "label": "DEFAULT",
+   "basis": "GF-RD6F891: engine net 25.5912 at decor-ceiling height 3.44 - run 7.624665 lm x (3.44 - 3.0) = tiles to 3.0 m (owner 2026-11-13); openings unchanged (all below 3.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-d0858b30e0ea869bd047",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "GF-R8496F0:wall_tile",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 19.4
+   },
+   "label": "DEFAULT",
+   "basis": "GF-R8496F0: run 7.2 lm x 3.0 m (owner 2026-11-13) - 1 doorway x 2.20 m2 (door 1.00 x 2.20 default; windows not read; was HELD None..None for the annex-height hold Q-54 B, now answered 4.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-de4088e7012e655bb071",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "GF-RD36087:wall_tile",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 7.04,
+    "high": 19.555
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 12.5
+   },
+   "label": "DEFAULT",
+   "basis": "GF-RD36087: run 4.9 lm x 3.0 m (owner 2026-11-13) - 1 doorway x 2.20 m2 (door 1.00 x 2.20 default; windows not read; was HELD 7.04..19.555 for the annex-height hold Q-54 B, now answered 4.00)"
+  },
+  {
+   "set": "TILE_300",
+   "line_id": "L-fa408571a8adcfaf1a1f",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "element_id": "GF-RDBD4F9:wall_tile",
+   "before": {
+    "class": "RELEASED",
+    "net": 26.6544,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 23.0274
+   },
+   "label": "DEFAULT",
+   "basis": "GF-RDBD4F9: engine net 26.6544 at decor-ceiling height 3.44 - run 8.243202 lm x (3.44 - 3.0) = tiles to 3.0 m (owner 2026-11-13); openings unchanged (all below 3.00)"
+  },
+  {
+   "set": "OWNER_ANSWERED",
+   "line_id": "L-0392d37452e98050dd1b",
+   "item_code": "ARCH.WINDOW",
+   "unit": "m2",
+   "element_id": "OPENINGS:ARCH_WINDOW:1F:HELD",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 9.87,
+    "high": 11.515
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.87
+   },
+   "label": "DRAWING-READ",
+   "basis": "W17 curved window over the pool: owner Q-76 A (2026-10-24): 3.29 x 3.00 = 9.870 m2, the 0.45 band excluded; the index still carried the range 9.87..11.515"
+  },
+  {
+   "set": "MATERIALITY",
+   "line_id": "L-636fd3ff1784a12e653b",
+   "item_code": "FIN.WP.ROOF",
+   "unit": "m2",
+   "element_id": "2F-ROOF-AT379:wp_membrane",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 115.656474,
+    "high": 115.813974
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 115.6565
+   },
+   "label": "DEFAULT",
+   "basis": "roof +9.70 membrane held 115.656474..115.813974 for a 0.16 m2 band question (D-BAND at the 2F west wall foot): below materiality, low end taken"
   }
  ],
  "sources": [
-  "MAIN_FILL_3.json"
+  "MAIN_FILL_3.json",
+  "MAIN_FILL_4.json"
  ]
 }

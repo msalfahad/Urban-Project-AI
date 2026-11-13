@@ -150,6 +150,7 @@ for name,unit,pred in KQ:
     t=_agg(pred); i=k.max_row+1
     k.append([name,unit,round(t['rel'],2),round(t['lo'],2) if t['lo'] else None,round(t['hi'],2) if t['hi'] else None,t['blank'],t['n'],f"=IFERROR(C{i}/{floor:.4f},0)",BAND.get(name,'')])
 k.append(['Rebar ratio check (detailed kg per m3 of calculated concrete)','kg/m3',f"=IFERROR(C5/C4,0)",None,None,None,None,None,'120 .. 140 expected; a low figure = the detailed takeoff is still partial'])
+k.append(['REBAR BY RATIO (owner 2026-11-13: the BOQ figure; ESTIMATE) = concrete (calc + held mid) x 130 kg/m3','t',f"=ROUND((C4+(D4+E4)/2)*130/1000,2)",f"=ROUND((C4+D4)*120/1000,2)",f"=ROUND((C4+E4)*140/1000,2)",None,None,None,'three Kuwait villas 120 .. 140 kg/m3; the detailed takeoff (row above) continues as the parallel check and must converge on this'])
 for rw in k.iter_rows(min_row=4,max_row=k.max_row):
     for x in rw: x.font=F; x.border=BR
     for x in rw[2:5]: x.number_format='#,##0.00;-#,##0.00;-'
@@ -162,11 +163,11 @@ XC=[('Concrete total (all elements)','m3',lambda l:l['item_code'].startswith('ST
     ('Footings','m3',lambda l:l['item_code']=='STR.CONC.FOOTING',66.26,'',77.63),
     ('Suspended beams','m3',lambda l:l['item_code']=='STR.CONC.BEAM',69.00,'+4.27..10.25 range',65.97),
     ('Suspended slabs','m3',lambda l:l['item_code']=='STR.CONC.SLAB',64.29,'',59.82),
-    ('Rebar (detailed, t)','t',lambda l:l['item_code']=='STR.REBAR',16.39,'partial extract',44.19),
+    ('Rebar (detailed, t)','t',lambda l:l['item_code']=='STR.REBAR',16.39,'partial extract; see the ratio row in Key quantities (owner: ratio is the BOQ figure)',44.19),
     ('Blockwork net','m2',lambda l:l['item_code']=='MAS.BLOCK',1092.1,'wall band x height - openings, all walls',1260.7),
     ('Floor tiles internal (+ unallocated)','m2',lambda l:l['item_code'] in ('FIN.FLOOR.PORCELAIN','FIN.FLOOR.WET_TILE','FIN.FLOOR.FINISH_HELD') or l['item_code'].startswith('FIN.MARBLE.') and l['unit']=='m2',376.3,'254.8 + 121.5 unallocated',409.6),
     ('Skirting','lm',lambda l:l['item_code']=='FIN.SKIRTING',185.5,'',282.9),
-    ('Wet-wall porcelain','m2',lambda l:l['item_code']=='FIN.WALL.TILE',308.3,'at 2.70 m',433.8),
+    ('Wet-wall porcelain','m2',lambda l:l['item_code']=='FIN.WALL.TILE',308.3,'at 2.70 m (ours now at 3.00 m, owner 2026-11-13)',433.8),
     ('Wet floor membrane','m2',lambda l:l['item_code']=='FIN.WP.FLOOR',62.8,'',72.0),
     ('Roof membrane','m2',lambda l:l['item_code']=='FIN.WP.ROOF',138.6,'main roof +9.70 only',285.0),
     ('Windows area','m2',lambda l:l['item_code']=='ARCH.WINDOW' and l['unit']=='m2',48.7,'default heights',116.9),

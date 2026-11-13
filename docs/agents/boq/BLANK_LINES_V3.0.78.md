@@ -14,11 +14,11 @@ make it DRAWING-READ instead of DEFAULT.
 | Plaster | 8 | 33 | none (counted from the plan); the opening heights A-GF-01, A-1F-01, D-GF-15 |
 | Paint | 3 | 31 | same opening heights |
 | External render | 6 | 35 | same opening sizes |
-| Tiles | 4 | 5 | confirm wall-tile height: to the decor ceiling (Q-48) = 2.70 default; finish of the room |
+| Tiles | 0 | 3 | finish of the room |
 | Ceilings | 7 | 0 | confirm stairwell ceilings are gypsum (or plaster + paint only); dome radius / rise (same as the concrete) |
-| Waterproofing | 34 | 19 | DECIDE: is foundation waterproofing in scope? (freelancer has none); door widths OP-010 / 017 / 018; roll size you buy; same decision; the sanitary fixture count per bathroom (or the sanitary schedule) |
+| Waterproofing | 34 | 18 | DECIDE: is foundation waterproofing in scope? (freelancer has none); door widths OP-010 / 017 / 018; roll size you buy; same decision; the sanitary fixture count per bathroom (or the sanitary schedule) |
 | Stairs | 55 | 28 | lift door size; same stair section; railing type (steel / glass / timber); stair section: risers and treads per flight (or confirm 0.15-0.175 / 0.28-0.30 defaults) |
-| Openings | 20 | 16 | confirm PVC door count / size; door widths of the openings listed; main door size; sizes of W02, W03, W17 from the window schedule; sizes of W11, W12, W14; the window schedule row |
+| Openings | 20 | 15 | confirm PVC door count / size; door widths of the openings listed; main door size; sizes of W02, W03, W17 from the window schedule; sizes of W11, W12, W14; the window schedule row |
 | Earthworks | 14 | 4 | excavation depth below ground level and working space (default 0.30 each side) |
 | Fence / site | 35 | 0 | depth of the fence wall below ground; fence length and height per side (sea, street, north, lower) and the below-ground band; gate sizes G-01, G-02; pool depth |
 | Rebar (parked) | 799 | 894 |  |
@@ -667,12 +667,6 @@ make it DRAWING-READ instead of DEFAULT.
 | Tiles | EXT.FLOOR.OUTDOOR | m2 | GF-COURT#POOL-DECK | HELD range | 6.548912 | 6.548912 | outdoor floor range | plan area | none |
 | Tiles | EXT.FLOOR.OUTDOOR | m2 | GF-COURT#PORCH | HELD range | 10.6785 | 10.6785 | outdoor floor range | plan area | none |
 | Tiles | FIN.FLOOR.FINISH_HELD | m2 | GF-R31F8AE:GF-ST-CN | HELD range | 0.0 | 0.23 | floor finish range | plan area | finish of the room |
-| Tiles | FIN.WALL.TILE | m2 | GF-R8496F0:wall_tile | BLANK |  |  | wet room with no perimeter x tile height | perimeter x height (to the false ceiling 2.70; sample: 3.00) - openings | confirm wall-tile height: to the decor ceiling (Q-48) = 2.70 default |
-| Tiles | FIN.WALL.TILE | m2 | GF-RA3AD49:wall_tile | BLANK |  |  | wet room with no perimeter x tile height | perimeter x height (to the false ceiling 2.70; sample: 3.00) - openings | confirm wall-tile height: to the decor ceiling (Q-48) = 2.70 default |
-| Tiles | FIN.WALL.TILE | m2 | GF-RB62B55:wall_tile | BLANK |  |  | wet room with no perimeter x tile height | perimeter x height (to the false ceiling 2.70; sample: 3.00) - openings | confirm wall-tile height: to the decor ceiling (Q-48) = 2.70 default |
-| Tiles | FIN.WALL.TILE | m2 | GF-RFAD3C4:wall_tile | BLANK |  |  | wet room with no perimeter x tile height | perimeter x height (to the false ceiling 2.70; sample: 3.00) - openings | confirm wall-tile height: to the decor ceiling (Q-48) = 2.70 default |
-| Tiles | FIN.WALL.TILE | m2 | GF-RD36087:wall_tile | HELD range | 7.04 | 19.555 | wet room with no perimeter x tile height | perimeter x height (to the false ceiling 2.70; sample: 3.00) - openings | confirm wall-tile height: to the decor ceiling (Q-48) = 2.70 default |
-| Tiles | FIN.WALL.TILE | m2 | GF-RDF7D28:wall_tile | HELD range | 11.4 | 25.21 | wet room with no perimeter x tile height | perimeter x height (to the false ceiling 2.70; sample: 3.00) - openings | confirm wall-tile height: to the decor ceiling (Q-48) = 2.70 default |
 | Ceilings | FIN.CEILING | m2 | 1F-R78C367:ceiling | BLANK |  |  | stairwell / strip ceiling with no area | plan area of the stairwell | confirm stairwell ceilings are gypsum (or plaster + paint only) |
 | Ceilings | FIN.CEILING | m2 | 2F-R4D1B62:stairwell ceiling | BLANK |  |  | stairwell / strip ceiling with no area | plan area of the stairwell | confirm stairwell ceilings are gypsum (or plaster + paint only) |
 | Ceilings | FIN.CEILING | m2 | GF-R31F8AE:stairwell ceiling | BLANK |  |  | stairwell / strip ceiling with no area | plan area of the stairwell | confirm stairwell ceilings are gypsum (or plaster + paint only) |
@@ -713,7 +707,6 @@ make it DRAWING-READ instead of DEFAULT.
 | Waterproofing | FIN.WP.PENETRATION | pcs | GF-RF38DAF:wp_penetrations | BLANK |  |  | one per sanitary fixture; fixture count of the wet room not read | count the fixtures on the plan (WC, basin, shower, floor drain) | the sanitary fixture count per bathroom (or the sanitary schedule) |
 | Waterproofing | FIN.WP.PENETRATION | pcs | GF-RFAD3C4:wp_penetrations | BLANK |  |  | one per sanitary fixture; fixture count of the wet room not read | count the fixtures on the plan (WC, basin, shower, floor drain) | the sanitary fixture count per bathroom (or the sanitary schedule) |
 | Waterproofing | FIN.WP.ROOF | m2 | 1F-POOLCOURT-550-LEDGE:wp_membrane | HELD range | 0.0 | 0.639573 | roof membrane range | roof area | none |
-| Waterproofing | FIN.WP.ROOF | m2 | 2F-ROOF-AT379:wp_membrane | HELD range | 115.656474 | 115.813974 | roof membrane range | roof area | none |
 | Waterproofing | FIN.WP.ROOF_UPTURN | lm | 2F-ROOF-TOP:wp_upturn | BLANK |  |  | top roof parapet length | roof perimeter x 0.30 | none |
 | Waterproofing | FIN.WP.ROOF_UPTURN | lm | 1F-POOLCOURT-550-LEDGE:wp_upturn | HELD range | 0.0 | 3.528277 | top roof parapet length | roof perimeter x 0.30 | none |
 | Waterproofing | FIN.WP.ROOF_UPTURN | lm | 1F-POOLCOURT-550:wp_upturn window_face | HELD range | 0.0 | 0.500002 | top roof parapet length | roof perimeter x 0.30 | none |
@@ -836,7 +829,6 @@ make it DRAWING-READ instead of DEFAULT.
 | Openings | ARCH.THRESHOLD | m2 | HL:FLOOR_SCOPE:THRESHOLD:GF:OP-013 | HELD range | 0.18 | 0.18 | threshold strip with no door width | width x wall thickness | door widths of the openings listed |
 | Openings | ARCH.THRESHOLD | m2 | HL:FLOOR_SCOPE:THRESHOLD:GF:OP-021 | HELD range | 0.4 | 0.4 | threshold strip with no door width | width x wall thickness | door widths of the openings listed |
 | Openings | ARCH.WINDOW | m2 | OPENINGS:ARCH_WINDOW:GF:HELD_NO_FIGURE | BLANK |  |  | GF window with no figure in the schedule | W x H | the window schedule row |
-| Openings | ARCH.WINDOW | m2 | OPENINGS:ARCH_WINDOW:1F:HELD | HELD range | 9.87 | 11.515 | GF window with no figure in the schedule | W x H | the window schedule row |
 | Openings | ARCH.WINDOW | pcs | OPENINGS:ARCH_WINDOW:GF:HELD | HELD range | 1.0 | 2.0 | GF window with no figure in the schedule | W x H | the window schedule row |
 | Openings | ARCH.WINDOW_REVEAL | m2 | 1F-REVEAL-W17:IN:JAMBS_HEAD:HELD | BLANK |  |  | window reveal with no size (W02, W03, W17) | jambs + head + sill x reveal depth | sizes of W02, W03, W17 from the window schedule |
 | Openings | ARCH.WINDOW_REVEAL | m2 | 1F-REVEAL-W17:OUT:JAMBS_HEAD:HELD | BLANK |  |  | window reveal with no size (W02, W03, W17) | jambs + head + sill x reveal depth | sizes of W02, W03, W17 from the window schedule |

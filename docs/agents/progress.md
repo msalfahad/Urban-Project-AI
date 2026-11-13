@@ -167,3 +167,15 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
 - MAIN FILL 3 (fill3_facade.py): facade render from the released facade runs (GF 105.89 / 1F 63.17 / 2F 29.8 lm) x
   storey heights - openings = 762.3 m2 + plinth 105.9 (GF run x printed F.F.L. +1.00) = 868.1 m2 ESTIMATE. The parallel
   run got 769.2 by the same method with 98.9 lm on GF. MAIN_FILL_ALL now 214 rows.
+
+### 2026-11-13 evening: owner decisions on the cross-check
+- Owner: "Why wet tiles calculated as 2.7m height? freelancer on 3m right? lets do 3m too." -> wall tiles 3.00 m from
+  F.F.L. in every wet room (MAIN FILL 4). Fact: the engine's released tile lines were NOT at 2.70; they ran to the decor
+  ceiling (clear height - 0.90 = 3.44 GF / 3.14 upper); 2.70 was the parallel run's default. 3.00 lowers ours.
+- Owner: "rebar use the normal okay, but also add our calculation method to get a similar calculation" -> BOQ rebar = ratio
+  120-140 kg/m3 (Key quantities row); the detailed takeoff stays as the parallel check (must converge).
+- Windows: owner "i gave you all the results, what is missing?" -> Q-76 A (W17 = 9.87) was answered on 24 Oct but never
+  wired; wired now (MAIN FILL 4). Still missing: W02 one-or-two windows (D-53, owner said drawing / designer evidence),
+  shutter leaves W11 / W12 / W14 (fence), and the freelancer's 116.9 m2 is aluminium incl. external doors.
+- Roof +9.70 membrane: held 115.66..115.81 for a 0.16 m2 band question -> released at the low end (materiality).
+  The annex roof (+4.30, finish 54.92 m2) has NO membrane line in the index: new line needed (T-770 wiring).
