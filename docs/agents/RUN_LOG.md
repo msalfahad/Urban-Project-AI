@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T22:41Z | Worker 2 | STARTED | run session_01E6cPnapFcfbsrJgArWmj2y | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T21:50Z | Verifier | STARTED | run session_01E6cPndMQRXkLmpxRuxAkaP | repo-attached routine | task state: per run log T-770 r3 READY (Gate B, W3), T-757 r1 READY (W1) | self-check pending
 - 2026-11-13T21:45Z | Worker 3 | SUCCESS | T-770 r3 READY 56d5eabd (Gate B, V3.0.81 / master 1.81.0) | r2 faults fixed, no quantity change: registry --promote mode + in-merge tools (dry promote on own Drive run: 0 problems, census clean; STR.CONC.SAFETY owned by B9-02); run check = index rule, own V3_0_81 88429a67 0 disagree exit 0; FINDING Checker DG-38971e0d court GBs 0.627 m3 re-binds on T-761 DEFAULT figures (Checker resolves or holds, -0.63 m3); blank non-rebar 691->295 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none (Drive OK)
 - 2026-11-13T21:31Z | Worker 1 | SUCCESS | T-757 READY r1 (agents/task-T-757 @ 27887ae7) | 114 ranged STR.CONC lines -> 0: 80 points by fallback order + 34 at low (widths 0.7715 m3 to IGNORED_SMALL, SAFETY 1.00 -> 1.20 m3); concrete 394.48..416.21 -> 405.60 m3 + safety; beam 79.24 vs freelancer 66.09 m3 (+19.9 %) UNRESOLVED for T-777 | self-check codemap PASS, t061 PASS, freeze PASS; problem: none
