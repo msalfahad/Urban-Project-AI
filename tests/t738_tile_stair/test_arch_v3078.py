@@ -336,3 +336,23 @@ def test_tile_piece_on_stair_code_refused():
     e = entries()
     e[1] = dict(e[1], piece=A.P_TILE, action="BOUND", low=1.0, high=2.0, value=None)
     _refused(e, match="not a HELD line of this piece")
+
+
+def test_older_view_restores_v3077_return_lines():
+    """a return paint line V3.0.77 EXCLUDED is shown to the V3.0.64 .. V3.0.76 checks in its V3.0.76 form (from the 'was'
+    of its record); every other line is the same object"""
+    from engine.source import arch_v3077 as A77
+    ln = _ln("FIN.PAINT", "OP-D1:door:RETURN_PAINT", "BOUNDED_EXPOSURE", rng=(0.0, 1.02))
+    was = {"evidence_state": ln["evidence_state"], "measured_net": None, "gross": None,
+           "bounded_range": ln["bounded_range"], "rfi": ln["rfi"], "class": "HELD",
+           "formula": ln["calculation"]["formula"]}
+    ex_ = copy.deepcopy(ln)
+    ex_.update(evidence_state="EXCLUDED_WITH_REASON", bounded_range=None, rfi=None)
+    ex_["calculation"] = dict(ex_["calculation"], formula="excluded", inputs={A77.REC_KEY: {
+        "piece": A77.P_RET, "was": was}})
+    other = base()[0]
+    v = A.older_view([ex_, other])
+    assert v[1] is other
+    assert v[0]["evidence_state"] == "BOUNDED_EXPOSURE" and v[0]["bounded_range"] == ln["bounded_range"]
+    assert A77.REC_KEY not in v[0]["calculation"]["inputs"] and v[0]["calculation"]["formula"] == ln["calculation"]["formula"]
+    assert ex_["evidence_state"] == "EXCLUDED_WITH_REASON"                 # the line itself is untouched

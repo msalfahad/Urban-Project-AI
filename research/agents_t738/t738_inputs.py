@@ -109,6 +109,25 @@ def _after(text):
     return t[0], []
 
 
+RULE_BY_CLASS = {"RANGE": "R-T715-4", "AT_MOST": "R-T715-4", "CONDITIONAL_ON_FORM": "R-T715-4 (ORR-007)",
+                 "AT_LEAST": "T-715 (merged T-281 / T-684 figure)", "BLANK_NAMED": "T-715 BLANK_NAMED",
+                 "NOT_APPLICABLE": "T-715 (merged T-493 / T-690 finding)"}
+
+
+def rule_of(piece, a):
+    """(rule id, why) of a ledger statement: the rule the cause opens with (then dropped from the why), else the rule of
+    its class; T-718 rows R-T718-2 / R-T718-3."""
+    cause = str(a.get("cause") or "")
+    head = cause.split(":")[0]
+    if head.startswith("R-T") and " " not in head.strip():
+        return head.strip(), cause[len(head) + 1:].strip()
+    if piece == "T-718":
+        return "R-T718-2 / R-T718-3", cause
+    if a["class"] == "NOT_APPLICABLE" and a.get("carrier"):
+        return "R-T715-3", cause
+    return RULE_BY_CLASS.get(a["class"], "T-715"), cause
+
+
 def rows():
     rs = [r for r in load(T730) if r["hub"] in HUBS]
     if len(rs) != ROWS_N:
@@ -170,11 +189,9 @@ def build():
         if (led["item_code"], led["element_id"], led["unit"]) != (ex["item_code"], ex["element_id"], ex["unit"]):
             raise InputsError(f"{lid}: ledger line {led['item_code']} {led['element_id']} is not the index's")
         tasks = [r["piece"], "T-730"] + (["T-733"] if lid in PENDING_CLOSED_BY else [])
-        rule = (a.get("cause") or "").split(":")[0] if (a.get("cause") or "").startswith("R-T") else \
-            ("R-T718-2 / R-T718-3" if r["piece"] == "T-718" else "R-T715-3" if a["class"] == "NOT_APPLICABLE"
-             else "R-T715-4")
+        rule, why = rule_of(r["piece"], a)
         e = dict(base, piece="STAIR_WIRE", line_id=lid, expect=ex, source_tasks=tasks, rule=rule,
-                 status=status_of(a.get("status")), status_text=a.get("status"), why=a.get("cause") or r["reason"],
+                 status=status_of(a.get("status")), status_text=a.get("status"), why=why,
                  open=a.get("item") or None)
         if r["piece"] == "T-718":
             prev = l715[lid]["after"]
@@ -183,7 +200,8 @@ def build():
         if act == "CHANGE" and kind == "VALUE":
             if a["class"] != "MEASURED" or D(a["value"]) != nums[0]:
                 raise InputsError(f"{lid}: ledger {a['class']} {a.get('value')} is not the map's {r['after']}")
-            e.update(action="POINT", value=_f(nums[0]))
+            e.update(action="POINT", value=_f(nums[0]),
+                     open=f"not released: a drawn figure, released only by a Checker record ({a.get('status')})")
         elif act == "CHANGE" and kind == "BOUND":
             if a["class"] != "RANGE" or [D(a["low"]), D(a["high"])] != nums:
                 raise InputsError(f"{lid}: ledger {a['class']} {a.get('low')} .. {a.get('high')} is not the map's")

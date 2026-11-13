@@ -578,6 +578,26 @@ def census(lines, codes=tuple(CODES)):
 
 
 # ================================================================================================ integrate / write
+def older_view(lines):
+    """the lines as the V3.0.64 .. V3.0.76 state checks see them: a return paint line V3.0.77 EXCLUDED (EDGE_AS_LM) in
+    its V3.0.76 form, rebuilt from the 'was' its V3.0.77 record carries (V3.0.77's own check holds the exclusion, and
+    runs on the lines as they are). Lines of this version are shown as they are (no older check reads their codes)."""
+    view = []
+    for ln in lines:
+        rec = ((ln.get("calculation") or {}).get("inputs") or {}).get(A3077.REC_KEY)
+        if not (rec and rec.get("piece") == A3077.P_RET and ln["item_code"] == A3077.PAINT):
+            view.append(ln)
+            continue
+        w = rec["was"]
+        o = copy.deepcopy(ln)
+        o.update(evidence_state=w["evidence_state"], measured_net=w["measured_net"], gross=w["gross"],
+                 bounded_range=w["bounded_range"], rfi=w["rfi"])
+        o["calculation"] = dict(o["calculation"], formula=w["formula"])
+        o["calculation"]["inputs"] = {k: v for k, v in o["calculation"]["inputs"].items() if k != A3077.REC_KEY}
+        view.append(o)
+    return view
+
+
 def integrate(prev, changes, for_lead=()):
     """-> (V3.0.78 lines, identity). Changed lines replace their candidate line in place, added lines follow the base;
     every other candidate line byte-identical (asserted); the earlier state checks re-run."""
@@ -609,17 +629,18 @@ def integrate(prev, changes, for_lead=()):
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
     if len(pids) != 1:
         raise ValueError(f"{METHOD}: {len(pids)} project identities in the lines")
-    v = A3077._older_view(out, prev)
+    v, pv = older_view(out), older_view(prev)
     ident = {"base_lines": len(prev), "v3_0_78_lines": len(out), "v3_0_78_rows": len(changes), "replaced": len(repl),
              "added": len(add), "concrete_v3_0_64": A3064.check_concrete(v),
              "concrete_v3_0_65": A3065.check_concrete(v), "concrete_v3_0_66": A3066.check_concrete(v),
-             "concrete_v3_0_67": A3067.check_concrete(v, prev), "lintels_v3_0_67": A3067.check_lintels(v),
+             "concrete_v3_0_67": A3067.check_concrete(v, pv), "lintels_v3_0_67": A3067.check_lintels(v),
              "masonry_v3_0_68": A3068.check_masonry(v), "finishes_v3_0_69": A3069.check_finishes(v),
-             "concrete_v3_0_70": A3070.check_concrete(v, prev), "lintels_v3_0_71": A3071.check_lintels(v, prev),
-             "masonry_v3_0_72": A3072.check_masonry(v, prev), "concrete_v3_0_73": A3073.check_concrete(v, prev),
-             "finishes_v3_0_74": A3074.check_finishes(v, prev), "formwork_concrete_v3_0_75":
-                 A3075.check_lines(v, prev), "beads_ceiling_v3_0_76": A3076.check_lines(v, prev),
+             "concrete_v3_0_70": A3070.check_concrete(v, pv), "lintels_v3_0_71": A3071.check_lintels(v, pv),
+             "masonry_v3_0_72": A3072.check_masonry(v, pv), "concrete_v3_0_73": A3073.check_concrete(v, pv),
+             "finishes_v3_0_74": A3074.check_finishes(v, pv), "formwork_concrete_v3_0_75":
+                 A3075.check_lines(v, pv), "beads_ceiling_v3_0_76": A3076.check_lines(v, pv),
              "paint_rule_v3_0_77": A3077.check_lines(out, prev), "tile_stair": check_lines(out, prev),
+             "older_checks_view_substituted": sum(1 for a, b in zip(v, out) if a is not b),
              "outside_rows": len(outside), "outside_rows_identical_to_base": len(outside),
              "outside_rows_sha256": hashlib.sha256("".join(A30.line_sha(x) for x in outside).encode()).hexdigest()}
     return out, ident
