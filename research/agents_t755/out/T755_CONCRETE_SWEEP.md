@@ -26,24 +26,23 @@
 | COLUMN | D-39+D-66 | 5 | RANGE 5 | 1.38278 .. 2.23125 | column section conflict + roof slab top not printed | 3, 5 |
 | COLUMN | D-44 | 1 | BLANK 1 | - | B15 up / down-stand on the tank columns | 1, 3 |
 | COLUMN | D-44+D-66 | 1 | BLANK 1 | - | B15 up / down-stand + tank column section conflict | 1, 3 |
-| COLUMN | D-63+D-66 | 13 | RANGE 13 | 6.378 .. 8.2665 | column band: schedule section vs drawn outline differ | 3 |
+| COLUMN | D-66 | 13 | RANGE 13 | 6.378 .. 8.2665 | column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2) | 3 |
 | DOME | SILENT_OMISSION | 1 | BLANK 1 | - | DOME-3 tower dome: no structural drawing (D-21 in T-647; the line text lost the id) | none (propose: add D-21, restate the line) |
 | FOOTING | Q-31 | 1 | RANGE 1 | 2.176 .. 2.275 | owner question Q-31 (one outline, two footing tags) | owner, not designer |
 | GROUND_BEAM | D-33 | 8 | BLANK 8 | - | ground beam carrying a landing / framing beam: section not printed | 4 |
 | GROUND_BEAM | D-34 | 8 | RANGE 8 | 1.17838 .. 1.57117 | ground-beam title by span: no precedence printed | 4 |
 | GROUND_BEAM | D-35 | 12 | BLANK 12 | - | exterior / annex / court ground-beam depth: 'FOLLOW ARCH.', levels not printed | 4 |
 | GROUND_BEAM | Q-28 | 1 | BLANK 1 | - | owner question Q-28 (boundary band section / founding level) | owner, not designer |
-| LIFT | D-22+D-40+D-43+D-63 | 1 | BLANK 1 | - | lift pit walls: supplier pit depth + floor build-up | 6, 8, 3 |
-| LIFT | D-43 | 1 | BLANK 1 | - | lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed | 6 |
+| LIFT | D-43 | 2 | BLANK 2 | - | lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5 | 6 |
 | LINTEL | D-04 | 1 | BLANK 1 | - | unlabelled beam piece: no mark, depth row not printed | 1 |
 | LINTEL | D-39 | 3 | BLANK 3 | - | roof slab top not printed (finished marks only); parapet build-up / height | 5 |
-| LINTEL | D-43 | 1 | BLANK 1 | - | lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed | 6 |
+| LINTEL | D-43 | 1 | BLANK 1 | - | lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5 | 6 |
 | LINTEL | D-45 | 4 | BLANK 4 | - | opening head not drawn on any sheet (lift landing doors, P-GF-01) | 2, 12 |
 | LINTEL | DESIGNER_TAG | 30 | BLANK 10, RANGE 20 | 1.181 .. 1.82041 | named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding) | none (propose: D-ids, L-T716-1) |
 | LINTEL | NAMED_TEXT | 1 | BLANK 1 | - | see READS (the only line: D-GF-14 lintel) | - |
 | LINTEL | Q-55 | 4 | RANGE 4 | 0.18 .. 0.230224 | owner rule Q-55 C fallback door head (existence / spare) | owner rule, not designer |
 | LINTEL | Q-67 | 1 | BLANK 1 | - | owner question Q-67 side-passage FFL | owner, not designer |
-| NECK | D-43 | 4 | BLANK 4 | - | lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed | 6 |
+| NECK | D-43 | 4 | BLANK 4 | - | lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5 | 6 |
 | NECK | DESIGNER_TAG | 8 | RANGE 8 | 1.305 .. 1.953 | named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding) | none (propose: D-ids, L-T716-1) |
 | NECK | NO_SINGLE_VALUE | 24 | RANGE 24 | 7.4674 .. 9.393 | neck: founding level not printed (minimum 1.50 m below EG only) | none (propose: new D-id 'founding level per footing') |
 | PARAPET | D-39 | 4 | BLANK 4 | - | roof slab top not printed (finished marks only); parapet build-up / height | 5 |

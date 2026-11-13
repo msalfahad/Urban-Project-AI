@@ -122,7 +122,12 @@ def build(out_dir: Path) -> dict:
     a70 = cens["70"]["assignment"]
     diff70 = sorted(l for l, a in t716["assignment"].items() if a70.get(l, {}).get("bucket") != a["bucket"])
     assert set(a70) == set(t716["assignment"]), "V3.0.70 HELD line set differs from T-716"
-    assert not diff70, f"V3.0.70 re-derivation differs from T-716 on {len(diff70)} lines: {diff70[:5]}"
+    # R-T755-1 v2: T-716 read retired causes too; the ONLY allowed difference is a line whose (own or host's) retired
+    # identifier was dropped. Every other line must land in the T-716 bucket (asserted).
+    other = [l for l in diff70 if not a70[l]["retired_hits"]]
+    assert not other, f"V3.0.70 re-derivation differs from T-716 on {len(other)} lines without a retired id: {other[:5]}"
+    t716_diff = {l: {"t716": t716["assignment"][l]["bucket"], "v2": a70[l]["bucket"],
+                     "retired": a70[l]["retired_hits"]} for l in diff70}
     tr = R.transitions([(k["v"], {r["line_id"]: r for r in k["index"]["lines"]}, cens[k["v"]]["assignment"])
                         for k in chain])
     delta = R.bucket_delta(a70, cens["77"]["assignment"], tr)
@@ -186,7 +191,11 @@ def build(out_dir: Path) -> dict:
         "candidate": chain[-1]["index"]["candidate_version"],
         "inputs": {k["v"]: {"lines_sha256": k["sha"], "index_file": k["index_file"], "index_sha256": k["index_sha"],
                             "package": k["pkg"]} for k in chain},
-        "t716_rederived_identical": True,
+        "t716_rederived_identical_except_retired": True,
+        "t716_differences_v3070": t716_diff,
+        "retired_hits_v3077": {l: {"bucket": a["bucket"], "retired": a["retired_hits"], "item_code": a["item_code"],
+                                   "dependent": a["dependent"], "host": a["host"]}
+                               for l, a in sorted(c77["assignment"].items()) if a["retired_hits"]},
         "held_lines": {k["v"]: cens[k["v"]]["held_lines"] for k in chain},
         "held_by_kind": {f"{k}|{p}": n for (k, p), n in sorted(kinds.items())},
         "dependent_lines": sum(1 for v in c77["assignment"].values() if v["dependent"]),
@@ -232,7 +241,9 @@ def markdown(s: dict) -> str:
     o = [f"# T-755 census of the HELD lines of {s['candidate']} by cause (R-T755-1)", "",
          "Inputs (runs of record, sha256 of each line file = its merged line index): "
          + ", ".join(f"V3.0.{v} {i['lines_sha256'][:8]} ({i['package']})" for v, i in s["inputs"].items()) + ".",
-         f"HELD lines per version: {s['held_lines']}. V3.0.70 re-derived identical to T-716 line by line. Dependent "
+         f"HELD lines per version: {s['held_lines']}. V3.0.70 re-derived identical to T-716 line by line EXCEPT "
+         f"{len(s['t716_differences_v3070'])} lines where T-716 read a retired / superseded cause from the notes "
+         f"history (R-T755-1 v2; listed below). Dependent "
          f"lines on V3.0.77: {s['dependent_lines']}. Per family and unit only; blank never 0; STR.REBAR kg PARKED.", "",
          "## Lines per cause kind (V3.0.77)", "", "| kind | active | parked rebar |", "|---|---|---|"]
     k = defaultdict(lambda: [0, 0])
@@ -270,6 +281,15 @@ def markdown(s: dict) -> str:
         o.append(f"| {r['line_id']} | {r['item_code'][9:]} | {r['element_id']} | {r['side']} | "
                  f"{'' if r['low'] is None else r['low']} | {'' if r['high'] is None else r['high']} | "
                  f"{r['bucket']}{' (dep.)' if r['dependent'] else ''} |")
+    o += ["", "## R-T755-1 v2: lines whose notes history printed an id the live cause does not (not read)", "",
+          f"V3.0.70 vs T-716: {len(s['t716_differences_v3070'])} lines change bucket; V3.0.77: "
+          f"{len(s['retired_hits_v3077'])} lines carry an id in history only.", "",
+          "| line | family | live bucket (V3.0.77) | history-only ids | dependent on |", "|---|---|---|---|---|"]
+    for lid, v in s["retired_hits_v3077"].items():
+        o.append(f"| {lid} | {v['item_code']} | {v['bucket']} | {', '.join(v['retired'])} | {v['host'] or '-'} |")
+    o += ["", "| line | T-716 bucket (V3.0.70) | v2 bucket (V3.0.70) |", "|---|---|---|"]
+    for lid, v in sorted(s["t716_differences_v3070"].items()):
+        o.append(f"| {lid} | {v['t716']} | {v['v2']} |")
     o += ["", "## Findings for the Lead", ""]
     for f in s["findings"]:
         if f["finding"] == "HELD_LINE_CITES_A_STAY_OUT_D_ID":

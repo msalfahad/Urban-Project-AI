@@ -266,8 +266,8 @@
    }
   },
   {
-   "bucket": "D-63+D-66",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "bucket": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "item_code": "STR.CONC.COLUMN",
    "lines": 13,
    "list_item": "3",
@@ -350,27 +350,15 @@
    }
   },
   {
-   "bucket": "D-22+D-40+D-43+D-63",
-   "fact": "lift pit walls: supplier pit depth + floor build-up",
-   "item_code": "STR.CONC.LIFT",
-   "lines": 1,
-   "list_item": "6, 8, 3",
-   "range_high": 0.0,
-   "range_low": 0.0,
-   "sides": {
-    "BLANK": 1
-   }
-  },
-  {
    "bucket": "D-43",
-   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed",
+   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5",
    "item_code": "STR.CONC.LIFT",
-   "lines": 1,
+   "lines": 2,
    "list_item": "6",
    "range_high": 0.0,
    "range_low": 0.0,
    "sides": {
-    "BLANK": 1
+    "BLANK": 2
    }
   },
   {
@@ -399,7 +387,7 @@
   },
   {
    "bucket": "D-43",
-   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed",
+   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5",
    "item_code": "STR.CONC.LINTEL",
    "lines": 1,
    "list_item": "6",
@@ -472,7 +460,7 @@
   },
   {
    "bucket": "D-43",
-   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed",
+   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5",
    "item_code": "STR.CONC.NECK",
    "lines": 4,
    "list_item": "6",
@@ -785,7 +773,7 @@
    "bucket": "D-43",
    "dependent": false,
    "element_id": "LINTEL:D-GF-08",
-   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed",
+   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5",
    "high": null,
    "host": null,
    "item_code": "STR.CONC.LINTEL",
@@ -853,7 +841,7 @@
    "bucket": "D-43",
    "dependent": false,
    "element_id": "P-C:NECK:COL:SH10:C1@213452,60528",
-   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed",
+   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5",
    "high": null,
    "host": null,
    "item_code": "STR.CONC.NECK",
@@ -1173,10 +1161,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C5@243102,55481|1F",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.504,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -1445,10 +1433,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C@265272,52633|GF",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.45,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -1598,10 +1586,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C9@259284,59442|1F",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.84,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -1822,7 +1810,7 @@
    "bucket": "D-43",
    "dependent": false,
    "element_id": "LIFT_TIE_BEAM:GF",
-   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed",
+   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5",
    "high": null,
    "host": null,
    "item_code": "STR.CONC.LIFT",
@@ -2023,16 +2011,16 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-22+D-40+D-43+D-63",
+   "bucket": "D-43",
    "dependent": false,
    "element_id": "LIFT_PIT:WALLS",
-   "fact": "lift pit walls: supplier pit depth + floor build-up",
+   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5",
    "high": null,
    "host": null,
    "item_code": "STR.CONC.LIFT",
    "kind": "DESIGNER",
    "line_id": "L-684fcad323adc0c8a267",
-   "list_item": "6, 8, 3",
+   "list_item": "6",
    "low": null,
    "read": false,
    "result": "STILL_HELD",
@@ -2125,10 +2113,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C9@254644,59429|1F",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 1.05,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -2278,10 +2266,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C5@259715,51786|1F",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.63,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -2295,10 +2283,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C7@247954,58915|1F",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.84,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -2414,10 +2402,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C3@265215,57750|GF",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.5625,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -2434,7 +2422,7 @@
    "bucket": "D-43",
    "dependent": false,
    "element_id": "P-C:NECK:COL:SH10:C2@213395,59220",
-   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed",
+   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5",
    "high": null,
    "host": null,
    "item_code": "STR.CONC.NECK",
@@ -2465,10 +2453,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C4@264812,63850|1F",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.525,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -2502,7 +2490,7 @@
    "bucket": "D-43",
    "dependent": false,
    "element_id": "P-C:NECK:COL:SH10:C9@214557,59222",
-   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed",
+   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5",
    "high": null,
    "host": null,
    "item_code": "STR.CONC.NECK",
@@ -2601,10 +2589,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C@247429,51302|GF",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.45,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -2737,10 +2725,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C6@250087,56100|1F",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.735,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -3230,10 +3218,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C5@255627,63526|1F",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.63,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -3281,10 +3269,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C3@247476,61310|1F",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.525,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -3505,7 +3493,7 @@
    "bucket": "D-43",
    "dependent": false,
    "element_id": "P-C:NECK:COL:SH10:C2@214579,60524",
-   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed",
+   "fact": "lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it (register: D-43 = GF lift tie-beam size): finding F-T755-5",
    "high": null,
    "host": null,
    "item_code": "STR.CONC.NECK",
@@ -3536,10 +3524,10 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C4@259526,63482|1F",
-   "fact": "column band: schedule section vs drawn outline differ",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
    "high": 0.525,
    "host": null,
    "item_code": "STR.CONC.COLUMN",

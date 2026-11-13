@@ -31,7 +31,8 @@ BUCKET_FACT = {
     "D-26": ("edge projection: no section / mark / bars / material printed (T-660 / T-721)", "1 (propose: add D-26)"),
     "D-28": ("east dome-opening ring: no mark, depth 'AS PER ARCH' (T-721 / T-724)", "1 (propose: add D-28)"),
     "D-16": ("column C8: schedule section vs drawn outline differ", "3"),
-    "D-63+D-66": ("column band: schedule section vs drawn outline differ", "3"),
+    "D-66": ("column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since "
+             "V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)", "3"),
     "D-39+D-66": ("column section conflict + roof slab top not printed", "3, 5"),
     "D-44": ("B15 up / down-stand on the tank columns", "1, 3"),
     "D-44+D-66": ("B15 up / down-stand + tank column section conflict", "1, 3"),
@@ -39,8 +40,9 @@ BUCKET_FACT = {
     "D-34": ("ground-beam title by span: no precedence printed", "4"),
     "D-35": ("exterior / annex / court ground-beam depth: 'FOLLOW ARCH.', levels not printed", "4"),
     "D-39": ("roof slab top not printed (finished marks only); parapet build-up / height", "5"),
-    "D-43": ("lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed", "6"),
-    "D-22+D-40+D-43+D-63": ("lift pit walls: supplier pit depth + floor build-up", "6, 8, 3"),
+    "D-43": ("lift pit raft depth 'as per lift manufacturer'; tie-beam section not printed. Pit walls L-684fcad3: live "
+             "rfi (V3.0.73) cites D-43 for the supplier pit depth although V3.0.42 F-T433-1 retired D-43 from it "
+             "(register: D-43 = GF lift tie-beam size): finding F-T755-5", "6"),
     "D-45": ("opening head not drawn on any sheet (lift landing doors, P-GF-01)", "2, 12"),
     "D-08": ("ST-02 round stair: curved treads / helicoid soffit not dimensioned", "7"),
     "D-56": ("ST-03 E1 waist not drawn (D-56 is OUT of the package: re-state under D-67 / D-68)", "7"),

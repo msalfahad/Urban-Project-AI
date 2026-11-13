@@ -1,7 +1,7 @@
 # T-755 census of the HELD lines of ARCH_TAKEOFF_V3.0.77 by cause (R-T755-1)
 
 Inputs (runs of record, sha256 of each line file = its merged line index): V3.0.70 e8e001de (T-693), V3.0.71 fc0bd98f (T-704), V3.0.72 f9578744 (T-703), V3.0.73 c5a0b128 (T-722), V3.0.74 bea5be02 (T-717), V3.0.75 a1eba08f (T-729), V3.0.76 9b35725c (T-736), V3.0.77 b8524d5c (T-749).
-HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2797, '75': 2747, '76': 2761, '77': 2799}. V3.0.70 re-derived identical to T-716 line by line. Dependent lines on V3.0.77: 149. Per family and unit only; blank never 0; STR.REBAR kg PARKED.
+HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2797, '75': 2747, '76': 2761, '77': 2799}. V3.0.70 re-derived identical to T-716 line by line EXCEPT 27 lines where T-716 read a retired / superseded cause from the notes history (R-T755-1 v2; listed below). Dependent lines on V3.0.77: 149. Per family and unit only; blank never 0; STR.REBAR kg PARKED.
 
 ## Lines per cause kind (V3.0.77)
 
@@ -22,12 +22,12 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 |---|---|---|---|---|---|
 | 1 | D-02, D-03, D-04, D-27, D-30, D-44 | 124 | 18 | kg: 1 lines; 1 blank; 1 dependent<br>m2: 16 lines; 9 bounded 28.7056 .. 35.2004; 7 blank; 13 dependent<br>m3: 17 lines; 13 bounded 5.98323 .. 8.38771; 4 blank; 2 dependent<br>pcs: 2 lines; 2 blank; 2 dependent | kg: 1 lines; 1 blank; 1 dependent<br>m2: 8 lines; 8 blank; 2 dependent<br>m3: 7 lines; 7 blank; 2 dependent<br>pcs: 2 lines; 2 blank; 2 dependent |
 | 2 | D-45, D-58, D-60, D-64 | 0 | 6 |  | lm: 1 lines; 1 blank<br>m2: 1 lines; 1 bounded 47.9498 .. 66.2499<br>m3: 4 lines; 4 blank |
-| 3 | D-16, D-46, D-63, D-65, D-66, D-44 | 9 | 54 | m2: 3 lines; 3 blank; 3 dependent<br>m3: 2 lines; 2 bounded 1.656 .. 1.8525 | m2: 33 lines; 10 bounded 59.2623 .. 68.0029; 23 blank; 29 dependent<br>m3: 21 lines; 18 bounded 7.76078 .. 10.4977; 3 blank |
+| 3 | D-16, D-46, D-63, D-65, D-66, D-44 | 44 | 16 | m2: 25 lines; 10 bounded 59.2623 .. 68.0029; 15 blank; 25 dependent<br>m3: 15 lines; 15 bounded 8.034 .. 10.119 | m2: 9 lines; 9 blank; 7 dependent<br>m3: 7 lines; 5 bounded 1.38278 .. 2.23125; 2 blank |
 | 4 | D-33, D-34, D-35 | 69 | 1 | m2: 12 lines; 12 blank; 7 dependent<br>m3: 34 lines; 9 bounded 121.142 .. 130.215; 25 blank; 1 dependent<br>pcs: 1 lines; 1 blank | m3: 1 lines; 1 blank |
 | 5 | D-06, D-17, D-39, D-62 | 105 | 21 | kg: 5 lines; 5 blank<br>lm: 10 lines; 7 bounded 147.03 .. 147.23; 3 blank<br>m2: 47 lines; 33 bounded 1027.84 .. 1163.54; 14 blank; 8 dependent<br>m3: 33 lines; 7 bounded 2.38329 .. 3.15125; 26 blank; 2 dependent<br>pcs: 10 lines; 10 blank | m2: 13 lines; 1 bounded 0.499037 .. 6.18681; 12 blank; 5 dependent<br>m3: 8 lines; 5 bounded 1.38278 .. 2.23125; 3 blank |
-| 6 | D-43, D-63 | 9 | 40 | m2: 2 lines; 2 blank<br>m3: 6 lines; 6 blank | m2: 26 lines; 10 bounded 59.2623 .. 68.0029; 16 blank; 22 dependent<br>m3: 14 lines; 13 bounded 6.378 .. 8.2665; 1 blank |
+| 6 | D-43, D-63 | 12 | 2 | m2: 4 lines; 4 blank<br>m3: 7 lines; 7 blank | m2: 2 lines; 2 blank |
 | 7 | D-08, D-13, D-29, D-56, D-67, D-68 | 5 | 0 | m2: 3 lines; 1 bounded 1.904 .. 2.38; 2 blank; 1 dependent<br>m3: 2 lines; 2 blank |  |
-| 8 | D-09, D-22, D-24, D-40, D-47 | 0 | 1 |  | m3: 1 lines; 1 blank |
+| 8 | D-09, D-22, D-24, D-40, D-47 | 0 | 0 | - | - |
 | 9 | D-41 | 9 | 9 | kg: 1 lines; 1 blank; 1 dependent<br>m2: 3 lines; 1 bounded 3.89232 .. 5.00599; 2 blank<br>m3: 3 lines; 3 blank; 2 dependent<br>pcs: 2 lines; 2 blank; 2 dependent | kg: 1 lines; 1 blank; 1 dependent<br>m2: 3 lines; 1 bounded 0.499037 .. 6.18681; 2 blank<br>m3: 3 lines; 3 blank; 2 dependent<br>pcs: 2 lines; 2 blank; 2 dependent |
 | 10 | - | 0 | 0 | - | - |
 | 11 | D-20, D-42 | 0 | 0 | - | - |
@@ -51,7 +51,7 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | D-14 | 2 / 0 | 2 / 0 | none | STR.CONC.BLINDING m3: 1 lines; 1 bounded 0 .. 0.189<br>STR.EARTH.EXCAVATION m3: 1 lines; 1 bounded 1.06927 .. 1.17647 |
 | D-15 | 1 / 1 | 1 / 1 | none | STR.EARTH.EXCAVATION m3: 1 lines; 1 blank |
 | D-16 | 9 / 0 | 9 / 0 | none | STR.CONC.COLUMN m3: 2 lines; 2 bounded 1.656 .. 1.8525<br>STR.FORMWORK m2: 3 lines; 3 blank; 3 dependent<br>STR.REBAR kg: 4 lines; 2 bounded 45.948 .. 110.137; 2 blank |
-| D-22 | 0 / 1 | 0 / 1 | none |  |
+| D-22 | 0 / 1 | 0 / 0 | T-722 out 1 |  |
 | D-26 | 2 / 10 | 7 / 21 | T-722 in 12, T-729 in 4 | STR.CONC.BEAM m3: 4 lines; 4 blank<br>STR.FORMWORK m2: 1 lines; 1 blank<br>STR.REBAR kg: 2 lines; 2 blank |
 | D-27 | 38 / 8 | 38 / 8 | none | STR.CONC.BEAM m3: 5 lines; 5 bounded 4.40103 .. 5.21851<br>STR.FORMWORK m2: 5 lines; 5 bounded 26.828 .. 33.0252; 5 dependent<br>STR.REBAR kg: 28 lines; 15 bounded 315.268 .. 427.483; 13 blank |
 | D-28 | 5 / 0 | 11 / 0 | T-722 in 2, T-729 in 4 | STR.CONC.BEAM m3: 1 lines; 1 blank<br>STR.FORMWORK m2: 5 lines; 5 blank<br>STR.REBAR kg: 5 lines; 5 bounded 108.254 .. 116.085 |
@@ -61,17 +61,17 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | D-36 | 62 / 0 | 62 / 0 | none | STR.REBAR kg: 62 lines; 39 bounded 646.528 .. 1194.52; 23 blank |
 | D-38 | 2 / 0 | 2 / 0 | none | STR.REBAR kg: 2 lines; 2 bounded 65.4612 .. 263.28 |
 | D-39 | 92 / 21 | 105 / 18 | T-704 in 3, T-717 in 1, T-717 out 2, T-717 sole->shared 1, T-722 in 2, T-722 out 4, T-736 in 10 | ARCH.WALL_PANEL m2: 6 lines; 6 blank<br>ARCH.WALL_VOLUME m3: 6 lines; 6 blank<br>FIN.PAINT m2: 3 lines; 3 bounded 109.252 .. 137.838<br>FIN.PLASTER m2: 25 lines; 25 bounded 899.431 .. 996.214; 1 dependent<br>FIN.PLASTER.BEAD lm: 10 lines; 7 bounded 147.03 .. 147.23; 3 blank<br>FIN.ROOF.SCREED m3: 3 lines; 3 blank<br>MAS.BLOCK m2: 6 lines; 6 blank<br>MAS.GLUE.AAC kg: 5 lines; 5 blank<br>MAS.MORTAR.BLACK m3: 5 lines; 5 blank<br>MAS.MORTAR.BLACK.PERIMETER m3: 5 lines; 5 blank; 2 dependent<br>MAS.UNITS.BLACK pcs: 5 lines; 5 blank<br>MAS.UNITS.WHITE pcs: 5 lines; 5 blank<br>STR.CONC.COLUMN m3: 7 lines; 7 bounded 2.38329 .. 3.15125<br>STR.CONC.LINTEL m3: 3 lines; 3 blank<br>STR.CONC.PARAPET m3: 4 lines; 4 blank<br>STR.FORMWORK m2: 7 lines; 5 bounded 19.1563 .. 29.4907; 2 blank; 7 dependent |
-| D-40 | 0 / 1 | 0 / 1 | none |  |
+| D-40 | 0 / 1 | 0 / 0 | T-722 out 1 |  |
 | D-41 | 9 / 8 | 9 / 9 | T-717 in 2, T-729 out 1 | ARCH.WALL_PANEL m2: 1 lines; 1 blank<br>ARCH.WALL_VOLUME m3: 1 lines; 1 blank<br>FIN.PLASTER m2: 1 lines; 1 bounded 3.89232 .. 5.00599<br>MAS.BLOCK m2: 1 lines; 1 blank<br>MAS.GLUE.AAC kg: 1 lines; 1 blank; 1 dependent<br>MAS.MORTAR.BLACK m3: 1 lines; 1 blank; 1 dependent<br>MAS.MORTAR.BLACK.PERIMETER m3: 1 lines; 1 blank; 1 dependent<br>MAS.UNITS.BLACK pcs: 1 lines; 1 blank; 1 dependent<br>MAS.UNITS.WHITE pcs: 1 lines; 1 blank; 1 dependent |
-| D-43 | 8 / 3 | 9 / 5 | T-704 in 1, T-729 in 2 | STR.CONC.LIFT m3: 1 lines; 1 blank<br>STR.CONC.LINTEL m3: 1 lines; 1 blank<br>STR.CONC.NECK m3: 4 lines; 4 blank<br>STR.FORMWORK m2: 2 lines; 2 blank<br>STR.REBAR kg: 1 lines; 1 blank |
+| D-43 | 8 / 2 | 12 / 2 | T-704 in 1, T-722 in 1, T-729 in 2 | STR.CONC.LIFT m3: 2 lines; 2 blank<br>STR.CONC.LINTEL m3: 1 lines; 1 blank<br>STR.CONC.NECK m3: 4 lines; 4 blank<br>STR.FORMWORK m2: 4 lines; 4 blank<br>STR.REBAR kg: 1 lines; 1 blank |
 | D-44 | 0 / 4 | 2 / 2 | T-722 shared->sole 2 | STR.CONC.COLUMN m3: 1 lines; 1 blank<br>STR.FORMWORK m2: 1 lines; 1 blank; 1 dependent |
 | D-45 | 0 / 0 | 6 / 0 | T-704 in 4, T-717 in 1, T-736 in 1 | FIN.PLASTER m2: 1 lines; 1 bounded 47.9498 .. 66.2499<br>FIN.PLASTER.BEAD lm: 1 lines; 1 blank<br>STR.CONC.LINTEL m3: 4 lines; 4 blank |
 | D-53 | 4 / 0 | 4 / 0 | none | ARCH.WINDOW m2: 1 lines; 1 blank<br>ARCH.WINDOW pcs: 1 lines; 1 bounded 1 .. 2<br>DOOR.MAIN_ENTRANCE m2: 1 lines; 1 bounded 5 .. 5<br>DOOR.MAIN_ENTRANCE pcs: 1 lines; 1 bounded 1 .. 1 |
 | D-56 | 3 / 0 | 3 / 0 | none | STR.CONC.STAIR m3: 1 lines; 1 blank<br>STR.FORMWORK.STAIR m2: 2 lines; 1 bounded 1.904 .. 2.38; 1 blank; 1 dependent |
 | D-57 | 19 / 0 | 19 / 0 | none | STR.REBAR kg: 19 lines; 19 blank |
 | D-62 | 3 / 1 | 3 / 1 | none | FIN.ROOF.FINISH m2: 1 lines; 1 blank<br>FIN.ROOF.INSULATION m2: 1 lines; 1 blank<br>FIN.ROOF.PROTECTION m2: 1 lines; 1 blank |
-| D-63 | 11 / 29 | 0 / 40 | T-729 sole->shared 11 |  |
-| D-66 | 0 / 36 | 0 / 47 | T-722 in 2, T-729 in 9 |  |
+| D-63 | 11 / 3 | 0 / 2 | T-722 out 1, T-729 out 11 |  |
+| D-66 | 26 / 10 | 35 / 12 | T-722 in 2, T-729 in 9 | STR.CONC.COLUMN m3: 13 lines; 13 bounded 6.378 .. 8.2665<br>STR.FORMWORK m2: 22 lines; 10 bounded 59.2623 .. 68.0029; 12 blank; 22 dependent |
 
 ## Bucket delta V3.0.70 -> V3.0.77 (residual 0 per bucket)
 
@@ -82,6 +82,7 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | D-04 | 58 | 59 | {'70->71': 1} | - |
 | D-05+D-26 | 10 | 21 | {'72->73': 7, '74->75': 4} | - |
 | D-08 | 0 | 2 | {'72->73': 2} | - |
+| D-22+D-40+D-63 | 1 | 0 | - | {'72->73': 1} |
 | D-26 | 2 | 7 | {'72->73': 5} | - |
 | D-28 | 5 | 11 | {'72->73': 2, '74->75': 4} | - |
 | D-33 | 21 | 9 | - | {'74->75': 12} |
@@ -91,13 +92,12 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | D-39+D-41 | 0 | 1 | {'73->74': 1} | - |
 | D-39+D-44 | 4 | 0 | - | {'72->73': 4} |
 | D-41 | 9 | 9 | {'73->74': 1} | {'74->75': 1} |
-| D-43 | 8 | 9 | {'70->71': 1} | - |
-| D-43+D-63 | 2 | 4 | {'74->75': 2} | - |
+| D-43 | 8 | 12 | {'70->71': 1, '72->73': 1, '74->75': 2} | - |
 | D-44 | 0 | 2 | {'72->73': 2} | - |
 | D-44+D-66 | 0 | 2 | {'72->73': 2} | - |
 | D-45 | 0 | 6 | {'70->71': 4, '73->74': 1, '75->76': 1} | - |
 | D-63 | 11 | 0 | - | {'74->75': 11} |
-| D-63+D-66 | 26 | 35 | {'74->75': 9} | - |
+| D-66 | 26 | 35 | {'74->75': 9} | - |
 | D-67 | 0 | 0 | {'72->73': 4} | {'74->75': 4} |
 | DESIGNER_TAG | 123 | 134 | {'70->71': 8, '72->73': 4, '74->75': 1} | {'72->73': 2} |
 | EDGE_HELD_M2 | 5 | 0 | - | {'74->75': 5} |
@@ -165,7 +165,7 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | L-21795b350fbd09150c43 | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0022 | BLANK |  |  | D-35 |
 | L-26f6b6f2365c72e42291 | COLUMN | P-C:COL:SH12:C2@254644,61274|2F | RANGE | 0.3287 | 0.425 | D-39 |
 | L-274b112580029084b80e | LINTEL | LINTEL:D-GF-04 | BLANK |  |  | DESIGNER_TAG |
-| L-291ba2ddf4bbe4f14cf7 | COLUMN | P-C:COL:SH12:C5@243102,55481|1F | RANGE | 0.42 | 0.504 | D-63+D-66 |
+| L-291ba2ddf4bbe4f14cf7 | COLUMN | P-C:COL:SH12:C5@243102,55481|1F | RANGE | 0.42 | 0.504 | D-66 |
 | L-2c1c49db7cd7b16c6206 | LINTEL | LINTEL:D-1F-01 | BLANK |  |  | DESIGNER_TAG |
 | L-2c7b0b1e1a439d9ffd1e | BEAM | HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.1 | RANGE | 0.347 | 0.4338 | D-27 |
 | L-2efe48097978cae5fc99 | LINTEL | LINTEL:P-1F-01 | RANGE | 0.063 | 0.12042 | DESIGNER_TAG |
@@ -181,7 +181,7 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | L-3f7b9501a902579e7406 | NECK | P-C:NECK:COL:SH10:C2@209843,64560 | RANGE | 0.2895 | 0.3225 | NO_SINGLE_VALUE |
 | L-402dbe61d1c924144a3c | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0015 | BLANK |  |  | D-35 |
 | L-40e8c2597de12644e8e2 | LINTEL | LINTEL:W24 | RANGE | 0.094 | 0.26828 | DESIGNER_TAG |
-| L-43dae3d6dfec957b26a8 | COLUMN | P-C:COL:SH12:C@265272,52633|GF | RANGE | 0.36 | 0.45 | D-63+D-66 |
+| L-43dae3d6dfec957b26a8 | COLUMN | P-C:COL:SH12:C@265272,52633|GF | RANGE | 0.36 | 0.45 | D-66 |
 | L-43e804ba4a4c07529fd5 | BEAM | HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.2 | RANGE | 0.4563 | 0.5475 | D-02 |
 | L-441ae5fe85351347aff0 | LINTEL | LINTEL:W05 | RANGE | 0.04 | 0.055 | DESIGNER_TAG |
 | L-46f2b70254f074885dfc | NECK | P-C:NECK:COL:SH10:C4@220308,64637 | RANGE | 0.282 | 0.315 | NO_SINGLE_VALUE |
@@ -190,7 +190,7 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | L-486cd9a0bf52e4b32abb | NECK | P-C:NECK:COL:SH10:C5@220440,52886 | RANGE | 0.3384 | 0.378 | NO_SINGLE_VALUE |
 | L-48f2e06e5c946eb1e5a7 | NECK | P-C:NECK:COL:SH10:C3@226007,58025 | RANGE | 0.267 | 0.3 | NO_SINGLE_VALUE |
 | L-4a12b89454e48ac510dc | LINTEL | LINTEL:A-1F-01 | RANGE | 0.054 | 0.1185 | DESIGNER_TAG |
-| L-4aed92c117a7ab1c90ee | COLUMN | P-C:COL:SH12:C9@259284,59442|1F | RANGE | 0.756 | 0.84 | D-63+D-66 |
+| L-4aed92c117a7ab1c90ee | COLUMN | P-C:COL:SH12:C9@259284,59442|1F | RANGE | 0.756 | 0.84 | D-66 |
 | L-4c4496579e5bfa20ae9f | COLUMN | P-C:COL:SH12:C8@256160,53630|GF | RANGE | 0.9 | 1.0125 | D-16 |
 | L-4ec473f7c0c712919823 | NECK | P-C:NECK:COL:SH10:C3@199252,55820 | RANGE | 0.192 | 0.33 | NO_SINGLE_VALUE |
 | L-4ef35980fbb54366703d | NECK | U-C:NECK:COL:SH10:CN@224210,63411 | RANGE | 0.1062 | 0.189 | DESIGNER_TAG |
@@ -215,13 +215,13 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | L-659243ed9fc2831c3ae8 | STAIR | HL:STAIR_CONCRETE:ST-01:MS2_TR | BLANK |  |  | DESIGNER_TAG |
 | L-6692d02cd6cd25120300 | LINTEL | LINTEL:W20 | RANGE | 0.056 | 0.08048 | DESIGNER_TAG |
 | L-67f3d325019e618328eb | BEAM | HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.1 | BLANK |  |  | D-05+D-26 |
-| L-684fcad323adc0c8a267 | LIFT | LIFT_PIT:WALLS | BLANK |  |  | D-22+D-40+D-43+D-63 |
+| L-684fcad323adc0c8a267 | LIFT | LIFT_PIT:WALLS | BLANK |  |  | D-43 |
 | L-694a75c84dd6e4bb4491 | COLUMN | P-C:COL:SH12:C3@241094,51256|GF | RANGE | 0.26352 | 0.50625 | D-39+D-66 |
 | L-6a2040e0fe0bf7391b9c | NECK | U-C:NECK:COL:SH10:CN@222091,55786 | RANGE | 0.1152 | 0.198 | DESIGNER_TAG |
 | L-6bf14711798e5af93594 | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0012.1 | BLANK |  |  | D-35 |
 | L-71998da6340be871d0af | LINTEL | LINTEL:D-GF-02 | RANGE | 0.036 | 0.042708 | Q-55 |
 | L-734ff1a78bbe6b7eb4c3 | NECK | P-C:NECK:COL:SH10:C@195972,51184 | RANGE | 0.192 | 0.33 | NO_SINGLE_VALUE |
-| L-755eb56b55e86301b488 | COLUMN | P-C:COL:SH12:C9@254644,59429|1F | RANGE | 0.756 | 1.05 | D-63+D-66 |
+| L-755eb56b55e86301b488 | COLUMN | P-C:COL:SH12:C9@254644,59429|1F | RANGE | 0.756 | 1.05 | D-66 |
 | L-7863355dfcb68a681d2d | STAIR | P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS | BLANK |  |  | Q-51 |
 | L-786344670c0002b31478 | LINTEL | LINTEL:W09 | RANGE | 0.092 | 0.118 | DESIGNER_TAG |
 | L-7a5214a334ea3559fa2d | BLINDING | U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_GROUND_BEAM | RANGE | 4.949374 | 9.422514 | FOOTING_DETAIL_CHOICE_OPEN |
@@ -230,18 +230,18 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | L-7f9eb7cced8df33202a5 | LINTEL | LINTEL:W08 | BLANK |  |  | D-39 |
 | L-81444e222487437e257e | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0020 | RANGE | 0.1305 | 0.174 | D-34 |
 | L-821032bc04a0b0d02133 | STAIR | DG5:ST-01:LOBBY | BLANK |  |  | DESIGNER_TAG |
-| L-831f6fe3de133294bb8f | COLUMN | P-C:COL:SH12:C5@259715,51786|1F | RANGE | 0.42 | 0.63 | D-63+D-66 |
-| L-85809d3db52bb93dfe96 | COLUMN | P-C:COL:SH12:C7@247954,58915|1F | RANGE | 0.672 | 0.84 | D-63+D-66 |
+| L-831f6fe3de133294bb8f | COLUMN | P-C:COL:SH12:C5@259715,51786|1F | RANGE | 0.42 | 0.63 | D-66 |
+| L-85809d3db52bb93dfe96 | COLUMN | P-C:COL:SH12:C7@247954,58915|1F | RANGE | 0.672 | 0.84 | D-66 |
 | L-85df35f17a205f919aa6 | NECK | P-C:NECK:COL:SH10:C@195866,57040 | RANGE | 0.192 | 0.33 | NO_SINGLE_VALUE |
 | L-882717b0c35a87e363ef | LINTEL | LINTEL:W10 | RANGE | 0.056 | 0.06 | DESIGNER_TAG |
 | L-88ccf8d4505411deb9e5 | BEAM | HL:BEAM_LEDGER:GF:BM-GF-057#BAND0019.2 | RANGE | 0.212 | 0.3975 | D-03 |
 | L-893c3db13b14dc38625e | BLINDING | P-C:PLAIN_CONCRETE:POOL:BLINDING_UNDER_POOL_BASE | BLANK |  |  | DESIGNER_TAG |
 | L-89d266a3e5280a10a3b9 | BEAM | T729:CHILD:HL:BEAM_LEDGER:1F:BM-1F-033#1F-NW-CORNER | BLANK |  |  | D-05+D-26 |
 | L-8d031491396379f0cbb1 | BEAM | HL:BEAM_LEDGER:2F:BM-2F-015#BAND0001.3 | RANGE | 0.0904 | 0.2712 | D-04 |
-| L-8de64040a1c3ae6cf137 | COLUMN | P-C:COL:SH12:C3@265215,57750|GF | RANGE | 0.45 | 0.5625 | D-63+D-66 |
+| L-8de64040a1c3ae6cf137 | COLUMN | P-C:COL:SH12:C3@265215,57750|GF | RANGE | 0.45 | 0.5625 | D-66 |
 | L-8eb74a02fcf5ae4465f8 | NECK | P-C:NECK:COL:SH10:C2@213395,59220 | BLANK |  |  | D-43 |
 | L-8f69c40749d579c14bf1 | LINTEL | LINTEL:L-GF-01 | BLANK |  |  | D-45 |
-| L-8f8ad257d9b2cb9e027f | COLUMN | P-C:COL:SH12:C4@264812,63850|1F | RANGE | 0.42 | 0.525 | D-63+D-66 |
+| L-8f8ad257d9b2cb9e027f | COLUMN | P-C:COL:SH12:C4@264812,63850|1F | RANGE | 0.42 | 0.525 | D-66 |
 | L-919a5749ef79759e01ca | COLUMN | P-C:COL:SH12:C2@252679,64225|2F | RANGE | 0.3287 | 0.425 | D-39 |
 | L-953e87a3e9d0425d404e | NECK | P-C:NECK:COL:SH10:C9@214557,59222 | BLANK |  |  | D-43 |
 | L-95a1f198cfe7f398d6ae | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0023:7DC+7DD#1 | BLANK |  |  | D-33 |
@@ -249,7 +249,7 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | L-970bac563cbcd69e2a30 | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0038 | RANGE | 0.098008 | 0.130678 | D-34 |
 | L-995eca94ba8dc09a028f | NECK | P-C:NECK:COL:SH10:C7@209292,59069 | RANGE | 0.3792 | 0.432 | NO_SINGLE_VALUE |
 | L-9a2c81164ec6499cc28c | PARAPET | 1F_ROOF#PARAPET_RC | BLANK |  |  | D-39 |
-| L-9cb26d86575a92694880 | COLUMN | P-C:COL:SH12:C@247429,51302|GF | RANGE | 0.36 | 0.45 | D-63+D-66 |
+| L-9cb26d86575a92694880 | COLUMN | P-C:COL:SH12:C@247429,51302|GF | RANGE | 0.36 | 0.45 | D-66 |
 | L-9e4895663f76d7f03ac9 | BEAM | HL:BEAM_LEDGER:GF:BM-GF-054#BAND0008 | RANGE | 1.013607 | 1.266989 | D-27 |
 | L-9ec762c0bd529b924f33 | LINTEL | LINTEL:D-1F-06 | BLANK |  |  | DESIGNER_TAG |
 | L-9f5a647014bbf83359f9 | COLUMN | P-C:COL:SH12:C@238150,57853|GF | RANGE | 0.26352 | 0.405 | D-39+D-66 |
@@ -257,7 +257,7 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | L-a55bfa01b726ef11650c | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0041 | BLANK |  |  | D-35 |
 | L-a7848a35fb4329e09d10 | LINTEL | LINTEL:D-GF-03 | RANGE | 0.052 | 0.058 | Q-55 |
 | L-a7b8b292503ae1bf6c77 | LINTEL | LINTEL:D-1F-05 | RANGE | 0.036 | 0.0628 | Q-55 |
-| L-a87ea657a42a311cb851 | COLUMN | P-C:COL:SH12:C6@250087,56100|1F | RANGE | 0.504 | 0.735 | D-63+D-66 |
+| L-a87ea657a42a311cb851 | COLUMN | P-C:COL:SH12:C6@250087,56100|1F | RANGE | 0.504 | 0.735 | D-66 |
 | L-a8c5c32c7a785c1e3f05 | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0040 | BLANK |  |  | D-33 |
 | L-a9d5e7dc22013e24d691 | BEAM | U-C:BEAMS:1F:BAND0014 | BLANK |  |  | D-05+D-26 |
 | L-ab37afa17f2ac5b0efd1 | BEAM | HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY | BLANK |  |  | D-28 |
@@ -286,10 +286,10 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | L-c10e2945d582b5a03126 | COLUMN | P-C:COL:SH12:C3@247476,61310|2F | BLANK |  |  | D-44+D-66 |
 | L-c1e57b06555adcf8edf7 | LINTEL | LINTEL:W11 | BLANK |  |  | DESIGNER_TAG |
 | L-c1e802184591eac927cf | NECK | P-C:NECK:COL:SH10:C5@205273,54905 | RANGE | 0.1944 | 0.36 | NO_SINGLE_VALUE |
-| L-c677b628a776d3b87b02 | COLUMN | P-C:COL:SH12:C5@255627,63526|1F | RANGE | 0.42 | 0.63 | D-63+D-66 |
+| L-c677b628a776d3b87b02 | COLUMN | P-C:COL:SH12:C5@255627,63526|1F | RANGE | 0.42 | 0.63 | D-66 |
 | L-c823e0dbd81e30c66aa5 | STRAP | HL:STRAP_CONCRETE:SB3:IN_FOOTING:F3 | RANGE | 0.0295 | 0.2683 | DESIGNER_TAG |
 | L-c8c07db4ac0d54d89bbf | NECK | U-C:NECK:COL:SH10:CN@225897,54910 | RANGE | 0.1152 | 0.198 | DESIGNER_TAG |
-| L-cc702b8541c15fdfd98c | COLUMN | P-C:COL:SH12:C3@247476,61310|1F | RANGE | 0.42 | 0.525 | D-63+D-66 |
+| L-cc702b8541c15fdfd98c | COLUMN | P-C:COL:SH12:C3@247476,61310|1F | RANGE | 0.42 | 0.525 | D-66 |
 | L-cda8f41522dc6f42b3d6 | BOUNDARY_PAD | FENCE:BAND:PADS | BLANK |  |  | NOT_PRINTED |
 | L-cfb4555cb26b39934bff | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0032:7E7+7E8#2 | BLANK |  |  | D-33 |
 | L-d0313e5d204e2758996a | BLINDING | P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BOUNDARY_WALL_BASE | BLANK |  |  | RFI-S04 |
@@ -304,7 +304,7 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | L-dd5b41a7af885e96f797 | LINTEL | LINTEL:W21 | RANGE | 0.04 | 0.055 | DESIGNER_TAG |
 | L-dd6d11415961b554e906 | NECK | P-C:NECK:COL:SH10:C2@214579,60524 | BLANK |  |  | D-43 |
 | L-df32d6f42a824be21d3f | LINTEL | LINTEL:D-GF-05 | BLANK |  |  | Q-67 |
-| L-e112e2add2f8979a6c39 | COLUMN | P-C:COL:SH12:C4@259526,63482|1F | RANGE | 0.42 | 0.525 | D-63+D-66 |
+| L-e112e2add2f8979a6c39 | COLUMN | P-C:COL:SH12:C4@259526,63482|1F | RANGE | 0.42 | 0.525 | D-66 |
 | L-e16c98075f69532a3dc7 | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0042 | BLANK |  |  | D-35 |
 | L-e2134034441cb7db7bd7 | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0021 | RANGE | 0.108 | 0.144 | D-34 |
 | L-e24946df436cbc25fca6 | GROUND_BEAM | P-C:GROUND_BEAMS:GROUND:BAND0008.1 | BLANK |  |  | D-33 |
@@ -328,6 +328,81 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 | L-fd68db051119ea0266ee | LINTEL | LINTEL:D-GF-07 | RANGE | 0.096 | 0.108 | DESIGNER_TAG |
 | L-fd8aaedc3457d6648f18 | LINTEL | LINTEL:L-2F-01 | BLANK |  |  | D-45 |
 
+## R-T755-1 v2: lines whose notes history printed an id the live cause does not (not read)
+
+V3.0.70 vs T-716: 27 lines change bucket; V3.0.77: 38 lines carry an id in history only.
+
+| line | family | live bucket (V3.0.77) | history-only ids | dependent on |
+|---|---|---|---|---|
+| L-093b1a8701615f5fed8c | STR.FORMWORK | D-66 | D-63 | L-755eb56b55e86301b488 |
+| L-10c6bca8239b3d25ebf8 | STR.FORMWORK | D-66 | D-63 | L-755eb56b55e86301b488 |
+| L-291ba2ddf4bbe4f14cf7 | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-3af6c436cd3960b58d04 | STR.FORMWORK | D-66 | D-63 | L-85809d3db52bb93dfe96 |
+| L-40973acdc3c3797fa441 | STR.FORMWORK | D-66 | D-63 | L-4aed92c117a7ab1c90ee |
+| L-43dae3d6dfec957b26a8 | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-45b8299ccc0c49c0c2c1 | STR.FORMWORK | D-66 | D-63 | L-c677b628a776d3b87b02 |
+| L-4aed92c117a7ab1c90ee | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-61689f48198a11cbeb90 | STR.FORMWORK | D-66 | D-63 | L-9cb26d86575a92694880 |
+| L-684fcad323adc0c8a267 | STR.CONC.LIFT | D-43 | D-22, D-40, D-63, RFI-S09 | - |
+| L-6d72f51dfe7ec1097f00 | STR.FORMWORK | D-43 | D-63, RFI-S09 | - |
+| L-6e80307d3649bddb80b6 | STR.FORMWORK | D-66 | D-63 | L-291ba2ddf4bbe4f14cf7 |
+| L-73757377a50522f001c8 | STR.FORMWORK | D-66 | D-63 | L-e112e2add2f8979a6c39 |
+| L-754bc0ccda4ecb226d39 | STR.FORMWORK | D-66 | D-63 | L-8de64040a1c3ae6cf137 |
+| L-755eb56b55e86301b488 | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-7b3aad24af34a0e58121 | STR.FORMWORK | D-66 | D-63 | L-cc702b8541c15fdfd98c |
+| L-831f6fe3de133294bb8f | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-84438f3b8c366e8d7ceb | STR.FORMWORK | D-66 | D-63 | L-c677b628a776d3b87b02 |
+| L-85809d3db52bb93dfe96 | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-8de64040a1c3ae6cf137 | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-8f8ad257d9b2cb9e027f | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-9cb26d86575a92694880 | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-a87ea657a42a311cb851 | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-aa26277740773f7d0c59 | STR.FORMWORK | D-66 | D-63 | L-cc702b8541c15fdfd98c |
+| L-afcc824345dfaed5ab2c | STR.FORMWORK | D-66 | D-63 | L-e112e2add2f8979a6c39 |
+| L-b0c5e97b91d9fd034670 | STR.FORMWORK | D-66 | D-63 | L-831f6fe3de133294bb8f |
+| L-b4c47b2ad35deb6f8abc | STR.FORMWORK | D-66 | D-63 | L-8f8ad257d9b2cb9e027f |
+| L-b7c3669d6e193e35e457 | STR.FORMWORK | D-66 | D-63 | L-8f8ad257d9b2cb9e027f |
+| L-b8482107f372617e0808 | STR.FORMWORK | D-66 | D-63 | L-43dae3d6dfec957b26a8 |
+| L-bba03bb82e17edf0c3dd | STR.FORMWORK | D-66 | D-63 | L-a87ea657a42a311cb851 |
+| L-bf1eecb7350e8d43826e | STR.FORMWORK | D-66 | D-63 | L-831f6fe3de133294bb8f |
+| L-c00cf98ba8a408aa2f55 | STR.FORMWORK | D-66 | D-63 | L-9cb26d86575a92694880 |
+| L-c677b628a776d3b87b02 | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-cc702b8541c15fdfd98c | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-e112e2add2f8979a6c39 | STR.CONC.COLUMN | D-66 | D-63 | - |
+| L-e3eb00574a3c1c605077 | STR.FORMWORK | D-43 | D-63, RFI-S09 | - |
+| L-f4de98be566024394324 | STR.FORMWORK | D-66 | D-63 | L-8de64040a1c3ae6cf137 |
+| L-fbf94b0bb2323bfe65d8 | STR.FORMWORK | D-66 | D-63 | L-43dae3d6dfec957b26a8 |
+
+| line | T-716 bucket (V3.0.70) | v2 bucket (V3.0.70) |
+|---|---|---|
+| L-093b1a8701615f5fed8c | D-63+D-66 | D-66 |
+| L-291ba2ddf4bbe4f14cf7 | D-63+D-66 | D-66 |
+| L-3af6c436cd3960b58d04 | D-63+D-66 | D-66 |
+| L-40973acdc3c3797fa441 | D-63+D-66 | D-66 |
+| L-43dae3d6dfec957b26a8 | D-63+D-66 | D-66 |
+| L-4aed92c117a7ab1c90ee | D-63+D-66 | D-66 |
+| L-61689f48198a11cbeb90 | D-63+D-66 | D-66 |
+| L-684fcad323adc0c8a267 | D-22+D-40+D-43+D-63 | D-22+D-40+D-63 |
+| L-6e80307d3649bddb80b6 | D-63+D-66 | D-66 |
+| L-755eb56b55e86301b488 | D-63+D-66 | D-66 |
+| L-831f6fe3de133294bb8f | D-63+D-66 | D-66 |
+| L-84438f3b8c366e8d7ceb | D-63+D-66 | D-66 |
+| L-85809d3db52bb93dfe96 | D-63+D-66 | D-66 |
+| L-8de64040a1c3ae6cf137 | D-63+D-66 | D-66 |
+| L-8f8ad257d9b2cb9e027f | D-63+D-66 | D-66 |
+| L-9cb26d86575a92694880 | D-63+D-66 | D-66 |
+| L-a87ea657a42a311cb851 | D-63+D-66 | D-66 |
+| L-aa26277740773f7d0c59 | D-63+D-66 | D-66 |
+| L-afcc824345dfaed5ab2c | D-63+D-66 | D-66 |
+| L-b0c5e97b91d9fd034670 | D-63+D-66 | D-66 |
+| L-b7c3669d6e193e35e457 | D-63+D-66 | D-66 |
+| L-b8482107f372617e0808 | D-63+D-66 | D-66 |
+| L-bba03bb82e17edf0c3dd | D-63+D-66 | D-66 |
+| L-c677b628a776d3b87b02 | D-63+D-66 | D-66 |
+| L-cc702b8541c15fdfd98c | D-63+D-66 | D-66 |
+| L-e112e2add2f8979a6c39 | D-63+D-66 | D-66 |
+| L-f4de98be566024394324 | D-63+D-66 | D-66 |
+
 ## Findings for the Lead
 
 - D-56 is out of the designer package but HELD lines cite it: L-061e18cf35a4b6b33d68, L-77ecb282cecee46e23f3, L-caa721ed972e7905d5e6
@@ -340,6 +415,7 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 - D-38 is in no list item: 2 lines (0 active)
 - D-53 is in no list item: 4 lines (4 active: L-6f06f2eaa7ab76256979, L-8ee14244d410e740c706, L-cdf1a9e6bcb2e00c3098, L-dd2ecc97cf3f9dcd86c3)
 - D-57 is in no list item: 19 lines (0 active)
+- list item 8 (D-09, D-22, D-24, D-40, D-47) is cited by no HELD line
 - list item 10 (no D-id) is cited by no HELD line
 - list item 11 (D-20, D-42) is cited by no HELD line
 - list item 14 (D-GF-07) is cited by no HELD line
@@ -348,7 +424,7 @@ HELD lines per version: {'70': 2765, '71': 2765, '72': 2765, '73': 2765, '74': 2
 - list item 17 (D-M1) is cited by no HELD line
 - list item 18 (D-J1, D-J2, D-J3) is cited by no HELD line
 - D-GF-07 is also a drawing mark (main entrance door): not read as an item; HELD lines printing it 3 (L-6f06f2eaa7ab76256979, L-8b699bfadc528cc639c8, L-8ee14244d410e740c706; buckets {'D-53': 2, 'FRAME_COVERS_RET': 1}; families DOOR.MAIN_ENTRANCE, FIN.PAINT.EDGE)
-- list D-ids cited by no HELD line: D-06, D-09, D-13, D-17, D-20, D-24, D-29, D-30, D-42, D-46, D-47, D-58, D-60, D-64, D-65, D-67, D-68, D-BAND, D-DRAIN, D-GF-07, D-J1, D-J2, D-J3, D-M1
+- list D-ids cited by no HELD line: D-06, D-09, D-13, D-17, D-20, D-22, D-24, D-29, D-30, D-40, D-42, D-46, D-47, D-58, D-60, D-64, D-65, D-67, D-68, D-BAND, D-DRAIN, D-GF-07, D-J1, D-J2, D-J3, D-M1
 - RFI_NO_ITEM_NUMBER [RFI-S04]: 1 lines (STR.CONC.BLINDING m3)
 - RFI_NO_ITEM_NUMBER [RFI-S08+RFI-S23]: 1 lines (STR.CONC.BLINDING m3)
 - RFI_NO_ITEM_NUMBER [RFI-S23]: 1 lines (STR.EARTH.EXCAVATION m3)

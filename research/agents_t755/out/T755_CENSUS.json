@@ -820,7 +820,7 @@
    "unit": "kg"
   },
   "L-093b1a8701615f5fed8c": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-755eb56b55e86301b488",
    "item_code": "STR.FORMWORK",
@@ -1441,7 +1441,7 @@
    "unit": "kg"
   },
   "L-10c6bca8239b3d25ebf8": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-755eb56b55e86301b488",
    "item_code": "STR.FORMWORK",
@@ -3934,7 +3934,7 @@
    "unit": "kg"
   },
   "L-291ba2ddf4bbe4f14cf7": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -5743,7 +5743,7 @@
    "unit": "kg"
   },
   "L-3af6c436cd3960b58d04": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-85809d3db52bb93dfe96",
    "item_code": "STR.FORMWORK",
@@ -6274,7 +6274,7 @@
    "unit": "kg"
   },
   "L-40973acdc3c3797fa441": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-4aed92c117a7ab1c90ee",
    "item_code": "STR.FORMWORK",
@@ -6607,7 +6607,7 @@
    "unit": "kg"
   },
   "L-43dae3d6dfec957b26a8": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -6859,7 +6859,7 @@
    "unit": "pcs"
   },
   "L-45b8299ccc0c49c0c2c1": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-c677b628a776d3b87b02",
    "item_code": "STR.FORMWORK",
@@ -7300,7 +7300,7 @@
    "unit": "m3"
   },
   "L-4aed92c117a7ab1c90ee": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -9595,7 +9595,7 @@
    "unit": "kg"
   },
   "L-61689f48198a11cbeb90": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-9cb26d86575a92694880",
    "item_code": "STR.FORMWORK",
@@ -10279,7 +10279,7 @@
    "unit": "kg"
   },
   "L-684fcad323adc0c8a267": {
-   "bucket": "D-22+D-40+D-43+D-63",
+   "bucket": "D-43",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.LIFT",
@@ -10693,7 +10693,7 @@
    "unit": "kg"
   },
   "L-6d72f51dfe7ec1097f00": {
-   "bucket": "D-43+D-63",
+   "bucket": "D-43",
    "dependent": false,
    "host": null,
    "item_code": "STR.FORMWORK",
@@ -10801,7 +10801,7 @@
    "unit": "kg"
   },
   "L-6e80307d3649bddb80b6": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-291ba2ddf4bbe4f14cf7",
    "item_code": "STR.FORMWORK",
@@ -11287,7 +11287,7 @@
    "unit": "m3"
   },
   "L-73757377a50522f001c8": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-e112e2add2f8979a6c39",
    "item_code": "STR.FORMWORK",
@@ -11503,7 +11503,7 @@
    "unit": "kg"
   },
   "L-754bc0ccda4ecb226d39": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-8de64040a1c3ae6cf137",
    "item_code": "STR.FORMWORK",
@@ -11512,7 +11512,7 @@
    "unit": "m2"
   },
   "L-755eb56b55e86301b488": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -12061,7 +12061,7 @@
    "unit": "m2"
   },
   "L-7b3aad24af34a0e58121": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-cc702b8541c15fdfd98c",
    "item_code": "STR.FORMWORK",
@@ -12790,7 +12790,7 @@
    "unit": "kg"
   },
   "L-831f6fe3de133294bb8f": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -12844,7 +12844,7 @@
    "unit": "kg"
   },
   "L-84438f3b8c366e8d7ceb": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-c677b628a776d3b87b02",
    "item_code": "STR.FORMWORK",
@@ -13015,7 +13015,7 @@
    "unit": "m2"
   },
   "L-85809d3db52bb93dfe96": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -13879,7 +13879,7 @@
    "unit": "lm"
   },
   "L-8de64040a1c3ae6cf137": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -14014,7 +14014,7 @@
    "unit": "kg"
   },
   "L-8f8ad257d9b2cb9e027f": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -15364,7 +15364,7 @@
    "unit": "kg"
   },
   "L-9cb26d86575a92694880": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -16426,7 +16426,7 @@
    "unit": "kg"
   },
   "L-a87ea657a42a311cb851": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -16552,7 +16552,7 @@
    "unit": "m3"
   },
   "L-aa26277740773f7d0c59": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-cc702b8541c15fdfd98c",
    "item_code": "STR.FORMWORK",
@@ -17173,7 +17173,7 @@
    "unit": "m3"
   },
   "L-afcc824345dfaed5ab2c": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-e112e2add2f8979a6c39",
    "item_code": "STR.FORMWORK",
@@ -17272,7 +17272,7 @@
    "unit": "kg"
   },
   "L-b0c5e97b91d9fd034670": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-831f6fe3de133294bb8f",
    "item_code": "STR.FORMWORK",
@@ -17704,7 +17704,7 @@
    "unit": "m3"
   },
   "L-b4c47b2ad35deb6f8abc": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-8f8ad257d9b2cb9e027f",
    "item_code": "STR.FORMWORK",
@@ -18019,7 +18019,7 @@
    "unit": "kg"
   },
   "L-b7c3669d6e193e35e457": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-8f8ad257d9b2cb9e027f",
    "item_code": "STR.FORMWORK",
@@ -18073,7 +18073,7 @@
    "unit": "kg"
   },
   "L-b8482107f372617e0808": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-43dae3d6dfec957b26a8",
    "item_code": "STR.FORMWORK",
@@ -18316,7 +18316,7 @@
    "unit": "kg"
   },
   "L-bba03bb82e17edf0c3dd": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-a87ea657a42a311cb851",
    "item_code": "STR.FORMWORK",
@@ -18730,7 +18730,7 @@
    "unit": "kg"
   },
   "L-bf1eecb7350e8d43826e": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-831f6fe3de133294bb8f",
    "item_code": "STR.FORMWORK",
@@ -18766,7 +18766,7 @@
    "unit": "m3"
   },
   "L-c00cf98ba8a408aa2f55": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-9cb26d86575a92694880",
    "item_code": "STR.FORMWORK",
@@ -19423,7 +19423,7 @@
    "unit": "lm"
   },
   "L-c677b628a776d3b87b02": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -20116,7 +20116,7 @@
    "unit": "kg"
   },
   "L-cc702b8541c15fdfd98c": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -22141,7 +22141,7 @@
    "unit": "kg"
   },
   "L-e112e2add2f8979a6c39": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "host": null,
    "item_code": "STR.CONC.COLUMN",
@@ -22420,7 +22420,7 @@
    "unit": "kg"
   },
   "L-e3eb00574a3c1c605077": {
-   "bucket": "D-43+D-63",
+   "bucket": "D-43",
    "dependent": false,
    "host": null,
    "item_code": "STR.FORMWORK",
@@ -24040,7 +24040,7 @@
    "unit": "kg"
   },
   "L-f4de98be566024394324": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-8de64040a1c3ae6cf137",
    "item_code": "STR.FORMWORK",
@@ -24805,7 +24805,7 @@
    "unit": "kg"
   },
   "L-fbf94b0bb2323bfe65d8": {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": true,
    "host": "L-43dae3d6dfec957b26a8",
    "item_code": "STR.FORMWORK",
@@ -25309,11 +25309,13 @@
    "out": {},
    "residual": 0
   },
-  "D-22+D-40+D-43+D-63": {
+  "D-22+D-40+D-63": {
    "first": 1,
    "in": {},
-   "last": 1,
-   "out": {},
+   "last": 0,
+   "out": {
+    "72->73": 1
+   },
    "residual": 0
   },
   "D-26": {
@@ -25473,18 +25475,18 @@
   "D-43": {
    "first": 8,
    "in": {
-    "70->71": 1
+    "70->71": 1,
+    "72->73": 1,
+    "74->75": 2
    },
-   "last": 9,
+   "last": 12,
    "out": {},
    "residual": 0
   },
   "D-43+D-63": {
    "first": 2,
-   "in": {
-    "74->75": 2
-   },
-   "last": 4,
+   "in": {},
+   "last": 2,
    "out": {},
    "residual": 0
   },
@@ -25554,7 +25556,7 @@
    },
    "residual": 0
   },
-  "D-63+D-66": {
+  "D-66": {
    "first": 26,
    "in": {
     "74->75": 9
@@ -26958,31 +26960,6 @@
    "lines": 9
   },
   {
-   "bucket": "D-22+D-40+D-43+D-63",
-   "by_family_unit": [
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 1,
-     "dependent": 0,
-     "item_code": "STR.CONC.LIFT",
-     "lines": 1,
-     "range": 0,
-     "range_high": 0.0,
-     "range_low": 0.0,
-     "unit": "m3"
-    }
-   ],
-   "finding": false,
-   "kind": "DESIGNER",
-   "line_ids": [
-    "L-684fcad323adc0c8a267"
-   ],
-   "lines": 1
-  },
-  {
    "bucket": "D-26",
    "by_family_unit": [
     {
@@ -28337,10 +28314,10 @@
      "at_least_sum": 0.0,
      "at_most": 0,
      "at_most_sum": 0.0,
-     "blank": 1,
+     "blank": 2,
      "dependent": 0,
      "item_code": "STR.CONC.LIFT",
-     "lines": 1,
+     "lines": 2,
      "range": 0,
      "range_high": 0.0,
      "range_low": 0.0,
@@ -28379,10 +28356,10 @@
      "at_least_sum": 0.0,
      "at_most": 0,
      "at_most_sum": 0.0,
-     "blank": 2,
+     "blank": 4,
      "dependent": 0,
      "item_code": "STR.FORMWORK",
-     "lines": 2,
+     "lines": 4,
      "range": 0,
      "range_high": 0.0,
      "range_low": 0.0,
@@ -28409,32 +28386,21 @@
     "L-0d5e2e3ac4167df90d6d",
     "L-12f3d8b9375cac407bca",
     "L-5ae06fda7d729d54c033",
+    "L-684fcad323adc0c8a267",
+    "L-6d72f51dfe7ec1097f00",
     "L-6ef1ef1f6434569cb808",
     "L-71262a3657a518d47cbd",
     "L-8eb74a02fcf5ae4465f8",
     "L-953e87a3e9d0425d404e",
     "L-c4db92ba870fed214e07",
-    "L-dd6d11415961b554e906"
+    "L-dd6d11415961b554e906",
+    "L-e3eb00574a3c1c605077"
    ],
-   "lines": 9
+   "lines": 12
   },
   {
    "bucket": "D-43+D-63",
    "by_family_unit": [
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 2,
-     "dependent": 0,
-     "item_code": "STR.FORMWORK",
-     "lines": 2,
-     "range": 0,
-     "range_high": 0.0,
-     "range_low": 0.0,
-     "unit": "m2"
-    },
     {
      "at_least": 0,
      "at_least_sum": 0.0,
@@ -28468,11 +28434,9 @@
    "kind": "DESIGNER",
    "line_ids": [
     "L-302b401eff698289c54e",
-    "L-6d72f51dfe7ec1097f00",
-    "L-e3eb00574a3c1c605077",
     "L-f0aadf70513eb21d5671"
    ],
-   "lines": 4
+   "lines": 2
   },
   {
    "bucket": "D-44",
@@ -28822,7 +28786,7 @@
    "lines": 3
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "by_family_unit": [
     {
      "at_least": 0,
@@ -35156,7 +35120,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C5@243102,55481|1F",
    "high": 0.504,
@@ -35364,7 +35328,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C@265272,52633|GF",
    "high": 0.45,
@@ -35481,7 +35445,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C9@259284,59442|1F",
    "high": 0.84,
@@ -35806,7 +35770,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-22+D-40+D-43+D-63",
+   "bucket": "D-43",
    "dependent": false,
    "element_id": "LIFT_PIT:WALLS",
    "high": null,
@@ -35884,7 +35848,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C9@254644,59429|1F",
    "high": 1.05,
@@ -36001,7 +35965,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C5@259715,51786|1F",
    "high": 0.63,
@@ -36014,7 +35978,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C7@247954,58915|1F",
    "high": 0.84,
@@ -36105,7 +36069,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C3@265215,57750|GF",
    "high": 0.5625,
@@ -36144,7 +36108,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C4@264812,63850|1F",
    "high": 0.525,
@@ -36248,7 +36212,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C@247429,51302|GF",
    "high": 0.45,
@@ -36352,7 +36316,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C6@250087,56100|1F",
    "high": 0.735,
@@ -36729,7 +36693,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C5@255627,63526|1F",
    "high": 0.63,
@@ -36768,7 +36732,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C3@247476,61310|1F",
    "high": 0.525,
@@ -36963,7 +36927,7 @@
    "unit": "m3"
   },
   {
-   "bucket": "D-63+D-66",
+   "bucket": "D-66",
    "dependent": false,
    "element_id": "P-C:COL:SH12:C4@259526,63482|1F",
    "high": 0.525,
@@ -37384,6 +37348,17 @@
    "lines": 19
   },
   {
+   "d_ids": [
+    "D-09",
+    "D-22",
+    "D-24",
+    "D-40",
+    "D-47"
+   ],
+   "finding": "LIST_ITEM_CITED_BY_NO_HELD_LINE",
+   "item": "8"
+  },
+  {
    "d_ids": [],
    "finding": "LIST_ITEM_CITED_BY_NO_HELD_LINE",
    "item": "10"
@@ -37457,9 +37432,11 @@
     "D-13",
     "D-17",
     "D-20",
+    "D-22",
     "D-24",
     "D-29",
     "D-30",
+    "D-40",
     "D-42",
     "D-46",
     "D-47",
@@ -38644,14 +38621,14 @@
   "L-093b1a8701615f5fed8c": [
    {
     "from": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "RANGE",
      8.3663,
      9.5488
@@ -38869,7 +38846,7 @@
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
@@ -40292,14 +40269,14 @@
   "L-40973acdc3c3797fa441": [
    {
     "from": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "RANGE",
      8.4203,
      9.2283
@@ -40517,7 +40494,7 @@
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
@@ -41303,14 +41280,14 @@
   "L-61689f48198a11cbeb90": [
    {
     "from": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "RANGE",
      4.7363,
      5.6043
@@ -41584,6 +41561,23 @@
     ]
    }
   ],
+  "L-684fcad323adc0c8a267": [
+   {
+    "from": [
+     "D-22+D-40+D-63",
+     "BLANK",
+     null,
+     null
+    ],
+    "step": "72->73",
+    "to": [
+     "D-43",
+     "BLANK",
+     null,
+     null
+    ]
+   }
+  ],
   "L-686a15f1996005bed645": [
    {
     "from": [
@@ -41650,7 +41644,7 @@
     ],
     "step": "74->75",
     "to": [
-     "D-43+D-63",
+     "D-43",
      "BLANK",
      null,
      null
@@ -41793,7 +41787,7 @@
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
@@ -41890,7 +41884,7 @@
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
@@ -42138,7 +42132,7 @@
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
@@ -42492,14 +42486,14 @@
   "L-84438f3b8c366e8d7ceb": [
    {
     "from": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "RANGE",
      5.52,
      6.732
@@ -44065,14 +44059,14 @@
   "L-afcc824345dfaed5ab2c": [
    {
     "from": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "RANGE",
      5.452,
      5.856
@@ -44116,14 +44110,14 @@
   "L-b0c5e97b91d9fd034670": [
    {
     "from": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "RANGE",
      5.125,
      6.219
@@ -44346,7 +44340,7 @@
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
@@ -44465,14 +44459,14 @@
   "L-b7c3669d6e193e35e457": [
    {
     "from": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "RANGE",
      5.3225,
      5.844461
@@ -44511,14 +44505,14 @@
   "L-b8482107f372617e0808": [
    {
     "from": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "RANGE",
      4.854,
      5.722
@@ -44637,14 +44631,14 @@
   "L-bba03bb82e17edf0c3dd": [
    {
     "from": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "RANGE",
      5.92,
      7.268
@@ -44748,7 +44742,7 @@
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
@@ -44782,7 +44776,7 @@
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
@@ -46116,7 +46110,7 @@
     ],
     "step": "74->75",
     "to": [
-     "D-43+D-63",
+     "D-43",
      "BLANK",
      null,
      null
@@ -46669,14 +46663,14 @@
   "L-f4de98be566024394324": [
    {
     "from": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "RANGE",
      5.545933,
      5.98
@@ -47001,7 +46995,7 @@
     ],
     "step": "74->75",
     "to": [
-     "D-63+D-66",
+     "D-66",
      "BLANK",
      null,
      null
@@ -47810,31 +47804,6 @@
     "L-d56d13bbfa402c600e98"
    ],
    "sole_lines": 9
-  },
-  "D-22": {
-   "shared": [
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 1,
-     "dependent": 0,
-     "item_code": "STR.CONC.LIFT",
-     "lines": 1,
-     "range": 0,
-     "range_high": 0.0,
-     "range_low": 0.0,
-     "unit": "m3"
-    }
-   ],
-   "shared_line_ids": [
-    "L-684fcad323adc0c8a267"
-   ],
-   "shared_lines": 1,
-   "sole": [],
-   "sole_line_ids": [],
-   "sole_lines": 0
   },
   "D-26": {
    "shared": [
@@ -49162,31 +49131,6 @@
    ],
    "sole_lines": 105
   },
-  "D-40": {
-   "shared": [
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 1,
-     "dependent": 0,
-     "item_code": "STR.CONC.LIFT",
-     "lines": 1,
-     "range": 0,
-     "range_high": 0.0,
-     "range_low": 0.0,
-     "unit": "m3"
-    }
-   ],
-   "shared_line_ids": [
-    "L-684fcad323adc0c8a267"
-   ],
-   "shared_lines": 1,
-   "sole": [],
-   "sole_line_ids": [],
-   "sole_lines": 0
-  },
   "D-41": {
    "shared": [
     {
@@ -49478,34 +49422,6 @@
      "at_most_sum": 0.0,
      "blank": 1,
      "dependent": 0,
-     "item_code": "STR.CONC.LIFT",
-     "lines": 1,
-     "range": 0,
-     "range_high": 0.0,
-     "range_low": 0.0,
-     "unit": "m3"
-    },
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 2,
-     "dependent": 0,
-     "item_code": "STR.FORMWORK",
-     "lines": 2,
-     "range": 0,
-     "range_high": 0.0,
-     "range_low": 0.0,
-     "unit": "m2"
-    },
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 1,
-     "dependent": 0,
      "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
      "lines": 1,
      "range": 0,
@@ -49530,22 +49446,19 @@
    ],
    "shared_line_ids": [
     "L-302b401eff698289c54e",
-    "L-684fcad323adc0c8a267",
-    "L-6d72f51dfe7ec1097f00",
-    "L-e3eb00574a3c1c605077",
     "L-f0aadf70513eb21d5671"
    ],
-   "shared_lines": 5,
+   "shared_lines": 2,
    "sole": [
     {
      "at_least": 0,
      "at_least_sum": 0.0,
      "at_most": 0,
      "at_most_sum": 0.0,
-     "blank": 1,
+     "blank": 2,
      "dependent": 0,
      "item_code": "STR.CONC.LIFT",
-     "lines": 1,
+     "lines": 2,
      "range": 0,
      "range_high": 0.0,
      "range_low": 0.0,
@@ -49584,10 +49497,10 @@
      "at_least_sum": 0.0,
      "at_most": 0,
      "at_most_sum": 0.0,
-     "blank": 2,
+     "blank": 4,
      "dependent": 0,
      "item_code": "STR.FORMWORK",
-     "lines": 2,
+     "lines": 4,
      "range": 0,
      "range_high": 0.0,
      "range_low": 0.0,
@@ -49612,14 +49525,17 @@
     "L-0d5e2e3ac4167df90d6d",
     "L-12f3d8b9375cac407bca",
     "L-5ae06fda7d729d54c033",
+    "L-684fcad323adc0c8a267",
+    "L-6d72f51dfe7ec1097f00",
     "L-6ef1ef1f6434569cb808",
     "L-71262a3657a518d47cbd",
     "L-8eb74a02fcf5ae4465f8",
     "L-953e87a3e9d0425d404e",
     "L-c4db92ba870fed214e07",
-    "L-dd6d11415961b554e906"
+    "L-dd6d11415961b554e906",
+    "L-e3eb00574a3c1c605077"
    ],
-   "sole_lines": 9
+   "sole_lines": 12
   },
   "D-44": {
    "shared": [
@@ -49984,48 +49900,6 @@
      "at_least_sum": 0.0,
      "at_most": 0,
      "at_most_sum": 0.0,
-     "blank": 0,
-     "dependent": 0,
-     "item_code": "STR.CONC.COLUMN",
-     "lines": 13,
-     "range": 13,
-     "range_high": 8.2665,
-     "range_low": 6.378,
-     "unit": "m3"
-    },
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 1,
-     "dependent": 0,
-     "item_code": "STR.CONC.LIFT",
-     "lines": 1,
-     "range": 0,
-     "range_high": 0.0,
-     "range_low": 0.0,
-     "unit": "m3"
-    },
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 14,
-     "dependent": 22,
-     "item_code": "STR.FORMWORK",
-     "lines": 24,
-     "range": 10,
-     "range_high": 68.002861,
-     "range_low": 59.262333,
-     "unit": "m2"
-    },
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
      "blank": 1,
      "dependent": 0,
      "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
@@ -50051,48 +49925,10 @@
     }
    ],
    "shared_line_ids": [
-    "L-093b1a8701615f5fed8c",
-    "L-10c6bca8239b3d25ebf8",
-    "L-291ba2ddf4bbe4f14cf7",
     "L-302b401eff698289c54e",
-    "L-3af6c436cd3960b58d04",
-    "L-40973acdc3c3797fa441",
-    "L-43dae3d6dfec957b26a8",
-    "L-45b8299ccc0c49c0c2c1",
-    "L-4aed92c117a7ab1c90ee",
-    "L-61689f48198a11cbeb90",
-    "L-684fcad323adc0c8a267",
-    "L-6d72f51dfe7ec1097f00",
-    "L-6e80307d3649bddb80b6",
-    "L-73757377a50522f001c8",
-    "L-754bc0ccda4ecb226d39",
-    "L-755eb56b55e86301b488",
-    "L-7b3aad24af34a0e58121",
-    "L-831f6fe3de133294bb8f",
-    "L-84438f3b8c366e8d7ceb",
-    "L-85809d3db52bb93dfe96",
-    "L-8de64040a1c3ae6cf137",
-    "L-8f8ad257d9b2cb9e027f",
-    "L-9cb26d86575a92694880",
-    "L-a87ea657a42a311cb851",
-    "L-aa26277740773f7d0c59",
-    "L-afcc824345dfaed5ab2c",
-    "L-b0c5e97b91d9fd034670",
-    "L-b4c47b2ad35deb6f8abc",
-    "L-b7c3669d6e193e35e457",
-    "L-b8482107f372617e0808",
-    "L-bba03bb82e17edf0c3dd",
-    "L-bf1eecb7350e8d43826e",
-    "L-c00cf98ba8a408aa2f55",
-    "L-c677b628a776d3b87b02",
-    "L-cc702b8541c15fdfd98c",
-    "L-e112e2add2f8979a6c39",
-    "L-e3eb00574a3c1c605077",
-    "L-f0aadf70513eb21d5671",
-    "L-f4de98be566024394324",
-    "L-fbf94b0bb2323bfe65d8"
+    "L-f0aadf70513eb21d5671"
    ],
-   "shared_lines": 40,
+   "shared_lines": 2,
    "sole": [],
    "sole_line_ids": [],
    "sole_lines": 0
@@ -50107,10 +49943,10 @@
      "blank": 1,
      "dependent": 0,
      "item_code": "STR.CONC.COLUMN",
-     "lines": 19,
-     "range": 18,
-     "range_high": 10.49775,
-     "range_low": 7.76078,
+     "lines": 6,
+     "range": 5,
+     "range_high": 2.23125,
+     "range_low": 1.38278,
      "unit": "m3"
     },
     {
@@ -50118,17 +49954,62 @@
      "at_least_sum": 0.0,
      "at_most": 0,
      "at_most_sum": 0.0,
-     "blank": 18,
-     "dependent": 28,
+     "blank": 6,
+     "dependent": 6,
      "item_code": "STR.FORMWORK",
-     "lines": 28,
+     "lines": 6,
+     "range": 0,
+     "range_high": 0.0,
+     "range_low": 0.0,
+     "unit": "m2"
+    }
+   ],
+   "shared_line_ids": [
+    "L-694a75c84dd6e4bb4491",
+    "L-6cba8c04e5f32a060b06",
+    "L-7f7fa7a824ff3d8969ce",
+    "L-7fe93376cb482ad01860",
+    "L-9f5a647014bbf83359f9",
+    "L-b35c1688058336adc729",
+    "L-bc01297b1c4a4c45a15f",
+    "L-c0b3340a906c2c7650f8",
+    "L-c10e2945d582b5a03126",
+    "L-ddec0b3f3436cdbdbf8b",
+    "L-e6c1c9a7feec10f64975",
+    "L-f9836bd6176bc3f9cc84"
+   ],
+   "shared_lines": 12,
+   "sole": [
+    {
+     "at_least": 0,
+     "at_least_sum": 0.0,
+     "at_most": 0,
+     "at_most_sum": 0.0,
+     "blank": 0,
+     "dependent": 0,
+     "item_code": "STR.CONC.COLUMN",
+     "lines": 13,
+     "range": 13,
+     "range_high": 8.2665,
+     "range_low": 6.378,
+     "unit": "m3"
+    },
+    {
+     "at_least": 0,
+     "at_least_sum": 0.0,
+     "at_most": 0,
+     "at_most_sum": 0.0,
+     "blank": 12,
+     "dependent": 22,
+     "item_code": "STR.FORMWORK",
+     "lines": 22,
      "range": 10,
      "range_high": 68.002861,
      "range_low": 59.262333,
      "unit": "m2"
     }
    ],
-   "shared_line_ids": [
+   "sole_line_ids": [
     "L-093b1a8701615f5fed8c",
     "L-10c6bca8239b3d25ebf8",
     "L-291ba2ddf4bbe4f14cf7",
@@ -50138,49 +50019,34 @@
     "L-45b8299ccc0c49c0c2c1",
     "L-4aed92c117a7ab1c90ee",
     "L-61689f48198a11cbeb90",
-    "L-694a75c84dd6e4bb4491",
-    "L-6cba8c04e5f32a060b06",
     "L-6e80307d3649bddb80b6",
     "L-73757377a50522f001c8",
     "L-754bc0ccda4ecb226d39",
     "L-755eb56b55e86301b488",
     "L-7b3aad24af34a0e58121",
-    "L-7f7fa7a824ff3d8969ce",
-    "L-7fe93376cb482ad01860",
     "L-831f6fe3de133294bb8f",
     "L-84438f3b8c366e8d7ceb",
     "L-85809d3db52bb93dfe96",
     "L-8de64040a1c3ae6cf137",
     "L-8f8ad257d9b2cb9e027f",
     "L-9cb26d86575a92694880",
-    "L-9f5a647014bbf83359f9",
     "L-a87ea657a42a311cb851",
     "L-aa26277740773f7d0c59",
     "L-afcc824345dfaed5ab2c",
     "L-b0c5e97b91d9fd034670",
-    "L-b35c1688058336adc729",
     "L-b4c47b2ad35deb6f8abc",
     "L-b7c3669d6e193e35e457",
     "L-b8482107f372617e0808",
     "L-bba03bb82e17edf0c3dd",
-    "L-bc01297b1c4a4c45a15f",
     "L-bf1eecb7350e8d43826e",
     "L-c00cf98ba8a408aa2f55",
-    "L-c0b3340a906c2c7650f8",
-    "L-c10e2945d582b5a03126",
     "L-c677b628a776d3b87b02",
     "L-cc702b8541c15fdfd98c",
-    "L-ddec0b3f3436cdbdbf8b",
     "L-e112e2add2f8979a6c39",
-    "L-e6c1c9a7feec10f64975",
     "L-f4de98be566024394324",
-    "L-f9836bd6176bc3f9cc84",
     "L-fbf94b0bb2323bfe65d8"
    ],
-   "shared_lines": 47,
-   "sole": [],
-   "sole_line_ids": [],
-   "sole_lines": 0
+   "sole_lines": 35
   }
  },
  "per_d_id_delta_70_77": {
@@ -50290,7 +50156,9 @@
    ]
   },
   "D-22": {
-   "moves": {},
+   "moves": {
+    "T-722 out": 1
+   },
    "residual": 0,
    "v70": [
     0,
@@ -50298,7 +50166,7 @@
    ],
    "v77": [
     0,
-    1
+    0
    ]
   },
   "D-26": {
@@ -50431,7 +50299,9 @@
    ]
   },
   "D-40": {
-   "moves": {},
+   "moves": {
+    "T-722 out": 1
+   },
    "residual": 0,
    "v70": [
     0,
@@ -50439,7 +50309,7 @@
    ],
    "v77": [
     0,
-    1
+    0
    ]
   },
   "D-41": {
@@ -50460,16 +50330,17 @@
   "D-43": {
    "moves": {
     "T-704 in": 1,
+    "T-722 in": 1,
     "T-729 in": 2
    },
    "residual": 0,
    "v70": [
     8,
-    3
+    2
    ],
    "v77": [
-    9,
-    5
+    12,
+    2
    ]
   },
   "D-44": {
@@ -50552,16 +50423,17 @@
   },
   "D-63": {
    "moves": {
-    "T-729 sole->shared": 11
+    "T-722 out": 1,
+    "T-729 out": 11
    },
    "residual": 0,
    "v70": [
     11,
-    29
+    3
    ],
    "v77": [
     0,
-    40
+    2
    ]
   },
   "D-66": {
@@ -50571,12 +50443,12 @@
    },
    "residual": 0,
    "v70": [
-    0,
-    36
+    26,
+    10
    ],
    "v77": [
-    0,
-    47
+    35,
+    12
    ]
   }
  },
@@ -51239,10 +51111,10 @@
      "blank": 2,
      "dependent": 0,
      "item_code": "STR.CONC.COLUMN",
-     "lines": 20,
-     "range": 18,
-     "range_high": 10.49775,
-     "range_low": 7.76078,
+     "lines": 7,
+     "range": 5,
+     "range_high": 2.23125,
+     "range_low": 1.38278,
      "unit": "m3"
     },
     {
@@ -51250,27 +51122,13 @@
      "at_least_sum": 0.0,
      "at_most": 0,
      "at_most_sum": 0.0,
-     "blank": 1,
-     "dependent": 0,
-     "item_code": "STR.CONC.LIFT",
-     "lines": 1,
+     "blank": 7,
+     "dependent": 7,
+     "item_code": "STR.FORMWORK",
+     "lines": 7,
      "range": 0,
      "range_high": 0.0,
      "range_low": 0.0,
-     "unit": "m3"
-    },
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 21,
-     "dependent": 29,
-     "item_code": "STR.FORMWORK",
-     "lines": 31,
-     "range": 10,
-     "range_high": 68.002861,
-     "range_low": 59.262333,
      "unit": "m2"
     },
     {
@@ -51303,62 +51161,24 @@
     }
    ],
    "shared_line_ids": [
-    "L-093b1a8701615f5fed8c",
     "L-0ede77cfd0badc4c7d62",
-    "L-10c6bca8239b3d25ebf8",
-    "L-291ba2ddf4bbe4f14cf7",
     "L-302b401eff698289c54e",
-    "L-3af6c436cd3960b58d04",
-    "L-40973acdc3c3797fa441",
-    "L-43dae3d6dfec957b26a8",
-    "L-45b8299ccc0c49c0c2c1",
-    "L-4aed92c117a7ab1c90ee",
-    "L-61689f48198a11cbeb90",
-    "L-684fcad323adc0c8a267",
     "L-694a75c84dd6e4bb4491",
     "L-6cba8c04e5f32a060b06",
-    "L-6d72f51dfe7ec1097f00",
-    "L-6e80307d3649bddb80b6",
-    "L-73757377a50522f001c8",
-    "L-754bc0ccda4ecb226d39",
-    "L-755eb56b55e86301b488",
-    "L-7b3aad24af34a0e58121",
     "L-7f7fa7a824ff3d8969ce",
     "L-7fe93376cb482ad01860",
-    "L-831f6fe3de133294bb8f",
-    "L-84438f3b8c366e8d7ceb",
-    "L-85809d3db52bb93dfe96",
     "L-8c96ce0b710b93d43d60",
-    "L-8de64040a1c3ae6cf137",
-    "L-8f8ad257d9b2cb9e027f",
-    "L-9cb26d86575a92694880",
     "L-9f5a647014bbf83359f9",
-    "L-a87ea657a42a311cb851",
-    "L-aa26277740773f7d0c59",
-    "L-afcc824345dfaed5ab2c",
-    "L-b0c5e97b91d9fd034670",
     "L-b35c1688058336adc729",
-    "L-b4c47b2ad35deb6f8abc",
-    "L-b7c3669d6e193e35e457",
-    "L-b8482107f372617e0808",
-    "L-bba03bb82e17edf0c3dd",
     "L-bc01297b1c4a4c45a15f",
-    "L-bf1eecb7350e8d43826e",
-    "L-c00cf98ba8a408aa2f55",
     "L-c0b3340a906c2c7650f8",
     "L-c10e2945d582b5a03126",
-    "L-c677b628a776d3b87b02",
-    "L-cc702b8541c15fdfd98c",
     "L-ddec0b3f3436cdbdbf8b",
-    "L-e112e2add2f8979a6c39",
-    "L-e3eb00574a3c1c605077",
     "L-e6c1c9a7feec10f64975",
     "L-f0aadf70513eb21d5671",
-    "L-f4de98be566024394324",
-    "L-f9836bd6176bc3f9cc84",
-    "L-fbf94b0bb2323bfe65d8"
+    "L-f9836bd6176bc3f9cc84"
    ],
-   "shared_lines": 54,
+   "shared_lines": 16,
    "sole": [
     {
      "at_least": 0,
@@ -51368,10 +51188,10 @@
      "blank": 0,
      "dependent": 0,
      "item_code": "STR.CONC.COLUMN",
-     "lines": 2,
-     "range": 2,
-     "range_high": 1.8525,
-     "range_low": 1.656,
+     "lines": 15,
+     "range": 15,
+     "range_high": 10.119,
+     "range_low": 8.034,
      "unit": "m3"
     },
     {
@@ -51379,13 +51199,13 @@
      "at_least_sum": 0.0,
      "at_most": 0,
      "at_most_sum": 0.0,
-     "blank": 3,
-     "dependent": 3,
+     "blank": 15,
+     "dependent": 25,
      "item_code": "STR.FORMWORK",
-     "lines": 3,
-     "range": 0,
-     "range_high": 0.0,
-     "range_low": 0.0,
+     "lines": 25,
+     "range": 10,
+     "range_high": 68.002861,
+     "range_low": 59.262333,
      "unit": "m2"
     },
     {
@@ -51404,17 +51224,52 @@
     }
    ],
    "sole_line_ids": [
+    "L-093b1a8701615f5fed8c",
+    "L-10c6bca8239b3d25ebf8",
     "L-1dc713c83bf62e525ff2",
+    "L-291ba2ddf4bbe4f14cf7",
+    "L-3af6c436cd3960b58d04",
+    "L-40973acdc3c3797fa441",
+    "L-43dae3d6dfec957b26a8",
+    "L-45b8299ccc0c49c0c2c1",
+    "L-4aed92c117a7ab1c90ee",
     "L-4c4496579e5bfa20ae9f",
+    "L-61689f48198a11cbeb90",
+    "L-6e80307d3649bddb80b6",
+    "L-73757377a50522f001c8",
+    "L-754bc0ccda4ecb226d39",
+    "L-755eb56b55e86301b488",
+    "L-7b3aad24af34a0e58121",
+    "L-831f6fe3de133294bb8f",
+    "L-84438f3b8c366e8d7ceb",
+    "L-85809d3db52bb93dfe96",
+    "L-8de64040a1c3ae6cf137",
+    "L-8f8ad257d9b2cb9e027f",
+    "L-9cb26d86575a92694880",
+    "L-a87ea657a42a311cb851",
+    "L-aa26277740773f7d0c59",
     "L-abaf73ff5ec264ea72bb",
     "L-ae0d688f7f2127696684",
+    "L-afcc824345dfaed5ab2c",
+    "L-b0c5e97b91d9fd034670",
+    "L-b4c47b2ad35deb6f8abc",
+    "L-b7c3669d6e193e35e457",
+    "L-b8482107f372617e0808",
     "L-b9eab157c42424b4ce77",
+    "L-bba03bb82e17edf0c3dd",
+    "L-bf1eecb7350e8d43826e",
+    "L-c00cf98ba8a408aa2f55",
     "L-c1f78f0bebe4cce34c11",
     "L-c468d50fcf627613b881",
+    "L-c677b628a776d3b87b02",
+    "L-cc702b8541c15fdfd98c",
     "L-d4d93613a1f811499c00",
-    "L-d56d13bbfa402c600e98"
+    "L-d56d13bbfa402c600e98",
+    "L-e112e2add2f8979a6c39",
+    "L-f4de98be566024394324",
+    "L-fbf94b0bb2323bfe65d8"
    ],
-   "sole_lines": 9
+   "sole_lines": 44
   },
   "4": {
    "shared": [
@@ -52147,48 +52002,6 @@
      "at_least_sum": 0.0,
      "at_most": 0,
      "at_most_sum": 0.0,
-     "blank": 0,
-     "dependent": 0,
-     "item_code": "STR.CONC.COLUMN",
-     "lines": 13,
-     "range": 13,
-     "range_high": 8.2665,
-     "range_low": 6.378,
-     "unit": "m3"
-    },
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 1,
-     "dependent": 0,
-     "item_code": "STR.CONC.LIFT",
-     "lines": 1,
-     "range": 0,
-     "range_high": 0.0,
-     "range_low": 0.0,
-     "unit": "m3"
-    },
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 14,
-     "dependent": 22,
-     "item_code": "STR.FORMWORK",
-     "lines": 24,
-     "range": 10,
-     "range_high": 68.002861,
-     "range_low": 59.262333,
-     "unit": "m2"
-    },
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
      "blank": 1,
      "dependent": 0,
      "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
@@ -52214,58 +52027,20 @@
     }
    ],
    "shared_line_ids": [
-    "L-093b1a8701615f5fed8c",
-    "L-10c6bca8239b3d25ebf8",
-    "L-291ba2ddf4bbe4f14cf7",
     "L-302b401eff698289c54e",
-    "L-3af6c436cd3960b58d04",
-    "L-40973acdc3c3797fa441",
-    "L-43dae3d6dfec957b26a8",
-    "L-45b8299ccc0c49c0c2c1",
-    "L-4aed92c117a7ab1c90ee",
-    "L-61689f48198a11cbeb90",
-    "L-684fcad323adc0c8a267",
-    "L-6d72f51dfe7ec1097f00",
-    "L-6e80307d3649bddb80b6",
-    "L-73757377a50522f001c8",
-    "L-754bc0ccda4ecb226d39",
-    "L-755eb56b55e86301b488",
-    "L-7b3aad24af34a0e58121",
-    "L-831f6fe3de133294bb8f",
-    "L-84438f3b8c366e8d7ceb",
-    "L-85809d3db52bb93dfe96",
-    "L-8de64040a1c3ae6cf137",
-    "L-8f8ad257d9b2cb9e027f",
-    "L-9cb26d86575a92694880",
-    "L-a87ea657a42a311cb851",
-    "L-aa26277740773f7d0c59",
-    "L-afcc824345dfaed5ab2c",
-    "L-b0c5e97b91d9fd034670",
-    "L-b4c47b2ad35deb6f8abc",
-    "L-b7c3669d6e193e35e457",
-    "L-b8482107f372617e0808",
-    "L-bba03bb82e17edf0c3dd",
-    "L-bf1eecb7350e8d43826e",
-    "L-c00cf98ba8a408aa2f55",
-    "L-c677b628a776d3b87b02",
-    "L-cc702b8541c15fdfd98c",
-    "L-e112e2add2f8979a6c39",
-    "L-e3eb00574a3c1c605077",
-    "L-f0aadf70513eb21d5671",
-    "L-f4de98be566024394324",
-    "L-fbf94b0bb2323bfe65d8"
+    "L-f0aadf70513eb21d5671"
    ],
-   "shared_lines": 40,
+   "shared_lines": 2,
    "sole": [
     {
      "at_least": 0,
      "at_least_sum": 0.0,
      "at_most": 0,
      "at_most_sum": 0.0,
-     "blank": 1,
+     "blank": 2,
      "dependent": 0,
      "item_code": "STR.CONC.LIFT",
-     "lines": 1,
+     "lines": 2,
      "range": 0,
      "range_high": 0.0,
      "range_low": 0.0,
@@ -52304,10 +52079,10 @@
      "at_least_sum": 0.0,
      "at_most": 0,
      "at_most_sum": 0.0,
-     "blank": 2,
+     "blank": 4,
      "dependent": 0,
      "item_code": "STR.FORMWORK",
-     "lines": 2,
+     "lines": 4,
      "range": 0,
      "range_high": 0.0,
      "range_low": 0.0,
@@ -52332,14 +52107,17 @@
     "L-0d5e2e3ac4167df90d6d",
     "L-12f3d8b9375cac407bca",
     "L-5ae06fda7d729d54c033",
+    "L-684fcad323adc0c8a267",
+    "L-6d72f51dfe7ec1097f00",
     "L-6ef1ef1f6434569cb808",
     "L-71262a3657a518d47cbd",
     "L-8eb74a02fcf5ae4465f8",
     "L-953e87a3e9d0425d404e",
     "L-c4db92ba870fed214e07",
-    "L-dd6d11415961b554e906"
+    "L-dd6d11415961b554e906",
+    "L-e3eb00574a3c1c605077"
    ],
-   "sole_lines": 9
+   "sole_lines": 12
   },
   "7": {
    "shared": [],
@@ -52383,31 +52161,6 @@
     "L-caa721ed972e7905d5e6"
    ],
    "sole_lines": 5
-  },
-  "8": {
-   "shared": [
-    {
-     "at_least": 0,
-     "at_least_sum": 0.0,
-     "at_most": 0,
-     "at_most_sum": 0.0,
-     "blank": 1,
-     "dependent": 0,
-     "item_code": "STR.CONC.LIFT",
-     "lines": 1,
-     "range": 0,
-     "range_high": 0.0,
-     "range_low": 0.0,
-     "unit": "m3"
-    }
-   ],
-   "shared_line_ids": [
-    "L-684fcad323adc0c8a267"
-   ],
-   "shared_lines": 1,
-   "sole": [],
-   "sole_line_ids": [],
-   "sole_lines": 0
   },
   "9": {
    "shared": [
@@ -52692,7 +52445,547 @@
    "sole_lines": 9
   }
  },
+ "retired_hits_v3077": {
+  "L-093b1a8701615f5fed8c": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-755eb56b55e86301b488",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-10c6bca8239b3d25ebf8": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-755eb56b55e86301b488",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-291ba2ddf4bbe4f14cf7": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-3af6c436cd3960b58d04": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-85809d3db52bb93dfe96",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-40973acdc3c3797fa441": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-4aed92c117a7ab1c90ee",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-43dae3d6dfec957b26a8": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-45b8299ccc0c49c0c2c1": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-c677b628a776d3b87b02",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-4aed92c117a7ab1c90ee": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-61689f48198a11cbeb90": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-9cb26d86575a92694880",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-684fcad323adc0c8a267": {
+   "bucket": "D-43",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.LIFT",
+   "retired": [
+    "D-22",
+    "D-40",
+    "D-63",
+    "RFI-S09"
+   ]
+  },
+  "L-6d72f51dfe7ec1097f00": {
+   "bucket": "D-43",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63",
+    "RFI-S09"
+   ]
+  },
+  "L-6e80307d3649bddb80b6": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-291ba2ddf4bbe4f14cf7",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-73757377a50522f001c8": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-e112e2add2f8979a6c39",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-754bc0ccda4ecb226d39": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-8de64040a1c3ae6cf137",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-755eb56b55e86301b488": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-7b3aad24af34a0e58121": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-cc702b8541c15fdfd98c",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-831f6fe3de133294bb8f": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-84438f3b8c366e8d7ceb": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-c677b628a776d3b87b02",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-85809d3db52bb93dfe96": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-8de64040a1c3ae6cf137": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-8f8ad257d9b2cb9e027f": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-9cb26d86575a92694880": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-a87ea657a42a311cb851": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-aa26277740773f7d0c59": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-cc702b8541c15fdfd98c",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-afcc824345dfaed5ab2c": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-e112e2add2f8979a6c39",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-b0c5e97b91d9fd034670": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-831f6fe3de133294bb8f",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-b4c47b2ad35deb6f8abc": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-8f8ad257d9b2cb9e027f",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-b7c3669d6e193e35e457": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-8f8ad257d9b2cb9e027f",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-b8482107f372617e0808": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-43dae3d6dfec957b26a8",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-bba03bb82e17edf0c3dd": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-a87ea657a42a311cb851",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-bf1eecb7350e8d43826e": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-831f6fe3de133294bb8f",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-c00cf98ba8a408aa2f55": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-9cb26d86575a92694880",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-c677b628a776d3b87b02": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-cc702b8541c15fdfd98c": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-e112e2add2f8979a6c39": {
+   "bucket": "D-66",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.CONC.COLUMN",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-e3eb00574a3c1c605077": {
+   "bucket": "D-43",
+   "dependent": false,
+   "host": null,
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63",
+    "RFI-S09"
+   ]
+  },
+  "L-f4de98be566024394324": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-8de64040a1c3ae6cf137",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  },
+  "L-fbf94b0bb2323bfe65d8": {
+   "bucket": "D-66",
+   "dependent": true,
+   "host": "L-43dae3d6dfec957b26a8",
+   "item_code": "STR.FORMWORK",
+   "retired": [
+    "D-63"
+   ]
+  }
+ },
  "rule": "R-T755-1 (research/agents_t755/t755_rules.py) = R-T716-1 + named ids + item view",
  "schema": "URBAN_T755_DESIGNER_RECENSUS_V1",
- "t716_rederived_identical": true
+ "t716_differences_v3070": {
+  "L-093b1a8701615f5fed8c": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-291ba2ddf4bbe4f14cf7": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-3af6c436cd3960b58d04": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-40973acdc3c3797fa441": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-43dae3d6dfec957b26a8": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-4aed92c117a7ab1c90ee": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-61689f48198a11cbeb90": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-684fcad323adc0c8a267": {
+   "retired": [
+    "D-43"
+   ],
+   "t716": "D-22+D-40+D-43+D-63",
+   "v2": "D-22+D-40+D-63"
+  },
+  "L-6e80307d3649bddb80b6": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-755eb56b55e86301b488": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-831f6fe3de133294bb8f": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-84438f3b8c366e8d7ceb": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-85809d3db52bb93dfe96": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-8de64040a1c3ae6cf137": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-8f8ad257d9b2cb9e027f": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-9cb26d86575a92694880": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-a87ea657a42a311cb851": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-aa26277740773f7d0c59": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-afcc824345dfaed5ab2c": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-b0c5e97b91d9fd034670": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-b7c3669d6e193e35e457": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-b8482107f372617e0808": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-bba03bb82e17edf0c3dd": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-c677b628a776d3b87b02": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-cc702b8541c15fdfd98c": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-e112e2add2f8979a6c39": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  },
+  "L-f4de98be566024394324": {
+   "retired": [
+    "D-63"
+   ],
+   "t716": "D-63+D-66",
+   "v2": "D-66"
+  }
+ },
+ "t716_rederived_identical_except_retired": true
 }

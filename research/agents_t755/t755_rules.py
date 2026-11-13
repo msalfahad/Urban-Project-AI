@@ -15,6 +15,19 @@ R-T755-1 = R-T716-1 (research/agents_t716/t716_rules.py, imported read-only, unc
 Everything else is R-T716-1 unchanged: one bucket per HELD line, first match DESIGNER > RFI > OWNER > DEPENDENT (host)
 > REASON_CODE > DESIGNER_TAG > METHOD_GAP > NOT_PRINTED > NAMED_TEXT > UNNAMED; per family and unit only, never summed
 across units; one-sided bounds on their side; a line with no bound is BLANK, counted, never 0.
+
+R-T755-1 v2 (rework of Gate A r1 fault F-V755-1: a RETIRED cause was read as live). The cause is read from the LIVE
+cause fields only. A line is CAUSE-REWRITTEN when its calculation.inputs (any depth) carry a cause-text record: action
+'CAUSE_TEXT' (old -> new, e.g. V3.0.42 R-T433) or 'RESTATE' (held reason restated, e.g. V3.0.46 R-T419). Each such
+record rewrote the live fields (rfi.question, bounded_range.basis) and appended a HISTORY note to `notes` (the retired
+'old' value, the superseded restatement); a later package can rewrite rfi.question again (e.g. V3.0.73 AT_LEAST), so
+an earlier record's 'new' value is live only while a live field still prints it. So:
+  (c1) a cause-rewritten line is read from rfi.question + bounded_range.basis + the still_held items of its fill
+       inputs; its notes are history and are NOT read (retired 'old' ids, superseded restatements and superseded
+       source texts never reach a bucket);
+  (c2) a line with no cause-text record is read exactly as R-T716-1 (rfi.question + notes + still_held);
+  (c3) an id the notes print that the live fields do not is listed (retired_hits) so the Checker can re-draw it;
+  (c4) host links (rule 4) are still read from the whole record: a link is not a cause.
 """
 from __future__ import annotations
 
@@ -36,15 +49,57 @@ def _named_re(named):
     return re.compile(r"(?<![A-Za-z0-9-])(" + alts + r")(?![0-9A-Za-z-])")
 
 
+REWRITE_ACTIONS = ("CAUSE_TEXT", "RESTATE")
+
+
+def _walk(o):
+    if isinstance(o, dict):
+        yield o
+        for v in o.values():
+            yield from _walk(v)
+    elif isinstance(o, (list, tuple)):
+        for v in o:
+            yield from _walk(v)
+
+
+def rewrites(line: dict) -> list:
+    """the cause-text records of the line (action CAUSE_TEXT / RESTATE), any depth of calculation.inputs."""
+    inp = (line.get("calculation") or {}).get("inputs") or {}
+    return [d for d in _walk(inp) if d.get("action") in REWRITE_ACTIONS]
+
+
+def _tokens(text: str) -> set:
+    i = R.ids(text)
+    return set(i["d"]) | set(i["q"]) | set(i["orr"]) | set(i["rfi"])
+
+
+def live_cause(line: dict) -> tuple:
+    """(live cause text, ids printed only in the notes history). R-T755-1 v2 (c1)-(c3)."""
+    if not rewrites(line):
+        return R.cause_text(line), set()
+    rfi = line.get("rfi")
+    q = (rfi.get("question") or "") if isinstance(rfi, dict) else (rfi if isinstance(rfi, str) else "")
+    basis = (line.get("bounded_range") or {}).get("basis") or ""
+    live = R.cause_text({"rfi": {"question": " | ".join(x for x in (q, basis) if x)},
+                         "calculation": line.get("calculation")})
+    notes = line.get("notes")
+    notes = " | ".join(str(n) for n in notes if n) if isinstance(notes, (list, tuple)) else str(notes or "")
+    return live, _tokens(notes) - _tokens(live)
+
+
 def classify_own(line: dict, named=()) -> dict:
-    """R-T716-1 rules 1-3 and 5-10 on the line's own text, with the named ids of (a) read as designer ids."""
-    own = R.classify_own(line)
+    """R-T716-1 rules 1-3 and 5-10 on the line's LIVE text (R-T755-1 v2), the named ids of (a) read as designer ids."""
+    text, removed = live_cause(line)
+    own = R.classify_own({"rfi": {"question": text}} if text else {})
+    if removed:
+        own = dict(own, retired_hits=sorted(removed))
     rx = _named_re(named)
-    extra = sorted(set(rx.findall(R.cause_text(line)))) if rx else []
+    extra = sorted(set(rx.findall(text))) if rx else []
     if not extra:
         return own
     d = sorted(set(own["d_ids"]) | set(extra), key=_dkey)
-    return {"kind": "DESIGNER", "bucket": "+".join(d), "d_ids": d}
+    return dict({"kind": "DESIGNER", "bucket": "+".join(d), "d_ids": d},
+                **({"retired_hits": own["retired_hits"]} if own.get("retired_hits") else {}))
 
 
 def _dkey(d: str):
@@ -86,7 +141,8 @@ def census(index_lines: list, records: dict, named=(), item_of=None) -> dict:
         assert lid not in assign, f"line {lid} twice"
         c = classify(lid, records, held, eids, named)
         assign[lid] = {"kind": c["kind"], "bucket": c["bucket"], "dependent": c["dependent"], "host": c["host"],
-                       "item_code": i["item_code"], "unit": i["unit"], "side": side(i), "d_ids": c["d_ids"]}
+                       "item_code": i["item_code"], "unit": i["unit"], "side": side(i), "d_ids": c["d_ids"],
+                       "retired_hits": c.get("retired_hits", [])}
         key = (i["item_code"], i["unit"])
         b = buckets[(c["kind"], c["bucket"])]
         b["kind"] = c["kind"]

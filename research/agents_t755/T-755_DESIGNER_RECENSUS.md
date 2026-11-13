@@ -1,6 +1,6 @@
 # T-755 designer-list re-census + concrete HELD-tail sweep on ARCH_TAKEOFF_V3.0.77 (lane S, research only)
 
-Worker 1, 2026-11-13, branch `agents/task-T-755`. Nothing wired, released, VERIFIED or summed into a total; no quantity
+Worker 1, 2026-11-13, branch `agents/task-T-755`; **round 2 (rework of Gate A r1 fault F-V755-1, 2026-11-13 11:2x-12:4x UTC)**. Nothing wired, released, VERIFIED or summed into a total; no quantity
 changed; no engine file touched. Rules: R-T716-1 (unchanged, imported), new R-T755-1 (`t755_rules.py`, proposed),
 UP-QTY-STATUS-001, L-T748-1, T-380 / L-T745-1 (no scaled length), owner 2026-11-11 15:30 (rebar parked).
 
@@ -15,9 +15,25 @@ merged line index of each version: e8e001de (T-693), fc0bd98f (T-704), f9578744 
 ## (A) Census, R-T755-1
 
 R-T755-1 = R-T716-1 + (a) the Lead's alphanumeric item ids read from a CLOSED list only (whole token), + (b) an item
-view (a D-id may sit under two items: D-44 in 1 and 3, D-63 in 3 and 6, D-45 in 2 and 12, D-62 in 5 and 13).
-**Re-derived on V3.0.70 identical to the merged T-716 census line by line** (2,765 lines, asserted), so every V3.0.70 ->
-V3.0.77 difference is attributed to the version step that made it (residual 0 per bucket and per D-id, asserted).
+view (a D-id may sit under two items: D-44 in 1 and 3, D-63 in 3 and 6, D-45 in 2 and 12, D-62 in 5 and 13), +
+**(v2) LIVE cause only**: a line whose inputs carry a cause-text record (action CAUSE_TEXT, e.g. V3.0.42 R-T433, or
+RESTATE, e.g. V3.0.46 R-T419) is read from rfi.question + bounded_range.basis (+ fill still_held) only; its notes are
+history (the retired 'old' value, superseded restatements and source texts) and are not read. Lines with no such record
+are read exactly as R-T716-1. Ids printed only in the history are listed per line (`retired_hits`).
+
+**r1 fault and fix.** r1 read the whole notes, so the V3.0.42 history "cause text 'D-63' -> 'D-66 (RFI-S20)'" (F-T433-2:
+D-63 is the lift columns on the lift raft; the 13 band columns are D-66) put 13 STR.CONC.COLUMN + 22 dependent
+STR.FORMWORK lines in 'D-63+D-66', and the V3.0.46 restatement note (pit depth 'L-1 / D-63', RFI-S09) put the lift
+pit-wall line and its 2 form faces under D-63 although their live rfi (rewritten again by V3.0.73 / V3.0.75) does not
+print it. v2 moves exactly those **38 lines** and no other (own diff r1 -> r2 on V3.0.77: 13 COLUMN + 22 FORMWORK
+'D-63+D-66' -> 'D-66'; 2 FORMWORK 'D-43+D-63' -> 'D-43'; 1 LIFT 'D-22+D-40+D-43+D-63' -> 'D-43'). The 2 lift-pit WP lines
+(membrane, board) print 'L-1 / D-63' in their LIVE rfi and stay 'D-43+D-63'.
+
+**V3.0.70 re-derived = the merged T-716 census line by line except 27 lines** (asserted: every differing line has a
+history-only id; any other difference fails the run): 26 'D-63+D-66' -> 'D-66' and 1 'D-22+D-40+D-43+D-63' ->
+'D-22+D-40+D-63' (the lift pit wall, whose live rfi on V3.0.70 was the V3.0.46 restatement). T-716 carried the same
+fault (its item 3 / item 6 D-63 counts are history artefacts). Every V3.0.70 -> V3.0.77 difference is attributed to the
+version step that made it (residual 0 per bucket and per D-id, asserted).
 
 HELD lines: 2,799 on V3.0.77 (2,765 on V3.0.70); 1,106 active + 1,693 STR.REBAR kg PARKED. **Every HELD line maps to
 one cause; UNNAMED 0, UNMAPPED 0.** 149 dependent (cause from a HELD host).
@@ -36,7 +52,9 @@ one cause; UNNAMED 0, UNMAPPED 0.** 149 dependent (cause from a HELD host).
 V3.0.70 -> V3.0.77 by package (lines; full table in `out/T755_CENSUS.md`): T-722 moved +7 D-05/D-26 projections, +2
 D-08, +7 D-35 (court / annex ground beams), METHOD_GAP 7 -> 0 (they were the D-35 court lines, F-V716-1); T-729 took
 36 BEAM_SIDE / 35 NO_LINE / 60 SPLIT_UNRESOLVED / 12 JOINT / 8 JUNCTION formwork codes out and put 126 lines under Q-10 +
-Q-13 (rebar), 12 D-33 and 11 D-34 lines out (formwork rows re-classed), 11 D-63 lines from SOLE to SHARED with D-66;
+Q-13 (rebar), 12 D-33 and 11 D-34 lines out (formwork rows re-classed), 11 D-63 formwork lines out and 9 D-66 in
+(formwork rows re-tied to their column hosts); T-722 1 lift pit wall 'D-22+D-40+D-63' -> 'D-43' (its V3.0.73 AT_LEAST
+rewrite of the live rfi);
 T-736 +10 D-39 (bead rows), T-749 +38 EXTERIOR_FINISH_NOT_SPECIFIED and +27 FRAME_* (paint edge lm); T-704 +4 D-45.
 
 ## (B) Concrete HELD tail: 194 STR.CONC.* m3 lines, **MEASURABLE_NOW 0, STILL_HELD 194**
@@ -70,10 +88,10 @@ bounded, 16 blank D-05 / D-26 / D-28).
 |---|---|---|---|
 | 1 beams | D-02, D-03, D-04, D-27, D-30, D-44 (+ propose D-05, D-26, D-28) | 36 / 18 (+ 88 rebar parked) | add D-05 / D-26 (21 / 28 lines incl. rebar, edge projections) and D-28 (dome ring): today in no item |
 | 2 lintels | D-45, D-58, D-60, D-64 | 0 / 6 | 30 lintel lines say 'designer' with no number (bearings MIN 40 cm): give them D-58 / D-64 or a new D-id |
-| 3 columns | D-16, D-46, D-63, D-65, D-66, D-44 | 5 / 54 | D-63 now always shared with D-66 or D-43 (T-729) |
+| 3 columns | D-16, D-46, D-63, D-65, D-66, D-44 | 40 / 16 (m3 15 sole bounded 8.034 .. 10.119; m2 25 sole, 10 bounded 59.2623 .. 68.0029 + 15 blank; shared m3 7, m2 9) | r1 5 / 54 was a history artefact (F-V755-1); D-66 alone holds 35 lines (13 COLUMN m3 6.378 .. 8.2665 + 22 dependent FORMWORK); **D-63 holds no column line live** |
 | 4 ground beams | D-33, D-34, D-35 | 47 / 1 (+ 22 rebar) | D-33 / D-34 formwork rows re-classed by T-729 |
 | 5 roof datum | D-06, D-17, D-39, D-62 | 105 / 21 | D-39 +10 bead rows (T-736); still the largest item |
-| 6 lift | D-43, D-63 | 8 / 40 | restate RFI-S08 / S23 (lift raft blinding) as D-43 |
+| 6 lift | D-43, D-63 | 11 / 2 (+1 rebar) (sole m3 7 blank: LIFT 2, NECK 4, LINTEL 1; m2 4 blank FORMWORK; shared 2 WP m2 blank) | r1 8 / 40 was a history artefact; D-63 live only on the 2 lift-pit WP lines; restate RFI-S08 / S23 (lift raft blinding) as D-43; see F-T755-5 |
 | 7 stairs | D-08, D-13, D-29, D-56, D-67, D-68 | 5 / 0 | D-56 still cited by 3 lines (it is OUT); D-67 / D-68 cited by none |
 | 8 floor build-up | D-09, D-22, D-24, D-40, D-47 | 0 / 1 | the 44 FIN.FLOOR.BED lines cite no D-id (NAMED_TEXT): they need D-09 / D-22 |
 | 9 sunken panels | D-41 | 9 / 9 | - |
@@ -91,6 +109,15 @@ bounded, 16 blank D-05 / D-26 / D-28).
 - F-T755-3: list D-ids cited by no HELD line: D-06, D-09, D-13, D-17, D-20, D-24, D-29, D-30, D-42, D-46, D-47, D-58,
   D-60, D-64, D-65, D-67, D-68 + all named ids of items 14 - 18.
 - F-T755-4: the D-GF-14 lintel's 'MEASURABLE NOW' class is stale: it is the junction-END method gap (read above).
+- **F-T755-5 (r2, live cause re-read of the 3 lift lines).** The lift pit-wall height (raft top -> slab-on-grade top)
+  depends on two facts: the pit depth below the GF lift landing (lift supplier, RFI L-1) and the GF build-up (D-22 / D-40,
+  RFI-S09). The designer register gives D-43 = the GF lift tie-beam size (ST p.8 n.19) and D-63 = the lift column / neck
+  section conflict, yet: (i) V3.0.42 retired D-43 from L-684fcad3 (F-T433-1) and V3.0.73 (T-722 AT_LEAST rewrite) put
+  'DESIGNER ITEM D-43 (upper end open: supplier pit depth)' back in its live rfi; its 2 form faces L-6d72f51d / L-e3eb0057
+  print 'pit depth D-43'; (ii) the V3.0.46 restatement and the 2 live WP lines print 'L-1 / D-63' for the same pit depth;
+  (iii) the D-63 register row itself says the pit depth is D-43. The pit depth therefore has no single id (D-43 or D-63
+  or the supplier RFI L-1, by line). No count of item 6 changes (both ids are in item 6) and no quantity moves; the Lead
+  names one id for the supplier pit depth in the list and the next lift package restates the 5 lines (cause text only).
 
 ## Owner manual method beside the drawing-derived method
 
@@ -100,10 +127,16 @@ value (the one read confirms an open method ruling). The owner manual lintel rul
 
 ## Tests
 
-`tests/t755_designer_recensus` (4, synthetic, not the training villa): closed-list named ids (door mark of the same
+`tests/t755_designer_recensus` (8, synthetic, not the training villa; r2 adds 3 + the runner check): closed-list named ids (door mark of the same
 shape never read; whole token only), normal (two lines on one item, one shared through a two-item D-id, dependent
 formwork follows its host), adverse (blank never 0, an AT_LEAST never closed into a range, kg apart from m3, an
-unlisted D-id reported, duplicate line refused), version-step reconciliation (residual 0).
+unlisted D-id reported, duplicate line refused), version-step reconciliation (residual 0). r2 (R-T755-1 v2):
+normal `test_normal_live_cause_after_a_correction_lands_in_one_bucket` (live D-66 -> one bucket; a line with no record
+reads as R-T716-1); adverse `test_adverse_a_retired_old_id_left_in_history_or_superseded_text_is_ignored` (retired
+'old' D-91 in the history and in a superseded source note -> ignored; the dependent form face follows the LIVE bucket;
+an id a live field still prints is kept; history-only ids listed) and
+`test_adverse_a_restatement_superseded_by_a_later_rewrite_is_history` (a RESTATE note naming D-63 / RFI-S09, rfi later
+rewritten to D-43 -> 'D-43'; the same restatement still live -> 'D-43+D-63').
 
 ## Lessons-register row (proposed, ERS s.7)
 
@@ -111,3 +144,9 @@ L-T755-1: a designer-list id must not share the shape of a drawing mark (D-GF-07
 collides cannot be counted from the BOQ and silently double-reads door rows. Rule: list ids are D-<number> only;
 regression = `test_named_ids_are_read_only_from_the_closed_list` (normal: a listed id is read; adverse: a door mark of
 the same shape is not).
+
+L-T755-2 (r2): a census reads a line's LIVE cause fields only. Cause-text records (CAUSE_TEXT old -> new, RESTATE)
+rewrite rfi.question / bounded_range.basis and leave the old text in the notes as history; reading the notes after a
+rewrite counts retired ids (35 column / formwork lines double-listed under D-63 + D-66 in r1 and in T-716) and
+superseded restatements (3 lift lines). Rule R-T755-1 v2; regression = the two r2 adverse tests above (normal: live
+D-66 -> one bucket; adverse: retired 'old' D-63 in the history -> ignored).

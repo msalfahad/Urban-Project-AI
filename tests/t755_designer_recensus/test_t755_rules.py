@@ -100,3 +100,61 @@ def test_the_runner_never_reads_a_list_id_that_is_a_drawing_mark():
     # a door mark of the D-<floor>-nn shape in a cause text never lands in a DESIGNER bucket
     rec = _rec("D-GF-07: engine door schedule")
     assert R.classify_own(rec, C.NAMED)["kind"] == "NAMED_TEXT"
+
+
+# ---- R-T755-1 v2: live cause only (Gate A r1 fault F-V755-1) -------------------------------------------------------
+
+def _corrected(rfi_q, notes, old, new, basis=None):
+    rec = {"rfi": {"question": rfi_q}, "notes": notes,
+           "calculation": {"inputs": {"some_version_key": {"piece": "CAUSE_TEXT", "action": "CAUSE_TEXT",
+                                                           "old": old, "new": new}}}}
+    if basis is not None:
+        rec["bounded_range"] = {"low": 1.0, "high": 2.0, "basis": basis}
+    return rec
+
+
+def test_normal_live_cause_after_a_correction_lands_in_one_bucket():
+    rec = _corrected("column size not printed (D-66 (RFI-X20))", "column held",
+                     "D-91", "D-66 (RFI-X20)", basis="size D-66")
+    c = R.classify_own(rec, NAMED)
+    assert (c["kind"], c["bucket"]) == ("DESIGNER", "D-66") and "retired_hits" not in c
+    # a line with no correction record is read exactly as R-T716-1
+    plain = _rec("D-66 and D-91", "note")
+    assert R.classify_own(plain, NAMED)["bucket"] == R.R.classify_own(plain)["bucket"] == "D-66+D-91"
+
+
+def test_adverse_a_retired_old_id_left_in_history_or_superseded_text_is_ignored():
+    notes = ("designer item D-91 (superseded source text) | V3.0.x: cause text 'D-91' -> 'D-66 (RFI-X20)' "
+             "(retarget); no figure moves")
+    rec = _corrected("column size not printed (D-66 (RFI-X20))", notes, "D-91", "D-66 (RFI-X20)")
+    c = R.classify_own(rec, NAMED)
+    assert c["bucket"] == "D-66" and c["retired_hits"] == ["D-91"]          # never 'D-66+D-91'
+    # dependent formwork follows the host's LIVE bucket, never the retired one
+    ix = [_ix(L(1), "STR.CONC.COLUMN", "m3", 0.36, 0.45), _ix(L(2), "STR.FORMWORK", "m2", eid=f"FW:{L(1)}:SIDES")]
+    cen = R.census(ix, {L(1): rec, L(2): _rec(None, "sides held")}, NAMED, {"D-66": ["3"], "D-91": ["3", "6"]})
+    assert cen["assignment"][L(2)]["bucket"] == "D-66" and cen["assignment"][L(2)]["dependent"]
+    assert "6" not in cen["per_item"] and cen["per_item"]["3"]["sole_lines"] == 2
+    # a retired id that a LIVE field still prints stays (it was not retired from the live cause)
+    keep = _corrected("lift wall D-91 and D-66", notes, "D-91", "D-66 (RFI-X20)")
+    assert R.classify_own(keep, NAMED)["bucket"] == "D-66+D-91"
+    keep_b = _corrected("held", notes, "D-91", "D-66", basis="D-91 lift raft")
+    assert R.classify_own(keep_b, NAMED)["bucket"] == "D-91"                 # live = rfi + basis only
+    # notes of a cause-rewritten line are history: an id printed only there never reaches a bucket
+    hist = _corrected("held: no face figure", "superseded source D-910 and D-9", "D-91", "D-66")
+    c = R.classify_own(hist, NAMED)
+    assert c["kind"] == "NAMED_TEXT" and c["retired_hits"] == ["D-09", "D-910"]
+
+
+def test_adverse_a_restatement_superseded_by_a_later_rewrite_is_history():
+    # V3.0.46-like RESTATE named D-63 + RFI-S09 in rfi and notes; a later package rewrote rfi.question to D-43 only
+    rec = {"rfi": {"question": "DESIGNER ITEM D-43 (upper end open: supplier pit depth)"},
+           "notes": "added HELD BLANK | V3.0.x: held reason restated to name every fact (pit depth (L-1 / D-63); "
+                    "build-up (RFI-S09)); quantity unchanged",
+           "calculation": {"inputs": {"k46": {"piece": "HELD_REASON", "action": "RESTATE",
+                                              "facts": ["pit depth (L-1 / D-63)", "build-up (RFI-S09)"]},
+                                      "k73": {"piece": "CONC_SIDE", "action": "AT_LEAST"}}}}
+    c = R.classify_own(rec, NAMED)
+    assert c["bucket"] == "D-43" and c["retired_hits"] == ["D-63", "RFI-S09"]
+    # the same restatement still LIVE in rfi.question (no later rewrite): both ids read
+    live = dict(rec, rfi={"question": "every fact this quantity depends on: pit depth (L-1 / D-63); was: (D-43)"})
+    assert R.classify_own(live, NAMED)["bucket"] == "D-43+D-63"
