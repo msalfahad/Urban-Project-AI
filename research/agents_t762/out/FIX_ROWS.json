@@ -1,0 +1,6782 @@
+{
+ "schema": "DELIVERY_FIX_ROWS_V1",
+ "task": "T-762",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.78",
+ "inputs": {
+  "index": "LINE_INDEX_V3_0_78.json",
+  "face_ledger": "T199_FORMWORK_BY_LINE_T332.json",
+  "t761": "T761_FIX_ROWS_INPUT.json",
+  "main_fill": "MAIN_FILL_ALL_INPUT.json"
+ },
+ "ratios_m2_per_m3": {
+  "STR.CONC.BEAM": {
+   "ratio": 7.661,
+   "complete_hosts": 73
+  },
+  "STR.CONC.COLUMN": {
+   "ratio": 10.058,
+   "complete_hosts": 16
+  },
+  "STR.CONC.SLAB": {
+   "ratio": 6.222,
+   "complete_hosts": 57
+  }
+ },
+ "median_released_face_m2": {
+  "STR.CONC.BEAM": 0.877,
+  "STR.CONC.COLUMN": 0.184,
+  "STR.CONC.GROUND_BEAM": 3.087,
+  "STR.CONC.SLAB": 2.12,
+  "STR.CONC.STAIR": 2.093
+ },
+ "summary": {
+  "held_formwork_lines": 336,
+  "filled": 336,
+  "still_blank": 0,
+  "by_label": {
+   "ESTIMATE": 267,
+   "DEFAULT": 67,
+   "SAFETY": 2
+  },
+  "by_method": {
+   "FACE": 215,
+   "INDEX_RANGE": 34,
+   "OQ10_EARTH_CAST_NOT_ADOPTED": 5,
+   "OQ10_FORMED": 60,
+   "HAND": 7,
+   "RATIO": 3,
+   "MEDIAN_FACE": 6,
+   "MEDIAN_FACE+T729_BOUND": 6
+  },
+  "released_m2_before": 1098.03,
+  "filled_m2": 1128.85,
+  "formwork_total_after_m2": 2226.88,
+  "main_fill_rows_superseded": 126,
+  "main_fill_m2_on_those_lines": 472.8,
+  "t762_m2_on_those_lines": 240.55,
+  "pulled_inside_t729_bounds": 6
+ },
+ "rows": [
+  {
+   "line_id": "L-01347a407f5f4c82d250",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1146bdecd41491ce9382:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.12
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-162 = -0.12 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 2.695644
+  },
+  {
+   "line_id": "L-029fae1c30e59965be6c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e9a885323ad6ec3ea32b:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.105
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-177 = -0.10 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 5.109779
+  },
+  {
+   "line_id": "L-02a5b135e66bd748a879",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-4783c6e18002c3a8a37e:FACES:HELD:-:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 7.2
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-070 = 7.20 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); R4-070: 2 sides x L 6.00 x D 0.60 (BAND0016 GB depth adopted by T-761: ST p.13 typical 30x60, same mark); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-030e2ec62b20bcc5267d",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-258.GF-008~REST.BEAM_SOFFIT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 9.6e-05,
+    "high": 0.00012
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000108
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 9.6e-05..0.00012 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-07d17625871345406c97",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fffa895ed96b9d6a682c:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 21.42
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-351 = 21.42 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); R4-351: DOME-B extrados top form, same shell as DOME-A: 21.42 m2 (full extrados 26.68)",
+   "supersedes_main_fill": 24.15
+  },
+  {
+   "line_id": "L-07ff3908f84c340be31d",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-a55bfa01b726ef11650c:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.91
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-112 = 0.91 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-0870024fbe57cd812ce7",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-27d104ca6fc3556d16e6:FACES:HELD:OQ10_EARTH_CAST:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_EARTH_CAST_NOT_ADOPTED",
+   "basis": "EARTH_CAST twin of 1 held face(s) R4-057: the FORMED reading is adopted on its own line (2 face(s)), so this alternative carries no form (never summed)",
+   "supersedes_main_fill": 3.540732
+  },
+  {
+   "line_id": "L-093b1a8701615f5fed8c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-755eb56b55e86301b488:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 8.3663,
+    "high": 9.5488
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.95755
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 8.3663..9.5488 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-0b6b01d1f9c2056faa53",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-296.1F-072~REST.EDGE_BAND",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2e-06,
+    "high": 2e-06
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2e-06
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 2e-06..2e-06 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-0bbf01242ef68c4d7323",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-1F-NW-2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.77712
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-1F-NW-2 (PARAPET parapet 1F NW-2 cast faces (2 x RC height x centreline)): midpoint of 2.16642..9.38782 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-0c4ddbaa09eece8bb246",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-5af89b9f1e5b90daf8f5:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.12
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-174 = -0.12 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-0cf48e59ec25da8e3114",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-3e7ea87496653eb75704:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.44
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-077 = 3.44 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.456952
+  },
+  {
+   "line_id": "L-0edbf58e586347a3073d",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-970bac563cbcd69e2a30:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.5523
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-110 = 0.55 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-1049f97c2c57406a8424",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-6bf14711798e5af93594:FACES:HELD:-:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.72
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-064 = 0.72 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); R4-064: 2 sides x L 1.20 x D 0.30 (BAND0012.1 depth per T-761: typical 30x30); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-10c6bca8239b3d25ebf8",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-755eb56b55e86301b488:FACES:CALCULATED:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.128007
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-296.1F-049.EDGE_BAND = 0.13 m2 (printed 1, range midpoint 0, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-14be8e3baf5847132cc7",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-43d1d1031b3d3ddd1cc4:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.125
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-158 T282-15D+7C8#1-B T282-15D+7C8#1-END = -0.12 m2 (printed 0, range midpoint 3, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.982596
+  },
+  {
+   "line_id": "L-1572a9a9796d43c604d4",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-10f3cd1eb0f81a3892f2:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.743091
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-012.L-10f3cd1eb0f81a3892f2 = 5.74 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-16e428b50357188a94d2",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-189",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 12.6
+   },
+   "label": "ESTIMATE",
+   "method": "HAND",
+   "basis": "hand: boundary pads sides 2 x (1.30 + 0.80) x 0.30 = 1.26 m2 x 10 pads (T-761 count, ST p.14 size); the 20 x 30 boundary columns go with the fence row T-769",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-1a866144074ab56808a6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fe78ae283abfb6256358:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.82
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-133 = 2.82 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 1.194362
+  },
+  {
+   "line_id": "L-1a995cf3f6682f078b40",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-f24cf117a9ce1e875785:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0245
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) T282-182+183#1-A = 0.02 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-1b5c40deb5c9a27da420",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-056402f98a6dbbcde0a0:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.045378
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-335.COL380 = 0.05 m2 (printed 0, range midpoint 0, held_from lower bound 1, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 5.579223
+  },
+  {
+   "line_id": "L-1cb99599c8fa353f2f3b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-1F-NW-4",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.653753
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-1F-NW-4 (PARAPET parapet 1F NW-4 cast faces (2 x RC height x centreline)): midpoint of 0.28038..1.027125 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-1d0a470cc8262784ac32",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d8b98b143e293d30833b:FACES:HELD:-:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.96
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-073 = 6.96 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); R4-073: 2 sides x L 5.80 x D 0.60 (BAND0013.2 depth per T-761: typical 30x60); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-1d19c2e412388f9bd7bc",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-ff727b2a52e39509a659:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.345705
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-050 = 0.35 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 0.292836
+  },
+  {
+   "line_id": "L-1ec53dc06ebdad85a19d",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-2F-SW-1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.32
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-2F-SW-1 (PARAPET parapet 2F SW-1 cast faces (2 x RC height x centreline)): midpoint of 4.74..7.9 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-1ed9ec6e957d611cbf18",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-5af89b9f1e5b90daf8f5:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.0
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-116 = 5.00 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-1f867d7ff0be2c5b03c5",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-0c5ede7fd2c9e425aa8d:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.875
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-087 = 0.88 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-1f8db5bb9fdce329d414",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-9e28c7012784a8dc33c8:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.27
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 2 below-ground face(s) R4-136 R4-139 = 6.27 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 5.311098
+  },
+  {
+   "line_id": "L-212e954e647dd2ca214e",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-a8c5c32c7a785c1e3f05:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.105
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-173 = -0.10 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-214814fa0c97c6e4d598",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-ANNEX-SW-2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.50796
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-ANNEX-SW-2 (PARAPET parapet ANNEX SW-2 cast faces (2 x RC height x centreline)): midpoint of 1.13097..1.88495 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-2191877a7925b3841bef",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1b7eaa73e9a5e911054d:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.24
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-024.L-1b7eaa73e9a5e911054d = 2.24 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-21cb4ac895e1c99f214f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-ANNEX-SW-1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.4
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-ANNEX-SW-1 (PARAPET parapet ANNEX SW-1 cast faces (2 x RC height x centreline)): midpoint of 1.8..3.0 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-2221529b63234c195eaf",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fad18af6e7139a5e99d1:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.195944
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "4 face(s) R4-207 R4-268.GF-111.JOINT_HELD_M2 R4-273.GF-111.JOINT_FACE R4-274.GF-111.EDGE_BAND = 6.20 m2 (printed 0, range midpoint 3, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-229672ce01a2edf0bef0",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-285.1F-045~REST.BEAM_SIDE_HELD_M2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000203
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-285.1F-045~REST.BEAM_SIDE_HELD_M2 (BEAM 1F roof slab (p.5) beam_side faces next to STAIR (9.300 m)): midpoint of 0.0..0.000406 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-24d224c5b3b47f92cf30",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-a55bfa01b726ef11650c:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.175
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) T282-1811+1812#1-A T282-1811+1812#1-END = 0.17 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-24da5c2af3a315778442",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-67e4b0485135f84acc46:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.028653
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-324.COL691 = 0.03 m2 (printed 0, range midpoint 0, held_from lower bound 1, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.75324
+  },
+  {
+   "line_id": "L-250ac0418b0109702a20",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-151a282bcf2d5324a618:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.315
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-164 R4-165 R4-166 = -0.32 m2 (printed 0, range midpoint 3, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.270598
+  },
+  {
+   "line_id": "L-261043f6ba027907f445",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-282.1F-072~REST.BEAM_SOFFIT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 0.074916,
+    "high": 0.0899
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.082408
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 0.074916..0.0899 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-269320c32bb42315e529",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-131df76e442a8b7cc2e9:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.086666
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-115 = 2.09 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.897889
+  },
+  {
+   "line_id": "L-2982b6e28466bc21149a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-3403073af4f952e49df1:OQ10:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.1602
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-046 = -0.16 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-2a796cbc07fa8401f885",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e9a885323ad6ec3ea32b:FACES:HELD:OQ10_EARTH_CAST:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_EARTH_CAST_NOT_ADOPTED",
+   "basis": "EARTH_CAST twin of 1 held face(s) R4-126: the FORMED reading is adopted on its own line (1 face(s)), so this alternative carries no form (never summed)",
+   "supersedes_main_fill": 5.109779
+  },
+  {
+   "line_id": "L-2c168be99c6485403152",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-284.1F-078~REST.BEAM_SIDE_HELD_M2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.055807
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-284.1F-078~REST.BEAM_SIDE_HELD_M2 (BEAM 1F roof slab (p.5) beam_side faces next to RING_MIX (24.734 m)): midpoint of 0.0..0.111614 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-2c497d334c0cd3be1f9e",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-27d104ca6fc3556d16e6:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.2925
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-151 R4-152 = -0.29 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.540732
+  },
+  {
+   "line_id": "L-2d2532c0a78976110e49",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-283.1F-045~REST.BEAM_SIDE_HELD_M2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.368927
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-283.1F-045~REST.BEAM_SIDE_HELD_M2 (BEAM 1F roof slab (p.5) beam_side faces next to HELD_EDGE (12.926 m)): midpoint of 0.0..0.737854 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-2e4055edfd34ee19d802",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d08e7a9d809a56733ff9:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.95
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-067 = 0.95 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 0.804712
+  },
+  {
+   "line_id": "L-2ff017c253ab31f3febd",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-bf5eb56348883cb2776d:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.12
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-171 = -0.12 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.447564
+  },
+  {
+   "line_id": "L-30a5a22c0c95e6bd2566",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-263b1a04a36fc0e8eee1:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.328434
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-284.1F-097.BEAM_SIDE_HELD_M2 = 0.33 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.453865
+  },
+  {
+   "line_id": "L-30cfc20e965cd0ba8c9b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-1F-NE-1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.063984
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-1F-NE-1 (PARAPET parapet 1F NE-1 cast faces (2 x RC height x centreline)): midpoint of 0.024..0.103968 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-31d5b3e47f9d9bcec0f4",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-4f30f08b15e9ab008e7a:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.236
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-261.GF-046.BEAM_SIDE_HELD_M2 = 0.24 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.137547
+  },
+  {
+   "line_id": "L-3216ec33cfa6a8f20c88",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-651a3d191bc4cb07cc1d:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.743271
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-284.1F-066.BEAM_SIDE_HELD_M2 = 0.74 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.493363
+  },
+  {
+   "line_id": "L-3280c42cb578a211045e",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-2c7b0b1e1a439d9ffd1e:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 3.559782,
+    "high": 3.733233
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.646507
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 3.55978..3.73323 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-32fe23d1618c4a21b715",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-2f97020ab26bff341fe4:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.299999
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-285.1F-002.BEAM_SIDE_HELD_M2 = 0.30 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.263941
+  },
+  {
+   "line_id": "L-3506cc114a3e6b2cf7ed",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-5225bc5777a370ad9f04:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.544833
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-284.1F-095.BEAM_SIDE_HELD_M2 R4-291.1F-095.JUNCTION_HELD_M2 = 0.54 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.238849
+  },
+  {
+   "line_id": "L-3549e551c3c8d13dee45",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-5ca0573b64ee1cb22e0e:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.951168
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-283.1F-045~BM-1F-026#BAND0031.2.BEAM_SIDE_HELD_M2 R4-285.1F-045~BM-1F-026#BAND0031.2.BEAM_SIDE_HELD_M2 R4-291.1F-045~ = 0.95 m2 (printed 0, range midpoint 3, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 7.038572
+  },
+  {
+   "line_id": "L-3587c9ce59183e5a40ae",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-cc6aaa99e1892f34b92f:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.82625
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-119 = 2.83 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 2.394088
+  },
+  {
+   "line_id": "L-35c71ddcb0a2db4def0b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-970bac563cbcd69e2a30:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.21
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) T282-180+181#1-B = 0.21 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-35f3af51cccc12a36a08",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-0e30aadba2eebc6c3ede:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.105
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-182 = -0.10 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.194362
+  },
+  {
+   "line_id": "L-367e3d5c1c88b973fef4",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-9d4f3289050a31f13951:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.324
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-285.1F-017.BEAM_SIDE_HELD_M2 = 0.32 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.365056
+  },
+  {
+   "line_id": "L-376516f6bfc0cb948e87",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-7c3edce23ec8faa3d674:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.312067
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-302.2F-044.BEAM_SIDE R4-302.2F-044.BEAM_SOFFIT R4-312.2F-044.EDGE_BAND = 0.31 m2 (printed 0, range midpoint 2, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-385a767a43cbc2844364",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-76d0bad3c40bd8cedca2:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.344419
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-283.1F-026~BM-1F-017#BAND0018.2.BEAM_SIDE_HELD_M2 = 1.34 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 5.954351
+  },
+  {
+   "line_id": "L-395a96045ed49db0cb3f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-7ca10403edee7eb03ce5:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.16525
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-261.GF-125.BEAM_SIDE_HELD_M2 = 1.17 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 18.48514
+  },
+  {
+   "line_id": "L-3ac238f421d365f06ba4",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-00465df980165c529476:FACES:HELD:-:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.92
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-071 = 1.92 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); R4-071: 2 sides x L 2.40 x D 0.40 (BAND0035 depth per T-761: typical 30x40); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-3af6c436cd3960b58d04",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-85809d3db52bb93dfe96:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 7.308526
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-229 R4-288.1F-042.JOINT_HELD_M2 R4-295.1F-042.JOINT_FACE = 7.31 m2 (printed 0, range midpoint 3, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-3b67d5601aea008e178d",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d53e5eb08e2c6c668254:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.04335
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-170 T282-177+7CD#2-A = -0.04 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-3c4e8f4d84fbd472c354",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d5401fa8986900c66c37:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 46.93
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-357 R4-358 R4-359 = 46.93 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 3; face ledger T-332); R4-357: DOME-TOWER soffit = intrados 2 pi R_i h_i of the same shell as A / B (released 24.15 m2 each); R4-358: DOME-TOWER extrados top form, same shell (T-761 DOME-3 = shells A / B): 21.42 m2; R4-359: DOME-TOWER support face = shell edge 0.10 x pi x 4.32 m mean diameter; host STR.CONC.DOME is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-3e1c9c572e000aa8a00b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-88c5feea922f65eb0eaa:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 10.64
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-018.L-88c5feea922f65eb0eaa = 10.64 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-3e64c5b2ad93e7b7e542",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-15a128c38982af899894:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.098008
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) T332-POOL-OUT-BURIED-F = 8.10 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-3ec80c0a4168a5c6ab38",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-057ca0aa9960e83c2ce3:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.02
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-000.L-057ca0aa9960e83c2ce3 = 1.02 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-40973acdc3c3797fa441",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-4aed92c117a7ab1c90ee:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 8.4203,
+    "high": 9.2283
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.8243
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 8.4203..9.2283 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-40a1126c765c79b91b86",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fb7a6431fede62e93fd5:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 35.256
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "5 face(s) R4-185.7FC#1 R4-185.7FE#1 R4-185.7FE#2 R4-185.7FE#3 R4-185.810#1 = 35.26 m2 (printed 0, range midpoint 0, held_from lower bound 5, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-40f817e1a25906ad5340",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-713bc64aaa210610e7fe:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.765
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-303.2F-010.BEAM_SIDE_HELD_M2 R4-304.2F-010.BEAM_SIDE_HELD_M2 = 0.77 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 4.095169
+  },
+  {
+   "line_id": "L-4126537802fa52fc0f4f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-26fcfbbb143269e7bb58:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.2025
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-157 = -0.20 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.528953
+  },
+  {
+   "line_id": "L-4240bf84b3fb055de232",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fb53ac7edf5914afd6f5:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.045
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-153 T282-13E+7D6#1-B = -0.04 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.456952
+  },
+  {
+   "line_id": "L-4250fb8ee25dd2585e45",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-27d104ca6fc3556d16e6:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.36
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 2 below-ground face(s) R4-054 R4-056 = 8.36 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 3.540732
+  },
+  {
+   "line_id": "L-42e60d1f5f7b910917f5",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c914cb3a65e76883a827:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.509985
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "4 face(s) R4-261.GF-144.BEAM_SIDE_HELD_M2 R4-261.GF-158.BEAM_SIDE_HELD_M2 R4-269.GF-144.JUNCTION_HELD_M2 R4-269.GF-158.JUNCTION_HE = 0.51 m2 (printed 0, range midpoint 4, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.090149
+  },
+  {
+   "line_id": "L-438fbcd95aa1f59f2752",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-81444e222487437e257e:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.015
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-072 = 1.01 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-445463e318098f16a786",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-760f6c369aa655adc84d:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.44
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-076 = 3.44 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.456952
+  },
+  {
+   "line_id": "L-448b1ba80cbfb56e27b3",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-7d8bf3e464a8406bfcb4:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.2
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-028.L-7d8bf3e464a8406bfcb4 = 1.20 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-45b8299ccc0c49c0c2c1",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c677b628a776d3b87b02:FACES:CALCULATED:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.096014
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-296.1F-005.EDGE_BAND = 0.10 m2 (printed 1, range midpoint 0, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-46b8405b4f37cf5590c4",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-8ea34765d16b54898140:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 21.42
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-344 = 21.42 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); R4-344: DOME-A extrados top form where steeper than 1.5H:1V: 2 pi x 2.235^2 x (0.832 - 0.150) = 21.42 m2 (full extrados 26.68)",
+   "supersedes_main_fill": 24.15
+  },
+  {
+   "line_id": "L-470ddf241409df9d54fc",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-7076482d75ca42691468:OQ10:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.963657
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-149 = 5.96 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 4.932582
+  },
+  {
+   "line_id": "L-48c60a6980d614f85788",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d62d2fcf3d0023ad1ad1:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.652067
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-302.2F-032.BEAM_SIDE R4-302.2F-032.BEAM_SOFFIT R4-312.2F-032.EDGE_BAND = 0.65 m2 (printed 0, range midpoint 2, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-495d4b80f284640bbd0b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-6e1034e07c44c4644c22:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.003
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-260.GF-066~BM-GF-043#BAND0043.1.BEAM_SIDE_HELD_M2 R4-269.GF-066~BM-GF-043#BAND0043.1.JUNCTION_HELD_M2 = 1.00 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 6.256547
+  },
+  {
+   "line_id": "L-4cc79249620592854850",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-7afad512258c1bad8519:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.24
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-180 R4-181 = -0.24 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.415367
+  },
+  {
+   "line_id": "L-4dd863c8135ddd3d6486",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-1F-NW-5",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.9555
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-1F-NW-5 (PARAPET parapet 1F NW-5 cast faces (2 x RC height x centreline)): midpoint of 3.975..5.936 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-4ddf54ff73eb432d262f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-21795b350fbd09150c43:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.13
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-104 = 5.13 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-4ee17a01ce682fd60a26",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c254e0d17c22fcae49fe:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.192
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-260.GF-042.BEAM_SIDE_HELD_M2 R4-261.GF-042.BEAM_SIDE_HELD_M2 = 0.19 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.404461
+  },
+  {
+   "line_id": "L-4f513174e47b0b21850c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1590b76b2fe8f131dc07:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 10.01
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-026.L-1590b76b2fe8f131dc07 = 10.01 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-4f782e5fef70ea41044e",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1fd49f3e7c5a7dd19d4d:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 10.650655,
+    "high": 11.952103
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 11.301379
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 10.6507..11.9521 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-509b17c4ea6344588fcb",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c0b7102a36344a0349f5:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.6275
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-066 = 1.63 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-50e0b511784fdff8f48b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-62243c74c430d383be86:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.75
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-117 = 0.75 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-5160d33fbf182f6f7093",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-b835f51602e05704c045:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.048
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-308.2F-056.JUNCTION_HELD_M2 = 0.05 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.910038
+  },
+  {
+   "line_id": "L-52d53054c6dfb63e49aa",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1487bdda099006e0c4ba:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.105
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-156 = -0.10 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-5564409fb6c9144c4baa",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e910cc0865d6434c55f9:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.359463
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-284.1F-082~BM-1F-022#BAND0024.2.BEAM_SIDE_HELD_M2 = 0.36 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 2.986061
+  },
+  {
+   "line_id": "L-571f92c443ba62a26151",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-ANNEX-SW-3",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.04008
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-ANNEX-SW-3 (PARAPET parapet ANNEX SW-3 cast faces (2 x RC height x centreline)): midpoint of 3.78006..6.3001 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-578c83bef18e44a88cb8",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-076a6d9e6df46aef97d1:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.953709
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-283.1F-078~BM-1F-017#BAND0018.1.BEAM_SIDE_HELD_M2 R4-284.1F-078~BM-1F-017#BAND0018.1.BEAM_SIDE_HELD_M2 = 0.95 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 6.821889
+  },
+  {
+   "line_id": "L-587a44328b782cb8a1cb",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-8b751f06280405a6b658:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.096036
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-265.GF-000.JOINT_HELD_M2 R4-267.GF-000.JOINT_HELD_M2 = 0.10 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.748663
+  },
+  {
+   "line_id": "L-5906788df4301f1ca50a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-35da88665bf36b89a8fc:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.71
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-014.L-35da88665bf36b89a8fc = 6.71 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-59b1735c7d992f36ceda",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c18e5714727c841ee613:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.187997
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-263.GF-146.EDGE_HELD_M2 = 0.19 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.276399
+  },
+  {
+   "line_id": "L-59f0c115e7db8fa87f58",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-258.GF-005~REST.BEAM_SOFFIT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 0.000196,
+    "high": 0.000245
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.00022
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 0.000196..0.000245 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-5ab9772abafd3c5f5a41",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-258.GF-005~REST.BEAM_SIDE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 0.000682,
+    "high": 0.000682
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000682
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 0.000682..0.000682 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-5c555f96b85e393a9ea1",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-33a9b7728781fcba12e2:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.8938,
+    "high": 5.630111
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.261956
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 2.8938..5.63011 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-5c55c1d533cee47e3393",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-275.GF-167.UNMATCHED_PLAN",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.05
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-275.GF-167.UNMATCHED_PLAN (BEAM GF roof slab (p.4) band pieces bound to no member (0.718 m2 plan)): midpoint of 0.05..0.05 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-5ce0754b2817d5f5d07a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e8536bc4f2699a24e2ab:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.45775
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-122 = 5.46 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 4.622999
+  },
+  {
+   "line_id": "L-5d8fd91bc34614772330",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fadb548a6843001d45b0:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.52
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-052 = 3.52 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 1.490835
+  },
+  {
+   "line_id": "L-5dfb93a579fa29760577",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-10f3cd1eb0f81a3892f2:OQ10:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.35
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-035 = -0.35 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-5e7beb2d55b81c888ce1",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d43bea72f2c8e939b663:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2927
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-037 = 2.29 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-5f065d238612109e173f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-dec7d97d6a15bedee772:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.2
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-028.L-dec7d97d6a15bedee772 = 1.20 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-6125d393fb6c79684c52",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-ae51e56262137366926b:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.975909
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "5 face(s) R4-211 R4-264.GF-162.JOINT_HELD_M2 R4-267.GF-162.JOINT_HELD_M2 R4-268.GF-162.JOINT_HELD_M2 R4-273.GF-162.JOINT_FACE = 6.98 m2 (printed 0, range midpoint 5, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 5.622994
+  },
+  {
+   "line_id": "L-61689f48198a11cbeb90",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-9cb26d86575a92694880:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.7363,
+    "high": 5.6043
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.1703
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 4.7363..5.6043 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-63056244c05c761419e7",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-2F-SE-1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.3
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-2F-SE-1 (PARAPET parapet 2F SE-1 cast faces (2 x RC height x centreline)): midpoint of 3.975..6.625 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-63356d6145d75795a166",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-164ae9d338976be9e582:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.935
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-030 = 4.94 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.FOOTING is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-64b6936c8020c159b1e2",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-bcfa6dddf762d6cf0fb3:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.048
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-308.2F-055.JUNCTION_HELD_M2 = 0.05 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.263941
+  },
+  {
+   "line_id": "L-65b352666800d4d4138a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e24946df436cbc25fca6:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.36
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "4 face(s) R4-167 R4-168 R4-169 T282-177+7CD#1-END = -0.36 m2 (printed 0, range midpoint 4, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-66886a431003aa6e54ed",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-222e42d97ea28ca69931:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.02
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-000.L-222e42d97ea28ca69931 = 1.02 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-66adf3a81cf94492d42a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-74bde45d27edaeb8dc32:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.937236
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-284.1F-075.BEAM_SIDE_HELD_M2 = 0.94 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 18.011004
+  },
+  {
+   "line_id": "L-67d999ba180df8384c41",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-1F-SE-1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.7893
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-1F-SE-1 (PARAPET parapet 1F SE-1 cast faces (2 x RC height x centreline)): midpoint of 4.38..15.1986 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-69089a50ceff59b06464",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-84bf7fb482a98fdbe482:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 7.101311
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-209 R4-264.GF-115.JOINT_HELD_M2 R4-273.GF-115.JOINT_FACE = 7.10 m2 (printed 0, range midpoint 3, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 6.497682
+  },
+  {
+   "line_id": "L-6cba8c04e5f32a060b06",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-9f5a647014bbf83359f9:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.85607
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-204 R4-273.GF-093.JOINT_FACE R4-274.GF-093.EDGE_BAND = 5.86 m2 (printed 0, range midpoint 2, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-6d72f51dfe7ec1097f00",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-LIFT-PIT-OUTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.25
+   },
+   "label": "SAFETY",
+   "method": "HAND",
+   "basis": "hand: 5.50 m2 per m (outer perimeter 8.80 less 3.30 column faces) x 1.50 m SAFETY pit height (D-43); below ground: formed reading",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-6e80307d3649bddb80b6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-291ba2ddf4bbe4f14cf7:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.822
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-234 R4-287.1F-080.JOINT_HELD_M2 R4-288.1F-080.JOINT_HELD_M2 = 5.82 m2 (printed 0, range midpoint 3, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-6ef1ef1f6434569cb808",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "LIFT_TIE_BEAM:GF:SIDES",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.5
+   },
+   "label": "ESTIMATE",
+   "method": "HAND",
+   "basis": "hand: 2 sides x (0.75 x 1.80 + 0.40 x 0.70 + 0.75 x 1.20 + 0.40 x 1.80) = 6.50 m2 (T-761 runs and nearest printed sections B14 / B1 / B7 / B1)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-6f2ee487219a83a86e15",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-a2c6fa502bd864cf5da2:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.418007
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "4 face(s) R4-235 R4-287.1F-098.JOINT_HELD_M2 R4-288.1F-098.JOINT_HELD_M2 R4-295.1F-098.JOINT_FACE = 5.42 m2 (printed 0, range midpoint 4, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.498752
+  },
+  {
+   "line_id": "L-6f83fc39933954d0e3e6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-919a5749ef79759e01ca:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.183916,
+    "high": 5.532116
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.858016
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 4.18392..5.53212 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-6fc0d97f90f0a14ffa5f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c9044bed39bc76ca6b2f:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.890783
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-261.GF-154~BM-GF-018#BAND0019.1.BEAM_SIDE_HELD_M2 = 0.89 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 2.862827
+  },
+  {
+   "line_id": "L-703b51d606ecb028731f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-284.1F-082~REST.BEAM_SIDE_HELD_M2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6e-06
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-284.1F-082~REST.BEAM_SIDE_HELD_M2 (BEAM 1F roof slab (p.5) beam_side faces next to RING_MIX (24.734 m)): midpoint of 0.0..1.2e-05 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-707f9d025528823d205e",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-f4a95b8019ae333d81ae:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.059
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-308.2F-017.JUNCTION_HELD_M2 = 0.06 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 6.256509
+  },
+  {
+   "line_id": "L-71262a3657a518d47cbd",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "LIFT_TIE_BEAM:GF:SOFFIT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.1
+   },
+   "label": "ESTIMATE",
+   "method": "HAND",
+   "basis": "hand: soffit 0.20 x 5.50 m runs (T-761)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-71a283d2bc3d4e5771a9",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fb7a6431fede62e93fd5:FACES:HELD:OQ10_EARTH_CAST:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_EARTH_CAST_NOT_ADOPTED",
+   "basis": "EARTH_CAST twin of 5 held face(s) R4-186.7FC#1 R4-186.7FE#1 R4-186.7FE#2 R4-186.7FE#3 R4-186.810#1: the FORMED reading is adopted on its own line (5 face(s)), so this alternative carries no form (never summed)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-73757377a50522f001c8",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e112e2add2f8979a6c39:FACES:CALCULATED:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.080014
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-296.1F-009.EDGE_BAND = 0.08 m2 (printed 1, range midpoint 0, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-7380736269ecfe6ce8a6",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-338.HIDDEN_2CC_2CD",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.136135
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-338.HIDDEN_2CC_2CD (STAIR RS-A waist soffit): held_from 0.14 m2 (lower bound)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-739ee9feb2a4c3aa6fa7",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-659243ed9fc2831c3ae8:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.39
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-325 = 0.39 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); R4-325: MS2 closing riser form: height 0.168 + 0.16 = 0.328 x width 1.20 (T-761 L-659243ed basis); host STR.CONC.STAIR is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-74001fc2519aa4a8a017",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-bae601274440c03cf9a2:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.7
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-020.L-bae601274440c03cf9a2 = 6.70 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-74cd501167246b342c97",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c5902fd02c58b85a5df1:OQ10:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) T282-17C+7E3#1-END = 0.00 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 1.093632
+  },
+  {
+   "line_id": "L-754bc0ccda4ecb226d39",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-8de64040a1c3ae6cf137:FACES:CALCULATED:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.08
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-274.GF-088.EDGE_BAND = 0.08 m2 (printed 1, range midpoint 0, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-773e61946c076353c74c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-43e804ba4a4c07529fd5:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 0.912506,
+    "high": 1.095008
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.003757
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 0.912506..1.09501 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-778be286070fc191ef81",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-760f6c369aa655adc84d:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.105
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-154 = -0.10 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.456952
+  },
+  {
+   "line_id": "L-77ecb282cecee46e23f3",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-061e18cf35a4b6b33d68:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 1.904,
+    "high": 2.38
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.142
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 1.904..2.38 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-793e16c45e3733cdaf55",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-361f5e913c566c4fe2b5:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.105
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-159 T282-15E+15F#1-END = -0.10 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.91483
+  },
+  {
+   "line_id": "L-7b33c9aecd3ef67e3b3b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-3403073af4f952e49df1:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.8
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-004.L-3403073af4f952e49df1 = 1.80 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-7b3aad24af34a0e58121",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-cc702b8541c15fdfd98c:FACES:CALCULATED:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.08
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-296.1F-029.EDGE_BAND = 0.08 m2 (printed 1, range midpoint 0, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-7b7aab7ac0fe962a91b9",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1f0b37d3309ac5bb4c07:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.36
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-006.L-1f0b37d3309ac5bb4c07 = 3.36 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-7c3552712f473f04f86c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-5bc1baae70fcc325abea:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.059
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R5-BAND0049.GF-095.BEAM_SIDE_HELD_M2:UNMATCHED = 0.06 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.786853
+  },
+  {
+   "line_id": "L-7c8b7e4bacd3e27a92a6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-dac43ee18f55433b57e7:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.0875
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-097 = 3.09 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 2.615455
+  },
+  {
+   "line_id": "L-7e854ad0624174309650",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-291.1F-045~REST.JUNCTION_HELD_M2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.00021
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-291.1F-045~REST.JUNCTION_HELD_M2 (BEAM 1F roof slab (p.5) junction faces next to held member (2.200 m)): midpoint of 0.0..0.00042 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-7f7fa7a824ff3d8969ce",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c10e2945d582b5a03126:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.693653
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "4 face(s) R4-241 R4-305.2F-018.JOINT_HELD_M2 R4-307.2F-018.JOINT_HELD_M2 R4-311.2F-018.JOINT_FACE = 5.69 m2 (printed 0, range midpoint 4, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-7fce9c893b0befb7f335",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-3e7ea87496653eb75704:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.105
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-155 = -0.10 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.456952
+  },
+  {
+   "line_id": "L-7fe93376cb482ad01860",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-694a75c84dd6e4bb4491:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.162052
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-218 R4-273.GF-182.JOINT_FACE R4-274.GF-182.EDGE_BAND = 6.16 m2 (printed 0, range midpoint 2, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-8029c283cbbe702cd468",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-26f6b6f2365c72e42291:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.206,
+    "high": 5.5822
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.8941
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 4.206..5.5822 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-812bdedead08caaa543f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-9e4895663f76d7f03ac9:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.280567,
+    "high": 9.614546
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 7.447557
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 5.28057..9.61455 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-81facd0ae5a789414e9f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-39ca5340879eafc35355:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 3.901443,
+    "high": 4.122348
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.011895
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 3.90144..4.12235 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-825bc0a640dbd64d52c6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-71144bbcfce0b1dbbdef:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.299953
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-261.GF-002.BEAM_SIDE_HELD_M2 = 0.30 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.263941
+  },
+  {
+   "line_id": "L-839bf7ea072a728b42e7",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-4783c6e18002c3a8a37e:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) T282-136+7D5#1-END = 0.00 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); T282-136+7D5#1-END: traced END length 0.0 m: the end sits on a drawn face, no form; host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-84438f3b8c366e8d7ceb",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c677b628a776d3b87b02:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.52,
+    "high": 6.732
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.126
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 5.52..6.732 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-84d165a110d688b96400",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-1F-SW-2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.170095
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-1F-SW-2 (PARAPET parapet 1F SW-2 cast faces (2 x RC height x centreline)): midpoint of 2.58003..13.76016 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-85eeff7117c47f1838ef",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-9e28c7012784a8dc33c8:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.15
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-179 = -0.15 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 5.311098
+  },
+  {
+   "line_id": "L-8605b860a698f87d336b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fb7a6431fede62e93fd5:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.04
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-187 = 0.04 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-86173b9f66d41239b9b9",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-56ebab0b7b448d0abeb1:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.38
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-145 = 3.38 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 1.43154
+  },
+  {
+   "line_id": "L-867e155d6f8f0a452eba",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-282.1F-072~REST.BEAM_SIDE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 0.102019,
+    "high": 0.102019
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.102019
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 0.102019..0.102019 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-872b7e3157891f022e79",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e8536bc4f2699a24e2ab:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.12
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-176 = -0.12 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 4.622999
+  },
+  {
+   "line_id": "L-888002f64f3975fefabd",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-GF-NW-7",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.16
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-GF-NW-7 (PARAPET parapet GF NW-7 cast faces (2 x RC height x centreline)): midpoint of 4.62..7.7 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-8894cda96fa1c15cd099",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-5d3e72daa69dc769ca5e:OQ10:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.5095
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-040 = -0.51 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-88b867797a3645bd5727",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-aba59a2157a48a69e2fb:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.452681
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "4 face(s) R4-258.GF-062.BEAM_SOFFIT R4-258.GF-106.BEAM_SOFFIT R4-274.GF-062.EDGE_BAND R4-274.GF-106.EDGE_BAND = 0.45 m2 (printed 0, range midpoint 2, held_from lower bound 2, hand 0; face ledger T-332); host STR.CONC.BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-897203c75bf4fc48f79c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-f0e25ad2cf73bf2a35ea:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.84
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-105 = 0.84 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-89efcbf909d56c794e92",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-cc6aaa99e1892f34b92f:OQ10:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.12
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-175 = -0.12 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 2.394088
+  },
+  {
+   "line_id": "L-8a6bdf08abb3f33017d6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-6bf14711798e5af93594:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.03
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) T282-10B+7D1#1-A = 0.03 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); T282-10B+7D1#1-A: delta length 0.10 m x D 0.30 (BAND0012.1); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-8af3d266b46859dcf329",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-92617ae61830c3cdce52:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.02
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-000.L-92617ae61830c3cdce52 = 1.02 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-8b2e98724d0dc822a4fc",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-a753af083197621c2ea4:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.8
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-004.L-a753af083197621c2ea4 = 1.80 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-8c96ce0b710b93d43d60",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-0ede77cfd0badc4c7d62:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.721464
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "4 face(s) R4-239 R4-306.2F-000.JOINT_HELD_M2 R4-311.2F-000.JOINT_FACE R4-312.2F-000.EDGE_BAND = 5.72 m2 (printed 0, range midpoint 3, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-8f0bfd8c267c8be7f469",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-402dbe61d1c924144a3c:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.18
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) T282-7D4+F8#2-A = 0.18 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); T282-7D4+F8#2-A: delta length 0.30 m x D 0.60 (BAND0015); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-8fbb23ed22b0b41d4da5",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d2c75eb10451e4dd1db5:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.2
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-028.L-d2c75eb10451e4dd1db5 = 1.20 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-907dc7fc0dfaf3914443",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-bf5eb56348883cb2776d:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.41784
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-108 = 3.42 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.447564
+  },
+  {
+   "line_id": "L-9261e6b8dba4e21c93d4",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-36efa902da4263479e0b:FACES:HELD:-:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.7
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) T332-POOL-BACK-BASE = 0.70 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-92cd80b46d8b8e3a1d0b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-2F-NW-1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.3
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-2F-NW-1 (PARAPET parapet 2F NW-1 cast faces (2 x RC height x centreline)): midpoint of 3.975..6.625 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-9449845c55fc31907aaa",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-bde0257c24588948167f:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.28
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-088 = 2.28 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 1.931309
+  },
+  {
+   "line_id": "L-94fee3359d55d5120fd6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-8d031491396379f0cbb1:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.438807
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-302.2F-007.BEAM_SIDE R4-302.2F-007.BEAM_SOFFIT R4-312.2F-007.EDGE_BAND = 0.44 m2 (printed 0, range midpoint 2, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-96f797ca9c3e2d981ee2",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-01830823b3fe396ad418:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.6
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-008.L-01830823b3fe396ad418 = 3.60 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-96fe7f55b6ddb98254b8",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-a2cb6d533860e6f37b3e:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.111026
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-199 R4-266.GF-064.JOINT_HELD_M2 R4-273.GF-064.JOINT_FACE = 8.11 m2 (printed 0, range midpoint 3, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 7.497325
+  },
+  {
+   "line_id": "L-9900f4e347a78254ae65",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-4d689805e55dca54f7cf:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.6
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-008.L-4d689805e55dca54f7cf = 3.60 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-99539ffe7a368fa2a00e",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-2bae08911f281f31553f:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.52
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-002.L-2bae08911f281f31553f = 2.52 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-99c08bf33b245b6a3b58",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-1F-NW-1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.635377
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-1F-NW-1 (PARAPET parapet 1F NW-1 cast faces (2 x RC height x centreline)): midpoint of 0.61365..2.657104 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-9a433c81f58b741005e0",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-35da88665bf36b89a8fc:OQ10:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.225
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-031.F9 = -0.23 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-9b816594be281b939c8a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-5146145453fda384253d:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.02
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-000.L-5146145453fda384253d = 1.02 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-9bf64b4c7a1bea136b40",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-26491bc55abff7518911:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.132
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-266.GF-041.JOINT_HELD_M2 R4-267.GF-041.JOINT_HELD_M2 = 0.13 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 4.685828
+  },
+  {
+   "line_id": "L-9c3643da524267bf47f6",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-7863355dfcb68a681d2d:SIDE:CONFLICT:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 0.679193,
+    "high": 0.843465
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.761329
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 0.679193..0.843465 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-9c86d057f36b82d5b135",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-b3a779187950eef0fcb6:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.6064
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-042 = 2.61 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-9d715ded13bf2959453c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-275.GF-151.UNMATCHED_PLAN",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.07
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-275.GF-151.UNMATCHED_PLAN (BEAM GF roof slab (p.4) band pieces bound to no member (0.718 m2 plan)): midpoint of 0.07..0.07 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-9dbd0ec91ff62126cced",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1487bdda099006e0c4ba:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.715
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-079 = 1.71 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-9e2bc194c66861e6f5a3",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-8ea71184fff91b4357b7:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.52168
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-258.C59D R4-258.C59S = 2.52 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.473462
+  },
+  {
+   "line_id": "L-9f1d2c5d37e218107a4c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-5d6f86944074e7c8a2b6:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.324
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-261.GF-026.BEAM_SIDE_HELD_M2 = 0.32 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.365056
+  },
+  {
+   "line_id": "L-9fb663a5a923a70b4408",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fb53ac7edf5914afd6f5:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.44
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-074 = 3.44 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.456952
+  },
+  {
+   "line_id": "L-a14c2f6466226f89d3a7",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-4129e781d6133b963bf7:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.0
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-100 = 3.00 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.270598
+  },
+  {
+   "line_id": "L-a1f5a414ee8504a6fba6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-a244493709ce2e0d23da:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.52
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-002.L-a244493709ce2e0d23da = 2.52 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-a209879765e3aeb36aba",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-26fcfbbb143269e7bb58:FACES:HELD:OQ10_EARTH_CAST:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_EARTH_CAST_NOT_ADOPTED",
+   "basis": "EARTH_CAST twin of 1 held face(s) R4-083: the FORMED reading is adopted on its own line (2 face(s)), so this alternative carries no form (never summed)",
+   "supersedes_main_fill": 1.528953
+  },
+  {
+   "line_id": "L-a2d766d3e99c0cae2c72",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-b4a13a43967ee4765662:FACES:HELD:-:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-075 = 0.30 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); R4-075: 2 sides x L 0.50 x D 0.30 (BAND0017.2, concrete IGNORED_SMALL in T-761; form kept); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-a3589b33d7fc771f51f0",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-3284f44000c02179ace7:FACES:HELD:-:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.38
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-065 = 1.38 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); R4-065: 2 sides x L 2.30 x D 0.30 (BAND0012.2 depth per T-761: typical 30x30); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-a3bf9c43f0abcf3a1e79",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-3e9076546ea34d8cbcc7:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.443995
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-260.GF-097.BEAM_SIDE_HELD_M2 R4-269.GF-097.JUNCTION_HELD_M2 = 0.44 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.870633
+  },
+  {
+   "line_id": "L-a49e9721f7a94085555b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-cb4d0756fba483b7787b:FACES:HELD:OQ10_SOFFIT:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.5925
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-034 = 1.59 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-a501b111660ad3de8a91",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-262.GF-166~REST.BEAM_SIDE_HELD_M2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.157151
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-262.GF-166~REST.BEAM_SIDE_HELD_M2 (BEAM GF roof slab (p.4) beam_side faces next to UNMATCHED (3.632 m)): midpoint of 0.0..0.314303 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-a518717aecafe678da2f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-GF-SW-9",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.11992
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-GF-SW-9 (PARAPET parapet GF SW-9 cast faces (2 x RC height x centreline)): midpoint of 0.83994..1.3999 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-a533bfe657c968a81c15",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-02ee97d409df4b3a501b:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.016998
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-291.1F-100.JUNCTION_HELD_M2 = 0.02 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 2.408901
+  },
+  {
+   "line_id": "L-a6b73e0d63eeac5bc4f5",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-260.GF-066~REST.BEAM_SIDE_HELD_M2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.1e-05
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-260.GF-066~REST.BEAM_SIDE_HELD_M2 (BEAM GF roof slab (p.4) beam_side faces next to HELD_EDGE (8.593 m)): midpoint of 0.0..6.2e-05 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-a6db395df047e935a4a3",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-bd8e800cb07a297b25d7:OQ10:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.5095
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-041 = -0.51 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-a7787e7e1a5e487fb255",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-GF-NE-4",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 15.416
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-GF-NE-4 (PARAPET parapet GF NE-4 cast faces (2 x RC height x centreline)): midpoint of 11.562..19.27 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-a95d7999231d555fc470",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-4299f559bf9509418385:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.236
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-285.1F-034.BEAM_SIDE_HELD_M2 = 0.24 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.137547
+  },
+  {
+   "line_id": "L-aa26277740773f7d0c59",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-cc702b8541c15fdfd98c:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.75
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "4 face(s) R4-225 R4-287.1F-029.JOINT_HELD_M2 R4-290.1F-029.JOINT_HELD_M2 R4-295.1F-029.JOINT_FACE = 5.75 m2 (printed 0, range midpoint 4, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-aa7aa07b0afa14135651",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-7076482d75ca42691468:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.105
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-183 = -0.10 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 4.932582
+  },
+  {
+   "line_id": "L-ab7d59c043b04b396128",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-f24cf117a9ce1e875785:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.45124
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-113 = 1.45 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-abae5a9f4b3ead466a50",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-0e852cca42fb8b765c58:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.68
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-084 = 1.68 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-abb2a65c35825e04c6bf",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-50667f69855b6d588011:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 0.575087,
+    "high": 0.690103
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.632595
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 0.575087..0.690103 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-abedb68e0e86451af4fc",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-038456ade3eb09b43bb8:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.126619
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-286.1F-090.EDGE_HELD_M2 = 0.13 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.283089
+  },
+  {
+   "line_id": "L-ac650f63b8175a091050",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fe78ae283abfb6256358:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.12
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-178 = -0.12 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.194362
+  },
+  {
+   "line_id": "L-accdcecf07e2306f75b2",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-ab62c5990fe1114d6171:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.237109
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-283.1F-045~BM-1F-026#BAND0031.1.BEAM_SIDE_HELD_M2 R4-291.1F-045~BM-1F-026#BAND0031.1.JUNCTION_HELD_M2 = 0.24 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 7.154564
+  },
+  {
+   "line_id": "L-ae0d688f7f2127696684",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1dc713c83bf62e525ff2:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 7.487159
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-237 R4-295.1F-104.JOINT_FACE = 7.49 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-af3802991a31d1c946a3",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-bd8e800cb07a297b25d7:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.8
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-010.L-bd8e800cb07a297b25d7 = 4.80 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-afcc824345dfaed5ab2c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e112e2add2f8979a6c39:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.452,
+    "high": 5.856
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.654
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 5.452..5.856 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b0093b51de95621bb382",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1ec3dfd936e83b658b2c:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 7.86517
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-232 R4-288.1F-067.JOINT_HELD_M2 R4-295.1F-067.JOINT_FACE = 7.87 m2 (printed 0, range midpoint 3, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 6.297753
+  },
+  {
+   "line_id": "L-b050ccc7cc6d3ade0d45",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-10f3cd1eb0f81a3892f2:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.928454
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) T332-F8-POOL-CONFLICT = 0.93 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b0c5e97b91d9fd034670",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-831f6fe3de133294bb8f:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.125,
+    "high": 6.219
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.672
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 5.125..6.219 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b12cb2ed0a2aeb4dd353",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fa1c346855c5040632a5:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.147733
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-267.GF-045.JOINT_HELD_M2 = 0.15 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.748663
+  },
+  {
+   "line_id": "L-b195f82c0b79c9a1b10d",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-683900f927474df70227:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.144749
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-286.1F-091.EDGE_HELD_M2 = 0.14 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.352385
+  },
+  {
+   "line_id": "L-b1ac6d7ca2c5120bdd7e",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d43bea72f2c8e939b663:FACES:HELD:OQ10_SOFFIT:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.14635
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-039 = 1.15 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b1d15c7c0bbdeb52f9c6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-258.GF-008~REST.BEAM_SIDE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 0.000341,
+    "high": 0.000341
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000341
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 0.000341..0.000341 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b2786e45b6262334fd5c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-0bb78accf8c0a0fbdbaf:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.105
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-172 T282-17E+17F#1-A T282-17E+17F#1-B = 0.10 m2 (printed 0, range midpoint 3, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b31fd59190fd232f0a6f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-a2bc431068c8113f71eb:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.503995
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-259.GF-024.BEAM_SIDE_HELD_M2 R4-260.GF-024.BEAM_SIDE_HELD_M2 R4-261.GF-024.BEAM_SIDE_HELD_M2 = 0.50 m2 (printed 0, range midpoint 3, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.365056
+  },
+  {
+   "line_id": "L-b35c1688058336adc729",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-bc01297b1c4a4c45a15f:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.693053
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "4 face(s) R4-238 R4-305.2F-005.JOINT_HELD_M2 R4-311.2F-005.JOINT_FACE R4-312.2F-005.EDGE_BAND = 5.69 m2 (printed 0, range midpoint 3, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b496828905921760d1ee",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-60f09eece6568b15f6ce:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 3.435526,
+    "high": 3.603002
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.519264
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 3.43553..3.603 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b4c47b2ad35deb6f8abc",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-8f8ad257d9b2cb9e027f:FACES:CALCULATED:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.080019
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-296.1F-013.EDGE_BAND = 0.08 m2 (printed 1, range midpoint 0, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b5a042a8c4f93287648f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e2134034441cb7db7bd7:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.84
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-078 = 0.84 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b631a4538e1eac9d3291",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-353",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "DEFAULT",
+   "method": "HAND",
+   "basis": "hand: DOME-B drum: as DOME-A (no drum concrete line; RC reading 36.0 m2 named)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b7c3669d6e193e35e457",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-8f8ad257d9b2cb9e027f:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.3225,
+    "high": 5.844461
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.583481
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 5.3225..5.84446 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b7db43e0b414083bf155",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-8a88f805c490b970d754:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.844035
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-194 R4-267.GF-003.JOINT_HELD_M2 R4-273.GF-003.JOINT_FACE = 5.84 m2 (printed 0, range midpoint 3, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.748663
+  },
+  {
+   "line_id": "L-b8482107f372617e0808",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-43dae3d6dfec957b26a8:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.854,
+    "high": 5.722
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.288
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 4.854..5.722 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b9be639b2f313de7b467",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-ANNEX-NW-1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.48
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-ANNEX-NW-1 (PARAPET parapet ANNEX NW-1 cast faces (2 x RC height x centreline)): midpoint of 0.36..0.6 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-b9eab157c42424b4ce77",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1dc713c83bf62e525ff2:FACES:CALCULATED:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.128
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-296.1F-104.EDGE_BAND = 0.13 m2 (printed 1, range midpoint 0, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-bba03bb82e17edf0c3dd",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-a87ea657a42a311cb851:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.92,
+    "high": 7.268
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.594
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 5.92..7.268 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-bc51350af5ede3e60e5a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-a8c5c32c7a785c1e3f05:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.47
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-111 = 1.47 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-be7d0aad6c5823b40c72",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-0682b72a63f720f54c8d:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 7.1
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-022.L-0682b72a63f720f54c8d = 7.10 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-bedbd230071bd9b319af",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-7d70692d03102a2dc306:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.346205
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-210 R4-273.GF-147.JOINT_FACE = 6.35 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 5.414735
+  },
+  {
+   "line_id": "L-bf1eecb7350e8d43826e",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-831f6fe3de133294bb8f:FACES:CALCULATED:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.096
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-296.1F-106.EDGE_BAND = 0.10 m2 (printed 1, range midpoint 0, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-c00cf98ba8a408aa2f55",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-9cb26d86575a92694880:FACES:CALCULATED:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.064
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-274.GF-185.EDGE_BAND = 0.06 m2 (printed 1, range midpoint 0, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-c0e7c4eb585037cef07b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-f83c4a469845c7e14dfa:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 0.288002,
+    "high": 0.288002
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.288002
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 0.288002..0.288002 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-c29bb95434f82bae307a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-ANNEX-SE-1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.2
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-ANNEX-SE-1 (PARAPET parapet ANNEX SE-1 cast faces (2 x RC height x centreline)): midpoint of 3.9..6.5 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-c323d39e712ceb56b115",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-cb4d0756fba483b7787b:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.55
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-032 = 4.55 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-c3fb9bb0d4a93ba004ae",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1146bdecd41491ce9382:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.1825
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-094 = 3.18 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 2.695644
+  },
+  {
+   "line_id": "L-c43fc4559780b73eefa7",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d2c75eb10451e4dd1db5:OQ10:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.225
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-031.FN = -0.23 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-c47fd8fdf9bd6d7d9cf2",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-4129e781d6133b963bf7:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.105
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-163 = -0.10 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.270598
+  },
+  {
+   "line_id": "L-c66c00f337c2d2e0975e",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d06033aa8d5f29aef490:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.914469
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-260.GF-066~BM-GF-043#BAND0043.2.BEAM_SIDE_HELD_M2 R4-261.GF-066~BM-GF-043#BAND0043.2.BEAM_SIDE_HELD_M2 = 0.91 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 6.256509
+  },
+  {
+   "line_id": "L-c73eba7ed76c3a44d296",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-0e30aadba2eebc6c3ede:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.82
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-142 = 2.82 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 1.194362
+  },
+  {
+   "line_id": "L-c7b17d201affddad4ed5",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-335.HIDDEN_535_536",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.306303
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-335.HIDDEN_535_536 (STAIR RS-S waist soffit): held_from 0.31 m2 (lower bound)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-c81877dbd88272eb9716",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-9a33d59e28a53df74b18:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.059994
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-290.1F-000.JOINT_HELD_M2 = 0.06 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.498752
+  },
+  {
+   "line_id": "L-c86beab2e9ceeb2afaee",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-151a282bcf2d5324a618:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.0
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-101 = 3.00 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.270598
+  },
+  {
+   "line_id": "L-c8b5f1bfd587dc02a921",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-46f25f72b44e8bc3e2e0:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.565
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-058 = 2.56 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 2.172722
+  },
+  {
+   "line_id": "L-c8ce3cb46a6494f759d4",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c5902fd02c58b85a5df1:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.5824
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-106 = 2.58 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 1.093632
+  },
+  {
+   "line_id": "L-c9161e616ac601ab1278",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-7afad512258c1bad8519:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.064
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-141 = 8.06 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.415367
+  },
+  {
+   "line_id": "L-c91dc651430e68d60417",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e9a885323ad6ec3ea32b:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.0325
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-125 = 6.03 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 5.109779
+  },
+  {
+   "line_id": "L-c927f50828c4da453f8f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fb9a2ac1d861b37db720:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.126619
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-286.1F-060.EDGE_HELD_M2 = 0.13 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.283089
+  },
+  {
+   "line_id": "L-c952153d347f092941af",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-1b7eaa73e9a5e911054d:OQ10:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.2136
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-045 = -0.21 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-cae38105da7148c318cb",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-31a0424bd0efcc93efba:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.243007
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-247 R4-295.1F-108.JOINT_FACE = 5.24 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.498752
+  },
+  {
+   "line_id": "L-cc4145dc19dba7e5c728",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-3dddf99008ab922da814:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.621
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-262.GF-142.BEAM_SIDE_HELD_M2 = 0.62 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 26.490943
+  },
+  {
+   "line_id": "L-cd188fe35575602f2ac7",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-336.HIDDEN_535_536",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.087731
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-336.HIDDEN_535_536 (STAIR RS-LD landing soffit): held_from 0.09 m2 (lower bound)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-cda1da6b75a6422e0787",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-9f49f5fafcb9322c90b5:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.489333
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-114 = 2.49 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.023255
+  },
+  {
+   "line_id": "L-cf06e7fa27a540eedd0f",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-336.HIDDEN_2CC_2CD",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.11875
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-336.HIDDEN_2CC_2CD (STAIR RS-LD landing soffit): held_from 0.12 m2 (lower bound)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-cf0cfd9ab1b79dc9f3d8",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-048",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 115.883294
+   },
+   "label": "ESTIMATE",
+   "method": "RATIO",
+   "basis": "35 column necks: neck concrete 11.52 m3 (36 lines: released / T-761 / held midpoints) x column ratio 10.06 m2/m3 (this villa); the ledger's perimeter 52.0 m per m of neck height (30 GF sections) needs the neck height (Q-21 datum); a bare-section P/A 13.0 would give 149.8 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-d018e58a6ce2a3592bc6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-f2d545c87e8586cde8af:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.544833
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-284.1F-061.BEAM_SIDE_HELD_M2 R4-291.1F-061.JUNCTION_HELD_M2 = 0.54 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.238849
+  },
+  {
+   "line_id": "L-d01f2c570963cbcdda77",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-1F-SW-3",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 10.67184
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-1F-SW-3 (PARAPET parapet 1F SW-3 cast faces (2 x RC height x centreline)): midpoint of 4.00194..17.34174 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-d0244b4f02d6a51fb85d",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-275.GF-161.UNMATCHED_PLAN",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.05125
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-275.GF-161.UNMATCHED_PLAN (BEAM GF roof slab (p.4) band pieces bound to no member (0.718 m2 plan)): midpoint of 0.05125..0.05125 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-d091c6a54de8a93bcbcf",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-36efa902da4263479e0b:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.599115
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) T332-POOL-BASE-EDGE-F = 3.60 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-d0a76835d4a25ee1ee6f",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-26fcfbbb143269e7bb58:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.61
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 2 below-ground face(s) R4-080 R4-082 = 3.61 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 1.528953
+  },
+  {
+   "line_id": "L-d56d13bbfa402c600e98",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-4c4496579e5bfa20ae9f:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.596165
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "4 face(s) R4-212 R4-264.GF-155.JOINT_HELD_M2 R4-267.GF-155.JOINT_HELD_M2 R4-273.GF-155.JOINT_FACE = 8.60 m2 (printed 0, range midpoint 4, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-d7252c8ee11fc2985759",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-efbed17455bb224e126e:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.2015
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-091 = 3.20 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 2.71202
+  },
+  {
+   "line_id": "L-d74bcfbe84668502a710",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c6fa4992eb3ed2aa01e6:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.2415
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-262.GF-133.BEAM_SIDE_HELD_M2 = 0.24 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 25.813471
+  },
+  {
+   "line_id": "L-d7a1abc1a2d88bac65d1",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-283.1F-026~REST.BEAM_SIDE_HELD_M2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000102
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-283.1F-026~REST.BEAM_SIDE_HELD_M2 (BEAM 1F roof slab (p.5) beam_side faces next to HELD_EDGE (12.926 m)): midpoint of 0.0..0.000204 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-db55cbe711ea18bf79ae",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-1F-NE-2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 30.512
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-1F-NE-2 (PARAPET parapet 1F NE-2 cast faces (2 x RC height x centreline)): midpoint of 11.442..49.582 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-db974b66b3dfa71251e9",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-402dbe61d1c924144a3c:FACES:HELD:-:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 11.64
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-130 R4-131 = 11.64 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 2; face ledger T-332); R4-130: 2 sides x L 5.45 x D 0.60 (BAND0015 depth per T-761: typical 30x60); R4-131: 2 sides x L 4.25 x D 0.60 (BAND0015); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-dc4074a6f728f13d8c66",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-efbed17455bb224e126e:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.225
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) R4-160 R4-161 = -0.22 m2 (printed 0, range midpoint 2, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 2.71202
+  },
+  {
+   "line_id": "L-dd1a819d9ef59fd9b78a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-274.GF-008~REST.EDGE_BAND",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 8.1e-05,
+    "high": 8.1e-05
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.1e-05
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 8.1e-05..8.1e-05 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-ddec0b3f3436cdbdbf8b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c0b3340a906c2c7650f8:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.888303
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-205 R4-273.GF-090.JOINT_FACE R4-274.GF-090.EDGE_BAND = 5.89 m2 (printed 0, range midpoint 2, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-e0669f63be01bce6cfb2",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-346",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "DEFAULT",
+   "method": "HAND",
+   "basis": "hand: no drum concrete in the candidate (named omission T-266; drum material / thickness not printed, G3-b): formwork follows the concrete; RC reading 2 faces x pi x 4.41 x 1.30 = 36.0 m2 named for the designer item",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-e1a2aafb8ecd8076971c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-b3a779187950eef0fcb6:FACES:HELD:OQ10_SOFFIT:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.8145
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-044 = 0.81 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-e1bde63d9e42dd9b9558",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-ANNEX-NE-6",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.48004
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-ANNEX-NE-6 (PARAPET parapet ANNEX NE-6 cast faces (2 x RC height x centreline)): midpoint of 6.36003..10.60005 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-e3000839e8386bd2291c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-99451ab1afb179bfb75c:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.050993
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-290.1F-003.JOINT_HELD_M2 = 0.05 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.498752
+  },
+  {
+   "line_id": "L-e3eb00574a3c1c605077",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-LIFT-PIT-INNER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.25
+   },
+   "label": "SAFETY",
+   "method": "HAND",
+   "basis": "hand: 5.50 m2 per m of pit height (ledger: inner perimeter 7.20 less 1.70 column faces) x 1.50 m = the T-761 SAFETY pit height (D-43)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-e5655bbaeb7cd51398d1",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d53e5eb08e2c6c668254:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.07569
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-103 = 1.08 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-e5837e0dd6eb5b32bb70",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-0e30aadba2eebc6c3ede:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.82
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-144 = 2.82 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.194362
+  },
+  {
+   "line_id": "L-e5b588d3dc230ce7eb00",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-bde4aa4648e5b6f0b67d:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.135252
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-286.1F-092.EDGE_HELD_M2 = 0.14 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.316202
+  },
+  {
+   "line_id": "L-e6456c9af8c9c810f960",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-2F-NE-1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.32
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-2F-NE-1 (PARAPET parapet 2F NE-1 cast faces (2 x RC height x centreline)): midpoint of 4.74..7.9 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-e7ab4297d6abe12f0c47",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-efd3f7806bf10b6a8e98:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-275.GF-112.UNMATCHED_PLAN = 0.10 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.315985
+  },
+  {
+   "line_id": "L-e8279740a39a9dbf25a5",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-6bdfcf21ebb29773436e:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.043697
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-269.GF-114~BM-GF-030#BAND0029.2.JUNCTION_HELD_M2 = 0.04 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 5.545542
+  },
+  {
+   "line_id": "L-e8b3d472679c4f7a6152",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e24946df436cbc25fca6:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.024
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-102 = 6.02 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-e8ebdf94fa205ad47dbe",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-ca163e55e38f8968a766:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.273303
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-284.1F-082~BM-1F-022#BAND0024.1.BEAM_SIDE_HELD_M2 = 0.27 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 2.955549
+  },
+  {
+   "line_id": "L-eb7b7329145b529cc89d",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-6290a9f3d93f38cd46d6:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 83.36
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-184 = 83.36 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.BOUNDARY_WALL is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-ecfdb29e020098089329",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-361f5e913c566c4fe2b5:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.16
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-086 = 2.16 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.91483
+  },
+  {
+   "line_id": "L-ed99e4c1b14ce3ad75cb",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-5d3e72daa69dc769ca5e:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.0
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-016.L-5d3e72daa69dc769ca5e = 5.00 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-ee50691a8cc801e7e924",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-15a128c38982af899894:FACES:HELD:-:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.1
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) T332-POOL-BACK-WALL = 2.10 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-ef4e9dadb1870bb0f713",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-0bb78accf8c0a0fbdbaf:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.69883
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-109 = 1.70 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f14782c0158421f3767a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e8536bc4f2699a24e2ab:FACES:HELD:OQ10_EARTH_CAST:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_EARTH_CAST_NOT_ADOPTED",
+   "basis": "EARTH_CAST twin of 1 held face(s) R4-123: the FORMED reading is adopted on its own line (1 face(s)), so this alternative carries no form (never summed)",
+   "supersedes_main_fill": 4.622999
+  },
+  {
+   "line_id": "L-f19a44ba871f6020d965",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-821032bc04a0b0d02133:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.04
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-332 = 1.04 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 1; face ledger T-332); R4-332: D1 lobby waist soffit = plan 1.035 m2 (T-711 / T-761 basis; 0 if the designer confirms a waist on fill); host STR.CONC.STAIR is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f24699a29b7dfac496b1",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-269.GF-114~REST.JUNCTION_HELD_M2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000553
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-269.GF-114~REST.JUNCTION_HELD_M2 (BEAM GF roof slab (p.4) junction faces next to held member (4.964 m)): midpoint of 0.0..0.001106 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f27f1cfd1cbb11a393bb",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-88ccf8d4505411deb9e5:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.935702
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "5 face(s) R4-258.GF-143.BEAM_SOFFIT R4-258.GF-159.BEAM_SIDE R4-258.GF-159.BEAM_SOFFIT R4-258.GF-160.BEAM_SOFFIT R4-274.GF-159.EDGE = 1.94 m2 (printed 0, range midpoint 4, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f2f2781ade657190d7e6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-d79d17d14f39d5148cb8:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.152,
+    "high": 5.5282
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.8401
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 4.152..5.5282 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f4432a2d23fb994a6e92",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-fe78ae283abfb6256358:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.82
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-132 = 2.82 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.194362
+  },
+  {
+   "line_id": "L-f4de98be566024394324",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-8de64040a1c3ae6cf137:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.545933,
+    "high": 5.98
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.762967
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 5.54593..5.98 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f50866a4b9e62fe438d6",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-f6af8a29e2c1b5fdcfd0:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.2
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-028.L-f6af8a29e2c1b5fdcfd0 = 1.20 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f5a62d38838a90e660af",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-0e852cca42fb8b765c58:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) T282-15C+7CC#1-END = 0.00 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f600eb2858eeee5e3910",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-1F-NW-3",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.84819
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-1F-NW-3 (PARAPET parapet 1F NW-3 cast faces (2 x RC height x centreline)): midpoint of 0.31827..1.378109 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f651996be5a5ae0a1543",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-322d1a1a7d9504e9cbc6:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1475
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-290.1F-033.JOINT_HELD_M2 = 0.15 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 3.498752
+  },
+  {
+   "line_id": "L-f6d75095bce737a0623a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:T332-PARAPET-1F-SW-1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.063984
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face T332-PARAPET-1F-SW-1 (PARAPET parapet 1F SW-1 cast faces (2 x RC height x centreline)): midpoint of 0.024..0.103968 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f8572ed3502009a1b19c",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-dc8cbfc119d006ff3927:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.312067
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-302.2F-046.BEAM_SIDE R4-302.2F-046.BEAM_SOFFIT R4-312.2F-046.EDGE_BAND = 0.31 m2 (printed 0, range midpoint 2, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f912614ba0443305943a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-b4a13a43967ee4765662:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0455
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "2 face(s) T282-13E+7D6#2-B T282-13E+7D6#2-END = 0.05 m2 (printed 0, range midpoint 0, held_from lower bound 0, hand 2; face ledger T-332); T282-13E+7D6#2-B: delta length 0.15 m x D 0.30 (BAND0017.2); T282-13E+7D6#2-END: delta length 0.0017 m x D 0.30 (BAND0017.2); host STR.CONC.GROUND_BEAM is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f91ce111a09e5dcfb15e",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-43d1d1031b3d3ddd1cc4:FACES:HELD:OQ10_FORMED:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.32
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-085 = 2.32 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 0.982596
+  },
+  {
+   "line_id": "L-f9836bd6176bc3f9cc84",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-e6c1c9a7feec10f64975:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.818089
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-217 R4-273.GF-179.JOINT_FACE R4-274.GF-179.EDGE_BAND = 5.82 m2 (printed 0, range midpoint 2, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f9a5da9a7d3e5b4c0610",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-274.GF-005~REST.EDGE_BAND",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 0.000162,
+    "high": 0.000162
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.000162
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 0.000162..0.000162 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-fa037ca1982c83c29750",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-53f223b06db14ac41d47:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 3.7206,
+    "high": 7.218122
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.469361
+   },
+   "label": "ESTIMATE",
+   "method": "INDEX_RANGE",
+   "basis": "midpoint of the candidate's own held range 3.7206..7.21812 m2 (engine bounds of the held faces)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-fa605d02e7af21c07379",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-62f712462a36d4ad1b32:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.085
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-061 = 4.08 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 3.460261
+  },
+  {
+   "line_id": "L-fb0989b9500ed0f90133",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-cc381dfe7b49cb758166:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.36
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-006.L-cc381dfe7b49cb758166 = 3.36 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-fb4d79c927184b5057f7",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-2999807a87e55d057be3:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.024
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-308.2F-057.JUNCTION_HELD_M2 = 0.02 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332)",
+   "supersedes_main_fill": 1.516729
+  },
+  {
+   "line_id": "L-fbf94b0bb2323bfe65d8",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-43dae3d6dfec957b26a8:FACES:CALCULATED:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.096
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-274.GF-178.EDGE_BAND = 0.10 m2 (printed 1, range midpoint 0, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-fbfcaef2963dd9acf4ac",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-275.GF-152.UNMATCHED_PLAN",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.07
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "untied face R4-275.GF-152.UNMATCHED_PLAN (BEAM GF roof slab (p.4) band pieces bound to no member (0.718 m2 plan)): midpoint of 0.07..0.07 m2",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-fc0f5cf21aa09cf5d95b",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-c9bb2eca50a2a2c8b569:OQ10:E=G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.14
+   },
+   "label": "DEFAULT",
+   "method": "OQ10_FORMED",
+   "basis": "OQ-10 FORMED reading of 1 below-ground face(s) R4-128 = 1.14 m2 (contact below natural ground included: no owner rule excludes it); EARTH_CAST twin 0.00 m2 not added",
+   "supersedes_main_fill": 0.965654
+  },
+  {
+   "line_id": "L-fcb1852ca2be8ce69eb8",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-541c7e565bb93ecdb78b:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.021627
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "3 face(s) R4-248 R4-311.2F-041.JOINT_FACE R4-312.2F-041.EDGE_BAND = 5.02 m2 (printed 0, range midpoint 2, held_from lower bound 1, hand 0; face ledger T-332); host STR.CONC.COLUMN is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-fff854696aade843f4e4",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-164ae9d338976be9e582:FACES:HELD:OQ10_FORMED:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": -0.28
+   },
+   "label": "ESTIMATE",
+   "method": "FACE",
+   "basis": "1 face(s) R4-036 = -0.28 m2 (printed 0, range midpoint 1, held_from lower bound 0, hand 0; face ledger T-332); host STR.CONC.FOOTING is HELD",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-027f7530c84fdc5f49a1",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-147",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.0875
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE",
+   "basis": "untied R4-147: span ARC:139+13A L 1.8063 sides (annex exterior) | no host ratio (no concrete line, no ratio for None): 1 face(s) x median released face of STR.CONC.GROUND_BEAM 3.09 m2 (this villa)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-23c3dcdd49db708a28a5",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:FACE:R4-315",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.1202
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE",
+   "basis": "untied R4-315: sunken-slab panels: beam faces above the sunken top / below the sunken | no host ratio (no concrete line, no ratio for None): 1 face(s) x median released face of STR.CONC.SLAB 2.12 m2 (this villa)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-39d830b14a64c52bc7ec",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-e37d81a8be8e0aa0010c:SIDE:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.607646
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE+T729_BOUND",
+   "basis": "SIDE:HELD:-:G not in the face ledger (re-measured after T-332) | no host ratio (released, no ratio for STR.CONC.STAIR): 1 face(s) x median released face of STR.CONC.STAIR 2.09 m2 (this villa) | T-729 CAP <= 1.21529 m2 (R-T725-1..3): 2.09 exceeds it -> midpoint 0..cap 0.608",
+   "supersedes_main_fill": 4.459645
+  },
+  {
+   "line_id": "L-4c0e72c44c32c35b1f37",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-67e4b0485135f84acc46:SIDE:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.435507
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE+T729_BOUND",
+   "basis": "SIDE:HELD:-:G not in the face ledger (re-measured after T-332) | no host ratio (released, no ratio for STR.CONC.STAIR): 1 face(s) x median released face of STR.CONC.STAIR 2.09 m2 (this villa) | T-729 CAP <= 0.871015 m2 (R-T725-1..3): 2.09 exceeds it -> midpoint 0..cap 0.436",
+   "supersedes_main_fill": 3.75324
+  },
+  {
+   "line_id": "L-57fc16524398c58c45cd",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-bb0e57b1948175a3d5b8:SIDE:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.417239
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE+T729_BOUND",
+   "basis": "SIDE:HELD:-:G not in the face ledger (re-measured after T-332) | no host ratio (released, no ratio for STR.CONC.STAIR): 1 face(s) x median released face of STR.CONC.STAIR 2.09 m2 (this villa) | T-729 CAP <= 0.834477 m2 (R-T725-1..3): 2.09 exceeds it -> midpoint 0..cap 0.417",
+   "supersedes_main_fill": 3.636761
+  },
+  {
+   "line_id": "L-7db84872f4e871c558b8",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-056402f98a6dbbcde0a0:SIDE:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.489677
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE+T729_BOUND",
+   "basis": "SIDE:HELD:-:G not in the face ledger (re-measured after T-332) | no host ratio (released, no ratio for STR.CONC.STAIR): 1 face(s) x median released face of STR.CONC.STAIR 2.09 m2 (this villa) | T-729 CAP <= 0.979355 m2 (R-T725-1..3): 2.09 exceeds it -> midpoint 0..cap 0.490",
+   "supersedes_main_fill": 5.579223
+  },
+  {
+   "line_id": "L-997777b321ab95220878",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-b6b0354b7842f0ed6e41:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.093071
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE",
+   "basis": "0 face(s) valued 0.00 m2, 1 face(s) with no value: RS-C (curved (12 tapered treads)) faces | no host ratio (T-761 ESTIMATE, no ratio for STR.CONC.STAIR): 1 face(s) x median released face of STR.CONC.STAIR 2.09 m2 (this villa)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-c6fafccf544826d69a6d",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-48b7d139bff681199543:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.785573
+   },
+   "label": "ESTIMATE",
+   "method": "RATIO",
+   "basis": "0 face(s) valued 0.00 m2, 1 face(s) with no value: DOME-A S0 approved design: ring beam faces (inner  | ratio fallback: host STR.CONC.BEAM L-48b7d139bff681199543 0.755 m3 (released) x 7.66 m2/m3 (this villa, 73 complete hosts) = 5.79 m2 - 0.00 m2 already on the host's lines = 5.79 m2 shared by 1/1 unvalued face(s)",
+   "supersedes_main_fill": 4.772642
+  },
+  {
+   "line_id": "L-caa721ed972e7905d5e6",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-061e18cf35a4b6b33d68:SIDE:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.093071
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE",
+   "basis": "SIDE:HELD:-:G not in the face ledger (re-measured after T-332) | no host ratio (T-761 ESTIMATE, no ratio for STR.CONC.STAIR): 1 face(s) x median released face of STR.CONC.STAIR 2.09 m2 (this villa)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-d9790e457fd530487553",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-7863355dfcb68a681d2d:SIDE:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.431403
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE+T729_BOUND",
+   "basis": "SIDE:HELD:-:G not in the face ledger (re-measured after T-332) | no host ratio (T-761 DEFAULT, no ratio for STR.CONC.STAIR): 1 face(s) x median released face of STR.CONC.STAIR 2.09 m2 (this villa) | T-729 CAP <= 0.862807 m2 (R-T731-1): 2.09 exceeds it -> midpoint 0..cap 0.431",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-ffd491ad529ee2251982",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-7863355dfcb68a681d2d:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.300071
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE",
+   "basis": "3 face(s) valued 7.21 m2, 1 face(s) with no value: MS1-T (turn (winders)) faces | no host ratio (T-761 DEFAULT, no ratio for STR.CONC.STAIR): 1 face(s) x median released face of STR.CONC.STAIR 2.09 m2 (this villa)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-e01bb929444556887537",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-85f64587588af8537b4b:SIDE:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.093071
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE",
+   "basis": "SIDE:HELD:-:G not in the face ledger (re-measured after T-332) | no host ratio (released, no ratio for STR.CONC.STAIR): 1 face(s) x median released face of STR.CONC.STAIR 2.09 m2 (this villa)",
+   "supersedes_main_fill": 0.364216
+  },
+  {
+   "line_id": "L-e86ee69846d492cfb17a",
+   "item_code": "STR.FORMWORK",
+   "unit": "m2",
+   "element_id": "FW:L-ab37afa17f2ac5b0efd1:FACES:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.891818
+   },
+   "label": "ESTIMATE",
+   "method": "RATIO",
+   "basis": "0 face(s) valued 0.00 m2, 1 face(s) with no value: DOME-B S0 approved design: ring beam faces (inner  | ratio fallback: host STR.CONC.BEAM L-ab37afa17f2ac5b0efd1 0.900 m3 (T-761 DEFAULT) x 7.66 m2/m3 (this villa, 73 complete hosts) = 6.89 m2 - 0.00 m2 already on the host's lines = 6.89 m2 shared by 1/1 unvalued face(s)",
+   "supersedes_main_fill": null
+  },
+  {
+   "line_id": "L-f93c7248b948b757aefb",
+   "item_code": "STR.FORMWORK.STAIR",
+   "unit": "m2",
+   "element_id": "FW:L-2416e65f053a14199cfc:SIDE:HELD:-:G",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.388
+   },
+   "label": "ESTIMATE",
+   "method": "MEDIAN_FACE+T729_BOUND",
+   "basis": "SIDE:HELD:-:G not in the face ledger (re-measured after T-332) | no host ratio (released, no ratio for STR.CONC.STAIR): 1 face(s) x median released face of STR.CONC.STAIR 2.09 m2 (this villa) | T-729 CAP <= 0.776 m2 (R-T725-1..3): 2.09 exceeds it -> midpoint 0..cap 0.388",
+   "supersedes_main_fill": 1.705481
+  }
+ ],
+ "unresolved": []
+}
