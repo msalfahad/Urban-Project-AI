@@ -1,0 +1,778 @@
+{
+ "schema": "URBAN_FIX_ROWS_V1",
+ "task": "T-769",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.79",
+ "inputs": [
+  "research/agents_t314/out/LINE_INDEX_V3_0_79.json"
+ ],
+ "summary": {
+  "family_lines": 42,
+  "lines_without_point_before": 37,
+  "rows": 37,
+  "lines_without_point_after": 0,
+  "new_lines_missing_families": 4,
+  "per_item": {
+   "EXT.FENCE.FACE [m2]": {
+    "lines": 7,
+    "after": 41.4614
+   },
+   "EXT.FENCE.WALL [m2]": {
+    "lines": 2,
+    "after": 9.54
+   },
+   "EXT.FENCE.BLOCK [m2]": {
+    "lines": 4,
+    "after": 95.4415
+   },
+   "EXT.FENCE.MASONRY_BELOW_NG [m2]": {
+    "lines": 1,
+    "after": 23.4099
+   },
+   "EXT.FENCE.BLOCK_COUNT [pcs]": {
+    "lines": 1,
+    "after": 1486.0
+   },
+   "EXT.FENCE.PLASTER [m2]": {
+    "lines": 8,
+    "after": 179.8425
+   },
+   "EXT.FENCE.PAINT [m2]": {
+    "lines": 8,
+    "after": 179.8425
+   },
+   "EXT.FENCE.TOP [lm]": {
+    "lines": 1,
+    "after": 6.727
+   },
+   "EXT.FENCE.GATE [pcs]": {
+    "lines": 2,
+    "after": 2.0
+   },
+   "EXT.POOL.WATER_FACE [m2]": {
+    "lines": 1,
+    "after": 21.3087
+   },
+   "EXT.FLOOR.OUTDOOR [m2]": {
+    "lines": 2,
+    "after": 17.2274
+   }
+  },
+  "fence_faces_total_m2": 206.662,
+  "vs_freelancer": {
+   "fence block above N.G. vs freelancer 'السور' 74.40 m2": [
+    95.441,
+    74.4
+   ],
+   "fence plaster / paint vs freelancer exterior rows 87-90 107.24 m2": [
+    179.843,
+    107.24
+   ],
+   "pool water face vs freelancer 40.80 m2": [
+    21.309,
+    40.8
+   ]
+  }
+ },
+ "rows": [
+  {
+   "line_id": "L-138c597bc2aa55cb2a99",
+   "item_code": "EXT.FENCE.FACE",
+   "unit": "m2",
+   "element_id": "FENCE:F-STREET:FACE:OUTSIDE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 11.251
+   },
+   "label": "ESTIMATE",
+   "basis": "5.80 x 2.65 printed = 15.370 - dip / rounded gate end 4.119 m2 scaled from the p.12 elevation 1:100 = 11.251"
+  },
+  {
+   "line_id": "L-778a67b2fbd8b61f88ad",
+   "item_code": "EXT.FENCE.FACE",
+   "unit": "m2",
+   "element_id": "FENCE:F-STREET:FACE:PLOT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 10.721
+   },
+   "label": "ESTIMATE",
+   "basis": "5.60 x 2.65 printed = 14.840 - the same scaled dip 4.119 m2 = 10.721"
+  },
+  {
+   "line_id": "L-7aaa47641fd87354fb5d",
+   "item_code": "EXT.FENCE.FACE",
+   "unit": "m2",
+   "element_id": "FENCE:F-STREET:FACE:END-G-01",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.4094
+   },
+   "label": "ESTIMATE",
+   "basis": "stop-end at G-01 0.20 x (2.65 - 0.603 scaled drop of the gate end) = 0.409 (T-404 at most 0.530)"
+  },
+  {
+   "line_id": "L-020e561643e5903e5c21",
+   "item_code": "EXT.FENCE.FACE",
+   "unit": "m2",
+   "element_id": "FENCE:F-SEA:FACE:OUTSIDE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.36
+   },
+   "label": "ESTIMATE",
+   "basis": "sea solid 2.40 (T-396 runs, gate G-02 and pool back excluded) x 2.65 drawn in both elevations (not printed for this run; Q-63 C element, designer RFI-B-A11 replaces it) = 6.360"
+  },
+  {
+   "line_id": "L-e22ea03658c74421b9d9",
+   "item_code": "EXT.FENCE.FACE",
+   "unit": "m2",
+   "element_id": "FENCE:F-LOWER:FACE:OUTSIDE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.18
+   },
+   "label": "ESTIMATE",
+   "basis": "passage closure 1.20 (T-396) x 2.65 fence height (no height printed for the closure; same fence) = 3.180"
+  },
+  {
+   "line_id": "L-1874145bb43c31a0cd03",
+   "item_code": "EXT.FENCE.FACE",
+   "unit": "m2",
+   "element_id": "FENCE:F-SEA:FACE:PLOT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.36
+   },
+   "label": "ESTIMATE",
+   "basis": "sea solid 2.40 (T-396 runs, gate G-02 and pool back excluded) x 2.65 drawn in both elevations (not printed for this run; Q-63 C element, designer RFI-B-A11 replaces it) = 6.360"
+  },
+  {
+   "line_id": "L-71cfc2e9c70fbab1b3f1",
+   "item_code": "EXT.FENCE.FACE",
+   "unit": "m2",
+   "element_id": "FENCE:F-LOWER:FACE:PLOT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.18
+   },
+   "label": "ESTIMATE",
+   "basis": "passage closure 1.20 (T-396) x 2.65 fence height (no height printed for the closure; same fence) = 3.180"
+  },
+  {
+   "line_id": "L-aad105421b72b47c6f5c",
+   "item_code": "EXT.FENCE.WALL",
+   "unit": "m2",
+   "element_id": "FENCE:F-SEA:WALL_PLANE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.36
+   },
+   "label": "ESTIMATE",
+   "basis": "2.40 x 2.65 (as the sea faces) = 6.360"
+  },
+  {
+   "line_id": "L-cb47254352092a9d9662",
+   "item_code": "EXT.FENCE.WALL",
+   "unit": "m2",
+   "element_id": "FENCE:F-LOWER:WALL_PLANE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.18
+   },
+   "label": "ESTIMATE",
+   "basis": "1.20 x 2.65 (as the closure faces) = 3.180"
+  },
+  {
+   "line_id": "L-479236085c3a79878c90",
+   "item_code": "EXT.FENCE.BLOCK",
+   "unit": "m2",
+   "element_id": "FENCE:F-NORTH:BLOCK_NET",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 81.5405
+   },
+   "label": "ESTIMATE",
+   "basis": "plane 31.37 x 2.65 = 83.1305 - 2 columns x 0.30 x 2.65 (T-761 count: one per run end) = 81.540; block to the full 2.65 (lower 0.50 band material not printed)"
+  },
+  {
+   "line_id": "L-4eb92fd041dee3234b34",
+   "item_code": "EXT.FENCE.BLOCK",
+   "unit": "m2",
+   "element_id": "FENCE:F-STREET:BLOCK_NET",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.131
+   },
+   "label": "ESTIMATE",
+   "basis": "plane 14.840 (released) - scaled dip 4.119 - 2 columns 1.590 = 9.131"
+  },
+  {
+   "line_id": "L-9b4ba80e8886e850cc67",
+   "item_code": "EXT.FENCE.BLOCK",
+   "unit": "m2",
+   "element_id": "FENCE:F-SEA:BLOCK_NET",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.18
+   },
+   "label": "ESTIMATE",
+   "basis": "plane 6.360 - 4 columns (two sea runs, G-02 jambs) 3.180 = 3.180"
+  },
+  {
+   "line_id": "L-22c53d141c69511bb328",
+   "item_code": "EXT.FENCE.BLOCK",
+   "unit": "m2",
+   "element_id": "FENCE:F-LOWER:BLOCK_NET",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.59
+   },
+   "label": "ESTIMATE",
+   "basis": "plane 3.180 - 2 columns 1.590 = 1.590"
+  },
+  {
+   "line_id": "L-c632bb4647031c37de19",
+   "item_code": "EXT.FENCE.MASONRY_BELOW_NG",
+   "unit": "m2",
+   "element_id": "FENCE:BAND:MASONRY_BELOW_NG",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 23.4099
+   },
+   "label": "ESTIMATE",
+   "basis": "band 44.07 x h 0.57 (formation 1.67 S01 as T-764 - blinding 0.10 - lower G.B 0.60 Q-28 A - upper G.B 0.40) = 25.120 - 10 columns x 0.30 x 0.57 = 23.410 (T-403 at least 17.628 at 1.50)"
+  },
+  {
+   "line_id": "L-59991e8fddedbe977fbb",
+   "item_code": "EXT.FENCE.BLOCK_COUNT",
+   "unit": "pcs",
+   "element_id": "FENCE:ALL:BLOCKS",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1486.0
+   },
+   "label": "ESTIMATE",
+   "basis": "fence block net above N.G. 95.441 + below N.G. 23.410 = 118.851 m2 x 12.5 per m2 (owner Q-75 / Q-80), waste separate; type HELD (Q-65 C)"
+  },
+  {
+   "line_id": "L-b1c2e0b93312e521d699",
+   "item_code": "EXT.FENCE.PLASTER",
+   "unit": "m2",
+   "element_id": "FENCE:F-NORTH:FACE:OUTSIDE:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 67.4455
+   },
+   "label": "DRAWING-READ",
+   "basis": "exposed face 31.37 x 2.15 (p.12 SECTION '215' above the outside ground band '50') = 67.445; system as the house exterior (render 1:4 + paint, Q-79; fence finish not printed, owner item open under Q-65 C)"
+  },
+  {
+   "line_id": "L-1e9a80dbea82741116cf",
+   "item_code": "EXT.FENCE.PAINT",
+   "unit": "m2",
+   "element_id": "FENCE:F-NORTH:FACE:OUTSIDE:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 67.4455
+   },
+   "label": "DRAWING-READ",
+   "basis": "= the plaster face 67.445 (owner 2026-11-12: paint = plaster face)"
+  },
+  {
+   "line_id": "L-36726588eba347a4c783",
+   "item_code": "EXT.FENCE.PLASTER",
+   "unit": "m2",
+   "element_id": "FENCE:F-NORTH:FACE:PLOT:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 77.425
+   },
+   "label": "DRAWING-READ",
+   "basis": "exposed face 30.97 x 2.50 (2.65 - court +0.15; T-404 finishable lower bound) = 77.425; system as the house exterior (render 1:4 + paint, Q-79; fence finish not printed, owner item open under Q-65 C)"
+  },
+  {
+   "line_id": "L-bac8095037312e3e90f4",
+   "item_code": "EXT.FENCE.PAINT",
+   "unit": "m2",
+   "element_id": "FENCE:F-NORTH:FACE:PLOT:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 77.425
+   },
+   "label": "DRAWING-READ",
+   "basis": "= the plaster face 77.425 (owner 2026-11-12: paint = plaster face)"
+  },
+  {
+   "line_id": "L-eb19e5f5365e81dcedeb",
+   "item_code": "EXT.FENCE.PLASTER",
+   "unit": "m2",
+   "element_id": "FENCE:F-STREET:FACE:OUTSIDE:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.351
+   },
+   "label": "ESTIMATE",
+   "basis": "exposed face face 11.251 - 5.80 x 0.50 outside ground band (SECTION '50'; elevation draws about 2.0 exposed) = 8.351; system as the house exterior (render 1:4 + paint, Q-79; fence finish not printed, owner item open under Q-65 C)"
+  },
+  {
+   "line_id": "L-8502adc8f55776e67a28",
+   "item_code": "EXT.FENCE.PAINT",
+   "unit": "m2",
+   "element_id": "FENCE:F-STREET:FACE:OUTSIDE:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 8.351
+   },
+   "label": "ESTIMATE",
+   "basis": "= the plaster face 8.351 (owner 2026-11-12: paint = plaster face)"
+  },
+  {
+   "line_id": "L-e46d3f1324eb8625cbdc",
+   "item_code": "EXT.FENCE.PLASTER",
+   "unit": "m2",
+   "element_id": "FENCE:F-STREET:FACE:PLOT:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.881
+   },
+   "label": "ESTIMATE",
+   "basis": "exposed face face 10.721 - 5.60 x 0.15 court = 9.881; system as the house exterior (render 1:4 + paint, Q-79; fence finish not printed, owner item open under Q-65 C)"
+  },
+  {
+   "line_id": "L-4465d1e72082b5678e4a",
+   "item_code": "EXT.FENCE.PAINT",
+   "unit": "m2",
+   "element_id": "FENCE:F-STREET:FACE:PLOT:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.881
+   },
+   "label": "ESTIMATE",
+   "basis": "= the plaster face 9.881 (owner 2026-11-12: paint = plaster face)"
+  },
+  {
+   "line_id": "L-639e70724813476c31d3",
+   "item_code": "EXT.FENCE.PLASTER",
+   "unit": "m2",
+   "element_id": "FENCE:F-SEA:FACE:OUTSIDE:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.16
+   },
+   "label": "ESTIMATE",
+   "basis": "exposed face 2.40 x 2.15 (section as the other runs) = 5.160; system as the house exterior (render 1:4 + paint, Q-79; fence finish not printed, owner item open under Q-65 C)"
+  },
+  {
+   "line_id": "L-0a2fbaa46f6a6b23323e",
+   "item_code": "EXT.FENCE.PAINT",
+   "unit": "m2",
+   "element_id": "FENCE:F-SEA:FACE:OUTSIDE:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.16
+   },
+   "label": "ESTIMATE",
+   "basis": "= the plaster face 5.160 (owner 2026-11-12: paint = plaster face)"
+  },
+  {
+   "line_id": "L-b7cf09f5c8966460da56",
+   "item_code": "EXT.FENCE.PLASTER",
+   "unit": "m2",
+   "element_id": "FENCE:F-SEA:FACE:PLOT:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.0
+   },
+   "label": "ESTIMATE",
+   "basis": "exposed face 2.40 x 2.50 (court +0.15) = 6.000; system as the house exterior (render 1:4 + paint, Q-79; fence finish not printed, owner item open under Q-65 C)"
+  },
+  {
+   "line_id": "L-2246f2ea8b345ac80584",
+   "item_code": "EXT.FENCE.PAINT",
+   "unit": "m2",
+   "element_id": "FENCE:F-SEA:FACE:PLOT:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.0
+   },
+   "label": "ESTIMATE",
+   "basis": "= the plaster face 6.000 (owner 2026-11-12: paint = plaster face)"
+  },
+  {
+   "line_id": "L-52d8589716c7724358ca",
+   "item_code": "EXT.FENCE.PLASTER",
+   "unit": "m2",
+   "element_id": "FENCE:F-LOWER:FACE:OUTSIDE:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.58
+   },
+   "label": "ESTIMATE",
+   "basis": "exposed face 1.20 x 2.15 (section as the other runs) = 2.580; system as the house exterior (render 1:4 + paint, Q-79; fence finish not printed, owner item open under Q-65 C)"
+  },
+  {
+   "line_id": "L-1c6a9f23a2f8320764a0",
+   "item_code": "EXT.FENCE.PAINT",
+   "unit": "m2",
+   "element_id": "FENCE:F-LOWER:FACE:OUTSIDE:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.58
+   },
+   "label": "ESTIMATE",
+   "basis": "= the plaster face 2.580 (owner 2026-11-12: paint = plaster face)"
+  },
+  {
+   "line_id": "L-e802015729d4df311c0c",
+   "item_code": "EXT.FENCE.PLASTER",
+   "unit": "m2",
+   "element_id": "FENCE:F-LOWER:FACE:PLOT:PLASTER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.0
+   },
+   "label": "ESTIMATE",
+   "basis": "exposed face 1.20 x 2.50 (court +0.15) = 3.000; system as the house exterior (render 1:4 + paint, Q-79; fence finish not printed, owner item open under Q-65 C)"
+  },
+  {
+   "line_id": "L-8c90675aafd8738b1e26",
+   "item_code": "EXT.FENCE.PAINT",
+   "unit": "m2",
+   "element_id": "FENCE:F-LOWER:FACE:PLOT:PAINT",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.0
+   },
+   "label": "ESTIMATE",
+   "basis": "= the plaster face 3.000 (owner 2026-11-12: paint = plaster face)"
+  },
+  {
+   "line_id": "L-07ab81e68a2ad5d4b15c",
+   "item_code": "EXT.FENCE.TOP",
+   "unit": "lm",
+   "element_id": "FENCE:F-STREET:TOP",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.727
+   },
+   "label": "ESTIMATE",
+   "basis": "plan 5.60 (corner square in the north top) + 1.127 developed along the scaled dip / rounded end = 6.727"
+  },
+  {
+   "line_id": "L-124e0c1ce0b8015699c9",
+   "item_code": "EXT.FENCE.GATE",
+   "unit": "pcs",
+   "element_id": "FENCE:G-01:LEAF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.0
+   },
+   "label": "ESTIMATE",
+   "basis": "one gate set in the printed 2.50 opening (leaf not drawn: type / leaves by the designer, T-361)"
+  },
+  {
+   "line_id": "L-b353801f6c9677de4f5d",
+   "item_code": "EXT.FENCE.GATE",
+   "unit": "pcs",
+   "element_id": "FENCE:G-02:LEAF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.0
+   },
+   "label": "DRAWING-READ",
+   "basis": "1 leaf drawn (D120 single swing; elevation leaf 0.90 x 2.10), T-361"
+  },
+  {
+   "line_id": "L-0b3dce44cf70ae95ccd6",
+   "item_code": "EXT.POOL.WATER_FACE",
+   "unit": "m2",
+   "element_id": "GF-POOL-WATER#FINISH",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 21.3087
+   },
+   "label": "DRAWING-READ",
+   "basis": "pool floor 8.5788 + inner perimeter 11.0695 x 1.15 (DXF dim 2E5E finished floor -0.85 to rim +0.30) = 21.309 (T-343)"
+  },
+  {
+   "line_id": "L-1c51d1e7a3b65243382a",
+   "item_code": "EXT.FLOOR.OUTDOOR",
+   "unit": "m2",
+   "element_id": "GF-COURT#POOL-DECK",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 6.548912,
+    "high": 6.548912
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.5489
+   },
+   "label": "MEASURED",
+   "basis": "range low = high: the drawn polygon (T-157 / T-343)"
+  },
+  {
+   "line_id": "L-dd6e372825ce06d45bdd",
+   "item_code": "EXT.FLOOR.OUTDOOR",
+   "unit": "m2",
+   "element_id": "GF-COURT#PORCH",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 10.6785,
+    "high": 10.6785
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 10.6785
+   },
+   "label": "MEASURED",
+   "basis": "range low = high: the drawn polygon (T-157 / T-343)"
+  }
+ ],
+ "new_lines": [
+  {
+   "family": "B1-01",
+   "item_code": "SITE.CLEARANCE",
+   "unit": "m2",
+   "net": 470.55,
+   "label": "DRAWING-READ",
+   "basis": "plot 15.00 x 31.37 printed (ARCH p.1 / p.2) = 470.550; owner 2026-11-02 17:20 (6) scope = the plot (T-491)"
+  },
+  {
+   "family": "B1-05",
+   "item_code": "SITE.ANTI_TERMITE",
+   "unit": "m2",
+   "net": 319.99,
+   "label": "DEFAULT",
+   "basis": "building footprint = printed GF area 319.99 m2 (ARCH p.1, 68.00 % of 470.55); no sheet prints a soil treatment (T-471): Lead row default, the designer can strike it"
+  },
+  {
+   "family": "B1-06",
+   "item_code": "SITE.DEWATERING",
+   "unit": "item",
+   "net": null,
+   "label": "NOT_APPLICABLE",
+   "basis": "groundwater -4.50 printed (ST p.9 note 4) vs deepest formation -1.67: 2.83 m clear; conditional only (note 14, T-358 B1-06a). Excavation support B1-06b is TRIGGERED (T-358): left to T-771"
+  },
+  {
+   "family": "B1-07",
+   "item_code": "SITE.PRELIMINARIES",
+   "unit": "item",
+   "net": 1,
+   "label": "DEFAULT",
+   "basis": "one lump-sum item (owner 17:20 (6): site handover item; hoarding gross 92.74 lm = 2 x (15.00 + 31.37) beside, T-491); durations / counts by the contractor's programme"
+  }
+ ]
+}
