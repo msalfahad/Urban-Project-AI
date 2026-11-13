@@ -1,0 +1,2770 @@
+{
+ "schema": "T761_FIX_ROWS_V1",
+ "task": "T-761",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.78",
+ "index": "research/agents_t738/out/LINE_INDEX_V3_0_78.json",
+ "defaults": {
+  "lintel_bearing_m": 0.15,
+  "beam_default_depth_m": 0.6,
+  "stair_plate_m": 0.16,
+  "roof_buildup_m": 0.175,
+  "parapet_default_h_m": 1.2,
+  "materiality_m3": 0.05
+ },
+ "counts": {
+  "blank_before": 80,
+  "blank_after": 0,
+  "released_rows": 67,
+  "ignored_small": 13,
+  "ranged_kept_named": 114
+ },
+ "released_m3_by_item": {
+  "STR.CONC.BEAM": {
+   "lines": 14,
+   "m3": 5.26
+  },
+  "STR.CONC.BLINDING": {
+   "lines": 2,
+   "m3": 1.956
+  },
+  "STR.CONC.BOUNDARY_PAD": {
+   "lines": 1,
+   "m3": 3.12
+  },
+  "STR.CONC.COLUMN": {
+   "lines": 2,
+   "m3": 0.84
+  },
+  "STR.CONC.DOME": {
+   "lines": 1,
+   "m3": 2.541
+  },
+  "STR.CONC.GROUND_BEAM": {
+   "lines": 19,
+   "m3": 11.963
+  },
+  "STR.CONC.LIFT": {
+   "lines": 2,
+   "m3": 2.3
+  },
+  "STR.CONC.LINTEL": {
+   "lines": 12,
+   "m3": 0.728
+  },
+  "STR.CONC.NECK": {
+   "lines": 4,
+   "m3": 1.462
+  },
+  "STR.CONC.PARAPET": {
+   "lines": 4,
+   "m3": 24.368
+  },
+  "STR.CONC.POOL": {
+   "lines": 1,
+   "m3": 0.228
+  },
+  "STR.CONC.STAIR": {
+   "lines": 5,
+   "m3": 3.657
+  }
+ },
+ "released_m3_by_label": {
+  "DEFAULT": 45.563,
+  "DRAWING-READ": 4.441,
+  "ESTIMATE": 2.381,
+  "SAFETY": 6.038
+ },
+ "ignored_small": {
+  "lines": 13,
+  "sum_m3": 0.4282,
+  "rule": "owner 2026-11-13 14:00 (rule file: T-757)"
+ },
+ "safety_line": {
+  "line_id": "NEW:STR.CONC.SAFETY",
+  "item_code": "STR.CONC.SAFETY",
+  "unit": "m3",
+  "after": {
+   "class": "RELEASED",
+   "net": 1.0
+  },
+  "label": "SAFETY",
+  "basis": "ignored known pieces 0.4282 m3 on 13 lines < 1 m3 -> 1 m3 (owner materiality rule); covers also unread scraps named in bases (ST-02 CA 0 .. 0.09). T-757 may merge its own IGNORED_SMALL set into this ONE line (never two safety lines)"
+ },
+ "rows": [
+  {
+   "line_id": "L-17c4238c0ef76656d06e",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-019#2F-031",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.261
+   },
+   "label": "DEFAULT",
+   "basis": "2F edge projection 0.1 x 4.35 m: plan 0.4350 m2 (T-721 DXF) x 0.60 (company default: no mark, no section, adjacent span unprinted) = 0.2610 m3; slab-cast at 0.16 would give 0.0696; D-05 / D-26 replace it",
+   "designer_item": "D-26"
+  },
+  {
+   "line_id": "L-331d4bbef719a7f0bbca",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.063
+   },
+   "label": "DEFAULT",
+   "basis": "GF edge projection 0.2 x 0.5251 m (edges 2C6 2C7): plan 0.1050 m2 (T-721 DXF) x 0.60 (company default: no mark, no section, adjacent span unprinted) = 0.0630 m3; slab-cast at 0.16 would give 0.0168; D-05 / D-26 replace it",
+   "designer_item": "D-05+D-26"
+  },
+  {
+   "line_id": "L-377cb988b2271c2e2e4d",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-038",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3414
+   },
+   "label": "DEFAULT",
+   "basis": "1F edge projection 0.1 x 5.69 m: plan 0.5690 m2 (T-721 DXF) x 0.60 (company default: no mark, no section, adjacent span unprinted) = 0.3414 m3; slab-cast at 0.16 would give 0.0910; D-05 / D-26 replace it",
+   "designer_item": "D-26"
+  },
+  {
+   "line_id": "L-54e397fe7b1485b2e8fe",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0629
+   },
+   "label": "DEFAULT",
+   "basis": "1F edge projection 0.2 x 0.5238 m (edges 5E1 5E6): plan 0.1048 m2 (T-721 DXF) x 0.60 (company default: no mark, no section, adjacent span unprinted) = 0.0629 m3; slab-cast at 0.16 would give 0.0168; D-05 / D-26 replace it",
+   "designer_item": "D-05+D-26"
+  },
+  {
+   "line_id": "L-56c49c3c2596a0869533",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "T729:CHILD:HL:BEAM_LEDGER:1F:BM-1F-033#1F-STRIP-AT-COL",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.096
+   },
+   "label": "DEFAULT",
+   "basis": "1F-STRIP-AT-COL: plan 0.16 m2 (T-724 census) x 0.60 company default = 0.0960 m3",
+   "designer_item": "D-05+D-26"
+  },
+  {
+   "line_id": "L-56d278bedc8dda2837a9",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-036#BAND0025",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.9265
+   },
+   "label": "DEFAULT",
+   "basis": "1F edge projection 0.2985 x 4.2845 m (edges 5DE 629): plan 1.5441 m2 (T-721 DXF) x 0.60 (company default: no mark, no section, adjacent span unprinted) = 0.9265 m3; slab-cast at 0.16 would give 0.2471; D-05 / D-26 replace it",
+   "designer_item": "D-05+D-26"
+  },
+  {
+   "line_id": "L-634cefe5e8a7fb458e16",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3599
+   },
+   "label": "DEFAULT",
+   "basis": "GF edge projection 0.1999 x 3.0005 m (edges 2C6 2C7): plan 0.5998 m2 (T-721 DXF) x 0.60 (company default: no mark, no section, adjacent span unprinted) = 0.3599 m3; slab-cast at 0.16 would give 0.0960; D-05 / D-26 replace it",
+   "designer_item": "D-05+D-26"
+  },
+  {
+   "line_id": "L-67f3d325019e618328eb",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3598
+   },
+   "label": "DEFAULT",
+   "basis": "1F edge projection 0.2 x 2.9987 m (edges 5E1 5E6): plan 0.5997 m2 (T-721 DXF) x 0.60 (company default: no mark, no section, adjacent span unprinted) = 0.3598 m3; slab-cast at 0.16 would give 0.0960; D-05 / D-26 replace it",
+   "designer_item": "D-05+D-26"
+  },
+  {
+   "line_id": "L-89d266a3e5280a10a3b9",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "T729:CHILD:HL:BEAM_LEDGER:1F:BM-1F-033#1F-NW-CORNER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.0176,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "1F-NW-CORNER: plan 0.029309 m2 (T-724 census) x 0.60 company default = 0.0176 m3",
+   "designer_item": "D-05+D-26"
+  },
+  {
+   "line_id": "L-a9d5e7dc22013e24d691",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "U-C:BEAMS:1F:BAND0014",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.8999
+   },
+   "label": "DEFAULT",
+   "basis": "1F edge projection 0.2 x 7.4996 m (edges 5E7 5E5): plan 1.4999 m2 (T-721 DXF) x 0.60 (company default: no mark, no section, adjacent span unprinted) = 0.8999 m3; slab-cast at 0.16 would give 0.2400; D-05 / D-26 replace it",
+   "designer_item": "D-05+D-26"
+  },
+  {
+   "line_id": "L-ab37afa17f2ac5b0efd1",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.8996
+   },
+   "label": "DEFAULT",
+   "basis": "east dome-opening ring in bay: plan 1.7993 m2 (T-721) x 0.50 = depth of the twin west ring B4 (L-48b7d139 released 0.7552, same ST p.7 DETAIL OF DOME; adjacent-span default) = 0.8996 m3; 0.60 default would give 1.0796; D-28 replaces it",
+   "designer_item": "D-28"
+  },
+  {
+   "line_id": "L-aba59a2157a48a69e2fb",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-061",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.492
+   },
+   "label": "DEFAULT",
+   "basis": "GF edge projection 0.2 x 4.1 m: plan 0.8200 m2 (T-721 DXF) x 0.60 (company default: no mark, no section, adjacent span unprinted) = 0.4920 m3; slab-cast at 0.16 would give 0.1312; D-05 / D-26 replace it",
+   "designer_item": "D-26"
+  },
+  {
+   "line_id": "L-bb49e831f053bd30a6ce",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "U-C:BEAMS:1F:BAND0023",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1619
+   },
+   "label": "DEFAULT",
+   "basis": "1F edge projection 0.3 x 0.8994 m (edges 5C1 619): plan 0.2698 m2 (T-721 DXF) x 0.60 (company default: no mark, no section, adjacent span unprinted) = 0.1619 m3; slab-cast at 0.16 would give 0.0432; D-05 / D-26 replace it",
+   "designer_item": "D-05+D-26"
+  },
+  {
+   "line_id": "L-e296002577c012f0afd4",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "T729:CHILD:HL:BEAM_LEDGER:GF:BM-GF-058#GF-NW-CORNER",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.0176,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "GF-NW-CORNER: plan 0.029309 m2 (T-724 census) x 0.60 company default = 0.0176 m3",
+   "designer_item": "D-05+D-26"
+  },
+  {
+   "line_id": "L-f113ed57f7875fed9a67",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "T729:CHILD:HL:BEAM_LEDGER:GF:BM-GF-058#GF-STRIP-AT-COL",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.096
+   },
+   "label": "DEFAULT",
+   "basis": "GF-STRIP-AT-COL: plan 0.16 m2 (T-724 census) x 0.60 company default = 0.0960 m3",
+   "designer_item": "D-05+D-26"
+  },
+  {
+   "line_id": "L-fbb65dfd2a66a16714ac",
+   "item_code": "STR.CONC.BEAM",
+   "unit": "m3",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-037",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.24
+   },
+   "label": "DEFAULT",
+   "basis": "1F edge projection 0.4 x 1.0 m: plan 0.4000 m2 (T-721 DXF) x 0.60 (company default: no mark, no section, adjacent span unprinted) = 0.2400 m3; slab-cast at 0.16 would give 0.0640; D-05 / D-26 replace it",
+   "designer_item": "D-26"
+  },
+  {
+   "line_id": "L-893c3db13b14dc38625e",
+   "item_code": "STR.CONC.BLINDING",
+   "unit": "m3",
+   "element_id": "P-C:PLAIN_CONCRETE:POOL:BLINDING_UNDER_POOL_BASE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.9155
+   },
+   "label": "DRAWING-READ",
+   "basis": "pool blinding: outline 7C6 grown by the printed wrap 0.10, clipped at the plot line, 11.8511 - 2.6958 (pit blinding already in L-98eb2d58) = 9.1553 m2 x 0.10 = 0.9155 m3 (T-667)",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-d0313e5d204e2758996a",
+   "item_code": "STR.CONC.BLINDING",
+   "unit": "m3",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BOUNDARY_WALL_BASE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.04
+   },
+   "label": "SAFETY",
+   "basis": "blinding under the 10 boundary pads: 1.30 x 0.80 x 0.10 (projection not printed) = 1.040 m3; follows the pad count",
+   "designer_item": "RFI-S04"
+  },
+  {
+   "line_id": "L-cda8f41522dc6f42b3d6",
+   "item_code": "STR.CONC.BOUNDARY_PAD",
+   "unit": "m3",
+   "element_id": "FENCE:BAND:PADS",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.12
+   },
+   "label": "SAFETY",
+   "basis": "boundary pads 1.30 x 0.80 x 0.30 (ST p.14) = 0.312 m3 each x 10 (one column at each end of the 5 drawn band runs: count 'SEE ARCH PLAN', none drawn) = 3.120 m3; designer item replaces the count",
+   "designer_item": "NOT_PRINTED"
+  },
+  {
+   "line_id": "L-0ede77cfd0badc4c7d62",
+   "item_code": "STR.CONC.COLUMN",
+   "unit": "m3",
+   "element_id": "P-C:COL:SH12:C2@247685,64087|2F",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.42
+   },
+   "label": "DEFAULT",
+   "basis": "C2@247685,64087 2F: schedule section 0.10 m2 x storey 4.20 = 0.4200 m3 (= released 1F lines of the same mark, route G register 0.42); B15 up / down-stand on the tank (D-44) not added",
+   "designer_item": "D-44"
+  },
+  {
+   "line_id": "L-c10e2945d582b5a03126",
+   "item_code": "STR.CONC.COLUMN",
+   "unit": "m3",
+   "element_id": "P-C:COL:SH12:C3@247476,61310|2F",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.42
+   },
+   "label": "DEFAULT",
+   "basis": "C3@247476,61310 2F: schedule section 0.10 m2 x storey 4.20 = 0.4200 m3 (= released 1F lines of the same mark, route G register 0.42); B15 up / down-stand on the tank (D-44) not added",
+   "designer_item": "D-44+D-66"
+  },
+  {
+   "line_id": "L-d5401fa8986900c66c37",
+   "item_code": "STR.CONC.DOME",
+   "unit": "m3",
+   "element_id": "DG5:DOME-3:SHELL",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.5407
+   },
+   "label": "DEFAULT",
+   "basis": "DOME-3 tower dome: arch circle r 2.205 (dia 4.41) and SE elevation 441 / 215 = the shells A / B; the only ST p.7 DETAIL OF DOME (442 / 190 / 10) -> same shell 2.5407 m3 (L-8ea34765 / L-fffa895e released); D-21 replaces it",
+   "designer_item": "SILENT_OMISSION"
+  },
+  {
+   "line_id": "L-00465df980165c529476",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0035",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.288
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.7200 m2 x 0.40 (ST p.13 typical 30x40 by clear span 3.10 (route G register); company default exterior / loaded GB = same mark) = 0.2880 m3; holds D-35",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-0bb78accf8c0a0fbdbaf",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0037.1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.2423
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.8077 m2 x 0.30 (ST p.13 typical 30x30 by clear span 2.43 (T-712); company default exterior / loaded GB = same mark) = 0.2423 m3; holds D-33",
+   "designer_item": "D-33"
+  },
+  {
+   "line_id": "L-1487bdda099006e0c4ba",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0019",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.2205
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.7350 m2 x 0.30 (ST p.13 typical 30x30 by clear span 2.45 (T-712); company default exterior / loaded GB = same mark) = 0.2205 m3; holds D-33",
+   "designer_item": "D-33"
+  },
+  {
+   "line_id": "L-21795b350fbd09150c43",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0022",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.456
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 1.1400 m2 x 0.40 (ST p.13 typical 30x40 by clear span 3.80 (route G register); company default exterior / loaded GB = same mark) = 0.4560 m3; holds D-35 (court)",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-3284f44000c02179ace7",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0012.2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.207
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.6900 m2 x 0.30 (ST p.13 typical 30x30 by clear span 2.30 (route G register); company default exterior / loaded GB = same mark) = 0.2070 m3; holds D-35",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-402dbe61d1c924144a3c",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0015",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.746
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 2.9100 m2 x 0.60 (ST p.13 typical 30x60 by clear span 10.13 (route G register); company default exterior / loaded GB = same mark) = 1.7460 m3; holds D-35",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-4783c6e18002c3a8a37e",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0016",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.08
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 1.8000 m2 x 0.60 (ST p.13 typical 30x60 by clear span 6.40 (route G register); company default exterior / loaded GB = same mark) = 1.0800 m3; holds D-35",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-5af89b9f1e5b90daf8f5",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0010.3",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.9
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 1.5000 m2 x 0.60 (ST p.13 typical 30x60 by clear span 5.00 (T-712) ON_LIMIT, c/c 5.30 -> 30x60 (route G both readings); company default exterior / loaded GB = same mark) = 0.9000 m3; holds D-33",
+   "designer_item": "D-33"
+  },
+  {
+   "line_id": "L-62243c74c430d383be86",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0002.1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.054
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.1800 m2 x 0.30 (ST p.13 typical 30x30 by clear span 0.60 (route G register); company default exterior / loaded GB = same mark) = 0.0540 m3; holds D-35 (court)",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-6bf14711798e5af93594",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0012.1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.135
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.4500 m2 x 0.30 (ST p.13 typical 30x30 by clear span 1.50 (route G register); company default exterior / loaded GB = same mark) = 0.1350 m3; holds D-35",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-95a1f198cfe7f398d6ae",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0023:7DC+7DD#1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.423
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 1.0575 m2 x 0.40 (ST p.13 typical 30x40 by clear span 3.52 (T-712); company default exterior / loaded GB = same mark) = 0.4230 m3; holds D-33",
+   "designer_item": "D-33"
+  },
+  {
+   "line_id": "L-a55bfa01b726ef11650c",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0041",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.117
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.3900 m2 x 0.30 (ST p.13 typical 30x30 by clear span 1.30 (route G register); company default exterior / loaded GB = same mark) = 0.1170 m3; holds D-35 (court)",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-a8c5c32c7a785c1e3f05",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0040",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.189
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.6300 m2 x 0.30 (ST p.13 typical 30x30 by clear span 2.10 (T-712); company default exterior / loaded GB = same mark) = 0.1890 m3; holds D-33",
+   "designer_item": "D-33"
+  },
+  {
+   "line_id": "L-b4a13a43967ee4765662",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0017.2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.045,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.1500 m2 x 0.30 (ST p.13 typical 30x30 by clear span 0.50 (route G register); company default exterior / loaded GB = same mark) = 0.0450 m3; holds D-35",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-be6708e07b40efa02779",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.009,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.0300 m2 x 0.30 (ST p.13 typical 30x30 by clear span 0.10 (route G register); company default exterior / loaded GB = same mark) = 0.0090 m3; holds D-35",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-cfb4555cb26b39934bff",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0032:7E7+7E8#2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.423
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 1.0575 m2 x 0.40 (ST p.13 typical 30x40 by clear span 3.52 (T-712); company default exterior / loaded GB = same mark) = 0.4230 m3; holds D-33",
+   "designer_item": "D-33"
+  },
+  {
+   "line_id": "L-d53e5eb08e2c6c668254",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1477
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.4922 m2 x 0.30 (ST p.13 typical 30x30 by clear span 1.54 (T-712); company default exterior / loaded GB = same mark) = 0.1477 m3; holds D-33",
+   "designer_item": "D-33"
+  },
+  {
+   "line_id": "L-d8b98b143e293d30833b",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.044
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 1.7400 m2 x 0.60 (ST p.13 typical 30x60 by clear span 5.80 (route G register); company default exterior / loaded GB = same mark) = 1.0440 m3; holds D-35",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-e16c98075f69532a3dc7",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0042",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1626
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 0.5419 m2 x 0.30 (ST p.13 typical 30x30 by quarter ring centre-line 1.81; company default exterior / loaded GB = same mark) = 0.1626 m3; holds D-35",
+   "designer_item": "D-35"
+  },
+  {
+   "line_id": "L-e24946df436cbc25fca6",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.1",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.6024
+   },
+   "label": "DEFAULT",
+   "basis": "drawn plan 1.5060 m2 x 0.40 (ST p.13 typical 30x40 by clear span 4.97 (T-712); company default exterior / loaded GB = same mark) = 0.6024 m3; holds D-33",
+   "designer_item": "D-33"
+  },
+  {
+   "line_id": "L-fb7a6431fede62e93fd5",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "unit": "m3",
+   "element_id": "T254:GROUND_BEAMS:GROUND:BOUNDARY_GB_NG",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.5256
+   },
+   "label": "DRAWING-READ",
+   "basis": "boundary band 5 runs 44.07 m: 8.8140 m2 (Checker own) x 0.40 (ST p.14 'GROUND BEAM (20x40)') = 3.5256 m3; minus 0.024 m3 per boundary column (count not printed, each below materiality: not deducted)",
+   "designer_item": "Q-28"
+  },
+  {
+   "line_id": "L-5ae06fda7d729d54c033",
+   "item_code": "STR.CONC.LIFT",
+   "unit": "m3",
+   "element_id": "LIFT_TIE_BEAM:GF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.65
+   },
+   "label": "DEFAULT",
+   "basis": "GF tie beam (ST p.8 n.19), runs 1.80 / 1.80 / 1.20 / 0.70 = 5.50 m: nearest printed section = the GF-roof shaft ring beams on the same runs (B14 0.20x0.75x1.80 0.270 + B1 0.20x0.40x0.70 0.056 + B7 0.20x0.75x1.20 0.180 + B1 0.20x0.40x1.80 0.144) = 0.650 m3; D-43 replaces it",
+   "designer_item": "D-43"
+  },
+  {
+   "line_id": "L-684fcad323adc0c8a267",
+   "item_code": "STR.CONC.LIFT",
+   "unit": "m3",
+   "element_id": "LIFT_PIT:WALLS",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.65
+   },
+   "label": "SAFETY",
+   "basis": "pit walls 0.20 ring: plan 1.100 m2 (T-401, Checker T-394) x 1.50 m pit height = 1.650 m3; pit depth is a lift-supplier item (D-43 / RFI L-1) and no company default exists: 1.50 is the SAFETY height (upper end of usual home-lift pits), replaced by the supplier depth",
+   "designer_item": "D-43"
+  },
+  {
+   "line_id": "L-072bc37c5486905a9d21",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:D-GF-09",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.052
+   },
+   "label": "DEFAULT",
+   "basis": "D-GF-09: 0.20 x 0.20 (ST p.13 schedule) x (1.00 + 2 x 0.15 bearing default) = 0.0520 m3; width = printed door type D120 1.00 (drawn gap 0.90 gives 0.048: same materiality class boundary, named); existence default = one lintel per opening (owner lintel rule); printed note 'MIN 40 cm' bearing would give 0.0720",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-0d5e2e3ac4167df90d6d",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:D-GF-08",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.052
+   },
+   "label": "DEFAULT",
+   "basis": "D-GF-08: 0.20 x 0.20 (ST p.13 schedule) x (1.00 + 2 x 0.15 bearing default) = 0.0520 m3; existence default = one lintel per opening (owner lintel rule) although a beam may serve the head (the lift tie beam of ST p.8 n.19 (unsized)); printed note 'MIN 40 cm' bearing would give 0.0720",
+   "designer_item": "D-43"
+  },
+  {
+   "line_id": "L-1313767d897f06ef95b6",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:W04",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.036,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "W04: 0.20 x 0.20 (ST p.13 schedule) x (0.60 + 2 x 0.15 bearing default) = 0.0360 m3; existence default = one lintel per opening (owner lintel rule) although a beam may serve the head (CB6 BM-GF-030 (20x75) over the drawn head +2.80); printed note 'MIN 40 cm' bearing would give 0.0560",
+   "designer_item": "D-39"
+  },
+  {
+   "line_id": "L-17953d7882899d43473f",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:D-GF-14",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.033,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "D-GF-14: 0.15 x 0.20 (ST p.13 schedule) x (0.80 + 2 x 0.15 bearing default) = 0.0330 m3; existence default = one lintel per opening (owner lintel rule); printed note 'MIN 40 cm' bearing would give 0.0480",
+   "designer_item": "NAMED_TEXT"
+  },
+  {
+   "line_id": "L-1c0e7646345156fcd0cb",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:D-2F-02",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.048,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "D-2F-02: 0.20 x 0.20 (ST p.13 schedule) x (0.90 + 2 x 0.15 bearing default) = 0.0480 m3; existence default = one lintel per opening (owner lintel rule) although a beam may serve the head (BM-2F-017 (unsized)); printed note 'MIN 40 cm' bearing would give 0.0680",
+   "designer_item": "D-04"
+  },
+  {
+   "line_id": "L-274b112580029084b80e",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:D-GF-04",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.033,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "D-GF-04: 0.15 x 0.20 (ST p.13 schedule) x (0.80 + 2 x 0.15 bearing default) = 0.0330 m3; printed note 'MIN 40 cm' bearing would give 0.0480",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-2c1c49db7cd7b16c6206",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:D-1F-01",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.033,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "D-1F-01: 0.15 x 0.20 (ST p.13 schedule) x (0.80 + 2 x 0.15 bearing default) = 0.0330 m3; existence default = one lintel per opening (owner lintel rule); printed note 'MIN 40 cm' bearing would give 0.0480",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-7f9eb7cced8df33202a5",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:W08",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.072
+   },
+   "label": "DEFAULT",
+   "basis": "W08: 0.20 x 0.20 (ST p.13 schedule) x (1.50 + 2 x 0.15 bearing default) = 0.0720 m3; existence default = one lintel per opening (owner lintel rule) although a beam may serve the head (CB6 BM-GF-030 (20x75) over the drawn head +2.80); printed note 'MIN 40 cm' bearing would give 0.0920",
+   "designer_item": "D-39"
+  },
+  {
+   "line_id": "L-8f69c40749d579c14bf1",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:L-GF-01",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.052
+   },
+   "label": "DEFAULT",
+   "basis": "L-GF-01: 0.20 x 0.20 (ST p.13 schedule) x (1.00 + 2 x 0.15 bearing default) = 0.0520 m3; existence default = one lintel per opening (owner lintel rule); printed note 'MIN 40 cm' bearing would give 0.0720",
+   "designer_item": "D-45"
+  },
+  {
+   "line_id": "L-961608860fcb38c106af",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:D-1F-09",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.036,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "D-1F-09: 0.15 x 0.20 (ST p.13 schedule) x (0.90 + 2 x 0.15 bearing default) = 0.0360 m3; existence default = one lintel per opening (owner lintel rule); printed note 'MIN 40 cm' bearing would give 0.0510",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-9ec762c0bd529b924f33",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:D-1F-06",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.033,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "D-1F-06: 0.15 x 0.20 (ST p.13 schedule) x (0.80 + 2 x 0.15 bearing default) = 0.0330 m3; printed note 'MIN 40 cm' bearing would give 0.0480",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-a500f10eedbd63a147ab",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:L-1F-01",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.052
+   },
+   "label": "DEFAULT",
+   "basis": "L-1F-01: 0.20 x 0.20 (ST p.13 schedule) x (1.00 + 2 x 0.15 bearing default) = 0.0520 m3; existence default = one lintel per opening (owner lintel rule); printed note 'MIN 40 cm' bearing would give 0.0720",
+   "designer_item": "D-45"
+  },
+  {
+   "line_id": "L-b699ce0da6b29b888435",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:W26",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.06
+   },
+   "label": "DEFAULT",
+   "basis": "W26: 0.20 x 0.20 (ST p.13 schedule) x (1.20 + 2 x 0.15 bearing default) = 0.0600 m3; existence default = one lintel per opening (owner lintel rule) although a beam may serve the head (the 2F stair-roof piece over W26 (soffit 3.00)); printed note 'MIN 40 cm' bearing would give 0.0800",
+   "designer_item": "D-39"
+  },
+  {
+   "line_id": "L-b729bd6381f216153df8",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:A-GF-01",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.039,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "A-GF-01: 0.15 x 0.20 (ST p.13 schedule) x (1.00 + 2 x 0.15 bearing default) = 0.0390 m3; existence default = one lintel per opening (owner lintel rule); arched head: straight-lintel equivalent (curved crown not printed, T-238); printed note 'MIN 40 cm' bearing would give 0.0540",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-bf88bf6f5efaa0ae5bdc",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:W25",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.052
+   },
+   "label": "DEFAULT",
+   "basis": "W25: 0.20 x 0.20 (ST p.13 schedule) x (1.00 + 2 x 0.15 bearing default) = 0.0520 m3; existence default = one lintel per opening (owner lintel rule); printed note 'MIN 40 cm' bearing would give 0.0720",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-c1e57b06555adcf8edf7",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:W11",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.09
+   },
+   "label": "DEFAULT",
+   "basis": "W11: 0.20 x 0.20 (ST p.13 schedule) x (1.95 + 2 x 0.15 bearing default) = 0.0900 m3; existence default = one lintel per opening (owner lintel rule) although a beam may serve the head (B9 (0.75) over GF-W18); printed note 'MIN 40 cm' bearing would give 0.1100",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-d887eecf51c121831336",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:P-GF-01",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "IGNORED_SMALL",
+    "size_m3": 0.048,
+    "covered_by": "NEW:STR.CONC.SAFETY"
+   },
+   "label": "DEFAULT",
+   "basis": "P-GF-01: 0.20 x 0.20 (ST p.13 schedule) x (0.90 + 2 x 0.15 bearing default) = 0.0480 m3; existence default = one lintel per opening (owner lintel rule); printed note 'MIN 40 cm' bearing would give 0.0680",
+   "designer_item": "D-45"
+  },
+  {
+   "line_id": "L-df32d6f42a824be21d3f",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:D-GF-05",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.052
+   },
+   "label": "DEFAULT",
+   "basis": "D-GF-05: 0.20 x 0.20 (ST p.13 schedule) x (1.00 + 2 x 0.15 bearing default) = 0.0520 m3; existence default = one lintel per opening (owner lintel rule); printed note 'MIN 40 cm' bearing would give 0.0720",
+   "designer_item": "Q-67"
+  },
+  {
+   "line_id": "L-e39175199fc6edc4db86",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:W12",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.09
+   },
+   "label": "DEFAULT",
+   "basis": "W12: 0.20 x 0.20 (ST p.13 schedule) x (1.95 + 2 x 0.15 bearing default) = 0.0900 m3; existence default = one lintel per opening (owner lintel rule) although a beam may serve the head (B9 (0.75) over GF-W18); printed note 'MIN 40 cm' bearing would give 0.1100",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-f892163c0602656f7e57",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:W27",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.052
+   },
+   "label": "DEFAULT",
+   "basis": "W27: 0.20 x 0.20 (ST p.13 schedule) x (1.00 + 2 x 0.15 bearing default) = 0.0520 m3; existence default = one lintel per opening (owner lintel rule); printed note 'MIN 40 cm' bearing would give 0.0720",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-fd8aaedc3457d6648f18",
+   "item_code": "STR.CONC.LINTEL",
+   "unit": "m3",
+   "element_id": "LINTEL:L-2F-01",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.052
+   },
+   "label": "DEFAULT",
+   "basis": "L-2F-01: 0.20 x 0.20 (ST p.13 schedule) x (1.00 + 2 x 0.15 bearing default) = 0.0520 m3; existence default = one lintel per opening (owner lintel rule); printed note 'MIN 40 cm' bearing would give 0.0720",
+   "designer_item": "D-45"
+  },
+  {
+   "line_id": "L-12f3d8b9375cac407bca",
+   "item_code": "STR.CONC.NECK",
+   "unit": "m3",
+   "element_id": "P-C:NECK:COL:SH10:C1@213452,60528",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.2925
+   },
+   "label": "DEFAULT",
+   "basis": "C1@213452,60528: route G base 0.2925 m3 (schedule section x neck from the printed minimum founding to the GB; register high 0.3675); lift raft level (D-43) replaces it",
+   "designer_item": "D-43"
+  },
+  {
+   "line_id": "L-8eb74a02fcf5ae4465f8",
+   "item_code": "STR.CONC.NECK",
+   "unit": "m3",
+   "element_id": "P-C:NECK:COL:SH10:C2@213395,59220",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.2925
+   },
+   "label": "DEFAULT",
+   "basis": "C2@213395,59220: route G base 0.2925 m3 (schedule section x neck from the printed minimum founding to the GB; register high 0.3675); lift raft level (D-43) replaces it",
+   "designer_item": "D-43"
+  },
+  {
+   "line_id": "L-953e87a3e9d0425d404e",
+   "item_code": "STR.CONC.NECK",
+   "unit": "m3",
+   "element_id": "P-C:NECK:COL:SH10:C9@214557,59222",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.585
+   },
+   "label": "DEFAULT",
+   "basis": "C9@214557,59222: route G base 0.5850 m3 (schedule section x neck from the printed minimum founding to the GB; register high 0.7350); lift raft level (D-43) replaces it",
+   "designer_item": "D-43"
+  },
+  {
+   "line_id": "L-dd6d11415961b554e906",
+   "item_code": "STR.CONC.NECK",
+   "unit": "m3",
+   "element_id": "P-C:NECK:COL:SH10:C2@214579,60524",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.2925
+   },
+   "label": "DEFAULT",
+   "basis": "C2@214579,60524: route G base 0.2925 m3 (schedule section x neck from the printed minimum founding to the GB; register high 0.3675); lift raft level (D-43) replaces it",
+   "designer_item": "D-43"
+  },
+  {
+   "line_id": "L-030538dda6a32c601c4c",
+   "item_code": "STR.CONC.PARAPET",
+   "unit": "m3",
+   "element_id": "2F_ROOF#PARAPET_RC",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.6551
+   },
+   "label": "DEFAULT",
+   "basis": "2F_ROOF: sum of runs top m2 (T-319 / T-324 drawn) x (height above finish + roof build-up default 0.175) = 3.6551 m3 [NE-1 1.1850 x (0.500 printed + 0.175); NW-1 1.3250 x (0.500 printed + 0.175); SE-1 1.3250 x (0.500 printed + 0.175); SW-1 1.5800 x (0.500 printed + 0.175)]; all-RC above the slab top (P7757 sections A-A / B-B cut every parapet in RC = this villa's drawing; ST p.14 P1 'typical' alternative = RC 0.30 upstand 1.6245 m3 + block above; Q-65 C designer answer replaces it)",
+   "designer_item": "D-39"
+  },
+  {
+   "line_id": "L-1d419b64e8ca1af30fb4",
+   "item_code": "STR.CONC.PARAPET",
+   "unit": "m3",
+   "element_id": "ANNEX_ROOF#PARAPET_RC",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.048
+   },
+   "label": "DEFAULT",
+   "basis": "ANNEX_ROOF: sum of runs top m2 (T-319 / T-324 drawn) x (height above finish + roof build-up default 0.175) = 4.0480 m3 [NE-6 2.1200 x (0.500 printed + 0.175); NE-6x 0.2600 x (0.500 printed + 0.175); NW-1 0.1200 x (0.500 printed + 0.175); SE-1 1.3000 x (0.500 printed + 0.175); SW-1 0.6000 x (0.500 printed + 0.175); SW-2 0.3770 x (0.500 printed + 0.175); SW-3 1.2200 x (0.500 printed + 0.175)]; all-RC above the slab top (P7757 sections A-A / B-B cut every parapet in RC = this villa's drawing; ST p.14 P1 'typical' alternative = RC 0.30 upstand 1.7991 m3 + block above; Q-65 C designer answer replaces it)",
+   "designer_item": "D-39"
+  },
+  {
+   "line_id": "L-9a2c81164ec6499cc28c",
+   "item_code": "STR.CONC.PARAPET",
+   "unit": "m3",
+   "element_id": "1F_ROOF#PARAPET_RC",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 12.8892
+   },
+   "label": "DEFAULT",
+   "basis": "1F_ROOF: sum of runs top m2 (T-319 / T-324 drawn) x (height above finish + roof build-up default 0.175) = 12.8892 m3 [NE-1 0.0080 x (1.200 default 1.20 + 0.175); NE-2 3.8140 x (1.300 printed + 0.175); NW-1 0.2046 x (1.299 printed + 0.175); NW-2 0.6334 x (1.300 printed + 0.175); NW-3 0.1061 x (1.299 printed + 0.175); NW-4 0.0935 x (1.099 printed + 0.175); NW-5 1.3250 x (0.448 printed + 0.175); SE-1 1.4600 x (1.041 printed + 0.175); SW-1 0.0080 x (1.200 default 1.20 + 0.175); SW-2 0.8450 x (1.200 default 1.20 + 0.175); SW-3 1.3340 x (1.300 printed + 0.175)]; all-RC above the slab top (P7757 sections A-A / B-B cut every parapet in RC = this villa's drawing; ST p.14 P1 'typical' alternative = RC 0.30 upstand 2.9495 m3 + block above; Q-65 C designer answer replaces it)",
+   "designer_item": "D-39"
+  },
+  {
+   "line_id": "L-b5ffc172a354375ca107",
+   "item_code": "STR.CONC.PARAPET",
+   "unit": "m3",
+   "element_id": "GF_TERRACE#PARAPET_RC",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.7752
+   },
+   "label": "DEFAULT",
+   "basis": "GF_TERRACE: sum of runs top m2 (T-319 / T-324 drawn) x (height above finish + roof build-up default 0.175) = 3.7752 m3 [NE-4 3.8540 x (0.500 printed + 0.175); NW-7 1.5400 x (0.500 printed + 0.175); SW-9 0.1990 x (0.500 printed + 0.175)]; all-RC above the slab top (P7757 sections A-A / B-B cut every parapet in RC = this villa's drawing; ST p.14 P1 'typical' alternative = RC 0.30 upstand 1.6779 m3 + block above; Q-65 C designer answer replaces it)",
+   "designer_item": "D-39"
+  },
+  {
+   "line_id": "L-b62a7065645589011141",
+   "item_code": "STR.CONC.POOL",
+   "unit": "m3",
+   "element_id": "HL:POOL_CONCRETE:POOL-1:STEPS",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.228
+   },
+   "label": "SAFETY",
+   "basis": "pool steps not drawn (T-667 R-T667-5; consultant P-2): SAFETY block 0.30 x 2.00 x 0.38 = 0.228 m3 (one bench step across the 3.50 back wall, the size the reference workbook carries; never VERIFIED)",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-061e18cf35a4b6b33d68",
+   "item_code": "STR.CONC.STAIR",
+   "unit": "m3",
+   "element_id": "P-C:SCOPE:STAIRS:GROUND:CC-5ab1872c70:FLIGHTS",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.1274
+   },
+   "label": "ESTIMATE",
+   "basis": "ST-03 E1: steps 0.3550 (T-258 / T-711) + waist 1.724 slope x 2.80 x 0.16 (ST-01 printed plate) = 1.1274 m3; S-9 / D-56 replaces the waist",
+   "designer_item": "D-56"
+  },
+  {
+   "line_id": "L-659243ed9fc2831c3ae8",
+   "item_code": "STR.CONC.STAIR",
+   "unit": "m3",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_TR",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.063
+   },
+   "label": "DEFAULT",
+   "basis": "ST-01 MS2 turn riser: height 0.168 + 0.16 = 0.328 x thickness 0.16 (plate) x width 1.20 (turn 1.44 m2) = 0.0630 m3 (T-711 per-unit)",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-7863355dfcb68a681d2d",
+   "item_code": "STR.CONC.STAIR",
+   "unit": "m3",
+   "element_id": "P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.2134
+   },
+   "label": "DEFAULT",
+   "basis": "ST-01 GF->1F remainder: reading A (27 equal risers 0.1667, within the 0.15-0.175 default) 0.8630 + winder wedges 1/2 x 0.1667 x 1.44 + flat turn 1.44 x 0.16 = 1.2134 m3 (T-711); reading B 1.4009",
+   "designer_item": "Q-51"
+  },
+  {
+   "line_id": "L-821032bc04a0b0d02133",
+   "item_code": "STR.CONC.STAIR",
+   "unit": "m3",
+   "element_id": "DG5:ST-01:LOBBY",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1656
+   },
+   "label": "ESTIMATE",
+   "basis": "ST-01b lobby D1 waist under 4 steps: plan 1.035 m2 (T-711) x 0.16 plate = 0.1656 m3 (if on compacted fill: 0)",
+   "designer_item": "DESIGNER_TAG"
+  },
+  {
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "item_code": "STR.CONC.STAIR",
+   "unit": "m3",
+   "element_id": "P-C:STAIRS:GROUND:SITE-4df8fcd99d130701",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.0879
+   },
+   "label": "ESTIMATE",
+   "basis": "ST-02 round stair 12 curved treads: wedges 2.05385 m3/m x riser 4.50/28 = 0.3301 (T-711) + helicoid waist 4.1077 m2 x 0.16 x slope 1.153 = 0.7578; CA (0 .. 0.09) in SAFETY; D-08 replaces it",
+   "designer_item": "D-08"
+  }
+ ],
+ "ranged_kept_named": [
+  {
+   "line_id": "L-005334b6998987164a5d",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W28",
+   "low": 0.04,
+   "high": 0.055,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-05a99150a85e9185ae48",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C4@224310,64557",
+   "low": 0.235,
+   "high": 0.315,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-080c97f5f6a92452cd04",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTING:FTG:SH10:T652:10A5",
+   "low": 0.435,
+   "high": 0.59,
+   "designer_item": "Q-31",
+   "fact": "owner question Q-31 (one outline, two footing tags)",
+   "list_item": "owner, not designer"
+  },
+  {
+   "line_id": "L-0c5ede7fd2c9e425aa8d",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0034",
+   "low": 0.1125,
+   "high": 0.15,
+   "designer_item": "D-34",
+   "fact": "ground-beam title by span: no precedence printed",
+   "list_item": "4"
+  },
+  {
+   "line_id": "L-0e852cca42fb8b765c58",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0007",
+   "low": 0.216,
+   "high": 0.288,
+   "designer_item": "D-34",
+   "fact": "ground-beam title by span: no precedence printed",
+   "list_item": "4"
+  },
+  {
+   "line_id": "L-10032bf9a60368473a7b",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BEYOND_PLOT_LINE",
+   "low": 0.0,
+   "high": 0.189,
+   "designer_item": "D-14",
+   "fact": "blinding projection past the plot line",
+   "list_item": "none (propose: add D-14)"
+  },
+  {
+   "line_id": "L-132cf60588a44f6af9d6",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C11@208990,51494",
+   "low": 0.5874,
+   "high": 0.66,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-15b8ad39d6b2250c9546",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C8@217457,52784",
+   "low": 0.4272,
+   "high": 0.54,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-15d9da9b17fd373553f0",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@223972,59262",
+   "low": 0.0972,
+   "high": 0.18,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-164ae9d338976be9e582",
+   "item_code": "STR.CONC.FOOTING",
+   "element_id": "P-C:FTG:SH10:T652:10A5",
+   "low": 2.176,
+   "high": 2.275,
+   "designer_item": "Q-31",
+   "fact": "owner question Q-31 (one outline, two footing tags)",
+   "list_item": "owner, not designer"
+  },
+  {
+   "line_id": "L-16b95607fc88cda3844a",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_LIFT_RAFT_FF",
+   "low": 2.256,
+   "high": 2.352,
+   "designer_item": "RFI-S08+RFI-S23",
+   "fact": "lift raft blinding projection (old RFI codes)",
+   "list_item": "6 (propose: restate as D-id)"
+  },
+  {
+   "line_id": "L-1a07849115af938b4a72",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-01",
+   "low": 0.056,
+   "high": 0.066716,
+   "designer_item": "Q-55",
+   "fact": "owner rule Q-55 C fallback door head (existence / spare)",
+   "list_item": "owner rule, not designer"
+  },
+  {
+   "line_id": "L-1a9e469651c32cce9b97",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@222815,61757",
+   "low": 0.1152,
+   "high": 0.198,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-1dc713c83bf62e525ff2",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C8@256160,53630|1F",
+   "low": 0.756,
+   "high": 0.84,
+   "designer_item": "D-16",
+   "fact": "column C8: schedule section vs drawn outline differ",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-1fd49f3e7c5a7dd19d4d",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-056#BAND0042",
+   "low": 2.262872,
+   "high": 2.545691,
+   "designer_item": "D-27",
+   "fact": "beam width: schedule vs drawn differ",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-26f6b6f2365c72e42291",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C2@254644,61274|2F",
+   "low": 0.3287,
+   "high": 0.425,
+   "designer_item": "D-39",
+   "fact": "roof slab top not printed (finished marks only); parapet build-up / height",
+   "list_item": "5"
+  },
+  {
+   "line_id": "L-291ba2ddf4bbe4f14cf7",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@243102,55481|1F",
+   "low": 0.42,
+   "high": 0.504,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-2c7b0b1e1a439d9ffd1e",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.1",
+   "low": 0.347,
+   "high": 0.4338,
+   "designer_item": "D-27",
+   "fact": "beam width: schedule vs drawn differ",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-2efe48097978cae5fc99",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:P-1F-01",
+   "low": 0.063,
+   "high": 0.12042,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-314946394d849141dda2",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:C@226940,50955",
+   "low": 0.267,
+   "high": 0.33,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-33a9b7728781fcba12e2",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C2@251723,58368|2F",
+   "low": 0.3267,
+   "high": 0.425,
+   "designer_item": "D-39",
+   "fact": "roof slab top not printed (finished marks only); parapet build-up / height",
+   "list_item": "5"
+  },
+  {
+   "line_id": "L-34346cb438bffee6acec",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@216858,57078",
+   "low": 0.1152,
+   "high": 0.198,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-35382b18e2e362df3ae6",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_STRAP",
+   "low": 0.0,
+   "high": 0.912684,
+   "designer_item": "STRAP_BLINDING_NOT_PRINTED",
+   "fact": "strap blinding not printed",
+   "list_item": "none (propose: D-id)"
+  },
+  {
+   "line_id": "L-39ca5340879eafc35355",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-030#BAND0009",
+   "low": 0.44255,
+   "high": 0.55323,
+   "designer_item": "D-27",
+   "fact": "beam width: schedule vs drawn differ",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-3af715c6e83364208ad0",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W01",
+   "low": 0.08,
+   "high": 0.108,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-3f7b9501a902579e7406",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C2@209843,64560",
+   "low": 0.2895,
+   "high": 0.3225,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-40e8c2597de12644e8e2",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W24",
+   "low": 0.094,
+   "high": 0.26828,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-43dae3d6dfec957b26a8",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@265272,52633|GF",
+   "low": 0.36,
+   "high": 0.45,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-43e804ba4a4c07529fd5",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.2",
+   "low": 0.4563,
+   "high": 0.5475,
+   "designer_item": "D-02",
+   "fact": "beam width: schedule vs drawn differ (CB10 kind)",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-441ae5fe85351347aff0",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W05",
+   "low": 0.04,
+   "high": 0.055,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-46f2b70254f074885dfc",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C4@220308,64637",
+   "low": 0.282,
+   "high": 0.315,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-47882fa3a0d9cdcc122e",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W13",
+   "low": 0.08,
+   "high": 0.108,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-486cd9a0bf52e4b32abb",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C5@220440,52886",
+   "low": 0.3384,
+   "high": 0.378,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-48f2e06e5c946eb1e5a7",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@226007,58025",
+   "low": 0.267,
+   "high": 0.3,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-4a12b89454e48ac510dc",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:A-1F-01",
+   "low": 0.054,
+   "high": 0.1185,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-4aed92c117a7ab1c90ee",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C9@259284,59442|1F",
+   "low": 0.756,
+   "high": 0.84,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-4c4496579e5bfa20ae9f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C8@256160,53630|GF",
+   "low": 0.9,
+   "high": 1.0125,
+   "designer_item": "D-16",
+   "fact": "column C8: schedule section vs drawn outline differ",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-4ec473f7c0c712919823",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@199252,55820",
+   "low": 0.192,
+   "high": 0.33,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-4ef35980fbb54366703d",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@224210,63411",
+   "low": 0.1062,
+   "high": 0.189,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-50667f69855b6d588011",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.1",
+   "low": 0.2875,
+   "high": 0.345,
+   "designer_item": "D-02",
+   "fact": "beam width: schedule vs drawn differ (CB10 kind)",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-516989b817e0ccc7cb80",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@217138,51213",
+   "low": 0.267,
+   "high": 0.3,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-53d0b6af1a801c3db58e",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@198052,57874",
+   "low": 0.192,
+   "high": 0.33,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-53ef44d8c490d1341b93",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W16",
+   "low": 0.078,
+   "high": 0.081732,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-53f223b06db14ac41d47",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C9@254644,59429|2F",
+   "low": 0.45738,
+   "high": 0.595,
+   "designer_item": "D-39",
+   "fact": "roof slab top not printed (finished marks only); parapet build-up / height",
+   "list_item": "5"
+  },
+  {
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "HL:PLANTED_COLUMN:PC-2F:CONCRETE",
+   "low": 0.20136,
+   "high": 0.35,
+   "designer_item": "D-39",
+   "fact": "roof slab top not printed (finished marks only); parapet build-up / height",
+   "list_item": "5"
+  },
+  {
+   "line_id": "L-5aec8a0055215ee5a711",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C2@212578,64533",
+   "low": 0.2895,
+   "high": 0.3225,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-5efd9ac69d4cfd9b9a6e",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C5@216447,64629",
+   "low": 0.3384,
+   "high": 0.378,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-6057028f3f666538a007",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W19",
+   "low": 0.056,
+   "high": 0.069,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-60f09eece6568b15f6ce",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.2",
+   "low": 0.335,
+   "high": 0.4188,
+   "designer_item": "D-27",
+   "fact": "beam width: schedule vs drawn differ",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-6290a9f3d93f38cd46d6",
+   "item_code": "STR.CONC.BOUNDARY_WALL",
+   "element_id": "P-C:SCOPE:BOUNDARY_WALL:FOUNDATION:CC-9fd936ab60:BEAM",
+   "low": 5.6392,
+   "high": 11.0328,
+   "designer_item": "Q-28",
+   "fact": "owner question Q-28 (boundary band section / founding level)",
+   "list_item": "owner, not designer"
+  },
+  {
+   "line_id": "L-6692d02cd6cd25120300",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W20",
+   "low": 0.056,
+   "high": 0.08048,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-694a75c84dd6e4bb4491",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@241094,51256|GF",
+   "low": 0.26352,
+   "high": 0.50625,
+   "designer_item": "D-39+D-66",
+   "fact": "column section conflict + roof slab top not printed",
+   "list_item": "3, 5"
+  },
+  {
+   "line_id": "L-6a2040e0fe0bf7391b9c",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@222091,55786",
+   "low": 0.1152,
+   "high": 0.198,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-71998da6340be871d0af",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-02",
+   "low": 0.036,
+   "high": 0.042708,
+   "designer_item": "Q-55",
+   "fact": "owner rule Q-55 C fallback door head (existence / spare)",
+   "list_item": "owner rule, not designer"
+  },
+  {
+   "line_id": "L-734ff1a78bbe6b7eb4c3",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@195972,51184",
+   "low": 0.192,
+   "high": 0.33,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-755eb56b55e86301b488",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C9@254644,59429|1F",
+   "low": 0.756,
+   "high": 1.05,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-786344670c0002b31478",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W09",
+   "low": 0.092,
+   "high": 0.118,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-7a5214a334ea3559fa2d",
+   "item_code": "STR.CONC.BLINDING",
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_GROUND_BEAM",
+   "low": 4.949374,
+   "high": 9.422514,
+   "designer_item": "FOOTING_DETAIL_CHOICE_OPEN",
+   "fact": "footing blinding: governing detail choice open",
+   "list_item": "none (propose: D-id)"
+  },
+  {
+   "line_id": "L-7c3edce23ec8faa3d674",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:2F:BAND0011.1",
+   "low": 0.112,
+   "high": 0.336,
+   "designer_item": "D-04",
+   "fact": "unlabelled beam piece: no mark, depth row not printed",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-7d90a0feed2537221f16",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W19+W20:PIER_REMAINDER",
+   "low": 0.0,
+   "high": 0.003,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-81444e222487437e257e",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0020",
+   "low": 0.1305,
+   "high": 0.174,
+   "designer_item": "D-34",
+   "fact": "ground-beam title by span: no precedence printed",
+   "list_item": "4"
+  },
+  {
+   "line_id": "L-831f6fe3de133294bb8f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@259715,51786|1F",
+   "low": 0.42,
+   "high": 0.63,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-85809d3db52bb93dfe96",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C7@247954,58915|1F",
+   "low": 0.672,
+   "high": 0.84,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-85df35f17a205f919aa6",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@195866,57040",
+   "low": 0.192,
+   "high": 0.33,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-882717b0c35a87e363ef",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W10",
+   "low": 0.056,
+   "high": 0.06,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-88ccf8d4505411deb9e5",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-057#BAND0019.2",
+   "low": 0.212,
+   "high": 0.3975,
+   "designer_item": "D-03",
+   "fact": "two marks on one beam",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-8d031491396379f0cbb1",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-015#BAND0001.3",
+   "low": 0.0904,
+   "high": 0.2712,
+   "designer_item": "D-04",
+   "fact": "unlabelled beam piece: no mark, depth row not printed",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-8de64040a1c3ae6cf137",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@265215,57750|GF",
+   "low": 0.45,
+   "high": 0.5625,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-8f8ad257d9b2cb9e027f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C4@264812,63850|1F",
+   "low": 0.42,
+   "high": 0.525,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-919a5749ef79759e01ca",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C2@252679,64225|2F",
+   "low": 0.3287,
+   "high": 0.425,
+   "designer_item": "D-39",
+   "fact": "roof slab top not printed (finished marks only); parapet build-up / height",
+   "list_item": "5"
+  },
+  {
+   "line_id": "L-970bac563cbcd69e2a30",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0038",
+   "low": 0.098008,
+   "high": 0.130678,
+   "designer_item": "D-34",
+   "fact": "ground-beam title by span: no precedence printed",
+   "list_item": "4"
+  },
+  {
+   "line_id": "L-995eca94ba8dc09a028f",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C7@209292,59069",
+   "low": 0.3792,
+   "high": 0.432,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-9cb26d86575a92694880",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@247429,51302|GF",
+   "low": 0.36,
+   "high": 0.45,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-9e4895663f76d7f03ac9",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-054#BAND0008",
+   "low": 1.013607,
+   "high": 1.266989,
+   "designer_item": "D-27",
+   "fact": "beam width: schedule vs drawn differ",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-9f5a647014bbf83359f9",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@238150,57853|GF",
+   "low": 0.26352,
+   "high": 0.405,
+   "designer_item": "D-39+D-66",
+   "fact": "column section conflict + roof slab top not printed",
+   "list_item": "3, 5"
+  },
+  {
+   "line_id": "L-a7848a35fb4329e09d10",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-03",
+   "low": 0.052,
+   "high": 0.058,
+   "designer_item": "Q-55",
+   "fact": "owner rule Q-55 C fallback door head (existence / spare)",
+   "list_item": "owner rule, not designer"
+  },
+  {
+   "line_id": "L-a7b8b292503ae1bf6c77",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-1F-05",
+   "low": 0.036,
+   "high": 0.0628,
+   "designer_item": "Q-55",
+   "fact": "owner rule Q-55 C fallback door head (existence / spare)",
+   "list_item": "owner rule, not designer"
+  },
+  {
+   "line_id": "L-a87ea657a42a311cb851",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C6@250087,56100|1F",
+   "low": 0.504,
+   "high": 0.735,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-abd65e1b745315dd17c2",
+   "item_code": "STR.CONC.STRAP",
+   "element_id": "HL:STRAP_CONCRETE:SB1:IN_FOOTING:F10_F",
+   "low": 0.0,
+   "high": 0.385,
+   "designer_item": "Q-31",
+   "fact": "owner question Q-31 (one outline, two footing tags)",
+   "list_item": "owner, not designer"
+  },
+  {
+   "line_id": "L-aca2db3c2b29719328c7",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W29",
+   "low": 0.064,
+   "high": 0.064,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-ae1bd9cb228d57594e46",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@209914,60584",
+   "low": 0.237,
+   "high": 0.27,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-b21cbf6560f613b39bf0",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C9@220198,60706",
+   "low": 0.519,
+   "high": 0.585,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-b4c234c8a3873239f67f",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C11@207698,54876",
+   "low": 0.5874,
+   "high": 0.66,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-bbad8cdb4d26986776a6",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:C10@224867,51226",
+   "low": 0.3738,
+   "high": 0.462,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-bc01297b1c4a4c45a15f",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@255627,63526|2F",
+   "low": 0.3287,
+   "high": 0.51,
+   "designer_item": "D-39+D-66",
+   "fact": "column section conflict + roof slab top not printed",
+   "list_item": "3, 5"
+  },
+  {
+   "line_id": "L-bd741a3faf2318dd8409",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C@207257,51203",
+   "low": 0.2376,
+   "high": 0.33,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-bef35462630d4b76596f",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:GF:BAND0030.2~T642_DEPTH_B4_B7",
+   "low": 0.0,
+   "high": 0.025,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-bf76c17309c92605e174",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W23",
+   "low": 0.056,
+   "high": 0.134,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-c0b3340a906c2c7650f8",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@233893,56561|GF",
+   "low": 0.26352,
+   "high": 0.405,
+   "designer_item": "D-39+D-66",
+   "fact": "column section conflict + roof slab top not printed",
+   "list_item": "3, 5"
+  },
+  {
+   "line_id": "L-c0b7102a36344a0349f5",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0025.1",
+   "low": 0.20925,
+   "high": 0.279,
+   "designer_item": "D-34",
+   "fact": "ground-beam title by span: no precedence printed",
+   "list_item": "4"
+  },
+  {
+   "line_id": "L-c1e802184591eac927cf",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C5@205273,54905",
+   "low": 0.1944,
+   "high": 0.36,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-c677b628a776d3b87b02",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C5@255627,63526|1F",
+   "low": 0.42,
+   "high": 0.63,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-c823e0dbd81e30c66aa5",
+   "item_code": "STR.CONC.STRAP",
+   "element_id": "HL:STRAP_CONCRETE:SB3:IN_FOOTING:F3",
+   "low": 0.0295,
+   "high": 0.2683,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-c8c07db4ac0d54d89bbf",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "U-C:NECK:COL:SH10:CN@225897,54910",
+   "low": 0.1152,
+   "high": 0.198,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-cc702b8541c15fdfd98c",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@247476,61310|1F",
+   "low": 0.42,
+   "high": 0.525,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-d62d2fcf3d0023ad1ad1",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:2F:BAND0006.1",
+   "low": 0.248,
+   "high": 0.744,
+   "designer_item": "D-04",
+   "fact": "unlabelled beam piece: no mark, depth row not printed",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C1@251701,62344|2F",
+   "low": 0.3287,
+   "high": 0.425,
+   "designer_item": "D-39",
+   "fact": "roof slab top not printed (finished marks only); parapet build-up / height",
+   "list_item": "5"
+  },
+  {
+   "line_id": "L-dc8cbfc119d006ff3927",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:2F:BAND0008.1",
+   "low": 0.112,
+   "high": 0.336,
+   "designer_item": "D-04",
+   "fact": "unlabelled beam piece: no mark, depth row not printed",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-dd3c32e4340e7a823a6e",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@201132,51210",
+   "low": 0.177,
+   "high": 0.315,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-dd5b41a7af885e96f797",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W21",
+   "low": 0.04,
+   "high": 0.055,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-e112e2add2f8979a6c39",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C4@259526,63482|1F",
+   "low": 0.42,
+   "high": 0.525,
+   "designer_item": "D-66",
+   "fact": "column band: schedule section vs drawn outline differ (13 columns; live cause D-66 = RFI-S20 since V3.0.42 F-T433-2; the retired D-63 is not read, R-T755-1 v2)",
+   "list_item": "3"
+  },
+  {
+   "line_id": "L-e2134034441cb7db7bd7",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0021",
+   "low": 0.108,
+   "high": 0.144,
+   "designer_item": "D-34",
+   "fact": "ground-beam title by span: no precedence printed",
+   "list_item": "4"
+  },
+  {
+   "line_id": "L-e6c1c9a7feec10f64975",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C@235241,51296|GF",
+   "low": 0.26352,
+   "high": 0.405,
+   "designer_item": "D-39+D-66",
+   "fact": "column section conflict + roof slab top not printed",
+   "list_item": "3, 5"
+  },
+  {
+   "line_id": "L-ed7aadd01d9daa9559a9",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W07",
+   "low": 0.056,
+   "high": 0.134,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-efe50185c0da4244e158",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C6@209970,56575",
+   "low": 0.3738,
+   "high": 0.42,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-f0e25ad2cf73bf2a35ea",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0030",
+   "low": 0.108,
+   "high": 0.144,
+   "designer_item": "D-34",
+   "fact": "ground-beam title by span: no precedence printed",
+   "list_item": "4"
+  },
+  {
+   "line_id": "L-f24cf117a9ce1e875785",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0039",
+   "low": 0.19612,
+   "high": 0.261493,
+   "designer_item": "D-34",
+   "fact": "ground-beam title by span: no precedence printed",
+   "list_item": "4"
+  },
+  {
+   "line_id": "L-f269fabb74f505755492",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W06",
+   "low": 0.04,
+   "high": 0.04,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-f54b7b2acf11ebd2a585",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C3@205523,52938",
+   "low": 0.192,
+   "high": 0.33,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-f68444edf483bc1d87d4",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:W22",
+   "low": 0.04,
+   "high": 0.04,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  },
+  {
+   "line_id": "L-f83c4a469845c7e14dfa",
+   "item_code": "STR.CONC.BEAM",
+   "element_id": "U-C:BEAMS:1F:BAND0005.1",
+   "low": 0.064,
+   "high": 0.192,
+   "designer_item": "D-04",
+   "fact": "unlabelled beam piece: no mark, depth row not printed",
+   "list_item": "1"
+  },
+  {
+   "line_id": "L-fad18af6e7139a5e99d1",
+   "item_code": "STR.CONC.COLUMN",
+   "element_id": "P-C:COL:SH12:C3@238374,54773|GF",
+   "low": 0.41175,
+   "high": 0.50625,
+   "designer_item": "D-39",
+   "fact": "roof slab top not printed (finished marks only); parapet build-up / height",
+   "list_item": "5"
+  },
+  {
+   "line_id": "L-fc622ff340ac65a544e3",
+   "item_code": "STR.CONC.NECK",
+   "element_id": "P-C:NECK:COL:SH10:C8@224698,57859",
+   "low": 0.4806,
+   "high": 0.54,
+   "designer_item": "NO_SINGLE_VALUE",
+   "fact": "neck: founding level not printed (minimum 1.50 m below EG only)",
+   "list_item": "none (propose: new D-id 'founding level per footing')"
+  },
+  {
+   "line_id": "L-fd68db051119ea0266ee",
+   "item_code": "STR.CONC.LINTEL",
+   "element_id": "LINTEL:D-GF-07",
+   "low": 0.096,
+   "high": 0.108,
+   "designer_item": "DESIGNER_TAG",
+   "fact": "named designer datum with no D-number (lintel bearings MIN 40 cm, neck founding level, dome-ring soffit, sill / head, pool steps, strap / blinding)",
+   "list_item": "none (propose: D-ids, L-T716-1)"
+  }
+ ]
+}
