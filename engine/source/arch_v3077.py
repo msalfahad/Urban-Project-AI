@@ -333,7 +333,9 @@ def _restate(b, e, srcs, edge=None):
         ln["bounded_range"] = {"low": _r(lo), "high": _r(hi),
                                "basis": f"{e.get('rule')}: plaster of the same face - band - tiled"[:200]}
         q = ((b.get("rfi") or {}).get("question") or "").strip()
-        ln["rfi"] = {"question": (q or f"open: {b['line_id']} HELD with its plaster face")[:400],
+        ln["rfi"] = {"question": (f"open: held with its plaster face {e.get('plaster_line_id')} (paint = plaster - band "
+                                  f"- tiled, UP-FIN-PAINT-002); the engine paint line's own cause before the "
+                                  f"restatement: {q or 'none recorded'}")[:400],
                      "blocks": list((b.get("rfi") or {}).get("blocks") or [b["line_id"]])}
         head = f"HELD (BOUNDED) {_fmt(lo)} .. {_fmt(hi)} m2 by UP-FIN-PAINT-002 (paint = plaster - band - tiled)"
         after = {"low": _r(lo), "high": _r(hi)}
