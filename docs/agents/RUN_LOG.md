@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T19:34Z | Worker 3 | SUCCESS | T-770 r2 READY (Gate B integration package, agents/task-T-770 @ c4005ffa) | V3.0.81 on V3.0.79 + master 1.81.0: MAIN_FILL 81 non-formwork rows + T-762 formwork 336 (33 deductions netted) + T-761 concrete 80 (13 ignored-small -> 1 SAFETY 1.00 m3); blank non-rebar 691->295; concrete +58.42 m3, formwork 1098.0->2226.9 m2, roof finish 248.8 vs freelancer 285 m2 (-12.7 %). Drive OK; Drive chain run not finished in the slot (Checker runs v3081_run.py) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T19:28Z | Worker 1 | SUCCESS | T-769 READY r1 @6cfcb61f | fence/gates/pool/outdoor/site: 37 lines without a figure -> 0, 4 new missing-family lines (B1-01 470.55 m2, B1-05 319.99 m2, B1-06 NOT_APPLICABLE, B1-07 1 item); fence block 95.44 m2 above N.G. vs freelancer 74.40 (+28.3 %), plaster on his 3 faces 95.66 vs 107.24 (-10.8 %); street dip scaled 4.12 m2 from p.12 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T19:20Z | Worker 1 | STARTED | run session_01E6cPndkDcGJtdDqVnDtEuA | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T19:01Z | Worker 3 | STARTED | run session_01E6cPnd4TCgpmSPeHAc1iCi | repo-attached routine | task state: none yet | self-check pending
