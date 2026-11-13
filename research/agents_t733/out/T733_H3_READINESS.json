@@ -1,0 +1,1285 @@
+{
+ "a_tread_highs": {
+  "far_end_gap_to_void_edge_m": {
+   "set_layer2": 0.0,
+   "set_layer5": 0.05
+  },
+  "gf_plan_pair": {
+   "22F": [
+    "5",
+    1.15
+   ],
+   "234": [
+    "2",
+    1.15
+   ]
+  },
+  "governing_set": {
+   "basis": "end lines on the drawn outline",
+   "set": "set_layer2"
+  },
+  "highs_sum_m2": "7.544413",
+  "lines": [
+   {
+    "candidate_m2": "4.094413",
+    "change": "none",
+    "class": "HELD",
+    "diff_m2": "0.000001",
+    "element_id": "1F-R78C367:flight 1",
+    "flight": "F1 (RS-C seen from 1F)",
+    "item_code": "FIN.MARBLE.TREAD",
+    "line_id": "L-6cf11c2d30387d0942b9",
+    "own_one_set_m2": "4.094412",
+    "verdict": "ENGINE_RIGHT"
+   },
+   {
+    "candidate_m2": "3.450000",
+    "change": "none",
+    "class": "HELD",
+    "diff_m2": "0.000000",
+    "element_id": "1F-R78C367:flight 4",
+    "flight": "F4 (RS-S seen from 1F)",
+    "item_code": "FIN.MARBLE.TREAD",
+    "line_id": "L-ea55ed317bc4de89aec1",
+    "own_one_set_m2": "3.450000",
+    "verdict": "ENGINE_RIGHT"
+   },
+   {
+    "candidate_m2": "4.094413",
+    "change": "none",
+    "class": "HELD",
+    "diff_m2": "0.000001",
+    "element_id": "GF-RC99C2A:flight 1",
+    "flight": "GF F1 RS-C carrier (blank, beside 4.094413 per T-429)",
+    "item_code": "FIN.MARBLE.TREAD",
+    "line_id": "L-fa534ec5f9dc14947899",
+    "own_one_set_m2": "4.094412",
+    "verdict": "ENGINE_RIGHT"
+   },
+   {
+    "candidate_m2": "3.450000",
+    "change": "none",
+    "class": "RELEASED",
+    "diff_m2": "0.000000",
+    "element_id": "GF-RC99C2A:flight 2",
+    "flight": "GF F2 RS-S carrier",
+    "item_code": "FIN.MARBLE.TREAD",
+    "line_id": "L-89c84fdd4964dec8a323",
+    "own_one_set_m2": "3.450000",
+    "verdict": "ENGINE_RIGHT"
+   }
+  ],
+  "own_readings": {
+   "mixed_engine": {
+    "F1_first_quad_m2": 0.335819,
+    "F1_last_quad_m2": 0.398468,
+    "F1_m2": 4.094412,
+    "F1_quads": 12,
+    "F4_m2": 3.45,
+    "overlap_m2": 0.057438,
+    "sum_m2": 7.544412,
+    "union_m2": 7.486974
+   },
+   "set_layer2": {
+    "F1_first_quad_m2": 0.335819,
+    "F1_last_quad_m2": 0.398468,
+    "F1_m2": 4.094412,
+    "F1_quads": 12,
+    "F4_m2": 3.45,
+    "overlap_m2": 0.0,
+    "sum_m2": 7.544412,
+    "union_m2": 7.544412
+   },
+   "set_layer5": {
+    "F1_first_quad_m2": 0.345285,
+    "F1_last_quad_m2": 0.398468,
+    "F1_m2": 4.104061,
+    "F1_quads": 12,
+    "F4_m2": 3.45,
+    "overlap_m2": 0.0,
+    "sum_m2": 7.554061,
+    "union_m2": 7.554061
+   }
+  },
+  "pair_offset_m": [
+   0.05
+  ],
+  "radial_top_line": {
+   "lengths_m": {
+    "BA3": 1.15,
+    "BA4": 1.15,
+    "BB9": 1.2,
+    "BBA": 1.149742
+   },
+   "radii_m": {
+    "BB9": [
+     1.580511,
+     2.780511
+    ],
+    "BBA": [
+     1.581559,
+     2.730969
+    ]
+   }
+  },
+  "result": "NO_DOUBLE_COUNT: T-727 s.5 DOUBLE_COUNT_RISK 0.0574 m2 withdrawn (SET_MIX); highs kept",
+  "verdict": {
+   "clean_sets": [
+    "set_a",
+    "set_b"
+   ],
+   "flight_lines": "KEEP (each flight's own one-set area)",
+   "overlap_m2": "0.057438",
+   "result": "SET_MIX",
+   "union_understated_by_m2": "0.057438"
+  }
+ },
+ "b_v07": {
+  "after": {
+   "cause": "slab panel drawn continuous; beams cross the footprint",
+   "m2": "0",
+   "result": "NOT_A_VOID",
+   "status": "DRAWING-CONFIRMED"
+  },
+  "alternative_S1": "client request (Q-29, owner 2026-10-22: no revised structural drawing): an open skylight would need a redesigned slab (beams and a column cross the footprint); shown apart, not quantified, never applied; designer item DOME-3 / CF-S8.3-01 (D-21) unchanged",
+  "before": {
+   "evidence": "no structural drawing named (T-719 / T-727)",
+   "result": "NOT A DRAWN VOID (S0)",
+   "status": "HELD"
+  },
+  "ceilings": [
+   {
+    "change": "none",
+    "class": "RELEASED",
+    "element_id": "2F-R1DB2D2:ceiling",
+    "item_code": "FIN.CEILING",
+    "line_id": "L-7531772e1581b35eea5f",
+    "m2": "19.350001",
+    "verdict": "ENGINE_RIGHT"
+   },
+   {
+    "change": "none",
+    "class": "RELEASED",
+    "element_id": "2F-RE83BED:ceiling",
+    "item_code": "FIN.CEILING",
+    "line_id": "L-1bd4ec39660768d22677",
+    "m2": "5.550000",
+    "verdict": "ENGINE_RIGHT"
+   }
+  ],
+  "evidence": {
+   "beam_line_lengths_inside_dome_m": [
+    0.065296,
+    1.208987,
+    1.25526,
+    1.578251,
+    2.371752,
+    3.935265,
+    4.113242
+   ],
+   "beam_lines_crossing_dome": 7,
+   "dome_disc_m2": 15.274758,
+   "dome_handle": "1300",
+   "dome_layer": "2",
+   "dome_radius_m": 2.205018,
+   "hatches_on_sheet_by_layer": {
+    "S-COL.HAT": 9,
+    "S-HAT.BAT": 3
+   },
+   "inside_dome_footprint_by_type_layer": {
+    "HATCH/S-COL.HAT": 2,
+    "LINE/1": 7,
+    "LINE/S-COL.BON": 2,
+    "LINE/S-REIN-SLAB": 3,
+    "LWPOLYLINE/REIN": 1,
+    "LWPOLYLINE/S-COL.BON": 2,
+    "LWPOLYLINE/S-TEXT.D": 1
+   },
+   "opening_drawn": false,
+   "overlay": {
+    "arch_2F_block_columns": 9,
+    "matched_st": 9,
+    "worst_corner_residual_mm": 0.495909
+   },
+   "s_opening_entities_on_sheet": 0,
+   "st_sheet_beam_line_extent_m": [
+    8.175,
+    6.8
+   ],
+   "st_sheet_beam_line_extent_m2": 55.59,
+   "st_sheet_columns": 9
+  }
+ },
+ "c_census": {
+  "by_code_class": {
+   "EXT.FLOOR.OUTDOOR | HELD": 2,
+   "EXT.FLOOR.PORCELAIN | RELEASED": 1,
+   "FIN.FLOOR.BED.DRY | HELD": 23,
+   "FIN.FLOOR.BED.DRY | RELEASED": 23,
+   "FIN.FLOOR.BED.WET | HELD": 21,
+   "FIN.FLOOR.BED.WET | RELEASED": 21,
+   "FIN.FLOOR.FINISH_HELD | HELD": 1,
+   "FIN.FLOOR.FINISH_HELD | RELEASED": 2,
+   "FIN.FLOOR.PORCELAIN | EXCLUDED": 13,
+   "FIN.FLOOR.PORCELAIN | RELEASED": 22,
+   "FIN.FLOOR.WET_TILE | RELEASED": 20,
+   "FIN.MARBLE.LANDING | HELD": 2,
+   "FIN.MARBLE.LANDING | RELEASED": 2,
+   "FIN.MARBLE.LIFT_SURROUND | HELD": 3,
+   "FIN.MARBLE.LIFT_THRESHOLD | RELEASED": 6,
+   "FIN.MARBLE.RISER | EXCLUDED": 1,
+   "FIN.MARBLE.RISER | HELD": 13,
+   "FIN.MARBLE.RISER | RELEASED": 1,
+   "FIN.MARBLE.THRESHOLD | RELEASED": 14,
+   "FIN.MARBLE.TREAD | EXCLUDED": 2,
+   "FIN.MARBLE.TREAD | HELD": 5,
+   "FIN.MARBLE.TREAD | RELEASED": 8,
+   "FIN.SKIRTING | EXCLUDED": 28,
+   "FIN.SKIRTING | HELD": 7,
+   "FIN.SKIRTING | RELEASED": 18,
+   "FIN.STAIR.SKIRTING.SLOPED | HELD": 22,
+   "FIN.STAIR.SKIRTING.ZIGZAG | HELD": 22,
+   "FIN.WALL.TILE | HELD": 6,
+   "FIN.WALL.TILE | RELEASED": 12
+  },
+  "held": 127,
+  "held_blank": 72,
+  "held_by_cause": {
+   "AT_LEAST (T-715)": 3,
+   "AT_MOST (T-715)": 8,
+   "BLANK_NAMED (T-715)": 1,
+   "CONDITIONAL_ON_FORM (T-715)": 27,
+   "DESIGNER_ITEM (T-681)": 7,
+   "MEASURABLE_NOW (T-681)": 2,
+   "MEASURED (T-715)": 8,
+   "NOT_APPLICABLE (T-715)": 12,
+   "OPEN_BOUND (T-681)": 44,
+   "OWNER_OPEN (T-681)": 6,
+   "PRINTED_VALUE_GAP (T-648)": 3,
+   "RANGE (T-715)": 4,
+   "WIRING_GAP (T-681)": 1,
+   "WIRING_GAP (T-715)": 1
+  },
+  "lines": 321,
+  "scope_codes": [
+   "FIN.FLOOR.PORCELAIN",
+   "FIN.FLOOR.WET_TILE",
+   "FIN.FLOOR.FINISH_HELD",
+   "EXT.FLOOR.PORCELAIN",
+   "EXT.FLOOR.OUTDOOR",
+   "FIN.WALL.TILE",
+   "FIN.SKIRTING",
+   "FIN.STAIR.SKIRTING.SLOPED",
+   "FIN.STAIR.SKIRTING.ZIGZAG",
+   "FIN.FLOOR.BED.DRY",
+   "FIN.FLOOR.BED.WET",
+   "FIN.MARBLE.*"
+  ],
+  "stale_vs_v3069": {
+   "added": 0,
+   "missing": 0,
+   "stale": 0
+  },
+  "waste": "no line in this census carries a waste factor; size-based waste (Urban tile rule) is applied only in the materials stage on the purchasing group, never as a default here",
+  "wiring": {
+   "by_hub_action": {
+    "H3 | CHANGE": 2,
+    "H3S | ADD": 1,
+    "H3S | BESIDE": 44,
+    "H3S | CHANGE": 43,
+    "H3S | KEEP": 1,
+    "H3S | TEXT": 3
+   },
+   "rows": 94,
+   "rows_detail": [
+    {
+     "action": "CHANGE",
+     "after": "BOUND 11.4 .. 25.21",
+     "host_line_id": "L-1341e0410a469089c3be",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3",
+     "in_tile_marble_scope": true,
+     "piece": "T-702",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "BOUND 7.04 .. 19.555",
+     "host_line_id": "L-de4088e7012e655bb071",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3",
+     "in_tile_marble_scope": true,
+     "piece": "T-702",
+     "unit": "m2"
+    },
+    {
+     "action": "KEEP",
+     "after": "NO_PROPOSAL",
+     "host_line_id": "L-5d2be30dd8d2ffeacc42",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-1983e89d8b619eade1db",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-1e36bc3c0893eeeb9c58",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 1.9044",
+     "host_line_id": "L-0f060e9951c28c4cf074",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 1.886",
+     "host_line_id": "L-07e0855f961a839c1277",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-24792292e996c57c52d9",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_LEAST 0.785833",
+     "host_line_id": "L-820baecf7f726b4d8f1e",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-f24a09f1b4117814e4c8",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 1.9044",
+     "host_line_id": "L-12f56cbfe750f8b30c41",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 1.571667",
+     "host_line_id": "L-ecc450d6cc865617f8f6",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 0.667",
+     "host_line_id": "L-8938aa3b25bf605e4b9d",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_LEAST 1.803386",
+     "host_line_id": "L-913cda8eb6d73f6e28cc",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 1.653536",
+     "host_line_id": "L-099fe9fcfa5667fb8b99",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-2efa4a4f4cc2aad9a2f2",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 0.751607",
+     "host_line_id": "L-16e0c6682725260f28e7",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-6cf11c2d30387d0942b9",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-ea55ed317bc4de89aec1",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 1.3225",
+     "host_line_id": "L-b4660de0ddd98ad0ffc2",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-5d338389185d72a6fb16",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "TEXT",
+     "after": "BLANK",
+     "host_line_id": "L-fa534ec5f9dc14947899",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-256e8ae3e15334092b5d",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 3.782209",
+     "host_line_id": "L-a08d67ca292ab16ef9c3",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 3.775064",
+     "host_line_id": "L-54eb280b9f7bf5eda65f",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-23e0ff3c4f454647b2b5",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "TEXT",
+     "after": "BLANK",
+     "host_line_id": "L-c6724654ee4ccdb0c508",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-437643d5f8553a89a0cd",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-0c2df36a42803126d3b9",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 3.782209",
+     "host_line_id": "L-48bb13e2f1c94d852a03",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 3.088689",
+     "host_line_id": "L-a1a0ab49818d4b9621b5",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 1.041933",
+     "host_line_id": "L-cccf54f717124cd750b3",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "TEXT",
+     "after": "BLANK",
+     "host_line_id": "L-30009d8eb01996ec6399",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 3.403367",
+     "host_line_id": "L-509c6af3d162ae145108",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-d827589991777fe63819",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "VALUE 1.361347",
+     "host_line_id": "L-406aae9a9854e015c45e",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.140175",
+     "host_line_id": "L-775f62538c1f46077807",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.470544",
+     "host_line_id": "L-b77a64fb9a941582f25c",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 0.470071",
+     "host_line_id": "L-a43adc74906d8bcd7b1c",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 0.881382",
+     "host_line_id": "L-ff51392df9e2c8c21efe",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 0.687588",
+     "host_line_id": "L-aed4c2990437f767dc90",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-18efa069acded71c81e7",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "BOUND 1.15 .. 1.420192",
+     "host_line_id": "L-28c33cd0ab5d19426661",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "BOUND 1.2 .. 1.460974",
+     "host_line_id": "L-2fae5d35b21e97684844",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.110854",
+     "host_line_id": "L-32f71724eeeaa46638c9",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_MOST 1.052389",
+     "host_line_id": "L-20c2640927e41626893d",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.344718",
+     "host_line_id": "L-cfecfcea2280155a6a74",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_MOST 0.350797",
+     "host_line_id": "L-8e463d6ce740fc19e60c",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.17184",
+     "host_line_id": "L-9b1da1af7c162de2233c",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 0.87888",
+     "host_line_id": "L-caacb4c1425981b2585f",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 0.68592",
+     "host_line_id": "L-193f8e812d9ade5f9c41",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-4ff56def5b73b558afbe",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_LEAST 0.168",
+     "host_line_id": "L-76de75ce9a315998be99",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 3.867073",
+     "host_line_id": "L-4b902816d29b75fab7fc",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_MOST 4.910135",
+     "host_line_id": "L-1c082cc60442407ed517",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_MOST 0.232143",
+     "host_line_id": "L-ebe230d8c2fbc35332b8",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 0.978571",
+     "host_line_id": "L-0ae4be232407b92343ef",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 2.321429",
+     "host_line_id": "L-d980ace38bdd63fa8de4",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.6",
+     "host_line_id": "L-4548e7ad947b07624e81",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 2.05",
+     "host_line_id": "L-add5acd610925402e0f5",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 0.733333",
+     "host_line_id": "L-53f3b7f153af0e1f5538",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.25",
+     "host_line_id": "L-9e5ed7164ee85f0fc196",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 0.766667",
+     "host_line_id": "L-c56a452218763d5e7bbf",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-76748b7b62ab2d52b4e2",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "BOUND 1.15 .. 1.983334",
+     "host_line_id": "L-5f0bd2b45c1718aeefc4",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "BOUND 1.2 .. 2.033334",
+     "host_line_id": "L-5bc4cea35db33e41d78c",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.616667",
+     "host_line_id": "L-bc0e1e80ca50865ccd06",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_MOST 1.4",
+     "host_line_id": "L-1ed4cfaa1c12054b401d",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.816667",
+     "host_line_id": "L-9ec979f00305b8ae8049",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_MOST 0.466667",
+     "host_line_id": "L-984553ed0b69b0f77fe2",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.672",
+     "host_line_id": "L-656ab12cc9b9797d3b1a",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.254",
+     "host_line_id": "L-20432b887f91dee03925",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 0.768",
+     "host_line_id": "L-1c907e0a59c55204e430",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-f45c2e6d46b0cc6a7e53",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 0.168",
+     "host_line_id": "L-5021b820dba41f631dde",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 5.316",
+     "host_line_id": "L-c8dce28c50dabd7b17fb",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_MOST 6.444104",
+     "host_line_id": "L-1a0d2ab50e42b0219eab",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_MOST 0.360715",
+     "host_line_id": "L-c074ce526885a44423d0",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 1.332143",
+     "host_line_id": "L-544b6b11bab9bbf037fb",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED CONDITIONAL 3.125",
+     "host_line_id": "L-8dde910ffeeb94a58323",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_LEAST 20.423364",
+     "host_line_id": "L-1fcec3328ccd0ea243d4",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_LEAST 4.460946",
+     "host_line_id": "L-c77e3887f7e348b1461d",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-3a3aabb15b187e33e3da",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-c955f6b3a3abca48d562",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_LEAST 5.75",
+     "host_line_id": "L-e085c168dee5fb19a7fb",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "EXCLUDED",
+     "host_line_id": "L-57202d2823270429cd80",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_LEAST 13.7964",
+     "host_line_id": "L-95b9555dd144951b071e",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "BOUND 0.785833 .. 1.111337",
+     "host_line_id": "L-820baecf7f726b4d8f1e",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-718",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "BOUND 5.75 .. 8.131728",
+     "host_line_id": "L-e085c168dee5fb19a7fb",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-718",
+     "unit": "lm"
+    },
+    {
+     "action": "CHANGE",
+     "after": "BOUND 1.803598 .. 2.131176",
+     "host_line_id": "L-913cda8eb6d73f6e28cc",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": true,
+     "piece": "T-718",
+     "unit": "m2"
+    },
+    {
+     "action": "CHANGE",
+     "after": "BOUND 13.8 .. 16.52144",
+     "host_line_id": "L-95b9555dd144951b071e",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-718",
+     "unit": "lm"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_LEAST 20.423364",
+     "host_line_id": "L-1fcec3328ccd0ea243d4",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-718",
+     "unit": "m2"
+    },
+    {
+     "action": "BESIDE",
+     "after": "ONE_SIDED AT_LEAST 4.460946",
+     "host_line_id": "L-c77e3887f7e348b1461d",
+     "host_v3071_eq_v3073": true,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-718",
+     "unit": "m2"
+    },
+    {
+     "action": "ADD",
+     "after": "VALUE 0.1587",
+     "host_line_id": "",
+     "host_v3071_eq_v3073": false,
+     "hub": "H3S",
+     "in_tile_marble_scope": false,
+     "piece": "T-715",
+     "unit": "m2"
+    }
+   ],
+   "stale_hosts": []
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.73 (c5a0b128, NOT RELEASED)",
+ "drawings": "Drive 'Alsenan chalet project': P7757_DXF_COMPRESSED.zip -> P7757.dxf (sha256 ab54dd55) and 'ST7757 dxf.dxf' (sha256 9f9d1179), own decode this run into the private folder",
+ "inputs": {
+  "t648": {
+   "path": "research/agents_t648/out/FINISH_HOLD_CAUSE_CENSUS_T648.json",
+   "sha256_16": "767d1d3a969a548c"
+  },
+  "t681": {
+   "path": "research/agents_t681/out/T681_TILES_CENSUS.json",
+   "sha256_16": "2ca16110154e890f"
+  },
+  "t702": {
+   "path": "research/agents_t702/out/T702_TILES_ROUND3.json",
+   "sha256_16": "ae5b37e75a1635cb"
+  },
+  "t715": {
+   "path": "research/agents_t715/out/T715_LEDGER.json",
+   "sha256_16": "740ba1827841a6e7"
+  },
+  "t719": {
+   "path": "research/agents_t719/out/T719_VOIDS.json",
+   "sha256_16": "8ffcd16db639aaec"
+  },
+  "t723": {
+   "path": "research/agents_t723/out/T723_ROWS.csv",
+   "sha256_16": "5907eb650b0087f5"
+  },
+  "t727d": {
+   "path": "research/agents_t727/T727_DRAWN.json",
+   "sha256_16": "c405679a020a46ac"
+  },
+  "v3069": {
+   "path": "research/agents_t687/out/LINE_INDEX_V3_0_69.json",
+   "sha256_16": "e908a5f105197d44"
+  },
+  "v3071": {
+   "path": "research/agents_t704/out/LINE_INDEX_V3_0_71.json",
+   "sha256_16": "eaea9f7e8cc83849"
+  },
+  "v3073": {
+   "path": "research/agents_t722/out/LINE_INDEX_V3_0_73.json",
+   "sha256_16": "af8d567d8a8ae828"
+  }
+ },
+ "moved": "no quantity moved; nothing wired; V2.9 + route G unchanged",
+ "task": "T-733"
+}

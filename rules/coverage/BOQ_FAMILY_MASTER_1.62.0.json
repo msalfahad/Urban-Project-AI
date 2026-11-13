@@ -1,8 +1,8 @@
 {
  "master": "URBAN_BOQ_FAMILY_MASTER",
  "version": "1.62.0",
- "supersedes": "1.61.0 (kept unchanged on disk; every released-configuration field, every T-637 field, the candidate of record ARCH_TAKEOFF_V3.0.59, its census, the pending T-423 / T-563 packages and every family's candidate block copied unchanged; B4-04 / B4-07 text for the pending V3.0.62 package)",
- "source": "1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.7 candidate packages (task T-203, pilot 2026-10-23 prerequisite 6; builder research/agents_t203/build_master_1_2_0.py; check tools/family_master_candidate.py) | 1.3.0 (T-231): 1.2.0 + pending_packages (rule r3 of tools/family_master_candidate.py): ARCH_TAKEOFF_V3.0.8 handed in for Gate B; no family state changes until it merges | 1.4.0 (T-211): 1.3.0 + pending ARCH_TAKEOFF_V3.0.9 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.5.0 (T-232): 1.4.0 + pending ARCH_TAKEOFF_V3.0.10 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.6.0 (T-239): 1.5.0 + pending ARCH_TAKEOFF_V3.0.11 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.7.0 (T-146 + T-247): 1.6.0 + pending ARCH_TAKEOFF_V3.0.12 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.8.0 (T-268): 1.7.0 + pending ARCH_TAKEOFF_V3.0.13 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.9.0 (T-240 WP1 .. WP4): 1.8.0 + pending ARCH_TAKEOFF_V3.0.14 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.10.0 (T-270): 1.9.0 + pending ARCH_TAKEOFF_V3.0.15 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.11.0 (T-245): 1.10.0 + pending ARCH_TAKEOFF_V3.0.16 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.12.0 (T-254): 1.11.0 + pending ARCH_TAKEOFF_V3.0.17 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.13.0 (T-266): 1.12.0 + pending ARCH_TAKEOFF_V3.0.18 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.14.0 (T-255): 1.13.0 + pending ARCH_TAKEOFF_V3.0.19 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.15.0 (T-244): 1.14.0 + pending ARCH_TAKEOFF_V3.0.20 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.16.0 (T-315): 1.15.0 + pending ARCH_TAKEOFF_V3.0.21 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.17.0 (T-331): 1.16.0 + pending ARCH_TAKEOFF_V3.0.22 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.18.0 (T-319): 1.17.0 + pending ARCH_TAKEOFF_V3.0.23 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.19.0 (T-338): 1.18.0 + pending ARCH_TAKEOFF_V3.0.24 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.20.0 (T-343): 1.19.0 + pending ARCH_TAKEOFF_V3.0.25 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.21.0 (T-279): 1.20.0 + pending ARCH_TAKEOFF_V3.0.26 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.22.0 (T-318): 1.21.0 + pending ARCH_TAKEOFF_V3.0.27 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.23.0 (T-326): 1.22.0 + pending ARCH_TAKEOFF_V3.0.28 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.24.0 (T-327): 1.23.0 + pending ARCH_TAKEOFF_V3.0.29 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.25.0 (T-199): 1.24.0 + pending ARCH_TAKEOFF_V3.0.30 (rule r3 of tools/family_master_candidate.py); no candidate state changes | r2 (Checker 2026-10-31 02:58): the item codes V3.0.30 writes are owned (STR.FORMWORK B10-13, STR.FORMWORK.STAIR B7-13, ARCH.SHUTTER B6-05, FIN.HANDRAIL B7-10) and B7-13 / B6-05 / B7-10 move NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (opt-in only), PROPOSED; candidate states unchanged | r3 (Checker 2026-10-31 04:02): MET.RAILING.GUARD (non-stair guard rails, written by V3.0.30) is listed under item_codes_without_family with its reason (no family of the 99 is that element; a new family is proposed to the register owner, F-T199-4); no family, line or quantity changes | 1.26.0 (T-328): 1.25.0 + pending ARCH_TAKEOFF_V3.0.31 (rule r3 of tools/family_master_candidate.py) + the V3.0.x ownership census (F-T199-5) + the guard-railing family B13-08 (F-T199-4); no candidate state changes | 1.27.0 (T-284): 1.26.0 + pending ARCH_TAKEOFF_V3.0.32 (rule r3 of tools/family_master_candidate.py) + the owners of its four codes; no candidate state changes | 1.28.0 (T-397): 1.27.0 + pending ARCH_TAKEOFF_V3.0.33 (rule r3 of tools/family_master_candidate.py); no new code, no family or candidate state changes | 1.29.0 (T-399): 1.28.0 + pending ARCH_TAKEOFF_V3.0.34 (rule r3 of tools/family_master_candidate.py) + B4-02 coverage_in_candidate (COVERED_BY_B4-01, pending); no new code, no capability or candidate state changes | 1.30.0 (T-400): 1.29.0 + pending ARCH_TAKEOFF_V3.0.35 (rule r3 of tools/family_master_candidate.py) + B13-04 owns the EXT.FENCE.* codes (IMPLEMENTED_NOT_INTEGRATED) + B10-11 owns STR.CONC.BOUNDARY_PAD; no candidate state changes | 1.31.0 (T-246): 1.30.0 + pending ARCH_TAKEOFF_V3.0.36 (rule r3 of tools/family_master_candidate.py); no family, code or candidate state changes | 1.32.0 (T-420): 1.31.0 + pending ARCH_TAKEOFF_V3.0.37 (rule r3 of tools/family_master_candidate.py) + B3-05 owns FIN.FLOOR.BED.DRY / .WET (capability IMPLEMENTED_NOT_INTEGRATED unchanged); no candidate state changes | 1.33.0 (T-421): 1.32.0 + pending ARCH_TAKEOFF_V3.0.38 (rule r3 of tools/family_master_candidate.py) + B3-01 owns FIN.FLOOR.FINISH_HELD, B6-07 FIN.MARBLE.LIFT_THRESHOLD, B6-06 FIN.MARBLE.LIFT_SURROUND; no candidate state changes | 1.34.0 (T-429): 1.33.0 + pending ARCH_TAKEOFF_V3.0.39 (rule r3 of tools/family_master_candidate.py) + the B7 stair families it rebinds; no candidate state changes | 1.35.0 (T-430): 1.34.0 + pending ARCH_TAKEOFF_V3.0.40 (rule r3 of tools/family_master_candidate.py) + the ground-beam family it splits and holds; no candidate state changes | 1.36.0 (T-431): 1.35.0 + pending ARCH_TAKEOFF_V3.0.41 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds or moves; no candidate state changes | 1.37.0 (T-442): 1.36.0 + pending ARCH_TAKEOFF_V3.0.42 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds, values or re-texts; no candidate state changes | 1.38.0 (T-350): 1.37.0 + pending ARCH_TAKEOFF_V3.0.43 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds or re-ranges; no candidate state changes | 1.39.0 (T-422): 1.38.0 + pending ARCH_TAKEOFF_V3.0.44 (rule r3 of tools/family_master_candidate.py) + the family whose lines it moves (B3-06); no code, capability or candidate state changes | 1.40.0 (T-478): 1.39.0 + pending ARCH_TAKEOFF_V3.0.45 (rule r3 of tools/family_master_candidate.py) + the family whose lines it splits, re-ranges or adds; no candidate state changes | 1.41.0 (T-479): 1.40.0 + family B13-09 (pool water-face finish) + not_a_boq_line_codes (ARCH.EXTERIOR) + candidate_census (fresh line census of the merged V3.0.45 run) + the reader text of B8-08 / B10-13 / B7-13; no quantity, no candidate state | 1.42.0 (T-419): 1.41.0 + pending ARCH_TAKEOFF_V3.0.46 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds or restates; no candidate state changes | 1.43.0 (T-485, F-T479-1): 1.42.0 + the 39 merged pending packages promoted (merge commit + Checker verdict each) + every family's candidate block re-derived at ARCH_TAKEOFF_V3.0.46 from candidate_census and a line diff of the reproduced chain run (research/agents_t485); no quantity, capability or owner change | 1.44.0 (T-443): 1.43.0 + pending ARCH_TAKEOFF_V3.0.47 (rule r3 of tools/family_master_candidate.py) + the family whose lines it splits; no candidate state changes | 1.45.0 (T-350 r4): 1.44.0 + pending ARCH_TAKEOFF_V3.0.48 (rule r3) + the earthworks families it values + rule r4 (F-C-T485-1: no item code -> N/A); no candidate state changes | 1.47.0 (T-497): 1.45.0 + pending ARCH_TAKEOFF_V3.0.50 (rule r3) + the B1-02 text it changes; no candidate state changes | 1.48.0 (T-483 r2): 1.47.0 + the 3 merged pending packages promoted (R-T485-1, merge commit + Checker verdict each; census + line diff at ARCH_TAKEOFF_V3.0.50) + pending ARCH_TAKEOFF_V3.0.49 (rule r3) + the family whose lines it changes; no quantity, capability or owner change | 1.50.0 (T-487): 1.48.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.51) + pending ARCH_TAKEOFF_V3.0.53 (rule r3) + the B9-02 text it changes; no quantity, capability or owner change | 1.51.0 (T-480): 1.50.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.53) + pending ARCH_TAKEOFF_V3.0.54 (rule r3) + the B7-09 text it changes; no quantity, capability or owner change | 1.52.0 (T-488): 1.51.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.54) + pending ARCH_TAKEOFF_V3.0.55 (rule r3) + the B9-01 / B10-12 text it changes; no quantity, capability or owner change | 1.53.0 (T-508): 1.52.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.55) + pending ARCH_TAKEOFF_V3.0.56 (rule r3) + the B3-06 / B7-07 / B7-08 text and the B7-07 / B7-08 item codes it adds; no quantity, capability or owner change | 1.54.0 (T-310 r7): 1.53.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.56) + pending ARCH_TAKEOFF_V3.0.57 (rule r3) + the waterproofing families it changes; B8-09 owns the two pool layer codes; no quantity, capability or owner change | 1.55.0 (T-507): 1.54.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.57) + pending ARCH_TAKEOFF_V3.0.58 (rule r3) + the B8-06 text of the lines it adds; no quantity, capability or owner change | 1.56.0 (T-637): 1.55.0 + R-T637-1 (T-630 findings F-T630-1 / -2 / -3): family for every live overlay code, register codes beside the blockwork work line ruled NOT_A_BOQ_LINE, V11 section -> master group crosswalk; no quantity, capability or owner change | 1.57.0 (T-525, gate fix): 1.56.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.58); no pending package; no quantity, capability or owner change | 1.58.0 (T-498): 1.57.0 + pending ARCH_TAKEOFF_V3.0.59 (rule r3) + the B9-01 / B9-04 text (codes already owned, T-637) + B9-04 capability NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (opt-in code writes its codes, file:line); no promotion, no quantity or owner change | 1.59.0 (T-651, gate fix): 1.58.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.59); no pending package; no quantity, capability or owner change | 1.60.0 (T-423 r3): 1.59.0 + pending ARCH_TAKEOFF_V3.0.60 (rule r3) + the finishes families it re-records; no promotion, no quantity, capability or owner change | 1.61.0 (T-563): 1.60.0 + pending ARCH_TAKEOFF_V3.0.61 (rule r3, after the pending V3.0.60) + the plaster / paint families it names; no promotion, no quantity, capability or owner change | 1.62.0 (T-314): 1.61.0 + pending ARCH_TAKEOFF_V3.0.62 (rule r3, after the pending V3.0.60 / V3.0.61) + the exterior finish families it names; no promotion, no quantity, capability or owner change",
+ "supersedes": "1.61.0 (kept unchanged on disk; every released-configuration field and every T-637 field copied unchanged; its 2 pending package promoted to candidate_packages; the families it changed re-derived at ARCH_TAKEOFF_V3.0.61, every other family's candidate block moved to ARCH_TAKEOFF_V3.0.61 with its census asserted unchanged; no new pending package (T-655 is a registry gate fix; T-314 r3 renumbers its pending master above this file at hand-in)",
+ "source": "1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.7 candidate packages (task T-203, pilot 2026-10-23 prerequisite 6; builder research/agents_t203/build_master_1_2_0.py; check tools/family_master_candidate.py) | 1.3.0 (T-231): 1.2.0 + pending_packages (rule r3 of tools/family_master_candidate.py): ARCH_TAKEOFF_V3.0.8 handed in for Gate B; no family state changes until it merges | 1.4.0 (T-211): 1.3.0 + pending ARCH_TAKEOFF_V3.0.9 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.5.0 (T-232): 1.4.0 + pending ARCH_TAKEOFF_V3.0.10 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.6.0 (T-239): 1.5.0 + pending ARCH_TAKEOFF_V3.0.11 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.7.0 (T-146 + T-247): 1.6.0 + pending ARCH_TAKEOFF_V3.0.12 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.8.0 (T-268): 1.7.0 + pending ARCH_TAKEOFF_V3.0.13 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.9.0 (T-240 WP1 .. WP4): 1.8.0 + pending ARCH_TAKEOFF_V3.0.14 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.10.0 (T-270): 1.9.0 + pending ARCH_TAKEOFF_V3.0.15 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.11.0 (T-245): 1.10.0 + pending ARCH_TAKEOFF_V3.0.16 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.12.0 (T-254): 1.11.0 + pending ARCH_TAKEOFF_V3.0.17 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.13.0 (T-266): 1.12.0 + pending ARCH_TAKEOFF_V3.0.18 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.14.0 (T-255): 1.13.0 + pending ARCH_TAKEOFF_V3.0.19 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.15.0 (T-244): 1.14.0 + pending ARCH_TAKEOFF_V3.0.20 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.16.0 (T-315): 1.15.0 + pending ARCH_TAKEOFF_V3.0.21 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.17.0 (T-331): 1.16.0 + pending ARCH_TAKEOFF_V3.0.22 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.18.0 (T-319): 1.17.0 + pending ARCH_TAKEOFF_V3.0.23 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.19.0 (T-338): 1.18.0 + pending ARCH_TAKEOFF_V3.0.24 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.20.0 (T-343): 1.19.0 + pending ARCH_TAKEOFF_V3.0.25 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.21.0 (T-279): 1.20.0 + pending ARCH_TAKEOFF_V3.0.26 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.22.0 (T-318): 1.21.0 + pending ARCH_TAKEOFF_V3.0.27 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.23.0 (T-326): 1.22.0 + pending ARCH_TAKEOFF_V3.0.28 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.24.0 (T-327): 1.23.0 + pending ARCH_TAKEOFF_V3.0.29 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.25.0 (T-199): 1.24.0 + pending ARCH_TAKEOFF_V3.0.30 (rule r3 of tools/family_master_candidate.py); no candidate state changes | r2 (Checker 2026-10-31 02:58): the item codes V3.0.30 writes are owned (STR.FORMWORK B10-13, STR.FORMWORK.STAIR B7-13, ARCH.SHUTTER B6-05, FIN.HANDRAIL B7-10) and B7-13 / B6-05 / B7-10 move NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (opt-in only), PROPOSED; candidate states unchanged | r3 (Checker 2026-10-31 04:02): MET.RAILING.GUARD (non-stair guard rails, written by V3.0.30) is listed under item_codes_without_family with its reason (no family of the 99 is that element; a new family is proposed to the register owner, F-T199-4); no family, line or quantity changes | 1.26.0 (T-328): 1.25.0 + pending ARCH_TAKEOFF_V3.0.31 (rule r3 of tools/family_master_candidate.py) + the V3.0.x ownership census (F-T199-5) + the guard-railing family B13-08 (F-T199-4); no candidate state changes | 1.27.0 (T-284): 1.26.0 + pending ARCH_TAKEOFF_V3.0.32 (rule r3 of tools/family_master_candidate.py) + the owners of its four codes; no candidate state changes | 1.28.0 (T-397): 1.27.0 + pending ARCH_TAKEOFF_V3.0.33 (rule r3 of tools/family_master_candidate.py); no new code, no family or candidate state changes | 1.29.0 (T-399): 1.28.0 + pending ARCH_TAKEOFF_V3.0.34 (rule r3 of tools/family_master_candidate.py) + B4-02 coverage_in_candidate (COVERED_BY_B4-01, pending); no new code, no capability or candidate state changes | 1.30.0 (T-400): 1.29.0 + pending ARCH_TAKEOFF_V3.0.35 (rule r3 of tools/family_master_candidate.py) + B13-04 owns the EXT.FENCE.* codes (IMPLEMENTED_NOT_INTEGRATED) + B10-11 owns STR.CONC.BOUNDARY_PAD; no candidate state changes | 1.31.0 (T-246): 1.30.0 + pending ARCH_TAKEOFF_V3.0.36 (rule r3 of tools/family_master_candidate.py); no family, code or candidate state changes | 1.32.0 (T-420): 1.31.0 + pending ARCH_TAKEOFF_V3.0.37 (rule r3 of tools/family_master_candidate.py) + B3-05 owns FIN.FLOOR.BED.DRY / .WET (capability IMPLEMENTED_NOT_INTEGRATED unchanged); no candidate state changes | 1.33.0 (T-421): 1.32.0 + pending ARCH_TAKEOFF_V3.0.38 (rule r3 of tools/family_master_candidate.py) + B3-01 owns FIN.FLOOR.FINISH_HELD, B6-07 FIN.MARBLE.LIFT_THRESHOLD, B6-06 FIN.MARBLE.LIFT_SURROUND; no candidate state changes | 1.34.0 (T-429): 1.33.0 + pending ARCH_TAKEOFF_V3.0.39 (rule r3 of tools/family_master_candidate.py) + the B7 stair families it rebinds; no candidate state changes | 1.35.0 (T-430): 1.34.0 + pending ARCH_TAKEOFF_V3.0.40 (rule r3 of tools/family_master_candidate.py) + the ground-beam family it splits and holds; no candidate state changes | 1.36.0 (T-431): 1.35.0 + pending ARCH_TAKEOFF_V3.0.41 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds or moves; no candidate state changes | 1.37.0 (T-442): 1.36.0 + pending ARCH_TAKEOFF_V3.0.42 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds, values or re-texts; no candidate state changes | 1.38.0 (T-350): 1.37.0 + pending ARCH_TAKEOFF_V3.0.43 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds or re-ranges; no candidate state changes | 1.39.0 (T-422): 1.38.0 + pending ARCH_TAKEOFF_V3.0.44 (rule r3 of tools/family_master_candidate.py) + the family whose lines it moves (B3-06); no code, capability or candidate state changes | 1.40.0 (T-478): 1.39.0 + pending ARCH_TAKEOFF_V3.0.45 (rule r3 of tools/family_master_candidate.py) + the family whose lines it splits, re-ranges or adds; no candidate state changes | 1.41.0 (T-479): 1.40.0 + family B13-09 (pool water-face finish) + not_a_boq_line_codes (ARCH.EXTERIOR) + candidate_census (fresh line census of the merged V3.0.45 run) + the reader text of B8-08 / B10-13 / B7-13; no quantity, no candidate state | 1.42.0 (T-419): 1.41.0 + pending ARCH_TAKEOFF_V3.0.46 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds or restates; no candidate state changes | 1.43.0 (T-485, F-T479-1): 1.42.0 + the 39 merged pending packages promoted (merge commit + Checker verdict each) + every family's candidate block re-derived at ARCH_TAKEOFF_V3.0.46 from candidate_census and a line diff of the reproduced chain run (research/agents_t485); no quantity, capability or owner change | 1.44.0 (T-443): 1.43.0 + pending ARCH_TAKEOFF_V3.0.47 (rule r3 of tools/family_master_candidate.py) + the family whose lines it splits; no candidate state changes | 1.45.0 (T-350 r4): 1.44.0 + pending ARCH_TAKEOFF_V3.0.48 (rule r3) + the earthworks families it values + rule r4 (F-C-T485-1: no item code -> N/A); no candidate state changes | 1.47.0 (T-497): 1.45.0 + pending ARCH_TAKEOFF_V3.0.50 (rule r3) + the B1-02 text it changes; no candidate state changes | 1.48.0 (T-483 r2): 1.47.0 + the 3 merged pending packages promoted (R-T485-1, merge commit + Checker verdict each; census + line diff at ARCH_TAKEOFF_V3.0.50) + pending ARCH_TAKEOFF_V3.0.49 (rule r3) + the family whose lines it changes; no quantity, capability or owner change | 1.50.0 (T-487): 1.48.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.51) + pending ARCH_TAKEOFF_V3.0.53 (rule r3) + the B9-02 text it changes; no quantity, capability or owner change | 1.51.0 (T-480): 1.50.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.53) + pending ARCH_TAKEOFF_V3.0.54 (rule r3) + the B7-09 text it changes; no quantity, capability or owner change | 1.52.0 (T-488): 1.51.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.54) + pending ARCH_TAKEOFF_V3.0.55 (rule r3) + the B9-01 / B10-12 text it changes; no quantity, capability or owner change | 1.53.0 (T-508): 1.52.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.55) + pending ARCH_TAKEOFF_V3.0.56 (rule r3) + the B3-06 / B7-07 / B7-08 text and the B7-07 / B7-08 item codes it adds; no quantity, capability or owner change | 1.54.0 (T-310 r7): 1.53.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.56) + pending ARCH_TAKEOFF_V3.0.57 (rule r3) + the waterproofing families it changes; B8-09 owns the two pool layer codes; no quantity, capability or owner change | 1.55.0 (T-507): 1.54.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.57) + pending ARCH_TAKEOFF_V3.0.58 (rule r3) + the B8-06 text of the lines it adds; no quantity, capability or owner change | 1.56.0 (T-637): 1.55.0 + R-T637-1 (T-630 findings F-T630-1 / -2 / -3): family for every live overlay code, register codes beside the blockwork work line ruled NOT_A_BOQ_LINE, V11 section -> master group crosswalk; no quantity, capability or owner change | 1.57.0 (T-525, gate fix): 1.56.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.58); no pending package; no quantity, capability or owner change | 1.58.0 (T-498): 1.57.0 + pending ARCH_TAKEOFF_V3.0.59 (rule r3) + the B9-01 / B9-04 text (codes already owned, T-637) + B9-04 capability NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (opt-in code writes its codes, file:line); no promotion, no quantity or owner change | 1.59.0 (T-651, gate fix): 1.58.0 + the 1 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.59); no pending package; no quantity, capability or owner change | 1.60.0 (T-423 r3): 1.59.0 + pending ARCH_TAKEOFF_V3.0.60 (rule r3) + the finishes families it re-records; no promotion, no quantity, capability or owner change | 1.61.0 (T-563): 1.60.0 + pending ARCH_TAKEOFF_V3.0.61 (rule r3, after the pending V3.0.60) + the plaster / paint families it names; no promotion, no quantity, capability or owner change | 1.62.0 (T-655, gate fix): 1.61.0 + the 2 merged pending package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at ARCH_TAKEOFF_V3.0.61); no pending package; no quantity, capability or owner change",
  "loaded_by": "nothing: engine/source/rule_store.py keeps 1.0.0 and engine/source/coverage_census_v2.py reads 1.1.0, so no run, census or quantity changes with this file",
  "capability_states": [
   "INTEGRATED_AND_TESTED",
@@ -21,7 +21,7 @@
   "NOT_IMPLEMENTED": "no code measures the family"
  },
  "released_configuration": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6) (the scored configuration of docs/agents/SCOREBOARD.md; ARCH_METHODS has no default, tools/urban_boq_m9.py:67 ARCH_METHODS; the owner switches the released default)",
- "v3_0_candidate": "ARCH_TAKEOFF_V3.0.59 (T-498 merge 4c37ce2c, Verifier 2026-11-09 05:54 UTC, Gate B PASS; BOQ_LINES 75331a76): the same opt-in candidate extended in place since ARCH_TAKEOFF_V3.0 (T-131 b1a6d6d): ARCH_TAKEOFF_V2.13 + route G with the M4 profile + the checker-verified pieces of candidate_packages; every line outside a package's rows byte-identical to the previous version (asserted by each package). NOT the released default (ARCH_TAKEOFF_V2.9 + route G stays released; the owner switches it). 'in_v3_0_candidate' = the candidate emits lines of the family; 'candidate.state' says how; 'v3_0_planned_tasks' = queued or READY lane I packages that change them next",
+ "v3_0_candidate": "ARCH_TAKEOFF_V3.0.61 (T-563 merge e04d99d9, Verifier 2026-11-09 16:13 UTC, Gate B PASS; BOQ_LINES 2bc99980): the same opt-in candidate extended in place since ARCH_TAKEOFF_V3.0 (T-131 b1a6d6d): ARCH_TAKEOFF_V2.13 + route G with the M4 profile + the checker-verified pieces of candidate_packages; every line outside a package's rows byte-identical to the previous version (asserted by each package). NOT the released default (ARCH_TAKEOFF_V2.9 + route G stays released; the owner switches it). 'in_v3_0_candidate' = the candidate emits lines of the family; 'candidate.state' says how; 'v3_0_planned_tasks' = queued or READY lane I packages that change them next",
  "run_evidence": {
   "engine_commit": "r3: runs NOT repeated; figures reused from the r2 build (runs on 0dec24c); since then 2 engine / tools files were added (engine/source/arch_v301.py, engine/source/ground_system_spans_v2.py: opt-in, read by no released method) and one modified: tools/urban_boq_m9.py (T-133 967d6d5: the opt-in ARCH_TAKEOFF_V3.0.1 flag; the verifier's 17:40 run found a plain V3.0 run byte-identical); 0dec24c (r2: both runs repeated on the working head; the released BOQ_LINES.csv is byte-identical to the r1 run on 1513f1d, the candidate again 579 lines); the N10 figures of B1-02 / B10-13 come from tools/struct_n10.py on the released run's route G registers",
   "python": "3.11 (project venv from requirements.txt)",
@@ -197,9 +197,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -244,17 +244,17 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-350",
      "T-350b",
      "T-497"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-350 (V3.0.43): STR.EARTH.EXCAVATION +12 -0 ~0 | V3.0.47 .. V3.0.50 by line diff (T-483 r2): T-350b (V3.0.48): STR.EARTH.EXCAVATION +0 -0 ~4; T-497 (V3.0.50): STR.EARTH.EXCAVATION +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.59: released m3 225.941333 (2 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 10 lines (8 UNKNOWN, bounded 8.333769 .. 9.568217) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-350 (V3.0.43): STR.EARTH.EXCAVATION +12 -0 ~0 | V3.0.47 .. V3.0.50 by line diff (T-483 r2): T-350b (V3.0.48): STR.EARTH.EXCAVATION +0 -0 ~4; T-497 (V3.0.50): STR.EARTH.EXCAVATION +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.61: released m3 225.941333 (2 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 10 lines (8 UNKNOWN, bounded 8.333769 .. 9.568217) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 225.941333 (2 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    }
   },
   {
@@ -289,16 +289,16 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-350",
      "T-350b"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-350 (V3.0.43): STR.EARTH.BACKFILL +5 -0 ~0 | V3.0.47 .. V3.0.50 by line diff (T-483 r2): T-350b (V3.0.48): STR.EARTH.BACKFILL +2 -0 ~1 | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 7 lines (6 UNKNOWN, bounded 119.963335 .. 128.643547) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-350 (V3.0.43): STR.EARTH.BACKFILL +5 -0 ~0 | V3.0.47 .. V3.0.50 by line diff (T-483 r2): T-350b (V3.0.48): STR.EARTH.BACKFILL +2 -0 ~1 | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 7 lines (6 UNKNOWN, bounded 119.963335 .. 128.643547) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": " | 1.38.0 (T-350): moved by the pending ARCH_TAKEOFF_V3.0.43 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.45.0 (T-350 r4): moved by the pending ARCH_TAKEOFF_V3.0.48 package (Gate B); the released capability of V2.9 + route G is unchanged"
   },
@@ -333,15 +333,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-350"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-350 (V3.0.43): STR.EARTH.DISPOSAL +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-350 (V3.0.43): STR.EARTH.DISPOSAL +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": " | 1.38.0 (T-350): moved by the pending ARCH_TAKEOFF_V3.0.43 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.45.0 (T-350 r4): moved by the pending ARCH_TAKEOFF_V3.0.48 package (Gate B); the released capability of V2.9 + route G is unchanged"
   },
@@ -377,9 +377,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -414,9 +414,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -454,9 +454,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -497,9 +497,9 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "IN_CANDIDATE_BASE_LINES",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code)",
     "released_in_candidate": "base lines",
@@ -609,16 +609,16 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-240",
      "T-431"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-240 (V3.0.14): ARCH.SPACE +4 -0 ~3; T-431 (V3.0.41): ARCH.SPACE +0 -0 ~2 | census ARCH_TAKEOFF_V3.0.59: released m2 63.675696 (11 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 2 lines (0 UNKNOWN, bounded 6.728412 .. 6.728412) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-240 (V3.0.14): ARCH.SPACE +4 -0 ~3; T-431 (V3.0.41): ARCH.SPACE +0 -0 ~2 | census ARCH_TAKEOFF_V3.0.61: released m2 63.675696 (11 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 2 lines (0 UNKNOWN, bounded 6.728412 .. 6.728412) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 63.675696 (11 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245",
      "T-338"
@@ -656,9 +656,9 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "IN_CANDIDATE_BASE_LINES",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code)",
     "released_in_candidate": "base lines",
@@ -695,9 +695,9 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "IN_CANDIDATE_BASE_LINES",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code)",
     "released_in_candidate": "base lines",
@@ -736,9 +736,9 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "IN_CANDIDATE_BASE_LINES",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code)",
     "released_in_candidate": "base lines",
@@ -806,23 +806,20 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-131",
      "T-240",
      "T-327",
      "T-421",
-     "T-431"
+     "T-431",
+     "T-423"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: STAIR_FLOOR_RESIDUE (T-116): the first-floor living porcelain line 44.869 m2 -> 38.459 .. 38.979 m2 BOUNDED_EXPOSURE (tread union, opening and well netted out; T-113 hand 38.588 .. 38.990 inside) | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-240 (V3.0.14): FIN.FLOOR.PORCELAIN +1 -0 ~15; T-327 (V3.0.29): FIN.FLOOR.PORCELAIN +1 -0 ~0; T-421 (V3.0.38): FIN.FLOOR.FINISH_HELD +3 -0 ~0, FIN.FLOOR.PORCELAIN +1 -0 ~2; T-431 (V3.0.41): FIN.FLOOR.PORCELAIN +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 311.148473 (24 lines)",
-    "open": "to V3.0.7: that range stays held (owner Q-66 B piece T-122 never integrated); no printed tile size, so the tile count holds every room; every other dry-floor line is the V2.13 base line | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 1 lines (0 UNKNOWN, bounded 0.0 .. 0.23) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: STAIR_FLOOR_RESIDUE (T-116): the first-floor living porcelain line 44.869 m2 -> 38.459 .. 38.979 m2 BOUNDED_EXPOSURE (tread union, opening and well netted out; T-113 hand 38.588 .. 38.990 inside) | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-240 (V3.0.14): FIN.FLOOR.PORCELAIN +1 -0 ~15; T-327 (V3.0.29): FIN.FLOOR.PORCELAIN +1 -0 ~0; T-421 (V3.0.38): FIN.FLOOR.FINISH_HELD +3 -0 ~0, FIN.FLOOR.PORCELAIN +1 -0 ~2; T-431 (V3.0.41): FIN.FLOOR.PORCELAIN +1 -0 ~0 | V3.0.60 .. V3.0.61 by line diff (T-655): T-423 (V3.0.60): FIN.FLOOR.PORCELAIN +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.61: released m2 311.148473 (24 lines)",
+    "open": "to V3.0.7: that range stays held (owner Q-66 B piece T-122 never integrated); no printed tile size, so the tile count holds every room; every other dry-floor line is the V2.13 base line | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 1 lines (0 UNKNOWN, bounded 0.0 .. 0.23) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 311.148473 (24 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
-    "record_only_packages": [
-     "T-245",
-     "T-246"
-    ]
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655)"
    },
    "note": " | 1.33.0 (T-421): moved by the pending ARCH_TAKEOFF_V3.0.38 package (Gate B); the released capability of V2.9 + route G is unchanged (no released method reads these codes): FIN.FLOOR.FINISH_HELD added (T-418 stair-room parts) | 1.36.0 (T-431): moved by the pending ARCH_TAKEOFF_V3.0.41 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.60.0 (T-423): re-recorded by the pending ARCH_TAKEOFF_V3.0.60 package (Gate B); no quantity moves; the released capability of V2.9 + route G is unchanged"
   },
@@ -881,16 +878,16 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-240",
      "T-266"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-240 (V3.0.14): FIN.FLOOR.WET_TILE +3 -0 ~0; T-266 (V3.0.18): FIN.FLOOR.WET_TILE +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 75.945577 (20 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: none (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-240 (V3.0.14): FIN.FLOOR.WET_TILE +3 -0 ~0; T-266 (V3.0.18): FIN.FLOOR.WET_TILE +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 75.945577 (20 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: none (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 75.945577 (20 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -925,9 +922,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -991,20 +988,18 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-240",
      "T-327",
-     "T-421"
+     "T-421",
+     "T-423"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-240 (V3.0.14): ARCH.THRESHOLD +9 -0 ~2; T-327 (V3.0.29): ARCH.THRESHOLD +1 -0 ~5, FIN.MARBLE.THRESHOLD +4 -0 ~0; T-421 (V3.0.38): ARCH.THRESHOLD +0 -0 ~3 | census ARCH_TAKEOFF_V3.0.59: released m2 1.82 (14 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 14 lines (8 UNKNOWN, bounded 1.31 .. 1.31) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-240 (V3.0.14): ARCH.THRESHOLD +9 -0 ~2; T-327 (V3.0.29): ARCH.THRESHOLD +1 -0 ~5, FIN.MARBLE.THRESHOLD +4 -0 ~0; T-421 (V3.0.38): ARCH.THRESHOLD +0 -0 ~3 | V3.0.60 .. V3.0.61 by line diff (T-655): T-423 (V3.0.60): FIN.MARBLE.THRESHOLD +0 -0 ~14 | census ARCH_TAKEOFF_V3.0.61: released m2 1.82 (14 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 14 lines (8 UNKNOWN, bounded 1.31 .. 1.31) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 1.82 (14 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
-    "record_only_packages": [
-     "T-245"
-    ]
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655)"
    },
    "note": " | 1.60.0 (T-423): re-recorded by the pending ARCH_TAKEOFF_V3.0.60 package (Gate B); no quantity moves; the released capability of V2.9 + route G is unchanged"
   },
@@ -1042,17 +1037,17 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-420",
      "T-421",
      "T-431"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-420 (V3.0.37): FIN.FLOOR.BED.DRY +38 -0 ~0, FIN.FLOOR.BED.WET +42 -0 ~0; T-421 (V3.0.38): FIN.FLOOR.BED.DRY +6 -0 ~4; T-431 (V3.0.41): FIN.FLOOR.BED.DRY +2 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 387.09405 (44 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 44 lines (0 UNKNOWN, bounded 12.468577 .. 17.195274) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-420 (V3.0.37): FIN.FLOOR.BED.DRY +38 -0 ~0, FIN.FLOOR.BED.WET +42 -0 ~0; T-421 (V3.0.38): FIN.FLOOR.BED.DRY +6 -0 ~4; T-431 (V3.0.41): FIN.FLOOR.BED.DRY +2 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 387.09405 (44 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 44 lines (0 UNKNOWN, bounded 12.468577 .. 17.195274) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 387.09405 (44 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.0.0 said NOT_IMPLEMENTED; 1.x (T-086) IMPLEMENTED_NOT_INTEGRATED as a material range only; 1.32.0 (T-420): moved by the pending ARCH_TAKEOFF_V3.0.37 package (Gate B); the released capability of V2.9 + route G is unchanged (no released method reads these codes) | 1.33.0 (T-421): moved by the pending ARCH_TAKEOFF_V3.0.38 package (Gate B); the released capability of V2.9 + route G is unchanged (no released method reads these codes): beds of the T-418 floor parts added, beds of the floor lines the lift threshold deducts restated | 1.36.0 (T-431): moved by the pending ARCH_TAKEOFF_V3.0.41 package (Gate B); the released capability of V2.9 + route G is unchanged"
   },
@@ -1116,7 +1111,7 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-315",
      "T-431",
@@ -1125,11 +1120,11 @@
      "T-483",
      "T-508"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-315 (V3.0.21): FIN.SKIRTING +0 -0 ~4; T-431 (V3.0.41): FIN.SKIRTING +0 -0 ~1; T-422 (V3.0.44): FIN.SKIRTING +1 -0 ~9 | V3.0.47 .. V3.0.50 by line diff (T-483 r2): T-443 (V3.0.47): FIN.SKIRTING +7 -0 ~1 | V3.0.51 by line diff (T-487): T-483 (V3.0.51): FIN.SKIRTING +0 -0 ~5 | V3.0.56 by line diff (T-310 r7): T-508 (V3.0.56): FIN.SKIRTING +6 -0 ~2 | census ARCH_TAKEOFF_V3.0.59: released lm 209.428592 (18 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: lm 7 lines (7 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-315 (V3.0.21): FIN.SKIRTING +0 -0 ~4; T-431 (V3.0.41): FIN.SKIRTING +0 -0 ~1; T-422 (V3.0.44): FIN.SKIRTING +1 -0 ~9 | V3.0.47 .. V3.0.50 by line diff (T-483 r2): T-443 (V3.0.47): FIN.SKIRTING +7 -0 ~1 | V3.0.51 by line diff (T-487): T-483 (V3.0.51): FIN.SKIRTING +0 -0 ~5 | V3.0.56 by line diff (T-310 r7): T-508 (V3.0.56): FIN.SKIRTING +6 -0 ~2 | census ARCH_TAKEOFF_V3.0.61: released lm 209.428592 (18 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: lm 7 lines (7 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "lm 209.428592 (18 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": " | 1.36.0 (T-431): moved by the pending ARCH_TAKEOFF_V3.0.41 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.39.0 (T-422): moved by the pending ARCH_TAKEOFF_V3.0.44 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.44.0 (T-443): moved by the pending ARCH_TAKEOFF_V3.0.47 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.48.0 (T-483 r2): moved by the pending ARCH_TAKEOFF_V3.0.51 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.53.0 (T-508): moved by the pending ARCH_TAKEOFF_V3.0.56 package (Gate B); the released capability of V2.9 + route G is unchanged; the V3.0.56 lines stay pending until a promotion version"
   },
@@ -1162,9 +1157,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -1227,15 +1222,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-315"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-315 (V3.0.21): FIN.WALL.TILE +1 -0 ~11 | census ARCH_TAKEOFF_V3.0.59: released m2 340.3038 (12 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 6 lines (6 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-315 (V3.0.21): FIN.WALL.TILE +1 -0 ~11 | census ARCH_TAKEOFF_V3.0.61: released m2 340.3038 (12 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 6 lines (6 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 340.3038 (12 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245",
      "T-246"
@@ -1277,9 +1272,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -1361,23 +1356,19 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-211",
      "T-244",
      "T-331",
-     "T-326"
+     "T-326",
+     "T-563"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-211 (V3.0.9): FIN.PLASTER +15 -0 ~13; T-244 (V3.0.20): FIN.PLASTER +0 -0 ~4; T-331 (V3.0.22): FIN.PLASTER +0 -0 ~12; T-326 (V3.0.28): FIN.PLASTER +8 -0 ~1 | census ARCH_TAKEOFF_V3.0.59: released m2 580.5819 (42 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 20 lines (12 UNKNOWN, bounded 488.201 .. 544.0606) (never 0, never summed; see candidate_census)",
-    "released_in_candidate": "m2 580.5819 (42 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
-    "record_only_packages": [
-     "T-245",
-     "T-338",
-     "T-246"
-    ]
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-211 (V3.0.9): FIN.PLASTER +15 -0 ~13; T-244 (V3.0.20): FIN.PLASTER +0 -0 ~4; T-331 (V3.0.22): FIN.PLASTER +0 -0 ~12; T-326 (V3.0.28): FIN.PLASTER +8 -0 ~1 | V3.0.60 .. V3.0.61 by line diff (T-655): T-563 (V3.0.61): FIN.PLASTER +0 -0 ~11 | census ARCH_TAKEOFF_V3.0.61: released m2 363.3738 (38 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 24 lines (10 UNKNOWN, bounded 932.72581 .. 1006.77641) (never 0, never summed; see candidate_census)",
+    "released_in_candidate": "m2 363.3738 (38 lines)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655)"
    },
    "note": " | 1.60.0 (T-423): re-recorded by the pending ARCH_TAKEOFF_V3.0.60 package (Gate B); no quantity moves; the released capability of V2.9 + route G is unchanged | 1.61.0 (T-563): restated by the pending ARCH_TAKEOFF_V3.0.61 package (Gate B): 4 released dry plaster lines leave the released total (HELD at their own height); the released capability of V2.9 + route G is unchanged"
   },
@@ -1397,12 +1388,11 @@
     "tools/urban_boq_m9.py:1274 _v29_facade(): facade outline run per floor and area (UP-FACADE-001)",
     "tools/urban_boq_m9.py:2718 FACADE.json",
     "commit 5476226 (T-014 facade gap closure, verifier run 39): engine/source/facade_gap_closure.py read only by engine/source/facade_passage_walls.py",
-    "commit 4fddf74 (T-109 passage walls) + 6699bb6 (T-123, verifier run 45): ground-floor run 98.887 -> 105.887 m (hand right), wired in ARCH_TAKEOFF_V3.0",
-    "engine/source/arch_v3062.py:342 changes_for(): face rows by element and levels, stale bindings refused; engine/source/arch_v3062.py:401 check_faces(): faces / holes once, held never 0; engine/source/arch_v3062.py:465 check_totals(); tests/t314_facade_faces/test_arch_v3062.py:88 (synthetic villa by hand)"
+    "commit 4fddf74 (T-109 passage walls) + 6699bb6 (T-123, verifier run 45): ground-floor run 98.887 -> 105.887 m (hand right), wired in ARCH_TAKEOFF_V3.0"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: ARCH.FACADE_RUN (lm), ARCH.FACADE (m2), FIN.EXT.FINISH (held without a specification)",
-   "opt_in_readers": "ARCH_TAKEOFF_V3.0 passage piece (merged b1a6d6d) | ARCH_TAKEOFF_V3.0.62 (engine/source/arch_v3062.py, opt-in candidate; pending Gate B, T-314)",
-   "missing": "the external finish is held without a stated specification; facade m2 held | in the opt-in candidate V3.0.62: exterior face rows by element (R-T314-1); W02 / D-GF-07 holes, parapet heights, plinth bottom / finish and 6 slab-edge depths HELD; corners m.l, copings, drips, beads, frames and the upturn-zone face named MISSING (no item code yet)",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0 passage piece (merged b1a6d6d)",
+   "missing": "the external finish is held without a stated specification; facade m2 held",
    "in_v3_0_candidate": "N/A",
    "v3_0_planned_tasks": [],
    "development_villa": {
@@ -1481,15 +1471,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "IN_CANDIDATE_BASE_LINES",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code)",
     "released_in_candidate": "base lines",
     "candidate_basis": "CARRIED from ARCH_TAKEOFF_V3.0.7 (T-203 / 1.2.0): the family owns no item code, so no line census or line diff can attribute lines to it; state and packages NOT re-derived"
    },
-   "note": " | 1.45.0 (T-350 r4, F-C-T485-1): in_v3_0_candidate 'yes' -> 'N/A': the family owns no item code, so no line census can attribute a candidate line to it (rule r4) | 1.62.0 (T-314): restated by the pending ARCH_TAKEOFF_V3.0.62 package (Gate B): FIN.EXT.FINISH face rows by element; the released capability of V2.9 + route G is unchanged"
+   "note": " | 1.45.0 (T-350 r4, F-C-T485-1): in_v3_0_candidate 'yes' -> 'N/A': the family owns no item code, so no line census can attribute a candidate line to it (rule r4)"
   },
   {
    "code": "B4-05",
@@ -1523,9 +1513,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -1592,7 +1582,7 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-211",
      "T-244",
@@ -1600,11 +1590,11 @@
      "T-399",
      "T-431"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-211 (V3.0.9): FIN.PAINT +15 -0 ~13; T-244 (V3.0.20): FIN.PAINT +0 -0 ~4; T-284 (V3.0.32): FIN.PAINT.CEILING +30 -0 ~0; T-399 (V3.0.34): FIN.PAINT +0 -0 ~1; T-431 (V3.0.41): FIN.PAINT.CEILING +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 612.033777 (35 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 10 lines (3 UNKNOWN, bounded 487.121 .. 542.8606) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-211 (V3.0.9): FIN.PAINT +15 -0 ~13; T-244 (V3.0.20): FIN.PAINT +0 -0 ~4; T-284 (V3.0.32): FIN.PAINT.CEILING +30 -0 ~0; T-399 (V3.0.34): FIN.PAINT +0 -0 ~1; T-431 (V3.0.41): FIN.PAINT.CEILING +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 612.033777 (35 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 10 lines (3 UNKNOWN, bounded 487.121 .. 542.8606) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 612.033777 (35 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245",
      "T-338",
@@ -1626,12 +1616,11 @@
    "source_needed": "elevations",
    "next_slice": "S4",
    "evidence": [
-    "tools/urban_boq_m9.py:1274 _v29_facade(): FIN.EXT.FINISH line per floor, held without a specification",
-    "engine/source/arch_v3062.py:342 changes_for(): face rows by element and levels, stale bindings refused; engine/source/arch_v3062.py:401 check_faces(): faces / holes once, held never 0; engine/source/arch_v3062.py:465 check_totals(); tests/t314_facade_faces/test_arch_v3062.py:88 (synthetic villa by hand)"
+    "tools/urban_boq_m9.py:1274 _v29_facade(): FIN.EXT.FINISH line per floor, held without a specification"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.EXT.FINISH (held)",
-   "opt_in_readers": "ARCH_TAKEOFF_V3.0 passage piece (merged b1a6d6d, run length only) | ARCH_TAKEOFF_V3.0.62 (engine/source/arch_v3062.py, opt-in candidate; pending Gate B, T-314)",
-   "missing": "no specification read; the line is always held | in the opt-in candidate V3.0.62: FIN.EXT.FINISH 18 lines from the face set of record (T-567), owner Q-07 B figure beside, never the quantity; specification of the finish still not read",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0 passage piece (merged b1a6d6d, run length only)",
+   "missing": "no specification read; the line is always held",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [],
    "development_villa": {
@@ -1670,20 +1659,19 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-131"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: FACADE_PASSAGE (T-109 / T-123): ground-floor facade run 98.887 -> 105.887 lm under owner Q-67 A (conditional; without the decision 98.887 .. 105.887 lm BOUNDED_EXPOSURE); T-123 hand 105.887 | census ARCH_TAKEOFF_V3.0.59: released lm 198.855559 (3 lines)",
-    "open": "to V3.0.7: facade area and external finish carry no quantity until a facade height is printed (Q-07); the external finish lines are base lines | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 7 lines (7 UNKNOWN); lm 3 lines (3 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: FACADE_PASSAGE (T-109 / T-123): ground-floor facade run 98.887 -> 105.887 lm under owner Q-67 A (conditional; without the decision 98.887 .. 105.887 lm BOUNDED_EXPOSURE); T-123 hand 105.887 | census ARCH_TAKEOFF_V3.0.61: released lm 198.855559 (3 lines)",
+    "open": "to V3.0.7: facade area and external finish carry no quantity until a facade height is printed (Q-07); the external finish lines are base lines | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 7 lines (7 UNKNOWN); lm 3 lines (3 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "lm 198.855559 (3 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
-   },
-   "note": " | 1.62.0 (T-314): restated by the pending ARCH_TAKEOFF_V3.0.62 package (Gate B): FIN.EXT.FINISH face rows by element; the released capability of V2.9 + route G is unchanged"
+   }
   },
   {
    "code": "B4-08",
@@ -1744,15 +1732,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-326"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-326 (V3.0.28): ARCH.WINDOW_REVEAL +35 -0 ~26 | census ARCH_TAKEOFF_V3.0.59: released m2 12.438866 (54 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 8 lines (8 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-326 (V3.0.28): ARCH.WINDOW_REVEAL +35 -0 ~26 | census ARCH_TAKEOFF_V3.0.61: released m2 12.438866 (54 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 8 lines (8 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 12.438866 (54 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -1786,9 +1774,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -1823,9 +1811,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -1863,9 +1851,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -1931,17 +1919,17 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-142",
      "T-284",
      "T-431"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: soffits over outside air (T-127): 5 lines added, 44.446 m2 (0 in V2.9 / V3.0.1): PL-02 5.640 and PL-03 12.834 m2 VERIFIED, PL-01 19.181, PL-04 4.374, PL-05 2.417 m2 DRAWING-CONFIRMED (owner Q-67 A cond., Q-68 C) | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-284 (V3.0.32): FIN.CEILING +3 -0 ~8; T-431 (V3.0.41): FIN.CEILING +2 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 411.337177 (36 lines)",
-    "open": "to V3.0.7: soffit finish HELD (Q-68 C: plaster / paint only in the provisional field); the five areas are typed records, no geometric reader of slabs over outside air yet; every room ceiling line is a base line and PROVISIONAL by design (O-P8-02, no ceiling type in a plan) | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 5 lines (5 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: soffits over outside air (T-127): 5 lines added, 44.446 m2 (0 in V2.9 / V3.0.1): PL-02 5.640 and PL-03 12.834 m2 VERIFIED, PL-01 19.181, PL-04 4.374, PL-05 2.417 m2 DRAWING-CONFIRMED (owner Q-67 A cond., Q-68 C) | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-284 (V3.0.32): FIN.CEILING +3 -0 ~8; T-431 (V3.0.41): FIN.CEILING +2 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 411.337177 (36 lines)",
+    "open": "to V3.0.7: soffit finish HELD (Q-68 C: plaster / paint only in the provisional field); the five areas are typed records, no geometric reader of slabs over outside air yet; every room ceiling line is a base line and PROVISIONAL by design (O-P8-02, no ceiling type in a plan) | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 5 lines (5 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 411.337177 (36 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -1975,9 +1963,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -2012,9 +2000,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -2053,16 +2041,16 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-284",
      "T-431"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-284 (V3.0.32): FIN.CEILING.BULKHEAD +13 -0 ~0; T-431 (V3.0.41): FIN.CEILING.BULKHEAD +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 27.9345 (13 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-284 (V3.0.32): FIN.CEILING.BULKHEAD +13 -0 ~0; T-431 (V3.0.41): FIN.CEILING.BULKHEAD +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 27.9345 (13 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 27.9345 (13 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.0.0 .. 1.26.0 said BLOCKED_BY_SOURCE (no item code, no module); 1.27.0 (T-284): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms | 1.36.0 (T-431): moved by the pending ARCH_TAKEOFF_V3.0.41 package (Gate B); the released capability of V2.9 + route G is unchanged"
   },
@@ -2094,9 +2082,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -2227,15 +2215,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-131"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: FACADE_PASSAGE (T-109): the two ground-floor open-air passage mouths OP-001 / OP-007 (2 pcs) NOT_APPLICABLE_WITH_EVIDENCE: not building openings | census ARCH_TAKEOFF_V3.0.59: released pcs 9.0 (9 lines)",
-    "open": "to V3.0.7: doors and windows are base lines, counted by class under B6-02 .. B6-04 | held in the candidate ARCH_TAKEOFF_V3.0.59: none (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: FACADE_PASSAGE (T-109): the two ground-floor open-air passage mouths OP-001 / OP-007 (2 pcs) NOT_APPLICABLE_WITH_EVIDENCE: not building openings | census ARCH_TAKEOFF_V3.0.61: released pcs 9.0 (9 lines)",
+    "open": "to V3.0.7: doors and windows are base lines, counted by class under B6-02 .. B6-04 | held in the candidate ARCH_TAKEOFF_V3.0.61: none (never 0, never summed; see candidate_census)",
     "released_in_candidate": "pcs 9.0 (9 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -2298,16 +2286,16 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-232",
      "T-268"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-232 (V3.0.10): DOOR.INTERNAL.PVC +10 -0 ~15; T-268 (V3.0.13): DOOR.INTERNAL.PVC +0 -0 ~2 | census ARCH_TAKEOFF_V3.0.59: released m2 28.6 (3 lines); pcs 15.0 (3 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 2 lines (0 UNKNOWN, bounded 8.03 .. 9.24); pcs 2 lines (0 UNKNOWN, bounded 5.0 .. 5.0) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-232 (V3.0.10): DOOR.INTERNAL.PVC +10 -0 ~15; T-268 (V3.0.13): DOOR.INTERNAL.PVC +0 -0 ~2 | census ARCH_TAKEOFF_V3.0.61: released m2 28.6 (3 lines); pcs 15.0 (3 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 2 lines (0 UNKNOWN, bounded 8.03 .. 9.24); pcs 2 lines (0 UNKNOWN, bounded 5.0 .. 5.0) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 28.6 (3 lines); pcs 15.0 (3 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -2369,16 +2357,16 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-232",
      "T-268"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-232 (V3.0.10): DOOR.EXTERNAL.ALUMINIUM +6 -0 ~2, DOOR.MAIN_ENTRANCE +2 -0 ~0; T-268 (V3.0.13): DOOR.EXTERNAL.ALUMINIUM +0 -0 ~4, DOOR.MAIN_ENTRANCE +0 -0 ~2 | census ARCH_TAKEOFF_V3.0.59: released m2 12.76 (2 lines); pcs 6.0 (2 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 1 lines (0 UNKNOWN, bounded 5.0 .. 5.0); pcs 1 lines (0 UNKNOWN, bounded 1.0 .. 1.0) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-232 (V3.0.10): DOOR.EXTERNAL.ALUMINIUM +6 -0 ~2, DOOR.MAIN_ENTRANCE +2 -0 ~0; T-268 (V3.0.13): DOOR.EXTERNAL.ALUMINIUM +0 -0 ~4, DOOR.MAIN_ENTRANCE +0 -0 ~2 | census ARCH_TAKEOFF_V3.0.61: released m2 12.76 (2 lines); pcs 6.0 (2 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 1 lines (0 UNKNOWN, bounded 5.0 .. 5.0); pcs 1 lines (0 UNKNOWN, bounded 1.0 .. 1.0) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 12.76 (2 lines); pcs 6.0 (2 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -2441,15 +2429,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-232"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-232 (V3.0.10): ARCH.WINDOW +9 -0 ~27 | census ARCH_TAKEOFF_V3.0.59: released m2 76.256 (3 lines); pcs 28.0 (3 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 2 lines (1 UNKNOWN, bounded 9.87 .. 11.515); pcs 1 lines (0 UNKNOWN, bounded 1.0 .. 2.0) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-232 (V3.0.10): ARCH.WINDOW +9 -0 ~27 | census ARCH_TAKEOFF_V3.0.61: released m2 76.256 (3 lines); pcs 28.0 (3 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 2 lines (1 UNKNOWN, bounded 9.87 .. 11.515); pcs 1 lines (0 UNKNOWN, bounded 1.0 .. 2.0) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 76.256 (3 lines); pcs 28.0 (3 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -2486,15 +2474,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-199"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): ARCH.SHUTTER +6 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released pcs 6.0 (3 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 3 lines (3 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): ARCH.SHUTTER +6 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released pcs 6.0 (3 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 3 lines (3 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "pcs 6.0 (3 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.0.0 .. 1.24.0 said NOT_IMPLEMENTED (no item code, no module); 1.25.0 (T-199 r2): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms"
   },
@@ -2529,15 +2517,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-421"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-421 (V3.0.38): FIN.MARBLE.LIFT_SURROUND +3 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 3 lines (0 UNKNOWN, bounded 2.75 .. 13.98) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-421 (V3.0.38): FIN.MARBLE.LIFT_SURROUND +3 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 3 lines (0 UNKNOWN, bounded 2.75 .. 13.98) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.0.0 EXPERIMENTAL (round 6 research, read by no method); 1.33.0 (T-421): moved by the pending ARCH_TAKEOFF_V3.0.38 package (Gate B); the released capability of V2.9 + route G is unchanged (no released method reads these codes)"
   },
@@ -2572,15 +2560,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-421"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-421 (V3.0.38): FIN.MARBLE.LIFT_THRESHOLD +6 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 1.5 (3 lines); lm 3.0 (3 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: none (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-421 (V3.0.38): FIN.MARBLE.LIFT_THRESHOLD +6 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 1.5 (3 lines); lm 3.0 (3 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: none (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 1.5 (3 lines); lm 3.0 (3 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.0.0 EXPERIMENTAL (round 6 research, read by no method); 1.33.0 (T-421): moved by the pending ARCH_TAKEOFF_V3.0.38 package (Gate B); the released capability of V2.9 + route G is unchanged (no released method reads these codes)"
   },
@@ -2641,13 +2629,13 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "IN_CANDIDATE_BASE_LINES",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code); held in the candidate: lm 14 lines (14 UNKNOWN)",
     "released_in_candidate": "base lines",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -2711,16 +2699,16 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-343",
      "T-429"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-343 (V3.0.25): FIN.MARBLE.TREAD +1 -0 ~0; T-429 (V3.0.39): FIN.MARBLE.TREAD +0 -0 ~9 | census ARCH_TAKEOFF_V3.0.59: released m2 23.3694 (8 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 5 lines (2 UNKNOWN, bounded 0.0 .. 8.924413) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-343 (V3.0.25): FIN.MARBLE.TREAD +1 -0 ~0; T-429 (V3.0.39): FIN.MARBLE.TREAD +0 -0 ~9 | census ARCH_TAKEOFF_V3.0.61: released m2 23.3694 (8 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 5 lines (2 UNKNOWN, bounded 0.0 .. 8.924413) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 23.3694 (8 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -2781,16 +2769,16 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-343",
      "T-429"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-343 (V3.0.25): FIN.MARBLE.RISER +1 -0 ~0; T-429 (V3.0.39): FIN.MARBLE.RISER +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.59: released m2 1.96 (1 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 13 lines (13 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-343 (V3.0.25): FIN.MARBLE.RISER +1 -0 ~0; T-429 (V3.0.39): FIN.MARBLE.RISER +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.61: released m2 1.96 (1 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 13 lines (13 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 1.96 (1 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -2852,17 +2840,17 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-266",
      "T-343",
      "T-421"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-266 (V3.0.18): FIN.MARBLE.LANDING +1 -0 ~0; T-343 (V3.0.25): FIN.MARBLE.LANDING +1 -0 ~0; T-421 (V3.0.38): FIN.MARBLE.LANDING +0 -0 ~2 | census ARCH_TAKEOFF_V3.0.59: released m2 10.1019 (2 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 2 lines (0 UNKNOWN, bounded 0.0 .. 12.147501) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-266 (V3.0.18): FIN.MARBLE.LANDING +1 -0 ~0; T-343 (V3.0.25): FIN.MARBLE.LANDING +1 -0 ~0; T-421 (V3.0.38): FIN.MARBLE.LANDING +0 -0 ~2 | census ARCH_TAKEOFF_V3.0.61: released m2 10.1019 (2 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 2 lines (0 UNKNOWN, bounded 0.0 .. 12.147501) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 10.1019 (2 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -2896,9 +2884,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -2961,15 +2949,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-429"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-429 (V3.0.39): FIN.STAIR.STEP_LM +0 -0 ~9 | census ARCH_TAKEOFF_V3.0.59: released lm 67.85 (7 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: lm 5 lines (2 UNKNOWN, bounded 0.0 .. 29.8964) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-429 (V3.0.39): FIN.STAIR.STEP_LM +0 -0 ~9 | census ARCH_TAKEOFF_V3.0.61: released lm 67.85 (7 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: lm 5 lines (2 UNKNOWN, bounded 0.0 .. 29.8964) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "lm 67.85 (7 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -3007,15 +2995,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-508"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.56 by line diff (T-310 r7): T-508 (V3.0.56): FIN.STAIR.SKIRTING.ZIGZAG +22 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: lm 22 lines (22 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.56 by line diff (T-310 r7): T-508 (V3.0.56): FIN.STAIR.SKIRTING.ZIGZAG +22 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: lm 22 lines (22 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.53.0 (T-508): moved by the pending ARCH_TAKEOFF_V3.0.56 package (Gate B); the released capability of V2.9 + route G is unchanged; the V3.0.56 lines stay pending until a promotion version"
   },
@@ -3050,15 +3038,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-508"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.56 by line diff (T-310 r7): T-508 (V3.0.56): FIN.STAIR.SKIRTING.SLOPED +22 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: lm 22 lines (22 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.56 by line diff (T-310 r7): T-508 (V3.0.56): FIN.STAIR.SKIRTING.SLOPED +22 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: lm 22 lines (22 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.53.0 (T-508): moved by the pending ARCH_TAKEOFF_V3.0.56 package (Gate B); the released capability of V2.9 + route G is unchanged; the V3.0.56 lines stay pending until a promotion version"
   },
@@ -3118,16 +3106,16 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-199",
      "T-480"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): FIN.RAILING +5 -0 ~0 | V3.0.54 by line diff (T-488): T-480 (V3.0.54): FIN.RAILING +3 -0 ~15 | census ARCH_TAKEOFF_V3.0.59: released lm 33.319174 (3 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: lm 5 lines (5 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): FIN.RAILING +5 -0 ~0 | V3.0.54 by line diff (T-488): T-480 (V3.0.54): FIN.RAILING +3 -0 ~15 | census ARCH_TAKEOFF_V3.0.61: released lm 33.319174 (3 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: lm 5 lines (5 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "lm 33.319174 (3 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    }
   },
   {
@@ -3162,15 +3150,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-199"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): FIN.HANDRAIL +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: none (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): FIN.HANDRAIL +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: none (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.0.0 .. 1.24.0 said NOT_IMPLEMENTED (defined, no module emitted it); 1.25.0 (T-199 r2): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms"
   },
@@ -3202,9 +3190,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -3256,17 +3244,17 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-187",
      "T-193",
      "T-266"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: STAIR_CONCRETE (T-184 / T-189 / T-192 rev3), ST-01 first to second floor: MS2-L 1.033445 m3 VERIFIED, MS2-U 1.001373 DRAWING-CONFIRMED, MS2-LD 0.4696 .. 0.4800 HELD, MS2-TR UNKNOWN; DEFAULT_GUARD (T-186) holds the route lines of ST-01 ground to first floor 2.785981 and ST-02 1.769462 m3 (waist convention 0.175 where 'T 16' is printed) and the first-floor 'winder' line 4.450745 m3 as MISREAD (dome ribs); lobby flight placeholder UNKNOWN. STR.CONC.STAIR released 9.954455 -> 2.983085 m3, held 0.4696 .. 0.4800, 5 blocked. V3.0.7 (T-193): that 'winder' line RETIRED: it is the east terrace dome DOME-B drawn on its own slab sheet, now carried once by the verified DOME-B shell under B10-09; STR.CONC.STAIR released 2.983085 and held 0.4696 .. 0.4800 unchanged, blocked 5 -> 4 | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-266 (V3.0.18): STR.CONC.STAIR +3 -0 ~2 | census ARCH_TAKEOFF_V3.0.59: released m3 5.368881 (6 lines)",
-    "open": "to V3.0.7: the ST-01 ground-to-first pieces, ST-01b, ST-02 and ST-03 ledger lines are not integrated (later V3.0.x); ST-02 curved parts held (Q-50); MS2-TR landing levels scaled, not printed; the ST-01 shaft floor in no line | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 5 lines (5 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: STAIR_CONCRETE (T-184 / T-189 / T-192 rev3), ST-01 first to second floor: MS2-L 1.033445 m3 VERIFIED, MS2-U 1.001373 DRAWING-CONFIRMED, MS2-LD 0.4696 .. 0.4800 HELD, MS2-TR UNKNOWN; DEFAULT_GUARD (T-186) holds the route lines of ST-01 ground to first floor 2.785981 and ST-02 1.769462 m3 (waist convention 0.175 where 'T 16' is printed) and the first-floor 'winder' line 4.450745 m3 as MISREAD (dome ribs); lobby flight placeholder UNKNOWN. STR.CONC.STAIR released 9.954455 -> 2.983085 m3, held 0.4696 .. 0.4800, 5 blocked. V3.0.7 (T-193): that 'winder' line RETIRED: it is the east terrace dome DOME-B drawn on its own slab sheet, now carried once by the verified DOME-B shell under B10-09; STR.CONC.STAIR released 2.983085 and held 0.4696 .. 0.4800 unchanged, blocked 5 -> 4 | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-266 (V3.0.18): STR.CONC.STAIR +3 -0 ~2 | census ARCH_TAKEOFF_V3.0.61: released m3 5.368881 (6 lines)",
+    "open": "to V3.0.7: the ST-01 ground-to-first pieces, ST-01b, ST-02 and ST-03 ledger lines are not integrated (later V3.0.x); ST-02 curved parts held (Q-50); MS2-TR landing levels scaled, not printed; the ST-01 shaft floor in no line | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 5 lines (5 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 5.368881 (6 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -3303,15 +3291,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-199"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): STR.FORMWORK.STAIR +31 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 36.927436 (10 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 20 lines (20 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): STR.FORMWORK.STAIR +31 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 36.927436 (10 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 20 lines (20 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 36.927436 (10 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.0.0 .. 1.24.0 said NOT_IMPLEMENTED (no item code, no module); 1.25.0 (T-199 r2): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms | 1.41.0 (T-479, from the T-474 handoff): T-199 merged; the candidate CARRIES this family since V3.0.30 (census V3.0.45 in candidate_census); 'in_v3_0_candidate: no' and the 'candidate' block are as of V3.0.7 (registry-wide, F-T479-1) | 1.43.0 (T-485): the merged packages are promoted and the candidate block states ARCH_TAKEOFF_V3.0.46 (census + line diff); the 1.41.0 remark 'as of V3.0.7' no longer applies"
   },
@@ -3343,11 +3331,11 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-179"
     ],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "STAIR_POOL_TANK_STEEL (T-166), stair part: stair steel by flight, strip and component as held ranges (1,039.160 .. 1,443.671 kg, r2 high from count B) and UNKNOWN lines; none released. Carried under item code STR.REBAR (owned by B11-01) with physical element STAIRS; counted here, never under B11-03",
     "open": "every stair bar count held (the '/m' notation is settled for footings only, T-171); typical-only stair families (T-184 p.16 reading not ruled); stair top-bar length, curved flight, winders, entrance / lobby flights",
     "released_in_candidate": "none",
@@ -3415,15 +3403,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-310"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.57 by line diff (T-507): T-310 (V3.0.57): FIN.WP.FLOOR +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.59: released m2 85.57571 (18 lines)",
-    "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code); held in the candidate: pcs 17 lines (17 UNKNOWN) | held in the candidate ARCH_TAKEOFF_V3.0.59: pcs 17 lines (17 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.57 by line diff (T-507): T-310 (V3.0.57): FIN.WP.FLOOR +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.61: released m2 85.57571 (18 lines)",
+    "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code); held in the candidate: pcs 17 lines (17 UNKNOWN) | held in the candidate ARCH_TAKEOFF_V3.0.61: pcs 17 lines (17 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 85.57571 (18 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    }
   },
   {
@@ -3519,15 +3507,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-310"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.57 by line diff (T-507): T-310 (V3.0.57): FIN.WP.DOORWAY_TRANSITION +3 -0 ~2 | census ARCH_TAKEOFF_V3.0.59: released m2 1.930379 (14 lines); pcs 14.0 (14 lines)",
-    "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code); held in the candidate: m2 13 lines (0 UNKNOWN, bounded 0.0 .. 2.138816) | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 14 lines (3 UNKNOWN, bounded 0.0 .. 1.819408) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.57 by line diff (T-507): T-310 (V3.0.57): FIN.WP.DOORWAY_TRANSITION +3 -0 ~2 | census ARCH_TAKEOFF_V3.0.61: released m2 1.930379 (14 lines); pcs 14.0 (14 lines)",
+    "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code); held in the candidate: m2 13 lines (0 UNKNOWN, bounded 0.0 .. 2.138816) | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 14 lines (3 UNKNOWN, bounded 0.0 .. 1.819408) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 1.930379 (14 lines); pcs 14.0 (14 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": " | 1.54.0 (T-310): moved by the pending ARCH_TAKEOFF_V3.0.57 package (Gate B); the released capability of V2.9 + route G is unchanged"
   },
@@ -3591,15 +3579,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-310"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.57 by line diff (T-507): T-310 (V3.0.57): FIN.WP.TERMINATION +0 -0 ~3, FIN.WP.WALL_UPTURN +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.59: released m2 25.214585 (17 lines)",
-    "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code); held in the candidate: m2 1 lines (1 UNKNOWN); lm 7 lines (0 UNKNOWN, bounded 0.0 .. 3.660363) | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 1 lines (1 UNKNOWN); lm 4 lines (0 UNKNOWN, bounded 0.0 .. 3.160363) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.57 by line diff (T-507): T-310 (V3.0.57): FIN.WP.TERMINATION +0 -0 ~3, FIN.WP.WALL_UPTURN +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.61: released m2 25.214585 (17 lines)",
+    "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code); held in the candidate: m2 1 lines (1 UNKNOWN); lm 7 lines (0 UNKNOWN, bounded 0.0 .. 3.660363) | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 1 lines (1 UNKNOWN); lm 4 lines (0 UNKNOWN, bounded 0.0 .. 3.160363) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 25.214585 (17 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    }
   },
   {
@@ -3634,9 +3622,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -3691,17 +3679,17 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-131",
      "T-133",
      "T-142"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: 22 roll lines (52 rolls on 21 lines + 1 held; owner Q-58 A cutting plans) carried from V2.13 by V3.0; MEMBRANE_FOLD_V5 audit attached as evidence by V3.0.1 (T-124: 21 AGREES, 1 NOT_COMPARABLE); coverage proof by V3.0.2 (T-137: 12 PROVEN, 9 PROVEN_EXCEPT_DETAIL, 1 NOT_PROVEN); roll counts unchanged | census ARCH_TAKEOFF_V3.0.59: released pcs 52.0 (21 lines)",
-    "open": "to V3.0.7: the second-floor top roof roll line holds its area with no count (NOT_PROVEN); 9 lines proven except the internal-corner / thin-wall details they list | held in the candidate ARCH_TAKEOFF_V3.0.59: pcs 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: 22 roll lines (52 rolls on 21 lines + 1 held; owner Q-58 A cutting plans) carried from V2.13 by V3.0; MEMBRANE_FOLD_V5 audit attached as evidence by V3.0.1 (T-124: 21 AGREES, 1 NOT_COMPARABLE); coverage proof by V3.0.2 (T-137: 12 PROVEN, 9 PROVEN_EXCEPT_DETAIL, 1 NOT_PROVEN); roll counts unchanged | census ARCH_TAKEOFF_V3.0.61: released pcs 52.0 (21 lines)",
+    "open": "to V3.0.7: the second-floor top roof roll line holds its area with no count (NOT_PROVEN); 9 lines proven except the internal-corner / thin-wall details they list | held in the candidate ARCH_TAKEOFF_V3.0.61: pcs 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "pcs 52.0 (21 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -3763,15 +3751,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-507"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.58 by line diff (T-525): T-507 (V3.0.58): FIN.WP.ROOF +2 -0 ~0, FIN.WP.ROOF_UPTURN +3 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 209.018867 (4 lines); lm 186.782544 (4 lines)",
-    "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code); held in the candidate: m2 1 lines (1 UNKNOWN); lm 1 lines (1 UNKNOWN) | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 2 lines (1 UNKNOWN, bounded 0.0 .. 0.639573); lm 3 lines (1 UNKNOWN, bounded 0.0 .. 4.028279) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.58 by line diff (T-525): T-507 (V3.0.58): FIN.WP.ROOF +2 -0 ~0, FIN.WP.ROOF_UPTURN +3 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 209.018867 (4 lines); lm 186.782544 (4 lines)",
+    "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code); held in the candidate: m2 1 lines (1 UNKNOWN); lm 1 lines (1 UNKNOWN) | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 2 lines (1 UNKNOWN, bounded 0.0 .. 0.639573); lm 3 lines (1 UNKNOWN, bounded 0.0 .. 4.028279) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 209.018867 (4 lines); lm 186.782544 (4 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": " | 1.55.0 (T-507): lines added by the pending ARCH_TAKEOFF_V3.0.58 package (Gate B); the released capability of V2.9 + route G is unchanged"
   },
@@ -3811,13 +3799,13 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "NO_LINE: the candidate emits no FIN.WP.BALCONY line at any version; T-486 will fill it; until then the family is outside the candidate (never 0, never 'base lines')",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "no_line": {
      "item_codes": [
       "FIN.WP.BALCONY"
@@ -3867,15 +3855,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-270"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-270 (V3.0.15): WP.FOUNDATION.BURIED_LIQUID +5 -0 ~0, WP.FOUNDATION.FOOTING_MEMBRANE +2 -0 ~0, WP.FOUNDATION.FOOTING_SCREED +4 -0 ~0, WP.FOUNDATION.FOOTING_SIDES +1 -0 ~0, WP.FOUNDATION.LIFT_PIT_BOARD +2 -0 ~0, WP.FOUNDATION.LIFT_PIT_MEMBRANE +2 -0 ~0, WP.FOUNDATION.LIFT_PIT_SCREED +2 -0 ~0, WP.FOUNDATION.PROCUREMENT +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m3 6.5275 (2 lines); m2 360.0282 (6 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 1 lines (1 UNKNOWN); m2 9 lines (9 UNKNOWN); item 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-270 (V3.0.15): WP.FOUNDATION.BURIED_LIQUID +5 -0 ~0, WP.FOUNDATION.FOOTING_MEMBRANE +2 -0 ~0, WP.FOUNDATION.FOOTING_SCREED +4 -0 ~0, WP.FOUNDATION.FOOTING_SIDES +1 -0 ~0, WP.FOUNDATION.LIFT_PIT_BOARD +2 -0 ~0, WP.FOUNDATION.LIFT_PIT_MEMBRANE +2 -0 ~0, WP.FOUNDATION.LIFT_PIT_SCREED +2 -0 ~0, WP.FOUNDATION.PROCUREMENT +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m3 6.5275 (2 lines); m2 360.0282 (6 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 1 lines (1 UNKNOWN); m2 9 lines (9 UNKNOWN); item 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 6.5275 (2 lines); m2 360.0282 (6 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245",
      "T-419"
@@ -3915,15 +3903,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-310"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.57 by line diff (T-507): T-310 (V3.0.57): WP.POOL.MEMBRANE +1 -0 ~0, WP.POOL.PROTECTION_SCREED +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m3 1.524503 (1 lines); m2 29.582355 (1 lines)",
-    "open": "no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: none (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.57 by line diff (T-507): T-310 (V3.0.57): WP.POOL.MEMBRANE +1 -0 ~0, WP.POOL.PROTECTION_SCREED +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m3 1.524503 (1 lines); m2 29.582355 (1 lines)",
+    "open": "no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: none (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 1.524503 (1 lines); m2 29.582355 (1 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": " | 1.54.0 (T-310): moved by the pending ARCH_TAKEOFF_V3.0.57 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.54.0 (T-310): owns WP.POOL.MEMBRANE (m2) and WP.POOL.PROTECTION_SCREED (m3), the printed outer protective layers of the pool (ELEMENT_REGISTER: their own family, never B8-08 or the concrete line); the family's water-side waterproofing is not printed for the development villa"
   },
@@ -4059,18 +4047,18 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-279",
      "T-419",
      "T-488",
      "T-498"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-279 (V3.0.26): ARCH.WALL_PANEL +19 -0 ~0, ARCH.WALL_VOLUME +19 -0 ~0, MAS.BLOCK +19 -0 ~0; T-419 (V3.0.46): MAS.BLOCK +2 -0 ~0 | V3.0.55 by line diff (T-508): T-488 (V3.0.55): ARCH.WALL_PANEL +0 -0 ~7, ARCH.WALL_VOLUME +0 -0 ~7, MAS.BLOCK +0 -0 ~7 | V3.0.59 by line diff (T-651): T-498 (V3.0.59): MAS.UNITS.BLACK +20 -0 ~0, MAS.UNITS.WHITE +17 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 467.7925 (13 lines); pcs 1075.8 (2 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m2 15 lines (15 UNKNOWN); pcs 35 lines (35 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-279 (V3.0.26): ARCH.WALL_PANEL +19 -0 ~0, ARCH.WALL_VOLUME +19 -0 ~0, MAS.BLOCK +19 -0 ~0; T-419 (V3.0.46): MAS.BLOCK +2 -0 ~0 | V3.0.55 by line diff (T-508): T-488 (V3.0.55): ARCH.WALL_PANEL +0 -0 ~7, ARCH.WALL_VOLUME +0 -0 ~7, MAS.BLOCK +0 -0 ~7 | V3.0.59 by line diff (T-651): T-498 (V3.0.59): MAS.UNITS.BLACK +20 -0 ~0, MAS.UNITS.WHITE +17 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 467.7925 (13 lines); pcs 1075.8 (2 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m2 15 lines (15 UNKNOWN); pcs 35 lines (35 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 467.7925 (13 lines); pcs 1075.8 (2 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "material_rows": {
     "MAS.UNITS.BLACK": {
@@ -4130,15 +4118,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-487"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.53 by line diff (T-480): T-487 (V3.0.53): STR.CONC.LINTEL +60 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m3 1.016 (16 lines)",
-    "open": "NO_LINE: the candidate emits no STR.CONC.LINTEL line at any version; T-487 will fill it; until then the family is outside the candidate (never 0, never 'base lines') | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 44 lines (44 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.53 by line diff (T-480): T-487 (V3.0.53): STR.CONC.LINTEL +60 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m3 1.016 (16 lines)",
+    "open": "NO_LINE: the candidate emits no STR.CONC.LINTEL line at any version; T-487 will fill it; until then the family is outside the candidate (never 0, never 'base lines') | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 44 lines (44 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 1.016 (16 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    }
   },
   {
@@ -4174,9 +4162,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -4215,15 +4203,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-498"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.59 by line diff (T-651): T-498 (V3.0.59): MAS.GLUE.AAC +17 -0 ~0, MAS.MORTAR.BLACK +20 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m3 1.269444 (2 lines); kg 43.596 (2 lines)",
-    "open": "no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 18 lines (18 UNKNOWN); kg 15 lines (12 UNKNOWN, bounded 842.06025 .. 861.32025) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.59 by line diff (T-651): T-498 (V3.0.59): MAS.GLUE.AAC +17 -0 ~0, MAS.MORTAR.BLACK +20 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m3 1.269444 (2 lines); kg 43.596 (2 lines)",
+    "open": "no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 18 lines (18 UNKNOWN); kg 15 lines (12 UNKNOWN, bounded 842.06025 .. 861.32025) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 1.269444 (2 lines); kg 43.596 (2 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.56.0 (T-637): owns its two material codes (F-T630-1); B9-04 no longer reads MISSING where the overlay carries its lines | 1.58.0 (T-498): moved by the pending ARCH_TAKEOFF_V3.0.59 package (Gate B); the released capability of V2.9 + route G is unchanged; the V3.0.59 lines stay pending until a promotion version | 1.59.0 (T-651): T-498 promoted (merge 4c37ce2c, Gate B); the candidate of record ARCH_TAKEOFF_V3.0.59 carries the family's lines (INTEGRATED_IN_CANDIDATE_AND_TESTED), written by engine/source/arch_v3059.py:332, engine/source/arch_v3059.py:477, tests/t498_block_materials/test_arch_v3059.py:94; capability stays IMPLEMENTED_NOT_INTEGRATED (released V2.9 + route G reads none of its codes); the 1.58.0 'pending' wording above is history"
   },
@@ -4255,9 +4243,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -4312,7 +4300,7 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-133",
      "T-142",
@@ -4322,11 +4310,11 @@
      "T-350",
      "T-478"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: ROUTE_G_SCOPE_V1 (T-126) by member family: footings 15.179 m3 released (verifier hand 15.213, -0.2 %), separate HELD lines F10 0.480 .. 0.590, under ground beams 4.949 .. 9.423 m3 and under straps 0.378 .. 0.772 m3 after the V3.0.2 REACH fix of defect D3 (hand 5.189 .. 9.387 and 0.670 inside); V3.0.6 default guard: the released footing line REBASED_ON_PRINTED (convention 0.10 = printed projection 0.10), unchanged; V3.0.7 guard evidence version 2 (T-193): the 0.10 thickness now confirmed by the printed footing note (structural PDF p.13 '10cm Plain con.', EV-BLINDING-T), so the line is REBASED_ON_PRINTED on both conventions; 15.179437 m3 and the line itself byte-identical (evidence only, no quantity moved) | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-239 (V3.0.11): STR.CONC.BLINDING +0 -0 ~1; T-350 (V3.0.43): STR.CONC.BLINDING +0 -0 ~1; T-478 (V3.0.45): STR.CONC.BLINDING +3 -0 ~2 | census ARCH_TAKEOFF_V3.0.59: released m3 12.734438 (1 lines)",
-    "open": "to V3.0.7: the three held lines are never summed (F10 two labels Q-31 C; ground-beam lines Q-21 C; no strap section printed); pool blinding (its projection) HELD outside these lines (T-183 line B); DG-2 recorded only | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 6 lines (1 UNKNOWN, bounded 7.640374 .. 13.466198) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: ROUTE_G_SCOPE_V1 (T-126) by member family: footings 15.179 m3 released (verifier hand 15.213, -0.2 %), separate HELD lines F10 0.480 .. 0.590, under ground beams 4.949 .. 9.423 m3 and under straps 0.378 .. 0.772 m3 after the V3.0.2 REACH fix of defect D3 (hand 5.189 .. 9.387 and 0.670 inside); V3.0.6 default guard: the released footing line REBASED_ON_PRINTED (convention 0.10 = printed projection 0.10), unchanged; V3.0.7 guard evidence version 2 (T-193): the 0.10 thickness now confirmed by the printed footing note (structural PDF p.13 '10cm Plain con.', EV-BLINDING-T), so the line is REBASED_ON_PRINTED on both conventions; 15.179437 m3 and the line itself byte-identical (evidence only, no quantity moved) | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-239 (V3.0.11): STR.CONC.BLINDING +0 -0 ~1; T-350 (V3.0.43): STR.CONC.BLINDING +0 -0 ~1; T-478 (V3.0.45): STR.CONC.BLINDING +3 -0 ~2 | census ARCH_TAKEOFF_V3.0.61: released m3 12.734438 (1 lines)",
+    "open": "to V3.0.7: the three held lines are never summed (F10 two labels Q-31 C; ground-beam lines Q-21 C; no strap section printed); pool blinding (its projection) HELD outside these lines (T-183 line B); DG-2 recorded only | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 6 lines (1 UNKNOWN, bounded 7.640374 .. 13.466198) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 12.734438 (1 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -4379,15 +4367,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-239"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-239 (V3.0.11): STR.CONC.FOOTING +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.59: released m3 64.304 (25 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m3 1 lines (0 UNKNOWN, bounded 2.176 .. 2.275) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-239 (V3.0.11): STR.CONC.FOOTING +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.61: released m3 64.304 (25 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m3 1 lines (0 UNKNOWN, bounded 2.176 .. 2.275) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 64.304 (25 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -4435,15 +4423,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-167"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: PROFILE_AUDIT (T-064 data file, owner Q-17 A): the 28 necks released 10.855 m3 on FOUNDING_DEPTH_M (a printed excavation minimum, owner Q-21 C) become HELD; all 36 neck lines held 3.075 .. 15.375 m3, 0 released | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "to V3.0.7: neck height not established until the founding level is verified (Q-21 C); NECK_TOP_LEVEL_M (INFERRED) becomes controlling after that | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 36 lines (1 UNKNOWN, bounded 3.075 .. 15.375) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: PROFILE_AUDIT (T-064 data file, owner Q-17 A): the 28 necks released 10.855 m3 on FOUNDING_DEPTH_M (a printed excavation minimum, owner Q-21 C) become HELD; all 36 neck lines held 3.075 .. 15.375 m3, 0 released | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "to V3.0.7: neck height not established until the founding level is verified (Q-21 C); NECK_TOP_LEVEL_M (INFERRED) becomes controlling after that | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 36 lines (1 UNKNOWN, bounded 3.075 .. 15.375) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -4508,7 +4496,7 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-131",
      "T-231",
@@ -4518,11 +4506,11 @@
      "T-430",
      "T-350"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: STRAPS (T-073): straps 3.781 -> 3.390 m3 measured (clear length between footing faces x printed section) + 0 .. 1.809 m3 HELD inside open footing outlines (owner Q-31) | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-231 (V3.0.8): STR.CONC.STRAP +5 -0 ~5; T-254 (V3.0.17): STR.CONC.GROUND_BEAM +1 -0 ~27; T-255 (V3.0.19): STR.CONC.GROUND_BEAM +0 -0 ~1; T-400 (V3.0.35): STR.CONC.GROUND_BEAM +0 -0 ~1; T-430 (V3.0.40): STR.CONC.GROUND_BEAM +2 -0 ~4; T-350 (V3.0.43): STR.CONC.STRAP +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.59: released m3 27.151055 (35 lines)",
-    "open": "to V3.0.7: the ground-beam concrete lines are route G profiled base lines (27.365 m3 on generic V6 conventions, e.g. the centre-to-centre length basis, not audited: T-167 s.5); GROUND_SYSTEM_SPANS_V2 (T-141) not wired; angled straps at their axis length (T-174) not integrated | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 31 lines (15 UNKNOWN, bounded 2.837573 .. 7.275031) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: STRAPS (T-073): straps 3.781 -> 3.390 m3 measured (clear length between footing faces x printed section) + 0 .. 1.809 m3 HELD inside open footing outlines (owner Q-31) | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-231 (V3.0.8): STR.CONC.STRAP +5 -0 ~5; T-254 (V3.0.17): STR.CONC.GROUND_BEAM +1 -0 ~27; T-255 (V3.0.19): STR.CONC.GROUND_BEAM +0 -0 ~1; T-400 (V3.0.35): STR.CONC.GROUND_BEAM +0 -0 ~1; T-430 (V3.0.40): STR.CONC.GROUND_BEAM +2 -0 ~4; T-350 (V3.0.43): STR.CONC.STRAP +0 -0 ~1 | census ARCH_TAKEOFF_V3.0.61: released m3 27.151055 (35 lines)",
+    "open": "to V3.0.7: the ground-beam concrete lines are route G profiled base lines (27.365 m3 on generic V6 conventions, e.g. the centre-to-centre length basis, not audited: T-167 s.5); GROUND_SYSTEM_SPANS_V2 (T-141) not wired; angled straps at their axis length (T-174) not integrated | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 31 lines (15 UNKNOWN, bounded 2.837573 .. 7.275031) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 27.151055 (35 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -4571,16 +4559,16 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-397",
      "T-442"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-397 (V3.0.33): STR.CONC.GROUND_SLAB +0 -0 ~1; T-442 (V3.0.42): STR.CONC.GROUND_SLAB +1 -0 ~1 | census ARCH_TAKEOFF_V3.0.59: released m3 21.638458 (26 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: none (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-397 (V3.0.33): STR.CONC.GROUND_SLAB +0 -0 ~1; T-442 (V3.0.42): STR.CONC.GROUND_SLAB +1 -0 ~1 | census ARCH_TAKEOFF_V3.0.61: released m3 21.638458 (26 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: none (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 21.638458 (26 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -4636,7 +4624,7 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-133",
      "T-231",
@@ -4644,11 +4632,11 @@
      "T-397",
      "T-442"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: ROUTE_G_SCOPE_V1 (T-126): columns above the necks 36.714 -> 34.446 m3, 5 pieces no upper slab plan draws NOT_APPLICABLE_WITH_EVIDENCE (2.268 m3, re-confirmed by the verifier on the structural drawing) | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-231 (V3.0.8): STR.CONC.COLUMN +3 -0 ~8; T-254 (V3.0.17): STR.CONC.COLUMN +0 -0 ~21; T-397 (V3.0.33): STR.CONC.COLUMN +0 -0 ~15; T-442 (V3.0.42): STR.CONC.COLUMN +0 -0 ~13 | census ARCH_TAKEOFF_V3.0.59: released m3 19.7765 (30 lines)",
-    "open": "to V3.0.7: 5 held column lines (1.134 .. 3.483 m3); 3 planted columns on the slab plans not evaluated by the scope piece (first floor +1.008, second floor +0.420 m3, V3.0.2 D2); column heights rest on T-119 | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 34 lines (16 UNKNOWN, bounded 9.168 .. 13.602) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: ROUTE_G_SCOPE_V1 (T-126): columns above the necks 36.714 -> 34.446 m3, 5 pieces no upper slab plan draws NOT_APPLICABLE_WITH_EVIDENCE (2.268 m3, re-confirmed by the verifier on the structural drawing) | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-231 (V3.0.8): STR.CONC.COLUMN +3 -0 ~8; T-254 (V3.0.17): STR.CONC.COLUMN +0 -0 ~21; T-397 (V3.0.33): STR.CONC.COLUMN +0 -0 ~15; T-442 (V3.0.42): STR.CONC.COLUMN +0 -0 ~13 | census ARCH_TAKEOFF_V3.0.61: released m3 19.7765 (30 lines)",
+    "open": "to V3.0.7: 5 held column lines (1.134 .. 3.483 m3); 3 planted columns on the slab plans not evaluated by the scope piece (first floor +1.008, second floor +0.420 m3, V3.0.2 D2); column heights rest on T-119 | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 34 lines (16 UNKNOWN, bounded 9.168 .. 13.602) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 19.7765 (30 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -4700,17 +4688,17 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-179",
      "T-146",
      "T-397"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: DOME_RING (T-160): the west dome ring VERIFIED 0.7552 m3 (checker 0.7553, 0.01 %) replaces route G's 4 arc bands of the same ring (0.2811 m3 + 0.2249 .. 0.6746 held, superseded by name); STR.CONC.BEAM released 64.8196 -> 65.2937 m3, held 8.449 .. 14.434 -> 8.224 .. 13.759 m3 | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-146 (V3.0.12): STR.CONC.BEAM +53 -0 ~50; T-397 (V3.0.33): STR.CONC.BEAM +0 -0 ~4 | census ARCH_TAKEOFF_V3.0.59: released m3 66.321054 (110 lines)",
-    "open": "to V3.0.7: east ring BLOCKED (section not printed, D-28); 24 held spans; BEAM_BINDING_V2 (T-085) and CONCRETE_LEDGER_V3 not wired; slab faces that are not slab (T-146) still in the slab line. The ring is a dome element (B10-09) carried under STR.CONC.BEAM, counted once, here. Since V3.0.7 carries the S0 shells (T-193 s.9, line byte-identical): T-185 reads the released 0.7552 m3 as the S1 edge-beam value, under S0 a CONFLICT 0.7552 .. 1.1422 m3 (plan band vs detail ring, depth 'AS PER ARCH'); its scenario tag needs a ruling in a later V3.0.x package | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 27 lines (5 UNKNOWN, bounded 8.372829 .. 13.77951) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: DOME_RING (T-160): the west dome ring VERIFIED 0.7552 m3 (checker 0.7553, 0.01 %) replaces route G's 4 arc bands of the same ring (0.2811 m3 + 0.2249 .. 0.6746 held, superseded by name); STR.CONC.BEAM released 64.8196 -> 65.2937 m3, held 8.449 .. 14.434 -> 8.224 .. 13.759 m3 | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-146 (V3.0.12): STR.CONC.BEAM +53 -0 ~50; T-397 (V3.0.33): STR.CONC.BEAM +0 -0 ~4 | census ARCH_TAKEOFF_V3.0.61: released m3 66.321054 (110 lines)",
+    "open": "to V3.0.7: east ring BLOCKED (section not printed, D-28); 24 held spans; BEAM_BINDING_V2 (T-085) and CONCRETE_LEDGER_V3 not wired; slab faces that are not slab (T-146) still in the slab line. The ring is a dome element (B10-09) carried under STR.CONC.BEAM, counted once, here. Since V3.0.7 carries the S0 shells (T-193 s.9, line byte-identical): T-185 reads the released 0.7552 m3 as the S1 edge-beam value, under S0 a CONFLICT 0.7552 .. 1.1422 m3 (plan band vs detail ring, depth 'AS PER ARCH'); its scenario tag needs a ruling in a later V3.0.x package | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 27 lines (5 UNKNOWN, bounded 8.372829 .. 13.77951) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 66.321054 (110 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -4762,15 +4750,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-146"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-146 (V3.0.12): STR.CONC.SLAB +0 -0 ~13 | census ARCH_TAKEOFF_V3.0.59: released m3 60.280155 (62 lines)",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: none (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-146 (V3.0.12): STR.CONC.SLAB +0 -0 ~13 | census ARCH_TAKEOFF_V3.0.61: released m3 60.280155 (62 lines)",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: none (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 60.280155 (62 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -4818,16 +4806,16 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-187",
      "T-193"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: DEFAULT_GUARD (T-186, V3.0.6): the two second-floor dome lines 3.685858 m3 each HELD (shell 0.12 / rise 1.0 conventions where 10 / 190 over 442 are printed); third dome placeholder DOME-3:SHELL UNKNOWN (Q-27 A); STR.CONC.DOME released 7.371716 -> 0, 3 blocked. V3.0.7 (T-193): DOME_SHELL (T-185, scenario S0) adds DOME-A (west) and DOME-B (east) 2.540681 m3 each VERIFIED (exact solid between concentric spheres from the printed chord 4.42, rise 1.90, shell 0.10) and supersedes the two convention lines (3.685858 each, -2.290355 m3 in total: rise, thickness and outer-area basis); the east dome's second reading as a 1F 'winder' stair (4.450745 m3) retired under B7-12, so each dome is carried once. STR.CONC.DOME released 0 -> 5.081362 m3, blocked 3 -> 1 | census ARCH_TAKEOFF_V3.0.59: released m3 5.081362 (2 lines)",
-    "open": "to V3.0.7: DOME-3 (upper-roof dome) stays an UNKNOWN / HELD placeholder (no structural detail, Q-27 A; never 0); S0 rings (west ring under B10-07, CONFLICT; east ring BLOCKED), drums and shell bars (298.34 .. 432.93 kg per dome) HELD; scenario S1 / S2 rows beside in the run file only, never in the candidate totals; NOT RELEASED | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: DEFAULT_GUARD (T-186, V3.0.6): the two second-floor dome lines 3.685858 m3 each HELD (shell 0.12 / rise 1.0 conventions where 10 / 190 over 442 are printed); third dome placeholder DOME-3:SHELL UNKNOWN (Q-27 A); STR.CONC.DOME released 7.371716 -> 0, 3 blocked. V3.0.7 (T-193): DOME_SHELL (T-185, scenario S0) adds DOME-A (west) and DOME-B (east) 2.540681 m3 each VERIFIED (exact solid between concentric spheres from the printed chord 4.42, rise 1.90, shell 0.10) and supersedes the two convention lines (3.685858 each, -2.290355 m3 in total: rise, thickness and outer-area basis); the east dome's second reading as a 1F 'winder' stair (4.450745 m3) retired under B7-12, so each dome is carried once. STR.CONC.DOME released 0 -> 5.081362 m3, blocked 3 -> 1 | census ARCH_TAKEOFF_V3.0.61: released m3 5.081362 (2 lines)",
+    "open": "to V3.0.7: DOME-3 (upper-roof dome) stays an UNKNOWN / HELD placeholder (no structural detail, Q-27 A; never 0); S0 rings (west ring under B10-07, CONFLICT; east ring BLOCKED), drums and shell bars (298.34 .. 432.93 kg per dome) HELD; scenario S1 / S2 rows beside in the run file only, never in the candidate totals; NOT RELEASED | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 5.081362 (2 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -4880,18 +4868,18 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-187",
      "T-193",
      "T-397",
      "T-419"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: DEFAULT_GUARD (T-186, V3.0.6): pool floor 1.51125 and walls 1.984 m3 HELD (0.25 / 1.60 conventions where 0.40 is printed; footprint 6.045 of 10.936 m2, wall band 1.24 of 2.357 m2); STR.CONC.POOL released 3.49525 -> 0, 2 blocked. V3.0.7 (T-193): POOL_CONCRETE (T-183 r2) adds base 4.374226 m3 (footprint 10.935564 m2 x printed 0.40) and walls 2.828071 m3 (band 2.356726 m2 x 1.20 m structural height, never the 1.15 finished depth), both VERIFIED, and supersedes the two convention lines (+3.707047 m3 against them); the steps line POOL-1:STEPS added BLOCKED. STR.CONC.POOL released 0 -> 7.202297 m3, blocked 2 -> 1 | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-397 (V3.0.33): STR.CONC.LIFT +1 -0 ~0; T-419 (V3.0.46): STR.CONC.LIFT +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m3 7.202297 (2 lines)",
-    "open": "to V3.0.7: the pool line group is PARTIALLY VERIFIED: steps HELD 'NOT DRAWN, consultant item' (never 0); pool bar populations (T-191, merged in lane S) not integrated; pool blinding projection HELD; joints / waterstop, membrane termination and finishes UNKNOWN; no tank, lift-pit or pump-room concrete line of the candidate (not established); NOT RELEASED | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 3 lines (3 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: DEFAULT_GUARD (T-186, V3.0.6): pool floor 1.51125 and walls 1.984 m3 HELD (0.25 / 1.60 conventions where 0.40 is printed; footprint 6.045 of 10.936 m2, wall band 1.24 of 2.357 m2); STR.CONC.POOL released 3.49525 -> 0, 2 blocked. V3.0.7 (T-193): POOL_CONCRETE (T-183 r2) adds base 4.374226 m3 (footprint 10.935564 m2 x printed 0.40) and walls 2.828071 m3 (band 2.356726 m2 x 1.20 m structural height, never the 1.15 finished depth), both VERIFIED, and supersedes the two convention lines (+3.707047 m3 against them); the steps line POOL-1:STEPS added BLOCKED. STR.CONC.POOL released 0 -> 7.202297 m3, blocked 2 -> 1 | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-397 (V3.0.33): STR.CONC.LIFT +1 -0 ~0; T-419 (V3.0.46): STR.CONC.LIFT +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m3 7.202297 (2 lines)",
+    "open": "to V3.0.7: the pool line group is PARTIALLY VERIFIED: steps HELD 'NOT DRAWN, consultant item' (never 0); pool bar populations (T-191, merged in lane S) not integrated; pool blinding projection HELD; joints / waterstop, membrane termination and finishes UNKNOWN; no tank, lift-pit or pump-room concrete line of the candidate (not established); NOT RELEASED | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 3 lines (3 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m3 7.202297 (2 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245",
      "T-442"
@@ -4943,15 +4931,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-400"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-400 (V3.0.35): STR.CONC.BOUNDARY_PAD +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m3 2 lines (1 UNKNOWN, bounded 7.2204 .. 7.2204) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-400 (V3.0.35): STR.CONC.BOUNDARY_PAD +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m3 2 lines (1 UNKNOWN, bounded 7.2204 .. 7.2204) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245"
     ]
@@ -4988,15 +4976,15 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-319"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-319 (V3.0.23): STR.CONC.PARAPET +4 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "held in the candidate ARCH_TAKEOFF_V3.0.59: m3 4 lines (4 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-319 (V3.0.23): STR.CONC.PARAPET +4 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "held in the candidate ARCH_TAKEOFF_V3.0.61: m3 4 lines (4 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    }
   },
   {
@@ -5036,17 +5024,17 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-199",
      "T-397",
      "T-419"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): STR.FORMWORK +612 -0 ~0; T-397 (V3.0.33): STR.FORMWORK +0 -0 ~10; T-419 (V3.0.46): STR.FORMWORK +2 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 1027.977403 (244 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 370 lines (370 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): STR.FORMWORK +612 -0 ~0; T-397 (V3.0.33): STR.FORMWORK +0 -0 ~10; T-419 (V3.0.46): STR.FORMWORK +2 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 1027.977403 (244 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 370 lines (370 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 1027.977403 (244 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    }
   },
   {
@@ -5095,7 +5083,7 @@
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-142",
      "T-151",
@@ -5104,11 +5092,11 @@
      "T-318",
      "T-419"
     ],
-    "as_of_package": "T-498",
-    "changed": "to V3.0.7: footing steel by bar population 874.86 kg DRAWING-CONFIRMED + 2,742.51 .. 2,836.40 kg HELD (V3.0.2, T-136; owner Q-71); column 1,887.13 kg + held 1,280.99 .. 2,119.35, ground system 1,252.91 + held 1,297.14 .. 2,269.56, beam 5,171.03 + held 4,247.22 .. 6,120.24 kg (V3.0.3, T-148 / T-138 / T-149; route lines superseded); neck steel 1,428.571 kg BLOCKED (V3.0.4, Q-21 C); route slab steel 2,584.35 kg superseded by held 4,643.766 .. 6,832.326 kg (V3.0.5, T-152). STR.REBAR item totals in V3.0.5 r2 = V3.0.6 (all families, incl. the stair / pool / tank lines of B7-14 / B11-03): 10,250.168 kg released, held 15,250.786 .. 21,621.545 kg, 579 blocked lines | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-318 (V3.0.27): STR.REBAR +138 -0 ~196; T-419 (V3.0.46): STR.REBAR +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released kg 9375.30576 (374 lines)",
-    "open": "to V3.0.7: links per metre (Q-71), straps (Q-74 directive, T-174), laps / development (note 9), planted-column bars (D-46), neck steel (Q-21 C), every slab bar count held; all NOT RELEASED | held in the candidate ARCH_TAKEOFF_V3.0.59: kg 1693 lines (799 UNKNOWN, bounded 14278.249488 .. 19646.877938) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "to V3.0.7: footing steel by bar population 874.86 kg DRAWING-CONFIRMED + 2,742.51 .. 2,836.40 kg HELD (V3.0.2, T-136; owner Q-71); column 1,887.13 kg + held 1,280.99 .. 2,119.35, ground system 1,252.91 + held 1,297.14 .. 2,269.56, beam 5,171.03 + held 4,247.22 .. 6,120.24 kg (V3.0.3, T-148 / T-138 / T-149; route lines superseded); neck steel 1,428.571 kg BLOCKED (V3.0.4, Q-21 C); route slab steel 2,584.35 kg superseded by held 4,643.766 .. 6,832.326 kg (V3.0.5, T-152). STR.REBAR item totals in V3.0.5 r2 = V3.0.6 (all families, incl. the stair / pool / tank lines of B7-14 / B11-03): 10,250.168 kg released, held 15,250.786 .. 21,621.545 kg, 579 blocked lines | V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-318 (V3.0.27): STR.REBAR +138 -0 ~196; T-419 (V3.0.46): STR.REBAR +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released kg 9375.30576 (374 lines)",
+    "open": "to V3.0.7: links per metre (Q-71), straps (Q-74 directive, T-174), laps / development (note 9), planted-column bars (D-46), neck steel (Q-21 C), every slab bar count held; all NOT RELEASED | held in the candidate ARCH_TAKEOFF_V3.0.61: kg 1693 lines (799 UNKNOWN, bounded 14278.249488 .. 19646.877938) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "kg 9375.30576 (374 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)",
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)",
     "record_only_packages": [
      "T-245",
      "T-338"
@@ -5144,9 +5132,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -5181,11 +5169,11 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-179"
     ],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "STAIR_POOL_TANK_STEEL (T-166), pool and tank part: 21 pool lines UNQUANTIFIED (their geometry superseded by T-183 r2: wall 1.20 m to the structure line; designer item D-57; the T-166 readings kept as information only), tank 2F-011 held 143.382 .. 149.310 kg, tank walls held; stair steel is counted under B7-14, the dome ring steel under B11-01 (beam ledger BM-1F-028), never twice",
     "open": "pool steel re-derived on the verified structure (T-191, merged in lane S, not yet integrated); tank walls; dome shell steel",
     "released_in_candidate": "none",
@@ -5221,9 +5209,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -5258,9 +5246,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -5295,9 +5283,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -5332,9 +5320,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -5369,9 +5357,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -5406,9 +5394,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -5449,15 +5437,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-328"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-328 (V3.0.31): FIN.ROOF.FINISH +4 -0 ~0, FIN.ROOF.INSULATION +4 -0 ~0, FIN.ROOF.PROTECTION +4 -0 ~0, FIN.ROOF.SCREED +4 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 202.21976 (3 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m3 4 lines (4 UNKNOWN); m2 9 lines (9 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-328 (V3.0.31): FIN.ROOF.FINISH +4 -0 ~0, FIN.ROOF.INSULATION +4 -0 ~0, FIN.ROOF.PROTECTION +4 -0 ~0, FIN.ROOF.SCREED +4 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 202.21976 (3 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m3 4 lines (4 UNKNOWN); m2 9 lines (9 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 202.21976 (3 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.0.0 .. 1.25.0 said NOT_IMPLEMENTED (no item code, no module); 1.26.0 (T-328): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms"
   },
@@ -5494,15 +5482,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-343"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-343 (V3.0.25): EXT.FLOOR.OUTDOOR +2 -0 ~0, EXT.FLOOR.PORCELAIN +1 -0 ~0, EXT.PAVING.INTERLOCK +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 140.5558 (2 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 2 lines (0 UNKNOWN, bounded 17.227412 .. 17.227412) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-343 (V3.0.25): EXT.FLOOR.OUTDOOR +2 -0 ~0, EXT.FLOOR.PORCELAIN +1 -0 ~0, EXT.PAVING.INTERLOCK +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 140.5558 (2 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 2 lines (0 UNKNOWN, bounded 17.227412 .. 17.227412) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 140.5558 (2 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.0.0 .. 1.25.0 said NOT_IMPLEMENTED: the 1.25.0 scan did not see the EXT. prefix (F-T199-5); 1.26.0 (T-328): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms"
   },
@@ -5534,9 +5522,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -5582,15 +5570,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-400"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-400 (V3.0.35): EXT.FENCE.BLOCK +4 -0 ~0, EXT.FENCE.BLOCK_COUNT +1 -0 ~0, EXT.FENCE.FACE +9 -0 ~0, EXT.FENCE.GATE +2 -0 ~0, EXT.FENCE.MASONRY_BELOW_NG +1 -0 ~0, EXT.FENCE.PAINT +8 -0 ~0, EXT.FENCE.PLASTER +8 -0 ~0, EXT.FENCE.TOP +2 -0 ~0, EXT.FENCE.WALL +4 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released m2 263.1715 (4 lines); lm 31.37 (1 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 30 lines (30 UNKNOWN); lm 1 lines (1 UNKNOWN); pcs 3 lines (3 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-400 (V3.0.35): EXT.FENCE.BLOCK +4 -0 ~0, EXT.FENCE.BLOCK_COUNT +1 -0 ~0, EXT.FENCE.FACE +9 -0 ~0, EXT.FENCE.GATE +2 -0 ~0, EXT.FENCE.MASONRY_BELOW_NG +1 -0 ~0, EXT.FENCE.PAINT +8 -0 ~0, EXT.FENCE.PLASTER +8 -0 ~0, EXT.FENCE.TOP +2 -0 ~0, EXT.FENCE.WALL +4 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released m2 263.1715 (4 lines); lm 31.37 (1 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 30 lines (30 UNKNOWN); lm 1 lines (1 UNKNOWN); pcs 3 lines (3 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "m2 263.1715 (4 lines); lm 31.37 (1 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "1.0.0 .. 1.29.0 said NOT_IMPLEMENTED (no item code, no module); 1.30.0 (T-400): moved by the pending ARCH_TAKEOFF_V3.0.35 package (Gate B); the released capability of V2.9 + route G is unchanged (no released method reads these codes)"
   },
@@ -5622,9 +5610,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -5659,9 +5647,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -5696,9 +5684,9 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none",
@@ -5736,15 +5724,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "INTEGRATED_IN_CANDIDATE_AND_TESTED",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-199"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): MET.RAILING.GUARD +6 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released lm 21.55 (4 lines)",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: lm 2 lines (2 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-199 (V3.0.30): MET.RAILING.GUARD +6 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released lm 21.55 (4 lines)",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: lm 2 lines (2 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "lm 21.55 (4 lines)",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "NEW in 1.26.0 (T-328 (h)): Lead element-register ruling F-T199-4 (Lead 2026-10-31 08:30): a guard rail on an open edge outside a stair is its own element, owner trade metalwork, separate from the stair guardrail B7-09 (never counted as a stair railing); 1.25.0 listed the code apart; capability_1_0_0 NOT_IMPLEMENTED stands for 'no family before 1.26.0'; 1.26.0 (T-328): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms"
   },
@@ -5779,15 +5767,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-284"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-284 (V3.0.32): FIN.STAIR.SOFFIT +2 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 2 lines (2 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-284 (V3.0.32): FIN.STAIR.SOFFIT +2 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 2 lines (2 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "NEW in 1.27.0 (T-284): a stair soffit is the underside of the flight / landing (T-281 STAIR_SOFFIT_V1), excluded from the room ceilings (R-CEIL-R3-1) and owned by no family before 1.27.0; capability_1_0_0 NOT_IMPLEMENTED stands for 'no family before 1.27.0'; 1.27.0 (T-284): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms"
   },
@@ -5822,15 +5810,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-284"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-284 (V3.0.32): FIN.DOME.SOFFIT +2 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 2 lines (2 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-284 (V3.0.32): FIN.DOME.SOFFIT +2 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "to V3.0.7: no candidate line; the released capability above is unchanged | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 2 lines (2 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "NEW in 1.27.0 (T-284): the open dome position is not a decor ceiling (T-283 / T-335); its intrados finish had no family before 1.27.0; capability_1_0_0 NOT_IMPLEMENTED stands for 'no family before 1.27.0'; 1.27.0 (T-284): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms"
   },
@@ -5866,15 +5854,15 @@
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "HELD_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [
      "T-343"
     ],
-    "as_of_package": "T-498",
-    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-343 (V3.0.25): EXT.POOL.WATER_FACE +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.59: released none",
-    "open": "to V3.0.7: no candidate line as of V3.0.7 (the line is newer: V3.0.25); see candidate_census | held in the candidate ARCH_TAKEOFF_V3.0.59: m2 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
+    "as_of_package": "T-563",
+    "changed": "V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): T-343 (V3.0.25): EXT.POOL.WATER_FACE +1 -0 ~0 | census ARCH_TAKEOFF_V3.0.61: released none",
+    "open": "to V3.0.7: no candidate line as of V3.0.7 (the line is newer: V3.0.25); see candidate_census | held in the candidate ARCH_TAKEOFF_V3.0.61: m2 1 lines (1 UNKNOWN) (never 0, never summed; see candidate_census)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    },
    "note": "NEW in 1.41.0 (T-479, from T-471 finding F-1 and T-328 finding F-T328-2): the pool water-face finish line was owned by no family (1.26.0 .. 1.40.0 item_codes_without_family); capability_1_0_0 NOT_IMPLEMENTED stands for 'no family before 1.41.0'; PROPOSED by the worker, effective with the Gate B merge, the Checker confirms"
   },
@@ -5915,13 +5903,13 @@
    "note": "NEW in 1.56.0 (T-637, T-630 F-T630-1): the lift landing door had no family before 1.56.0; capability_1_0_0 NOT_IMPLEMENTED stands for 'no family before 1.56.0'; PROPOSED by the worker, effective with the Checker merge",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
-    "method_version": "ARCH_TAKEOFF_V3.0.59",
+    "method_version": "ARCH_TAKEOFF_V3.0.61",
     "packages": [],
-    "as_of_package": "T-498",
+    "as_of_package": "T-563",
     "changed": "",
     "open": "no candidate line; the 3 overlay lines stay HELD blank (LIFT LANDING HEAD)",
     "released_in_candidate": "none",
-    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.59 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.59 (T-651: no line of the family changed)"
+    "candidate_basis": "CENSUS ARCH_TAKEOFF_V3.0.61 (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.60 .. V3.0.61 (T-655: no line of the family changed)"
    }
   }
  ],
@@ -5938,8 +5926,8 @@
   "NOT_IN_CANDIDATE": "the candidate emits no line of this family"
  },
  "candidate": {
-  "method_version": "ARCH_TAKEOFF_V3.0.59",
-  "as_of_package": "T-498",
+  "method_version": "ARCH_TAKEOFF_V3.0.61",
+  "as_of_package": "T-563",
   "released": false,
   "released_default": "ARCH_TAKEOFF_V2.9 + route G (unchanged)",
   "scope_of_the_figures": "the development villa runs of each package (own run, reproduced by its Gate B verdict); the methods are generic and each package tests them on a synthetic villa; from 1.43.0 the family blocks state the candidate of record by line census (candidate_census) and line diff",
@@ -7687,20 +7675,14 @@
    "development_villa_run": "5073 lines, V3_0_59_BOQ_LINES.json 75331a76 (T-651 chain run, reproduced)",
    "note": "T-498 (research/agents_t498/T-498_BLOCK_MATERIALS_INTEGRATION.md): blockwork material lines beside the MAS.BLOCK lines (R-T498-1), recomputed on the V3.0.58 masonry lines (= V3.0.56: T-310 / T-507 moved waterproofing only) with the merged T-453 r2 machinery (material base = contract net - REQUIRED RC lintel faces bound to the B9-02 lines): black 0.20 units 1,075.80 pcs (86.064 m2 VERIFIED), mortar 1.269444 m3 PROVISIONAL (10.155552 bags, 1.396388 m3 sand beside), AAC glue 20.061 kg VERIFIED + 23.535 kg PROVISIONAL + range 842.06025 .. 861.32025 kg (3 lines); 0.15 m black units / mortar, white units and every held masonry line blank by name; the Gate B integration package (the stage of 74 lines; the later overlay rows on these lines chain after it, before = this package's after)",
    "promoted_in": "1.59.0 (T-651)"
-  }
- ],
- "candidate_state_counts": {
-  "INTEGRATED_IN_CANDIDATE_AND_TESTED": 52,
-  "HELD_IN_CANDIDATE": 14,
-  "IN_CANDIDATE_BASE_LINES": 6,
-  "NOT_IN_CANDIDATE": 32
- },
- "pending_packages": [
+  },
   {
    "task": "T-423",
    "method_version": "ARCH_TAKEOFF_V3.0.60",
    "module": "engine/source/arch_v3060.py",
-   "status": "READY_FOR_GATE_B",
+   "merge_commit": "62e18eed5846de64f8b46cd5f6e9c8a011ded67e",
+   "verdict": "MERGED (Verifier 2026-11-09 14:05 UTC, Gate B; board BOARD.md row T-423 at agents/control b3bb1535: 'MERGED 62e18eed (Verifier 2026-11-09T14:05Z per date -u, run session_01E6cPneK3oWnREbXzwA7M9u, lock checker; GATE B STEP 3 PASS on bdbbb8db)')",
+   "gate": "GATE_B",
    "integrates": [
     "T-246",
     "T-284",
@@ -7713,6 +7695,7 @@
    "tests": [
     "tests/t423_split_remainder"
    ],
+   "task_commit": "bef65684865db661bf2accf89d8e1821c0cfc32a",
    "changes_families_by_item_code": [
     "FIN.CEILING",
     "FIN.WALL.TILE",
@@ -7720,14 +7703,28 @@
     "FIN.MARBLE.THRESHOLD",
     "FIN.FLOOR.PORCELAIN"
    ],
+   "families_changed_by_line_diff": [
+    "B3-01",
+    "B3-04"
+   ],
+   "lines_touched": 15,
+   "families_record_only_by_line_diff": [
+    "B4-01",
+    "B4-03",
+    "B5-01"
+   ],
+   "lines_record_only": 7,
+   "development_villa_run": "5073 lines, V3_0_60_BOQ_LINES.json 8c8a9642 (T-655 chain run, reproduced)",
    "note": "T-423 (research/agents_t423/T-423_SPLIT_REMAINDER.md): 5 FIN.CEILING lines list their HELD dome piece by id (T-330 ceiling FLAG 6 -> 1, the GF open plan set aside by name); the 1F-02 door hole D-1F-04 1.760 m2 moved to its doorway face piece on the tile and backing records (room 27.9101 unchanged); 14 marble thresholds one material state URBAN_METHOD (UP-THR-001); 15 strips carry m2 / m.l / pcs as a measure_pair; on V3.0.59 75331a76 -> V3.0.60 8c8a9642: 22 lines text-only, totals unchanged; the Gate B integration package",
-   "task_commit": "bef65684865db661bf2accf89d8e1821c0cfc32a"
+   "promoted_in": "1.62.0 (T-655)"
   },
   {
    "task": "T-563",
    "method_version": "ARCH_TAKEOFF_V3.0.61",
    "module": "engine/source/arch_v3061.py",
-   "status": "READY_FOR_GATE_B",
+   "merge_commit": "e04d99d905bfe1fb7481986fd2ddc2cc2635ba6f",
+   "verdict": "MERGED (Verifier 2026-11-09 16:13 UTC, Gate B; board BOARD.md row T-563 at agents/control b3bb1535: 'MERGED (Verifier 2026-11-09T16:13Z, run session_01E6cPnbMQMaFE3rtypyQHJD, engine e04d99d9 by `engine push`, on top of T-653 db8898c1; CODEMAP-only conflict: working-branch version taken, maps rebuilt, check stale none, freeze 0)')",
+   "gate": "GATE_B",
    "integrates": [
     "T-556",
     "T-558",
@@ -7737,36 +7734,28 @@
    "tests": [
     "tests/t563_plaster_height"
    ],
+   "task_commit": "6fb7ab8bcfd350a39b4b155f6992cfaff6d321f0",
    "changes_families_by_item_code": [
     "FIN.PLASTER"
    ],
+   "families_changed_by_line_diff": [
+    "B4-03"
+   ],
+   "lines_touched": 11,
+   "families_record_only_by_line_diff": [],
+   "lines_record_only": 0,
+   "development_villa_run": "5073 lines, V3_0_61_BOQ_LINES.json 2bc99980 (T-655 chain run, reproduced)",
    "note": "T-563 (research/agents_t563/T-563_PLASTER_HEIGHT_WIRING.md): PLASTER_HEIGHT_V1_WIRING (T-558 manifest V6): 11 dry FIN.PLASTER lines restated at the slab / roof soffit (Q-72, R-T556-1), all HELD (bounded) on the unprinted roof build-up (D-39 / DCR-6): 4 RELEASED lines 217.2081 m2 -> HELD 262.01799 .. 262.05199 m2, FIN.PLASTER released 580.5819 -> 363.3738 m2, 11 lines 840.64581 .. 895.89641 m2; FIN.PAINT 45 lines byte-identical; every other line byte-identical; the Gate B integration package",
-   "task_commit": "6fb7ab8bcfd350a39b4b155f6992cfaff6d321f0"
-  },
-  {
-   "task": "T-314",
-   "method_version": "ARCH_TAKEOFF_V3.0.62",
-   "module": "engine/source/arch_v3062.py",
-   "status": "READY_FOR_GATE_B",
-   "integrates": [
-    "T-305",
-    "T-311",
-    "T-324",
-    "T-337",
-    "T-348",
-    "T-349",
-    "T-567"
-   ],
-   "tests": [
-    "tests/t314_facade_faces"
-   ],
-   "changes_families_by_item_code": [
-    "FIN.EXT.FINISH"
-   ],
-   "note": "T-314 (research/agents_t314/T-314_FACADE_FACE_ROWS.md): exterior plaster / Sigma face rows (R-T314-1) into FIN.EXT.FINISH by element and levels (storey, parapet outer / inner / top, plinth, slab edge), holes once on the face that holds them, held faces / holes as ranges or blank, never 0: 3 storey lines HELD blank -> restated, 15 element lines ADDED; point 152.005 m2 + 13 bounded lines, net 1,007.93 .. 1,085.61 m2; every other line byte-identical; the Gate B integration package",
-   "task_commit": "56c20f6ecb54d75595df5c0a10ab2977b38595a8"
+   "promoted_in": "1.62.0 (T-655)"
   }
  ],
+ "candidate_state_counts": {
+  "INTEGRATED_IN_CANDIDATE_AND_TESTED": 52,
+  "HELD_IN_CANDIDATE": 14,
+  "IN_CANDIDATE_BASE_LINES": 6,
+  "NOT_IN_CANDIDATE": 32
+ },
+ "pending_packages": [],
  "not_a_boq_line_codes": {
   "ARCH.EXTERIOR": {
    "meaning": "the area of an exterior space (garden band, court, roof) as an AREA REGISTER line: a space with no finish kind is written with its area; it is no work item of any family",
@@ -7817,14 +7806,14 @@
   }
  },
  "candidate_census": {
-  "method_version": "ARCH_TAKEOFF_V3.0.59",
+  "method_version": "ARCH_TAKEOFF_V3.0.61",
   "builder": "research/agents_t479/t479_registry_census.py (line class and verdict binding as T-469; every line in exactly one bucket: family / NOT_A_BOQ_LINE / NO_FAMILY) | 1.56.0 (T-637): re-run with research/agents_t479/t479_registry_census.census() unchanged on the same index, families other than B9-01 / B9-04 / B6-08 asserted equal to 1.55.0",
   "lines": 5073,
-  "lines_sha256": "75331a76e688b89fd5286f5358fbe7477822a4b555971d5f983dc3a6e5e57cb1",
+  "lines_sha256": "2bc99980f5ae160008d1508f61755047b8fb7cca55b51b47bf26b97caeb8ba0d",
   "verdicts_sha256": "b3b08dd767c82e3019ad4e72590ee9ff130cd44f104e198826c0f47f98974922",
   "downgrades_sha256": "817326399e5b9ffff1d727b9599dff46d1f917c930e759c37e1d5721f0f85766",
-  "index": "research/agents_t651/out/LINE_INDEX_V3_0_59.json (sha256 2cd0ebd8e39db84510ba7a4a4f257cd3b2c1176f650ca7094ed71741fb698ab0)",
-  "scope": "the development villa run of the merged candidate of record V3.0.59 (T-498 merge 4c37ce2c; BOQ_LINES 75331a76 reproduced by T-651 from the Drive copies, V3.0.58 = c9570e6c on the way); the V3.0.44 verdict set and the T-469 downgrade snapshot bind by line content, as in 1.43.0",
+  "index": "research/agents_t655/out/LINE_INDEX_V3_0_61.json (sha256 10e5f116d30af67f991a233388100c2575c87d9cbd9f8ce464fe78ee0ca1f0ec)",
+  "scope": "the development villa run of the merged candidate of record V3.0.61 (T-563 merge e04d99d9; BOQ_LINES 2bc99980 reproduced by T-655 from the Drive copies, V3.0.59 = 75331a76 and V3.0.60 = 8c8a9642 on the way); the V3.0.44 verdict set and the T-469 downgrade snapshot bind by line content, as in 1.43.0",
   "meaning": "per family: in_candidate yes/no, lines, item codes present and, per unit, released / held (bounded low .. high, UNKNOWN count) / excluded, and the Checker-verified share apart: VERIFIED_WHOLE (group verdict) and VERIFIED_COMPONENT (a one-line verdict equal to the whole line); held is never 0 and never summed; this block states the candidate, the family 'candidate' blocks are derived from it (1.43.0, T-485)",
   "families": {
    "B1-01": {
@@ -8716,16 +8705,16 @@
     "units": {
      "m2": {
       "lines": 75,
-      "released_lines": 42,
-      "released": 580.5819,
+      "released_lines": 38,
+      "released": 363.3738,
       "verified_whole_lines": 0,
       "verified_whole": 0.0,
       "verified_component_lines": 0,
       "verified_component": 0.0,
-      "held_lines": 20,
-      "held_low": 488.201,
-      "held_high": 544.0606,
-      "held_unknown_lines": 12,
+      "held_lines": 24,
+      "held_low": 932.72581,
+      "held_high": 1006.77641,
+      "held_unknown_lines": 10,
       "excluded_lines": 13
      }
     }
@@ -10029,9 +10018,9 @@
   "issue_counts": {},
   "stale_in_candidate_vs_registry": [],
   "previous": {
-   "method_version": "ARCH_TAKEOFF_V3.0.58",
-   "lines": 4999,
-   "lines_sha256": "c9570e6c02e92f101f937b8982f25005df37c422b274836145d111eaba4058fe"
+   "method_version": "ARCH_TAKEOFF_V3.0.59",
+   "lines": 5073,
+   "lines_sha256": "75331a76e688b89fd5286f5358fbe7477822a4b555971d5f983dc3a6e5e57cb1"
   },
   "register_pairing_v3_0_57": {
    "panel_block_pairs": 26,
@@ -10045,24 +10034,25 @@
   }
  },
  "promotion": {
-  "task": "T-651",
+  "task": "T-655",
   "round": "r1",
-  "from_registry": "1.58.0",
+  "from_registry": "1.61.0",
   "promoted": [
-   "T-498"
+   "T-423",
+   "T-563"
   ],
   "previous_promotion": {
-   "task": "T-525",
-   "from_registry": "1.56.0",
+   "task": "T-651",
+   "from_registry": "1.58.0",
    "promoted": [
-    "T-507"
+    "T-498"
    ]
   },
-  "merge_commits_source": "research/agents_t651/out/PROMOTIONS_SOURCE_1_59_0.json (sha256 ebda5f002d4a489e3142e02439708d134e78ea2d1ed541b5b504beead67aaa4c)",
-  "line_diff": "research/agents_t651/out/T651_PACKAGE_FAMILIES.json (sha256 153371e918c8eb9a58e9a371de5acf8c3f1bf619d880dfd0c75c05275d417dba)",
+  "merge_commits_source": "research/agents_t655/out/PROMOTIONS_SOURCE_1_62_0.json (sha256 e1acadce00f90d65165e7866eef8041493502086e4da967c454dfa97ae17fe1e)",
+  "line_diff": "research/agents_t655/out/T655_PACKAGE_FAMILIES.json (sha256 e6099906322d30a1c69e1644241c4ca9c2c34bbfd0bee6c9da113817b400b6c0)",
   "rule": "R-T485-1: a merged package never stays in pending_packages; a family's candidate state is derived from the candidate's lines (census + line diff), never carried from a package's text; a family that owns no item code is CARRIED and labelled so",
   "quantity_change": "none (no engine, method, line or capability field moves)",
-  "line_index": "research/agents_t651/out/LINE_INDEX_V3_0_59.json"
+  "line_index": "research/agents_t655/out/LINE_INDEX_V3_0_61.json"
  },
  "trade_key_crosswalk": {
   "rule": "R-T637-1 (c): the key is the scorecard / statement V11 SECTION id without its '@Vn' version suffix (one key = one section through every version); each key maps to exactly one master group, or to MULTI_GROUP with its groups named (the section re-adds rows of two groups: shown beside each, never inside one). The V11 trade code is the reference's own grouping and is NEVER used as a master group.",

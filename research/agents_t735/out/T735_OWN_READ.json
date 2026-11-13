@@ -1,0 +1,41 @@
+{
+ "drawing": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' sha256 9f9d1179",
+ "face_1F_072": {
+  "across_edges_beside_slab_m": "0",
+  "all_along_member": true,
+  "dome_side": "1F-073 west dome opening + ring (RING_MIX): held length, not in this line",
+  "other_side": "outer west strip 1F-059 / 1F-079 / 1F-093 (EDGE_HELD, BM-1F-034 HELD)",
+  "slab_edges_m": {
+   "1F-041": "0.785",
+   "1F-060": "1.046",
+   "1F-090": "1.046",
+   "1F-094": "1.142"
+  }
+ },
+ "outlines_mm": {
+  "34A": [
+   200,
+   400
+  ],
+  "34D": [
+   400,
+   200
+  ],
+  "350": [
+   400,
+   200
+  ],
+  "356": [
+   400,
+   200
+  ],
+  "412": [
+   200,
+   500
+  ],
+  "415": [
+   600,
+   200
+  ]
+ }
+}

@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-665",
+  "merge_commit": "12acd3d49759a6d6b0a1c61dad66b71b0bad65aa",
+  "verdict_time": "2026-11-10 08:05 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-10T08:05Z, run session_01E6cPncgxNYck8DvS6tWyTP; GATE B PASS; merge 12acd3d4 (tree d09f0d5f = task head tree)",
+  "board_commit": "bfbea962"
+ }
+]

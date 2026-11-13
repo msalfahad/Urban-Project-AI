@@ -1,0 +1,808 @@
+{
+ "rule": "R-T742-1..3 1.0.0",
+ "task": "T-742",
+ "status": "research only, not wired; no candidate line moved",
+ "family_lines": {
+  "ANNEX": {
+   "family": "B9-05 MAS.BLOCK.PARAPET",
+   "status": "HELD",
+   "net_m2": "0.000000 .. 15.092525",
+   "m3": "0.000000 .. 3.018505",
+   "p1_reading_at_b_edge_0_m2": "5.997010 .. 6.037010",
+   "p1_increment_m2_per_m_b_edge": "29.985050",
+   "runs": 7,
+   "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5: parapet material per run, roof build-up b_edge)",
+   "procurement": "HELD (block type Q-65 C; black 12.5 / m2 only if keyed)"
+  },
+  "GF": {
+   "family": "B9-05 MAS.BLOCK.PARAPET",
+   "status": "HELD",
+   "net_m2": "0.000000 .. 14.184950",
+   "m3": "0.000000 .. 2.836990",
+   "p1_reading_at_b_edge_0_m2": "5.592956 .. 5.673980",
+   "p1_increment_m2_per_m_b_edge": "27.964780",
+   "runs": 3,
+   "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5: parapet material per run, roof build-up b_edge)",
+   "procurement": "HELD (block type Q-65 C; black 12.5 / m2 only if keyed)"
+  },
+  "1F": {
+   "family": "B9-05 MAS.BLOCK.PARAPET",
+   "status": "HELD",
+   "net_m2": "0.000000 .. 57.661748",
+   "m3": "0.000000 .. 15.471096",
+   "p1_reading_at_b_edge_0_m2": "37.645009 .. 42.891953",
+   "p1_increment_m2_per_m_b_edge": "49.157550",
+   "runs": 11,
+   "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5: parapet material per run, roof build-up b_edge)",
+   "procurement": "HELD (block type Q-65 C; black 12.5 / m2 only if keyed)"
+  },
+  "2F": {
+   "family": "B9-05 MAS.BLOCK.PARAPET",
+   "status": "HELD",
+   "net_m2": "0.000000 .. 14.525000",
+   "m3": "0.000000 .. 2.707500",
+   "p1_reading_at_b_edge_0_m2": "5.810000",
+   "p1_increment_m2_per_m_b_edge": "29.050000",
+   "runs": 4,
+   "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5: parapet material per run, roof build-up b_edge)",
+   "procurement": "HELD (block type Q-65 C; black 12.5 / m2 only if keyed)"
+  }
+ },
+ "total_net_m2": "0.000000 .. 101.464223",
+ "total_p1_reading_at_b_edge_0_m2": "55.044975 .. 60.412943",
+ "runs": [
+  {
+   "chain": "ANNEX",
+   "run": "NE-6",
+   "candidate_line": "L-1d419b64e8ca1af30fb4",
+   "t_m": "0.2",
+   "centreline_m": "10.60005 .. 10.60005",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "10.800000",
+   "inner_arris_m": "10.400100",
+   "census": "DRAWN",
+   "outer_handles": [
+    "AC7"
+   ],
+   "outer_drawn_m": 10.7997,
+   "inner_handles": [
+    "B34"
+   ],
+   "inner_drawn_m": 10.7997
+  },
+  {
+   "chain": "ANNEX",
+   "run": "NE-6x",
+   "candidate_line": "L-1d419b64e8ca1af30fb4",
+   "t_m": "0.2",
+   "centreline_m": "1.29995 .. 1.29995",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": null,
+   "inner_arris_m": null,
+   "census": "NOT_IN_OUTLINE_CHAIN (run found after T-311: T-324 C5)",
+   "outer_handles": [],
+   "outer_drawn_m": null,
+   "inner_handles": [],
+   "inner_drawn_m": null
+  },
+  {
+   "chain": "ANNEX",
+   "run": "NW-1",
+   "candidate_line": "L-1d419b64e8ca1af30fb4",
+   "t_m": "0.2",
+   "centreline_m": "0.6 .. 0.6",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "0.500000",
+   "inner_arris_m": "0.700000",
+   "census": "DRAWN",
+   "outer_handles": [
+    "B39"
+   ],
+   "outer_drawn_m": 0.5,
+   "inner_handles": [
+    "B38"
+   ],
+   "inner_drawn_m": 0.7
+  },
+  {
+   "chain": "ANNEX",
+   "run": "SE-1",
+   "candidate_line": "L-1d419b64e8ca1af30fb4",
+   "t_m": "0.2",
+   "centreline_m": "6.5 .. 6.5",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "6.700000",
+   "inner_arris_m": "6.300000",
+   "census": "DRAWN",
+   "outer_handles": [
+    "B2C"
+   ],
+   "outer_drawn_m": 6.7,
+   "inner_handles": [
+    "B37"
+   ],
+   "inner_drawn_m": 6.3
+  },
+  {
+   "chain": "ANNEX",
+   "run": "SW-1",
+   "candidate_line": "L-1d419b64e8ca1af30fb4",
+   "t_m": "0.2",
+   "centreline_m": "3.0 .. 3.0",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "3.100000",
+   "inner_arris_m": "2.900000",
+   "census": "DRAWN",
+   "outer_handles": [
+    "B26"
+   ],
+   "outer_drawn_m": 3.0997,
+   "inner_handles": [
+    "B41"
+   ],
+   "inner_drawn_m": 2.9
+  },
+  {
+   "chain": "ANNEX",
+   "run": "SW-2",
+   "candidate_line": "L-1d419b64e8ca1af30fb4",
+   "t_m": "0.2",
+   "centreline_m": "1.88495 .. 1.88495",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "2.042000",
+   "inner_arris_m": "1.727900",
+   "census": "DRAWN",
+   "outer_handles": [
+    "B29"
+   ],
+   "outer_drawn_m": 2.042,
+   "inner_handles": [
+    "B2B"
+   ],
+   "inner_drawn_m": 1.7279
+  },
+  {
+   "chain": "ANNEX",
+   "run": "SW-3",
+   "candidate_line": "L-1d419b64e8ca1af30fb4",
+   "t_m": "0.2",
+   "centreline_m": "6.1001 .. 6.3001",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "6.200100",
+   "inner_arris_m": "6.400100",
+   "census": "PARTLY_DRAWN",
+   "outer_handles": [
+    "B36"
+   ],
+   "outer_drawn_m": 6.0,
+   "inner_handles": [
+    "B35"
+   ],
+   "inner_drawn_m": 6.2
+  },
+  {
+   "chain": "GF",
+   "run": "NE-4",
+   "candidate_line": "L-b5ffc172a354375ca107",
+   "t_m": "0.2",
+   "centreline_m": "19.27 .. 19.27",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "19.370000",
+   "inner_arris_m": "19.170000",
+   "census": "DRAWN",
+   "outer_handles": [
+    "AC7"
+   ],
+   "outer_drawn_m": 19.37,
+   "inner_handles": [
+    "B25",
+    "B34"
+   ],
+   "inner_drawn_m": 19.1703
+  },
+  {
+   "chain": "GF",
+   "run": "NW-7",
+   "candidate_line": "L-b5ffc172a354375ca107",
+   "t_m": "0.2",
+   "centreline_m": "7.7 .. 7.7",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "7.900000",
+   "inner_arris_m": "7.500000",
+   "census": "DRAWN",
+   "outer_handles": [
+    "B30"
+   ],
+   "outer_drawn_m": 7.9,
+   "inner_handles": [
+    "B32",
+    "B33"
+   ],
+   "inner_drawn_m": 7.9
+  },
+  {
+   "chain": "GF",
+   "run": "SW-9",
+   "candidate_line": "L-b5ffc172a354375ca107",
+   "t_m": "0.2",
+   "centreline_m": "0.99478 .. 1.3999",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "1.499900",
+   "inner_arris_m": "1.299900",
+   "census": "PARTLY_DRAWN",
+   "outer_handles": [
+    "BDC"
+   ],
+   "outer_drawn_m": 0.8948,
+   "inner_handles": [
+    "BDB"
+   ],
+   "inner_drawn_m": 0.8948
+  },
+  {
+   "chain": "1F",
+   "run": "NE-1",
+   "candidate_line": "L-9a2c81164ec6499cc28c",
+   "t_m": "0.2 .. 0.6052",
+   "centreline_m": "0.04 .. 0.04",
+   "h_above_finish_m": "1.0996 .. 1.2996",
+   "h_status": "HELD",
+   "outer_arris_m": "0.080000",
+   "inner_arris_m": "0.000000",
+   "census": "DRAWN",
+   "outer_handles": [
+    "1311"
+   ],
+   "outer_drawn_m": 0.08,
+   "inner_handles": [],
+   "inner_drawn_m": 0.0
+  },
+  {
+   "chain": "1F",
+   "run": "NE-2",
+   "candidate_line": "L-9a2c81164ec6499cc28c",
+   "t_m": "0.2",
+   "centreline_m": "19.07 .. 19.07",
+   "h_above_finish_m": "1.3 .. 1.3",
+   "h_status": "PRINTED",
+   "outer_arris_m": "19.270000",
+   "inner_arris_m": "18.870000",
+   "census": "PARTLY_DRAWN",
+   "outer_handles": [
+    "127F"
+   ],
+   "outer_drawn_m": 18.27,
+   "inner_handles": [
+    "1285"
+   ],
+   "inner_drawn_m": 18.87
+  },
+  {
+   "chain": "1F",
+   "run": "NW-1",
+   "candidate_line": "L-9a2c81164ec6499cc28c",
+   "t_m": "0.2 .. 0.6052",
+   "centreline_m": "1.02275 .. 1.02275",
+   "h_above_finish_m": "1.299 .. 1.299",
+   "h_status": "PRINTED",
+   "outer_arris_m": "1.170300",
+   "inner_arris_m": "0.875200",
+   "census": "NOT_ON_ROOF_PLAN (outer)",
+   "outer_handles": [],
+   "outer_drawn_m": 0.0,
+   "inner_handles": [
+    "12A7"
+   ],
+   "inner_drawn_m": 1.1703
+  },
+  {
+   "chain": "1F",
+   "run": "NW-2",
+   "candidate_line": "L-9a2c81164ec6499cc28c",
+   "t_m": "0.2 .. 0.6052",
+   "centreline_m": "3.1672 .. 3.1672",
+   "h_above_finish_m": "1.3 .. 1.3",
+   "h_status": "PRINTED",
+   "outer_arris_m": "3.528300",
+   "inner_arris_m": "3.693100",
+   "census": "NOT_ON_ROOF_PLAN",
+   "outer_handles": [],
+   "outer_drawn_m": 0.0,
+   "inner_handles": [],
+   "inner_drawn_m": 0.0
+  },
+  {
+   "chain": "1F",
+   "run": "NW-3",
+   "candidate_line": "L-9a2c81164ec6499cc28c",
+   "t_m": "0.2 .. 0.6052",
+   "centreline_m": "0.53045 .. 0.53045",
+   "h_above_finish_m": "1.299 .. 1.299",
+   "h_status": "PRINTED",
+   "outer_arris_m": "0.578000",
+   "inner_arris_m": "0.482900",
+   "census": "NOT_ON_ROOF_PLAN (outer)",
+   "outer_handles": [],
+   "outer_drawn_m": 0.0,
+   "inner_handles": [
+    "12A7"
+   ],
+   "inner_drawn_m": 0.978
+  },
+  {
+   "chain": "1F",
+   "run": "NW-4",
+   "candidate_line": "L-9a2c81164ec6499cc28c",
+   "t_m": "0.2 .. 0.6052",
+   "centreline_m": "0.4673 .. 0.4673",
+   "h_above_finish_m": "1.099 .. 1.099",
+   "h_status": "PRINTED",
+   "outer_arris_m": "0.467300",
+   "inner_arris_m": "0.467300",
+   "census": "NOT_ON_ROOF_PLAN",
+   "outer_handles": [],
+   "outer_drawn_m": 0.0,
+   "inner_handles": [],
+   "inner_drawn_m": 0.0
+  },
+  {
+   "chain": "1F",
+   "run": "NW-5",
+   "candidate_line": "L-9a2c81164ec6499cc28c",
+   "t_m": "0.2 .. 0.6052",
+   "centreline_m": "6.625 .. 6.625",
+   "h_above_finish_m": "0.448 .. 0.448",
+   "h_status": "PRINTED",
+   "outer_arris_m": "6.725000",
+   "inner_arris_m": "6.525000",
+   "census": "PARTLY_DRAWN",
+   "outer_handles": [
+    "12A6"
+   ],
+   "outer_drawn_m": 0.0327,
+   "inner_handles": [
+    "12A7"
+   ],
+   "inner_drawn_m": 6.725
+  },
+  {
+   "chain": "1F",
+   "run": "SE-1",
+   "candidate_line": "L-9a2c81164ec6499cc28c",
+   "t_m": "0.2",
+   "centreline_m": "7.3 .. 7.3",
+   "h_above_finish_m": "1.041 .. 1.041",
+   "h_status": "PRINTED",
+   "outer_arris_m": "7.500000",
+   "inner_arris_m": "7.100000",
+   "census": "DRAWN",
+   "outer_handles": [
+    "12C7"
+   ],
+   "outer_drawn_m": 7.5,
+   "inner_handles": [
+    "12C9"
+   ],
+   "inner_drawn_m": 7.1
+  },
+  {
+   "chain": "1F",
+   "run": "SW-1",
+   "candidate_line": "L-9a2c81164ec6499cc28c",
+   "t_m": "0.2 .. 0.6052",
+   "centreline_m": "0.04 .. 0.04",
+   "h_above_finish_m": "1.0996 .. 1.2996",
+   "h_status": "HELD",
+   "outer_arris_m": "0.080000",
+   "inner_arris_m": "0.000000",
+   "census": "NOT_ON_ROOF_PLAN",
+   "outer_handles": [],
+   "outer_drawn_m": 0.0,
+   "inner_handles": [],
+   "inner_drawn_m": 0.0
+  },
+  {
+   "chain": "1F",
+   "run": "SW-2",
+   "candidate_line": "L-9a2c81164ec6499cc28c",
+   "t_m": "0.2",
+   "centreline_m": "4.22495 .. 4.30005",
+   "h_above_finish_m": "0.385 .. 1.6",
+   "h_status": "HELD",
+   "outer_arris_m": "4.400000",
+   "inner_arris_m": "4.200100",
+   "census": "PARTLY_DRAWN",
+   "outer_handles": [
+    "12A8"
+   ],
+   "outer_drawn_m": 2.4949,
+   "inner_handles": [
+    "12B9"
+   ],
+   "inner_drawn_m": 4.125
+  },
+  {
+   "chain": "1F",
+   "run": "SW-3",
+   "candidate_line": "L-9a2c81164ec6499cc28c",
+   "t_m": "0.2",
+   "centreline_m": "6.6699 .. 6.6699",
+   "h_above_finish_m": "1.3 .. 1.3",
+   "h_status": "PRINTED",
+   "outer_arris_m": "6.769900",
+   "inner_arris_m": "6.569900",
+   "census": "DRAWN",
+   "outer_handles": [
+    "1273"
+   ],
+   "outer_drawn_m": 6.7697,
+   "inner_handles": [
+    "1278"
+   ],
+   "inner_drawn_m": 6.57
+  },
+  {
+   "chain": "2F",
+   "run": "NE-1",
+   "candidate_line": "L-030538dda6a32c601c4c",
+   "t_m": "0.15",
+   "centreline_m": "7.9 .. 7.9",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "8.100000",
+   "inner_arris_m": "7.700000",
+   "census": "PARTLY_DRAWN",
+   "outer_handles": [
+    "1280",
+    "1281"
+   ],
+   "outer_drawn_m": 7.1,
+   "inner_handles": [
+    "1282",
+    "1283",
+    "1284"
+   ],
+   "inner_drawn_m": 6.5
+  },
+  {
+   "chain": "2F",
+   "run": "NW-1",
+   "candidate_line": "L-030538dda6a32c601c4c",
+   "t_m": "0.2",
+   "centreline_m": "6.625 .. 6.625",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "6.800000",
+   "inner_arris_m": "6.450000",
+   "census": "DRAWN",
+   "outer_handles": [
+    "1291"
+   ],
+   "outer_drawn_m": 6.8,
+   "inner_handles": [
+    "1292"
+   ],
+   "inner_drawn_m": 6.45
+  },
+  {
+   "chain": "2F",
+   "run": "SE-1",
+   "candidate_line": "L-030538dda6a32c601c4c",
+   "t_m": "0.2",
+   "centreline_m": "6.625 .. 6.625",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "6.800000",
+   "inner_arris_m": "6.450000",
+   "census": "PARTLY_DRAWN",
+   "outer_handles": [
+    "1287",
+    "1288"
+   ],
+   "outer_drawn_m": 5.6,
+   "inner_handles": [
+    "1286",
+    "12B7",
+    "12B8"
+   ],
+   "inner_drawn_m": 5.5926
+  },
+  {
+   "chain": "2F",
+   "run": "SW-1",
+   "candidate_line": "L-030538dda6a32c601c4c",
+   "t_m": "0.2",
+   "centreline_m": "7.9 .. 7.9",
+   "h_above_finish_m": "0.5 .. 0.5",
+   "h_status": "PRINTED",
+   "outer_arris_m": "8.100000",
+   "inner_arris_m": "7.700000",
+   "census": "PARTLY_DRAWN",
+   "outer_handles": [
+    "1274",
+    "1275",
+    "1276",
+    "1277"
+   ],
+   "outer_drawn_m": 5.3,
+   "inner_handles": [
+    "1279",
+    "127A",
+    "127B",
+    "127C",
+    "127D",
+    "127E"
+   ],
+   "inner_drawn_m": 4.55
+  }
+ ],
+ "length_reconciliation": {
+  "ANNEX": {
+   "t737": "BOUNDED_EXPOSURE 14.671022 .. 15.271022",
+   "face_length_from_face_m": "29.342044",
+   "outer_sum_m": "29.342100",
+   "centreline_sum_t311_m": "28.885100",
+   "corner_term_m": "0.457000",
+   "face_vs_outer_m": "-0.000056",
+   "closes": true,
+   "upper_end": "T-737 high end +0.600 m2 = 1.200 m x 0.50: the NE-6x run found after T-311 (T-324 C5, centreline 1.29995) and the SW-3 cut range; carried as the bound"
+  },
+  "GF": {
+   "t737": "MEASURED 14.385",
+   "face_length_from_face_m": "28.770000",
+   "outer_sum_m": "28.769900",
+   "centreline_sum_t311_m": "28.369900",
+   "corner_term_m": "0.400000",
+   "face_vs_outer_m": "0.000100",
+   "closes": true,
+   "sw9": "SW-9 roof-plan pair BDB / BDC drawn 0.8948 m; + t/2 = 0.9948 = the V3.0.23 low end 0.99478; the outline reading 1.3999 is the high end (range kept, cause named)"
+  },
+  "2F": {
+   "t737": "MEASURED 14.9",
+   "face_length_from_face_m": "29.800000",
+   "outer_sum_m": "29.800000",
+   "centreline_sum_t311_m": "29.050000",
+   "corner_term_m": "0.750000",
+   "face_vs_outer_m": "0.000000",
+   "closes": true
+  },
+  "1F": {
+   "t737": "BOUNDED_EXPOSURE 54.00748 .. 60.029307",
+   "verdict": "NOT_INVERTIBLE: the 1F face is the sum of per-run CAD-top heights (0.448 .. 1.30, 3 runs HELD) so no single length follows from it; the census below checks the 1F runs by handle instead",
+   "nw_group": {
+    "roof_plan_inner_face_m": "11.6",
+    "t311_outline_inner_arrises_m": "12.043500",
+    "difference_m": "-0.443500",
+    "t311_centreline_m": "12.336200",
+    "v3023_centreline_m": "11.892700",
+    "v3023_minus_t311_m": "-0.443500",
+    "verdict": "AGREES: the roof plan draws the NW inner face straight (12A7); T-311 followed the wavy floor outline (+0.4435 m on NW-2); T-324 C3 straightened NW-2 in V3.0.23 by the same 0.4435 m; this is the 1F length difference T-550 named (49.676 vs 49.233)"
+   }
+  }
+ },
+ "outer_profiles_not_in_outline": {
+  "BDB": {
+   "chain": "GF",
+   "first_side": "SW-9",
+   "inner_face_m": 0.8948,
+   "profile": [
+    {
+     "handle": "BDC",
+     "layer": "5",
+     "depth_m": 0.2,
+     "overlap_m": 0.8948,
+     "from_m": 0.0
+    }
+   ]
+  },
+  "12A7": {
+   "chain": "1F",
+   "first_side": "NW-1",
+   "inner_face_m": 11.6,
+   "profile": [
+    {
+     "handle": "1308",
+     "layer": "5",
+     "depth_m": 0.3,
+     "overlap_m": 5.4871,
+     "from_m": 0.0
+    },
+    {
+     "handle": "1322",
+     "layer": "5",
+     "depth_m": 0.125,
+     "overlap_m": 4.9211,
+     "from_m": 0.566
+    },
+    {
+     "handle": "1323",
+     "layer": "5",
+     "depth_m": 0.175,
+     "overlap_m": 4.9211,
+     "from_m": 0.566
+    },
+    {
+     "handle": "130E",
+     "layer": "5",
+     "depth_m": 0.6052,
+     "overlap_m": 0.6,
+     "from_m": 5.7923
+    },
+    {
+     "handle": "12A6",
+     "layer": "5",
+     "depth_m": 0.2,
+     "overlap_m": 0.5,
+     "from_m": 6.4923
+    },
+    {
+     "handle": "1315",
+     "layer": "5",
+     "depth_m": 0.4983,
+     "overlap_m": 0.428,
+     "from_m": 6.9923
+    },
+    {
+     "handle": "1316",
+     "layer": "5",
+     "depth_m": 0.5483,
+     "overlap_m": 0.05,
+     "from_m": 7.4203
+    },
+    {
+     "handle": "1319",
+     "layer": "5",
+     "depth_m": 0.4983,
+     "overlap_m": 4.0594,
+     "from_m": 7.4203
+    },
+    {
+     "handle": "1318",
+     "layer": "5",
+     "depth_m": 0.5483,
+     "overlap_m": 3.9594,
+     "from_m": 7.4703
+    },
+    {
+     "handle": "130D",
+     "layer": "5",
+     "depth_m": 0.5483,
+     "overlap_m": 0.05,
+     "from_m": 11.4297
+    },
+    {
+     "handle": "130C",
+     "layer": "5",
+     "depth_m": 0.4983,
+     "overlap_m": 0.022,
+     "from_m": 11.4797
+    }
+   ]
+  },
+  "12B9": {
+   "chain": "1F",
+   "first_side": "SW-2",
+   "inner_face_m": 4.125,
+   "profile": [
+    {
+     "handle": "12C5",
+     "layer": "5",
+     "depth_m": 0.4,
+     "overlap_m": 4.125,
+     "from_m": 0.0
+    },
+    {
+     "handle": "12A8",
+     "layer": "5",
+     "depth_m": 0.2,
+     "overlap_m": 2.2949,
+     "from_m": 1.8301
+    },
+    {
+     "handle": "12A9",
+     "layer": "5",
+     "depth_m": 0.15,
+     "overlap_m": 2.2949,
+     "from_m": 1.8301
+    }
+   ]
+  },
+  "1283": {
+   "chain": "2F",
+   "first_side": "NE-1",
+   "inner_face_m": 3.0842,
+   "profile": [
+    {
+     "handle": "1281",
+     "layer": "1",
+     "depth_m": 0.15,
+     "overlap_m": 3.0842,
+     "from_m": 0.0
+    }
+   ]
+  },
+  "12B7": {
+   "chain": "2F",
+   "first_side": "SE-1",
+   "inner_face_m": 4.2,
+   "profile": [
+    {
+     "handle": "1288",
+     "layer": "1",
+     "depth_m": 0.2,
+     "overlap_m": 4.2,
+     "from_m": 0.0
+    }
+   ]
+  },
+  "1279": {
+   "chain": "2F",
+   "first_side": "SW-1",
+   "inner_face_m": 1.53,
+   "profile": [
+    {
+     "handle": "1274",
+     "layer": "1",
+     "depth_m": 0.2,
+     "overlap_m": 1.53,
+     "from_m": 0.0
+    }
+   ]
+  }
+ },
+ "registration": {
+  "ANNEX+GF": {
+   "outline_floor": "GF",
+   "plan": "1F_PLAN",
+   "vertices": 18,
+   "on_entity_end_points": 13
+  },
+  "1F": {
+   "outline_floor": "1F",
+   "plan": "2F_PLAN",
+   "vertices": 22,
+   "on_entity_end_points": 9
+  },
+  "2F": {
+   "outline_floor": "2F",
+   "plan": "2F_PLAN",
+   "vertices": 8,
+   "on_entity_end_points": 8
+  }
+ },
+ "freelancer": {
+  "rows": [
+   {
+    "row": "BLK 172",
+    "his_m2": "66.000000",
+    "his_length_m": "66.000000",
+    "his_height_m": "1.000000"
+   },
+   {
+    "row": "BLK 177",
+    "his_m2": "77.130000",
+    "his_length_m": "42.850000",
+    "his_height_m": "1.800000"
+   },
+   {
+    "row": "BLK 178",
+    "his_m2": "29.800000",
+    "his_length_m": "29.800000",
+    "his_height_m": "1.000000"
+   }
+  ],
+  "his_total_m2": "172.930000",
+  "vs_ceiling_m2": "71.465777",
+  "vs_p1_m2": "112.517057 .. 117.885025"
+ }
+}

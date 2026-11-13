@@ -1,0 +1,42 @@
+{
+ "schema": "URBAN_T736_RECORD_EXTRACT_V1",
+ "source": "agents/control docs/agents/verdicts/V3.0.74/DOWNGRADES.json (board commit 2d28645c, file sha256 76109859d28d64f9534da62937a786b6ff514e4c93ed40cfe7022b3e3ea88046)",
+ "record": {
+  "basis_label": "UNSUPPORTED BASIS",
+  "binding": "LINE_CONTENT_V1",
+  "candidate_version": "ARCH_TAKEOFF_V3.0.74",
+  "checker": {
+   "routine": "Verifier",
+   "run_token": "20261112T135228-451-21809",
+   "verdict_commit": "022f34f12"
+  },
+  "downgrade_id": "DG-98cbadebaecc5ede",
+  "engine_qty": 115.832,
+  "evidence": [
+   {
+    "printed_value": "radius 2211.0915 mm each (pi r^2 = 15.359013 m2; 105-chord polygon 15.349849 m2)",
+    "sheet": "Alsenan chalet project / P7757.dxf (2F plan, +9.70 roof) CIRCLE 12EB and CIRCLE 2F33"
+   },
+   {
+    "printed_value": "closed face 146.374500 m2 (12E2) .. 146.532000 m2 (2F wall face), perimeter 65.140 m",
+    "sheet": "Alsenan chalet project / P7757.dxf (2F plan) LINE 1281 / 1291 / 1278 / 12A7 / 1285 / 12C9 / 12B9 / 12E2 / 12E6 / 1280 + door gap 1.000"
+   },
+   {
+    "printed_value": "115.832 m2 = 146.532000 - 2 x 15.349849 = 115.832303 (3-decimal rounding 0.000303)",
+    "sheet": "ARCH_TAKEOFF_V3.0.73 L-636fd3ff1784a12e653b"
+   }
+  ],
+  "line_content_sha256": "96dcbdd91b8daabc94b9a47cf76b02b391e3935826aeed7dfbb738dc87a7360d",
+  "line_ids": [
+   "L-636fd3ff1784a12e653b"
+  ],
+  "project_id": "development-villa-t131",
+  "reason": "UNSUPPORTED BASIS: the released +9.70 roof membrane 115.832 m2 lies 0.018026 m2 ABOVE its own same-basis band 115.656474 .. 115.813974 m2: the trace deducts the two dome CIRCLEs 12EB / 2F33 (r 2.211092 m) as inscribed 105-chord polygons (1 mm sagitta), 15.349849 instead of 15.359013 m2 each (under-deduction 0.018329 m2, R-T691-1); the face is closed on named lines (wall-face reading 146.532000 m2, D-band reading 146.374500 m2: the 0.075 layer-D feature at the 2F west wall foot is unprinted, D-BAND 0.1575 m2). Downgrade only: the line goes HELD; the candidate figure stays in the audit rows; the H4 package then carries the drawing band (R-T734-1 c), never a chosen end",
+  "resolved": false,
+  "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+  "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+  "state": "HELD",
+  "time": "2026-11-12T15:06:49Z",
+  "unit": "m2"
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.73.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.71",
+  "ARCH_TAKEOFF_V3.0.72"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.71": {
+   "lines": 5123,
+   "lines_sha256": "fc0bd98f914ab9a7bfb035fbb5dfaeadf8a9868dfffc74f509785d728e2389a5"
+  },
+  "ARCH_TAKEOFF_V3.0.72": {
+   "lines": 5123,
+   "lines_sha256": "f95787445eb78597ec8bca6c46d90e5d17b4fb4d9ad417e9ef0463c7b3be53ae",
+   "previous": "ARCH_TAKEOFF_V3.0.71",
+   "item_codes": {
+    "MAS.BLOCK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 2
+    },
+    "MAS.GLUE.AAC": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 4
+    },
+    "MAS.MORTAR.BLACK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 6
+    },
+    "MAS.MORTAR.BLACK.LINTEL_BEARING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 6,
+     "record": 0
+    },
+    "MAS.MORTAR.BLACK.PERIMETER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 3,
+     "record": 0
+    },
+    "MAS.UNITS.BLACK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 6
+    }
+   },
+   "families": {
+    "B9-04": {
+     "MAS.MORTAR.BLACK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 6
+     },
+     "MAS.MORTAR.BLACK.LINTEL_BEARING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 6,
+      "record": 0
+     },
+     "MAS.MORTAR.BLACK.PERIMETER": {
+      "added": 0,
+      "removed": 0,
+      "changed": 3,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [
+    "B9-01",
+    "B9-04"
+   ],
+   "record_apart": [],
+   "touched": 10,
+   "record_only": 18
+  }
+ }
+}

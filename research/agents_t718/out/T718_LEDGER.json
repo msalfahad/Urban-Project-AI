@@ -1,0 +1,797 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.70",
+ "cut_pieces": [
+  {
+   "cuts": [
+    "column 3005 near face (3005) s 1.0",
+    "column 3005 far face (3005) s 1.5",
+    "window jamb C5C (C5C) s 2.25"
+   ],
+   "flight": "MS2-L",
+   "piece": "MS2-L.W1",
+   "plan_front_edge_m": "1.000000",
+   "plan_riser_face_m": "0.950000",
+   "risers": 4,
+   "risers_by_front": 4,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "1.000000",
+   "t410_risers": 4,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-9b1da1af7c162de2233c",
+     "value": "1.171840"
+    },
+    "ZIGZAG": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-656ab12cc9b9797d3b1a",
+     "value": "1.672000"
+    }
+   }
+  },
+  {
+   "cuts": [
+    "column 3005 near face (3005) s 1.0",
+    "column 3005 far face (3005) s 1.5",
+    "window jamb C5C (C5C) s 2.25"
+   ],
+   "flight": "MS2-L",
+   "piece": "MS2-L.W1C",
+   "plan_front_edge_m": "0.500000",
+   "plan_riser_face_m": "0.500000",
+   "risers": 1,
+   "risers_by_front": 1,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "0.500000",
+   "t410_risers": 1,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-193f8e812d9ade5f9c41",
+     "value": "0.685920"
+    },
+    "ZIGZAG": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-1c907e0a59c55204e430",
+     "value": "0.768000"
+    }
+   }
+  },
+  {
+   "cuts": [
+    "column 3005 near face (3005) s 1.0",
+    "column 3005 far face (3005) s 1.5",
+    "window jamb C5C (C5C) s 2.25"
+   ],
+   "flight": "MS2-L",
+   "piece": "MS2-L.W1B",
+   "plan_front_edge_m": "0.750000",
+   "plan_riser_face_m": "0.750000",
+   "risers": 3,
+   "risers_by_front": 3,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "0.750000",
+   "t410_risers": 3,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-caacb4c1425981b2585f",
+     "value": "0.878880"
+    },
+    "ZIGZAG": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-20432b887f91dee03925",
+     "value": "1.254000"
+    }
+   }
+  },
+  {
+   "cuts": [
+    "column 3005 near face (3005) s 1.0",
+    "column 3005 far face (3005) s 1.5",
+    "window jamb C5C (C5C) s 2.25"
+   ],
+   "flight": "MS2-L",
+   "piece": "MS2-L.W2",
+   "plan_front_edge_m": "1.050000",
+   "plan_riser_face_m": "1.100000",
+   "risers": 4,
+   "risers_by_front": 4,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "1.050000",
+   "t410_risers": 4,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "NOT_APPLICABLE",
+     "high": null,
+     "line_id": "L-4ff56def5b73b558afbe",
+     "value": null
+    },
+    "ZIGZAG": {
+     "class": "NOT_APPLICABLE",
+     "high": null,
+     "line_id": "L-f45c2e6d46b0cc6a7e53",
+     "value": null
+    }
+   }
+  },
+  {
+   "cuts": [
+    "column 2FBD near face (2FBD) s 0.4",
+    "column 2FBD far face (2FBD) s 0.9",
+    "window jamb 354 (354) s 1.65"
+   ],
+   "flight": "MS1-L",
+   "piece": "MS1-L.W1",
+   "plan_front_edge_m": "0.400000",
+   "plan_riser_face_m": "0.350000",
+   "risers": 2,
+   "risers_by_front": 2,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "0.400000",
+   "t410_risers": 2,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-a43adc74906d8bcd7b1c",
+     "value": "0.470071"
+    },
+    "ZIGZAG": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-53f3b7f153af0e1f5538",
+     "value": "0.733333"
+    }
+   }
+  },
+  {
+   "cuts": [
+    "column 2FBD near face (2FBD) s 0.4",
+    "column 2FBD far face (2FBD) s 0.9",
+    "window jamb 354 (354) s 1.65"
+   ],
+   "flight": "MS1-L",
+   "piece": "MS1-L.W1C",
+   "plan_front_edge_m": "0.500000",
+   "plan_riser_face_m": "0.500000",
+   "risers": 1,
+   "risers_by_front": 1,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "0.500000",
+   "t410_risers": 1,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-aed4c2990437f767dc90",
+     "value": "0.687588"
+    },
+    "ZIGZAG": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-c56a452218763d5e7bbf",
+     "value": "0.766667"
+    }
+   }
+  },
+  {
+   "cuts": [
+    "column 2FBD near face (2FBD) s 0.4",
+    "column 2FBD far face (2FBD) s 0.9",
+    "window jamb 354 (354) s 1.65"
+   ],
+   "flight": "MS1-L",
+   "piece": "MS1-L.W1B",
+   "plan_front_edge_m": "0.750000",
+   "plan_riser_face_m": "0.750000",
+   "risers": 3,
+   "risers_by_front": 3,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "0.750000",
+   "t410_risers": 3,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-ff51392df9e2c8c21efe",
+     "value": "0.881382"
+    },
+    "ZIGZAG": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-9e5ed7164ee85f0fc196",
+     "value": "1.250000"
+    }
+   }
+  },
+  {
+   "cuts": [
+    "column 2FBD near face (2FBD) s 0.4",
+    "column 2FBD far face (2FBD) s 0.9",
+    "window jamb 354 (354) s 1.65"
+   ],
+   "flight": "MS1-L",
+   "piece": "MS1-L.W2",
+   "plan_front_edge_m": "1.050000",
+   "plan_riser_face_m": "1.100000",
+   "risers": 4,
+   "risers_by_front": 4,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "1.050000",
+   "t410_risers": 4,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "NOT_APPLICABLE",
+     "high": null,
+     "line_id": "L-18efa069acded71c81e7",
+     "value": null
+    },
+    "ZIGZAG": {
+     "class": "NOT_APPLICABLE",
+     "high": null,
+     "line_id": "L-76748b7b62ab2d52b4e2",
+     "value": null
+    }
+   }
+  },
+  {
+   "cuts": [
+    "GF face 21B end / hidden opening 33C start (33C) s 0.95",
+    "hidden opening 33C end / GF face 21C start (33C) s 1.85"
+   ],
+   "flight": "MS1-U",
+   "piece": "MS1-U.E1",
+   "plan_front_edge_m": "0.950000",
+   "plan_riser_face_m": "0.900000",
+   "risers": 4,
+   "risers_by_front": 4,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "0.950000",
+   "t410_risers": 4,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-32f71724eeeaa46638c9",
+     "value": "1.110854"
+    },
+    "ZIGZAG": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-bc0e1e80ca50865ccd06",
+     "value": "1.616667"
+    }
+   }
+  },
+  {
+   "cuts": [
+    "GF face 21B end / hidden opening 33C start (33C) s 0.95",
+    "hidden opening 33C end / GF face 21C start (33C) s 1.85"
+   ],
+   "flight": "MS1-U",
+   "piece": "MS1-U.E2",
+   "plan_front_edge_m": "0.900000",
+   "plan_riser_face_m": "0.900000",
+   "risers": 3,
+   "risers_by_front": 3,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "0.900000",
+   "t410_risers": 3,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "AT_MOST",
+     "high": "1.052389",
+     "line_id": "L-20c2640927e41626893d",
+     "value": null
+    },
+    "ZIGZAG": {
+     "class": "AT_MOST",
+     "high": "1.400000",
+     "line_id": "L-1ed4cfaa1c12054b401d",
+     "value": null
+    }
+   }
+  },
+  {
+   "cuts": [
+    "GF face 21B end / hidden opening 33C start (33C) s 0.95",
+    "hidden opening 33C end / GF face 21C start (33C) s 1.85"
+   ],
+   "flight": "MS1-U",
+   "piece": "MS1-U.E3a",
+   "plan_front_edge_m": "1.150000",
+   "plan_riser_face_m": "1.200000",
+   "risers": 4,
+   "risers_by_front": 4,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "1.150000",
+   "t410_risers": 4,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-cfecfcea2280155a6a74",
+     "value": "1.344718"
+    },
+    "ZIGZAG": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-9ec979f00305b8ae8049",
+     "value": "1.816667"
+    }
+   }
+  },
+  {
+   "cuts": [
+    "column 2FD2 near face (2FD2) s 0.2",
+    "column 2FD2 far face (2FD2) s 1.0"
+   ],
+   "flight": "RS-S",
+   "piece": "RS-S.S0",
+   "plan_front_edge_m": "0.200000",
+   "plan_riser_face_m": "0.150000",
+   "risers": 1,
+   "risers_by_front": 1,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "0.200000",
+   "t410_risers": 1,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "AT_MOST",
+     "high": "0.232143",
+     "line_id": "L-ebe230d8c2fbc35332b8",
+     "value": null
+    },
+    "ZIGZAG": {
+     "class": "AT_MOST",
+     "high": "0.360715",
+     "line_id": "L-c074ce526885a44423d0",
+     "value": null
+    }
+   }
+  },
+  {
+   "cuts": [
+    "column 2FD2 near face (2FD2) s 0.2",
+    "column 2FD2 far face (2FD2) s 1.0"
+   ],
+   "flight": "RS-S",
+   "piece": "RS-S.S1",
+   "plan_front_edge_m": "0.800000",
+   "plan_riser_face_m": "0.800000",
+   "risers": 3,
+   "risers_by_front": 3,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "0.800000",
+   "t410_risers": 3,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-0ae4be232407b92343ef",
+     "value": "0.978571"
+    },
+    "ZIGZAG": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-544b6b11bab9bbf037fb",
+     "value": "1.332143"
+    }
+   }
+  },
+  {
+   "cuts": [
+    "column 2FD2 near face (2FD2) s 0.2",
+    "column 2FD2 far face (2FD2) s 1.0"
+   ],
+   "flight": "RS-S",
+   "piece": "RS-S.S2",
+   "plan_front_edge_m": "2.000000",
+   "plan_riser_face_m": "2.050000",
+   "risers": 7,
+   "risers_by_front": 7,
+   "t410_agrees_front_edge": true,
+   "t410_plan_m": "2.000000",
+   "t410_risers": 7,
+   "t715_lines": {
+    "SLOPED": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-d980ace38bdd63fa8de4",
+     "value": "2.321429"
+    },
+    "ZIGZAG": {
+     "class": "CONDITIONAL_ON_FORM",
+     "high": null,
+     "line_id": "L-8dde910ffeeb94a58323",
+     "value": "3.125000"
+    }
+   }
+  }
+ ],
+ "drawn_sha256_16": "cf491c8a32183216",
+ "f_v715_1": {
+  "cause": "the 0.050 is the drawn nosing projection (front edge AC0 layer 5 / riser face AC2 layer 2, every pair 0.050 apart): T-410 cut the pieces on the FRONT-EDGE datum (first front edge -> column 3005 1.000, column 0.500, -> window jamb C5C 0.750 = 2.250); the Checker measured the wall from the first RISER FACE (2.200). Both runs are 3.300 (11 x 0.300) and both give 4 / 1 / 3 / 4 risers; the window stretch is 1.050 vs 1.100 by the same 0.050",
+  "difference_m": "0.050000",
+  "finding": "F-V715-1",
+  "flight": "MS2-L",
+  "nosing_projection_m": "0.050000",
+  "physical_reading": "the skirting rides the visible tread tops, which run front edge to front edge, and the sloped form rakes on the nosing line (UP-STAIR-011): the walled stretch of the strip is 2.250 (R-T718-1); 2.200 is the wall beyond riser face 1, a different length (the first 0.050 lies over the 1F floor under nosing 1)",
+  "status": "CLOSED - cause found (datum), no line moves",
+  "verdict": "T-410 pieces AGREE by handle (W1 1.000 / W1C 0.500 / W1B 0.750, risers 4 / 1 / 3); the 2F stack (12B7 / 2F78 / 12CF-12D1) repeats the 1F stations: one face, one reading",
+  "walled_plan_front_edge_m": "2.250000",
+  "walled_plan_riser_face_m": "2.200000",
+  "window_plan_front_edge_m": "1.050000",
+  "window_plan_riser_face_m": "1.100000"
+ },
+ "lines": [
+  {
+   "after": {
+    "carrier": null,
+    "cause": "floor kept (R-T715-2: 5 fronts >= 1.150); ceiling R-T718-2: every straight front of the turn lies inside the drawn square, so each <= its diameter hypot(1.150, 1.150) = 1.626346 (= BE6 drawn); 5 x that x (4.50/27 - 0.030)",
+    "class": "RANGE",
+    "high": "1.111337",
+    "item": "D-67 (winder subdivision not drawn; S-9, C-ST-3)",
+    "line_id": "L-820baecf7f726b4d8f1e",
+    "low": "0.785833",
+    "status": "DRAWING-CONFIRMED (region 1.150 x 1.150: fan BE6 / BE8 / BEA ends on AF0 / ADE); r 4.50/27 (Q-46 A), t ASSUMED - OWNER-APPROVED",
+    "value": null
+   },
+   "before": {
+    "carrier": null,
+    "cause": "R-T715-2: 5 turn risers (A-A) x >= 1.150 x (4.50/27 - 0.030)",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "D-67 (winder subdivision not drawn; S-9, C-ST-3)",
+    "line_id": "L-820baecf7f726b4d8f1e",
+    "low": "0.785833",
+    "status": "DRAWING-CONFIRMED; t ASSUMED - OWNER-APPROVED",
+    "value": null
+   },
+   "drawn_flight": "MS1-T",
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-820baecf7f726b4d8f1e",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "floor kept (R-T715-2: 5 fronts >= 1.150); ceiling R-T718-2: every straight front of the turn lies inside the drawn square, so each <= its diameter hypot(1.150, 1.150) = 1.626346 (= BE6 drawn); 5 x that",
+    "class": "RANGE",
+    "high": "8.131728",
+    "item": "D-67 (winder subdivision not drawn; S-9, C-ST-3)",
+    "line_id": "L-e085c168dee5fb19a7fb",
+    "low": "5.750000",
+    "status": "DRAWING-CONFIRMED (region 1.150 x 1.150: fan BE6 / BE8 / BEA ends on AF0 / ADE)",
+    "value": null
+   },
+   "before": {
+    "carrier": null,
+    "cause": "R-T715-2: 5 winder treads (A-A 5 turn risers, the 5th onto MS1-LD) x lane 1.150; each winder nosing spans inner corner -> outer wall >= 1.150",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "D-67 (winder subdivision not drawn; S-9, C-ST-3)",
+    "line_id": "L-e085c168dee5fb19a7fb",
+    "low": "5.750000",
+    "status": "DRAWING-CONFIRMED",
+    "value": null
+   },
+   "drawn_flight": "MS1-T",
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.STAIR.STEP_LM",
+   "line_id": "L-e085c168dee5fb19a7fb",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "floor R-T718-3: the 12 drawn riser faces sum 13.798023 lm (257 1.149742 / 255 1.148281 start on the curtails, ten 1.150) x (4.50/28 - 0.030); ceiling R-T718-2: each face line between the stair's outline arcs 23F r 1.530511 / 23E r 2.780511 (= ST S-OPENING 2DE / 2DD) = 1.250367, risers 1 / 2 from their drawn start to 23E + the curtail face arcs 259 0.840283 / 25B 0.562992: 16.304073 lm",
+    "class": "RANGE",
+    "high": "2.131176",
+    "item": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+    "line_id": "L-913cda8eb6d73f6e28cc",
+    "low": "1.803598",
+    "status": "ASSUMED - OWNER-APPROVED (riser 4.50/28, Q-50 A cond) on DRAWING-CONFIRMED riser faces (own read 257 .. 241 = ST 2EA .. 2DF, rigid fit 0.0 mm)",
+    "value": null
+   },
+   "before": {
+    "carrier": null,
+    "cause": "12 drawn curved riser lines: smaller of the two readings of their summed length (13.7964 lm, R-T711-2) x (4.50/28 - 0.030); marble may extend over the 0.050 band / curtail (open), never shorter",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+    "line_id": "L-913cda8eb6d73f6e28cc",
+    "low": "1.803386",
+    "status": "ASSUMED - OWNER-APPROVED (riser 4.50/28) on DRAWING-CONFIRMED riser lines (T-415 / T-412)",
+    "value": null
+   },
+   "drawn_flight": "RS-C",
+   "element_id": "GF-RC99C2A:flight 1",
+   "item_code": "FIN.MARBLE.RISER",
+   "line_id": "L-913cda8eb6d73f6e28cc",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "floor R-T718-3: 12 drawn front edges inside the lane 1.150000 (11 x 1.150 + 256 1.200 of which 0.050 over the outer band, role open RFI-S27) = 13.800000; ceiling R-T718-2: radial fronts between 23F / 23E = 1.250 each, steps 1 / 2 + curtail front arcs 258 0.949440 / 25A 0.672000: 16.521440 lm",
+    "class": "RANGE",
+    "high": "16.521440",
+    "item": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+    "line_id": "L-95b9555dd144951b071e",
+    "low": "13.800000",
+    "status": "DRAWING-CONFIRMED (own read: front edges 256 .. 240 layer 5, radial; curtail fronts 258 / 25A)",
+    "value": null
+   },
+   "before": {
+    "carrier": null,
+    "cause": "12 curved steps, each nosing a drawn riser line: smaller reading (T-415 12 x 1.150 = 13.800, engine RADIAL 13.7964); curtail steps 1-3 may add, never less",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "D-08 / RFI-S27 (curved flight: outer band role, curtail; Q-50 A cond curved part HELD)",
+    "line_id": "L-95b9555dd144951b071e",
+    "low": "13.796400",
+    "status": "DRAWING-CONFIRMED (T-415 / T-412)",
+    "value": null
+   },
+   "drawn_flight": "RS-C",
+   "element_id": "GF-RC99C2A:flight 1",
+   "item_code": "FIN.STAIR.STEP_LM",
+   "line_id": "L-95b9555dd144951b071e",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "min(O, D) of the measured rows 17.197803 + MS1-L CONFLICT smallest reading 3.225561; held rows >= 0; T-718: no drawn geometry bounds it from above: the winder + junction soffit (1.500 m2 plan) follows the undrawn winder subdivision D-67 (stepped or raked underside not printed, C-ST-3) and the O vs D soffit method has no owner rule; a raked or stepped surface over a plan has no area ceiling without its form",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "C-ST-3 / D-67 (winder + junction 1.500 m2 plan), O vs D soffit method (no owner rule)",
+    "line_id": "L-1fcec3328ccd0ea243d4",
+    "low": "20.423364",
+    "status": "DRAWING-CONFIRMED (T-281 MERGED)",
+    "value": null
+   },
+   "before": {
+    "carrier": null,
+    "cause": "min(O, D) of the measured rows 17.197803 + MS1-L CONFLICT smallest reading 3.225561; held rows >= 0",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "C-ST-3 / D-67 (winder + junction 1.500 m2 plan), O vs D soffit method (no owner rule)",
+    "line_id": "L-1fcec3328ccd0ea243d4",
+    "low": "20.423364",
+    "status": "DRAWING-CONFIRMED (T-281 MERGED)",
+    "value": null
+   },
+   "element_id": "STAIR:ST-01:soffit",
+   "item_code": "FIN.STAIR.SOFFIT",
+   "line_id": "L-1fcec3328ccd0ea243d4",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "carrier": null,
+    "cause": "min(O, D) of the measured RS-S / RS-LD / RS-A rows; RS-C, members and unknown sub-pieces >= 0; T-718: no drawn geometry bounds it from above: the RS-C underside form and waist are not printed (D-08 / RFI-S27; ST p.16 'THICK.' without a value), so the helical soffit has no ceiling",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "D-08 / RFI-S27 (RS-C waist not printed: helical soffit HELD)",
+    "line_id": "L-c77e3887f7e348b1461d",
+    "low": "4.460946",
+    "status": "ASSUMED - OWNER-APPROVED (riser 4.50/28) (T-281 MERGED)",
+    "value": null
+   },
+   "before": {
+    "carrier": null,
+    "cause": "min(O, D) of the measured RS-S / RS-LD / RS-A rows; RS-C, members and unknown sub-pieces >= 0",
+    "class": "AT_LEAST",
+    "high": null,
+    "item": "D-08 / RFI-S27 (RS-C waist not printed: helical soffit HELD)",
+    "line_id": "L-c77e3887f7e348b1461d",
+    "low": "4.460946",
+    "status": "ASSUMED - OWNER-APPROVED (riser 4.50/28) (T-281 MERGED)",
+    "value": null
+   },
+   "element_id": "STAIR:ST-02:soffit",
+   "item_code": "FIN.STAIR.SOFFIT",
+   "line_id": "L-c77e3887f7e348b1461d",
+   "unit": "m2"
+  }
+ ],
+ "rs_c_detail": {
+  "faces": {
+   "ceiling_lm": "16.304073",
+   "floor_lm": "13.798023",
+   "per_line": [
+    {
+     "at_most_m": "2.039576",
+     "curtail": "259",
+     "drawn_m": 1.149742,
+     "handle": "257",
+     "riser": 1
+    },
+    {
+     "at_most_m": "1.760824",
+     "curtail": "25B",
+     "drawn_m": 1.148281,
+     "handle": "255",
+     "riser": 2
+    },
+    {
+     "at_most_m": "1.250368",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "253",
+     "riser": 3
+    },
+    {
+     "at_most_m": "1.250368",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "251",
+     "riser": 4
+    },
+    {
+     "at_most_m": "1.250368",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "24F",
+     "riser": 5
+    },
+    {
+     "at_most_m": "1.250368",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "24D",
+     "riser": 6
+    },
+    {
+     "at_most_m": "1.250368",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "24B",
+     "riser": 7
+    },
+    {
+     "at_most_m": "1.250368",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "249",
+     "riser": 8
+    },
+    {
+     "at_most_m": "1.250368",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "247",
+     "riser": 9
+    },
+    {
+     "at_most_m": "1.250368",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "245",
+     "riser": 10
+    },
+    {
+     "at_most_m": "1.250368",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "243",
+     "riser": 11
+    },
+    {
+     "at_most_m": "1.250368",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "241",
+     "riser": 12
+    }
+   ]
+  },
+  "fronts": {
+   "ceiling_lm": "16.521440",
+   "floor_lm": "13.800000",
+   "per_line": [
+    {
+     "at_most_m": "2.149440",
+     "curtail": "258",
+     "drawn_m": 1.2,
+     "handle": "256",
+     "riser": 1
+    },
+    {
+     "at_most_m": "1.872000",
+     "curtail": "25A",
+     "drawn_m": 1.15,
+     "handle": "254",
+     "riser": 2
+    },
+    {
+     "at_most_m": "1.250000",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "252",
+     "riser": 3
+    },
+    {
+     "at_most_m": "1.250000",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "250",
+     "riser": 4
+    },
+    {
+     "at_most_m": "1.250000",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "24E",
+     "riser": 5
+    },
+    {
+     "at_most_m": "1.250000",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "24C",
+     "riser": 6
+    },
+    {
+     "at_most_m": "1.250000",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "24A",
+     "riser": 7
+    },
+    {
+     "at_most_m": "1.250000",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "248",
+     "riser": 8
+    },
+    {
+     "at_most_m": "1.250000",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "246",
+     "riser": 9
+    },
+    {
+     "at_most_m": "1.250000",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "244",
+     "riser": 10
+    },
+    {
+     "at_most_m": "1.250000",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "242",
+     "riser": 11
+    },
+    {
+     "at_most_m": "1.250000",
+     "curtail": null,
+     "drawn_m": 1.15,
+     "handle": "240",
+     "riser": 12
+    }
+   ]
+  }
+ },
+ "rules": {
+  "R-T718-1": "1.0.0",
+  "R-T718-2": "1.0.0",
+  "R-T718-3": "1.0.0"
+ },
+ "schema": "T718_STAIR_FINISH_ROUND2_V1",
+ "unchanged": "every other T-715 line (79 of 85) keeps its T-715 statement; the 26 skirting form lines of the 13 walled pieces stay CONDITIONAL_ON_FORM (ORR-007): this run confirms 10 cut pieces by handle"
+}

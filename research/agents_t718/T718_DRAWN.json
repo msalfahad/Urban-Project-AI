@@ -1,0 +1,666 @@
+{
+ "read_by": "worker 2, T-718, 2026-11-11 (own read)",
+ "round_stair_rs_c": {
+  "centre": "common centre of 23F / 23E / 239 / 23D (relative values only)",
+  "curtail": {
+   "face": {
+    "1": {
+     "arc_m": 0.840283,
+     "handle": "259",
+     "layer": "2",
+     "r_m": 0.338268
+    },
+    "2": {
+     "arc_m": 0.562992,
+     "handle": "25B",
+     "layer": "2",
+     "r_m": 0.226778
+    }
+   },
+   "front": {
+    "1": {
+     "arc_m": 0.94944,
+     "handle": "258",
+     "layer": "5",
+     "r_m": 0.354001
+    },
+    "2": {
+     "arc_m": 0.672,
+     "handle": "25A",
+     "layer": "5",
+     "r_m": 0.243547
+    }
+   }
+  },
+  "inner_band_r_m": 1.580511,
+  "inner_edge_r_m": 1.530511,
+  "lines": {
+   "faces": [
+    {
+     "drawn_m": 1.149742,
+     "handle": "257",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.581559,
+     "r_out_m": 2.730969,
+     "riser": 1
+    },
+    {
+     "drawn_m": 1.148281,
+     "handle": "255",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.58302,
+     "r_out_m": 2.730969,
+     "riser": 2
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "253",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.581302,
+     "r_out_m": 2.730969,
+     "riser": 3
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "251",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.581302,
+     "r_out_m": 2.730969,
+     "riser": 4
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "24F",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.581302,
+     "r_out_m": 2.730969,
+     "riser": 5
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "24D",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.581302,
+     "r_out_m": 2.730969,
+     "riser": 6
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "24B",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.581302,
+     "r_out_m": 2.730969,
+     "riser": 7
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "249",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.581302,
+     "r_out_m": 2.730969,
+     "riser": 8
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "247",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.581302,
+     "r_out_m": 2.730969,
+     "riser": 9
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "245",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.581302,
+     "r_out_m": 2.730969,
+     "riser": 10
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "243",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.581302,
+     "r_out_m": 2.730969,
+     "riser": 11
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "241",
+     "layer": "2",
+     "offset_m": 0.05,
+     "r_in_m": 1.581302,
+     "r_out_m": 2.730969,
+     "riser": 12
+    }
+   ],
+   "fronts": [
+    {
+     "drawn_m": 1.2,
+     "handle": "256",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.780511,
+     "riser": 1
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "254",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.730511,
+     "riser": 2
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "252",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.730511,
+     "riser": 3
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "250",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.730511,
+     "riser": 4
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "24E",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.730511,
+     "riser": 5
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "24C",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.730511,
+     "riser": 6
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "24A",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.730511,
+     "riser": 7
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "248",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.730511,
+     "riser": 8
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "246",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.730511,
+     "riser": 9
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "244",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.730511,
+     "riser": 10
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "242",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.730511,
+     "riser": 11
+    },
+    {
+     "drawn_m": 1.15,
+     "handle": "240",
+     "layer": "5",
+     "offset_m": 0.0,
+     "r_in_m": 1.580511,
+     "r_out_m": 2.730511,
+     "riser": 12
+    }
+   ]
+  },
+  "outer_band_r_m": 2.730511,
+  "outer_edge_r_m": 2.780511,
+  "structural_check": {
+   "rigid_fit_det": 1.0,
+   "rigid_fit_max_residual_mm": 0.0,
+   "st_face_handles": [
+    "2EA",
+    "2E9",
+    "2E8",
+    "2E7",
+    "2E6",
+    "2E5",
+    "2E4",
+    "2E3",
+    "2E2",
+    "2E1",
+    "2E0",
+    "2DF"
+   ],
+   "st_opening_handles": [
+    "2DE",
+    "2DD"
+   ],
+   "st_opening_r_m": [
+    1.530511,
+    2.780511
+   ]
+  }
+ },
+ "schema": "T718_DRAWN_V1",
+ "sources": {
+  "arch": {
+   "drive": "Alsenan chalet project / P7757_DXF_COMPRESSED.zip (P7757.dxf)",
+   "sha256_8": "ab54dd55"
+  },
+  "st": {
+   "drive": "Alsenan chalet project / ST7757 dxf.dxf",
+   "sha256_8": "9f9d1179"
+  }
+ },
+ "straight": {
+  "flights": {
+   "MS1-L": {
+    "cuts": [
+     {
+      "handle": "2FBD",
+      "label": "column 2FBD near face",
+      "station_m": 0.4
+     },
+     {
+      "handle": "2FBD",
+      "label": "column 2FBD far face",
+      "station_m": 0.9
+     },
+     {
+      "handle": "354",
+      "label": "window jamb 354",
+      "station_m": 1.65
+     }
+    ],
+    "face_handles": [
+     "DE",
+     "DF",
+     "D0",
+     "D1",
+     "CA",
+     "CB",
+     "CC",
+     "CD",
+     "-",
+     "486"
+    ],
+    "face_stations_m": [
+     0.05,
+     0.35,
+     0.65,
+     0.95,
+     1.25,
+     1.55,
+     1.85,
+     2.15,
+     null,
+     2.75
+    ],
+    "front_handles": [
+     "DC",
+     "DD",
+     "CE",
+     "CF",
+     "C6",
+     "C7",
+     "C9",
+     "C8",
+     "C5",
+     "485"
+    ],
+    "front_lengths_m": [
+     0.575,
+     1.15
+    ],
+    "front_stations_m": [
+     0.0,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     1.5,
+     1.8,
+     2.1,
+     2.4,
+     2.7
+    ],
+    "nosing_projection_m": [
+     0.05
+    ],
+    "sheet": "GF",
+    "wall_face": "298"
+   },
+   "MS1-U": {
+    "cuts": [
+     {
+      "handle": "33C",
+      "label": "GF face 21B end / hidden opening 33C start",
+      "station_m": 0.95
+     },
+     {
+      "handle": "33C",
+      "label": "hidden opening 33C end / GF face 21C start",
+      "station_m": 1.85
+     }
+    ],
+    "face_handles": [
+     "A93",
+     "A94",
+     "A9E",
+     "AA0",
+     "A9F",
+     "A9D",
+     "AA4",
+     "AA3",
+     "AA2",
+     "AA1",
+     "ABD"
+    ],
+    "face_stations_m": [
+     0.05,
+     0.35,
+     0.65,
+     0.95,
+     1.25,
+     1.55,
+     1.85,
+     2.15,
+     2.45,
+     2.75,
+     3.05
+    ],
+    "front_handles": [
+     "A92",
+     "A95",
+     "AA5",
+     "AA6",
+     "AA7",
+     "AA8",
+     "AA9",
+     "AAA",
+     "AAB",
+     "AAC",
+     "ABE"
+    ],
+    "front_lengths_m": [
+     1.15
+    ],
+    "front_stations_m": [
+     -0.0,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     1.5,
+     1.8,
+     2.1,
+     2.4,
+     2.7,
+     3.0
+    ],
+    "nosing_projection_m": [
+     0.05
+    ],
+    "sheet": "1F",
+    "wall_face": "B16"
+   },
+   "MS2-L": {
+    "cuts": [
+     {
+      "handle": "3005",
+      "label": "column 3005 near face",
+      "station_m": 1.0
+     },
+     {
+      "handle": "3005",
+      "label": "column 3005 far face",
+      "station_m": 1.5
+     },
+     {
+      "handle": "C5C",
+      "label": "window jamb C5C",
+      "station_m": 2.25
+     }
+    ],
+    "face_handles": [
+     "AC2",
+     "AC1",
+     "AB9",
+     "ABA",
+     "ABB",
+     "ABC",
+     "AB1",
+     "AB2",
+     "AB3",
+     "AB4",
+     "A99",
+     "A9A"
+    ],
+    "face_stations_m": [
+     0.05,
+     0.35,
+     0.65,
+     0.95,
+     1.25,
+     1.55,
+     1.85,
+     2.15,
+     2.45,
+     2.75,
+     3.05,
+     3.35
+    ],
+    "front_handles": [
+     "AC0",
+     "ABF",
+     "AB5",
+     "AB6",
+     "AB7",
+     "AB8",
+     "AAD",
+     "AAE",
+     "AB0",
+     "AAF",
+     "A98",
+     "A97"
+    ],
+    "front_lengths_m": [
+     1.15
+    ],
+    "front_stations_m": [
+     0.0,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     1.5,
+     1.8,
+     2.1,
+     2.4,
+     2.7,
+     3.0,
+     3.3
+    ],
+    "nosing_projection_m": [
+     0.05
+    ],
+    "sheet": "1F",
+    "wall_face": "AF1"
+   },
+   "RS-S": {
+    "cuts": [
+     {
+      "handle": "2FD2",
+      "label": "column 2FD2 near face",
+      "station_m": 0.2
+     },
+     {
+      "handle": "2FD2",
+      "label": "column 2FD2 far face",
+      "station_m": 1.0
+     }
+    ],
+    "face_handles": [
+     "B4E",
+     "B55",
+     "B54",
+     "B53",
+     "B52",
+     "B51",
+     "B50",
+     "B4F",
+     "B56",
+     "B57",
+     "B58"
+    ],
+    "face_stations_m": [
+     0.05,
+     0.35,
+     0.65,
+     0.95,
+     1.25,
+     1.55,
+     1.85,
+     2.15,
+     2.45,
+     2.75,
+     3.05
+    ],
+    "front_handles": [
+     "B43",
+     "B4A",
+     "B49",
+     "B48",
+     "B47",
+     "B46",
+     "B45",
+     "B44",
+     "B4B",
+     "B4C",
+     "B4D"
+    ],
+    "front_lengths_m": [
+     1.15
+    ],
+    "front_stations_m": [
+     0.0,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     1.5,
+     1.8,
+     2.1,
+     2.4,
+     2.7,
+     3.0
+    ],
+    "nosing_projection_m": [
+     0.05
+    ],
+    "sheet": "1F",
+    "wall_face": "336"
+   }
+  },
+  "sheet_offset_gf_to_1f_x_m": -44.8527,
+  "stack_pair": [
+   "3005",
+   "2FBD"
+  ]
+ },
+ "turn_ms1_t": {
+  "BE6_end_on_wall_corner_m": 0.0,
+  "BE7_end_past_north_face_m": 0.035355,
+  "BE7_end_past_west_face_m": -0.035355,
+  "fan": [
+   {
+    "drawn_m": 1.258652,
+    "handle": "BE8",
+    "kind": "fan_front",
+    "layer": "5"
+   },
+   {
+    "drawn_m": 1.626346,
+    "handle": "BE6",
+    "kind": "fan_front",
+    "layer": "5"
+   },
+   {
+    "drawn_m": 1.258652,
+    "handle": "BEA",
+    "kind": "fan_front",
+    "layer": "5"
+   },
+   {
+    "drawn_m": 1.258652,
+    "handle": "BE9",
+    "kind": "fan_face",
+    "layer": "2"
+   },
+   {
+    "drawn_m": 1.626346,
+    "handle": "BE7",
+    "kind": "fan_face",
+    "layer": "2"
+   },
+   {
+    "drawn_m": 1.258652,
+    "handle": "BEB",
+    "kind": "fan_face",
+    "layer": "2"
+   }
+  ],
+  "inner_corner": "start of BE6 (the fan's common point)",
+  "note": "BE7 / BE9 / BEB (layer 2) are the 0.050 companions; BE7 is drawn as long as BE6, so its far end passes the north face (drafting overshoot of an offset copy, not a longer riser: the walls bound it)",
+  "side_to_north_wall_m": 1.15,
+  "side_to_west_wall_m": 1.15,
+  "walls": [
+   "AF0",
+   "ADE"
+  ]
+ }
+}

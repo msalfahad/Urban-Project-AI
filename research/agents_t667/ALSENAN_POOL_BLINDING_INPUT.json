@@ -1,0 +1,44 @@
+{
+ "schema": "URBAN_T667_POOL_BLINDING_INPUT_V1",
+ "source": {
+  "dxf": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "Drive 'Alsenan chalet project' / 'ST7757.pdf' p.7 DETAIL OF SWIMMING POOL (N.I.S.)",
+  "arch_dxf": "Drive 'Alsenan chalet project' / 'P7757_DXF_COMPRESSED.zip' -> P7757.dxf (text search only)",
+  "read": "own read this task, 2026-11-10 (t667_extract.py on the decoded copy in .work/private; values only: areas, lengths, clearances; no position, no text)"
+ },
+ "printed": {
+  "blinding_t": [0.10, "ST p.7 '10cm PLAIN CONCRETE.' under the pool base"],
+  "wrap_layers": [["protection screed", 0.05, "ST p.7 '5cm SECREED.' under the base and up the outer wall faces"],
+                  ["membrane", 0.05, "ST p.7 '5cm INSULATION MEMBRANE.' under the base and up the outer wall faces"]],
+  "projection_beyond_wrap": [null, "ST p.7: the plain concrete is drawn past the outer membrane at both ends, no dimension (N.I.S.)"],
+  "outline": {"kind": "D", "r": [1.75, "ST DXF ground beams plan S-BW outer outline (back 3.50, bulge -1 half circle) = arch GF plan 350 x 350, walls 20"],
+              "b": [1.75, "ST DXF ground beams plan S-BW outer outline: straight sides 1.75 from the back to the circle's diameter"]},
+  "floor": {"kind": "flat", "basis": "owner Q-26 A (2026-10-19): flat floor at the printed 1.15 m; the structural detail's slope is not used"},
+  "steps": "none drawn: ST p.7 detail (its shallow bench belongs to the slope set aside by Q-26 A), ST DXF, arch DXF (no step / ladder text; the pool block is a label only); T-183 E and T-659 reads agree"
+ },
+ "geometry_read": {
+  "pool_outline_area_m2": 10.935563,
+  "pool_outline_perimeter_m": 12.497787,
+  "pool_back_on_plot_edge_gap_m": 0.0,
+  "pool_back_length_m": 3.5,
+  "band_7FE_along_pool_back_m": 0.001,
+  "nearest_drawn_line_m": {"1": 0.4998, "2": 0.95, "D": 0.503, "S-AXIS": 0.85, "S-COL.BON": 0.5, "S-COL.HAT": 0.5},
+  "foundation_frame_nearest_line_m": {"S-AXIS": 0.0, "S-BOUN": 0.0, "S-COL.BON": 0.4911, "S-COL.HAT": 0.4911},
+  "frame_check_columns_inside_a_footing": [35, 35],
+  "pool_grown_0.10_m2": 12.22105,
+  "pool_grown_inside_plot_m2": 11.85105,
+  "pool_grown_beyond_plot_m2": 0.37,
+  "pit_layer_over_pool_grown_in_plot_m2": {"1B24 F8": 1.931845, "1666 F4": 0.735358, "180C FN": 0.028558},
+  "pit_layer_union_over_pool_grown_in_plot_m2": 2.695761,
+  "footing_outline_over_pool_outline_m2": {"1B24 F8": 1.296549, "1666 F4": 0.282424},
+  "footing_outline_over_pool_grown_in_plot_m2": {"1B24 F8": 1.616095, "1666 F4": 0.483251},
+  "footing_outline_union_over_pool_grown_in_plot_m2": 2.099346
+ },
+ "cross_checks": {
+  "T597_pool_envelope_in_plot_m2": [11.85105, "research/agents_t597/T-597_B1_PLAN_SIDE.md (Checker re-measured, DRAWING-CONFIRMED)"],
+  "T597_pits_share_given_to_pool_envelope_m2": [2.695761, "research/agents_t597/T-597_B1_PLAN_SIDE.md (F8 1.931845, F4 0.735358, FN 0.028558)"],
+  "T597_beyond_plot_round_corners_m2": [0.365708, "research/agents_t597/T-597_B1_PLAN_SIDE.md (round corners; blinding is mitred here: 0.37)"],
+  "T183_blinding_at_least_m3": [1.222, "research/agents_t183/T-183_POOL_RC.md line B (grown 0.10, plot line not clipped)"]
+ }
+}

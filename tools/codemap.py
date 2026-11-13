@@ -701,6 +701,22 @@ def render_rules(repo, P):
             dl = (r.get("delegation") or {}).get("owner_requirement", "")
             L.append(f"| {r['rule_id']} | {r.get('version', '')} | {r.get('status', '')} | {cell(r.get('title', ''))} | "
                      f"{r.get('supersedes') or '-'} | {cell(dl, 70)} | {', '.join(f'`{x}`' for x in (r.get('tests') or [])[:2])} |")
+    # T-740: the Company Rulebook (OWNER CONFIRMED company rules, rules/rulebook/), its newest version only
+    books = sorted((p for p in repo.files if p.startswith("rules/rulebook/URBAN_COMPANY_RULEBOOK_") and p.endswith(".json")),
+                   key=lambda p: tuple(int(x) for x in re.findall(r"(\d+)\.(\d+)\.(\d+)\.json$", p)[0]))
+    if books:
+        rel = books[-1]
+        d = repo.json(rel)
+        recs = d.get("records") or []
+        L += ["", f"## Company rulebook `{rel}` ({d.get('version', '')}; {len(recs)}; earlier versions kept unchanged)", "",
+              "| Rule | Version | Status | Level | Title | Supersedes (in scope) | Tests |", "|---|---|---|---|---|---|---|"]
+        for r in recs:
+            for x in r.get("tests") or []:
+                if not repo.exists(x.split("::")[0]):
+                    P.warn(f"rule {r['rule_id']}: test reference does not resolve: {x}")
+            sup = (r.get("supersedes_in_scope") or "-").split(" (")[0]
+            L.append(f"| {r['rule_id']} | {r.get('version', '')} | {r.get('status', '')} | {r.get('level', '')} | "
+                     f"{cell(r.get('title', ''))} | {sup} | {', '.join(f'`{x}`' for x in (r.get('tests') or [])[:2]) or '-'} |")
     for title, rel, key, cols in (
             ("Method register V3 (`rules/methods/`)", "rules/methods/URBAN_METHOD_REGISTER_V3.json", "methods",
              (("Method id", "id"), ("Applies to", "applies_to"), ("Statement", "statement"))),

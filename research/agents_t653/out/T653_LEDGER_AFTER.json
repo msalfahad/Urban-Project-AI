@@ -1,0 +1,647 @@
+{
+ "eval_fixtures": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "b1f4a14346d7bef2649fc6b78e6868c2d7c9acea65c38e6f38b4aa9fb47303ed",
+     "equal_committed": true,
+     "output": "A_FIXTURE_RESULTS.json",
+     "rebuilt_sha256": "b1f4a14346d7bef2649fc6b78e6868c2d7c9acea65c38e6f38b4aa9fb47303ed",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "b1f4a14346d7bef2649fc6b78e6868c2d7c9acea65c38e6f38b4aa9fb47303ed",
+     "equal_committed": true,
+     "output": "A_FIXTURE_RESULTS.json",
+     "rebuilt_sha256": "b1f4a14346d7bef2649fc6b78e6868c2d7c9acea65c38e6f38b4aa9fb47303ed",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6
+  }
+ },
+ "t543": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "a4cfcdeb01aab26e38b543fa73c89c2999b54cbad85916d9fe6023aa0af4f721",
+     "equal_committed": true,
+     "output": "T543_BLOCKWORK_RECONCILE.json",
+     "rebuilt_sha256": "a4cfcdeb01aab26e38b543fa73c89c2999b54cbad85916d9fe6023aa0af4f721",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "a4cfcdeb01aab26e38b543fa73c89c2999b54cbad85916d9fe6023aa0af4f721",
+     "equal_committed": true,
+     "output": "T543_BLOCKWORK_RECONCILE.json",
+     "rebuilt_sha256": "a4cfcdeb01aab26e38b543fa73c89c2999b54cbad85916d9fe6023aa0af4f721",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t550": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "499544802db1bab767099c07dc6a48d6ee2c3f950659656616e45b8e17412a12",
+     "equal_committed": true,
+     "output": "T550_UNRESOLVED_RESTATED.json",
+     "rebuilt_sha256": "499544802db1bab767099c07dc6a48d6ee2c3f950659656616e45b8e17412a12",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "499544802db1bab767099c07dc6a48d6ee2c3f950659656616e45b8e17412a12",
+     "equal_committed": true,
+     "output": "T550_UNRESOLVED_RESTATED.json",
+     "rebuilt_sha256": "499544802db1bab767099c07dc6a48d6ee2c3f950659656616e45b8e17412a12",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t559": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "73a05432f590e28cfddcf57e60524eb419d5172d82021caa96963b5d9fcff464",
+     "equal_committed": false,
+     "output": "T559_LEFTOVER.json",
+     "rebuilt_sha256": "09ad09899c03d3fa3cfae4b88a54eece349d3a3e6625a08b2c6c1638d0eb4f10",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "73a05432f590e28cfddcf57e60524eb419d5172d82021caa96963b5d9fcff464",
+     "equal_committed": false,
+     "output": "T559_LEFTOVER.json",
+     "rebuilt_sha256": "09ad09899c03d3fa3cfae4b88a54eece349d3a3e6625a08b2c6c1638d0eb4f10",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t568": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "75e25fe8239fcb08361869a0d5c4e4483f3b6c859b8a74912ec42aae326be045",
+     "equal_committed": false,
+     "output": "T568_TYPE_TABLE.json",
+     "rebuilt_sha256": "5f94998d667ff552116a46b394bc36e8f25739afbe2b3fa1af4152bb00e39a6c",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "75e25fe8239fcb08361869a0d5c4e4483f3b6c859b8a74912ec42aae326be045",
+     "equal_committed": false,
+     "output": "T568_TYPE_TABLE.json",
+     "rebuilt_sha256": "5f94998d667ff552116a46b394bc36e8f25739afbe2b3fa1af4152bb00e39a6c",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t573": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "447804a48e21142e5d0eeffda8517300ab595791a11b599a7b1af74dbf3dcdbf",
+     "equal_committed": true,
+     "output": "T573_CEILING_RECONCILE.json",
+     "rebuilt_sha256": "447804a48e21142e5d0eeffda8517300ab595791a11b599a7b1af74dbf3dcdbf",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "447804a48e21142e5d0eeffda8517300ab595791a11b599a7b1af74dbf3dcdbf",
+     "equal_committed": true,
+     "output": "T573_CEILING_RECONCILE.json",
+     "rebuilt_sha256": "447804a48e21142e5d0eeffda8517300ab595791a11b599a7b1af74dbf3dcdbf",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t574": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "7b1e01bf83c20702bad3ed58689915c57bac5e3a179bf33195816c67435abab8",
+     "equal_committed": true,
+     "output": "T574_SKIRTING_RECONCILE.json",
+     "rebuilt_sha256": "7b1e01bf83c20702bad3ed58689915c57bac5e3a179bf33195816c67435abab8",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "7b1e01bf83c20702bad3ed58689915c57bac5e3a179bf33195816c67435abab8",
+     "equal_committed": true,
+     "output": "T574_SKIRTING_RECONCILE.json",
+     "rebuilt_sha256": "7b1e01bf83c20702bad3ed58689915c57bac5e3a179bf33195816c67435abab8",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t577": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "b1b684a3478982b7c80d6f25a6acf0c8dea4dfaa80449f0866e373cee2ddb320",
+     "equal_committed": true,
+     "output": "T577_MARBLE_RECONCILE.json",
+     "rebuilt_sha256": "b1b684a3478982b7c80d6f25a6acf0c8dea4dfaa80449f0866e373cee2ddb320",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "b1b684a3478982b7c80d6f25a6acf0c8dea4dfaa80449f0866e373cee2ddb320",
+     "equal_committed": true,
+     "output": "T577_MARBLE_RECONCILE.json",
+     "rebuilt_sha256": "b1b684a3478982b7c80d6f25a6acf0c8dea4dfaa80449f0866e373cee2ddb320",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t578": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "75172951bf95cfdd8a857a42c43521daa088a6a210cf95483d18c3fca3432158",
+     "equal_committed": true,
+     "output": "T578_RAIL_NOSING_RECONCILE.json",
+     "rebuilt_sha256": "75172951bf95cfdd8a857a42c43521daa088a6a210cf95483d18c3fca3432158",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "75172951bf95cfdd8a857a42c43521daa088a6a210cf95483d18c3fca3432158",
+     "equal_committed": true,
+     "output": "T578_RAIL_NOSING_RECONCILE.json",
+     "rebuilt_sha256": "75172951bf95cfdd8a857a42c43521daa088a6a210cf95483d18c3fca3432158",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t584": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "242b8e0d3fdbf271b08b0f2bf1569ce21193f9b560603ee48ccdc8bf018a68b9",
+     "equal_committed": true,
+     "output": "T584_STEPS.json",
+     "rebuilt_sha256": "242b8e0d3fdbf271b08b0f2bf1569ce21193f9b560603ee48ccdc8bf018a68b9",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "242b8e0d3fdbf271b08b0f2bf1569ce21193f9b560603ee48ccdc8bf018a68b9",
+     "equal_committed": true,
+     "output": "T584_STEPS.json",
+     "rebuilt_sha256": "242b8e0d3fdbf271b08b0f2bf1569ce21193f9b560603ee48ccdc8bf018a68b9",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t585": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "207d4c6a35172786a54caaa1732351cac23947ed3e69228fb815a8538361bb7e",
+     "equal_committed": true,
+     "output": "T585_SKIRTING_FOLLOWUPS.json",
+     "rebuilt_sha256": "207d4c6a35172786a54caaa1732351cac23947ed3e69228fb815a8538361bb7e",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "207d4c6a35172786a54caaa1732351cac23947ed3e69228fb815a8538361bb7e",
+     "equal_committed": true,
+     "output": "T585_SKIRTING_FOLLOWUPS.json",
+     "rebuilt_sha256": "207d4c6a35172786a54caaa1732351cac23947ed3e69228fb815a8538361bb7e",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t592": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "c32be0ed6d17ff05e3a116fafb3c0bb241a90d9cdfaf602877e16977e256f689",
+     "equal_committed": true,
+     "output": "T592_DOOR_STEPS.json",
+     "rebuilt_sha256": "c32be0ed6d17ff05e3a116fafb3c0bb241a90d9cdfaf602877e16977e256f689",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "c32be0ed6d17ff05e3a116fafb3c0bb241a90d9cdfaf602877e16977e256f689",
+     "equal_committed": true,
+     "output": "T592_DOOR_STEPS.json",
+     "rebuilt_sha256": "c32be0ed6d17ff05e3a116fafb3c0bb241a90d9cdfaf602877e16977e256f689",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t598": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": null,
+     "equal_committed": null,
+     "output": "ALSENAN_EDGES_T598.json#result",
+     "rebuilt_sha256": "775785dcfd595c63b197f96108034ab58d0c47ee0026fda27579ae6800d22686",
+     "text": null
+    },
+    {
+     "committed_sha256": null,
+     "equal_committed": null,
+     "output": "ALSENAN_EDGES_T598.json#result==committed",
+     "rebuilt_sha256": "3cbc87c7681f34db4617feaa2c8801931bc5e42d8d0f560e756dd4cd92885f18",
+     "text": "True"
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": null,
+     "equal_committed": null,
+     "output": "ALSENAN_EDGES_T598.json#result",
+     "rebuilt_sha256": "775785dcfd595c63b197f96108034ab58d0c47ee0026fda27579ae6800d22686",
+     "text": null
+    },
+    {
+     "committed_sha256": null,
+     "equal_committed": null,
+     "output": "ALSENAN_EDGES_T598.json#result==committed",
+     "rebuilt_sha256": "3cbc87c7681f34db4617feaa2c8801931bc5e42d8d0f560e756dd4cd92885f18",
+     "text": "True"
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t602": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "c7cb2f106e7b2039482582c7b95688fd003368928b38b04d325b79f1cc92db40",
+     "equal_committed": true,
+     "output": "T602_DOOR_STEPS.json",
+     "rebuilt_sha256": "c7cb2f106e7b2039482582c7b95688fd003368928b38b04d325b79f1cc92db40",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "c7cb2f106e7b2039482582c7b95688fd003368928b38b04d325b79f1cc92db40",
+     "equal_committed": true,
+     "output": "T602_DOOR_STEPS.json",
+     "rebuilt_sha256": "c7cb2f106e7b2039482582c7b95688fd003368928b38b04d325b79f1cc92db40",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t607": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "7a8867153e6d885b3d258e4347ac9851022cdc7d87f60f4e63e829efbee129a2",
+     "equal_committed": true,
+     "output": "T607_SHARED_RESIDUAL.json",
+     "rebuilt_sha256": "7a8867153e6d885b3d258e4347ac9851022cdc7d87f60f4e63e829efbee129a2",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "7a8867153e6d885b3d258e4347ac9851022cdc7d87f60f4e63e829efbee129a2",
+     "equal_committed": true,
+     "output": "T607_SHARED_RESIDUAL.json",
+     "rebuilt_sha256": "7a8867153e6d885b3d258e4347ac9851022cdc7d87f60f4e63e829efbee129a2",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t618": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "3ca6790cf6378e2221d57fabbb7b775566fd27a0fea80b0b18190dcc8a0ef49f",
+     "equal_committed": true,
+     "output": "T618_RESIDUALS.json",
+     "rebuilt_sha256": "3ca6790cf6378e2221d57fabbb7b775566fd27a0fea80b0b18190dcc8a0ef49f",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "3ca6790cf6378e2221d57fabbb7b775566fd27a0fea80b0b18190dcc8a0ef49f",
+     "equal_committed": true,
+     "output": "T618_RESIDUALS.json",
+     "rebuilt_sha256": "3ca6790cf6378e2221d57fabbb7b775566fd27a0fea80b0b18190dcc8a0ef49f",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t627": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "491f2f7fbfbf2208d4a5793224364b21e2ffb072b335886411a6b638bddf81bf",
+     "equal_committed": true,
+     "output": "T627_ROW_EVIDENCE.json",
+     "rebuilt_sha256": "491f2f7fbfbf2208d4a5793224364b21e2ffb072b335886411a6b638bddf81bf",
+     "text": null
+    },
+    {
+     "committed_sha256": "7cb60e0581255964e0bb77c6ab6b18e539cbfab231710de998c016d534270ebd",
+     "equal_committed": true,
+     "output": "T627_ROW_EVIDENCE.md",
+     "rebuilt_sha256": "7cb60e0581255964e0bb77c6ab6b18e539cbfab231710de998c016d534270ebd",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": "InvalidOperation: [<class 'decimal.InvalidOperation'>]",
+   "outputs": [],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t645": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "3e1384ee4e84bf9ed74a976e3a27170aad0fe4b049d76708cfe7dc3f60fe9629",
+     "equal_committed": true,
+     "output": "STAIR_HOLD_CENSUS_T645.json",
+     "rebuilt_sha256": "3e1384ee4e84bf9ed74a976e3a27170aad0fe4b049d76708cfe7dc3f60fe9629",
+     "text": null
+    },
+    {
+     "committed_sha256": "2181c92dd8ed82ffb0e0aa25f14fc2feaa9bf0f20dbaaa9fac8fb7c41de9f664",
+     "equal_committed": true,
+     "output": "STAIR_HOLD_CENSUS_T645.md",
+     "rebuilt_sha256": "2181c92dd8ed82ffb0e0aa25f14fc2feaa9bf0f20dbaaa9fac8fb7c41de9f664",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "3e1384ee4e84bf9ed74a976e3a27170aad0fe4b049d76708cfe7dc3f60fe9629",
+     "equal_committed": true,
+     "output": "STAIR_HOLD_CENSUS_T645.json",
+     "rebuilt_sha256": "3e1384ee4e84bf9ed74a976e3a27170aad0fe4b049d76708cfe7dc3f60fe9629",
+     "text": null
+    },
+    {
+     "committed_sha256": "2181c92dd8ed82ffb0e0aa25f14fc2feaa9bf0f20dbaaa9fac8fb7c41de9f664",
+     "equal_committed": true,
+     "output": "STAIR_HOLD_CENSUS_T645.md",
+     "rebuilt_sha256": "2181c92dd8ed82ffb0e0aa25f14fc2feaa9bf0f20dbaaa9fac8fb7c41de9f664",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ },
+ "t646": {
+  "default": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "fd4988c7f2f9cf0d187a1eebaf57897c640ea3a0114d98314cc4f6fe9c4197cf",
+     "equal_committed": true,
+     "output": "ROOF_FENCE_HOLD_CENSUS_T646.json",
+     "rebuilt_sha256": "fd4988c7f2f9cf0d187a1eebaf57897c640ea3a0114d98314cc4f6fe9c4197cf",
+     "text": null
+    },
+    {
+     "committed_sha256": "03f1c267408eff460969b5ca5dc020e532f496ed061020a54e89827405579d79",
+     "equal_committed": true,
+     "output": "ROOF_FENCE_HOLD_CENSUS_T646.md",
+     "rebuilt_sha256": "03f1c267408eff460969b5ca5dc020e532f496ed061020a54e89827405579d79",
+     "text": null
+    }
+   ],
+   "prec_after_build": 28,
+   "prec_after_import": 28,
+   "prec_before": 28
+  },
+  "prec6": {
+   "error": null,
+   "outputs": [
+    {
+     "committed_sha256": "fd4988c7f2f9cf0d187a1eebaf57897c640ea3a0114d98314cc4f6fe9c4197cf",
+     "equal_committed": true,
+     "output": "ROOF_FENCE_HOLD_CENSUS_T646.json",
+     "rebuilt_sha256": "fd4988c7f2f9cf0d187a1eebaf57897c640ea3a0114d98314cc4f6fe9c4197cf",
+     "text": null
+    },
+    {
+     "committed_sha256": "03f1c267408eff460969b5ca5dc020e532f496ed061020a54e89827405579d79",
+     "equal_committed": true,
+     "output": "ROOF_FENCE_HOLD_CENSUS_T646.md",
+     "rebuilt_sha256": "03f1c267408eff460969b5ca5dc020e532f496ed061020a54e89827405579d79",
+     "text": null
+    }
+   ],
+   "prec_after_build": 6,
+   "prec_after_import": 6,
+   "prec_before": 6
+  }
+ }
+}

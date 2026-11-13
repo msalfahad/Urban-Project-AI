@@ -1,0 +1,615 @@
+{
+ "baseline_reproduction": [
+  {
+   "band": "GF",
+   "finish": "plaster",
+   "line_id": "L-95f2c45c2eccaaeccb08",
+   "match": true,
+   "reference": [
+    "48.52",
+    "62.01"
+   ],
+   "reproduced": [
+    "48.52",
+    "62.01"
+   ]
+  },
+  {
+   "band": "GF",
+   "finish": "paint",
+   "line_id": "L-145bd2394f2907558243",
+   "match": true,
+   "reference": [
+    "48.52",
+    "62.01"
+   ],
+   "reproduced": [
+    "48.52",
+    "62.01"
+   ]
+  },
+  {
+   "band": "1F",
+   "finish": "plaster",
+   "line_id": "L-0eac839f9132da7bd116",
+   "match": true,
+   "reference": [
+    "42.48",
+    "47.67"
+   ],
+   "reproduced": [
+    "42.48",
+    "47.67"
+   ]
+  },
+  {
+   "band": "1F",
+   "finish": "paint",
+   "line_id": "L-2ab93d5029a4b7cc4dca",
+   "match": true,
+   "reference": [
+    "42.48",
+    "47.67"
+   ],
+   "reproduced": [
+    "42.48",
+    "47.67"
+   ]
+  },
+  {
+   "band": "2F",
+   "finish": "plaster",
+   "line_id": "L-418121a4b223cb4e8646",
+   "match": true,
+   "reference": [
+    "44.512",
+    "49.872"
+   ],
+   "reproduced": [
+    "44.508",
+    "49.868"
+   ]
+  },
+  {
+   "band": "2F",
+   "finish": "paint",
+   "line_id": "L-5a7a5c6f070ec7142ca5",
+   "match": true,
+   "reference": [
+    "42.722",
+    "47.932"
+   ],
+   "reproduced": [
+    "42.723",
+    "47.933"
+   ]
+  }
+ ],
+ "candidate": "ARCH_TAKEOFF_V3.0.65",
+ "code_totals_m2": {
+  "FIN.PAINT": {
+   "after_t680": {
+    "blank": 2,
+    "bounded": 8,
+    "high": "589.0006",
+    "low": "537.7750"
+   },
+   "after_t680_and_t676_op009": {
+    "blank": 2,
+    "bounded": 8,
+    "high": "589.0006",
+    "low": "537.7750"
+   },
+   "before": {
+    "blank": 3,
+    "bounded": 7,
+    "high": "542.8606",
+    "low": "487.1210"
+   },
+   "change_high": "46.1400",
+   "change_low": "50.6540",
+   "lines": 10
+  },
+  "FIN.PLASTER": {
+   "after_t680": {
+    "blank": 9,
+    "bounded": 15,
+    "high": "1054.86641",
+    "low": "985.32981"
+   },
+   "after_t680_and_t676_op009": {
+    "blank": 9,
+    "bounded": 15,
+    "high": "1054.74641",
+    "low": "985.32981"
+   },
+   "before": {
+    "blank": 10,
+    "bounded": 14,
+    "high": "1006.77641",
+    "low": "932.72581"
+   },
+   "change_high": "48.09000",
+   "change_low": "52.60400",
+   "lines": 24
+  }
+ },
+ "corrections_2f_kept": {
+  "high": "0.208",
+  "low": "0.338"
+ },
+ "heads_applied": {
+  "1F-north-window": {
+   "head_m": "7.000",
+   "id": "W25",
+   "issue_check": "AGREES (max edge offset 0.006 m)",
+   "sill_m": "5.500",
+   "source": "DWF SOUTH WEST ELEVATION (vector); current issue Pages_07-08 p.7",
+   "status": "DRAWING-CONFIRMED",
+   "view": "DWF SOUTH WEST ELEVATION (vector)",
+   "width_m": "1.00"
+  },
+  "W27": {
+   "head_m": "11.200",
+   "id": "W27",
+   "issue_check": "AGREES (max edge offset 0.013 m)",
+   "sill_m": "9.700",
+   "source": "DWF SOUTH WEST ELEVATION (vector); current issue Pages_07-08 p.7",
+   "status": "DRAWING-CONFIRMED",
+   "view": "DWF SOUTH WEST ELEVATION (vector)",
+   "width_m": "1.00"
+  }
+ },
+ "inputs": {
+  "candidate_line_index": "e1887c34362b9d2f6558eab7bf825be958ee87206403995abef42be62a335ce1",
+  "t173_input": "9da832d488bf93dcb125b4b028cddd30d11f3cae5ba113966bcbf7507c23a393",
+  "t173_shaft": "39c9d671f65f65268ee40bdb54477cc28695deee1341b840560c277fbc39427c",
+  "t201_heads": "75977bd3fb29773a6765bc523547843c40c539d42f27724723fcc1c155b43838",
+  "t676_census": "400b024835a159ccd378c832ffa05d32555f73565c796fa1ceba17dd2cd5e808"
+ },
+ "lines": [
+  {
+   "band": "GF",
+   "candidate": [
+    48.52,
+    62.01
+   ],
+   "change_vs_candidate": {
+    "after": [
+     "50.945",
+     "62.434"
+    ],
+    "before": [
+     "48.520",
+     "62.010"
+    ],
+    "delta": [
+     "2.425",
+     "0.424"
+    ]
+   },
+   "change_vs_overlay": null,
+   "class": "HELD",
+   "element_id": "HL:WALL_FINISH:ST_GF:PLASTER",
+   "finish": "plaster",
+   "held_high": "62.434",
+   "held_low": "50.945",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-95f2c45c2eccaaeccb08",
+   "materials": {
+    "BOND_COAT spatter dash (1:2)": {
+     "cement_bags": null,
+     "sand_m3": null,
+     "status": "HELD",
+     "water": "HELD",
+     "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+    },
+    "WALL_PLASTER (1:4)": {
+     "cement_bags": [
+      "7.805589",
+      "9.565888"
+     ],
+     "per_m2": {
+      "cement_bags": "0.153216",
+      "sand_m3": "0.02128"
+     },
+     "sand_m3": [
+      "1.08411",
+      "1.328596"
+     ],
+     "status": "HELD_BOUND",
+     "water": "HELD (no water : cement ratio printed or owner-given)"
+    },
+    "coat_class": "DRY_WALL_PLASTER"
+   },
+   "measured_net": null,
+   "overlay_bound": null,
+   "returns_lo_hi": [
+    "0.423",
+    "0.423"
+   ],
+   "status": "HELD bound (geometry DRAWING-CONFIRMED; W25 / W27 heads DRAWING-CONFIRMED T-201; build-up b and roof datum PROVISIONAL; door heads ASSUMED - OWNER-APPROVED Q-55 C; paint top ASSUMED - OWNER-APPROVED Q-48 A)",
+   "step1_heads": [
+    "50.522",
+    "62.011"
+   ],
+   "still_open": [
+    "build-up b 0 .. 0.10 (DCR-6 / DCR-7)",
+    "NW floor under the winders +0.30 / +1.00 (C-SH-2)",
+    "winder soffit MS1-T (C-ST-3)",
+    "GF doorless passage head to the basin space (OP-020)",
+    "B20 over the GF south wall (Q-46 / OQ-11)"
+   ]
+  },
+  {
+   "band": "GF",
+   "candidate": [
+    48.52,
+    62.01
+   ],
+   "change_vs_candidate": {
+    "after": [
+     "50.945",
+     "62.434"
+    ],
+    "before": [
+     "48.520",
+     "62.010"
+    ],
+    "delta": [
+     "2.425",
+     "0.424"
+    ]
+   },
+   "change_vs_overlay": null,
+   "class": "HELD",
+   "element_id": "HL:WALL_FINISH:ST_GF:PAINT",
+   "finish": "paint",
+   "held_high": "62.434",
+   "held_low": "50.945",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-145bd2394f2907558243",
+   "measured_net": null,
+   "overlay_bound": null,
+   "returns_lo_hi": [
+    "0.423",
+    "0.423"
+   ],
+   "status": "HELD bound (geometry DRAWING-CONFIRMED; W25 / W27 heads DRAWING-CONFIRMED T-201; build-up b and roof datum PROVISIONAL; door heads ASSUMED - OWNER-APPROVED Q-55 C; paint top ASSUMED - OWNER-APPROVED Q-48 A)",
+   "step1_heads": [
+    "50.522",
+    "62.011"
+   ],
+   "still_open": [
+    "build-up b 0 .. 0.10 (DCR-6 / DCR-7)",
+    "NW floor under the winders +0.30 / +1.00 (C-SH-2)",
+    "winder soffit MS1-T (C-ST-3)",
+    "GF doorless passage head to the basin space (OP-020)",
+    "B20 over the GF south wall (Q-46 / OQ-11)"
+   ]
+  },
+  {
+   "band": "1F",
+   "candidate": [
+    42.48,
+    47.67
+   ],
+   "change_vs_candidate": {
+    "after": [
+     "45.317",
+     "46.564"
+    ],
+    "before": [
+     "42.480",
+     "47.670"
+    ],
+    "delta": [
+     "2.837",
+     "-1.106"
+    ]
+   },
+   "change_vs_overlay": null,
+   "class": "HELD",
+   "element_id": "HL:WALL_FINISH:ST_1F:PLASTER",
+   "finish": "plaster",
+   "held_high": "46.564",
+   "held_low": "45.317",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-0eac839f9132da7bd116",
+   "materials": {
+    "BOND_COAT spatter dash (1:2)": {
+     "cement_bags": null,
+     "sand_m3": null,
+     "status": "HELD",
+     "water": "HELD",
+     "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+    },
+    "WALL_PLASTER (1:4)": {
+     "cement_bags": [
+      "6.943289",
+      "7.13435"
+     ],
+     "per_m2": {
+      "cement_bags": "0.153216",
+      "sand_m3": "0.02128"
+     },
+     "sand_m3": [
+      "0.964346",
+      "0.990882"
+     ],
+     "status": "HELD_BOUND",
+     "water": "HELD (no water : cement ratio printed or owner-given)"
+    },
+    "coat_class": "DRY_WALL_PLASTER"
+   },
+   "measured_net": null,
+   "overlay_bound": null,
+   "returns_lo_hi": [
+    "0.396",
+    "0.396"
+   ],
+   "status": "HELD bound (geometry DRAWING-CONFIRMED; W25 / W27 heads DRAWING-CONFIRMED T-201; build-up b and roof datum PROVISIONAL; door heads ASSUMED - OWNER-APPROVED Q-55 C; paint top ASSUMED - OWNER-APPROVED Q-48 A)",
+   "step1_heads": [
+    "44.921",
+    "46.168"
+   ],
+   "still_open": [
+    "build-up b 0 .. 0.10 (DCR-6 / DCR-7)",
+    "winder soffit MS1-T above +5.50: none (the turn ends at +3.50)",
+    "B20 / B23 ends at the stair head (Q-46 / OQ-11)",
+    "GF passage band part above +5.50: none"
+   ]
+  },
+  {
+   "band": "1F",
+   "candidate": [
+    42.48,
+    47.67
+   ],
+   "change_vs_candidate": {
+    "after": [
+     "45.317",
+     "46.564"
+    ],
+    "before": [
+     "42.480",
+     "47.670"
+    ],
+    "delta": [
+     "2.837",
+     "-1.106"
+    ]
+   },
+   "change_vs_overlay": null,
+   "class": "HELD",
+   "element_id": "HL:WALL_FINISH:ST_1F:PAINT",
+   "finish": "paint",
+   "held_high": "46.564",
+   "held_low": "45.317",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-2ab93d5029a4b7cc4dca",
+   "measured_net": null,
+   "overlay_bound": null,
+   "returns_lo_hi": [
+    "0.396",
+    "0.396"
+   ],
+   "status": "HELD bound (geometry DRAWING-CONFIRMED; W25 / W27 heads DRAWING-CONFIRMED T-201; build-up b and roof datum PROVISIONAL; door heads ASSUMED - OWNER-APPROVED Q-55 C; paint top ASSUMED - OWNER-APPROVED Q-48 A)",
+   "step1_heads": [
+    "44.921",
+    "46.168"
+   ],
+   "still_open": [
+    "build-up b 0 .. 0.10 (DCR-6 / DCR-7)",
+    "winder soffit MS1-T above +5.50: none (the turn ends at +3.50)",
+    "B20 / B23 ends at the stair head (Q-46 / OQ-11)",
+    "GF passage band part above +5.50: none"
+   ]
+  },
+  {
+   "band": "2F",
+   "candidate": [
+    null,
+    null
+   ],
+   "change_vs_candidate": {
+    "after": [
+     "47.342",
+     "48.772"
+    ],
+    "before": [
+     null,
+     null
+    ],
+    "delta": [
+     null,
+     null
+    ]
+   },
+   "change_vs_overlay": {
+    "after": [
+     "47.342",
+     "48.772"
+    ],
+    "before": [
+     "44.512",
+     "49.872"
+    ],
+    "delta": [
+     "2.830",
+     "-1.100"
+    ]
+   },
+   "class": "HELD",
+   "element_id": "HL:WALL_FINISH:ST_2F:PLASTER",
+   "finish": "plaster",
+   "held_high": "48.772",
+   "held_low": "47.342",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-418121a4b223cb4e8646",
+   "materials": {
+    "BOND_COAT spatter dash (1:2)": {
+     "cement_bags": null,
+     "sand_m3": null,
+     "status": "HELD",
+     "water": "HELD",
+     "why": "spatter dash has no candidate line (MISSING category, T-364) and no thickness from the project, the owner or the rules"
+    },
+    "WALL_PLASTER (1:4)": {
+     "cement_bags": [
+      "7.253552",
+      "7.472651"
+     ],
+     "per_m2": {
+      "cement_bags": "0.153216",
+      "sand_m3": "0.02128"
+     },
+     "sand_m3": [
+      "1.007438",
+      "1.037868"
+     ],
+     "status": "HELD_BOUND",
+     "water": "HELD (no water : cement ratio printed or owner-given)"
+    },
+    "coat_class": "DRY_WALL_PLASTER"
+   },
+   "measured_net": null,
+   "overlay_bound": [
+    "44.512",
+    "49.872"
+   ],
+   "returns_lo_hi": [
+    "0.394",
+    "0.404"
+   ],
+   "status": "HELD bound (geometry DRAWING-CONFIRMED; W25 / W27 heads DRAWING-CONFIRMED T-201; build-up b and roof datum PROVISIONAL; door heads ASSUMED - OWNER-APPROVED Q-55 C; paint top ASSUMED - OWNER-APPROVED Q-48 A)",
+   "step1_heads": [
+    "46.948",
+    "48.368"
+   ],
+   "still_open": [
+    "build-up b 0 .. 0.10 (DCR-6 / DCR-7)",
+    "roof datum D-39",
+    "B23 end at the stair head (Q-46 / OQ-11)",
+    "D-T173-1 N correction and roof B3 downstand (low end only, as T-640)"
+   ]
+  },
+  {
+   "band": "2F",
+   "candidate": [
+    null,
+    null
+   ],
+   "change_vs_candidate": {
+    "after": [
+     "45.392",
+     "46.822"
+    ],
+    "before": [
+     null,
+     null
+    ],
+    "delta": [
+     null,
+     null
+    ]
+   },
+   "change_vs_overlay": {
+    "after": [
+     "45.392",
+     "46.822"
+    ],
+    "before": [
+     "42.722",
+     "47.932"
+    ],
+    "delta": [
+     "2.670",
+     "-1.110"
+    ]
+   },
+   "class": "HELD",
+   "element_id": "HL:WALL_FINISH:ST_2F:PAINT",
+   "finish": "paint",
+   "held_high": "46.822",
+   "held_low": "45.392",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-5a7a5c6f070ec7142ca5",
+   "measured_net": null,
+   "overlay_bound": [
+    "42.722",
+    "47.932"
+   ],
+   "returns_lo_hi": [
+    "0.379",
+    "0.389"
+   ],
+   "status": "HELD bound (geometry DRAWING-CONFIRMED; W25 / W27 heads DRAWING-CONFIRMED T-201; build-up b and roof datum PROVISIONAL; door heads ASSUMED - OWNER-APPROVED Q-55 C; paint top ASSUMED - OWNER-APPROVED Q-48 A)",
+   "step1_heads": [
+    "45.013",
+    "46.433"
+   ],
+   "still_open": [
+    "build-up b 0 .. 0.10 (DCR-6 / DCR-7)",
+    "roof datum D-39",
+    "B23 end at the stair head (Q-46 / OQ-11)",
+    "D-T173-1 N correction and roof B3 downstand (low end only, as T-640)"
+   ]
+  }
+ ],
+ "rules": [
+  "R-T680-1",
+  "R-T680-2",
+  "R-T680-3"
+ ],
+ "schema": "URBAN_T680_SHAFT_ROUND2_V1",
+ "shaft_sums_m2": {
+  "paint": {
+   "candidate_bounded_high": "109.680",
+   "candidate_bounded_low": "91.000",
+   "high": "155.820",
+   "low": "141.654"
+  },
+  "plaster": {
+   "candidate_bounded_high": "109.680",
+   "candidate_bounded_low": "91.000",
+   "high": "157.770",
+   "low": "143.604"
+  }
+ },
+ "task": "T-680",
+ "wet_room_lines": [
+  {
+   "cause_t676": "room floor level +0.30 or +1.00 not drawn (T-088; T-173 C-SH-2: the floor under the stair-core rooms has no edge or level); both the plaster band (floor -> 1F slab soffit, Q-72) and the tile band start from it",
+   "class": "HELD",
+   "element_id": "GF-RD36087:plaster",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-a636dabcd4bc7e59169a",
+   "measured_net": null,
+   "missing_datum": [
+    "GF-RD36087 finished floor level: +0.30 (lobby) or +1.00 (main GF) - no floor edge or level is drawn under the stair-core rooms (T-088; T-173 C-SH-2): designer item",
+    "the top of the wet-wall render: the 1F slab soffit (+5.50 - b - 0.16), build-up b 0 .. 0.10",
+    "the head of the doorless passage OP-020 (0.90 m, shared with the stair hall; head lines hidden, no head printed; T-441)"
+   ],
+   "why_no_bound": "a 0.70 m floor-datum spread x the room perimeter (T-283 cove runs 4.90 / 6.20 m, not wall faces) with an unestablished render top and a held opening gives no two-sided bound from the drawings; the line stays HELD by name, never 0"
+  },
+  {
+   "cause_t676": "room floor level +0.30 or +1.00 not drawn (T-088; T-173 C-SH-2: the floor under the stair-core rooms has no edge or level); both the plaster band (floor -> 1F slab soffit, Q-72) and the tile band start from it",
+   "class": "HELD",
+   "element_id": "GF-RDF7D28:plaster",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-3f7fb1b37e68e6d6c7b7",
+   "measured_net": null,
+   "missing_datum": [
+    "GF-RDF7D28 finished floor level: +0.30 (lobby) or +1.00 (main GF) - no floor edge or level is drawn under the stair-core rooms (T-088; T-173 C-SH-2): designer item",
+    "the top of the wet-wall render: the 1F slab soffit (+5.50 - b - 0.16) or the soffit of the beam crossing the room (T-283: bulkhead edges on CONFLICT / HELD beams, Q-61 C)",
+    "the window OP-014 head / sill (no T-201 record; the line carries the window as EXCLUDED)"
+   ],
+   "why_no_bound": "a 0.70 m floor-datum spread x the room perimeter (T-283 cove runs 4.90 / 6.20 m, not wall faces) with an unestablished render top and a held opening gives no two-sided bound from the drawings; the line stays HELD by name, never 0"
+  }
+ ]
+}

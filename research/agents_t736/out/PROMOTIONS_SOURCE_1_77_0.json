@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-736",
+  "merge_commit": "166fb1fd6ea86f51b49d75c086370045927c00f4",
+  "verdict_time": "2026-11-12 23:38 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-12T23:38Z per `date -u`, run unknown, lock checker; GATE B PASS; merge 166fb1fd (no conflict; task head contained engine a650be13)",
+  "board_commit": "3df4a818"
+ }
+]

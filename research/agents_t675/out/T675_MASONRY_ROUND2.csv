@@ -1,0 +1,49 @@
+part,id,line_id,code_or_wall,before,after,low,high,cause_or_basis
+a,HOUSE_BELOW_NG:MAIN_S,L-a951fbf0e4fdacf3308d,MAS.GLUE.AAC,HELD blank,NOT_APPLICABLE_WITH_EVIDENCE,,,"retire in the wiring row with this evidence in the same diff (never 0, never valued): the host is black block, no AAC unit or glue is laid"
+a,HOUSE_BELOW_NG:MAIN_S,L-cf220ce7edefedd935b4,MAS.MORTAR.BLACK,HELD blank,HELD blank,,,"black block below the main-house neighbour-side ground beams (MAIN_S, 16.270 m net axis): printed by ST p.1 note 2, but no section prints its thickness or botto"
+a,HOUSE_BELOW_NG:MAIN_S,L-bd21b0ea1ce4e1c8dabd,MAS.UNITS.BLACK,HELD blank,HELD blank,,,"black block below the main-house neighbour-side ground beams (MAIN_S, 16.270 m net axis): printed by ST p.1 note 2, but no section prints its thickness or botto"
+a,HOUSE_BELOW_NG:MAIN_S,L-09c52c7b398d3218cc0e,MAS.UNITS.WHITE,HELD blank,NOT_APPLICABLE_WITH_EVIDENCE,,,"retire in the wiring row with this evidence in the same diff (never 0, never valued): the host is black block, no AAC unit or glue is laid"
+a,HOUSE_BELOW_NG:ANNEX_S,L-6b0bb35ba62fe484aa7e,MAS.GLUE.AAC,HELD blank,NOT_APPLICABLE_WITH_EVIDENCE,,,"retire in the wiring row with this evidence in the same diff (never 0, never valued): the host is black block, no AAC unit or glue is laid"
+a,HOUSE_BELOW_NG:ANNEX_S,L-17cea41ab1b8f2bdb19e,MAS.MORTAR.BLACK,HELD blank,HELD blank,,,"black block below the annex neighbour-side ground beams (ANNEX_S, 10.000 m net axis): the annex exterior ground-beam soffit is a CONFLICT (levels reading L vs t"
+a,HOUSE_BELOW_NG:ANNEX_S,L-8971f07e8552cf3831c0,MAS.UNITS.BLACK,HELD blank,HELD blank,,,"black block below the annex neighbour-side ground beams (ANNEX_S, 10.000 m net axis): the annex exterior ground-beam soffit is a CONFLICT (levels reading L vs t"
+a,HOUSE_BELOW_NG:ANNEX_S,L-2ae0aac40cd54e372c68,MAS.UNITS.WHITE,HELD blank,NOT_APPLICABLE_WITH_EVIDENCE,,,"retire in the wiring row with this evidence in the same diff (never 0, never valued): the host is black block, no AAC unit or glue is laid"
+b-bed,D-1F-02,L-866a6602ffa70d03f210,lintel bed,0.001111 .. 0.001111,EXACT,0.001111,0.001111,
+b-bed,D-1F-03,L-866a6602ffa70d03f210,lintel bed,0.000556 .. 0.001111,RANGE,0.000556,0.000887,
+b-bed,D-1F-04,L-866a6602ffa70d03f210,lintel bed,0.000556 .. 0.000666,RANGE,0.000556,0.000667,
+b-bed,D-1F-07,L-866a6602ffa70d03f210,lintel bed,0.000556 .. 0.001111,RANGE,0.000556,0.000916,
+b-bed,D-1F-08,L-866a6602ffa70d03f210,lintel bed,0.001111 .. 0.001111,EXACT,0.001111,0.001111,
+b-bed,D-1F-10,L-866a6602ffa70d03f210,lintel bed,0.000556 .. 0.001111,RANGE,0.000556,0.000916,
+b-bed,D-1F-09,L-866a6602ffa70d03f210,lintel bed,None .. None,HELD,0.0,0.001111,"DESIGNER ITEM / candidate: the lintel itself is HELD_RANGE (face 0 .. 0.34 m2, T-582 class, inside the held dome piece of 1F-W13 / W17); if built, its bed lies "
+b-bed,D-GF-10,L-8f163174139bcf80c7c7,lintel bed,0.000556 .. 0.001111,RANGE,0.000556,0.000907,
+b-bed,D-GF-13,L-8f163174139bcf80c7c7,lintel bed,0.001111 .. 0.001111,EXACT,0.001111,0.001111,
+b-band,1F-W12 2.2-2.4 OU,L-866a6602ffa70d03f210,1F-W12,HELD,HELD bounded,0.0,0.000278,D-1F-03: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meet
+b-band,1F-W12 2.2-2.4 UO,L-866a6602ffa70d03f210,1F-W12,HELD,HELD bounded,0.0,0.000278,D-1F-03: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meet
+b-band,1F-W13 0.0-2.2 FU,L-866a6602ffa70d03f210,1F-W13,HELD,NOT_APPLICABLE_WITH_EVIDENCE,0.0,0.0,"ends FU: a free end (F) and one unknown stop carry at most one joint-bearing end, the module already credits one: increment 0 under every reading (R-T675-3)"
+b-band,1F-W13 0.0-2.2 UO,L-866a6602ffa70d03f210,1F-W13,HELD,HELD bounded,0.0,0.003057,dome opening piece: top of wall / ring position not drawn (T-227 / T-261)
+b-band,1F-W13 2.2-2.4 CU,L-866a6602ffa70d03f210,1F-W13,HELD,HELD bounded,0.0,0.000278,dome opening piece: top of wall / ring position not drawn (T-227 / T-261)
+b-band,1F-W13 2.2-2.4 UO,L-866a6602ffa70d03f210,1F-W13,HELD,HELD bounded,0.0,0.000278,dome opening piece: top of wall / ring position not drawn (T-227 / T-261)
+b-band,1F-W13 2.4-3.45 OU,L-866a6602ffa70d03f210,1F-W13,HELD,HELD bounded,0.0,0.001459,dome opening piece: top of wall / ring position not drawn (T-227 / T-261)
+b-band,1F-W13 2.4-3.45 UO,L-866a6602ffa70d03f210,1F-W13,HELD,HELD bounded,0.0,0.001459,dome opening piece: top of wall / ring position not drawn (T-227 / T-261)
+b-band,1F-W13 3.45-3.8 CU,L-866a6602ffa70d03f210,1F-W13,HELD,HELD bounded,0.0,0.000486,dome opening piece: top of wall / ring position not drawn (T-227 / T-261)
+b-band,1F-W13 3.45-3.8 UC,L-866a6602ffa70d03f210,1F-W13,HELD,HELD bounded,0.0,0.000486,dome opening piece: top of wall / ring position not drawn (T-227 / T-261)
+b-band,1F-W13 3.8-4.04 CU,L-866a6602ffa70d03f210,1F-W13,HELD,HELD bounded,0.0,0.000333,dome opening piece: top of wall / ring position not drawn (T-227 / T-261)
+b-band,1F-W13 3.8-4.04 UC,L-866a6602ffa70d03f210,1F-W13,HELD,HELD bounded,0.0,0.000333,dome opening piece: top of wall / ring position not drawn (T-227 / T-261)
+b-band,1F-W17 0.0-2.2 UF,L-866a6602ffa70d03f210,1F-W17,HELD,NOT_APPLICABLE_WITH_EVIDENCE,0.0,0.0,"ends UF: a free end (F) and one unknown stop carry at most one joint-bearing end, the module already credits one: increment 0 under every reading (R-T675-3)"
+b-band,1F-W17 2.2-2.4 UU,L-866a6602ffa70d03f210,1F-W17,HELD,HELD bounded,0.0,0.000278,D-1F-10: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meet
+b-band,1F-W17 2.2-2.4 UO,L-866a6602ffa70d03f210,1F-W17,HELD,HELD bounded,0.0,0.000278,D-1F-10: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meet
+b-band,1F-W17 2.4-3.7 UO,L-866a6602ffa70d03f210,1F-W17,HELD,HELD bounded,0.0,0.001806,dome opening piece: top of wall / ring position not drawn (T-227 / T-261)
+b-band,1F-W19 2.2-2.4 OU,L-866a6602ffa70d03f210,1F-W19,HELD,HELD bounded,0.0,0.000278,D-1F-07: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meet
+b-band,1F-W19 2.2-2.4 UO,L-866a6602ffa70d03f210,1F-W19,HELD,HELD bounded,0.0,0.000278,D-1F-07: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meet
+b-band,1F-W23 2.2-2.4 CU,L-866a6602ffa70d03f210,1F-W23,HELD,HELD bounded,0.0,0.000278,D-1F-04: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meet
+b-band,1F-W23 2.2-2.4 UC,L-866a6602ffa70d03f210,1F-W23,HELD,HELD bounded,0.0,0.000278,D-1F-04: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meet
+b-band,1F-W24 0.0-3.7 OU,L-a8f0d0e9fff641c0fa8e,1F-W24,HELD,HELD bounded,0.0,0.005141,dome opening piece: top of wall / ring position not drawn (T-227 / T-261)
+b-band,GF-W29 2.2-2.4 OU,L-8f163174139bcf80c7c7,GF-W29,HELD,HELD bounded,0.0,0.000278,D-GF-10: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meet
+b-band,GF-W29 2.2-2.4 UO,L-8f163174139bcf80c7c7,GF-W29,HELD,HELD bounded,0.0,0.000278,D-GF-10: FLAGGED_DEFICIT lintel end (T-516 / T-527: drawn available masonry < the printed 0.40 m RC lintel bearing; the built bearing decides whether block meet
+b-piece,1F-W13 east ring west crossing,,1F-W13,OPEN,HELD bounded,0.0,0.000403,"dome opening piece: top of wall not drawn (T-227 / T-261, designer)"
+b-piece,1F-W13 east dome opening 1F-077,,1F-W13,OPEN,HELD bounded,0.0,0.004022,"dome opening piece: top of wall not drawn (T-227 / T-261, designer)"
+b-piece,1F-W13 east ring east crossing,,1F-W13,OPEN,HELD bounded,0.0,0.000403,"dome opening piece: top of wall not drawn (T-227 / T-261, designer)"
+b-piece,1F-W17 east dome opening 1F-077,,1F-W17,OPEN,HELD bounded,0.0,0.000641,"dome opening piece: top of wall not drawn (T-227 / T-261, designer)"
+b-piece,1F-W17 east ring sliver,,1F-W17,OPEN,HELD bounded,0.0,4e-06,"dome opening piece: top of wall not drawn (T-227 / T-261, designer)"
+b-piece,1F-W24 west dome opening 1F-073,,1F-W24,OPEN,HELD bounded,0.0,0.00147,"dome opening piece: top of wall not drawn (T-227 / T-261, designer)"
+c,L-1c53fadb2f92d1f36d4e,L-1c53fadb2f92d1f36d4e,GF-W01,UNKNOWN,ASSUMED - OWNER-APPROVED,0.058854,0.058854,thickness DRAWING-CONFIRMED (face lines 0.200 m apart on the wall layer; the P7757 DXF has no wall hatch on any layer); colour BLACK (ST p.1 note 2 neighbour-si
+c,L-10dd62f66ad05488e63b,L-10dd62f66ad05488e63b,1F-W02 1F-W03 1F-W09,UNKNOWN,ASSUMED - OWNER-APPROVED,0.039291,0.039291,thickness DRAWING-CONFIRMED (face lines 0.200 m apart on the wall layer; the P7757 DXF has no wall hatch on any layer); colour BLACK (ST p.1 note 2 neighbour-si

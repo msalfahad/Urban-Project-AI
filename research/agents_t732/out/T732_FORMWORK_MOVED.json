@@ -1,0 +1,927 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.73",
+ "census": [
+  {
+   "line_id": "L-5c555f96b85e393a9ea1",
+   "member_after": [
+    "BOUNDED",
+    "0.3267",
+    "0.425"
+   ],
+   "member_before": [
+    "BOUNDED",
+    "0.303",
+    "0.425"
+   ],
+   "state": "RESTATED"
+  },
+  {
+   "line_id": "L-7f7fa7a824ff3d8969ce",
+   "member_after": [
+    "AT_LEAST",
+    "0.328700",
+    null
+   ],
+   "member_before": [
+    "BLANK",
+    null,
+    null
+   ],
+   "state": "RESTATED"
+  },
+  {
+   "line_id": "L-8029c283cbbe702cd468",
+   "member_after": [
+    "BOUNDED",
+    "0.3287",
+    "0.425"
+   ],
+   "member_before": [
+    "BOUNDED",
+    "0.303",
+    "0.425"
+   ],
+   "state": "RESTATED"
+  },
+  {
+   "line_id": "L-8c96ce0b710b93d43d60",
+   "member_after": [
+    "AT_LEAST",
+    "0.328700",
+    null
+   ],
+   "member_before": [
+    "BLANK",
+    null,
+    null
+   ],
+   "state": "RESTATED"
+  },
+  {
+   "line_id": "L-f2f2781ade657190d7e6",
+   "member_after": [
+    "BOUNDED",
+    "0.3287",
+    "0.425"
+   ],
+   "member_before": [
+    "BOUNDED",
+    "0.303",
+    "0.425"
+   ],
+   "state": "RESTATED"
+  },
+  {
+   "line_id": "L-fa037ca1982c83c29750",
+   "member_after": [
+    "BOUNDED",
+    "0.45738",
+    "0.595"
+   ],
+   "member_before": [
+    "BOUNDED",
+    "0.4242",
+    "0.595"
+   ],
+   "state": "RESTATED"
+  },
+  {
+   "line_id": "L-fcb1852ca2be8ce69eb8",
+   "member_after": [
+    "BOUNDED",
+    "0.20136",
+    "0.35"
+   ],
+   "member_before": [
+    "BOUNDED",
+    "0.1824",
+    "0.35"
+   ],
+   "state": "RESTATED"
+  }
+ ],
+ "children": [
+  {
+   "cls": "BLANK_NAMED",
+   "contacts": "south face on column 366 / beam band; ends on L-634cefe5 / L-331d4bbe",
+   "edge_m_per_m_depth": "0.8",
+   "item": "D-05 / D-26 (projection: no section / mark / bars / material)",
+   "piece": "GF-STRIP-AT-COL",
+   "soffit_m2": "0.16",
+   "why": "concrete child NAMED blank (D-05 / D-26: no section / mark / bars / MATERIAL): whether a formed face exists at all is open; per-unit figures beside only"
+  },
+  {
+   "cls": "BLANK_NAMED",
+   "contacts": "east face on the north strip, south face on the west strip (T-724 own read)",
+   "edge_m_per_m_depth": "0.304315",
+   "item": "D-05 / D-26 (projection corner, rounded outline arc 316)",
+   "piece": "GF-NW-CORNER",
+   "soffit_m2": "0.029309",
+   "why": "concrete child NAMED blank (D-05 / D-26: no section / mark / bars / MATERIAL): whether a formed face exists at all is open; per-unit figures beside only"
+  },
+  {
+   "cls": "BLANK_NAMED",
+   "contacts": "south face on column 68C / beam band; ends on L-67f3d325 / L-54e397fe",
+   "edge_m_per_m_depth": "0.8",
+   "item": "D-05 / D-26 (projection: no section / mark / bars / material)",
+   "piece": "1F-STRIP-AT-COL",
+   "soffit_m2": "0.16",
+   "why": "concrete child NAMED blank (D-05 / D-26: no section / mark / bars / MATERIAL): whether a formed face exists at all is open; per-unit figures beside only"
+  },
+  {
+   "cls": "BLANK_NAMED",
+   "contacts": "east face on the north strip, south face on the west strip (T-724 own read)",
+   "edge_m_per_m_depth": "0.304315",
+   "item": "D-05 / D-26 (projection corner, rounded outline arc 647)",
+   "piece": "1F-NW-CORNER",
+   "soffit_m2": "0.029309",
+   "why": "concrete child NAMED blank (D-05 / D-26: no section / mark / bars / MATERIAL): whether a formed face exists at all is open; per-unit figures beside only"
+  }
+ ],
+ "family": {
+  "at_least_m2": "107.379697",
+  "bounded_high_m2": "127.151372",
+  "bounded_low_m2": "102.914777",
+  "by_class": {
+   "AT_LEAST": 35,
+   "BLANK_NAMED": 251,
+   "BOUNDED": 30,
+   "FIX_ROW": 54
+  },
+  "t714": {
+   "at_least": "98.543697",
+   "bounded": [
+    "87.941284",
+    "103.192739"
+   ],
+   "by_class": {
+    "AT_LEAST": 32,
+    "BLANK_NAMED": 258,
+    "BOUNDED": 26,
+    "FIX_ROW": 54
+   }
+  },
+  "t724_restated_lines": [
+   "L-030e2ec62b20bcc5267d",
+   "L-3280c42cb578a211045e",
+   "L-59f0c115e7db8fa87f58",
+   "L-b496828905921760d1ee"
+  ]
+ },
+ "not_claimed": "development villa; nothing wired, released or VERIFIED; no freelancer formwork row (FREELANCER_NO_ROW): no %; V2.9 + route G unchanged",
+ "pins": {
+  "research/agents_t110/BEAM_MEMBER_REGISTER.csv": "368d0fa2d690fb02",
+  "research/agents_t119/COLUMNS_TO_CONTROLLING_MEMBER.csv": "dbe1ce155c7d7356",
+  "research/agents_t332/FORMWORK_T332_BY_FACE.csv": "15c188724a60d580",
+  "research/agents_t402/HELD_LINES_T402.csv": "e7a8f8a4d3de89f2",
+  "research/agents_t638/out/FORMWORK_HOLD_CENSUS_T638.json": "a75276c82547c7cc",
+  "research/agents_t693/out/LINE_INDEX_V3_0_70.json": "6c12da077200db17",
+  "research/agents_t707/out/T707_COLUMN_TAIL.json": "f8feb9bfbbc4e969",
+  "research/agents_t711/out/T711_LEDGER.json": "36cd106334645d92",
+  "research/agents_t712/out/T712_LEDGER.json": "9d2bbd78d5a40b16",
+  "research/agents_t714/out/T714_FORMWORK_BOUNDS.json": "17959a8de65c4707",
+  "research/agents_t721/out/T721_LEDGER.json": "76b09766541b9049",
+  "research/agents_t722/out/LINE_INDEX_V3_0_73.json": "af8d567d8a8ae828",
+  "research/agents_t722/out/T722_SUMMARY.json": "e6d8906cbb5343bd",
+  "research/agents_t724/out/T724_FINDINGS.json": "9bba4b7414d58ca1"
+ },
+ "restated": [
+  {
+   "base": "9.65",
+   "basis": "SLAB_TOP",
+   "class_after": "BOUNDED",
+   "column": "COL-2F-56",
+   "concrete_line": "L-33a9b7728781fcba12e2",
+   "d_ctrl": [
+    "0.40",
+    "1.2"
+   ],
+   "d_open_by": [
+    "BM-2F-018"
+   ],
+   "d_walk": "0.40",
+   "element_id": "FW:L-33a9b7728781fcba12e2:FACES:HELD:-:G",
+   "envelope": "5.7260000",
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": "5.390000",
+     "low": "2.893800"
+    },
+    {
+     "dep": "CAP_ONLY",
+     "face_id": "R4-305.2F-034.JOINT_HELD_M2",
+     "high": "0.047900",
+     "low": "0.000000"
+    },
+    {
+     "dep": "AT_D_MIN",
+     "face_id": "R4-311.2F-034.JOINT_FACE",
+     "high": "0.192211",
+     "low": "0.000000"
+    }
+   ],
+   "h_hi": "4.2500",
+   "handle": "41E",
+   "high": "5.630111",
+   "hold": "D-39 (2F roof slab top) high end",
+   "line_id": "L-5c555f96b85e393a9ea1",
+   "low": "2.893800",
+   "member_after": [
+    "BOUNDED",
+    "0.326700",
+    "0.425000"
+   ],
+   "member_before": [
+    "BOUNDED",
+    "0.303",
+    "0.425"
+   ],
+   "old": {
+    "class": "BLANK_NAMED",
+    "faces": [
+     [
+      "R4-245",
+      "DEPENDENT"
+     ],
+     [
+      "R4-305.2F-034.JOINT_HELD_M2",
+      "CAP_ONLY"
+     ],
+     [
+      "R4-311.2F-034.JOINT_FACE",
+      "DEPENDENT"
+     ]
+    ],
+    "why": "no positive floor: every face is 0 .. x or follows an unstated reading"
+   },
+   "old_shaft_record": {
+    "cause": "column shaft: framing member held, controlling depth settled by calculated members (T-119 r2 FRAMING_MEMBER_HELD_D_SETTL",
+    "face_id": "R4-245",
+    "hi": "5.320000",
+    "lo": "5.320000"
+   },
+   "panels": [
+    "P3",
+    "P5",
+    "P6"
+   ],
+   "perimeter_m": [
+    "1.4",
+    "1.4"
+   ],
+   "sections_m": [
+    [
+     "0.2",
+     "0.5"
+    ]
+   ],
+   "shaft_h_lo": "2.067000",
+   "t707_beside": [
+    "4.349800",
+    "5.726000"
+   ],
+   "top_lo_column": "12.917000",
+   "top_lo_shaft": "12.917000"
+  },
+  {
+   "base": "9.65",
+   "basis": "SLAB_TOP",
+   "class_after": "AT_LEAST",
+   "column": "COL-2F-52",
+   "concrete_line": "L-c10e2945d582b5a03126",
+   "d_ctrl": [
+    "0.40",
+    "1.20"
+   ],
+   "d_open_by": [
+    "BM-2F-007",
+    "BM-2F-016"
+   ],
+   "d_walk": null,
+   "element_id": "FW:L-c10e2945d582b5a03126:FACES:HELD:-:G",
+   "envelope": null,
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": null,
+     "low": "2.893800"
+    },
+    {
+     "dep": "CAP_ONLY",
+     "face_id": "R4-305.2F-018.JOINT_HELD_M2",
+     "high": "0.207566",
+     "low": "0.000000"
+    },
+    {
+     "dep": "CAP_ONLY",
+     "face_id": "R4-307.2F-018.JOINT_HELD_M2",
+     "high": "0.520000",
+     "low": "0.000000"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-311.2F-018.JOINT_FACE",
+     "high": null,
+     "low": "0.000000"
+    }
+   ],
+   "h_hi": null,
+   "handle": "424",
+   "high": null,
+   "hold": "D-44 (B15 20x120 up / down-stand); section CONFLICT D-66",
+   "line_id": "L-7f7fa7a824ff3d8969ce",
+   "low": "2.893800",
+   "member_after": [
+    "AT_LEAST",
+    "0.328700",
+    null
+   ],
+   "member_before": [
+    "BLANK",
+    null,
+    null
+   ],
+   "old": {
+    "class": "BLANK_NAMED",
+    "faces": [
+     [
+      "R4-241",
+      "BLOCK"
+     ],
+     [
+      "R4-305.2F-018.JOINT_HELD_M2",
+      "CAP_ONLY"
+     ],
+     [
+      "R4-307.2F-018.JOINT_HELD_M2",
+      "CAP_ONLY"
+     ],
+     [
+      "R4-311.2F-018.JOINT_FACE",
+      "DEPENDENT"
+     ]
+    ],
+    "why": "concrete member HELD BLANK: L-c10e2945 concrete line HELD BLANK (no figure, no bound)"
+   },
+   "old_shaft_record": {
+    "cause": "framing band read as upstand or downstand not settled (D-44): shaft range",
+    "face_id": "R4-241",
+    "hi": "5.320000",
+    "lo": "4.200000"
+   },
+   "panels": [
+    "P2",
+    "P5"
+   ],
+   "perimeter_m": [
+    "1.40",
+    "1.50"
+   ],
+   "sections_m": [
+    [
+     "0.25",
+     "0.5"
+    ],
+    [
+     "0.20",
+     "0.50"
+    ]
+   ],
+   "shaft_h_lo": "2.067000",
+   "t707_beside": [
+    "4.349800",
+    null
+   ],
+   "top_lo_column": "12.937000",
+   "top_lo_shaft": "12.917000"
+  },
+  {
+   "base": "9.65",
+   "basis": "SLAB_TOP",
+   "class_after": "BOUNDED",
+   "column": "COL-2F-54",
+   "concrete_line": "L-26f6b6f2365c72e42291",
+   "d_ctrl": [
+    "0.40",
+    "0.40"
+   ],
+   "d_open_by": [],
+   "d_walk": "0.40",
+   "element_id": "FW:L-26f6b6f2365c72e42291:FACES:HELD:-:G",
+   "envelope": "5.7260000",
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": "5.390000",
+     "low": "4.013800"
+    },
+    {
+     "dep": "INDEPENDENT",
+     "face_id": "R4-309.COL-2F-54",
+     "high": "0.192200",
+     "low": "0.192200"
+    }
+   ],
+   "h_hi": "4.2500",
+   "handle": "41B",
+   "high": "5.582200",
+   "hold": "D-39 (2F roof slab top) high end",
+   "line_id": "L-8029c283cbbe702cd468",
+   "low": "4.206000",
+   "member_after": [
+    "BOUNDED",
+    "0.328700",
+    "0.425000"
+   ],
+   "member_before": [
+    "BOUNDED",
+    "0.303",
+    "0.425"
+   ],
+   "old": {
+    "class": "BLANK_NAMED",
+    "faces": [
+     [
+      "R4-243",
+      "CAP_ONLY"
+     ],
+     [
+      "R4-309.COL-2F-54",
+      "DEPENDENT"
+     ]
+    ],
+    "why": "no positive floor: every face is 0 .. x or follows an unstated reading"
+   },
+   "old_shaft_record": {
+    "cause": "2F roof structural top not printed, only the finished +13.90 (D-39, T-248): shaft is an upper bound only (AT_MOST)",
+    "face_id": "R4-243",
+    "hi": "5.320000",
+    "lo": null
+   },
+   "panels": [
+    "P1",
+    "P3",
+    "P4"
+   ],
+   "perimeter_m": [
+    "1.4",
+    "1.4"
+   ],
+   "sections_m": [
+    [
+     "0.2",
+     "0.5"
+    ]
+   ],
+   "shaft_h_lo": "2.867000",
+   "t707_beside": [
+    "4.349800",
+    "5.726000"
+   ],
+   "top_lo_column": "12.937000",
+   "top_lo_shaft": "12.917000"
+  },
+  {
+   "base": "9.65",
+   "basis": "SLAB_TOP",
+   "class_after": "AT_LEAST",
+   "column": "COL-2F-50",
+   "concrete_line": "L-0ede77cfd0badc4c7d62",
+   "d_ctrl": [
+    "0.40",
+    "1.20"
+   ],
+   "d_open_by": [
+    "BM-2F-007"
+   ],
+   "d_walk": null,
+   "element_id": "FW:L-0ede77cfd0badc4c7d62:FACES:HELD:-:G",
+   "envelope": null,
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": null,
+     "low": "2.921800"
+    },
+    {
+     "dep": "CAP_ONLY",
+     "face_id": "R4-306.2F-000.JOINT_HELD_M2",
+     "high": "0.509955",
+     "low": "0.000000"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-311.2F-000.JOINT_FACE",
+     "high": null,
+     "low": "0.000000"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-312.2F-000.EDGE_BAND",
+     "high": null,
+     "low": "0.000000"
+    }
+   ],
+   "h_hi": null,
+   "handle": "40F",
+   "high": null,
+   "hold": "D-44 (B15 20x120 up / down-stand)",
+   "line_id": "L-8c96ce0b710b93d43d60",
+   "low": "2.921800",
+   "member_after": [
+    "AT_LEAST",
+    "0.328700",
+    null
+   ],
+   "member_before": [
+    "BLANK",
+    null,
+    null
+   ],
+   "old": {
+    "class": "BLANK_NAMED",
+    "faces": [
+     [
+      "R4-239",
+      "BLOCK"
+     ],
+     [
+      "R4-306.2F-000.JOINT_HELD_M2",
+      "CAP_ONLY"
+     ],
+     [
+      "R4-311.2F-000.JOINT_FACE",
+      "DEPENDENT"
+     ],
+     [
+      "R4-312.2F-000.EDGE_BAND",
+      "DEPENDENT"
+     ]
+    ],
+    "why": "concrete member HELD BLANK: L-0ede77cf concrete line HELD BLANK (no figure, no bound)"
+   },
+   "old_shaft_record": {
+    "cause": "framing band read as upstand or downstand not settled (D-44): shaft range",
+    "face_id": "R4-239",
+    "hi": "5.320000",
+    "lo": "4.200000"
+   },
+   "panels": [
+    "P2"
+   ],
+   "perimeter_m": [
+    "1.4",
+    "1.4"
+   ],
+   "sections_m": [
+    [
+     "0.2",
+     "0.5"
+    ]
+   ],
+   "shaft_h_lo": "2.087000",
+   "t707_beside": [
+    "4.349800",
+    null
+   ],
+   "top_lo_column": "12.937000",
+   "top_lo_shaft": "12.937000"
+  },
+  {
+   "base": "9.65",
+   "basis": "SLAB_TOP",
+   "class_after": "BOUNDED",
+   "column": "COL-2F-53",
+   "concrete_line": "L-d79d17d14f39d5148cb8",
+   "d_ctrl": [
+    "0.40",
+    "0.40"
+   ],
+   "d_open_by": [],
+   "d_walk": "0.40",
+   "element_id": "FW:L-d79d17d14f39d5148cb8:FACES:HELD:-:G",
+   "envelope": "5.7260000",
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": "5.390000",
+     "low": "4.013800"
+    },
+    {
+     "dep": "INDEPENDENT",
+     "face_id": "R4-309.COL-2F-53",
+     "high": "0.138200",
+     "low": "0.138200"
+    }
+   ],
+   "h_hi": "4.2500",
+   "handle": "421",
+   "high": "5.528200",
+   "hold": "D-39 (2F roof slab top) high end",
+   "line_id": "L-f2f2781ade657190d7e6",
+   "low": "4.152000",
+   "member_after": [
+    "BOUNDED",
+    "0.328700",
+    "0.425000"
+   ],
+   "member_before": [
+    "BOUNDED",
+    "0.303",
+    "0.425"
+   ],
+   "old": {
+    "class": "BLANK_NAMED",
+    "faces": [
+     [
+      "R4-242",
+      "CAP_ONLY"
+     ],
+     [
+      "R4-309.COL-2F-53",
+      "DEPENDENT"
+     ]
+    ],
+    "why": "no positive floor: every face is 0 .. x or follows an unstated reading"
+   },
+   "old_shaft_record": {
+    "cause": "2F roof structural top not printed, only the finished +13.90 (D-39, T-248): shaft is an upper bound only (AT_MOST)",
+    "face_id": "R4-242",
+    "hi": "5.320000",
+    "lo": null
+   },
+   "panels": [
+    "P1",
+    "P2",
+    "P3",
+    "P5"
+   ],
+   "perimeter_m": [
+    "1.4",
+    "1.4"
+   ],
+   "sections_m": [
+    [
+     "0.2",
+     "0.5"
+    ]
+   ],
+   "shaft_h_lo": "2.867000",
+   "t707_beside": [
+    "4.349800",
+    "5.726000"
+   ],
+   "top_lo_column": "12.937000",
+   "top_lo_shaft": "12.917000"
+  },
+  {
+   "base": "9.65",
+   "basis": "SLAB_TOP",
+   "class_after": "BOUNDED",
+   "column": "COL-2F-55",
+   "concrete_line": "L-53f223b06db14ac41d47",
+   "d_ctrl": [
+    "0.40",
+    "1.2"
+   ],
+   "d_open_by": [
+    "BM-2F-017"
+   ],
+   "d_walk": "0.40",
+   "element_id": "FW:L-53f223b06db14ac41d47:FACES:HELD:-:G",
+   "envelope": "7.3620000",
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": "6.930000",
+     "low": "3.720600"
+    },
+    {
+     "dep": "CAP_ONLY",
+     "face_id": "R4-305.2F-037.JOINT_HELD_M2",
+     "high": "0.047900",
+     "low": "0.000000"
+    },
+    {
+     "dep": "AT_D_MIN",
+     "face_id": "R4-311.2F-037.JOINT_FACE",
+     "high": "0.240222",
+     "low": "0.000000"
+    }
+   ],
+   "h_hi": "4.2500",
+   "handle": "418",
+   "high": "7.218122",
+   "hold": "D-39 (2F roof slab top) high end",
+   "line_id": "L-fa037ca1982c83c29750",
+   "low": "3.720600",
+   "member_after": [
+    "BOUNDED",
+    "0.457380",
+    "0.595000"
+   ],
+   "member_before": [
+    "BOUNDED",
+    "0.4242",
+    "0.595"
+   ],
+   "old": {
+    "class": "BLANK_NAMED",
+    "faces": [
+     [
+      "R4-244",
+      "DEPENDENT"
+     ],
+     [
+      "R4-305.2F-037.JOINT_HELD_M2",
+      "CAP_ONLY"
+     ],
+     [
+      "R4-311.2F-037.JOINT_FACE",
+      "DEPENDENT"
+     ]
+    ],
+    "why": "no positive floor: every face is 0 .. x or follows an unstated reading"
+   },
+   "old_shaft_record": {
+    "cause": "column shaft: framing member held, controlling depth settled by calculated members (T-119 r2 FRAMING_MEMBER_HELD_D_SETTL",
+    "face_id": "R4-244",
+    "hi": "6.840000",
+    "lo": "6.840000"
+   },
+   "panels": [
+    "P3",
+    "P4",
+    "P6",
+    "P7"
+   ],
+   "perimeter_m": [
+    "1.8",
+    "1.8"
+   ],
+   "sections_m": [
+    [
+     "0.2",
+     "0.7"
+    ]
+   ],
+   "shaft_h_lo": "2.067000",
+   "t707_beside": [
+    "5.592600",
+    "7.362000"
+   ],
+   "top_lo_column": "12.917000",
+   "top_lo_shaft": "12.917000"
+  },
+  {
+   "base": "9.65",
+   "basis": "CTRL_SOFFIT",
+   "class_after": "AT_LEAST",
+   "column": "COL-2F-59",
+   "concrete_line": "L-541c7e565bb93ecdb78b",
+   "d_ctrl": [
+    "0.75",
+    "0.75"
+   ],
+   "d_open_by": [],
+   "d_walk": "0.75",
+   "element_id": "FW:L-541c7e565bb93ecdb78b:FACES:HELD:-:G",
+   "envelope": "5.72600000",
+   "faces": [
+    {
+     "dep": "REDERIVED",
+     "face_id": "SHAFT",
+     "high": "4.900000",
+     "low": "3.020400"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-311.2F-041.JOINT_FACE",
+     "high": null,
+     "low": "0.000000"
+    },
+    {
+     "dep": "DEPENDENT",
+     "face_id": "R4-312.2F-041.EDGE_BAND",
+     "high": null,
+     "low": "0.000000"
+    }
+   ],
+   "h_hi": "3.50",
+   "handle": "778",
+   "high": null,
+   "hold": "D-39 (2F roof slab top) high end",
+   "line_id": "L-fcb1852ca2be8ce69eb8",
+   "low": "3.020400",
+   "member_after": [
+    "BOUNDED",
+    "0.201360",
+    "0.350000"
+   ],
+   "member_before": [
+    "BOUNDED",
+    "0.1824",
+    "0.35"
+   ],
+   "old": {
+    "class": "BLANK_NAMED",
+    "faces": [
+     [
+      "R4-248",
+      "DEPENDENT"
+     ],
+     [
+      "R4-311.2F-041.JOINT_FACE",
+      "DEPENDENT"
+     ],
+     [
+      "R4-312.2F-041.EDGE_BAND",
+      "DEPENDENT"
+     ]
+    ],
+    "why": "no positive floor: every face is 0 .. x or follows an unstated reading"
+   },
+   "old_shaft_record": {
+    "cause": "section CONFLICT in the issued set: CONFLICT (drawn 0.20 x 0.40 vs P.C 20x50): reading 1.20 x 3.45 = 4.140 .. 4.830, bot",
+    "face_id": "R4-248",
+    "hi": "4.830000",
+    "lo": "4.140000"
+   },
+   "panels": [
+    "P4"
+   ],
+   "perimeter_m": [
+    "1.2",
+    "1.40"
+   ],
+   "sections_m": [
+    [
+     "0.2",
+     "0.4"
+    ],
+    [
+     "0.20",
+     "0.50"
+    ]
+   ],
+   "shaft_h_lo": "2.517000",
+   "t707_beside": [
+    "2.828400",
+    "4.676000"
+   ],
+   "top_lo_column": "12.917000",
+   "top_lo_shaft": "12.917000"
+  }
+ ],
+ "rules": {
+  "R-T732-1": "1.0.0",
+  "R-T732-2": "1.0.0"
+ },
+ "schema": "URBAN_T732_FORMWORK_MOVED_V1",
+ "task": "T-732",
+ "unchanged_named": [
+  {
+   "class": "BLANK_NAMED",
+   "line_id": "L-40a1126c765c79b91b86",
+   "member": "L-fb7a6431fede62e93fd5",
+   "why": "member stays capped blank 0 .. 3.5256 (R-T724-3): no floor; faces OQ-10"
+  },
+  {
+   "class": "BLANK_NAMED",
+   "line_id": "L-6d72f51dfe7ec1097f00",
+   "member": "L-684fcad323adc0c8a267",
+   "why": "member AT_LEAST 1.903 already in T-714 (T-711 ledger); faces carry no figure (D-43)"
+  },
+  {
+   "class": "BLANK_NAMED",
+   "line_id": "L-71a283d2bc3d4e5771a9",
+   "member": "L-fb7a6431fede62e93fd5",
+   "why": "member stays capped blank 0 .. 3.5256 (R-T724-3): no floor; faces OQ-10"
+  },
+  {
+   "class": "BLANK_NAMED",
+   "line_id": "L-8605b860a698f87d336b",
+   "member": "L-fb7a6431fede62e93fd5",
+   "why": "member stays capped blank 0 .. 3.5256 (R-T724-3): no floor; faces OQ-10"
+  },
+  {
+   "class": "BLANK_NAMED",
+   "line_id": "L-e3eb00574a3c1c605077",
+   "member": "L-684fcad323adc0c8a267",
+   "why": "member AT_LEAST 1.903 already in T-714 (T-711 ledger); faces carry no figure (D-43)"
+  },
+  {
+   "class": "AT_LEAST",
+   "line_id": "L-e86ee69846d492cfb17a",
+   "member": "L-ab37afa17f2ac5b0efd1",
+   "why": "member AT_LEAST 0.115155 already in T-714 (T-721 ledger); soffit FLOOR_ONLY 1.7993 kept"
+  }
+ ]
+}

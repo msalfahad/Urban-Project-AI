@@ -1,0 +1,16 @@
+[
+ {
+  "task": "T-423",
+  "merge_commit": "62e18eed5846de64f8b46cd5f6e9c8a011ded67e",
+  "verdict_time": "2026-11-09 14:05 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED 62e18eed (Verifier 2026-11-09T14:05Z per date -u, run session_01E6cPneK3oWnREbXzwA7M9u, lock checker; GATE B STEP 3 PASS on bdbbb8db)"
+ },
+ {
+  "task": "T-563",
+  "merge_commit": "e04d99d905bfe1fb7481986fd2ddc2cc2635ba6f",
+  "verdict_time": "2026-11-09 16:13 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-09T16:13Z, run session_01E6cPnbMQMaFE3rtypyQHJD, engine e04d99d9 by `engine push`, on top of T-653 db8898c1; CODEMAP-only conflict: working-branch version taken, maps rebuilt, check stale none, freeze 0)"
+ }
+]

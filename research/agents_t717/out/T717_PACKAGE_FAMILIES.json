@@ -1,0 +1,56 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.75.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.73",
+  "ARCH_TAKEOFF_V3.0.74"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.73": {
+   "lines": 5123,
+   "lines_sha256": "c5a0b1281cdb6149a5650d790ad325bc50fcbe0cb8d1bec89760f70c01fd85e8"
+  },
+  "ARCH_TAKEOFF_V3.0.74": {
+   "lines": 5155,
+   "lines_sha256": "bea5be02fcbfdbc99bd38b5c1c0d982246eaa7c8717b4974ebbfbdf5dc5d690c",
+   "previous": "ARCH_TAKEOFF_V3.0.73",
+   "item_codes": {
+    "FIN.PAINT": {
+     "added": 31,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.PLASTER": {
+     "added": 1,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    }
+   },
+   "families": {
+    "B4-03": {
+     "FIN.PLASTER": {
+      "added": 1,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B4-06": {
+     "FIN.PAINT": {
+      "added": 31,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 36,
+   "record_only": 0
+  }
+ }
+}

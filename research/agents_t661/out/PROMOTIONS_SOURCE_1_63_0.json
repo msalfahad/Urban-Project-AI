@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-661",
+  "merge_commit": "ea1533e47ad2aff6f75b2607aabc758b6b85d1a6",
+  "verdict_time": "2026-11-10 03:43 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED ea1533e4 (Verifier 2026-11-10T03:43Z, run session_01E6cPneBNhhGma2XBX2LNRV; GATE B PASS; candidate of record ARCH_TAKEOFF_V3.0.62 56207c79, NOT RELEASED; master 1.63.0 promoted in the merge by the package's own tools)",
+  "board_commit": "2abdb07e"
+ }
+]

@@ -1,0 +1,708 @@
+{
+ "a_roof_layers": {
+  "adhesive": "roof finish material and tile size not printed: adhesive HELD (T-448 rule needs a size)",
+  "cap_b_roof_030": "REFUSED: cap 0.30 from 'parapet note ST p.14 (T-250 s.(d))' is cited but not located on a sheet: refused as a bound",
+  "falls_once": {
+   "reading": "Q-45 'roof depending on slope' and Q-41 'roof -> screed' describe ONE falls volume: carried once by FIN.ROOF.SCREED; no FIN.FLOOR.BED line sits on a roof zone (0 found): no double count",
+   "tile_bed_lines_on_roof_zones": []
+  },
+  "own_text_census": "ST7757 2,237 TEXT / MTEXT / ATTRIB / DIMENSION entities, P7757 497: no roof or terrace layer callout and no layer thickness; the only 'INSULATION' print is the pool detail ('5cm INSULATION MEMBRANE.' with '10cm PLAIN CONCRETE.'); structural level texts +0.15 / +0.30 / +1.00 / +9.70 only (no slab level under a terrace or roof); 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING' x3 is a title-area note with no dimension; 'T min = 20 / 25 / 30 cm' is the column-thickness-by-storey-height note (H, 4.3 / 4.7 / 5 m), not a roof build-up",
+  "rows": [
+   {
+    "item_code": "FIN.ROOF.SCREED",
+    "layer": "FALLS_SCREED",
+    "line_id": "L-b016c961ddf9e530e3c1",
+    "membrane_face_basis_m2": "HELD (Q-34 PARKED)",
+    "t702": {
+     "state": "HELD blank",
+     "why": "owner Q-34 PARKED (top roof; no roof plan D-62)"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m3"
+    },
+    "zone": "ROOF-1390"
+   },
+   {
+    "item_code": "FIN.ROOF.FINISH",
+    "layer": "FINISH",
+    "line_id": "L-ab79aa46b9647f63b54a",
+    "membrane_face_basis_m2": "HELD (Q-34 PARKED)",
+    "t702": {
+     "state": "HELD blank",
+     "why": "owner Q-34 PARKED (top roof; no roof plan D-62)"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m2"
+    },
+    "zone": "ROOF-1390"
+   },
+   {
+    "item_code": "FIN.ROOF.INSULATION",
+    "layer": "INSULATION",
+    "line_id": "L-19912fbc18556b65ccf6",
+    "membrane_face_basis_m2": "HELD (Q-34 PARKED)",
+    "t702": {
+     "state": "HELD blank",
+     "why": "owner Q-34 PARKED (top roof; no roof plan D-62)"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m2"
+    },
+    "zone": "ROOF-1390"
+   },
+   {
+    "item_code": "FIN.ROOF.PROTECTION",
+    "layer": "PROTECTION",
+    "line_id": "L-c5c48bba5d23fa70e9ad",
+    "membrane_face_basis_m2": "HELD (Q-34 PARKED)",
+    "t702": {
+     "state": "HELD blank",
+     "why": "owner Q-34 PARKED (top roof; no roof plan D-62)"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m2"
+    },
+    "zone": "ROOF-1390"
+   },
+   {
+    "item_code": "FIN.ROOF.SCREED",
+    "layer": "FALLS_SCREED",
+    "line_id": "L-bec94500648a90fb2f2a",
+    "membrane_face_basis_m2": "55.560 (AT220 released; D-band 54.920 .. 55.560, T-321)",
+    "t702": {
+     "high": null,
+     "layer": "FALLS_SCREED",
+     "low": "3.324832",
+     "quantity": null,
+     "state": "HELD",
+     "unit": "m3",
+     "why": "scope Q-41 'roof -> screed' own line (ASSUMED - OWNER-APPROVED); t0 unprinted (D-39): AT_LEAST .. OPEN",
+     "zone": "ROOF-430"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m3"
+    },
+    "zone": "ROOF-430"
+   },
+   {
+    "item_code": "FIN.ROOF.FINISH",
+    "layer": "FINISH",
+    "line_id": "L-702487d5998861c463c1",
+    "membrane_face_basis_m2": "55.560 (AT220 released; D-band 54.920 .. 55.560, T-321)",
+    "t702": {
+     "layer": "FINISH",
+     "quantity": "54.9203",
+     "state": "MEASURED (area); material HELD",
+     "unit": "m2",
+     "why": "to its own edge: finish hatch D1F + B2A (T-321)",
+     "zone": "ROOF-430"
+    },
+    "v3069": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 54.9203,
+     "unit": "m2"
+    },
+    "zone": "ROOF-430"
+   },
+   {
+    "item_code": "FIN.ROOF.INSULATION",
+    "layer": "INSULATION",
+    "line_id": "L-8a5192a5ee3e40b61b08",
+    "membrane_face_basis_m2": "55.560 (AT220 released; D-band 54.920 .. 55.560, T-321)",
+    "t702": {
+     "layer": "INSULATION",
+     "quantity": null,
+     "state": "UNKNOWN",
+     "why": "no print and no owner rule; designer item D-39 (no insulation printed; pool-detail insulation not extended to a roof, ERS s.3): HELD blank, never 0",
+     "zone": "ROOF-430"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m2"
+    },
+    "zone": "ROOF-430"
+   },
+   {
+    "item_code": "FIN.ROOF.PROTECTION",
+    "layer": "PROTECTION",
+    "line_id": "L-0cb71da74613f446eee9",
+    "membrane_face_basis_m2": "55.560 (AT220 released; D-band 54.920 .. 55.560, T-321)",
+    "t702": {
+     "layer": "PROTECTION",
+     "quantity": null,
+     "state": "CARRIED_BY",
+     "why": "Q-41 gives ONE roof screed line ('falls / protection'), carried by FIN.ROOF.SCREED: no second layer printed or ruled",
+     "zone": "ROOF-430"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m2"
+    },
+    "zone": "ROOF-430"
+   },
+   {
+    "item_code": "FIN.ROOF.SCREED",
+    "layer": "FALLS_SCREED",
+    "line_id": "L-f4ae7151a6e2b93dd7ad",
+    "membrane_face_basis_m2": "115.65646 .. 115.81396 (T-691 MERGED; candidate 115.832 is 0.018 above its band: chord-deducted domes)",
+    "t702": {
+     "high": null,
+     "layer": "FALLS_SCREED",
+     "low": "4.791492",
+     "quantity": null,
+     "state": "HELD",
+     "unit": "m3",
+     "why": "scope Q-41 'roof -> screed' own line (ASSUMED - OWNER-APPROVED); t0 unprinted (D-39): AT_LEAST .. OPEN",
+     "zone": "ROOF-970"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m3"
+    },
+    "zone": "ROOF-970"
+   },
+   {
+    "item_code": "FIN.ROOF.FINISH",
+    "layer": "FINISH",
+    "line_id": "L-e005eb9041acb08d8b87",
+    "membrane_face_basis_m2": "115.65646 .. 115.81396 (T-691 MERGED; candidate 115.832 is 0.018 above its band: chord-deducted domes)",
+    "t702": {
+     "layer": "FINISH",
+     "quantity": "115.65646",
+     "state": "MEASURED (area); material HELD",
+     "unit": "m2",
+     "why": "to its own edge: finish hatch 2F21 + drafting gaps, domes excluded (T-321)",
+     "zone": "ROOF-970"
+    },
+    "v3069": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 115.65646,
+     "unit": "m2"
+    },
+    "zone": "ROOF-970"
+   },
+   {
+    "item_code": "FIN.ROOF.INSULATION",
+    "layer": "INSULATION",
+    "line_id": "L-122cbab32ca719527de8",
+    "membrane_face_basis_m2": "115.65646 .. 115.81396 (T-691 MERGED; candidate 115.832 is 0.018 above its band: chord-deducted domes)",
+    "t702": {
+     "layer": "INSULATION",
+     "quantity": null,
+     "state": "UNKNOWN",
+     "why": "no print and no owner rule; designer item D-39 (no insulation printed; pool-detail insulation not extended to a roof, ERS s.3): HELD blank, never 0",
+     "zone": "ROOF-970"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m2"
+    },
+    "zone": "ROOF-970"
+   },
+   {
+    "item_code": "FIN.ROOF.PROTECTION",
+    "layer": "PROTECTION",
+    "line_id": "L-e0dc4455bc0c6ee4fa9b",
+    "membrane_face_basis_m2": "115.65646 .. 115.81396 (T-691 MERGED; candidate 115.832 is 0.018 above its band: chord-deducted domes)",
+    "t702": {
+     "layer": "PROTECTION",
+     "quantity": null,
+     "state": "CARRIED_BY",
+     "why": "Q-41 gives ONE roof screed line ('falls / protection'), carried by FIN.ROOF.SCREED: no second layer printed or ruled",
+     "zone": "ROOF-970"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m2"
+    },
+    "zone": "ROOF-970"
+   },
+   {
+    "item_code": "FIN.ROOF.SCREED",
+    "layer": "FALLS_SCREED",
+    "line_id": "L-5f018cfc13aaa9ae2210",
+    "membrane_face_basis_m2": "32.721 (AT216 released)",
+    "t702": {
+     "high": null,
+     "layer": "FALLS_SCREED",
+     "low": "2.512672",
+     "quantity": null,
+     "state": "HELD",
+     "unit": "m3",
+     "why": "scope Q-41 'roof -> screed' own line (ASSUMED - OWNER-APPROVED); t0 unprinted (D-39): AT_LEAST .. OPEN",
+     "zone": "TERRACE-550"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m3"
+    },
+    "zone": "TERRACE-550"
+   },
+   {
+    "item_code": "FIN.ROOF.FINISH",
+    "layer": "FINISH",
+    "line_id": "L-a6ce29981d037284ec84",
+    "membrane_face_basis_m2": "32.721 (AT216 released)",
+    "t702": {
+     "layer": "FINISH",
+     "quantity": "31.643",
+     "state": "MEASURED (area); material HELD",
+     "unit": "m2",
+     "why": "to its own edge: finish hatch AE0 + D1A + 1252 (T-321)",
+     "zone": "TERRACE-550"
+    },
+    "v3069": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 31.643,
+     "unit": "m2"
+    },
+    "zone": "TERRACE-550"
+   },
+   {
+    "item_code": "FIN.ROOF.INSULATION",
+    "layer": "INSULATION",
+    "line_id": "L-940b7a65d7e79bc0ec33",
+    "membrane_face_basis_m2": "32.721 (AT216 released)",
+    "t702": {
+     "layer": "INSULATION",
+     "quantity": null,
+     "state": "UNKNOWN",
+     "why": "no print and no owner rule; designer item D-39 (no insulation printed; pool-detail insulation not extended to a roof, ERS s.3): HELD blank, never 0",
+     "zone": "TERRACE-550"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m2"
+    },
+    "zone": "TERRACE-550"
+   },
+   {
+    "item_code": "FIN.ROOF.PROTECTION",
+    "layer": "PROTECTION",
+    "line_id": "L-f9e6d4f8c099f6a6cc8e",
+    "membrane_face_basis_m2": "32.721 (AT216 released)",
+    "t702": {
+     "layer": "PROTECTION",
+     "quantity": null,
+     "state": "CARRIED_BY",
+     "why": "Q-41 gives ONE roof screed line ('falls / protection'), carried by FIN.ROOF.SCREED: no second layer printed or ruled",
+     "zone": "TERRACE-550"
+    },
+    "v3069": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null,
+     "unit": "m2"
+    },
+    "zone": "TERRACE-550"
+   }
+  ],
+  "rule": "R-T702-3",
+  "terrace_soffit": "TERRACE-550 over GF-07 / GF-16: the structural set draws one 0.16 plate (no step, T-128 / T-220); on that plate the slab top is 5.451 and the build-up under the printed +5.50 would be 0.049 m, less than the printed 1 % falls rise 0.190 .. 0.203 m (T-321 Checker): the plate reading and the printed finished level cannot both hold (DCR-6). The roof-part soffit bound of T-690 (S 3.65 .. 4.34 above the GF FFL) stands; no printed fact narrows it"
+ },
+ "b_stair_core": {
+  "bounds_v3069": {
+   "L-1983e89d8b619eade1db": {
+    "class": "HELD",
+    "held": [
+     0.0,
+     2.9225
+    ],
+    "item_code": "FIN.MARBLE.LANDING"
+   },
+   "L-5d2be30dd8d2ffeacc42": {
+    "class": "HELD",
+    "held": [
+     0.0,
+     9.225001
+    ],
+    "item_code": "FIN.MARBLE.LANDING"
+   },
+   "L-a788de4672b1f0d2e6c1": {
+    "class": "HELD",
+    "held": [
+     0.0,
+     0.23
+    ],
+    "item_code": "FIN.FLOOR.FINISH_HELD"
+   }
+  },
+  "gf_core_floor": "GF hall 4.805 (+1.00) and back lobby 1.3225 (+0.30) are floor-level surfaces at flight ends: owner trade FLOOR (A6), material HELD (no finish source, RFI-B-A12); centre strip GF-ST-CN 0 .. 0.23 HELD; under-stair porcelain 2.07 released",
+  "landings_unwired": "T-493 (MERGED 2a02de31) proposals still not in V3.0.69: MS1-LD 1.4375, MS2-LD 2.9325, 2F arrival 4.865, RS-LD 1.3525 m2 (B7-04 own lines); L-1983e89d NOT_APPLICABLE as a landing bound; L-5d2be30d = 7.7975 landings + 1.4275 named non-landing",
+  "one_owner": "PASS: 11 surfaces, 0 claimed twice",
+  "rule": "R-T702-4 / R-T702-5",
+  "surfaces": [
+   {
+    "area_m2": "4.805",
+    "level": "1.0",
+    "owner_trade": "FLOOR",
+    "surface": "ST01-GF-HALL",
+    "t493_line_state": "FINISH_HELD 4.805 (B3-01)",
+    "v3069": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.FLOOR.FINISH_HELD",
+     "line_id": "L-f53d498668da3dc7c228",
+     "measured_net": 4.805
+    }
+   },
+   {
+    "area_m2": "1.3225",
+    "level": "0.3",
+    "owner_trade": "FLOOR",
+    "surface": "ST01-GF-LOBBY030",
+    "t493_line_state": "FINISH_HELD 1.3225 (B3-01)",
+    "v3069": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.FLOOR.FINISH_HELD",
+     "line_id": "L-b4441a1b55eda53d98ea",
+     "measured_net": 1.3225
+    }
+   },
+   {
+    "area_m2": null,
+    "level": "",
+    "owner_trade": "TREAD",
+    "surface": "ST01-MS1-T",
+    "t493_line_state": "tread family (T-412 / Q-51 HELD; S-9)",
+    "v3069": null
+   },
+   {
+    "area_m2": "1.4375",
+    "level": "3.5",
+    "owner_trade": "B7-04",
+    "surface": "ST01-MS1-LD",
+    "t493_line_state": "NO LINE (silent omission, F-3)",
+    "v3069": null
+   },
+   {
+    "area_m2": "4.9225",
+    "level": "5.5",
+    "owner_trade": "B7-04",
+    "surface": "ST01-1F-ARRIVAL",
+    "t493_line_state": "RELEASED 4.9225 (B7-04)",
+    "v3069": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.MARBLE.LANDING",
+     "line_id": "L-8011889d84788553a6b1",
+     "measured_net": 4.9225
+    }
+   },
+   {
+    "area_m2": "2.9325",
+    "level": "7.516",
+    "owner_trade": "B7-04",
+    "surface": "ST01-MS2-LD",
+    "t493_line_state": "only inside HELD bound L-5d2be30d 0 .. 9.225 (no line of its own)",
+    "v3069": null
+   },
+   {
+    "area_m2": "4.865",
+    "level": "9.7",
+    "owner_trade": "B7-04",
+    "surface": "ST01-2F-ARRIVAL",
+    "t493_line_state": "only inside HELD bound L-5d2be30d 0 .. 9.225 (F-1)",
+    "v3069": null
+   },
+   {
+    "area_m2": null,
+    "level": "1.0",
+    "owner_trade": "FLOOR",
+    "surface": "ST02-GF-FOOT",
+    "t493_line_state": "GF open-room porcelain (B3-01)",
+    "v3069": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-7625f35c503d9f8e6196",
+     "measured_net": 109.478417
+    }
+   },
+   {
+    "area_m2": "1.3525",
+    "level": "4.696",
+    "owner_trade": "B7-04",
+    "surface": "ST02-RS-LD",
+    "t493_line_state": "NO LINE (F-2; deducted from 1F porcelain as R04 1.352454)",
+    "v3069": null
+   },
+   {
+    "area_m2": null,
+    "level": "5.5",
+    "owner_trade": "FLOOR",
+    "surface": "ST02-1F-TOP",
+    "t493_line_state": "1F living porcelain (B3-01)",
+    "v3069": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-b06400d46d252f242018",
+     "measured_net": 33.411036
+    }
+   },
+   {
+    "area_m2": "5.18",
+    "level": "1.0",
+    "owner_trade": "B7-04",
+    "surface": "ST03-E1-LANDING",
+    "t493_line_state": "RELEASED 5.1794 (B7-04)",
+    "v3069": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.MARBLE.LANDING",
+     "line_id": "L-3dd82a576dce1beb4250",
+     "measured_net": 5.1794
+    }
+   }
+  ],
+  "wall_tile": [
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": "25.21",
+     "held_low": "11.4"
+    },
+    "backing": "L-3f7fb1b37e68e6d6c7b7",
+    "basis": "6.2000 m x tile top 2.2 .. 4.35 (R-T686-3: highest head 2.20 .. G1 +4.65 - floor +0.30) less 2.24 .. 1.76 m2 openings",
+    "before": "HELD blank (DESIGNER_ITEM, C-SH-2)",
+    "line_id": "L-1341e0410a469089c3be",
+    "room": "GF-10",
+    "status": "OPEN BOUND (ASSUMED - OWNER-APPROVED Q-55 C head / Q-48 A top; floor level C-SH-2 designer item stays named)"
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": "19.555",
+     "held_low": "7.04"
+    },
+    "backing": "L-a636dabcd4bc7e59169a",
+    "basis": "4.9000 m x tile top 2.2 .. 4.35 (R-T686-3: highest head 2.20 .. G1 +4.65 - floor +0.30) less 3.74 .. 1.76 m2 openings",
+    "before": "HELD blank (DESIGNER_ITEM, C-SH-2)",
+    "line_id": "L-de4088e7012e655bb071",
+    "room": "GF-11",
+    "status": "OPEN BOUND (ASSUMED - OWNER-APPROVED Q-55 C head / Q-48 A top; floor level C-SH-2 designer item stays named)"
+   }
+  ],
+  "wall_tile_total": [
+   "18.44",
+   "44.765"
+  ],
+  "wet_core_floor_level": "own read this run (GF plan): the level marks +0.30 (back lobby, north) and +1.00 (hall, south) lie outside GF-10 / GF-11; neither room carries a mark, and the basin space's leafless 0.90 doorway opens toward the stair lanes: both floor options stay carried (C-SH-2, designer)"
+ },
+ "c_beam_crossings": {
+  "drawings": "Drive 'Alsenan chalet project': P7757_DXF_COMPRESSED.zip -> P7757.dxf (sha256 ab54dd55) and 'ST7757 dxf.dxf' (sha256 9f9d1179), own decode this run into the private folder",
+  "finding": "F-T702-2: T-690 (MERGED, wired in V3.0.69) took the GF wet-room soffit as the flat 1F slab (S 4.29, DRAWING-CONFIRMED); the five GF-roof-slab 'Sunken slab.' panels (T-213: 275 / 276 / 280 / 287 / 298, drop d printed nowhere, D-41) lie over GF-07 (4.476 m of faces) and GF-14 (1.718 m) by this overlay, and 275 / 276 cover the plan zone behind doors 320 / 321 (the W.C. wedges GF-12 / GF-13; not traced face by face this run): those bands are HELD on d, not fixed",
+  "overlay": "ST S-COL.BON 35C -> arch S-COL.BON 2FAE (1.10 x 0.25 both); checked: 22 ST column outlines within 12 m of 35C match an arch S-COL.BON outline, worst corner residual 0.0 mm",
+  "rooms": [
+   {
+    "after": {
+     "band": [
+      "0.499037",
+      "6.186806"
+     ],
+     "status": "HELD (bounded): terrace build-up D-39 / DCR-6 and sunken drop D-41 (new); beam count established (1)",
+     "terms": {
+      "B27 stretch (band 0)": "1.143764",
+      "floor part (T-690 split)": "6.39951",
+      "free floor faces": "0.779746",
+      "roof part (terrace, share)": "4.09149",
+      "under sunken panels 280 / 287 (D-41)": "4.476"
+     }
+    },
+    "beam": "B27 90 x 85 (T-110 BM-GF-048), soffit 3.60 above the FFL: fills the band [H 3.65, S 4.29]",
+    "before": {
+     "band": [
+      "2.853686",
+      "6.918815"
+     ],
+     "beam_term": [
+      "0",
+      "1.242"
+     ],
+     "cause": "HELD (bounded): roof build-up not printed (D-39 / DCR-6); beam-end count in an open-sided room"
+    },
+    "count": "1 crossing (north end into column 2FAE); the south end leaves through the open east edge (B3) and frames into the S-COL.BON column south-east of that edge (local x 3.275 .. 4.375): 0 on a wall",
+    "geometry": {
+     "B27_edges": "325 (0.900, 4.700) -> (4.369, 0.000); 326 (-0.034, 4.450) -> (3.398, -0.200): width 0.900, angle 53.571 deg to the x axis",
+     "B27_on_faces": {
+      "158 north wall": "0.1476",
+      "A6 south face": "0",
+      "AE west face": "0.0462",
+      "B3 open east edge": "1.5156 (open: 0)",
+      "column 2FAE south face": "0.9000",
+      "column return": "0.0500"
+     },
+     "B27_total_m": "1.143764",
+     "B27_under_panel_m": "0",
+     "faces": "AE west face 0 .. 4.45, column 2FAE south face 0 .. 0.90 at 4.45 + return 0.05, 158 north wall 0.90 .. 3.00 at 4.50 (door D-GF-06 1.659 .. 2.659), A6 south face 0 .. 3.00; B3 east edge (layer 5) OPEN; walk 10.500 m (T-690 uses 10.491, T-128 walk: residual 0.009 named)",
+     "panels": {
+      "280": {
+       "faces": {
+        "AE west face": "2.7236"
+       },
+       "plan_m2": "3.0784"
+      },
+      "287": {
+       "faces": {
+        "158 north wall": "1.7524"
+       },
+       "plan_m2": "2.0804"
+      }
+     }
+    },
+    "line_id": "L-ea586fea86188a18bb67",
+    "room": "GF-07"
+   },
+   {
+    "after": {
+     "band": [
+      "3.892324",
+      "5.005988"
+     ],
+     "status": "HELD (bounded): sunken drop D-41 (new); beam count established (2)",
+     "terms": {
+      "B11 oblique": "0.282868",
+      "B11 square": "0.2",
+      "free faces": "6.066132",
+      "under sunken panels 275 / 276 (D-41)": "1.718",
+      "walk (T-690)": "8.267"
+     }
+    },
+    "beam": "B11 20 x 75 (T-110 BM-GF-001): depth 0.59 below the slab, a 0.05 strip of wall stays under it in the 0.64 band",
+    "before": {
+     "band": [
+      "5.05488",
+      "5.29088"
+     ],
+     "beam_term": [
+      "0",
+      "0.236"
+     ],
+     "cause": "HELD (bounded): beam-end count in an open-sided room"
+    },
+    "count": "2 crossings: square on the south face D2, at 45 deg over door 320 (between sunken panels 275 / 276, its top unprinted, T-213 s.4)",
+    "geometry": {
+     "B11_edges": "28F / 428 at x -0.580 / -0.380, N-S (0.20 wide)",
+     "B11_on_faces": {
+      "D2 south face (square)": "0.200000",
+      "over door 320 (45 deg)": "0.282868"
+     },
+     "faces": "D2 south 0.794, BE east 1.024, 318 W_C 1.341, 324 W_B 1.323, 317 0.142, door 320 0.800 (D315, head 2.20 below H: wall above it in the band), 31A 0.238, door 321 0.800, 31B 0.938, west face 0.844; 2DB (layer 2, above the cut) OPEN 1.256; walk 8.243 m (T-690 / T-128 8.267: residual 0.024 named)",
+     "panel_faces_m": "1.718",
+     "panels": {
+      "275": {
+       "317": "0.142",
+       "W_B 324": "1.000",
+       "over door 320": "0.414"
+      },
+      "276": {
+       "31A": "0.059",
+       "over door 320": "0.103"
+      }
+     }
+    },
+    "line_id": "L-ef7a16664d12b68a6e71",
+    "room": "GF-14"
+   }
+  ],
+  "rule": "R-T702-1 / R-T702-2"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.69",
+ "d_census_after": {
+  "DESIGNER_ITEM": "7 -> 5 blank (+2 OPEN BOUND; class change for the Lead: DESIGNER -> OPEN_BOUND)",
+  "FIN.WALL.TILE blank": "6 -> 4",
+  "held": 104,
+  "moved_blank_to_bounded": [
+   "L-1341e0410a469089c3be",
+   "L-de4088e7012e655bb071"
+  ],
+  "never_summed": "the two new bounds stay beside the released wall tile, never added",
+  "unchanged": "OWNER_OPEN 46, OPEN_BOUND 44 (+2), MEASURABLE_NOW 6 (T-681 fixes, unwired), WIRING_GAP 1 (T-690 closed, unwired); (a) and (c) move no tile-scope line (roof layers, landings and the plaster bands are other codes)"
+ },
+ "d_census_before": {
+  "by_class": {
+   "DESIGNER_ITEM": 7,
+   "MEASURABLE_NOW": 6,
+   "OPEN_BOUND": 44,
+   "OWNER_OPEN": 46,
+   "WIRING_GAP": 1
+  },
+  "held": 104,
+  "identical_v3066_v3069": true,
+  "scope_lines": 264
+ },
+ "inputs": {
+  "t493": "research/agents_t493/CENSUS_T493.csv",
+  "t646": "research/agents_t646/out/ROOF_FENCE_HOLD_CENSUS_T646.json",
+  "t681": "research/agents_t681/out/T681_TILES_CENSUS.json",
+  "t686": "research/agents_t686/out/T686_ROUND3.json",
+  "t690": "research/agents_t690/out/T690_TILES_ROUND2.json",
+  "t691": "research/agents_t691/out/T691_WP_ROUND2.json",
+  "v3066": "research/agents_t677/out/LINE_INDEX_V3_0_66.json",
+  "v3069": "research/agents_t687/out/LINE_INDEX_V3_0_69.json"
+ },
+ "rules": [
+  "R-T702-1",
+  "R-T702-2",
+  "R-T702-3",
+  "R-T702-4",
+  "R-T702-5"
+ ],
+ "task": "T-702"
+}

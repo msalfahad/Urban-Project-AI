@@ -234,11 +234,79 @@
   },
   "coverage/BOQ_FAMILY_MASTER_1.62.0.json": {
    "kind": "AUTHORED",
-   "sha256": "245fd5ac7218d1eddaa52df194801360d0d03a090dd4277852ec095e6dea5240"
+   "sha256": "b389a0e811a2de96def0daeb7172e74780a846a743bd79326d5e72f210c97f32"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.63.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "0c85aa0c0f550115b586eb4feb658c5ba5dae9f8f1e452bc9cc5dae2698390ea"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.64.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "e801e83ab7749ab019151206be5f815d8a3dd20452f67a4000cfdfa921c08a0c"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.65.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "08db14e0b6291c4b64db7a03cfd26c5e17f7cbb173e2b101320ff93f2980f07b"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.66.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "14035f271b6b8262e94226cdeb1ad706131055b38b3207c594fce44ea40c49ab"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.67.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "da9e63bc5cfbb0e6c1bfcc3cc8eaa379d2fc8e9ad63d43ac066267880c7860c1"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.68.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "e91e93c8916119762df22162c68dbe03e1b0996878f923146af2d112b123aa89"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.69.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "af8cb2f18ea4f147e546ccb8bb28207ab9a804e7212050ae40960dca805956fc"
   },
   "coverage/BOQ_FAMILY_MASTER_1.7.0.json": {
    "kind": "AUTHORED",
    "sha256": "17422419ccbc3e88dd5487f62a5719521b5bc7544f5b20faeeb27298053c0fa7"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.70.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "36ba9081021bfeb5974c0530ab5ff8b871e0948d72e4441c586a65ad799c0b73"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.71.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "57b53849e39747bcb438fd4dbc8b0650fff01fdacb670852ca8c57ca1843604a"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.72.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "78ea386103defebfcef3ff77b8969976ca5587ff890b8a8ddcb8c79653772c00"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.73.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "8dfbac77a9a4a36b4ace1e4ac0d72ab3cb988f320de58439c0a42aa5aa269958"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.74.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "edf5e4646f087a453c3a4202ea862d946b766351cf91053f3cf9632be5a6ae0e"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.75.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "cb551f248590005f90353a9634e9ca3e88bd224636cd02ada223eb36ccf584d6"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.76.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "9a5cf292d281042eafbfc18088dfcf16bd602766f8f1c8bf7444546e5fbb0258"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.77.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "950bed874b2067f62262f045ce866cb6c00f57e0d8d91686101a78c641aa5c65"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.78.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "8823c660dd7123e4705064ece05b4ee95107cb9cc67063a37d0e0d0cdbff7e90"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.79.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "ee64bc09ef0036bd97678f1540b2693ac37c56a12cff616cab9503f04a4694c0"
   },
   "coverage/BOQ_FAMILY_MASTER_1.8.0.json": {
    "kind": "AUTHORED",
@@ -293,6 +361,10 @@
   "rulebook/URBAN_COMPANY_RULEBOOK_1.1.0.json": {
    "kind": "AUTHORED",
    "sha256": "da38d121eec33c00ff3c8b524ed022be6a66f5789fdd9a0cd37f216f84dcde35"
+  },
+  "rulebook/URBAN_COMPANY_RULEBOOK_1.2.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "baf602108b825884188e0cf5b0e42e7beebfc4b0dc9f909f1eb8832d6a900bb6"
   }
  },
  "latest_owner_approved": "1.5.0",

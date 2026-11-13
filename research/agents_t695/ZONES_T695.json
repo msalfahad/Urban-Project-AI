@@ -1,0 +1,873 @@
+{
+ "annex": {
+  "at_least_m3": 0.877899,
+  "parts": [
+   {
+    "free_strip_m2": 0.325,
+    "min_depth_m": 0.1,
+    "piece": "10B+7D1#2"
+   },
+   {
+    "free_strip_m2": 1.503299,
+    "min_depth_m": 0.1,
+    "piece": "13F+7D3#1"
+   },
+   {
+    "free_strip_m2": 1.799443,
+    "min_depth_m": 0.1,
+    "piece": "13E+7D6#1"
+   },
+   {
+    "free_strip_m2": 0.0,
+    "min_depth_m": 0.1,
+    "piece": "13E+7D6#2"
+   },
+   {
+    "free_strip_m2": 2.15,
+    "min_depth_m": 0.1,
+    "piece": "140+7D7#1"
+   },
+   {
+    "free_strip_m2": 0.912203,
+    "min_depth_m": 0.1,
+    "piece": "142+7D8#1"
+   },
+   {
+    "free_strip_m2": 0.350592,
+    "min_depth_m": 0.15,
+    "piece": "13C+7D9#1"
+   },
+   {
+    "free_strip_m2": 0.6,
+    "min_depth_m": 0.15,
+    "piece": "141+7DA#1"
+   },
+   {
+    "free_strip_m2": 0.663157,
+    "min_depth_m": 0.1,
+    "piece": "139+13A#1"
+   }
+  ],
+  "skipped": [
+   {
+    "dL_m": 0.3,
+    "piece": "10B+7D1#1",
+    "why": "route-G piece and ledger run disagree: left out of the lower bound (a smaller AT_LEAST stays valid)"
+   },
+   {
+    "dL_m": -5.7,
+    "piece": "13D+7D2#1",
+    "why": "route-G piece and ledger run disagree: left out of the lower bound (a smaller AT_LEAST stays valid)"
+   },
+   {
+    "dL_m": 4.68,
+    "piece": "7D4+F8#1",
+    "why": "route-G piece and ledger run disagree: left out of the lower bound (a smaller AT_LEAST stays valid)"
+   },
+   {
+    "dL_m": 0.4,
+    "piece": "136+7D5#1",
+    "why": "route-G piece and ledger run disagree: left out of the lower bound (a smaller AT_LEAST stays valid)"
+   },
+   {
+    "dL_m": 0.7,
+    "piece": "137+138#1",
+    "why": "route-G piece and ledger run disagree: left out of the lower bound (a smaller AT_LEAST stays valid)"
+   }
+  ],
+  "unbounded_pieces": [
+   "10B+7D1#2",
+   "13F+7D3#1",
+   "13E+7D6#1",
+   "13E+7D6#2",
+   "140+7D7#1",
+   "142+7D8#1",
+   "139+13A#1"
+  ],
+  "upper": null
+ },
+ "straps": {
+  "detail": [
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 3.919701,
+      "compaction_footprint_m2": 3.920067,
+      "displacement_m3": 1.960033,
+      "excavation_m3": 5.879734,
+      "fill_depth_m": 1.0,
+      "formation_depth_m": 1.5,
+      "layers": 7,
+      "netted_cut_m3": 0.000366,
+      "plan_m2": 3.920067,
+      "scenario": "BOX|R1_NONE|LOW|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.063126,
+      "compaction_footprint_m2": 2.063126,
+      "displacement_m3": 1.031563,
+      "excavation_m3": 3.094689,
+      "fill_depth_m": 1.0,
+      "formation_depth_m": 1.5,
+      "layers": 7,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.063126,
+      "scenario": "BOX|R1_NONE|LOW|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 1.629046,
+      "compaction_footprint_m2": 1.525376,
+      "displacement_m3": 0.659018,
+      "excavation_m3": 2.288064,
+      "fill_depth_m": 1.1,
+      "formation_depth_m": 1.5,
+      "layers": 8,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 1.525376,
+      "scenario": "BOX|R1_NONE|LOW|SB3"
+     }
+    },
+    "scenario": "BOX|R1_NONE|LOW",
+    "total": {
+     "backfill_m3": 7.611873,
+     "compaction_footprint_m2": 7.508569,
+     "excavation_m3": 11.262487,
+     "layers": 8,
+     "netted_cut_m3": 0.000366,
+     "scenario": "BOX|R1_NONE|LOW"
+    }
+   },
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 3.695701,
+      "compaction_footprint_m2": 3.920067,
+      "displacement_m3": 2.184033,
+      "excavation_m3": 5.879734,
+      "fill_depth_m": 1.0,
+      "formation_depth_m": 1.5,
+      "layers": 7,
+      "netted_cut_m3": 0.000366,
+      "plan_m2": 3.920067,
+      "scenario": "BOX|R1_NONE|HIGH|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.063126,
+      "compaction_footprint_m2": 2.063126,
+      "displacement_m3": 1.031563,
+      "excavation_m3": 3.094689,
+      "fill_depth_m": 1.0,
+      "formation_depth_m": 1.5,
+      "layers": 7,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.063126,
+      "scenario": "BOX|R1_NONE|HIGH|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 1.546366,
+      "compaction_footprint_m2": 1.525376,
+      "displacement_m3": 0.741698,
+      "excavation_m3": 2.288064,
+      "fill_depth_m": 1.1,
+      "formation_depth_m": 1.5,
+      "layers": 8,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 1.525376,
+      "scenario": "BOX|R1_NONE|HIGH|SB3"
+     }
+    },
+    "scenario": "BOX|R1_NONE|HIGH",
+    "total": {
+     "backfill_m3": 7.305193,
+     "compaction_footprint_m2": 7.508569,
+     "excavation_m3": 11.262487,
+     "layers": 8,
+     "netted_cut_m3": 0.000366,
+     "scenario": "BOX|R1_NONE|HIGH"
+    }
+   },
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 5.597095,
+      "compaction_footprint_m2": 5.040087,
+      "displacement_m3": 2.464042,
+      "excavation_m3": 8.061137,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.003002,
+      "plan_m2": 5.040087,
+      "scenario": "BOX|R2_BLINDING|LOW|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.689799,
+      "compaction_footprint_m2": 2.480908,
+      "displacement_m3": 1.279654,
+      "excavation_m3": 3.969453,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.480908,
+      "scenario": "BOX|R2_BLINDING|LOW|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 2.515312,
+      "compaction_footprint_m2": 2.134241,
+      "displacement_m3": 0.899473,
+      "excavation_m3": 3.414786,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.134241,
+      "scenario": "BOX|R2_BLINDING|LOW|SB3"
+     }
+    },
+    "scenario": "BOX|R2_BLINDING|LOW",
+    "total": {
+     "backfill_m3": 10.802207,
+     "compaction_footprint_m2": 9.655236,
+     "excavation_m3": 15.445376,
+     "layers": 10,
+     "netted_cut_m3": 0.003002,
+     "scenario": "BOX|R2_BLINDING|LOW"
+    }
+   },
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 5.309095,
+      "compaction_footprint_m2": 5.040087,
+      "displacement_m3": 2.752042,
+      "excavation_m3": 8.061137,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.003002,
+      "plan_m2": 5.040087,
+      "scenario": "BOX|R2_BLINDING|HIGH|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.689799,
+      "compaction_footprint_m2": 2.480908,
+      "displacement_m3": 1.279654,
+      "excavation_m3": 3.969453,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.480908,
+      "scenario": "BOX|R2_BLINDING|HIGH|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 2.346699,
+      "compaction_footprint_m2": 2.134241,
+      "displacement_m3": 1.068087,
+      "excavation_m3": 3.414786,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.134241,
+      "scenario": "BOX|R2_BLINDING|HIGH|SB3"
+     }
+    },
+    "scenario": "BOX|R2_BLINDING|HIGH",
+    "total": {
+     "backfill_m3": 10.345593,
+     "compaction_footprint_m2": 9.655236,
+     "excavation_m3": 15.445376,
+     "layers": 10,
+     "netted_cut_m3": 0.003002,
+     "scenario": "BOX|R2_BLINDING|HIGH"
+    }
+   },
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 5.675497,
+      "compaction_footprint_m2": 5.040087,
+      "displacement_m3": 2.738447,
+      "excavation_m3": 8.413943,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.003002,
+      "plan_m2": 5.040087,
+      "scenario": "BOX|R3_FOOTING_CHAIN|LOW|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.719044,
+      "compaction_footprint_m2": 2.480908,
+      "displacement_m3": 1.424073,
+      "excavation_m3": 4.143116,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.480908,
+      "scenario": "BOX|R3_FOOTING_CHAIN|LOW|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 2.557933,
+      "compaction_footprint_m2": 2.134241,
+      "displacement_m3": 1.00625,
+      "excavation_m3": 3.564182,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.134241,
+      "scenario": "BOX|R3_FOOTING_CHAIN|LOW|SB3"
+     }
+    },
+    "scenario": "BOX|R3_FOOTING_CHAIN|LOW",
+    "total": {
+     "backfill_m3": 10.952471,
+     "compaction_footprint_m2": 9.655236,
+     "excavation_m3": 16.121241,
+     "layers": 10,
+     "netted_cut_m3": 0.003002,
+     "scenario": "BOX|R3_FOOTING_CHAIN|LOW"
+    }
+   },
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 5.387497,
+      "compaction_footprint_m2": 5.040087,
+      "displacement_m3": 3.026447,
+      "excavation_m3": 8.413943,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.003002,
+      "plan_m2": 5.040087,
+      "scenario": "BOX|R3_FOOTING_CHAIN|HIGH|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.719044,
+      "compaction_footprint_m2": 2.480908,
+      "displacement_m3": 1.424073,
+      "excavation_m3": 4.143116,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.480908,
+      "scenario": "BOX|R3_FOOTING_CHAIN|HIGH|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 2.389319,
+      "compaction_footprint_m2": 2.134241,
+      "displacement_m3": 1.174863,
+      "excavation_m3": 3.564182,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.134241,
+      "scenario": "BOX|R3_FOOTING_CHAIN|HIGH|SB3"
+     }
+    },
+    "scenario": "BOX|R3_FOOTING_CHAIN|HIGH",
+    "total": {
+     "backfill_m3": 10.495858,
+     "compaction_footprint_m2": 9.655236,
+     "excavation_m3": 16.121241,
+     "layers": 10,
+     "netted_cut_m3": 0.003002,
+     "scenario": "BOX|R3_FOOTING_CHAIN|HIGH"
+    }
+   },
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 3.045031,
+      "compaction_footprint_m2": 3.045031,
+      "displacement_m3": 1.522515,
+      "excavation_m3": 4.567546,
+      "fill_depth_m": 1.0,
+      "formation_depth_m": 1.5,
+      "layers": 7,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 3.045031,
+      "scenario": "DRAWN|R1_NONE|LOW|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.063126,
+      "compaction_footprint_m2": 2.063126,
+      "displacement_m3": 1.031563,
+      "excavation_m3": 3.094689,
+      "fill_depth_m": 1.0,
+      "formation_depth_m": 1.5,
+      "layers": 7,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.063126,
+      "scenario": "DRAWN|R1_NONE|LOW|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 1.629046,
+      "compaction_footprint_m2": 1.525376,
+      "displacement_m3": 0.659018,
+      "excavation_m3": 2.288064,
+      "fill_depth_m": 1.1,
+      "formation_depth_m": 1.5,
+      "layers": 8,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 1.525376,
+      "scenario": "DRAWN|R1_NONE|LOW|SB3"
+     }
+    },
+    "scenario": "DRAWN|R1_NONE|LOW",
+    "total": {
+     "backfill_m3": 6.737203,
+     "compaction_footprint_m2": 6.633533,
+     "excavation_m3": 9.950299,
+     "layers": 8,
+     "netted_cut_m3": 0.0,
+     "scenario": "DRAWN|R1_NONE|LOW"
+    }
+   },
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 2.828028,
+      "compaction_footprint_m2": 3.045031,
+      "displacement_m3": 1.739519,
+      "excavation_m3": 4.567546,
+      "fill_depth_m": 1.0,
+      "formation_depth_m": 1.5,
+      "layers": 7,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 3.045031,
+      "scenario": "DRAWN|R1_NONE|HIGH|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.063126,
+      "compaction_footprint_m2": 2.063126,
+      "displacement_m3": 1.031563,
+      "excavation_m3": 3.094689,
+      "fill_depth_m": 1.0,
+      "formation_depth_m": 1.5,
+      "layers": 7,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.063126,
+      "scenario": "DRAWN|R1_NONE|HIGH|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 1.546366,
+      "compaction_footprint_m2": 1.525376,
+      "displacement_m3": 0.741698,
+      "excavation_m3": 2.288064,
+      "fill_depth_m": 1.1,
+      "formation_depth_m": 1.5,
+      "layers": 8,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 1.525376,
+      "scenario": "DRAWN|R1_NONE|HIGH|SB3"
+     }
+    },
+    "scenario": "DRAWN|R1_NONE|HIGH",
+    "total": {
+     "backfill_m3": 6.437519,
+     "compaction_footprint_m2": 6.633533,
+     "excavation_m3": 9.950299,
+     "layers": 8,
+     "netted_cut_m3": 0.0,
+     "scenario": "DRAWN|R1_NONE|HIGH"
+    }
+   },
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 4.350045,
+      "compaction_footprint_m2": 3.91504,
+      "displacement_m3": 1.914019,
+      "excavation_m3": 6.264064,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 3.91504,
+      "scenario": "DRAWN|R2_BLINDING|LOW|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.689799,
+      "compaction_footprint_m2": 2.480908,
+      "displacement_m3": 1.279654,
+      "excavation_m3": 3.969453,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.480908,
+      "scenario": "DRAWN|R2_BLINDING|LOW|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 2.515312,
+      "compaction_footprint_m2": 2.134241,
+      "displacement_m3": 0.899473,
+      "excavation_m3": 3.414786,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.134241,
+      "scenario": "DRAWN|R2_BLINDING|LOW|SB3"
+     }
+    },
+    "scenario": "DRAWN|R2_BLINDING|LOW",
+    "total": {
+     "backfill_m3": 9.555157,
+     "compaction_footprint_m2": 8.530189,
+     "excavation_m3": 13.648303,
+     "layers": 10,
+     "netted_cut_m3": 0.0,
+     "scenario": "DRAWN|R2_BLINDING|LOW"
+    }
+   },
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 4.071041,
+      "compaction_footprint_m2": 3.91504,
+      "displacement_m3": 2.193023,
+      "excavation_m3": 6.264064,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 3.91504,
+      "scenario": "DRAWN|R2_BLINDING|HIGH|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.689799,
+      "compaction_footprint_m2": 2.480908,
+      "displacement_m3": 1.279654,
+      "excavation_m3": 3.969453,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.480908,
+      "scenario": "DRAWN|R2_BLINDING|HIGH|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 2.346699,
+      "compaction_footprint_m2": 2.134241,
+      "displacement_m3": 1.068087,
+      "excavation_m3": 3.414786,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.6,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.134241,
+      "scenario": "DRAWN|R2_BLINDING|HIGH|SB3"
+     }
+    },
+    "scenario": "DRAWN|R2_BLINDING|HIGH",
+    "total": {
+     "backfill_m3": 9.107539,
+     "compaction_footprint_m2": 8.530189,
+     "excavation_m3": 13.648303,
+     "layers": 10,
+     "netted_cut_m3": 0.0,
+     "scenario": "DRAWN|R2_BLINDING|HIGH"
+    }
+   },
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 4.410945,
+      "compaction_footprint_m2": 3.91504,
+      "displacement_m3": 2.127172,
+      "excavation_m3": 6.538117,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 3.91504,
+      "scenario": "DRAWN|R3_FOOTING_CHAIN|LOW|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.719044,
+      "compaction_footprint_m2": 2.480908,
+      "displacement_m3": 1.424073,
+      "excavation_m3": 4.143116,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.480908,
+      "scenario": "DRAWN|R3_FOOTING_CHAIN|LOW|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 2.557933,
+      "compaction_footprint_m2": 2.134241,
+      "displacement_m3": 1.00625,
+      "excavation_m3": 3.564182,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.134241,
+      "scenario": "DRAWN|R3_FOOTING_CHAIN|LOW|SB3"
+     }
+    },
+    "scenario": "DRAWN|R3_FOOTING_CHAIN|LOW",
+    "total": {
+     "backfill_m3": 9.68792,
+     "compaction_footprint_m2": 8.530189,
+     "excavation_m3": 14.245415,
+     "layers": 10,
+     "netted_cut_m3": 0.0,
+     "scenario": "DRAWN|R3_FOOTING_CHAIN|LOW"
+    }
+   },
+   {
+    "by_strap": {
+     "SB1": {
+      "backfill_m3": 4.131941,
+      "compaction_footprint_m2": 3.91504,
+      "displacement_m3": 2.406176,
+      "excavation_m3": 6.538117,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 3.91504,
+      "scenario": "DRAWN|R3_FOOTING_CHAIN|HIGH|SB1"
+     },
+     "SB2": {
+      "backfill_m3": 2.719044,
+      "compaction_footprint_m2": 2.480908,
+      "displacement_m3": 1.424073,
+      "excavation_m3": 4.143116,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.480908,
+      "scenario": "DRAWN|R3_FOOTING_CHAIN|HIGH|SB2"
+     },
+     "SB3": {
+      "backfill_m3": 2.389319,
+      "compaction_footprint_m2": 2.134241,
+      "displacement_m3": 1.174863,
+      "excavation_m3": 3.564182,
+      "fill_depth_m": 1.5,
+      "formation_depth_m": 1.67,
+      "layers": 10,
+      "netted_cut_m3": 0.0,
+      "plan_m2": 2.134241,
+      "scenario": "DRAWN|R3_FOOTING_CHAIN|HIGH|SB3"
+     }
+    },
+    "scenario": "DRAWN|R3_FOOTING_CHAIN|HIGH",
+    "total": {
+     "backfill_m3": 9.240303,
+     "compaction_footprint_m2": 8.530189,
+     "excavation_m3": 14.245415,
+     "layers": 10,
+     "netted_cut_m3": 0.0,
+     "scenario": "DRAWN|R3_FOOTING_CHAIN|HIGH"
+    }
+   }
+  ],
+  "envelope": {
+   "backfill_m3": [
+    6.437519,
+    10.952471
+   ],
+   "backfill_m3_by": [
+    "DRAWN|R1_NONE|HIGH",
+    "BOX|R3_FOOTING_CHAIN|LOW"
+   ],
+   "compaction_footprint_m2": [
+    6.633533,
+    9.655236
+   ],
+   "compaction_footprint_m2_by": [
+    "DRAWN|R1_NONE|LOW",
+    "BOX|R2_BLINDING|LOW"
+   ],
+   "excavation_m3": [
+    9.950299,
+    16.121241
+   ],
+   "excavation_m3_by": [
+    "DRAWN|R1_NONE|LOW",
+    "BOX|R3_FOOTING_CHAIN|LOW"
+   ],
+   "layers": [
+    8,
+    10
+   ],
+   "layers_by": [
+    "BOX|R1_NONE|LOW",
+    "BOX|R2_BLINDING|LOW"
+   ],
+   "scenarios": 12
+  },
+  "plans_m2": {
+   "BOX": {
+    "SB1": [
+     3.920067,
+     5.040087
+    ],
+    "SB2": [
+     2.063126,
+     2.480908
+    ],
+    "SB3": [
+     1.525376,
+     2.134241
+    ]
+   },
+   "DRAWN": {
+    "SB1": [
+     3.045031,
+     3.91504
+    ],
+    "SB2": [
+     2.063126,
+     2.480908
+    ],
+    "SB3": [
+     1.525376,
+     2.134241
+    ]
+   }
+  },
+  "s01_sensitivity_excavation_m3": {
+   "+0.10": [
+    10.613652,
+    17.086765
+   ],
+   "-0.10": [
+    9.286946,
+    15.155717
+   ]
+  },
+  "scenarios": [
+   {
+    "backfill_m3": 7.611873,
+    "compaction_footprint_m2": 7.508569,
+    "excavation_m3": 11.262487,
+    "layers": 8,
+    "netted_cut_m3": 0.000366,
+    "scenario": "BOX|R1_NONE|LOW"
+   },
+   {
+    "backfill_m3": 7.305193,
+    "compaction_footprint_m2": 7.508569,
+    "excavation_m3": 11.262487,
+    "layers": 8,
+    "netted_cut_m3": 0.000366,
+    "scenario": "BOX|R1_NONE|HIGH"
+   },
+   {
+    "backfill_m3": 10.802207,
+    "compaction_footprint_m2": 9.655236,
+    "excavation_m3": 15.445376,
+    "layers": 10,
+    "netted_cut_m3": 0.003002,
+    "scenario": "BOX|R2_BLINDING|LOW"
+   },
+   {
+    "backfill_m3": 10.345593,
+    "compaction_footprint_m2": 9.655236,
+    "excavation_m3": 15.445376,
+    "layers": 10,
+    "netted_cut_m3": 0.003002,
+    "scenario": "BOX|R2_BLINDING|HIGH"
+   },
+   {
+    "backfill_m3": 10.952471,
+    "compaction_footprint_m2": 9.655236,
+    "excavation_m3": 16.121241,
+    "layers": 10,
+    "netted_cut_m3": 0.003002,
+    "scenario": "BOX|R3_FOOTING_CHAIN|LOW"
+   },
+   {
+    "backfill_m3": 10.495858,
+    "compaction_footprint_m2": 9.655236,
+    "excavation_m3": 16.121241,
+    "layers": 10,
+    "netted_cut_m3": 0.003002,
+    "scenario": "BOX|R3_FOOTING_CHAIN|HIGH"
+   },
+   {
+    "backfill_m3": 6.737203,
+    "compaction_footprint_m2": 6.633533,
+    "excavation_m3": 9.950299,
+    "layers": 8,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R1_NONE|LOW"
+   },
+   {
+    "backfill_m3": 6.437519,
+    "compaction_footprint_m2": 6.633533,
+    "excavation_m3": 9.950299,
+    "layers": 8,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R1_NONE|HIGH"
+   },
+   {
+    "backfill_m3": 9.555157,
+    "compaction_footprint_m2": 8.530189,
+    "excavation_m3": 13.648303,
+    "layers": 10,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R2_BLINDING|LOW"
+   },
+   {
+    "backfill_m3": 9.107539,
+    "compaction_footprint_m2": 8.530189,
+    "excavation_m3": 13.648303,
+    "layers": 10,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R2_BLINDING|HIGH"
+   },
+   {
+    "backfill_m3": 9.68792,
+    "compaction_footprint_m2": 8.530189,
+    "excavation_m3": 14.245415,
+    "layers": 10,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R3_FOOTING_CHAIN|LOW"
+   },
+   {
+    "backfill_m3": 9.240303,
+    "compaction_footprint_m2": 8.530189,
+    "excavation_m3": 14.245415,
+    "layers": 10,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R3_FOOTING_CHAIN|HIGH"
+   }
+  ],
+  "trench_union_BP_box_m2": 9.655235
+ },
+ "zero": {
+  "D_max_m": 0.4,
+  "d_star_m": 0.85,
+  "evidence": {
+   "ground_beam_plan_level_marks": [
+    "+0.15",
+    "+0.30",
+    "+1.00"
+   ],
+   "sunken_hatches_on_ground_beam_plan": 0,
+   "sunken_hatches_on_other_sheets": 14
+  },
+  "lowest_blinding_bottom_m": 0.45,
+  "runs": 13,
+  "top_m": 0.95,
+  "wet_drop_margin_m": 0.45,
+  "zero": true
+ }
+}

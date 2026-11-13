@@ -6,8 +6,17 @@ ARCH_TAKEOFF V1/V2 openings and the M4 / route-G architectural lintel evidence) 
 plus the exact decimal length of the drafted piece (independent of binary floats).
 usage: python3 -I eval_fixtures.py SRC FIXTURE_DIR [JSON_OUT]"""
 import json, math, sys
-from decimal import Decimal, getcontext
-getcontext().prec = 50
+from decimal import Context, Decimal, localcontext
+# T-653 (F-T648-2): the 50-digit context is local to exact_length(); this script no longer sets the process-global
+# Decimal precision (it used to set getcontext().prec = 50 at import).
+
+
+def exact_length(a, b):
+    """the exact length of the stored binary coordinates (Decimal(float) is exact), to 50 digits"""
+    with localcontext(Context(prec=50)):
+        return str(((Decimal(a[0]) - Decimal(b[0])) ** 2 + (Decimal(a[1]) - Decimal(b[1])) ** 2).sqrt())
+
+
 from pathlib import Path
 SRC, FIX = sys.argv[1], Path(sys.argv[2])
 sys.path.insert(0, SRC)
@@ -43,8 +52,7 @@ for f in sorted(FIX.glob("*.dxf")):
               "float_length_drawing_units": repr(math.dist(s["a"], s["b"])), "below_min_len": math.dist(s["a"], s["b"]) < 100.0 * (1e-3 / u),
               # the exact length of the stored binary coordinates (Decimal(float) is exact), to 50 digits:
               # it shows whether the error is in the stored coordinates (the transform) or in the distance formula
-              "exact_length_of_stored_coordinates": str(((Decimal(s["a"][0]) - Decimal(s["b"][0])) ** 2 +
-                                                         (Decimal(s["a"][1]) - Decimal(s["b"][1])) ** 2).sqrt()),
+              "exact_length_of_stored_coordinates": exact_length(s["a"], s["b"]),
               "drafted_length": "100 mm (by construction: the block's local coordinates are exact)"}
              for s in short]
     mm = [dict(s, a=(s["a"][0] * u * 1000, s["a"][1] * u * 1000), b=(s["b"][0] * u * 1000, s["b"][1] * u * 1000)) for s in segs]

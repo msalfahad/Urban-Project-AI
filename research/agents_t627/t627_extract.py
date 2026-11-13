@@ -28,7 +28,7 @@ import collections
 import json
 import math
 import sys
-from decimal import Decimal
+from decimal import Context, Decimal, localcontext
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -87,7 +87,9 @@ def shown(dm) -> str | None:
 
 
 def q3(x) -> str:
-    return str(Decimal(repr(float(x))).quantize(Decimal("0.001")))
+    # T-656: the module's only Decimal arithmetic, in its own local 40-digit context (never the caller's precision)
+    with localcontext(Context(prec=40)):
+        return str(Decimal(repr(float(x))).quantize(Decimal("0.001")))
 
 
 def _seg(e):

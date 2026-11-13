@@ -1,0 +1,397 @@
+{
+ "binding": {
+  "faces": [
+   {
+    "h_hi": "13.44",
+    "h_lo": "12.74",
+    "id": "ST-01 N face (26E / ADE / 127E)",
+    "line": "ST_GF / ST_1F / ST_2F bands",
+    "width": 2.5
+   },
+   {
+    "h_hi": "4.34",
+    "h_lo": "4.24",
+    "id": "ST-01 S face, GF only (220)",
+    "line": "ST_GF band",
+    "width": 2.5
+   },
+   {
+    "h_hi": "12.90",
+    "h_lo": "12.74",
+    "id": "ST-01 W face u 0 .. 5.20 (298 / AF1 / 12B7)",
+    "line": "ST bands",
+    "width": 5.2
+   },
+   {
+    "h_hi": "13.44",
+    "h_lo": "12.74",
+    "id": "ST-01 E face = lift wall, stair side (21C / B16 / 129A)",
+    "line": "ST bands",
+    "width": 5.2
+   },
+   {
+    "h_hi": "4.04",
+    "h_lo": "3.99",
+    "id": "1F arrival wall across the landing (AEA / AEB)",
+    "line": "1F-13",
+    "width": 2.5
+   },
+   {
+    "h_hi": "4.04",
+    "h_lo": "3.79",
+    "id": "2F arrival wall across the landing (1282 / 1283)",
+    "line": "2F-01",
+    "width": 2.5
+   },
+   {
+    "h_hi": "4.04",
+    "h_lo": "3.79",
+    "id": "W face south of u 5.20, 1F / 2F (C21 / 12B7)",
+    "line": "1F-13 / 2F-01",
+    "width": "1.250000"
+   },
+   {
+    "h_hi": null,
+    "h_lo": null,
+    "id": "lift shaft V-03 inner face (each of 4, every floor)",
+    "line": "none (lining needs a specification, T-719)",
+    "width": 1.8
+   },
+   {
+    "h_hi": null,
+    "h_lo": null,
+    "id": "lift shaft outer width, GF (21C .. 222)",
+    "line": "neighbouring rooms",
+    "width": 2.2
+   },
+   {
+    "h_hi": "4.29",
+    "h_lo": "3.99",
+    "id": "ST-02 well west run (T-709 E3E)",
+    "line": "1F-13",
+    "width": "4.00"
+   },
+   {
+    "h_hi": "4.29",
+    "h_lo": "3.99",
+    "id": "ST-02 well south run (T-709 D7B)",
+    "line": "1F-13",
+    "width": "7.02"
+   }
+  ],
+  "height_hits": [],
+  "in_scope_level_intervals": [],
+  "levels_in_scope": [
+   "+0.30",
+   "+1.00",
+   "+3.50",
+   "+5.34",
+   "+5.50",
+   "+7.516",
+   "+7.684",
+   "+9.70",
+   "+13.74",
+   "+13.90"
+  ],
+  "levels_out_of_scope": [
+   "+0.15",
+   "+4.30"
+  ],
+  "nearest": [
+   {
+    "face": "ST-01 S face, GF only (220)",
+    "gap_m": "1.060000",
+    "height": [
+     "4.24",
+     "4.34"
+    ]
+   },
+   {
+    "face": "1F arrival wall across the landing (AEA / AEB)",
+    "gap_m": "1.360000",
+    "height": [
+     "3.99",
+     "4.04"
+    ]
+   },
+   {
+    "face": "2F arrival wall across the landing (1282 / 1283)",
+    "gap_m": "1.360000",
+    "height": [
+     "3.79",
+     "4.04"
+    ]
+   },
+   {
+    "face": "ST-01 N face (26E / ADE / 127E)",
+    "gap_m": "7.340000",
+    "height": [
+     "12.74",
+     "13.44"
+    ]
+   }
+  ],
+  "out_of_scope_level_intervals": [
+   [
+    "0.15",
+    "5.50"
+   ],
+   [
+    "4.30",
+    "9.70"
+   ]
+  ],
+  "out_of_scope_level_sources": {
+   "+0.15": [
+    "242C SE_ELEVATION",
+    "2883 NW_ELEVATION",
+    "394 GF outside the ST-01 box",
+    "407 GF outside the ST-01 box",
+    "409 GF outside the ST-01 box",
+    "40B GF outside the ST-01 box",
+    "40D GF outside the ST-01 box",
+    "4AE GF outside the ST-01 box"
+   ],
+   "+4.30": [
+    "244B SE_ELEVATION",
+    "D20 1F beside the annex 'ROOF' block (B8D)"
+   ],
+   "+5.50": [
+    "1251 1F outside the ST-01 box",
+    "2887 NW_ELEVATION",
+    "D16 1F outside the ST-01 box",
+    "D1B 1F outside the ST-01 box",
+    "D1D 1F outside the ST-01 box"
+   ],
+   "+9.70": [
+    "1350 2F outside the ST-01 box",
+    "1352 2F outside the ST-01 box"
+   ]
+  },
+  "result": "NO_FACE (OUT_OF_SCOPE matches only)",
+  "row": "2.5 x 5.4",
+  "tol_h": "0.054",
+  "tol_w": "0.10",
+  "width_matches": [
+   "ST-01 N face (26E / ADE / 127E)",
+   "ST-01 S face, GF only (220)",
+   "1F arrival wall across the landing (AEA / AEB)",
+   "2F arrival wall across the landing (1282 / 1283)"
+  ]
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.72",
+ "candidate_lines": [
+  {
+   "class": "EXCLUDED",
+   "code": "FIN.PAINT",
+   "element": "2F-R4D1B62:stair hall paint",
+   "high": null,
+   "line": "L-bacbf7fd",
+   "low": null
+  },
+  {
+   "class": "EXCLUDED",
+   "code": "FIN.PAINT",
+   "element": "GF-R31F8AE:stair hall paint",
+   "high": null,
+   "line": "L-83f2ef17",
+   "low": null
+  },
+  {
+   "class": "HELD",
+   "code": "FIN.PAINT",
+   "element": "HL:WALL_FINISH:1F_13:PAINT",
+   "high": 114.3677,
+   "line": "L-be48ea84",
+   "low": 111.0177
+  },
+  {
+   "class": "HELD",
+   "code": "FIN.PAINT",
+   "element": "HL:WALL_FINISH:2F_01:PAINT",
+   "high": 26.0002,
+   "line": "L-c74cfb4e",
+   "low": 22.6502
+  },
+  {
+   "class": "HELD",
+   "code": "FIN.PAINT",
+   "element": "HL:WALL_FINISH:ST_1F:PAINT",
+   "high": 46.564,
+   "line": "L-2ab93d50",
+   "low": 45.317
+  },
+  {
+   "class": "HELD",
+   "code": "FIN.PAINT",
+   "element": "HL:WALL_FINISH:ST_2F:PAINT",
+   "high": 46.822,
+   "line": "L-5a7a5c6f",
+   "low": 45.392
+  },
+  {
+   "class": "HELD",
+   "code": "FIN.PAINT",
+   "element": "HL:WALL_FINISH:ST_GF:PAINT",
+   "high": 62.434,
+   "line": "L-145bd239",
+   "low": 50.945
+  },
+  {
+   "class": "EXCLUDED",
+   "code": "FIN.PLASTER",
+   "element": "2F-R4D1B62:stair hall plaster",
+   "high": null,
+   "line": "L-7afc2b10",
+   "low": null
+  },
+  {
+   "class": "EXCLUDED",
+   "code": "FIN.PLASTER",
+   "element": "GF-R31F8AE:stair hall plaster",
+   "high": null,
+   "line": "L-acc2563d",
+   "low": null
+  },
+  {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "element": "HL:WALL_FINISH:1F_13:PLASTER",
+   "high": 139.6155,
+   "line": "L-9b4a7bab",
+   "low": 135.6255
+  },
+  {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "element": "HL:WALL_FINISH:2F_01:PLASTER",
+   "high": 31.76591,
+   "line": "L-ae0cdd79",
+   "low": 27.35991
+  },
+  {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "element": "HL:WALL_FINISH:ST_1F:PLASTER",
+   "high": 46.564,
+   "line": "L-0eac839f",
+   "low": 45.317
+  },
+  {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "element": "HL:WALL_FINISH:ST_2F:PLASTER",
+   "high": 48.772,
+   "line": "L-418121a4",
+   "low": 47.342
+  },
+  {
+   "class": "HELD",
+   "code": "FIN.PLASTER",
+   "element": "HL:WALL_FINISH:ST_GF:PLASTER",
+   "high": 62.434,
+   "line": "L-95f2c45c",
+   "low": 50.945
+  }
+ ],
+ "his_row": {
+  "PLS": {
+   "first_row": {
+    "height_m": "12.9",
+    "length_m": "14.8",
+    "m2": "190.920000"
+   },
+   "first_row_of_group": 23,
+   "group_J": "204.420000",
+   "group_rows": [
+    23,
+    24
+   ],
+   "group_status": "ESTABLISHED",
+   "group_sum_I": "204.420000",
+   "height_m": "5.4",
+   "m2": "13.500000",
+   "row": 24,
+   "width_m": "2.5"
+  },
+  "PNT": {
+   "first_row": {
+    "height_m": "12.9",
+    "length_m": "14.8",
+    "m2": "190.920000"
+   },
+   "first_row_of_group": 24,
+   "group_J": "204.420000",
+   "group_rows": [
+    24,
+    25
+   ],
+   "group_status": "ESTABLISHED",
+   "group_sum_I": "204.420000",
+   "height_m": "5.4",
+   "m2": "13.500000",
+   "row": 25,
+   "width_m": "2.5"
+  }
+ },
+ "once": {
+  "1F-13": {
+   "chain": "T-606 1F-LIV.ours",
+   "chain_lm": "52.44",
+   "expected_room_face_lm": "39.440000",
+   "open_edges_lm": [],
+   "result": "ONCE",
+   "room_face_lm": "39.45",
+   "room_minus_expected_lm": "0.010000",
+   "shaft_faces_walked_lm": [
+    "5.2",
+    "2.5",
+    "5.2",
+    "0.10"
+   ]
+  },
+  "2F-01": {
+   "chain": "T-606 2F-CORR.ours",
+   "chain_lm": "12.9",
+   "expected_room_face_lm": "9.000000",
+   "open_edges_lm": [
+    "2.5"
+   ],
+   "result": "ONCE",
+   "room_face_lm": "9.009",
+   "room_minus_expected_lm": "0.009000",
+   "shaft_faces_walked_lm": [
+    "0.700000",
+    "0.700000"
+   ]
+  },
+  "GF": {
+   "result": "ONCE",
+   "why": "the GF stair-hall lines (GF-R31F8AE) are EXCLUDED on the candidate; the ST_GF shaft lines alone carry the GF band"
+  }
+ },
+ "reconciliation": {
+  "bridge": {
+   "his row 24 2.5 x 5.4: NO_FACE (OUT_OF_SCOPE matches only)": "13.500000",
+   "north (his 2.40 / +1.00 vs printed 2.50 / +0.30 lobby, heights)": "-2.64",
+   "south side (open above +5.50, his box wall over 12.90)": "20.11",
+   "west / east (his 5.00 x 12.90 x 2 vs faces to 5.20, lobby, soffit)": "-3.62"
+  },
+  "bridge_sum": "27.350000",
+  "engine_change_m2": "0",
+  "engine_shaft_gross_T173": "177.07",
+  "his_minus_engine": "27.350000",
+  "his_stair_house_gross": "204.420000",
+  "like_for_like_plaster_pct": [
+   "-15.81",
+   "-9.88"
+  ],
+  "like_for_like_plaster_pct_row_named_apart": [
+   "-14.83",
+   "-8.82"
+  ],
+  "paint_row": "PNT row 25 13.500000 m2: the same row (group [24, 25]), same result"
+ },
+ "schema": "T726_SHAFT_RESIDUAL_V1",
+ "status": "RESEARCH, UNWIRED"
+}

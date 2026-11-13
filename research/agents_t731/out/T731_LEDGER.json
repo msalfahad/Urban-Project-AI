@@ -1,0 +1,500 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.73",
+ "drawn_arch": {
+  "1F": [
+   "+5.50",
+   5.5,
+   "level mark; storey dimension 450 from +1.00"
+  ],
+  "GF": [
+   "+1.00",
+   1.0,
+   "level mark on the GF stair-hall floor"
+  ],
+  "LD": [
+   "+3.50",
+   3.5,
+   "vertical dimension 320 from the +0.30 mark to the top (finish) line of the half landing: 0.30 + 3.20"
+  ],
+  "LOBBY": [
+   "+0.30",
+   0.3,
+   "level mark on the court-door lobby floor under the landing"
+  ],
+  "sheet": "p7757_arch_sheet10.pdf (section A-A, 1:100, page rotated)"
+ },
+ "drawn_st": {
+  "d1_lane": 1.2,
+  "d1_lines": {
+   "1C4": 0.9,
+   "1C5": 0.6,
+   "1C6": 0.3,
+   "1C7": 0.0
+  },
+  "dxf_sha256_16": "9f9d1179a5d2a663",
+  "g": 0.3,
+  "lane": 1.2,
+  "ms1l_A_first": "26C",
+  "ms1l_col36B_m2": 0.025,
+  "ms1l_lines": {
+   "25D": 3.0,
+   "25E": 3.3,
+   "268": 1.8,
+   "269": 2.1,
+   "26A": 2.4,
+   "26B": 2.7,
+   "26C": 0.6,
+   "26D": 0.9,
+   "26E": 1.2,
+   "26F": 1.5,
+   "271": 0.3,
+   "45A": 0.0
+  },
+  "ms1ld": [
+   1.2,
+   1.2
+  ],
+  "ms1u_lines": {
+   "25B": 3.3,
+   "25C": 3.0,
+   "260": 1.8,
+   "261": 2.7,
+   "262": 2.1,
+   "263": 2.4,
+   "264": 0.6,
+   "265": 0.9,
+   "266": 1.2,
+   "267": 1.5,
+   "270": 0.3,
+   "459": 0.0
+  },
+  "ms2l_lines": {
+   "631": 3.0,
+   "632": 3.3,
+   "63C": 1.8,
+   "63D": 2.1,
+   "63E": 2.4,
+   "63F": 2.7,
+   "640": 0.6,
+   "641": 0.9,
+   "642": 1.2,
+   "643": 1.5,
+   "645": 0.3,
+   "646": 0.0
+  },
+  "ms2ld_e": [
+   1.2,
+   1.2
+  ],
+  "ms2ld_w": [
+   1.3,
+   1.15
+  ],
+  "ms2u_lines": {
+   "62F": 3.0,
+   "630": 2.7,
+   "634": 1.5,
+   "635": 2.4,
+   "636": 1.8,
+   "637": 2.1,
+   "638": 0.3,
+   "639": 0.6,
+   "63A": 0.9,
+   "63B": 1.2,
+   "644": 0.0
+  },
+  "st_levels_at_st01": "none: no level text within 5 m of 45A (p.4) or 646 (p.5); the ST plans print no stair level",
+  "t": 0.16,
+  "turn_region": [
+   1.3,
+   1.15
+  ],
+  "winder_lines_B": {
+   "2F3": 1.15,
+   "2F4": 1.6263,
+   "2F5": 1.2587,
+   "2F6": 1.2587
+  }
+ },
+ "effects_beside": {
+  "MS1-L concrete high m3 (side O x 1.20)": {
+   "T-258 recorded (refused B27)": "1.054813",
+   "T-725 (refused B28-uniform)": "1.037005",
+   "T-731 coherent B": "1.023763"
+  },
+  "MS1-L soffit true D high m2": {
+   "T-725": "4.002826",
+   "T-731": "3.968092"
+  },
+  "MS1-L soffit true O high m2 (lane A input, T-715 / T-718)": {
+   "T-725": "4.464083",
+   "T-731": "4.436732"
+  },
+  "floors moved": 0
+ },
+ "findings": {
+  "F-T731-1": "T-725's 'coherent B' (4.50 / 28 uniform) is itself incoherent: section A-A prints the half landing at +3.50 (dimension 320 above +0.30), which 16 risers at 0.160714 miss by +0.0714 m, and it would carry the VERIFIED MS1-U at 0.160714 instead of 2.00 / 12. The coherent structural reading is 16 risers over 2.50 m (0.15625) then 12 over 2.00 m (0.166667). Highs only move: MS1-L concrete hi 1.037005 -> 1.023763 m3, well side hi 0.854426 -> 0.843465 m2.",
+  "F-T731-2": "The architectural GF plan reading (10 + 4 + 11) is refused twice: Q-46 A makes it a check, and its 11 MS1-U risers contradict the 12 drawn on ST p.4 and cut in section A-A.",
+  "F-T731-3": "The ST plans print no level at ST-01 (own read p.4 / p.5): every reading's rise rests on the architectural section's levels; reading B's count is structural, its levels architectural (levels are physical facts, R-T731-1 (a))."
+ },
+ "inputs": {
+  "research/agents_t258/LEDGER_T258.csv": "6b062b42a598f42e",
+  "research/agents_t711/out/T711_LEDGER.json": "36cd106334645d92",
+  "research/agents_t722/out/LINE_INDEX_V3_0_73.json": "af8d567d8a8ae828",
+  "research/agents_t725/out/T725_LEDGER.json": "280a08bd9814fe4e"
+ },
+ "levels": [
+  {
+   "level_m": 1.0,
+   "name": "GF",
+   "source": "level mark on the GF stair-hall floor"
+  },
+  {
+   "level_m": 3.5,
+   "name": "LD",
+   "source": "vertical dimension 320 from the +0.30 mark to the top (finish) line of the half landing: 0.30 + 3.20"
+  },
+  {
+   "level_m": 5.5,
+   "name": "1F",
+   "source": "level mark; storey dimension 450 from +1.00"
+  }
+ ],
+ "readings_coherent": {
+  "A": {
+   "pieces": [
+    [
+     "MS1-L",
+     10
+    ],
+    [
+     "MS1-T",
+     5
+    ],
+    [
+     "MS1-U",
+     12
+    ]
+   ],
+   "segments": [
+    {
+     "from": "GF",
+     "n": 15,
+     "pieces": [
+      "MS1-L",
+      "MS1-T"
+     ],
+     "r": 0.166666667,
+     "rise_m": 2.5,
+     "to": "LD"
+    },
+    {
+     "from": "LD",
+     "n": 12,
+     "pieces": [
+      "MS1-U"
+     ],
+     "r": 0.166666667,
+     "rise_m": 2.0,
+     "to": "1F"
+    }
+   ],
+   "source": "section A-A sheet 10 (owner Q-46 A: the section counts)"
+  },
+  "B": {
+   "pieces": [
+    [
+     "MS1-L",
+     12
+    ],
+    [
+     "MS1-T",
+     4
+    ],
+    [
+     "MS1-U",
+     12
+    ]
+   ],
+   "segments": [
+    {
+     "from": "GF",
+     "n": 16,
+     "pieces": [
+      "MS1-L",
+      "MS1-T"
+     ],
+     "r": 0.15625,
+     "rise_m": 2.5,
+     "to": "LD"
+    },
+    {
+     "from": "LD",
+     "n": 12,
+     "pieces": [
+      "MS1-U"
+     ],
+     "r": 0.166666667,
+     "rise_m": 2.0,
+     "to": "1F"
+    }
+   ],
+   "source": "ST p.4: 12 straight lines 45A .. 25E + winders 2F6 / 2F4 / 2F5 + closing 2F3 + 12 lines 25B .. 459"
+  }
+ },
+ "readings_refused": {
+  "B27-as-recorded": {
+   "source": "T-258 / T-281 / T-352 / T-711 MS1-L part",
+   "why": "R-T725-1: reading B27-as-recorded counts 28 risers (ST p.4) but takes its rise from a total of 27 (section A-A 27): not one stair"
+  },
+  "B28-uniform": {
+   "misses": [
+    [
+     "LD",
+     3.5,
+     3.571429,
+     0.071429
+    ]
+   ],
+   "source": "T-725 'coherent B': ST p.4 count 28 at 4.50 / 28 over the storey",
+   "why": "R-T731-1 (c): one rise 0.160714 over a printed half landing: reaches +3.571429 at the landing printed +3.50 (miss +0.071429 m), and carries MS1-U at 0.160714 against its VERIFIED 2.00 / 12"
+  },
+  "P": {
+   "pieces": [
+    [
+     "MS1-L",
+     10
+    ],
+    [
+     "MS1-T",
+     4
+    ],
+    [
+     "MS1-U",
+     11
+    ]
+   ],
+   "source": "architectural GF plan 10 + 4 + 11 (Q-46: a check only)",
+   "why": "R-T731-1 (d): P counts 11 risers on MS1-U, drawn 12 on every source read"
+  }
+ },
+ "remeasure": [
+  {
+   "basis": "p.5 5E3 -> 5E2 1.300 x 632 -> 5C0 1.150 x T 0.16 (Q-47 A); level 5.50 + 12 x 4.20 / 25",
+   "ledger": "ST01-MS2-LD-W",
+   "ledger_m3": "0.239200",
+   "own_m3": 0.2392,
+   "piece": "MS2-LD-W half landing +7.516",
+   "released_line": "L-2416e65f (0.4696 with MS2-LD-E)",
+   "residual_m3": 0.0,
+   "status_ledger": "DRAWING-CONFIRMED"
+  },
+  {
+   "basis": "p.5 5E2 -> 5D4 1.200 x 62F -> 5C0 1.200 x 0.16; level 9.70 - 12 x 0.168",
+   "ledger": "ST01-MS2-LD-E",
+   "ledger_m3": "0.230400",
+   "own_m3": 0.2304,
+   "piece": "MS2-LD-E half landing +7.684",
+   "released_line": "L-2416e65f (0.4696 with MS2-LD-W)",
+   "residual_m3": 0.0,
+   "status_ledger": "DRAWING-CONFIRMED"
+  },
+  {
+   "basis": "p.4 25A -> 296 1.200 x 25B -> 279 1.200 x 0.16; level printed by section A-A (320 above +0.30)",
+   "ledger": "ST01-MS1-LD",
+   "ledger_m3": "0.230400",
+   "own_m3": 0.2304,
+   "piece": "MS1-LD half landing +3.50",
+   "released_line": "L-e37d81a8 (1.227952 with MS1-U)",
+   "residual_m3": 0.0,
+   "status_ledger": "VERIFIED"
+  },
+  {
+   "basis": "p.3 1C7 / 1C6 / 1C5 / 1C4 at 0.300, 1.150 long, lane 1C3 -> 15F 1.200; r = 0.70 / 4 = 0.175 (section A-A +0.30 / +1.00); 4 x 1/2 x r x 0.30 x 1.20 = 0.126000 - arrival wedge in GS-08 0.025714 (Q-62 A cond)",
+   "ledger": "ST01b-D1-STEPS",
+   "ledger_m3": "0.100286",
+   "own_m3": 0.100286,
+   "piece": "D1 steps (ST-01b) +0.30 -> +1.00",
+   "released_line": "L-85f64587 (0.100286)",
+   "residual_m3": 0.0,
+   "status_ledger": "DRAWING-CONFIRMED"
+  },
+  {
+   "basis": "p.4 12 lines 459 .. 25B at 0.300 (handles in the ledger), 459 0.200 inside B20 (2C6); r 2.00 / 12 on both coherent readings = the VERIFIED basis",
+   "ledger": "ST01-MS1-U",
+   "ledger_m3": "0.997552",
+   "own_m3": null,
+   "piece": "MS1-U flight geometry",
+   "released_line": "L-e37d81a8",
+   "residual_m3": null,
+   "status_ledger": "VERIFIED"
+  },
+  {
+   "basis": "p.5 12 lines 646 .. 632 at 0.300, 646 0.150 inside B20 (5E1); 3.300 = T-258 basis",
+   "ledger": "ST01-MS2-L",
+   "ledger_m3": "1.033444",
+   "own_m3": null,
+   "piece": "MS2-L flight geometry",
+   "released_line": "L-67e4b048",
+   "residual_m3": null,
+   "status_ledger": "VERIFIED"
+  },
+  {
+   "basis": "p.5 11 drawn lines 644 .. 62F at 0.300, 62F -> 5E1 3.100; arrival line from p.4 459 (T-258)",
+   "ledger": "ST01-MS2-U",
+   "ledger_m3": "1.001373",
+   "own_m3": null,
+   "piece": "MS2-U flight geometry",
+   "released_line": "L-bb0e57b1",
+   "residual_m3": null,
+   "status_ledger": "VERIFIED"
+  },
+  {
+   "basis": "p.4 12 lines 45A .. 25E at 0.300 (B), 10 lines 26C .. 25E (A, from 0.600), 45A 0.150 short of B20 face 2C6, lane 284 -> 256 1.200, head 25E 0.050 short of the well end",
+   "ledger": "ST01-MS1-L",
+   "ledger_m3": "",
+   "own_m3": null,
+   "piece": "MS1-L flight geometry (HELD)",
+   "released_line": null,
+   "residual_m3": null,
+   "status_ledger": "HELD"
+  },
+  {
+   "basis": "p.4 284 -> 2F3 1.300 x 25E -> 279 1.150 = 1.495 m2; winder lines 2F6 1.2587 / 2F4 1.6263 / 2F5 1.2587, closing 2F3 1.1500; soffit not drawn (C-ST-3)",
+   "ledger": "ST01-MS1-T-SLAB",
+   "ledger_m3": "",
+   "own_m3": null,
+   "piece": "MS1-T turn region (HELD)",
+   "released_line": null,
+   "residual_m3": null,
+   "status_ledger": "HELD"
+  }
+ ],
+ "restated": [
+  {
+   "class_on_V3_0_73": "HELD blank",
+   "class_proposed": "AT_LEAST (T-711, unchanged)",
+   "high_new": null,
+   "high_old": null,
+   "item": "STR.CONC.STAIR",
+   "line_id": "L-7863355dfcb68a681d2d",
+   "low_new": "1.213428",
+   "low_old": "1.213429",
+   "note": "floor from reading A; B (16 risers to +3.50 at 2.50 / 16 = 0.15625) is above it; no AT_MOST (warped turn soffit, C-ST-3); componentwise min mixes readings (refused, information only) 1.209143 -> 1.205928. T-711 printed 1.213429 half-up; the exact reading A sum 1.213428296 floors to 1.213428 (R-T696-1): -0.000001 m3, rounding only",
+   "piece": "MS1-L + winders + turn",
+   "reading_sums_exact": {
+    "A": "1.213428296120851",
+    "B": "1.366662121944398"
+   },
+   "reading_sums_new": {
+    "A": "1.213428",
+    "B": "1.366662"
+   },
+   "reading_sums_old": {
+    "A_section_arch_27": "1.213429",
+    "B_structural_28": "1.400927"
+   },
+   "t725_B_sum_beside": "1.383119",
+   "unit": "m3"
+  },
+  {
+   "class_on_V3_0_73": "HELD blank",
+   "class_proposed": "BOUNDED (T-725)",
+   "high_new": "0.843465",
+   "high_old": "0.854426",
+   "item": "STR.FORMWORK.STAIR",
+   "line_id": "L-9c3643da524267bf47f6",
+   "low_new": "0.679193",
+   "low_old": "0.679193",
+   "note": "high = reading B method O on the coherent 0.15625 (T-725 0.854426 used 4.50 / 28 uniform)",
+   "piece": "MS1-L well side",
+   "readings_new": {
+    "AD": 0.679193,
+    "AO": 0.709344,
+    "BD": 0.812221,
+    "BO": 0.843464
+   },
+   "unit": "m2"
+  },
+  {
+   "cap_new": "0.862807",
+   "cap_old": "0.873917",
+   "class_on_V3_0_73": "HELD blank",
+   "class_proposed": "BLANK_NAMED (T-725, SEQ)",
+   "item": "STR.FORMWORK.STAIR",
+   "line_id": "L-d9790e457fd530487553",
+   "note": "cap = reading B method O on the coherent 0.15625; low stays blank (sequence not printed)",
+   "piece": "MS1-L west wall + well-end junction",
+   "readings_new": {
+    "A": 0.729036,
+    "B": 0.862806
+   },
+   "unit": "m2"
+  },
+  {
+   "class_on_V3_0_73": "HELD blank",
+   "class_proposed": "AT_LEAST (T-725, unchanged)",
+   "item": "STR.FORMWORK.STAIR",
+   "line_id": "L-ffd491ad529ee2251982",
+   "low_new": "7.678894",
+   "low_old": "7.678894",
+   "note": "low = reading A method D (unchanged); the B readings move with the coherent rise but stay above",
+   "piece": "MS1-L risers + soffit + winder turn",
+   "readings_new": {
+    "AD": {
+     "risers": 2.0,
+     "soffit": 3.225561,
+     "sum": 7.678895,
+     "turn_floor": 1.495,
+     "winders": 0.958333
+    },
+    "AO": {
+     "risers": 2.0,
+     "soffit": 3.677828,
+     "sum": 8.131161,
+     "turn_floor": 1.495,
+     "winders": 0.958333
+    },
+    "BD": {
+     "risers": 2.25,
+     "soffit": 3.968092,
+     "sum": 8.540233,
+     "turn_floor": 1.495,
+     "winders": 0.827141
+    },
+    "BO": {
+     "risers": 2.25,
+     "soffit": 4.436732,
+     "sum": 9.008873,
+     "turn_floor": 1.495,
+     "winders": 0.827141
+    }
+   },
+   "readings_old": {
+    "AD": [
+     7.678895,
+     null
+    ],
+    "AO": [
+     8.131161,
+     null
+    ],
+    "BD": [
+     8.662885,
+     null
+    ],
+    "BO": [
+     9.124142,
+     null
+    ]
+   },
+   "unit": "m2"
+  }
+ ],
+ "rules": {
+  "R-T731-1": "1.0.0",
+  "R-T731-2": "1.0.0"
+ },
+ "schema": "URBAN_T731_STAIR_COHERENT_V1",
+ "task": "T-731"
+}

@@ -1,0 +1,925 @@
+{
+ "a_census": {
+  "by_class_v3066": {
+   "DESIGNER_ITEM": 7,
+   "MEASURABLE_NOW": 6,
+   "OPEN_BOUND": 44,
+   "OWNER_OPEN": 46,
+   "WIRING_GAP": 1
+  },
+  "candidate": "ARCH_TAKEOFF_V3.0.66",
+  "held_count": 104,
+  "in_scope_lines_identical_v3065_v3066": true,
+  "materials": "unchanged from T-681 (areas unchanged): adhesive group 149 .. 248 bags HELD (no tile size printed)",
+  "measurable_now": [
+   {
+    "after": "NOT_APPLICABLE 0 lm",
+    "evidence": "T-681 own DXF read; Checker own re-measure AGREE (MERGED ebd8a77d, Gate e)",
+    "item_code": "FIN.SKIRTING",
+    "line_id": "L-33f2018c987f782d1c91",
+    "status": "DRAWING-CONFIRMED",
+    "stretch": "MS2-LD.W13 (W 1.050 .. 1.200)",
+    "v3066": "HELD blank (unchanged since V3.0.65)",
+    "wired": false
+   },
+   {
+    "after": "FULL 1 lm",
+    "evidence": "T-681 own DXF read; Checker own re-measure AGREE (MERGED ebd8a77d, Gate e)",
+    "item_code": "FIN.SKIRTING",
+    "line_id": "L-760bfa8dd00061361695",
+    "status": "DRAWING-CONFIRMED",
+    "stretch": "MS2-LD.W25 (N 1.400 .. 2.400)",
+    "v3066": "HELD blank (unchanged since V3.0.65)",
+    "wired": false
+   },
+   {
+    "after": "NOT_APPLICABLE 0 lm",
+    "evidence": "T-681 own DXF read; Checker own re-measure AGREE (MERGED ebd8a77d, Gate e)",
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-18efa069acded71c81e7",
+    "status": "DRAWING-CONFIRMED",
+    "stretch": "MS1-L.W2 sloped (W 2.250 .. 1.200)",
+    "v3066": "HELD blank (unchanged since V3.0.65)",
+    "wired": false
+   },
+   {
+    "after": "NOT_APPLICABLE 0 lm",
+    "evidence": "T-681 own DXF read; Checker own re-measure AGREE (MERGED ebd8a77d, Gate e)",
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-4ff56def5b73b558afbe",
+    "status": "DRAWING-CONFIRMED",
+    "stretch": "MS2-L.W2 sloped (W 2.250 .. 1.200)",
+    "v3066": "HELD blank (unchanged since V3.0.65)",
+    "wired": false
+   },
+   {
+    "after": "NOT_APPLICABLE 0 lm",
+    "evidence": "T-681 own DXF read; Checker own re-measure AGREE (MERGED ebd8a77d, Gate e)",
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "line_id": "L-76748b7b62ab2d52b4e2",
+    "status": "DRAWING-CONFIRMED",
+    "stretch": "MS1-L.W2 zigzag (W 2.250 .. 1.200)",
+    "v3066": "HELD blank (unchanged since V3.0.65)",
+    "wired": false
+   },
+   {
+    "after": "NOT_APPLICABLE 0 lm",
+    "evidence": "T-681 own DXF read; Checker own re-measure AGREE (MERGED ebd8a77d, Gate e)",
+    "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+    "line_id": "L-f45c2e6d46b0cc6a7e53",
+    "status": "DRAWING-CONFIRMED",
+    "stretch": "MS2-L.W2 zigzag (W 2.250 .. 1.200)",
+    "v3066": "HELD blank (unchanged since V3.0.65)",
+    "wired": false
+   }
+  ],
+  "rule": "R-T690-2",
+  "totals": {
+   "EXT.FLOOR.OUTDOOR [m2]": {
+    "blank": 0,
+    "bounded": 2,
+    "by_class": {
+     "OWNER_OPEN": 2
+    },
+    "high": "17.227412",
+    "lines": 2,
+    "low": "17.227412"
+   },
+   "FIN.FLOOR.BED.DRY [m3]": {
+    "blank": 0,
+    "bounded": 23,
+    "by_class": {
+     "OPEN_BOUND": 23
+    },
+    "high": "12.060739",
+    "lines": 23,
+    "low": "9.045554"
+   },
+   "FIN.FLOOR.BED.WET [m3]": {
+    "blank": 0,
+    "bounded": 21,
+    "by_class": {
+     "OPEN_BOUND": 21
+    },
+    "high": "5.134535",
+    "lines": 21,
+    "low": "3.423023"
+   },
+   "FIN.FLOOR.FINISH_HELD [m2]": {
+    "blank": 0,
+    "bounded": 1,
+    "by_class": {
+     "DESIGNER_ITEM": 1
+    },
+    "high": "0.23",
+    "lines": 1,
+    "low": "0"
+   },
+   "FIN.SKIRTING [lm]": {
+    "blank": 7,
+    "bounded": 0,
+    "by_class": {
+     "DESIGNER_ITEM": 4,
+     "MEASURABLE_NOW": 2,
+     "WIRING_GAP": 1
+    },
+    "high": null,
+    "lines": 7,
+    "low": null
+   },
+   "FIN.STAIR.SKIRTING.SLOPED [lm]": {
+    "blank": 22,
+    "bounded": 0,
+    "by_class": {
+     "MEASURABLE_NOW": 2,
+     "OWNER_OPEN": 20
+    },
+    "high": null,
+    "lines": 22,
+    "low": null
+   },
+   "FIN.STAIR.SKIRTING.ZIGZAG [lm]": {
+    "blank": 22,
+    "bounded": 0,
+    "by_class": {
+     "MEASURABLE_NOW": 2,
+     "OWNER_OPEN": 20
+    },
+    "high": null,
+    "lines": 22,
+    "low": null
+   },
+   "FIN.WALL.TILE [m2]": {
+    "blank": 6,
+    "bounded": 0,
+    "by_class": {
+     "DESIGNER_ITEM": 2,
+     "OWNER_OPEN": 4
+    },
+    "high": null,
+    "lines": 6,
+    "low": null
+   }
+  }
+ },
+ "b_wiring_gap": {
+  "after": "EXCLUDED (NOT_APPLICABLE)",
+  "before": "HELD blank",
+  "beside_removed_lm": "0.400",
+  "checked": [
+   {
+    "line_id": "L-af8221bd2d33bde80c67",
+    "why": "4.650 lm = face 6.550 - OP-010 1.000 - OP-020 0.900 (T-443): the passage width is deducted and no jamb return is added"
+   },
+   {
+    "line_id": "L-1cf6c336250d34f0a200",
+    "why": "basin space GF-11 skirting EXCLUDED (full-height tile, UP-CER-004)"
+   }
+  ],
+  "effect": "FIN.SKIRTING HELD blank 7 -> 6 on V3.0.66 (5 after the T-681 W25 fix); valued lm unchanged; nothing moves into a neighbour",
+  "element_id": "SKIRT-T443:GF-ST-HALL:OP-020-JAMBS",
+  "line_id": "L-6ff876aefb5a3631565c",
+  "settled_by": "FR-T601-2 (T-601 / T-604 manifest V12, restated V20, MERGED): NOT_APPLICABLE by Q-06 A, the passage's wash side is a basin-only wet space",
+  "stair_lines_naming_OP_020": 0
+ },
+ "c_wet_band": {
+  "H_source": "wall-tile top = finished ceiling, owner G1 (Q-43 / Q-48 A): GF 3.65, 1F / 2F 3.35 (ASSUMED - OWNER-APPROVED)",
+  "S_source": "plaster top = structural soffit, owner 2026-11-02 / Q-72, by R-T556-1: interval - floor build-up above - slab (floor part, DRAWING-CONFIRMED); roof part interval - b_roof - slab",
+  "annex_gross_m2": "20.532",
+  "annex_low_high_m2": [
+   "19.932994",
+   "20.532"
+  ],
+  "core_levels": {
+   "floor_options": [
+    "0.30",
+    "1.00"
+   ],
+   "g1_ceiling_abs": "4.65",
+   "slab_soffit_abs": "5.29",
+   "src": "C-SH-2 floor +0.30 or +1.00 not drawn (T-088 / T-173); soffit = 1F FFL +5.50 - 0.05 (T-214) - 0.16 (Q-14) = +5.29; tile top bound 2.20 (highest head, Q-55 C) .. G1 +4.65 - floor (T-686 R-T686-3)"
+  },
+  "floor_buildup": [
+   "0.05",
+   "T-214 drawn FFL -> slab top layer on every floor band, Verifier re-measured (T-556)"
+  ],
+  "roof_buildup_max": {
+   "ROOF-1390": [
+    "0.30",
+    "parapet note ST p.14: b_roof < 0.30 (T-250 s.(d), MERGED)"
+   ],
+   "ROOF-970": [
+    "0.30",
+    "parapet note ST p.14: b_roof < 0.30 (T-250 s.(d), MERGED)"
+   ],
+   "TERRACE-550": [
+    null,
+    "no merged record bounds the terrace build-up from above: the roof part's S runs down to H (S >= H is the only physical bound)"
+   ]
+  },
+  "rooms": [
+   {
+    "H_m": "3.35",
+    "S_floor_m": "3.99",
+    "S_roof_m": [
+     "3.74",
+     "4.04"
+    ],
+    "band_high_m2": "6.21",
+    "band_low_m2": "3.51",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line '1F-R8BDA49:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "0"
+    ],
+    "engine_room": "1F-R8BDA49",
+    "face_length_m": "9",
+    "in_no_line_now": {
+     "backing_plaster": "L-3eba04f2458578e7dc19",
+     "both_m2": "27.9101",
+     "paint": [
+      "L-c60782dc0946127b7e94"
+     ],
+     "wall_tile": "L-a34d09209fb5aad3eb63",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "W20",
+     "D-1F-04"
+    ],
+    "roof": "ROOF-970",
+    "room": "1F-02",
+    "status": "HELD (bounded): roof build-up not printed (D-39 / DCR-6)",
+    "under_roof_share": "1.0",
+    "zone": "1F"
+   },
+   {
+    "H_m": "3.35",
+    "S_floor_m": "3.99",
+    "S_roof_m": [
+     "3.74",
+     "4.04"
+    ],
+    "band_high_m2": "6.21",
+    "band_low_m2": "3.51",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line '1F-R48AA46:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "0"
+    ],
+    "engine_room": "1F-R48AA46",
+    "face_length_m": "9",
+    "in_no_line_now": {
+     "backing_plaster": "L-9473c0c6ce4e11e4d162",
+     "both_m2": "27.91",
+     "paint": [
+      "L-43134b281f14a8bee79e"
+     ],
+     "wall_tile": "L-88ed2535c1975adb702e",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "D-1F-01",
+     "W19"
+    ],
+    "roof": "ROOF-970",
+    "room": "1F-03",
+    "status": "HELD (bounded): roof build-up not printed (D-39 / DCR-6)",
+    "under_roof_share": "1.0",
+    "zone": "1F"
+   },
+   {
+    "H_m": "3.35",
+    "S_floor_m": "3.99",
+    "S_roof_m": null,
+    "band_high_m2": "10.8416",
+    "band_low_m2": "10.8416",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line '1F-R26FA0D:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "0"
+    ],
+    "engine_room": "1F-R26FA0D",
+    "face_length_m": "16.94",
+    "in_no_line_now": {
+     "backing_plaster": "L-2948639faa08fa1cff81",
+     "both_m2": "52.529",
+     "paint": [
+      "L-7878bf61681466dee87e"
+     ],
+     "wall_tile": "L-b2077eee5a71a975bd74",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "W21",
+     "D-1F-06",
+     "D-1F-05"
+    ],
+    "roof": null,
+    "room": "1F-07",
+    "status": "ASSUMED - OWNER-APPROVED (H Q-48 A) on a DRAWING-CONFIRMED soffit",
+    "under_roof_share": "0.0",
+    "zone": "1F"
+   },
+   {
+    "H_m": "3.35",
+    "S_floor_m": "3.99",
+    "S_roof_m": null,
+    "band_high_m2": "4.1856",
+    "band_low_m2": "4.1856",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line '1F-R52AC05:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "0"
+    ],
+    "engine_room": "1F-R52AC05",
+    "face_length_m": "6.54",
+    "in_no_line_now": {
+     "backing_plaster": "L-005cb3310fbebd97d563",
+     "both_m2": "19.6691",
+     "paint": [
+      "L-3621a14bd1e193739089"
+     ],
+     "wall_tile": "L-1090bb5c8226afec2235",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "D-1F-06",
+     "W22"
+    ],
+    "roof": null,
+    "room": "1F-08",
+    "status": "ASSUMED - OWNER-APPROVED (H Q-48 A) on a DRAWING-CONFIRMED soffit",
+    "under_roof_share": "0.0",
+    "zone": "1F"
+   },
+   {
+    "H_m": "3.35",
+    "S_floor_m": "3.99",
+    "S_roof_m": [
+     "3.74",
+     "4.04"
+    ],
+    "band_high_m2": "4.9818",
+    "band_low_m2": "4.275",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line '1F-RED23B8:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "0"
+    ],
+    "engine_room": "1F-RED23B8",
+    "face_length_m": "7.6",
+    "in_no_line_now": {
+     "backing_plaster": "L-5e5e62e91688eebfb285",
+     "both_m2": "23.2201",
+     "paint": [
+      "L-561e8611d7ba1bf514d3"
+     ],
+     "wall_tile": "L-086e72207311265f81ab",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "W23",
+     "D-1F-07"
+    ],
+    "roof": "ROOF-970",
+    "room": "1F-09",
+    "status": "HELD (bounded): roof build-up not printed (D-39 / DCR-6)",
+    "under_roof_share": "0.31",
+    "zone": "1F"
+   },
+   {
+    "H_m": "3.35",
+    "S_floor_m": "3.99",
+    "S_roof_m": [
+     "3.74",
+     "4.04"
+    ],
+    "band_high_m2": "6.003",
+    "band_low_m2": "3.393",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line '1F-R48CDA5:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "0"
+    ],
+    "engine_room": "1F-R48CDA5",
+    "face_length_m": "8.7",
+    "in_no_line_now": {
+     "backing_plaster": "L-12b83d399be186804faf",
+     "both_m2": "26.3051",
+     "paint": [
+      "L-d8707985856b2cfbe5a2"
+     ],
+     "wall_tile": "L-82cd58d4a16fb94ddfc6",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "W18",
+     "D-1F-10"
+    ],
+    "roof": "ROOF-970",
+    "room": "1F-12",
+    "status": "HELD (bounded): roof build-up not printed (D-39 / DCR-6)",
+    "under_roof_share": "1.0",
+    "zone": "1F"
+   },
+   {
+    "H_m": "3.35",
+    "S_floor_m": "3.99",
+    "S_roof_m": [
+     "3.74",
+     "4.04"
+    ],
+    "band_high_m2": "6.693",
+    "band_low_m2": "3.783",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line '2F-RE83BED:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "0"
+    ],
+    "engine_room": "2F-RE83BED",
+    "face_length_m": "9.7",
+    "in_no_line_now": {
+     "backing_plaster": "L-bec624729c89553f720f",
+     "both_m2": "30.255",
+     "paint": [
+      "L-5b91ae8508c9162b1e04"
+     ],
+     "wall_tile": "L-065bafe1b98e3a43881c",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "W28",
+     "D-2F-03"
+    ],
+    "roof": "ROOF-1390",
+    "room": "2F-02",
+    "status": "HELD (bounded): roof build-up not printed (D-39 / DCR-6)",
+    "under_roof_share": "1.0",
+    "zone": "2F"
+   },
+   {
+    "H_m": "3.65",
+    "S_floor_m": "4.29",
+    "S_roof_m": [
+     "3.65",
+     "4.34"
+    ],
+    "band_high_m2": "6.918815",
+    "band_low_m2": "2.853686",
+    "beams": [
+     "B27"
+    ],
+    "carrier": "FIN.PLASTER, new component line 'GF-RC06FED:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "1.242"
+    ],
+    "engine_room": "GF-RC06FED",
+    "face_length_m": "10.491",
+    "in_no_line_now": {
+     "backing_plaster": "L-721a0f1441436193978c",
+     "both_m2": "32.3422",
+     "paint": [
+      "L-c3f7e68ce91a436802e2"
+     ],
+     "wall_tile": "L-f5c5a1a9c9ee2b644cb5",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "D-GF-06",
+     "W10",
+     "W09"
+    ],
+    "roof": "TERRACE-550",
+    "room": "GF-07",
+    "status": "HELD (bounded): roof build-up not printed (D-39 / DCR-6); beam-end count in an open-sided room",
+    "under_roof_share": "0.39",
+    "zone": "GF_MAIN"
+   },
+   {
+    "H_m": "3.65",
+    "S_floor_m": "4.29",
+    "S_roof_m": null,
+    "band_high_m2": "4.74496",
+    "band_low_m2": "4.74496",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line 'GF-RF38DAF:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "0"
+    ],
+    "engine_room": "GF-RF38DAF",
+    "face_length_m": "7.414",
+    "in_no_line_now": {
+     "backing_plaster": "L-2b9a85e1bedf161c0c21",
+     "both_m2": "25.3011",
+     "paint": [
+      "L-a05ce0360adda3a26c4a"
+     ],
+     "wall_tile": "L-c34694477f67800ae2e3",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "D-GF-11"
+    ],
+    "roof": null,
+    "room": "GF-12",
+    "status": "ASSUMED - OWNER-APPROVED (H Q-48 A) on a DRAWING-CONFIRMED soffit",
+    "under_roof_share": "0.0",
+    "zone": "GF_MAIN"
+   },
+   {
+    "H_m": "3.65",
+    "S_floor_m": "4.29",
+    "S_roof_m": null,
+    "band_high_m2": "4.3584",
+    "band_low_m2": "4.3584",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line 'GF-RB28769:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "0"
+    ],
+    "engine_room": "GF-RB28769",
+    "face_length_m": "6.81",
+    "in_no_line_now": {
+     "backing_plaster": "L-302f7235046bbe0b6c09",
+     "both_m2": "22.6165",
+     "paint": [
+      "L-f0047fe1e4a14e6528ed"
+     ],
+     "wall_tile": "L-a3cb2c8a9b6080769ebc",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "W06",
+     "D-GF-12"
+    ],
+    "roof": null,
+    "room": "GF-13",
+    "status": "ASSUMED - OWNER-APPROVED (H Q-48 A) on a DRAWING-CONFIRMED soffit",
+    "under_roof_share": "0.0",
+    "zone": "GF_MAIN"
+   },
+   {
+    "H_m": "3.65",
+    "S_floor_m": "4.29",
+    "S_roof_m": null,
+    "band_high_m2": "5.29088",
+    "band_low_m2": "5.05488",
+    "beams": [
+     "B11"
+    ],
+    "carrier": "FIN.PLASTER, new component line 'GF-RDBD4F9:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "0.236"
+    ],
+    "engine_room": "GF-RDBD4F9",
+    "face_length_m": "8.267",
+    "in_no_line_now": {
+     "backing_plaster": "L-910672305a87544d4d72",
+     "both_m2": "26.6544",
+     "paint": [
+      "L-2e7ba2852011a8412e25"
+     ],
+     "wall_tile": "L-fa408571a8adcfaf1a1f",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "D-GF-11",
+     "D-GF-12"
+    ],
+    "roof": null,
+    "room": "GF-14",
+    "status": "HELD (bounded): beam-end count in an open-sided room",
+    "under_roof_share": "0.0",
+    "zone": "GF_MAIN"
+   },
+   {
+    "H_m": "3.65",
+    "S_floor_m": "4.29",
+    "S_roof_m": [
+     "3.65",
+     "4.34"
+    ],
+    "band_high_m2": "5.085875",
+    "band_low_m2": "2.2448",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line 'GF-RD6F891:plaster band above ceiling' (owner trade plaster, register ruling 2026-11-11)",
+    "deducted_m2": [
+     "0",
+     "0"
+    ],
+    "engine_room": "GF-RD6F891",
+    "face_length_m": "7.625",
+    "in_no_line_now": {
+     "backing_plaster": "L-ccc97166c57999d5a303",
+     "both_m2": "25.5912",
+     "paint": [
+      "L-8f50fe9bb5760f61c78a"
+     ],
+     "wall_tile": "L-ca4e74c59364f665b102",
+     "why": "the room's FIN.PLASTER line is the tile backing to H (equal to the tile line); paint EXCLUDED; ceiling lines are horizontal / bulkhead drops"
+    },
+    "openings_in_band": [
+     "W07",
+     "D-GF-14"
+    ],
+    "roof": "TERRACE-550",
+    "room": "GF-16",
+    "status": "HELD (bounded): roof build-up not printed (D-39 / DCR-6)",
+    "under_roof_share": "0.54",
+    "zone": "GF_MAIN"
+   },
+   {
+    "H_m": [
+     "2.494",
+     "3.25"
+    ],
+    "S_m": [
+     "3.084",
+     "3.84"
+    ],
+    "band_high_m2": "4.248",
+    "band_low_m2": "3.658",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line 'GF-R8496F0:plaster band above ceiling'",
+    "datum_points": 757,
+    "engine_room": "GF-R8496F0",
+    "face_length_m": "7.2",
+    "gross_m2": [
+     "4.248",
+     "4.248"
+    ],
+    "in_no_line_now": {
+     "why": "T-686 line = L x H - openings below H (re-computed at both datum ends) for the annex; stair-core lines stop at the tile top by construction; wall tile stops at H; 'paint above wall tile' EXCLUDED"
+    },
+    "joint_total_plaster_to_S_m2": [
+     "17.3608",
+     "25.888"
+    ],
+    "openings_in_band": [
+     "D-GF-02",
+     "A-GF-01"
+    ],
+    "room": "GF-02",
+    "status": "HELD (bounded): annex slab top s 3.544 .. 4.30 (Q-54 B / D-39); band height S - H = 0.59 on the whole datum range",
+    "t686_line_below_H": {
+     "high": "21.64",
+     "line_id": "L-2211463bba5eeb2e4282",
+     "low": "13.7028"
+    },
+    "zone": "GF_ANNEX"
+   },
+   {
+    "H_m": [
+     "2.494",
+     "3.25"
+    ],
+    "S_m": [
+     "3.084",
+     "3.84"
+    ],
+    "band_high_m2": "4.425",
+    "band_low_m2": "4.425",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line 'GF-RB62B55:plaster band above ceiling'",
+    "datum_points": 757,
+    "engine_room": "GF-RB62B55",
+    "face_length_m": "7.5",
+    "gross_m2": [
+     "4.425",
+     "4.425"
+    ],
+    "in_no_line_now": {
+     "why": "T-686 line = L x H - openings below H (re-computed at both datum ends) for the annex; stair-core lines stop at the tile top by construction; wall tile stops at H; 'paint above wall tile' EXCLUDED"
+    },
+    "joint_total_plaster_to_S_m2": [
+     "21.37",
+     "27.04"
+    ],
+    "openings_in_band": [
+     "D-GF-02"
+    ],
+    "room": "GF-03",
+    "status": "HELD (bounded): annex slab top s 3.544 .. 4.30 (Q-54 B / D-39); band height S - H = 0.59 on the whole datum range",
+    "t686_line_below_H": {
+     "high": "22.615",
+     "line_id": "L-f43782d52f32b53a6f1e",
+     "low": "16.945"
+    },
+    "zone": "GF_ANNEX"
+   },
+   {
+    "H_m": [
+     "2.494",
+     "3.25"
+    ],
+    "S_m": [
+     "3.084",
+     "3.84"
+    ],
+    "band_high_m2": "3.304",
+    "band_low_m2": "3.304",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line 'GF-RFAD3C4:plaster band above ceiling'",
+    "datum_points": 757,
+    "engine_room": "GF-RFAD3C4",
+    "face_length_m": "5.6",
+    "gross_m2": [
+     "3.304",
+     "3.304"
+    ],
+    "in_no_line_now": {
+     "why": "T-686 line = L x H - openings below H (re-computed at both datum ends) for the annex; stair-core lines stop at the tile top by construction; wall tile stops at H; 'paint above wall tile' EXCLUDED"
+    },
+    "joint_total_plaster_to_S_m2": [
+     "15.5104",
+     "19.744"
+    ],
+    "openings_in_band": [
+     "D-GF-04"
+    ],
+    "room": "GF-05",
+    "status": "HELD (bounded): annex slab top s 3.544 .. 4.30 (Q-54 B / D-39); band height S - H = 0.59 on the whole datum range",
+    "t686_line_below_H": {
+     "high": "16.44",
+     "line_id": "L-f179fc08a266294ad4a4",
+     "low": "12.2064"
+    },
+    "zone": "GF_ANNEX"
+   },
+   {
+    "H_m": [
+     "2.494",
+     "3.25"
+    ],
+    "S_m": [
+     "3.084",
+     "3.84"
+    ],
+    "band_high_m2": "8.555",
+    "band_low_m2": "8.545994",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line 'GF-RA3AD49:plaster band above ceiling'",
+    "datum_points": 757,
+    "engine_room": "GF-RA3AD49",
+    "face_length_m": "14.5",
+    "gross_m2": [
+     "8.555",
+     "8.555"
+    ],
+    "in_no_line_now": {
+     "why": "T-686 line = L x H - openings below H (re-computed at both datum ends) for the annex; stair-core lines stop at the tile top by construction; wall tile stops at H; 'paint above wall tile' EXCLUDED"
+    },
+    "joint_total_plaster_to_S_m2": [
+     "40.2665",
+     "51.2285"
+    ],
+    "openings_in_band": [
+     "W08",
+     "D-GF-05"
+    ],
+    "room": "GF-06",
+    "status": "HELD (bounded): annex slab top s 3.544 .. 4.30 (Q-54 B / D-39); band height S - H = 0.59 on the whole datum range",
+    "t686_line_below_H": {
+     "high": "42.6735",
+     "line_id": "L-595181aa140e7efb2ac7",
+     "low": "31.720506"
+    },
+    "zone": "GF_ANNEX"
+   },
+   {
+    "H_m": [
+     "2.2",
+     "4.35"
+    ],
+    "S_m": [
+     "4.29",
+     "4.99"
+    ],
+    "band_high_m2": "17.298",
+    "band_low_m2": "3.584",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line 'GF-RDF7D28:plaster band above ceiling'",
+    "datum_points": 4,
+    "engine_room": "GF-RDF7D28",
+    "face_length_m": "6.2",
+    "gross_m2": [
+     "3.968",
+     "17.298"
+    ],
+    "in_no_line_now": {
+     "why": "T-686 line = L x H - openings below H (re-computed at both datum ends) for the annex; stair-core lines stop at the tile top by construction; wall tile stops at H; 'paint above wall tile' EXCLUDED"
+    },
+    "joint_total_plaster_to_S_m2": [
+     "24.358",
+     "29.178"
+    ],
+    "openings_in_band": [
+     "W05",
+     "D-GF-10"
+    ],
+    "room": "GF-10",
+    "status": "HELD (bounded): stair-core floor +0.30 / +1.00 not drawn (C-SH-2, designer); tile top 2.20 .. G1",
+    "t686_line_below_H": {
+     "high": "25.21",
+     "line_id": "L-3f7fb1b37e68e6d6c7b7",
+     "low": "11.4"
+    },
+    "zone": "CORE"
+   },
+   {
+    "H_m": [
+     "2.2",
+     "4.35"
+    ],
+    "S_m": [
+     "4.29",
+     "4.99"
+    ],
+    "band_high_m2": "13.671",
+    "band_low_m2": "2.56",
+    "beams": [],
+    "carrier": "FIN.PLASTER, new component line 'GF-RD36087:plaster band above ceiling'",
+    "datum_points": 4,
+    "engine_room": "GF-RD36087",
+    "face_length_m": "4.9",
+    "gross_m2": [
+     "3.136",
+     "13.671"
+    ],
+    "in_no_line_now": {
+     "why": "T-686 line = L x H - openings below H (re-computed at both datum ends) for the annex; stair-core lines stop at the tile top by construction; wall tile stops at H; 'paint above wall tile' EXCLUDED"
+    },
+    "joint_total_plaster_to_S_m2": [
+     "15.4",
+     "22.691"
+    ],
+    "openings_in_band": [
+     "D-GF-10",
+     "T-128:doorway to the stair hall (no leaf drawn)"
+    ],
+    "room": "GF-11",
+    "status": "HELD (bounded): stair-core floor +0.30 / +1.00 not drawn (C-SH-2, designer); tile top 2.20 .. G1",
+    "t686_line_below_H": {
+     "high": "19.555",
+     "line_id": "L-a636dabcd4bc7e59169a",
+     "low": "7.04"
+    },
+    "zone": "CORE"
+   }
+  ],
+  "rule": "R-T690-1",
+  "slab": [
+   "0.16",
+   "structural general note 16 cm unless stated (owner Q-14); T-556 SLAB"
+  ],
+  "total_high_m2": "123.02493",
+  "total_low_m2": "78.83192"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.66",
+ "d_nosing": {
+  "agree": true,
+  "edge": "ST01-MS2TR",
+  "joins": "B7-05 nosing package T-424 (QUEUED): edge ST01-MS2TR in the landing / floor edges outside the step basis (T-598 s.6: 8.550 -> 12.000 lm); V3.0.66 carries no nosing line yet (0 lines with NOSING in the code)",
+  "no_double_count": "MS2-L step lm L-23651ecfef77992ec8d4 = 11 x 1.150 = 12.65 (treads only, no landing edge); the T-412 'position not drawn' HELD edge ST01-MS2TR-N01 is the same edge (one count)",
+  "own_lm": "1.150",
+  "own_read": {
+   "1F plan": "west lane x 0 .. 1.150, well 1.150 .. 1.350, east lane 1.350 .. 2.500 (tread-set stations); west set 12 tread lines at 0.300 to y 3.300 / 3.350 (front / face pair, layers 5 / 2); north wall inner face (layer 1) y 4.500; N-S pair in the north square: layer 5 at x 1.250 y 3.350 .. 4.500 (1.150) and layer 2 at x 1.300 (1.150, 0.050 behind): the closing-step front and its riser face",
+   "2F plan": "same frame: layer 5 at x 1.250 y 3.300 .. 4.450 (1.150) + layer 2 at x 1.300; north wall face y 4.450",
+   "GF plan": "the same two lines lie on layer 2 only (above the GF cut): not a GF object",
+   "reading": "the front runs from the well end to the north wall face, 0.100 inside the well from each lane edge; the front (continuous) lies west of the face, i.e. it overhangs toward the lower west part (+7.516) from the upper east part (+7.684): one nosing, 1.150 lm, on two plans"
+  },
+  "status": "DRAWING-CONFIRMED (arch 1F plan, own read this run; arch 2F plan + ST p.5, T-598 MERGED; one riser on section A-A, T-684)",
+  "t598_lm": "1.15",
+  "t684_lm": "1.150"
+ },
+ "inputs": {
+  "faces": "71ca2ef5d3fdf36c",
+  "openings": "51ce597347d38553",
+  "rooms": "696333bc12f0acb9",
+  "t598": "2ee67610d6abe69a",
+  "t681": "2ca16110154e890f",
+  "t686": "f755ea4f6154e008",
+  "v3065": "e1887c34362b9d2f",
+  "v3066": "02065c41e79dd9df"
+ },
+ "rules": [
+  "R-T690-1",
+  "R-T690-2",
+  "R-T690-3"
+ ],
+ "schema": "URBAN_T690_TILES_ROUND2_V1",
+ "task": "T-690",
+ "wired": false
+}

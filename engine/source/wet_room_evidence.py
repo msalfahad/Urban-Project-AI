@@ -44,6 +44,7 @@ from engine.source import room_vocab as RV
 from engine.source import waterproofing_system as WS
 
 METHOD_ID = "WET_ROOM_EVIDENCE_V1"
+DEFAULT_GUARD_CLASS = "GUARDED_VIA_V3.0.6"  # T-744 (T-212 P1): V1 read by arch_v211 in the chain inherited by V3.0.6
 WET, DRY, HELD, NONE = "WET", "DRY", "HELD", "NONE"
 MEASURED = "MEASURED"
 HAND_WASH = "HAND_WASH"                      # a space named for its hand-wash basin(s) (owner Q-06: wet)
@@ -461,3 +462,119 @@ def policy_record():
                       "layer / WC linework with a drain mark", "sanitary drawing items", "basin only -> hand-wash "
                       "(wet)", "anything else -> HELD"],
             "hand_wash_words": list(HAND_WASH_WORDS)}
+
+
+# ------------------------------------------------------------------------------------------------ V2 (T-744)
+# WET_ROOM_EVIDENCE_V2 additions (T-744): a fixture is typed from the block's CONTENT, never its name alone. A block
+# whose content is text only (TEXT / MTEXT / ATTDEF / ATTRIB) is a room tag (a room name such as 'W.C' or 'Wash'
+# written in a block), not a fixture, whatever its name says (T-743 finding: 7 'WC' + 2 'WASH' text-only tag blocks
+# read as 7 WCs and 2 basins on the development villa; ELEMENT_REGISTER 'SANITARY FIXTURES', L-T743-1). Q-13 B:
+# uncertain fixture recognition never creates a quantity, so a fixture-named block whose content was not read is an
+# UNCONFIRMED candidate, never a fixture. The V1 functions above are unchanged (the candidate chain ARCH_TAKEOFF_V2.11
+# .. V3.0.x reads them through arch_v211.wet_classes); nothing below is wired.
+METHOD_ID_V2 = "WET_ROOM_EVIDENCE_V2"
+TEXT_TYPES = ("TEXT", "MTEXT", "ATTDEF", "ATTRIB")
+CONTENT_TAG, CONTENT_GEOMETRY, CONTENT_EMPTY, CONTENT_NOT_READ = "TEXT_ONLY", "GEOMETRY", "EMPTY", "NOT_READ"
+FIXTURE, TAG, UNCONFIRMED, NOT_EVIDENCE = "FIXTURE", "TAG", "UNCONFIRMED", "NOT_EVIDENCE"
+
+
+def block_content(entity_types):
+    """the flattened entity types of one block definition (nested blocks expanded by the caller) -> TEXT_ONLY,
+    GEOMETRY, EMPTY; None -> NOT_READ (the content is not known: never guessed)."""
+    if entity_types is None:
+        return CONTENT_NOT_READ
+    t = [str(x).upper() for x in entity_types]
+    if not t:
+        return CONTENT_EMPTY
+    if all(x in TEXT_TYPES for x in t):
+        return CONTENT_TAG
+    return CONTENT_GEOMETRY
+
+
+def fixture_reading(insert, block_types=None):
+    """one plan insert -> {"kind" (the V1 name reading), "content", "verdict", "basis"}. verdict: FIXTURE (a sanitary
+    or drain name AND drawn geometry), TAG (text-only content: a room tag, never a fixture), UNCONFIRMED (a sanitary
+    name, content not read), NOT_EVIDENCE (no sanitary name, or an empty block). block_types: {block name: flattened
+    entity types} read from the drawing's block table; when the name is absent the insert's own 'box' (the intake
+    computes it from the block's non-text geometry only, tools/arch_intake._inserts) stands for GEOMETRY, and a box of
+    None leaves the content NOT_READ."""
+    name = insert.get("name")
+    k = _fixture_kind(name)
+    if block_types is not None and name in block_types:
+        content, src = block_content(block_types[name]), "block definition"
+    elif insert.get("box"):
+        content, src = CONTENT_GEOMETRY, "insert extents of non-text geometry (intake box)"
+    else:
+        content, src = CONTENT_NOT_READ, "no block definition and no geometry extents"
+    if content == CONTENT_TAG:
+        return {"kind": k, "content": content, "verdict": TAG,
+                "basis": f"block '{name}' holds text only ({src}): a room tag, not a fixture"}
+    if not k:
+        return {"kind": None, "content": content, "verdict": NOT_EVIDENCE, "basis": "no sanitary name"}
+    if content == CONTENT_GEOMETRY:
+        return {"kind": k, "content": content, "verdict": FIXTURE,
+                "basis": f"block '{name}' named {k} with drawn geometry ({src})"}
+    if content == CONTENT_EMPTY:
+        return {"kind": k, "content": content, "verdict": NOT_EVIDENCE,
+                "basis": f"block '{name}' is empty: nothing is drawn"}
+    return {"kind": k, "content": content, "verdict": UNCONFIRMED,
+            "basis": f"block '{name}' named {k}, content not read ({src}): a candidate only (Q-13 B)"}
+
+
+def plan_evidence_v2(polygon, ents, roles, unit_m, holes=(), *, block_types=None):
+    """plan_evidence (V1) with every fixture and block drain re-typed by content (fixture_reading): text-only blocks
+    move to the room tags (and so to the label reading, which uses block tags only when no text types the space),
+    content-not-read blocks to 'fixtures_unconfirmed', empty blocks out. Adds 'fixture_readings' (one per moved or
+    kept block) and 'method'."""
+    ev = plan_evidence(polygon, ents, roles, unit_m, holes)
+    by_id = {i["id"]: i for i in ents.get("inserts") or ()}
+    keep_fx, keep_dr, unconf, readings, new_tags = [], [], [], [], []
+    for group, keep in (("fixtures", keep_fx), ("drains", keep_dr)):
+        for x in ev[group]:
+            if group == "drains" and x.get("source") != "BLOCK":
+                keep.append(x)
+                continue
+            ins = by_id.get(x["id"]) or {"name": x.get("block") or x.get("name"), "box": None}
+            r = fixture_reading(ins, block_types)
+            readings.append(dict(r, id=x["id"], name=ins.get("name")))
+            if r["verdict"] == FIXTURE:
+                keep.append(x)
+            elif r["verdict"] == TAG:
+                if AR.tag_of(ins.get("name")):
+                    new_tags.append(ins.get("name"))
+            elif r["verdict"] == UNCONFIRMED:
+                unconf.append(dict(x, group=group, basis=r["basis"]))
+    # one physical fixture once: a block nested in a kept fixture block of the same kind is that fixture's own
+    # drawing (a wrapper block around a symbol block), never a second fixture
+    for keep in (keep_fx, keep_dr):
+        names = {(by_id.get(x["id"]) or {}).get("name"): x["kind"] for x in keep}
+        nested = [x for x in keep
+                  if any(names.get(n) == x["kind"] for n in (by_id.get(x["id"]) or {}).get("path") or ())]
+        for x in nested:
+            keep.remove(x)
+            readings.append({"id": x["id"], "name": (by_id.get(x["id"]) or {}).get("name"), "kind": x["kind"],
+                             "content": None, "verdict": NOT_EVIDENCE,
+                             "basis": "nested in a fixture block of the same kind: that fixture's own drawing"})
+    out = dict(ev, fixtures=keep_fx, drains=keep_dr, fixtures_unconfirmed=unconf, fixture_readings=readings,
+               method=METHOD_ID_V2)
+    if new_tags:
+        def inside(x, y):
+            return _pip(x, y, polygon) and not any(_pip(x, y, h) for h in holes)
+        texts = [t.get("value") for t in ents.get("texts") or () if inside(t["x"], t["y"])]
+        old_tags = [b["text"] for b in (ev["labels"].get("labels") or ()) if ev["labels"].get("source") == "BLOCK_TAG"]
+        out["labels"] = label_reading(texts, old_tags + new_tags)
+    return out
+
+
+def classify_v2(plan_ev, sanitary=None, *, space_kind=None):
+    """classify (V1) over plan_evidence_v2; an unlabelled space whose only plan sign is an UNCONFIRMED fixture-named
+    block is WET_DRY_NOT_ESTABLISHED (HELD) with that block named, never typed by the name (Q-13 B)."""
+    rec = classify(plan_ev, sanitary, space_kind=space_kind)
+    unc = plan_ev.get("fixtures_unconfirmed") or []
+    rec = dict(rec, method=METHOD_ID_V2)
+    if unc and rec["class"] == HELD and rec["reason"] == "NO_LABEL_NO_EVIDENCE":
+        rec.update(reason="WET_DRY_NOT_ESTABLISHED", rules=["Q-13", "UP-QTY-STATUS-001"],
+                   basis="no label; only fixture-named block(s) whose content was not read (" +
+                         ", ".join(sorted({str(x.get("block") or x.get("name")) for x in unc})) +
+                         "): a name alone is not a fixture (Q-13 B, T-744)")
+    return rec

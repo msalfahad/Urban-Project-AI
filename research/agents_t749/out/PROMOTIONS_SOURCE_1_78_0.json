@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-749",
+  "merge_commit": "8dc7c0f6e71851b3dcc31d0babb15f59b1a4b325",
+  "verdict_time": "2026-11-13 03:26 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-13T03:26Z per `date -u`, run session_01E6cPnc1ULBrvSJPnU5Quij, lock checker; GATE B PASS; merge 8dc7c0f6 (no conflict; task head contained engine e771a5b2)",
+  "board_commit": "90ab3e21"
+ }
+]

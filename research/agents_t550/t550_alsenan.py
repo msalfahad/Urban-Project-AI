@@ -166,5 +166,10 @@ def main(argv=None):
     return 0
 
 
+# T-653: this builder's functions run in the same local 40-digit context as its rules (before T-653 they ran
+# at 40 only because importing the rules changed the process-global context).
+P.in_prec40(globals())
+
+
 if __name__ == "__main__":
     raise SystemExit(main())

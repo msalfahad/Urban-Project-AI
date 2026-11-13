@@ -31,9 +31,40 @@ R-T559-2 (proposed, every villa; the register ruling PARAPET EDGE DOWNSTAND MEMB
 """
 from __future__ import annotations
 
-from decimal import Decimal, getcontext
+import functools
+import inspect
+import types
+from decimal import Context, Decimal, localcontext
 
-getcontext().prec = 40
+# T-653 (F-T648-2): 40 digits are used only INSIDE this module's functions, through a local Decimal context; importing
+# this module never changes the process-global context (it used to set getcontext().prec = 40 at import, which changed
+# every later Decimal result in the same process). in_prec40() at the end of the module applies the local context.
+PREC = 40
+
+
+def ctx40():
+    """a local 40-digit Decimal context: `with ctx40(): ...`; the caller's context is restored on exit."""
+    return localcontext(Context(prec=PREC))
+
+
+def in_prec40(namespace: dict) -> None:
+    """run every plain function DEFINED in the module of `namespace` (its globals()) inside ctx40(); generator
+    functions, classes and names imported from other modules are left as they are. Marks each wrapper
+    `_t653_prec40 = True`. Called once, at the end of the module (here and in its builder)."""
+    mod = namespace["__name__"]
+    for name, fn in list(namespace.items()):
+        if (isinstance(fn, types.FunctionType) and fn.__module__ == mod and not getattr(fn, "_t653_prec40", False)
+                and not inspect.isgeneratorfunction(fn) and name not in ("ctx40", "in_prec40")):
+            namespace[name] = _wrap40(fn)
+
+
+def _wrap40(fn):
+    @functools.wraps(fn)
+    def run40(*args, **kwargs):
+        with ctx40():
+            return fn(*args, **kwargs)
+    run40._t653_prec40 = True
+    return run40
 CAUSES = ("ENGINE_RIGHT", "ENGINE_WRONG", "RULE_DIFFERENCE", "HELD", "TOLERANCE", "UNRESOLVED")
 H_BASIS = ("Q55C", "PRINTED", "OUTLINE", "HELD")
 WIDTH_TOL_M = Decimal("0.005")
@@ -187,3 +218,6 @@ def edge_member_carriage(bands: list[dict], lines: list[dict]) -> list[dict]:
                        held_m3=None if ln.get("held_low") is None else f"{ln['held_low']} .. {ln['held_high']}")
         out.append(rec)
     return out
+
+
+in_prec40(globals())   # T-653: every function of this module runs in a local 40-digit context

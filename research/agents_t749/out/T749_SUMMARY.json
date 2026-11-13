@@ -1,0 +1,232 @@
+{
+ "base_lines_sha256": "9b35725cf55ec092a321bb6000883f3480ef04e70c5445de02e42f4f77be59c0",
+ "census_after": {
+  "FIN.EXT.PAINT.EDGE": {
+   "blank": 3,
+   "bounded": 35,
+   "excluded": 0,
+   "high": 284.418063,
+   "lines": 38,
+   "low": 283.218063,
+   "released": 0,
+   "released_q": 0.0,
+   "unit": "lm"
+  },
+  "FIN.PAINT": {
+   "blank": 0,
+   "bounded": 11,
+   "excluded": 61,
+   "high": 687.846697,
+   "lines": 76,
+   "low": 603.802485,
+   "released": 4,
+   "released_q": 217.2081,
+   "unit": "m2"
+  },
+  "FIN.PAINT.EDGE": {
+   "blank": 3,
+   "bounded": 27,
+   "excluded": 0,
+   "high": 33.8,
+   "lines": 30,
+   "low": 0.0,
+   "released": 0,
+   "released_q": 0.0,
+   "unit": "lm"
+  }
+ },
+ "census_before": {
+  "FIN.PAINT": {
+   "blank": 3,
+   "bounded": 38,
+   "excluded": 31,
+   "high": 710.006421,
+   "lines": 76,
+   "low": 604.990059,
+   "released": 4,
+   "released_q": 217.2081,
+   "unit": "m2"
+  }
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.76",
+ "identity": {
+  "added": 68,
+  "base_lines": 5173,
+  "beads_ceiling_v3_0_76": {
+   "BEAD_ADD:AT_LEAST": 5,
+   "BEAD_ADD:BOUND": 9,
+   "CEIL_EXCL:EXCLUDE": 1,
+   "DG_HOLD:HOLD": 1
+  },
+  "concrete_v3_0_64": {
+   "ADD_LOWER_ONLY": 1,
+   "BOUND": 6,
+   "HELD_BLANK": 0,
+   "LOWER_ONLY": 1,
+   "UPPER_ONLY": 0,
+   "VALUE": 0
+  },
+  "concrete_v3_0_65": {
+   "ADD_COMPANION": 1,
+   "BOUND": 0,
+   "HELD_BLANK": 0,
+   "LOWER_ONLY": 0,
+   "NOT_APPLICABLE": 5,
+   "UPPER_ONLY": 0,
+   "VALUE": 1
+  },
+  "concrete_v3_0_66": {
+   "ADD_COMPANION": 0,
+   "ADD_SHARED": 1,
+   "BOUND": 17,
+   "HELD_BLANK": 0,
+   "LOWER_ONLY": 1,
+   "NOT_APPLICABLE": 0,
+   "REVALUE": 3,
+   "UPPER_ONLY": 0,
+   "VALUE": 0
+  },
+  "concrete_v3_0_67": {
+   "BOUND": 8,
+   "LOWER_ONLY": 2,
+   "assumed": 6,
+   "plane": 5
+  },
+  "concrete_v3_0_70": {
+   "BOUND": 5,
+   "NARROW": 1,
+   "OWNER": 1
+  },
+  "concrete_v3_0_73": {
+   "AT_LEAST": 9,
+   "NAMED": 18,
+   "NARROW": 5
+  },
+  "diff": {
+   "vs_base": {
+    "ADDED": 68,
+    "CHANGED": 35,
+    "SAME": 5138
+   },
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3649,
+    "QUANTITY_DIFFERS": 1054,
+    "SAME_QUANTITY": 538
+   }
+  },
+  "finishes_v3_0_69": {
+   "BOUND": 14,
+   "CAUSE": 1,
+   "VALUE": 1,
+   "band_bound": 14,
+   "band_value": 4
+  },
+  "finishes_v3_0_74": {
+   "BOUND": 4,
+   "band": 2,
+   "return_blank": 3,
+   "return_bound": 27
+  },
+  "formwork_concrete_v3_0_75": {
+   "CONC_C10:ADD_NAMED": 4,
+   "CONC_C10:AT_LEAST": 1,
+   "CONC_C10:CAP": 1,
+   "FW_WIRE:AT_LEAST": 42,
+   "FW_WIRE:BOUND": 34,
+   "FW_WIRE:CAP": 70,
+   "FW_WIRE:NAMED": 190,
+   "FW_WIRE:RELEASE": 54
+  },
+  "lintels_v3_0_67": {
+   "other": 52,
+   "restated_v3_0_67": 9
+  },
+  "lintels_v3_0_71": {
+   "AT_MOST": 16,
+   "DATUM_NAMED": 3
+  },
+  "masonry_v3_0_68": {
+   "lintel_bed": 9,
+   "material_lines": 74,
+   "not_applicable": 4,
+   "perimeter": 20,
+   "restated": 12,
+   "v3_0_59_materials": {
+    "masonry_lines": 28,
+    "material_lines": 70,
+    "producers": 70
+   }
+  },
+  "masonry_v3_0_72": {
+   "BOUND_ROUNDING": 10,
+   "ONE_SIDED": 18
+  },
+  "older_checks_view_substituted": 30,
+  "outside_rows": 5138,
+  "outside_rows_identical_to_base": 5138,
+  "outside_rows_sha256": "b458bbd00c5d10c29ae610fdb45b62df30e12a2fe1f038ebfeb32bb609d2a3b3",
+  "paint_rule": {
+   "EXT_EDGE:CORNER": 9,
+   "EXT_EDGE:OPENING": 26,
+   "EXT_EDGE:OPENING_BLANK": 3,
+   "PAINT_RESTATE:RANGE": 5,
+   "RETURN_LM:EDGE": 27,
+   "RETURN_LM:EDGE_BLANK": 3,
+   "RETURN_LM:EXCLUDE": 30
+  },
+  "replaced": 35,
+  "v3_0_77_lines": 5241,
+  "v3_0_77_rows": 103
+ },
+ "lines_sha256": "b8524d5c7cc47a1171fd74501364e37a6214caeb8acc4345f4d9acb303eb3790",
+ "method": "ARCH_TAKEOFF_V3.0.77",
+ "schema": "URBAN_T749_SUMMARY_V1",
+ "totals_moved_by_code": {
+  "FIN.EXT.PAINT.EDGE|lm": {
+   "base": null,
+   "v3_0_77": {
+    "blocked_lines": 3,
+    "bounded_lines": 35,
+    "held_high": 284.418063,
+    "held_low": 283.218063,
+    "lines": 38,
+    "released": 0.0
+   }
+  },
+  "FIN.PAINT.EDGE|lm": {
+   "base": null,
+   "v3_0_77": {
+    "blocked_lines": 3,
+    "bounded_lines": 27,
+    "held_high": 33.8,
+    "held_low": 0.0,
+    "lines": 30,
+    "released": 0.0
+   }
+  },
+  "FIN.PAINT|m2": {
+   "base": {
+    "blocked_lines": 3,
+    "bounded_lines": 38,
+    "held_high": 710.006421,
+    "held_low": 604.990059,
+    "lines": 45,
+    "released": 217.2081
+   },
+   "v3_0_77": {
+    "blocked_lines": 0,
+    "bounded_lines": 11,
+    "held_high": 687.846697,
+    "held_low": 603.802485,
+    "lines": 15,
+    "released": 217.2081
+   }
+  }
+ },
+ "waiting_pieces": {
+  "T749_EDGES_HELD": "every paint edge line is HELD: interior returns on their head frame coverage (not printed) or size; exterior edges on their host face (exterior paint HELD with its render host)",
+  "T749_EXT_PAINT_M2": "exterior paint m2 = render of the same faces (T-747 / T-751: 1,009.110254 .. 1,087.619176 m2 on 126 faces, 6 1F slab-edge faces blank) waits its render host: the T-314 r3 face rows are not in the candidate (FIN.EXT.FINISH lines HELD blank); no paint m2 line is formed before",
+  "T749_FALSE_CEILING_PAINT": "FIN.PAINT.CEILING (31 released) has no plaster soffit line: outside this restatement",
+  "T749_FENCE": "boundary-wall plaster / paint pairs (8) stay HELD blank: refused by R-T747-1 rule 3 / Q-65"
+ }
+}

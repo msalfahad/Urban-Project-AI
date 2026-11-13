@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-687",
+  "merge_commit": "12bf5b8c03c972d38ce6dc33384e8a586d038e69",
+  "verdict_time": "2026-11-11 07:30 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-11T07:30Z, run session_01E6cPncdZEPbJjz2ey34pSg; GATE B PASS; merge 12bf5b8c (CODEMAP-only conflict: working-branch version taken, maps rebuilt by the tool, stale none, freeze 0)",
+  "board_commit": "8baea091"
+ }
+]

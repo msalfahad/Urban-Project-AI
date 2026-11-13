@@ -264,4 +264,8 @@ OTHER_REBAR_AWARE = (
     # T-419: the V3.0.46 extension adds ONE HELD BLANK STR.REBAR line (the GF lift tie beam's bars: no bar detail
     # printed) with its member length beside, never the quantity; it writes no kg, reads no bar and applies no ratio
     "engine/source/arch_v3046.py",
+    # T-704: the V3.0.71 extension names 'rebar' only in a WAITING note (the lintel formwork / rebar / bed mortar of the
+    # 21 blank lintel openings stay as V3.0.70, not re-derived from a one-sided figure); it states concrete m3 beside
+    # HELD blank lintel lines only, writes no reinforcement quantity, computes no kg and applies no ratio
+    "engine/source/arch_v3071.py",
 )

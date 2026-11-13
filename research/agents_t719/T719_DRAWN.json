@@ -1,0 +1,326 @@
+{
+ "DOMES": {
+  "east": {
+   "disc_m2": 15.359013,
+   "handle": "2F33",
+   "layer": "5",
+   "overlap_with_2f_faces_m2": 0.0,
+   "overlap_with_light_well_m2": 0.108438,
+   "overlap_with_living_face_m2": 14.066017,
+   "r_m": 2.211092
+  },
+  "third_above": {
+   "disc_m2": 15.274758,
+   "handle": "1300",
+   "layer": "2",
+   "overlap_with_2f_faces_m2": {
+    "2F-R1DB2D2": 11.065712,
+    "2F-R2BDCEE": 1.619003,
+    "2F-RE83BED": 1.623767
+   },
+   "r_m": 2.205018
+  },
+  "west": {
+   "disc_m2": 15.359013,
+   "handle": "12EB",
+   "layer": "5",
+   "overlap_with_2f_faces_m2": 0.0,
+   "overlap_with_light_well_m2": 0.0,
+   "r_m": 2.211092
+  }
+ },
+ "V-01": {
+  "corner_landing_m2": 1.3225,
+  "dims_m": {
+   "corner_landing_d": 1.15,
+   "corner_landing_w": 1.15,
+   "south_face_to_arrival_edge": 2.4,
+   "south_face_to_north_edge": 4.0,
+   "west_to_east_edge": 7.02,
+   "west_to_void_edge_east": 5.87,
+   "xrect_h": 2.75,
+   "xrect_w": 5.82
+  },
+  "engine": {
+   "below_seen_flights": [
+    "F1",
+    "F4",
+    "F6"
+   ],
+   "below_seen_footprint_overlaps_m2": [
+    [
+     "F1",
+     "F4",
+     0.057438
+    ],
+    [
+     "F1",
+     "F6",
+     0.0
+    ],
+    [
+     "F4",
+     "F6",
+     0.0
+    ]
+   ],
+   "below_seen_treads_m2": 8.924413,
+   "below_seen_union_m2": 8.866974,
+   "carried_corner_landing_m2": 1.295,
+   "carried_in_well_by_footprint_m2": 3.45327,
+   "carried_in_well_m2": 3.45327,
+   "carried_other_m2": 2.15827,
+   "carried_pieces": [
+    {
+     "h_m": 1.2,
+     "m2": 1.445812,
+     "touches_below_seen_flight": true,
+     "touches_xrect": true,
+     "w_m": 2.82
+    },
+    {
+     "h_m": 4.0,
+     "m2": 0.712458,
+     "touches_below_seen_flight": true,
+     "touches_xrect": true,
+     "w_m": 7.02
+    }
+   ],
+   "ceiling_over_void_m2": 16.005,
+   "deducted_in_well_by_footprint_m2": 22.71923,
+   "deducted_in_well_m2": 22.71923,
+   "face_in_well_m2": 26.1725,
+   "face_m2": 75.983002,
+   "gf_double_height_m2": 16.005,
+   "gf_face_in_well_m2": 26.1725,
+   "gf_flights_in_well_m2": 8.194412,
+   "gf_room": "SITE-735e111dcf9b22c8",
+   "gf_room_double_height_m2": 16.005,
+   "named_deductions_sum_m2": 24.871974,
+   "room": "1F-R78C367",
+   "split_face_parts_m2": {
+    "ROOM_FLOOR": 44.869353,
+    "STAIR_BELOW_SEEN": 6.771668,
+    "STAIR_FLIGHTS": 8.336981,
+    "VOID": 16.005
+   },
+   "void_part_m2": 16.005,
+   "well_outside_face_m2": 0.0675,
+   "xrect_overlap_below_seen_m2": 2.112744
+  },
+  "gf_rectangle_above_m2": 16.005,
+  "gf_vs_1f_tread_deviation_m": [
+   [
+    "BA4",
+    "241",
+    0.0
+   ],
+   [
+    "BBA",
+    "257",
+    0.0
+   ],
+   [
+    "B4E",
+    "234",
+    0.0
+   ],
+   [
+    "B5A",
+    "144",
+    0.0
+   ]
+  ],
+  "handles": {
+   "arrival_edge": "D24",
+   "corner_first_tread": "B59",
+   "diag_1": "B78",
+   "diag_2": "B79",
+   "east_edge": "AF5",
+   "gf_rectangle_above": "4B0",
+   "outline": "B77",
+   "south_wall_face": "AEC",
+   "void_edge_east": "B75",
+   "void_edge_north": "B74",
+   "void_edge_south_piece": "B76",
+   "void_word_insert": "B7A",
+   "west_wall_face": "AF7"
+  },
+  "void_word_inside_xrect": true,
+  "well_m2": 26.24,
+  "xrect_inside_well": true,
+  "xrect_m2": 16.005,
+  "xrect_outline_open_polyline_closed_m2": 12.194984,
+  "xrect_outline_open_polyline_points": 6
+ },
+ "V-02": {
+  "engine_faces_1f_m2": {},
+  "engine_faces_gf_m2": {},
+  "gf_above_same_centres": true,
+  "handles": {
+   "1F_glazing_side_arc": "BCE",
+   "1F_outline": [
+    "BCF",
+    "2F1C",
+    "C7A",
+    "2F1B"
+   ],
+   "1F_same_centre": [
+    "C7A",
+    "BCE"
+   ],
+   "GF_above": [
+    "20A",
+    "299"
+   ]
+  },
+  "joint_gaps_m": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "outline_m2": 3.824427,
+  "outline_m2_shoelace": 3.824427,
+  "outline_valid_as_drawn": false,
+  "radii_m": {
+   "2F1B": 0.510424,
+   "2F1C": 0.689893,
+   "BCE": 1.935,
+   "BCF": 1.735,
+   "C7A": 1.55
+  },
+  "span_m": [
+   1.849984,
+   2.700583
+  ],
+  "west_side_offset_from_glazing_arc_m": 0.2
+ },
+ "V-03": {
+  "shaft_rooms": {
+   "1F": {
+    "kind": "SHAFT",
+    "m2": 3.24,
+    "room": "1F-RCCB686"
+   },
+   "2F": {
+    "kind": "SHAFT",
+    "m2": 3.24,
+    "room": "2F-R2BDCEE"
+   },
+   "GF": {
+    "kind": "SHAFT",
+    "m2": 3.24,
+    "room": "GF-R89E756"
+   }
+  },
+  "stacked_shafts": [
+   {
+    "floors": [
+     "GF",
+     "1F",
+     "2F"
+    ],
+    "m2_each": 3.24
+   }
+  ]
+ },
+ "V-04": {
+  "1F": {
+   "face_m2": 75.983002,
+   "flights": [
+    {
+     "below_seen": true,
+     "id": "F1",
+     "kind": "RADIAL",
+     "stacked_over_below": false,
+     "treads_m2": 4.094413
+    },
+    {
+     "below_seen": false,
+     "id": "F2",
+     "kind": "STRAIGHT",
+     "stacked_over_below": true,
+     "treads_m2": 3.795
+    },
+    {
+     "below_seen": false,
+     "id": "F3",
+     "kind": "STRAIGHT",
+     "stacked_over_below": true,
+     "treads_m2": 3.45
+    },
+    {
+     "below_seen": true,
+     "id": "F4",
+     "kind": "STRAIGHT",
+     "stacked_over_below": false,
+     "treads_m2": 3.45
+    },
+    {
+     "below_seen": false,
+     "id": "F5",
+     "kind": "RADIAL",
+     "stacked_over_below": false,
+     "treads_m2": 1.495
+    },
+    {
+     "below_seen": true,
+     "id": "F6",
+     "kind": "STRAIGHT",
+     "stacked_over_below": false,
+     "treads_m2": 1.38
+    }
+   ],
+   "kind": "DRY",
+   "room": "1F-R78C367"
+  },
+  "2F": {
+   "face_m2": 18.600001,
+   "flights": [
+    {
+     "below_seen": false,
+     "id": "F1",
+     "kind": "STRAIGHT",
+     "stacked_over_below": true,
+     "treads_m2": 3.45
+    },
+    {
+     "below_seen": false,
+     "id": "F2",
+     "kind": "STRAIGHT",
+     "stacked_over_below": true,
+     "treads_m2": 3.45
+    }
+   ],
+   "kind": "STAIR",
+   "room": "2F-R4D1B62"
+  },
+  "GF": {
+   "face_m2": 12.475,
+   "flights": [
+    {
+     "below_seen": false,
+     "id": "F1",
+     "kind": "STRAIGHT",
+     "stacked_over_below": false,
+     "treads_m2": 2.415
+    },
+    {
+     "below_seen": false,
+     "id": "F2",
+     "kind": "STRAIGHT",
+     "stacked_over_below": false,
+     "treads_m2": 1.035
+    }
+   ],
+   "kind": "STAIR",
+   "room": "GF-R31F8AE"
+  }
+ },
+ "frame_alignment": {
+  "source": "engine column grid",
+  "votes": 15
+ },
+ "unit_m": 0.001
+}

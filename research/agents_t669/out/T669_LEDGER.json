@@ -1,0 +1,2276 @@
+{
+ "a_corner_square": {
+  "finding": "F-T665-1",
+  "floor_m3": {
+   "after": "0.112500",
+   "before_V3_0_63": "0.090000",
+   "delta": "0.022500"
+  },
+  "line_status": "LOWER_ONLY (D-35 high open), unchanged class",
+  "other_lines": "BAND0012.2 L-3284f440 (2.30) and BAND0015 L-402dbe61 (5.45 + 4.25) unchanged",
+  "owner": {
+   "kind": "RUN",
+   "line_id": "L-6bf14711ae0b84d0f8b9",
+   "member": "ground BAND0012.1",
+   "run": "10B / 7D1 (BAND0012.1 + BAND0012.2)"
+  },
+  "reads": {
+   "columns": {
+    "207": [
+     "10.40",
+     "0",
+     "10.80",
+     "0.30"
+    ],
+    "20B": [
+     "4.55",
+     "0",
+     "4.95",
+     "0.30"
+    ],
+    "223": [
+     "0",
+     "4.30",
+     "0.30",
+     "4.90"
+    ],
+    "22C": [
+     "0",
+     "1.50",
+     "0.30",
+     "2.00"
+    ]
+   },
+   "run1": {
+    "axis": "y",
+    "inner": [
+     "0.30",
+     "0",
+     "4.60"
+    ],
+    "name": "10B / 7D1 (BAND0012.1 + BAND0012.2)",
+    "outer": [
+     "0",
+     "0",
+     "4.90"
+    ],
+    "spans": {
+     "L-3284f440": [
+      "2.00",
+      "4.30"
+     ],
+     "L-6bf14711ae0b84d0f8b9": [
+      "0.30",
+      "1.50"
+     ]
+    }
+   },
+   "run2": {
+    "axis": "x",
+    "inner": [
+     "0.30",
+     "0.30",
+     "10.50"
+    ],
+    "name": "F8 / 7D4 (BAND0015)",
+    "outer": [
+     "0",
+     "0",
+     "10.43"
+    ],
+    "spans": {
+     "L-402dbe61": [
+      "0.30",
+      "4.55"
+     ]
+    }
+   },
+   "square": [
+    "0",
+    "0",
+    "0.30",
+    "0.30"
+   ],
+   "touching_square": "F8, 10B, 7D1, 7D4 (layer 1) only; S-BOUN 810 / hatch 80F abut the outer corner from outside (x -1.20 .. 0); S-AXIS 1498 (axis line, not a member); no S-COL.BON outline"
+  },
+  "residual_m3": "0.000000",
+  "run1_both_edges_box": [
+   "0.000000",
+   "0.000000",
+   "0.300000",
+   "4.600000"
+  ],
+  "run2_both_edges_box": [
+   "0.300000",
+   "0.000000",
+   "10.430000",
+   "0.300000"
+  ],
+  "span_m": [
+   "1.200000",
+   "1.500000"
+  ],
+  "square_m3_at_floor": "0.022500",
+  "why": "10B and 7D1 (run #1) are both drawn across the square to F8 (y 0); 7D4 (run #2 inner face) stops at x 0.30 on 7D1; no column outline; R-T669-1 (b)"
+ },
+ "b_roof_columns": {
+  "annex_ceiling_m3": "0.506250",
+  "five_2f_high_m3": "2.295000",
+  "five_2f_low_m3": "1.636200",
+  "reads": {
+   "ST_2F_roof_plan": "SECOND FLOOR ROOF SLAB plan, one layer-1 outline 8.175 x 6.80 m holding all 8 2F column outlines (40F / 412 / 415 / 418 / 41B / 41E / 421 / 424); inside it the only thickness texts are 'T' / '18' (x2, handles 7B3 / 7B4, 1A7D / 1A7E) and NO level text; the two '+9.70' LEVEL texts (3F4, 3F6) lie outside the outline (lower roofs)",
+   "W26_apex": "+12.50 = printed sill +10.80 + printed 170 (PDF SE elevation chain 170 / 5 / 88 / 97 to +14.40; T-194 / RFI-1 closure, merged); the highest printed opening top on the 2F storey",
+   "sheet10_A_A": "arch sheet 10 SECTION A-A (own render): one continuous hatched roof slab across the 2F storey, +13.90 on its top line, parapet 50 above, storey 420 from +9.70; the arched stair window drawn under it (scaled check only: sill ~ +10.85, apex ~ +12.58 at 1.28 cm/px, not used as a value)"
+  },
+  "rows": [
+   {
+    "height_m": [
+     "3.030000",
+     "4.250000"
+    ],
+    "high_basis": "R-T658-4 ceiling unchanged (13.90 printed - 9.65 approved)",
+    "high_m3": "0.425000",
+    "line": "L-d79d17d1",
+    "low_basis": "R-T669-2: 0.10 x (12.50 W26 apex printed + 0.18 printed 2F roof slab T18 - 9.65 base APPROVED datum)",
+    "low_m3": "0.303000",
+    "member": "C1 2F 20x50",
+    "section_m2": "0.10",
+    "status_after": "BOUNDED (HELD)",
+    "still_open": "D-39 roof slab-top level / build-up (the true height inside 3.03 .. 4.25)"
+   },
+   {
+    "height_m": [
+     "3.030000",
+     "4.250000"
+    ],
+    "high_basis": "R-T658-4 ceiling unchanged (13.90 printed - 9.65 approved)",
+    "high_m3": "0.425000",
+    "line": "L-26f6b6f2",
+    "low_basis": "R-T669-2: 0.10 x (12.50 W26 apex printed + 0.18 printed 2F roof slab T18 - 9.65 base APPROVED datum)",
+    "low_m3": "0.303000",
+    "member": "C2 2F 20x50",
+    "section_m2": "0.10",
+    "status_after": "BOUNDED (HELD)",
+    "still_open": "D-39 roof slab-top level / build-up (the true height inside 3.03 .. 4.25)"
+   },
+   {
+    "height_m": [
+     "3.030000",
+     "4.250000"
+    ],
+    "high_basis": "R-T658-4 ceiling unchanged (13.90 printed - 9.65 approved)",
+    "high_m3": "0.425000",
+    "line": "L-33a9b772",
+    "low_basis": "R-T669-2: 0.10 x (12.50 W26 apex printed + 0.18 printed 2F roof slab T18 - 9.65 base APPROVED datum)",
+    "low_m3": "0.303000",
+    "member": "C2 2F 20x50",
+    "section_m2": "0.10",
+    "status_after": "BOUNDED (HELD)",
+    "still_open": "D-39 roof slab-top level / build-up (the true height inside 3.03 .. 4.25)"
+   },
+   {
+    "height_m": [
+     "3.030000",
+     "4.250000"
+    ],
+    "high_basis": "R-T658-4 ceiling unchanged (13.90 printed - 9.65 approved)",
+    "high_m3": "0.425000",
+    "line": "L-919a5749",
+    "low_basis": "R-T669-2: 0.10 x (12.50 W26 apex printed + 0.18 printed 2F roof slab T18 - 9.65 base APPROVED datum)",
+    "low_m3": "0.303000",
+    "member": "C2 2F 20x50",
+    "section_m2": "0.10",
+    "status_after": "BOUNDED (HELD)",
+    "still_open": "D-39 roof slab-top level / build-up (the true height inside 3.03 .. 4.25)"
+   },
+   {
+    "height_m": [
+     "3.030000",
+     "4.250000"
+    ],
+    "high_basis": "R-T658-4 ceiling unchanged (13.90 printed - 9.65 approved)",
+    "high_m3": "0.595000",
+    "line": "L-53f223b0",
+    "low_basis": "R-T669-2: 0.14 x (12.50 W26 apex printed + 0.18 printed 2F roof slab T18 - 9.65 base APPROVED datum)",
+    "low_m3": "0.424200",
+    "member": "C9 2F 20x70",
+    "section_m2": "0.14",
+    "status_after": "BOUNDED (HELD)",
+    "still_open": "D-39 roof slab-top level / build-up (the true height inside 3.03 .. 4.25)"
+   },
+   {
+    "high_m3": "0.506250",
+    "line": "L-fad18af6",
+    "low_m3": null,
+    "member": "C3 GF 25x50 (annex)",
+    "section_m2": "0.125",
+    "status_after": "UPPER_ONLY (HELD)",
+    "why_no_low": "R-T669-2 refused: printed opening top under the slab not printed / not drawn: HELD, never 0; the annex prints no opening head or sill (T-201 / T-227: 'no opening height, sill or head is printed' on the annex) and no annex roof slab thickness or slab-top level (Q-54 B / D-39); arch sheet 9 prints +0.30 / +4.30 finished only"
+   }
+  ]
+ },
+ "c_census": {
+  "families": {
+   "B10-01": {
+    "blank": 1,
+    "bounded": 5,
+    "bounded_high_m3": "13.466198",
+    "bounded_low_m3": "7.640374",
+    "by_class": {
+     "DESIGNER ITEM": 5,
+     "OPEN BOUND": 1
+    },
+    "lines": 6
+   },
+   "B10-02": {
+    "blank": 0,
+    "bounded": 1,
+    "bounded_high_m3": "2.275000",
+    "bounded_low_m3": "2.176000",
+    "by_class": {
+     "DESIGNER ITEM": 1
+    },
+    "lines": 1
+   },
+   "B10-03": {
+    "blank": 4,
+    "bounded": 32,
+    "bounded_high_m3": "11.346000",
+    "bounded_low_m3": "8.772400",
+    "by_class": {
+     "DESIGNER ITEM": 4,
+     "OPEN BOUND": 32
+    },
+    "lines": 36
+   },
+   "B10-04": {
+    "blank": 20,
+    "bounded": 11,
+    "bounded_high_m3": "5.750071",
+    "bounded_low_m3": "1.202910",
+    "by_class": {
+     "DESIGNER ITEM": 30,
+     "OPEN BOUND": 1
+    },
+    "lines": 31
+   },
+   "B10-06": {
+    "blank": 16,
+    "bounded": 18,
+    "bounded_high_m3": "13.602000",
+    "bounded_low_m3": "9.168000",
+    "by_class": {
+     "DESIGNER ITEM": 29,
+     "MEASURABLE NOW": 5
+    },
+    "lines": 34
+   },
+   "B10-07": {
+    "blank": 12,
+    "bounded": 14,
+    "bounded_high_m3": "8.507278",
+    "bounded_low_m3": "6.023085",
+    "by_class": {
+     "DESIGNER ITEM": 25,
+     "MEASURABLE NOW": 1
+    },
+    "lines": 26
+   },
+   "B10-09": {
+    "blank": 1,
+    "bounded": 0,
+    "bounded_high_m3": "0.000000",
+    "bounded_low_m3": "0.000000",
+    "by_class": {
+     "DESIGNER ITEM": 1
+    },
+    "lines": 1
+   },
+   "B10-10": {
+    "blank": 3,
+    "bounded": 0,
+    "bounded_high_m3": "0.000000",
+    "bounded_low_m3": "0.000000",
+    "by_class": {
+     "DESIGNER ITEM": 3
+    },
+    "lines": 3
+   },
+   "B10-11": {
+    "blank": 1,
+    "bounded": 1,
+    "bounded_high_m3": "7.220400",
+    "bounded_low_m3": "7.220400",
+    "by_class": {
+     "DESIGNER ITEM": 1,
+     "MEASURABLE NOW": 1
+    },
+    "lines": 2
+   },
+   "B10-12": {
+    "blank": 4,
+    "bounded": 0,
+    "bounded_high_m3": "0.000000",
+    "bounded_low_m3": "0.000000",
+    "by_class": {
+     "DESIGNER ITEM": 4
+    },
+    "lines": 4
+   }
+  },
+  "not_in_V3_0_63_named": [
+   {
+    "AT_LEAST_M3": "0.915529",
+    "line": "NEW:STR.CONC.BLINDING:POOL-1",
+    "what": "pool blinding (T-667 MERGED, NEW line, unwired)",
+    "wiring": "T-668"
+   }
+  ],
+  "rows": [
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.000000",
+     "0.189000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-14: the 0.10 projection beyond the plot line may not be built",
+    "family": "B10-01",
+    "item_code": "STR.CONC.BLINDING",
+    "line_id": "L-10032bf9a60368473a7b",
+    "member": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BEYOND_PLOT_LINE",
+    "named": "D-14 (blinding beyond the plot line)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "pad count not printed (as the pad line); under the G.B between pads no blinding is drawn (A-A is cut through a pad); end projections of the pad blinding not dimensioned",
+    "family": "B10-01",
+    "item_code": "STR.CONC.BLINDING",
+    "line_id": "L-d0313e5d204e2758996a",
+    "member": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BOUNDARY_WALL_BASE",
+    "named": "Q-28 (pad count; pad blinding projections not dimensioned)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "2.256000",
+     "2.352000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "FF raft projection not dimensioned (ST p.14 draws it, prints 10cm only)",
+    "family": "B10-01",
+    "item_code": "STR.CONC.BLINDING",
+    "line_id": "L-16b95607fc88cda3844a",
+    "member": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_LIFT_RAFT_FF",
+    "named": "FF lift-raft blinding projection drawn, not dimensioned (ST p.14)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.435000",
+     "0.590000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "F10 + F readings A / B (Q-31 C), 0.10 thick 0.10 past each face",
+    "family": "B10-01",
+    "item_code": "STR.CONC.BLINDING",
+    "line_id": "L-080c97f5f6a92452cd04",
+    "member": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTING:FTG:SH10:T652:10A5",
+    "named": "Q-31 C (F10 + F readings A / B)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "4.949374",
+     "9.422514"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-33 / D-35 ground-beam sections; plan-distinct of the pit layer (T-478)",
+    "family": "B10-01",
+    "item_code": "STR.CONC.BLINDING",
+    "line_id": "L-7a5214a334ea3559fa2d",
+    "member": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_GROUND_BEAM",
+    "named": "D-33 / D-35 (ground-beam sections under the blinding)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.000000",
+     "0.912684"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-15: ST p.13 prints no blinding under straps",
+    "family": "B10-01",
+    "item_code": "STR.CONC.BLINDING",
+    "line_id": "L-35382b18e2e362df3ae6",
+    "member": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_STRAP",
+    "named": "D-15 (blinding under straps)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "2.176000",
+     "2.275000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED: overlay op FOOTING_S02_BOUND (T-595 R-T595-2)|T-595 R-T595-2|L-164ae9d338976be9e582: note R-T595-2 scenario-set bound: low LOWERED, high unchanged",
+    "family": "B10-02",
+    "item_code": "STR.CONC.FOOTING",
+    "line_id": "L-164ae9d338976be9e582",
+    "member": "P-C:FTG:SH10:T652:10A5",
+    "named": "Q-31 C readings under the V3.0.11 conflict record (F10 + F); T-595 third reading named WAITING"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.587400",
+     "0.660000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.33 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:35C (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F13, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-b4c234c8a3873239f67f",
+    "member": "P-C:NECK:COL:SH10:C11@207698,54876",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.587400",
+     "0.660000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.33 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:37D (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F11, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-132cf60588a44f6af9d6",
+    "member": "P-C:NECK:COL:SH10:C11@208990,51494",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.173000"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "R-T657-2: raft depth left to the supplier; upper end open by its item; D-43 lift pit raft depth 'as per lift manufacturer' (ST p.14); D-63 section",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-12f3d8b9375cac407bca",
+    "member": "P-C:NECK:COL:SH10:C1@213452,60528",
+    "named": "D-43 / D-63 (lift raft depth, lift necks)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.289500",
+     "0.322500"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.930000 = top +0.95 (GF column base +0.95 at GFRS:32C (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.35 (F2, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-3f7b9501a902579e7406",
+    "member": "P-C:NECK:COL:SH10:C2@209843,64560",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.289500",
+     "0.322500"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.930000 = top +0.95 (GF column base +0.95 at GFRS:32F (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.35 (F2, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-5aec8a0055215ee5a711",
+    "member": "P-C:NECK:COL:SH10:C2@212578,64533",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.173000"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "R-T657-2: raft depth left to the supplier; upper end open by its item; D-43 lift pit raft depth 'as per lift manufacturer' (ST p.14); D-63 section",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-8eb74a02fcf5ae4465f8",
+    "member": "P-C:NECK:COL:SH10:C2@213395,59220",
+    "named": "D-43 / D-63 (lift raft depth, lift necks)"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.173000"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "R-T657-2: raft depth left to the supplier; upper end open by its item; D-43 lift pit raft depth 'as per lift manufacturer' (ST p.14); D-63 section",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-dd6d11415961b554e906",
+    "member": "P-C:NECK:COL:SH10:C2@214579,60524",
+    "named": "D-43 / D-63 (lift raft depth, lift necks)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.192000",
+     "0.330000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:353: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F3, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-4ec473f7c0c712919823",
+    "member": "P-C:NECK:COL:SH10:C3@199252,55820",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.177000",
+     "0.315000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.180000 = top +0.25 (annex member GFRS:350: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F15, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-dd3c32e4340e7a823a6e",
+    "member": "P-C:NECK:COL:SH10:C3@201132,51210",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.192000",
+     "0.330000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.280000 = top +0.25 (GF column base +0.25 at GFRS:365 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F3, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-f54b7b2acf11ebd2a585",
+    "member": "P-C:NECK:COL:SH10:C3@205523,52938",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.237000",
+     "0.270000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.580000 = top +0.95 (GF column base +0.95 at GFRS:36B (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.7 (F12, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-ae1bd9cb228d57594e46",
+    "member": "P-C:NECK:COL:SH10:C3@209914,60584",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.267000",
+     "0.300000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:383 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F14, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-516989b817e0ccc7cb80",
+    "member": "P-C:NECK:COL:SH10:C3@217138,51213",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.267000",
+     "0.300000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:344 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F8, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-48f2e06e5c946eb1e5a7",
+    "member": "P-C:NECK:COL:SH10:C3@226007,58025",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.282000",
+     "0.315000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:377 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F4, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-46f2b70254f074885dfc",
+    "member": "P-C:NECK:COL:SH10:C4@220308,64637",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.235000",
+     "0.315000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.125 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:335 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F4, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-05a99150a85e9185ae48",
+    "member": "P-C:NECK:COL:SH10:C4@224310,64557",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.194400",
+     "0.360000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.18 m2 x h 1.080000 = top +0.25 (GF column base +0.25 at GFRS:35F (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F13, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-c1e802184591eac927cf",
+    "member": "P-C:NECK:COL:SH10:C5@205273,54905",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.338400",
+     "0.378000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.18 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:332 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F5, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-5efd9ac69d4cfd9b9a6e",
+    "member": "P-C:NECK:COL:SH10:C5@216447,64629",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.338400",
+     "0.378000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.18 m2 x h 1.880000 = top +0.95 (GF column base +0.95 at GFRS:374 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F5, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-486cd9a0bf52e4b32abb",
+    "member": "P-C:NECK:COL:SH10:C5@220440,52886",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.373800",
+     "0.420000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.21 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:362 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F6, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-efe50185c0da4244e158",
+    "member": "P-C:NECK:COL:SH10:C6@209970,56575",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.379200",
+     "0.432000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.24 m2 x h 1.580000 = top +0.95 (GF column base +0.95 at GFRS:368 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.7 (F12, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-995eca94ba8dc09a028f",
+    "member": "P-C:NECK:COL:SH10:C7@209292,59069",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.427200",
+     "0.540000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.24 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:380 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F14, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-15b8ad39d6b2250c9546",
+    "member": "P-C:NECK:COL:SH10:C8@217457,52784",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.480600",
+     "0.540000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.27 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:36E (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F8, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-fc622ff340ac65a544e3",
+    "member": "P-C:NECK:COL:SH10:C8@224698,57859",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.432500"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "R-T657-2: raft depth left to the supplier; upper end open by its item; D-43 lift pit raft depth 'as per lift manufacturer' (ST p.14); D-63 section",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-953e87a3e9d0425d404e",
+    "member": "P-C:NECK:COL:SH10:C9@214557,59222",
+    "named": "D-43 / D-63 (lift raft depth, lift necks)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.519000",
+     "0.585000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.3 m2 x h 1.730000 = top +0.95 (GF column base +0.95 at GFRS:37A (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.55 (F9, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-b21cbf6560f613b39bf0",
+    "member": "P-C:NECK:COL:SH10:C9@220198,60706",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.192000",
+     "0.330000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:34A: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-85df35f17a205f919aa6",
+    "member": "P-C:NECK:COL:SH10:C@195866,57040",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.192000",
+     "0.330000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:34D: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-734ff1a78bbe6b7eb4c3",
+    "member": "P-C:NECK:COL:SH10:C@195972,51184",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.192000",
+     "0.330000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.280000 = top +0.25 (annex member GFRS:356: T-394 base +0.95 vs annex FFL +0.30 - 0.05 = +0.25 (two readings, the lower taken)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-53d0b6af1a801c3db58e",
+    "member": "P-C:NECK:COL:SH10:C@198052,57874",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.237600",
+     "0.330000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.12 m2 x h 1.980000 = top +0.95 (GF column base +0.95 at GFRS:359 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (F, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-bd741a3faf2318dd8409",
+    "member": "P-C:NECK:COL:SH10:C@207257,51203",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.373800",
+     "0.462000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.21 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:371 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.50 (F10|F, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-bbad8cdb4d26986776a6",
+    "member": "U-C:NECK:COL:SH10:C10@224867,51226",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.267000",
+     "0.330000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.15 m2 x h 1.780000 = top +0.95 (GF column base +0.95 at GFRS:347 (same datum as the neck top, R-NECK-ENDS-1; T-394)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.50 (F10|F, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-314946394d849141dda2",
+    "member": "U-C:NECK:COL:SH10:C@226940,50955",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.115200",
+     "0.198000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-34346cb438bffee6acec",
+    "member": "U-C:NECK:COL:SH10:CN@216858,57078",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.115200",
+     "0.198000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-6a2040e0fe0bf7391b9c",
+    "member": "U-C:NECK:COL:SH10:CN@222091,55786",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.115200",
+     "0.198000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-1a9e469651c32cce9b97",
+    "member": "U-C:NECK:COL:SH10:CN@222815,61757",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.097200",
+     "0.180000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.09 m2 x h 1.080000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.5 (F8, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-15d9da9b17fd373553f0",
+    "member": "U-C:NECK:COL:SH10:CN@223972,59262",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.106200",
+     "0.189000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.09 m2 x h 1.180000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.4 (F4, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-4ef35980fbb54366703d",
+    "member": "U-C:NECK:COL:SH10:CN@224210,63411",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.115200",
+     "0.198000"
+    ],
+    "cause_class": "OPEN BOUND",
+    "evidence": "min section 0.09 m2 x h 1.280000 = top +0.25 (no GF member (neck-only CN): lowest drawn GF structural top +0.25 (T-287 / T-214)) + 1.50 (ST p.9 note 1 printed minimum 1.50 below EG +-0.00 (T-357)) - 0.17 stack - H 0.3 (FN, footing schedule; T-205)",
+    "family": "B10-03",
+    "item_code": "STR.CONC.NECK",
+    "line_id": "L-c8c07db4ac0d54d89bbf",
+    "member": "U-C:NECK:COL:SH10:CN@225897,54910",
+    "named": "founding level not printed (ST p.9 note 1 minimum, p.13 'LESS THAN 2.5m'; Q-21 C: decided on site with engineering approval)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED: GB.EXTERIOR.DEPTH_BASIS.COURT HELD: not declared for this project (T-449 correction register (R-GB-EXT-DEPTH-1))",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-62243c74c430d383be86",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0002.1",
+    "named": "D-35 (court G.B depth basis; court structural top / ground level unprinted)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.216000",
+     "0.288000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED: Checker downgrade DG-2ddc451c17d2b589 (APPLIED in the V3.0.57 index): Checker downgrade DG-2ddc451c17d2b589 UNSUPPORTED BASIS (ST7757.pdf p.13: ground-beam sections titled 'Less than 5m length' 30 x 40 and 'Less then 2.5m length'",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-0e852cca42fb8b765c58",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0007",
+    "named": "D-34 (title precedence, 30x30 .. 30x40)"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.596400"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-33 run carrying a landing beam (175+7DE / 176+7E6 / 7DC+7DD lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings R-T658-8: least of drawn plan area x least title depth over the readings span 5.02 m, area 1.506 m2; span 4.97 m, area 1.491 m2",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-e24946df436cbc25fca6",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0008.1",
+    "named": "D-33"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.147657"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-33 run carrying a landing beam (7E7+7E8 lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings R-T658-8: least of drawn plan area x least title depth over the readings span 1.5367 m, area 0.492189 m2",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-d53e5eb08e2c6c668254",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0008.2",
+    "named": "D-33"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.600000"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-33 run carrying a landing beam (7E7+7E8 lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings R-T658-8: least of drawn plan area x least title depth over the readings span 5.0 m, area 1.5 m2",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-5af89b9f1e5b90daf8f5",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0010.3",
+    "named": "D-33"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.090000"
+    },
+    "beside_after_T669": {
+     "AT_LEAST_M3": "0.112500"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open R-T658-3: runs [1.2] m x 0.30 x (0.25 - 0.0) literal floor",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-6bf14711798e5af93594",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0012.1",
+    "named": "D-35",
+    "note": "T-669 (a): owns the annex SE corner square (R-T669-1); floor 0.090 -> 0.1125; still D-35 high open"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.172500"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open R-T658-3: runs [2.3] m x 0.30 x (0.25 - 0.0) literal floor",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-3284f44000c02179ace7",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0012.2",
+    "named": "D-35"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "OPEN BOUND",
+    "evidence": "UNCHANGED: section not printed: blank, never 0 (T-449 correction register (R-GB-NECK-CUT-1))",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-be6708e07b40efa02779",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0013.1",
+    "named": "neck-cut sliver section not printed (R-GB-NECK-CUT-1)"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.435000"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open R-T658-3: runs [5.8] m x 0.30 x (0.25 - 0.0) literal floor",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-d8b98b143e293d30833b",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0013.2",
+    "named": "D-35"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.727500"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open R-T658-3: runs [5.45, 4.25] m x 0.30 x (0.25 - 0.0) literal floor",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-402dbe61d1c924144a3c",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0015",
+    "named": "D-35"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.450000"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open R-T658-3: runs [6.0] m x 0.30 x (0.25 - 0.0) literal floor",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-4783c6e18002c3a8a37e",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0016",
+    "named": "D-35"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.037500"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open R-T658-3: runs [0.5] m x 0.30 x (0.25 - 0.0) literal floor",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-b4a13a43967ee4765662",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0017.2",
+    "named": "D-35"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.220500"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-33 run carrying a landing beam (141+7DA lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings R-T658-8: least of drawn plan area x least title depth over the readings span 2.45 m, area 0.735 m2",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-1487bdda099006e0c4ba",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0019",
+    "named": "D-33"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.130500",
+     "0.174000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "R-T658-1: span 1.45 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-81444e222487437e257e",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0020",
+    "named": "D-34 (title precedence, 30x30 .. 30x40)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.108000",
+     "0.144000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "R-T658-1: span 1.2 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-e2134034441cb7db7bd7",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0021",
+    "named": "D-34 (title precedence, 30x30 .. 30x40)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED: GB.EXTERIOR.DEPTH_BASIS.COURT HELD: not declared for this project (T-449 correction register (R-GB-EXT-DEPTH-1))",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-21795b350fbd09150c43",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0022",
+    "named": "D-35 (court G.B depth basis; court structural top / ground level unprinted)"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.423000"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-33 run carrying a landing beam (7E1+7E2 lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings R-T658-8: least of drawn plan area x least title depth over the readings span 3.525 m, area 1.0575 m2",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-95a1f198cfe7f398d6ae",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0023:7DC+7DD#1",
+    "named": "D-33"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.209250",
+     "0.279000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED: Checker downgrade DG-2ddc451c17d2b589 (APPLIED in the V3.0.57 index): Checker downgrade DG-2ddc451c17d2b589 UNSUPPORTED BASIS (ST7757.pdf p.13: ground-beam sections titled 'Less than 5m length' 30 x 40 and 'Less then 2.5m length'",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-c0b7102a36344a0349f5",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0025.1",
+    "named": "D-34 (title precedence, 30x30 .. 30x40)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.108000",
+     "0.144000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "R-T658-1: span 1.2 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-f0e25ad2cf73bf2a35ea",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0030",
+    "named": "D-34 (title precedence, 30x30 .. 30x40)"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.423000"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-33 run carrying a landing beam (114+115+7DF lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings R-T658-8: least of drawn plan area x least title depth over the readings span 3.525 m, area 1.0575 m2",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-cfb4555cb26b39934bff",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0032:7E7+7E8#2",
+    "named": "D-33"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.112500",
+     "0.150000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "R-T658-1: span 1.25 m x 0.30 x the titles that hold (Checker downgrade DG-a31a0d7e9dd564ad (APPLIED in the V3.0.57 index))",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-0c5ede7fd2c9e425aa8d",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0034",
+    "named": "D-34 (title precedence, 30x30 .. 30x40)"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.180000"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open R-T658-3: runs [2.4] m x 0.30 x (0.25 - 0.0) literal floor",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-00465df980165c529476",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0035",
+    "named": "D-35"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.242309"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-33 run carrying a landing beam (182+183 lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings R-T658-8: least of drawn plan area x least title depth over the readings span 2.4269 m, area 0.807695 m2",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-0bb78accf8c0a0fbdbaf",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0037.1",
+    "named": "D-33"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.093040",
+     "0.130678"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "R-T658-7: drawn plan area x the titles that hold; area 0.310134 m2 (edges [0.788981, 1.278577] m), span 0.789 m; area 0.326694 m2 (edges [0.788981, 1.388981] m), span 0.789 m",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-970bac563cbcd69e2a30",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0038",
+    "named": "D-34 (title precedence, 30x30 .. 30x40)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.196120",
+     "0.261493"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "R-T658-7: drawn plan area x the titles that hold; area 0.653733 m2 (edges [2.143112, 2.073244] m), span 2.0732 m",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-f24cf117a9ce1e875785",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0039",
+    "named": "D-34 (title precedence, 30x30 .. 30x40)"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.189000"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-33 run carrying a landing beam (180+181 lands): ST p.13 prints sections only 'without concentrated load'; high NOT ESTABLISHED by the drawings R-T658-8: least of drawn plan area x least title depth over the readings span 2.1 m, area 0.63 m2",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-a8c5c32c7a785c1e3f05",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0040",
+    "named": "D-33"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED: GB.EXTERIOR.DEPTH_BASIS.COURT HELD: not declared for this project (T-449 correction register (R-GB-EXT-DEPTH-1))",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-a55bfa01b726ef11650c",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0041",
+    "named": "D-35 (court G.B depth basis; court structural top / ground level unprinted)"
+   },
+   {
+    "beside": {
+     "AT_LEAST_M3": "0.135473"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-35 annex exterior ground-beam depth (literal +0.25 .. N.G. 0.00 cannot hold the printed exterior section): high open R-T658-3: runs [1.8063] m x 0.30 x (0.25 - 0.0) literal floor",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-e16c98075f69532a3dc7",
+    "member": "P-C:GROUND_BEAMS:GROUND:BAND0042",
+    "named": "D-35"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.000000",
+     "3.525600"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED: candidate record V3.0.19 (T-311 extract): M4: boundary-wall columns 20 x 30 ('SEE ARCH PLAN', none drawn): count and positions: the band 5 runs 44.07 m x 0.20 x 0",
+    "family": "B10-04",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "line_id": "L-fb7a6431fede62e93fd5",
+    "member": "T254:GROUND_BEAMS:GROUND:BOUNDARY_GB_NG",
+    "named": "Q-28 (RFI)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.000000",
+     "0.385000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED: T-572 HELD-bound component HL:STRAP_CONCRETE:SB1:IN_FOOTING:F10_F: BOUNDED: low SB1 end piece inside the F10 + F outline may be no separate solid (follows Q-31 C; T-233); high SB1 1.00 x 0.50 section over its drawn length inside the outline (T-231 / T-233)",
+    "family": "B10-04",
+    "item_code": "STR.CONC.STRAP",
+    "line_id": "L-abd65e1b745315dd17c2",
+    "member": "HL:STRAP_CONCRETE:SB1:IN_FOOTING:F10_F",
+    "named": "Q-31 C (SB1 end inside F10 + F)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.029500",
+     "0.268300"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED: T-572 HELD-bound component HL:STRAP_CONCRETE:SB3:IN_FOOTING:F3: BOUNDED: low SB3 0.50 x 0.40 soffit at the F3 top (T-230); high SB3 soffit at the F3 underside (D-15 strap soffit; T-230 / T-350)",
+    "family": "B10-04",
+    "item_code": "STR.CONC.STRAP",
+    "line_id": "L-c823e0dbd81e30c66aa5",
+    "member": "HL:STRAP_CONCRETE:SB3:IN_FOOTING:F3",
+    "named": "D-15 (strap soffit)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED (R-T658-4 refuses a ceiling): D-39: main roof slab-top datum and roof build-up not printed; section CONFLICT",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-541c7e565bb93ecdb78b",
+    "member": "HL:PLANTED_COLUMN:PC-2F:CONCRETE",
+    "named": "D-39 / D-66"
+   },
+   {
+    "beside": {
+     "AT_MOST_M3": "0.425000"
+    },
+    "bound_V3_0_63": null,
+    "bound_after_T669": [
+     "0.303000",
+     "0.425000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-39 main roof slab-top datum and build-up: low blank R-T658-4: C1 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-d79d17d14f39d5148cb8",
+    "member": "P-C:COL:SH12:C1@251701,62344|2F",
+    "named": "D-39",
+    "note": "T-669 (b): drawn lower end R-T669-2; still D-39 inside the bound"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED (R-T658-4 refuses a ceiling): D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-0ede77cfd0badc4c7d62",
+    "member": "P-C:COL:SH12:C2@247685,64087|2F",
+    "named": "D-39 / D-44"
+   },
+   {
+    "beside": {
+     "AT_MOST_M3": "0.425000"
+    },
+    "bound_V3_0_63": null,
+    "bound_after_T669": [
+     "0.303000",
+     "0.425000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-39 main roof slab-top datum and build-up: low blank R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-33a9b7728781fcba12e2",
+    "member": "P-C:COL:SH12:C2@251723,58368|2F",
+    "named": "D-39",
+    "note": "T-669 (b): drawn lower end R-T669-2; still D-39 inside the bound"
+   },
+   {
+    "beside": {
+     "AT_MOST_M3": "0.425000"
+    },
+    "bound_V3_0_63": null,
+    "bound_after_T669": [
+     "0.303000",
+     "0.425000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-39 main roof slab-top datum and build-up: low blank R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-919a5749ef79759e01ca",
+    "member": "P-C:COL:SH12:C2@252679,64225|2F",
+    "named": "D-39",
+    "note": "T-669 (b): drawn lower end R-T669-2; still D-39 inside the bound"
+   },
+   {
+    "beside": {
+     "AT_MOST_M3": "0.425000"
+    },
+    "bound_V3_0_63": null,
+    "bound_after_T669": [
+     "0.303000",
+     "0.425000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-39 main roof slab-top datum and build-up: low blank R-T658-4: C2 2F 20x50 0.10 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-26f6b6f2365c72e42291",
+    "member": "P-C:COL:SH12:C2@254644,61274|2F",
+    "named": "D-39",
+    "note": "T-669 (b): drawn lower end R-T669-2; still D-39 inside the bound"
+   },
+   {
+    "beside": {
+     "AT_MOST_M3": "0.506250"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "Q-54 B / D-39 annex roof slab-top datum: low blank R-T658-4: C3 GF 25x50 (annex) 0.125 m2 x (4.30 finished mark, printed and re-read r2 - 0.25 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-fad18af6e7139a5e99d1",
+    "member": "P-C:COL:SH12:C3@238374,54773|GF",
+    "named": "D-39 / Q-54 B"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED (R-T658-4 refuses a ceiling): Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-694a75c84dd6e4bb4491",
+    "member": "P-C:COL:SH12:C3@241094,51256|GF",
+    "named": "D-39 / Q-54B / D-66"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.420000",
+     "0.525000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-cc702b8541c15fdfd98c",
+    "member": "P-C:COL:SH12:C3@247476,61310|1F",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED (R-T658-4 refuses a ceiling): D-39: main roof slab-top datum and roof build-up not printed; D-44 B15 upstand / downstand; section CONFLICT",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-c10e2945d582b5a03126",
+    "member": "P-C:COL:SH12:C3@247476,61310|2F",
+    "named": "D-39 / D-44 / D-66"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.450000",
+     "0.562500"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-8de64040a1c3ae6cf137",
+    "member": "P-C:COL:SH12:C3@265215,57750|GF",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.420000",
+     "0.525000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-e112e2add2f8979a6c39",
+    "member": "P-C:COL:SH12:C4@259526,63482|1F",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.420000",
+     "0.525000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-8f8ad257d9b2cb9e027f",
+    "member": "P-C:COL:SH12:C4@264812,63850|1F",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.420000",
+     "0.504000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-291ba2ddf4bbe4f14cf7",
+    "member": "P-C:COL:SH12:C5@243102,55481|1F",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.420000",
+     "0.630000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-c677b628a776d3b87b02",
+    "member": "P-C:COL:SH12:C5@255627,63526|1F",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED (R-T658-4 refuses a ceiling): D-39: main roof slab-top datum and roof build-up not printed; section CONFLICT",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-bc01297b1c4a4c45a15f",
+    "member": "P-C:COL:SH12:C5@255627,63526|2F",
+    "named": "D-39 / D-66"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.420000",
+     "0.630000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-831f6fe3de133294bb8f",
+    "member": "P-C:COL:SH12:C5@259715,51786|1F",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.504000",
+     "0.735000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-a87ea657a42a311cb851",
+    "member": "P-C:COL:SH12:C6@250087,56100|1F",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.672000",
+     "0.840000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-85809d3db52bb93dfe96",
+    "member": "P-C:COL:SH12:C7@247954,58915|1F",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.756000",
+     "0.840000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-1dc713c83bf62e525ff2",
+    "member": "P-C:COL:SH12:C8@256160,53630|1F",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.900000",
+     "1.012500"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-4c4496579e5bfa20ae9f",
+    "member": "P-C:COL:SH12:C8@256160,53630|GF",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.756000",
+     "1.050000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-755eb56b55e86301b488",
+    "member": "P-C:COL:SH12:C9@254644,59429|1F",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": {
+     "AT_MOST_M3": "0.595000"
+    },
+    "bound_V3_0_63": null,
+    "bound_after_T669": [
+     "0.424200",
+     "0.595000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-39 main roof slab-top datum and build-up: low blank R-T658-4: C9 2F 20x70 0.14 m2 x (13.90 finished mark, printed and re-read r2 - 9.65 base, APPROVED structural datum, not printed text: READS R2_MARKS_REREAD) ceiling",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-53f223b06db14ac41d47",
+    "member": "P-C:COL:SH12:C9@254644,59429|2F",
+    "named": "D-39",
+    "note": "T-669 (b): drawn lower end R-T669-2; still D-39 inside the bound"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.756000",
+     "0.840000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-4aed92c117a7ab1c90ee",
+    "member": "P-C:COL:SH12:C9@259284,59442|1F",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED (R-T658-4 refuses a ceiling): Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-c0b3340a906c2c7650f8",
+    "member": "P-C:COL:SH12:C@233893,56561|GF",
+    "named": "D-39 / Q-54B / D-66"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED (R-T658-4 refuses a ceiling): Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-e6c1c9a7feec10f64975",
+    "member": "P-C:COL:SH12:C@235241,51296|GF",
+    "named": "D-39 / Q-54B / D-66"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED (R-T658-4 refuses a ceiling): Q-54B / D-39: annex roof slab-top datum not printed; section CONFLICT",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-9f5a647014bbf83359f9",
+    "member": "P-C:COL:SH12:C@238150,57853|GF",
+    "named": "D-39 / Q-54B / D-66"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.360000",
+     "0.450000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-9cb26d86575a92694880",
+    "member": "P-C:COL:SH12:C@247429,51302|GF",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.360000",
+     "0.450000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "UNCHANGED, R-T658-5: schedule vs drawn outline held as CONFLICT (owner answer: hold, member by member); no third print found (D-66 search)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-43dae3d6dfec957b26a8",
+    "member": "P-C:COL:SH12:C@265272,52633|GF",
+    "named": "D-66 (schedule vs drawn outline CONFLICT, held member by member)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.378000",
+     "1.161000"
+    ],
+    "cause_class": "MEASURABLE NOW",
+    "evidence": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-0d4cd54cb397f210d1fd",
+    "member": "U-C:COL:SH12:CN@257027,56053",
+    "named": "FR-T647-1: NOT_APPLICABLE_WITH_EVIDENCE (ST p.9 CN row: GF / 1F / 2F struck; DRAWING-CONFIRMED T-075); not wired"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.378000",
+     "1.161000"
+    ],
+    "cause_class": "MEASURABLE NOW",
+    "evidence": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-de9383f76f000503e1d7",
+    "member": "U-C:COL:SH12:CN@261568,56053",
+    "named": "FR-T647-5: NOT_APPLICABLE_WITH_EVIDENCE (ST p.9 CN row: GF / 1F / 2F struck; DRAWING-CONFIRMED T-075); not wired"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "MEASURABLE NOW",
+    "evidence": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-53a35abf19b1d8807f38",
+    "member": "U-C:COL:SH12:CN@262379,59868",
+    "named": "FR-T647-3: NOT_APPLICABLE_WITH_EVIDENCE (ST p.9 CN row: GF / 1F / 2F struck; DRAWING-CONFIRMED T-075); not wired"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.378000",
+     "1.161000"
+    ],
+    "cause_class": "MEASURABLE NOW",
+    "evidence": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-d33f749864d96dd236f0",
+    "member": "U-C:COL:SH12:CN@262935,63411",
+    "named": "FR-T647-4: NOT_APPLICABLE_WITH_EVIDENCE (ST p.9 CN row: GF / 1F / 2F struck; DRAWING-CONFIRMED T-075); not wired"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "MEASURABLE NOW",
+    "evidence": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "family": "B10-06",
+    "item_code": "STR.CONC.COLUMN",
+    "line_id": "L-1850e27801a200419510",
+    "member": "U-C:COL:SH12:CN@265215,56248",
+    "named": "FR-T647-2: NOT_APPLICABLE_WITH_EVIDENCE (ST p.9 CN row: GF / 1F / 2F struck; DRAWING-CONFIRMED T-075); not wired"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.442550",
+     "0.553230"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "schedule b 0.25 (p.10 row B6) vs drawn 0.200 (5CC / 5CD) on this span, the other four B6 spans drawn 0.25; no section; column 77B (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-39ca5340879eafc35355",
+    "member": "HL:BEAM_LEDGER:1F:BM-1F-030#BAND0009",
+    "named": "D-27 (WIDTH)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.287500",
+     "0.345000"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "schedule b 0.25 (p.11 row CB10) vs drawn 0.300 (5E7 / 5E8); mirror CB13 printed 0.30 = drawn; no section; columns 685 / 68B (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-50667f69855b6d588011",
+    "member": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.1",
+    "named": "D-02 (WIDTH)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.456300",
+     "0.547500"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "schedule b 0.25 vs drawn 0.300 (5E7 / 5E8); no section; column 685 (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-43e804ba4a4c07529fd5",
+    "member": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.2",
+    "named": "D-02 (WIDTH)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "B-B (cut 76E) crosses it; outline 0.45 ends at B23's outer face 5E1; no mark, no bars, depth not printed (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-67f3d325019e618328eb",
+    "member": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.1",
+    "named": "D-05/D-26 (PROJECTION)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-54e397fe7b1485b2e8fe",
+    "member": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.2",
+    "named": "D-05/D-26 (PROJECTION)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-56d278bedc8dda2837a9",
+    "member": "HL:BEAM_LEDGER:1F:BM-1F-036#BAND0025",
+    "named": "D-05/D-26 (PROJECTION)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-fbb65dfd2a66a16714ac",
+    "member": "HL:BEAM_LEDGER:1F:BM-1F-037",
+    "named": "D-26 (PROJECTION)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-377cb988b2271c2e2e4d",
+    "member": "HL:BEAM_LEDGER:1F:BM-1F-038",
+    "named": "D-26 (PROJECTION)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.090376",
+     "0.271128"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no mark, no section crosses it; drawn width 0.2 x f2f 1.1297 x scheduled depths of breadth-0.20 rows 0.40 .. 1.20 (R-T660-2, Q-61 C(4))",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-8d031491396379f0cbb1",
+    "member": "HL:BEAM_LEDGER:2F:BM-2F-015#BAND0001.3",
+    "named": "D-04 (UNLABELLED)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-17c4238c0ef76656d06e",
+    "member": "HL:BEAM_LEDGER:2F:BM-2F-019#2F-031",
+    "named": "D-26 (PROJECTION)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "1.013607",
+     "1.266989"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "schedule b 0.25 (p.10 row B29) vs drawn edges 0.200 (463 / 2CE); no section cuts it; ends on B22 face and the B21 face (oblique) (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-9e4895663f76d7f03ac9",
+    "member": "HL:BEAM_LEDGER:GF:BM-GF-054#BAND0008",
+    "named": "D-27 (WIDTH)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.347000",
+     "0.433800"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "schedule b 0.20 (p.11 row CB2) vs drawn 0.250 (274 / 278); no section cuts it; between columns 32F / 332 (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-2c7b0b1e1a439d9ffd1e",
+    "member": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.1",
+    "named": "D-27 (WIDTH)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.335000",
+     "0.418800"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "schedule b 0.20 vs drawn 0.250 (274 / 278); no section; columns 332 / 377 (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-60f09eece6568b15f6ce",
+    "member": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.2",
+    "named": "D-27 (WIDTH)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "2.262872",
+     "2.545691"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "schedule b 0.45 (p.10 row B21) vs drawn 0.400 measured square to the inclined axis (433 / 434); no section; columns 322 / 37A (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-1fd49f3e7c5a7dd19d4d",
+    "member": "HL:BEAM_LEDGER:GF:BM-GF-056#BAND0042",
+    "named": "D-27 (WIDTH)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.212000",
+     "0.397500"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "B3 20x40 (p.10, label 'B3 (With Stair)' 0.15 m north of span 2) vs CB3 20x75 (p.11 three-span row, CB3 printed under all three spans); never both (Q-61 C(2), R-T660-4)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-88ccf8d4505411deb9e5",
+    "member": "HL:BEAM_LEDGER:GF:BM-GF-057#BAND0019.2",
+    "named": "D-03 (TWO_MARKS)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "A-A (cut 55A) crosses it; outline 0.40 ends at B20's outer face 2C6; no mark, no bars, depth not printed (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-634cefe5e8a7fb458e16",
+    "member": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.1",
+    "named": "D-05/D-26 (PROJECTION)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-331d4bbef719a7f0bbca",
+    "member": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.2",
+    "named": "D-05/D-26 (PROJECTION)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-aba59a2157a48a69e2fb",
+    "member": "HL:BEAM_LEDGER:GF:BM-GF-061",
+    "named": "D-26 (PROJECTION)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no section crosses it; no mark, no bars, depth not printed; dome detail ring depth dimension 182F prints 'AS PER ARCH' (text override; its scaled measurement 0.75 on an N.I.S. detail is an indication, never a quantity), no B4 mark on the east ring (Q-61 C(3)) (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-ab37afa17f2ac5b0efd1",
+    "member": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY",
+    "named": "D-28 (RING)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.064016",
+     "0.192048"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no mark, no section crosses it; drawn width 0.2 x f2f 0.8002 x scheduled depths of breadth-0.20 rows 0.40 .. 1.20 (R-T660-2, Q-61 C(4))",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-f83c4a469845c7e14dfa",
+    "member": "U-C:BEAMS:1F:BAND0005.1",
+    "named": "D-04 (UNLABELLED)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-a9d5e7dc22013e24d691",
+    "member": "U-C:BEAMS:1F:BAND0014",
+    "named": "D-05/D-26 (PROJECTION)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-bb49e831f053bd30a6ce",
+    "member": "U-C:BEAMS:1F:BAND0023",
+    "named": "D-05/D-26 (PROJECTION)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.247976",
+     "0.743928"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no mark, no section crosses it; drawn width 0.2 x f2f 3.0997 x scheduled depths of breadth-0.20 rows 0.40 .. 1.20 (R-T660-2, Q-61 C(4))",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-d62d2fcf3d0023ad1ad1",
+    "member": "U-C:BEAMS:2F:BAND0006.1",
+    "named": "D-04 (UNLABELLED)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.111944",
+     "0.335832"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no mark, no section crosses it; drawn width 0.2 x f2f 1.3993 x scheduled depths of breadth-0.20 rows 0.40 .. 1.20 (R-T660-2, Q-61 C(4))",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-dc8cbfc119d006ff3927",
+    "member": "U-C:BEAMS:2F:BAND0008.1",
+    "named": "D-04 (UNLABELLED)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.111944",
+     "0.335832"
+    ],
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "no mark, no section crosses it; drawn width 0.2 x f2f 1.3993 x scheduled depths of breadth-0.20 rows 0.40 .. 1.20 (R-T660-2, Q-61 C(4))",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-7c3edce23ec8faa3d674",
+    "member": "U-C:BEAMS:2F:BAND0011.1",
+    "named": "D-04 (UNLABELLED)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "0.040000",
+     "0.120000"
+    ],
+    "cause_class": "MEASURABLE NOW",
+    "evidence": "T-661: the T-642 split wiring carries this unsplit range (0.04 .. 0.12 = any W20 depth 0.40 .. 1.20); T-660 ledger row NEW:...BAND0030.2~T642_DEPTH_B4_B7",
+    "family": "B10-07",
+    "item_code": "STR.CONC.BEAM",
+    "line_id": "L-efd3f7806bf10b6a8e98",
+    "member": "U-C:BEAMS:GF:BAND0030.2",
+    "named": "T-642 FR-T642-2 split (0.05 released at B4 0.50 + companion 0 .. 0.025, B7 alternative) merged, unwired: wire in an integration row"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "Q-27 A (three domes) with no structural detail for the upper-roof dome: shell thickness, ring and whether '215' is the shell rise not printed; the 1F-roof detail (442 / 190 / 10) is another element's (no borrowing)",
+    "family": "B10-09",
+    "item_code": "STR.CONC.DOME",
+    "line_id": "L-d5401fa8986900c66c37",
+    "member": "DG5:DOME-3:SHELL",
+    "named": "consultant 2026-10-24 G3 (upper-roof dome: no structural detail)"
+   },
+   {
+    "beside": {
+     "FLOOR_BESIDE_M3": "1.903000"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-43: pit depth 'As Per Lift Manufactures recommendations' (ST p.14) not printed",
+    "family": "B10-10",
+    "item_code": "STR.CONC.LIFT",
+    "line_id": "L-684fcad323adc0c8a267",
+    "member": "LIFT_PIT:WALLS",
+    "named": "D-43 (lift pit depth 'as per manufacturer')"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "D-43: tie beam at 3.00 (ST p.8 note 19), section not printed",
+    "family": "B10-10",
+    "item_code": "STR.CONC.LIFT",
+    "line_id": "L-5ae06fda7d729d54c033",
+    "member": "LIFT_TIE_BEAM:GF",
+    "named": "D-43 (lift tie beam section not printed)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "steps NOT DRAWN on ST p.7 (own read) nor dimensioned on the architectural plan: consultant item (owner 2026-10-19 16:45, T-183)",
+    "family": "B10-10",
+    "item_code": "STR.CONC.POOL",
+    "line_id": "L-b62a7065645589011141",
+    "member": "HL:POOL_CONCRETE:POOL-1:STEPS",
+    "named": "consultant 2026-10-23 row 3 / P-2 (pool steps not drawn)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "pad count = boundary-column count, 'SEE ARCH PLAN': no boundary column drawn on the architectural or structural plans (own GF read; T-065 M4); Q-28 A provisional",
+    "family": "B10-11",
+    "item_code": "STR.CONC.BOUNDARY_PAD",
+    "line_id": "L-cda8f41522dc6f42b3d6",
+    "member": "FENCE:BAND:PADS",
+    "named": "Q-28 (boundary columns 'SEE ARCH PLAN', none drawn: pad count)"
+   },
+   {
+    "beside": null,
+    "bound_V3_0_63": [
+     "7.220400",
+     "7.220400"
+    ],
+    "cause_class": "MEASURABLE NOW",
+    "evidence": "section B.W 20x60 vs typical 20x40 (designer RFI, Q-28); band founding level 'AS PER EXCAVATION DEPTH' not printed, so whether the 21.45 m shares the footings' elevation is open (owner's Q-28 caveat)",
+    "family": "B10-11",
+    "item_code": "STR.CONC.BOUNDARY_WALL",
+    "line_id": "L-6290a9f3d93f38cd46d6",
+    "member": "P-C:SCOPE:BOUNDARY_WALL:FOUNDATION:CC-9fd936ab60:BEAM",
+    "named": "T-659 bound 5.6392 .. 11.0328 merged (T-666 confirmed, residual 0): wire in T-668; then Q-28 (B.W 20x60 vs 20x40) keeps it bounded"
+   },
+   {
+    "beside": {
+     "FLOOR_BESIDE_M3": "2.949453"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "Q-65 C (material above the upstand: designer) + D-39 (roof build-up b_edge) + the P1 margin; no P1/P2/P3 keyed to a run",
+    "family": "B10-12",
+    "item_code": "STR.CONC.PARAPET",
+    "line_id": "L-9a2c81164ec6499cc28c",
+    "member": "1F_ROOF#PARAPET_RC",
+    "named": "Q-65 C + D-39 (parapet material above the upstand; roof build-up)"
+   },
+   {
+    "beside": {
+     "FLOOR_BESIDE_M3": "1.624500"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "Q-65 C (material above the upstand: designer) + D-39 (roof build-up b_edge) + the P1 margin; no P1/P2/P3 keyed to a run",
+    "family": "B10-12",
+    "item_code": "STR.CONC.PARAPET",
+    "line_id": "L-030538dda6a32c601c4c",
+    "member": "2F_ROOF#PARAPET_RC",
+    "named": "Q-65 C + D-39 (parapet material above the upstand; roof build-up)"
+   },
+   {
+    "beside": {
+     "FLOOR_BESIDE_M3": "1.799103"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "Q-65 C (material above the upstand: designer) + D-39 (roof build-up b_edge) + the P1 margin; no P1/P2/P3 keyed to a run",
+    "family": "B10-12",
+    "item_code": "STR.CONC.PARAPET",
+    "line_id": "L-1d419b64e8ca1af30fb4",
+    "member": "ANNEX_ROOF#PARAPET_RC",
+    "named": "Q-65 C + D-39 (parapet material above the upstand; roof build-up)"
+   },
+   {
+    "beside": {
+     "FLOOR_BESIDE_M3": "1.677887"
+    },
+    "bound_V3_0_63": null,
+    "cause_class": "DESIGNER ITEM",
+    "evidence": "Q-65 C (material above the upstand: designer) + D-39 (roof build-up b_edge) + the P1 margin; no P1/P2/P3 keyed to a run",
+    "family": "B10-12",
+    "item_code": "STR.CONC.PARAPET",
+    "line_id": "L-b5ffc172a354375ca107",
+    "member": "GF_TERRACE#PARAPET_RC",
+    "named": "Q-65 C + D-39 (parapet material above the upstand; roof build-up)"
+   }
+  ],
+  "totals": {
+   "blank": 62,
+   "bounded": 82,
+   "bounded_high_m3": "62.166947",
+   "bounded_low_m3": "42.203169",
+   "by_class": {
+    "DESIGNER ITEM": 103,
+    "MEASURABLE NOW": 7,
+    "OPEN BOUND": 34
+   },
+   "lines": 144
+  }
+ },
+ "candidate": {
+  "index": "research/agents_t665/out/LINE_INDEX_V3_0_63.json",
+  "lines_sha256": "09ec4c1ac012982d372b2b5251ad07570d5f2a895af0f2a02bcdfc9d3480a9a1",
+  "version": "ARCH_TAKEOFF_V3.0.63"
+ },
+ "rules": [
+  "R-T669-1",
+  "R-T669-2"
+ ],
+ "schema": "URBAN_T669_LEDGER_V1",
+ "task": "T-669"
+}

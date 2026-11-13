@@ -1,500 +1,487 @@
-"""ARCH_TAKEOFF_V3.0.62 (T-314, lane I, r2, rebased): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.61
-(engine.source.arch_v30 .. arch_v3061), with ONE new piece, the EXTERIOR PLASTER / SIGMA FACE ROWS of the
-Checker-verified facade face ledger, booked into the FIN.EXT.FINISH lines by face, never by run x storey height:
+"""ARCH_TAKEOFF_V3.0.62 (T-661, lane I, CONCRETE GATE B integration package): the SAME opt-in BOQ candidate as
+ARCH_TAKEOFF_V3.0 .. V3.0.61 (engine.source.arch_v30, arch_v301 .. arch_v3061), extended with ONE piece built from
+Checker-merged member ledgers of the B10 concrete families (STR.CONC.*, m3):
 
-  FACADE_FACES  every drawn exterior face band is ONE row with its element (STOREY / PARAPET_OUTER / PARAPET_INNER /
-                PARAPET_TOP / PLINTH / SLAB_EDGE), its levels and its area (point, range or blank); every opening is
-                ONE hole on the face that holds it (fixed area, or a HELD range 0 .. cap). A FIN.EXT.FINISH line is the
-                sum of its face rows: gross = sum of faces, net = gross - fixed holes; a HELD hole or a HELD face makes
-                the line a bounded range with NO point value; a blank face (no printed dimension) makes the line blank.
+  CONC_LEDGER   each named HELD concrete line is restated member by member as its merged ledger states it, one of:
+                  BOUND       a new drawn bound low .. high (BOUNDED_EXPOSURE), the old range kept in the record;
+                  VALUE       a Checker re-measured value (MEASURED), the old bound kept in the record;
+                  HELD_BLANK  no drawn bound (BLOCKED_RFI, blank, the RFI named): the measure the drawings DO fix
+                              (a plan area, an AT_LEAST floor) is BESIDE the line in its record, never the quantity;
+                              an old bound with no drawn basis leaves the line only with this replacement and is
+                              kept in the record labelled 'not drawn';
+                  LOWER_ONLY  a drawn lower end and an upper end open by a named item (BLOCKED_RFI, blank): the
+                              AT_LEAST figure beside, never a range, never 0;
+                  CONFIRM     the ledger states the line exactly as the candidate carries it: no change, the binding
+                              asserted (a ledger that disagrees with the line refuses the run).
 
-R-T314-1 (every villa): (1) a line takes face rows of ONE element only: a parapet / plinth / slab-edge band in a STOREY
-line is refused (the element owns the band, never the formula of the floor whose outline draws it); (2) a STOREY face
-lies inside one level part [F.F.L., next level) of its line (a two-F.F.L. ground floor is two parts of one line); a band
-crossing a part boundary is refused until split; (3) every face once, every opening once, on a face of the same line,
-its sill / head inside the face band, never larger than the face; a HELD hole has a cap above 0; (4) a HELD face or
-hole is never 0: blank stays blank, a range stays a range (no point value); DRAWING-CONFIRMED faces carry one value;
-(5) the existing line keeps its id, element and rule (CHANGE), the new lines are ADDED with their element; every other
-V3.0.61 line is byte-identical (asserted); totals move only in FIN.EXT.FINISH (asserted); (6) the owner manual method
-(OWNER_NOTES_SIGMA 2026-10-21, Q-07 B bands from the floor, Q-73 full holes) is recorded BESIDE each line, never as its
-quantity; (7) every line figure is recomputed here from the rows and asserted equal to the expected figure of the
-inputs (the merged ledgers' own figure).
-
-m.l items (corners, drips, copings) are never FIN.EXT.FINISH m2 rows (refused); they are listed as named MISSING items
-of this stage until their item codes have a registry family. Nothing here names a project, a sheet or a coordinate.
+R-T661-1 (every villa; wires the merged member ledgers of the concrete lane, ERS s.2-5, UP-QTY-STATUS-001, WORKFLOW
+CONTROLS s.1 / s.5): (a) every entry binds to the line as the candidate carries it (item, element, unit, class, value
+or range to 1e-6) and stops on a stale line; (b) only STR.CONC.* m3 lines may change, each once; (c) a VALUE needs a
+Checker re-measure named in its entry and is > 0; a BOUND has 0 < low <= high; a held line is never 0 and never
+gains a value without (c); (d) a bound that leaves a line leaves only with its replacement (blank with the measure
+beside, or lower only) and stays in the record with its reason; (e) every line not named, and every CONFIRM line, is
+byte-identical (asserted); only STR.CONC.*|m3 code totals move, each by exactly the restatement (asserted).
+Files: V3_0_62_BOQ_LINES.json / .csv, V3_0_62_INTEGRATION_LEDGER.json / .csv, V3_0_62_DIFF.csv, V3_0_62_RUN.json.
+Nothing here names a project, a sheet, a layer or a coordinate.
 """
 
 from __future__ import annotations
 
 import copy
 import hashlib
-import math
+import re
 
 from engine.source import arch_v30 as A30
 from engine.source import arch_v302 as A302
 from engine.source import arch_v304 as A304
 from engine.source import arch_v305 as A305
-from engine.source import arch_v3046 as A3046
-from engine.source import arch_v3058 as A3058
+from engine.source import arch_v3018 as A3018
+from engine.source import arch_v3030 as A3030
+from engine.source import arch_v3031 as A3031
+from engine.source import arch_v3036 as A3036
+from engine.source import arch_v3043 as A3043
 from engine.source import arch_v3061 as A3061
 
-DEFAULT_GUARD_CLASS = "TOOLING"          # books Checker-merged face ledgers; computes sums of their rows only
+DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: re-books Checker-merged member ledgers onto candidate lines
 METHOD = "ARCH_TAKEOFF_V3.0.62"
 EXTENDS = A3061.METHOD
 CANDIDATE = A30.METHOD
-POLICY_ID = "URBAN_BOQ_T314_ARCH_V3_0_62"
+POLICY_ID = "URBAN_BOQ_T661_ARCH_V3_0_62"
 INPUTS_SCHEMA = "URBAN_V3062_INPUTS_V1"
 LEDGER_SCHEMA = "URBAN_V3062_INTEGRATION_LEDGER_V1"
 ROLLBACK = A30.ROLLBACK
-RULE_ID = "R-T314-1"
-RULE_VERSION = "1.0.0"
-REC_KEY = "facade_faces_v3062"
-P_FACE = "FACADE_FACES"
-CODE = "FIN.EXT.FINISH"
-UNIT = "m2"
-FAMILY = "B4"
-ELEMENTS = ("STOREY", "PARAPET_OUTER", "PARAPET_INNER", "PARAPET_TOP", "PLINTH", "SLAB_EDGE")
-LEVELLED = ("STOREY", "PARAPET_OUTER", "PLINTH")       # bands with a bottom / top level (a slab edge has none printed)
-STATUS = ("DRAWING-CONFIRMED", "ASSUMED — OWNER-APPROVED", "HELD")
-LINEAR_UNITS = ("lm", "m.l", "m")
-TOL = 1e-6
-FACE_TOL = 0.0005
-MM_GUARD_AREA = 5000.0                   # m2 of one face: above it is a unit error (mm2 / cm2)
-MM_GUARD_LEVEL = 200.0                   # m: a level above it is millimetres
-ITEM_TEXT = ("Exterior plaster / Sigma finish (face rows)", "لياسة خارجية / سيجما (حسب الواجهات)")
-PIECES = {P_FACE: {
-    "policy": "R-T314-1: face rows of the Checker-verified facade ledger, one element per line, holes once by face",
-    "owner_manual_method": "OWNER_NOTES_SIGMA 2026-10-21: Sigma is the exterior plaster area; Q-07 B bands measured "
-                           "from the floor; every actual opening deducted in full where masonry exists (Q-73 A); "
-                           "corners their own m.l line (owner correction 2026-10-22)",
-    "drawing_method": "drawn face band length x band height by element and levels; openings by schedule size on the "
-                      "face that holds them; plinth / parapet / slab-edge bands each their own line"}}
+InputsError = A3031.InputsError
+_r = A3018._r
+_fmt = A3030._fmt
+RULE_ID, RULE_VERSION = "R-T661-1", "T-661"
+REC_KEY = "concrete_ledger_v3062"
+P_CL = "CONC_LEDGER"
+ACTIONS = ("BOUND", "VALUE", "HELD_BLANK", "LOWER_ONLY", "CONFIRM")
+CHANGING = ("BOUND", "VALUE", "HELD_BLANK", "LOWER_ONLY")
+CODE_PREFIX = "STR.CONC."
+UNIT = "m3"
+BOUNDED, BLANK, VALUED = "BOUNDED_EXPOSURE", "BLOCKED_RFI", "MEASURED"
+VALUED_STATES = A3036.VALUED_STATES
+EXCLUDED = ("EXCLUDED_WITH_REASON", "NOT_APPLICABLE_WITH_EVIDENCE")
+CLASSES = ("RELEASED", "HELD")
+BESIDE_KINDS = ("PLAN_AREA_M2", "AT_LEAST_M3", "NONE")
+BIND_TOL = 1e-6
+TOT_TOL = 1e-4
+MAX_Q = 100.0                            # one concrete member line above 100 m3 is a unit slip
+LINE_ID_RE = re.compile(r"^L-[0-9a-f]{20}$")
+
+PIECES = {
+    P_CL: {"module": "engine/source/arch_v3062.py (HELD B10 concrete lines restated member by member from the "
+                     "Checker-merged ledgers: drawn bounds, a re-measured value, blank with the drawn measure beside, "
+                     "lower only; nothing else moves)",
+           "policy": "CONCRETE_GATE_B_V1", "rule_id": "R-T657-1..4 + R-T659-1..5 + R-T660-1..6 (R-T661-1)",
+           "owner_rules": ["Q-21 C (no change of founding level without engineering approval)",
+                           "Q-61 C (beams member by member; two marks never both)", "Q-65 C / Q-27 A / Q-28 A",
+                           "UP-QTY-STATUS-001 (held is blank, never 0)", "ERS s.2-5 (drawn element first)"],
+           "owner_manual_method": "one flat neck height 1.50 m x section; the beam-schedule section on every band; "
+                                  "the boundary band at one section; parapets / dome / pit at a borrowed detail",
+           "drawing_method": "the merged ledgers: necks h from the printed minimum (ST p.9 note 1) to the single-row "
+                             "'LESS THAN 2.5m' detail (ST p.13) x schedule sections (T-657); beams member by member "
+                             "between owning faces x printed depth, strips with no mark / bars / depth held with their "
+                             "plan area (T-660); small elements bound only where printed (T-659)"},
+}
 WAITING = dict(A3061.WAITING)
-
-
-class InputsError(ValueError):
-    pass
-
-
-def _r(x, n=6):
-    return None if x is None else round(float(x) + 0.0, n)
-
-
-def _num(x, where, hi):
-    if isinstance(x, bool) or not isinstance(x, (int, float)) or not math.isfinite(x) or x < 0:
-        raise InputsError(f"{where}: {x!r} is not a non-negative number")
-    if x > hi:
-        raise InputsError(f"{where}: {x} is above {hi} (millimetres or a unit error: refused)")
-    return float(x)
-
-
-def _lvl(x, where):
-    if isinstance(x, bool) or not isinstance(x, (int, float)) or not math.isfinite(x):
-        raise InputsError(f"{where}: {x!r} is not a level")
-    if abs(x) > MM_GUARD_LEVEL:
-        raise InputsError(f"{where}: level {x} is millimetres (refused)")
-    return float(x)
+WAITING.update({
+    "T661_T658_COLUMNS_GROUND_BEAMS": "T-658 r2 (B10-06 columns, B10-04 ground beam / strap, B10-02 footing) is "
+                                      "restaged into this package only after it is MERGED, never before",
+    "T661_BOUNDARY_BAND": "the boundary band line keeps its V3.0.61 state: the Checker's T-659 residual (does the band "
+                          "continue below the stretches where the building stands on the plot line with its own "
+                          "exterior G.B?) is a cross-trade check not settled by any merged ledger; until it is, the "
+                          "drawn bound 5.6392 .. 11.0328 m3 is not wired (its low end may not be a lower bound)",
+    "T661_T642_COMPANION": "the T-642 GF BAND0030.2 depth companion (0 .. 0.025 m3) is a trial-BOQ overlay line, not a "
+                           "candidate line: it enters with the T-642 split wiring, not as an add here",
+    "T661_POOL_BLINDING": "pool blinding (ST p.7 '10cm PLAIN CONCRETE') is MISSING from the candidate (named by T-659, "
+                          "never 0): a lane S row adds it",
+})
 
 
 # ================================================================================================ inputs
-def load_inputs(doc, project_id=None):
-    """URBAN_V3062_INPUTS_V1 -> checked dict:
-        {"schema", "project", "sources": [{task, file, sha256, merge_commit, checker_run}],
-         "lines": [{"key", "line_id" (existing FIN.EXT.FINISH line) | null, "element", "floor", "element_id" (new),
-                    "parts": [[bottom, top], ...] (levelled elements), "why_held"}],
-         "faces": [{"face_id", "line", "element", "bottom", "top", "lo", "hi", "status", "owner_q07"}],
-         "openings": [{"opening_id", "face_id", "hole_m2" | null, "cap_m2" (held), "status", "sill", "head"}],
-         "items": [{"key", "unit", "status", "why"}]  (named MISSING m.l / unregistered items, never a number here),
-         "expect": {line key: {"gross": [lo, hi] | null, "net": [lo, hi] | null}}}"""
-    if not isinstance(doc, dict) or doc.get("schema") != INPUTS_SCHEMA:
-        raise InputsError(f"inputs schema is not {INPUTS_SCHEMA}")
-    if project_id is not None and doc.get("project") not in (None, project_id):
-        raise InputsError("inputs name another project")
-    srcs = doc.get("sources") or []
-    if not srcs:
-        raise InputsError("no source ledger named")
-    for s in srcs:
-        for k in ("task", "file", "sha256", "merge_commit", "checker_run"):
-            if not s.get(k):
-                raise InputsError(f"source {s.get('task')}: missing {k}")
-    lines = {}
-    for ln in doc.get("lines") or ():
-        k = ln.get("key")
-        if not k or k in lines:
-            raise InputsError(f"line key {k!r} missing or repeated")
-        el = ln.get("element")
-        if el not in ELEMENTS:
-            raise InputsError(f"{k}: element {el!r} is not one of {ELEMENTS}")
-        if not ln.get("line_id") and not ln.get("element_id"):
-            raise InputsError(f"{k}: a new line names its element id")
-        parts = []
-        for p in ln.get("parts") or ():
-            b, t = _lvl(p[0], f"{k} part"), _lvl(p[1], f"{k} part")
-            if not b < t:
-                raise InputsError(f"{k}: a level part needs bottom < top")
-            parts.append((b, t))
-        if el in LEVELLED and not parts:
-            raise InputsError(f"{k}: a {el} line states its level parts")
-        lines[k] = dict(ln, parts=sorted(parts))
-    faces, by_line = {}, {k: [] for k in lines}
-    for f in doc.get("faces") or ():
-        fid, k = f.get("face_id"), f.get("line")
-        if not fid or fid in faces:
-            raise InputsError(f"face {fid!r} missing or booked twice (every face once)")
-        if k not in lines:
-            raise InputsError(f"face {fid}: line {k!r} is not an input line")
-        L = lines[k]
-        if f.get("element") != L["element"]:
-            raise InputsError(f"face {fid}: a {f.get('element')} band in the {L['element']} line {k} (R-T314-1 (1))")
-        st = f.get("status")
-        if st not in STATUS:
-            raise InputsError(f"face {fid}: status {st!r}")
-        lo, hi = f.get("lo"), f.get("hi")
-        if (lo is None) != (hi is None):
-            raise InputsError(f"face {fid}: a range names both ends")
-        if lo is not None:
-            lo, hi = _num(lo, f"face {fid} lo", MM_GUARD_AREA), _num(hi, f"face {fid} hi", MM_GUARD_AREA)
-            if lo > hi + TOL:
-                raise InputsError(f"face {fid}: lo > hi")
-            if st != "HELD" and abs(hi - lo) > TOL:
-                raise InputsError(f"face {fid}: a {st} face carries one value, not a range")
-            if st == "HELD" and hi <= TOL:
-                raise InputsError(f"face {fid}: a HELD face carried as 0 (blank or a range, never 0)")
-        elif st != "HELD":
-            raise InputsError(f"face {fid}: a {st} face without an area")
-        b = t = None
-        if L["element"] in LEVELLED:
-            b = None if f.get("bottom") is None else _lvl(f.get("bottom"), f"face {fid}")
-            t = None if f.get("top") is None else _lvl(f.get("top"), f"face {fid}")
-            if (b is None or t is None) and st != "HELD":
-                raise InputsError(f"face {fid}: a {st} face states both levels (an unprinted level is HELD)")
-            if b is None and t is None:
-                raise InputsError(f"face {fid}: a {L['element']} band states at least one printed level")
-            if b is not None and t is not None and not b < t:
-                raise InputsError(f"face {fid}: bottom < top")
-            bb, tt = (t if b is None else b), (b if t is None else t)
-            if not any(pb - TOL <= bb and tt <= pt + TOL for pb, pt in L["parts"]):
-                raise InputsError(f"face {fid}: band {b} -> {t} crosses a level part of {k} {L['parts']} "
-                                  f"(split it first, R-T314-1 (2))")
-        faces[fid] = dict(f, lo=lo, hi=hi, bottom=b, top=t)
-        by_line[k].append(fid)
-    ops = {}
-    for o in doc.get("openings") or ():
-        oid, fid = o.get("opening_id"), o.get("face_id")
-        if not oid or oid in ops:
-            raise InputsError(f"opening {oid!r} missing or deducted twice (every opening once)")
-        F = faces.get(fid)
-        if F is None:
-            raise InputsError(f"opening {oid}: face {fid!r} is not an input face")
-        st = o.get("status")
-        if st not in STATUS:
-            raise InputsError(f"opening {oid}: status {st!r}")
-        if st == "HELD":
-            if o.get("hole_m2") is not None:
-                raise InputsError(f"opening {oid}: a HELD hole carries no point value")
-            cap = _num(o.get("cap_m2"), f"opening {oid} cap", MM_GUARD_AREA)
-            if cap <= TOL:
-                raise InputsError(f"opening {oid}: a HELD hole bounded at 0 (name its cap)")
-            hole = None
-        else:
-            hole, cap = _num(o.get("hole_m2"), f"opening {oid} hole", MM_GUARD_AREA), None
-        size = hole if hole is not None else cap
-        if F["lo"] is not None and size > F["hi"] + FACE_TOL:
-            raise InputsError(f"opening {oid}: hole {size} m2 larger than its face {fid} ({F['hi']} m2)")
-        if o.get("sill") is not None and o.get("head") is not None:
-            s, h = _lvl(o["sill"], f"opening {oid}"), _lvl(o["head"], f"opening {oid}")
-            if not s < h:
-                raise InputsError(f"opening {oid}: sill < head")
-            if (F["bottom"] is not None and s < F["bottom"] - TOL) or (F["top"] is not None and h > F["top"] + TOL):
-                raise InputsError(f"opening {oid}: {s} -> {h} leaves its band {F['bottom']} -> {F['top']}")
-        ops[oid] = dict(o, hole_m2=hole, cap_m2=cap)
-    items = []
-    for it in doc.get("items") or ():
-        if any(it.get(k) is not None for k in ("value", "lo", "hi", "quantity")):
-            raise InputsError(f"item {it.get('key')}: a named MISSING item carries no number in this stage")
-        items.append({"key": it.get("key"), "unit": it.get("unit"), "status": it.get("status"),
-                      "why": str(it.get("why") or "")[:300]})
-    return {"project": doc.get("project"), "sources": srcs, "lines": lines, "faces": faces, "by_line": by_line,
-            "openings": ops, "items": items, "expect": doc.get("expect") or {}}
+def _need(s, keys, where):
+    for k in keys:
+        if s.get(k) in (None, ""):
+            raise InputsError(f"{where}: missing {k}")
 
 
-# ================================================================================================ the rule
-def line_figures(d, key):
-    """R-T314-1: one line from its face rows -> gross / fixed / held / net and the line state."""
-    fids = d["by_line"][key]
-    if not fids:
-        raise InputsError(f"{key}: a line with no face row")
-    F = [d["faces"][f] for f in fids]
-    O = [o for o in d["openings"].values() if o["face_id"] in fids]
-    fixed = sum(o["hole_m2"] for o in O if o["hole_m2"] is not None)
-    held = sum(o["cap_m2"] for o in O if o["cap_m2"] is not None)
-    blank = [f["face_id"] for f in F if f["lo"] is None]
-    out = {"faces": len(F), "faces_blank": blank, "openings": len(O), "deduct_fixed": _r(fixed),
-           "deduct_held": [0.0, _r(held)] if held else None,
-           "assumed_holes": _r(sum(o["hole_m2"] for o in O if o["status"] == "ASSUMED — OWNER-APPROVED")),
-           "owner_q07": _r(sum(float(f["owner_q07"]) for f in F if f.get("owner_q07") is not None))
-           if any(f.get("owner_q07") is not None for f in F) else None}
-    if blank:
-        return dict(out, gross=None, net=None, state="BLANK")
-    g_lo, g_hi = sum(f["lo"] for f in F), sum(f["hi"] for f in F)
-    n_lo, n_hi = g_lo - fixed - held, g_hi - fixed
-    if n_lo < -FACE_TOL:
-        raise InputsError(f"{key}: holes {_r(fixed + held)} m2 exceed the faces {_r(g_lo)} m2")
-    out = dict(out, gross=[_r(g_lo), _r(g_hi)], net=[_r(max(n_lo, 0.0)), _r(n_hi)])
-    if abs(n_hi - n_lo) > TOL or any(f["status"] == "HELD" for f in F) or \
-            any(o["status"] == "HELD" for o in O):
-        return dict(out, state="RANGE")
-    st = "ASSUMED" if (any(f["status"] != "DRAWING-CONFIRMED" for f in F) or
-                       any(o["status"] != "DRAWING-CONFIRMED" for o in O)) else "DC"
-    return dict(out, state=st)
+def _num(x, where, top=MAX_Q, zero=False):
+    if isinstance(x, bool) or not isinstance(x, (int, float)) or x != x:
+        raise InputsError(f"{where}: not a number ({x!r})")
+    if (x < 0 if zero else x <= 0) or x > top:
+        raise InputsError(f"{where}: {x} outside 0 .. {top} m3 (unit slip, sign or HELD-as-0)")
+    return float(x)
 
 
-def _rec(d, key, fig, **kw):
-    s = d["sources"]
-    L = d["lines"][key]
-    return dict({"piece": P_FACE, "policy": PIECES[P_FACE]["policy"], "line_key": key, "element": L["element"],
-                 "tasks": [x["task"] for x in s], "ledgers": [x["file"] for x in s],
-                 "ledger_sha256": [x["sha256"] for x in s], "merge_commits": [x["merge_commit"] for x in s],
-                 "checker_runs": [x["checker_run"] for x in s], "rule_id": RULE_ID, "rule_version": RULE_VERSION,
-                 "face_ids": sorted(d["by_line"][key]),
-                 "opening_ids": sorted(o for o, x in d["openings"].items() if x["face_id"] in d["by_line"][key]),
-                 "figures": fig, "owner_manual_method": PIECES[P_FACE]["owner_manual_method"],
-                 "owner_q07_beside_m2": fig["owner_q07"], "release_status": "NOT RELEASED"}, **kw)
-
-
-def _shape(fig):
-    """-> (evidence_state, measured_net, bounded_range, evidence_status)."""
-    if fig["state"] == "BLANK":
-        return "BLOCKED_RFI", None, None, "HELD"
-    if fig["state"] == "RANGE":
-        return ("BOUNDED_EXPOSURE", None, {"low": fig["net"][0], "high": fig["net"][1],
-                                           "basis": "HELD face / hole: a named range, no point value (R-T314-1 (4))"},
-                "HELD")
-    return ("MEASURED" if fig["state"] == "DC" else "PROVISIONAL", fig["net"][0], None,
-            "DRAWING-CONFIRMED" if fig["state"] == "DC" else "ASSUMED — OWNER-APPROVED")
-
-
-def _gross(fig, ev):
-    """a numeric gross only on a point line (a bounded / blank line states one state: its range, R-T241 / V3.0.24)."""
-    if ev not in ("MEASURED", "PROVISIONAL") or fig["gross"] is None or fig["gross"][0] != fig["gross"][1]:
+def _beside(b, where, need):
+    """the measure beside a held line: {kind PLAN_AREA_M2 | AT_LEAST_M3 | NONE, value, basis}"""
+    if b is None:
+        if need:
+            raise InputsError(f"{where}: a held line carries the measure the drawings fix beside it (or kind NONE)")
         return None
-    return fig["gross"][0]
+    k = b.get("kind")
+    if k not in BESIDE_KINDS:
+        raise InputsError(f"{where}: beside kind {k!r}")
+    if k == "NONE":
+        if b.get("value") is not None:
+            raise InputsError(f"{where}: beside NONE carries no figure")
+    else:
+        _num(b.get("value"), f"{where} beside", top=1000.0)
+        _need(b, ("basis",), f"{where} beside")
+    return dict(b)
 
 
-def _formula(fig):
-    if fig["gross"] is None:
-        return f"HELD: {len(fig['faces_blank'])} face(s) without a printed dimension: blank by name, never 0"
-    g = fig["gross"]
-    gs = f"{g[0]}" if g[0] == g[1] else f"{g[0]} .. {g[1]}"
-    h = f" - HELD holes 0 .. {fig['deduct_held'][1]}" if fig["deduct_held"] else ""
-    n = fig["net"]
-    ns = f"{n[0]}" if n[0] == n[1] else f"{n[0]} .. {n[1]}"
-    return (f"sum of {fig['faces']} face rows {gs} m2 - {fig['openings']} holes fixed {fig['deduct_fixed']} m2{h} = "
-            f"{ns} m2 (R-T314-1)")
+def _entry(e, srcs):
+    a = e.get("action")
+    if a not in ACTIONS:
+        raise InputsError(f"entry action {a!r}")
+    w = f"{a} {e.get('line_id')}"
+    if not isinstance(e.get("line_id"), str) or not LINE_ID_RE.match(e["line_id"]):
+        raise InputsError(f"{w}: line id")
+    A3043._tasks(e, srcs, w)
+    _need(e, ("expect", "member", "basis"), w)
+    x = e["expect"]
+    _need(x, ("item_code", "element_id", "unit", "class"), w)
+    if not str(x["item_code"]).startswith(CODE_PREFIX) or x["unit"] != UNIT:
+        raise InputsError(f"{w}: {x['item_code']} {x['unit']} is not a code this version may change (STR.CONC.* m3)")
+    if x["class"] not in CLASSES:
+        raise InputsError(f"{w}: class {x['class']}")
+    if x["class"] == "RELEASED":
+        raise InputsError(f"{w}: a released line is not restated by this version (held concrete lines only)")
+    af = e.get("after") or {}
+    if a == "BOUND":
+        lo, hi = _num(af.get("low"), f"{w} low"), _num(af.get("high"), f"{w} high")
+        if lo > hi + 1e-9:
+            raise InputsError(f"{w}: low {lo} > high {hi}")
+        _need(e, ("why_held", "question"), w)
+    elif a == "VALUE":
+        _num(af.get("value"), f"{w} value")
+        _need(e, ("remeasure",), w)                     # the Checker's own re-measure of this member
+        if af.get("low") is not None or af.get("high") is not None:
+            raise InputsError(f"{w}: a value carries no range")
+    elif a in ("HELD_BLANK", "LOWER_ONLY"):
+        if af.get("value") is not None or af.get("low") is not None or af.get("high") is not None:
+            raise InputsError(f"{w}: a {a} line carries no quantity and no range (blank, the measure beside)")
+        _need(e, ("why_held", "question"), w)
+        b = _beside(e.get("beside"), w, need=True)
+        if a == "LOWER_ONLY" and (b is None or b["kind"] != "AT_LEAST_M3"):
+            raise InputsError(f"{w}: a lower-only line carries its AT_LEAST m3 figure beside")
+    else:                                               # CONFIRM
+        if af:
+            raise InputsError(f"{w}: a CONFIRM entry changes nothing (no after)")
+    if a in ("HELD_BLANK", "LOWER_ONLY") and (x.get("low") is not None):
+        _need(e, ("set_aside",), w)                     # a bound leaves only with its reason, kept in the record
+    return dict(e)
 
 
-def _question(d, key, fig):
-    L = d["lines"][key]
-    return (L.get("why_held") or f"{fig['faces_blank'] or 'a held face / hole'} on {key}: the printed dimension")[:400]
+def load_inputs(doc, project_id=None):
+    """URBAN_V3062_INPUTS_V1 -> the validated doc.
+    {"schema", "project_id", "sources": [{"task", "file", "sha256", "merge_commit", "checker_run"}],
+     "expect_totals": {"<code>|m3": {released, held_low, held_high, ...}} (optional, asserted on the code totals),
+     "entries": [{"action", "line_id", "source_tasks", "member", "basis",
+                  "expect" {item_code, element_id, unit, class HELD, low / high (None = blank)},
+                  "after" {low, high} | {value} | {}, "why_held", "question", "beside" {kind, value, basis},
+                  "set_aside" (the old bound's reason), "remeasure" (VALUE: the Checker's own re-measure)}]}"""
+    if not doc:
+        return None
+    if doc.get("schema") != INPUTS_SCHEMA:
+        raise InputsError(f"project inputs: schema must be {INPUTS_SCHEMA}")
+    if project_id and doc.get("project_id") not in (None, project_id):
+        raise InputsError(f"project inputs are for {doc.get('project_id')!r}, the run is {project_id!r}")
+    srcs = A3043._sources(doc)
+    ents = [_entry(x, srcs) for x in doc.get("entries") or ()]
+    if not ents:
+        raise InputsError("no entry in the inputs")
+    seen = set()
+    for e in ents:
+        if e["line_id"] in seen:
+            raise InputsError(f"{e['line_id']}: named twice (one line, one restatement)")
+        seen.add(e["line_id"])
+    return dict(doc, _sources=srcs, _entries=ents)
 
 
-def changed_line(before, d, key):
-    fig = line_figures(d, key)
-    ev, net, br, es = _shape(fig)
-    ln = copy.deepcopy(before)
-    ln["evidence_state"], ln["measured_net"], ln["bounded_range"] = ev, net, br
-    ln["gross"] = _gross(fig, ev)
-    ln["deductions"] = []
-    ln["calculation"] = {"formula": _formula(fig)[:1500],
-                         "inputs": dict(copy.deepcopy(before["calculation"].get("inputs") or {}),
-                                        **{REC_KEY: _rec(d, key, fig, evidence_status=es),
-                                           "evidence_status": es})}
-    ln["rfi"] = {"question": _question(d, key, fig), "blocks": [before["line_id"]]} if ev in (
-        "BLOCKED_RFI", "BOUNDED_EXPOSURE") else None
-    ln["notes"] = (f"{METHOD}: face rows by element ({d['lines'][key]['element']}), holes once by face; owner Q-07 B "
-                   f"part {fig['owner_q07']} m2 beside; NOT RELEASED")
-    return A3046._fin(ln), fig, es
+# ================================================================================================ lines
+def line_class(ln):
+    if ln["evidence_state"] in EXCLUDED:
+        return "EXCLUDED"
+    if ln["evidence_state"] in VALUED_STATES and ln.get("measured_net") is not None:
+        return "RELEASED"
+    return "HELD"
 
 
-def new_line(tpl, d, key):
+def _range(ln):
+    if ln.get("evidence_state") != BOUNDED:
+        return None
+    b = ln.get("bounded_range") or {}
+    lo, hi = b.get("low"), b.get("high")
+    return (float(lo), float(hi)) if isinstance(lo, (int, float)) and isinstance(hi, (int, float)) else None
+
+
+def _assert_bound(b, e):
+    x = e["expect"]
+    w = f"{e['action']} {e['line_id']}"
+    if b is None:
+        raise InputsError(f"{w}: not in the candidate (stale binding)")
+    loc = b.get("location") or {}
+    ok = (b["item_code"] == x["item_code"] and loc.get("element_id") == x["element_id"] and b["unit"] == x["unit"]
+          and line_class(b) == x["class"])
+    if ok:
+        r = _range(b)
+        if x.get("low") is None:
+            ok = r is None and x.get("high") is None
+        else:
+            ok = r is not None and abs(r[0] - x["low"]) <= BIND_TOL and abs(r[1] - x["high"]) <= BIND_TOL
+    if not ok:
+        raise InputsError(f"{w}: {b['item_code']} {loc.get('element_id')} {b['evidence_state']} range {_range(b)} is "
+                          f"not the ledger's {x} (stale binding: re-read)")
+    if e["action"] in ("HELD_BLANK", "LOWER_ONLY") and _range(b) is not None:
+        sa = e.get("set_aside") or {}
+        if not sa.get("why") or sa.get("low") is None or abs(sa["low"] - _range(b)[0]) > BIND_TOL or \
+                abs(sa["high"] - _range(b)[1]) > BIND_TOL:
+            raise InputsError(f"{w}: the bound {_range(b)} leaves the line: its set_aside record must state it and why")
+
+
+def _fin(ln):
     from engine.source import boq_line as BL
-    fig = line_figures(d, key)
-    ev, net, br, es = _shape(fig)
-    L = d["lines"][key]
-    rec = _rec(d, key, fig, evidence_status=es, geometry_line_id=tpl["line_id"])
-    g = _gross(fig, ev)
-    ln = BL.make_line(
-        project_id=tpl["project"]["project_id"], revision_set_sha256=tpl["project"]["revision_set_sha256"],
-        item_code=CODE, unit=UNIT, evidence_state=ev, measured_net=net, gross=g, bounded_range=br,
-        element_id=L["element_id"], floor=L.get("floor"), physical_element=f"exterior finish face band: {L['element']}",
-        formula=_formula(fig)[:1500], inputs={REC_KEY: rec, "evidence_status": es},
-        documents=copy.deepcopy(tpl["source"]["documents"]), geometry_source=tpl["source"]["geometry_source"],
-        geometry_confidence=tpl["source"]["geometry_confidence"], rule_id=RULE_ID, rule_version=RULE_VERSION,
-        material_state=tpl.get("material_state") or "BY_SPEC",
-        rfi=None if ev == "MEASURED" or ev == "PROVISIONAL" else {"question": _question(d, key, fig), "blocks": []},
-        notes=f"{METHOD}: its own line by element (never folded into a storey line); owner Q-07 B part "
-              f"{fig['owner_q07']} m2 beside; NOT RELEASED",
-        item_en=tpl.get("item_en") or ITEM_TEXT[0], item_ar=tpl.get("item_ar") or ITEM_TEXT[1], trade=tpl["trade"],
-        subtrade=tpl.get("subtrade"))
-    return A3046._fin(ln), fig, es
+    return BL.validate(ln)
+
+
+def _rec(srcs, **kw):
+    return dict({"piece": P_CL, "policy": PIECES[P_CL]["policy"], "tasks": [s["task"] for s in srcs],
+                 "ledgers": [s["file"] for s in srcs], "ledger_sha256": [s["sha256"] for s in srcs],
+                 "merge_commits": [s["merge_commit"] for s in srcs], "checker_runs": [s["checker_run"] for s in srcs],
+                 "rule_id": RULE_ID, "rule_version": RULE_VERSION, "release_status": "NOT RELEASED"}, **kw)
+
+
+def _beside_text(b):
+    if not b or b["kind"] == "NONE":
+        return "no drawn measure beside"
+    u = "m2 plan" if b["kind"] == "PLAN_AREA_M2" else "m3 at least"
+    return f"beside: {_fmt(b['value'])} {u} ({b['basis']})"
+
+
+def _restate(b, e, srcs):
+    a, af = e["action"], e.get("after") or {}
+    ln = copy.deepcopy(b)
+    was = {"evidence_state": b["evidence_state"], "measured_net": b.get("measured_net"), "gross": b.get("gross"),
+           "bounded_range": b.get("bounded_range"), "rfi": b.get("rfi"),
+           "formula": (b.get("calculation") or {}).get("formula"), "class": line_class(b)}
+    if a == "BOUND":
+        lo, hi = float(af["low"]), float(af["high"])
+        ln["evidence_state"], ln["measured_net"], ln["gross"] = BOUNDED, None, None
+        ln["bounded_range"] = {"low": _r(lo), "high": _r(hi), "basis": f"{e['member']}: {e['basis']}"[:200]}
+        ln["rfi"] = {"question": e["question"][:400], "blocks": [b["line_id"]]}
+        head = f"HELD (BOUNDED) {_fmt(lo)} .. {_fmt(hi)} m3"
+        after = {"low": _r(lo), "high": _r(hi)}
+    elif a == "VALUE":
+        v = float(af["value"])
+        ln["evidence_state"], ln["measured_net"], ln["gross"] = VALUED, _r(v), _r(v)
+        ln["bounded_range"], ln["rfi"] = None, None
+        head = f"VALUED AS DRAWN {_fmt(v)} m3 (Checker re-measure: {e['remeasure']})"[:400]
+        after = {"value": _r(v)}
+    else:                                               # HELD_BLANK / LOWER_ONLY
+        ln["evidence_state"], ln["measured_net"], ln["gross"], ln["bounded_range"] = BLANK, None, None, None
+        ln["rfi"] = {"question": e["question"][:400], "blocks": [b["line_id"]]}
+        head = ("HELD, LOWER END ONLY (blank)" if a == "LOWER_ONLY" else "HELD BLANK") + "; " + _beside_text(
+            e["beside"])
+        after = {"beside": e["beside"]}
+    ln["deductions"], ln["additions"] = [], []
+    ln["calculation"] = dict(ln["calculation"], formula=(
+        f"{METHOD}: {head} = {e['member']}: {e['basis']}" + (f"; {e['why_held']}" if e.get("why_held") else ""))[:1500])
+    inp = ln["calculation"]["inputs"] = dict(ln["calculation"].get("inputs") or {})
+    inp[REC_KEY] = _rec(srcs, action=a, member=e["member"], was=was, after=after, basis=e["basis"],
+                        why_held=(e.get("why_held") or "")[:600], beside=e.get("beside"),
+                        set_aside=e.get("set_aside"), remeasure=e.get("remeasure"),
+                        freelancer_beside=e.get("freelancer_beside"))
+    A305._note(ln, f"{METHOD}: {head[:200]} (was {A302._q(A30._qty(b))}); NOT RELEASED")
+    return _fin(ln)
 
 
 def changes_for(doc, prev):
-    """-> (changes, log). CHANGE the named FIN.EXT.FINISH lines in place (same id), ADD the new element lines."""
+    """-> (changes, log). CONFIRM entries are asserted on the candidate line and change nothing."""
+    if not doc:
+        return [], {"piece": "T661", "state": "NO_PROJECT_INPUT"}
     if any(((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY) for ln in prev):
-        raise InputsError("the candidate already carries V3.0.62 face records (applied once)")
+        raise InputsError("the candidate already carries V3.0.62 records (applied once)")
     by = {ln["line_id"]: ln for ln in prev}
-    have = set(by)
-    ext = [ln for ln in prev if ln["item_code"] == CODE]
-    named = {L["line_id"] for L in doc["lines"].values() if L.get("line_id")}
-    for lid in named:
-        ln = by.get(lid)
-        if ln is None or ln["item_code"] != CODE:
-            raise InputsError(f"{lid} is not a {CODE} line of the base (stale binding)")
-    left = sorted(ln["line_id"] for ln in ext if ln["line_id"] not in named)
-    if left:
-        raise InputsError(f"{CODE} line(s) of the base not bound by the face rows: {left}")
-    tpl = by[sorted(named)[0]] if named else None
-    changes, log = [], {"piece": P_FACE, "changed": 0, "added": 0, "by_state": {}, "missing_items": doc["items"]}
-    for key in sorted(doc["lines"]):
-        L = doc["lines"][key]
-        if L.get("line_id"):
-            before = by[L["line_id"]]
-            after, fig, es = changed_line(before, doc, key)
-            act = "CHANGE"
-            log["changed"] += 1
-        else:
-            if tpl is None:
-                raise InputsError("a new face line needs an existing line of the base as its template")
-            after, fig, es = new_line(tpl, doc, key)
-            if after["line_id"] in have:
-                raise InputsError(f"{key}: an added line repeats a candidate id")
-            have.add(after["line_id"])
-            before, act = None, "ADD"
-            log["added"] += 1
-        log["by_state"][es] = log["by_state"].get(es, 0) + 1
-        changes.append({"piece": P_FACE, "action": act, "step": f"{act}_FACE_LINE", "before": before, "after": after,
-                        "line_key": key, "figures": fig, "evidence_status": es,
-                        "held": None if es != "HELD" else [{"what": key, "why": _question(doc, key, fig)}],
-                        "verification": {"task": "T-305 / T-311 / T-324 / T-337 / T-349",
-                                         "merge_commits": [s["merge_commit"] for s in doc["sources"]]}})
-    check_expect(changes, doc["expect"])
+    S = doc["_sources"]
+    changes = []
+    log = {"piece": "T661", "state": "RUN", "sources": doc["sources"], "by_action": {}, "lines": 0,
+           "confirmed": []}
+    for e in doc["_entries"]:
+        b = by.get(e["line_id"])
+        _assert_bound(b, e)
+        log["by_action"][e["action"]] = log["by_action"].get(e["action"], 0) + 1
+        if e["action"] == "CONFIRM":
+            log["confirmed"].append(e["line_id"])
+            continue
+        srcs = [S[t] for t in e["source_tasks"]]
+        after = _restate(b, e, srcs)
+        held = None
+        if e["action"] != "VALUE":
+            q = A30._qty(after)
+            held = [{"what": e["member"], "why": (e.get("why_held") or "")[:300],
+                     "range": [q["low"], q["high"]] if q["low"] is not None else None,
+                     "beside": e.get("beside")}]
+        changes.append(A305._change(P_CL, "CHANGE", b, after, drawing_reference="; ".join(s["file"] for s in srcs),
+                                    held=held, downstream=[], verification=A3036._ver(srcs),
+                                    evidence_status="VERIFIED" if e["action"] == "VALUE" else "HELD",
+                                    codes=[P_CL], group=b["item_code"], step=e["action"]))
+    log["lines"] = len(changes)
     return changes, log
 
 
-def check_expect(changes, expect):
-    """each expected figure (line key -> gross / net [lo, hi] | None) equals the recomputed one."""
-    got = {c["line_key"]: c["figures"] for c in changes}
-    for key, e in expect.items():
-        g = got.get(key)
-        if g is None:
-            raise InputsError(f"{key}: expected, but no line was built")
-        for k in ("gross", "net"):
-            if k not in e:
-                continue
-            a, b = g[k], e[k]
-            if (a is None) != (b is None) or (a is not None and any(abs(x - y) > TOL for x, y in zip(a, b))):
-                raise InputsError(f"{key} {k}: line {a} != expected {b} (the merged ledgers' figure)")
-    return True
+# ================================================================================================ checks
+def _bucket(ln):
+    q = A30._qty(ln)
+    if q["value"] is not None and ln["evidence_state"] != "BLOCKED_RFI":
+        return "released"
+    return "bounded" if q["low"] is not None else "blocked"
 
 
-def check_faces(lines):
-    """every V3.0.62 face record: one element per line, held never 0, a range never a point, faces / holes once."""
-    seen_f, seen_o, n = {}, {}, 0
+def expected_totals(t0, changes):
+    """the STR.CONC.*|m3 code totals the restatement must give, from the base totals and the changes alone"""
+    want = {}
+    for c in changes:
+        k = f"{c['after']['item_code']}|{c['after']['unit']}"
+        z = want.setdefault(k, dict(t0[k]))
+        for ln, s in ((c["before"], -1), (c["after"], 1)):
+            q, bk = A30._qty(ln), _bucket(ln)
+            if bk == "released":
+                z["released"] += s * q["value"]
+            elif bk == "bounded":
+                z["held_low"] += s * q["low"]
+                z["held_high"] += s * q["high"]
+                z["bounded_lines"] += s
+            else:
+                z["blocked_lines"] += s
+    return want
+
+
+def check_totals(t0, t1, changes, expect=None):
+    """only STR.CONC.*|m3 code totals move, each exactly by the restatement; optional expect = the inputs' figures"""
+    moved = {k for k in set(t0) | set(t1) if t0.get(k) != t1.get(k)}
+    bad = sorted(k for k in moved if not (k.startswith(CODE_PREFIX) and k.endswith(f"|{UNIT}")))
+    if bad:
+        raise ValueError(f"{METHOD}: totals moved outside STR.CONC.*|m3: {bad}")
+    want = expected_totals(t0, changes)
+    for k in moved:
+        if k not in want:
+            raise ValueError(f"{METHOD}: {k} moved with no change on it")
+    out = {}
+    for k, z in want.items():
+        a = t1[k]
+        ok = a["lines"] == z["lines"] and all(abs(a[f] - z[f]) <= TOT_TOL for f in ("released", "held_low",
+                                                                                  "held_high")) and \
+            a["bounded_lines"] == z["bounded_lines"] and a["blocked_lines"] == z["blocked_lines"]
+        if not ok:
+            raise ValueError(f"{METHOD}: {k} totals {t0[k]} -> {a} are not the restatement {z}")
+        if expect and k in expect:
+            for f, v in expect[k].items():
+                if abs(a[f] - v) > TOT_TOL:
+                    raise ValueError(f"{METHOD}: {k} {f} {a[f]} is not the inputs' {v}")
+        out[k] = {"base": t0[k], "v3_0_62": a}
+    return out
+
+
+def check_concrete(lines, before=None):
+    """on finished lines: every V3.0.62 line is in the state its action names (BOUND bounded 0 < low <= high with an
+    RFI; VALUE MEASURED > 0; HELD_BLANK / LOWER_ONLY blank with an RFI and the measure beside); with `before`, no
+    STR.CONC line went from held to released except a VALUE line. -> summary"""
+    out = {a: 0 for a in CHANGING}
     for ln in lines:
         rec = ((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY)
         if not rec:
             continue
-        n += 1
-        if ln["item_code"] != CODE or ln["unit"] != UNIT:
-            raise ValueError(f"{METHOD}: {ln['line_id']} a face record on {ln['item_code']} {ln['unit']}")
-        for f in rec["face_ids"]:
-            if f in seen_f:
-                raise ValueError(f"{METHOD}: face {f} booked in two lines ({seen_f[f]}, {ln['line_id']})")
-            seen_f[f] = ln["line_id"]
-        for o in rec["opening_ids"]:
-            if o in seen_o:
-                raise ValueError(f"{METHOD}: opening {o} deducted on two lines")
-            seen_o[o] = ln["line_id"]
-        if rec["evidence_status"] == "HELD" and ln["measured_net"] is not None:
-            raise ValueError(f"{METHOD}: {ln['line_id']} a HELD face line carries a point value")
-        br = ln.get("bounded_range")
-        if br and br["high"] <= TOL:
-            raise ValueError(f"{METHOD}: {ln['line_id']} a held range carried as 0")
-    return {"face_lines": n, "faces": len(seen_f), "openings": len(seen_o)}
+        a = rec["action"]
+        r = _range(ln)
+        ok = ln["item_code"].startswith(CODE_PREFIX) and ln["unit"] == UNIT
+        if a == "BOUND":
+            ok = ok and r is not None and 0 < r[0] <= r[1] + 1e-9 and ln.get("measured_net") is None and \
+                bool((ln.get("rfi") or {}).get("question"))
+        elif a == "VALUE":
+            ok = ok and ln["evidence_state"] == VALUED and (ln.get("measured_net") or 0) > 0 and rec.get("remeasure")
+        else:
+            ok = ok and ln["evidence_state"] == BLANK and ln.get("measured_net") is None and r is None and \
+                bool((ln.get("rfi") or {}).get("question")) and rec.get("beside") is not None
+        if not ok:
+            raise ValueError(f"{METHOD}: {ln['line_id']}: a {a} line is not in its state")
+        out[a] += 1
+    if before is not None:
+        b = {x["line_id"]: x for x in before}
+        for ln in lines:
+            o = b.get(ln["line_id"])
+            if o is None or not ln["item_code"].startswith(CODE_PREFIX):
+                continue
+            rec = ((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY) or {}
+            if line_class(o) == "HELD" and line_class(ln) == "RELEASED" and rec.get("action") != "VALUE":
+                raise ValueError(f"{METHOD}: {ln['line_id']}: a HELD concrete line was released without a re-measure")
+    return out
 
 
+# ================================================================================================ integrate / write
 def integrate(prev, changes, for_lead=()):
-    """-> (V3.0.62 lines, identity). Changed lines in place, added lines follow; every other line byte-identical."""
+    """-> (V3.0.62 lines, identity). Changed lines replace their candidate line in place; every other candidate line
+    is byte-identical (asserted); the earlier versions' checks re-run on the result (the V3.0.61 set)."""
     sid = {ln["line_id"]: i for i, ln in enumerate(prev)}
-    out, adds, repl = list(prev), [], set()
+    out = list(prev)
+    repl = set()
     for c in changes:
         a = c["after"]
-        if a["item_code"] != CODE:
-            raise ValueError(f"{METHOD}: {a['item_code']} is not a code this version may change or add")
-        if c["action"] == "ADD":
-            if a["line_id"] in sid:
-                raise ValueError(f"{METHOD}: an added line repeats a candidate id")
-            adds.append(a)
-        elif c["action"] == "CHANGE":
-            i = sid.get(a["line_id"])
-            if i is None or a["line_id"] in repl:
-                raise ValueError(f"{METHOD}: a changed line is not a candidate line or changes twice")
-            out[i] = a
-            repl.add(a["line_id"])
-        else:
-            raise ValueError(f"{METHOD}: action {c['action']}")
-    out = out + adds
-    if len({ln["line_id"] for ln in out}) != len(out):
-        raise ValueError(f"{METHOD}: a BOQ line id appears twice")
-    same = [x for x in prev if x["line_id"] not in repl]
-    bad = [x["line_id"] for x in same if A30.line_sha(x) != A30.line_sha(out[sid[x["line_id"]]])]
+        if not a["item_code"].startswith(CODE_PREFIX) or a["unit"] != UNIT or c["action"] != "CHANGE":
+            raise ValueError(f"{METHOD}: {c['action']} {a['item_code']} is not a change this version may make")
+        i = sid.get(a["line_id"])
+        if i is None or a["line_id"] in repl:
+            raise ValueError(f"{METHOD}: a changed line is not a candidate line or changes twice")
+        out[i] = a
+        repl.add(a["line_id"])
+    _o, i61 = A3061.integrate(out, [], for_lead)     # every V3.0.10 .. V3.0.61 family check, re-run on these lines
+    ident = {"base_lines": len(prev), "v3_0_62_lines": len(out), "v3_0_62_rows": len(changes), "replaced": len(repl),
+             "added": 0, "checks_v3_0_61": {k: v for k, v in i61.items() if k not in (
+                 "base_lines", "v3_0_61_lines", "v3_0_61_rows", "replaced", "added", "outside_rows",
+                 "outside_rows_identical_to_base", "outside_rows_sha256")},
+             "concrete": check_concrete(out, prev)}
+    pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
+    if len(pids) != 1:
+        raise ValueError(f"{METHOD}: {len(pids)} project identities in the lines")
+    outside = [ln for ln in prev if ln["line_id"] not in repl]
+    bad = [a["line_id"] for a in outside if A30.line_sha(a) != A30.line_sha(out[sid[a["line_id"]]])]
     if bad:
-        raise ValueError(f"{METHOD}: {len(bad)} candidate line(s) outside the named changes differ")
-    _l61, ident61 = A3061.integrate(out, [], for_lead)        # every V3.0.10 .. V3.0.61 check on the result
-    ident = {"base_lines": len(prev), "v3_0_62_lines": len(out), "v3_0_62_rows": len(changes),
-             "replaced": len(repl), "added": len(adds),
-             "v3_0_61_checks": {k: v for k, v in ident61.items()
-                                if k not in ("base_lines", "v3_0_61_lines", "v3_0_61_rows", "replaced", "added",
-                                             "outside_rows", "outside_rows_identical_to_base", "outside_rows_sha256")},
-             "faces": check_faces(out), "outside_rows": len(same), "outside_rows_identical_to_base": len(same),
-             "outside_rows_sha256": hashlib.sha256("".join(A30.line_sha(x) for x in same).encode()).hexdigest()}
+        raise ValueError(f"{METHOD}: {len(bad)} candidate line(s) differ outside the named changes")
+    ident.update(outside_rows=len(outside), outside_rows_identical_to_base=len(outside),
+                 outside_rows_sha256=hashlib.sha256("".join(A30.line_sha(x) for x in outside).encode()).hexdigest())
     return out, ident
 
 
-def check_totals(t0, t1):
-    moved = {}
-    for k in sorted(set(t0) | set(t1)):
-        if t0.get(k) == t1.get(k):
-            continue
-        if k.split("|")[0] != CODE:
-            raise ValueError(f"{METHOD}: totals moved outside {CODE}: {k}")
-        moved[k] = {"base": t0.get(k), "v3_0_62": t1.get(k),
-                    "view_base": None if t0.get(k) is None else A3058.total_view(t0[k]),
-                    "view_v3_0_62": None if t1.get(k) is None else A3058.total_view(t1[k])}
-    return moved
-
-
 def ledger_rows(changes, released_lines=None):
+    rel = {A30._key(ln): ln for ln in released_lines or ()}
     rows = []
     for c in changes:
-        a = c["after"]
-        rec = a["calculation"]["inputs"][REC_KEY]
-        loc = a.get("location") or {}
-        rows.append({"version": METHOD, "piece": c["piece"], "action": c["step"], "change": c["action"],
-                     "line_id": a["line_id"], "line_key": c["line_key"], "item_code": a["item_code"],
-                     "family": FAMILY, "floor": loc.get("floor"), "element_id": loc.get("element_id"),
-                     "element": rec["element"], "unit": a["unit"], "before_base": A30._qty(c["before"]),
-                     "after_v3_0_62": A30._qty(a), "figures": c["figures"], "evidence_status": c["evidence_status"],
-                     "still_held": c.get("held"), "release_status": "NOT RELEASED",
-                     "owner_manual_method": PIECES[P_FACE]["owner_manual_method"],
-                     "drawing_derived_method": PIECES[P_FACE]["drawing_method"], "record": rec,
-                     "verification": c["verification"], "rollback": ROLLBACK})
+        ref = c["after"]
+        b29 = None
+        if released_lines is not None:
+            b29 = A30._qty(rel[A30._key(ref)]) if A30._key(ref) in rel else dict(A30._qty(None),
+                                                                                 state="NOT_IN_RELEASED")
+        loc = ref.get("location") or {}
+        rec = ref["calculation"]["inputs"][REC_KEY]
+        rows.append({"version": METHOD, "piece": c["piece"], "action": c.get("step"), "change": c["action"],
+                     "line_id": ref["line_id"], "item_code": ref["item_code"], "floor": loc.get("floor"),
+                     "member": rec["member"], "element_id": loc.get("element_id"), "unit": ref["unit"],
+                     "before_released_v2_9": b29, "before_base": A30._qty(c.get("before")),
+                     "after_v3_0_62": A30._qty(ref), "class": [rec["was"]["class"], line_class(ref)],
+                     "evidence_status": c.get("evidence_status"), "still_held": c.get("held"),
+                     "beside": rec.get("beside"), "set_aside": rec.get("set_aside"), "remeasure": rec.get("remeasure"),
+                     "release_status": "NOT RELEASED", "basis": rec["basis"],
+                     "owner_manual_method": PIECES[c["piece"]]["owner_manual_method"],
+                     "drawing_derived_method": PIECES[c["piece"]]["drawing_method"],
+                     "verification": c.get("verification") or {}, "rollback": ROLLBACK})
     return rows
 
 
-LEDGER_CSV = ("version", "action", "change", "line_id", "line_key", "item_code", "element", "floor", "element_id",
-              "unit", "base", "v3_0_62", "owner_q07_beside", "evidence_status", "still_held")
+LEDGER_CSV = ("version", "piece", "action", "line_id", "item_code", "floor", "member", "element_id", "unit", "v2_9",
+              "base", "v3_0_62", "class", "beside", "evidence_status", "verification")
 DIFF_CSV = ("line_id", "item_code", "floor", "element_id", "unit", "vs_base", "vs_released_v2_9", "v2_9", "base",
             "v3_0_62")
 
@@ -502,22 +489,24 @@ DIFF_CSV = ("line_id", "item_code", "floor", "element_id", "unit", "vs_base", "v
 def ledger_csv(rows):
     def q(x):
         return A302._q(x) if x and (x.get("value") is not None or x.get("low") is not None or x.get("state")) else ""
-    return A305._csv([{"version": r["version"], "action": r["action"], "change": r["change"], "line_id": r["line_id"],
-                       "line_key": r["line_key"], "item_code": r["item_code"], "element": r["element"],
-                       "floor": r.get("floor") or "", "element_id": r.get("element_id") or "", "unit": r["unit"],
-                       "base": q(r.get("before_base")), "v3_0_62": q(r.get("after_v3_0_62")),
-                       "owner_q07_beside": "" if r["figures"]["owner_q07"] is None else r["figures"]["owner_q07"],
+    return A305._csv([{"version": r["version"], "piece": r["piece"], "action": r["action"], "line_id": r["line_id"],
+                       "item_code": r["item_code"], "floor": r.get("floor") or "", "member": r.get("member") or "",
+                       "element_id": r.get("element_id") or "", "unit": r["unit"],
+                       "v2_9": q(r.get("before_released_v2_9")), "base": q(r.get("before_base")),
+                       "v3_0_62": q(r.get("after_v3_0_62")), "class": " -> ".join(r["class"]),
+                       "beside": _beside_text(r.get("beside")) if r.get("beside") else "",
                        "evidence_status": r["evidence_status"],
-                       "still_held": "; ".join(f"{x['what']}: {x['why']}" for x in (r.get("still_held") or ()))[:300]}
+                       "verification": f"{r['verification'].get('task')} "
+                                       f"{' '.join(x[:8] for x in r['verification'].get('merge_commits') or ())}"}
                       for r in rows], LEDGER_CSV)
 
 
 def diff_rows(prev, new, released_lines=None):
-    rows = A3046.diff_rows(prev, new, released_lines)
-    return [dict({k: v for k, v in r.items() if k != "v3_0_46"}, v3_0_62=r["v3_0_46"]) for r in rows]
+    return [dict({k: v for k, v in d.items() if k != "v3_0_61"}, v3_0_62=d["v3_0_61"])
+            for d in A3061.diff_rows(prev, new, released_lines)]
 
 
-def write(out, prev, changes, log, released_lines=None, for_lead=()):
+def write(out, prev, changes, log, released_lines=None, for_lead=(), expect_totals=None):
     """the V3_0_62_* files beside the base candidate's files. -> (file names, identity, ledger)."""
     from pathlib import Path
     from engine.source import boq_line as BL
@@ -526,25 +515,28 @@ def write(out, prev, changes, log, released_lines=None, for_lead=()):
     rows = ledger_rows(changes, released_lines)
     diff = diff_rows(prev, new, released_lines)
     named = {c["after"]["line_id"] for c in changes}
-    stray = [d["line_id"] for d in diff if d["vs_base"] in ("CHANGED", "ADDED") and d["line_id"] not in named]
+    stray = [d["line_id"] for d in diff if d["vs_base"] != "SAME" and d["line_id"] not in named]
     if stray:
         raise ValueError(f"{METHOD}: {len(stray)} line(s) changed outside the named changes")
+    conf = set(log.get("confirmed") or ())
+    if any(d["vs_base"] != "SAME" for d in diff if d["line_id"] in conf):
+        raise ValueError(f"{METHOD}: a CONFIRM line moved")
     dsum = {}
     for d in diff:
-        dsum[d["vs_base"]] = dsum.get(d["vs_base"], 0) + 1
-    ident = dict(ident, diff={"vs_base": dsum})
-    t1 = A304.code_totals(new)
-    moved = check_totals(A304.code_totals(prev), t1)
-    view = A3058.totals_view(t1)
+        dsum.setdefault("vs_base", {}).setdefault(d["vs_base"], 0)
+        dsum["vs_base"][d["vs_base"]] += 1
+        if d["vs_released_v2_9"] is not None:
+            dsum.setdefault("vs_released_v2_9", {}).setdefault(d["vs_released_v2_9"], 0)
+            dsum["vs_released_v2_9"][d["vs_released_v2_9"]] += 1
+    ident = dict(ident, diff=dsum, confirmed=len(conf))
+    moved = check_totals(A304.code_totals(prev), A304.code_totals(new), changes, expect_totals)
     led = {"schema": LEDGER_SCHEMA, "method": METHOD, "extends": EXTENDS, "candidate": CANDIDATE,
            "base": A30.BASE_METHOD, "released": A30.RELEASED_METHOD, "released_default": False, "rows": rows,
-           "summary": log, "waiting_pieces": WAITING, "integration_package": True}
+           "confirmed_unchanged": sorted(conf), "waiting_pieces": WAITING, "integration_package": True}
     run = {"method": METHOD, "policy": POLICY_ID, "extends": EXTENDS, "candidate": CANDIDATE,
            "base_method": A30.BASE_METHOD, "released_method": A30.RELEASED_METHOD, "released_default": False,
            "rollback": ROLLBACK, "identity": ident, "pieces": PIECES, "piece_logs": [log],
-           "totals_moved_by_code": moved, "code_totals_view": {k: v for k, v in view.items()
-                                                               if k.split("|")[0] == CODE},
-           "missing_items": log["missing_items"], "waiting_pieces": WAITING}
+           "totals_moved_by_code": moved, "waiting_pieces": WAITING}
     files = {"V3_0_62_BOQ_LINES.json": BL.dumps(new),
              "V3_0_62_BOQ_LINES.csv": A30._lines_csv(new),
              "V3_0_62_INTEGRATION_LEDGER.json": A30._j(led),
@@ -558,9 +550,9 @@ def write(out, prev, changes, log, released_lines=None, for_lead=()):
 
 def policy_record():
     return {"method": METHOD, "extends": EXTENDS, "pieces": sorted(PIECES), "inputs_schema": INPUTS_SCHEMA,
-            "released_default": False, "rollback": ROLLBACK, "codes": [CODE]}
+            "released_default": False, "rollback": ROLLBACK, "actions": list(ACTIONS)}
 
 
-__all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "CODE", "ELEMENTS", "load_inputs",
-           "line_figures", "changes_for", "check_expect", "check_faces", "integrate", "check_totals", "ledger_rows",
-           "diff_rows", "write", "InputsError"]
+__all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "load_inputs", "changes_for",
+           "check_concrete", "check_totals", "expected_totals", "integrate", "ledger_rows", "diff_rows", "write",
+           "InputsError", "line_class"]

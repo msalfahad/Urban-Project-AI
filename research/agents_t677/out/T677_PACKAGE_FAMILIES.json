@@ -1,0 +1,78 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.67.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.65",
+  "ARCH_TAKEOFF_V3.0.66"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.65": {
+   "lines": 5075,
+   "lines_sha256": "38af79092ddce5f893e75eea6a44f6dc8ce616c7740f6f5ee896064b61dda26f"
+  },
+  "ARCH_TAKEOFF_V3.0.66": {
+   "lines": 5076,
+   "lines_sha256": "c411617d8aac6157aa751defa80f8cc8a22b9bfc94e3631fbbf227d0517b59ea",
+   "previous": "ARCH_TAKEOFF_V3.0.65",
+   "item_codes": {
+    "STR.CONC.GROUND_BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.GROUND_SLAB": {
+     "added": 0,
+     "removed": 0,
+     "changed": 3,
+     "record": 0
+    },
+    "STR.CONC.LINTEL": {
+     "added": 1,
+     "removed": 0,
+     "changed": 16,
+     "record": 0
+    },
+    "STR.CONC.STAIR": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    }
+   },
+   "families": {
+    "B10-04": {
+     "STR.CONC.GROUND_BEAM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-05": {
+     "STR.CONC.GROUND_SLAB": {
+      "added": 0,
+      "removed": 0,
+      "changed": 3,
+      "record": 0
+     }
+    },
+    "B9-02": {
+     "STR.CONC.LINTEL": {
+      "added": 1,
+      "removed": 0,
+      "changed": 16,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [
+    "B7-12"
+   ],
+   "record_apart": [],
+   "touched": 21,
+   "record_only": 1
+  }
+ }
+}

@@ -1,0 +1,367 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.67 (T-682 LINE_INDEX_V3_0_67; FIN.WP.* lines unchanged since V3.0.66)",
+ "measurable_now": [
+  {
+   "after": "1.400000 .. 1.900000",
+   "agrees": "T-685 1.400 .. 1.900",
+   "before": "blank (HELD)",
+   "item": "FIN.WP.WALL_UPTURN",
+   "line": "L-8090ff20f2b547d1bc96",
+   "source": "own read this run: DIMENSION 5E1 4500.0 / 5D5 3000.0; north 158 1.6591 + gap 1.000 (D120 33E rot 180) + 159 0.3409 = 3.000, 158 / 15A 0.200 apart; south A6 3.000; west B0 0.100 + gap 1.000 + AF 1.050 + gap 1.500 + AE 0.850 = 4.500 (W frames 3CC 0.900 / 3BF 1.400 inside the gaps); east B3 4.000 + AD 0.500 layer 5, no wall; column 2FAE 1.100 x 0.250 proud 0.050 over 0.900: run unchanged",
+   "status": "OPEN_BOUND (W09 / W10 sills not printed, D-45)",
+   "unit": "m2"
+  },
+  {
+   "after": "4.500",
+   "agrees": "T-685 4.500",
+   "before": "no line",
+   "item": "FIN.WP.TERMINATION",
+   "line": "MISSING FIN.WP.TERMINATION GF-07 open side",
+   "source": "B3 4.000 + AD 0.500, layer 5 = DIMENSION 5E1",
+   "status": "ASSUMED - OWNER-APPROVED (Q-37 A box line)",
+   "unit": "lm"
+  },
+  {
+   "after": "0.200",
+   "agrees": "T-685 / T-336 0.200",
+   "before": "no line",
+   "item": "FIN.WP.DOORWAY",
+   "line": "MISSING FIN.WP.DOORWAY D-GF-07",
+   "source": "gap 1.000 x wall 0.200 (158 / 15A)",
+   "status": "DRAWING-CONFIRMED",
+   "unit": "m2"
+  },
+  {
+   "after": "1",
+   "agrees": "T-685 / T-336 1",
+   "before": "no line",
+   "item": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line": "MISSING FIN.WP.DOORWAY_TRANSITION_NR D-GF-07",
+   "source": "one door D120 33E",
+   "status": "DRAWING-CONFIRMED (m2 stays HELD, Q-35 C)",
+   "unit": "pcs"
+  }
+ ],
+ "penetrations": {
+  "high_pcs": 31,
+  "low_pcs": 19,
+  "missing_datum": "the W.C. pan outlet (floor S-trap through the slab or wall P-trap) is printed on no sheet; the drainage legend defines B.T.T.S. but tags only the 1F east bath run; a wet-room / W.C. installation detail fixes the high end",
+  "not_counted": "stacks in walls / at high level; basin and shower wastes drawn into a floor drain",
+  "rows": [
+   {
+    "after_high": 1,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-6375385673176b8b2c9c",
+    "name": "dewaneya wash",
+    "note": "2 basins: wastes drawn into the FD",
+    "open_term": "",
+    "room": "GF-R8496F0",
+    "status": "MEASURED",
+    "wc_drawn": 0
+   },
+   {
+    "after_high": 1,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-229e7bf9e837e1d838bd",
+    "name": "kitchen",
+    "note": "",
+    "open_term": "",
+    "room": "GF-RA3AD49",
+    "status": "MEASURED",
+    "wc_drawn": 0
+   },
+   {
+    "after_high": 2,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-bcda623f9ad89eba41db",
+    "name": "core wedge W.C.",
+    "note": "",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "GF-RB28769",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   },
+   {
+    "after_high": 2,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-f650522e7882dddccdfa",
+    "name": "dewaneya W.C.",
+    "note": "",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "GF-RB62B55",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   },
+   {
+    "after_high": 1,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-a4bbc2efdb8425554344",
+    "name": "basin space",
+    "note": "basin waste drawn into the FD",
+    "open_term": "",
+    "room": "GF-RD36087",
+    "status": "MEASURED",
+    "wc_drawn": 0
+   },
+   {
+    "after_high": 2,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-20dfb3cd1232128b3cb6",
+    "name": "master bath",
+    "note": "shower tray waste into the FD",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "GF-RD6F891",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   },
+   {
+    "after_high": 1,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-0db07ac89503dd3f5980",
+    "name": "wash lobby",
+    "note": "2 basins: wastes drawn into the FD",
+    "open_term": "",
+    "room": "GF-RDBD4F9",
+    "status": "MEASURED",
+    "wc_drawn": 0
+   },
+   {
+    "after_high": 2,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-657bff4f4cc8e417bc6c",
+    "name": "W.C. by the stair",
+    "note": "",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "GF-RDF7D28",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   },
+   {
+    "after_high": 2,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-5f41701522d675c37b10",
+    "name": "core wedge W.C.",
+    "note": "",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "GF-RF38DAF",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   },
+   {
+    "after_high": 2,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-345e907e572a363fb615",
+    "name": "driver W.C.",
+    "note": "",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "GF-RFAD3C4",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   },
+   {
+    "after_high": 1,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "MISSING FIN.WP.PENETRATION GF-07",
+    "name": "pantry",
+    "note": "SS F\\A H/L is a stack at high level: no floor penetration",
+    "open_term": "",
+    "room": "GF-RC99C2A",
+    "status": "MEASURED",
+    "wc_drawn": 0
+   },
+   {
+    "after_high": 1,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-9971bd68a5150abebe0a",
+    "name": "laundry",
+    "note": "SS F\\A-T/B drawn on the north wall line (in the wall), not in the floor",
+    "open_term": "",
+    "room": "1F-R26FA0D",
+    "status": "MEASURED",
+    "wc_drawn": 0
+   },
+   {
+    "after_high": 2,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-fb8f6c4b9b3044505557",
+    "name": "W.C. east of the laundry",
+    "note": "SS T/B in the north wall",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "1F-R52AC05",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   },
+   {
+    "after_high": 2,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-2af93ddb70a431b92800",
+    "name": "bath by the laundry",
+    "note": "basin waste drawn into the FD",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "1F-RED23B8",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   },
+   {
+    "after_high": 2,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-a5f885a2f86ee05d5b8b",
+    "name": "east bath",
+    "note": "its soil run is printed 'P 4\" SLOPE 1% B.T.T.S.' (below the slab): the pan outlet passes the slab here, the strongest sign for the high end; the pan outlet type is still not printed",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "1F-R48CDA5",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   },
+   {
+    "after_high": 2,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-3e6dbcb5614746978a87",
+    "name": "west twin, WEST cell",
+    "note": "walk-in zone: one FD 4\" at the screen line; SS T/B in the partition wall",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "1F-R48AA46",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   },
+   {
+    "after_high": 3,
+    "after_low": 2,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 2,
+    "line": "L-2253a7ed9e80ac00c728",
+    "name": "west twin, EAST cell",
+    "note": "FD 3\" in the walk-in zone + FD 4\" by the W.C. / basin",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "1F-R8BDA49",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   },
+   {
+    "after_high": 2,
+    "after_low": 1,
+    "before": "blank; T-685 AT LEAST 1",
+    "fd_printed": 1,
+    "line": "L-faa7232880f13c1e4a99",
+    "name": "W.C. by the stair",
+    "note": "SS T/B beside, in the wall",
+    "open_term": "1 W.C. pan outlet(s): floor or wall outlet not printed",
+    "room": "2F-RE83BED",
+    "status": "OPEN_BOUND",
+    "wc_drawn": 1
+   }
+  ],
+  "twin_map": {
+   "EAST cell (C22 / C1C / C26 / C25)": "1F-R8BDA49",
+   "WEST cell (B3E / C23 / C28 / AE4-AE5)": "1F-R48AA46"
+  }
+ },
+ "pool_court": "3 lines stay merged-unwired (T-522 / T-529 values in the overlay; wiring row)",
+ "q34_lines": "3 lines (2F top roof membrane, upturn, rolls) stay HELD: owner Q-34 parked, not asked",
+ "roof_F_V685_1": {
+  "corrected": {
+   "band_m2": [
+    115.65646,
+    115.81396
+   ],
+   "basis": "the candidate's own basis (inside the wall / parapet faces, domes as circles) = T-321 high end",
+   "change_m2": -0.01804,
+   "change_pct": -0.0156,
+   "status": "OPEN_BOUND (D-BAND 0.1575 m2: what the 0.075 band at the 2F west wall foot is - cladding, moulding or a thicker wall base - is printed nowhere; neither end chosen)",
+   "value_m2": 115.81396
+  },
+  "dome": {
+   "chords_engine": 105,
+   "polygon_m2": 15.349849,
+   "polygon_ring_m": 13.890625,
+   "r_m": 2.211092,
+   "ring_short_each_m": 0.002073,
+   "true_m2": 15.359013,
+   "true_ring_m": 13.892698,
+   "under_deduction_each_m2": 0.009165
+  },
+  "element": "flat roof membrane of the +9.70 terraces round the 2F block: the area inside the parapet / wall faces where the membrane turns up (UP-WP-ROOF-001, Q-24), the two dome discs open (Q-24 / Q-29: the membrane stops at the dome circle with a 0.20 upturn); flat m2 and upturn lm kept apart",
+  "own_measure": {
+   "dband_strip": "0.075 (12E2 at the 2F west wall foot to the wall face, 12E6) x 2.100 (12E6 .. the west-wing parapet north face)",
+   "dband_strip_m2": 0.1575,
+   "net_high_m2": 115.81397,
+   "net_low_m2": 115.65649,
+   "outline_dband_m2": 146.37452,
+   "outline_wallface_m2": 146.532,
+   "vs_t321_high": 1e-05,
+   "vs_t321_low": 3e-05
+  },
+  "released_vs_band": {
+   "causes": [
+    [
+     "two dome holes taken as inscribed 105-chord polygons (1 mm sagitta), not circles: 2 x (pi r^2 - 105/2 r^2 sin(2 pi/105))",
+     "0.018329"
+    ]
+   ],
+   "excess": "0.018040",
+   "inside": false,
+   "named": "0.018329",
+   "residual": "-0.000289",
+   "residual_within_rounding": true,
+   "unit": "m2"
+  },
+  "rolls": "FIN.WP.MEMBRANE_ROLLS 17 pcs: strips by length into whole 1.00 x 10.00 rolls (Q-49 A); a 0.018 m2 change inside two dome discs moves no strip end by a roll: unchanged (not re-run)",
+  "upturn": {
+   "check": {
+    "causes": [
+     [
+      "two dome rings as 105-chord perimeters, not circumferences",
+      "-0.004145"
+     ]
+    ],
+    "excess": "-0.003396",
+    "inside": false,
+    "named": "-0.004145",
+    "residual": "0.000750",
+    "residual_within_rounding": false,
+    "unit": "lm"
+   },
+   "corrected_lm": 92.925,
+   "released_lm": 92.922,
+   "true_lm": 92.925396
+  }
+ },
+ "rules": [
+  "R-T691-1",
+  "R-T691-2",
+  "R-T691-3"
+ ],
+ "task": "T-691"
+}

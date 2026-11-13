@@ -1,0 +1,283 @@
+{
+ "annex": {
+  "at_least_m3": 0.877899,
+  "parts": [
+   {
+    "free_strip_m2": 0.325,
+    "min_depth_m": 0.1,
+    "piece": "10B+7D1#2"
+   },
+   {
+    "free_strip_m2": 1.503299,
+    "min_depth_m": 0.1,
+    "piece": "13F+7D3#1"
+   },
+   {
+    "free_strip_m2": 1.799443,
+    "min_depth_m": 0.1,
+    "piece": "13E+7D6#1"
+   },
+   {
+    "free_strip_m2": 0.0,
+    "min_depth_m": 0.1,
+    "piece": "13E+7D6#2"
+   },
+   {
+    "free_strip_m2": 2.15,
+    "min_depth_m": 0.1,
+    "piece": "140+7D7#1"
+   },
+   {
+    "free_strip_m2": 0.912203,
+    "min_depth_m": 0.1,
+    "piece": "142+7D8#1"
+   },
+   {
+    "free_strip_m2": 0.350592,
+    "min_depth_m": 0.15,
+    "piece": "13C+7D9#1"
+   },
+   {
+    "free_strip_m2": 0.6,
+    "min_depth_m": 0.15,
+    "piece": "141+7DA#1"
+   },
+   {
+    "free_strip_m2": 0.663157,
+    "min_depth_m": 0.1,
+    "piece": "139+13A#1"
+   }
+  ],
+  "skipped": [
+   {
+    "dL_m": 0.3,
+    "piece": "10B+7D1#1",
+    "why": "route-G piece and ledger run disagree: left out of the lower bound (a smaller AT_LEAST stays valid)"
+   },
+   {
+    "dL_m": -5.7,
+    "piece": "13D+7D2#1",
+    "why": "route-G piece and ledger run disagree: left out of the lower bound (a smaller AT_LEAST stays valid)"
+   },
+   {
+    "dL_m": 4.68,
+    "piece": "7D4+F8#1",
+    "why": "route-G piece and ledger run disagree: left out of the lower bound (a smaller AT_LEAST stays valid)"
+   },
+   {
+    "dL_m": 0.4,
+    "piece": "136+7D5#1",
+    "why": "route-G piece and ledger run disagree: left out of the lower bound (a smaller AT_LEAST stays valid)"
+   },
+   {
+    "dL_m": 0.7,
+    "piece": "137+138#1",
+    "why": "route-G piece and ledger run disagree: left out of the lower bound (a smaller AT_LEAST stays valid)"
+   }
+  ],
+  "unbounded_pieces": [
+   "10B+7D1#2",
+   "13F+7D3#1",
+   "13E+7D6#1",
+   "13E+7D6#2",
+   "140+7D7#1",
+   "142+7D8#1",
+   "139+13A#1"
+  ],
+  "upper": null
+ },
+ "b1_lines": 20,
+ "candidate": "ARCH_TAKEOFF_V3.0.68",
+ "census_counts": {
+  "B1-02|DESIGNER": 7,
+  "B1-02|MEASURABLE_NOW": 5,
+  "B1-03|DESIGNER": 4,
+  "B1-03|MEASURABLE_NOW": 3,
+  "B1-04|NEEDS_TEST": 1
+ },
+ "footprints_layers_merged": {
+  "ext_gb_trench": "formation compaction 13.9172..14.18 m2 outside the pits ('COMPACTED SOIL', p.13)",
+  "pits": "compaction 124.649555 m2, 11 layers (T-350 r2)",
+  "pool": "formation compaction 11.851051 m2"
+ },
+ "inputs_sha256": {
+  "agents_t242/LEDGER_T242.csv": "c21991ca5f9ab5d133ffb4059f545421c0418de919868952af1cc161ade1dc94",
+  "agents_t350r2/BEAM_OVER_PITS_T350R2.csv": "57fb877026defc1e210722733641799ea2da3218b74a757e7df8e8d38271ed22",
+  "agents_t350r2/FILL_T350R2.csv": "d09982f6cea0d5c145fd47f404af98efe5379de28bb7040edbaa212ee39424af",
+  "agents_t672/out/LINE_INDEX_V3_0_68.json": "fc485958b2d1a51153409ca81a4f671b295766bc3bbfb27d9e1d43567df13e8d",
+  "agents_t695/STRAP_TRENCH_INPUT_T695.json": "a1034c41f56f5172d7d198cb27fdafc6a80d4bb7c064ee475e3a0074b1d5fccf"
+ },
+ "int_main_d33": {
+  "check": true,
+  "zero_if_D_at_most_m": 0.85
+ },
+ "lines_sha256": "d1de50cb0a58919e0860ca46cbd5170baf55ac9b66f55978b988214aef95bf94",
+ "material": {
+  "balance": null,
+  "geometry_m3": {
+   "excavation_in_situ_valued": 225.941333
+  },
+  "missing_tests": [
+   "maximum dry density by ASTM D1557 (Modified Proctor) on the excavated soil",
+   "in-situ dry density of the excavated soil (ASTM D6938 or sand cone)",
+   "loose (bulked) density of the excavated soil, measured",
+   "suitability of the excavated soil for re-use as fill (geotechnical classification)",
+   "placement target density (project specification; 95 % MPD is PROPOSED-SPEC only)"
+  ],
+  "state": "HELD"
+ },
+ "method": "EARTHWORKS_CENSUS_V1",
+ "straps": {
+  "backfill_by": [
+   "DRAWN|R1_NONE|HIGH",
+   "BOX|R3_FOOTING_CHAIN|LOW"
+  ],
+  "backfill_m3": [
+   6.437519,
+   10.952471
+  ],
+  "compaction_footprint_m2": [
+   6.633533,
+   9.655236
+  ],
+  "excavation_by": [
+   "DRAWN|R1_NONE|LOW",
+   "BOX|R3_FOOTING_CHAIN|LOW"
+  ],
+  "excavation_m3": [
+   9.950299,
+   16.121241
+  ],
+  "layers": [
+   8,
+   10
+  ],
+  "s01_sensitivity_excavation_m3": {
+   "+0.10": [
+    10.613652,
+    17.086765
+   ],
+   "-0.10": [
+    9.286946,
+    15.155717
+   ]
+  },
+  "scenarios": [
+   {
+    "backfill_m3": 7.611873,
+    "compaction_footprint_m2": 7.508569,
+    "excavation_m3": 11.262487,
+    "layers": 8,
+    "netted_cut_m3": 0.000366,
+    "scenario": "BOX|R1_NONE|LOW"
+   },
+   {
+    "backfill_m3": 7.305193,
+    "compaction_footprint_m2": 7.508569,
+    "excavation_m3": 11.262487,
+    "layers": 8,
+    "netted_cut_m3": 0.000366,
+    "scenario": "BOX|R1_NONE|HIGH"
+   },
+   {
+    "backfill_m3": 10.802207,
+    "compaction_footprint_m2": 9.655236,
+    "excavation_m3": 15.445376,
+    "layers": 10,
+    "netted_cut_m3": 0.003002,
+    "scenario": "BOX|R2_BLINDING|LOW"
+   },
+   {
+    "backfill_m3": 10.345593,
+    "compaction_footprint_m2": 9.655236,
+    "excavation_m3": 15.445376,
+    "layers": 10,
+    "netted_cut_m3": 0.003002,
+    "scenario": "BOX|R2_BLINDING|HIGH"
+   },
+   {
+    "backfill_m3": 10.952471,
+    "compaction_footprint_m2": 9.655236,
+    "excavation_m3": 16.121241,
+    "layers": 10,
+    "netted_cut_m3": 0.003002,
+    "scenario": "BOX|R3_FOOTING_CHAIN|LOW"
+   },
+   {
+    "backfill_m3": 10.495858,
+    "compaction_footprint_m2": 9.655236,
+    "excavation_m3": 16.121241,
+    "layers": 10,
+    "netted_cut_m3": 0.003002,
+    "scenario": "BOX|R3_FOOTING_CHAIN|HIGH"
+   },
+   {
+    "backfill_m3": 6.737203,
+    "compaction_footprint_m2": 6.633533,
+    "excavation_m3": 9.950299,
+    "layers": 8,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R1_NONE|LOW"
+   },
+   {
+    "backfill_m3": 6.437519,
+    "compaction_footprint_m2": 6.633533,
+    "excavation_m3": 9.950299,
+    "layers": 8,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R1_NONE|HIGH"
+   },
+   {
+    "backfill_m3": 9.555157,
+    "compaction_footprint_m2": 8.530189,
+    "excavation_m3": 13.648303,
+    "layers": 10,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R2_BLINDING|LOW"
+   },
+   {
+    "backfill_m3": 9.107539,
+    "compaction_footprint_m2": 8.530189,
+    "excavation_m3": 13.648303,
+    "layers": 10,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R2_BLINDING|HIGH"
+   },
+   {
+    "backfill_m3": 9.68792,
+    "compaction_footprint_m2": 8.530189,
+    "excavation_m3": 14.245415,
+    "layers": 10,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R3_FOOTING_CHAIN|LOW"
+   },
+   {
+    "backfill_m3": 9.240303,
+    "compaction_footprint_m2": 8.530189,
+    "excavation_m3": 14.245415,
+    "layers": 10,
+    "netted_cut_m3": 0.0,
+    "scenario": "DRAWN|R3_FOOTING_CHAIN|HIGH"
+   }
+  ]
+ },
+ "task": "T-695",
+ "zero_zone": {
+  "D_max_m": 0.4,
+  "d_star_m": 0.85,
+  "evidence": {
+   "ground_beam_plan_level_marks": [
+    "+0.15",
+    "+0.30",
+    "+1.00"
+   ],
+   "sunken_hatches_on_ground_beam_plan": 0,
+   "sunken_hatches_on_other_sheets": 14
+  },
+  "lowest_blinding_bottom_m": 0.45,
+  "runs": 13,
+  "top_m": 0.95,
+  "wet_drop_margin_m": 0.45,
+  "zero": true
+ }
+}

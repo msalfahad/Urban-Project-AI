@@ -1,0 +1,305 @@
+{
+ "align": [
+  {
+   "axis": "y",
+   "f1": "AC9",
+   "f2": "1274",
+   "gf": "2BC",
+   "gf_minus_1f_mm": 0.0,
+   "gf_minus_2f_mm": 0.0
+  },
+  {
+   "axis": "x",
+   "f1": "AF3",
+   "f2": "1287",
+   "gf": "9B",
+   "gf_minus_1f_mm": 1e-06,
+   "gf_minus_2f_mm": 2e-06
+  },
+  {
+   "axis": "x_minus_500",
+   "f1": "B62",
+   "gf": "2D6",
+   "gf_minus_1f_mm": 1e-06
+  }
+ ],
+ "drawn_sha256": "4cd59d907ecf6f3d4c189f82d6fafeedbc5ee6e01d821b50c20c8fac8df83ed3",
+ "family": "B2-03",
+ "findings": [
+  {
+   "id": "F-T720-1",
+   "verdict": "ENGINE_RIGHT",
+   "what": "GF / 1F / 2F engine plates agree with the own handle read after the named causes, residual GF -0.000209, 1F +0.000020, 2F +0.000000 m2 (engine plate printed to 4 dp)"
+  },
+  {
+   "id": "F-T720-2",
+   "verdict": "ENGINE_WRONG (reconciliation only, no BOQ line)",
+   "what": "north-arrow block NR1 (inserts 1612 / 19A2 / 19A3, lines on layers 1/5) is read as a wall network on every plan: plate_top_level and the face categories carry 0.6581 m2 per plan (1.9743 m2 in all) that is not building (R-T720-2)"
+  },
+  {
+   "id": "F-T720-3",
+   "verdict": "RULE_DIFFERENCE",
+   "what": "engine plate includes the side passage 5.880 (threshold closure); R-T720-4 / Q-67 A keep it beside the gross, covered 4.080 by the 1F floor"
+  }
+ ],
+ "floors": [
+  {
+   "categories_sum_m2": 284.8047,
+   "engine_plate_m2": 284.1465,
+   "engine_plate_top_level_m2": 284.8046,
+   "engine_symbol_component_m2": 0.6581,
+   "floor": "GF",
+   "gross_m2": 278.266291,
+   "named_inside_not_deducted": [
+    "lift shaft 3.240 (T-719 V-03, stacked; not deducted: gross)",
+    "garden band 13.986 inside the outer wall line (engine EXTERNAL 9.101 + MERGED 4.885; D-48 designer classification open; its cover is the GF roof slab per the Q-67 reading, cited)",
+    "curved glazing bay on the pool court: outline follows the outermost glazing line 280 (bulge 0.867, r 2.330 m) as the engine plate does (its arc correction on the same polyline: 6.995 m2 out of the rectangle)"
+   ],
+   "reconcile": {
+    "accept": true,
+    "causes": [
+     {
+      "cause": "engine closes the side passage by two PASSAGE thresholds (OP-001 / OP-007): outside the envelope by R-T720-4",
+      "m2": -5.88
+     }
+    ],
+    "gap_pct": 2.113159,
+    "named_m2": -5.88,
+    "own_minus_engine_m2": -5.880209,
+    "residual_m2": -0.000209,
+    "residual_pct": 7.5e-05,
+    "state": "RESIDUAL_NAMED"
+   },
+   "rows": [
+    {
+     "handles": [
+      "103",
+      "15A",
+      "26C",
+      "280",
+      "2B5",
+      "2BC",
+      "2D6",
+      "2F87",
+      "338",
+      "34C",
+      "34D",
+      "8B",
+      "94",
+      "9B",
+      "9C",
+      "9D",
+      "9E",
+      "A1",
+      "E2"
+     ],
+     "id": "GF house",
+     "m2": 217.788972,
+     "state": "DRAWING-CONFIRMED"
+    },
+    {
+     "handles": [
+      "107",
+      "10A",
+      "10D",
+      "120",
+      "12C",
+      "85",
+      "A2",
+      "A3"
+     ],
+     "id": "GF annex (single storey)",
+     "m2": 60.477319,
+     "state": "DRAWING-CONFIRMED"
+    }
+   ],
+   "state": "DRAWING-CONFIRMED"
+  },
+  {
+   "categories_sum_m2": 210.4599,
+   "engine_plate_m2": 209.8017,
+   "engine_plate_top_level_m2": 210.4598,
+   "engine_symbol_component_m2": 0.6581,
+   "floor": "1F",
+   "gross_m2": 209.839104,
+   "named_inside_not_deducted": [
+    "V-01 ST-02 light well 26.240 (T-719; engine VOID 16.005 + flights seen 6.772 + residue 3.453): inside the 1F gross, not deducted",
+    "lift shaft 3.240 (T-719 V-03)",
+    "concave curved wall BD0 / BCD r 1.935 m: opening bridged on the same circle (R-T720-1)"
+   ],
+   "reconcile": {
+    "accept": true,
+    "causes": [
+     {
+      "cause": "1F east straight opening bridged on the face line B61 (engine follows frame line C37, 80 mm in)",
+      "m2": 0.037384
+     }
+    ],
+    "gap_pct": 0.017825,
+    "named_m2": 0.037384,
+    "own_minus_engine_m2": 0.037404,
+    "residual_m2": 2e-05,
+    "residual_pct": 1e-05,
+    "state": "RESIDUAL_NAMED"
+   },
+   "rows": [
+    {
+     "handles": [
+      "AC9",
+      "AE3",
+      "AF3",
+      "AF4",
+      "B3A",
+      "B3B",
+      "B5D",
+      "B61",
+      "B62",
+      "B6C",
+      "BCD",
+      "BD0"
+     ],
+     "id": "1F",
+     "m2": 209.839104,
+     "state": "DRAWING-CONFIRMED"
+    }
+   ],
+   "state": "DRAWING-CONFIRMED"
+  },
+  {
+   "categories_sum_m2": 55.7381,
+   "engine_plate_m2": 55.08,
+   "engine_plate_top_level_m2": 55.7381,
+   "engine_symbol_component_m2": 0.6581,
+   "floor": "2F",
+   "gross_m2": 55.08,
+   "named_inside_not_deducted": [
+    "lift shaft 3.240 (T-719 V-03)",
+    "ST-01 stair box inside (T-719 V-04)"
+   ],
+   "reconcile": {
+    "accept": true,
+    "causes": [],
+    "gap_pct": 0.0,
+    "named_m2": 0,
+    "own_minus_engine_m2": 0.0,
+    "residual_m2": 0.0,
+    "residual_pct": 0.0,
+    "state": "BALANCED"
+   },
+   "rows": [
+    {
+     "handles": [
+      "1274",
+      "1281",
+      "1287",
+      "1288",
+      "1291"
+     ],
+     "id": "2F roof structures (stair, lift, maid room)",
+     "m2": 55.08,
+     "state": "DRAWING-CONFIRMED"
+    }
+   ],
+   "state": "DRAWING-CONFIRMED"
+  }
+ ],
+ "gf_ground": {
+  "COVERED_BY_FLOOR": [
+   {
+    "m2": 17.48,
+    "vs_cited": {
+     "Q-68 porch": 19.181,
+     "why": "Q-68 includes the slab beyond the 1F walls (not read here)"
+    },
+    "what": "entrance zone under the 1F west wing (porch, entrance stair)"
+   },
+   {
+    "m2": 8.465133,
+    "what": "pool court strip and the GF curved bay under the 1F floor"
+   }
+  ],
+  "COVERED_BY_FLOOR_m2": 25.945133,
+  "COVERED_BY_SLAB_m2": null,
+  "HELD_slabs_named_without_outline": [
+   "Q-68 pool court slab projection (18.393 gross, VOID 4.373: cited)",
+   "Q-68 1F roof-slab edges 6.791 (cited)",
+   "Q-67 GF-roof panel over the passage 1.56 (cited)"
+  ],
+  "OPEN_TO_SKY_m2": null,
+  "OPEN_TO_SKY_upper_bound_m2": 160.458577,
+  "boundary_wall_band": "the plot outline is the outer face of the boundary walls; the courts of OQ-04 (167.714) are measured inside them: not compared here",
+  "outside_GF_envelope_m2": 192.28371,
+  "outside_not_under_1F_m2": 162.258577,
+  "plot_outer_face_m2": 470.55,
+  "side_passage": {
+   "COVERED_BY_FLOOR_m2": 4.08,
+   "m2": 5.88,
+   "rest_m2": 1.8,
+   "rest_state": "HELD (Q-67 reading: GF-roof slab panel 1.56 to the boundary beam + the 0.24 mouth band under the layer-5 boundary lines 86 / 105 / 106; slab outline not read here)",
+   "rule": "OUTSIDE_ENVELOPE",
+   "vs_Q67_m2": 5.64,
+   "why_differs": "Q-67 5.64 = 1.20 x 4.70 from the inner face of the boundary wall; here to the outer face line 86 (+1.20 x 0.20)"
+  }
+ },
+ "gross_all_storeys_m2": 543.185395,
+ "printed_dims": [
+  {
+   "diff_mm": 0.0,
+   "dim": "A67",
+   "faces": [
+    "107",
+    "9B"
+   ],
+   "own_m": 15.0,
+   "printed_m": 15.0
+  },
+  {
+   "diff_mm": 0.0,
+   "dim": "598",
+   "faces": [
+    "10A",
+    "98"
+   ],
+   "own_m": 8.3,
+   "printed_m": 8.3
+  },
+  {
+   "diff_mm": 0.0,
+   "dim": "5F9",
+   "faces": [
+    "298",
+    "B6"
+   ],
+   "own_m": 15.97,
+   "printed_m": 15.97
+  },
+  {
+   "diff_mm": -1e-06,
+   "dim": "D87",
+   "faces": [
+    "107",
+    "B3A"
+   ],
+   "own_m": 10.6,
+   "printed_m": 10.6
+  },
+  {
+   "diff_mm": 1e-06,
+   "dim": "143C",
+   "faces": [
+    "1291",
+    "B5D"
+   ],
+   "own_m": 6.77,
+   "printed_m": 6.77
+  }
+ ],
+ "roofs": {
+  "1F_roof_not_under_2F_m2": 154.759104,
+  "2F_outside_1F_m2": 0.0,
+  "GF_roof_not_under_1F_m2": 98.452319,
+  "state": "OPEN_TO_SKY (a roof, not a floor)"
+ },
+ "status": "research, unwired; no quantity moved",
+ "task": "T-720"
+}
