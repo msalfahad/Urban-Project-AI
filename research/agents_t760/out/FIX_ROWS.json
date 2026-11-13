@@ -1,0 +1,1616 @@
+{
+ "schema": "T760_FIX_ROWS_V1",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.79",
+ "index_sha16": "0582aac58defff74",
+ "base": "agents/task-T-314 597d2820 (T-314 r3 READY, stacked on V3.0.78)",
+ "sets": [
+  "EXT_RENDER_PAINT"
+ ],
+ "summary": {
+  "FIN.EXT.PAINT.EDGE": {
+   "lines": 38,
+   "blank_before": 3,
+   "blank_after": 0,
+   "after": 317.1,
+   "low_before": 280.62,
+   "high_before": 281.82,
+   "labels": {
+    "DRAWING-READ": 3,
+    "MEASURED": 34,
+    "ESTIMATE": 1
+   }
+  },
+  "FIN.EXT.PAINT": {
+   "lines": 18,
+   "blank_before": 1,
+   "blank_after": 0,
+   "after": 1054.0,
+   "low_before": 1008.58,
+   "high_before": 1085.61,
+   "labels": {
+    "ESTIMATE": 5,
+    "MEASURED": 3,
+    "DEFAULT": 7,
+    "DRAWING-READ": 3
+   }
+  },
+  "FIN.EXT.FINISH": {
+   "lines": 18,
+   "blank_before": 1,
+   "blank_after": 0,
+   "after": 1054.0,
+   "low_before": 1008.58,
+   "high_before": 1085.61,
+   "labels": {
+    "DRAWING-READ": 3,
+    "DEFAULT": 7,
+    "ESTIMATE": 5,
+    "MEASURED": 3
+   }
+  },
+  "ARCH.FACADE_RUN": {
+   "lines": 3,
+   "blank_before": 3,
+   "blank_after": 0,
+   "after": 0.0,
+   "low_before": 0.0,
+   "high_before": 0.0,
+   "labels": {
+    "NOT_APPLICABLE_WITH_EVIDENCE": 3
+   }
+  },
+  "ARCH.FACADE": {
+   "lines": 4,
+   "blank_before": 4,
+   "blank_after": 0,
+   "after": 946.98,
+   "low_before": 0.0,
+   "high_before": 0.0,
+   "labels": {
+    "MEASURED": 2,
+    "DRAWING-READ": 2
+   }
+  }
+ },
+ "rows": [
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-00c945c77933c8e88c52",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W03",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 15.257684
+   },
+   "label": "DRAWING-READ",
+   "basis": "glazed line NW-4 developed 6.6577 head + 2 frame-end jambs +1.00 .. +5.30 (T-305 W03)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-0490ed646652c41fca5e",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "2F-FACADE:CORNER_EDGE:2F-STOREY",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 16.8,
+    "high": 16.8
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 16.8
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-055b04a9d70f369717c2",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_TOP:GF_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.592956,
+    "high": 5.67398
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.633468
+   },
+   "label": "ESTIMATE",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); x 0.20 / 0.30 drawn; D-band end at mid"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-0a6d30ea444e90e119bb",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PLINTH",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 71.68859,
+    "high": 72.749795
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 71.75114
+   },
+   "label": "DRAWING-READ",
+   "basis": "72.750 high - NW-4 (6.6577 x 0.85 -> x 0.70: the arc stands on the pool rim +0.30, lines 2861 / 285C, T-751) ; NW-3 / NW-5 ends on the court +0.15 (285E / 283E), SW-8 +0.15 as every covered plinth"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-0b729a1774ad4ce4efaf",
+   "item_code": "ARCH.FACADE_RUN",
+   "unit": "lm",
+   "element_id": "2F-FACADE:facade outline 2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "basis": "the thin 10.84 m second outline around 0.66 m2 on a wall layer is a drawing element (defect L-N10-01): no face in the T-305 / T-756 ledgers (every drawn face once, residual 0); the run is the released outline"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-0d552b0330e270458632",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W19",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.2,
+    "high": 2.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-1f1149d7984ccf9741d7",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:CORNER_EDGE:1F-STOREY",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 37.8,
+    "high": 37.8
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 37.8
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-1f2271d554f95e406a6d",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W02",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 10.73
+   },
+   "label": "DRAWING-READ",
+   "basis": "6.33 printed + 2 x 2.20 drawn at B-B (T-201)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-22e75c3942faeeb6718a",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "1F-FACADE:SLAB_EDGE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.89638
+   },
+   "label": "DEFAULT",
+   "basis": "runs x 0.60 default depth: NW-2 2.675, NE-1 0.08, SW-1 0.08, SW-2 3.00, NW-4 0.467, NW-5 0.325 (T-305 / T-348) + SE-1 porch-mouth band 2.30 x 0.80 = 1.840 (T-754) + 1.80 behind the annex x 0.60"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-230398c46b92f029d3b8",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "2F-FACADE:PARAPET_TOP:2F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.415,
+    "high": 5.415
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.415
+   },
+   "label": "MEASURED",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); 18.05 m x 0.30 DRAWING-CONFIRMED (T-722 concrete agrees)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-295c61dadc19f202ba40",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "GF-FACADE:SLAB_EDGE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 1.85426,
+    "high": 4.30924
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.6397
+   },
+   "label": "DEFAULT",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); pool-court front 0.962 + void ring inner 4.4636 m x 0.60 (beam depth default; T-348 r2 0.20 .. 0.75)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-2f8915e983602ec8b486",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W20",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.2,
+    "high": 2.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-303ff82cf94735a67f5f",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "GF-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 376.694149,
+    "high": 410.179149
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 391.253149
+   },
+   "label": "DRAWING-READ",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); 376.694 low + (GF/NW-7 35.550 - W02 6.33 x 2.20 = 13.926 -> 21.624) - 7.065; D-GF-07 hole 2.00 x 2.50 = 5.000 printed plan tag (plan dimension governs a facade, company default; F-T737-1)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-3339078669e1e4d29686",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W22",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.2,
+    "high": 2.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-348c4d8d32f3f6d35fe5",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "element_id": "2F-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 125.16
+   },
+   "label": "MEASURED",
+   "basis": "29.80 x 4.20 (T-737 handle re-measure, register)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-38ec925f1c1e26478bc5",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_OUTER:ANNEX_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 14.671022,
+    "high": 15.271022
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 15.271022
+   },
+   "label": "ESTIMATE",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); 14.671 + NE-6x outer face 0.600 m2 (T-324 C5): an outer face is rendered like every outer face; Q-65 C holds its block material, not its render; < 1 % of the line"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-3f4d289ce3f0cd4fd4a3",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W06",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.2,
+    "high": 2.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-42e228e940e2164d7967",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "1F-FACADE:SLAB_EDGE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.89638
+   },
+   "label": "DEFAULT",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); runs x 0.60 default depth: NW-2 2.675, NE-1 0.08, SW-1 0.08, SW-2 3.00, NW-4 0.467, NW-5 0.325 (T-305 / T-348) + SE-1 porch-mouth band 2.30 x 0.80 = 1.840 (T-754) + 1.80 behind the annex x 0.60"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-43527ae4e8ec75c56636",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "element_id": "1F-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 280.73812
+   },
+   "label": "DRAWING-READ",
+   "basis": "= 1F render 249.954 + its holes 30.784 (T-305 OPENING_HOLES; T-756 stage faces incl.; register)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-472196bf3c74cdf83180",
+   "item_code": "ARCH.FACADE_RUN",
+   "unit": "lm",
+   "element_id": "1F-FACADE:facade outline 2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "basis": "the thin 10.84 m second outline around 0.66 m2 on a wall layer is a drawing element (defect L-N10-01): no face in the T-305 / T-756 ledgers (every drawn face once, residual 0); the run is the released outline"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-4858f2a238a9fe36c5d9",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W10",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.0,
+    "high": 4.0
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.0
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-490fdc0ff59a0e66ca13",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_TOP:GF_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.592956,
+    "high": 5.67398
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.633468
+   },
+   "label": "ESTIMATE",
+   "basis": "x 0.20 / 0.30 drawn; D-band end at mid"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-5175b3811753a2ff87d4",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W24",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.55,
+    "high": 4.55
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.55
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-54e708d3940d1932607c",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_TOP:ANNEX_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.99701,
+    "high": 6.03701
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.01701
+   },
+   "label": "ESTIMATE",
+   "basis": "x 0.30 drawn; D-band end 0.20 m at mid"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-5816ca234f93f8947eb9",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_OUTER:GF_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 14.385,
+    "high": 14.385
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 14.385
+   },
+   "label": "MEASURED",
+   "basis": "T-305 / T-337 DRAWING-CONFIRMED faces"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-5a04a3ec70ce025ddd95",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "1F-FACADE:PARAPET_OUTER:1F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 54.651307,
+    "high": 60.029307
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 58.253371
+   },
+   "label": "DEFAULT",
+   "basis": "54.651 low + NE-1 / SW-1 0.08 x 1.20 + SW-2 4.40 x 1.20 = 5.280 (parapet 1.20 company default; range 1.10 .. 1.30 / 0.385 .. 1.60)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-5acef54ec7173ec1c7e7",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "2F-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 117.305,
+    "high": 117.305
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 117.305
+   },
+   "label": "DEFAULT",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); 125.160 gross (T-737 handle re-measure) - 7.855 holes; D-2F-01 head 2.20 (company default head)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-5cbd99833ad9c8b54edc",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "1F-FACADE:PARAPET_INNER:1F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 41.82353,
+    "high": 56.608545
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 49.216037
+   },
+   "label": "ESTIMATE",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); R-T324-1 at c = 0.10 + 1F exposed height 1.07 .. 1.17 HELD (D-39 roof datum) at its midpoint"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-60877480b3303b0be233",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_INNER:GF_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 8.209433,
+    "high": 13.88495
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 11.047192
+   },
+   "label": "DEFAULT",
+   "basis": "R-T324-1 at c = 0.10 (as annex)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-62f300acd39b136cb175",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "2F-FACADE:PAINT_EDGE:W29",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.2,
+    "high": 4.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-641be9f82f398510d4d8",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_OUTER:GF_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 14.385,
+    "high": 14.385
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 14.385
+   },
+   "label": "MEASURED",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); T-305 / T-337 DRAWING-CONFIRMED faces"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-66bc23b0d25030222328",
+   "item_code": "ARCH.FACADE_RUN",
+   "unit": "lm",
+   "element_id": "GF-FACADE:facade outline 2",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0
+   },
+   "label": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "basis": "the thin 10.84 m second outline around 0.66 m2 on a wall layer is a drawing element (defect L-N10-01): no face in the T-305 / T-756 ledgers (every drawn face once, residual 0); the run is the released outline"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-6d894ba11e85ebab3595",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:CORNER_EDGE:PARAPET-OUTER_ANNEX_4.30",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.0,
+    "high": 2.0
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.0
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-732f4753bbbf9bd5824a",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W16",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 6.845844,
+    "high": 6.845844
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.845844
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-757343d535ae19b589bf",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "1F-FACADE:PARAPET_TOP:1F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 9.83151,
+    "high": 9.84653
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.83902
+   },
+   "label": "ESTIMATE",
+   "basis": "drawn widths; D-band end 0.075 m at mid"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-77ae9fd557ed96e51e2c",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:CORNER_EDGE:PARAPET-OUTER_GF_5.50",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 1.0,
+    "high": 2.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2
+   },
+   "label": "ESTIMATE",
+   "basis": "1.0 + stop-end 2 x 0.50 + 0.20 = 1.20: the GF parapet ends at the open passage mouth, nothing to abut (T-754)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-7a7ada8a4bc4018bbf37",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_TOP:ANNEX_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.99701,
+    "high": 6.03701
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.01701
+   },
+   "label": "ESTIMATE",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); x 0.30 drawn; D-band end 0.20 m at mid"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-7c48b6a481d71ac57c54",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_OUTER:ANNEX_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 14.671022,
+    "high": 15.271022
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 15.271022
+   },
+   "label": "ESTIMATE",
+   "basis": "14.671 + NE-6x outer face 0.600 m2 (T-324 C5): an outer face is rendered like every outer face; Q-65 C holds its block material, not its render; < 1 % of the line"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-7d1ad2dedd3b0c5ec4eb",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "1F-FACADE:PARAPET_TOP:1F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 9.83151,
+    "high": 9.84653
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.83902
+   },
+   "label": "ESTIMATE",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); drawn widths; D-band end 0.075 m at mid"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-7dee2315237624352856",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "2F-FACADE:CORNER_EDGE:PARAPET-OUTER_2F_13.90",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.0,
+    "high": 2.0
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.0
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-828dceb0078b7f012235",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "2F-FACADE:PAINT_EDGE:W28",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.2,
+    "high": 2.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-86262d3438794a5c0c02",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_INNER:GF_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 8.209433,
+    "high": 13.88495
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 11.047192
+   },
+   "label": "DEFAULT",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); R-T324-1 at c = 0.10 (as annex)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-87ff71254064b753bb4c",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W21",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.2,
+    "high": 2.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-8936969dac171b4ff53c",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W11",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 6.35,
+    "high": 6.35
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.35
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-89d750dd0e9ced13f5ca",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "2F-FACADE:PARAPET_TOP:2F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.415,
+    "high": 5.415
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.415
+   },
+   "label": "MEASURED",
+   "basis": "18.05 m x 0.30 DRAWING-CONFIRMED (T-722 concrete agrees)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-8b0186a7c762cde9b53b",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W23",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.2,
+    "high": 2.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "1F-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 248.178057,
+    "high": 249.954348
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 249.954348
+   },
+   "label": "DRAWING-READ",
+   "basis": "high bound: the three arched step returns 1F/NW-2 1.776 m2 (T-348 r2 geometry) are built and rendered"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-8e743d3fc959f0128da5",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W14",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.65,
+    "high": 5.65
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.65
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-8fc0ef84a82316f912cd",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W12",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 6.35,
+    "high": 6.35
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.35
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-90199dd4394b21b21b06",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W18",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.82,
+    "high": 4.82
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.82
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-938135cf4fd2008ac1b3",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "2F-FACADE:PAINT_EDGE:W26",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.070563,
+    "high": 4.070563
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.070563
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-9628878ef7699c67ec56",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "2F-FACADE:PAINT_EDGE:W27",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.0,
+    "high": 4.0
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.0
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-9640af531898069cc45d",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W15",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 6.845844,
+    "high": 6.845844
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.845844
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-9669bde9e6b37fe1c508",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W09",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.5,
+    "high": 4.5
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.5
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-982ab2bc6e1d1c672bf9",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "2F-FACADE:PARAPET_OUTER:2F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 14.9,
+    "high": 14.9
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 14.9
+   },
+   "label": "MEASURED",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); T-305 / T-337 DRAWING-CONFIRMED faces"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-9c5ba69d91cf8e1e043c",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_INNER:ANNEX_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 8.88843,
+    "high": 14.91405
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 11.90124
+   },
+   "label": "DEFAULT",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); R-T324-1 split at c = 0.10 (roof build-up default: 5 cm insulation + 5 cm protection above the membrane): upturn exposed 0.10 of 0.20 -> midpoint; D-band end at mid (0.02 m2)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-9e40edefa411df4ade1a",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W07",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.2,
+    "high": 2.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-a0c8ffbfd68113575de4",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "1F-FACADE:PARAPET_OUTER:1F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 54.651307,
+    "high": 60.029307
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 58.253371
+   },
+   "label": "DEFAULT",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); 54.651 low + NE-1 / SW-1 0.08 x 1.20 + SW-2 4.40 x 1.20 = 5.280 (parapet 1.20 company default; range 1.10 .. 1.30 / 0.385 .. 1.60)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-a2780542dcf0bd72666c",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:CORNER_EDGE:PLINTH_GF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 14.25,
+    "high": 14.25
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 14.25
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-a7bb7850d1b13a093d09",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W08",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.5,
+    "high": 4.5
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.5
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-a853287771a92fcbd499",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W05",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.2,
+    "high": 2.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "GF-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 376.694149,
+    "high": 410.179149
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 391.253149
+   },
+   "label": "DRAWING-READ",
+   "basis": "376.694 low + (GF/NW-7 35.550 - W02 6.33 x 2.20 = 13.926 -> 21.624) - 7.065; D-GF-07 hole 2.00 x 2.50 = 5.000 printed plan tag (plan dimension governs a facade, company default; F-T737-1)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-b15852d929ba95ce8797",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:CORNER_EDGE:PASSAGE_MOUTH_NO_HOST",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 1.4,
+    "high": 1.4
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.4
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-b6a0ab4adcaae538a1f8",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PLINTH",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 71.68859,
+    "high": 72.749795
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 71.75114
+   },
+   "label": "DRAWING-READ",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); 72.750 high - NW-4 (6.6577 x 0.85 -> x 0.70: the arc stands on the pool rim +0.30, lines 2861 / 285C, T-751) ; NW-3 / NW-5 ends on the court +0.15 (285E / 283E), SW-8 +0.15 as every covered plinth"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-bd3478078952e97e1291",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:CORNER_EDGE:GF-STOREY",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 95.1,
+    "high": 95.1
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 95.1
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-c0e9a4c62171de1f369b",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "element_id": "GF-FACADE:facade below F.F.L. (plinth)",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 71.75114
+   },
+   "label": "DRAWING-READ",
+   "basis": "= plinth render faces (register)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-c1ee2df6d49af6ccaaff",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W01",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.2,
+    "high": 5.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-c79492a8ed9c2c310d37",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "GF-FACADE:PARAPET_INNER:ANNEX_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 8.88843,
+    "high": 14.91405
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 11.90124
+   },
+   "label": "DEFAULT",
+   "basis": "R-T324-1 split at c = 0.10 (roof build-up default: 5 cm insulation + 5 cm protection above the membrane): upturn exposed 0.10 of 0.20 -> midpoint; D-band end at mid (0.02 m2)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-c8d7e0b8c422b558b5fb",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W25",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 4.0,
+    "high": 4.0
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.0
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-cc7dc0a51f3319a99482",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "element_id": "GF-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 469.329
+   },
+   "label": "MEASURED",
+   "basis": "= GF render 391.253 + holes 59.150 + W02 13.926 + D-GF-07 5.000 = T-337 gross (register; render counted once)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-cdade9d53266d174ea6d",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "1F-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 248.178057,
+    "high": 249.954348
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 249.954348
+   },
+   "label": "DRAWING-READ",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); high bound: the three arched step returns 1F/NW-2 1.776 m2 (T-348 r2 geometry) are built and rendered"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-d4178f2108229818b472",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "1F-FACADE:PARAPET_INNER:1F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 41.82353,
+    "high": 56.608545
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 49.216037
+   },
+   "label": "ESTIMATE",
+   "basis": "R-T324-1 at c = 0.10 + 1F exposed height 1.07 .. 1.17 HELD (D-39 roof datum) at its midpoint"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-d503696a891174c1d837",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "2F-FACADE:PARAPET_OUTER:2F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 14.9,
+    "high": 14.9
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 14.9
+   },
+   "label": "MEASURED",
+   "basis": "T-305 / T-337 DRAWING-CONFIRMED faces"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "2F-FACADE:facade",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 117.305,
+    "high": 117.305
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 117.305
+   },
+   "label": "DEFAULT",
+   "basis": "125.160 gross (T-737 handle re-measure) - 7.855 holes; D-2F-01 head 2.20 (company default head)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-d5b431b40ee77854d295",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W17",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.29
+   },
+   "label": "DRAWING-READ",
+   "basis": "owner Q-76 A window 3.29 x 3.00 (T-627)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-d8a40db59611b0508dbc",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:CORNER_EDGE:PARAPET-OUTER_1F_9.70",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 6.585812,
+    "high": 6.585812
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.585812
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-e0d6f67fd63d6d84d934",
+   "item_code": "FIN.EXT.PAINT",
+   "unit": "m2",
+   "element_id": "2F-FACADE:PARAPET_INNER:2F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 8.49,
+    "high": 14.15
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 11.32
+   },
+   "label": "DEFAULT",
+   "basis": "= render of the same faces (UP-FIN-PAINT-002); R-T324-1 at c = 0.10 (28.30 m x 0.40)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-e3ee1b7f7603762da446",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "GF-FACADE:SLAB_EDGE",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 1.85426,
+    "high": 4.30924
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.6397
+   },
+   "label": "DEFAULT",
+   "basis": "pool-court front 0.962 + void ring inner 4.4636 m x 0.60 (beam depth default; T-348 r2 0.20 .. 0.75)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-ea0199024291675b2fc5",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "GF-FACADE:PAINT_EDGE:W04",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 2.2,
+    "high": 2.2
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.2
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-fbda06a1ad25128c6a63",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "element_id": "2F-FACADE:PARAPET_INNER:2F_ROOF",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 8.49,
+    "high": 14.15
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 11.32
+   },
+   "label": "DEFAULT",
+   "basis": "R-T324-1 at c = 0.10 (28.30 m x 0.40)"
+  },
+  {
+   "set": "EXT_RENDER_PAINT",
+   "line_id": "L-fff0703638afcf72604c",
+   "item_code": "FIN.EXT.PAINT.EDGE",
+   "unit": "lm",
+   "element_id": "1F-FACADE:PAINT_EDGE:W13",
+   "before": {
+    "class": "HELD",
+    "net": null,
+    "low": 5.8,
+    "high": 5.8
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.8
+   },
+   "label": "MEASURED",
+   "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)"
+  }
+ ]
+}
