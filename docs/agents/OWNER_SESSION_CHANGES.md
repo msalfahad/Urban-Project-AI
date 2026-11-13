@@ -140,3 +140,4 @@ conflicts with something you planned, say so in your report to the main chat ins
 | 2026-10-19 08:51 | Owner answers recorded for Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20, Q-21 and the drawing-first directive added | OWNER_QUESTIONS.md, MISSION.md | Owner's words in the main chat |
 | 2026-10-19 08:50 | Merge instruction: the verifier merges verified tasks and regenerates the generated maps | OWNER_QUESTIONS.md | Owner |
 | 2026-10-19 08:45 | Lead instructions replaced: reports in engineering terms, PROGRESS.md, question format, report delivered to the main chat each run; auditor check (hourly :28) created | Lead trigger; auditor trigger; PROGRESS.md; MISSION.md; TEAM.md | Owner |
+| 2026-11-13 | OUTPUT_FORMAT_REFERENCE.md (new), boq/build_boq.py (Key quantities sheet), Urban_trial_BOQ_V3.0.78_with_fill.xlsx | QS-office sample shape and plausibility bands recorded without client names; workbook rebuilt | owner upload of three sample PDFs |

@@ -146,3 +146,15 @@ OWNER_QUESTIONS_ANSWERED.md, AGENT_BRIEF.md and BOARD.md; this file is the short
 - Waiting: plaster / paint with the wet band, external plaster, stairs, roof, formwork +33 m2, waterproofing.
 - Verified whole lines: slab 60.28 m3 and lift-pit blinding only. Target for no held lines in concrete, masonry,
   plaster and tiles: about 17 Nov; main risk: dimensions the drawings do not print (designer list).
+
+### 2026-11-13 evening: QS-office samples (owner upload, three PDFs; no client names kept)
+- Owner: "here are they جلال samples" (not Alsenan; "maybe would help you for our own system"). Recorded in
+  docs/agents/OUTPUT_FORMAT_REFERENCE.md: the document shape (inputs sheet with slab-to-slab storey heights and wastage
+  %, key-quantities page, one sheet per trade, corners in lm by type, steel by diameter = length x d^2/162), the rules
+  seen (block count by volume = 12.5/m2; wastage apart: concrete 5 %, steel 10 %, blocks 5 %, tiles 10 %; paint =
+  plaster faces - tiled; ceilings = floor area) and plausibility bands per m2 of internal floor (3 Kuwait villas agree
+  on 120-140 kg steel per m3 of concrete = the owner's end-of-project approximate-tons basis).
+- Workbook now has a "Key quantities" sheet (calculated / held / blank per trade + per-m2 ratio vs the band).
+  V3.0.78 with fill: concrete 291.5 + 44.6..66.3 held (0.68 m3/m2, in band); blockwork 467.8 net with 15 blank lines
+  (1.10/m2 vs band 2.5..3.2 = the biggest hole); external plaster 0 (15 blank); corners 0 calc; backfill 0 calc;
+  sanitary count 0. These four are the next fills.
