@@ -247,6 +247,34 @@ def diff_rows(applied):
             for r in sorted(applied, key=lambda r: r["line_id"])]
 
 
+def write(out, base_lines, rows_doc, base_version=EXTENDS):
+    """the hub's V3_0_81_* files beside the base candidate's files. -> (file names, identity)."""
+    import csv
+    import io
+    from pathlib import Path
+    from engine.source import arch_v30 as A30
+    from engine.source import boq_line as BL
+    out = Path(out)
+    new, applied = apply_boq_lines(base_lines, rows_doc, base_version)
+    d = diff_rows(applied)
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=list(d[0]), lineterminator="\n")
+    w.writeheader()
+    w.writerows(d)
+    by_set = {}
+    for r in applied:
+        by_set[r.get("set") or "-"] = by_set.get(r.get("set") or "-", 0) + 1
+    ident = {"base_lines": len(base_lines), "v3_0_81_lines": len(new), "applied": len(applied), "by_set": by_set,
+             "outside_rows_identical_to_base": True, "rows_candidate_version": rows_doc.get("candidate_version")}
+    run = {"method": METHOD, "policy": POLICY_ID, "extends": base_version, "rule": RULE, "released_default": False,
+           "identity": ident}
+    files = {"V3_0_81_BOQ_LINES.json": BL.dumps(new), "V3_0_81_BOQ_LINES.csv": A30._lines_csv(new),
+             "V3_0_81_DIFF.csv": buf.getvalue(), "V3_0_81_RUN.json": A30._j(run)}
+    for name, text in files.items():
+        (out / name).write_text(text, encoding="utf-8")
+    return sorted(files), ident
+
+
 def policy_record():
     return {"policy_id": POLICY_ID, "method": METHOD, "extends": EXTENDS, "rule": RULE, "labels": list(LABELS),
             "row_schemas": list(ROW_SCHEMAS), "valued_state_for_non_measured": PROVISIONAL,
