@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13 01:34 UTC | Worker 1 | SUCCESS | T-752 READY 3d0ca771 | B13-07 special metalwork census: every arch + struct sheet read, canopy / pergola / screen / frame NOT_DRAWN; 9 beam ends no family owns (1F SE 3 pcs 0.10x0.10, 0.900 lm visible, plan = elevation by handle; annex 6 pcs raster p.12), kg + material HELD (designer D-M1); railings / shutters / gates EXCLUDED by id; freelancer no row; 18 tests pass, nothing wired | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13 01:20 UTC | Worker 1 | STARTED | run session_01E6cPncjF3EzoWVTb5vdTJx | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T01:00Z | Worker 3 | STARTED | run session_01E6cPnaNwboeae2SEnZXDEM | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T00:59Z | Worker 2 | SUCCESS | T-753 READY 7e8cc3ab | B13-06 joinery census on P7757 by handle: base runs 3 pcs 11.616 lm / 6.513 m2 worktop, vanities 3 pcs 5.973 lm / 2.861 m2 (5 basins to B12-01), built-in cupboards 3 pcs 5.362 lm; heights and materials HELD (designer D-J1..3 proposed), wall cabinets NOT_DRAWN, freelancer NO_ROW; completeness scan found 2 vanities the visual read missed | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: none
