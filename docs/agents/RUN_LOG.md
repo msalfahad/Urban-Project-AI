@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T12:16Z | Lead | STARTED | run session_01E6cPnab3smX4vFuS44KkfF | repo-attached routine | task state: board | report pending
 - 2026-11-13T12:12Z | Worker 1 | SUCCESS | T-755 r2 READY (agents/task-T-755 @ d31fec52) | R-T755-1 v2 reads only live cause fields (rfi question, range basis) on lines with a CAUSE_TEXT / RESTATE record: exactly 38 V3.0.77 HELD lines re-bucketed (35 column / formwork D-63+D-66 -> D-66, 3 lift -> D-43); item 3 columns 40 sole / 16 shared active, item 6 lift 11 / 2; concrete sweep MEASURABLE_NOW 0 of 194 stands; F-T755-5 lift pit depth cited as D-43 / D-63 / L-1 by line (no quantity moves) | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK (own chain b8524d5c reproduced); problem: none
 - 2026-11-13T11:50Z | Verifier | IDLE | none (run lock held by run 20261113T095152-419-16639 since 2026-11-13T09:51Z) | overlap lock: another Verifier run is active; no claim, no change, no quantity | lock
 - 2026-11-13T11:21Z | Worker 1 | STARTED | run session_01E6cPnaRUAHj3KqRvG7qKpp | repo-attached routine | task state: none yet | self-check pending | stale run lock of run 20261113T091953-393-7679 since 2026-11-13T09:19Z recovered
