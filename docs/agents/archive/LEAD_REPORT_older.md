@@ -1,3 +1,18 @@
+## LEAD REPORT 2026-11-13 04:15 UTC
+
+Drive read OK (no file created or modified in the private project folders since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.77 / master 1.78.0 (NOT RELEASED; released V2.9 + route G untouched). 3 merged since 00:13 (paint package, metalwork and joinery censuses), each with the Checker's own re-measure.
+- PAINT (m2, your rule UP-FIN-PAINT-002 now in the candidate): held 604.990 .. 710.006 -> 603.802 .. 687.847 (low -1.19, high -22.16: 24.15 m2 of door / window returns left the area); released 217.208 unchanged. Checker re-did the 5 changed rooms by hand (plaster - band - tiled): AGREE; one room 1F_11 +4.31 high from a wall opening deducted on an outdated outline (ENGINE_WRONG fixed).
+- PAINT EDGES (lm, new lines, all HELD): inside 0 .. 33.80 (30 openings, 3 blank), outside 283.218 .. 284.418 (windows 103.68 along their arches, corners). Exterior paint m2 = render 1,009.11 .. 1,087.62 waits the exterior render package.
+- SPECIAL METALWORK (pcs): no canopy / pergola / gate drawn on any sheet; 9 projecting beam ends counted (3 + 6), material / size not printed -> designer list item 17. Freelancer: no row (not comparable).
+- JOINERY (lm / m2): base runs 11.616 lm, worktop 6.513 m2; vanities 5.973 lm / 2.861 m2; cupboards 5.362 lm, face m2 HELD (no height) -> designer list item 18. Freelancer: no row.
+- Learned (section 7 ADOPTED): a census closes with a completeness scan (0 unexplained); absence needs every sheet read and unowned drawn pieces are counted, never dropped; an opening edge is one lm line whichever face lists it.
+- Missing: tiles + stair finishes, exterior render, WP, earthworks still to join the candidate (serial hub, next TODO). The designer list quotes line counts from V3.0.70: new task refreshes it on V3.0.77 and checks whether any held concrete line is now measurable.
+- Team health: 13 runs since 00:13, all closed with a final line; self-check PASS everywhere incl. this run. Three idle worker runs (02:40-03:21) again because next rows waited on just-READY tasks and lane S had no own row; fixed (T-738, T-754 TODO; new lane S row). One Checker STARTED line had a mistyped run id (no effect). Queue check 14 actionable, 0 flagged, 0 stall.
+- Gates: lowest open gate 1 (exterior edge residuals, designer re-census, tiles package). M3 estimate 15-17 Nov.
+
+OWNER PACKAGE: none today (no item meets section 2.7). The designer list now has 18 items (for you to send when you choose; agents never send it).
+
+NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
 ## LEAD REPORT 2026-11-13 00:13 UTC
 
 Drive read OK (no file in the private project folders modified since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.76 / master 1.77.0 (NOT RELEASED; released V2.9 + route G untouched). 3 pieces merged since 20:14, each with the Checker's own re-measure on the drawings.

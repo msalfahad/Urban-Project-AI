@@ -2,57 +2,49 @@
 
 # LEAD STATE (at most 5 KB; the Lead rewrites it at the end of every run)
 
-Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log e121e0b4..`,
-`git -C .work/board log` after this run's commit, `git log d24e4497..` on main, RUN_LOG lines after 12:16Z 13 Nov,
-rows changed since), then rewrite. Check every MERGED claim with `git merge-base --is-ancestor <sha> origin/...`.
+Next Lead run: read this file, then only what changed since: `git -C .work/engine log 8d3bbf1c..`, board commits after
+this run's, RUN_LOG lines after 16:31Z 13 Nov, rows changed since. Check every MERGED claim with
+`git merge-base --is-ancestor <sha> origin/...`.
 
 ## Last seen
-- engine origin head: e121e0b4 (T-756 merge, research). No owner commit.
-- main: d24e4497 unchanged. Last Lead run: 2026-11-13 12:16 UTC (session_01E6cPnab3smX4vFuS44KkfF).
-- UNCLOSED runs: Verifier 09:52 (merged T-756 10:00, no final line; lock expired 11:51), Worker 1 09:19 (resumed 11:21).
-- Drive: no file created / modified in the private folders after 12:00 12 Nov.
+- engine origin head: 8d3bbf1c (T-761 merge). No owner commit on the engine. main d24e4497 unchanged.
+- Last Lead run: 2026-11-13 16:31 UTC (session_01E6cPnbKcxVkiLBmNh56Jcy). Drive readable; no new file in the
+  private folders since 12 Nov 12:00 (no photos).
+- Candidate of record ARCH_TAKEOFF_V3.0.78 (T-738), registry 1.79.0 still PENDING [T-738] (merge 208c5689 did not
+  promote). NOT RELEASED; released default V2.9 + route G untouched.
 
-## Governing
-- OWNER DECISION 2026-11-13 12:00 DELIVERY RESET: materiality UP-QTY-MATERIALITY-001 (< 0.1 m3 ignored + logged,
-  allowance max(1 m3, sum); other units < 1 % not worked; report 0.01 m3 / 0.1 m2 / 0.1 lm); company defaults: values
-  from the owner only; owner sends DESIGNER_QUESTIONS; agents work ONLY on workbook gaps in order external render ->
-  tiles + stairs -> WP -> earthworks -> roof layers -> missing families (MEP last). NO new census / statement /
-  reconciliation / lessons rows; every new row moves a BOQ quantity.
-- OWNER RULE 2026-11-12 PAINT (UP-FIN-PAINT-002). Rebar PARKED (2026-11-11). Only the main chat merges PRs.
-- STACKING (Lead 13 Nov 12:30): T-314 r3 (V3.0.79, W2) and T-750 (V3.0.80, W3) built on T-738 r2 head 49d21678;
-  Gate B one at a time T-738 -> T-314 -> T-750 -> T-509, each rebased by tools on its merged predecessor.
-  Never write "after T-nnn" in a claimable row (queue_check reads it as WAITING).
+## Hub order (Lead 16:40, written in rows and the LEAD NOTE)
+T-314 r4 (W2; V3.0.79; master 1.80.0 promotes T-738 + T-314; registry-only) -> T-770 r2 (W3; rebase by tools,
+V3.0.81 kept, master 1.81.0; MAIN_FILL 81 non-formwork rows + formwork per Checker ruling + T-761 concrete if within
+three families) -> T-750 (W3; V3.0.80 reservation lapsed, next free at claim) -> T-764 wiring.
 
-## Baseline (V3.0.77 b8524d5c, NOT RELEASED)
-- STR.CONC released 291.48 m3; 194 HELD (72 width < 0.1 m3: low 19.69, widths 3.83; 42 wider; 80 blank). Formwork 1,061.10 m2.
-- FIN.EXT.FINISH 0 released; T-756 ledger render = paint 1,009.11 .. 1,087.62 m2; corners 176.94 .. 178.14 lm.
-- FIN.PAINT released 217.21, held 603.80 .. 687.85 m2. FIN.PLASTER held 1,106.95 .. 1,302.17 m2.
-- WP roof released 93.19 m2; WP 53 HELD + 5 MISSING. Roof layers B13-01: insulation / protection unprinted
-  (need owner default values), screed AT_LEAST 10.63 m3 (T-646), all blank in the candidate.
-- T-738 r2 figures (AGREE): stair wall tile 18.44 .. 44.77 m2, risers 13.09 .. 13.74 m2.
+## Open dispute (decide next run from the Checker's T-762 verdict)
+- MAIN_FILL_ALL formwork 126 rows 472.8 m2 vs T-762 face set 240.6 m2 on the same lines (W1: host ratio applied to
+  each partial line, hosts 2-4x). Checker asked to settle on one host by hand. CONFIRMED -> T-770 r2 wires T-762's
+  formwork; the owner's fill_from_index.py formwork step needs his fix (told him by push 16:4x).
 
-## Live rows (12:30)
-- READY: T-738 r2 (Gate B, since 09:46, CHECKER-RUNS), T-755 r2 (Gate A, since 12:12, EVIDENCE).
-- TODO: W1 T-757 (materiality, NEW); W2 T-314 r3 (stacked); W3 T-750 (stacked). QUEUED: T-509, T-363, T-424, T-364,
-  T-513, T-502. PARKED: T-664, T-382. IN PROGRESS: T-180. PAUSED: T-450 p2, T-451, T-472.
-- Queue check 14 actionable, 0 flagged, 0 stall.
-- NEXT RUN: if T-738 merged -> SCOREBOARD v2 restate in queue; T-314 r3 Gate B next. If T-755 r2 merged -> counts
-  for DESIGNER_QUESTIONS (owner sends it). T-757 merged -> wiring goes into the next free hub package (name it).
+## Fill state (from handoffs, not yet wired except V3.0.78)
+- Concrete: T-761 MERGED fix rows, 80 blank -> 0, +58.42 m3 + 1.00 SAFETY (unwired).
+- Formwork: T-762 READY, 336 blank -> 0, 1,098.0 -> 2,226.9 m2 ESTIMATE/DEFAULT (no freelancer row).
+- Ext render + paint: T-760 MERGED fix rows 1,054.00 m2 each vs freelancer 1,469.97 = -28.3 % RULE_DIFFERENCE; T-314
+  wiring 1,008.58 .. 1,085.61 m2 (verified r3, merge blocked by registry only).
+- T-770 r1 (unmerged): blank non-rebar 692 -> 551; roof finish 248.8 vs freelancer 285 m2 (-12.7 %); plaster
+  1,254.7 m2 + held; paint 675.8; disposal 105.6 .. 115.5 m3 held.
 
-## Top 5 priorities
-1. T-738 r2 Gate B (waiting a Checker run).
-2. T-314 r3 exterior render + paint into the candidate.
-3. T-750 WP; then T-509 earthworks.
-4. T-757 concrete materiality -> +19.69 m3 released, allowance line.
-5. Roof layers once the owner gives default values.
+## Live rows (16:40)
+- READY: T-762 (Gate A). TODO: W1 T-757, T-767, T-769, T-772; W2 T-314 r4, T-763, T-765, T-766, T-768, T-774;
+  W3 T-770 r2 (waits T-314 r4), T-764, T-750, T-771, T-775, T-773. QUEUED (folded): T-363, T-364, T-424, T-502,
+  T-509, T-513. PAUSED: T-382, T-664, T-450 p2, T-451, T-472. IN PROGRESS: T-180.
+- Queue check 24 actionable, 0 flagged, 0 stall.
+- T-763 sharpened: MAIN_FILL already fills 11 dry-room plaster + 11 paint + bed points; only the rest.
 
 ## Rules decided (keep)
-- Board check reads the newest Lead note line containing 'LANE ORDER:'. Status word FIRST; 7 cells; no '|' in a cell.
-- MERGED only after `engine push` + sha on origin. Keep one claimable row per lane.
+- Board check reads the newest line starting `Lead <date> <hh:mm>` that contains 'LANE ORDER:'; lanes separated by ';'.
+- Status word FIRST; 7 cells; no '|' in a cell. MERGED only after `engine push` + sha on origin.
 - Register: arris once; opening edges in paint = lm; flush parapet screen = one face; railings in the railing family;
   parapet block body -> A masonry, downstand -> B10; stair concrete + formwork S, finish faces A.
 - Lessons: no new rows (owner reset). PROPOSED stay: L-T727-1, L-T738-1, L-T755-1.
 
 ## Blockers / open owner items
-- Company default values (roof insulation / protection first). ORR-007 stair skirting payable form. Q-34 2F top roof.
-  Scheduled-task edits approved but not possible under repo settings. Scout paused.
+- DESIGNER_QUESTIONS (18) with the owner; ORR-007 stair skirting; Q-34 2F top roof; release switch T-773 is his.
+- Scheduled-task frequency change recommended in DELIVERY_MODE s.7 (owner only). Scout paused.
