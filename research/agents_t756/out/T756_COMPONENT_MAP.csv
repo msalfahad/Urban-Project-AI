@@ -1,0 +1,67 @@
+component,trade,t311_line,t311_line_state,qty,unit,v3077_line_id,v3077_state,why
+ANNEX parapet / concrete (RC part above the slab top),CONCRETE,NO_LINE,,1.733106 .. 2.888510,m3,L-1d419b64e8ca1af30fb4,LIVE,
+ANNEX parapet / blockwork (masonry part),BLOCKWORK,NO_LINE,,0.000000 .. 5.777020,m2,,MISSING,no MAS.* line carries a parapet run (V3.0.77 element census: 0; T-311 R-T311-2); masonry part 0 .. solid HELD (Q-65 C / D-39)
+ANNEX parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.331060 .. 28.885100,m2,L-e1bde63d9e42dd9b9558,LIVE,
+ANNEX parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.331060 .. 28.885100,m2,L-b9be639b2f313de7b467,LIVE,
+ANNEX parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.331060 .. 28.885100,m2,L-c29bb95434f82bae307a,LIVE,
+ANNEX parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.331060 .. 28.885100,m2,L-21cb4ac895e1c99f214f,LIVE,
+ANNEX parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.331060 .. 28.885100,m2,L-214814fa0c97c6e4d598,LIVE,
+ANNEX parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.331060 .. 28.885100,m2,L-571f92c443ba62a26151,LIVE,
+ANNEX parapet / reinforcement,REBAR,NO_LINE,,,t,,PARKED,"owner decision 2026-11-11 15:30 (board): rebar parked, no new rebar rows (Q-81 deferred)"
+ANNEX parapet / exterior plaster outer face,PLASTER_EXT,L-b05f70c92405dbcfbe62,LIVE,14.671050 .. 14.671050,m2,L-7c48b6a481d71ac57c54,NEW_FREE,added at the wiring package
+ANNEX parapet / plaster inner face,PLASTER_PARAPET_INNER,NO_LINE,,14.214050 .. 14.214050,m2,L-c79492a8ed9c2c310d37,NEW_FREE,added at the wiring package
+ANNEX parapet / top (cap / coping),COPING_TOP,NO_LINE,,5.777020 .. 5.777020,m2,L-54e708d3940d1932607c,NEW_FREE,added at the wiring package
+ANNEX parapet / membrane upturn on the inner face,WATERPROOFING,L-d4c73babd2a275c28929,LIVE,28.428100 .. 28.428100,m.l (0.20 m high),L-d4c73babd2a275c28929,LIVE,
+ANNEX parapet / top arrises (outer + inner),CORNERS,NO_LINE,,57.770200 .. 57.770200,m.l,,MISSING,horizontal arrises: T-337 FIN.EXT.CORNERS 710.171878 .. 821.858800 m.l (stage missing item; T-749: not restated); no line in V3.0.77
+GF parapet / concrete (RC part above the slab top),CONCRETE,NO_LINE,,1.702194 .. 2.836990,m3,L-b5ffc172a354375ca107,LIVE,
+GF parapet / blockwork (masonry part),BLOCKWORK,NO_LINE,,0.000000 .. 5.673980,m2,,MISSING,no MAS.* line carries a parapet run (V3.0.77 element census: 0; T-311 R-T311-2); masonry part 0 .. solid HELD (Q-65 C / D-39)
+GF parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.021940 .. 28.369900,m2,L-a7787e7e1a5e487fb255,LIVE,
+GF parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.021940 .. 28.369900,m2,L-888002f64f3975fefabd,LIVE,
+GF parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.021940 .. 28.369900,m2,L-a518717aecafe678da2f,LIVE,
+GF parapet / reinforcement,REBAR,NO_LINE,,,t,,PARKED,"owner decision 2026-11-11 15:30 (board): rebar parked, no new rebar rows (Q-81 deferred)"
+GF parapet / exterior plaster outer face,PLASTER_EXT,NO_LINE,,14.384950 .. 14.384950,m2,L-5816ca234f93f8947eb9,NEW_FREE,added at the wiring package
+GF parapet / plaster inner face,PLASTER_PARAPET_INNER,NO_LINE,,13.984950 .. 13.984950,m2,L-60877480b3303b0be233,NEW_FREE,added at the wiring package
+GF parapet / top (cap / coping),COPING_TOP,NO_LINE,,5.673980 .. 5.673980,m2,L-490fdc0ff59a0e66ca13,NEW_FREE,added at the wiring package
+GF parapet / membrane upturn on the inner face,WATERPROOFING,L-994b88140f2ea50f1b31,LIVE,27.969900 .. 27.969900,m.l (0.20 m high),L-994b88140f2ea50f1b31,LIVE,
+GF parapet / top arrises (outer + inner),CORNERS,NO_LINE,,56.739800 .. 56.739800,m.l,,MISSING,horizontal arrises: T-337 FIN.EXT.CORNERS 710.171878 .. 821.858800 m.l (stage missing item; T-749: not restated); no line in V3.0.77
+1F parapet / concrete (RC part above the slab top),CONCRETE,NO_LINE,,2.980569 .. 11.647660,m3,L-9a2c81164ec6499cc28c,LIVE,
+1F parapet / blockwork (masonry part),BLOCKWORK,NO_LINE,,0.000000 .. 43.335453,m2,,MISSING,no MAS.* line carries a parapet run (V3.0.77 element census: 0; T-311 R-T311-2); masonry part 0 .. solid HELD (Q-65 C / D-39)
+1F parapet / formwork (cast faces),FORMWORK,NO_LINE,,29.805690 .. 116.476594,m2,L-30cfc20e965cd0ba8c9b,LIVE,
+1F parapet / formwork (cast faces),FORMWORK,NO_LINE,,29.805690 .. 116.476594,m2,L-db55cbe711ea18bf79ae,LIVE,
+1F parapet / formwork (cast faces),FORMWORK,NO_LINE,,29.805690 .. 116.476594,m2,L-99c08bf33b245b6a3b58,LIVE,
+1F parapet / formwork (cast faces),FORMWORK,NO_LINE,,29.805690 .. 116.476594,m2,L-0bbf01242ef68c4d7323,LIVE,
+1F parapet / formwork (cast faces),FORMWORK,NO_LINE,,29.805690 .. 116.476594,m2,L-f600eb2858eeee5e3910,LIVE,
+1F parapet / formwork (cast faces),FORMWORK,NO_LINE,,29.805690 .. 116.476594,m2,L-1cb99599c8fa353f2f3b,LIVE,
+1F parapet / formwork (cast faces),FORMWORK,NO_LINE,,29.805690 .. 116.476594,m2,L-4dd863c8135ddd3d6486,LIVE,
+1F parapet / formwork (cast faces),FORMWORK,NO_LINE,,29.805690 .. 116.476594,m2,L-67d999ba180df8384c41,LIVE,
+1F parapet / formwork (cast faces),FORMWORK,NO_LINE,,29.805690 .. 116.476594,m2,L-f6d75095bce737a0623a,LIVE,
+1F parapet / formwork (cast faces),FORMWORK,NO_LINE,,29.805690 .. 116.476594,m2,L-84d165a110d688b96400,LIVE,
+1F parapet / formwork (cast faces),FORMWORK,NO_LINE,,29.805690 .. 116.476594,m2,L-d01f2c570963cbcdda77,LIVE,
+1F parapet / reinforcement,REBAR,NO_LINE,,,t,,PARKED,"owner decision 2026-11-11 15:30 (board): rebar parked, no new rebar rows (Q-81 deferred)"
+1F parapet / exterior plaster outer face,PLASTER_EXT,NO_LINE,,53.913501 .. 59.291501,m2,L-5a04a3ec70ce025ddd95,NEW_FREE,added at the wiring package
+1F parapet / plaster inner face,PLASTER_PARAPET_INNER,NO_LINE,,52.081974 .. 57.185095,m2,L-d4178f2108229818b472,NEW_FREE,added at the wiring package
+1F parapet / top (cap / coping),COPING_TOP,NO_LINE,,9.935230 .. 9.935230,m2,L-757343d535ae19b589bf,NEW_FREE,added at the wiring package
+1F parapet / membrane upturn on the inner face,WATERPROOFING,L-5ce5ba49792e8f9d1f6f,LIVE,48.783500 .. 48.783500,m.l (0.20 m high),L-5ce5ba49792e8f9d1f6f,LIVE,
+1F parapet / top arrises (outer + inner),CORNERS,NO_LINE,,99.352300 .. 99.352300,m.l,,MISSING,horizontal arrises: T-337 FIN.EXT.CORNERS 710.171878 .. 821.858800 m.l (stage missing item; T-749: not restated); no line in V3.0.77
+2F parapet / concrete (RC part above the slab top),CONCRETE,NO_LINE,,1.624500 .. 2.707500,m3,L-030538dda6a32c601c4c,LIVE,
+2F parapet / blockwork (masonry part),BLOCKWORK,NO_LINE,,0.000000 .. 5.810000,m2,,MISSING,no MAS.* line carries a parapet run (V3.0.77 element census: 0; T-311 R-T311-2); masonry part 0 .. solid HELD (Q-65 C / D-39)
+2F parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.430000 .. 29.050000,m2,L-e6456c9af8c9c810f960,LIVE,
+2F parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.430000 .. 29.050000,m2,L-92cd80b46d8b8e3a1d0b,LIVE,
+2F parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.430000 .. 29.050000,m2,L-63056244c05c761419e7,LIVE,
+2F parapet / formwork (cast faces),FORMWORK,NO_LINE,,17.430000 .. 29.050000,m2,L-1ec53dc06ebdad85a19d,LIVE,
+2F parapet / reinforcement,REBAR,NO_LINE,,,t,,PARKED,"owner decision 2026-11-11 15:30 (board): rebar parked, no new rebar rows (Q-81 deferred)"
+2F parapet / exterior plaster outer face,PLASTER_EXT,L-d52c4f763b19aedf8b8b,LIVE,14.900000 .. 14.900000,m2,L-d503696a891174c1d837,NEW_FREE,added at the wiring package
+2F parapet / plaster inner face,PLASTER_PARAPET_INNER,NO_LINE,,14.150000 .. 14.150000,m2,L-fbda06a1ad25128c6a63,NEW_FREE,added at the wiring package
+2F parapet / top (cap / coping),COPING_TOP,NO_LINE,,5.415000 .. 5.415000,m2,L-89d750dd0e9ced13f5ca,NEW_FREE,added at the wiring package
+2F parapet / membrane upturn on the inner face,WATERPROOFING,L-aac1f35e08f85b643692,LIVE,28.300000 .. 28.300000,m.l (0.20 m high),L-aac1f35e08f85b643692,LIVE,
+2F parapet / top arrises (outer + inner),CORNERS,NO_LINE,,58.100000 .. 58.100000,m.l,,MISSING,horizontal arrises: T-337 FIN.EXT.CORNERS 710.171878 .. 821.858800 m.l (stage missing item; T-749: not restated); no line in V3.0.77
+plinth house / exterior plaster face,PLASTER_EXT,NO_LINE,,63.927290 .. 64.988495,m2,L-0a6d30ea444e90e119bb,NEW_FREE,added at the wiring package
+plinth house / concrete substrate face (ground-beam outer face),CONCRETE,OTHER_LINE: STR.CONC.GROUND_BEAM (59 lines),,60.345055 .. 61.406260,m2 of face (no m3),,OTHER_TRADE,substrate face of STR.CONC.GROUND_BEAM (61 lines in V3.0.77; T-311 counted 59): not a finish line
+plinth house / wall course ground-beam top -> F.F.L.,BLOCKWORK,L-4165954ce4871eda30cc,LIVE,3.582235 .. 3.582235,m2,L-4165954ce4871eda30cc,LIVE,
+plinth annex / exterior plaster face,PLASTER_EXT,NO_LINE,,7.056300 .. 7.056300,m2,L-0a6d30ea444e90e119bb,NEW_FREE,added at the wiring package
+plinth annex / concrete substrate face (ground-beam outer face),CONCRETE,OTHER_LINE: STR.CONC.GROUND_BEAM (59 lines),,5.579200 .. 5.579200,m2 of face (no m3),,OTHER_TRADE,substrate face of STR.CONC.GROUND_BEAM (61 lines in V3.0.77; T-311 counted 59): not a finish line
+plinth annex / wall course ground-beam top -> F.F.L.,BLOCKWORK,L-4165954ce4871eda30cc,LIVE,1.477100 .. 1.477100,m2,L-4165954ce4871eda30cc,LIVE,
+plinth passage / exterior plaster face,PLASTER_EXT,NO_LINE,,0.705000 .. 0.705000,m2,L-0a6d30ea444e90e119bb,NEW_FREE,added at the wiring package
+plinth passage / substrate split,CONCRETE,NO_LINE,,,m2,,MISSING,"passage substrate split HELD (T-311): no quantity, no line"
+annex-roof band (1F SE-1 +4.30 -> +5.50) / exterior plaster,PLASTER_EXT,NO_LINE,,4.080000 .. 4.080000,m2,L-b05f70c92405dbcfbe62,LIVE,
+annex-roof band / membrane upturn at its foot,WATERPROOFING,L-d4c73babd2a275c28929,LIVE,3.400000 .. 3.400000,m.l (0.20 m high),L-d4c73babd2a275c28929,LIVE,
