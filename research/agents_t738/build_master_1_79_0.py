@@ -53,13 +53,23 @@ PENDING = {
     "changes_families_by_item_code": ["FIN.MARBLE.LANDING", "FIN.MARBLE.RISER", "FIN.MARBLE.TREAD", "FIN.STAIR.FLIGHT",
                                       "FIN.STAIR.SKIRTING.SLOPED", "FIN.STAIR.SKIRTING.ZIGZAG", "FIN.STAIR.SOFFIT",
                                       "FIN.STAIR.STEP_LM", "FIN.WALL.TILE"],
-    "note": "@NOTE@",
+    "note": ('T-738 (research/agents_t738/T-738_TILES_STAIR_GATE_B.md): TILE_GATE_B_V1 + STAIR_FINISH_GATE_B_V1 from the merged T-702 / T-715 / T-718 ledgers with the T-733 tread verdict, as mapped by T-730 (hubs H3 / H3S): 2 stair-core wall tile lines HELD blank -> bounded 18.44 .. 44.765 m2; 86 stair finish lines restated (15 HELD points: risers 10.338610 m2, winder treads 1.3225 m2, pitch lines 20.234818 m; 8 bounds; 20 EXCLUDED: 15 duplicate readings named to their carriers, 5 with no physical element; 38 figures beside: 27 ORR-007 skirting forms, 8 caps, 3 lower ends; 3 causes named) and 1 closing riser 0.1587 m2 added HELD; released lines and every other line byte-identical; the Gate B integration package'),
 }
 PROPOSED = ("1.79.0 (T-738): restated by the ARCH_TAKEOFF_V3.0.78 package (Gate B): stair-core wall tile bounds and "
             "the stair finish lines from the merged T-715 / T-718 ledgers (HELD; ORR-007 forms beside); the released "
             "capability of V2.9 + route G is unchanged")
 OPT_IN = "ARCH_TAKEOFF_V3.0.78 (engine/source/arch_v3078.py, opt-in candidate; Gate B package T-738)"
-MISS = @MISS@
+MISS = {
+    'B4-01': ('in the opt-in candidate V3.0.78: the two GF stair-core wall tile lines HELD bounded (GF-10 11.40 .. 25.21, GF-11 7.04 .. 19.555 m2, T-702 (b): run x tile top 2.20 .. 4.35 less openings; floor level C-SH-2 designer item); 4 wall tile lines stay HELD blank'),
+    'B7-01': ('in the opt-in candidate V3.0.78: 7 pitch lines HELD at their drawn figures (20.234818 m.l, R-T715-1), 5 duplicate readings EXCLUDED with their carriers, 2 blank by name (winder walking line D-67; RS-C curved pitch D-08 / RFI-S27)'),
+    'B7-02': ('in the opt-in candidate V3.0.78: winder treads HELD 1.3225 m2 (turn region tiled, R-T715-2); 3 tread exposure lines (1F views of GF flights) EXCLUDED as duplicate readings (T-733: highs ENGINE_RIGHT on one step-line set, the GF lines carry them); RS-C tread blank by name (marble edge / curtail D-08)'),
+    'B7-03': ('in the opt-in candidate V3.0.78: 7 riser lines HELD at their drawn figures (10.338610 m2), the MS2-TR closing riser added HELD 0.1587 m2, turn / curved risers bounded (0.785833 .. 1.111337 and 1.803598 .. 2.131176, T-718), 4 duplicate readings EXCLUDED'),
+    'B7-04': ('in the opt-in candidate V3.0.78: the GF landing bound EXCLUDED (no landing in it, T-493); the 2F landing bound 0 .. 9.225 m2 waits the T-493 landing lines (WIRING_GAP)'),
+    'B7-06': ('in the opt-in candidate V3.0.78: winder and RS-C nosings bounded (5.75 .. 8.131728 and 13.80 .. 16.52144 m.l, T-718); 3 duplicate readings EXCLUDED'),
+    'B7-07': ('in the opt-in candidate V3.0.78: 14 zigzag form figures (23.468477 m.l) beside their blank lines, CONDITIONAL on ORR-007 (never summed); 2 corner walls bounded 2.35 .. 4.016668; 4 caps beside; 2 stretches with no wall face EXCLUDED'),
+    'B7-08': ('in the opt-in candidate V3.0.78: 13 sloped form figures (17.009045 m.l) beside their blank lines, CONDITIONAL on ORR-007 (never summed); 2 corner walls bounded 2.35 .. 2.881166; 4 caps and 1 lower end beside; 2 stretches with no wall face EXCLUDED'),
+    'B7-15': ('in the opt-in candidate V3.0.78: stair soffits HELD blank with lower ends beside (ST-01 20.423364, ST-02 4.460946 m2; no drawn ceiling: winder underside D-67 / RS-C waist D-08)'),
+}
 
 
 def _at(path, pattern):

@@ -1,0 +1,148 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.79.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.77",
+  "ARCH_TAKEOFF_V3.0.78"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.77": {
+   "lines": 5241,
+   "lines_sha256": "b8524d5c7cc47a1171fd74501364e37a6214caeb8acc4345f4d9acb303eb3790"
+  },
+  "ARCH_TAKEOFF_V3.0.78": {
+   "lines": 5242,
+   "lines_sha256": "f0c3a619b6738a41edd9273ee39ed39ed1df3cf76e10bbb7697426abed090ed0",
+   "previous": "ARCH_TAKEOFF_V3.0.77",
+   "item_codes": {
+    "FIN.MARBLE.LANDING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "FIN.MARBLE.RISER": {
+     "added": 1,
+     "removed": 0,
+     "changed": 13,
+     "record": 0
+    },
+    "FIN.MARBLE.TREAD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 1
+    },
+    "FIN.STAIR.FLIGHT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 12,
+     "record": 2
+    },
+    "FIN.STAIR.SKIRTING.SLOPED": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 18
+    },
+    "FIN.STAIR.SKIRTING.ZIGZAG": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 18
+    },
+    "FIN.STAIR.SOFFIT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 2
+    },
+    "FIN.STAIR.STEP_LM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 5,
+     "record": 0
+    },
+    "FIN.WALL.TILE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    }
+   },
+   "families": {
+    "B4-01": {
+     "FIN.WALL.TILE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B7-01": {
+     "FIN.STAIR.FLIGHT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 12,
+      "record": 2
+     }
+    },
+    "B7-02": {
+     "FIN.MARBLE.TREAD": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 1
+     }
+    },
+    "B7-03": {
+     "FIN.MARBLE.RISER": {
+      "added": 1,
+      "removed": 0,
+      "changed": 13,
+      "record": 0
+     }
+    },
+    "B7-04": {
+     "FIN.MARBLE.LANDING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B7-06": {
+     "FIN.STAIR.STEP_LM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 5,
+      "record": 0
+     }
+    },
+    "B7-07": {
+     "FIN.STAIR.SKIRTING.ZIGZAG": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 18
+     }
+    },
+    "B7-08": {
+     "FIN.STAIR.SKIRTING.SLOPED": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 18
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [
+    "B7-15"
+   ],
+   "record_apart": [],
+   "touched": 46,
+   "record_only": 41
+  }
+ }
+}
