@@ -1,15 +1,15 @@
 {
- "base": "agents/task-T-770 20f6d37d (V3.0.81 = V3.0.78 + MAIN_FILL_ALL)",
+ "base": "agents/task-T-770 c4005ffa (V3.0.81 r2 = V3.0.79 + MAIN_FILL 81 + T-762 + T-761)",
  "candidate_version": "ARCH_TAKEOFF_V3.0.81",
- "index_sha16": "9cbc24d921f82323",
+ "index_sha16": "3976b262611bc3bd",
  "overlap_with_MAIN_FILL_ALL": 0,
  "rows": [
   {
    "after": {
     "class": "RELEASED",
-    "net": 19.4
+    "net": 17.64
    },
-   "basis": "GF-R8496F0: render behind tiles to the false ceiling: run 7.2 lm x Hc 3.00 - doorway 1.00 x 2.20 (H 3.84 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "basis": "GF-R8496F0: render behind the tiles to the 3.00 m tile top: run 7.2 lm x 3.00 - openings 3.9600 m2 (doors 0.8 lm + passage 1 lm x head 2.20; drawn widths, ARCH_TAKEOFF_V2.9 room runs)",
    "before": {
     "class": "HELD",
     "high": 21.64,
@@ -28,7 +28,7 @@
     "class": "RELEASED",
     "net": 6.048
    },
-   "basis": "GF-R8496F0: band above the false ceiling: run 7.2 lm x (H 3.84 - Hc 3.00) = x 0.84",
+   "basis": "GF-R8496F0: face above the tiles to the soffit: run 7.2 lm x (H 3.84 - 3.00) = x 0.84 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 4.248,
@@ -45,9 +45,9 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 41.3
+    "net": 39.05
    },
-   "basis": "GF-RA3AD49: render behind tiles to the false ceiling: run 14.5 lm x Hc 3.00 - doorway 1.00 x 2.20 (H 3.84 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "basis": "GF-RA3AD49: render behind the tiles to the 3.00 m tile top: run 14.5 lm x 3.00 - openings 4.4500 m2 (doors 1 lm x head 2.20 + window OP-006 1.5 x (2.5 - 1) [T-201 W08 1.50 x 1.50]; drawn widths, ARCH_TAKEOFF_V2.9 room runs)",
    "before": {
     "class": "HELD",
     "high": 42.6735,
@@ -66,7 +66,7 @@
     "class": "RELEASED",
     "net": 12.18
    },
-   "basis": "GF-RA3AD49: band above the false ceiling: run 14.5 lm x (H 3.84 - Hc 3.00) = x 0.84",
+   "basis": "GF-RA3AD49: face above the tiles to the soffit: run 14.5 lm x (H 3.84 - 3.00) = x 0.84 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 8.555,
@@ -83,9 +83,9 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 20.3
+    "net": 20.74
    },
-   "basis": "GF-RB62B55: render behind tiles to the false ceiling: run 7.5 lm x Hc 3.00 - doorway 1.00 x 2.20 (H 3.84 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "basis": "GF-RB62B55: render behind the tiles to the 3.00 m tile top: run 7.5 lm x 3.00 - openings 1.7600 m2 (doors 0.8 lm x head 2.20; drawn widths, ARCH_TAKEOFF_V2.9 room runs)",
    "before": {
     "class": "HELD",
     "high": 22.615,
@@ -104,7 +104,7 @@
     "class": "RELEASED",
     "net": 6.3
    },
-   "basis": "GF-RB62B55: band above the false ceiling: run 7.5 lm x (H 3.84 - Hc 3.00) = x 0.84",
+   "basis": "GF-RB62B55: face above the tiles to the soffit: run 7.5 lm x (H 3.84 - 3.00) = x 0.84 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 4.425,
@@ -121,9 +121,9 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 14.6
+    "net": 15.04
    },
-   "basis": "GF-RFAD3C4: render behind tiles to the false ceiling: run 5.6 lm x Hc 3.00 - doorway 1.00 x 2.20 (H 3.84 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "basis": "GF-RFAD3C4: render behind the tiles to the 3.00 m tile top: run 5.6 lm x 3.00 - openings 1.7600 m2 (doors 0.8 lm x head 2.20; drawn widths, ARCH_TAKEOFF_V2.9 room runs)",
    "before": {
     "class": "HELD",
     "high": 16.44,
@@ -142,7 +142,7 @@
     "class": "RELEASED",
     "net": 4.704
    },
-   "basis": "GF-RFAD3C4: band above the false ceiling: run 5.6 lm x (H 3.84 - Hc 3.00) = x 0.84",
+   "basis": "GF-RFAD3C4: face above the tiles to the soffit: run 5.6 lm x (H 3.84 - 3.00) = x 0.84 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 3.304,
@@ -159,9 +159,9 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 14.656
+    "net": 10.9665
    },
-   "basis": "GF-RD36087: render behind tiles to the false ceiling: run 4.9 lm x Hc 3.44 - doorway 1.00 x 2.20 (H 4.34 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "basis": "GF-RD36087: render behind the tiles to the 3.00 m tile top: run 4.9 lm x 3.00 - openings 3.7335 m2 (doors 0.797039 lm + passage 0.9 lm x head 2.20; drawn widths, ARCH_TAKEOFF_V2.9 room runs)",
    "before": {
     "class": "HELD",
     "high": 19.555,
@@ -178,9 +178,9 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 4.41
+    "net": 6.566
    },
-   "basis": "GF-RD36087: band above the false ceiling: run 4.9 lm x (H 4.34 - Hc 3.44) = x 0.90",
+   "basis": "GF-RD36087: face above the tiles to the soffit: run 4.9 lm x (H 4.34 - 3.00) = x 1.34 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 13.671,
@@ -197,9 +197,9 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 19.128
+    "net": 16.3665
    },
-   "basis": "GF-RDF7D28: render behind tiles to the false ceiling: run 6.2 lm x Hc 3.44 - doorway 1.00 x 2.20 (H 4.34 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "basis": "GF-RDF7D28: render behind the tiles to the 3.00 m tile top: run 6.2 lm x 3.00 - openings 2.2335 m2 (doors 0.797039 lm x head 2.20 + window OP-014 0.6 x (2.5 - 1.7) [T-201 0.60 class 1.70 .. 2.50]; drawn widths, ARCH_TAKEOFF_V2.9 room runs)",
    "before": {
     "class": "HELD",
     "high": 25.21,
@@ -216,9 +216,9 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 5.58
+    "net": 8.308
    },
-   "basis": "GF-RDF7D28: band above the false ceiling: run 6.2 lm x (H 4.34 - Hc 3.44) = x 0.90",
+   "basis": "GF-RDF7D28: face above the tiles to the soffit: run 6.2 lm x (H 4.34 - 3.00) = x 1.34 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 17.298,
@@ -235,9 +235,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 6.8622
+    "net": 20.634
    },
-   "basis": "GF-RD6F891: band above the false ceiling: run 7.624665 lm x (H 4.34 - Hc 3.44) = x 0.90",
+   "basis": "GF-RD6F891: render behind the tiles to the 3.00 m tile top: run 7.624665 lm x 3.00 - openings 2.2400 m2 (doors 0.8 lm x head 2.20 + window OP-016 0.6 x (2.5 - 1.7) [T-201 0.60 class 1.70 .. 2.50]; drawn widths, ARCH_TAKEOFF_V2.9 room runs); was 25.5912 (split at the old decor-ceiling height)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 25.5912
+   },
+   "element_id": "GF-RD6F891:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-ccc97166c57999d5a303",
+   "set": "RENDER_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 10.2171
+   },
+   "basis": "GF-RD6F891: face above the tiles to the soffit: run 7.624665 lm x (H 4.34 - 3.00) = x 1.34 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 5.085875,
@@ -254,9 +273,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 7.4189
+    "net": 21.2096
    },
-   "basis": "GF-RDBD4F9: band above the false ceiling: run 8.243202 lm x (H 4.34 - Hc 3.44) = x 0.90",
+   "basis": "GF-RDBD4F9: render behind the tiles to the 3.00 m tile top: run 8.243202 lm x 3.00 - openings 3.5200 m2 (doors 1.6 lm x head 2.20; drawn widths, ARCH_TAKEOFF_V2.9 room runs); was 26.6544 (split at the old decor-ceiling height)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 26.6544
+   },
+   "element_id": "GF-RDBD4F9:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-910672305a87544d4d72",
+   "set": "RENDER_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 11.0459
+   },
+   "basis": "GF-RDBD4F9: face above the tiles to the soffit: run 8.243202 lm x (H 4.34 - 3.00) = x 1.34 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 5.005988,
@@ -273,9 +311,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 6.1288
+    "net": 18.1894
    },
-   "basis": "GF-RB28769: band above the false ceiling: run 6.809808 lm x (H 4.34 - Hc 3.44) = x 0.90; was run x 0.64 at the superseded height (R-T556-1 scenario)",
+   "basis": "GF-RB28769: render behind the tiles to the 3.00 m tile top: run 6.809808 lm x 3.00 - openings 2.2400 m2 (doors 0.8 lm x head 2.20 + window OP-015 0.6 x (2.5 - 1.7) [T-201 0.60 class 1.70 .. 2.50]; drawn widths, ARCH_TAKEOFF_V2.9 room runs); was 22.6165 (split at the old decor-ceiling height)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 22.6165
+   },
+   "element_id": "GF-RB28769:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-302f7235046bbe0b6c09",
+   "set": "RENDER_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 9.1251
+   },
+   "basis": "GF-RB28769: face above the tiles to the soffit: run 6.809808 lm x (H 4.34 - 3.00) = x 1.34 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted); was 4.3584 (split at the old decor-ceiling height)",
    "before": {
     "class": "RELEASED",
     "high": null,
@@ -292,9 +349,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 6.6726
+    "net": 20.4821
    },
-   "basis": "GF-RF38DAF: band above the false ceiling: run 7.414038 lm x (H 4.34 - Hc 3.44) = x 0.90; was run x 0.64 at the superseded height (R-T556-1 scenario)",
+   "basis": "GF-RF38DAF: render behind the tiles to the 3.00 m tile top: run 7.414038 lm x 3.00 - openings 1.7600 m2 (doors 0.8 lm x head 2.20; drawn widths, ARCH_TAKEOFF_V2.9 room runs); was 25.3011 (split at the old decor-ceiling height)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 25.3011
+   },
+   "element_id": "GF-RF38DAF:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-2b9a85e1bedf161c0c21",
+   "set": "RENDER_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 9.9348
+   },
+   "basis": "GF-RF38DAF: face above the tiles to the soffit: run 7.414038 lm x (H 4.34 - 3.00) = x 1.34 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted); was 4.74496 (split at the old decor-ceiling height)",
    "before": {
     "class": "RELEASED",
     "high": null,
@@ -311,9 +387,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 8.1
+    "net": 24.76
    },
-   "basis": "1F-R8BDA49: band above the false ceiling: run 9.0 lm x (H 4.04 - Hc 3.14) = x 0.90",
+   "basis": "1F-R8BDA49: render behind the tiles to the 3.00 m tile top: run 9.0 lm x 3.00 - openings 2.2400 m2 (doors 0.8 lm x head 2.20 + window OP-002 0.6 x (2.5 - 1.7) [T-201 0.60 class 1.70 .. 2.50]; drawn widths, ARCH_TAKEOFF_V2.9 room runs); was 27.9101 (split at the old decor-ceiling height)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 27.9101
+   },
+   "element_id": "1F-R8BDA49:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-3eba04f2458578e7dc19",
+   "set": "RENDER_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 9.36
+   },
+   "basis": "1F-R8BDA49: face above the tiles to the soffit: run 9.0 lm x (H 4.04 - 3.00) = x 1.04 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 6.21,
@@ -330,9 +425,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 6.84
+    "net": 20.56
    },
-   "basis": "1F-RED23B8: band above the false ceiling: run 7.6 lm x (H 4.04 - Hc 3.14) = x 0.90",
+   "basis": "1F-RED23B8: render behind the tiles to the 3.00 m tile top: run 7.6 lm x 3.00 - openings 2.2400 m2 (doors 0.8 lm x head 2.20 + window OP-015 0.6 x (2.5 - 1.7) [T-201 0.60 class 1.70 .. 2.50]; drawn widths, ARCH_TAKEOFF_V2.9 room runs); was 23.2201 (split at the old decor-ceiling height)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 23.2201
+   },
+   "element_id": "1F-RED23B8:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-5e5e62e91688eebfb285",
+   "set": "RENDER_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 7.904
+   },
+   "basis": "1F-RED23B8: face above the tiles to the soffit: run 7.6 lm x (H 4.04 - 3.00) = x 1.04 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 4.9818,
@@ -349,9 +463,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 8.1
+    "net": 24.76
    },
-   "basis": "1F-R48AA46: band above the false ceiling: run 9.0 lm x (H 4.04 - Hc 3.14) = x 0.90",
+   "basis": "1F-R48AA46: render behind the tiles to the 3.00 m tile top: run 9.0 lm x 3.00 - openings 2.2400 m2 (doors 0.8 lm x head 2.20 + window OP-001 0.6 x (2.5 - 1.7) [T-201 0.60 class 1.70 .. 2.50]; drawn widths, ARCH_TAKEOFF_V2.9 room runs); was 27.91 (split at the old decor-ceiling height)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 27.91
+   },
+   "element_id": "1F-R48AA46:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-9473c0c6ce4e11e4d162",
+   "set": "RENDER_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 9.36
+   },
+   "basis": "1F-R48AA46: face above the tiles to the soffit: run 9.0 lm x (H 4.04 - 3.00) = x 1.04 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 6.21,
@@ -368,9 +501,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 7.83
+    "net": 23.94
    },
-   "basis": "1F-R48CDA5: band above the false ceiling: run 8.7 lm x (H 4.04 - Hc 3.14) = x 0.90",
+   "basis": "1F-R48CDA5: render behind the tiles to the 3.00 m tile top: run 8.7 lm x 3.00 - openings 2.1600 m2 (doors 0.8 lm x head 2.20 + window E-WALL 0.5 x (2.5 - 1.7) [own DXF read: layer W frame, jambs 0.50 apart in the east wall (the V2.9 opening reader missed it; 'glazing_edge' 0.48); height = the 0.60 class 1.70 .. 2.50 (ESTIMATE)]; drawn widths, ARCH_TAKEOFF_V2.9 room runs); was 26.3051 (split at the old decor-ceiling height)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 26.3051
+   },
+   "element_id": "1F-R48CDA5:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "ESTIMATE",
+   "line_id": "L-12b83d399be186804faf",
+   "set": "RENDER_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 9.048
+   },
+   "basis": "1F-R48CDA5: face above the tiles to the soffit: run 8.7 lm x (H 4.04 - 3.00) = x 1.04 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 6.003,
@@ -387,9 +539,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 15.246
+    "net": 46.6
    },
-   "basis": "1F-R26FA0D: band above the false ceiling: run 16.94 lm x (H 4.04 - Hc 3.14) = x 0.90; was run x 0.64 at the superseded height (R-T556-1 scenario)",
+   "basis": "1F-R26FA0D: render behind the tiles to the 3.00 m tile top: run 16.94 lm x 3.00 - openings 4.2200 m2 (doors 1.7 lm x head 2.20 + window OP-013 0.6 x (2.5 - 1.7) [T-201 0.60 class 1.70 .. 2.50]; drawn widths, ARCH_TAKEOFF_V2.9 room runs); was 52.529 (split at the old decor-ceiling height)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 52.529
+   },
+   "element_id": "1F-R26FA0D:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-2948639faa08fa1cff81",
+   "set": "RENDER_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 17.6176
+   },
+   "basis": "1F-R26FA0D: face above the tiles to the soffit: run 16.94 lm x (H 4.04 - 3.00) = x 1.04 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted); was 10.8416 (split at the old decor-ceiling height)",
    "before": {
     "class": "RELEASED",
     "high": null,
@@ -406,9 +577,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 5.886
+    "net": 17.38
    },
-   "basis": "1F-R52AC05: band above the false ceiling: run 6.54 lm x (H 4.04 - Hc 3.14) = x 0.90; was run x 0.64 at the superseded height (R-T556-1 scenario)",
+   "basis": "1F-R52AC05: render behind the tiles to the 3.00 m tile top: run 6.54 lm x 3.00 - openings 2.2400 m2 (doors 0.8 lm x head 2.20 + window OP-014 0.6 x (2.5 - 1.7) [T-201 0.60 class 1.70 .. 2.50]; drawn widths, ARCH_TAKEOFF_V2.9 room runs); was 19.6691 (split at the old decor-ceiling height)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 19.6691
+   },
+   "element_id": "1F-R52AC05:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-005cb3310fbebd97d563",
+   "set": "RENDER_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 6.8016
+   },
+   "basis": "1F-R52AC05: face above the tiles to the soffit: run 6.54 lm x (H 4.04 - 3.00) = x 1.04 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted); was 4.1856 (split at the old decor-ceiling height)",
    "before": {
     "class": "RELEASED",
     "high": null,
@@ -425,9 +615,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 8.73
+    "net": 26.86
    },
-   "basis": "2F-RE83BED: band above the false ceiling: run 9.7 lm x (H 4.04 - Hc 3.14) = x 0.90",
+   "basis": "2F-RE83BED: render behind the tiles to the 3.00 m tile top: run 9.7 lm x 3.00 - openings 2.2400 m2 (doors 0.8 lm x head 2.20 + window OP-004 0.6 x (2.5 - 1.7) [T-201 0.60 class 1.70 .. 2.50]; drawn widths, ARCH_TAKEOFF_V2.9 room runs); was 30.255 (split at the old decor-ceiling height)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 30.255
+   },
+   "element_id": "2F-RE83BED:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-bec624729c89553f720f",
+   "set": "RENDER_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 10.088
+   },
+   "basis": "2F-RE83BED: face above the tiles to the soffit: run 9.7 lm x (H 4.04 - 3.00) = x 1.04 (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)",
    "before": {
     "class": "HELD",
     "high": 6.693,
@@ -444,9 +653,9 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 8.4616
+    "net": 4.756
    },
-   "basis": "GF-07 pantry: run = released tile 32.3422 m2 / Hc 3.44 = 9.4018 lm (openings ignored) x (4.34 - 3.44)",
+   "basis": "GF-07 pantry: wall run 2.90 lm (own DXF read: west 1.30 + south 1.60) x (H 4.34 - kitchen ceiling 2.70 default); window W10 head 2.50 below the ceiling",
    "before": {
     "class": "HELD",
     "high": 6.186806,
@@ -455,7 +664,7 @@
    },
    "element_id": "GF-RC06FED:plaster band above ceiling",
    "item_code": "FIN.PLASTER",
-   "label": "ESTIMATE",
+   "label": "DEFAULT",
    "line_id": "L-ea586fea86188a18bb67",
    "set": "PLASTER_BAND",
    "unit": "m2"
@@ -463,9 +672,9 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 56.6895
+    "net": 56.9567
    },
-   "basis": "stair shaft full exposed height (Q-72), T-173 bound 50.945 .. 62.434: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
+   "basis": "stair shaft ST-01 GF band plaster: T-680 face model at b = 0 (owner: plaster = storey - slab), NW floor +0.30 (T-441 lobby has no west face), OP-020 head 2.20 default, winder body and B20 / B23 ends deducted per the structural plan (Q-46 open), W25 / W27 T-201 heads, 2F soffit +13.72 + B3; bound 50.945 .. 62.434",
    "before": {
     "class": "HELD",
     "high": 62.434,
@@ -482,47 +691,9 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 45.9405
+    "net": 56.9567
    },
-   "basis": "stair shaft full exposed height (Q-72), T-173 bound 45.317 .. 46.564: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
-   "before": {
-    "class": "HELD",
-    "high": 46.564,
-    "low": 45.317,
-    "net": null
-   },
-   "element_id": "HL:WALL_FINISH:ST_1F:PLASTER",
-   "item_code": "FIN.PLASTER",
-   "label": "ESTIMATE",
-   "line_id": "L-0eac839f9132da7bd116",
-   "set": "SHAFT",
-   "unit": "m2"
-  },
-  {
-   "after": {
-    "class": "RELEASED",
-    "net": 48.057
-   },
-   "basis": "stair shaft full exposed height (Q-72), T-173 bound 47.342 .. 48.772: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
-   "before": {
-    "class": "HELD",
-    "high": 48.772,
-    "low": 47.342,
-    "net": null
-   },
-   "element_id": "HL:WALL_FINISH:ST_2F:PLASTER",
-   "item_code": "FIN.PLASTER",
-   "label": "ESTIMATE",
-   "line_id": "L-418121a4b223cb4e8646",
-   "set": "SHAFT",
-   "unit": "m2"
-  },
-  {
-   "after": {
-    "class": "RELEASED",
-    "net": 56.6895
-   },
-   "basis": "stair shaft full exposed height (Q-72), T-173 bound 50.945 .. 62.434: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
+   "basis": "stair shaft ST-01 GF band paint: T-680 face model at b = 0 (owner: plaster = storey - slab), NW floor +0.30 (T-441 lobby has no west face), OP-020 head 2.20 default, winder body and B20 / B23 ends deducted per the structural plan (Q-46 open), W25 / W27 T-201 heads, 2F soffit +13.72 + B3; bound 50.945 .. 62.434",
    "before": {
     "class": "HELD",
     "high": 62.434,
@@ -539,9 +710,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 45.9405
+    "net": 45.922
    },
-   "basis": "stair shaft full exposed height (Q-72), T-173 bound 45.317 .. 46.564: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
+   "basis": "stair shaft ST-01 1F band plaster: T-680 face model at b = 0 (owner: plaster = storey - slab), NW floor +0.30 (T-441 lobby has no west face), OP-020 head 2.20 default, winder body and B20 / B23 ends deducted per the structural plan (Q-46 open), W25 / W27 T-201 heads, 2F soffit +13.72 + B3; bound 45.317 .. 46.564",
+   "before": {
+    "class": "HELD",
+    "high": 46.564,
+    "low": 45.317,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:ST_1F:PLASTER",
+   "item_code": "FIN.PLASTER",
+   "label": "ESTIMATE",
+   "line_id": "L-0eac839f9132da7bd116",
+   "set": "SHAFT",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 45.922
+   },
+   "basis": "stair shaft ST-01 1F band paint: T-680 face model at b = 0 (owner: plaster = storey - slab), NW floor +0.30 (T-441 lobby has no west face), OP-020 head 2.20 default, winder body and B20 / B23 ends deducted per the structural plan (Q-46 open), W25 / W27 T-201 heads, 2F soffit +13.72 + B3; bound 45.317 .. 46.564",
    "before": {
     "class": "HELD",
     "high": 46.564,
@@ -558,9 +748,28 @@
   {
    "after": {
     "class": "RELEASED",
-    "net": 46.107
+    "net": 48.642
    },
-   "basis": "stair shaft full exposed height (Q-72), T-173 bound 45.392 .. 46.822: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
+   "basis": "stair shaft ST-01 2F band plaster: T-680 face model at b = 0 (owner: plaster = storey - slab), NW floor +0.30 (T-441 lobby has no west face), OP-020 head 2.20 default, winder body and B20 / B23 ends deducted per the structural plan (Q-46 open), W25 / W27 T-201 heads, 2F soffit +13.72 + B3; bound 47.342 .. 48.772",
+   "before": {
+    "class": "HELD",
+    "high": 48.772,
+    "low": 47.342,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:ST_2F:PLASTER",
+   "item_code": "FIN.PLASTER",
+   "label": "ESTIMATE",
+   "line_id": "L-418121a4b223cb4e8646",
+   "set": "SHAFT",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 46.692
+   },
+   "basis": "stair shaft ST-01 2F band paint: T-680 face model at b = 0 (owner: plaster = storey - slab), NW floor +0.30 (T-441 lobby has no west face), OP-020 head 2.20 default, winder body and B20 / B23 ends deducted per the structural plan (Q-46 open), W25 / W27 T-201 heads, 2F soffit +13.72 + B3; bound 45.392 .. 46.822",
    "before": {
     "class": "HELD",
     "high": 46.822,
@@ -948,7 +1157,7 @@
     "ESTIMATE": 4
    },
    "lines": 15,
-   "released_after": 828.0,
+   "released_after": 828.8,
    "released_before": 675.8,
    "rows": 4
   },
@@ -959,13 +1168,13 @@
    "held_high_before": 404.7,
    "held_low_before": 288.6,
    "labels": {
-    "DEFAULT": 26,
+    "DEFAULT": 37,
     "ESTIMATE": 5
    },
    "lines": 81,
-   "released_after": 1649.5,
+   "released_after": 1622.0,
    "released_before": 1254.7,
-   "rows": 31
+   "rows": 42
   },
   "FIN.PLASTER.BEAD": {
    "blank_before": 5,

@@ -1,21 +1,24 @@
 """T-763 F-04 PLASTER HEIGHT 4.34 / 4.04 + plaster, paint and corner-bead figures (DELIVERY MODE fix-row set; worker 2,
-2026-11-13).
+2026-11-13; r2 after the Checker's Gate A findings of 18:54).
 
-Reads the candidate line index ARCH_TAKEOFF_V3.0.81 (T-770 r1, agents/task-T-770 @ 20f6d37d = V3.0.78 + MAIN_FILL_ALL
-wired) and writes out/FIX_ROWS.json + out/FIX_ROWS.md: one row per FIN.PLASTER, FIN.PAINT and FIN.PLASTER.BEAD line
-that is still HELD (blank or ranged) after MAIN_FILL, plus the four RELEASED wet-room 'band above ceiling' lines that
-still carry the superseded height (set HEIGHT_RESTATE, separable). FIN.WALL.TILE (MAIN_FILL_4 TILE_300) and the
-floor beds (MAIN_FILL_1) are already filled: overlap with MAIN_FILL_ALL is asserted 0.
+Reads the candidate line index ARCH_TAKEOFF_V3.0.81 (T-770 r2, agents/task-T-770 @ c4005ffa = V3.0.79 + MAIN_FILL 81
++ T-762 + T-761 wired; the FIN.PLASTER / FIN.PAINT / FIN.PLASTER.BEAD / FIN.WALL.TILE lines are identical to the r1
+index 9cbc24d9) and writes out/FIX_ROWS.json + out/FIX_ROWS.md: one row per FIN.PLASTER, FIN.PAINT and FIN.PLASTER.BEAD
+line still HELD (blank or ranged) after MAIN_FILL, plus the RELEASED wet-room render / band lines whose split moves to
+the 3.00 m tile top (sets RENDER_RESTATE / HEIGHT_RESTATE, separable). FIN.WALL.TILE (MAIN_FILL_4 TILE_300) and the
+floor beds (MAIN_FILL_1) belong to MAIN_FILL: overlap with MAIN_FILL_ALL is asserted 0.
 
-Height rule (owner 2026-11-13, DELIVERY_MODE s.3; rule record RULE_T763_PLASTER_HEIGHT.json, supersedes R-T556-1's
-roof-scenario height): plaster height H = storey - slab 0.16 = 4.34 GF, 4.04 1F / 2F, 3.84 GF annex (+0.30 .. +4.30);
-false ceiling = H - 0.90 (company default); wet-room tiles 3.00 m (owner 2026-11-13).
-  wet room 'plaster' line   = render behind the tiles up to the false ceiling = run x Hc - doorway 2.20
-                              (Hc = H - 0.90; in the annex Hc = 3.00 because H - 0.90 = 2.94 is below the owner's 3.00
-                              tile top and a ceiling cannot sit below the tiling)
-  wet room 'band' line      = run x (H - Hc)  (wall face above the false ceiling to the soffit; no opening reaches it)
-  so render + band          = run x H - doorway, whatever the ceiling split.
-Every other figure: the merged ledgers named in its basis. No drawing was opened in this run; no client data here.
+Heights (owner 2026-11-13; rule record RULE_T763_PLASTER_HEIGHT.json, r2):
+  plaster height H = storey - slab 0.16 = 4.34 GF, 4.04 1F / 2F, 3.84 GF annex (+0.30 .. +4.30)
+  false ceiling: dry rooms H - 0.90; wet rooms and kitchen 2.70 (company default, kept: never replaced by a bound)
+  wet-room wall tiles 3.00 m from F.F.L. (owner, 'for tile height only')
+  wet room 'plaster' line = render behind the tiles = run x 3.00 - drawn openings (all heads <= 2.50 < 3.00)
+  wet room 'band' line    = run x (H - 3.00): the face above the tiles, all of it above the 2.70 ceiling, unpainted
+  so render + band        = run x H - openings (the Checker's reading that honours both owner defaults).
+Openings: drawn widths (ARCH_TAKEOFF_V2.9 room boundary runs 'door' / 'passage' and the room's window openings on the
+architectural DXF; one window the opening reader missed read by hand); door / passage head 2.20 company default;
+window sill / head from the vector elevations (T-201: every 0.60 window 1.70 .. 2.50 above F.F.L.; 1.50 / 1.00 windows
+1.00 .. 2.50). Stair-shaft lines: points of the T-680 model with each held cause closed (t763_shaft.py).
 
   python3 -I research/agents_t763/t763_fill.py <LINE_INDEX_V3_0_81.json> [--check]
 """
@@ -27,54 +30,99 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
 OUT = os.path.join(HERE, "out", "FIX_ROWS.json")
 OUT_MD = os.path.join(HERE, "out", "FIX_ROWS.md")
 T728 = os.path.join(HERE, "..", "agents_t728", "out", "T728_BEAD_RESTATEMENT.json")
-INDEX_SHA16 = "9cbc24d921f82323"     # sha256[:16] of LINE_INDEX_V3_0_81.json at agents/task-T-770 20f6d37d
+INDEX_SHA16 = "3976b262611bc3bd"     # sha256[:16] of LINE_INDEX_V3_0_81.json at agents/task-T-770 c4005ffa (r2)
 FAMILIES = ("FIN.PLASTER", "FIN.PAINT", "FIN.PLASTER.BEAD")
 LABELS = ("MEASURED", "DRAWING-READ", "DEFAULT", "ESTIMATE", "SAFETY")
 
 SLAB = 0.16
 H = {"GF": 4.50 - SLAB, "1F": 4.20 - SLAB, "2F": 4.20 - SLAB, "ANNEX": 4.00 - SLAB}   # 4.34 / 4.04 / 4.04 / 3.84
-CEIL_DROP = 0.90            # false ceiling = clear height - 0.90 (company default, owner 2026-11-13)
-TILE_H = 3.00               # wet-room wall tiles 3.00 m from F.F.L. (owner 2026-11-13)
-DOOR = 1.00 * 2.20          # doorway 1.00 x 2.20 (head default 2.20; same deduction as MAIN_FILL_4)
-HEAD = 2.20                 # head default where none is printed
+CEIL_DROP = 0.90            # dry-room false ceiling = clear height - 0.90 (company default, owner 2026-11-13)
+WET_CEIL = 2.70             # wet rooms / kitchen false ceiling 2.70 (company default, owner 2026-11-13)
+TILE_H = 3.00               # wet-room wall tiles 3.00 m from F.F.L. (owner 2026-11-13, tile height only)
+HEAD = 2.20                 # door / passage head default where none is printed
+DOOR = 1.00 * HEAD          # (kept for the reveal / bead defaults)
 REVEAL_T = 0.15             # through-reveal depth: the 4 released THROUGH reveals of this candidate = perimeter x 0.15
 
 r4 = lambda x: round(x + 0.0, 4)
 
 
-def ceiling(zone: str) -> float:
-    """false-ceiling height of a wet room: H - 0.90, never below the 3.00 m tile top (annex 3.84 - 0.90 = 2.94 -> 3.00)"""
-    return max(H[zone] - CEIL_DROP, TILE_H)
+def ceiling(zone: str, wet: bool = True) -> float:
+    """false-ceiling height: wet rooms / kitchen 2.70, dry rooms H - 0.90 (company defaults, both kept as stated)"""
+    return WET_CEIL if wet else H[zone] - CEIL_DROP
 
 
-def wet_render(run: float, zone: str, doors: int = 1) -> float:
-    """render behind the tiles up to the false ceiling (the wet room's FIN.PLASTER 'plaster' line)"""
+def openings_m2(doors_lm: float = 0.0, passages_lm: float = 0.0, windows=()) -> float:
+    """area of the drawn openings below the tile top: doors / passages x head 2.20, windows width x (head - sill)"""
+    tot = 0.0
+    for v in (doors_lm, passages_lm):
+        if v is None or v < 0:
+            raise ValueError("opening width missing or negative: never 0 by default")
+    tot += (doors_lm + passages_lm) * HEAD
+    for w in windows:
+        wd, sill, head = w["w"], w["sill"], w["head"]
+        if wd is None or wd <= 0 or sill is None or head is None or head <= sill:
+            raise ValueError(f"window {w.get('id')} without a drawn width / sill / head: never 0")
+        if head > TILE_H:
+            raise ValueError(f"window {w.get('id')} head {head} above the tile top: split it explicitly")
+        tot += wd * (head - sill)
+    return tot
+
+
+def wet_render(run: float, zone: str, opening_m2: float) -> float:
+    """render behind the tiles up to the 3.00 m tile top (the wet room's FIN.PLASTER 'plaster' line)"""
     if run is None or run <= 0:
         raise ValueError("wall run missing: a wet-room render line is never valued without its run")
-    return run * ceiling(zone) - doors * DOOR
+    if opening_m2 is None or opening_m2 < 0:
+        raise ValueError("openings not read: a wet-room render line is never valued without them")
+    v = run * TILE_H - opening_m2
+    if v <= 0:
+        raise ValueError("openings exceed the face")
+    return v
 
 
 def wet_band(run: float, zone: str) -> float:
-    """wall face above the false ceiling up to the soffit (FIN.PLASTER 'plaster band above ceiling')"""
+    """wall face above the tiles up to the soffit (FIN.PLASTER 'plaster band above ceiling'), all above the 2.70 ceiling"""
     if run is None or run <= 0:
         raise ValueError("wall run missing: a band line is never valued without its run")
-    return run * (H[zone] - ceiling(zone))
+    return run * (H[zone] - TILE_H)
 
 
-# Wall runs (lm) of the wet rooms: the ledger runs MAIN_FILL_4 used for the same rooms' tile lines (CANDIDATE_V3021_T335
-# wall_run_lm), zone from the T-676 hold class (Q-54 B = annex under the +4.30 roof).
-WET = {  # room: (zone, run_lm)
-    "GF-R8496F0": ("ANNEX", 7.2), "GF-RA3AD49": ("ANNEX", 14.5), "GF-RB62B55": ("ANNEX", 7.5), "GF-RFAD3C4": ("ANNEX", 5.6),
-    "GF-RD36087": ("GF", 4.9), "GF-RDF7D28": ("GF", 6.2), "GF-RD6F891": ("GF", 7.624665), "GF-RDBD4F9": ("GF", 8.243202),
-    "GF-RB28769": ("GF", 6.809808), "GF-RF38DAF": ("GF", 7.414038),
-    "1F-R8BDA49": ("1F", 9.0), "1F-RED23B8": ("1F", 7.6), "1F-R48AA46": ("1F", 9.0), "1F-R48CDA5": ("1F", 8.7),
-    "1F-R26FA0D": ("1F", 16.94), "1F-R52AC05": ("1F", 6.54), "2F-RE83BED": ("2F", 9.7),
+# Wet rooms: (zone, run lm, doors lm, passages lm, windows). Run = the ledger runs MAIN_FILL_4 used for the same rooms'
+# tile lines (CANDIDATE_V3021_T335 wall_run_lm; = the ARCH_TAKEOFF_V2.9 room perimeter, GF-RDBD4F9 without its open side
+# 1.2557); zone from the T-676 hold class (Q-54 B = annex under the +4.30 roof). Doors / passages = the room's V2.9
+# boundary runs 'door' / 'passage' on the architectural DXF (drawn gap widths); windows = the room's V2.9 window
+# openings, sill / head per T-201 (vector elevations, by width class: every 0.60 window 1.70 .. 2.50; W08 / W09 1.50 and
+# W10 1.00: 1.00 .. 2.50 above F.F.L.).
+SMALL = lambda oid, w=0.60, lab="T-201 0.60 class 1.70 .. 2.50": {"id": oid, "w": w, "sill": 1.70, "head": 2.50, "src": lab}
+WET = {
+    "GF-R8496F0": ("ANNEX", 7.2, 0.8, 1.0, ()),
+    "GF-RA3AD49": ("ANNEX", 14.5, 1.0, 0.0, ({"id": "OP-006", "w": 1.50, "sill": 1.00, "head": 2.50, "src": "T-201 W08 1.50 x 1.50"},)),
+    "GF-RB62B55": ("ANNEX", 7.5, 0.8, 0.0, ()),
+    "GF-RFAD3C4": ("ANNEX", 5.6, 0.8, 0.0, ()),
+    "GF-RD36087": ("GF", 4.9, 0.797039, 0.9, ()),
+    "GF-RDF7D28": ("GF", 6.2, 0.797039, 0.0, (SMALL("OP-014"),)),
+    "GF-RD6F891": ("GF", 7.624665, 0.8, 0.0, (SMALL("OP-016"),)),
+    "GF-RDBD4F9": ("GF", 8.243202, 1.6, 0.0, ()),
+    "GF-RB28769": ("GF", 6.809808, 0.8, 0.0, (SMALL("OP-015"),)),
+    "GF-RF38DAF": ("GF", 7.414038, 0.8, 0.0, ()),
+    "1F-R8BDA49": ("1F", 9.0, 0.8, 0.0, (SMALL("OP-002"),)),
+    "1F-RED23B8": ("1F", 7.6, 0.8, 0.0, (SMALL("OP-015"),)),
+    "1F-R48AA46": ("1F", 9.0, 0.8, 0.0, (SMALL("OP-001"),)),
+    "1F-R48CDA5": ("1F", 8.7, 0.8, 0.0, (SMALL("E-WALL", 0.50, "own DXF read: layer W frame, jambs 0.50 apart in the east "
+                                               "wall (the V2.9 opening reader missed it; 'glazing_edge' 0.48); "
+                                               "height = the 0.60 class 1.70 .. 2.50 (ESTIMATE)"),)),
+    "1F-R26FA0D": ("1F", 16.94, 1.7, 0.0, (SMALL("OP-013"),)),
+    "1F-R52AC05": ("1F", 6.54, 0.8, 0.0, (SMALL("OP-014"),)),
+    "2F-RE83BED": ("2F", 9.7, 0.8, 0.0, (SMALL("OP-004"),)),
 }
-PANTRY = "GF-RC06FED"       # GF-07 pantry, tiled to the decor ceiling: released tile 32.3422 m2 at Hc 3.44 -> run 9.4018
-PANTRY_TILE = 32.3422
+PANTRY = "GF-RC06FED"       # GF-07 pantry (kitchen ceiling 2.70)
+PANTRY_RUN = 1.30 + 1.60    # own DXF read: west wall face 1.30 (window W10 1.00 in it, head 2.50 < 2.70) + south wall
+                            # face 1.60 (incl. the flush column face 0.20); the east / north sides are layer-5 counter
+                            # lines and the open side to the living room: no wall face above a ceiling there
 
 # Bead hosts: element room key -> T-728 room; blank arrises valued by default (edge id: (lm, label, basis)).
 BEAD_BLANK = {
@@ -132,37 +180,49 @@ def build(index_path, t728_path=T728):
     idx = json.loads(raw)
     L = [l for l in idx["lines"] if l["class"] != "EXCLUDED"]
     by_eid = {l["element_id"]: l for l in L}
+    by_id = {l["line_id"]: l for l in L}
     rows = []
 
-    # 1. wet rooms: render (plaster) and band lines
-    for room, (zone, run) in WET.items():
+    # 1. wet rooms: render (plaster) and band lines, split at the 3.00 m tile top, drawn openings
+    for room, (zone, run, d_lm, p_lm, wins) in WET.items():
         p = by_eid.get(f"{room}:plaster"); b = by_eid.get(f"{room}:plaster band above ceiling")
-        Hc = ceiling(zone)
-        if p and p["class"] == "HELD":
-            rows.append(line_row(p, wet_render(run, zone), "DEFAULT",
-                                 f"{room}: render behind tiles to the false ceiling: run {run} lm x Hc {Hc:.2f} - doorway 1.00 x 2.20 "
-                                 f"(H {H[zone]:.2f} = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))", "PLASTER_WET"))
-        if b and (b["class"] == "HELD" or b["measured_net"] is not None and room in ("GF-RB28769", "GF-RF38DAF", "1F-R26FA0D", "1F-R52AC05")):
-            set_name = "PLASTER_BAND" if b["class"] == "HELD" else "HEIGHT_RESTATE"
-            rows.append(line_row(b, wet_band(run, zone), "DEFAULT",
-                                 f"{room}: band above the false ceiling: run {run} lm x (H {H[zone]:.2f} - Hc {Hc:.2f}) = x {H[zone] - Hc:.2f}"
-                                 + ("; was run x 0.64 at the superseded height (R-T556-1 scenario)" if set_name == "HEIGHT_RESTATE" else ""),
-                                 set_name))
+        if p is None or b is None:
+            raise ValueError(f"{room}: render or band line missing on the index")
+        om = openings_m2(d_lm, p_lm, wins)
+        est = any("ESTIMATE" in w["src"] for w in wins)
+        ops = (f"doors {d_lm:g} lm" + (f" + passage {p_lm:g} lm" if p_lm else "") + " x head 2.20"
+               + "".join(f" + window {w['id']} {w['w']:g} x ({w['head']:g} - {w['sill']:g}) [{w['src']}]" for w in wins))
+        for l, val, kind in ((p, wet_render(run, zone, om), "render"), (b, wet_band(run, zone), "band")):
+            if l["class"] not in ("HELD", "RELEASED"):
+                raise ValueError(f"{l['element_id']}: class {l['class']}")
+            if kind == "render":
+                set_name = "PLASTER_WET" if l["class"] == "HELD" else "RENDER_RESTATE"
+                basis = (f"{room}: render behind the tiles to the 3.00 m tile top: run {run} lm x 3.00 - openings "
+                         f"{om:.4f} m2 ({ops}; drawn widths, ARCH_TAKEOFF_V2.9 room runs)")
+            else:
+                set_name = "PLASTER_BAND" if l["class"] == "HELD" else "HEIGHT_RESTATE"
+                basis = (f"{room}: face above the tiles to the soffit: run {run} lm x (H {H[zone]:.2f} - 3.00) = x "
+                         f"{H[zone] - TILE_H:.2f} (H = storey - slab 0.16; all above the 2.70 wet-room ceiling, unpainted)")
+            if l["class"] == "RELEASED":
+                basis += f"; was {l['measured_net']} (split at the old decor-ceiling height)"
+            rows.append(line_row(l, val, "ESTIMATE" if est and kind == "render" else "DEFAULT", basis, set_name))
     pb = by_eid[f"{PANTRY}:plaster band above ceiling"]
-    run_p = PANTRY_TILE / (H["GF"] - CEIL_DROP)
-    rows.append(line_row(pb, run_p * CEIL_DROP, "ESTIMATE",
-                         f"GF-07 pantry: run = released tile {PANTRY_TILE} m2 / Hc 3.44 = {run_p:.4f} lm (openings ignored) x (4.34 - 3.44)",
-                         "PLASTER_BAND"))
+    rows.append(line_row(pb, PANTRY_RUN * (H["GF"] - WET_CEIL), "DEFAULT",
+                         f"GF-07 pantry: wall run {PANTRY_RUN:.2f} lm (own DXF read: west 1.30 + south 1.60) x (H 4.34 - "
+                         "kitchen ceiling 2.70 default); window W10 head 2.50 below the ceiling", "PLASTER_BAND"))
 
-    # 2. stair-shaft and band-share lines: bounded by the shaft build-up / held contacts (T-173): midpoint
-    for eid, code in (("HL:WALL_FINISH:ST_GF:PLASTER", "FIN.PLASTER"), ("HL:WALL_FINISH:ST_1F:PLASTER", "FIN.PLASTER"),
-                      ("HL:WALL_FINISH:ST_2F:PLASTER", "FIN.PLASTER"), ("HL:WALL_FINISH:ST_GF:PAINT", "FIN.PAINT"),
-                      ("HL:WALL_FINISH:ST_1F:PAINT", "FIN.PAINT"), ("HL:WALL_FINISH:ST_2F:PAINT", "FIN.PAINT")):
-        l = by_eid[eid]
-        rows.append(line_row(l, mid(l), "ESTIMATE",
-                             f"stair shaft full exposed height (Q-72), T-173 bound {l['held_low']} .. {l['held_high']}: midpoint "
-                             "(floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
-                             "SHAFT"))
+    # 2. stair-shaft lines: the T-680 model at the owner height rule, every held cause closed (t763_shaft.py);
+    #    band-share lines: bound width below 1 % of the family (Checker: may stay, label ESTIMATE)
+    import t763_shaft as SH
+    for lid, (band, fin, v) in SH.points().items():
+        l = by_id[lid]
+        if not (l["held_low"] - 0.001 <= v <= l["held_high"] + 0.001):
+            raise ValueError(f"{lid}: shaft point {v:.3f} outside its merged bound {l['held_low']} .. {l['held_high']}")
+        rows.append(line_row(l, v, "ESTIMATE",
+                             f"stair shaft ST-01 {band} band {fin}: T-680 face model at b = 0 (owner: plaster = storey - "
+                             "slab), NW floor +0.30 (T-441 lobby has no west face), OP-020 head 2.20 default, winder body "
+                             "and B20 / B23 ends deducted per the structural plan (Q-46 open), W25 / W27 T-201 heads, 2F "
+                             f"soffit +13.72 + B3; bound {l['held_low']} .. {l['held_high']}", "SHAFT"))
     for l in L:
         if l["class"] == "HELD" and str(l["element_id"]).startswith(("PLASTER-BAND@", "PAINT-BAND@")):
             rows.append(line_row(l, mid(l), "ESTIMATE",
@@ -223,10 +283,22 @@ def summary(rows, L):
     return s
 
 
-def write(index_path):
+MAIN_FILL = os.path.join(HERE, "..", "agents_t762", "MAIN_FILL_ALL_INPUT.json")
+
+
+def overlap(rows, main_fill_path=MAIN_FILL):
+    """line ids written both here and by MAIN_FILL_ALL (must be 0: MAIN_FILL owns its lines)"""
+    mf = {r["line_id"] for r in json.load(open(main_fill_path))["rows"]}
+    return sorted(r["line_id"] for r in rows if r["line_id"] in mf)
+
+
+def write(index_path, main_fill_path=MAIN_FILL):
     sha, ver, rows, L = build(index_path)
+    ov = overlap(rows, main_fill_path)
+    if ov:
+        raise ValueError(f"lines also written by MAIN_FILL_ALL: {ov}")
     out = {"schema": "T763_FIX_ROWS_V1", "candidate_version": ver, "index_sha16": sha,
-           "base": "agents/task-T-770 20f6d37d (V3.0.81 = V3.0.78 + MAIN_FILL_ALL)",
+           "base": "agents/task-T-770 c4005ffa (V3.0.81 r2 = V3.0.79 + MAIN_FILL 81 + T-762 + T-761)",
            "overlap_with_MAIN_FILL_ALL": 0, "summary": summary(rows, L), "rows": rows}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     text = json.dumps(out, indent=1, sort_keys=True) + "\n"
@@ -246,7 +318,8 @@ def write(index_path):
 def main(argv):
     if len(argv) < 2:
         raise SystemExit(__doc__)
-    text, md, out = write(argv[1])
+    mf = argv[argv.index("--main-fill") + 1] if "--main-fill" in argv else MAIN_FILL
+    text, md, out = write(argv[1], mf)
     if "--check" in argv:
         if open(OUT).read() != text or open(OUT_MD).read() != md:
             raise SystemExit("FIX_ROWS is stale: rerun without --check")
