@@ -1,0 +1,17 @@
+{
+ "schema": "URBAN_RESEARCH_RULE_V1",
+ "rule_id": "R-T763-1",
+ "title": "Interior plaster height = storey - slab; wet-room render / band split at the false ceiling",
+ "scope": "every villa (values below are the owner's 2026-11-13 company figures; printed FFLs govern the storey)",
+ "provenance": "owner 2026-11-13 (DELIVERY_MODE.md s.3 heights; AGENT_BRIEF 'Heights', 'Company defaults', 'Wet-room wall tiles')",
+ "supersedes": "R-T556-1 roof-scenario plaster height (the D-39 / DCR-6 build-up bound) for the height of interior plaster",
+ "rule": {
+  "plaster_height_m": "H = storey (printed FFL to FFL) - slab 0.16: 4.34 GF, 4.04 upper floors, 3.84 GF annex (+0.30 .. +4.30)",
+  "false_ceiling_m": "Hc = H - 0.90 (company default); in a wet room never below the 3.00 m tile top",
+  "wet_room": "render behind tiles (FIN.PLASTER 'plaster') = run x Hc - openings; band above the ceiling = run x (H - Hc); render + band = run x H - openings",
+  "dry_room": "plaster = face run x H - openings - beam ends (MAIN_FILL_2)",
+  "labels": "DEFAULT where H / Hc / heads come from the company defaults; DRAWING-READ replaces a figure when the designer prints it"
+ },
+ "never": ["a missing wall run valued as 0", "the superseded 0.64 m band factor kept beside the owner height"],
+ "test": "tests/t763_plaster_height/test_t763_fill.py (normal + adverse, synthetic non-Alsenan room)"
+}

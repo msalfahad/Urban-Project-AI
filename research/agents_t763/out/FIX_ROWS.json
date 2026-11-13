@@ -1,0 +1,988 @@
+{
+ "base": "agents/task-T-770 20f6d37d (V3.0.81 = V3.0.78 + MAIN_FILL_ALL)",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.81",
+ "index_sha16": "9cbc24d921f82323",
+ "overlap_with_MAIN_FILL_ALL": 0,
+ "rows": [
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 19.4
+   },
+   "basis": "GF-R8496F0: render behind tiles to the false ceiling: run 7.2 lm x Hc 3.00 - doorway 1.00 x 2.20 (H 3.84 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "before": {
+    "class": "HELD",
+    "high": 21.64,
+    "low": 13.7028,
+    "net": null
+   },
+   "element_id": "GF-R8496F0:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-2211463bba5eeb2e4282",
+   "set": "PLASTER_WET",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 6.048
+   },
+   "basis": "GF-R8496F0: band above the false ceiling: run 7.2 lm x (H 3.84 - Hc 3.00) = x 0.84",
+   "before": {
+    "class": "HELD",
+    "high": 4.248,
+    "low": 3.658,
+    "net": null
+   },
+   "element_id": "GF-R8496F0:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-0d72630e929dd193c181",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 41.3
+   },
+   "basis": "GF-RA3AD49: render behind tiles to the false ceiling: run 14.5 lm x Hc 3.00 - doorway 1.00 x 2.20 (H 3.84 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "before": {
+    "class": "HELD",
+    "high": 42.6735,
+    "low": 31.720506,
+    "net": null
+   },
+   "element_id": "GF-RA3AD49:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-595181aa140e7efb2ac7",
+   "set": "PLASTER_WET",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 12.18
+   },
+   "basis": "GF-RA3AD49: band above the false ceiling: run 14.5 lm x (H 3.84 - Hc 3.00) = x 0.84",
+   "before": {
+    "class": "HELD",
+    "high": 8.555,
+    "low": 8.545994,
+    "net": null
+   },
+   "element_id": "GF-RA3AD49:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-5f10df2be91ae985d170",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 20.3
+   },
+   "basis": "GF-RB62B55: render behind tiles to the false ceiling: run 7.5 lm x Hc 3.00 - doorway 1.00 x 2.20 (H 3.84 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "before": {
+    "class": "HELD",
+    "high": 22.615,
+    "low": 16.945,
+    "net": null
+   },
+   "element_id": "GF-RB62B55:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-f43782d52f32b53a6f1e",
+   "set": "PLASTER_WET",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 6.3
+   },
+   "basis": "GF-RB62B55: band above the false ceiling: run 7.5 lm x (H 3.84 - Hc 3.00) = x 0.84",
+   "before": {
+    "class": "HELD",
+    "high": 4.425,
+    "low": 4.425,
+    "net": null
+   },
+   "element_id": "GF-RB62B55:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-9fc0022e1cd4a65e0f38",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 14.6
+   },
+   "basis": "GF-RFAD3C4: render behind tiles to the false ceiling: run 5.6 lm x Hc 3.00 - doorway 1.00 x 2.20 (H 3.84 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "before": {
+    "class": "HELD",
+    "high": 16.44,
+    "low": 12.2064,
+    "net": null
+   },
+   "element_id": "GF-RFAD3C4:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-f179fc08a266294ad4a4",
+   "set": "PLASTER_WET",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 4.704
+   },
+   "basis": "GF-RFAD3C4: band above the false ceiling: run 5.6 lm x (H 3.84 - Hc 3.00) = x 0.84",
+   "before": {
+    "class": "HELD",
+    "high": 3.304,
+    "low": 3.304,
+    "net": null
+   },
+   "element_id": "GF-RFAD3C4:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-d2923b89f8c35723fe00",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 14.656
+   },
+   "basis": "GF-RD36087: render behind tiles to the false ceiling: run 4.9 lm x Hc 3.44 - doorway 1.00 x 2.20 (H 4.34 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "before": {
+    "class": "HELD",
+    "high": 19.555,
+    "low": 7.04,
+    "net": null
+   },
+   "element_id": "GF-RD36087:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-a636dabcd4bc7e59169a",
+   "set": "PLASTER_WET",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 4.41
+   },
+   "basis": "GF-RD36087: band above the false ceiling: run 4.9 lm x (H 4.34 - Hc 3.44) = x 0.90",
+   "before": {
+    "class": "HELD",
+    "high": 13.671,
+    "low": 2.56,
+    "net": null
+   },
+   "element_id": "GF-RD36087:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-85676275dc71d09ffcf2",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 19.128
+   },
+   "basis": "GF-RDF7D28: render behind tiles to the false ceiling: run 6.2 lm x Hc 3.44 - doorway 1.00 x 2.20 (H 4.34 = storey - slab 0.16; Hc = max(H - 0.90, tile 3.00))",
+   "before": {
+    "class": "HELD",
+    "high": 25.21,
+    "low": 11.4,
+    "net": null
+   },
+   "element_id": "GF-RDF7D28:plaster",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-3f7fb1b37e68e6d6c7b7",
+   "set": "PLASTER_WET",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 5.58
+   },
+   "basis": "GF-RDF7D28: band above the false ceiling: run 6.2 lm x (H 4.34 - Hc 3.44) = x 0.90",
+   "before": {
+    "class": "HELD",
+    "high": 17.298,
+    "low": 3.584,
+    "net": null
+   },
+   "element_id": "GF-RDF7D28:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-8d82373c9e2c2f2acd3b",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 6.8622
+   },
+   "basis": "GF-RD6F891: band above the false ceiling: run 7.624665 lm x (H 4.34 - Hc 3.44) = x 0.90",
+   "before": {
+    "class": "HELD",
+    "high": 5.085875,
+    "low": 2.2448,
+    "net": null
+   },
+   "element_id": "GF-RD6F891:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-6e94267143f7df16bac4",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 7.4189
+   },
+   "basis": "GF-RDBD4F9: band above the false ceiling: run 8.243202 lm x (H 4.34 - Hc 3.44) = x 0.90",
+   "before": {
+    "class": "HELD",
+    "high": 5.005988,
+    "low": 3.892324,
+    "net": null
+   },
+   "element_id": "GF-RDBD4F9:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-ef7a16664d12b68a6e71",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 6.1288
+   },
+   "basis": "GF-RB28769: band above the false ceiling: run 6.809808 lm x (H 4.34 - Hc 3.44) = x 0.90; was run x 0.64 at the superseded height (R-T556-1 scenario)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 4.3584
+   },
+   "element_id": "GF-RB28769:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-477f92690d1b141f67c5",
+   "set": "HEIGHT_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 6.6726
+   },
+   "basis": "GF-RF38DAF: band above the false ceiling: run 7.414038 lm x (H 4.34 - Hc 3.44) = x 0.90; was run x 0.64 at the superseded height (R-T556-1 scenario)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 4.74496
+   },
+   "element_id": "GF-RF38DAF:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-4ad6cf526013266c2125",
+   "set": "HEIGHT_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 8.1
+   },
+   "basis": "1F-R8BDA49: band above the false ceiling: run 9.0 lm x (H 4.04 - Hc 3.14) = x 0.90",
+   "before": {
+    "class": "HELD",
+    "high": 6.21,
+    "low": 3.51,
+    "net": null
+   },
+   "element_id": "1F-R8BDA49:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-6bcf9406e3ff0b96da6b",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 6.84
+   },
+   "basis": "1F-RED23B8: band above the false ceiling: run 7.6 lm x (H 4.04 - Hc 3.14) = x 0.90",
+   "before": {
+    "class": "HELD",
+    "high": 4.9818,
+    "low": 4.275,
+    "net": null
+   },
+   "element_id": "1F-RED23B8:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-79b6a45ab31f122546a9",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 8.1
+   },
+   "basis": "1F-R48AA46: band above the false ceiling: run 9.0 lm x (H 4.04 - Hc 3.14) = x 0.90",
+   "before": {
+    "class": "HELD",
+    "high": 6.21,
+    "low": 3.51,
+    "net": null
+   },
+   "element_id": "1F-R48AA46:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-fccef7ef809c5bc21a23",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 7.83
+   },
+   "basis": "1F-R48CDA5: band above the false ceiling: run 8.7 lm x (H 4.04 - Hc 3.14) = x 0.90",
+   "before": {
+    "class": "HELD",
+    "high": 6.003,
+    "low": 3.393,
+    "net": null
+   },
+   "element_id": "1F-R48CDA5:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-ff2a3a31df4c48599b73",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 15.246
+   },
+   "basis": "1F-R26FA0D: band above the false ceiling: run 16.94 lm x (H 4.04 - Hc 3.14) = x 0.90; was run x 0.64 at the superseded height (R-T556-1 scenario)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 10.8416
+   },
+   "element_id": "1F-R26FA0D:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-be4e20be1c791ad6864e",
+   "set": "HEIGHT_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 5.886
+   },
+   "basis": "1F-R52AC05: band above the false ceiling: run 6.54 lm x (H 4.04 - Hc 3.14) = x 0.90; was run x 0.64 at the superseded height (R-T556-1 scenario)",
+   "before": {
+    "class": "RELEASED",
+    "high": null,
+    "low": null,
+    "net": 4.1856
+   },
+   "element_id": "1F-R52AC05:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-aa45baf044e3abc14f92",
+   "set": "HEIGHT_RESTATE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 8.73
+   },
+   "basis": "2F-RE83BED: band above the false ceiling: run 9.7 lm x (H 4.04 - Hc 3.14) = x 0.90",
+   "before": {
+    "class": "HELD",
+    "high": 6.693,
+    "low": 3.783,
+    "net": null
+   },
+   "element_id": "2F-RE83BED:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-c6ffb2cc0e02828f0939",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 8.4616
+   },
+   "basis": "GF-07 pantry: run = released tile 32.3422 m2 / Hc 3.44 = 9.4018 lm (openings ignored) x (4.34 - 3.44)",
+   "before": {
+    "class": "HELD",
+    "high": 6.186806,
+    "low": 0.499037,
+    "net": null
+   },
+   "element_id": "GF-RC06FED:plaster band above ceiling",
+   "item_code": "FIN.PLASTER",
+   "label": "ESTIMATE",
+   "line_id": "L-ea586fea86188a18bb67",
+   "set": "PLASTER_BAND",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 56.6895
+   },
+   "basis": "stair shaft full exposed height (Q-72), T-173 bound 50.945 .. 62.434: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
+   "before": {
+    "class": "HELD",
+    "high": 62.434,
+    "low": 50.945,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:ST_GF:PLASTER",
+   "item_code": "FIN.PLASTER",
+   "label": "ESTIMATE",
+   "line_id": "L-95f2c45c2eccaaeccb08",
+   "set": "SHAFT",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 45.9405
+   },
+   "basis": "stair shaft full exposed height (Q-72), T-173 bound 45.317 .. 46.564: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
+   "before": {
+    "class": "HELD",
+    "high": 46.564,
+    "low": 45.317,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:ST_1F:PLASTER",
+   "item_code": "FIN.PLASTER",
+   "label": "ESTIMATE",
+   "line_id": "L-0eac839f9132da7bd116",
+   "set": "SHAFT",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 48.057
+   },
+   "basis": "stair shaft full exposed height (Q-72), T-173 bound 47.342 .. 48.772: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
+   "before": {
+    "class": "HELD",
+    "high": 48.772,
+    "low": 47.342,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:ST_2F:PLASTER",
+   "item_code": "FIN.PLASTER",
+   "label": "ESTIMATE",
+   "line_id": "L-418121a4b223cb4e8646",
+   "set": "SHAFT",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 56.6895
+   },
+   "basis": "stair shaft full exposed height (Q-72), T-173 bound 50.945 .. 62.434: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
+   "before": {
+    "class": "HELD",
+    "high": 62.434,
+    "low": 50.945,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:ST_GF:PAINT",
+   "item_code": "FIN.PAINT",
+   "label": "ESTIMATE",
+   "line_id": "L-145bd2394f2907558243",
+   "set": "SHAFT",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 45.9405
+   },
+   "basis": "stair shaft full exposed height (Q-72), T-173 bound 45.317 .. 46.564: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
+   "before": {
+    "class": "HELD",
+    "high": 46.564,
+    "low": 45.317,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:ST_1F:PAINT",
+   "item_code": "FIN.PAINT",
+   "label": "ESTIMATE",
+   "line_id": "L-2ab93d5029a4b7cc4dca",
+   "set": "SHAFT",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 46.107
+   },
+   "basis": "stair shaft full exposed height (Q-72), T-173 bound 45.392 .. 46.822: midpoint (floor build-up 0 .. 0.10, held window / passage heads; paint = plaster, no false ceiling in the shaft)",
+   "before": {
+    "class": "HELD",
+    "high": 46.822,
+    "low": 45.392,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:ST_2F:PAINT",
+   "item_code": "FIN.PAINT",
+   "label": "ESTIMATE",
+   "line_id": "L-5a7a5c6f070ec7142ca5",
+   "set": "SHAFT",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.4349
+   },
+   "basis": "band share bound 3.344721 .. 3.525121 (width 0.180 m2, below 1 % of the family): midpoint",
+   "before": {
+    "class": "HELD",
+    "high": 3.525121,
+    "low": 3.344721,
+    "net": null
+   },
+   "element_id": "PAINT-BAND@L-c0ac22c964a42e7d71b1",
+   "item_code": "FIN.PAINT",
+   "label": "ESTIMATE",
+   "line_id": "L-ab4ed4328ee652456117",
+   "set": "BAND_SHARE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.8552
+   },
+   "basis": "band share bound 0.839412 .. 0.870912 (width 0.031 m2, below 1 % of the family): midpoint",
+   "before": {
+    "class": "HELD",
+    "high": 0.870912,
+    "low": 0.839412,
+    "net": null
+   },
+   "element_id": "PLASTER-BAND@L-8cecb1d010d5aafbf25d",
+   "item_code": "FIN.PLASTER",
+   "label": "ESTIMATE",
+   "line_id": "L-b10c1b356670f749cc23",
+   "set": "BAND_SHARE",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.8436
+   },
+   "basis": "GF-REVEAL-A-GF-01: (2 x 2.20 head default + 1.2238) = 5.6238 lm x depth 0.15 (as the released THROUGH reveals); arch: drawn arc 1.2238 as head",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-3e19506bd9e093dfb7be",
+   "set": "REVEAL",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.81
+   },
+   "basis": "1F-REVEAL-A-1F-01: (2 x 2.20 head default + 1.0000) = 5.4000 lm x depth 0.15 (as the released THROUGH reveals); arch drawn on no view: straight 1.00 head",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-64cb94b4b8dc2cb17608",
+   "set": "REVEAL",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.81
+   },
+   "basis": "GF-REVEAL-D-GF-15: (2 x 2.20 head default + 1.0000) = 5.4000 lm x depth 0.15 (as the released THROUGH reveals); door width 1.00 (T-602 drawn)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+   "item_code": "FIN.PLASTER",
+   "label": "DEFAULT",
+   "line_id": "L-e70e7e48b4c15b4f5a21",
+   "set": "REVEAL",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 10.5
+   },
+   "basis": "2F-03: 2 arris rows: D-2F-02#2F-03 5.3000; D-2F-03#2F-03 5.2000",
+   "before": {
+    "class": "HELD",
+    "high": 10.5,
+    "low": 10.5,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:2F_03#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "MEASURED",
+   "line_id": "L-23c35b304a26aed28745",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 44.75
+   },
+   "basis": "1F-13: 11 arris rows: 1F-13#V23 3.3500; 1F-13#V27 3.3500; 1F-13#V28 3.3500; 1F-13#V31 3.3500; 1F-13#V32 3.3500; 1F-13#V58 3.3500; 1F-13#V69 3.3500; D-1F-03#1F-13 5.4000; D-1F-05#1F-13 5.3000; D-1F-08#1F-13 5.3000; D-1F-09#1F-13 5.3000",
+   "before": {
+    "class": "HELD",
+    "high": 44.75,
+    "low": 44.75,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:1F_13#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "MEASURED",
+   "line_id": "L-375cb0fcabe370b9d763",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 28.85
+   },
+   "basis": "GF-15: 7 arris rows: D-GF-13#GF-15 5.4000; D-GF-14#GF-15 5.2000; GF-15#V02 3.6500; GF-15#V12 3.6500; GF-15#V13 3.6500; GF-15#V55 3.6500; GF-15#V56 3.6500",
+   "before": {
+    "class": "HELD",
+    "high": 28.85,
+    "low": 28.85,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:GF_15#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "MEASURED",
+   "line_id": "L-3f739ef6e0c69fb4f344",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 24.0
+   },
+   "basis": "1F-01: 6 arris rows: 1F-01#V06 3.3500; 1F-01#V07 3.3500; 1F-01#V16 3.3500; 1F-01#V17 3.3500; D-1F-01#1F-01 5.2000; D-1F-02#1F-01 5.4000",
+   "before": {
+    "class": "HELD",
+    "high": 24.0,
+    "low": 24.0,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:1F_01#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "MEASURED",
+   "line_id": "L-40fd65121d1a0c76be0e",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 43.24
+   },
+   "basis": "1F-11: 10 arris rows: 1F-11#V03 3.3500; 1F-11#V06 3.3500; 1F-11#V11 3.3500; 1F-11#V13 3.3500; 1F-11#V14 3.3500; 1F-11#V16 3.3500; 1F-11#V25 3.3500; D-1F-09#1F-11 5.3000; D-1F-10#1F-11 5.2000; W17#IN 9.2900 (W17 room side: 3.29 x 3.00 (owner Q-76 A): head 3.29 + 2 jambs 3.00)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:1F_11#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "DRAWING-READ",
+   "line_id": "L-54081b3817663419369d",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 24.46
+   },
+   "basis": "ST-GF: 4 arris rows: D-GF-08#ST-GF 5.4000; D-GF-09#ST-GF 5.3000; OPEN#ST-GF-OP020 5.3000 (doorless 0.90 opening OP-020: 0.90 head + 2 jambs x 2.20 head default); ST-GF#V14 + ST-GF#V15 8.4600",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:ST_GF#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "DEFAULT",
+   "line_id": "L-752cd53001d7a989828d",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 10.5
+   },
+   "basis": "GF-04: 2 arris rows: D-GF-03#GF-04 5.3000; D-GF-04#GF-04 5.2000",
+   "before": {
+    "class": "HELD",
+    "high": 10.5,
+    "low": 10.5,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:GF_04#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "MEASURED",
+   "line_id": "L-768a147c329176650d9d",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 87.4805
+   },
+   "basis": "GF-08: 18 arris rows: D-GF-07#GF-08 7.0000; D-GF-08#GF-08 5.4000; D-GF-13#GF-08 5.4000; GF-08#V27 3.6500; GF-08#V28 3.6500; GF-08#V41 3.6500; GF-08#V42 3.6500; GF-08#V56 3.6500; GF-08#V57 3.6500; GF-08#V60 3.4864; GF-08#V61 3.4864; GF-08#V62 3.6500; GF-08#V66 3.6500; GF-08#V67 3.6500; GF-08#V79 3.6500; GF-08#V80 3.6500; OPEN#GF-08-OP003 7.3000 (open side OP-003 between columns: 2 column-jamb arrises x 3.65 (the room's measured arris height)); W03#IN 15.2577 (curved W03 room side = the outside edge T-760 (merged): developed head 6.6577 + 2 jambs +1.00 .. +5.30)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:GF_08#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "ESTIMATE",
+   "line_id": "L-775120ed864deb8f8442",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 11.0238
+   },
+   "basis": "GF-01: 2 arris rows: A-GF-01#GF-01 5.6238 (arch A-GF-01: head on the drawn arc 1.2238 (T-238 ARC, drawing) + 2 jambs x 2.20 head default); D-GF-01#GF-01 5.4000",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:GF_01#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "DEFAULT",
+   "line_id": "L-905765ed94a23ecea887",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 14.05
+   },
+   "basis": "2F-01: 3 arris rows: 2F-01#V25 3.3500; D-2F-01#2F-01 5.4000; D-2F-02#2F-01 5.3000",
+   "before": {
+    "class": "HELD",
+    "high": 14.05,
+    "low": 14.05,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:2F_01#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "MEASURED",
+   "line_id": "L-ad606e88798049fed932",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 7.92
+   },
+   "basis": "ST-1F: 1 arris rows: ST-1F#V10 + ST-1F#V11 7.9200",
+   "before": {
+    "class": "HELD",
+    "high": 7.92,
+    "low": 7.92,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:ST_1F#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "MEASURED",
+   "line_id": "L-c446c784ee4c1f2ad001",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 7.68
+   },
+   "basis": "ST-2F: 1 arris rows: ST-2F#V10 + ST-2F#V11 7.6800",
+   "before": {
+    "class": "HELD",
+    "high": 7.78,
+    "low": 7.58,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:ST_2F#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "ESTIMATE",
+   "line_id": "L-cf7c0b342f8e973c08c5",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 17.3
+   },
+   "basis": "1F-04: 4 arris rows: 1F-04#V13 3.3500; 1F-04#V14 3.3500; D-1F-03#1F-04 5.4000; D-1F-04#1F-04 5.2000",
+   "before": {
+    "class": "HELD",
+    "high": 17.3,
+    "low": 17.3,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:1F_04#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "MEASURED",
+   "line_id": "L-d61b82b6648b7fa64aaa",
+   "set": "BEAD",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 10.7
+   },
+   "basis": "1F-10: 2 arris rows: A-1F-01#1F-10 5.4000 (arch A-1F-01: width 1.00 (MAIN_FILL_2 basis) + 2 jambs x 2.20 head default); D-1F-08#1F-10 5.3000",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "HL:WALL_FINISH:1F_10#BEAD",
+   "item_code": "FIN.PLASTER.BEAD",
+   "label": "DEFAULT",
+   "line_id": "L-ec2092fdff9ada938f71",
+   "set": "BEAD",
+   "unit": "lm"
+  }
+ ],
+ "schema": "T763_FIX_ROWS_V1",
+ "summary": {
+  "FIN.PAINT": {
+   "blank_before": 0,
+   "held_after": 0,
+   "held_before": 4,
+   "held_high_before": 159.3,
+   "held_low_before": 145.0,
+   "labels": {
+    "ESTIMATE": 4
+   },
+   "lines": 15,
+   "released_after": 828.0,
+   "released_before": 675.8,
+   "rows": 4
+  },
+  "FIN.PLASTER": {
+   "blank_before": 3,
+   "held_after": 0,
+   "held_before": 27,
+   "held_high_before": 404.7,
+   "held_low_before": 288.6,
+   "labels": {
+    "DEFAULT": 26,
+    "ESTIMATE": 5
+   },
+   "lines": 81,
+   "released_after": 1649.5,
+   "released_before": 1254.7,
+   "rows": 31
+  },
+  "FIN.PLASTER.BEAD": {
+   "blank_before": 5,
+   "held_after": 0,
+   "held_before": 14,
+   "held_high_before": 165.7,
+   "held_low_before": 165.5,
+   "labels": {
+    "DEFAULT": 3,
+    "DRAWING-READ": 1,
+    "ESTIMATE": 2,
+    "MEASURED": 8
+   },
+   "lines": 14,
+   "released_after": 342.5,
+   "released_before": 0,
+   "rows": 14
+  }
+ }
+}
