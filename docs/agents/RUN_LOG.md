@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T19:20Z | Worker 1 | STARTED | run session_01E6cPndkDcGJtdDqVnDtEuA | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T19:01Z | Worker 3 | STARTED | run session_01E6cPnd4TCgpmSPeHAc1iCi | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-13T18:55Z | Verifier | SUCCESS | T-763 (Gate A) | Drive OK. T-763 r1 REJECTED -> TODO r2 (gates f/h + e; a-c PASS): wet-room ceiling uses H-0.90 (>=3.00) against the owner default 'wet rooms / kitchen 2.70' (split render/band moves ~27.6 m2, totals unchanged; Checker reading: render to the 3.00 tile top, band above); 1.00x2.20 door default where widths are drawn: own DXF re-measure GF-RD36087 17.532 vs 19.066 m2 (+8.7 %, 2nd opening 0.797 missed), GF-RDF7D28 25.155 vs 24.708 (-1.8 %); shaft 6 lines + pantry band by midpoint/back-derivation, not a fallback method. BEAD 14 / REVEAL 3 / BAND_SHARE 2 not failed. No merge, no quantity change; no new owner question; T-180 slot not used (no line CLOSABLE NOW per 18:46 restatement). | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T18:51Z | Verifier | STARTED | run session_01E6cPne5Hq1NAFY97M6vDWc | repo-attached routine | task state: per run log none READY after 18:44 Verifier run (W2 started 18:40) | self-check pending
