@@ -27,6 +27,21 @@ import v3079_run as R79  # noqa: E402  (T-314; imports T-738's v3078_run and the
 INDEX79 = ROOT / "research/agents_t314/out/LINE_INDEX_V3_0_79.json"
 INDEX81 = HERE / "out/LINE_INDEX_V3_0_81.json"
 PACKAGE = HERE / "V3081_PACKAGE.json"
+DOWNGRADES = ROOT / "research/agents_t469/DOWNGRADES_SNAPSHOT.json"       # the snapshot the T-479 indexes bind
+DOWNGRADES_SHA = "817326399e5b9ffff1d727b9599dff46d1f917c930e759c37e1d5721f0f85766"
+
+
+def _downgrades(lines):
+    """-> ({line_id: downgrade_id}, [status]) by the T-469 binding rule (research/agents_t469, unchanged) on the pinned
+    snapshot; the same rule research/agents_t479/t479_registry_census.index_lines applies to build a line index."""
+    if str(ROOT / "research" / "agents_t469") not in sys.path:
+        sys.path.insert(0, str(ROOT / "research" / "agents_t469"))
+    import t469_trade_scoreboard as T469  # noqa: E402
+    raw = DOWNGRADES.read_bytes()
+    if hashlib.sha256(raw).hexdigest() != DOWNGRADES_SHA:
+        raise SystemExit(f"{DOWNGRADES.name}: sha is not the pinned {DOWNGRADES_SHA[:8]}")
+    doc = json.loads(raw)
+    return T469.applied_downgrades(lines, doc["downgrades"] if isinstance(doc, dict) else doc)
 
 
 def main(argv=None):
@@ -53,12 +68,24 @@ def main(argv=None):
     lines81 = json.loads((d / "V3_0_81_BOQ_LINES.json").read_text(encoding="utf-8"))
     run = json.loads((d / "V3_0_81_RUN.json").read_text(encoding="utf-8"))
     idx81 = {ln["line_id"]: ln for ln in json.loads(INDEX81.read_text(encoding="utf-8"))["lines"]}
-    # the BOQ-line view must agree with the committed line index, line by line
+    # the BOQ-line view must agree with the committed line index, line by line, classified AS THE INDEX CLASSIFIES
+    # (T-770 r3, Verifier FAULT 2): the T-479 index rule = line class, then a binding Checker downgrade of the pinned
+    # T-469 snapshot moves RELEASED -> HELD (never promotes). DG-1b0eacce2d68f2a5 holds 38 STR.REBAR footing lines
+    # (874.86 kg) in V3.0.79 and V3.0.81 alike; the applied set must equal the one the committed index records.
     from engine.source import arch_v3081 as A
+    dg_held, dg_status = _downgrades(lines81)
+    want = sorted(r["downgrade_id"] for r in json.loads(INDEX81.read_text(encoding="utf-8"))["downgrades"]
+                  if r.get("status") == "APPLIED")
+    got = sorted(r["downgrade_id"] for r in dg_status if r.get("status") == "APPLIED")
+    if got != want:
+        print("applied downgrades", got, "differ from the committed index", want)
+        return 1
     bad = []
     for ln in lines81:
         x = idx81.get(ln["line_id"])
         c = A.line_class(ln)
+        if c == "RELEASED" and ln["line_id"] in dg_held:
+            c = "HELD"
         if x is None or x["class"] != c:
             bad.append((ln["line_id"], c, x and x["class"]))
         elif c == "RELEASED" and abs(float(ln["measured_net"]) - float(x["measured_net"])) > 1e-6:
