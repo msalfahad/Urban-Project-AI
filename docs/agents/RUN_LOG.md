@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-13T01:56Z | Verifier | SUCCESS | T-752 GATE A PASS MERGED cb9b1444, T-753 GATE A PASS MERGED e771a5b2 (published e771a5b2) | Drive OK (own DXF + p.12 decode). T-752: 1F stubs C4A..C52 3 x 0.10x0.30 beyond C49 = 0.900 lm, SE squares 0.80 c/c AGREE; p.12 6 squares AGREE; kg HELD D-M1; X-lattice on p.12 is RL family (Lead to confirm RL id). T-753: KIT-01 137+11C 4.700 lm / 2.600 m2 and 1F-CPB-01 B0A 1.800 lm / 0.900 m2 AGREE by handle; heights HELD D-J1..3. CODEMAP conflict rebuilt. Research only, no quantity change; scoreboard restated; no owner question. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13T01:52Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-752 (W1 @3d0ca771), T-753 (W2 @7e8cc3ab) per run log | self-check pending
 - 2026-11-13 01:34 UTC | Worker 1 | SUCCESS | T-752 READY 3d0ca771 | B13-07 special metalwork census: every arch + struct sheet read, canopy / pergola / screen / frame NOT_DRAWN; 9 beam ends no family owns (1F SE 3 pcs 0.10x0.10, 0.900 lm visible, plan = elevation by handle; annex 6 pcs raster p.12), kg + material HELD (designer D-M1); railings / shutters / gates EXCLUDED by id; freelancer no row; 18 tests pass, nothing wired | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-13 01:20 UTC | Worker 1 | STARTED | run session_01E6cPncjF3EzoWVTb5vdTJx | repo-attached routine | task state: none yet | self-check pending
