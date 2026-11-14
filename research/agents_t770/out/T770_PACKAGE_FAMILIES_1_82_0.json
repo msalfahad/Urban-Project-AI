@@ -1,0 +1,472 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.82.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.81",
+  "ARCH_TAKEOFF_V3.0.82"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.81": {
+   "lines": 5276,
+   "lines_sha256": "88429a67c3fb7da55b87e81af97a0768b8cff591f9f180e702b044aa9bb5bf1c"
+  },
+  "ARCH_TAKEOFF_V3.0.82": {
+   "lines": 5280,
+   "lines_sha256": "e36bb3b11a2f84e6a9f899f763e34f43168505066a4e1d9cafad6364785ffdcd",
+   "previous": "ARCH_TAKEOFF_V3.0.81",
+   "item_codes": {
+    "EXT.FENCE.BLOCK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "EXT.FENCE.BLOCK_COUNT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "EXT.FENCE.FACE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 7,
+     "record": 0
+    },
+    "EXT.FENCE.GATE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "EXT.FENCE.MASONRY_BELOW_NG": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "EXT.FENCE.PAINT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 8,
+     "record": 0
+    },
+    "EXT.FENCE.PLASTER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 8,
+     "record": 0
+    },
+    "EXT.FENCE.TOP": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "EXT.FENCE.WALL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "EXT.FLOOR.OUTDOOR": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "EXT.POOL.WATER_FACE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "FIN.WP.DOORWAY_TRANSITION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 14,
+     "record": 0
+    },
+    "FIN.WP.MEMBRANE_ROLLS": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "FIN.WP.PENETRATION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 17,
+     "record": 0
+    },
+    "FIN.WP.ROOF": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "FIN.WP.ROOF_UPTURN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 3,
+     "record": 0
+    },
+    "FIN.WP.TERMINATION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.WP.WALL_UPTURN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "SITE.ANTI_TERMITE": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "SITE.CLEARANCE": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "SITE.PRELIMINARIES": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.CONC.BLINDING": {
+     "added": 1,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.BOUNDARY_PAD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.EARTH.BACKFILL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 7,
+     "record": 0
+    },
+    "STR.EARTH.DISPOSAL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.EARTH.EXCAVATION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 10,
+     "record": 0
+    },
+    "STR.FORMWORK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "WP.FOUNDATION.BURIED_LIQUID": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "WP.FOUNDATION.FOOTING_MEMBRANE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "WP.FOUNDATION.FOOTING_SCREED": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "WP.FOUNDATION.FOOTING_SIDES": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "WP.FOUNDATION.LIFT_PIT_BOARD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "WP.FOUNDATION.LIFT_PIT_MEMBRANE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "WP.FOUNDATION.PROCUREMENT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    }
+   },
+   "families": {
+    "B1-01": {
+     "SITE.CLEARANCE": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B1-02": {
+     "STR.EARTH.EXCAVATION": {
+      "added": 0,
+      "removed": 0,
+      "changed": 10,
+      "record": 0
+     }
+    },
+    "B1-03": {
+     "STR.EARTH.BACKFILL": {
+      "added": 0,
+      "removed": 0,
+      "changed": 7,
+      "record": 0
+     }
+    },
+    "B1-04": {
+     "STR.EARTH.DISPOSAL": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B1-05": {
+     "SITE.ANTI_TERMITE": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B1-07": {
+     "SITE.PRELIMINARIES": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B10-01": {
+     "STR.CONC.BLINDING": {
+      "added": 1,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-11": {
+     "STR.CONC.BOUNDARY_PAD": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-13": {
+     "STR.FORMWORK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B13-02": {
+     "EXT.FLOOR.OUTDOOR": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B13-04": {
+     "EXT.FENCE.BLOCK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     },
+     "EXT.FENCE.BLOCK_COUNT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     },
+     "EXT.FENCE.FACE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 7,
+      "record": 0
+     },
+     "EXT.FENCE.GATE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     },
+     "EXT.FENCE.MASONRY_BELOW_NG": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     },
+     "EXT.FENCE.PAINT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 8,
+      "record": 0
+     },
+     "EXT.FENCE.PLASTER": {
+      "added": 0,
+      "removed": 0,
+      "changed": 8,
+      "record": 0
+     },
+     "EXT.FENCE.TOP": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     },
+     "EXT.FENCE.WALL": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B13-09": {
+     "EXT.POOL.WATER_FACE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B8-01": {
+     "FIN.WP.PENETRATION": {
+      "added": 0,
+      "removed": 0,
+      "changed": 17,
+      "record": 0
+     }
+    },
+    "B8-02": {
+     "FIN.WP.DOORWAY_TRANSITION": {
+      "added": 0,
+      "removed": 0,
+      "changed": 14,
+      "record": 0
+     }
+    },
+    "B8-03": {
+     "FIN.WP.TERMINATION": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     },
+     "FIN.WP.WALL_UPTURN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B8-05": {
+     "FIN.WP.MEMBRANE_ROLLS": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B8-06": {
+     "FIN.WP.ROOF": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     },
+     "FIN.WP.ROOF_UPTURN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 3,
+      "record": 0
+     }
+    },
+    "B8-08": {
+     "WP.FOUNDATION.BURIED_LIQUID": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     },
+     "WP.FOUNDATION.FOOTING_MEMBRANE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     },
+     "WP.FOUNDATION.FOOTING_SCREED": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     },
+     "WP.FOUNDATION.FOOTING_SIDES": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     },
+     "WP.FOUNDATION.LIFT_PIT_BOARD": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     },
+     "WP.FOUNDATION.LIFT_PIT_MEMBRANE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     },
+     "WP.FOUNDATION.PROCUREMENT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 116,
+   "record_only": 0
+  }
+ }
+}
