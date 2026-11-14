@@ -108,5 +108,9 @@ T-634 found no drawn face for it).
 
 | 2026-11-14 | blockwork read -22 % and plaster +5.8 % after the fills | both headline pairs compared different face classes (his parapets / fence / facade row in masonry; our wet band, returns and pantry render in plaster) | R-T779-1: put both totals on the same face classes first; a class only one side books is a scope row; storey walls by the T-543 identity with each carried HELD figure replaced by the released fill | `t779_split.py --check` (all identities assert exact) | proposed |
 
+Drawing check this run (Drive arch sheet 09, read, nothing copied): the NE elevation / section prints FFL +1.00 GF,
++5.50 1F, storey 4.50 and a 0.50 terrace upstand; no 7.50 x 5.50 masonry element was identified there, so row 3
+stays UNRESOLVED (no dimension scaled from the image).
+
 Missing: his opening schedule by wall (to split the openings / length censuses), the 1F 'projections' element, the
 two stair rows by id, an own drawing re-measure of the engine walls.
