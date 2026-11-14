@@ -162,3 +162,17 @@ def test_villa_1_sheet_acceptance_heights():
                 yield from walk(v)
     recs = list(walk(raw))
     assert recs and all(r["source"] in ("PRINTED", "OWNER-DEFAULT", "HELD") and r["ref"] for r in recs)
+
+
+def test_villa_1_sheet_agrees_with_the_r_t763_1_patch():
+    """The villa-specific constants of the T-763 fill (R-T763-1) are reproduced by the sheet: the patch can retire."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("t763_fill", os.path.join(ROOT, "research", "agents_t763", "t763_fill.py"))
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    s = P.load(VILLA_1)
+    for zone in ("GF", "1F", "2F", "ANNEX"):
+        assert P.plaster_height(s, zone)["value_m"] == pytest.approx(m.H[zone], abs=1e-9)
+        assert P.ceiling_height(s, zone)["value_m"] == pytest.approx(m.ceiling(zone, wet=False), abs=1e-9)
+        assert P.ceiling_height(s, zone, wet=True)["value_m"] == pytest.approx(m.ceiling(zone, wet=True), abs=1e-9)
+    assert P.storey(s, "GF")["wet_tile_height"]["value"] == pytest.approx(m.TILE_H)
