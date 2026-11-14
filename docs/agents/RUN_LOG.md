@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T17:50Z | Verifier | STARTED | run session_01E6cPnbyzHJz91Z8kmT2z9k | repo-attached routine | task state: T-796 READY r1 (W1, head c64f65dd) | self-check pending
 - 2026-11-14T17:26Z | Worker 1 | SUCCESS | T-796 READY r1 c64f65dd + board 0afccf52 | MAIN FILL overlay now applies only at the row's before state: V3.0.86 107 rows = 66 already, 18 applied (wall tile 3.00 m + W17 still unwired), 23 skipped newer; disposal HELD 105.6..115.5 -> 10.477 m3 (E 335.756 - Z1 175.089 - Z2 150.190, reuse per p.13, k=1, k_break 1.032), roof WP 336.13 -> 324.09 m2 (+13.7 % vs 285), ext render 1,343.5 -> 1,305.6 m2 (-13.1 % vs 1,502.8); blank/held non-rebar 14/5 -> 14/4 | self-check codemap PASS, t061 PASS, freeze PASS; problem: none
 - 2026-11-14T17:20Z | Worker 1 | STARTED | run session_01E6cPnf2YehYxAWeqjjgaYN | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14T17:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
