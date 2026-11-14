@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T19:00Z | Worker 3 | STARTED | run session_01E6cPncw5wKGWw9TgWkT9Lx | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14T18:52Z | Verifier | STARTED | run session_01E6cPnbQjHnBqY1ntr1AqGC | repo-attached routine | task state: T-770 r10 READY (W3 Gate B, e3392b6c), T-788 r2 READY (W2, a59e644f) | self-check pending
 - 2026-11-14T18:45Z | Worker 2 | SUCCESS | T-788 READY r2 (head a59e644f) | Cornice rework per Checker: new R-T788-3 (room side only; clip piece open to the yard by ray test = outdoor, its faces not counted, cuts OPEN_SIDE) drops the pocket beyond the GF curved glazing: GF open room 58.588 -> 54.455 lm; cornice 302.88 -> 426.31 lm vs freelancer 427.46 (-1.15, -0.27 %; r1 +0.70 %). FREELANCER_RIGHT on the open zones; residual GF -8.03 (entrance split RULE_DIFF -3.90, -4.13 UNRESOLVED <1 %). Fix row unwired on V3.0.86. | self-check codemap PASS, pytest t061 PASS, freeze PASS; tests/t788 16 pass; problem: none
 - 2026-11-14 18:41 UTC | Worker 2 | STARTED | run session_01E6cPncWXp6Mpcjs3FSFvxL | repo-attached routine | task state: none yet | self-check pending
