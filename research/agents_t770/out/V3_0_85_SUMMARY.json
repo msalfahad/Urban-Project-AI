@@ -1,0 +1,660 @@
+{
+ "added": {
+  "L-0183ddaae1447ca94557": {
+   "high": null,
+   "item_code": "FIN.SPATTER_DASH",
+   "kind": "carrier",
+   "label": "ESTIMATE",
+   "low": null,
+   "net": 1053.998077,
+   "set": "T-771",
+   "set_figure": 1054.0,
+   "unit": "m2"
+  },
+  "L-0c58cebaada0095ba2b5": {
+   "item_code": "FIN.WP.DOORWAY",
+   "label": "DRAWING-READ",
+   "net": 0.2,
+   "set": "T-785",
+   "unit": "m2"
+  },
+  "L-0e7e3f7eb88071c3f761": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 5.40296,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-16a74c4a0f02bb211d59": {
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "label": "DRAWING-READ",
+   "net": 1.0,
+   "set": "T-785",
+   "unit": "pcs"
+  },
+  "L-1f8ec6e4b7879eeaf9a2": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 6.824665,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-20d4ef916669ef6dc6c0": {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "label": "DEFAULT",
+   "net": 1.5456,
+   "set": "T-785",
+   "unit": "m2"
+  },
+  "L-380ad51bd493ae96ab05": {
+   "item_code": "FIN.WP.TERMINATION",
+   "label": "DRAWING-READ",
+   "net": 4.5,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-3af2593df4581ed5fed2": {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "label": "DEFAULT",
+   "net": 2.631,
+   "set": "T-785",
+   "unit": "m2"
+  },
+  "L-45dce7fbff153bcbdc26": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 6.0051,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-5106e933022e75745356": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 8.9,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-5963930ae778db70690f": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 6.8,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-63384e6d0cca2d1c3512": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 8.2,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-66f6d624f897cc9d5ca2": {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "label": "DEFAULT",
+   "net": 1.754904,
+   "set": "T-785",
+   "unit": "m2"
+  },
+  "L-682522faa3ece4084448": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 15.24,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-77538e947d000b719173": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 6.6432,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-87180acd3969ae2083cd": {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "label": "DEFAULT",
+   "net": 2.109216,
+   "set": "T-785",
+   "unit": "m2"
+  },
+  "L-8a71aad97e697ddf6d05": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 13.5,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-8b09e37ad0a6564678de": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 8.2,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-9a57537ff571cb63970e": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 5.74,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-9d16ff5a7c726e14f6a9": {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "label": "DEFAULT",
+   "net": 2.63856,
+   "set": "T-785",
+   "unit": "m2"
+  },
+  "L-a50650ff329d39e8f6af": {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "label": "DEFAULT",
+   "net": 2.303952,
+   "set": "T-785",
+   "unit": "m2"
+  },
+  "L-aa239af216bbd0e3d133": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 7.9,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-ac70eeab0b1566e5cff2": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 6.7,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-c53f23561c901e047179": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "DEFAULT",
+   "net": 9.5,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-d3a04e84c9436b946fa7": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 6.61404,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-d9b33cd086ffecb2fdb9": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 5.4,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-de5993342ad6c0f379c0": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 4.8,
+   "set": "T-785",
+   "unit": "lm"
+  },
+  "L-e291e010106beb1aaf57": {
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "label": "ESTIMATE",
+   "net": 0.2,
+   "set": "T-785",
+   "unit": "m2"
+  },
+  "L-f318cd1cc8303e10634d": {
+   "item_code": "FIN.WP.PENETRATION",
+   "label": "MEASURED",
+   "net": 1.0,
+   "set": "T-785",
+   "unit": "pcs"
+  },
+  "L-f4b81c527e38f50ff650": {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "label": "MEASURED",
+   "net": 3.20296,
+   "set": "T-785",
+   "unit": "lm"
+  }
+ },
+ "applied": 106,
+ "base_index_sha256": "e07948d2376c1a4e6d3e1a3cf3e332d87f392e15253670b6389e5873d662804c",
+ "blank_in_package_families_after": 0,
+ "blank_in_package_families_before": 12,
+ "blank_non_rebar_after": 44,
+ "blank_non_rebar_before": 56,
+ "by_set": {
+  "T-760": {
+   "labels": {
+    "DEFAULT": 14,
+    "DRAWING-READ": 11,
+    "ESTIMATE": 11,
+    "MEASURED": 42,
+    "NOT_APPLICABLE": 3
+   },
+   "rows": 81
+  },
+  "T-780": {
+   "labels": {
+    "DRAWING-READ": 12,
+    "ESTIMATE": 7
+   },
+   "rows": 19
+  },
+  "T-785": {
+   "labels": {
+    "DEFAULT": 6
+   },
+   "rows": 6
+  }
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.84",
+ "index_sha256": "878e9a629435932479415d6fb01d15e56edd719851b8c8d0543a0a45000a47fa",
+ "lines": 5334,
+ "lines_before": 5304,
+ "method": "ARCH_TAKEOFF_V3.0.85",
+ "outside_lines_identical": true,
+ "package_sha256": "cd7b8c98b9785ffecb94587ebc1f08c46319fa276b1cf759f047f7d1010598a3",
+ "ranged_in_package_families_after": 0,
+ "ranged_in_package_families_before": 69,
+ "ranged_non_rebar_after": 9,
+ "ranged_non_rebar_before": 78,
+ "report": {
+  "na_label_rows": {
+   "T-760": 3
+  },
+  "recalled": [
+   {
+    "element_id": "SPATTER:EXTERIOR",
+    "reason": "deferred by name in T-770 r7 (V3.0.84, R-T770-5 u) until its carrier FIN.EXT.FINISH was wired; the merged T-760 set wires it in this package",
+    "set": "T-771"
+   }
+  ],
+  "v4": {
+   "carrier_added": [
+    {
+     "element_id": "SPATTER:EXTERIOR",
+     "item_code": "FIN.SPATTER_DASH",
+     "line_id": "L-0183ddaae1447ca94557",
+     "set": "T-771"
+    }
+   ],
+   "deferred_added": [],
+   "excluded_with_reason": [],
+   "ranged_added": [],
+   "rows_detail_sets": [],
+   "v3": {
+    "basis_corrections": [],
+    "carried": {},
+    "not_applicable_rows": [
+     {
+      "item_code": "ARCH.FACADE_RUN",
+      "line_id": "L-0b729a1774ad4ce4efaf",
+      "set": "T-760"
+     },
+     {
+      "item_code": "ARCH.FACADE_RUN",
+      "line_id": "L-472196bf3c74cdf83180",
+      "set": "T-760"
+     },
+     {
+      "item_code": "ARCH.FACADE_RUN",
+      "line_id": "L-66bc23b0d25030222328",
+      "set": "T-760"
+     }
+    ],
+    "restated_safety": [],
+    "source_schemas": {
+     "T-760": "T760_FIX_ROWS_V1",
+     "T-771": "URBAN_FIX_ROWS_V1",
+     "T-780": "DELIVERY_FIX_ROWS_V1",
+     "T-785": "URBAN_FIX_ROWS_V1"
+    },
+    "stack": {
+     "deferred": [],
+     "not_applicable": [],
+     "stacked_on_base": [],
+     "stacked_on_row": []
+    }
+   }
+  }
+ },
+ "rule": [
+  "R-T770-1",
+  "R-T770-2",
+  "R-T770-3",
+  "R-T770-4",
+  "R-T770-5",
+  "R-T770-6"
+ ],
+ "set_sha256": {
+  "T-760": "cbf80bb43e6dbcdd65188369eaf6043e30754863868b8e6a45eceaacb1459ca5",
+  "T-780": "7add7e23fae003fcb0fca354a70e7c79dc9406814427d2419d0e3d4261da233a",
+  "T-785": "90c1a3a48c4b64f4e779023dab9a5112e98471e8714f5d7f24edfe4bd46a02f0",
+  "recall:T-771": "5eb803cdd7c6e16424ef2560c6f194c4d631eb6bb84e8e6ac00c623662cd863f"
+ },
+ "totals_moved": {
+  "ARCH.FACADE [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 946.98
+   },
+   "before": {
+    "blank": 4,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 0.0
+   }
+  },
+  "ARCH.FACADE_RUN [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 198.86
+   },
+   "before": {
+    "blank": 3,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 6,
+    "released": 198.86
+   }
+  },
+  "FIN.EXT.FINISH [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 1054.0
+   },
+   "before": {
+    "blank": 1,
+    "held_high": 1085.61,
+    "held_low": 1008.58,
+    "lines": 18,
+    "released": 0.0
+   }
+  },
+  "FIN.EXT.PAINT [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 1054.0
+   },
+   "before": {
+    "blank": 1,
+    "held_high": 1085.61,
+    "held_low": 1008.58,
+    "lines": 18,
+    "released": 0.0
+   }
+  },
+  "FIN.EXT.PAINT.EDGE [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 38,
+    "released": 317.1
+   },
+   "before": {
+    "blank": 3,
+    "held_high": 281.82,
+    "held_low": 280.62,
+    "lines": 38,
+    "released": 0.0
+   }
+  },
+  "FIN.ROOF.FINISH [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 238.48
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 248.81
+   }
+  },
+  "FIN.ROOF.INSULATION [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 238.48
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 248.81
+   }
+  },
+  "FIN.ROOF.PROTECTION [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 238.48
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 248.81
+   }
+  },
+  "FIN.ROOF.SCREED [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 17.89
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 18.66
+   }
+  },
+  "FIN.SPATTER_DASH [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 2855.84
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 1801.84
+   }
+  },
+  "FIN.WP.DOORWAY [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 15,
+    "released": 2.13
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 14,
+    "released": 1.93
+   }
+  },
+  "FIN.WP.DOORWAY_TRANSITION [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 15,
+    "released": 2.5
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 14,
+    "released": 2.3
+   }
+  },
+  "FIN.WP.DOORWAY_TRANSITION_NR [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 15,
+    "released": 15.0
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 14,
+    "released": 14.0
+   }
+  },
+  "FIN.WP.MEMBRANE_ROLLS [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 22,
+    "released": 57.0
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 22,
+    "released": 59.0
+   }
+  },
+  "FIN.WP.PENETRATION [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 56.0
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 17,
+    "released": 55.0
+   }
+  },
+  "FIN.WP.ROOF [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 6,
+    "released": 244.03
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 6,
+    "released": 256.23
+   }
+  },
+  "FIN.WP.ROOF_UPTURN [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 7,
+    "released": 232.97
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 7,
+    "released": 220.61
+   }
+  },
+  "FIN.WP.SUNKEN_RECESS [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 6,
+    "released": 12.98
+   },
+   "before": {}
+  },
+  "FIN.WP.TERMINATION [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 5,
+    "released": 7.66
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 3.16
+   }
+  },
+  "FIN.WP.WALL_UPTURN [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 31.69
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 27.11
+   }
+  },
+  "FIN.WP.WALL_UPTURN_LM [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 135.57
+   },
+   "before": {}
+  }
+ }
+}
