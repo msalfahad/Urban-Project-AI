@@ -5,15 +5,15 @@ from openpyxl.utils import get_column_letter
 m=json.load(open(sys.argv[1])); L=json.load(open(sys.argv[2])); out=sys.argv[3]; ver=L.get('candidate_version','ARCH_TAKEOFF_V3.0.x')
 FILL=json.load(open(sys.argv[7])) if len(sys.argv)>7 else None
 if FILL:  # apply a main-chat fix-row set as an overlay before aggregation (shows the 'after fill' state; labels kept)
-    fr={r['line_id']:r for r in FILL['rows']}; applied=0
-    for l in L['lines']:
-        r=fr.get(l['line_id'])
-        if not r: continue
-        a=r['after']
-        if 'net' in a: l['class']='RELEASED'; l['measured_net']=a['net']; l['held_low']=l['held_high']=None
-        else: l['class']='HELD'; l['held_low']=a['low']; l['held_high']=a['high']
-        l['fill_label']=r['label']; applied+=1
-    ver=ver+' + '+FILL['schema'].replace('_V1','')+f' ({applied} rows)'
+    # T-796 R-T796-1: a row applies only where the index line still carries the row's 'before' state and no later
+    # fill_basis; a newer wired value is never overridden (skips are printed to stderr with their reason)
+    import importlib.util as _iu, pathlib as _pl
+    _s=_iu.spec_from_file_location('boq_overlay',_pl.Path(__file__).resolve().parent/'overlay.py'); _O=_iu.module_from_spec(_s); _s.loader.exec_module(_O)
+    _log=_O.apply_overlay(L['lines'],FILL); _sm=_O.summary(_log); applied=_sm.get('APPLY',0)
+    for _e in _log:
+        if _e['action'].startswith('SKIP'): print('OVERLAY SKIP',_e['action'],_e['line_id'],_e['item_code'],'index',_e['index'],'row',_e['row_after'],file=sys.stderr)
+    print('OVERLAY',json.dumps(_sm),file=sys.stderr)
+    ver=ver+' + '+FILL['schema'].replace('_V1','')+f' ({applied} rows applied, {sum(v for k,v in _sm.items() if k.startswith("SKIP"))} skipped as older than the index)'
 STMT=json.load(open(sys.argv[4])) if len(sys.argv)>4 else None; KEYMAP=json.load(open(sys.argv[5])) if len(sys.argv)>5 else None; BENCH=json.load(open(sys.argv[6])) if len(sys.argv)>6 else None
 fams={f['code']:f for f in m['families']}
 ic={c:f['code'] for f in m['families'] for c in f.get('item_codes',[])}

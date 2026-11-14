@@ -106,14 +106,16 @@ ORDER = ["Concrete", "Formwork", "Blockwork", "Plaster", "Paint", "External rend
 def main(index_path, fill_path, xlsx_path, md_path):
     idx = json.load(open(index_path)); fill = json.load(open(fill_path))
     ver = idx.get("candidate_version", "?")
-    after = {r["line_id"]: r for r in fill["rows"]}
+    # T-796 R-T796-1: the MAIN FILL overlay applies only where the index line still carries the row's 'before' state and
+    # no later fill_basis; a newer wired value is never overridden (skips listed in the markdown)
+    import importlib.util as _iu, pathlib as _pl
+    _s = _iu.spec_from_file_location("boq_overlay", _pl.Path(__file__).resolve().parent / "overlay.py"); O = _iu.module_from_spec(_s); _s.loader.exec_module(O)
+    lines = [dict(l) for l in idx["lines"]]
+    olog = O.apply_overlay(lines, fill); osum = O.summary(olog)
     rows = []
-    for l in idx["lines"]:
+    for l in lines:
         if l["class"] == "EXCLUDED":
             continue
-        l = dict(l); a = after.get(l["line_id"])
-        if a:
-            l["class"] = a["after"]["class"]; l["measured_net"] = a["after"].get("net"); l["held_low"] = a["after"].get("low"); l["held_high"] = a["after"].get("high")
         if l["class"] != "HELD":
             continue
         blank = l["held_low"] is None and l["held_high"] is None
@@ -131,6 +133,12 @@ def main(index_path, fill_path, xlsx_path, md_path):
     for t in ORDER:
         if t in by:
             b = by[t]; md.append(f"| {t} | {b['blank']} | {b['held']} | {'; '.join(sorted(o for o in b['owner'] if o not in ('none', 'same', '?')))} |")
+    sk = [e for e in olog if e["action"].startswith("SKIP")]
+    md += ["", f"## MAIN FILL overlay (T-796 precedence): {json.dumps(osum)}", "",
+           "A row applies only where the index line still carries the row's before state and no later fill_basis. Rows skipped"
+           " (the index value stands):", "", "| line id | item | unit | action | index | MAIN FILL row |", "|---|---|---|---|---|---|"]
+    for e in sk:
+        md.append(f"| {e['line_id']} | {e['item_code']} | {e['unit']} | {e['action']} | {e['index']} | {e['row_after']} |")
     md += ["", "## Every line (rebar left out)", "", "| trade | item | unit | element | state | low | high | why no figure | what fills it | owner can give |", "|---|---|---|---|---|---|---|---|---|---|"]
     for r in rows:
         if r["trade"].startswith("Rebar"):
