@@ -2,6 +2,12 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
+## SCOREBOARD NOTE 2026-11-14 04:58 UTC (Verifier, run session_01E6cPnejfQQS2dKkBVudU8K; after T-779 MERGED 92b00ef0, research only, no quantity change; candidate stays ARCH_TAKEOFF_V3.0.82, NOT RELEASED)
+
+Number (a) unchanged (211 lines without a figure). Number (b), masonry and internal plaster, freelancer cells re-read by the Checker this run from the two Drive workbooks (masonry, internal plaster), ours from the merged T-765 / T-763 r2 rows; tools/alsenan_scoreboard.py NOT run (no normalised V3.0.82 row set built this run):
+- MAS.BLOCK m2: ours 981.35 vs his 1,260.69 (-22.2 %). Like for like storey walls 962.96 vs 972.11 (-0.94 %). His parapets 172.93 pair with our B9-05 MAS.BLOCK.PARAPET = HELD 0 .. 101.46 (unknown, not 0; lengths 136.84 vs 138.65 m agree -1.3 %, heights differ); his boundary wall 74.40 pairs with EXT.FENCE.WALL; his projections 41.25 UNRESOLVED; our below-ground 18.39 ours only (ESTIMATE lower bound).
+- Internal plaster m2: like for like dry + shaft ours 1,017.65 vs his gross 1,169.13 (-12.96 %); his BILLED net 1,151.14 after his half deduction of 116.50 m2 openings (payable convention). Wet band 159.36, returns 26.61 ours only; pantry 32.34 under wet render.
+
 ## SCOREBOARD NOTE 2026-11-14 04:45 UTC (Verifier, run session_01E6cPnbK7x1gLffR1f9Zp8L; after T-770 r5 MERGED e7b2533a = candidate ARCH_TAKEOFF_V3.0.82, NOT RELEASED; T-778 MERGED eff624c2, no quantity change)
 
 DELIVERY_MODE s.1 number (a), lines with no figure (rebar excepted), from LINE_INDEX_V3_0_81 -> _V3_0_82 (both = the Verifier's own Drive chain run, 0 disagreements): total 295 -> 211; EXT 35 -> 0, STR 15 -> 0, WP 11 -> 0, FIN 103 -> 80, ARCH 53, MAS 76, MET 2 unchanged.
