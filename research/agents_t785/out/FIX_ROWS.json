@@ -1,0 +1,1140 @@
+{
+ "schema": "URBAN_FIX_ROWS_V1",
+ "task": "T-785",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.82",
+ "inputs": [
+  "research/agents_t770/out/LINE_INDEX_V3_0_82.json",
+  "research/agents_t546/t546_inputs.py",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json",
+  "research/agents_t710/out/T710_WP_ROUND3.json",
+  "research/agents_t743/out/T743_ALSENAN_COUNTS.json"
+ ],
+ "summary": {
+  "candidate": "ARCH_TAKEOFF_V3.0.82",
+  "his_room_list": "17 rows (GF 10 incl. kitchen, 1F 6 incl. laundry, roof floor 1); ours 18 = his 17 + pantry",
+  "floor_m2": {
+   "ours": 85.57571,
+   "his": 72.01,
+   "diff": 13.56571,
+   "pct": 18.84,
+   "residual": 0.0,
+   "like_for_like_17_rooms": 72.12071,
+   "like_for_like_pct": 0.15
+  },
+  "upturn_lm": {
+   "ours_run": 135.572925,
+   "his": 144.61,
+   "diff": -9.037075,
+   "pct": -6.25,
+   "residual": 0.0,
+   "like_for_like_17_gross": 144.728925,
+   "like_for_like_pct": 0.08
+  },
+  "by_cause": {
+   "floor:TOLERANCE": 0.023416,
+   "floor:RULE_DIFFERENCE": 13.235,
+   "floor:ENGINE_RIGHT": 0.307294,
+   "upturn:RULE_DIFFERENCE": -9.556,
+   "upturn:TOLERANCE": 0.000625,
+   "upturn:ENGINE_RIGHT": 0.5183
+  },
+  "sunken_rooms": {
+   "n": 6,
+   "upturn_before_m2": 9.148,
+   "upturn_after_m2": 13.722,
+   "recess_m2": 12.983232,
+   "recess_parts_capped": 6
+  },
+  "wall_upturn_m2": {
+   "before": 27.114585,
+   "after": 31.688585
+  },
+  "rows": 6,
+  "new_lines": 29,
+  "flags": [
+   "F-T785-1: the D-41 default recess 0.30 (main chat 13 Nov, used by T-765 drop walls) exceeds the T-710 beam bound d_max 0.24 on panels 275 / 276 / 280 / 287 / 5BF; R-T785-2 caps it there (298: 0.30 < 0.34). T-765 GF-W20 uses 0.30: 0.9308 x 0.06 = 0.056 m2 of blockwork, below materiality; one drop value per panel across trades is a T-770 wiring check",
+   "F-T785-2: the pantry had 5 WP lines absent from the candidate (doorway, transition, transition nr, termination, penetration; T-710 c / T-767 note): added as new lines",
+   "his 72.01 / 144.61 are also his wet-room gypsum ceiling and cornice figures (decor sheet H74 / H75): one room list feeds three trades"
+  ]
+ },
+ "rooms": [
+  {
+   "room": "GF-RDBD4F9",
+   "title": "GF lobby wash (2 basins)",
+   "freelancer_row": 14,
+   "floor_m2": 4.730695,
+   "his_floor_m2": 4.73,
+   "run_lm": 6.6432,
+   "door_segments_lm": 1.6,
+   "open_edges_lm": 1.256,
+   "gross_lm": 9.4992,
+   "his_perimeter_lm": 9.5,
+   "hand_boundary_lm": "9.5002",
+   "sunken": false
+  },
+  {
+   "room": "GF-RD36087",
+   "title": "GF basin space by the stair",
+   "freelancer_row": 15,
+   "floor_m2": 1.485,
+   "his_floor_m2": 1.7,
+   "run_lm": 3.20296,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.9,
+   "gross_lm": 4.90296,
+   "his_perimeter_lm": 5.3,
+   "hand_boundary_lm": "4.9",
+   "sunken": false
+  },
+  {
+   "room": "GF-RD6F891",
+   "title": "GF master bath",
+   "freelancer_row": 16,
+   "floor_m2": 3.717683,
+   "his_floor_m2": 3.7,
+   "run_lm": 6.824665,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 7.624665,
+   "his_perimeter_lm": 7.6,
+   "hand_boundary_lm": "7.6245",
+   "sunken": false
+  },
+  {
+   "room": "GF-RB28769",
+   "title": "GF core W.C. 245 x 167 (wedge)",
+   "freelancer_row": 17,
+   "floor_m2": 2.36761,
+   "his_floor_m2": 2.3,
+   "run_lm": 6.0051,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 6.8051,
+   "his_perimeter_lm": 6.7,
+   "hand_boundary_lm": "6.8098",
+   "sunken": false
+  },
+  {
+   "room": "GF-RF38DAF",
+   "title": "GF core W.C. 289 x 167 (wedge)",
+   "freelancer_row": 18,
+   "floor_m2": 2.675221,
+   "his_floor_m2": 2.67,
+   "run_lm": 6.61404,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 7.41404,
+   "his_perimeter_lm": 7.4,
+   "hand_boundary_lm": "7.414",
+   "sunken": false
+  },
+  {
+   "room": "GF-RDF7D28",
+   "title": "GF stair-core W.C. 175 x 135",
+   "freelancer_row": 19,
+   "floor_m2": 2.3625,
+   "his_floor_m2": 2.36,
+   "run_lm": 5.40296,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 6.20296,
+   "his_perimeter_lm": 6.2,
+   "hand_boundary_lm": "6.2",
+   "sunken": false
+  },
+  {
+   "room": "GF-RA3AD49",
+   "title": "GF kitchen",
+   "freelancer_row": 20,
+   "floor_m2": 9.630001,
+   "his_floor_m2": 9.55,
+   "run_lm": 13.5,
+   "door_segments_lm": 1.0,
+   "open_edges_lm": 0.0,
+   "gross_lm": 14.5,
+   "his_perimeter_lm": 14.35,
+   "hand_boundary_lm": "14.5",
+   "sunken": false
+  },
+  {
+   "room": "GF-RFAD3C4",
+   "title": "GF driver W.C.",
+   "freelancer_row": 21,
+   "floor_m2": 1.95,
+   "his_floor_m2": 1.95,
+   "run_lm": 4.8,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 5.6,
+   "his_perimeter_lm": 5.58,
+   "hand_boundary_lm": "5.6",
+   "sunken": false
+  },
+  {
+   "room": "GF-RB62B55",
+   "title": "GF W.C. by the reception room",
+   "freelancer_row": 22,
+   "floor_m2": 3.375,
+   "his_floor_m2": 3.37,
+   "run_lm": 6.7,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 7.5,
+   "his_perimeter_lm": 7.5,
+   "hand_boundary_lm": "7.5",
+   "sunken": false
+  },
+  {
+   "room": "GF-R8496F0",
+   "title": "GF wash by the reception room",
+   "freelancer_row": 23,
+   "floor_m2": 3.1325,
+   "his_floor_m2": 3.15,
+   "run_lm": 5.4,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 1.0,
+   "gross_lm": 7.2,
+   "his_perimeter_lm": 7.2,
+   "hand_boundary_lm": "7.2",
+   "sunken": false
+  },
+  {
+   "room": "1F-R48CDA5",
+   "title": "1F east bath 210 x 225",
+   "freelancer_row": 27,
+   "floor_m2": 4.725,
+   "his_floor_m2": 4.72,
+   "run_lm": 7.9,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 8.7,
+   "his_perimeter_lm": 8.7,
+   "hand_boundary_lm": "8.7",
+   "sunken": true
+  },
+  {
+   "room": "1F-RED23B8",
+   "title": "1F bath by the laundry",
+   "freelancer_row": 28,
+   "floor_m2": 3.5775,
+   "his_floor_m2": 3.6,
+   "run_lm": 6.8,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 7.6,
+   "his_perimeter_lm": 7.6,
+   "hand_boundary_lm": "7.6",
+   "sunken": true
+  },
+  {
+   "room": "1F-R52AC05",
+   "title": "1F W.C. by the laundry",
+   "freelancer_row": 29,
+   "floor_m2": 2.646,
+   "his_floor_m2": 2.59,
+   "run_lm": 5.74,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 6.54,
+   "his_perimeter_lm": 6.48,
+   "hand_boundary_lm": "6.54",
+   "sunken": true
+  },
+  {
+   "room": "1F-R48AA46",
+   "title": "1F west bath A 245 x 205",
+   "freelancer_row": 30,
+   "floor_m2": 5.0225,
+   "his_floor_m2": 5,
+   "run_lm": 8.2,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 9.0,
+   "his_perimeter_lm": 9,
+   "hand_boundary_lm": "9.0",
+   "sunken": true
+  },
+  {
+   "room": "1F-R8BDA49",
+   "title": "1F west bath B 245 x 205",
+   "freelancer_row": 31,
+   "floor_m2": 5.0225,
+   "his_floor_m2": 5,
+   "run_lm": 8.2,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 9.0,
+   "his_perimeter_lm": 8.9,
+   "hand_boundary_lm": "9.0",
+   "sunken": true
+  },
+  {
+   "room": "1F-R26FA0D",
+   "title": "1F laundry",
+   "freelancer_row": 32,
+   "floor_m2": 10.151,
+   "his_floor_m2": 10,
+   "run_lm": 15.24,
+   "door_segments_lm": 1.7,
+   "open_edges_lm": 0.0,
+   "gross_lm": 16.94,
+   "his_perimeter_lm": 16.85,
+   "hand_boundary_lm": "16.94",
+   "sunken": false
+  },
+  {
+   "room": "2F-RE83BED",
+   "title": "2F roof-floor W.C. 300 x 185",
+   "freelancer_row": 36,
+   "floor_m2": 5.55,
+   "his_floor_m2": 5.62,
+   "run_lm": 8.9,
+   "door_segments_lm": 0.8,
+   "open_edges_lm": 0.0,
+   "gross_lm": 9.7,
+   "his_perimeter_lm": 9.75,
+   "hand_boundary_lm": "9.7",
+   "sunken": true
+  },
+  {
+   "room": "GF-RC99C2A",
+   "title": "GF pantry (wet zone, Q-37 A)",
+   "freelancer_row": null,
+   "floor_m2": 13.455,
+   "his_floor_m2": null,
+   "run_lm": 9.5,
+   "door_segments_lm": 1.0,
+   "open_edges_lm": 4.5,
+   "gross_lm": 15.0,
+   "his_perimeter_lm": null,
+   "hand_boundary_lm": null,
+   "sunken": false
+  }
+ ],
+ "rows": [
+  {
+   "line_id": "L-ba15212ec9887e6d4f73",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "unit": "m2",
+   "element_id": "1F-R48AA46:wp_wall_upturn",
+   "before": {
+    "class": "RELEASED",
+    "net": 1.64,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.46
+   },
+   "label": "DEFAULT",
+   "basis": "sunken wet room (T-213 / T-710 panel 280): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 8.20 x 0.30 = 2.460 m2 (was x 0.20); recess on its own line (R-T785-2)"
+  },
+  {
+   "line_id": "L-60f100105399a9bdfb08",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "unit": "m2",
+   "element_id": "1F-R48CDA5:wp_wall_upturn",
+   "before": {
+    "class": "RELEASED",
+    "net": 1.58,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.37
+   },
+   "label": "DEFAULT",
+   "basis": "sunken wet room (T-213 / T-710 panel 298): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 7.90 x 0.30 = 2.370 m2 (was x 0.20); recess on its own line (R-T785-2)"
+  },
+  {
+   "line_id": "L-ace6533512ada47d1352",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "unit": "m2",
+   "element_id": "1F-R52AC05:wp_wall_upturn",
+   "before": {
+    "class": "RELEASED",
+    "net": 1.148,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.722
+   },
+   "label": "DEFAULT",
+   "basis": "sunken wet room (T-213 / T-710 panel 276): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 5.74 x 0.30 = 1.722 m2 (was x 0.20); recess on its own line (R-T785-2)"
+  },
+  {
+   "line_id": "L-6e6daedebef2db6a83bd",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "unit": "m2",
+   "element_id": "1F-R8BDA49:wp_wall_upturn",
+   "before": {
+    "class": "RELEASED",
+    "net": 1.64,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.46
+   },
+   "label": "DEFAULT",
+   "basis": "sunken wet room (T-213 / T-710 panel 280+287): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 8.20 x 0.30 = 2.460 m2 (was x 0.20); recess on its own line (R-T785-2)"
+  },
+  {
+   "line_id": "L-a93486d24647a9e14445",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "unit": "m2",
+   "element_id": "1F-RED23B8:wp_wall_upturn",
+   "before": {
+    "class": "RELEASED",
+    "net": 1.36,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.04
+   },
+   "label": "DEFAULT",
+   "basis": "sunken wet room (T-213 / T-710 panel 275): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 6.80 x 0.30 = 2.040 m2 (was x 0.20); recess on its own line (R-T785-2)"
+  },
+  {
+   "line_id": "L-b842beb71b67af783cd7",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "unit": "m2",
+   "element_id": "2F-RE83BED:wp_wall_upturn",
+   "before": {
+    "class": "RELEASED",
+    "net": 1.78,
+    "low": null,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 2.67
+   },
+   "label": "DEFAULT",
+   "basis": "sunken wet room (T-213 / T-710 panel 5BF): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 8.90 x 0.30 = 2.670 m2 (was x 0.20); recess on its own line (R-T785-2)"
+  }
+ ],
+ "new_lines": [
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "GF-RDBD4F9:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-519ae15dd6ff755f4aa5 = 1.32864 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 6.6432,
+   "vs_freelancer": {
+    "freelancer_lm": 9.5,
+    "like_for_like_lm": 9.4992
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "GF-RD36087:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-017f9184994017c8a62b = 0.640592 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 3.20296,
+   "vs_freelancer": {
+    "freelancer_lm": 5.3,
+    "like_for_like_lm": 4.90296
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "GF-RD6F891:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-8b981cb63e87f18b13d4 = 1.36493 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 6.824665,
+   "vs_freelancer": {
+    "freelancer_lm": 7.6,
+    "like_for_like_lm": 7.624665
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "GF-RB28769:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-60d7c01f386770e2bf9c = 1.20102 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 6.0051,
+   "vs_freelancer": {
+    "freelancer_lm": 6.7,
+    "like_for_like_lm": 6.8051
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "GF-RF38DAF:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-0226eb38b2c6469296df = 1.32281 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 6.61404,
+   "vs_freelancer": {
+    "freelancer_lm": 7.4,
+    "like_for_like_lm": 7.41404
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "GF-RDF7D28:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-8dd259ad89d2cd276ad2 = 1.08059 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 5.40296,
+   "vs_freelancer": {
+    "freelancer_lm": 6.2,
+    "like_for_like_lm": 6.20296
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "GF-RA3AD49:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-f77fe27244893dc1cc9b = 2.7 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 13.5,
+   "vs_freelancer": {
+    "freelancer_lm": 14.35,
+    "like_for_like_lm": 14.5
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "GF-RFAD3C4:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-31877d6c1cb33b74e5a7 = 0.96 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 4.8,
+   "vs_freelancer": {
+    "freelancer_lm": 5.58,
+    "like_for_like_lm": 5.6
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "GF-RB62B55:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-6c277fc130b921a7f83e = 1.34 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 6.7,
+   "vs_freelancer": {
+    "freelancer_lm": 7.5,
+    "like_for_like_lm": 7.5
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "GF-R8496F0:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-5362cff3511074da962a = 1.08 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 5.4,
+   "vs_freelancer": {
+    "freelancer_lm": 7.2,
+    "like_for_like_lm": 7.2
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "1F-R48CDA5:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-60f100105399a9bdfb08 = 1.58 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 7.9,
+   "vs_freelancer": {
+    "freelancer_lm": 8.7,
+    "like_for_like_lm": 8.7
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "1F-RED23B8:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-a93486d24647a9e14445 = 1.36 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 6.8,
+   "vs_freelancer": {
+    "freelancer_lm": 7.6,
+    "like_for_like_lm": 7.6
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "1F-R52AC05:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-ace6533512ada47d1352 = 1.148 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 5.74,
+   "vs_freelancer": {
+    "freelancer_lm": 6.48,
+    "like_for_like_lm": 6.54
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "1F-R48AA46:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-ba15212ec9887e6d4f73 = 1.64 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 8.2,
+   "vs_freelancer": {
+    "freelancer_lm": 9,
+    "like_for_like_lm": 9.0
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "1F-R8BDA49:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-6e6daedebef2db6a83bd = 1.64 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 8.2,
+   "vs_freelancer": {
+    "freelancer_lm": 8.9,
+    "like_for_like_lm": 9.0
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "1F-R26FA0D:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-2d478a44f042f938e4e7 = 3.048 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 15.24,
+   "vs_freelancer": {
+    "freelancer_lm": 16.85,
+    "like_for_like_lm": 16.94
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "2F-RE83BED:wp_wall_upturn_lm",
+   "label": "MEASURED",
+   "basis": "run of the upturn strip of line L-b842beb71b67af783cd7 = 1.78 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+   "net": 8.9,
+   "vs_freelancer": {
+    "freelancer_lm": 9.75,
+    "like_for_like_lm": 9.7
+   }
+  },
+  {
+   "item_code": "FIN.WP.WALL_UPTURN_LM",
+   "unit": "lm",
+   "element_id": "GF-RC99C2A:wp_wall_upturn_lm",
+   "label": "DEFAULT",
+   "basis": "run of the upturn strip of line L-8090ff20f2b547d1bc96 = 1.9 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines); pantry run = T-767 DEFAULT 15.00 - 4.50 - 1.00",
+   "net": 9.5,
+   "vs_freelancer": {
+    "freelancer_lm": null,
+    "note": "not in his list (pantry, owner Q-37 A)"
+   }
+  },
+  {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "unit": "m2",
+   "element_id": "1F-R48AA46:wp_sunken_recess",
+   "label": "DEFAULT",
+   "basis": "membrane lining the recess (tray on the structural slab): panel 280 loop 8.7884 x d 0.24 (default 0.30 capped at the beam bound) = 2.1092 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+   "net": 2.109216
+  },
+  {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "unit": "m2",
+   "element_id": "1F-R48CDA5:wp_sunken_recess",
+   "label": "DEFAULT",
+   "basis": "membrane lining the recess (tray on the structural slab): panel 298 loop 8.7952 x d 0.30 (default 0.30) = 2.6386 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+   "net": 2.63856
+  },
+  {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "unit": "m2",
+   "element_id": "1F-R52AC05:wp_sunken_recess",
+   "label": "DEFAULT",
+   "basis": "membrane lining the recess (tray on the structural slab): panel 276 loop 6.4400 x d 0.24 (default 0.30 capped at the beam bound) = 1.5456 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+   "net": 1.5456
+  },
+  {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "unit": "m2",
+   "element_id": "1F-R8BDA49:wp_sunken_recess",
+   "label": "DEFAULT",
+   "basis": "membrane lining the recess (tray on the structural slab): panel 280 loop 5.4235 x d 0.24 (default 0.30 capped at the beam bound); panel 287 loop 5.5390 x d 0.24 (default 0.30 capped at the beam bound) = 2.6310 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+   "net": 2.631
+  },
+  {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "unit": "m2",
+   "element_id": "1F-RED23B8:wp_sunken_recess",
+   "label": "DEFAULT",
+   "basis": "membrane lining the recess (tray on the structural slab): panel 275 loop 7.3121 x d 0.24 (default 0.30 capped at the beam bound) = 1.7549 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+   "net": 1.754904
+  },
+  {
+   "item_code": "FIN.WP.SUNKEN_RECESS",
+   "unit": "m2",
+   "element_id": "2F-RE83BED:wp_sunken_recess",
+   "label": "DEFAULT",
+   "basis": "membrane lining the recess (tray on the structural slab): panel 5BF loop 9.5998 x d 0.24 (default 0.30 capped at the beam bound) = 2.3040 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+   "net": 2.303952
+  },
+  {
+   "item_code": "FIN.WP.DOORWAY",
+   "unit": "m2",
+   "element_id": "GF-RC99C2A:doorway D120",
+   "label": "DRAWING-READ",
+   "basis": "floor piece through door D120: printed gap 1.00 x wall 0.20 (T-710 c)",
+   "net": 0.2
+  },
+  {
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "unit": "pcs",
+   "element_id": "GF-RC99C2A:doorway transition nr D120",
+   "label": "DRAWING-READ",
+   "basis": "one transition per physical door (Q-35 C): D120",
+   "net": 1.0
+  },
+  {
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "unit": "m2",
+   "element_id": "GF-RC99C2A:doorway transition D120",
+   "label": "ESTIMATE",
+   "basis": "door width 1.00 x 0.20 upturn carried across the door (same basis as the 14 released transitions, T-767)",
+   "net": 0.2
+  },
+  {
+   "item_code": "FIN.WP.TERMINATION",
+   "unit": "lm",
+   "element_id": "GF-RC99C2A:termination open side",
+   "label": "DRAWING-READ",
+   "basis": "membrane edge on the open dining side, printed DIM 5E1 4.50 (T-710 c; Q-37 A)",
+   "net": 4.5
+  },
+  {
+   "item_code": "FIN.WP.PENETRATION",
+   "unit": "pcs",
+   "element_id": "GF-RC99C2A:wp_penetrations",
+   "label": "MEASURED",
+   "basis": "T-743 sanitary census {'FLOOR_DRAIN': 1} (one WP penetration per fixture, owner default)",
+   "net": 1.0
+  }
+ ],
+ "floor_components": [
+  {
+   "name": "2-dp rounding",
+   "qty": "0.000695",
+   "sign": 1,
+   "cause": "TOLERANCE",
+   "room": "GF lobby wash (2 basins)"
+  },
+  {
+   "name": "passage reveal 0.20 x 1.10 taken into his room (1.55 x 1.10)",
+   "qty": "0.220",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF basin space by the stair"
+  },
+  {
+   "name": "his 1.705 truncated to 2 dp",
+   "qty": "0.005",
+   "sign": 1,
+   "cause": "TOLERANCE",
+   "room": "GF basin space by the stair"
+  },
+  {
+   "name": "diagonal-wall corner 0.983 x 0.982 / 2 out of 2.10 x 2.00",
+   "qty": "0.017683",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "GF master bath"
+  },
+  {
+   "name": "wedge room by shoelace on the drawn wall faces",
+   "qty": "0.06761",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "GF core W.C. 245 x 167 (wedge)"
+  },
+  {
+   "name": "2-dp truncation",
+   "qty": "0.005221",
+   "sign": 1,
+   "cause": "TOLERANCE",
+   "room": "GF core W.C. 289 x 167 (wedge)"
+  },
+  {
+   "name": "2-dp truncation",
+   "qty": "0.0025",
+   "sign": 1,
+   "cause": "TOLERANCE",
+   "room": "GF stair-core W.C. 175 x 135"
+  },
+  {
+   "name": "printed 300 x 270 + 105 x 150 less two drawn piers 0.045",
+   "qty": "0.080001",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "GF kitchen"
+  },
+  {
+   "name": "2-dp truncation",
+   "qty": "0.005",
+   "sign": 1,
+   "cause": "TOLERANCE",
+   "room": "GF W.C. by the reception room"
+  },
+  {
+   "name": "column corner out of the printed 150 x 210",
+   "qty": "0.0175",
+   "sign": -1,
+   "cause": "ENGINE_RIGHT",
+   "room": "GF wash by the reception room"
+  },
+  {
+   "name": "2-dp truncation",
+   "qty": "0.005",
+   "sign": 1,
+   "cause": "TOLERANCE",
+   "room": "1F east bath 210 x 225"
+  },
+  {
+   "name": "drawn jamb 0.45 x 0.05 out of 2.00 x 1.80",
+   "qty": "0.0225",
+   "sign": -1,
+   "cause": "ENGINE_RIGHT",
+   "room": "1F bath by the laundry"
+  },
+  {
+   "name": "printed 180 x 147 against his 1.80 x 1.44",
+   "qty": "0.056",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "1F W.C. by the laundry"
+  },
+  {
+   "name": "printed 245 x 205 against his 5.00",
+   "qty": "0.0225",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "1F west bath A 245 x 205"
+  },
+  {
+   "name": "printed 245 x 205 against his 5.00",
+   "qty": "0.0225",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "1F west bath B 245 x 205"
+  },
+  {
+   "name": "printed 347 x 300 / 185 with the W.C. corner, against his typed 10.00",
+   "qty": "0.151",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "1F laundry"
+  },
+  {
+   "name": "printed 185 against his 1.875",
+   "qty": "0.07",
+   "sign": -1,
+   "cause": "ENGINE_RIGHT",
+   "room": "2F roof-floor W.C. 300 x 185"
+  },
+  {
+   "name": "pantry box 4.50 x 3.00 less the column edge 0.900 x 0.050",
+   "qty": "13.455",
+   "sign": 1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF pantry (wet zone, Q-37 A)"
+  }
+ ],
+ "upturn_components": [
+  {
+   "name": "pantry upturn run (not in his list, owner Q-37 A)",
+   "qty": 9.5,
+   "sign": 1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF pantry (wet zone, Q-37 A)"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF lobby wash (2 basins)"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF lobby wash (2 basins)"
+  },
+  {
+   "name": "lobby to stair hall, no wall",
+   "qty": "1.256",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF lobby wash (2 basins)"
+  },
+  {
+   "name": "boundary: hand reading vs his perimeter",
+   "qty": "0.0002",
+   "sign": 1,
+   "cause": "TOLERANCE",
+   "room": "GF lobby wash (2 basins)"
+  },
+  {
+   "name": "engine run vs hand boundary less segments (closure / door block width)",
+   "qty": "0.0010",
+   "sign": -1,
+   "cause": "TOLERANCE",
+   "room": "GF lobby wash (2 basins)"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF basin space by the stair"
+  },
+  {
+   "name": "basin space to passage, no wall",
+   "qty": "0.90",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF basin space by the stair"
+  },
+  {
+   "name": "boundary: hand reading vs his perimeter",
+   "qty": "0.4",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF basin space by the stair"
+  },
+  {
+   "name": "engine run vs hand boundary less segments (closure / door block width)",
+   "qty": "0.00296",
+   "sign": 1,
+   "cause": "TOLERANCE",
+   "room": "GF basin space by the stair"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF master bath"
+  },
+  {
+   "name": "boundary: hand reading vs his perimeter",
+   "qty": "0.0245",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "GF master bath"
+  },
+  {
+   "name": "engine run vs hand boundary less segments (closure / door block width)",
+   "qty": "0.000165",
+   "sign": 1,
+   "cause": "TOLERANCE",
+   "room": "GF master bath"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF core W.C. 245 x 167 (wedge)"
+  },
+  {
+   "name": "boundary: hand reading vs his perimeter",
+   "qty": "0.1098",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "GF core W.C. 245 x 167 (wedge)"
+  },
+  {
+   "name": "engine run vs hand boundary less segments (closure / door block width)",
+   "qty": "0.0047",
+   "sign": -1,
+   "cause": "TOLERANCE",
+   "room": "GF core W.C. 245 x 167 (wedge)"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF core W.C. 289 x 167 (wedge)"
+  },
+  {
+   "name": "boundary: hand reading vs his perimeter",
+   "qty": "0.014",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "GF core W.C. 289 x 167 (wedge)"
+  },
+  {
+   "name": "engine run vs hand boundary less segments (closure / door block width)",
+   "qty": "0.00004",
+   "sign": 1,
+   "cause": "TOLERANCE",
+   "room": "GF core W.C. 289 x 167 (wedge)"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF stair-core W.C. 175 x 135"
+  },
+  {
+   "name": "engine run vs hand boundary less segments (closure / door block width)",
+   "qty": "0.00296",
+   "sign": 1,
+   "cause": "TOLERANCE",
+   "room": "GF stair-core W.C. 175 x 135"
+  },
+  {
+   "name": "doorway segment 1.00 m",
+   "qty": "1.00",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF kitchen"
+  },
+  {
+   "name": "boundary: hand reading vs his perimeter",
+   "qty": "0.15",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "GF kitchen"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF driver W.C."
+  },
+  {
+   "name": "boundary: hand reading vs his perimeter",
+   "qty": "0.02",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "GF driver W.C."
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF W.C. by the reception room"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF wash by the reception room"
+  },
+  {
+   "name": "arch to the reception room, no leaf, no wall",
+   "qty": "1.00",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "GF wash by the reception room"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "1F east bath 210 x 225"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "1F bath by the laundry"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "1F W.C. by the laundry"
+  },
+  {
+   "name": "boundary: hand reading vs his perimeter",
+   "qty": "0.06",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "1F W.C. by the laundry"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "1F west bath A 245 x 205"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "1F west bath B 245 x 205"
+  },
+  {
+   "name": "boundary: hand reading vs his perimeter",
+   "qty": "0.1",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "1F west bath B 245 x 205"
+  },
+  {
+   "name": "doorway segment 0.90 m",
+   "qty": "0.90",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "1F laundry"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "1F laundry"
+  },
+  {
+   "name": "boundary: hand reading vs his perimeter",
+   "qty": "0.09",
+   "sign": 1,
+   "cause": "ENGINE_RIGHT",
+   "room": "1F laundry"
+  },
+  {
+   "name": "doorway segment 0.80 m",
+   "qty": "0.80",
+   "sign": -1,
+   "cause": "RULE_DIFFERENCE",
+   "room": "2F roof-floor W.C. 300 x 185"
+  },
+  {
+   "name": "boundary: hand reading vs his perimeter",
+   "qty": "0.05",
+   "sign": -1,
+   "cause": "ENGINE_RIGHT",
+   "room": "2F roof-floor W.C. 300 x 185"
+  }
+ ]
+}
