@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T20:50Z | Verifier | STARTED | run session_01E6cPnddzoTn5ciSsGEHeER | repo-attached routine | task state: T-799 READY (W2, 231411489) per run log; queue to read | self-check pending
 - 2026-11-14 20:49 UTC | Worker 2 | SUCCESS | T-799 READY (231411489) | his plaster shaft rows 54.00 m2 = 40.50 ST-02 round-stair well faces (already once in our 1F-13; placement) + 13.50 UNRESOLVED (1.15 % of 1,169.13); no fix row. F-V788-1: R-T788-4 doors as barriers + 9 tests; Alsenan outdoor pocket 0.849 m2 unchanged, cornice 426.31 lm unchanged. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-14 20:40 UTC | Worker 2 | STARTED | run session_01E6cPncCJwXRbFQpgugZu1w | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14 20:17 UTC | Lead | SUCCESS | board | V3.0.87 MERGED (beam 76.05 vs 65.97 m3 +15.3 %, upturn 228.99 vs 194 lm); T-788 cornice 426.31 vs 427.46 lm (-0.27 %), T-795, T-796, T-793 WORKED; T-791 stairs FAILED r1 -> r2 W1 first; r11 = cornice + held ranges (blank 18 -> 14) + COMPARE_V3.0.88.md for number (b); NEW T-798 concrete/formwork residuals, T-799 plaster shafts 54 m2 + F-V788-1, T-800 heights in run command; Drive no new files; queue check: 10 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
