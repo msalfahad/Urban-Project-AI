@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14 12:48 UTC | Worker 2 | SUCCESS | T-790 READY @87131607 | Blockwork blanks 26 -> 0: 24 ARCH.WALL_PANEL/VOLUME views = MAS.BLOCK of the same group (962.96 m2, REFERENCE, Blockwork subtotal 981.35 m2 unchanged), GF t=0.40 GF-H01 strip N/A; mesh strip 1,414.84 lm and sharmat 579 pcs (were HELD 856..1,148 lm / 293..601 pcs) ESTIMATE OPTIONAL, freelancer none (RULE_DIFFERENCE); open: lift tie faces by area, white family A unchosen | self-check codemap PASS, t061 PASS, freeze PASS; problem: none
 - 2026-11-14 12:40 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14T12:21Z | Lead | SUCCESS | board | V3.0.84 + V3.0.85 MERGED (blank non-rebar 124->56->44: left blockwork panel/volume 26 + stairs 14, 8 ranges); T-787 dome extrados / T-789 parapet (all RC, block 0) WORKED -> r9 queued; T-781/T-782/T-784 generalise modules WORKED (unwired); NEW T-790 blockwork panel, T-791 stairs, T-792 schedule-first columns, T-793 inputs-sheet heights, T-794 roof upturn +20.1 %; T-783 unblocked; T-424/T-502 DONE; Drive OK, no photos; no owner question; queue check: 12 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-14T12:16Z | Lead | STARTED | run session_01E6cPnezGV6nNnxiDAVKD6g | repo-attached routine | task state: board | report pending
