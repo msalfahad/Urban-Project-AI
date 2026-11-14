@@ -1,0 +1,144 @@
+{
+ "schema": "URBAN_FIX_ROWS_V1",
+ "task": "T-789",
+ "rule": "R-T789-1 (t789_rules.py, every villa)",
+ "base": "ARCH_TAKEOFF_V3.0.84 (LINE_INDEX_V3_0_84.json)",
+ "rows": [
+  {
+   "id": "F-T789-1",
+   "line_id": null,
+   "item_code": "MAS.BLOCK.PARAPET",
+   "unit": "m2",
+   "element_id": "ANNEX#PARAPET_BLOCK",
+   "action": "NO_LINE",
+   "before": {
+    "class": "HELD (T-742 draft, never wired)",
+    "low": 0.0,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0,
+    "label": "DRAWING-READ"
+   },
+   "basis": "ANNEX: 7 runs, centreline 29.99 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-1d419b64e8ca1af30fb4 STR.CONC.PARAPET 4.048 m3 (T-761, wired; = R-T789-1 ALL_RC 4.0480); masonry is its complement = 0, never both",
+   "alternative_P1": {
+    "block_m2": 11.24,
+    "concrete_m3": 1.7991,
+    "concrete_change_m3": -2.2489,
+    "basis": "ST p.14 P1 typical: RC upstand 0.30 above slab top + block above, H = h + 0.175"
+   },
+   "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5)"
+  },
+  {
+   "id": "F-T789-2",
+   "line_id": null,
+   "item_code": "MAS.BLOCK.PARAPET",
+   "unit": "m2",
+   "element_id": "GF#PARAPET_BLOCK",
+   "action": "NO_LINE",
+   "before": {
+    "class": "HELD (T-742 draft, never wired)",
+    "low": 0.0,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0,
+    "label": "DRAWING-READ"
+   },
+   "basis": "GF: 3 runs, centreline 27.96 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-b5ffc172a354375ca107 STR.CONC.PARAPET 3.7752 m3 (T-761, wired; = R-T789-1 ALL_RC 3.7752); masonry is its complement = 0, never both",
+   "alternative_P1": {
+    "block_m2": 10.49,
+    "concrete_m3": 1.6779,
+    "concrete_change_m3": -2.0973,
+    "basis": "ST p.14 P1 typical: RC upstand 0.30 above slab top + block above, H = h + 0.175"
+   },
+   "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5)"
+  },
+  {
+   "id": "F-T789-3",
+   "line_id": null,
+   "item_code": "MAS.BLOCK.PARAPET",
+   "unit": "m2",
+   "element_id": "1F#PARAPET_BLOCK",
+   "action": "NO_LINE",
+   "before": {
+    "class": "HELD (T-742 draft, never wired)",
+    "low": 0.0,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0,
+    "label": "DRAWING-READ"
+   },
+   "basis": "1F: 11 runs, centreline 49.16 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-9a2c81164ec6499cc28c STR.CONC.PARAPET 12.8892 m3 (T-761, wired; = R-T789-1 ALL_RC 12.8892); masonry is its complement = 0, never both; height DEFAULT 1.20 on NE-1, SW-1, SW-2",
+   "alternative_P1": {
+    "block_m2": 49.7,
+    "concrete_m3": 2.9495,
+    "concrete_change_m3": -9.9397,
+    "basis": "ST p.14 P1 typical: RC upstand 0.30 above slab top + block above, H = h + 0.175"
+   },
+   "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5)"
+  },
+  {
+   "id": "F-T789-4",
+   "line_id": null,
+   "item_code": "MAS.BLOCK.PARAPET",
+   "unit": "m2",
+   "element_id": "2F#PARAPET_BLOCK",
+   "action": "NO_LINE",
+   "before": {
+    "class": "HELD (T-742 draft, never wired)",
+    "low": 0.0,
+    "high": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.0,
+    "label": "DRAWING-READ"
+   },
+   "basis": "2F: 4 runs, centreline 29.05 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-030538dda6a32c601c4c STR.CONC.PARAPET 3.6551 m3 (T-761, wired; = R-T789-1 ALL_RC 3.6551); masonry is its complement = 0, never both",
+   "alternative_P1": {
+    "block_m2": 10.89,
+    "concrete_m3": 1.6245,
+    "concrete_change_m3": -2.0306,
+    "basis": "ST p.14 P1 typical: RC upstand 0.30 above slab top + block above, H = h + 0.175"
+   },
+   "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5)"
+  },
+  {
+   "id": "F-T789-5",
+   "line_id": "L-7503af7cc1eea4e6735d",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "element_id": "HOUSE_BELOW_NG:MAIN_S",
+   "action": "BASIS_TEXT (supersedes F-T779-1 text)",
+   "before": {
+    "class": "RELEASED",
+    "net": 11.389,
+    "label": "ESTIMATE"
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 11.389,
+    "label": "ESTIMATE"
+   },
+   "basis": "MAIN_S run 16.27 x 0.70 m = 11.389: 0.70 = slab -0.10 down to the governing ground-beam band top -0.80 (T-407 lower bound h >= 0.70; the footing top -0.85 does not govern, Checker F-V779-2); not a printed depth; block under the neighbour-side beam printed (ST p.1 n.2); formation unprinted (Q-21 C)"
+  }
+ ],
+ "totals": {
+  "centreline_m": 136.157,
+  "concrete_all_rc_m3": 24.3676,
+  "masonry_m2": 0.0,
+  "alt_P1_block_m2": 82.32,
+  "alt_P1_block_m2_b_edge_0": 58.5,
+  "alt_P1_concrete_m3": 8.0509
+ },
+ "freelancer": {
+  "parapet_block_m2": 172.93,
+  "vs_ours_m2": 172.93,
+  "split": "material RULE_DIFFERENCE (he books block, this villa's sections draw RC; designer item 5); his 0.50 m below the finish = edge member concrete ENGINE_RIGHT 68.42 (T-550); his flat 1.80 vs printed 1F heights ENGINE_RIGHT 7.63 (T-550)"
+ }
+}
