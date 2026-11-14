@@ -1,5 +1,20 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-14 08:15 UTC
+Drive readable; no new files or photos (newest project file 21 Oct). Candidate of record V3.0.83 (not released); V2.9 + route G untouched. V3.0.84 with the Checker.
+- Lines with no figure (non-rebar): 211 (V3.0.82, merged) -> 124 (V3.0.83, merged) -> 56 in V3.0.84 (READY). The last FILL round V3.0.85 wires exterior render / paint (81 lines merged 13 Nov but never wired: found by worker 3 at r7), roof layers, wet-room WP; parapet masonry (HELD 0 .. 101.46 m2) and dome extrados (about 83.2 m2, no line) have rows.
+- Concrete (m3): 406.79 vs 352.44 (+15.4 %), all named except UNRESOLVED +7.14 beams / -5.84 other: new row (worker 1) to find each piece on the drawings.
+- Masonry (m2): 981.35 vs 1,260.69 (-22.2 %) = his parapets 172.93 + boundary 74.40 in masonry (RULE_DIFFERENCE / ours HELD), our below-ground 18.39 ENGINE_RIGHT, his 1F projections 41.25 UNRESOLVED; storey walls -0.94 %. Checker re-read his workbook row by row: AGREE.
+- Plaster (m2): dry + shafts 1,017.65 vs 1,169.13 (-12.96 %): his flat height -150.0 and part deductions +152.3 RULE_DIFFERENCE, lengths +55.8 ENGINE_RIGHT, shaft rows 54.0 UNRESOLVED.
+- Roof (m2): finish 238.48 / membrane 244.03 vs 285 = dome footprints 45.99 RULE_DIFFERENCE + pool court -5.55 ENGINE_RIGHT + 0.52 residual (0.18 %); Checker DXF re-measure AGREE.
+- Wet-room WP: floor 85.58 vs 72.01 m2 (+18.84 %) = pantry 13.455 (Q-37 rule) + 0.31 ENGINE_RIGHT; upturn now in his unit 135.57 vs 144.61 lm (-6.25 %, doorways on their own lines). Checker re-measured three rooms: AGREE.
+- Ceilings / windows (V3.0.84): gypsum 426.82 vs 409.58 m2 (+4.2 %); windows 90.18 + one ranged vs 116.9 m2 (-14 %, ENGINE_RIGHT). Cornice 302.9 vs 427.5 lm (-29.1 %) UNRESOLVED: new row.
+- GENERALISE: one command runs the Drive drawings to the workbook in about 65 s; 21.6 % of non-rebar lines reached straight from geometry (reach, not correctness); backlog 118 item rows, formwork largest.
+- Decisions: r8 content fixed (T-760 + T-771 spatter + T-780 + T-785, own Drive chain required); new rows T-786 concrete residuals, T-787 dome extrados, T-788 cornice, T-789 parapet / projections; folded rows T-750, T-509, T-363, T-364, T-513 closed with r5 / r6.
+- Team: every run since 04:20 closed with a final line; one Checker overlap-guard INCOMPLETE at 06:51 (by design, previous run still active); Checker 07:51 still running; stamps written ahead of the clock corrected by the Checker (and by me in this run). Selfcheck PASS (codemap, t061, freeze 0); queue check 14 actionable, 0 flagged, 0 stall.
+OWNER PACKAGE: none new (designer list incl. the dome build-up item when T-787 adds it, stair skirting form, 2F top roof, release switch remain with you).
+NEEDS FIXING: none new. The fill_from_index.py formwork step was fixed by your main chat's 04:34 audit (overlay formwork rows dropped, T-762 governs).
+
 ## LEAD REPORT 2026-11-14 04:20 UTC
 Drive readable; no new files or photos (newest file in the project folder 21 Oct). Candidate of record V3.0.81 (not released); V2.9 + route G untouched. V3.0.82 (earthworks, waterproofing, fence / site) with the Checker now.
 - Lines with no figure (non-rebar): 295 (V3.0.81) -> 211 in V3.0.82 (READY). The merged, not yet wired sets cover masonry, plaster / paint, concrete points (round .83) and stairs, openings / ceilings / domes, missing families (round .84); FILL ends with those two rounds.
@@ -26,19 +41,3 @@ Drive readable; no new files or photos since 12 Nov. Candidate of record V3.0.79
 - Team: all runs since 20:20 closed with a final line except the Checker run started 23:51 (still running: merged boundary + masonry, now on V3.0.81); selfcheck PASS (codemap, t061, freeze 0); queue check 19 actionable, 0 flagged, 0 stall.
 OWNER PACKAGE: none new (designer list, stair skirting form, 2F top roof and the release switch remain with you).
 NEEDS FIXING: the formwork step of docs/agents/boq/fill_from_index.py (whole-member ratio on each partial line) is still unchanged since 13 Nov 14:18; fix it before any rebuild on a newer index.
-
-## LEAD REPORT 2026-11-13 20:20 UTC
-Drive readable; no new files or photos since 12 Nov. Candidate of record V3.0.79 (exterior render + paint, master 1.80.0; not released); V2.9 + route G untouched. Package V3.0.81 with the Checker now.
-- Lines with no figure (non-rebar): 691 in V3.0.79 -> 295 in V3.0.81 (READY); the merged fix rows for earthworks (18), waterproofing (50) and fence / site (37) go in the next round.
-- Concrete (m3): blank 80 -> 0 (+58.42 + 1.00 SAFETY). Beams 78.2 .. 80.6 vs freelancer 66.09 (+18 %, UNRESOLVED): new beam-by-beam task.
-- Formwork (m2): 1,098.0 -> 2,226.9 ESTIMATE/DEFAULT; main-fill double count CONFIRMED by the Checker on one beam (38.5 m2 against a physical 12.5 .. 15.4), so the face set is wired instead. No freelancer line.
-- Exterior render / paint (m2): 1,008.6 .. 1,085.6 each, in the candidate; vs freelancer 1,469.97 = -26 .. -31 % RULE_DIFFERENCE.
-- Roof finish 248.8 vs 285 m2 (-12.7 %, open). WP wet floor 85.58 vs 72.01 m2: pantry 13.46 RULE_DIFFERENCE, rest +0.15 %.
-- Earthworks (m3): excavation 336.5, backfill 327.5, disposal 9.0 (replaces the main-fill 105.6 .. 115.5 that left out zone 2); no freelancer line.
-- Fence (m2): block 95.44 vs 74.40 (+28.3 %), plaster 95.66 vs 107.24 (-10.8 %): cause queued in the boundary task.
-- Found: boundary excavation dug at 0.40 m everywhere, but structural sheet 14 section A-A draws the fence-run base 0.90 m wide (up to +58.9 m3 if every metre were a fence run). New task splits the boundary into under-building (your Q-28 A band) and fence runs before any change; owner question only if two sheets contradict on one run.
-- Plaster / paint fill r1 rejected: wet-room ceiling default 2.70 replaced and default door widths where widths are drawn; r2 queued first for worker 2. Plaster 1,212.2 vs 1,169.1 m2 (+3.7 %) pending that.
-- Decisions: T-750's held waterproofing stage superseded by the merged fix rows (folded into the next wiring round); concrete-range task restated on your 0.05 m3 rule, no new rule file.
-- Team: every run since 16:31 closed with a final line; selfcheck PASS (codemap, t061, freeze 0); queue check 20 actionable, 0 flagged, 0 stall.
-OWNER PACKAGE: none new (designer list, stair skirting form, 2F top roof and the release switch remain with you).
-NEEDS FIXING: the formwork step of docs/agents/boq/fill_from_index.py applies a whole member's ratio to each partial line (Checker confirmed); fix it before the next rebuild on a newer index (told 16:4x, still open).

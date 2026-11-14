@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-14 08:15; DELIVERY MODE 2026-11-13 in force)
+
+- FILL (target 17 Nov): wired V3.0.82 (earthworks + waterproofing + fence / site) and V3.0.83 (concrete points + plaster / paint + masonry); blank non-rebar 295 -> 211 -> 124. V3.0.84 (stairs + openings / ceilings / domes + missing families, 124 -> 56) is with the Checker. Last round V3.0.85 = exterior render / paint (81 lines merged 13 Nov, never wired) + roof layers + wet-room WP. The remaining HELD / missing pieces have rows: parapet masonry, dome extrados. Confidence 17 Nov: MEDIUM-HIGH (two Gate B rounds left, each about 2 Checker runs).
+- Freelancer differences: blockwork -22.2 %, plaster +5.8 %, roof -16 %, wet-room WP +18.8 % all split to named causes and merged; still open: concrete residuals +7.14 / -5.84 m3, cornice -29.1 %, his 41.25 m2 '1F projections' masonry.
+- GENERALISE: one-command skeleton merged (reaches 21.6 % of non-rebar lines from geometry directly; backlog 118 item rows, formwork largest); opening table, inputs sheet, schedule-first structure queued; wall-band masonry after those. SECOND VILLA after the release switch (owner).
+
 ## Status (Lead, 2026-11-14 00:20; DELIVERY MODE 2026-11-13 in force)
 
 - FILL (target 17 Nov): fix-row sets merged and checked for every FILL family group except stair finishes (T-766) and openings / ceilings / domes (T-768), both next for worker 2. Wiring: V3.0.81 (concrete + formwork + main fill; blank non-rebar 691 -> 295) is with the Checker; then V3.0.82 (earthworks + waterproofing + fence / site, boundary split) and V3.0.83 (concrete points + plaster / paint + masonry). Missing families (T-771) after V3.0.82.

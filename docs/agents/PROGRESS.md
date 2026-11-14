@@ -1,5 +1,31 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-14 08:15 UTC (Lead). Previous version: 2026-11-14 00:20 UTC. Released default V2.9 + route G
+untouched. Candidate of record now V3.0.83 (not released); V3.0.84 is with the checker. Counted your way: lines with no
+figure, and each trade against the freelancer.
+
+Since 00:20 (newest first):
+- Lines with no figure (not rebar): 295 -> 211 -> 124 in the candidate; 56 once the package with the checker merges.
+  The last fill package carries exterior render / paint (checked 13 Nov but never wired: 81 lines), roof layers and
+  wet-room waterproofing; parapet masonry and the dome outer faces get their figures in new tasks.
+- Concrete: 406.79 vs freelancer 352.44 m3 (+15.4 %): explained except +7.14 m3 on beams and -5.84 m3 on other
+  elements; a task now finds those pieces on the drawings.
+- Blockwork 981.4 vs 1,260.7 m2 (-22.2 %): his parapets 172.9 and boundary wall 74.4 sit in his masonry, ours
+  elsewhere; storey walls agree within 0.9 %. Still not explained: his 41.25 m2 "1F projections".
+- Plaster: dry rooms + shafts 1,017.7 vs 1,169.1 m2 (-13 %): his flat 3.6 m height and his part deductions, both
+  rule differences; our lengths are the checked ones.
+- Roof: finish 238.5 / membrane 244.0 vs 285 m2: the dome footprints (46.0 m2) and the pool court explain all but
+  0.5 m2; the dome outer surfaces (about 83 m2) have no line yet: task queued.
+- Wet-room waterproofing floor 85.6 vs 72.0 m2 (+18.8 %): the pantry (13.5 m2, your answered rule) explains it; the
+  other 17 rooms agree within 0.2 %. Upturn now also in his unit: 135.6 vs 144.6 lm (-6.3 %, door openings).
+- Stairs, openings, ceilings, domes (in V3.0.84): gypsum ceilings 426.8 vs 409.6 m2 (+4.2 %); windows 90.2 m2 plus
+  one ranged window vs 116.9 m2 (-14 %, our drawn heads checked by hand).
+- Cornice 302.9 vs 427.5 lm (-29.1 %): not explained; task queued.
+- One command now runs the drawings end to end into the workbook (69 s); about a fifth of the lines come straight
+  from the drawing geometry, the rest still through the fill tables: that list is the generalise work.
+
+Previous section (2026-11-14 00:20):
+
 Last update: 2026-11-14 00:20 UTC (Lead). Previous version: 2026-11-13 20:20 UTC. Released default V2.9 + route G
 untouched. Candidate of record still V3.0.79; the package with the concrete, formwork and main-fill figures (V3.0.81)
 is with the checker now. Counted your way: lines with no figure, and each trade against the freelancer.
