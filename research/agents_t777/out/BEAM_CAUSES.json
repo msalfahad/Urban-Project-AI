@@ -1,0 +1,3900 @@
+{
+ "candidate": "research/agents_t770/out/LINE_INDEX_V3_0_81.json",
+ "causes": {
+  "C1_MARKS_DRAWN_NOT_IN_HIS_SHEET": 10.1225,
+  "C2a_WIDTH": -0.3244,
+  "C2b_DEPTH": -0.0002,
+  "C2c1_LENGTH_ENGINE_LONGER": 3.4362,
+  "C2c2_LENGTH_HIS_LONGER": -8.3228,
+  "C2d_ENDS_JOINTS_AND_POINTS": 0.7803,
+  "C3_HIS_SHEET_ARITHMETIC": 0.128,
+  "C4_UNLABELLED_PIECES_DEFAULT_DEPTH": 6.8589,
+  "C4b_UNLABELLED_PIECES_DRAWING_READ": 0.5996
+ },
+ "detail": {
+  "C1_MARKS_DRAWN_NOT_IN_HIS_SHEET": [
+   "GF B20 upstand 0.1200",
+   "GF B27 4.1918",
+   "GF B28 0.2121",
+   "GF CA 0.1725",
+   "1F B19 1.6236",
+   "1F B23 upstand 0.1200",
+   "1F B25 2.8500",
+   "1F B5 0.8325"
+  ],
+  "C2a_WIDTH": [
+   "GF B21 -0.2805",
+   "GF B29 -0.2528",
+   "GF CB2 +0.1705",
+   "1F B6 -0.1104",
+   "1F CB10 +0.1488"
+  ],
+  "C2c1_LENGTH_ENGINE_LONGER": [
+   "GF B1 +0.2091",
+   "1F B4 +1.0864",
+   "1F B6 +2.1300"
+  ],
+  "C2c2_LENGTH_HIS_LONGER": [
+   "GF B13 -0.0887",
+   "GF B17 -0.1013",
+   "GF B2 -0.1880",
+   "GF B20 -0.2700",
+   "GF B21 -0.1079",
+   "GF B24 -0.8250",
+   "GF B26 -0.5152",
+   "GF B4 -0.0463",
+   "GF B7 -0.6381",
+   "GF B9 -0.0300",
+   "GF CB1 -0.1312",
+   "GF CB2 -0.1080",
+   "GF CB3 -0.6017",
+   "GF CB4 -0.0976",
+   "GF CB5 -0.0880",
+   "GF CB6 -0.1125",
+   "GF CB7 -0.0300",
+   "GF CB8 -0.5298",
+   "1F B1 -0.1194",
+   "1F B2 -0.1680",
+   "1F B23 -0.2700",
+   "1F B7 -0.1500",
+   "1F CB10 -0.1310",
+   "1F CB11 -0.4481",
+   "1F CB12 -0.4406",
+   "1F CB13 -0.1275",
+   "1F CB9 -0.1800",
+   "2F B1 -0.2560",
+   "2F B15 -0.9840",
+   "2F B2 -0.2000",
+   "2F B3 -0.0280",
+   "2F B8 -0.2895"
+  ],
+  "C2d_ENDS_JOINTS_AND_POINTS": [
+   "GF B17 +0.0442",
+   "GF B2 -0.0318",
+   "GF B20 +0.0900",
+   "GF B24 +0.0949",
+   "GF B26 +0.1798",
+   "GF B7 +0.2836",
+   "GF B9 -0.0297",
+   "GF CB7 -0.0899",
+   "GF CB8 -0.0410",
+   "1F B23 +0.1196",
+   "1F CB11 +0.0532",
+   "1F CB12 +0.0248"
+  ],
+  "C4_UNLABELLED_PIECES_DEFAULT_DEPTH": [
+   "GF BM-GF-058 D-05 0.0630 DEFAULT",
+   "GF BM-GF-058 D-05 0.3599 DEFAULT",
+   "GF BM-GF-057 D-03 0.3975 DEFAULT",
+   "GF BM-GF-061 D-26 0.4920 DEFAULT",
+   "GF BM-GF-062 D-04 (new piece) 0.0000 DEFAULT",
+   "GF BM-GF-058 D-05 0.0960 DEFAULT",
+   "1F BM-1F-038 D-26 0.3414 DEFAULT",
+   "1F BM-1F-033 D-05 0.0629 DEFAULT",
+   "1F BM-1F-033 D-05 0.0960 DEFAULT",
+   "1F BM-1F-036 D-05 0.9265 DEFAULT",
+   "1F BM-1F-033 D-05 0.3598 DEFAULT",
+   "1F BM-1F-034 D-05 0.8999 DEFAULT",
+   "1F BM-1F-039  0.8996 DEFAULT",
+   "1F BM-1F-035 D-05 0.1619 DEFAULT",
+   "1F BM-1F-032 D-04 0.0640 DEFAULT",
+   "1F BM-1F-037 D-26 0.2400 DEFAULT",
+   "2F BM-2F-019 D-26 (as the GF / 1F projection strips) 0.2610 DEFAULT",
+   "2F BM-2F-018 D-04 0.1120 DEFAULT",
+   "2F BM-2F-015 D-04 0.1695 DEFAULT",
+   "2F BM-2F-016 D-04 0.7440 DEFAULT",
+   "2F BM-2F-017 D-04 0.1120 DEFAULT"
+  ],
+  "C4b_UNLABELLED_PIECES_DRAWING_READ": [
+   "GF BM-GF-059 D-04 0.5496 MEASURED",
+   "GF BM-GF-062 D-04 (new piece) 0.0500 MEASURED"
+  ]
+ },
+ "diff_m3": 13.2778,
+ "diff_pct": 20.13,
+ "engine_by_label": {
+  "DEFAULT": 6.8589,
+  "DRAWING-READ": 5.4641,
+  "MEASURED": 66.9207
+ },
+ "engine_by_storey": {
+  "1F": 28.0774,
+  "2F": 5.697,
+  "GF": 45.4694
+ },
+ "engine_lines": 140,
+ "engine_m3": 79.2437,
+ "fixes": [
+  "research/agents_t761/out/FIX_ROWS.json",
+  "research/agents_t757/out/FIX_ROWS.json"
+ ],
+ "freelancer_by_storey": {
+  "F1": 17.027,
+  "F1_page": 17.155,
+  "F2": 6.056000000000001,
+  "GF": 42.882875
+ },
+ "freelancer_rows_sum": 66.093875,
+ "freelancer_total_cell": 65.965875,
+ "ledger": "research/agents_t241/LEDGER_T241.csv",
+ "lines": [
+  {
+   "L": "3.55",
+   "b": "0.5",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-046#BAND0046.1",
+   "label": "MEASURED",
+   "line_id": "L-007ee1494e960a6985a7",
+   "m3": 1.426197,
+   "mark": "B24",
+   "member": "BM-GF-046",
+   "run": "BM-GF-046#BAND0046.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.8117",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0002.1",
+   "label": "MEASURED",
+   "line_id": "L-02ee97d409df4b3a501b",
+   "m3": 0.381173,
+   "mark": "B4",
+   "member": "BM-1F-003",
+   "run": "BM-1F-003#BAND0002.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "3.0",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0008.3",
+   "label": "MEASURED",
+   "line_id": "L-03f1399ed0091428743e",
+   "m3": 0.24,
+   "mark": "B3",
+   "member": "BM-2F-010",
+   "run": "BM-2F-010#BAND0008.3",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "3.5432",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-016#BAND0017",
+   "label": "MEASURED",
+   "line_id": "L-06fc0372ccf1017c16f6",
+   "m3": 0.36166,
+   "mark": "B5",
+   "member": "BM-GF-016",
+   "run": "BM-GF-016#BAND0017",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "5.625",
+   "b": "0.25",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-017#BAND0018.1",
+   "label": "MEASURED",
+   "line_id": "L-076a6d9e6df46aef97d1",
+   "m3": 1.079463,
+   "mark": "CB12",
+   "member": "BM-1F-017",
+   "run": "BM-1F-017#BAND0018.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "1.75",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0005",
+   "label": "MEASURED",
+   "line_id": "L-0cbe4442d020b25140ee",
+   "m3": 0.14,
+   "mark": "B1",
+   "member": "BM-GF-005",
+   "run": "BM-GF-005#BAND0005",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "2.3744",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-021#BAND0021.1.r2",
+   "label": "MEASURED",
+   "line_id": "L-0e110d2c29b2cd318139",
+   "m3": 0.250988,
+   "mark": "CB4",
+   "member": "BM-GF-021",
+   "run": "BM-GF-021#BAND0021.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "4.5",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0012",
+   "label": "MEASURED",
+   "line_id": "L-11c12069bf067c21c799",
+   "m3": 0.45,
+   "mark": "B4",
+   "member": "BM-GF-011",
+   "run": "BM-GF-011#BAND0012",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "11.8",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-013#BAND0014",
+   "label": "MEASURED",
+   "line_id": "L-128bbb3f98713383935f",
+   "m3": 1.6801,
+   "mark": "CB7",
+   "member": "BM-GF-013",
+   "run": "BM-GF-013#BAND0014",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.47",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0002",
+   "label": "MEASURED",
+   "line_id": "L-12a43a865f2d2f54f201",
+   "m3": 0.1176,
+   "mark": "B1",
+   "member": "BM-GF-002",
+   "run": "BM-GF-002#BAND0002",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.8",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0007.1",
+   "label": "MEASURED",
+   "line_id": "L-13031ccc9cc57a0f3465",
+   "m3": 0.144,
+   "mark": "B2",
+   "member": "BM-2F-008",
+   "run": "BM-2F-008#BAND0007.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "0.8049",
+   "b": "0.25",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-037#BAND0035.1",
+   "label": "MEASURED",
+   "line_id": "L-16dade3e7416d986e44f",
+   "m3": 0.212122,
+   "mark": "B28",
+   "member": "BM-GF-037",
+   "run": "BM-GF-037#BAND0035.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "4.35",
+   "b": "0.1",
+   "d": "",
+   "designer": "D-26 (as the GF / 1F projection strips)",
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-019#2F-031",
+   "label": "DEFAULT",
+   "line_id": "L-17c4238c0ef76656d06e",
+   "m3": 0.261,
+   "mark": "(none)",
+   "member": "BM-2F-019",
+   "run": "BM-2F-019#2F-031",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "2F"
+  },
+  {
+   "L": "3.0",
+   "b": "0.2",
+   "d": "0.2",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-053",
+   "label": "MEASURED",
+   "line_id": "L-18a6faa46b46d2c35db8",
+   "m3": 0.12,
+   "mark": "B20 upstand",
+   "member": "BM-GF-053",
+   "run": "BM-GF-053",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.47",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0001.2",
+   "label": "MEASURED",
+   "line_id": "L-1a37f7e858c8c96bd5f6",
+   "m3": 0.347,
+   "mark": "CB9",
+   "member": "BM-1F-002",
+   "run": "BM-1F-002#BAND0001.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "1.0",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0008.2",
+   "label": "MEASURED",
+   "line_id": "L-1caceb74f8c279933a14",
+   "m3": 0.08,
+   "mark": "B1",
+   "member": "BM-2F-009",
+   "run": "BM-2F-009#BAND0008.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "7.4802",
+   "b": "",
+   "d": "0.75",
+   "designer": "D-27",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-056#BAND0042",
+   "label": "DRAWING-READ",
+   "line_id": "L-1fd49f3e7c5a7dd19d4d",
+   "m3": 2.262872,
+   "mark": "B21",
+   "member": "BM-GF-056",
+   "run": "BM-GF-056#BAND0042",
+   "src": "T757",
+   "status": "CONFLICT",
+   "storey": "GF"
+  },
+  {
+   "L": "1.8",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0012",
+   "label": "MEASURED",
+   "line_id": "L-23275eb03f41ddcace97",
+   "m3": 0.144,
+   "mark": "B1",
+   "member": "BM-2F-014",
+   "run": "BM-2F-014#BAND0012.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "4.3722",
+   "b": "0.25",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0021",
+   "label": "MEASURED",
+   "line_id": "L-263b1a04a36fc0e8eee1",
+   "m3": 0.546523,
+   "mark": "B6",
+   "member": "BM-1F-020",
+   "run": "BM-1F-020#BAND0021",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "3.0",
+   "b": "0.2",
+   "d": "0.2",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-029",
+   "label": "MEASURED",
+   "line_id": "L-28396d852c7ae317a153",
+   "m3": 0.12,
+   "mark": "B23 upstand",
+   "member": "BM-1F-029",
+   "run": "BM-1F-029",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "4.1",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0015",
+   "label": "MEASURED",
+   "line_id": "L-28458292be2e750a481f",
+   "m3": 0.41,
+   "mark": "B4",
+   "member": "BM-1F-014",
+   "run": "BM-1F-014#BAND0015",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "3.0",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0005",
+   "label": "MEASURED",
+   "line_id": "L-2999807a87e55d057be3",
+   "m3": 0.24,
+   "mark": "B2",
+   "member": "BM-2F-006",
+   "run": "BM-2F-006#BAND0005",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "3.47",
+   "b": "",
+   "d": "0.5",
+   "designer": "D-27",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.1",
+   "label": "DRAWING-READ",
+   "line_id": "L-2c7b0b1e1a439d9ffd1e",
+   "m3": 0.4338,
+   "mark": "CB2",
+   "member": "BM-GF-055",
+   "run": "BM-GF-055#BAND0036.1",
+   "src": "T757",
+   "status": "CONFLICT",
+   "storey": "GF"
+  },
+  {
+   "L": "1.2",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0029.3",
+   "label": "MEASURED",
+   "line_id": "L-2cf19b552884b0f3dd5f",
+   "m3": 0.096,
+   "mark": "B1",
+   "member": "BM-GF-031",
+   "run": "BM-GF-031#BAND0029.3",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "7.4",
+   "b": "0.35",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-042#BAND0041.1",
+   "label": "MEASURED",
+   "line_id": "L-2e2fc5195697247a6a0b",
+   "m3": 1.940009,
+   "mark": "CB1",
+   "member": "BM-GF-042",
+   "run": "BM-GF-042#BAND0041.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.1448",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0015",
+   "label": "MEASURED",
+   "line_id": "L-2f85d9047ea71f6b0b14",
+   "m3": 0.091584,
+   "mark": "B1",
+   "member": "BM-GF-014",
+   "run": "BM-GF-014#BAND0015",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "2.5",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0001.1",
+   "label": "MEASURED",
+   "line_id": "L-2f97020ab26bff341fe4",
+   "m3": 0.2,
+   "mark": "B3",
+   "member": "BM-1F-001",
+   "run": "BM-1F-001#BAND0001.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "0.7",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0023.1",
+   "label": "MEASURED",
+   "line_id": "L-300800076840dab01c49",
+   "m3": 0.056,
+   "mark": "B1",
+   "member": "BM-GF-023",
+   "run": "BM-GF-023#BAND0023.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "0.525",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-05",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.2",
+   "label": "DEFAULT",
+   "line_id": "L-331d4bbef719a7f0bbca",
+   "m3": 0.063,
+   "mark": "(none)",
+   "member": "BM-GF-058",
+   "run": "BM-GF-058#BAND0031.2",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "GF"
+  },
+  {
+   "L": "1.8",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0012",
+   "label": "MEASURED",
+   "line_id": "L-34ccc6d35e46cb3763d7",
+   "m3": 0.144,
+   "mark": "B1",
+   "member": "BM-1F-013",
+   "run": "BM-1F-013#BAND0012.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "5.69",
+   "b": "0.1",
+   "d": "",
+   "designer": "D-26",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-038",
+   "label": "DEFAULT",
+   "line_id": "L-377cb988b2271c2e2e4d",
+   "m3": 0.3414,
+   "mark": "(none)",
+   "member": "BM-1F-038",
+   "run": "BM-1F-038",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "1F"
+  },
+  {
+   "L": "1.9",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0029.4",
+   "label": "MEASURED",
+   "line_id": "L-39779d6e8cbcc6ac2bae",
+   "m3": 0.151391,
+   "mark": "B1",
+   "member": "BM-GF-031",
+   "run": "BM-GF-031#BAND0029.4",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "4.4153",
+   "b": "",
+   "d": "0.5",
+   "designer": "D-27",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-030#BAND0009",
+   "label": "DRAWING-READ",
+   "line_id": "L-39ca5340879eafc35355",
+   "m3": 0.44255,
+   "mark": "B6",
+   "member": "BM-1F-030",
+   "run": "BM-1F-030#BAND0009",
+   "src": "T757",
+   "status": "CONFLICT",
+   "storey": "1F"
+  },
+  {
+   "L": "4.9505",
+   "b": "0.9",
+   "d": "0.85",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-048#BAND0048.1",
+   "label": "MEASURED",
+   "line_id": "L-3dddf99008ab922da814",
+   "m3": 4.1918,
+   "mark": "B27",
+   "member": "BM-GF-048",
+   "run": "BM-GF-048#BAND0048.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.7",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-035.2#CB5-span2",
+   "label": "MEASURED",
+   "line_id": "L-3e9076546ea34d8cbcc7",
+   "m3": 0.296,
+   "mark": "CB5",
+   "member": "BM-GF-035.2",
+   "run": "BM-GF-035.2#CB5-span2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "4.7478",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0004",
+   "label": "MEASURED",
+   "line_id": "L-415cfcdd1d775ee6251c",
+   "m3": 0.712173,
+   "mark": "B11",
+   "member": "BM-1F-005",
+   "run": "BM-1F-005#BAND0004",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "1.6075",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-010#BAND0008",
+   "label": "MEASURED",
+   "line_id": "L-419db30d16a77844a58d",
+   "m3": 0.129688,
+   "mark": "B1",
+   "member": "BM-1F-010",
+   "run": "BM-1F-010#BAND0008",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "1.2",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0011.1",
+   "label": "MEASURED",
+   "line_id": "L-4299f559bf9509418385",
+   "m3": 0.18,
+   "mark": "B7",
+   "member": "BM-1F-012",
+   "run": "BM-1F-012#BAND0011.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "3.651",
+   "b": "0.3",
+   "d": "",
+   "designer": "D-02",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.2",
+   "label": "DRAWING-READ",
+   "line_id": "L-43e804ba4a4c07529fd5",
+   "m3": 0.5475,
+   "mark": "CB10",
+   "member": "BM-1F-031",
+   "run": "BM-1F-031#BAND0026.2",
+   "src": "T757",
+   "status": "CONFLICT",
+   "storey": "1F"
+  },
+  {
+   "L": "5.3375",
+   "b": "0.4",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-025#BAND0030.1",
+   "label": "MEASURED",
+   "line_id": "L-45e0d887d33192039e05",
+   "m3": 1.62356,
+   "mark": "B19",
+   "member": "BM-1F-025",
+   "run": "BM-1F-025#BAND0030.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "2.45",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0002",
+   "label": "MEASURED",
+   "line_id": "L-46f3fb2ab0f763994f26",
+   "m3": 0.196,
+   "mark": "B3",
+   "member": "BM-2F-003",
+   "run": "BM-2F-003#BAND0002.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY",
+   "label": "MEASURED",
+   "line_id": "L-48b7d139bff681199543",
+   "m3": 0.7552,
+   "mark": "B4",
+   "member": "BM-1F-028",
+   "run": "BM-1F-028#BAND0033",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "2.5484",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-008#BAND0009",
+   "label": "MEASURED",
+   "line_id": "L-4a9628ac51fddc7945cd",
+   "m3": 0.205544,
+   "mark": "B1",
+   "member": "BM-GF-008",
+   "run": "BM-GF-008#BAND0009",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.2",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0025.1",
+   "label": "MEASURED",
+   "line_id": "L-4f30f08b15e9ab008e7a",
+   "m3": 0.18,
+   "mark": "B7",
+   "member": "BM-GF-026",
+   "run": "BM-GF-026#BAND0025.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "2.301",
+   "b": "0.3",
+   "d": "",
+   "designer": "D-02",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.1",
+   "label": "DRAWING-READ",
+   "line_id": "L-50667f69855b6d588011",
+   "m3": 0.345,
+   "mark": "CB10",
+   "member": "BM-1F-031",
+   "run": "BM-1F-031#BAND0026.1",
+   "src": "T757",
+   "status": "CONFLICT",
+   "storey": "1F"
+  },
+  {
+   "L": "4.1",
+   "b": "0.25",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0022",
+   "label": "MEASURED",
+   "line_id": "L-5225bc5777a370ad9f04",
+   "m3": 0.5125,
+   "mark": "B6",
+   "member": "BM-1F-021",
+   "run": "BM-1F-021#BAND0022",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "0.524",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-05",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.2",
+   "label": "DEFAULT",
+   "line_id": "L-54e397fe7b1485b2e8fe",
+   "m3": 0.0629,
+   "mark": "(none)",
+   "member": "BM-1F-033",
+   "run": "BM-1F-033#BAND0013.2",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "1F"
+  },
+  {
+   "L": "0.524",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-05",
+   "element_id": "T729:CHILD:HL:BEAM_LEDGER:1F:BM-1F-033#1F-STRIP-AT-COL",
+   "label": "DEFAULT",
+   "line_id": "L-56c49c3c2596a0869533",
+   "m3": 0.096,
+   "mark": "(none)",
+   "member": "BM-1F-033",
+   "run": "BM-1F-033#BAND0013.2",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "1F"
+  },
+  {
+   "L": "4.51",
+   "b": "0.349",
+   "d": "",
+   "designer": "D-05",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-036#BAND0025",
+   "label": "DEFAULT",
+   "line_id": "L-56d278bedc8dda2837a9",
+   "m3": 0.9265,
+   "mark": "(none)",
+   "member": "BM-1F-036",
+   "run": "BM-1F-036#BAND0025",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "1F"
+  },
+  {
+   "L": "1.885",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0049",
+   "label": "MEASURED",
+   "line_id": "L-5bc1baae70fcc325abea",
+   "m3": 0.282743,
+   "mark": "B7",
+   "member": "BM-GF-049",
+   "run": "BM-GF-049#BAND0049",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.3",
+   "b": "0.45",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0031.2",
+   "label": "MEASURED",
+   "line_id": "L-5ca0573b64ee1cb22e0e",
+   "m3": 1.11375,
+   "mark": "B23",
+   "member": "BM-1F-026",
+   "run": "BM-1F-026#BAND0031.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "2.7",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0024.1",
+   "label": "MEASURED",
+   "line_id": "L-5d6f86944074e7c8a2b6",
+   "m3": 0.216,
+   "mark": "B2",
+   "member": "BM-GF-025",
+   "run": "BM-GF-025#BAND0024.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.2",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0021.2",
+   "label": "MEASURED",
+   "line_id": "L-5f15221db7e0251cffe1",
+   "m3": 0.32,
+   "mark": "CB4",
+   "member": "BM-GF-021",
+   "run": "BM-GF-021#BAND0021.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.35",
+   "b": "",
+   "d": "0.5",
+   "designer": "D-27",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.2",
+   "label": "DRAWING-READ",
+   "line_id": "L-60f09eece6568b15f6ce",
+   "m3": 0.4188,
+   "mark": "CB2",
+   "member": "BM-GF-055",
+   "run": "BM-GF-055#BAND0036.2",
+   "src": "T757",
+   "status": "CONFLICT",
+   "storey": "GF"
+  },
+  {
+   "L": "5.1",
+   "b": "0.45",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-044#BAND0044.1",
+   "label": "MEASURED",
+   "line_id": "L-616a12281372088e618d",
+   "m3": 1.76542,
+   "mark": "B17",
+   "member": "BM-GF-044",
+   "run": "BM-GF-044#BAND0044.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.002",
+   "b": "0.199",
+   "d": "",
+   "designer": "D-05",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.1",
+   "label": "DEFAULT",
+   "line_id": "L-634cefe5e8a7fb458e16",
+   "m3": 0.3599,
+   "mark": "(none)",
+   "member": "BM-GF-058",
+   "run": "BM-GF-058#BAND0031.1",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "GF"
+  },
+  {
+   "L": "2.7",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0010.1",
+   "label": "MEASURED",
+   "line_id": "L-6499eb01de0a455a6341",
+   "m3": 0.216,
+   "mark": "B3",
+   "member": "BM-2F-012",
+   "run": "BM-2F-012#BAND0010.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "4.4222",
+   "b": "0.25",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0020",
+   "label": "MEASURED",
+   "line_id": "L-651a3d191bc4cb07cc1d",
+   "m3": 0.552773,
+   "mark": "B6",
+   "member": "BM-1F-019",
+   "run": "BM-1F-019#BAND0020",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "2.999",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-05",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.1",
+   "label": "DEFAULT",
+   "line_id": "L-67f3d325019e618328eb",
+   "m3": 0.3598,
+   "mark": "(none)",
+   "member": "BM-1F-033",
+   "run": "BM-1F-033#BAND0013.1",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "1F"
+  },
+  {
+   "L": "0.95",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0032",
+   "label": "MEASURED",
+   "line_id": "L-6873e8f788bfcd4f9031",
+   "m3": 0.076,
+   "mark": "B1",
+   "member": "BM-GF-033",
+   "run": "BM-GF-033#BAND0032",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "5.85",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0029.2",
+   "label": "MEASURED",
+   "line_id": "L-6bdfcf21ebb29773436e",
+   "m3": 0.8775,
+   "mark": "CB6",
+   "member": "BM-GF-030",
+   "run": "BM-GF-030#BAND0029.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.4159",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-009#BAND0010",
+   "label": "MEASURED",
+   "line_id": "L-6d79eaf1b0f24483b0e0",
+   "m3": 0.3429,
+   "mark": "B4",
+   "member": "BM-GF-009",
+   "run": "BM-GF-009#BAND0010",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.0",
+   "b": "0.4",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-043#BAND0043.1",
+   "label": "MEASURED",
+   "line_id": "L-6e1034e07c44c4644c22",
+   "m3": 0.990006,
+   "mark": "B20",
+   "member": "BM-GF-043",
+   "run": "BM-GF-043#BAND0043.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "2.5",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0016",
+   "label": "MEASURED",
+   "line_id": "L-71144bbcfce0b1dbbdef",
+   "m3": 0.2,
+   "mark": "B3",
+   "member": "BM-GF-015",
+   "run": "BM-GF-015#BAND0016.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "2.7",
+   "b": "0.2",
+   "d": "1.2",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0006.2",
+   "label": "MEASURED",
+   "line_id": "L-713bc64aaa210610e7fe",
+   "m3": 0.648,
+   "mark": "B15",
+   "member": "BM-2F-007",
+   "run": "BM-2F-007#BAND0006.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "6.8754",
+   "b": "0.55",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-027#BAND0032",
+   "label": "MEASURED",
+   "line_id": "L-74bde45d27edaeb8dc32",
+   "m3": 2.849975,
+   "mark": "B25",
+   "member": "BM-1F-027",
+   "run": "BM-1F-027#BAND0032",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "4.0",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0029.1",
+   "label": "MEASURED",
+   "line_id": "L-75a0d6b933218568f685",
+   "m3": 0.6,
+   "mark": "CB6",
+   "member": "BM-GF-030",
+   "run": "BM-GF-030#BAND0029.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "4.3",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0003",
+   "label": "MEASURED",
+   "line_id": "L-7687818e1bd5d4a520e3",
+   "m3": 0.43,
+   "mark": "B4",
+   "member": "BM-1F-004",
+   "run": "BM-1F-004#BAND0003",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "5.025",
+   "b": "0.25",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0018.2",
+   "label": "MEASURED",
+   "line_id": "L-76d0bad3c40bd8cedca2",
+   "m3": 0.942188,
+   "mark": "CB12",
+   "member": "BM-1F-017",
+   "run": "BM-1F-017#BAND0018.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "3.3",
+   "b": "0.3",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0027.3",
+   "label": "MEASURED",
+   "line_id": "L-780b8142b030c0108b6b",
+   "m3": 0.7425,
+   "mark": "CB11",
+   "member": "BM-1F-023",
+   "run": "BM-1F-023#BAND0027.3",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "4.85",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0017",
+   "label": "MEASURED",
+   "line_id": "L-785ce1a08953de7d421e",
+   "m3": 0.485,
+   "mark": "B5",
+   "member": "BM-1F-016",
+   "run": "BM-1F-016#BAND0017",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "3.55",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0001.4",
+   "label": "MEASURED",
+   "line_id": "L-7a4d5364c39aa3fe5850",
+   "m3": 0.355,
+   "mark": "CB9",
+   "member": "BM-1F-002",
+   "run": "BM-1F-002#BAND0001.4",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "3.4502",
+   "b": "0.3",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-040#BAND0039",
+   "label": "MEASURED",
+   "line_id": "L-7c1a1da8004c4272ccba",
+   "m3": 0.716937,
+   "mark": "CB8",
+   "member": "BM-GF-040",
+   "run": "BM-GF-040#BAND0039",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.399",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-04",
+   "element_id": "U-C:BEAMS:2F:BAND0011.1",
+   "label": "DEFAULT",
+   "line_id": "L-7c3edce23ec8faa3d674",
+   "m3": 0.112,
+   "mark": "(none)",
+   "member": "BM-2F-018",
+   "run": "BM-2F-018#BAND0011.1",
+   "src": "T757",
+   "status": "HELD",
+   "storey": "2F"
+  },
+  {
+   "L": "7.8",
+   "b": "0.5",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0045",
+   "label": "MEASURED",
+   "line_id": "L-7ca10403edee7eb03ce5",
+   "m3": 2.925,
+   "mark": "B22",
+   "member": "BM-GF-045",
+   "run": "BM-GF-045#BAND0045",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.47",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0001.2",
+   "label": "MEASURED",
+   "line_id": "L-84768dadb07330d74cbd",
+   "m3": 0.5205,
+   "mark": "B8",
+   "member": "BM-2F-002",
+   "run": "BM-2F-002#BAND0001.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "3.475",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0016",
+   "label": "MEASURED",
+   "line_id": "L-8661fc82d8f1289926c4",
+   "m3": 0.3475,
+   "mark": "B5",
+   "member": "BM-1F-015",
+   "run": "BM-1F-015#BAND0016",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "2.65",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-03",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-057#BAND0019.2",
+   "label": "DEFAULT",
+   "line_id": "L-88ccf8d4505411deb9e5",
+   "m3": 0.3975,
+   "mark": "CB3 and B3 (With Stair)",
+   "member": "BM-GF-057",
+   "run": "BM-GF-057#BAND0019.2",
+   "src": "T757",
+   "status": "HELD",
+   "storey": "GF"
+  },
+  {
+   "L": "3.85",
+   "b": "0.3",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0037",
+   "label": "MEASURED",
+   "line_id": "L-89718e85f0f24c9cc08c",
+   "m3": 0.86625,
+   "mark": "B16",
+   "member": "BM-GF-038",
+   "run": "BM-GF-038#BAND0037.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "4.45",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0030.1",
+   "label": "MEASURED",
+   "line_id": "L-8a51458e17f147aaf7ed",
+   "m3": 0.445,
+   "mark": "B4",
+   "member": "BM-GF-032",
+   "run": "BM-GF-032#BAND0030.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.13",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-04",
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-015#BAND0001.3",
+   "label": "DEFAULT",
+   "line_id": "L-8d031491396379f0cbb1",
+   "m3": 0.1695,
+   "mark": "(none)",
+   "member": "BM-2F-015",
+   "run": "BM-2F-015#BAND0001.3",
+   "src": "T757",
+   "status": "HELD",
+   "storey": "2F"
+  },
+  {
+   "L": "1.501",
+   "b": "0.5",
+   "d": "",
+   "designer": "D-04",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-059#BAND0046.2",
+   "label": "MEASURED",
+   "line_id": "L-8ea71184fff91b4357b7",
+   "m3": 0.549624,
+   "mark": "(none)",
+   "member": "BM-GF-059",
+   "run": "BM-GF-059#BAND0046.2",
+   "src": "INDEX",
+   "status": "HELD",
+   "storey": "GF"
+  },
+  {
+   "L": "5.1",
+   "b": "0.35",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-042#BAND0041.2",
+   "label": "MEASURED",
+   "line_id": "L-9270e8b8860414386adb",
+   "m3": 1.33875,
+   "mark": "CB1",
+   "member": "BM-GF-042",
+   "run": "BM-GF-042#BAND0041.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "2.65",
+   "b": "0.3",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-023#BAND0027.2",
+   "label": "MEASURED",
+   "line_id": "L-935e72dff296573fff64",
+   "m3": 0.619159,
+   "mark": "CB11",
+   "member": "BM-1F-023",
+   "run": "BM-1F-023#BAND0027.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "6.7083",
+   "b": "0.3",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-023#BAND0027.1",
+   "label": "MEASURED",
+   "line_id": "L-9696bbb45246c6dce183",
+   "m3": 1.539652,
+   "mark": "CB11",
+   "member": "BM-1F-023",
+   "run": "BM-1F-023#BAND0027.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "3.5201",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-003#BAND0003",
+   "label": "MEASURED",
+   "line_id": "L-9a55aadc9f0880ae37a7",
+   "m3": 0.528021,
+   "mark": "B8",
+   "member": "BM-GF-003",
+   "run": "BM-GF-003#BAND0003",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.8",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0022",
+   "label": "MEASURED",
+   "line_id": "L-9c4ad8b13b08f7063722",
+   "m3": 0.27,
+   "mark": "B14",
+   "member": "BM-GF-022",
+   "run": "BM-GF-022#BAND0022.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "2.7",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0010.1",
+   "label": "MEASURED",
+   "line_id": "L-9d4f3289050a31f13951",
+   "m3": 0.216,
+   "mark": "B2",
+   "member": "BM-1F-011",
+   "run": "BM-1F-011#BAND0010.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "6.7412",
+   "b": "",
+   "d": "0.75",
+   "designer": "D-27",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-054#BAND0008",
+   "label": "DRAWING-READ",
+   "line_id": "L-9e4895663f76d7f03ac9",
+   "m3": 1.013607,
+   "mark": "B29",
+   "member": "BM-GF-054",
+   "run": "BM-GF-054#BAND0008",
+   "src": "T757",
+   "status": "CONFLICT",
+   "storey": "GF"
+  },
+  {
+   "L": "2.7",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0020.2",
+   "label": "MEASURED",
+   "line_id": "L-a2bc431068c8113f71eb",
+   "m3": 0.216,
+   "mark": "B2",
+   "member": "BM-GF-020",
+   "run": "BM-GF-020#BAND0020.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "2.8907",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-017#BAND0018.r2",
+   "label": "MEASURED",
+   "line_id": "L-a38b4013f5e3a30830b4",
+   "m3": 0.296447,
+   "mark": "B4",
+   "member": "BM-GF-017",
+   "run": "BM-GF-017#BAND0018",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.0",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0007.2",
+   "label": "MEASURED",
+   "line_id": "L-a4a61b29934bbed25f3b",
+   "m3": 0.24,
+   "mark": "B2",
+   "member": "BM-1F-009",
+   "run": "BM-1F-009#BAND0007.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "7.5",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-05",
+   "element_id": "U-C:BEAMS:1F:BAND0014",
+   "label": "DEFAULT",
+   "line_id": "L-a9d5e7dc22013e24d691",
+   "m3": 0.8999,
+   "mark": "(none)",
+   "member": "BM-1F-034",
+   "run": "BM-1F-034#BAND0014",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "1F"
+  },
+  {
+   "L": "",
+   "b": "0.2",
+   "d": "",
+   "designer": "",
+   "element_id": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY",
+   "label": "DEFAULT",
+   "line_id": "L-ab37afa17f2ac5b0efd1",
+   "m3": 0.8996,
+   "mark": "(none printed)",
+   "member": "BM-1F-039",
+   "run": "BM-1F-039",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "1F"
+  },
+  {
+   "L": "3.0",
+   "b": "0.45",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-026#BAND0031.1",
+   "label": "MEASURED",
+   "line_id": "L-ab62c5990fe1114d6171",
+   "m3": 1.132104,
+   "mark": "B23",
+   "member": "BM-1F-026",
+   "run": "BM-1F-026#BAND0031.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "4.1",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-26",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-061",
+   "label": "DEFAULT",
+   "line_id": "L-aba59a2157a48a69e2fb",
+   "m3": 0.492,
+   "mark": "(none)",
+   "member": "BM-GF-061",
+   "run": "BM-GF-061",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "GF"
+  },
+  {
+   "L": "2.9",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-028#BAND0027",
+   "label": "MEASURED",
+   "line_id": "L-ac63a60a21f5618611a1",
+   "m3": 0.2002,
+   "mark": "B2",
+   "member": "BM-GF-028",
+   "run": "BM-GF-028#BAND0027",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.2",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0011.2",
+   "label": "MEASURED",
+   "line_id": "L-ae4fced6f2202c9543af",
+   "m3": 0.096,
+   "mark": "B1",
+   "member": "BM-2F-013",
+   "run": "BM-2F-013#BAND0011.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "4.5541",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-001#BAND0001",
+   "label": "MEASURED",
+   "line_id": "L-b274a04546a58e0ecfdd",
+   "m3": 0.68655,
+   "mark": "B11",
+   "member": "BM-GF-001",
+   "run": "BM-GF-001#BAND0001",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.0",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0007.2",
+   "label": "MEASURED",
+   "line_id": "L-b2efc69ac20dee663880",
+   "m3": 0.24,
+   "mark": "B2",
+   "member": "BM-2F-008",
+   "run": "BM-2F-008#BAND0007.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "1.8",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0006",
+   "label": "MEASURED",
+   "line_id": "L-b3c87fd2cd7cc45c329a",
+   "m3": 0.27,
+   "mark": "B7",
+   "member": "BM-1F-007",
+   "run": "BM-1F-007#BAND0006.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "6.35",
+   "b": "0.3",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0040.2",
+   "label": "MEASURED",
+   "line_id": "L-b6b4eb28a8001c2af2dd",
+   "m3": 1.42875,
+   "mark": "CB8",
+   "member": "BM-GF-041",
+   "run": "BM-GF-041#BAND0040.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.8",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0004",
+   "label": "MEASURED",
+   "line_id": "L-b835f51602e05704c045",
+   "m3": 0.144,
+   "mark": "B1",
+   "member": "BM-2F-005",
+   "run": "BM-2F-005#BAND0004",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "3.3",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0007",
+   "label": "MEASURED",
+   "line_id": "L-baee6107bcb8f1b0a6c0",
+   "m3": 0.264,
+   "mark": "B3",
+   "member": "BM-GF-007",
+   "run": "BM-GF-007#BAND0007",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.3",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0033.1",
+   "label": "MEASURED",
+   "line_id": "L-bb486e98db90bc7604ad",
+   "m3": 0.104,
+   "mark": "B1",
+   "member": "BM-GF-034",
+   "run": "BM-GF-034#BAND0033.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "0.899",
+   "b": "0.3",
+   "d": "",
+   "designer": "D-05",
+   "element_id": "U-C:BEAMS:1F:BAND0023",
+   "label": "DEFAULT",
+   "line_id": "L-bb49e831f053bd30a6ce",
+   "m3": 0.1619,
+   "mark": "(none)",
+   "member": "BM-1F-035",
+   "run": "BM-1F-035#BAND0023",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "1F"
+  },
+  {
+   "L": "2.5",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0003",
+   "label": "MEASURED",
+   "line_id": "L-bcfa6dddf762d6cf0fb3",
+   "m3": 0.2,
+   "mark": "B2",
+   "member": "BM-2F-004",
+   "run": "BM-2F-004#BAND0003",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "5.745",
+   "b": "0.3",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-041#BAND0040.1",
+   "label": "MEASURED",
+   "line_id": "L-bd16e6923af088014236",
+   "m3": 1.310964,
+   "mark": "CB8",
+   "member": "BM-GF-041",
+   "run": "BM-GF-041#BAND0040.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "0.5",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-04 (new piece)",
+   "element_id": "U-C:BEAMS:GF:BAND0030.2~T642_DEPTH_B4_B7",
+   "label": "DEFAULT",
+   "line_id": "L-bef35462630d4b76596f",
+   "m3": 0.0,
+   "mark": "(none; in line with B4)",
+   "member": "BM-GF-062",
+   "run": "BM-GF-062#GF-112",
+   "src": "T757",
+   "status": "HELD",
+   "storey": "GF"
+  },
+  {
+   "L": "0.8",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0020.1",
+   "label": "MEASURED",
+   "line_id": "L-c254e0d17c22fcae49fe",
+   "m3": 0.064,
+   "mark": "B1",
+   "member": "BM-GF-019",
+   "run": "BM-GF-019#BAND0020.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.1888",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0019.3",
+   "label": "MEASURED",
+   "line_id": "L-c42aa4d2b8d8aa456a2c",
+   "m3": 0.478314,
+   "mark": "CB3",
+   "member": "BM-GF-018",
+   "run": "BM-GF-018#BAND0019.3",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "2.5",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0001.1",
+   "label": "MEASURED",
+   "line_id": "L-c484802154b46ed37908",
+   "m3": 0.2,
+   "mark": "B3",
+   "member": "BM-2F-001",
+   "run": "BM-2F-001#BAND0001.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "7.0675",
+   "b": "0.65",
+   "d": "0.85",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-047#BAND0047.1",
+   "label": "MEASURED",
+   "line_id": "L-c6fa4992eb3ed2aa01e6",
+   "m3": 4.0846,
+   "mark": "B26",
+   "member": "BM-GF-047",
+   "run": "BM-GF-047#BAND0047.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.8",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0026",
+   "label": "MEASURED",
+   "line_id": "L-c82e9ff1d51c005f29d8",
+   "m3": 0.144,
+   "mark": "B1",
+   "member": "BM-GF-027",
+   "run": "BM-GF-027#BAND0026.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.02",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0019.1",
+   "label": "MEASURED",
+   "line_id": "L-c9044bed39bc76ca6b2f",
+   "m3": 0.453,
+   "mark": "CB3",
+   "member": "BM-GF-018",
+   "run": "BM-GF-018#BAND0019.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.15",
+   "b": "0.3",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0038",
+   "label": "MEASURED",
+   "line_id": "L-c914cb3a65e76883a827",
+   "m3": 0.1725,
+   "mark": "CA",
+   "member": "BM-GF-039",
+   "run": "BM-GF-039#BAND0038.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "6.3",
+   "b": "0.35",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0028",
+   "label": "MEASURED",
+   "line_id": "L-c9aa7efd6862439d6079",
+   "m3": 1.65375,
+   "mark": "B18",
+   "member": "BM-1F-024",
+   "run": "BM-1F-024#BAND0028",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "3.0",
+   "b": "0.3",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-022#BAND0024.1",
+   "label": "MEASURED",
+   "line_id": "L-ca163e55e38f8968a766",
+   "m3": 0.467672,
+   "mark": "CB13",
+   "member": "BM-1F-022",
+   "run": "BM-1F-022#BAND0024.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "1.7",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-006#BAND0006",
+   "label": "MEASURED",
+   "line_id": "L-cbf53752cfd897c35c2c",
+   "m3": 0.255,
+   "mark": "B7",
+   "member": "BM-GF-006",
+   "run": "BM-GF-006#BAND0006",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.3",
+   "b": "0.4",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0043.2",
+   "label": "MEASURED",
+   "line_id": "L-d06033aa8d5f29aef490",
+   "m3": 0.99,
+   "mark": "B20",
+   "member": "BM-GF-043",
+   "run": "BM-GF-043#BAND0043.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.1",
+   "b": "0.199",
+   "d": "",
+   "designer": "D-04",
+   "element_id": "U-C:BEAMS:2F:BAND0006.1",
+   "label": "DEFAULT",
+   "line_id": "L-d62d2fcf3d0023ad1ad1",
+   "m3": 0.744,
+   "mark": "(none)",
+   "member": "BM-2F-016",
+   "run": "BM-2F-016#BAND0006.1",
+   "src": "T757",
+   "status": "HELD",
+   "storey": "2F"
+  },
+  {
+   "L": "3.75",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0004",
+   "label": "MEASURED",
+   "line_id": "L-d70e4b8d2e812cd863f4",
+   "m3": 0.375,
+   "mark": "B4",
+   "member": "BM-GF-004",
+   "run": "BM-GF-004#BAND0004",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.9799",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0011",
+   "label": "MEASURED",
+   "line_id": "L-daca46a09caaa7139045",
+   "m3": 0.197986,
+   "mark": "B4",
+   "member": "BM-GF-010",
+   "run": "BM-GF-010#BAND0011",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "0.7",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0007.1",
+   "label": "MEASURED",
+   "line_id": "L-dadbee5aad44a7afbb0d",
+   "m3": 0.056,
+   "mark": "B1",
+   "member": "BM-1F-008",
+   "run": "BM-1F-008#BAND0007.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "6.3",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-029#BAND0028",
+   "label": "MEASURED",
+   "line_id": "L-db759eb6300a0147c463",
+   "m3": 0.9153,
+   "mark": "B9",
+   "member": "BM-GF-029",
+   "run": "BM-GF-029#BAND0028",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.399",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-04",
+   "element_id": "U-C:BEAMS:2F:BAND0008.1",
+   "label": "DEFAULT",
+   "line_id": "L-dc8cbfc119d006ff3927",
+   "m3": 0.112,
+   "mark": "(none)",
+   "member": "BM-2F-017",
+   "run": "BM-2F-017#BAND0008.1",
+   "src": "T757",
+   "status": "HELD",
+   "storey": "2F"
+  },
+  {
+   "L": "2.7",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0005.2",
+   "label": "MEASURED",
+   "line_id": "L-e0e1fc258cc7a68fdf6c",
+   "m3": 0.216,
+   "mark": "B2",
+   "member": "BM-1F-006",
+   "run": "BM-1F-006#BAND0005.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "0.6158",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-050.r2#RING-B7",
+   "label": "MEASURED",
+   "line_id": "L-e72c162de78a4bf302c0",
+   "m3": 0.499805,
+   "mark": "B7",
+   "member": "BM-GF-050",
+   "run": "BM-GF-050#BAND0050",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "3.15",
+   "b": "0.3",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0024.2",
+   "label": "MEASURED",
+   "line_id": "L-e910cc0865d6434c55f9",
+   "m3": 0.4725,
+   "mark": "CB13",
+   "member": "BM-1F-022",
+   "run": "BM-1F-022#BAND0024.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "2.3",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0033.2",
+   "label": "MEASURED",
+   "line_id": "L-ed3cf93a185c88b4ab5a",
+   "m3": 0.184,
+   "mark": "CB5",
+   "member": "BM-GF-035",
+   "run": "BM-GF-035#BAND0033.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.2",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0013",
+   "label": "MEASURED",
+   "line_id": "L-ee0d081dc810d310a4ab",
+   "m3": 0.096,
+   "mark": "B1",
+   "member": "BM-GF-012",
+   "run": "BM-GF-012#BAND0013",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "0.5",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-04 (new piece)",
+   "element_id": "U-C:BEAMS:GF:BAND0030.2",
+   "label": "MEASURED",
+   "line_id": "L-efd3f7806bf10b6a8e98",
+   "m3": 0.05,
+   "mark": "(none; in line with B4)",
+   "member": "BM-GF-062",
+   "run": "BM-GF-062#GF-112",
+   "src": "INDEX",
+   "status": "HELD",
+   "storey": "GF"
+  },
+  {
+   "L": "0.525",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-05",
+   "element_id": "T729:CHILD:HL:BEAM_LEDGER:GF:BM-GF-058#GF-STRIP-AT-COL",
+   "label": "DEFAULT",
+   "line_id": "L-f113ed57f7875fed9a67",
+   "m3": 0.096,
+   "mark": "(none)",
+   "member": "BM-GF-058",
+   "run": "BM-GF-058#BAND0031.2",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "GF"
+  },
+  {
+   "L": "4.1",
+   "b": "0.25",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0019",
+   "label": "MEASURED",
+   "line_id": "L-f2d545c87e8586cde8af",
+   "m3": 0.5125,
+   "mark": "B6",
+   "member": "BM-1F-018",
+   "run": "BM-1F-018#BAND0019",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "6.6",
+   "b": "0.2",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "P-C:BEAMS:2F:BAND0009",
+   "label": "MEASURED",
+   "line_id": "L-f4a95b8019ae333d81ae",
+   "m3": 0.99,
+   "mark": "B7",
+   "member": "BM-2F-011",
+   "run": "BM-2F-011#BAND0009",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "2F"
+  },
+  {
+   "L": "0.801",
+   "b": "0.2",
+   "d": "",
+   "designer": "D-04",
+   "element_id": "U-C:BEAMS:1F:BAND0005.1",
+   "label": "DEFAULT",
+   "line_id": "L-f83c4a469845c7e14dfa",
+   "m3": 0.064,
+   "mark": "(none)",
+   "member": "BM-1F-032",
+   "run": "BM-1F-032#BAND0005.1",
+   "src": "T757",
+   "status": "HELD",
+   "storey": "1F"
+  },
+  {
+   "L": "5.0272",
+   "b": "0.25",
+   "d": "0.75",
+   "designer": "",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-036#BAND0034.1",
+   "label": "MEASURED",
+   "line_id": "L-fab1bc66232c8d568797",
+   "m3": 0.952313,
+   "mark": "B13",
+   "member": "BM-GF-036",
+   "run": "BM-GF-036#BAND0034.1",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  },
+  {
+   "L": "1.0",
+   "b": "0.4",
+   "d": "",
+   "designer": "D-26",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-037",
+   "label": "DEFAULT",
+   "line_id": "L-fbb65dfd2a66a16714ac",
+   "m3": 0.24,
+   "mark": "(none)",
+   "member": "BM-1F-037",
+   "run": "BM-1F-037",
+   "src": "T761",
+   "status": "HELD",
+   "storey": "1F"
+  },
+  {
+   "L": "3.35",
+   "b": "0.2",
+   "d": "0.5",
+   "designer": "",
+   "element_id": "P-C:BEAMS:1F:BAND0001.3",
+   "label": "MEASURED",
+   "line_id": "L-fce03d2bd6dae64f2641",
+   "m3": 0.335,
+   "mark": "CB9",
+   "member": "BM-1F-002",
+   "run": "BM-1F-002#BAND0001.3",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "1F"
+  },
+  {
+   "L": "2.95",
+   "b": "0.2",
+   "d": "0.4",
+   "designer": "",
+   "element_id": "P-C:BEAMS:GF:BAND0023.2",
+   "label": "MEASURED",
+   "line_id": "L-fd0852ad2cbea736b300",
+   "m3": 0.236,
+   "mark": "B3",
+   "member": "BM-GF-024",
+   "run": "BM-GF-024#BAND0023.2",
+   "src": "INDEX",
+   "status": "CALCULATED",
+   "storey": "GF"
+  }
+ ],
+ "per_mark": [
+  {
+   "cls": "ENGINE_ONLY",
+   "diff_m3": 2.008,
+   "engine_L": 0,
+   "engine_b_d": [],
+   "engine_labels": [
+    "DEFAULT",
+    "MEASURED"
+   ],
+   "engine_lines": 8,
+   "engine_m3": 2.008,
+   "his_L": 0,
+   "his_b_d": [],
+   "his_m3": 0,
+   "his_rows": 0,
+   "mark": "(unlabelled / held piece)",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 0.2101,
+   "engine_L": 16.763,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.4"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 12,
+   "engine_m3": 1.3421,
+   "his_L": 14.15,
+   "his_b_d": [
+    [
+     0.2,
+     0.4
+    ]
+   ],
+   "his_m3": 1.132,
+   "his_rows": 4,
+   "mark": "B1",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 0.004,
+   "engine_L": 4.554,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.6865,
+   "his_L": 4.55,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 0.6825,
+   "his_rows": 1,
+   "mark": "B11",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.0789,
+   "engine_L": 5.027,
+   "engine_b_d": [
+    [
+     "0.25",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.9523,
+   "his_L": 5.5,
+   "his_b_d": [
+    [
+     0.25,
+     0.75
+    ]
+   ],
+   "his_m3": 1.0312,
+   "his_rows": 1,
+   "mark": "B13",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 0.0,
+   "engine_L": 1.8,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.27,
+   "his_L": 1.8,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 0.27,
+   "his_rows": 1,
+   "mark": "B14",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.0,
+   "engine_L": 3.85,
+   "engine_b_d": [
+    [
+     "0.3",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.8662,
+   "his_L": 3.85,
+   "his_b_d": [
+    [
+     0.3,
+     0.75
+    ]
+   ],
+   "his_m3": 0.8663,
+   "his_rows": 1,
+   "mark": "B16",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.0571,
+   "engine_L": 5.1,
+   "engine_b_d": [
+    [
+     "0.45",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 1.7654,
+   "his_L": 5.4,
+   "his_b_d": [
+    [
+     0.45,
+     0.75
+    ]
+   ],
+   "his_m3": 1.8225,
+   "his_rows": 1,
+   "mark": "B17",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.2198,
+   "engine_L": 8.3,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.4"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 3,
+   "engine_m3": 0.6322,
+   "his_L": 10.65,
+   "his_b_d": [
+    [
+     0.2,
+     0.4
+    ]
+   ],
+   "his_m3": 0.852,
+   "his_rows": 3,
+   "mark": "B2",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.18,
+   "engine_L": 6.3,
+   "engine_b_d": [
+    [
+     "0.4",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 1.98,
+   "his_L": 7.2,
+   "his_b_d": [
+    [
+     0.4,
+     0.75
+    ]
+   ],
+   "his_m3": 2.16,
+   "his_rows": 1,
+   "mark": "B20",
+   "storey": "GF"
+  },
+  {
+   "cls": "ENGINE_ONLY",
+   "diff_m3": 0.12,
+   "engine_L": 3.0,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.2"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.12,
+   "his_L": 0,
+   "his_b_d": [],
+   "his_m3": 0,
+   "his_rows": 0,
+   "mark": "B20 upstand",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.3696,
+   "engine_L": 7.48,
+   "engine_b_d": [
+    [
+     "",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "DRAWING-READ"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 2.2629,
+   "his_L": 7.8,
+   "his_b_d": [
+    [
+     0.45,
+     0.75
+    ]
+   ],
+   "his_m3": 2.6325,
+   "his_rows": 1,
+   "mark": "B21",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 0.0,
+   "engine_L": 7.8,
+   "engine_b_d": [
+    [
+     "0.5",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 2.925,
+   "his_L": 7.8,
+   "his_b_d": [
+    [
+     0.5,
+     0.75
+    ]
+   ],
+   "his_m3": 2.925,
+   "his_rows": 1,
+   "mark": "B22",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.7301,
+   "engine_L": 3.55,
+   "engine_b_d": [
+    [
+     "0.5",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 1.4262,
+   "his_L": 5.75,
+   "his_b_d": [
+    [
+     0.5,
+     0.75
+    ]
+   ],
+   "his_m3": 2.1562,
+   "his_rows": 1,
+   "mark": "B24",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.3354,
+   "engine_L": 7.067,
+   "engine_b_d": [
+    [
+     "0.65",
+     "0.85"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 4.0846,
+   "his_L": 8,
+   "his_b_d": [
+    [
+     0.65,
+     0.85
+    ]
+   ],
+   "his_m3": 4.42,
+   "his_rows": 1,
+   "mark": "B26",
+   "storey": "GF"
+  },
+  {
+   "cls": "ENGINE_ONLY",
+   "diff_m3": 4.1918,
+   "engine_L": 4.95,
+   "engine_b_d": [
+    [
+     "0.9",
+     "0.85"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 4.1918,
+   "his_L": 0,
+   "his_b_d": [],
+   "his_m3": 0,
+   "his_rows": 0,
+   "mark": "B27",
+   "storey": "GF"
+  },
+  {
+   "cls": "ENGINE_ONLY",
+   "diff_m3": 0.2121,
+   "engine_L": 0.805,
+   "engine_b_d": [
+    [
+     "0.25",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.2121,
+   "his_L": 0,
+   "his_b_d": [],
+   "his_m3": 0,
+   "his_rows": 0,
+   "mark": "B28",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.252,
+   "engine_L": 6.741,
+   "engine_b_d": [
+    [
+     "",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "DRAWING-READ"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 1.0136,
+   "his_L": 6.75,
+   "his_b_d": [
+    [
+     0.25,
+     0.75
+    ]
+   ],
+   "his_m3": 1.2656,
+   "his_rows": 1,
+   "mark": "B29",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.004,
+   "engine_L": 8.75,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.4"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 3,
+   "engine_m3": 0.7,
+   "his_L": 8.8,
+   "his_b_d": [
+    [
+     0.2,
+     0.4
+    ]
+   ],
+   "his_m3": 0.704,
+   "his_rows": 2,
+   "mark": "B3",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.0377,
+   "engine_L": 20.986,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.5"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 6,
+   "engine_m3": 2.1073,
+   "his_L": 21.45,
+   "his_b_d": [
+    [
+     0.2,
+     0.5
+    ]
+   ],
+   "his_m3": 2.145,
+   "his_rows": 5,
+   "mark": "B4",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.0083,
+   "engine_L": 3.543,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.5"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.3617,
+   "his_L": 3.7,
+   "his_b_d": [
+    [
+     0.2,
+     0.5
+    ]
+   ],
+   "his_m3": 0.37,
+   "his_rows": 1,
+   "mark": "B5",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.3545,
+   "engine_L": 6.226,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 4,
+   "engine_m3": 1.2175,
+   "his_L": 10.48,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 1.572,
+   "his_rows": 2,
+   "mark": "B7",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 0.003,
+   "engine_L": 3.52,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.528,
+   "his_L": 3.5,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 0.525,
+   "his_rows": 1,
+   "mark": "B8",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.0597,
+   "engine_L": 6.3,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.9153,
+   "his_L": 6.5,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 0.975,
+   "his_rows": 1,
+   "mark": "B9",
+   "storey": "GF"
+  },
+  {
+   "cls": "ENGINE_ONLY",
+   "diff_m3": 0.1725,
+   "engine_L": 1.15,
+   "engine_b_d": [
+    [
+     "0.3",
+     "0.5"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.1725,
+   "his_L": 0,
+   "his_b_d": [],
+   "his_m3": 0,
+   "his_rows": 0,
+   "mark": "CA",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.1337,
+   "engine_L": 12.5,
+   "engine_b_d": [
+    [
+     "0.35",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 3.2788,
+   "his_L": 13,
+   "his_b_d": [
+    [
+     0.35,
+     0.75
+    ]
+   ],
+   "his_m3": 3.4125,
+   "his_rows": 1,
+   "mark": "CB1",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 0.0626,
+   "engine_L": 6.82,
+   "engine_b_d": [
+    [
+     "",
+     "0.5"
+    ]
+   ],
+   "engine_labels": [
+    "DRAWING-READ"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 0.8526,
+   "his_L": 7.9,
+   "his_b_d": [
+    [
+     0.2,
+     0.5
+    ]
+   ],
+   "his_m3": 0.79,
+   "his_rows": 1,
+   "mark": "CB2",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.6017,
+   "engine_L": 6.209,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 0.9313,
+   "his_L": 10.22,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 1.533,
+   "his_rows": 1,
+   "mark": "CB3",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.084,
+   "engine_L": 5.574,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.5"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 0.571,
+   "his_L": 6.55,
+   "his_b_d": [
+    [
+     0.2,
+     0.5
+    ]
+   ],
+   "his_m3": 0.655,
+   "his_rows": 1,
+   "mark": "CB4",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.088,
+   "engine_L": 6.0,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.4"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 0.48,
+   "his_L": 7.1,
+   "his_b_d": [
+    [
+     0.2,
+     0.4
+    ]
+   ],
+   "his_m3": 0.568,
+   "his_rows": 1,
+   "mark": "CB5",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.1125,
+   "engine_L": 9.85,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 1.4775,
+   "his_L": 10.6,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 1.59,
+   "his_rows": 1,
+   "mark": "CB6",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.1199,
+   "engine_L": 11.8,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 1.6801,
+   "his_L": 12,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 1.8,
+   "his_rows": 1,
+   "mark": "CB7",
+   "storey": "GF"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.5708,
+   "engine_L": 15.545,
+   "engine_b_d": [
+    [
+     "0.3",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 3,
+   "engine_m3": 3.4567,
+   "his_L": 17.9,
+   "his_b_d": [
+    [
+     0.3,
+     0.75
+    ]
+   ],
+   "his_m3": 4.0275,
+   "his_rows": 1,
+   "mark": "CB8",
+   "storey": "GF"
+  },
+  {
+   "cls": "ENGINE_ONLY",
+   "diff_m3": 4.052,
+   "engine_L": 0,
+   "engine_b_d": [],
+   "engine_labels": [
+    "DEFAULT"
+   ],
+   "engine_lines": 10,
+   "engine_m3": 4.052,
+   "his_L": 0,
+   "his_b_d": [],
+   "his_m3": 0,
+   "his_rows": 0,
+   "mark": "(unlabelled / held piece)",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.1183,
+   "engine_L": 4.107,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.4"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 3,
+   "engine_m3": 0.3297,
+   "his_L": 5.6,
+   "his_b_d": [
+    [
+     0.2,
+     0.4
+    ]
+   ],
+   "his_m3": 0.448,
+   "his_rows": 2,
+   "mark": "B1",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 0.0072,
+   "engine_L": 4.748,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.7122,
+   "his_L": 4.7,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 0.705,
+   "his_rows": 1,
+   "mark": "B11",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 0.0,
+   "engine_L": 6.3,
+   "engine_b_d": [
+    [
+     "0.35",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 1.6538,
+   "his_L": 6.3,
+   "his_b_d": [
+    [
+     0.35,
+     0.75
+    ]
+   ],
+   "his_m3": 1.6537,
+   "his_rows": 1,
+   "mark": "B18",
+   "storey": "1F"
+  },
+  {
+   "cls": "ENGINE_ONLY",
+   "diff_m3": 1.6236,
+   "engine_L": 5.338,
+   "engine_b_d": [
+    [
+     "0.4",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 1.6236,
+   "his_L": 0,
+   "his_b_d": [],
+   "his_m3": 0,
+   "his_rows": 0,
+   "mark": "B19",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.168,
+   "engine_L": 8.4,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.4"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 3,
+   "engine_m3": 0.672,
+   "his_L": 10.5,
+   "his_b_d": [
+    [
+     0.2,
+     0.4
+    ]
+   ],
+   "his_m3": 0.84,
+   "his_rows": 3,
+   "mark": "B2",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.1504,
+   "engine_L": 6.3,
+   "engine_b_d": [
+    [
+     "0.45",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 2.2459,
+   "his_L": 7.1,
+   "his_b_d": [
+    [
+     0.45,
+     0.75
+    ]
+   ],
+   "his_m3": 2.3962,
+   "his_rows": 1,
+   "mark": "B23",
+   "storey": "1F"
+  },
+  {
+   "cls": "ENGINE_ONLY",
+   "diff_m3": 0.12,
+   "engine_L": 3.0,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.2"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.12,
+   "his_L": 0,
+   "his_b_d": [],
+   "his_m3": 0,
+   "his_rows": 0,
+   "mark": "B23 upstand",
+   "storey": "1F"
+  },
+  {
+   "cls": "ENGINE_ONLY",
+   "diff_m3": 2.85,
+   "engine_L": 6.875,
+   "engine_b_d": [
+    [
+     "0.55",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 2.85,
+   "his_L": 0,
+   "his_b_d": [],
+   "his_m3": 0,
+   "his_rows": 0,
+   "mark": "B25",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 0.0,
+   "engine_L": 2.5,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.4"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.2,
+   "his_L": 2.5,
+   "his_b_d": [
+    [
+     0.2,
+     0.4
+    ]
+   ],
+   "his_m3": 0.2,
+   "his_rows": 1,
+   "mark": "B3",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 1.0864,
+   "engine_L": 12.212,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.5"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 4,
+   "engine_m3": 1.9764,
+   "his_L": 8.9,
+   "his_b_d": [
+    [
+     0.2,
+     0.5
+    ]
+   ],
+   "his_m3": 0.89,
+   "his_rows": 2,
+   "mark": "B4",
+   "storey": "1F"
+  },
+  {
+   "cls": "ENGINE_ONLY",
+   "diff_m3": 0.8325,
+   "engine_L": 8.325,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.5"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 0.8325,
+   "his_L": 0,
+   "his_b_d": [],
+   "his_m3": 0,
+   "his_rows": 0,
+   "mark": "B5",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 2.0206,
+   "engine_L": 21.41,
+   "engine_b_d": [
+    [
+     "",
+     "0.5"
+    ],
+    [
+     "0.25",
+     "0.5"
+    ]
+   ],
+   "engine_labels": [
+    "DRAWING-READ",
+    "MEASURED"
+   ],
+   "engine_lines": 5,
+   "engine_m3": 2.5668,
+   "his_L": 4.37,
+   "his_b_d": [
+    [
+     0.25,
+     0.5
+    ]
+   ],
+   "his_m3": 0.5463,
+   "his_rows": 1,
+   "mark": "B6",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.15,
+   "engine_L": 3.0,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 0.45,
+   "his_L": 4.0,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 0.6,
+   "his_rows": 2,
+   "mark": "B7",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 0.0175,
+   "engine_L": 5.952,
+   "engine_b_d": [
+    [
+     "0.3",
+     ""
+    ]
+   ],
+   "engine_labels": [
+    "DRAWING-READ"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 0.8925,
+   "his_L": 7,
+   "his_b_d": [
+    [
+     0.25,
+     0.5
+    ]
+   ],
+   "his_m3": 0.875,
+   "his_rows": 1,
+   "mark": "CB10",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.3949,
+   "engine_L": 12.658,
+   "engine_b_d": [
+    [
+     "0.3",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 3,
+   "engine_m3": 2.9013,
+   "his_L": 14.65,
+   "his_b_d": [
+    [
+     0.3,
+     0.75
+    ]
+   ],
+   "his_m3": 3.2963,
+   "his_rows": 1,
+   "mark": "CB11",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.4158,
+   "engine_L": 10.65,
+   "engine_b_d": [
+    [
+     "0.25",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 2.0217,
+   "his_L": 13,
+   "his_b_d": [
+    [
+     0.25,
+     0.75
+    ]
+   ],
+   "his_m3": 2.4375,
+   "his_rows": 1,
+   "mark": "CB12",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.1098,
+   "engine_L": 6.15,
+   "engine_b_d": [
+    [
+     "0.3",
+     "0.5"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 2,
+   "engine_m3": 0.9402,
+   "his_L": 7,
+   "his_b_d": [
+    [
+     0.3,
+     0.5
+    ]
+   ],
+   "his_m3": 1.05,
+   "his_rows": 1,
+   "mark": "CB13",
+   "storey": "1F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.18,
+   "engine_L": 10.37,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.5"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 3,
+   "engine_m3": 1.037,
+   "his_L": 12.17,
+   "his_b_d": [
+    [
+     0.2,
+     0.5
+    ]
+   ],
+   "his_m3": 1.217,
+   "his_rows": 1,
+   "mark": "CB9",
+   "storey": "1F"
+  },
+  {
+   "cls": "ENGINE_ONLY",
+   "diff_m3": 1.3985,
+   "engine_L": 0,
+   "engine_b_d": [],
+   "engine_labels": [
+    "DEFAULT"
+   ],
+   "engine_lines": 5,
+   "engine_m3": 1.3985,
+   "his_L": 0,
+   "his_b_d": [],
+   "his_m3": 0,
+   "his_rows": 0,
+   "mark": "(unlabelled / held piece)",
+   "storey": "2F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.256,
+   "engine_L": 5.8,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.4"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 4,
+   "engine_m3": 0.464,
+   "his_L": 9.0,
+   "his_b_d": [
+    [
+     0.2,
+     0.4
+    ]
+   ],
+   "his_m3": 0.72,
+   "his_rows": 2,
+   "mark": "B1",
+   "storey": "2F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.984,
+   "engine_L": 2.7,
+   "engine_b_d": [
+    [
+     "0.2",
+     "1.2"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.648,
+   "his_L": 6.8,
+   "his_b_d": [
+    [
+     0.2,
+     1.2
+    ]
+   ],
+   "his_m3": 1.632,
+   "his_rows": 1,
+   "mark": "B15",
+   "storey": "2F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.2,
+   "engine_L": 10.3,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.4"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 4,
+   "engine_m3": 0.824,
+   "his_L": 12.8,
+   "his_b_d": [
+    [
+     0.2,
+     0.4
+    ]
+   ],
+   "his_m3": 1.024,
+   "his_rows": 3,
+   "mark": "B2",
+   "storey": "2F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.028,
+   "engine_L": 10.65,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.4"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 4,
+   "engine_m3": 0.852,
+   "his_L": 11.0,
+   "his_b_d": [
+    [
+     0.2,
+     0.4
+    ]
+   ],
+   "his_m3": 0.88,
+   "his_rows": 2,
+   "mark": "B3",
+   "storey": "2F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": 0.0,
+   "engine_L": 6.6,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.99,
+   "his_L": 6.6,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 0.99,
+   "his_rows": 1,
+   "mark": "B7",
+   "storey": "2F"
+  },
+  {
+   "cls": "BOTH",
+   "diff_m3": -0.2895,
+   "engine_L": 3.47,
+   "engine_b_d": [
+    [
+     "0.2",
+     "0.75"
+    ]
+   ],
+   "engine_labels": [
+    "MEASURED"
+   ],
+   "engine_lines": 1,
+   "engine_m3": 0.5205,
+   "his_L": 5.4,
+   "his_b_d": [
+    [
+     0.2,
+     0.75
+    ]
+   ],
+   "his_m3": 0.81,
+   "his_rows": 1,
+   "mark": "B8",
+   "storey": "2F"
+  }
+ ],
+ "residual_m3": -0.000224,
+ "residual_pct_of_line": 0.0003,
+ "schema": "T777_BEAM_CAUSES_V1",
+ "verdicts": {
+  "C1_MARKS_DRAWN_NOT_IN_HIS_SHEET": "ENGINE_RIGHT",
+  "C2a_WIDTH": "UNRESOLVED",
+  "C2b_DEPTH": "AGREE",
+  "C2c1_LENGTH_ENGINE_LONGER": "ENGINE_RIGHT",
+  "C2c2_LENGTH_HIS_LONGER": "RULE_DIFFERENCE",
+  "C2d_ENDS_JOINTS_AND_POINTS": "ENGINE_RIGHT",
+  "C3_HIS_SHEET_ARITHMETIC": "ENGINE_RIGHT",
+  "C4_UNLABELLED_PIECES_DEFAULT_DEPTH": "UNRESOLVED",
+  "C4b_UNLABELLED_PIECES_DRAWING_READ": "UNRESOLVED"
+ }
+}
