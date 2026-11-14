@@ -1,0 +1,514 @@
+{
+ "added": {},
+ "applied": 296,
+ "base_index_sha256": "e51909257a5d688ff9be64f687560464acac4303f3ebc176d5d1ed820c9656ec",
+ "blank_in_package_families_after": 0,
+ "blank_in_package_families_before": 87,
+ "blank_non_rebar_after": 124,
+ "blank_non_rebar_before": 211,
+ "by_set": {
+  "T-757": {
+   "labels": {
+    "DEFAULT": 72,
+    "DRAWING-READ": 40,
+    "ESTIMATE": 1,
+    "SAFETY": 1
+   },
+   "rows": 114
+  },
+  "T-763": {
+   "labels": {
+    "DEFAULT": 48,
+    "DRAWING-READ": 1,
+    "ESTIMATE": 33,
+    "MEASURED": 8
+   },
+   "rows": 90
+  },
+  "T-765": {
+   "labels": {
+    "DEFAULT": 47,
+    "ESTIMATE": 31,
+    "NOT_APPLICABLE": 13
+   },
+   "rows": 91
+  },
+  "T-776": {
+   "labels": {
+    "DEFAULT": 1
+   },
+   "rows": 1
+  }
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.82",
+ "index_sha256": "f3a81dfe753f81901adeea07d318aae82d20f729e75ead43bbf3b7abac4a78fe",
+ "lines": 5280,
+ "lines_before": 5280,
+ "method": "ARCH_TAKEOFF_V3.0.83",
+ "outside_lines_identical": true,
+ "package_sha256": "3c24aaa25d97e63159ff144d9249a71ebb6c74499759a829e273036a2b6393e5",
+ "ranged_in_package_families_after": 0,
+ "ranged_in_package_families_before": 193,
+ "ranged_non_rebar_after": 116,
+ "ranged_non_rebar_before": 309,
+ "report": {
+  "basis_corrections": [
+   {
+    "line_id": "L-c22e309433e7b671cf2d",
+    "new": "1F-W14+W15 16.5345 (4.0927 x 4.04",
+    "old": "1F-W14+W15 16.5255 (4.0927 x 4.04",
+    "source": "Checker F-V765-1 (T-765 Gate A, 2026-11-14): 4.0927 x 4.04 = 16.5345; the line figure 64.8492 is left as verified (0.009 m2 under the corrected components, below materiality)"
+   }
+  ],
+  "carried": {
+   "T-776": [
+    "L-6290a9f3d93f38cd46d6"
+   ]
+  },
+  "not_applicable_rows": [
+   {
+    "item_code": "MAS.GLUE.AAC",
+    "line_id": "L-3594af8e0405355d51c4",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.UNITS.WHITE",
+    "line_id": "L-c9b56cb8453e5f67a334",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.GLUE.AAC",
+    "line_id": "L-8e250abdcadfdbf33951",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.UNITS.WHITE",
+    "line_id": "L-d4c62b9df1e162be5e8b",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.UNITS.BLACK",
+    "line_id": "L-318e6311ab5e01c0fa3e",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.MORTAR.BLACK",
+    "line_id": "L-cdb8d54311c5c841528f",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+    "line_id": "L-c10db6d6a0726d12b9b8",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.BLOCK",
+    "line_id": "L-ff06449b7f61f19c418d",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.UNITS.BLACK",
+    "line_id": "L-43f32c104c36f9bd85be",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.MORTAR.BLACK",
+    "line_id": "L-07e80def32e147b160ac",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.MORTAR.BLACK.PERIMETER",
+    "line_id": "L-f57d9679c2acf87dc06b",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.GLUE.AAC",
+    "line_id": "L-24d4696063cef72b0ddb",
+    "set": "T-765"
+   },
+   {
+    "item_code": "MAS.UNITS.WHITE",
+    "line_id": "L-ee1c4e34adec6ee5813d",
+    "set": "T-765"
+   }
+  ],
+  "restated_safety": [
+   {
+    "after": 1.199706,
+    "before": 1.0,
+    "line_id": "L-cf5784d8fd9bf3f3aca2",
+    "set": "T-757"
+   }
+  ],
+  "source_schemas": {
+   "T-757": "T757_FIX_ROWS_V1",
+   "T-763": "T763_FIX_ROWS_V1",
+   "T-765": null,
+   "T-776": "DELIVERY_FIX_ROWS_V1"
+  },
+  "stack": {
+   "deferred": [],
+   "not_applicable": [],
+   "stacked_on_base": [],
+   "stacked_on_row": [
+    {
+     "after": 9.0958,
+     "line_id": "L-6290a9f3d93f38cd46d6",
+     "restated_net": 8.4588,
+     "restates": "T-757",
+     "set": "T-776"
+    }
+   ]
+  }
+ },
+ "rule": [
+  "R-T770-1",
+  "R-T770-2",
+  "R-T770-3",
+  "R-T770-4"
+ ],
+ "set_sha256": {
+  "T-757": "155ed1b3be8eef37d5d8c984e50585f2cf236ed5b5105ec808048db086dcdfd7",
+  "T-763": "419b3f359a24bda1dd6e4173cc176f9b38e92768ca5c2fecd4e5699f602da712",
+  "T-765": "5e2a1ca35b40c6802249edcba28d92629fe51b4330a0557b2b79af137edd54a8",
+  "T-776": "d6d623505f155c6fe1ff06ef01c35d8c09b31ca19899202b9ff0ab2d387638b3"
+ },
+ "totals_moved": {
+  "FIN.PAINT [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 15,
+    "released": 828.81
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 159.35,
+    "held_low": 145.0,
+    "lines": 15,
+    "released": 675.8
+   }
+  },
+  "FIN.PAINT.EDGE [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 30,
+    "released": 26.92
+   },
+   "before": {
+    "blank": 3,
+    "held_high": 33.8,
+    "held_low": 0.0,
+    "lines": 30,
+    "released": 0.0
+   }
+  },
+  "FIN.PLASTER [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 81,
+    "released": 1622.0
+   },
+   "before": {
+    "blank": 3,
+    "held_high": 404.65,
+    "held_low": 288.64,
+    "lines": 81,
+    "released": 1254.71
+   }
+  },
+  "FIN.PLASTER.BEAD [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 14,
+    "released": 342.45
+   },
+   "before": {
+    "blank": 5,
+    "held_high": 165.65,
+    "held_low": 165.45,
+    "lines": 14,
+    "released": 0.0
+   }
+  },
+  "MAS.BLOCK [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 27,
+    "released": 981.35
+   },
+   "before": {
+    "blank": 15,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 28,
+    "released": 467.79
+   }
+  },
+  "MAS.GLUE.AAC [kg]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 12,
+    "released": 1747.74
+   },
+   "before": {
+    "blank": 10,
+    "held_high": 861.32,
+    "held_low": 842.06,
+    "lines": 15,
+    "released": 43.6
+   }
+  },
+  "MAS.MORTAR.BLACK [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 7.17
+   },
+   "before": {
+    "blank": 12,
+    "held_high": 0.62,
+    "held_low": 0.62,
+    "lines": 20,
+    "released": 2.59
+   }
+  },
+  "MAS.MORTAR.BLACK.LINTEL_BEARING [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 9,
+    "released": 0.01
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.01,
+    "held_low": 0.0,
+    "lines": 9,
+    "released": 0.0
+   }
+  },
+  "MAS.MORTAR.BLACK.PERIMETER [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 0.42
+   },
+   "before": {
+    "blank": 12,
+    "held_high": 0.11,
+    "held_low": 0.07,
+    "lines": 20,
+    "released": 0.1
+   }
+  },
+  "MAS.UNITS.BLACK [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 7226.37
+   },
+   "before": {
+    "blank": 12,
+    "held_high": 702.91,
+    "held_low": 698.66,
+    "lines": 20,
+    "released": 2571.28
+   }
+  },
+  "MAS.UNITS.WHITE [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 12,
+    "released": 2527.32
+   },
+   "before": {
+    "blank": 15,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 15,
+    "released": 0.0
+   }
+  },
+  "STR.CONC.BEAM [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 140,
+    "released": 79.24
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 8.41,
+    "held_low": 5.98,
+    "lines": 140,
+    "released": 72.18
+   }
+  },
+  "STR.CONC.BLINDING [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 9,
+    "released": 29.69
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 13.47,
+    "held_low": 7.64,
+    "lines": 9,
+    "released": 16.54
+   }
+  },
+  "STR.CONC.BOUNDARY_WALL [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 9.1
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 11.03,
+    "held_low": 5.64,
+    "lines": 1,
+    "released": 0.0
+   }
+  },
+  "STR.CONC.COLUMN [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 59,
+    "released": 33.92
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 15.5,
+    "held_low": 11.8,
+    "lines": 59,
+    "released": 20.62
+   }
+  },
+  "STR.CONC.FOOTING [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 26,
+    "released": 66.58
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 2.27,
+    "held_low": 2.18,
+    "lines": 26,
+    "released": 64.3
+   }
+  },
+  "STR.CONC.GROUND_BEAM [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 59,
+    "released": 36.9
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 1.57,
+    "held_low": 1.18,
+    "lines": 59,
+    "released": 35.72
+   }
+  },
+  "STR.CONC.LINTEL [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 52,
+    "released": 3.11
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 2.05,
+    "held_low": 1.36,
+    "lines": 52,
+    "released": 1.74
+   }
+  },
+  "STR.CONC.NECK [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 36,
+    "released": 10.34
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 11.35,
+    "held_low": 8.77,
+    "lines": 36,
+    "released": 1.46
+   }
+  },
+  "STR.CONC.SAFETY [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 1.2
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 1.0
+   }
+  },
+  "STR.CONC.STRAP [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 5,
+    "released": 3.42
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.65,
+    "held_low": 0.03,
+    "lines": 5,
+    "released": 3.39
+   }
+  }
+ }
+}
