@@ -2,6 +2,10 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
+## SCOREBOARD NOTE 2026-11-14 21:56 UTC per `date -u` (Verifier, scheduled Checker run 21:51Z; after T-791 r2 MERGED 1da51dd1, fix rows on V3.0.87 UNWIRED; candidate stays ARCH_TAKEOFF_V3.0.87 / master 1.87.0, NOT RELEASED; released default unchanged)
+
+No candidate line moved (LINE_INDEX_V3_0_87 unchanged); number (a) unchanged until T-770 wires T-791. When wired: Stairs blank 14 -> 0; FIN.RAILING 33.32 -> 42.96 lm vs freelancer 18.95 internal (+126.7 %; ENGINE_RIGHT on scope for ST-01b 2.050, RL-09 4.892, RL-11 1.579, own hand reads), MET.RAILING.GUARD 21.55 -> 31.42 lm (freelancer no row, NOT COMPARABLE), FIN.SKIRTING 209.43 -> 213.33 lm (+3.90 lm labelled DEFAULT / ESTIMATE, not VERIFIED). tools/alsenan_scoreboard.py NOT run (no normalised V3.0.87 row set; freelancer workbooks not downloaded this run). Drive readable (arch DXF zip, sheet10, pages 11-12 decoded). Verified share unchanged; T-180 slot not worked (no CLOSABLE NOW line).
+
 ## SCOREBOARD NOTE 2026-11-14 21:07 UTC per `date -u` (Verifier, run session_01E6cPnddzoTn5ciSsGEHeER; after T-799 MERGED 0d3168e5, research + rule R-T788-4 unwired; candidate stays ARCH_TAKEOFF_V3.0.87 / master 1.87.0, NOT RELEASED; released default unchanged)
 
 No candidate line moved (LINE_INDEX_V3_0_87 unchanged); number (a) unchanged. Number (b) context only: internal plaster dry + shafts 1,017.65 vs freelancer 1,169.13 m2 (-12.96 %) now has his two shaft rows 54.00 m2 split: 40.50 = ST-02 well faces already in our 1F-13 (own DXF AEC 10.673 + AF7 5.150 m, PLACEMENT, ENGINE_RIGHT on face count) + 13.50 UNRESOLVED (1.15 %). Cornice 426.31 vs 427.46 lm unchanged under R-T788-4 (own run). tools/alsenan_scoreboard.py NOT run (no normalised V3.0.87 row set; freelancer workbooks not downloaded this run). Drive readable (arch DXF zip decoded). Verified share unchanged; T-180 slot not worked (no CLOSABLE NOW line).
