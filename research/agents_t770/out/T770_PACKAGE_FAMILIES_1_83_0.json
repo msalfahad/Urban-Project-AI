@@ -1,0 +1,306 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.83.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.82",
+  "ARCH_TAKEOFF_V3.0.83"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.82": {
+   "lines": 5280,
+   "lines_sha256": "e36bb3b11a2f84e6a9f899f763e34f43168505066a4e1d9cafad6364785ffdcd"
+  },
+  "ARCH_TAKEOFF_V3.0.83": {
+   "lines": 5280,
+   "lines_sha256": "1e63190c8235e9685a21c12560faba6af0ddae74385e2eb07fd9a8c91b04119b",
+   "previous": "ARCH_TAKEOFF_V3.0.82",
+   "item_codes": {
+    "FIN.PAINT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.PAINT.EDGE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 30,
+     "record": 0
+    },
+    "FIN.PLASTER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 42,
+     "record": 0
+    },
+    "FIN.PLASTER.BEAD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 14,
+     "record": 0
+    },
+    "MAS.BLOCK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 15,
+     "record": 0
+    },
+    "MAS.GLUE.AAC": {
+     "added": 0,
+     "removed": 0,
+     "changed": 13,
+     "record": 0
+    },
+    "MAS.MORTAR.BLACK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 13,
+     "record": 0
+    },
+    "MAS.MORTAR.BLACK.LINTEL_BEARING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 6,
+     "record": 0
+    },
+    "MAS.MORTAR.BLACK.PERIMETER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 16,
+     "record": 0
+    },
+    "MAS.UNITS.BLACK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 13,
+     "record": 0
+    },
+    "MAS.UNITS.WHITE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 15,
+     "record": 0
+    },
+    "STR.CONC.BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 14,
+     "record": 0
+    },
+    "STR.CONC.BLINDING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 5,
+     "record": 0
+    },
+    "STR.CONC.BOUNDARY_WALL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.COLUMN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 27,
+     "record": 0
+    },
+    "STR.CONC.FOOTING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.GROUND_BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 8,
+     "record": 0
+    },
+    "STR.CONC.LINTEL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 24,
+     "record": 0
+    },
+    "STR.CONC.NECK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 32,
+     "record": 0
+    },
+    "STR.CONC.SAFETY": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.STRAP": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-01": {
+     "STR.CONC.BLINDING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 5,
+      "record": 0
+     }
+    },
+    "B10-02": {
+     "STR.CONC.FOOTING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-03": {
+     "STR.CONC.NECK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 32,
+      "record": 0
+     }
+    },
+    "B10-04": {
+     "STR.CONC.GROUND_BEAM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 8,
+      "record": 0
+     },
+     "STR.CONC.STRAP": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B10-06": {
+     "STR.CONC.COLUMN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 27,
+      "record": 0
+     }
+    },
+    "B10-07": {
+     "STR.CONC.BEAM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 14,
+      "record": 0
+     }
+    },
+    "B10-11": {
+     "STR.CONC.BOUNDARY_WALL": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B4-03": {
+     "FIN.PLASTER": {
+      "added": 0,
+      "removed": 0,
+      "changed": 42,
+      "record": 0
+     }
+    },
+    "B4-06": {
+     "FIN.PAINT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     },
+     "FIN.PAINT.EDGE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 30,
+      "record": 0
+     }
+    },
+    "B4-09": {
+     "FIN.PLASTER.BEAD": {
+      "added": 0,
+      "removed": 0,
+      "changed": 14,
+      "record": 0
+     }
+    },
+    "B9-01": {
+     "MAS.BLOCK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 15,
+      "record": 0
+     },
+     "MAS.UNITS.BLACK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 13,
+      "record": 0
+     },
+     "MAS.UNITS.WHITE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 15,
+      "record": 0
+     }
+    },
+    "B9-02": {
+     "STR.CONC.LINTEL": {
+      "added": 0,
+      "removed": 0,
+      "changed": 24,
+      "record": 0
+     },
+     "STR.CONC.SAFETY": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B9-04": {
+     "MAS.GLUE.AAC": {
+      "added": 0,
+      "removed": 0,
+      "changed": 13,
+      "record": 0
+     },
+     "MAS.MORTAR.BLACK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 13,
+      "record": 0
+     },
+     "MAS.MORTAR.BLACK.LINTEL_BEARING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 6,
+      "record": 0
+     },
+     "MAS.MORTAR.BLACK.PERIMETER": {
+      "added": 0,
+      "removed": 0,
+      "changed": 16,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 296,
+   "record_only": 0
+  }
+ }
+}
