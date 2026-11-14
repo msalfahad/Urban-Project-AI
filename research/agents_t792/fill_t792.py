@@ -76,6 +76,18 @@ PLANTED = {  # planted columns: not in the column schedule by type (legend 'Plan
     "L-541c7e565bb93ecdb78b": ("PC-2F", "text 77C 'P.C 20x50' (drawn FFRS 77B 0.20 x 0.40; printed size governs, "
                                "T-757 DEFAULT)", 0.10, 3.325),
 }
+OUTLINES_EXPLAINED = {  # T-784 storey outlines with no schedule mark (UNSCHEDULED / AMBIGUOUS): every one named
+    "P322": "GF start of the turned T.C at C9 / F9 (note 324; T-217 s.7 item 4): the GF member is the SOLID 37A, carried",
+    "P329": "GF start outline of PC-1F-A (text 544 'P.C 20x70'): line L-2ac3c9b3",
+    "P344": "GF C3 at FP 10A0, drawn 0.20 x 0.50 vs GR 25 x 50 (T-256 row 55): carried as a candidate C3 line at the "
+            "schedule section; schedule-first bound that C3 tag to 31B instead (31B = ANSI35 start of the turned C8 T.C "
+            "at F8, T-217 s.2): count and m3 neutral (one C3 at GR 25 x 50 x 4.50 either way)",
+    "P386": "GF start outline of PC-1F-B (text 548 'P.C 20x50'): line L-31a0424b",
+    "P66A": "1F PC-1F-A body: line L-2ac3c9b3",
+    "P69D": "1F PC-1F-B body: line L-31a0424b",
+    "P77B": "1F roof start outline of PC-2F (text 77C 'P.C 20x50'): line L-541c7e56",
+    "P778": "2F PC-2F body: line L-541c7e56",
+}
 FOOT_HAND = ("F12", 4.4, 3.2, 0.7)   # one footing for the Checker: schedule B x L x H, one drawn outline TAGGED
 
 
@@ -196,6 +208,15 @@ def build():
              "note": "totals agree 36 = 36; per mark only the two CONFLICT members move (10AE C3 -> C, 10E0 C8 -> C7); "
                      "their neck lines already carry the 30 x 50 / 30 x 80 sections of the resolved marks (L-15b8ad39 "
                      "0.4272 = 0.24 x 1.78): mark only, no m3 change; heights stay (Q-21)"}
+    expl = []
+    for key in ("GF_COLUMN", "1F_COLUMN", "2F_COLUMN"):
+        for dd in sf[key]["bind"]["designer"]:
+            if dd["status"] in ("UNSCHEDULED_OUTLINE", "AMBIGUOUS_OUTLINE"):
+                h = dd["outline"].split("@")[0]
+                assert h in OUTLINES_EXPLAINED, h
+                expl.append({"storey": key[:2], "outline": dd["outline"], "status": dd["status"],
+                             "size_m": dd["size_m"], "reading": OUTLINES_EXPLAINED[h]})
+    assert len(expl) == len(OUTLINES_EXPLAINED)
     dsum = sum(r["after"]["net"] - r["before"]["net"] for r in rows)
     summary = {"lines_changed": len(rows), "lines_new": 0, "column_m3_before": r4(sum(col.values())),
                "column_m3_after": r4(sum(col.values()) + dsum), "column_delta_m3": r4(dsum),
@@ -219,7 +240,7 @@ def build():
                                         "544 548 77C)"},
                  "summary": summary, "rows": rows, "new_lines": [], "confirmed_no_change": confirmed,
                  "conflict_members": member_log, "storeys": storeys, "footing": footing, "necks": necks,
-                 "not_changed": "formwork of 10AE / 10E0 (face-ledger ESTIMATE lines L-7fe93376 / L-ae0d688f): perimeter "
+                 "outlines_explained": expl, "not_changed": "formwork of 10AE / 10E0 (face-ledger ESTIMATE lines L-7fe93376 / L-ae0d688f): perimeter "
                                 "+0.20 x 3.875 = +0.78 m2 and -0.10 x 4.20 = -0.42 m2 (net +0.36, gross 1.20 m2 = 0.3 % of "
                                 "the 384.1 m2 column formwork line set, below 1 %): logged, not restated"}
 
@@ -250,6 +271,10 @@ def md(out):
     L += ["", "## Necks (count only)", "", f"Candidate {n['candidate_count']} vs schedule-first "
           f"{n['schedule_first_count']}: {n['note']}.", "", "| mark | candidate | schedule-first |", "|---|---|---|"]
     L += [f"| {k} | {v[0]} | {v[1]} |" for k, v in n["by_mark"].items()]
+    L += ["", "## Storey outlines with no schedule mark (all named; no missing member)", "",
+          "| storey | outline | status | size m | reading |", "|---|---|---|---|---|"]
+    L += [f"| {e['storey']} | {e['outline']} | {e['status']} | {e['size_m']} | {e['reading']} |"
+          for e in out["outlines_explained"]]
     L += ["", "Not changed: " + out["not_changed"]]
     return "\n".join(L) + "\n"
 

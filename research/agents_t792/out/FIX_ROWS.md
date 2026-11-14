@@ -78,4 +78,17 @@ Candidate 36 vs schedule-first 36: totals agree 36 = 36; per mark only the two C
 | C9 | 2 | 2 |
 | CN | 6 | 6 |
 
+## Storey outlines with no schedule mark (all named; no missing member)
+
+| storey | outline | status | size m | reading |
+|---|---|---|---|---|
+| GF | P322@67413,45123 | UNSCHEDULED_OUTLINE | [0.2, 1.0] | GF start of the turned T.C at C9 / F9 (note 324; T-217 s.7 item 4): the GF member is the SOLID 37A, carried |
+| GF | P329@56705,37848 | UNSCHEDULED_OUTLINE | [0.7, 0.2] | GF start outline of PC-1F-A (text 544 'P.C 20x70'): line L-2ac3c9b3 |
+| GF | P344@73263,43748 | AMBIGUOUS_OUTLINE | [0.2, 0.5] | GF C3 at FP 10A0, drawn 0.20 x 0.50 vs GR 25 x 50 (T-256 row 55): carried as a candidate C3 line at the schedule section; schedule-first bound that C3 tag to 31B instead (31B = ANSI35 start of the turned C8 T.C at F8, T-217 s.2): count and m3 neutral (one C3 at GR 25 x 50 x 4.50 either way) |
+| GF | P386@71463,37848 | AMBIGUOUS_OUTLINE | [0.5, 0.2] | GF start outline of PC-1F-B (text 548 'P.C 20x50'): line L-31a0424b |
+| 1F | P66A@17981,37848 | UNSCHEDULED_OUTLINE | [0.7, 0.2] | 1F PC-1F-A body: line L-2ac3c9b3 |
+| 1F | P69D@32739,37848 | AMBIGUOUS_OUTLINE | [0.5, 0.2] | 1F PC-1F-B body: line L-31a0424b |
+| 1F | P77B@26269,44830 | UNSCHEDULED_OUTLINE | [0.2, 0.4] | 1F roof start outline of PC-2F (text 77C 'P.C 20x50'): line L-541c7e56 |
+| 2F | P778@-12455,44830 | UNSCHEDULED_OUTLINE | [0.2, 0.4] | 2F PC-2F body: line L-541c7e56 |
+
 Not changed: formwork of 10AE / 10E0 (face-ledger ESTIMATE lines L-7fe93376 / L-ae0d688f): perimeter +0.20 x 3.875 = +0.78 m2 and -0.10 x 4.20 = -0.42 m2 (net +0.36, gross 1.20 m2 = 0.3 % of the 384.1 m2 column formwork line set, below 1 %): logged, not restated
