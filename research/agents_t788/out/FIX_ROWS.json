@@ -1,0 +1,59 @@
+{
+ "schema": "URBAN_FIX_ROWS_V1",
+ "task": "T-788",
+ "rule": "R-T788-1 .. 2 (t788_rules.py, every villa)",
+ "base": "ARCH_TAKEOFF_V3.0.86 (LINE_INDEX_V3_0_86.json)",
+ "summary": {
+  "before_lm": 302.88,
+  "after_lm": 426.31,
+  "dry_lm": 264.909,
+  "wet_lm": 161.402,
+  "freelancer_lm": 427.46,
+  "freelancer_dry": 282.85,
+  "freelancer_wet": 144.61,
+  "added_by_cause_lm": {
+   "GF open room (dining / entrance / reception / hall)": 54.455,
+   "1F living zone (living + corridor + landing + light-well)": 39.44,
+   "GF wash lobby (2 basins, incl. niche)": 12.558,
+   "GF pantry (wet by owner Q-37 A)": 10.48,
+   "2F stair lobby + shaft-box ceiling, net of the ST-2F 15.5 already in": 6.5
+  },
+  "partition_lm": {
+   "GF": {
+    "GF-14": 7.434,
+    "GF-07": 7.69,
+    "OUTDOOR-0": 1.767,
+    "GF-08": 52.899,
+    "OUTSIDE": 237.923,
+    "OUTDOOR_POCKET_CUT": 2.359
+   },
+   "1F": {
+    "ST-1F": 13.0,
+    "1F-13": 39.44
+   },
+   "2F": {
+    "ST-2F": 13.002,
+    "2F-01": 8.998
+   }
+  }
+ },
+ "rows": [
+  {
+   "line_id": "L-33d272f5b4d7b33767b6",
+   "item_code": "FIN.CEILING.CORNICE",
+   "unit": "lm",
+   "element_id": "T-771:NEW:CEILING:CORNICE",
+   "before": {
+    "class": "RELEASED",
+    "net": 302.88,
+    "label": "ESTIMATE"
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 426.31
+   },
+   "label": "ESTIMATE",
+   "basis": "R-T788-1: decor-ceiling wall run per room / zone from the arch DXF faces (lengths MEASURED; the run itself ESTIMATE: no cornice detail printed, Q-57 A mod): closed rooms (T-147) 302.88 + open zones 123.43 (GF open room 54.455, 1F living zone 39.44, wash lobby 12.558, pantry 10.48, 2F lobby + shaft-box top 22.0 replacing ST-2F 15.5); dry 264.91 + wet 161.4; no run on open sides, void edges (ceiling drops, own line) or the stair wells"
+  }
+ ]
+}
