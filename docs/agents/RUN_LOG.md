@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14 08:12 UTC | Lead | STARTED | run session_01E6cPneLBXjpenSNg9tg7SE | repo-attached routine | task state: board | report pending
 - 2026-11-14T07:51Z | Verifier | STARTED | run session_01E6cPnc1RcFNwEWfWhhdLyh | repo-attached routine | task state: per run log T-772 r1 READY (W1), T-770 r7 READY (W3, Gate B), T-785 READY (W2) | self-check pending
 - 2026-11-14 07:34 UTC | Worker 1 | SUCCESS | T-772 READY r1 (agents/task-T-772 @ ab181132) | one manifest-driven command tools/urban_boq_run.py runs the Alsenan Drive drawings end to end in 69 s (V2.13 + route G -> boq_export_v1 per identity + exceptions list) and SV-A synthetic (11 tests); vs V3.0.83 non-rebar 2,260 lines: 489 (21.6 %) reached directly from geometry, 1,771 only via arch_v30xx overlays (926) or fix rows (845); backlog 118 item rows, formwork 581 lines largest; no candidate line changed | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: none
 - 2026-11-14 07:20 UTC | Worker 1 | STARTED | run session_01E6cPnepNRShC7hap3USbNy | repo-attached routine | task state: none yet | self-check pending
