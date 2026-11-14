@@ -1,5 +1,20 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-14 20:14 UTC
+Drive readable; no new files or photos since 16:00 (no PHOTO REVIEW task). Candidate of record ARCH_TAKEOFF_V3.0.87 / master 1.87.0 (merged 91072069 + df770b00, not released); V2.9 + route G untouched.
+- Lines with no figure (non-rebar), V3.0.87: 18 = stairs railings / guards / skirting 14 BLANK + 4 HELD ranges. The 4 ranges are closed by merged fix rows (door tile edges 115.2 lm DEFAULT, stair corner 0.23 m2, two space points) that wire in round 11 -> 14. The 14 stairs lines were handed in (40.91 lm railings, 31.42 lm guards) but rejected for a missing regression test and one piece that may be counted as rail and as skirting; rework is worker 1's first job. FILL target 17 Nov holds if that merges by 15 Nov.
+- Concrete (m3): beams 76.19 -> 76.05 vs 65.97 (+15.3 %; column-front strips -0.141, Checker AGREE), UNRESOLVED 3.48 -> new row to split it piece by piece. Columns 33.83 vs 28.55 (+18.5 %; upper-floor gap = planted columns he does not carry). Formwork of two columns still uses the pre-schedule faces (Checker flag, about -0.42 / +0.78 m2, immaterial to the 2,227 m2 trade): same new row.
+- Roof upturn (lm): 232.97 -> 228.99 vs 194 (+18.0 %): dome rings +41.64 RULE_DIFFERENCE, pool court +6.25 ENGINE_RIGHT, his lump -11.89 UNRESOLVED; door D115 and ledge glazing moved to their own transition / termination lines. Now in the candidate.
+- Cornice (lm): 302.88 -> 426.31 vs 427.46 (-0.27 %, was -29.1 %): the open zones were missing (FREELANCER_RIGHT); a pocket beyond the curved glazing (-4.14 lm) removed after the Checker's own DXF read. Merged, PARTIALLY VERIFIED; wires in round 11.
+- Earthworks: disposal shown correctly now (10.48 m3 from the excavation balance; the board tools no longer overlay the old 105.6 .. 115.5 range).
+- Plaster (m2): his two shaft rows 54.00 still UNRESOLVED -> new architectural row. Masonry 981.35 vs 1,260.69 (-22.2 %) unchanged; the wall-band second method is next for worker 2.
+- GENERALISE: heights now readable from a villa's inputs sheet (villa 1 reproduces the owner heights exactly; 0 BOQ lines changed); new row wires it into the one drawings-in command with an optional floor build-up (Checker flag).
+- Number (b): no per-trade table on V3.0.86 / .87 yet (Checker: scoreboard tool cannot run). Decision: round 11 commits COMPARE_V3.0.88.md from the workbook Compare sheet; until then the trade figures above are the package figures.
+- Decisions: r11 = cornice + held ranges (+ stairs if merged); new T-798 (concrete / formwork residuals), T-799 (plaster shafts + cornice ray-test check), T-800 (heights in the run command). Queue check: 10 actionable rows, 0 flagged, 0 stall checks. Lessons: no new rows (owner reset); proposed L-T791-1 'a closed double outline on a rail layer is classified once (rail or divider) before any lm is taken' (PROPOSED).
+- Team: every run since 16:13 closed with a final line (W1 17:26 / 19:29, W2 16:51 / 18:45, W3 17:59 / 19:03, Checker 17:00 / 18:08 / 19:38 / 19:54); 5 merges, 1 rejection; READY now 0. Selfcheck PASS (codemap, t061, freeze 0).
+OWNER PACKAGE: none new. With you: designer list (dome build-up, 1F parapet height), stair skirting form, 2F top roof, the release switch (T-773).
+NEEDS FIXING: none only you can do.
+
 ## LEAD REPORT 2026-11-14 16:13 UTC
 Drive readable; no new files or photos since 12:00 (newest project file 21 Oct). Candidate of record ARCH_TAKEOFF_V3.0.86 / master 1.86.0 (not released); V2.9 + route G untouched.
 - Lines with no figure (non-rebar): 44 (V3.0.85) -> 18 (V3.0.86, merged 9be5f69a 15:43): blockwork 26 -> 0; left stairs railings / guards / skirting 14 BLANK (T-791, worker 1 first) and HELD ranges: wall-tile door-jamb edges 0 .. 73.1 lm, floor corner 0 .. 0.23 m2, two space areas low = high (new T-795). FILL target 17 Nov holds (r10 + r11).
@@ -26,19 +41,4 @@ Drive readable; no new files or photos since 08:00 (newest project file 21 Oct).
 - Team: every run since 08:16 closed with a final line; one Checker overlap-guard INCOMPLETE at 11:52 by design (the 10:51 run was still merging r8; it closed 12:00). Number (b) not re-run by the scoreboard tool on V3.0.85 (asked for the next light run). Selfcheck PASS (codemap, t061, freeze 0); queue check 12 actionable, 0 flagged, 0 stall.
 OWNER PACKAGE: none new. With you: designer list (now incl. the dome build-up and the 1F parapet height), stair skirting form, 2F top roof, the release switch.
 NEEDS FIXING: none.
-
-## LEAD REPORT 2026-11-14 08:15 UTC
-Drive readable; no new files or photos (newest project file 21 Oct). Candidate of record V3.0.83 (not released); V2.9 + route G untouched. V3.0.84 with the Checker.
-- Lines with no figure (non-rebar): 211 (V3.0.82, merged) -> 124 (V3.0.83, merged) -> 56 in V3.0.84 (READY). The last FILL round V3.0.85 wires exterior render / paint (81 lines merged 13 Nov but never wired: found by worker 3 at r7), roof layers, wet-room WP; parapet masonry (HELD 0 .. 101.46 m2) and dome extrados (about 83.2 m2, no line) have rows.
-- Concrete (m3): 406.79 vs 352.44 (+15.4 %), all named except UNRESOLVED +7.14 beams / -5.84 other: new row (worker 1) to find each piece on the drawings.
-- Masonry (m2): 981.35 vs 1,260.69 (-22.2 %) = his parapets 172.93 + boundary 74.40 in masonry (RULE_DIFFERENCE / ours HELD), our below-ground 18.39 ENGINE_RIGHT, his 1F projections 41.25 UNRESOLVED; storey walls -0.94 %. Checker re-read his workbook row by row: AGREE.
-- Plaster (m2): dry + shafts 1,017.65 vs 1,169.13 (-12.96 %): his flat height -150.0 and part deductions +152.3 RULE_DIFFERENCE, lengths +55.8 ENGINE_RIGHT, shaft rows 54.0 UNRESOLVED.
-- Roof (m2): finish 238.48 / membrane 244.03 vs 285 = dome footprints 45.99 RULE_DIFFERENCE + pool court -5.55 ENGINE_RIGHT + 0.52 residual (0.18 %); Checker DXF re-measure AGREE.
-- Wet-room WP: floor 85.58 vs 72.01 m2 (+18.84 %) = pantry 13.455 (Q-37 rule) + 0.31 ENGINE_RIGHT; upturn now in his unit 135.57 vs 144.61 lm (-6.25 %, doorways on their own lines). Checker re-measured three rooms: AGREE.
-- Ceilings / windows (V3.0.84): gypsum 426.82 vs 409.58 m2 (+4.2 %); windows 90.18 + one ranged vs 116.9 m2 (-14 %, ENGINE_RIGHT). Cornice 302.9 vs 427.5 lm (-29.1 %) UNRESOLVED: new row.
-- GENERALISE: one command runs the Drive drawings to the workbook in about 65 s; 21.6 % of non-rebar lines reached straight from geometry (reach, not correctness); backlog 118 item rows, formwork largest.
-- Decisions: r8 content fixed (T-760 + T-771 spatter + T-780 + T-785, own Drive chain required); new rows T-786 concrete residuals, T-787 dome extrados, T-788 cornice, T-789 parapet / projections; folded rows T-750, T-509, T-363, T-364, T-513 closed with r5 / r6.
-- Team: every run since 04:20 closed with a final line; one Checker overlap-guard INCOMPLETE at 06:51 (by design, previous run still active); Checker 07:51 still running; stamps written ahead of the clock corrected by the Checker (and by me in this run). Selfcheck PASS (codemap, t061, freeze 0); queue check 14 actionable, 0 flagged, 0 stall.
-OWNER PACKAGE: none new (designer list incl. the dome build-up item when T-787 adds it, stair skirting form, 2F top roof, release switch remain with you).
-NEEDS FIXING: none new. The fill_from_index.py formwork step was fixed by your main chat's 04:34 audit (overlay formwork rows dropped, T-762 governs).
 

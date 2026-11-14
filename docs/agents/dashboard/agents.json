@@ -6,52 +6,52 @@
   "last_run": "2026-11-14T04:31:58Z",
   "result": "ok",
   "working_on": "Daily update 14 Nov (scheduler SUCCEEDED); next 15 Nov 04:31 UTC",
-  "as_of": "2026-11-14T16:13:00Z"
+  "as_of": "2026-11-14T20:14:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-11-14T16:12:00Z",
+  "last_run": "2026-11-14T20:12:00Z",
   "result": "running",
-  "working_on": "Queued wiring round 10 (beam bands, schedule column fixes, roof upturn); new tasks: held ranges to points, workbook overlay fix + disposal, schedule structure provider",
-  "as_of": "2026-11-14T16:13:00Z"
+  "working_on": "Queued wiring round 11 (cornice + held ranges), stairs rework, new: concrete / formwork residuals, plaster shaft rows, heights in the drawings-in command",
+  "as_of": "2026-11-14T20:14:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-14T15:19:00Z",
+  "last_run": "2026-11-14T19:20:00Z",
   "result": "ok",
-  "working_on": "15:28 schedule-first column fixes (merged 15:49); next: stair railings / skirting (14 blank lines), disposal + workbook overlay fix, schedule structure provider",
-  "as_of": "2026-11-14T16:13:00Z"
+  "working_on": "19:29 stairs railings / guards / skirting handed in, rejected 19:53 (regression test missing, one divider piece); next: rework, then concrete / formwork residuals",
+  "as_of": "2026-11-14T20:14:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-14T14:41:00Z",
+  "last_run": "2026-11-14T18:41:00Z",
   "result": "ok",
-  "working_on": "14:50 cornice 302.9 -> 430.4 vs 427.5 lm (READY, checker re-measure pending); next: re-measure aid for the checker, held ranges to points, wall-band masonry",
-  "as_of": "2026-11-14T16:13:00Z"
+  "working_on": "18:45 cornice rework 426.31 vs 427.46 lm (merged 19:05); next: plaster shaft rows 54 m2, wall-band masonry",
+  "as_of": "2026-11-14T20:14:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-11-14T14:59:27Z",
+  "last_run": "2026-11-14T18:59:23Z",
   "result": "ok",
-  "working_on": "15:08 roof upturn split (merged 15:49); V3.0.86 merged 15:43 (blank non-rebar 44 -> 18); next: wiring round 10",
-  "as_of": "2026-11-14T16:13:00Z"
+  "working_on": "17:59 wiring round 10 (merged 19:45, V3.0.87); 19:03 inputs-sheet height provider (merged 19:54); next: wiring round 11",
+  "as_of": "2026-11-14T20:14:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-11-14T14:50:00Z",
+  "last_run": "2026-11-14T19:49:50Z",
   "result": "ok",
-  "working_on": "14:50 run merged V3.0.86 + column fixes + roof upturn (closed 15:52); 15:51 overlap guard by design; next: cornice re-measure first",
-  "as_of": "2026-11-14T16:13:00Z"
+  "working_on": "19:54 stairs rejected, height provider merged; earlier 19:38 round 10 + cornice merged; next: stairs rework, round 11",
+  "as_of": "2026-11-14T20:14:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -69,6 +69,6 @@
   "last_run": "2026-11-14T12:54:21Z",
   "result": "ok",
   "working_on": "Refreshed 14 Nov 12:54 UTC (scheduler SUCCEEDED); next 15 Nov 00:54 UTC",
-  "as_of": "2026-11-14T16:13:00Z"
+  "as_of": "2026-11-14T20:14:00Z"
  }
 ]

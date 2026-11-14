@@ -1,8 +1,27 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-14 16:13 UTC (Lead). Previous version: 2026-11-14 12:19 UTC. Released default V2.9 + route G
-untouched. Candidate of record now V3.0.86 (not released). Counted your way: lines with no figure, and each trade
+Last update: 2026-11-14 20:14 UTC (Lead). Previous version: 2026-11-14 16:13 UTC. Released default V2.9 + route G
+untouched. Candidate of record now V3.0.87 (not released). Counted your way: lines with no figure, and each trade
 against the freelancer.
+
+Since 16:13 (newest first):
+- Lines with no figure (not rebar): 18 in the candidate. The 4 lines carried as a range now have single figures in
+  checked fix sheets (door-jamb tile edges 115.2 lm, stair corner 0.23 m2, two space areas) that go in with the next
+  candidate -> 14. The 14 stair railing / guard / skirting lines were handed in but sent back: no regression test, and
+  one drawn piece could be billed both as railing and as skirting. Rework is the structural worker's first job.
+- Cornice: 302.9 -> 426.3 vs 427.5 lm (-0.3 %): checked by the checker's own drawing read and merged; goes into the
+  next candidate.
+- Concrete: beams 76.2 -> 76.1 m3 vs 66.0 (+15.3 %), columns 33.8 vs 28.6 m3, now in the candidate. 3.5 m3 of the beam
+  gap is still not explained piece by piece: task queued, together with two column formwork lines.
+- Roof upturn: 233.0 -> 229.0 vs 194 lm (+18.0 %), now in the candidate (dome rings 41.6 lm rule difference, pool
+  court 6.3 lm, his typed lump 11.9 lm not found).
+- Earthworks: the workbook tools now show the candidate's 10.5 m3 of soil to remove (the older 105.6 .. 115.5 range
+  no longer overrides it).
+- Plaster: his two shaft rows (54.0 m2) still not explained: task queued.
+- Second villa: heights can now be read from a villa's inputs sheet (villa 1 gives your heights exactly); next it goes
+  into the one drawings-in command.
+
+Previous section (2026-11-14 16:13):
 
 Since 12:19 (newest first):
 - Lines with no figure (not rebar): 44 -> 18 in the candidate. Every block-wall line now has a figure. Left: 14 stair

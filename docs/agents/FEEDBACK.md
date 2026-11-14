@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-14 20:14 (since 16:13)
+
+- T-796 MAIN FILL overlay precedence + disposal: WORKED (MERGED de1aa003; board view disposal HELD 105.6 .. 115.5 -> 10.477 m3, Checker own B1 sum AGREE; held 5 -> 4).
+- T-795 held ranges to points: WORKED (MERGED 26c0b41b; door tile edges 115.2 lm DEFAULT, stair corner 0.23 m2, two space points) -> wire in r11.
+- T-788 r2 cornice: WORKED (MERGED c12c8eb4; 426.31 vs 427.46 lm, -0.27 %, PARTIALLY VERIFIED; outdoor pocket -4.138 lm Checker AGREE) -> r11; F-V788-1 adverse test -> NEW T-799 part 2.
+- T-770 r10 (V3.0.87 / 1.87.0): WORKED (Gate B PASS 91072069 + promotion df770b00; 20/20 hand AGREE; beam 76.05 m3, upturn 228.99 lm) -> F-V770r10-1 column formwork faces -> NEW T-798.
+- T-793 height provider: WORKED (MERGED 939bb281; villa-1 = R-T763-1 exactly, 0 candidate lines changed) -> F-V793-1 floor build-up + wiring into the run command -> NEW T-800.
+- T-791 stairs: FAILED r1 (REJECTED: no regression test; GF divider counted as rail AND skirting possible, F-V791-1). Decision: r2 worker 1 first with the exact three fixes in the row; the 12 agreed figures stay.
+- Recurring cause: number (b) still not produced on V3.0.86 / .87 (Checker 'not run' x4). Decision: r11 must commit COMPARE_V3.0.88.md from build_boq.py.
+
 ## Lead 2026-11-14 16:13 (since 12:19)
 
 - T-770 r9 (V3.0.86 / 1.86.0): WORKED (Gate B PASS 9be5f69a + promotion cb3d2fb1; blank non-rebar 44 -> 18; dome shells 3 x 26.685 m2 Checker DXF AGREE).

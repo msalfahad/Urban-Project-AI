@@ -53,6 +53,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-14 20:14; DELIVERY MODE 2026-11-13 in force)
+
+- FILL (target 17 Nov): V3.0.86 and V3.0.87 merged; blank non-rebar 44 -> 18. Round 11 (cornice + held ranges) -> 14;
+  the stairs rework (14 lines) closes FILL. Confidence 17 Nov: HIGH if the stairs rework merges by 15 Nov (one fix-row
+  set + one or two wiring rounds left).
+- Freelancer differences: closed today: cornice (-0.27 %), roof upturn split to causes, disposal shown correctly;
+  open = beams UNRESOLVED 3.48 m3, plaster shaft rows 54.00 m2, masonry -22.2 % (second method next), his upturn lump
+  11.89 lm, his 1F projections 41.25 m2. Number (b) per-trade table to be committed with round 11.
+- GENERALISE (to 22 Nov): height provider merged (first consumer of the inputs sheet); next: heights in the drawings-in
+  command, schedule-table structure provider, wall-band masonry. SECOND VILLA after the release switch (owner).
+
 ## Status (Lead, 2026-11-14 12:19; DELIVERY MODE 2026-11-13 in force)
 
 - FILL (target 17 Nov): V3.0.84 and V3.0.85 merged (stairs, openings / ceilings / domes, missing families, exterior
