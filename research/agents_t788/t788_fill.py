@@ -1,4 +1,4 @@
-"""T-788 F-22 cornice fix row on ARCH_TAKEOFF_V3.0.85 (worker 2, 2026-11-14).
+"""T-788 F-22 cornice fix row on ARCH_TAKEOFF_V3.0.86 (worker 2, 2026-11-14).
 
 The candidate line FIN.CEILING.CORNICE (B5-03, L-33d272f5b4d7b33767b6) carries 302.88 lm = the T-147 closed-room
 perimeters only; the open zones (GF open room, pantry, wash lobby, 1F living zone, 2F stair lobby) were left out as
@@ -9,7 +9,9 @@ wrapper into .work/private, polygonised per floor with the T-147 tool (boxes of 
   python -I research/agents_t147/scripts/rooms.py <P7757.dxf> -163 -124 -811 -784 <priv>/gf_rooms.json
   python -I research/agents_t147/scripts/rooms.py <P7757.dxf> -208 -169 -811 -784 <priv>/f1_rooms.json
   python -I research/agents_t147/scripts/rooms.py <P7757.dxf> -253 -214 -811 -784 <priv>/f2_rooms.json
-  python -I research/agents_t788/t788_fill.py <priv>          (writes out/FIX_ROWS.json; no coordinates are written)
+  python -I research/agents_t788/t788_fill.py <priv> <P7757.dxf>   (writes out/FIX_ROWS.json; no coordinates written)
+r2 (Checker REJECTED r1): R-T788-3 drops the outdoor pocket beyond the GF curved glazing from the open room (its outer
+glazing face and its two clip cuts), barrier lines read from the same DXF.
 Zone cuts are the T-147 ceil_ledger.py clips (gclip, lobby box, pantry box, shaft boxes), copied below.
 """
 from __future__ import annotations
@@ -24,7 +26,7 @@ sys.path.insert(0, str(HERE))
 import t788_rules as R  # noqa: E402
 
 LINE = "L-33d272f5b4d7b33767b6"
-IDX = RES / "agents_t770/out/LINE_INDEX_V3_0_85.json"
+IDX = RES / "agents_t770/out/LINE_INDEX_V3_0_86.json"
 T147 = RES / "agents_t147/rooms_geom.json"
 FREELANCER = {  # Drive freelancer finishing workbook, sheet 'decor', cornice column G (lm) by room row
     "dry": {"GF reception+dining": 58.16, "GF master bed": 21.71, "GF entrance": 14.76, "GF diwaniya": 20.0,
@@ -36,7 +38,14 @@ FREELANCER = {  # Drive freelancer finishing workbook, sheet 'decor', cornice co
 FL_DRY, FL_WET = 282.85, 144.61
 
 
-def open_zones(priv):
+def barriers(dxf):
+    """Barrier lines (layers 1 / S-COL.BON / W) of the plan, shapely LineStrings in metres (R-T788-3)."""
+    import t788_zone_pieces as Z
+    ents, _ = Z.entities(dxf)
+    return [g for *_, g in ents]
+
+
+def open_zones(priv, bar):
     from shapely import wkt
     from shapely.geometry import Polygon, box
 
@@ -57,14 +66,20 @@ def open_zones(priv):
     gclip = Polygon([(-148.2, -805.094), (-129.07, -805.094), (-129.07, -797.594), (-131.0, -797.594),
                      (-131.0, -795.9), (-145.05, -795.9), (-145.05, -800.45), (-148.2, -800.45)])
     LB, PB = box(-140.6, -796.0, -137.85, -793.0), box(-148.2, -805.2, -145.05, -800.45)
-    g = R.partition_perimeter(G0, {"GF-14": LB,
-                                   "GF-07": PB.intersection(gclip), "GF-08": gclip}, "OUTSIDE")
+    # R-T788-3: pieces of the open face inside the clip that are outdoors (the pocket beyond the curved glazing)
+    _, pockets = R.split_outdoor(G0.difference(LB).difference(PB), gclip, bar)
+    pocket_cut = round(sum(q.length - q.boundary.intersection(G0.boundary.buffer(0.003)).length for q in pockets), 3)
+    regs = {"GF-14": LB, "GF-07": PB.intersection(gclip)}
+    regs.update({f"OUTDOOR-{i}": q for i, q in enumerate(pockets)})
+    regs["GF-08"] = gclip
+    g = R.partition_perimeter(G0, regs, "OUTSIDE")
     p1 = R.partition_perimeter(P1, {"ST-1F": box(-189.893, -797.194, -187.393, -791.994)}, "1F-13")
     p2 = R.partition_perimeter(P2, {"ST-2F": box(-234.745, -797.194, -232.245, -791.994)}, "2F-01")
     # cut lines (T-147 clips) classified on the drawing: OPENING = a gap inside a wall line, OPEN_SIDE = no wall
     cuts = {
         "GF-07": [(2.79, "OPENING")],                     # south window gap, inner wall face (wall body leaks)
-        "GF-08": [(0.285, "OPENING"), (1.475, "OPENING"), (0.891, "OPENING"), (1.271, "OPENING"), (4.5, "OPEN_SIDE")],
+        # 1.475 + 0.891 bound the outdoor pocket (R-T788-3): OPEN_SIDE, not OPENING (r1 called them OPENING)
+        "GF-08": [(0.285, "OPENING"), (1.475, "OPEN_SIDE"), (0.891, "OPEN_SIDE"), (1.271, "OPENING"), (4.5, "OPEN_SIDE")],
         "GF-14": [(1.271, "OPENING"), (niche.length, "WALL")],
         "1F-13": [(2.5, "OPEN_SIDE")],
         "2F-01": [],
@@ -78,15 +93,18 @@ def open_zones(priv):
         "2F-01+ST-2F": R.cornice_run([(p2["2F-01"], "WALL"), (p2["ST-2F"], "WALL")], True),
         "ST-1F": R.cornice_run([], False),
     }
+    if abs(pocket_cut - (1.475 + 0.891)) > 0.02:
+        raise SystemExit(f"outdoor-pocket cut lines {pocket_cut} != 2.366 hand-classified: re-classify the cuts")
+    g["OUTDOOR_POCKET_CUT"] = pocket_cut
     return runs, {"GF": g, "1F": p1, "2F": p2}
 
 
-def main(priv):
+def main(priv, dxf):
     rooms = json.load(open(T147))
     open_ids = {"GF-07", "GF-08", "GF-14", "1F-13", "2F-01"}
     closed = {r["id"]: (r["kind"], r["perimeter"]) for r in rooms
               if r["id"] not in open_ids and r["kind"] in ("DRY", "WET")}
-    runs, parts = open_zones(priv)
+    runs, parts = open_zones(priv, barriers(dxf))
     before = 302.88
     st2_t147 = 15.5                                       # ST-2F perimeter T-147 carried in its 2F dry sum
     dry = sum(p for k, p in closed.values() if k == "DRY") + runs["GF-08"] + runs["1F-13"] + runs["2F-01+ST-2F"]
@@ -101,7 +119,7 @@ def main(priv):
     }
     out = {
         "schema": "URBAN_FIX_ROWS_V1", "task": "T-788", "rule": "R-T788-1 .. 2 (t788_rules.py, every villa)",
-        "base": "ARCH_TAKEOFF_V3.0.85 (LINE_INDEX_V3_0_85.json)",
+        "base": "ARCH_TAKEOFF_V3.0.86 (LINE_INDEX_V3_0_86.json)",
         "summary": {"before_lm": before, "after_lm": after, "dry_lm": round(dry, 3), "wet_lm": round(wet, 3),
                     "freelancer_lm": round(FL_DRY + FL_WET, 2), "freelancer_dry": FL_DRY, "freelancer_wet": FL_WET,
                     "added_by_cause_lm": {k: round(v, 3) for k, v in causes.items()},
@@ -128,4 +146,4 @@ def main(priv):
 
 
 if __name__ == "__main__":
-    main(pathlib.Path(sys.argv[1]))
+    main(pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2]))

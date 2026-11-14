@@ -15,6 +15,12 @@ R-T788-2 PERIMETER PARTITION: when one plan face (an open space) is split into z
   point of the face boundary belongs to exactly one zone (the first region containing it, else the default zone), so
   the zone runs add up to the face perimeter and no clip sliver is counted twice. The cut lines themselves are not
   wall (OPEN_SIDE) unless they lie inside a wall line (then OPENING, added by the caller).
+R-T788-3 ROOM SIDE ONLY (Checker F-T788 r1, 2026-11-14): a zone's run counts only boundary whose room side is the
+  zone interior inside the building envelope. When a plan face leaks to the yard and a cut region takes a piece of it,
+  every disjoint piece of (face x region) is tested for enclosure: a piece from which straight rays (16 directions,
+  40 m) reach no barrier line (wall, column, window) in at least 2 directions is OUTDOOR. An outdoor piece is not part
+  of the zone: its boundary (e.g. the OUTER face of a curved glazing line) is not counted, and a cut line that bounds
+  it is OPEN_SIDE, never OPENING. A window / wall line between the room and the outdoors counts once (inner face).
 """
 from __future__ import annotations
 
@@ -44,6 +50,40 @@ def cornice_run(edges, has_decor_ceiling):
         elif cls not in NOT_COUNTED:
             raise ValueError(f"unknown edge class {cls!r}")
     return round(tot, 3)
+
+
+RAY_DIRS, RAY_LEN_M, OUTDOOR_MIN_ESCAPES = 16, 40.0, 2
+
+
+def is_outdoor(piece, barriers, n=RAY_DIRS, length=RAY_LEN_M, min_escapes=OUTDOOR_MIN_ESCAPES):
+    """R-T788-3: True when rays from an interior point of `piece` escape the barrier lines in >= min_escapes directions."""
+    from shapely import STRtree
+    from shapely.geometry import LineString
+
+    if piece is None or piece.is_empty:
+        raise ValueError("piece missing")
+    if not barriers:
+        raise ValueError("no barrier lines: enclosure unknown (HELD, never assumed indoor)")
+    tree = STRtree(list(barriers))
+    p = piece.representative_point()
+    escapes = 0
+    for k in range(n):
+        a = 2 * math.pi * k / n
+        ray = LineString([(p.x, p.y), (p.x + length * math.cos(a), p.y + length * math.sin(a))])
+        if not any(barriers[i].intersects(ray) for i in tree.query(ray)):
+            escapes += 1
+    return escapes >= min_escapes
+
+
+def split_outdoor(face, region, barriers):
+    """R-T788-3: (indoor part, [outdoor pieces]) of face x region; an outdoor piece is not part of the zone."""
+    part = face.intersection(region)
+    pieces = [part] if part.geom_type == "Polygon" else [g for g in getattr(part, "geoms", []) if g.area > 0]
+    indoor, outdoor = [], []
+    for g in pieces:
+        (outdoor if is_outdoor(g, barriers) else indoor).append(g)
+    from shapely.ops import unary_union
+    return unary_union(indoor), outdoor
 
 
 def partition_perimeter(parent, regions, default, step=0.005):

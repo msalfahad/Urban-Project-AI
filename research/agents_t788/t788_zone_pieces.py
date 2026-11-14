@@ -107,7 +107,7 @@ def main(dxf, priv):
 
     ensure_faces(dxf, priv)
     ents, doors = entities(dxf)
-    runs, parts = F.open_zones(priv)
+    runs, parts = F.open_zones(priv, [g for *_, g in ents])
     # the same parent faces and cut regions as t788_fill.open_zones (re-picked here; areas are the identifiers)
     from shapely import wkt
     from shapely.geometry import Polygon
@@ -124,8 +124,13 @@ def main(dxf, priv):
     gclip = Polygon([(-148.2, -805.094), (-129.07, -805.094), (-129.07, -797.594), (-131.0, -797.594),
                      (-131.0, -795.9), (-145.05, -795.9), (-145.05, -800.45), (-148.2, -800.45)])
     LB, PB = box(-140.6, -796.0, -137.85, -793.0), box(-148.2, -805.2, -145.05, -800.45)
+    G0 = max(gf, key=lambda g: g.area)
+    _, pockets = R.split_outdoor(G0.difference(LB).difference(PB), gclip, [g for *_, g in ents])   # R-T788-3
+    gregs = {"GF-14": LB, "GF-07": PB.intersection(gclip)}
+    gregs.update({f"OUTDOOR-{i}": q for i, q in enumerate(pockets)})
+    gregs["GF-08"] = gclip
     sets = [
-        ("GF", max(gf, key=lambda g: g.area), {"GF-14": LB, "GF-07": PB.intersection(gclip), "GF-08": gclip}, "OUTSIDE"),
+        ("GF", G0, gregs, "OUTSIDE"),
         ("1F", pick(f1, 75.983), {"ST-1F": box(-189.893, -797.194, -187.393, -791.994)}, "1F-13"),
         ("2F", pick(f2, 18.600), {"ST-2F": box(-234.745, -797.194, -232.245, -791.994)}, "2F-01"),
     ]
@@ -133,7 +138,7 @@ def main(dxf, priv):
     for floor, parent, regions, default in sets:
         pieces = zone_pieces(parent, regions, default, ents, doors)
         for zone, d in pieces.items():
-            if zone in ("OUTSIDE", "ST-1F"):
+            if zone in ("OUTSIDE", "ST-1F") or zone.startswith("OUTDOOR-"):
                 continue                     # not a cornice zone (yard leak / open stair well, R-T788-1)
             tot = sum(d.values())
             print(f"\n== {floor} {zone}: boundary {tot:.3f} m (partition {parts[floor][zone]:.3f})")
@@ -144,7 +149,7 @@ def main(dxf, priv):
             report[zone] = {"boundary_m": round(tot, 3), "partition_m": parts[floor][zone],
                             "pieces": len([v for v in d.values() if v >= 0.005])}
     print("\n== hand-classified cut lines (t788_fill.open_zones): GF-07 +2.79 OPENING, +4.5 OPEN_SIDE; GF-08 openings"
-          " 0.285 + 1.475 + 0.891 + 1.271, 4.5 OPEN_SIDE; GF-14 opening 1.271 + niche WALL; 1F-13 2.5 OPEN_SIDE")
+          " 0.285 + 1.271; 1.475 + 0.891 (outdoor pocket, R-T788-3) and 4.5 OPEN_SIDE; GF-14 opening 1.271 + niche WALL; 1F-13 2.5 OPEN_SIDE")
     print("== zone runs (lm):", json.dumps(runs))
     print(json.dumps(report, indent=1))
 
