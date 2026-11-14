@@ -1,0 +1,71 @@
+family,item_en,lines,excluded,GEOMETRY_DIRECT,GEOMETRY_RESTATED,FILL_RESTATED,OVERLAY_ONLY,FILL_ONLY,reached_share
+B1-01,Site clearance,1,0,0,0,0,0,1,0.0
+B1-02,Excavation by type and depth,12,0,0,0,0,2,10,0.0
+B1-03,Backfill and compaction,7,0,0,0,0,0,7,0.0
+B1-04,Disposal of surplus,1,0,0,0,0,0,1,0.0
+B1-05,Soil treatment / anti-termite,1,0,0,0,0,0,1,0.0
+B1-07,Preliminaries,1,0,0,0,0,0,1,0.0
+B10-01,Blinding,9,0,0,0,0,1,8,0.0
+B10-02,Isolated / combined footings,26,0,25,0,1,0,0,0.9615
+B10-03,Necks,36,0,0,0,36,0,0,0.0
+B10-04,Strap / ground beams,64,7,14,18,24,3,5,0.2188
+B10-05,Ground slab,26,0,21,4,0,1,0,0.8077
+B10-06,Columns,59,13,26,2,28,2,1,0.4407
+B10-07,Beams,140,56,75,1,6,36,22,0.5357
+B10-08,Suspended slabs,62,13,62,0,0,0,0,1.0
+B10-09,Domes / rings,3,2,0,0,0,2,1,0.0
+B10-10,Pool / tank / lift pit / pump room,5,2,0,0,0,2,3,0.0
+B10-11,Boundary wall concrete,2,0,0,0,1,0,1,0.0
+B10-12,RC parapets,4,0,0,0,0,0,4,0.0
+B10-13,Formwork (all elements),581,33,0,0,0,298,283,0.0
+B11-01,Footing / column / beam / slab / GB bars,2067,577,24,56,0,1987,0,0.0116
+B13-01,Roofing build-up / insulation / screed to falls,16,0,0,0,0,3,13,0.0
+B13-02,Interlock / external paving,4,0,0,0,0,2,2,0.0
+B13-04,Fencing / gates,39,0,0,0,0,5,34,0.0
+B13-08,"Guard railings outside stairs (roof / floor edge / balcony / fence), installed length",6,0,0,0,0,6,0,0.0
+B13-09,Pool / tank internal finish (water faces),1,0,0,0,0,0,1,0.0
+B2-02,Room clear internal floor area,13,3,9,0,0,4,0,0.6923
+B3-01,Dry floor porcelain / ceramic,25,13,16,2,0,7,0,0.64
+B3-02,Wet-room floor tile,20,0,16,0,0,4,0,0.8
+B3-04,Door threshold marble,28,10,17,0,0,11,0,0.6071
+B3-05,Screed / build-up,88,0,0,0,0,44,44,0.0
+B3-06,Ordinary skirting,25,28,4,7,0,14,0,0.16
+B4-01,Wet-room wall porcelain / ceramic,18,0,6,11,0,1,0,0.3333
+B4-03,Internal plaster,81,13,20,2,17,6,36,0.2469
+B4-06,Internal paint,76,61,0,0,0,31,45,0.0
+B4-07,External paint / coatings,84,0,12,1,0,71,0,0.1429
+B4-08,Reveals and returns,62,0,1,26,0,35,0,0.0161
+B4-09,Corner beads / profiles,14,0,0,0,0,0,14,0.0
+B5-01,Physical ceiling area per room,40,1,23,7,0,10,0,0.575
+B5-04,Bulkheads / dropped ceilings,14,0,0,0,0,14,0,0.0
+B5-06,Dome intrados finish,2,0,0,0,0,2,0,0.0
+B6-01,"Opening census (doors, windows, type, size, host wall)",9,2,9,0,0,0,0,1.0
+B6-02,Internal doors (PVC / wood),10,15,0,0,0,10,0,0.0
+B6-03,Main / external / steel doors,6,4,0,0,0,6,0,0.0
+B6-04,Windows / aluminium / glazing / skylights,9,27,0,0,0,9,0,0.0
+B6-05,Shutters,6,0,0,0,0,6,0,0.0
+B6-06,Elevator outer surround marble,3,0,0,0,0,3,0,0.0
+B6-07,Elevator threshold marble,6,0,0,0,0,6,0,0.0
+B7-01,"Stair assembly reconstruction (all stairs, occurrence once)",9,5,9,0,0,0,0,1.0
+B7-02,Tread marble,10,5,3,6,0,1,0,0.3
+B7-03,Visible riser marble,11,5,9,0,0,2,0,0.8182
+B7-04,Landing marble,3,1,1,0,0,2,0,0.3333
+B7-06,Commercial step basis,9,5,2,7,0,0,0,0.2222
+B7-07,Stair skirting zigzag,20,2,0,0,0,20,0,0.0
+B7-08,Stair skirting sloped,20,2,0,0,0,20,0,0.0
+B7-09,Open-edge guardrail (3D installed path),8,14,0,0,0,8,0,0.0
+B7-10,Wall-mounted handrail,0,1,0,0,0,0,0,
+B7-12,Stair concrete,11,1,0,0,3,6,2,0.0
+B7-13,Stair formwork,30,1,0,0,0,10,20,0.0
+B7-15,Stair soffit finish (flight / landing undersides),2,0,0,0,0,2,0,0.0
+B8-01,Wet-room floor membrane,35,0,17,1,17,0,0,0.4857
+B8-02,Doorway floor continuation,42,2,28,0,11,0,3,0.6667
+B8-03,Wet-room upturn (0.20 m incl. doorway),22,3,16,1,5,0,0,0.7273
+B8-05,Membrane overlap / rolls / procurement,22,0,21,0,1,0,0,0.9545
+B8-06,Roof waterproofing + 0.20 upturn,13,0,5,0,3,2,3,0.3846
+B8-08,Foundations / basement / below-grade walls,19,0,0,0,0,8,11,0.0
+B8-09,Pool / tank internal waterproofing,2,0,0,0,0,2,0,0.0
+B9-01,Block walls by type and thickness,57,8,0,0,6,20,31,0.0
+B9-02,Lintels,53,9,0,0,0,16,37,0.0
+B9-04,Mortar / glue,57,9,0,0,0,16,41,0.0
+NO_FAMILY,,60,0,22,0,0,38,0,0.3667
