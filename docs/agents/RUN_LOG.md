@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T09:20Z | Worker 1 | STARTED | run session_01E6cPndSBQsrFaZdZ8Tjx7r | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14T09:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14T08:54Z | Verifier | SUCCESS | T-789 r1 (Gate A) | Drive OK (sheet10 section A-A). T-789 GATE A PASS MERGED 7113111b (fix rows, unwired -> r9): own section read all parapets in slab/beam hatch = ALL_RC AGREE; own hand calc STR.CONC.PARAPET annex 4.048 / GF 3.775 / 1F 12.889 / 2F 3.655 = 24.37 m3 AGREE (2F width 6.65 scaled vs 6.625); parapet block 0 m2 DRAWING-READ complement, his 172.93 m2 RULE_DIFFERENCE + 68.42/7.63 ENGINE_RIGHT; flag F-V789-1 1F parapet drawn ~1.63 m vs DEFAULT 1.20 (<=0.37 m3, designer item 5). No candidate line moved, scoreboard unchanged; T-180 slot not used (no CLOSABLE NOW line). No owner question. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-14T08:51Z | Verifier | STARTED | run session_01E6cPncBbmzJ3PuoKjqGzNW | repo-attached routine | task state: T-789 r1 READY (W2) | self-check pending
