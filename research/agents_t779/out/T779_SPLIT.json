@@ -1,0 +1,662 @@
+{
+ "blockwork": {
+  "colour": {
+   "his_external_section": "559.8015",
+   "his_external_walls_ex_projections": "518.5515",
+   "his_internal_15_20_sections": "700.888",
+   "his_internal_walls_ex_boundary_parapets": "453.558",
+   "ours_black_m2": "581.0497",
+   "ours_white_m2": "400.2983"
+  },
+  "floors": {
+   "1F": {
+    "H_his": "3.668934",
+    "L_his": "120.31",
+    "his_minus_ours": "-0.4663",
+    "his_net": "391.0595",
+    "ours": "391.5258",
+    "rows": [
+     {
+      "class": "TOLERANCE",
+      "delta": "-1.8989",
+      "name": "T-543: version drift of valued walls (V2 figure - V3.0.58 value)"
+     },
+     {
+      "class": "RULE_DIFFERENCE",
+      "delta": "-7.298599",
+      "name": "T-543: height convention: his flat storey heights vs the engine's clear height under each member"
+     },
+     {
+      "class": "UNRESOLVED",
+      "delta": "-8.4990",
+      "name": "T-543: openings census: his deductions vs the engine's (both deduct every opening, Q-73)"
+     },
+     {
+      "class": "UNRESOLVED",
+      "delta": "11.241615",
+      "name": "T-543: RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding"
+     },
+     {
+      "carried": "43.044784",
+      "class": "FILL_CHANGE",
+      "delta": "1.688984",
+      "name": "fill vs carried: dome / member pieces + held length (W04 / W10 / W13 / W17 / W24 / W11) at the ring soffit",
+      "released": "41.3558"
+     },
+     {
+      "carried": "45.914",
+      "class": "FILL_CHANGE",
+      "delta": "4.2995",
+      "name": "fill vs carried: held-opening walls W07 / W14+15 / W16: openings deducted at 2.20 head default",
+      "released": "41.6145"
+     },
+     {
+      "class": "TOLERANCE",
+      "delta": "0.0001",
+      "name": "T-713 component print rounding (line value - sum of printed components)"
+     }
+    ]
+   },
+   "2F": {
+    "H_his": "3.521611",
+    "L_his": "39.10",
+    "his_minus_ours": "-5.3712",
+    "his_net": "123.9350",
+    "ours": "129.3062",
+    "rows": [
+     {
+      "class": "TOLERANCE",
+      "delta": "0",
+      "name": "T-543: version drift of valued walls (V2 figure - V3.0.58 value)"
+     },
+     {
+      "class": "RULE_DIFFERENCE",
+      "delta": "-4.476873",
+      "name": "T-543: height convention: his flat storey heights vs the engine's clear height under each member"
+     },
+     {
+      "class": "UNRESOLVED",
+      "delta": "-2.1650",
+      "name": "T-543: openings census: his deductions vs the engine's (both deduct every opening, Q-73)"
+     },
+     {
+      "class": "UNRESOLVED",
+      "delta": "-1.760806",
+      "name": "T-543: RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding"
+     },
+     {
+      "carried": "132.337679",
+      "class": "FILL_CHANGE",
+      "delta": "3.031479",
+      "name": "fill vs carried: roof datum: b_r 0.05 what-if -> owner +13.90 structural top (b_r 0); held pieces at defaults",
+      "released": "129.3062"
+     }
+    ]
+   },
+   "GF": {
+    "H_his": "3.838211",
+    "L_his": "134.28",
+    "his_minus_ours": "24.8280",
+    "his_net": "466.9550",
+    "ours": "442.1270",
+    "rows": [
+     {
+      "class": "TOLERANCE",
+      "delta": "-0.1204",
+      "name": "T-543: version drift of valued walls (V2 figure - V3.0.58 value)"
+     },
+     {
+      "class": "RULE_DIFFERENCE",
+      "delta": "2.524107",
+      "name": "T-543: height convention: his flat storey heights vs the engine's clear height under each member"
+     },
+     {
+      "class": "UNRESOLVED",
+      "delta": "-5.7800",
+      "name": "T-543: openings census: his deductions vs the engine's (both deduct every opening, Q-73)"
+     },
+     {
+      "class": "UNRESOLVED",
+      "delta": "5.519348",
+      "name": "T-543: RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding"
+     },
+     {
+      "carried": "12.921",
+      "class": "FILL_CHANGE",
+      "delta": "-0.0101",
+      "name": "fill vs carried: CB2 width conflict D-27 (GF-W22)",
+      "released": "12.9311"
+     },
+     {
+      "carried": "130.745",
+      "class": "FILL_CHANGE",
+      "delta": "-1.6191",
+      "name": "fill vs carried: annex storey datum (11 annex walls) at 3.84 / 4.00 - beam",
+      "released": "132.3641"
+     },
+     {
+      "carried": "8.2725",
+      "class": "FILL_CHANGE",
+      "delta": "0.0025",
+      "name": "fill vs carried: W10 shaft piece increment",
+      "released": "8.2700"
+     },
+     {
+      "carried": "41.807",
+      "class": "FILL_CHANGE",
+      "delta": "7.2000",
+      "name": "fill vs carried: held-opening walls W15 / W26: openings now deducted (D-GF-07 2.00x2.50, W01 2.40, A-GF-01 1.00x2.20)",
+      "released": "34.6070"
+     },
+     {
+      "carried": "41.171",
+      "class": "FILL_CHANGE",
+      "delta": "7.3304",
+      "name": "fill vs carried: lift walls W08 / W09 / W13 / W14: T-761 tie-beam faces + lift doors deducted",
+      "released": "33.8406"
+     },
+     {
+      "carried": "46.693",
+      "class": "FILL_CHANGE",
+      "delta": "2.2743",
+      "name": "fill vs carried: sunken-panel drop walls: recess default 0.30 x run deducted (D-41)",
+      "released": "44.4187"
+     },
+     {
+      "carried": "23.965545",
+      "class": "FILL_CHANGE",
+      "delta": "7.507045",
+      "name": "fill vs carried: held length (W03 / W30 / W36 filled; H01 / H02 / W37 glazed strips = 0 blockwork)",
+      "released": "16.4585"
+     },
+     {
+      "class": "TOLERANCE",
+      "delta": "-0.0001",
+      "name": "T-713 component print rounding (line value - sum of printed components)"
+     }
+    ]
+   }
+  },
+  "his_minus_ours": "279.3415",
+  "his_total": "1260.6895",
+  "lines": [
+   {
+    "element_id": "GF-WALLS:walls t=0.15",
+    "label": "ESTIMATE",
+    "line_id": "L-0d9b9e89bb6455da475d",
+    "m2": "101.0064",
+    "source": "T-765"
+   },
+   {
+    "element_id": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+    "label": "MEASURED/released",
+    "line_id": "L-10dd62f66ad05488e63b",
+    "m2": "23.9",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+    "label": "MEASURED/released",
+    "line_id": "L-1c53fadb2f92d1f36d4e",
+    "m2": "62.164",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "2F-WALLS:walls t=0.15",
+    "label": "DEFAULT",
+    "line_id": "L-246f3c09de4c6b90efe5",
+    "m2": "1.765",
+    "source": "T-765"
+   },
+   {
+    "element_id": "1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+    "label": "MEASURED/released",
+    "line_id": "L-2fdc0f971a94348ec855",
+    "m2": "101.976",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+    "label": "MEASURED/released",
+    "line_id": "L-4054259959463edd70fb",
+    "m2": "25.2727",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "GF-WALLS:walls t=0.20",
+    "label": "ESTIMATE",
+    "line_id": "L-4165954ce4871eda30cc",
+    "m2": "181.8837",
+    "source": "T-765"
+   },
+   {
+    "element_id": "GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+    "label": "MEASURED/released",
+    "line_id": "L-4e304f59db838d5fc7ec",
+    "m2": "4.458",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+    "label": "MEASURED/released",
+    "line_id": "L-541cf7210e52db0498bb",
+    "m2": "44.2975",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "1F-WALLS:walls t=0.20",
+    "label": "DEFAULT",
+    "line_id": "L-5ffa7157a2fe483dd008",
+    "m2": "18.121",
+    "source": "T-765"
+   },
+   {
+    "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+    "label": "MEASURED/released",
+    "line_id": "L-73acd5a9d7e7cf6515c1",
+    "m2": "52.318",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "HOUSE_BELOW_NG:MAIN_S",
+    "label": "ESTIMATE",
+    "line_id": "L-7503af7cc1eea4e6735d",
+    "m2": "11.389",
+    "source": "T-765"
+   },
+   {
+    "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+    "label": "DEFAULT",
+    "line_id": "L-76a4d8e50423fb02b914",
+    "m2": "21.945",
+    "source": "T-765"
+   },
+   {
+    "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+    "label": "MEASURED/released",
+    "line_id": "L-87e0023741a8e2d98b21",
+    "m2": "9.895",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+    "label": "DEFAULT",
+    "line_id": "L-9056ebed77701b50abfc",
+    "m2": "25.895",
+    "source": "T-765"
+   },
+   {
+    "element_id": "GF-WALLS:walls t=0.20#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+    "label": "MEASURED/released",
+    "line_id": "L-a3f88ecda2402f67c500",
+    "m2": "5.59",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "label": "MEASURED/released",
+    "line_id": "L-a56a8add7812d1b52cb7",
+    "m2": "58.2529",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+    "label": "DEFAULT",
+    "line_id": "L-a6eedf5e4adec6d07618",
+    "m2": "3.85",
+    "source": "T-765"
+   },
+   {
+    "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "label": "MEASURED/released",
+    "line_id": "L-abf15bdf70ccf1e7b474",
+    "m2": "24.2374",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+    "label": "MEASURED/released",
+    "line_id": "L-adb393d6db51056d343b",
+    "m2": "8.595",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "2F-WALLS:walls t=0.20",
+    "label": "ESTIMATE",
+    "line_id": "L-afe984a62285e133ec2f",
+    "m2": "28.3687",
+    "source": "T-765"
+   },
+   {
+    "element_id": "1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+    "label": "MEASURED/released",
+    "line_id": "L-b7b4d784fbe7fdbebe84",
+    "m2": "46.836",
+    "source": "V3.0.82"
+   },
+   {
+    "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+    "label": "DEFAULT",
+    "line_id": "L-bbb82de298fecbafa11d",
+    "m2": "16.225",
+    "source": "T-765"
+   },
+   {
+    "element_id": "1F-WALLS:walls t=0.15",
+    "label": "DEFAULT",
+    "line_id": "L-c22e309433e7b671cf2d",
+    "m2": "64.8492",
+    "source": "T-765"
+   },
+   {
+    "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "label": "DEFAULT",
+    "line_id": "L-e1e06ec149b44d4f6f8a",
+    "m2": "9.47",
+    "source": "T-765"
+   },
+   {
+    "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+    "label": "DEFAULT",
+    "line_id": "L-e90c9dd5ca08ffb64728",
+    "m2": "21.7875",
+    "source": "T-765"
+   },
+   {
+    "element_id": "HOUSE_BELOW_NG:ANNEX_S",
+    "label": "ESTIMATE",
+    "line_id": "L-ee857398614d817e6917",
+    "m2": "7.0",
+    "source": "T-765"
+   }
+  ],
+  "ours_per_floor": {
+   "1F": "391.5258",
+   "2F": "129.3062",
+   "BELOW": "18.389",
+   "GF": "442.1270"
+  },
+  "ours_total": "981.3480",
+  "pct": "-22.16",
+  "scope_rows": [
+   {
+    "class": "RULE_DIFFERENCE (family placement; T-543 5a-5d)",
+    "delta": "172.93",
+    "name": "his parapet rows (3) in masonry: RC upstand 0.30 = concrete (P1 detail) + block alternative above (material HELD Q-65 C) + his height from the slab"
+   },
+   {
+    "class": "RULE_DIFFERENCE (family placement)",
+    "delta": "74.40",
+    "name": "his boundary wall row 37.20 x 2.00 in masonry: ours under EXT.FENCE.WALL"
+   },
+   {
+    "class": "UNRESOLVED",
+    "delta": "41.25",
+    "name": "his 1F 'projections' row 7.50 x 5.50: no masonry element identified (facade frames HELD, T-172)"
+   },
+   {
+    "class": "UNRESOLVED",
+    "delta": "-9.84",
+    "name": "his 20 cm openings with no floor"
+   },
+   {
+    "class": "ENGINE_RIGHT on scope (value ESTIMATE, lower bound)",
+    "delta": "-18.389",
+    "name": "below-ground block under the neighbour-side beams (printed note p.1 n.2; 0.70 = lower bound h >= 0.70, formation unprinted): ours only"
+   }
+  ],
+  "storey_rows_by_class": {
+   "FILL_CHANGE": "31.705008",
+   "RULE_DIFFERENCE": "-9.251365",
+   "TOLERANCE": "-2.0193",
+   "UNRESOLVED": "-1.443843"
+  },
+  "storey_walls_like_for_like": {
+   "his_incl_unassigned_openings": "972.1095",
+   "his_minus_ours": "9.1505",
+   "ours": "962.9590",
+   "pct": "-0.94"
+  }
+ },
+ "inputs": {
+  "idx81": {
+   "path": "research/agents_t770/out/LINE_INDEX_V3_0_81.json",
+   "sha16": "3976b262611bc3bd"
+  },
+  "idx82": {
+   "path": "research/agents_t770/out/LINE_INDEX_V3_0_82.json",
+   "sha16": "e51909257a5d688f"
+  },
+  "raw": {
+   "path": "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json",
+   "sha16": "752c9f4e0c4546d0"
+  },
+  "t543": {
+   "path": "research/agents_t543/out/T543_BLOCKWORK_RECONCILE.json",
+   "sha16": "a4cfcdeb01aab26e"
+  },
+  "t763": {
+   "path": "research/agents_t763/out/FIX_ROWS.json",
+   "sha16": "419b3f359a24bda1"
+  },
+  "t765": {
+   "path": "research/agents_t765/out/FIX_ROWS.json",
+   "sha16": "5e2a1ca35b40c680"
+  }
+ },
+ "plaster": {
+  "board_ex_wet": "1236.8221",
+  "board_pair_rows": [
+   {
+    "delta": "58.0787",
+    "name": "dry rooms (11): his - ours"
+   },
+   {
+    "delta": "93.3993",
+    "name": "stair shaft: his - ours"
+   },
+   {
+    "delta": "-32.3422",
+    "name": "pantry GF-07 levelling render counted as dry in the board figure (it is WET render under full-height porcelain; his pantry faces are in his spatter / tile rows)"
+   },
+   {
+    "delta": "-159.3641",
+    "name": "wet-room plaster band above the tile top to the soffit: ours only (his wet faces are his spatter row; he has no band row)"
+   },
+   {
+    "delta": "-26.6136",
+    "name": "door / window returns (jambs + head): ours by id; his row 26 is outside his 1,169.1"
+   },
+   {
+    "delta": "-0.8552",
+    "name": "GF-08 band share (T-763 midpoint)"
+   }
+  ],
+  "dry_bridge_totals": {
+   "DEDUCTIONS": "152.3330",
+   "HEIGHT": "-150.0428",
+   "LENGTH": "55.7893",
+   "ROUNDING (line values vs bases)": "-0.0008"
+  },
+  "dry_rooms": [
+   {
+    "deductions": "13.227",
+    "height": "-4.8305",
+    "his_H": "3.6000",
+    "his_L": "20.0",
+    "his_m2": "72.000",
+    "length": "-0.4572",
+    "our_H": "3.84",
+    "our_L": "20.127",
+    "our_m2": "64.0607",
+    "room": "GF-01"
+   },
+   {
+    "deductions": "4.220",
+    "height": "-3.0000",
+    "his_H": "3.6000",
+    "his_L": "12.5",
+    "his_m2": "45.000",
+    "length": "0.0000",
+    "our_H": "3.84",
+    "our_L": "12.5",
+    "our_m2": "43.7800",
+    "room": "GF-04"
+   },
+   {
+    "deductions": "25.865",
+    "height": "-15.9374",
+    "his_H": "3.6000",
+    "his_L": "21.05",
+    "his_m2": "75.780",
+    "length": "-1.7532",
+    "our_H": "4.34",
+    "our_L": "21.537",
+    "our_m2": "67.6056",
+    "room": "GF-15"
+   },
+   {
+    "deductions": "46.797",
+    "height": "-39.3591",
+    "his_H": "3.6000",
+    "his_L": "54.25",
+    "his_m2": "195.300",
+    "length": "3.8232",
+    "our_H": "4.34",
+    "our_L": "53.188",
+    "our_m2": "184.0389",
+    "room": "GF-08"
+   },
+   {
+    "deductions": "8.033",
+    "height": "-11.3280",
+    "his_H": "3.4000",
+    "his_L": "17.5",
+    "his_m2": "59.500",
+    "length": "-0.6800",
+    "our_H": "4.04",
+    "our_L": "17.7",
+    "our_m2": "63.4750",
+    "room": "1F-01"
+   },
+   {
+    "deductions": "6.285",
+    "height": "-11.1360",
+    "his_H": "3.4000",
+    "his_L": "17.3",
+    "his_m2": "58.820",
+    "length": "-0.3400",
+    "our_H": "4.04",
+    "our_L": "17.4",
+    "our_m2": "64.0110",
+    "room": "1F-04"
+   },
+   {
+    "deductions": "4.805",
+    "height": "-10.3680",
+    "his_H": "3.4000",
+    "his_L": "22.3",
+    "his_m2": "75.820",
+    "length": "20.7400",
+    "our_H": "4.04",
+    "our_L": "16.2",
+    "our_m2": "60.6430",
+    "room": "1F-10"
+   },
+   {
+    "deductions": "10.887",
+    "height": "-14.1754",
+    "his_H": "3.4000",
+    "his_L": "21.9",
+    "his_m2": "74.460",
+    "length": "-0.8466",
+    "our_H": "4.04",
+    "our_L": "22.149",
+    "our_m2": "78.5950",
+    "room": "1F-11"
+   },
+   {
+    "deductions": "19.990",
+    "height": "-22.0467",
+    "his_H": "3.4811",
+    "his_L": "49.60",
+    "his_m2": "172.665",
+    "length": "35.3337",
+    "our_H": "4.04",
+    "our_L": "39.45",
+    "our_m2": "139.3880",
+    "room": "1F-13"
+   },
+   {
+    "deductions": "5.636",
+    "height": "-12.0960",
+    "his_H": "3.4000",
+    "his_L": "18.9",
+    "his_m2": "64.260",
+    "length": "0.0000",
+    "our_H": "4.04",
+    "our_L": "18.9",
+    "our_m2": "70.7200",
+    "room": "2F-03"
+   },
+   {
+    "deductions": "6.588",
+    "height": "-5.7658",
+    "his_H": "3.4000",
+    "his_L": "9.0",
+    "his_m2": "30.600",
+    "length": "-0.0306",
+    "our_H": "4.04",
+    "our_L": "9.009",
+    "our_m2": "29.8084",
+    "room": "2F-01"
+   }
+  ],
+  "his_classes": {
+   "door_returns": "15.960",
+   "dry_rooms": "924.205",
+   "shaft": "244.920",
+   "total": "1209.385",
+   "wash_wet_in_his_plaster": "24.300"
+  },
+  "his_like_for_like": "1169.125",
+  "like_for_like_dry_plus_shaft": {
+   "his": "1169.125",
+   "his_minus_ours": "151.4780",
+   "ours": "1017.6470",
+   "pct": "-12.96"
+  },
+  "ours_classes": {
+   "DRY": "866.1263",
+   "DRY_BAND_SHARE": "0.8552",
+   "RETURNS": "26.6136",
+   "SHAFT": "151.5207",
+   "WET_BAND": "159.3641",
+   "WET_RENDER": "417.5203"
+  },
+  "ours_total": "1622.0002",
+  "returns": {
+   "his_row_26": "15.960",
+   "ours": "26.6136"
+  },
+  "shaft_rows": [
+   {
+    "class": "UNRESOLVED (T-173 / T-634 / T-701)",
+    "delta": "54.00",
+    "name": "his two stair rows with no drawn face (2.50 x 5.40; 11.25 x 3.60)"
+   },
+   {
+    "class": "ENGINE_RIGHT (T-173 two traces)",
+    "delta": "13.85",
+    "name": "his stair-house box 14.8 x 12.9 vs the drawn faces (T-680 gross 177.07 at b 0)"
+   },
+   {
+    "class": "RULE_DIFFERENCE",
+    "delta": "25.5493",
+    "name": "our deductions on the shaft faces (openings Q-73, winder body, B20 / B23 ends) and the T-763 storey - slab face model, vs his none"
+   }
+  ]
+ },
+ "rule": "R-T779-1",
+ "schema": "URBAN_T779_SPLIT_V1"
+}

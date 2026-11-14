@@ -1,0 +1,25 @@
+{
+ "schema": "URBAN_FIX_ROWS_V1",
+ "task": "T-779",
+ "base": "T-765 FIX_ROWS (MERGED 3b9f35a6) on ARCH_TAKEOFF_V3.0.81 / V3.0.82",
+ "rows": [
+  {
+   "id": "F-T779-1",
+   "line_id": "L-7503af7cc1eea4e6735d",
+   "item_code": "MAS.BLOCK",
+   "unit": "m2",
+   "element_id": "HOUSE_BELOW_NG:MAIN_S",
+   "before": {"class": "RELEASED", "net": 11.389, "label": "ESTIMATE", "basis": "MAIN_S run x 0.70 m, the only printed depth (T-407 / T-675); formation unprinted (Q-21 C)"},
+   "after": {"class": "RELEASED", "net": 11.389, "label": "ESTIMATE"},
+   "basis": "MAIN_S run 16.27 x 0.70 m = 11.389: 0.70 is the LOWER BOUND h >= 0.70 derived in T-407 (thickest footing top -0.85 vs slab -0.10 + 0.80), not a printed depth; block under the neighbour-side beam is printed (note p.1 n.2); formation unprinted (Q-21 C)",
+   "change": "basis text only; value and label unchanged; wire with the T-765 row in T-770 r6"
+  }
+ ],
+ "findings": [
+  {
+   "id": "F-T779-2",
+   "to": "Lead / T-180 workbook keymap",
+   "text": "Plaster comparison: the board figure 'ex wet render' 1,236.8 includes the pantry GF-07 levelling render 32.342 (wet render under full-height porcelain), the wet-room band above the tile top 159.364 and returns 26.614; report dry + shaft 1,017.647 vs his 1,169.125 (-12.96 %) with wet band and returns beside (ours only) and pantry under wet render."
+  }
+ ]
+}
