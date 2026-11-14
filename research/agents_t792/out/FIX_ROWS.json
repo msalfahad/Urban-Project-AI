@@ -1,0 +1,274 @@
+{
+ "schema": "URBAN_FIX_ROWS_V1",
+ "task": "T-792",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.85",
+ "rule": "MARK_BY_OUTLINE_FIT_V1 (proposed, research/agents_t792/fill_t792.py) + company default 'schedule governs a column'",
+ "inputs": {
+  "index": "LINE_INDEX_V3_0_85.json",
+  "t784": "research/agents_t784/out/SCHEDULE_FIRST.json (re-run on the Drive DXF this run: byte-identical md)",
+  "t778": "research/agents_t778/out/NONBEAM_CAUSES.json (freelancer per mark)",
+  "drawings": "Drive 'Alsenan chalet project' ST7757 dxf.dxf: column schedule (GF / 1ST / FOU bands), column setting-out plan, foundation plan, GF / 1F roof slab plans (handles 10AE 10E0 350 380 69A 329 386 66A 69D 77B, texts 20D 24E 1681 10E1 544 548 77C)"
+ },
+ "summary": {
+  "lines_changed": 2,
+  "lines_new": 0,
+  "column_m3_before": 33.9244,
+  "column_m3_after": 33.8339,
+  "column_delta_m3": -0.0905,
+  "freelancer_column_m3": 28.5465,
+  "column_vs_freelancer_before": "+5.38 m3 (+18.8 %)",
+  "column_vs_freelancer_after": "+5.29 m3 (+18.5 %)",
+  "blank_lines_before_after": "0 / 0 (COLUMN, FOOTING, NECK)",
+  "acceptance": "per storey schedule-first vs candidate: GF within 5 %; 1F / 2F outside only by the planted columns (like-for-like within 5 %), both figures carried with the cause"
+ },
+ "rows": [
+  {
+   "line_id": "L-694a75c84dd6e4bb4491",
+   "item_code": "STR.CONC.COLUMN",
+   "unit": "m3",
+   "element_id": "P-C:COL:SH12:C3@241094,51256|GF",
+   "before": {
+    "class": "RELEASED",
+    "net": 0.31,
+    "label": "DEFAULT"
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.3875
+   },
+   "label": "DEFAULT",
+   "designer_item": "D-66",
+   "basis": "10AE GF: mark C by MARK_BY_OUTLINE_FIT_V1 (setting-out plan (text 20D) C, foundation plan (text 1681) C3; FOU 10AE 0.50 x 0.30, GF roof slab plan GFRS 350 0.40 x 0.20 (single-storey annex); C fits every outline, C3 does not); schedule GF C 20 x 50 governs (company default) = 0.100 m2 x annex h 3.875 = +4.30 printed finished - 0.175 roof build-up default - base +0.25 (T-757 basis, kept) = 0.3875 m3; D-66 answer replaces it",
+   "beside": {
+    "drawing_derived": 0.31,
+    "schedule_other_mark": 0.4844,
+    "schedule_first": 0.3875
+   }
+  },
+  {
+   "line_id": "L-1dc713c83bf62e525ff2",
+   "item_code": "STR.CONC.COLUMN",
+   "unit": "m3",
+   "element_id": "P-C:COL:SH12:C8@256160,53630|1F",
+   "before": {
+    "class": "RELEASED",
+    "net": 0.84,
+    "label": "DRAWING-READ"
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.672
+   },
+   "label": "DEFAULT",
+   "designer_item": "D-66",
+   "basis": "10E0 1F: mark C7 by MARK_BY_OUTLINE_FIT_V1 (setting-out plan (text 24E) C7, foundation plan (text 10E1) C8; FOU 10E0 0.80 x 0.30, GFRS 380 0.80 x 0.25, FFRS 69A 0.80 x 0.25; C7 fits every outline, C8 does not); schedule 1F C7 20 x 80 governs (company default) = 0.160 m2 x 1F h 4.20 (+5.45 .. +9.65) = 0.6720 m3; D-66 answer replaces it",
+   "beside": {
+    "drawing_derived": 0.84,
+    "schedule_other_mark": 0.756,
+    "schedule_first": 0.672
+   }
+  }
+ ],
+ "new_lines": [],
+ "confirmed_no_change": [
+  {
+   "line_id": "L-4c4496579e5bfa20ae9f",
+   "net": 0.9,
+   "label": "DRAWING-READ",
+   "basis": "10E0 GF: mark C7 by MARK_BY_OUTLINE_FIT_V1 (setting-out plan (text 24E) C7, foundation plan (text 10E1) C8; FOU 10E0 0.80 x 0.30, GFRS 380 0.80 x 0.25, FFRS 69A 0.80 x 0.25; C7 fits every outline, C8 does not); schedule GF C7 25 x 80 governs (company default) = 0.200 m2 x GF h 4.50 (slab tops +0.95 .. +5.45) = 0.9000 m3; drawn section = scheduled section: both methods agree, mark only (was carried as C8)",
+   "beside": {
+    "drawing_derived": 0.9,
+    "schedule_other_mark": 1.0125,
+    "schedule_first": 0.9
+   }
+  },
+  {
+   "line_id": "L-2ac3c9b3b4c2221a0299",
+   "net": 0.588,
+   "label": "DRAWING-READ",
+   "basis": "PC-1F-A: planted column, no schedule row by type (legend P.C); text 544 'P.C 20x70', GFRS 329 / FFRS 66A drawn 0.70 x 0.20 agree: 0.14 m2 x 4.2 = 0.5880 m3; the freelancer carries the same section; ENGINE_RIGHT vs schedule-first (which cannot see a P.C)",
+   "beside": {
+    "drawing_derived": 0.588,
+    "schedule_first": null
+   }
+  },
+  {
+   "line_id": "L-31a0424bd0efcc93efba",
+   "net": 0.42,
+   "label": "DRAWING-READ",
+   "basis": "PC-1F-B: planted column, no schedule row by type (legend P.C); text 548 'P.C 20x50', GFRS 386 / FFRS 69D drawn 0.50 x 0.20 agree: 0.10 m2 x 4.2 = 0.4200 m3; the freelancer carries the same section; ENGINE_RIGHT vs schedule-first (which cannot see a P.C)",
+   "beside": {
+    "drawing_derived": 0.42,
+    "schedule_first": null
+   }
+  },
+  {
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "net": 0.3325,
+   "label": "DEFAULT",
+   "basis": "PC-2F: planted column, no schedule row by type (legend P.C); text 77C 'P.C 20x50' (drawn FFRS 77B 0.20 x 0.40; printed size governs, T-757 DEFAULT): 0.10 m2 x 3.325 = 0.3325 m3; the freelancer carries the same section; ENGINE_RIGHT vs schedule-first (which cannot see a P.C)",
+   "beside": {
+    "drawing_derived": 0.3325,
+    "schedule_first": null
+   }
+  }
+ ],
+ "conflict_members": [
+  {
+   "member": "10AE",
+   "tags": {
+    "setting-out plan (text 20D)": "C",
+    "foundation plan (text 1681)": "C3"
+   },
+   "outlines": "FOU 10AE 0.50 x 0.30, GF roof slab plan GFRS 350 0.40 x 0.20 (single-storey annex)",
+   "fit_by_mark": {
+    "C": {
+     "FOUNDATION": true,
+     "GF": true
+    },
+    "C3": {
+     "FOUNDATION": true,
+     "GF": false
+    }
+   },
+   "resolved_mark": "C",
+   "reason": "FITS_EVERY_OUTLINE"
+  },
+  {
+   "member": "10E0",
+   "tags": {
+    "setting-out plan (text 24E)": "C7",
+    "foundation plan (text 10E1)": "C8"
+   },
+   "outlines": "FOU 10E0 0.80 x 0.30, GFRS 380 0.80 x 0.25, FFRS 69A 0.80 x 0.25",
+   "fit_by_mark": {
+    "C7": {
+     "FOUNDATION": true,
+     "GF": true,
+     "1F": true
+    },
+    "C8": {
+     "FOUNDATION": true,
+     "GF": true,
+     "1F": false
+    }
+   },
+   "resolved_mark": "C7",
+   "reason": "FITS_EVERY_OUTLINE"
+  }
+ ],
+ "storeys": [
+  {
+   "storey": "GF",
+   "candidate_before": 19.8119,
+   "candidate_after": 19.8894,
+   "schedule_first": 20.025,
+   "after_vs_schedule_pct": -0.7,
+   "planted_m3": 0.0,
+   "like_for_like_pct": -0.7,
+   "within_5pct": true,
+   "cause": "storey frame: candidate drawing-read bases (annex 3.875 on 4 C members incl. 10AE, +0.25 base 5.20 on C3 / C5) vs the flat 4.50 schedule-first frame: ENGINE_RIGHT (T-576; heights are not in the schedule)",
+   "freelancer": 17.4374,
+   "after_vs_freelancer": "+2.45 m3 (+14.1 %)"
+  },
+  {
+   "storey": "1F",
+   "candidate_before": 10.332,
+   "candidate_after": 10.164,
+   "schedule_first": 9.156,
+   "after_vs_schedule_pct": 11.0,
+   "planted_m3": 1.008,
+   "like_for_like_pct": -0.0,
+   "within_5pct": false,
+   "cause": "PC-1F-A / PC-1F-B planted columns 1.008: no schedule row by type; ENGINE_RIGHT (printed P.C size texts, the freelancer carries both)",
+   "freelancer": 7.728,
+   "after_vs_freelancer": "+2.44 m3 (+31.5 %)"
+  },
+  {
+   "storey": "2F",
+   "candidate_before": 3.7805,
+   "candidate_after": 3.7805,
+   "schedule_first": 3.528,
+   "after_vs_schedule_pct": 7.2,
+   "planted_m3": 0.3325,
+   "like_for_like_pct": -2.3,
+   "within_5pct": false,
+   "cause": "PC-2F 0.3325 (no schedule row by type, ENGINE_RIGHT) and the 2F frame 4.075 (13.90 - 0.175 roof DEFAULT - 9.65) vs 4.20 on six members -0.075: ENGINE_RIGHT (closer drawing read, both DEFAULT)",
+   "freelancer": 3.381,
+   "after_vs_freelancer": "+0.40 m3 (+11.8 %)"
+  }
+ ],
+ "footing": {
+  "candidate": 66.579,
+  "schedule_first": 66.522,
+  "diff": "+0.057 m3 (+0.09 %)",
+  "freelancer": 65.634,
+  "vs_freelancer": "+0.945 m3 (+1.44 %)",
+  "causes": [
+   "F10 + F drawn as one outline 3.25 x 1.40 x 0.50 (owner Q-31 C 'bigger area') vs schedule rows F10 1.96 + F 0.216: +0.099 RULE_DIFFERENCE (Q-31 C governs)",
+   "FN clipped by F9: notch 0.40 x 0.35 x 0.30 owned by F9 (R-CONC-OWN-1): -0.042 ENGINE_RIGHT",
+   "F7: schedule row, no plan symbol: no member, no line (designer list)"
+  ],
+  "hand_check": "F12: schedule 4.40 x 3.20 x 0.70 = 9.8560 m3, one drawn outline TAGGED"
+ },
+ "necks": {
+  "candidate_count": 36,
+  "schedule_first_count": 36,
+  "by_mark": {
+   "C": [
+    5,
+    6
+   ],
+   "C1": [
+    1,
+    1
+   ],
+   "C10": [
+    1,
+    1
+   ],
+   "C11": [
+    2,
+    2
+   ],
+   "C2": [
+    4,
+    4
+   ],
+   "C3": [
+    6,
+    5
+   ],
+   "C4": [
+    2,
+    2
+   ],
+   "C5": [
+    3,
+    3
+   ],
+   "C6": [
+    1,
+    1
+   ],
+   "C7": [
+    1,
+    2
+   ],
+   "C8": [
+    2,
+    1
+   ],
+   "C9": [
+    2,
+    2
+   ],
+   "CN": [
+    6,
+    6
+   ]
+  },
+  "note": "totals agree 36 = 36; per mark only the two CONFLICT members move (10AE C3 -> C, 10E0 C8 -> C7); their neck lines already carry the 30 x 50 / 30 x 80 sections of the resolved marks (L-15b8ad39 0.4272 = 0.24 x 1.78): mark only, no m3 change; heights stay (Q-21)"
+ },
+ "not_changed": "formwork of 10AE / 10E0 (face-ledger ESTIMATE lines L-7fe93376 / L-ae0d688f): perimeter +0.20 x 3.875 = +0.78 m2 and -0.10 x 4.20 = -0.42 m2 (net +0.36, gross 1.20 m2 = 0.3 % of the 384.1 m2 column formwork line set, below 1 %): logged, not restated"
+}
