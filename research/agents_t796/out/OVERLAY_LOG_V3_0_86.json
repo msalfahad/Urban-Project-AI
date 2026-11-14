@@ -1,0 +1,908 @@
+{
+ "index": "ARCH_TAKEOFF_V3.0.86",
+ "fill_schema": "MAIN_CHAT_FIX_ROWS_V1",
+ "fill_written_on": "ARCH_TAKEOFF_V3.0.78",
+ "summary": {
+  "ALREADY": 66,
+  "SKIP_NEWER": 23,
+  "APPLY": 18
+ },
+ "skipped_by_family": {
+  "ARCH.FACADE": {
+   "rows": 4,
+   "index_m": 946.97826,
+   "old_overlay_m": 868.1375,
+   "unit": "m2",
+   "old_minus_index": -78.84076
+  },
+  "FIN.EXT.FINISH": {
+   "rows": 3,
+   "index_m": 758.512497,
+   "old_overlay_m": 762.2508,
+   "unit": "m2",
+   "old_minus_index": 3.738303
+  },
+  "FIN.ROOF.FINISH": {
+   "rows": 1,
+   "index_m": 34.390242,
+   "old_overlay_m": 46.589375,
+   "unit": "m2",
+   "old_minus_index": 12.199133
+  },
+  "FIN.ROOF.INSULATION": {
+   "rows": 4,
+   "index_m": 238.484216,
+   "old_overlay_m": 248.809135,
+   "unit": "m2",
+   "old_minus_index": 10.324919
+  },
+  "FIN.ROOF.PROTECTION": {
+   "rows": 4,
+   "index_m": 238.484216,
+   "old_overlay_m": 248.809135,
+   "unit": "m2",
+   "old_minus_index": 10.324919
+  },
+  "FIN.ROOF.SCREED": {
+   "rows": 4,
+   "index_m": 17.886316,
+   "old_overlay_m": 18.660684,
+   "unit": "m3",
+   "old_minus_index": 0.774368
+  },
+  "FIN.WP.ROOF": {
+   "rows": 2,
+   "index_m": 150.204216,
+   "old_overlay_m": 162.245875,
+   "unit": "m2",
+   "old_minus_index": 12.041659
+  },
+  "STR.EARTH.DISPOSAL": {
+   "rows": 1,
+   "index_m": 10.476796,
+   "old_overlay_m": 110.589,
+   "unit": "m3",
+   "old_minus_index": 100.112204
+  }
+ },
+ "disposal": {
+  "E": 335.756344,
+  "Z1": 175.089307,
+  "Z2": 150.190242,
+  "held_b1_lines": [],
+  "k1_from_excavation": {
+   "disposal_in_situ": 10.476794999999981,
+   "import_compacted": 0.0,
+   "k_break": 1.0322085880658916,
+   "label": "ESTIMATE"
+  },
+  "z2_imported_alternative": {
+   "disposal_in_situ": 160.667037,
+   "import_compacted": 150.190242,
+   "k_break": 1.9176290645778842,
+   "label": "ESTIMATE"
+  }
+ },
+ "log": [
+  {
+   "line_id": "L-0cb71da74613f446eee9",
+   "item_code": "FIN.ROOF.PROTECTION",
+   "unit": "m2",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: annex +4.30 face to wall face B3A (T-321 handles, exact arc 55.560332; engine arc 55.559 kept); finish hatch D1F + B2A stopped 0.640 m2 short on the D band B3C ",
+   "index": [
+    "RELEASED",
+    55.559,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    54.9203,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-122cbab32ca719527de8",
+   "item_code": "FIN.ROOF.INSULATION",
+   "unit": "m2",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: +9.70 face 146.532 less the two dome openings 2 x 15.359 (B4 rings, Q-44 A) = membrane line (T-764, merged); finish hatch 2F21 + gaps stopped on the band [basis",
+   "index": [
+    "RELEASED",
+    115.813974,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    115.65646,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-19912fbc18556b65ccf6",
+   "item_code": "FIN.ROOF.INSULATION",
+   "unit": "m2",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: +13.90 top roof inside the parapet = 2F wall inner faces 7.70 x 6.45 = 49.665 m2 (DXF 12B7 / 1292 / 1283 / 1279, beam tops included; was slab panels 7.4543 / 0.",
+   "index": [
+    "RELEASED",
+    34.390242,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    46.589375,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-5f018cfc13aaa9ae2210",
+   "item_code": "FIN.ROOF.SCREED",
+   "unit": "m3",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: 32.721 m2 x screed 0.075 avg (company default); +5.50 strips face (T-321 handles AE3 / B25 / B33 / B5D / BDB / CED); finish hatch AE0 + D1A + 1252 leaves 1.078 ",
+   "index": [
+    "RELEASED",
+    2.454075,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    2.373225,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-8a5192a5ee3e40b61b08",
+   "item_code": "FIN.ROOF.INSULATION",
+   "unit": "m2",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: annex +4.30 face to wall face B3A (T-321 handles, exact arc 55.560332; engine arc 55.559 kept); finish hatch D1F + B2A stopped 0.640 m2 short on the D band B3C ",
+   "index": [
+    "RELEASED",
+    55.559,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    54.9203,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-940b7a65d7e79bc0ec33",
+   "item_code": "FIN.ROOF.INSULATION",
+   "unit": "m2",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: +5.50 strips face (T-321 handles AE3 / B25 / B33 / B5D / BDB / CED); finish hatch AE0 + D1A + 1252 leaves 1.078 m2 of symbol frames / door-swing gaps",
+   "index": [
+    "RELEASED",
+    32.721,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    31.643,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-ab79aa46b9647f63b54a",
+   "item_code": "FIN.ROOF.FINISH",
+   "unit": "m2",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: +13.90 top roof inside the parapet = 2F wall inner faces 7.70 x 6.45 = 49.665 m2 (DXF 12B7 / 1292 / 1283 / 1279, beam tops included; was slab panels 7.4543 / 0.",
+   "index": [
+    "RELEASED",
+    34.390242,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    46.589375,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-b016c961ddf9e530e3c1",
+   "item_code": "FIN.ROOF.SCREED",
+   "unit": "m3",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: 34.390 m2 x screed 0.075 avg (company default); +13.90 top roof inside the parapet = 2F wall inner faces 7.70 x 6.45 = 49.665 m2 (DXF 12B7 / 1292 / 1283 / 1279,",
+   "index": [
+    "RELEASED",
+    2.579268,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    3.494203,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-bec94500648a90fb2f2a",
+   "item_code": "FIN.ROOF.SCREED",
+   "unit": "m3",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: 55.559 m2 x screed 0.075 avg (company default); annex +4.30 face to wall face B3A (T-321 handles, exact arc 55.560332; engine arc 55.559 kept); finish hatch D1F",
+   "index": [
+    "RELEASED",
+    4.166925,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    4.119022,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-c5c48bba5d23fa70e9ad",
+   "item_code": "FIN.ROOF.PROTECTION",
+   "unit": "m2",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: +13.90 top roof inside the parapet = 2F wall inner faces 7.70 x 6.45 = 49.665 m2 (DXF 12B7 / 1292 / 1283 / 1279, beam tops included; was slab panels 7.4543 / 0.",
+   "index": [
+    "RELEASED",
+    34.390242,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    46.589375,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-e0dc4455bc0c6ee4fa9b",
+   "item_code": "FIN.ROOF.PROTECTION",
+   "unit": "m2",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: +9.70 face 146.532 less the two dome openings 2 x 15.359 (B4 rings, Q-44 A) = membrane line (T-764, merged); finish hatch 2F21 + gaps stopped on the band [basis",
+   "index": [
+    "RELEASED",
+    115.813974,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    115.65646,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-f4ae7151a6e2b93dd7ad",
+   "item_code": "FIN.ROOF.SCREED",
+   "unit": "m3",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: 115.814 m2 x screed 0.075 avg (company default); +9.70 face 146.532 less the two dome openings 2 x 15.359 (B4 rings, Q-44 A) = membrane line (T-764, merged); fi",
+   "index": [
+    "RELEASED",
+    8.686048,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    8.674234,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-f9e6d4f8c099f6a6cc8e",
+   "item_code": "FIN.ROOF.PROTECTION",
+   "unit": "m2",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: +5.50 strips face (T-321 handles AE3 / B25 / B33 / B5D / BDB / CED); finish hatch AE0 + D1A + 1252 leaves 1.078 m2 of symbol frames / door-swing gaps",
+   "index": [
+    "RELEASED",
+    32.721,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    31.643,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-3e8fe55da71851816dd4",
+   "item_code": "FIN.WP.ROOF",
+   "unit": "m2",
+   "set": "ROOF_LAYERS",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: +13.90 top roof inside the parapet = 2F wall inner faces 7.70 x 6.45 = 49.665 m2 (DXF 12B7 / 1292 / 1283 / 1279, beam tops included; was slab panels 7.4543 / 0.",
+   "index": [
+    "RELEASED",
+    34.390242,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    46.589375,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-78d7c8a989ab34527a1c",
+   "item_code": "STR.EARTH.DISPOSAL",
+   "unit": "m3",
+   "set": "EARTH_DISPOSAL",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: T-764 9.0486 + excavation change -0.7721 - backfill change -2.2004 (in situ, no bulking) [restates T-764 9.048556 ESTIMATE, R-T770-3 h]",
+   "index": [
+    "RELEASED",
+    10.476796,
+    null,
+    null
+   ],
+   "row_after": [
+    "HELD",
+    null,
+    105.632,
+    115.546
+   ]
+  },
+  {
+   "line_id": "L-348c4d8d32f3f6d35fe5",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "set": "FACADE",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: 29.80 x 4.20 (T-737 handle re-measure, register)",
+   "index": [
+    "RELEASED",
+    125.16,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    117.14,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-43527ae4e8ec75c56636",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "set": "FACADE",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: = 1F render 249.954 + its holes 30.784 (T-305 OPENING_HOLES; T-756 stage faces incl.; register)",
+   "index": [
+    "RELEASED",
+    280.73812,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    231.3317,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "set": "FACADE",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: high bound: the three arched step returns 1F/NW-2 1.776 m2 (T-348 r2 geometry) are built and rendered",
+   "index": [
+    "RELEASED",
+    249.954348,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    231.3317,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "set": "FACADE",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: 376.694 low + (GF/NW-7 35.550 - W02 6.33 x 2.20 = 13.926 -> 21.624) - 7.065; D-GF-07 hole 2.00 x 2.50 = 5.000 printed plan tag (plan dimension governs a facade,",
+   "index": [
+    "RELEASED",
+    391.253149,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    413.7791,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-c0e9a4c62171de1f369b",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "set": "FACADE",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: = plinth render faces (register)",
+   "index": [
+    "RELEASED",
+    71.75114,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    105.8867,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-cc7dc0a51f3319a99482",
+   "item_code": "ARCH.FACADE",
+   "unit": "m2",
+   "set": "FACADE",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: = GF render 391.253 + holes 59.150 + W02 13.926 + D-GF-07 5.000 = T-337 gross (register; render counted once)",
+   "index": [
+    "RELEASED",
+    469.329,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    413.7791,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "item_code": "FIN.EXT.FINISH",
+   "unit": "m2",
+   "set": "FACADE",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: 125.160 gross (T-737 handle re-measure) - 7.855 holes; D-2F-01 head 2.20 (company default head)",
+   "index": [
+    "RELEASED",
+    117.305,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    117.14,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-065bafe1b98e3a43881c",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "RELEASED",
+    30.255,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    28.897,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-086e72207311265f81ab",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "RELEASED",
+    23.2201,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    22.1561,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-1090bb5c8226afec2235",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "RELEASED",
+    19.6691,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    18.7535,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-1341e0410a469089c3be",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "HELD",
+    null,
+    11.4,
+    25.21
+   ],
+   "row_after": [
+    "RELEASED",
+    16.4,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-82cd58d4a16fb94ddfc6",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "RELEASED",
+    26.3051,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    25.0871,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-88c11c5d8dc1dfd7c27e",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "HELD",
+    null,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    14.6,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-88ed2535c1975adb702e",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "RELEASED",
+    27.91,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    26.65,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-96d9839bd3bca4c08a67",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "HELD",
+    null,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    20.3,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-a34d09209fb5aad3eb63",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "RELEASED",
+    27.9101,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    26.6501,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-a3cb2c8a9b6080769ebc",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "RELEASED",
+    22.6165,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    19.6202,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-b2077eee5a71a975bd74",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "RELEASED",
+    52.529,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    50.1574,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-c330b8dc47261d5ada7e",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "HELD",
+    null,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    41.3,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-c34694477f67800ae2e3",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "RELEASED",
+    25.3011,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    22.0389,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-ca4e74c59364f665b102",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "RELEASED",
+    25.5912,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    22.2363,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-d0858b30e0ea869bd047",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "HELD",
+    null,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    19.4,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-de4088e7012e655bb071",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "HELD",
+    null,
+    7.04,
+    19.555
+   ],
+   "row_after": [
+    "RELEASED",
+    12.5,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-fa408571a8adcfaf1a1f",
+   "item_code": "FIN.WALL.TILE",
+   "unit": "m2",
+   "set": "TILE_300",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "RELEASED",
+    26.6544,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    23.0274,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-0392d37452e98050dd1b",
+   "item_code": "ARCH.WINDOW",
+   "unit": "m2",
+   "set": "OWNER_ANSWERED",
+   "action": "APPLY",
+   "reason": "index line still at the row's before state",
+   "index": [
+    "HELD",
+    null,
+    9.87,
+    11.515
+   ],
+   "row_after": [
+    "RELEASED",
+    9.87,
+    null,
+    null
+   ]
+  },
+  {
+   "line_id": "L-636fd3ff1784a12e653b",
+   "item_code": "FIN.WP.ROOF",
+   "unit": "m2",
+   "set": "MATERIALITY",
+   "action": "SKIP_NEWER",
+   "reason": "index line carries a later fix row's fill_basis: +9.70 roof membrane 115.656474 (= ROOF-970 finish, released) + drawn band D-BAND 0.1575 m2 = 115.813974",
+   "index": [
+    "RELEASED",
+    115.813974,
+    null,
+    null
+   ],
+   "row_after": [
+    "RELEASED",
+    115.6565,
+    null,
+    null
+   ]
+  }
+ ]
+}
