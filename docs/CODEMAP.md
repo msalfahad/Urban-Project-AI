@@ -2501,6 +2501,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t762/` | 5 |
 | `research/agents_t763/` | 5 |
 | `research/agents_t764/` | 3 |
+| `research/agents_t765/` | 3 |
 | `research/agents_t767/` | 3 |
 | `research/agents_t769/` | 3 |
 | `research/agents_t776/` | 3 |
