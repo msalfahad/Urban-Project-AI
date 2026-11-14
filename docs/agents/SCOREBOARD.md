@@ -2,6 +2,11 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
+## SCOREBOARD NOTE 2026-11-14 04:45 UTC (Verifier, run session_01E6cPnbK7x1gLffR1f9Zp8L; after T-770 r5 MERGED e7b2533a = candidate ARCH_TAKEOFF_V3.0.82, NOT RELEASED; T-778 MERGED eff624c2, no quantity change)
+
+DELIVERY_MODE s.1 number (a), lines with no figure (rebar excepted), from LINE_INDEX_V3_0_81 -> _V3_0_82 (both = the Verifier's own Drive chain run, 0 disagreements): total 295 -> 211; EXT 35 -> 0, STR 15 -> 0, WP 11 -> 0, FIN 103 -> 80, ARCH 53, MAS 76, MET 2 unchanged.
+Number (b), candidate vs freelancer: tools/alsenan_scoreboard.py was NOT run this run (freelancer workbooks not downloaded in the time left); the newest full table stays the v2 section below (2026-11-10, superseded candidate). Concrete, from the merged T-777 / T-778 splits: 406.79 vs his RC 352.44 m3 (+54.36, +15.4 %), of which +55.47 is scope outside his RC total (blinding 26.79, RC parapets 24.37, lintels 3.11, SAFETY 1.20); paired non-beam -18.86 m3 (ENGINE_RIGHT -17.99, RULE_DIFFERENCE +4.97, UNRESOLVED -5.84). Workbook Urban_trial_BOQ_V3.0.82 builds (build_boq.py, master 1.82.0) but *.xlsx is git-ignored on agents/control, so it is not committed.
+
 ## SCOREBOARD v2 2026-11-10 17:03 UTC
 
 RESTATED 2026-11-14 02:15 UTC (Verifier run session_01E6cPnc51f4YyEhq9jbxDQN, lock checker; Drive readable): T-777 (beam vs freelancer causes, research-only), T-766 (stair finish fix rows) and T-771 (missing-family fix rows) GATE A PASS, MERGED 88e4b912 as UNWIRED fix-row sets. No candidate line changed: candidate of record stays ARCH_TAKEOFF_V3.0.81 (NOT RELEASED), released V2.9 + route G untouched; every cell below stands. Effects arrive only when T-770 r7 wires them (stair 66 blank -> 0; missing families 39 -> 4 B12 runs HELD_MEP_STAGE). Beam concrete 79.24 vs freelancer 65.97 m3 (+20.1 %): +10.25 ENGINE_RIGHT (B27 / B25 own re-measure AGREE), -8.32 RULE_DIFFERENCE (joint ownership), +7.14 UNRESOLVED (default depths / D-27).
