@@ -1,3 +1,15 @@
+## LEAD REPORT 2026-11-13 16:40 UTC
+Drive readable; no new files or photos since 12 Nov. Candidate V3.0.78 (not released); default V2.9 + route G untouched.
+- Concrete (m3): blank 80 -> 0 in the merged fix-row set (+58.42 m3 DEFAULT/ESTIMATE + 1.00 m3 SAFETY), not yet wired; beam 78.2 .. 80.6 vs freelancer 66.09 (+18 %, UNRESOLVED: same-mark / 0.60 defaults).
+- Formwork (m2): blank 336 -> 0 handed in (1,098.0 -> 2,226.9 m2 ESTIMATE/DEFAULT); no freelancer line to compare.
+- Exterior render + paint (m2): 1,008.6 .. 1,085.6 each, verified; vs freelancer 1,469.97 = -26 .. -31 % RULE_DIFFERENCE (face-by-face vs run x height); merge blocked only by the coverage-registry step.
+- Main fill (owner set, 207 lines): blank non-rebar lines 692 -> 551 on its branch; roof finish 248.8 vs freelancer 285 m2 (-12.7 %); dry-room plaster 866.1 m2 DEFAULT, paint 675.8 m2; disposal 105.6 .. 115.5 m3 held.
+- Worse / found: worker 1 reports the main-fill formwork rows apply a whole host's ratio to each partial line: 472.8 m2 vs 240.6 m2 on the same 126 lines (about +232 m2). Sent to the Checker to settle by hand before wiring.
+- Decisions: hub order exterior render (registry fix, worker 2) -> main fill round 2 (worker 3, formwork per the Checker ruling) -> waterproofing -> roof/earthworks. Plaster task trimmed to lines the main fill does not cover.
+- Team: all agents ran and closed their runs since 12:30; selfcheck PASS (codemap, t061, freeze 0); queue check 24 actionable, 0 flagged.
+OWNER PACKAGE: none new (designer list, stair skirting form, 2F top roof and the release switch remain with you).
+NEEDS FIXING: if the Checker confirms the formwork double count, the formwork step of docs/agents/boq/fill_from_index.py needs your fix before any rebuild on a newer index.
+
 ## LEAD REPORT 2026-11-13 12:30 UTC
 
 Drive read OK (no file created or modified in the private project folders since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.77 / master 1.78.0 unchanged (NOT RELEASED; released V2.9 + route G untouched). Your delivery reset of 12:00 is applied on the board.
