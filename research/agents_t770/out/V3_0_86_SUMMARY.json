@@ -1,0 +1,384 @@
+{
+ "added": {
+  "L-059036f4ed3c3255469d": {
+   "item_code": "FIN.ROOF.PROTECTION",
+   "label": "DEFAULT",
+   "net": 26.685002,
+   "set": "T-787",
+   "unit": "m2"
+  },
+  "L-2582dafdf98b2a3553cf": {
+   "item_code": "FIN.ROOF.PROTECTION",
+   "label": "DEFAULT",
+   "net": 26.685002,
+   "set": "T-787",
+   "unit": "m2"
+  },
+  "L-65a8a0cf89c894abb38f": {
+   "item_code": "FIN.ROOF.PROTECTION",
+   "label": "DEFAULT",
+   "net": 26.685002,
+   "set": "T-787",
+   "unit": "m2"
+  },
+  "L-70491857badca9415604": {
+   "item_code": "FIN.WP.ROOF",
+   "label": "DEFAULT",
+   "net": 26.685002,
+   "set": "T-787",
+   "unit": "m2"
+  },
+  "L-8ab07e235ed55992f2e6": {
+   "item_code": "FIN.WP.ROOF",
+   "label": "DEFAULT",
+   "net": 26.685002,
+   "set": "T-787",
+   "unit": "m2"
+  },
+  "L-98cdb4d05f5a187dc5f9": {
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "label": "ESTIMATE",
+   "net": 12.0,
+   "set": "T-787",
+   "unit": "pcs"
+  },
+  "L-ce645ec35a76abcebc67": {
+   "item_code": "FIN.WP.ROOF",
+   "label": "DEFAULT",
+   "net": 26.685002,
+   "set": "T-787",
+   "unit": "m2"
+  }
+ },
+ "applied": 29,
+ "base_index_sha256": "878e9a629435932479415d6fb01d15e56edd719851b8c8d0543a0a45000a47fa",
+ "blank_in_package_families_after": 0,
+ "blank_in_package_families_before": 26,
+ "blank_non_rebar_after": 18,
+ "blank_non_rebar_before": 44,
+ "by_set": {
+  "T-789": {
+   "labels": {
+    "ESTIMATE": 1
+   },
+   "rows": 1
+  },
+  "T-790": {
+   "labels": {
+    "DEFAULT": 18,
+    "ESTIMATE": 8,
+    "NOT_APPLICABLE": 2
+   },
+   "rows": 28
+  }
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.85",
+ "index_sha256": "350770c0a813491f8c6ea3569b55f3fb6d972184b8e1d525a6e547cff7244187",
+ "lines": 5341,
+ "lines_before": 5334,
+ "method": "ARCH_TAKEOFF_V3.0.86",
+ "outside_lines_identical": true,
+ "package_sha256": "a44993d5ea83e89f1405d1c6b6f956ec447e0379da08b1bf08495d6bf40443bd",
+ "ranged_in_package_families_after": 0,
+ "ranged_in_package_families_before": 2,
+ "ranged_non_rebar_after": 7,
+ "ranged_non_rebar_before": 9,
+ "report": {
+  "base_basis_corrections": [
+   {
+    "item_code": "FIN.ROOF.INSULATION",
+    "line_id": "L-122cbab32ca719527de8",
+    "new": "(B4 rings, Q-44 A) = membrane line",
+    "old": "(B4 rings, Q-44 A) + drawn band 0.1575 = membrane line",
+    "source": "Checker F-V770r8-1 (T-770 r8 Gate B, 2026-11-14T11:49Z): 146.532 - 2 x 15.359 = 115.814 already equals the line; the drawn band is inside the face",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.EXT.FINISH",
+    "line_id": "L-5a04a3ec70ce025ddd95",
+    "new": "54.651 low (minimum heights) + SW-2 4.40 x (1.20 - 0.385) + NE-1 / SW-1 2 x 0.08 x (1.20 - 1.10) = 58.253",
+    "old": "54.651 low + NE-1 / SW-1 0.08 x 1.20 + SW-2 4.40 x 1.20 = 5.280",
+    "source": "Checker F-V770r8-1 (T-770 r8 Gate B, 2026-11-14T11:49Z): the figure already holds the minimum heights",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.ROOF.FINISH",
+    "line_id": "L-e005eb9041acb08d8b87",
+    "new": "(B4 rings, Q-44 A) = membrane line",
+    "old": "(B4 rings, Q-44 A) + drawn band 0.1575 = membrane line",
+    "source": "Checker F-V770r8-1 (T-770 r8 Gate B, 2026-11-14T11:49Z): 146.532 - 2 x 15.359 = 115.814 already equals the line; the drawn band is inside the face",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.ROOF.PROTECTION",
+    "line_id": "L-e0dc4455bc0c6ee4fa9b",
+    "new": "(B4 rings, Q-44 A) = membrane line",
+    "old": "(B4 rings, Q-44 A) + drawn band 0.1575 = membrane line",
+    "source": "Checker F-V770r8-1 (T-770 r8 Gate B, 2026-11-14T11:49Z): 146.532 - 2 x 15.359 = 115.814 already equals the line; the drawn band is inside the face",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.ROOF.SCREED",
+    "line_id": "L-f4ae7151a6e2b93dd7ad",
+    "new": "(B4 rings, Q-44 A) = membrane line",
+    "old": "(B4 rings, Q-44 A) + drawn band 0.1575 = membrane line",
+    "source": "Checker F-V770r8-1 (T-770 r8 Gate B, 2026-11-14T11:49Z): 146.532 - 2 x 15.359 = 115.814 already equals the line; the drawn band is inside the face",
+    "unit": "m3"
+   }
+  ],
+  "basis_text_rows": [
+   {
+    "item_code": "MAS.BLOCK",
+    "line_id": "L-7503af7cc1eea4e6735d",
+    "set": "T-789"
+   }
+  ],
+  "no_line_rows": [
+   {
+    "basis": "ANNEX: 7 runs, centreline 29.99 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-1d419b64e8ca1af30fb4 STR.CONC.PARAPET 4.048 m3 (T-761, wired; = R-T789-1 ALL_RC 4.0480); masonry is its complement = 0, never both",
+    "complement": [
+     {
+      "item_code": "STR.CONC.PARAPET",
+      "line_id": "L-1d419b64e8ca1af30fb4",
+      "net": 4.048,
+      "unit": "m3"
+     }
+    ],
+    "element_id": "ANNEX#PARAPET_BLOCK",
+    "id": "F-T789-1",
+    "item_code": "MAS.BLOCK.PARAPET",
+    "label": "DRAWING-READ",
+    "set": "T-789",
+    "unit": "m2"
+   },
+   {
+    "basis": "GF: 3 runs, centreline 27.96 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-b5ffc172a354375ca107 STR.CONC.PARAPET 3.7752 m3 (T-761, wired; = R-T789-1 ALL_RC 3.7752); masonry is its complement = 0, never both",
+    "complement": [
+     {
+      "item_code": "STR.CONC.PARAPET",
+      "line_id": "L-b5ffc172a354375ca107",
+      "net": 3.7752,
+      "unit": "m3"
+     }
+    ],
+    "element_id": "GF#PARAPET_BLOCK",
+    "id": "F-T789-2",
+    "item_code": "MAS.BLOCK.PARAPET",
+    "label": "DRAWING-READ",
+    "set": "T-789",
+    "unit": "m2"
+   },
+   {
+    "basis": "1F: 11 runs, centreline 49.16 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-9a2c81164ec6499cc28c STR.CONC.PARAPET 12.8892 m3 (T-761, wired; = R-T789-1 ALL_RC 12.8892); masonry is its complement = 0, never both; height DEFAULT 1.20 on NE-1, SW-1, SW-2",
+    "complement": [
+     {
+      "item_code": "STR.CONC.PARAPET",
+      "line_id": "L-9a2c81164ec6499cc28c",
+      "net": 12.8892,
+      "unit": "m3"
+     }
+    ],
+    "element_id": "1F#PARAPET_BLOCK",
+    "id": "F-T789-3",
+    "item_code": "MAS.BLOCK.PARAPET",
+    "label": "DRAWING-READ",
+    "set": "T-789",
+    "unit": "m2"
+   },
+   {
+    "basis": "2F: 4 runs, centreline 29.05 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-030538dda6a32c601c4c STR.CONC.PARAPET 3.6551 m3 (T-761, wired; = R-T789-1 ALL_RC 3.6551); masonry is its complement = 0, never both",
+    "complement": [
+     {
+      "item_code": "STR.CONC.PARAPET",
+      "line_id": "L-030538dda6a32c601c4c",
+      "net": 3.6551,
+      "unit": "m3"
+     }
+    ],
+    "element_id": "2F#PARAPET_BLOCK",
+    "id": "F-T789-4",
+    "item_code": "MAS.BLOCK.PARAPET",
+    "label": "DRAWING-READ",
+    "set": "T-789",
+    "unit": "m2"
+   }
+  ],
+  "set_base_read": [
+   {
+    "candidate_version": "ARCH_TAKEOFF_V3.0.84",
+    "set": "T-789"
+   },
+   {
+    "candidate_version": "ARCH_TAKEOFF_V3.0.85",
+    "set": "T-790"
+   }
+  ],
+  "v5": {
+   "na_label_rows": {},
+   "recalled": [],
+   "v4": {
+    "carrier_added": [],
+    "deferred_added": [],
+    "excluded_with_reason": [],
+    "ranged_added": [],
+    "rows_detail_sets": [],
+    "v3": {
+     "basis_corrections": [],
+     "carried": {},
+     "not_applicable_rows": [
+      {
+       "item_code": "ARCH.WALL_PANEL",
+       "line_id": "L-8eb5f0bb66e3985f9c7c",
+       "set": "T-790"
+      },
+      {
+       "item_code": "ARCH.WALL_VOLUME",
+       "line_id": "L-391cc0e96fb7830363e4",
+       "set": "T-790"
+      }
+     ],
+     "restated_safety": [],
+     "source_schemas": {
+      "T-787": "URBAN_FIX_ROWS_V1",
+      "T-789": "URBAN_FIX_ROWS_V1",
+      "T-790": "URBAN_FIX_ROWS_V1"
+     },
+     "stack": {
+      "deferred": [],
+      "not_applicable": [],
+      "stacked_on_base": [],
+      "stacked_on_row": []
+     }
+    }
+   }
+  }
+ },
+ "rule": [
+  "R-T770-1",
+  "R-T770-2",
+  "R-T770-3",
+  "R-T770-4",
+  "R-T770-5",
+  "R-T770-6",
+  "R-T770-7"
+ ],
+ "set_sha256": {
+  "T-787": "eabfb415ddc3bf3d8a23cd84a4aad9b0b1fb65df32b9b8dba842788ff3940ff9",
+  "T-789": "7783b7c12108d9ecf620d44c8b25c5d8d64bebc8c9a322f626bddcffeb6dd56d",
+  "T-790": "555a00b8f0049b37aef03841ede50bc6b33a67d8f099ce96be96b2baea2b0c97"
+ },
+ "totals_moved": {
+  "ARCH.WALL_PANEL [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 25,
+    "released": 962.96
+   },
+   "before": {
+    "blank": 13,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 26,
+    "released": 467.79
+   }
+  },
+  "ARCH.WALL_VOLUME [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 25,
+    "released": 173.51
+   },
+   "before": {
+    "blank": 13,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 26,
+    "released": 84.63
+   }
+  },
+  "FIN.ROOF.PROTECTION [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 7,
+    "released": 318.54
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 238.48
+   }
+  },
+  "FIN.WP.MEMBRANE_ROLLS [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 23,
+    "released": 69.0
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 22,
+    "released": 57.0
+   }
+  },
+  "FIN.WP.ROOF [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 9,
+    "released": 324.09
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 6,
+    "released": 244.03
+   }
+  },
+  "MAS.MESH_STRIP [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 1414.84
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 1147.96,
+    "held_low": 856.14,
+    "lines": 1,
+    "released": 0.0
+   }
+  },
+  "MAS.SHARMAT [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 579.0
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 601.42,
+    "held_low": 293.0,
+    "lines": 1,
+    "released": 0.0
+   }
+  }
+ }
+}
