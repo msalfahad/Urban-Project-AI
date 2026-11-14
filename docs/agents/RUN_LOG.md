@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T13:50Z | Verifier | STARTED | run session_01E6cPnbu6c4ZFiLNAhMa4Jx | repo-attached routine | task state: per run log T-786 r1 READY (W1) | self-check pending
 - 2026-11-14 13:30 UTC | Worker 1 | SUCCESS | T-786 READY r1 @ 0c30a9b9 | Concrete residuals: ST sections A-A/B-B cut the GF/1F roof-edge bands and draw no concrete there, so 11 projection-band lines go from the 0.60 beam default to the 0.16 printed slab thickness (DEFAULT, D-26). Beam 79.24 -> 76.19 m3 vs freelancer 65.97 (+20.1% -> +15.5%); beam UNRESOLVED 7.13 -> 3.48 m3 (<= 1% of his RC total, 3.52); non-beam -5.84 m3 named by drawing ref/designer item. | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive OK; problem: none
 - 2026-11-14 13:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14 13:00 UTC | Worker 3 | STARTED | run session_01E6cPneTRM68d23qFiVuRvD | repo-attached routine | task state: none yet | self-check pending
