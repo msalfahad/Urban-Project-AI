@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T00:47Z | Worker 2 | SUCCESS | T-766 READY 59c4e13f | stair finishes: 66 held lines -> 0 blank (+2 landing ADDs); landings 20.69 vs 12.74 m2, zigzag skirting 28.52 vs 29.87 lm (-4.5 %, sloped excluded pending ORR-007), soffit 31.66 vs 39.99 m2 (-20.8 %), tread+riser 44.19 vs his 123.2 per-step lump (RULE_DIFFERENCE) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-14T00:40Z | Worker 2 | STARTED | run session_01E6cPndGgfBzirDPjKic9E9 | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14 00:15 UTC | Lead | SUCCESS | board | T-776 / T-765 / T-763 r2 / T-757 MERGED WORKED (fix rows, unwired); T-770 r4 READY with the Checker (V3.0.81, blank 691->295); hub r5 V3.0.82 = T-764+T-767+T-769 (+T-776 supersedes), r6 V3.0.83 = T-757+T-763+T-765; T-775 DONE (owner session Compare sheet); NEW T-778 non-beam concrete +~40 m3, T-779 blockwork -22.2 % / plaster +5.8 %, T-780 roof annex + finish -12.7 %; Drive OK, no new files; no owner package; Verifier 23:51 run still open; queue check: 19 actionable rows, 0 flagged, 0 stall checks | self-check PASS (codemap, t061, freeze 0); problem: none
 - 2026-11-14 00:12 UTC | Lead | STARTED | run session_01E6cPneYnoad5ZL7ALxM8BL | repo-attached routine | task state: board | report pending
