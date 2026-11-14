@@ -46,31 +46,33 @@ def main(index_path, out_dir):
                 else:
                     notes.append(f"{code} {l['line_id']}: no released m2 pair; left as it is")
 
-    # 2. formwork by the villa's own ratio
-    pairs = collections.defaultdict(lambda: [0.0, 0.0, 0])
-    fw = [l for l in L if l["item_code"] in ("STR.FORMWORK", "STR.FORMWORK.STAIR")]
-    host_of = {}
-    for l in fw:
-        m = re.search(r"FW:(L-[0-9a-f]{20})", str(l.get("element_id")))
-        host_of[l["line_id"]] = byid.get(m.group(1)) if m else None
-    for l in fw:
-        h = host_of[l["line_id"]]
-        if h and h["class"] == "RELEASED" and l["class"] == "RELEASED" and h["measured_net"]:
-            r = pairs[h["item_code"]]; r[0] += l["measured_net"] or 0; r[1] += h["measured_net"]; r[2] += 1
-    ratios = {k: (v[0] / v[1], v[2]) for k, v in pairs.items() if v[1] > 0 and v[2] >= 2}
-    for l in fw:
-        if l["class"] != "HELD":
-            continue
-        h = host_of[l["line_id"]]
-        if h is None:
-            notes.append(f"formwork {l['line_id']} ({str(l.get('element_id'))[:40]}): no host concrete line in the index; needs the element's own faces")
-        elif h["class"] != "RELEASED":
-            notes.append(f"formwork {l['line_id']}: host {h['item_code']} {h['line_id']} is HELD; fill after the concrete (T-761)")
-        elif h["item_code"] not in ratios:
-            notes.append(f"formwork {l['line_id']}: no ratio for host type {h['item_code']} (fewer than 2 released pairs)")
-        else:
-            r, n = ratios[h["item_code"]]
-            row(l, h["measured_net"] * r, "ESTIMATE", f"host {h['item_code']} {h['line_id']} {h['measured_net']} m3 x {r:.3f} m2/m3 (this villa, {n} released pairs)", "FORMWORK_RATIO")
+    # 2. formwork by the villa's own ratio: DISABLED 2026-11-14 (a member's ratio was applied to each of its partial face lines; T-762 fills formwork face by face)
+    fw=[]; host_of={}; ratios={}
+    if False:
+        pairs = collections.defaultdict(lambda: [0.0, 0.0, 0])
+        fw = [l for l in L if l["item_code"] in ("STR.FORMWORK", "STR.FORMWORK.STAIR")]
+        host_of = {}
+        for l in fw:
+            m = re.search(r"FW:(L-[0-9a-f]{20})", str(l.get("element_id")))
+            host_of[l["line_id"]] = byid.get(m.group(1)) if m else None
+        for l in fw:
+            h = host_of[l["line_id"]]
+            if h and h["class"] == "RELEASED" and l["class"] == "RELEASED" and h["measured_net"]:
+                r = pairs[h["item_code"]]; r[0] += l["measured_net"] or 0; r[1] += h["measured_net"]; r[2] += 1
+        ratios = {k: (v[0] / v[1], v[2]) for k, v in pairs.items() if v[1] > 0 and v[2] >= 2}
+        for l in fw:
+            if l["class"] != "HELD":
+                continue
+            h = host_of[l["line_id"]]
+            if h is None:
+                notes.append(f"formwork {l['line_id']} ({str(l.get('element_id'))[:40]}): no host concrete line in the index; needs the element's own faces")
+            elif h["class"] != "RELEASED":
+                notes.append(f"formwork {l['line_id']}: host {h['item_code']} {h['line_id']} is HELD; fill after the concrete (T-761)")
+            elif h["item_code"] not in ratios:
+                notes.append(f"formwork {l['line_id']}: no ratio for host type {h['item_code']} (fewer than 2 released pairs)")
+            else:
+                r, n = ratios[h["item_code"]]
+                row(l, h["measured_net"] * r, "ESTIMATE", f"host {h['item_code']} {h['line_id']} {h['measured_net']} m3 x {r:.3f} m2/m3 (this villa, {n} released pairs)", "FORMWORK_RATIO")
 
     # 3. roof layers
     def zone(eid):

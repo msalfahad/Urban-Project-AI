@@ -1662,3 +1662,74 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 11-13 03:21 | Worker 1 | NO FINAL LINE | STARTED 03:21; no final line; session not checked, cause NOT KNOWN |
 | 11-13 03:51 | Verifier | SUCCESS | STARTED 03:51, final 03:51; none (light run: READY 0; T-749/T-752/T-753 already merged by earlier runs; T-754 still QUEUED) / No gate run, no merge, no quantity change; SCOREBOAR |
 | 11-13 04:14 | Lead | SUCCESS | STARTED 04:14, final 04:17; board / 3 MERGED since 00:17 (T-749 Gate B -> candidate V3.0.77: FIN.PAINT held 604.990..710.006 -> 603.802..687.847 m2, edges as lm lines; T-752 / T- |
+
+## 2026-11-13 04:20 to 2026-11-14 04:32 UTC (daily audit 2026-11-14 04:35; rows generated from RUN_LOG; a same-minute START/final pair is one run)
+
+| Slot (UTC) | Agent | Status | Evidence |
+|---|---|---|---|
+| 11-13 04:41 | Worker 2 | SUCCESS | STARTED 04:41, final 04:55; T-754 READY 2189c2b5 | Exterior paint edge residuals (lm, research, unwired): NW-1/NW-2 + NW-2/NW-3 parapet corners NOT_A_CORNER (coplanar screen fron |
+| 11-13 04:51 | Verifier | SUCCESS | STARTED 04:51, final 04:54; none (light run: READY 0; T-754 claimed by W2 04:41, T-738 / T-755 TODO) | No gate run, no merge, no quantity change; SCOREBOARD v2 restated 03:35 on  |
+| 11-13 05:01 | Worker 3 | SUCCESS | STARTED 05:01, final 06:38; T-738 READY (integration package, Gate B; agents/task-T-738 @ 46bff1ad; ARCH_TAKEOFF_V3.0.78 + master 1.79.0 pending) | V3.0.77 b8524d5c -> V3.0.78 f0 |
+| 11-13 05:20 | Worker 1 | SUCCESS | STARTED 05:20, final 06:27; T-755 READY (agents/task-T-755 @ 664c68c7) | V3.0.77 (b8524d5c, own Drive chain): 2,799 HELD lines all mapped to a cause (UNNAMED 0), V3.0.70 re-deriv |
+| 11-13 05:50 | Verifier | SUCCESS | STARTED 05:50, final 05:53; T-754 GATE A PASS MERGED 4bfa0e9f (PARTIALLY VERIFIED 4/7) | Drive OK. Own DXF re-walk (P7757 sha ab54dd55): NW parapet 27CB +11.00 4.807698 m, no arr |
+| 11-13 06:41 | Worker 2 | SUCCESS | STARTED 06:41, final 06:41; none | No claimable TODO row on the board: T-754 (W2 FIRST) MERGED 4bfa0e9f at 06:00; live rows are READY T-738 / T-755, IN PROGRESS T-180, QUEUED T-3 |
+| 11-13 06:53 | Verifier | INCOMPLETE | STARTED 06:53, final 07:53; none (overlap guard: run session_01E6cPnctaY9ZbmhJ8ifGa8C-unknown STARTED 06:53Z, no final line, <75 min) | no check, no merge, no quantity change | s |
+| 11-13 07:00 | Worker 3 | SUCCESS | STARTED 07:00, final 07:01; none | No claimable TODO row: board has 0 TODO (10 QUEUED after T-738 / T-314 hub order or rebar-parked, 3 PAUSED, T-180 Checker in progress); own T-7 |
+| 11-13 07:20 | Worker 1 | SUCCESS | STARTED 07:20, final 07:20; none | No claimable TODO row on the board (open rows are QUEUED behind the T-738 Gate B serial hub, PAUSED, IN PROGRESS T-180, or READY T-738 / T-755) |
+| 11-13 07:58 | Verifier | SUCCESS | final 07:58 (no STARTED line in the window); T-738 GATE B REJECTED r1; T-755 GATE A REJECTED r1 | Drive OK. T-738: L4 to the end on 46bff1ad 24,501 pass / 1 FAIL (t459 candidate binding not rebui |
+| 11-13 08:14 | Lead | SUCCESS | STARTED 08:14, final 08:30; board | Since 04:17: T-754 MERGED 4bfa0e9f (PARTIAL 4/7, research); T-738 Gate B and T-755 Gate A REJECTED r1 -> TODO r2 with exact faults (t459 bindi |
+| 11-13 08:40 | Worker 2 | SUCCESS | STARTED 08:40, final 08:53; T-756 READY (agents/task-T-756 @ 5e4c1355) | Exterior render/paint face ledger re-based on V3.0.77: 98 T-305 bands + 46 T-311 components mapped by id, |
+| 11-13 08:51 | Verifier | SUCCESS | STARTED 08:51, final 08:51; none (READY 0: T-738 / T-755 TODO r2, T-756 CLAIMED, T-180 slot) | Light run: nothing to check, nothing merged or rejected, no quantity change; candid |
+| 11-13 09:01 | Worker 3 | SUCCESS | STARTED 09:01, final 09:46; T-738 r2 READY (integration package, Gate B, agents/task-T-738 @ 49d21678) | Gate B (b) fault fixed: T459_CANDIDATE_BINDING.json rebuilt by its tool ( |
+| 11-13 09:19 | Worker 1 | NO FINAL LINE | STARTED 09:19; no final line; session not checked, cause NOT KNOWN |
+| 11-13 09:52 | Verifier | INCOMPLETE | STARTED 09:52, final 10:51; none (overlap guard: run session_01E6cPnempse2wFh8LTJGZA9 STARTED 09:52Z, no final line, <75 min) | no check, no merge, no quantity change | self-chec |
+| 11-13 10:40 | Worker 2 | SUCCESS | STARTED 10:40, final 10:40; none | No claimable TODO row: board holds only MERGED / QUEUED (Lead-sequenced lane I packages T-314, T-363, T-364, T-424, T-502, T-509, T-513, T-750; |
+| 11-13 11:00 | Worker 3 | SUCCESS | STARTED 11:00, final 11:00; none | No claimable TODO row on the board (0 TODO; READY 1 = own T-738 r2 integration package awaiting Checker Gate B on agents/task-T-738 @ 49d21678; |
+| 11-13 11:21 | Worker 1 | SUCCESS | STARTED 11:21, final 12:12; T-755 r2 READY (agents/task-T-755 @ d31fec52) | R-T755-1 v2 reads only live cause fields (rfi question, range basis) on lines with a CAUSE_TEXT / REST |
+| 11-13 11:50 | Verifier | IDLE | final 11:50 (no STARTED line in the window); none (run lock held by run 20261113T095152-419-16639 since 2026-11-13T09:51Z) | overlap lock: another Verifier run is active; no claim, no change, no  |
+| 11-13 12:16 | Lead | SUCCESS | STARTED 12:16, final 12:21; board | Owner reset 13 Nov applied: T-314 r3 (ext render+paint, V3.0.79, W2) and T-750 (WP, V3.0.80, W3) built stacked on T-738 r2, Gate B one at a ti |
+| 11-13 12:41 | Worker 2 | SUCCESS | STARTED 12:41, final 13:21; T-314 r3 READY (agents/task-T-314 @ 597d2820, reserved ARCH_TAKEOFF_V3.0.79) | Ext render+paint integration (owner gap #1) from merged T-756 ledger, s |
+| 11-13 12:53 | Verifier | SUCCESS | STARTED 12:53, final 13:48; T-738 r2 (Gate B), T-755 r2 (Gate A) | T-738 r2 GATE B PASS MERGED 208c56891: candidate ARCH_TAKEOFF_V3.0.77 b8524d5c -> V3.0.78 (master 1.79.0), tile |
+| 11-13 13:31 | Worker 3 | INCOMPLETE | STARTED 13:31, final 13:52; T-750 | DRIVE NOT READABLE (Google_Drive connector HTTP 503): run of record not run. Stage pushed agents/task-T-750 @ 9b26f708 on T-314 r3 (V3.0.79):  |
+| 11-13 14:47 | Worker 2 | SUCCESS | STARTED 14:47, final 14:55; T-760 READY cacbb177 | Ext render+paint fix rows on V3.0.79 (T-314 r3): FIN.EXT.FINISH/PAINT 1 blank+17 ranges -> 0, 1054.00 m2 each; PAINT.EDGE 3 bla |
+| 11-13 15:10 | Verifier | SUCCESS | STARTED 15:10, final 15:15; T-760 (Gate A), T-314 r3 (Gate B) | Drive NOT readable (connector unavailable). T-760 GATE A PASS MERGED 89be1473: 81 fix rows, labels+basis 81/81, 3  |
+| 11-13 15:10 | Worker 1 | SUCCESS | STARTED 15:10, final 15:21; T-761 READY (agents/task-T-761 @2f25ce8e) | Blank STR.CONC lines 80 -> 0 on V3.0.78: 67 figures +58.42 m3 (GB 11.96, parapet 24.37 all-RC, beam 5.26 a |
+| 11-13 16:03 | Worker 3 | SUCCESS | STARTED 16:03, final 16:25; T-770 r1 READY (agents/task-T-770 @ 20f6d37d, ARCH_TAKEOFF_V3.0.81) | MAIN_FILL_ALL 207 rows wired by line id on V3.0.78 (DEFAULT/ESTIMATE labels, non |
+| 11-13 16:09 | Worker 1 | SUCCESS | STARTED 16:09, final 16:19; T-762 READY @06d0b826 | Formwork blank 336 -> 0 (face ledger, OQ-10 formed once, hand chains, ratio residual, T-729 caps); formwork 1,098.0 -> 2,226.9 |
+| 11-13 16:10 | Verifier | SUCCESS | STARTED 16:10, final 16:17; T-761 (Gate A), T-314 r3 (Gate B) | Drive OK. T-761 GATE A PASS MERGED 8d3bbf1c (fix rows, unwired until T-770): 80 blank STR.CONC -> 0, +58.42 m3 + 1 |
+| 11-13 16:31 | Lead | SUCCESS | STARTED 16:31, final 16:34; board | T-314 r3 REJECTED (registry) -> TODO r4 W2 first; T-770 r1 -> TODO r2 after T-314 r4 (hub serial, 1.79.0 PENDING) with formwork per Checker ru |
+| 11-13 16:47 | Worker 2 | SUCCESS | STARTED 16:47, final 16:54; T-314 r4 READY b3d2b72f | Registry-only rework, no quantity change: BOQ_FAMILY_MASTER_1.80.0 promotes merged-pending T-738 (merge 208c5689, candidate  |
+| 11-13 16:54 | Verifier | SUCCESS | STARTED 16:54, final 17:00; T-762 (Gate A) | Drive OK. T-762 GATE A PASS MERGED 43eae30a (formwork fix rows 336 blank -> 0, +1,128.9 m2 ESTIMATE/DEFAULT/SAFETY, unwired until T-7 |
+| 11-13 17:00 | Worker 3 | SUCCESS | STARTED 17:00, final 17:07; T-764 READY r1 @ a8fd15fa | Earthworks B1: 20 lines, 18 without figure -> 0 (excavation 336.5 m3, backfill Z1 177.3 + Z2 150.2, disposal 9.0 m3 net, r |
+| 11-13 17:20 | Worker 1 | SUCCESS | STARTED 17:20, final 17:27; T-767 READY r1 @ e1a7b15e | WP lines without a figure 50 -> 0 (fix rows, not wired): penetrations 55 pcs, door transitions 2.30 m2, terminations 3.16  |
+| 11-13 17:50 | Verifier | SUCCESS | STARTED 17:50, final 18:44; T-767 (Gate A), T-764 (Gate A), T-314 r4 (Gate B) | Drive OK. T-767 MERGED 9de1dcd5 + T-764 MERGED 61a65c42 (fix rows, unwired; 3 hand checks each: fo |
+| 11-13 18:40 | Worker 2 | SUCCESS | STARTED 18:40, final 18:51; T-763 READY r1 @ c1580314 | 49 fix rows on V3.0.81: held->0 FIN.PLASTER 27, FIN.PAINT 4, FIN.PLASTER.BEAD 14 (R-T763-1 H 4.34/4.04/annex 3.84, wet ren |
+| 11-13 18:51 | Verifier | SUCCESS | STARTED 18:51, final 18:55; T-763 (Gate A) | Drive OK. T-763 r1 REJECTED -> TODO r2 (gates f/h + e; a-c PASS): wet-room ceiling uses H-0.90 (>=3.00) against the owner default 'we |
+| 11-13 19:01 | Worker 3 | SUCCESS | STARTED 19:01, final 19:34; T-770 r2 READY (Gate B integration package, agents/task-T-770 @ c4005ffa) | V3.0.81 on V3.0.79 + master 1.81.0: MAIN_FILL 81 non-formwork rows + T-762 |
+| 11-13 19:20 | Worker 1 | SUCCESS | STARTED 19:20, final 19:28; T-769 READY r1 @6cfcb61f | fence/gates/pool/outdoor/site: 37 lines without a figure -> 0, 4 new missing-family lines (B1-01 470.55 m2, B1-05 319.99 m2 |
+| 11-13 19:51 | Verifier | SUCCESS | STARTED 19:51, final 20:34; T-769 (Gate A), T-770 r2 (Gate B) | Drive OK. T-769 GATE A PASS MERGED f8319feb (fence/site fix rows, unwired): 3 own re-measures AGREE from p.12 (sec |
+| 11-13 20:13 | Lead | SUCCESS | STARTED 20:13, final 20:17; board | T-769/T-767/T-764/T-762/T-314 r4 MERGED WORKED, T-763 r1 REJECTED -> r2 W2 first; T-770 r2 READY (blank 691->295) with Checker; T-770 r3 = T-7 |
+| 11-13 20:40 | Worker 2 | SUCCESS | STARTED 20:40, final 20:54; T-763 r2 READY 76d962d1 | Drive OK. Plaster/paint/bead/paint-edge fix rows (90) on V3.0.81 r2: wet rooms split at the 3.00 tile top under the kept 2.7 |
+| 11-13 20:51 | Verifier | SUCCESS | STARTED 20:51, final 21:13; T-763 r2 (Gate A) | Drive OK. T-763 r2 GATE A PASS MERGED 2c6a2822 (plaster/paint/bead/paint-edge fix rows, unwired until T-770 r4): r1 findings close |
+| 11-13 21:00 | Worker 3 | SUCCESS | STARTED 21:00, final 21:45; T-770 r3 READY 56d5eabd (Gate B, V3.0.81 / master 1.81.0) | r2 faults fixed, no quantity change: registry --promote mode + in-merge tools (dry promote |
+| 11-13 21:20 | Worker 1 | SUCCESS | STARTED 21:20, final 21:31; T-757 READY r1 (agents/task-T-757 @ 27887ae7) | 114 ranged STR.CONC lines -> 0: 80 points by fallback order + 34 at low (widths 0.7715 m3 to IGNORED_S |
+| 11-13 21:50 | Verifier | SUCCESS | STARTED 21:50, final 22:43; T-770 r3 (Gate B), T-757 r1 (Gate A) | Drive OK. T-757 GATE A PASS MERGED 951682c5 (fix rows, unwired): 114 ranged STR.CONC -> 80 points + 34 at low;  |
+| 11-13 22:41 | Worker 2 | SUCCESS | STARTED 22:41, final 22:52; T-765 READY r1 (agents/task-T-765 @ 7038338d) | masonry blank/ranged lines 91 -> 0 on V3.0.81 (block hosts by T-713 component with annex 4.00 / b_r 0  |
+| 11-13 22:50 | Verifier | SUCCESS | STARTED 22:50, final 22:51; none (light run: READY 0; T-770 r4 TODO W3, T-765 CLAIMED W2) | No check, no merge, no quantity change; engine stays 951682c5, candidate of record V3. |
+| 11-13 22:59 | Worker 3 | SUCCESS | STARTED 22:59, final 23:03; T-770 r4 READY @6fc6bbf5 | Gate B one-test fix: registry test now mode-aware (pending->build, promoted->build_promoted) with adverse promoted-mismatch |
+| 11-13 23:21 | Worker 1 | SUCCESS | STARTED 23:21, final 23:31; T-776 READY r1 (agents/task-T-776 @ 1322a401) | Boundary band 91.94 m split from ST DXF into FENCE 44.07 / UNDER_BLDG 44.37 / SEA_GAP 3.50 m; p.14 A-A |
+| 11-13 23:51 | Verifier | INCOMPLETE | STARTED 23:51, final 00:50; none (overlap guard: run session_01E6cPndR8eTFzSg9PwVd7D4 active since 2026-11-13T23:51Z, 59 min, no final line) | no check, no merge, no quantity cha |
+| 11-14 00:12 | Lead | SUCCESS | STARTED 00:12, final 00:15; board | T-776 / T-765 / T-763 r2 / T-757 MERGED WORKED (fix rows, unwired); T-770 r4 READY with the Checker (V3.0.81, blank 691->295); hub r5 V3.0.82  |
+| 11-14 00:40 | Worker 2 | SUCCESS | STARTED 00:40, final 00:47; T-766 READY 59c4e13f | stair finishes: 66 held lines -> 0 blank (+2 landing ADDs); landings 20.69 vs 12.74 m2, zigzag skirting 28.52 vs 29.87 lm (-4.5 |
+| 11-14 01:02 | Worker 3 | SUCCESS | STARTED 01:02, final 01:11; T-771 READY agents/task-T-771 @ 9057f4b2 | 39 missing families -> 0 uncovered: 23 new lines in 10 families (B12-01 fixtures 12 WC / 17 basins / 6 show |
+| 11-14 01:05 | Verifier | SUCCESS | final 01:05 (no STARTED line in the window); T-776 r1 (Gate A), T-765 r1 (Gate A), T-770 r4 (Gate B) | Drive OK. T-770 r4 GATE B PASS MERGED ba6fafe0 (merge 06302fc6 + in-merge promotion, master  |
+| 11-14 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 01:28; T-777 READY (agents/task-T-777 @ eb727206) | Beam concrete candidate 79.24 vs freelancer 65.97 m3 (+13.28, +20.1 %) split by named cause, residual -0. |
+| 11-14 01:51 | Verifier | SUCCESS | STARTED 01:51, final 01:57; T-777 r1, T-766 r1, T-771 r1 (Gate A) | Drive OK. All three GATE A PASS, MERGED 88e4b912 (unwired fix-row / research sets; candidate V3.0.81 unchanged |
+| 11-14 02:41 | Worker 2 | SUCCESS | STARTED 02:41, final 02:48; T-768 READY 24860297 | F-09 openings/ceilings/domes: 43 HELD lines -> 0 (34 figures: 8 DRAWING-READ, 18 DEFAULT, 8 ESTIMATE; 9 EXCLUDED with evidence) |
+| 11-14 02:51 | Verifier | SUCCESS | STARTED 02:51, final 03:07; T-768 r1 (Gate A) | Drive OK. T-768 GATE A PASS MERGED eda8232a (fix-row set, unwired: T-770 r7; candidate V3.0.81 unchanged, no quantity change). Own |
+| 11-14 03:01 | Worker 3 | SUCCESS | STARTED 03:01, final 03:46; T-770 r5 READY (integration package, Gate B) | ARCH_TAKEOFF_V3.0.82 on V3.0.81: T-764 earthworks + T-767 waterproofing + T-769 fence/site wired by lin |
+| 11-14 03:21 | Worker 1 | SUCCESS | STARTED 03:21, final 03:33; T-778 READY (agents/task-T-778 @ c65858ed) | non-beam concrete vs freelancer: 406.79 vs his RC 352.44 m3 (+54.36, +15.4 %) closed to named causes, res |
+| 11-14 03:51 | Verifier | RUNNING | STARTED 03:51; no final line yet at 04:32 (running or silent; session not checked) |
+| 11-14 04:11 | Lead | SUCCESS | STARTED 04:11, final 04:17; board | T-777 / T-766 / T-771 / T-768 / T-778 MERGED WORKED (concrete 406.79 vs 352.44 +15.4 % closed to causes; windows -14.4 % split to 0); T-770 r4 |
+
+**Totals: 64 slots: SUCCESS 57, INCOMPLETE 4, NO FINAL LINE 1, IDLE 1, RUNNING 1** (NO FINAL LINE = STARTED without a final line in RUN_LOG; session not checked; cause NOT KNOWN. RUNNING = the 03:51 Checker run still open at audit time.)
