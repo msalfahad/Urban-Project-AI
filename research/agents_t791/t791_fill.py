@@ -16,7 +16,7 @@ The geometry and the guards are pure functions (tested on a synthetic villa in t
 
 r2 changes (Checker F-V791-1, gate d):
   * F-V791-1 settled, RAIL: the GF well band 4A4 / 47F + 155 / 156 + 157 / 151 (all layer 5, thin continuous, NOT the
-    cut-wall layer 1) is two 50 mm bands with a 100 mm open gap (47F x -143739.9 / 151 x -143839.9), the west leg turning
+    cut-wall layer 1) is two 50 mm bands with a 100 mm open gap (47F / 151), the west leg turning
     hidden (layer 2: 152 / 153) exactly at the plan cut line C3 as the flight rises above the cut. Section A-A (Drive
     "Alsenan chalet project" / p7757_arch_sheet10.pdf, single sheet, raster 4672 x 6624 = 400 dpi, 1:100, read by pixel
     runs) draws at the +1.00 hall a LEVEL guard continuous with D1's sloped rail: two vertical posts and a top rail at
@@ -160,13 +160,13 @@ RS_STEP_DEG, RS_GOINGS, RS_RISER = 7.790996, 12, 4.50 / 28
 E1_PLAN, E1_RISE, E1_TOP = 1.200, 4 * 0.17, 0.200
 RL04_BAND = 6.127
 FENCE_PX_WALL, FENCE_PX_RAIL, FENCE_WALL_M = 913, 590, 5.80
-# GF well band (P7757.dxf by handle): east leg 4A4 x -143689.9 / 47F x -143739.9 from y -793143.5; south closure
-# 155 y -795943.5 / 156 y -795893.5 (centre -795918.5); west leg 157 / 151 (centre x -143864.9); D1 nosings 481 y
-# -793143.5 .. 490 y -794043.5 (3 x 0.300); MS1-L first nosing DC y -795893.5.
-ST01B_BAND_C = (-793143.5 - (-795918.5)) / 1000  # 2.775 east-leg centreline to the closure centre
+# GF well band (P7757.dxf by handle, lengths only): east leg 4A4 2.800 / 47F 2.750 (50 mm apart), south closure 155 0.200
+# / 156 0.100 (50 mm apart: closure centre 0.025 inside 4A4's end), west leg 157 / 151 (centres 0.150 from the east leg's);
+# D1 nosings 481 .. 490 = 3 x 0.300 from the band's north end; MS1-L first nosing DC 0.050 inside 4A4's south end.
+ST01B_BAND_C = 2.800 - 0.025               # 2.775 east-leg centreline to the closure centre
 ST01B_D1_PLAN = 0.900
-ST01B_ACROSS = (-143714.9 - (-143864.9)) / 1000  # 0.150 east to west band centres
-ST01B_LEG = (-795893.5 - (-795918.5)) / 1000      # 0.025 closure centre to MS1-L first nosing
+ST01B_ACROSS = 0.200 - 0.025 - 0.025       # 0.150 east to west band centres
+ST01B_LEG = 0.050 - 0.025                  # 0.025 closure centre to MS1-L first nosing
 DIVIDER_SKIRT = 1.900 + 0.100 + 0.200      # r1 face reading, carried only if the band were a wall
 
 
