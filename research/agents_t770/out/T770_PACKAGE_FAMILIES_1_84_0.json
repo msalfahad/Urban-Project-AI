@@ -1,0 +1,540 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.84.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.83",
+  "ARCH_TAKEOFF_V3.0.84"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.83": {
+   "lines": 5280,
+   "lines_sha256": "1e63190c8235e9685a21c12560faba6af0ddae74385e2eb07fd9a8c91b04119b"
+  },
+  "ARCH_TAKEOFF_V3.0.84": {
+   "lines": 5304,
+   "lines_sha256": "05a3126c11ff65dced8bd8d3b831914aea7bf2a273b0d0f7bda8b22ee5fd64f3",
+   "previous": "ARCH_TAKEOFF_V3.0.83",
+   "item_codes": {
+    "ARCH.SHUTTER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 3,
+     "record": 0
+    },
+    "ARCH.THRESHOLD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 14,
+     "record": 0
+    },
+    "ARCH.WINDOW": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "ARCH.WINDOW_REVEAL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 8,
+     "record": 0
+    },
+    "DOOR.INTERNAL.PVC": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "DOOR.MAIN_ENTRANCE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "FIN.CEILING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.CEILING.BULKHEAD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "FIN.CEILING.CORNICE": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.CEILING.GYPSUM": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.DOME.SOFFIT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "FIN.MARBLE.LANDING": {
+     "added": 2,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "FIN.MARBLE.LIFT_SURROUND": {
+     "added": 0,
+     "removed": 0,
+     "changed": 3,
+     "record": 0
+    },
+    "FIN.MARBLE.RISER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 10,
+     "record": 0
+    },
+    "FIN.MARBLE.TREAD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "FIN.SPATTER_DASH": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.STAIR.FLIGHT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 9,
+     "record": 0
+    },
+    "FIN.STAIR.NOSING": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.STAIR.SKIRTING.SLOPED": {
+     "added": 0,
+     "removed": 0,
+     "changed": 20,
+     "record": 0
+    },
+    "FIN.STAIR.SKIRTING.ZIGZAG": {
+     "added": 0,
+     "removed": 0,
+     "changed": 20,
+     "record": 0
+    },
+    "FIN.STAIR.SOFFIT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "FIN.STAIR.STEP_LM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "FIN.WALL.TILE.EDGE": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "JOIN.KITCHEN.BASE": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "JOIN.KITCHEN.WALL": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "JOIN.WARDROBE": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MAS.MESH_STRIP": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MAS.SHARMAT": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MEP.SAN.BASIN": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MEP.SAN.FLOOR_DRAIN_3IN": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MEP.SAN.FLOOR_DRAIN_4IN": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MEP.SAN.KITCHEN_SINK": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MEP.SAN.SHOWER_TRAY": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MEP.SAN.SHOWER_WALKIN": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MEP.SAN.WASHING_MACHINE_POINT": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MEP.SAN.WC": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MET.RAILING.POST": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "SITE.EXCAVATION_SUPPORT": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B1-06": {
+     "SITE.EXCAVATION_SUPPORT": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B12-01": {
+     "MEP.SAN.BASIN": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "MEP.SAN.FLOOR_DRAIN_3IN": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "MEP.SAN.FLOOR_DRAIN_4IN": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "MEP.SAN.KITCHEN_SINK": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "MEP.SAN.SHOWER_TRAY": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "MEP.SAN.SHOWER_WALKIN": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "MEP.SAN.WASHING_MACHINE_POINT": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "MEP.SAN.WC": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B13-06": {
+     "JOIN.KITCHEN.BASE": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "JOIN.KITCHEN.WALL": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "JOIN.WARDROBE": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B3-04": {
+     "ARCH.THRESHOLD": {
+      "added": 0,
+      "removed": 0,
+      "changed": 14,
+      "record": 0
+     }
+    },
+    "B4-05": {
+     "FIN.SPATTER_DASH": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B4-08": {
+     "ARCH.WINDOW_REVEAL": {
+      "added": 0,
+      "removed": 0,
+      "changed": 8,
+      "record": 0
+     }
+    },
+    "B4-10": {
+     "FIN.WALL.TILE.EDGE": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B5-01": {
+     "FIN.CEILING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B5-02": {
+     "FIN.CEILING.GYPSUM": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B5-03": {
+     "FIN.CEILING.CORNICE": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B5-04": {
+     "FIN.CEILING.BULKHEAD": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B5-06": {
+     "FIN.DOME.SOFFIT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B6-02": {
+     "DOOR.INTERNAL.PVC": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B6-03": {
+     "DOOR.MAIN_ENTRANCE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B6-04": {
+     "ARCH.WINDOW": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B6-05": {
+     "ARCH.SHUTTER": {
+      "added": 0,
+      "removed": 0,
+      "changed": 3,
+      "record": 0
+     }
+    },
+    "B6-06": {
+     "FIN.MARBLE.LIFT_SURROUND": {
+      "added": 0,
+      "removed": 0,
+      "changed": 3,
+      "record": 0
+     }
+    },
+    "B7-01": {
+     "FIN.STAIR.FLIGHT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 9,
+      "record": 0
+     }
+    },
+    "B7-02": {
+     "FIN.MARBLE.TREAD": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B7-03": {
+     "FIN.MARBLE.RISER": {
+      "added": 0,
+      "removed": 0,
+      "changed": 10,
+      "record": 0
+     }
+    },
+    "B7-04": {
+     "FIN.MARBLE.LANDING": {
+      "added": 2,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B7-05": {
+     "FIN.STAIR.NOSING": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-06": {
+     "FIN.STAIR.STEP_LM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B7-07": {
+     "FIN.STAIR.SKIRTING.ZIGZAG": {
+      "added": 0,
+      "removed": 0,
+      "changed": 20,
+      "record": 0
+     }
+    },
+    "B7-08": {
+     "FIN.STAIR.SKIRTING.SLOPED": {
+      "added": 0,
+      "removed": 0,
+      "changed": 20,
+      "record": 0
+     }
+    },
+    "B7-11": {
+     "MET.RAILING.POST": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-15": {
+     "FIN.STAIR.SOFFIT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B9-03": {
+     "MAS.MESH_STRIP": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "MAS.SHARMAT": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 133,
+   "record_only": 0
+  }
+ }
+}
