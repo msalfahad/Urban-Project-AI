@@ -1,0 +1,197 @@
+{
+ "added": {},
+ "applied": 5,
+ "base_index_sha256": "d92c44544119571cb4a2f4f310b1e3e9019e3b7b75b47f7f7c6c45a61809a75d",
+ "blank_in_package_families_after": 0,
+ "blank_in_package_families_before": 0,
+ "blank_non_rebar_after": 18,
+ "blank_non_rebar_before": 18,
+ "by_set": {
+  "T-788": {
+   "labels": {
+    "ESTIMATE": 1
+   },
+   "rows": 1
+  },
+  "T-795": {
+   "labels": {
+    "DEFAULT": 1,
+    "DRAWING-READ": 1,
+    "MEASURED": 2
+   },
+   "rows": 4
+  }
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.87",
+ "index_sha256": "5522d95d37dc1bfcef764836f3afca693192cae6729ca727ca5e200cec76020d",
+ "lines": 5344,
+ "lines_before": 5344,
+ "method": "ARCH_TAKEOFF_V3.0.88",
+ "outside_lines_identical": true,
+ "package_sha256": "9e8b0be7d2615bd70e519fe454d03c3e6cbfc723119914d575d3cfc826c18e48",
+ "range_to_point": [
+  {
+   "high": 0.604,
+   "inside_range": true,
+   "item_code": "ARCH.SPACE",
+   "label": "MEASURED",
+   "line_id": "L-554a525edce9a9235bee",
+   "low": 0.604,
+   "point": 0.604,
+   "unit": "m2"
+  },
+  {
+   "high": 6.124412,
+   "inside_range": true,
+   "item_code": "ARCH.SPACE",
+   "label": "MEASURED",
+   "line_id": "L-6485382cd3b6f09c192c",
+   "low": 6.124412,
+   "point": 6.124412,
+   "unit": "m2"
+  },
+  {
+   "high": 0.23,
+   "inside_range": true,
+   "item_code": "FIN.FLOOR.FINISH_HELD",
+   "label": "DRAWING-READ",
+   "line_id": "L-a788de4672b1f0d2e6c1",
+   "low": 0.0,
+   "point": 0.23,
+   "unit": "m2"
+  },
+  {
+   "high": 73.1,
+   "inside_range": false,
+   "item_code": "FIN.WALL.TILE.EDGE",
+   "label": "DEFAULT",
+   "line_id": "L-41b2f150f7779382b976",
+   "low": 0.0,
+   "point": 115.2,
+   "unit": "lm"
+  }
+ ],
+ "ranged_in_package_families_after": 0,
+ "ranged_in_package_families_before": 4,
+ "ranged_non_rebar_after": 3,
+ "ranged_non_rebar_before": 7,
+ "report": {
+  "base_basis_corrections": [],
+  "basis_text_rows": [],
+  "checker_finding_sets": [],
+  "no_line_rows": [],
+  "set_base_read": [
+   {
+    "candidate_version": "ARCH_TAKEOFF_V3.0.86",
+    "set": "T-788"
+   }
+  ],
+  "v5": {
+   "na_label_rows": {},
+   "recalled": [],
+   "v4": {
+    "carrier_added": [],
+    "deferred_added": [],
+    "excluded_with_reason": [],
+    "ranged_added": [],
+    "rows_detail_sets": [],
+    "v3": {
+     "basis_corrections": [],
+     "carried": {},
+     "not_applicable_rows": [],
+     "restated_safety": [],
+     "source_schemas": {
+      "T-788": "URBAN_FIX_ROWS_V1",
+      "T-795": "URBAN_FIX_ROWS_V1"
+     },
+     "stack": {
+      "deferred": [],
+      "not_applicable": [],
+      "stacked_on_base": [],
+      "stacked_on_row": []
+     }
+    }
+   }
+  }
+ },
+ "rule": [
+  "R-T770-1",
+  "R-T770-2",
+  "R-T770-3",
+  "R-T770-4",
+  "R-T770-5",
+  "R-T770-6",
+  "R-T770-7",
+  "R-T770-8"
+ ],
+ "set_sha256": {
+  "T-788": "a490dda0f1c54ca12c4d71302c9c7c70facc1b5c8aed9d57311447cee3f1a84f",
+  "T-795": "86d1f5449149e113d93daa43ca3f55cb7c9c90a3046dbb1d2507a0a3e32b691d"
+ },
+ "totals_moved": {
+  "ARCH.SPACE [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 13,
+    "released": 70.4
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 6.73,
+    "held_low": 6.73,
+    "lines": 13,
+    "released": 63.68
+   }
+  },
+  "FIN.CEILING.CORNICE [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 426.31
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 302.88
+   }
+  },
+  "FIN.FLOOR.FINISH_HELD [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 6.36
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.23,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 6.13
+   }
+  },
+  "FIN.WALL.TILE.EDGE [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 147.21
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 73.1,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 32.01
+   }
+  }
+ }
+}

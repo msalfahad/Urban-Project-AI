@@ -1,0 +1,197 @@
+{
+ "base": "ARCH_TAKEOFF_V3.0.87",
+ "method": "ARCH_TAKEOFF_V3.0.88",
+ "row_bases": [
+  "ARCH_TAKEOFF_V3.0.86"
+ ],
+ "schema": "URBAN_FILL_PACKAGE_V8",
+ "set_names": [
+  "T-788",
+  "T-795"
+ ],
+ "set_sha256": {
+  "T-788": "a490dda0f1c54ca12c4d71302c9c7c70facc1b5c8aed9d57311447cee3f1a84f",
+  "T-795": "86d1f5449149e113d93daa43ca3f55cb7c9c90a3046dbb1d2507a0a3e32b691d"
+ },
+ "sets": [
+  {
+   "base": "ARCH_TAKEOFF_V3.0.86 (LINE_INDEX_V3_0_86.json)",
+   "rows": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 426.31
+     },
+     "basis": "R-T788-1: decor-ceiling wall run per room / zone from the arch DXF faces (lengths MEASURED; the run itself ESTIMATE: no cornice detail printed, Q-57 A mod): closed rooms (T-147) 302.88 + open zones 123.43 (GF open room 54.455, 1F living zone 39.44, wash lobby 12.558, pantry 10.48, 2F lobby + shaft-box top 22.0 replacing ST-2F 15.5); dry 264.91 + wet 161.4; no run on open sides, void edges (ceiling drops, own line) or the stair wells",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 302.88
+     },
+     "element_id": "T-771:NEW:CEILING:CORNICE",
+     "item_code": "FIN.CEILING.CORNICE",
+     "label": "ESTIMATE",
+     "line_id": "L-33d272f5b4d7b33767b6",
+     "unit": "lm"
+    }
+   ],
+   "rule": "R-T788-1 .. 2 (t788_rules.py, every villa)",
+   "schema": "URBAN_FIX_ROWS_V1",
+   "summary": {
+    "added_by_cause_lm": {
+     "1F living zone (living + corridor + landing + light-well)": 39.44,
+     "2F stair lobby + shaft-box ceiling, net of the ST-2F 15.5 already in": 6.5,
+     "GF open room (dining / entrance / reception / hall)": 54.455,
+     "GF pantry (wet by owner Q-37 A)": 10.48,
+     "GF wash lobby (2 basins, incl. niche)": 12.558
+    },
+    "after_lm": 426.31,
+    "before_lm": 302.88,
+    "dry_lm": 264.909,
+    "freelancer_dry": 282.85,
+    "freelancer_lm": 427.46,
+    "freelancer_wet": 144.61,
+    "partition_lm": {
+     "1F": {
+      "1F-13": 39.44,
+      "ST-1F": 13.0
+     },
+     "2F": {
+      "2F-01": 8.998,
+      "ST-2F": 13.002
+     },
+     "GF": {
+      "GF-07": 7.69,
+      "GF-08": 52.899,
+      "GF-14": 7.434,
+      "OUTDOOR-0": 1.767,
+      "OUTDOOR_POCKET_CUT": 2.359,
+      "OUTSIDE": 237.923
+     }
+    },
+    "wet_lm": 161.402
+   },
+   "task": "T-788"
+  },
+  {
+   "candidate_version": "ARCH_TAKEOFF_V3.0.86",
+   "inputs": {
+    "door_faces": "research/agents_t795/DOOR_FACES_T795.csv",
+    "drawings": "Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip (V2.13 plan read, own run)",
+    "index": "LINE_INDEX_V3_0_86.json",
+    "t312": "research/agents_t312/OPENINGS_T312.csv + FACE_LEDGER_T312.csv (merged)",
+    "t781": "research/agents_t781/out/OPENING_TABLE_ALSENAN.json (merged OPENING_TABLE_V1)"
+   },
+   "rows": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 115.2
+     },
+     "basis": "R-T795-1: 22 tiled door faces (T-312 opening ledger, bound to OPENING_TABLE_V1 where the plan reader detects the door) x (2 x min(H, 3.00) + W): jambs 96.8 + heads 18.4 = 115.2 lm; W MEASURED, H 2.20 DEFAULT (Q-55 C, no door head printed); tile top 3.00 (owner 13 Nov); doors between two tiled rooms counted on both faces; rooms with a RELEASED wall-tile line 73.1, rooms whose wall-tile area is still HELD (annex / level) 42.1; arch A-GF-01 head on its 1.00 chord (crown not printed); edge form (frame cover / 45-degree / profile) = designer item",
+     "before": {
+      "class": "HELD",
+      "high": 73.1,
+      "label": "ESTIMATE",
+      "low": 0.0
+     },
+     "element_id": "T-771:NEW:TILE_EDGE:DOOR_JAMBS",
+     "item_code": "FIN.WALL.TILE.EDGE",
+     "label": "DEFAULT",
+     "line_id": "L-41b2f150f7779382b976",
+     "per_room_lm": {
+      "1F-02": 5.2,
+      "1F-03": 5.2,
+      "1F-07": 10.5,
+      "1F-08": 5.2,
+      "1F-09": 5.2,
+      "1F-12": 5.2,
+      "2F-02": 5.2,
+      "GF-02": 10.6,
+      "GF-03": 5.2,
+      "GF-05": 5.2,
+      "GF-06": 5.4,
+      "GF-07": 5.4,
+      "GF-10": 5.2,
+      "GF-11": 10.5,
+      "GF-12": 5.2,
+      "GF-13": 5.2,
+      "GF-14": 10.4,
+      "GF-16": 5.2
+     },
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.23
+     },
+     "basis": "R-T795-2: stair-room strip 0.200 x 1.150 = 0.230 m2 (T-418 GF-ST-CN, room-local x 1.15 .. 1.35, y 3.85 .. 5.00) re-read on the arch DXF this run: at the cut plane nothing crosses or bounds it on layers 1 / 5 / S-COL.BON (only HIDDEN layer-2 lines 2C6 / 49C / 49D at 0.10 / 0.15 from its west edge = the winder edge / balustrade ABOVE, and the winder radials meeting at its SW corner); the D1 bottom riser 481 and the divider end 4A6 stop at y 3.85; the north wall 26E closes it at y 5.00; the '+0.30' LEVEL mark is in the same open area: floor of the +0.30 back-door lobby, finish as GF-ST-LOBBY030 (porcelain / marble choice stays HELD by finish, not by area)",
+     "before": {
+      "class": "HELD",
+      "high": 0.23,
+      "low": 0.0
+     },
+     "element_id": "GF-R31F8AE:GF-ST-CN",
+     "item_code": "FIN.FLOOR.FINISH_HELD",
+     "label": "DRAWING-READ",
+     "line_id": "L-a788de4672b1f0d2e6c1",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.604
+     },
+     "basis": "R-T795-2: GF-OP-003 band: the 6.82 x 0.20 strip inside the south facade held with the garden band (T-343 cross-check P-2; V3.0.14 FLOOR_SCOPE HELD_WITH); its finish stays with that band; plan polygon area, low = high = 0.604 m2 (a range of zero width)",
+     "before": {
+      "class": "HELD",
+      "high": 0.604,
+      "low": 0.604
+     },
+     "element_id": "HL:FLOOR_SCOPE:HELD_WITH:GF:GF-OP-003-NO-OPENING:band",
+     "item_code": "ARCH.SPACE",
+     "label": "MEASURED",
+     "line_id": "L-554a525edce9a9235bee",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 6.124412
+     },
+     "basis": "R-T795-2: GF open-room floor under the flights drawn below the cut (V3.0.14 FLOOR_SCOPE UNDER_STAIR_HELD); the floor finish under it stays its own designer item; plan polygon area, low = high = 6.124412 m2 (a range of zero width)",
+     "before": {
+      "class": "HELD",
+      "high": 6.124412,
+      "low": 6.124412
+     },
+     "element_id": "HL:FLOOR_SCOPE:UNDER_STAIR_HELD:GF:GF-RC99C2A-UNDER-STAIR",
+     "item_code": "ARCH.SPACE",
+     "label": "MEASURED",
+     "line_id": "L-6485382cd3b6f09c192c",
+     "unit": "m2"
+    }
+   ],
+   "rule": "R-T795-1 .. 2 (research/agents_t795/t795_rules.py, every villa)",
+   "schema": "URBAN_FIX_ROWS_V1",
+   "summary": {
+    "bound_to_opening_table": 15,
+    "door_faces": 22,
+    "freelancer": "B4-10 tile edges: no row in his finishes workbook (T-368: 0 rows) -> RULE_DIFFERENCE (scope)",
+    "hand_check_largest_door": "1.00 x 2.20 door / arch on one tiled face: 2 x 2.20 + 1.00 = 5.40 lm (GF-06 kitchen D-GF-05, GF-07 pantry D-GF-06, GF-02 arch A-GF-01)",
+    "heads_lm": 18.4,
+    "held_ranges_after": 0,
+    "held_ranges_before": 4,
+    "jamb_edge_lm": 115.2,
+    "jamb_edge_lm_old_range": [
+     0.0,
+     73.1
+    ],
+    "jambs_lm": 96.8,
+    "old_range_high_restated": "73.1 = the 14 faces of the 12 rooms with a determinate band in T-368 (14 x 4.40 + heads 11.50); the 8 annex / level faces were HELD by band height, which the owner's 3.00 tile top now settles (door head 2.20 < 3.00)"
+   },
+   "task": "T-795"
+  }
+ ]
+}
