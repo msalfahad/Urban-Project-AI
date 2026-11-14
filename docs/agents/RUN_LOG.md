@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T21:51Z | Verifier | STARTED | run session_01E6cPndPMZhAbJK745BfUfS-unknown | repo-attached routine | task state: T-791 r2 READY (W1, 4977a48f) per run log; queue to read | self-check pending
 - 2026-11-14T21:30Z | Worker 1 | SUCCESS | T-791 r2 READY (agents/task-T-791 @4977a48f, fix rows on V3.0.87) | Stairs blank 14 -> 0. F-V791-1 settled RAIL from DXF layers (two 50 mm layer-5 bands, 100 mm gap) + sheet10 A-A level guard at +1.00 (1.886 m, top rail 0.99 m, no upstand): ST-01b 2.050 lm DRAWING-READ, divider skirting NA. FIN.RAILING 33.32 -> 42.96 lm vs FL 18.95 (ENGINE_RIGHT scope), GUARD 21.55 -> 31.42 (FL no row), SKIRTING 209.43 -> 213.33. RL-10 not in DXF (p.12 raster), re-scale 3.761 confirms 3.748. tests/t791_stair_rails 16 + t476 9 pass | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; task freeze 0, codemap stale none; problem: none
 - 2026-11-14T21:20Z | Worker 1 | STARTED | run session_01E6cPndpvdrsiUkFwwW8XCx | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14T21:00Z | Worker 3 | STARTED | run session_01E6cPneVVcRXBdGgSGUHTyi | repo-attached routine | task state: none yet | self-check pending
