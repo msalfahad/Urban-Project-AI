@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T15:28Z | Worker 1 | SUCCESS | T-792 READY r1 c92524f2 | Schedule-first vs candidate columns: 2 fix rows on V3.0.85 (10AE GF 0.310->0.3875, 10E0 1F 0.840->0.672 m3; columns 33.92->33.83 vs freelancer 28.55, +18.8->+18.5 %); per storey GF -0.7 %, 1F/2F gaps = planted P.C only (like-for-like 0.0 / -2.3 %); footings +0.09 % named, necks 36=36; MARK_BY_OUTLINE_FIT_V1 proposed; Drive OK | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-14T15:19Z | Worker 1 | STARTED | run session_01E6cPnc5tUwXucNChTU2WUm | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14T15:08Z | Worker 3 | SUCCESS | T-794 READY r1 @50559f82 | roof upturn 232.97 -> 228.99 lm vs freelancer 194 (+20.1 -> +18.0 %): +9.70 door D115 1.00 lm and ledge glazing 2.977 lm moved to transition / termination lines; gap split exactly: dome rings +41.64 RULE_DIFF (Q-24), pool court +6.25 ENGINE_RIGHT, door -1.00, his typed lump residual -11.89 UNRESOLVED | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-14T15:00Z | Worker 3 | STARTED | run session_01E6cPndoRLYRe8FpgmSGBAo | repo-attached routine | task state: none yet | self-check pending
