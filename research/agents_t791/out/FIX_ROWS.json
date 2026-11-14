@@ -1,15 +1,16 @@
 {
- "base": "claude/access-permissions-setup-ii24ws @ c12c8eb4",
+ "base": "claude/access-permissions-setup-ii24ws @ 0d3168e5",
  "blank_before": 14,
- "candidate_version": "ARCH_TAKEOFF_V3.0.86",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.87",
  "freelancer": {
   "GF stair hall / lobby skirting": "no row (T-443)",
   "external / guard railing lm": "no row",
   "internal railing lm (typed constant, T-578)": 18.95,
   "stair skirting lm (ST-01 23.1 + ST-02 2.4 + E1 4.37, T-766)": 29.87
  },
- "index_sha16": "350770c0a813491f",
+ "index_sha16": "d92c44544119571c",
  "left_after": 0,
+ "revision": "r2",
  "rows": 14,
  "rows_detail": [
   {
@@ -90,11 +91,10 @@
   },
   {
    "after": {
-    "class": "EXCLUDED",
-    "net": null,
-    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+    "class": "RELEASED",
+    "net": 2.05
    },
-   "basis": "no rail: band 4A4 2.800 / 47F 2.750 beyond D1 (0.900, RL-08) is the east face line of the solid divider (T-393 'solid to the cut'; T-441 east face 1.900 = 2.800 - 0.900, its skirting is SKIRT-T443 DIVIDER-BAND); the hall side is at +1.00 with no drop, section A-A draws no rail continuing at +1.00 (T-476 F-T476-1 read); F-T476-1 closed",
+   "basis": "R-T791-1 role RAIL: plan band 4A4 / 47F + 155 / 156 + 157 / 151 all layer 5 (not cut-wall layer 1), two 50 mm bands with a 100 mm open gap, west leg hidden (152 / 153) past cut line C3; section A-A (sheet10) draws a level guard at +1.00, top rail 0.99 m + mid rail, 1.886 m, on the slab with no upstand, MS1-L visible through it, continuous with D1's rail. Level piece from D1 top nosing (490) along the east-leg centreline 2.775 - 0.900 = 1.875 + turn across 0.150 + leg 0.025 to MS1-L first nosing (DC) = 2.050, level (rise 0)",
    "before": {
     "class": "HELD",
     "high": null,
@@ -103,7 +103,7 @@
    },
    "element_id": "RAIL:ST-01b:GF east-lane band beyond D1",
    "item_code": "FIN.RAILING",
-   "label": "NOT_APPLICABLE",
+   "label": "DRAWING-READ",
    "line_id": "L-0129ba42e945a132bc36",
    "set": "STAIRS",
    "unit": "lm"
@@ -129,10 +129,11 @@
   },
   {
    "after": {
-    "class": "RELEASED",
-    "net": 2.2
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
    },
-   "basis": "faces of the solid divider at the hall floor +1.00 at the plan cut: east 1.900 (4A4 2.800 - D1 0.900) + west 0.100 + south end 0.200 (155) = 2.200 (T-441 by handle); the T-418 outline 3.400 adds y 0.45 .. 1.05, drawn only as the hidden band above, not taken; a solid face at floor level carries skirting (UP-SKIRT-001)",
+   "basis": "the band is an open guard, not a wall (R-T791-1; section A-A sheet10: posts and rails standing on the +1.00 slab, no curb, flight visible through; plan: two 50 mm layer-5 bands with a 100 mm gap, no cut-wall line): no wall face at the floor, no skirting. Mutually exclusive with RAIL:ST-01b (carried there); r1's 2.200 withdrawn",
    "before": {
     "class": "HELD",
     "high": null,
@@ -141,7 +142,7 @@
    },
    "element_id": "SKIRT-T443:GF-ST-HALL:DIVIDER-BAND",
    "item_code": "FIN.SKIRTING",
-   "label": "DRAWING-READ",
+   "label": "NOT_APPLICABLE",
    "line_id": "L-4e7d3bef5e6ac89252ff",
    "set": "STAIRS",
    "unit": "lm"
@@ -266,7 +267,7 @@
     "class": "RELEASED",
     "net": 3.748
    },
-   "basis": "street fence X railing in the wall's dip, p.12 FENCE ELEVATION 1:100 scaled (no printed length): top rail between the dip faces 590 px x 5.80 / 913 px (the printed 5.80 wall drawn) = 3.748; 4 X panels 0.877 each (= RL-01 panel)",
+   "basis": "street fence X railing in the wall's dip, p.12 FENCE ELEVATION 1:100 scaled (no printed length; p.12 is a raster page and is not in the DXF, so no handle read exists): top rail between the dip faces 590 px x 5.80 / 913 px (the printed 5.80 wall drawn) = 3.748; r2 re-scale outer edge 592 px = 3.761, inner 557 px = 3.539; 4 X panels 0.877 each (= RL-01 panel)",
    "before": {
     "class": "HELD",
     "high": null,
@@ -284,13 +285,13 @@
  "task": "T-791",
  "totals": {
   "FIN.RAILING": {
-   "after": 40.91,
+   "after": 42.96,
    "blank_after": 0,
    "blank_before": 5,
    "released_before": 33.32
   },
   "FIN.SKIRTING": {
-   "after": 215.53,
+   "after": 213.33,
    "blank_after": 0,
    "blank_before": 7,
    "released_before": 209.43

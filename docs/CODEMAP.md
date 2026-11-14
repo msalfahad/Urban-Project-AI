@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 99 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2779 | pytest suites, one folder per round. |
+| `tests/` | 2780 | pytest suites, one folder per round. |
 | `tools/` | 120 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -1776,6 +1776,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t788/` | 3 |
 | `tests/t789_parapet_masonry/` | 1 |
 | `tests/t790/` | 1 |
+| `tests/t791_stair_rails/` | 1 |
 | `tests/t793_height_provider/` | 1 |
 | `tests/t795_door_tile_edges/` | 1 |
 | `tests/t796_overlay_precedence/` | 1 |
