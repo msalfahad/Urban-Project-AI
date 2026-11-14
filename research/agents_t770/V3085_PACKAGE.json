@@ -1,0 +1,3717 @@
+{
+ "base": "ARCH_TAKEOFF_V3.0.84",
+ "carriers": {
+  "SPATTER:EXTERIOR": {
+   "carrier": [
+    "FIN.EXT.FINISH",
+    "m2"
+   ]
+  }
+ },
+ "method": "ARCH_TAKEOFF_V3.0.85",
+ "recall": {
+  "T-771": {
+   "element_ids": [
+    "SPATTER:EXTERIOR"
+   ],
+   "reason": "deferred by name in T-770 r7 (V3.0.84, R-T770-5 u) until its carrier FIN.EXT.FINISH was wired; the merged T-760 set wires it in this package"
+  }
+ },
+ "recall_sets": {
+  "T-771": {
+   "candidate_version": "ARCH_TAKEOFF_V3.0.81",
+   "dispositions": {
+    "B1-01": {
+     "disposition": "COVERED_BY_ROW",
+     "evidence": "T-769 new_lines (MERGED f8319feb), wired by a T-770 round"
+    },
+    "B1-05": {
+     "disposition": "COVERED_BY_ROW",
+     "evidence": "T-769 new_lines (MERGED f8319feb), wired by a T-770 round"
+    },
+    "B1-06": {
+     "disposition": "COVERED_BY_ROW",
+     "evidence": "B1-06a dewatering NOT_APPLICABLE by T-769 (water -4.50 vs formation -1.67); B1-06b support = the new line above; B1-06c none printed (T-358)"
+    },
+    "B1-07": {
+     "disposition": "COVERED_BY_ROW",
+     "evidence": "T-769 new_lines (MERGED f8319feb), wired by a T-770 round"
+    },
+    "B11-02": {
+     "disposition": "PARKED",
+     "evidence": "rebar parked by the owner 2026-11-11: approximate tons by ratio at the end"
+    },
+    "B11-03": {
+     "disposition": "PARKED",
+     "evidence": "rebar parked by the owner 2026-11-11: approximate tons by ratio at the end"
+    },
+    "B11-04": {
+     "disposition": "PARKED",
+     "evidence": "rebar parked by the owner 2026-11-11: approximate tons by ratio at the end"
+    },
+    "B12-02": {
+     "disposition": "HELD_MEP_STAGE",
+     "evidence": "drainage / supply runs: the sanitary sheets are not to scale (plotted 1:108 vs printed 1:100, T-743); runs at the MEP stage (owner default 'drainage runs at MEP')"
+    },
+    "B12-03": {
+     "disposition": "HELD_MEP_STAGE",
+     "evidence": "no electrical drawing in the Drive set; MEP stage"
+    },
+    "B12-04": {
+     "disposition": "HELD_MEP_STAGE",
+     "evidence": "no HVAC drawing in the Drive set; MEP stage"
+    },
+    "B12-05": {
+     "disposition": "HELD_MEP_STAGE",
+     "evidence": "no low-voltage drawing in the Drive set; MEP stage"
+    },
+    "B13-03": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "garden labels only, no landscape / irrigation plan (T-427); out of the owner scope freeze"
+    },
+    "B13-05": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no movement joint or sealant printed on ST p.1-16, ARCH p.1-12, SAN p.1-3 (T-365); owner Q-42 gives a width only; out of the owner scope freeze"
+    },
+    "B13-07": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no canopy or pergola on any sheet (T-199, T-471); railings, gates and shutters are on B7-09 / B13-08 / B13-04 / B6-05"
+    },
+    "B2-01": {
+     "disposition": "REGISTER_NO_LINE",
+     "evidence": "a room register, not a quantity: every line carries its room id (arch_measure.room_id); master 1.45.0 N/A"
+    },
+    "B2-03": {
+     "disposition": "REGISTER_NO_LINE",
+     "evidence": "Lead decision F-T730-5 (master 1.76.0): coverage denominator only, no candidate line",
+     "figure_beside": "gross floor plate MEASURED T-720: GF 278.27, 1F 209.84, 2F 55.08 = 543.19 m2"
+    },
+    "B2-04": {
+     "disposition": "REGISTER_NO_LINE",
+     "evidence": "a functional zone; its floor, wall tile and WP are on B3-02 / B4-01 / B8 lines (T-351)",
+     "figure_beside": "open pantry 4.50 x 3.00 = 13.50 m2 (T-120)"
+    },
+    "B2-05": {
+     "disposition": "REGISTER_NO_LINE",
+     "evidence": "a void is a deduction, not a payable item: the GF light well is out of the GF ceiling (T-147), stair shafts on B7 lines",
+     "figure_beside": "GF light well 23.24 m2 (ST p.4 face; 1F plan VOID 4.00 x 5.87 = 23.48)"
+    },
+    "B3-03": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no marble floor drawn or noted (T-091, 12 arch pages + DXF); GF entrance / hall floor is B3-01 (T-418); the freelancer 'entrance marble' rows are the E1 external stair (B7-02 / B7-04, T-471)"
+    },
+    "B3-07": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "hidden skirting profile printed nowhere (T-409); doorway boundaries carry the marble threshold lines (B3-04); no profile / transition strip printed"
+    },
+    "B4-02": {
+     "disposition": "COVERED_BY_LINE",
+     "evidence": "kitchen / laundry / pantry faces are full-height wet-room tile on FIN.WALL.TILE (B4-01) by owner rule (UP-WET-001, Q-37 A / Q-40 A / Q-48 A); 0 own faces (T-351)"
+    },
+    "B4-04": {
+     "disposition": "COVERED_BY_LINE",
+     "evidence": "external render is FIN.EXT.FINISH (18 lines, T-760 figures), mapped to B4-07 in master 1.81.0: PROPOSAL for the next master: move FIN.EXT.FINISH to B4-04 (render), keep paint / edges in B4-07; no line moves"
+    },
+    "B4-11": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no material legend, 0 of 675 DXF texts name a cladding; render + paint on every face (T-360 MERGED 5bde82a7); porch arch surround on the designer list"
+    },
+    "B5-05": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no access panel drawn or noted; MEP drawings absent: revisit with B12 at the MEP stage"
+    },
+    "B6-08": {
+     "disposition": "COVERED_BY_ROW",
+     "evidence": "T-768 (worker 2, TODO) fills DOOR.LIFT_LANDING: 3 landings GF / 1F / 2F (T-619), 1.00 x 2.10 default; the lines are absent from V3.0.81, so T-768 adds them",
+     "figure_beside": "3 pcs"
+    },
+    "B7-10": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no wall handrail drawn (one FIN.HANDRAIL EXCLUDED_WITH_REASON line, T-199 / UP-STAIR-013)"
+    },
+    "B7-14": {
+     "disposition": "PARKED",
+     "evidence": "rebar parked by the owner 2026-11-11: approximate tons by ratio at the end"
+    },
+    "B8-04": {
+     "disposition": "COVERED_BY_LINE",
+     "evidence": "showers sit inside the wet-room membrane FIN.WP.FLOOR + upturn (B8-01 / B8-03), no separate tanking (Q-40 A, T-369); 6 showers (T-743)"
+    },
+    "B8-07": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no balcony / terrace label, no slab projecting with a door onto it; the 2F roof terrace and the pool-court slab are on FIN.WP.ROOF (B8-06) (T-486 MERGED)"
+    },
+    "B9-05": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "parapets carried all-RC on STR.CONC.PARAPET (T-761 MERGED: sections A-A / B-B cut every parapet in RC); ST p.14 typical block-on-upstand alternative noted in T-761's basis"
+    }
+   },
+   "inputs": [
+    "research/agents_t770/out/LINE_INDEX_V3_0_81.json",
+    "rules/coverage/BOQ_FAMILY_MASTER_1.81.0.json",
+    "research/agents_t743/out/T743_ALSENAN_COUNTS.json",
+    "research/agents_t355/summary.json",
+    "research/agents_t362/summary.json",
+    "research/agents_t760/out/FIX_ROWS.json",
+    "research/agents_t763/out/FIX_ROWS.json",
+    "research/agents_t769/out/FIX_ROWS.json"
+   ],
+   "master_mapping_proposal": {
+    "family_field": "disposition (builder Missing sheet skips every disposition but HELD_MEP_STAGE)",
+    "item_codes_to_family": {
+     "FIN.CEILING.CORNICE": "B5-03",
+     "FIN.CEILING.GYPSUM": "B5-02",
+     "FIN.SPATTER_DASH": "B4-05",
+     "FIN.STAIR.NOSING": "B7-05",
+     "FIN.WALL.TILE.EDGE": "B4-10",
+     "JOIN.KITCHEN.BASE": "B13-06",
+     "JOIN.KITCHEN.WALL": "B13-06",
+     "JOIN.WARDROBE": "B13-06",
+     "MAS.MESH_STRIP": "B9-03",
+     "MAS.SHARMAT": "B9-03",
+     "MEP.SAN.BASIN": "B12-01",
+     "MEP.SAN.FLOOR_DRAIN_3IN": "B12-01",
+     "MEP.SAN.FLOOR_DRAIN_4IN": "B12-01",
+     "MEP.SAN.KITCHEN_SINK": "B12-01",
+     "MEP.SAN.SHOWER_TRAY": "B12-01",
+     "MEP.SAN.SHOWER_WALKIN": "B12-01",
+     "MEP.SAN.WASHING_MACHINE_POINT": "B12-01",
+     "MEP.SAN.WC": "B12-01",
+     "MET.RAILING.POST": "B7-11",
+     "SITE.EXCAVATION_SUPPORT": "B1-06"
+    },
+    "move": {
+     "FIN.EXT.FINISH": "B4-07 -> B4-04"
+    }
+   },
+   "new_lines": [
+    {
+     "basis": "ST p.8 note 15 puts excavation protection / shoring on the contractor (extent by his specialist study); faces at the plot line >= 1.50 deep on all 4 sides (T-358 TRIGGERED); 1 lump-sum item, perimeter 2 x (15.00 + 31.37) = 92.74 lm beside",
+     "element_id": "SITE:B1-06b",
+     "family": "B1-06",
+     "item_code": "SITE.EXCAVATION_SUPPORT",
+     "label": "DRAWING-READ",
+     "net": 1.0,
+     "unit": "item"
+    },
+    {
+     "basis": "= carrier FIN.PLASTER m2 total 1622.00 (V3.0.81 index with the merged T-760 / T-763 / T-769 figures; owner OD-V3B-4..7 coat under every finished face once, wet-room tile backing included; recompute from the carrier at wiring)",
+     "element_id": "SPATTER:INTERIOR",
+     "family": "B4-05",
+     "item_code": "FIN.SPATTER_DASH",
+     "label": "ESTIMATE",
+     "net": 1622.0,
+     "unit": "m2",
+     "vs_freelancer": {
+      "diff": 1117.46,
+      "freelancer": 504.54,
+      "pct": 221.5,
+      "verdict": "RULE_DIFFERENCE: freelancer = wet rooms + kitchens 433.83 + under soffit 70.71 only; owner OD-V3B-4..7 = every plastered face"
+     }
+    },
+    {
+     "basis": "= carrier FIN.EXT.FINISH m2 total 1054.00 (V3.0.81 index with the merged T-760 / T-763 / T-769 figures; owner OD-V3B-4..7 coat under every finished face once; recompute from the carrier at wiring)",
+     "element_id": "SPATTER:EXTERIOR",
+     "family": "B4-05",
+     "item_code": "FIN.SPATTER_DASH",
+     "label": "ESTIMATE",
+     "net": 1054.0,
+     "unit": "m2"
+    },
+    {
+     "basis": "= carrier EXT.FENCE.PLASTER m2 total 179.84 (V3.0.81 index with the merged T-760 / T-763 / T-769 figures; owner OD-V3B-4..7 coat under every finished face once; recompute from the carrier at wiring)",
+     "element_id": "SPATTER:FENCE",
+     "family": "B4-05",
+     "item_code": "FIN.SPATTER_DASH",
+     "label": "ESTIMATE",
+     "net": 179.84,
+     "unit": "m2"
+    },
+    {
+     "basis": "T-368 determinate 31.65 lm at the 3.65 tile top x 3.00 / 3.65 (owner tile top 3.00, 13 Nov) = 26.01 + GF-14 wall end and flat stop 2 x 3.00 (no header on the slab plan) = 32.01; finish 45-degree OR steel profile (never both), designer list",
+     "element_id": "TILE_EDGE:CORNERS_AND_ENDS",
+     "family": "B4-10",
+     "item_code": "FIN.WALL.TILE.EDGE",
+     "label": "ESTIMATE",
+     "net": 32.01,
+     "unit": "lm"
+    },
+    {
+     "basis": "door-jamb tile edges: T-368 range 0 .. 73.1 lm (0 when the door frame covers the edge); frame / architrave detail not printed",
+     "element_id": "TILE_EDGE:DOOR_JAMBS",
+     "family": "B4-10",
+     "high": 73.1,
+     "item_code": "FIN.WALL.TILE.EDGE",
+     "label": "ESTIMATE",
+     "low": 0.0,
+     "unit": "lm"
+    },
+    {
+     "basis": "= FIN.CEILING m2 of the candidate 411.34 (4 lines still blank: T-768 fills them; recompute at wiring); owner Q-57 A mod + Q-48 A: gypsum decor ceiling in every room, moisture-resistant board type HELD (not specified); FIN.CEILING stays the physical area (B5-01): wire as the board item, not added to it",
+     "element_id": "CEILING:GYPSUM_DECOR",
+     "family": "B5-02",
+     "item_code": "FIN.CEILING.GYPSUM",
+     "label": "ESTIMATE",
+     "net": 411.34,
+     "unit": "m2",
+     "vs_freelancer": {
+      "diff": 1.76,
+      "freelancer": 409.58,
+      "pct": 0.4,
+      "verdict": "AGREE within 1 % before T-768's blanks"
+     }
+    },
+    {
+     "basis": "T-147 closed-room wall perimeter at the decor ceiling 302.88 lm; no cornice / cove detail printed (Q-57 A mod: cove only with geometry or a detail, not carried); open zones without a wall edge not counted",
+     "element_id": "CEILING:CORNICE",
+     "family": "B5-03",
+     "item_code": "FIN.CEILING.CORNICE",
+     "label": "ESTIMATE",
+     "net": 302.88,
+     "unit": "lm",
+     "vs_freelancer": {
+      "diff": -124.58,
+      "freelancer": 427.46,
+      "pct": -29.1,
+      "verdict": "UNRESOLVED: freelancer rooms 282.85 + wet rooms 144.61 lm; open-zone and wet-room runs to split by room"
+     }
+    },
+    {
+     "basis": "one nosing per step edge = T-766 FIN.STAIR.STEP_LM 89.69 (READY; recompute when merged) + landing / floor arrival edges 7.4 (T-412 DRAWING-CONFIRMED) = 97.09; nosing form not printed (designer list)",
+     "element_id": "STAIR:NOSING",
+     "family": "B7-05",
+     "item_code": "FIN.STAIR.NOSING",
+     "label": "ESTIMATE",
+     "net": 97.09,
+     "unit": "lm"
+    },
+    {
+     "basis": "posts drawn on the roof X railings: RL-02 (NW) 6, RL-01 (SE) 4 = 10 (T-361); glass panels drawn nowhere and not specified: no glass line",
+     "element_id": "RAILING:POSTS",
+     "family": "B7-11",
+     "item_code": "MET.RAILING.POST",
+     "label": "DRAWING-READ",
+     "net": 10.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "strip on every 3rd course of every block wall (Q-77): T-355 black restated by T-362 + white family A (62.5 x 25 face, as T-765): certain 856.14 .. + held levels 291.82; 7 walls of unknown block type not in the range (T-362)",
+     "element_id": "MASONRY:MESH_STRIP",
+     "family": "B9-03",
+     "high": 1147.96,
+     "item_code": "MAS.MESH_STRIP",
+     "label": "ESTIMATE",
+     "low": 856.14,
+     "optional": true,
+     "unit": "lm"
+    },
+    {
+     "basis": "one tie per 3rd course at every wall-to-column junction (Q-77): 293 pcs at 57 resolved junctions .. + 60 held junctions x 5.14 pcs average",
+     "element_id": "MASONRY:SHARMAT",
+     "family": "B9-03",
+     "high": 601.42,
+     "item_code": "MAS.SHARMAT",
+     "label": "ESTIMATE",
+     "low": 293.0,
+     "optional": true,
+     "unit": "pcs"
+    },
+    {
+     "basis": "WC (GF 6, 1F 5, 2F 1): 12 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:WC",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.WC",
+     "label": "MEASURED",
+     "net": 12.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "wash basin (GF 11, 1F 5, 2F 1; 5 on both sheets): 17 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:BASIN",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.BASIN",
+     "label": "MEASURED",
+     "net": 17.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "shower tray (GF 1, 1F 2): 3 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:SHOWER_TRAY",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.SHOWER_TRAY",
+     "label": "MEASURED",
+     "net": 3.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "walk-in shower zone, screen + mixer (1F 2, 2F 1): 3 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:SHOWER_WALKIN",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.SHOWER_WALKIN",
+     "label": "MEASURED",
+     "net": 3.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "floor drain 4 in: 14 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:FLOOR_DRAIN_4IN",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.FLOOR_DRAIN_4IN",
+     "label": "MEASURED",
+     "net": 14.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "floor drain 3 in: 5 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:FLOOR_DRAIN_3IN",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.FLOOR_DRAIN_3IN",
+     "label": "MEASURED",
+     "net": 5.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "GF kitchen sink (kitchen FD4 drawn, sink symbol not): 1 per room by function (T-743 HELD the symbol); designer list",
+     "element_id": "SANITARY:KITCHEN_SINK",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.KITCHEN_SINK",
+     "label": "ESTIMATE",
+     "net": 1.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "1F laundry washing-machine point (FD4 drawn): 1 per room by function (T-743 HELD the symbol); designer list",
+     "element_id": "SANITARY:WASHING_MACHINE_POINT",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.WASHING_MACHINE_POINT",
+     "label": "ESTIMATE",
+     "net": 1.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "GF lobby box 0.50 x 2.10 (T-223) 2.100 + 1F dressing box 0.50 x 1.80 (T-223 / T-240) 1.800 = 3.900 lm; height 2.40 company default (owner 13 Nov); no interior drawing; boxes drawn on layer 5, no wall line (T-223 joinery rule)",
+     "element_id": "JOINERY:WARDROBE",
+     "family": "B13-06",
+     "item_code": "JOIN.WARDROBE",
+     "label": "DEFAULT",
+     "net": 3.9,
+     "unit": "lm"
+    },
+    {
+     "basis": "GF kitchen L counter north 2.650 + west 2.500 (T-351) 5.150 + GF pantry wall-backed legs 3.066 + 1.450 + 1.400 (T-351) 5.916 = 11.066 lm; height 0.85 company default (owner 13 Nov); no interior drawing; counter outlines drawn; pantry peninsula on the open edge not counted",
+     "element_id": "JOINERY:BASE",
+     "family": "B13-06",
+     "item_code": "JOIN.KITCHEN.BASE",
+     "label": "DEFAULT",
+     "net": 11.07,
+     "unit": "lm"
+    },
+    {
+     "basis": "GF kitchen west leg (north leg under W08) (T-351) 2.500 + GF pantry wall-backed legs (T-351) 5.916 = 8.416 lm; height 0.70 company default (owner 13 Nov); no interior drawing; wall units not drawn: on the wall-backed legs, none under a window",
+     "element_id": "JOINERY:WALL",
+     "family": "B13-06",
+     "item_code": "JOIN.KITCHEN.WALL",
+     "label": "ESTIMATE",
+     "net": 8.42,
+     "unit": "lm"
+    }
+   ],
+   "rows": [],
+   "schema": "URBAN_FIX_ROWS_V1",
+   "summary": {
+    "dispositions": {
+     "COVERED_BY_LINE": [
+      "B4-02",
+      "B4-04",
+      "B8-04"
+     ],
+     "COVERED_BY_ROW": [
+      "B1-01",
+      "B1-05",
+      "B1-06",
+      "B1-07",
+      "B6-08"
+     ],
+     "HELD_MEP_STAGE": [
+      "B12-02",
+      "B12-03",
+      "B12-04",
+      "B12-05"
+     ],
+     "NOT_APPLICABLE_WITH_EVIDENCE": [
+      "B13-03",
+      "B13-05",
+      "B13-07",
+      "B3-03",
+      "B3-07",
+      "B4-11",
+      "B5-05",
+      "B7-10",
+      "B8-07",
+      "B9-05"
+     ],
+     "PARKED": [
+      "B11-02",
+      "B11-03",
+      "B11-04",
+      "B7-14"
+     ],
+     "REGISTER_NO_LINE": [
+      "B2-01",
+      "B2-03",
+      "B2-04",
+      "B2-05"
+     ]
+    },
+    "missing_families_in_candidate": 39,
+    "missing_sheet_after_wiring": [
+     "B12-02",
+     "B12-03",
+     "B12-04",
+     "B12-05"
+    ],
+    "new_lines": 23,
+    "not_covered": [],
+    "with_new_lines": [
+     "B1-06",
+     "B12-01",
+     "B13-06",
+     "B4-05",
+     "B4-10",
+     "B5-02",
+     "B5-03",
+     "B7-05",
+     "B7-11",
+     "B9-03"
+    ]
+   },
+   "task": "T-771"
+  }
+ },
+ "row_bases": [
+  "ARCH_TAKEOFF_V3.0.79",
+  "ARCH_TAKEOFF_V3.0.81",
+  "ARCH_TAKEOFF_V3.0.82"
+ ],
+ "schema": "URBAN_FILL_PACKAGE_V5",
+ "set_names": [
+  "T-760",
+  "T-780",
+  "T-785"
+ ],
+ "set_sha256": {
+  "T-760": "cbf80bb43e6dbcdd65188369eaf6043e30754863868b8e6a45eceaacb1459ca5",
+  "T-780": "7add7e23fae003fcb0fca354a70e7c79dc9406814427d2419d0e3d4261da233a",
+  "T-785": "90c1a3a48c4b64f4e779023dab9a5112e98471e8714f5d7f24edfe4bd46a02f0",
+  "recall:T-771": "5eb803cdd7c6e16424ef2560c6f194c4d631eb6bb84e8e6ac00c623662cd863f"
+ },
+ "sets": [
+  {
+   "base": "agents/task-T-314 597d2820 (T-314 r3 READY, stacked on V3.0.78)",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.79",
+   "index_sha16": "0582aac58defff74",
+   "rows": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 15.257684
+     },
+     "basis": "glazed line NW-4 developed 6.6577 head + 2 frame-end jambs +1.00 .. +5.30 (T-305 W03)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W03",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "DRAWING-READ",
+     "line_id": "L-00c945c77933c8e88c52",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 16.8
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 16.8,
+      "low": 16.8,
+      "net": null
+     },
+     "element_id": "2F-FACADE:CORNER_EDGE:2F-STOREY",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-0490ed646652c41fca5e",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.633468
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); x 0.20 / 0.30 drawn; D-band end at mid",
+     "before": {
+      "class": "HELD",
+      "high": 5.67398,
+      "low": 5.592956,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_TOP:GF_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "ESTIMATE",
+     "line_id": "L-055b04a9d70f369717c2",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 71.75114
+     },
+     "basis": "72.750 high - NW-4 (6.6577 x 0.85 -> x 0.70: the arc stands on the pool rim +0.30, lines 2861 / 285C, T-751) ; NW-3 / NW-5 ends on the court +0.15 (285E / 283E), SW-8 +0.15 as every covered plinth",
+     "before": {
+      "class": "HELD",
+      "high": 72.749795,
+      "low": 71.68859,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PLINTH",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "DRAWING-READ",
+     "line_id": "L-0a6d30ea444e90e119bb",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.0
+     },
+     "basis": "the thin 10.84 m second outline around 0.66 m2 on a wall layer is a drawing element (defect L-N10-01): no face in the T-305 / T-756 ledgers (every drawn face once, residual 0); the run is the released outline",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "2F-FACADE:facade outline 2",
+     "item_code": "ARCH.FACADE_RUN",
+     "label": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "line_id": "L-0b729a1774ad4ce4efaf",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.2,
+      "low": 2.2,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W19",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-0d552b0330e270458632",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 37.8
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 37.8,
+      "low": 37.8,
+      "net": null
+     },
+     "element_id": "1F-FACADE:CORNER_EDGE:1F-STOREY",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-1f1149d7984ccf9741d7",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 10.73
+     },
+     "basis": "6.33 printed + 2 x 2.20 drawn at B-B (T-201)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W02",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "DRAWING-READ",
+     "line_id": "L-1f2271d554f95e406a6d",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 6.89638
+     },
+     "basis": "runs x 0.60 default depth: NW-2 2.675, NE-1 0.08, SW-1 0.08, SW-2 3.00, NW-4 0.467, NW-5 0.325 (T-305 / T-348) + SE-1 porch-mouth band 2.30 x 0.80 = 1.840 (T-754) + 1.80 behind the annex x 0.60",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-FACADE:SLAB_EDGE",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "DEFAULT",
+     "line_id": "L-22e75c3942faeeb6718a",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.415
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); 18.05 m x 0.30 DRAWING-CONFIRMED (T-722 concrete agrees)",
+     "before": {
+      "class": "HELD",
+      "high": 5.415,
+      "low": 5.415,
+      "net": null
+     },
+     "element_id": "2F-FACADE:PARAPET_TOP:2F_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "MEASURED",
+     "line_id": "L-230398c46b92f029d3b8",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.6397
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); pool-court front 0.962 + void ring inner 4.4636 m x 0.60 (beam depth default; T-348 r2 0.20 .. 0.75)",
+     "before": {
+      "class": "HELD",
+      "high": 4.30924,
+      "low": 1.85426,
+      "net": null
+     },
+     "element_id": "GF-FACADE:SLAB_EDGE",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "DEFAULT",
+     "line_id": "L-295c61dadc19f202ba40",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.2,
+      "low": 2.2,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W20",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-2f8915e983602ec8b486",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 391.253149
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); 376.694 low + (GF/NW-7 35.550 - W02 6.33 x 2.20 = 13.926 -> 21.624) - 7.065; D-GF-07 hole 2.00 x 2.50 = 5.000 printed plan tag (plan dimension governs a facade, company default; F-T737-1)",
+     "before": {
+      "class": "HELD",
+      "high": 410.179149,
+      "low": 376.694149,
+      "net": null
+     },
+     "element_id": "GF-FACADE:facade",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "DRAWING-READ",
+     "line_id": "L-303ff82cf94735a67f5f",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.2,
+      "low": 2.2,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W22",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-3339078669e1e4d29686",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 125.16
+     },
+     "basis": "29.80 x 4.20 (T-737 handle re-measure, register)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "2F-FACADE:facade",
+     "item_code": "ARCH.FACADE",
+     "label": "MEASURED",
+     "line_id": "L-348c4d8d32f3f6d35fe5",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 15.271022
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); 14.671 + NE-6x outer face 0.600 m2 (T-324 C5): an outer face is rendered like every outer face; Q-65 C holds its block material, not its render; < 1 % of the line",
+     "before": {
+      "class": "HELD",
+      "high": 15.271022,
+      "low": 14.671022,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_OUTER:ANNEX_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "ESTIMATE",
+     "line_id": "L-38ec925f1c1e26478bc5",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.2,
+      "low": 2.2,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W06",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-3f4d289ce3f0cd4fd4a3",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 6.89638
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); runs x 0.60 default depth: NW-2 2.675, NE-1 0.08, SW-1 0.08, SW-2 3.00, NW-4 0.467, NW-5 0.325 (T-305 / T-348) + SE-1 porch-mouth band 2.30 x 0.80 = 1.840 (T-754) + 1.80 behind the annex x 0.60",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-FACADE:SLAB_EDGE",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "DEFAULT",
+     "line_id": "L-42e228e940e2164d7967",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 280.73812
+     },
+     "basis": "= 1F render 249.954 + its holes 30.784 (T-305 OPENING_HOLES; T-756 stage faces incl.; register)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-FACADE:facade",
+     "item_code": "ARCH.FACADE",
+     "label": "DRAWING-READ",
+     "line_id": "L-43527ae4e8ec75c56636",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.0
+     },
+     "basis": "the thin 10.84 m second outline around 0.66 m2 on a wall layer is a drawing element (defect L-N10-01): no face in the T-305 / T-756 ledgers (every drawn face once, residual 0); the run is the released outline",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-FACADE:facade outline 2",
+     "item_code": "ARCH.FACADE_RUN",
+     "label": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "line_id": "L-472196bf3c74cdf83180",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.0
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 4.0,
+      "low": 4.0,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W10",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-4858f2a238a9fe36c5d9",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.633468
+     },
+     "basis": "x 0.20 / 0.30 drawn; D-band end at mid",
+     "before": {
+      "class": "HELD",
+      "high": 5.67398,
+      "low": 5.592956,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_TOP:GF_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "ESTIMATE",
+     "line_id": "L-490fdc0ff59a0e66ca13",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.55
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 4.55,
+      "low": 4.55,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W24",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-5175b3811753a2ff87d4",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 6.01701
+     },
+     "basis": "x 0.30 drawn; D-band end 0.20 m at mid",
+     "before": {
+      "class": "HELD",
+      "high": 6.03701,
+      "low": 5.99701,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_TOP:ANNEX_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "ESTIMATE",
+     "line_id": "L-54e708d3940d1932607c",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 14.385
+     },
+     "basis": "T-305 / T-337 DRAWING-CONFIRMED faces",
+     "before": {
+      "class": "HELD",
+      "high": 14.385,
+      "low": 14.385,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_OUTER:GF_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "MEASURED",
+     "line_id": "L-5816ca234f93f8947eb9",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 58.253371
+     },
+     "basis": "54.651 low + NE-1 / SW-1 0.08 x 1.20 + SW-2 4.40 x 1.20 = 5.280 (parapet 1.20 company default; range 1.10 .. 1.30 / 0.385 .. 1.60)",
+     "before": {
+      "class": "HELD",
+      "high": 60.029307,
+      "low": 54.651307,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PARAPET_OUTER:1F_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "DEFAULT",
+     "line_id": "L-5a04a3ec70ce025ddd95",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 117.305
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); 125.160 gross (T-737 handle re-measure) - 7.855 holes; D-2F-01 head 2.20 (company default head)",
+     "before": {
+      "class": "HELD",
+      "high": 117.305,
+      "low": 117.305,
+      "net": null
+     },
+     "element_id": "2F-FACADE:facade",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "DEFAULT",
+     "line_id": "L-5acef54ec7173ec1c7e7",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 49.216037
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); R-T324-1 at c = 0.10 + 1F exposed height 1.07 .. 1.17 HELD (D-39 roof datum) at its midpoint",
+     "before": {
+      "class": "HELD",
+      "high": 56.608545,
+      "low": 41.82353,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PARAPET_INNER:1F_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "ESTIMATE",
+     "line_id": "L-5cbd99833ad9c8b54edc",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 11.047192
+     },
+     "basis": "R-T324-1 at c = 0.10 (as annex)",
+     "before": {
+      "class": "HELD",
+      "high": 13.88495,
+      "low": 8.209433,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_INNER:GF_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "DEFAULT",
+     "line_id": "L-60877480b3303b0be233",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 4.2,
+      "low": 4.2,
+      "net": null
+     },
+     "element_id": "2F-FACADE:PAINT_EDGE:W29",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-62f300acd39b136cb175",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 14.385
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); T-305 / T-337 DRAWING-CONFIRMED faces",
+     "before": {
+      "class": "HELD",
+      "high": 14.385,
+      "low": 14.385,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_OUTER:GF_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "MEASURED",
+     "line_id": "L-641be9f82f398510d4d8",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.0
+     },
+     "basis": "the thin 10.84 m second outline around 0.66 m2 on a wall layer is a drawing element (defect L-N10-01): no face in the T-305 / T-756 ledgers (every drawn face once, residual 0); the run is the released outline",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-FACADE:facade outline 2",
+     "item_code": "ARCH.FACADE_RUN",
+     "label": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "line_id": "L-66bc23b0d25030222328",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.0
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.0,
+      "low": 2.0,
+      "net": null
+     },
+     "element_id": "GF-FACADE:CORNER_EDGE:PARAPET-OUTER_ANNEX_4.30",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-6d894ba11e85ebab3595",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 6.845844
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 6.845844,
+      "low": 6.845844,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W16",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-732f4753bbbf9bd5824a",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 9.83902
+     },
+     "basis": "drawn widths; D-band end 0.075 m at mid",
+     "before": {
+      "class": "HELD",
+      "high": 9.84653,
+      "low": 9.83151,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PARAPET_TOP:1F_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "ESTIMATE",
+     "line_id": "L-757343d535ae19b589bf",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.2
+     },
+     "basis": "1.0 + stop-end 2 x 0.50 + 0.20 = 1.20: the GF parapet ends at the open passage mouth, nothing to abut (T-754)",
+     "before": {
+      "class": "HELD",
+      "high": 2.2,
+      "low": 1.0,
+      "net": null
+     },
+     "element_id": "GF-FACADE:CORNER_EDGE:PARAPET-OUTER_GF_5.50",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "ESTIMATE",
+     "line_id": "L-77ae9fd557ed96e51e2c",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 6.01701
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); x 0.30 drawn; D-band end 0.20 m at mid",
+     "before": {
+      "class": "HELD",
+      "high": 6.03701,
+      "low": 5.99701,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_TOP:ANNEX_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "ESTIMATE",
+     "line_id": "L-7a7ada8a4bc4018bbf37",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 15.271022
+     },
+     "basis": "14.671 + NE-6x outer face 0.600 m2 (T-324 C5): an outer face is rendered like every outer face; Q-65 C holds its block material, not its render; < 1 % of the line",
+     "before": {
+      "class": "HELD",
+      "high": 15.271022,
+      "low": 14.671022,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_OUTER:ANNEX_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "ESTIMATE",
+     "line_id": "L-7c48b6a481d71ac57c54",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 9.83902
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); drawn widths; D-band end 0.075 m at mid",
+     "before": {
+      "class": "HELD",
+      "high": 9.84653,
+      "low": 9.83151,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PARAPET_TOP:1F_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "ESTIMATE",
+     "line_id": "L-7d1ad2dedd3b0c5ec4eb",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.0
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.0,
+      "low": 2.0,
+      "net": null
+     },
+     "element_id": "2F-FACADE:CORNER_EDGE:PARAPET-OUTER_2F_13.90",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-7dee2315237624352856",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.2,
+      "low": 2.2,
+      "net": null
+     },
+     "element_id": "2F-FACADE:PAINT_EDGE:W28",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-828dceb0078b7f012235",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 11.047192
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); R-T324-1 at c = 0.10 (as annex)",
+     "before": {
+      "class": "HELD",
+      "high": 13.88495,
+      "low": 8.209433,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_INNER:GF_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "DEFAULT",
+     "line_id": "L-86262d3438794a5c0c02",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.2,
+      "low": 2.2,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W21",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-87ff71254064b753bb4c",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 6.35
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 6.35,
+      "low": 6.35,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W11",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-8936969dac171b4ff53c",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.415
+     },
+     "basis": "18.05 m x 0.30 DRAWING-CONFIRMED (T-722 concrete agrees)",
+     "before": {
+      "class": "HELD",
+      "high": 5.415,
+      "low": 5.415,
+      "net": null
+     },
+     "element_id": "2F-FACADE:PARAPET_TOP:2F_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "MEASURED",
+     "line_id": "L-89d750dd0e9ced13f5ca",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.2,
+      "low": 2.2,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W23",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-8b0186a7c762cde9b53b",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 249.954348
+     },
+     "basis": "high bound: the three arched step returns 1F/NW-2 1.776 m2 (T-348 r2 geometry) are built and rendered",
+     "before": {
+      "class": "HELD",
+      "high": 249.954348,
+      "low": 248.178057,
+      "net": null
+     },
+     "element_id": "1F-FACADE:facade",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "DRAWING-READ",
+     "line_id": "L-8bb83e16cc7b104ab88b",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.65
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 5.65,
+      "low": 5.65,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W14",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-8e743d3fc959f0128da5",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 6.35
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 6.35,
+      "low": 6.35,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W12",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-8fc0ef84a82316f912cd",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.82
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 4.82,
+      "low": 4.82,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W18",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-90199dd4394b21b21b06",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.070563
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 4.070563,
+      "low": 4.070563,
+      "net": null
+     },
+     "element_id": "2F-FACADE:PAINT_EDGE:W26",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-938135cf4fd2008ac1b3",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.0
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 4.0,
+      "low": 4.0,
+      "net": null
+     },
+     "element_id": "2F-FACADE:PAINT_EDGE:W27",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-9628878ef7699c67ec56",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 6.845844
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 6.845844,
+      "low": 6.845844,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W15",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-9640af531898069cc45d",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.5
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 4.5,
+      "low": 4.5,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W09",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-9669bde9e6b37fe1c508",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 14.9
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); T-305 / T-337 DRAWING-CONFIRMED faces",
+     "before": {
+      "class": "HELD",
+      "high": 14.9,
+      "low": 14.9,
+      "net": null
+     },
+     "element_id": "2F-FACADE:PARAPET_OUTER:2F_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "MEASURED",
+     "line_id": "L-982ab2bc6e1d1c672bf9",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 11.90124
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); R-T324-1 split at c = 0.10 (roof build-up default: 5 cm insulation + 5 cm protection above the membrane): upturn exposed 0.10 of 0.20 -> midpoint; D-band end at mid (0.02 m2)",
+     "before": {
+      "class": "HELD",
+      "high": 14.91405,
+      "low": 8.88843,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_INNER:ANNEX_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "DEFAULT",
+     "line_id": "L-9c5ba69d91cf8e1e043c",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.2,
+      "low": 2.2,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W07",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-9e40edefa411df4ade1a",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 58.253371
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); 54.651 low + NE-1 / SW-1 0.08 x 1.20 + SW-2 4.40 x 1.20 = 5.280 (parapet 1.20 company default; range 1.10 .. 1.30 / 0.385 .. 1.60)",
+     "before": {
+      "class": "HELD",
+      "high": 60.029307,
+      "low": 54.651307,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PARAPET_OUTER:1F_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "DEFAULT",
+     "line_id": "L-a0c8ffbfd68113575de4",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 14.25
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 14.25,
+      "low": 14.25,
+      "net": null
+     },
+     "element_id": "GF-FACADE:CORNER_EDGE:PLINTH_GF",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-a2780542dcf0bd72666c",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.5
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 4.5,
+      "low": 4.5,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W08",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-a7bb7850d1b13a093d09",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.2,
+      "low": 2.2,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W05",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-a853287771a92fcbd499",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 391.253149
+     },
+     "basis": "376.694 low + (GF/NW-7 35.550 - W02 6.33 x 2.20 = 13.926 -> 21.624) - 7.065; D-GF-07 hole 2.00 x 2.50 = 5.000 printed plan tag (plan dimension governs a facade, company default; F-T737-1)",
+     "before": {
+      "class": "HELD",
+      "high": 410.179149,
+      "low": 376.694149,
+      "net": null
+     },
+     "element_id": "GF-FACADE:facade",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "DRAWING-READ",
+     "line_id": "L-b05f70c92405dbcfbe62",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.4
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 1.4,
+      "low": 1.4,
+      "net": null
+     },
+     "element_id": "GF-FACADE:CORNER_EDGE:PASSAGE_MOUTH_NO_HOST",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-b15852d929ba95ce8797",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 71.75114
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); 72.750 high - NW-4 (6.6577 x 0.85 -> x 0.70: the arc stands on the pool rim +0.30, lines 2861 / 285C, T-751) ; NW-3 / NW-5 ends on the court +0.15 (285E / 283E), SW-8 +0.15 as every covered plinth",
+     "before": {
+      "class": "HELD",
+      "high": 72.749795,
+      "low": 71.68859,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PLINTH",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "DRAWING-READ",
+     "line_id": "L-b6a0ab4adcaae538a1f8",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 95.1
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 95.1,
+      "low": 95.1,
+      "net": null
+     },
+     "element_id": "GF-FACADE:CORNER_EDGE:GF-STOREY",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-bd3478078952e97e1291",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 71.75114
+     },
+     "basis": "= plinth render faces (register)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-FACADE:facade below F.F.L. (plinth)",
+     "item_code": "ARCH.FACADE",
+     "label": "DRAWING-READ",
+     "line_id": "L-c0e9a4c62171de1f369b",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 5.2,
+      "low": 5.2,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W01",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-c1ee2df6d49af6ccaaff",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 11.90124
+     },
+     "basis": "R-T324-1 split at c = 0.10 (roof build-up default: 5 cm insulation + 5 cm protection above the membrane): upturn exposed 0.10 of 0.20 -> midpoint; D-band end at mid (0.02 m2)",
+     "before": {
+      "class": "HELD",
+      "high": 14.91405,
+      "low": 8.88843,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PARAPET_INNER:ANNEX_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "DEFAULT",
+     "line_id": "L-c79492a8ed9c2c310d37",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.0
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 4.0,
+      "low": 4.0,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W25",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-c8d7e0b8c422b558b5fb",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 469.329
+     },
+     "basis": "= GF render 391.253 + holes 59.150 + W02 13.926 + D-GF-07 5.000 = T-337 gross (register; render counted once)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-FACADE:facade",
+     "item_code": "ARCH.FACADE",
+     "label": "MEASURED",
+     "line_id": "L-cc7dc0a51f3319a99482",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 249.954348
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); high bound: the three arched step returns 1F/NW-2 1.776 m2 (T-348 r2 geometry) are built and rendered",
+     "before": {
+      "class": "HELD",
+      "high": 249.954348,
+      "low": 248.178057,
+      "net": null
+     },
+     "element_id": "1F-FACADE:facade",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "DRAWING-READ",
+     "line_id": "L-cdade9d53266d174ea6d",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 49.216037
+     },
+     "basis": "R-T324-1 at c = 0.10 + 1F exposed height 1.07 .. 1.17 HELD (D-39 roof datum) at its midpoint",
+     "before": {
+      "class": "HELD",
+      "high": 56.608545,
+      "low": 41.82353,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PARAPET_INNER:1F_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "ESTIMATE",
+     "line_id": "L-d4178f2108229818b472",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 14.9
+     },
+     "basis": "T-305 / T-337 DRAWING-CONFIRMED faces",
+     "before": {
+      "class": "HELD",
+      "high": 14.9,
+      "low": 14.9,
+      "net": null
+     },
+     "element_id": "2F-FACADE:PARAPET_OUTER:2F_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "MEASURED",
+     "line_id": "L-d503696a891174c1d837",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 117.305
+     },
+     "basis": "125.160 gross (T-737 handle re-measure) - 7.855 holes; D-2F-01 head 2.20 (company default head)",
+     "before": {
+      "class": "HELD",
+      "high": 117.305,
+      "low": 117.305,
+      "net": null
+     },
+     "element_id": "2F-FACADE:facade",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "DEFAULT",
+     "line_id": "L-d52c4f763b19aedf8b8b",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 9.29
+     },
+     "basis": "owner Q-76 A window 3.29 x 3.00 (T-627)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W17",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "DRAWING-READ",
+     "line_id": "L-d5b431b40ee77854d295",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 6.585812
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 6.585812,
+      "low": 6.585812,
+      "net": null
+     },
+     "element_id": "1F-FACADE:CORNER_EDGE:PARAPET-OUTER_1F_9.70",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-d8a40db59611b0508dbc",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 11.32
+     },
+     "basis": "= render of the same faces (UP-FIN-PAINT-002); R-T324-1 at c = 0.10 (28.30 m x 0.40)",
+     "before": {
+      "class": "HELD",
+      "high": 14.15,
+      "low": 8.49,
+      "net": null
+     },
+     "element_id": "2F-FACADE:PARAPET_INNER:2F_ROOF",
+     "item_code": "FIN.EXT.PAINT",
+     "label": "DEFAULT",
+     "line_id": "L-e0d6f67fd63d6d84d934",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.6397
+     },
+     "basis": "pool-court front 0.962 + void ring inner 4.4636 m x 0.60 (beam depth default; T-348 r2 0.20 .. 0.75)",
+     "before": {
+      "class": "HELD",
+      "high": 4.30924,
+      "low": 1.85426,
+      "net": null
+     },
+     "element_id": "GF-FACADE:SLAB_EDGE",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "DEFAULT",
+     "line_id": "L-e3ee1b7f7603762da446",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.2
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 2.2,
+      "low": 2.2,
+      "net": null
+     },
+     "element_id": "GF-FACADE:PAINT_EDGE:W04",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-ea0199024291675b2fc5",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 11.32
+     },
+     "basis": "R-T324-1 at c = 0.10 (28.30 m x 0.40)",
+     "before": {
+      "class": "HELD",
+      "high": 14.15,
+      "low": 8.49,
+      "net": null
+     },
+     "element_id": "2F-FACADE:PARAPET_INNER:2F_ROOF",
+     "item_code": "FIN.EXT.FINISH",
+     "label": "DEFAULT",
+     "line_id": "L-fbda06a1ad25128c6a63",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.8
+     },
+     "basis": "HELD point of the merged edge ledger (T-751 / T-754 / T-756)",
+     "before": {
+      "class": "HELD",
+      "high": 5.8,
+      "low": 5.8,
+      "net": null
+     },
+     "element_id": "1F-FACADE:PAINT_EDGE:W13",
+     "item_code": "FIN.EXT.PAINT.EDGE",
+     "label": "MEASURED",
+     "line_id": "L-fff0703638afcf72604c",
+     "set": "EXT_RENDER_PAINT",
+     "unit": "lm"
+    }
+   ],
+   "schema": "T760_FIX_ROWS_V1",
+   "sets": [
+    "EXT_RENDER_PAINT"
+   ],
+   "summary": {
+    "ARCH.FACADE": {
+     "after": 946.98,
+     "blank_after": 0,
+     "blank_before": 4,
+     "high_before": 0.0,
+     "labels": {
+      "DRAWING-READ": 2,
+      "MEASURED": 2
+     },
+     "lines": 4,
+     "low_before": 0.0
+    },
+    "ARCH.FACADE_RUN": {
+     "after": 0.0,
+     "blank_after": 0,
+     "blank_before": 3,
+     "high_before": 0.0,
+     "labels": {
+      "NOT_APPLICABLE_WITH_EVIDENCE": 3
+     },
+     "lines": 3,
+     "low_before": 0.0
+    },
+    "FIN.EXT.FINISH": {
+     "after": 1054.0,
+     "blank_after": 0,
+     "blank_before": 1,
+     "high_before": 1085.61,
+     "labels": {
+      "DEFAULT": 7,
+      "DRAWING-READ": 3,
+      "ESTIMATE": 5,
+      "MEASURED": 3
+     },
+     "lines": 18,
+     "low_before": 1008.58
+    },
+    "FIN.EXT.PAINT": {
+     "after": 1054.0,
+     "blank_after": 0,
+     "blank_before": 1,
+     "high_before": 1085.61,
+     "labels": {
+      "DEFAULT": 7,
+      "DRAWING-READ": 3,
+      "ESTIMATE": 5,
+      "MEASURED": 3
+     },
+     "lines": 18,
+     "low_before": 1008.58
+    },
+    "FIN.EXT.PAINT.EDGE": {
+     "after": 317.1,
+     "blank_after": 0,
+     "blank_before": 3,
+     "high_before": 281.82,
+     "labels": {
+      "DRAWING-READ": 3,
+      "ESTIMATE": 1,
+      "MEASURED": 34
+     },
+     "lines": 38,
+     "low_before": 280.62
+    }
+   }
+  },
+  {
+   "beside": {
+    "alternative_top_roof_gross_m2": {
+     "value": 49.665,
+     "when": "the designer's roof plan shows the dome membrane running under DOME-3 (no base upturn): +15.275 m2 per layer, -13.855 lm upturn; designer item D-62 (no roof plan)"
+    },
+    "annex_finish_on_d_band_m2": {
+     "value": 54.9203,
+     "when": "the D band at the annex wall foot is a built plinth on the slab (finish only, -0.639 m2 = 0.27 % of the roof finish trade)"
+    },
+    "missing_item_dome_extrados": "3 concrete dome shells (S0) have no outer-surface waterproofing / finish line; spherical cap pi (a^2 + h^2): 2 x pi (2.21^2 + 1.90^2) = 53.38 m2 + pi (2.205^2 + 2.15^2) = 29.80 m2, about 83.2 m2 BESIDE only (no company default, no printed spec): Lead to route as a MISSING family / designer item, never folded into the roof membrane",
+    "pool_court_layers": "the +5.50 pool-court open-sky slab has a membrane line (4.907 + ledge 0.640) but no screed / insulation / protection / finish lines: its floor finish belongs to the pool-court outdoor floor family (T-769), not added here"
+   },
+   "candidate_version": "ARCH_TAKEOFF_V3.0.82",
+   "inputs": {
+    "drawn": "T626_DRAWN.json (T-626 / T-321 merged)",
+    "dxf_reread": "Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip handles 12B7 1292 1283 1279 1288 1291 1281 1274 1300 (dimensions only)",
+    "index": "LINE_INDEX_V3_0_82.json"
+   },
+   "rows": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 55.559
+     },
+     "basis": "annex +4.30 face to wall face B3A (T-321 handles, exact arc 55.560332; engine arc 55.559 kept); finish hatch D1F + B2A stopped 0.640 m2 short on the D band B3C at the wall foot",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 54.9203
+     },
+     "element_id": "ROOF:ROOF-430:INSULATION",
+     "item_code": "FIN.ROOF.INSULATION",
+     "label": "DRAWING-READ",
+     "line_id": "L-8a5192a5ee3e40b61b08",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 55.559
+     },
+     "basis": "annex +4.30 face to wall face B3A (T-321 handles, exact arc 55.560332; engine arc 55.559 kept); finish hatch D1F + B2A stopped 0.640 m2 short on the D band B3C at the wall foot",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 54.9203
+     },
+     "element_id": "ROOF:ROOF-430:PROTECTION",
+     "item_code": "FIN.ROOF.PROTECTION",
+     "label": "DRAWING-READ",
+     "line_id": "L-0cb71da74613f446eee9",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 55.559
+     },
+     "basis": "annex +4.30 face to wall face B3A (T-321 handles, exact arc 55.560332; engine arc 55.559 kept); finish hatch D1F + B2A stopped 0.640 m2 short on the D band B3C at the wall foot",
+     "before": {
+      "class": "RELEASED",
+      "label": null,
+      "net": 54.9203
+     },
+     "element_id": "ROOF:ROOF-430:FINISH",
+     "item_code": "FIN.ROOF.FINISH",
+     "label": "DRAWING-READ",
+     "line_id": "L-702487d5998861c463c1",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.166925
+     },
+     "basis": "55.559 m2 x screed 0.075 avg (company default); annex +4.30 face to wall face B3A (T-321 handles, exact arc 55.560332; engine arc 55.559 kept); finish hatch D1F + B2A stopped 0.640 m2 short on the D band B3C at the wall foot",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 4.119022
+     },
+     "element_id": "ROOF:ROOF-430:FALLS_SCREED",
+     "item_code": "FIN.ROOF.SCREED",
+     "label": "DRAWING-READ",
+     "line_id": "L-bec94500648a90fb2f2a",
+     "restates_t764": false,
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 32.721
+     },
+     "basis": "+5.50 strips face (T-321 handles AE3 / B25 / B33 / B5D / BDB / CED); finish hatch AE0 + D1A + 1252 leaves 1.078 m2 of symbol frames / door-swing gaps",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 31.643
+     },
+     "element_id": "ROOF:TERRACE-550:INSULATION",
+     "item_code": "FIN.ROOF.INSULATION",
+     "label": "DRAWING-READ",
+     "line_id": "L-940b7a65d7e79bc0ec33",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 32.721
+     },
+     "basis": "+5.50 strips face (T-321 handles AE3 / B25 / B33 / B5D / BDB / CED); finish hatch AE0 + D1A + 1252 leaves 1.078 m2 of symbol frames / door-swing gaps",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 31.643
+     },
+     "element_id": "ROOF:TERRACE-550:PROTECTION",
+     "item_code": "FIN.ROOF.PROTECTION",
+     "label": "DRAWING-READ",
+     "line_id": "L-f9e6d4f8c099f6a6cc8e",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 32.721
+     },
+     "basis": "+5.50 strips face (T-321 handles AE3 / B25 / B33 / B5D / BDB / CED); finish hatch AE0 + D1A + 1252 leaves 1.078 m2 of symbol frames / door-swing gaps",
+     "before": {
+      "class": "RELEASED",
+      "label": null,
+      "net": 31.643
+     },
+     "element_id": "ROOF:TERRACE-550:FINISH",
+     "item_code": "FIN.ROOF.FINISH",
+     "label": "DRAWING-READ",
+     "line_id": "L-a6ce29981d037284ec84",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.454075
+     },
+     "basis": "32.721 m2 x screed 0.075 avg (company default); +5.50 strips face (T-321 handles AE3 / B25 / B33 / B5D / BDB / CED); finish hatch AE0 + D1A + 1252 leaves 1.078 m2 of symbol frames / door-swing gaps",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 2.373225
+     },
+     "element_id": "ROOF:TERRACE-550:FALLS_SCREED",
+     "item_code": "FIN.ROOF.SCREED",
+     "label": "DRAWING-READ",
+     "line_id": "L-5f018cfc13aaa9ae2210",
+     "restates_t764": false,
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 115.813974
+     },
+     "basis": "+9.70 face 146.532 less the two dome openings 2 x 15.359 (B4 rings, Q-44 A) + drawn band 0.1575 = membrane line (T-764, merged); finish hatch 2F21 + gaps stopped on the band",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 115.65646
+     },
+     "element_id": "ROOF:ROOF-970:INSULATION",
+     "item_code": "FIN.ROOF.INSULATION",
+     "label": "DRAWING-READ",
+     "line_id": "L-122cbab32ca719527de8",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 115.813974
+     },
+     "basis": "+9.70 face 146.532 less the two dome openings 2 x 15.359 (B4 rings, Q-44 A) + drawn band 0.1575 = membrane line (T-764, merged); finish hatch 2F21 + gaps stopped on the band",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 115.65646
+     },
+     "element_id": "ROOF:ROOF-970:PROTECTION",
+     "item_code": "FIN.ROOF.PROTECTION",
+     "label": "DRAWING-READ",
+     "line_id": "L-e0dc4455bc0c6ee4fa9b",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 115.813974
+     },
+     "basis": "+9.70 face 146.532 less the two dome openings 2 x 15.359 (B4 rings, Q-44 A) + drawn band 0.1575 = membrane line (T-764, merged); finish hatch 2F21 + gaps stopped on the band",
+     "before": {
+      "class": "RELEASED",
+      "label": null,
+      "net": 115.65646
+     },
+     "element_id": "ROOF:ROOF-970:FINISH",
+     "item_code": "FIN.ROOF.FINISH",
+     "label": "DRAWING-READ",
+     "line_id": "L-e005eb9041acb08d8b87",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 8.686048
+     },
+     "basis": "115.814 m2 x screed 0.075 avg (company default); +9.70 face 146.532 less the two dome openings 2 x 15.359 (B4 rings, Q-44 A) + drawn band 0.1575 = membrane line (T-764, merged); finish hatch 2F21 + gaps stopped on the band",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 8.674234
+     },
+     "element_id": "ROOF:ROOF-970:FALLS_SCREED",
+     "item_code": "FIN.ROOF.SCREED",
+     "label": "DRAWING-READ",
+     "line_id": "L-f4ae7151a6e2b93dd7ad",
+     "restates_t764": false,
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 34.390242
+     },
+     "basis": "+13.90 top roof inside the parapet = 2F wall inner faces 7.70 x 6.45 = 49.665 m2 (DXF 12B7 / 1292 / 1283 / 1279, beam tops included; was slab panels 7.4543 / 0.16 = 46.589, F-V770-1) less DOME-3 base r 2.205 = 15.275 m2 (S0 concrete dome L-d5401fa8 stands on the slab; layers stop at its base with an upturn, as at the +9.70 domes, Q-24 / Q-29) = 34.390 m2; outline from the 2F walls, no roof plan: Q-34 stays with the owner",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 46.589375
+     },
+     "element_id": "2F-ROOF-TOP:wp_membrane",
+     "item_code": "FIN.WP.ROOF",
+     "label": "ESTIMATE",
+     "line_id": "L-3e8fe55da71851816dd4",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 34.390242
+     },
+     "basis": "+13.90 top roof inside the parapet = 2F wall inner faces 7.70 x 6.45 = 49.665 m2 (DXF 12B7 / 1292 / 1283 / 1279, beam tops included; was slab panels 7.4543 / 0.16 = 46.589, F-V770-1) less DOME-3 base r 2.205 = 15.275 m2 (S0 concrete dome L-d5401fa8 stands on the slab; layers stop at its base with an upturn, as at the +9.70 domes, Q-24 / Q-29) = 34.390 m2; outline from the 2F walls, no roof plan: Q-34 stays with the owner",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 46.589375
+     },
+     "element_id": "ROOF:ROOF-1390:INSULATION",
+     "item_code": "FIN.ROOF.INSULATION",
+     "label": "ESTIMATE",
+     "line_id": "L-19912fbc18556b65ccf6",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 34.390242
+     },
+     "basis": "+13.90 top roof inside the parapet = 2F wall inner faces 7.70 x 6.45 = 49.665 m2 (DXF 12B7 / 1292 / 1283 / 1279, beam tops included; was slab panels 7.4543 / 0.16 = 46.589, F-V770-1) less DOME-3 base r 2.205 = 15.275 m2 (S0 concrete dome L-d5401fa8 stands on the slab; layers stop at its base with an upturn, as at the +9.70 domes, Q-24 / Q-29) = 34.390 m2; outline from the 2F walls, no roof plan: Q-34 stays with the owner",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 46.589375
+     },
+     "element_id": "ROOF:ROOF-1390:PROTECTION",
+     "item_code": "FIN.ROOF.PROTECTION",
+     "label": "ESTIMATE",
+     "line_id": "L-c5c48bba5d23fa70e9ad",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 34.390242
+     },
+     "basis": "+13.90 top roof inside the parapet = 2F wall inner faces 7.70 x 6.45 = 49.665 m2 (DXF 12B7 / 1292 / 1283 / 1279, beam tops included; was slab panels 7.4543 / 0.16 = 46.589, F-V770-1) less DOME-3 base r 2.205 = 15.275 m2 (S0 concrete dome L-d5401fa8 stands on the slab; layers stop at its base with an upturn, as at the +9.70 domes, Q-24 / Q-29) = 34.390 m2; outline from the 2F walls, no roof plan: Q-34 stays with the owner",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 46.589375
+     },
+     "element_id": "ROOF:ROOF-1390:FINISH",
+     "item_code": "FIN.ROOF.FINISH",
+     "label": "ESTIMATE",
+     "line_id": "L-ab79aa46b9647f63b54a",
+     "restates_t764": false,
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.579268
+     },
+     "basis": "34.390 m2 x screed 0.075 avg (company default); +13.90 top roof inside the parapet = 2F wall inner faces 7.70 x 6.45 = 49.665 m2 (DXF 12B7 / 1292 / 1283 / 1279, beam tops included; was slab panels 7.4543 / 0.16 = 46.589, F-V770-1) less DOME-3 base r 2.205 = 15.275 m2 (S0 concrete dome L-d5401fa8 stands on the slab; layers stop at its base with an upturn, as at the +9.70 domes, Q-24 / Q-29) = 34.390 m2; outline from the 2F walls, no roof plan: Q-34 stays with the owner",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 3.494203
+     },
+     "element_id": "ROOF:ROOF-1390:FALLS_SCREED",
+     "item_code": "FIN.ROOF.SCREED",
+     "label": "ESTIMATE",
+     "line_id": "L-b016c961ddf9e530e3c1",
+     "restates_t764": false,
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 42.15454
+     },
+     "basis": "parapet inner faces 2 x (7.70 + 6.45) = 28.30 + DOME-3 base ring 13.855 = 42.155 lm (was the 2F facade run 29.8 = outer faces 2 x (8.10 + 6.80): the upturn rises on the inner face)",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 29.8
+     },
+     "element_id": "2F-ROOF-TOP:wp_upturn",
+     "item_code": "FIN.WP.ROOF_UPTURN",
+     "label": "ESTIMATE",
+     "line_id": "L-aac1f35e08f85b643692",
+     "restates_t764": true,
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.0
+     },
+     "basis": "top roof 34.390 m2 x 8 rolls / 55.559 m2 of roof 1F-AT220 (T-764 method kept) = 4.95 -> 5 rolls",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 7.0
+     },
+     "element_id": "2F-ROOF-TOP:wp_rolls_to_buy",
+     "item_code": "FIN.WP.MEMBRANE_ROLLS",
+     "label": "ESTIMATE",
+     "line_id": "L-90b40877c8c3da54ba1b",
+     "restates_t764": true,
+     "unit": "pcs"
+    }
+   ],
+   "rule": "ROOF_LAYER_AREA_V1 (proposed, research/agents_t780/t780_rules.py)",
+   "schema": "DELIVERY_FIX_ROWS_V1",
+   "summary": {
+    "annex_membrane_line": "the annex +4.30 roof HAS a membrane line: L-d57d2dc2 1F-ROOF-AT220 55.559 m2 (= ROOF-430, T-321 / T-702); the 13 Nov owner table note 'annex has no membrane line' is a label mismatch (AT220 is the 1F-plan name of ROOF-430), not a missing quantity",
+    "blank_roof_lines_after": 0,
+    "blank_roof_lines_before": 0,
+    "restated_t764_lines": [
+     "L-aac1f35e08f85b643692",
+     "L-90b40877c8c3da54ba1b"
+    ],
+    "roof_finish_m2": {
+     "after": 238.484216,
+     "after_vs_freelancer_pct": -16.3,
+     "before": 248.809135,
+     "causes_m2_his_minus_ours": {
+      "RULE_DIFFERENCE DOME-3 footprint +13.90 (S0 shell on the slab) : his row gross": 15.274758,
+      "RULE_DIFFERENCE dome footprints +9.70 (2 openings, B4 rings) : his row gross": 30.718026,
+      "TOLERANCE +9.70 membrane line vs face less exact dome discs (band 0.1575 = arc gain)": 0.0,
+      "TOLERANCE annex corner arc discretisation (55.559 vs exact 55.560)": 0.001332,
+      "UNRESOLVED residual of his row (T-626, below 1 %)": 0.521668
+     },
+     "freelancer": 285.0
+    },
+    "roof_membrane_m2": {
+     "after": 244.031083,
+     "after_vs_freelancer_pct": -14.4,
+     "before": 256.230216,
+     "causes_m2_his_minus_ours": {
+      "ENGINE_RIGHT pool-court open-sky slab + ledge +5.50 (membrane, not in his row)": -5.546867,
+      "RULE_DIFFERENCE DOME-3 footprint +13.90 (S0 shell on the slab) : his row gross": 15.274758,
+      "RULE_DIFFERENCE dome footprints +9.70 (2 openings, B4 rings) : his row gross": 30.718026,
+      "TOLERANCE +9.70 membrane line vs face less exact dome discs (band 0.1575 = arc gain)": 0.0,
+      "TOLERANCE annex corner arc discretisation (55.559 vs exact 55.560)": 0.001332,
+      "UNRESOLVED residual of his row (T-626, below 1 %)": 0.521668
+     },
+     "freelancer": 285.0
+    },
+    "roof_upturn_lm": {
+     "after": 232.965084,
+     "after_vs_freelancer_pct": 20.1,
+     "after_without_dome_rings_lm": 191.325148,
+     "before": 220.610544,
+     "dome_ring_upturns_lm": 41.639936,
+     "freelancer": 194.0,
+     "note": "his row's length basis is not printed; without the 3 dome-ring upturns ours is within 1.4 % of his 194.00 (consistent with his gross-dome area): proposal, not a split"
+    },
+    "rows": 19
+   },
+   "surfaces": {
+    "ROOF-1390": {
+     "basis": "+13.90 top roof inside the parapet = 2F wall inner faces 7.70 x 6.45 = 49.665 m2 (DXF 12B7 / 1292 / 1283 / 1279, beam tops included; was slab panels 7.4543 / 0.16 = 46.589, F-V770-1) less DOME-3 base r 2.205 = 15.275 m2 (S0 concrete dome L-d5401fa8 stands on the slab; layers stop at its base with an upturn, as at the +9.70 domes, Q-24 / Q-29) = 34.390 m2; outline from the 2F walls, no roof plan: Q-34 stays with the owner",
+     "face_m2": 49.665,
+     "footprints_m2": 15.274758,
+     "label": "ESTIMATE",
+     "layer_m2": 34.390242,
+     "screed_m3": 2.579268,
+     "upturn_lm": 42.15454
+    },
+    "ROOF-430": {
+     "basis": "annex +4.30 face to wall face B3A (T-321 handles, exact arc 55.560332; engine arc 55.559 kept); finish hatch D1F + B2A stopped 0.640 m2 short on the D band B3C at the wall foot",
+     "face_m2": 55.559,
+     "footprints_m2": 0,
+     "label": "DRAWING-READ",
+     "layer_m2": 55.559,
+     "screed_m3": 4.166925,
+     "upturn_lm": null
+    },
+    "ROOF-970": {
+     "basis": "+9.70 face 146.532 less the two dome openings 2 x 15.359 (B4 rings, Q-44 A) + drawn band 0.1575 = membrane line (T-764, merged); finish hatch 2F21 + gaps stopped on the band",
+     "face_m2": 115.813974,
+     "footprints_m2": 0,
+     "label": "DRAWING-READ",
+     "layer_m2": 115.813974,
+     "screed_m3": 8.686048,
+     "upturn_lm": null
+    },
+    "TERRACE-550": {
+     "basis": "+5.50 strips face (T-321 handles AE3 / B25 / B33 / B5D / BDB / CED); finish hatch AE0 + D1A + 1252 leaves 1.078 m2 of symbol frames / door-swing gaps",
+     "face_m2": 32.721,
+     "footprints_m2": 0,
+     "label": "DRAWING-READ",
+     "layer_m2": 32.721,
+     "screed_m3": 2.454075,
+     "upturn_lm": null
+    }
+   },
+   "task": "T-780"
+  },
+  {
+   "candidate_version": "ARCH_TAKEOFF_V3.0.82",
+   "floor_components": [
+    {
+     "cause": "TOLERANCE",
+     "name": "2-dp rounding",
+     "qty": "0.000695",
+     "room": "GF lobby wash (2 basins)",
+     "sign": 1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "passage reveal 0.20 x 1.10 taken into his room (1.55 x 1.10)",
+     "qty": "0.220",
+     "room": "GF basin space by the stair",
+     "sign": -1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "his 1.705 truncated to 2 dp",
+     "qty": "0.005",
+     "room": "GF basin space by the stair",
+     "sign": 1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "diagonal-wall corner 0.983 x 0.982 / 2 out of 2.10 x 2.00",
+     "qty": "0.017683",
+     "room": "GF master bath",
+     "sign": 1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "wedge room by shoelace on the drawn wall faces",
+     "qty": "0.06761",
+     "room": "GF core W.C. 245 x 167 (wedge)",
+     "sign": 1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "2-dp truncation",
+     "qty": "0.005221",
+     "room": "GF core W.C. 289 x 167 (wedge)",
+     "sign": 1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "2-dp truncation",
+     "qty": "0.0025",
+     "room": "GF stair-core W.C. 175 x 135",
+     "sign": 1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "printed 300 x 270 + 105 x 150 less two drawn piers 0.045",
+     "qty": "0.080001",
+     "room": "GF kitchen",
+     "sign": 1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "2-dp truncation",
+     "qty": "0.005",
+     "room": "GF W.C. by the reception room",
+     "sign": 1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "column corner out of the printed 150 x 210",
+     "qty": "0.0175",
+     "room": "GF wash by the reception room",
+     "sign": -1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "2-dp truncation",
+     "qty": "0.005",
+     "room": "1F east bath 210 x 225",
+     "sign": 1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "drawn jamb 0.45 x 0.05 out of 2.00 x 1.80",
+     "qty": "0.0225",
+     "room": "1F bath by the laundry",
+     "sign": -1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "printed 180 x 147 against his 1.80 x 1.44",
+     "qty": "0.056",
+     "room": "1F W.C. by the laundry",
+     "sign": 1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "printed 245 x 205 against his 5.00",
+     "qty": "0.0225",
+     "room": "1F west bath A 245 x 205",
+     "sign": 1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "printed 245 x 205 against his 5.00",
+     "qty": "0.0225",
+     "room": "1F west bath B 245 x 205",
+     "sign": 1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "printed 347 x 300 / 185 with the W.C. corner, against his typed 10.00",
+     "qty": "0.151",
+     "room": "1F laundry",
+     "sign": 1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "printed 185 against his 1.875",
+     "qty": "0.07",
+     "room": "2F roof-floor W.C. 300 x 185",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "pantry box 4.50 x 3.00 less the column edge 0.900 x 0.050",
+     "qty": "13.455",
+     "room": "GF pantry (wet zone, Q-37 A)",
+     "sign": 1
+    }
+   ],
+   "inputs": [
+    "research/agents_t770/out/LINE_INDEX_V3_0_82.json",
+    "research/agents_t546/t546_inputs.py",
+    "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json",
+    "research/agents_t710/out/T710_WP_ROUND3.json",
+    "research/agents_t743/out/T743_ALSENAN_COUNTS.json"
+   ],
+   "new_lines": [
+    {
+     "basis": "run of the upturn strip of line L-519ae15dd6ff755f4aa5 = 1.32864 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "GF-RDBD4F9:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 6.6432,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 9.5,
+      "like_for_like_lm": 9.4992
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-017f9184994017c8a62b = 0.640592 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "GF-RD36087:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 3.20296,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 5.3,
+      "like_for_like_lm": 4.90296
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-8b981cb63e87f18b13d4 = 1.36493 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "GF-RD6F891:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 6.824665,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 7.6,
+      "like_for_like_lm": 7.624665
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-60d7c01f386770e2bf9c = 1.20102 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "GF-RB28769:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 6.0051,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 6.7,
+      "like_for_like_lm": 6.8051
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-0226eb38b2c6469296df = 1.32281 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "GF-RF38DAF:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 6.61404,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 7.4,
+      "like_for_like_lm": 7.41404
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-8dd259ad89d2cd276ad2 = 1.08059 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "GF-RDF7D28:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 5.40296,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 6.2,
+      "like_for_like_lm": 6.20296
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-f77fe27244893dc1cc9b = 2.7 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "GF-RA3AD49:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 13.5,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 14.35,
+      "like_for_like_lm": 14.5
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-31877d6c1cb33b74e5a7 = 0.96 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "GF-RFAD3C4:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 4.8,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 5.58,
+      "like_for_like_lm": 5.6
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-6c277fc130b921a7f83e = 1.34 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "GF-RB62B55:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 6.7,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 7.5,
+      "like_for_like_lm": 7.5
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-5362cff3511074da962a = 1.08 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "GF-R8496F0:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 5.4,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 7.2,
+      "like_for_like_lm": 7.2
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-60f100105399a9bdfb08 = 1.58 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "1F-R48CDA5:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 7.9,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 8.7,
+      "like_for_like_lm": 8.7
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-a93486d24647a9e14445 = 1.36 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "1F-RED23B8:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 6.8,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 7.6,
+      "like_for_like_lm": 7.6
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-ace6533512ada47d1352 = 1.148 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "1F-R52AC05:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 5.74,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 6.48,
+      "like_for_like_lm": 6.54
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-ba15212ec9887e6d4f73 = 1.64 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "1F-R48AA46:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 8.2,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 9,
+      "like_for_like_lm": 9.0
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-6e6daedebef2db6a83bd = 1.64 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "1F-R8BDA49:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 8.2,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 8.9,
+      "like_for_like_lm": 9.0
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-2d478a44f042f938e4e7 = 3.048 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "1F-R26FA0D:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 15.24,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 16.85,
+      "like_for_like_lm": 16.94
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-b842beb71b67af783cd7 = 1.78 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines)",
+     "element_id": "2F-RE83BED:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "MEASURED",
+     "net": 8.9,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": 9.75,
+      "like_for_like_lm": 9.7
+     }
+    },
+    {
+     "basis": "run of the upturn strip of line L-8090ff20f2b547d1bc96 = 1.9 m2 / rule height 0.20 (R-T785-1; walls only, doorways and open edges are their own lines); pantry run = T-767 DEFAULT 15.00 - 4.50 - 1.00",
+     "element_id": "GF-RC99C2A:wp_wall_upturn_lm",
+     "item_code": "FIN.WP.WALL_UPTURN_LM",
+     "label": "DEFAULT",
+     "net": 9.5,
+     "unit": "lm",
+     "vs_freelancer": {
+      "freelancer_lm": null,
+      "note": "not in his list (pantry, owner Q-37 A)"
+     }
+    },
+    {
+     "basis": "membrane lining the recess (tray on the structural slab): panel 280 loop 8.7884 x d 0.24 (default 0.30 capped at the beam bound) = 2.1092 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+     "element_id": "1F-R48AA46:wp_sunken_recess",
+     "item_code": "FIN.WP.SUNKEN_RECESS",
+     "label": "DEFAULT",
+     "net": 2.109216,
+     "unit": "m2"
+    },
+    {
+     "basis": "membrane lining the recess (tray on the structural slab): panel 298 loop 8.7952 x d 0.30 (default 0.30) = 2.6386 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+     "element_id": "1F-R48CDA5:wp_sunken_recess",
+     "item_code": "FIN.WP.SUNKEN_RECESS",
+     "label": "DEFAULT",
+     "net": 2.63856,
+     "unit": "m2"
+    },
+    {
+     "basis": "membrane lining the recess (tray on the structural slab): panel 276 loop 6.4400 x d 0.24 (default 0.30 capped at the beam bound) = 1.5456 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+     "element_id": "1F-R52AC05:wp_sunken_recess",
+     "item_code": "FIN.WP.SUNKEN_RECESS",
+     "label": "DEFAULT",
+     "net": 1.5456,
+     "unit": "m2"
+    },
+    {
+     "basis": "membrane lining the recess (tray on the structural slab): panel 280 loop 5.4235 x d 0.24 (default 0.30 capped at the beam bound); panel 287 loop 5.5390 x d 0.24 (default 0.30 capped at the beam bound) = 2.6310 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+     "element_id": "1F-R8BDA49:wp_sunken_recess",
+     "item_code": "FIN.WP.SUNKEN_RECESS",
+     "label": "DEFAULT",
+     "net": 2.631,
+     "unit": "m2"
+    },
+    {
+     "basis": "membrane lining the recess (tray on the structural slab): panel 275 loop 7.3121 x d 0.24 (default 0.30 capped at the beam bound) = 1.7549 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+     "element_id": "1F-RED23B8:wp_sunken_recess",
+     "item_code": "FIN.WP.SUNKEN_RECESS",
+     "label": "DEFAULT",
+     "net": 1.754904,
+     "unit": "m2"
+    },
+    {
+     "basis": "membrane lining the recess (tray on the structural slab): panel 5BF loop 9.5998 x d 0.24 (default 0.30 capped at the beam bound) = 2.3040 m2 (R-T785-2; drop unprinted D-41; bound d_max = beam depth - slab 0.16, T-710)",
+     "element_id": "2F-RE83BED:wp_sunken_recess",
+     "item_code": "FIN.WP.SUNKEN_RECESS",
+     "label": "DEFAULT",
+     "net": 2.303952,
+     "unit": "m2"
+    },
+    {
+     "basis": "floor piece through door D120: printed gap 1.00 x wall 0.20 (T-710 c)",
+     "element_id": "GF-RC99C2A:doorway D120",
+     "item_code": "FIN.WP.DOORWAY",
+     "label": "DRAWING-READ",
+     "net": 0.2,
+     "unit": "m2"
+    },
+    {
+     "basis": "one transition per physical door (Q-35 C): D120",
+     "element_id": "GF-RC99C2A:doorway transition nr D120",
+     "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+     "label": "DRAWING-READ",
+     "net": 1.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "door width 1.00 x 0.20 upturn carried across the door (same basis as the 14 released transitions, T-767)",
+     "element_id": "GF-RC99C2A:doorway transition D120",
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "label": "ESTIMATE",
+     "net": 0.2,
+     "unit": "m2"
+    },
+    {
+     "basis": "membrane edge on the open dining side, printed DIM 5E1 4.50 (T-710 c; Q-37 A)",
+     "element_id": "GF-RC99C2A:termination open side",
+     "item_code": "FIN.WP.TERMINATION",
+     "label": "DRAWING-READ",
+     "net": 4.5,
+     "unit": "lm"
+    },
+    {
+     "basis": "T-743 sanitary census {'FLOOR_DRAIN': 1} (one WP penetration per fixture, owner default)",
+     "element_id": "GF-RC99C2A:wp_penetrations",
+     "item_code": "FIN.WP.PENETRATION",
+     "label": "MEASURED",
+     "net": 1.0,
+     "unit": "pcs"
+    }
+   ],
+   "rooms": [
+    {
+     "door_segments_lm": 1.6,
+     "floor_m2": 4.730695,
+     "freelancer_row": 14,
+     "gross_lm": 9.4992,
+     "hand_boundary_lm": "9.5002",
+     "his_floor_m2": 4.73,
+     "his_perimeter_lm": 9.5,
+     "open_edges_lm": 1.256,
+     "room": "GF-RDBD4F9",
+     "run_lm": 6.6432,
+     "sunken": false,
+     "title": "GF lobby wash (2 basins)"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 1.485,
+     "freelancer_row": 15,
+     "gross_lm": 4.90296,
+     "hand_boundary_lm": "4.9",
+     "his_floor_m2": 1.7,
+     "his_perimeter_lm": 5.3,
+     "open_edges_lm": 0.9,
+     "room": "GF-RD36087",
+     "run_lm": 3.20296,
+     "sunken": false,
+     "title": "GF basin space by the stair"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 3.717683,
+     "freelancer_row": 16,
+     "gross_lm": 7.624665,
+     "hand_boundary_lm": "7.6245",
+     "his_floor_m2": 3.7,
+     "his_perimeter_lm": 7.6,
+     "open_edges_lm": 0.0,
+     "room": "GF-RD6F891",
+     "run_lm": 6.824665,
+     "sunken": false,
+     "title": "GF master bath"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 2.36761,
+     "freelancer_row": 17,
+     "gross_lm": 6.8051,
+     "hand_boundary_lm": "6.8098",
+     "his_floor_m2": 2.3,
+     "his_perimeter_lm": 6.7,
+     "open_edges_lm": 0.0,
+     "room": "GF-RB28769",
+     "run_lm": 6.0051,
+     "sunken": false,
+     "title": "GF core W.C. 245 x 167 (wedge)"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 2.675221,
+     "freelancer_row": 18,
+     "gross_lm": 7.41404,
+     "hand_boundary_lm": "7.414",
+     "his_floor_m2": 2.67,
+     "his_perimeter_lm": 7.4,
+     "open_edges_lm": 0.0,
+     "room": "GF-RF38DAF",
+     "run_lm": 6.61404,
+     "sunken": false,
+     "title": "GF core W.C. 289 x 167 (wedge)"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 2.3625,
+     "freelancer_row": 19,
+     "gross_lm": 6.20296,
+     "hand_boundary_lm": "6.2",
+     "his_floor_m2": 2.36,
+     "his_perimeter_lm": 6.2,
+     "open_edges_lm": 0.0,
+     "room": "GF-RDF7D28",
+     "run_lm": 5.40296,
+     "sunken": false,
+     "title": "GF stair-core W.C. 175 x 135"
+    },
+    {
+     "door_segments_lm": 1.0,
+     "floor_m2": 9.630001,
+     "freelancer_row": 20,
+     "gross_lm": 14.5,
+     "hand_boundary_lm": "14.5",
+     "his_floor_m2": 9.55,
+     "his_perimeter_lm": 14.35,
+     "open_edges_lm": 0.0,
+     "room": "GF-RA3AD49",
+     "run_lm": 13.5,
+     "sunken": false,
+     "title": "GF kitchen"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 1.95,
+     "freelancer_row": 21,
+     "gross_lm": 5.6,
+     "hand_boundary_lm": "5.6",
+     "his_floor_m2": 1.95,
+     "his_perimeter_lm": 5.58,
+     "open_edges_lm": 0.0,
+     "room": "GF-RFAD3C4",
+     "run_lm": 4.8,
+     "sunken": false,
+     "title": "GF driver W.C."
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 3.375,
+     "freelancer_row": 22,
+     "gross_lm": 7.5,
+     "hand_boundary_lm": "7.5",
+     "his_floor_m2": 3.37,
+     "his_perimeter_lm": 7.5,
+     "open_edges_lm": 0.0,
+     "room": "GF-RB62B55",
+     "run_lm": 6.7,
+     "sunken": false,
+     "title": "GF W.C. by the reception room"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 3.1325,
+     "freelancer_row": 23,
+     "gross_lm": 7.2,
+     "hand_boundary_lm": "7.2",
+     "his_floor_m2": 3.15,
+     "his_perimeter_lm": 7.2,
+     "open_edges_lm": 1.0,
+     "room": "GF-R8496F0",
+     "run_lm": 5.4,
+     "sunken": false,
+     "title": "GF wash by the reception room"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 4.725,
+     "freelancer_row": 27,
+     "gross_lm": 8.7,
+     "hand_boundary_lm": "8.7",
+     "his_floor_m2": 4.72,
+     "his_perimeter_lm": 8.7,
+     "open_edges_lm": 0.0,
+     "room": "1F-R48CDA5",
+     "run_lm": 7.9,
+     "sunken": true,
+     "title": "1F east bath 210 x 225"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 3.5775,
+     "freelancer_row": 28,
+     "gross_lm": 7.6,
+     "hand_boundary_lm": "7.6",
+     "his_floor_m2": 3.6,
+     "his_perimeter_lm": 7.6,
+     "open_edges_lm": 0.0,
+     "room": "1F-RED23B8",
+     "run_lm": 6.8,
+     "sunken": true,
+     "title": "1F bath by the laundry"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 2.646,
+     "freelancer_row": 29,
+     "gross_lm": 6.54,
+     "hand_boundary_lm": "6.54",
+     "his_floor_m2": 2.59,
+     "his_perimeter_lm": 6.48,
+     "open_edges_lm": 0.0,
+     "room": "1F-R52AC05",
+     "run_lm": 5.74,
+     "sunken": true,
+     "title": "1F W.C. by the laundry"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 5.0225,
+     "freelancer_row": 30,
+     "gross_lm": 9.0,
+     "hand_boundary_lm": "9.0",
+     "his_floor_m2": 5,
+     "his_perimeter_lm": 9,
+     "open_edges_lm": 0.0,
+     "room": "1F-R48AA46",
+     "run_lm": 8.2,
+     "sunken": true,
+     "title": "1F west bath A 245 x 205"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 5.0225,
+     "freelancer_row": 31,
+     "gross_lm": 9.0,
+     "hand_boundary_lm": "9.0",
+     "his_floor_m2": 5,
+     "his_perimeter_lm": 8.9,
+     "open_edges_lm": 0.0,
+     "room": "1F-R8BDA49",
+     "run_lm": 8.2,
+     "sunken": true,
+     "title": "1F west bath B 245 x 205"
+    },
+    {
+     "door_segments_lm": 1.7,
+     "floor_m2": 10.151,
+     "freelancer_row": 32,
+     "gross_lm": 16.94,
+     "hand_boundary_lm": "16.94",
+     "his_floor_m2": 10,
+     "his_perimeter_lm": 16.85,
+     "open_edges_lm": 0.0,
+     "room": "1F-R26FA0D",
+     "run_lm": 15.24,
+     "sunken": false,
+     "title": "1F laundry"
+    },
+    {
+     "door_segments_lm": 0.8,
+     "floor_m2": 5.55,
+     "freelancer_row": 36,
+     "gross_lm": 9.7,
+     "hand_boundary_lm": "9.7",
+     "his_floor_m2": 5.62,
+     "his_perimeter_lm": 9.75,
+     "open_edges_lm": 0.0,
+     "room": "2F-RE83BED",
+     "run_lm": 8.9,
+     "sunken": true,
+     "title": "2F roof-floor W.C. 300 x 185"
+    },
+    {
+     "door_segments_lm": 1.0,
+     "floor_m2": 13.455,
+     "freelancer_row": null,
+     "gross_lm": 15.0,
+     "hand_boundary_lm": null,
+     "his_floor_m2": null,
+     "his_perimeter_lm": null,
+     "open_edges_lm": 4.5,
+     "room": "GF-RC99C2A",
+     "run_lm": 9.5,
+     "sunken": false,
+     "title": "GF pantry (wet zone, Q-37 A)"
+    }
+   ],
+   "rows": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.46
+     },
+     "basis": "sunken wet room (T-213 / T-710 panel 280): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 8.20 x 0.30 = 2.460 m2 (was x 0.20); recess on its own line (R-T785-2)",
+     "before": {
+      "class": "RELEASED",
+      "high": null,
+      "low": null,
+      "net": 1.64
+     },
+     "element_id": "1F-R48AA46:wp_wall_upturn",
+     "item_code": "FIN.WP.WALL_UPTURN",
+     "label": "DEFAULT",
+     "line_id": "L-ba15212ec9887e6d4f73",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.37
+     },
+     "basis": "sunken wet room (T-213 / T-710 panel 298): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 7.90 x 0.30 = 2.370 m2 (was x 0.20); recess on its own line (R-T785-2)",
+     "before": {
+      "class": "RELEASED",
+      "high": null,
+      "low": null,
+      "net": 1.58
+     },
+     "element_id": "1F-R48CDA5:wp_wall_upturn",
+     "item_code": "FIN.WP.WALL_UPTURN",
+     "label": "DEFAULT",
+     "line_id": "L-60f100105399a9bdfb08",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.722
+     },
+     "basis": "sunken wet room (T-213 / T-710 panel 276): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 5.74 x 0.30 = 1.722 m2 (was x 0.20); recess on its own line (R-T785-2)",
+     "before": {
+      "class": "RELEASED",
+      "high": null,
+      "low": null,
+      "net": 1.148
+     },
+     "element_id": "1F-R52AC05:wp_wall_upturn",
+     "item_code": "FIN.WP.WALL_UPTURN",
+     "label": "DEFAULT",
+     "line_id": "L-ace6533512ada47d1352",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.46
+     },
+     "basis": "sunken wet room (T-213 / T-710 panel 280+287): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 8.20 x 0.30 = 2.460 m2 (was x 0.20); recess on its own line (R-T785-2)",
+     "before": {
+      "class": "RELEASED",
+      "high": null,
+      "low": null,
+      "net": 1.64
+     },
+     "element_id": "1F-R8BDA49:wp_wall_upturn",
+     "item_code": "FIN.WP.WALL_UPTURN",
+     "label": "DEFAULT",
+     "line_id": "L-6e6daedebef2db6a83bd",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.04
+     },
+     "basis": "sunken wet room (T-213 / T-710 panel 275): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 6.80 x 0.30 = 2.040 m2 (was x 0.20); recess on its own line (R-T785-2)",
+     "before": {
+      "class": "RELEASED",
+      "high": null,
+      "low": null,
+      "net": 1.36
+     },
+     "element_id": "1F-RED23B8:wp_wall_upturn",
+     "item_code": "FIN.WP.WALL_UPTURN",
+     "label": "DEFAULT",
+     "line_id": "L-a93486d24647a9e14445",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.67
+     },
+     "basis": "sunken wet room (T-213 / T-710 panel 5BF): company default 'recess + 0.30 up' (owner 2026-11-13): wall run 8.90 x 0.30 = 2.670 m2 (was x 0.20); recess on its own line (R-T785-2)",
+     "before": {
+      "class": "RELEASED",
+      "high": null,
+      "low": null,
+      "net": 1.78
+     },
+     "element_id": "2F-RE83BED:wp_wall_upturn",
+     "item_code": "FIN.WP.WALL_UPTURN",
+     "label": "DEFAULT",
+     "line_id": "L-b842beb71b67af783cd7",
+     "unit": "m2"
+    }
+   ],
+   "schema": "URBAN_FIX_ROWS_V1",
+   "summary": {
+    "by_cause": {
+     "floor:ENGINE_RIGHT": 0.307294,
+     "floor:RULE_DIFFERENCE": 13.235,
+     "floor:TOLERANCE": 0.023416,
+     "upturn:ENGINE_RIGHT": 0.5183,
+     "upturn:RULE_DIFFERENCE": -9.556,
+     "upturn:TOLERANCE": 0.000625
+    },
+    "candidate": "ARCH_TAKEOFF_V3.0.82",
+    "flags": [
+     "F-T785-1: the D-41 default recess 0.30 (main chat 13 Nov, used by T-765 drop walls) exceeds the T-710 beam bound d_max 0.24 on panels 275 / 276 / 280 / 287 / 5BF; R-T785-2 caps it there (298: 0.30 < 0.34). T-765 GF-W20 uses 0.30: 0.9308 x 0.06 = 0.056 m2 of blockwork, below materiality; one drop value per panel across trades is a T-770 wiring check",
+     "F-T785-2: the pantry had 5 WP lines absent from the candidate (doorway, transition, transition nr, termination, penetration; T-710 c / T-767 note): added as new lines",
+     "his 72.01 / 144.61 are also his wet-room gypsum ceiling and cornice figures (decor sheet H74 / H75): one room list feeds three trades"
+    ],
+    "floor_m2": {
+     "diff": 13.56571,
+     "his": 72.01,
+     "like_for_like_17_rooms": 72.12071,
+     "like_for_like_pct": 0.15,
+     "ours": 85.57571,
+     "pct": 18.84,
+     "residual": 0.0
+    },
+    "his_room_list": "17 rows (GF 10 incl. kitchen, 1F 6 incl. laundry, roof floor 1); ours 18 = his 17 + pantry",
+    "new_lines": 29,
+    "rows": 6,
+    "sunken_rooms": {
+     "n": 6,
+     "recess_m2": 12.983232,
+     "recess_parts_capped": 6,
+     "upturn_after_m2": 13.722,
+     "upturn_before_m2": 9.148
+    },
+    "upturn_lm": {
+     "diff": -9.037075,
+     "his": 144.61,
+     "like_for_like_17_gross": 144.728925,
+     "like_for_like_pct": 0.08,
+     "ours_run": 135.572925,
+     "pct": -6.25,
+     "residual": 0.0
+    },
+    "wall_upturn_m2": {
+     "after": 31.688585,
+     "before": 27.114585
+    }
+   },
+   "task": "T-785",
+   "upturn_components": [
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "pantry upturn run (not in his list, owner Q-37 A)",
+     "qty": 9.5,
+     "room": "GF pantry (wet zone, Q-37 A)",
+     "sign": 1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "GF lobby wash (2 basins)",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "GF lobby wash (2 basins)",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "lobby to stair hall, no wall",
+     "qty": "1.256",
+     "room": "GF lobby wash (2 basins)",
+     "sign": -1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "boundary: hand reading vs his perimeter",
+     "qty": "0.0002",
+     "room": "GF lobby wash (2 basins)",
+     "sign": 1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "engine run vs hand boundary less segments (closure / door block width)",
+     "qty": "0.0010",
+     "room": "GF lobby wash (2 basins)",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "GF basin space by the stair",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "basin space to passage, no wall",
+     "qty": "0.90",
+     "room": "GF basin space by the stair",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "boundary: hand reading vs his perimeter",
+     "qty": "0.4",
+     "room": "GF basin space by the stair",
+     "sign": -1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "engine run vs hand boundary less segments (closure / door block width)",
+     "qty": "0.00296",
+     "room": "GF basin space by the stair",
+     "sign": 1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "GF master bath",
+     "sign": -1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "boundary: hand reading vs his perimeter",
+     "qty": "0.0245",
+     "room": "GF master bath",
+     "sign": 1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "engine run vs hand boundary less segments (closure / door block width)",
+     "qty": "0.000165",
+     "room": "GF master bath",
+     "sign": 1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "GF core W.C. 245 x 167 (wedge)",
+     "sign": -1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "boundary: hand reading vs his perimeter",
+     "qty": "0.1098",
+     "room": "GF core W.C. 245 x 167 (wedge)",
+     "sign": 1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "engine run vs hand boundary less segments (closure / door block width)",
+     "qty": "0.0047",
+     "room": "GF core W.C. 245 x 167 (wedge)",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "GF core W.C. 289 x 167 (wedge)",
+     "sign": -1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "boundary: hand reading vs his perimeter",
+     "qty": "0.014",
+     "room": "GF core W.C. 289 x 167 (wedge)",
+     "sign": 1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "engine run vs hand boundary less segments (closure / door block width)",
+     "qty": "0.00004",
+     "room": "GF core W.C. 289 x 167 (wedge)",
+     "sign": 1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "GF stair-core W.C. 175 x 135",
+     "sign": -1
+    },
+    {
+     "cause": "TOLERANCE",
+     "name": "engine run vs hand boundary less segments (closure / door block width)",
+     "qty": "0.00296",
+     "room": "GF stair-core W.C. 175 x 135",
+     "sign": 1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 1.00 m",
+     "qty": "1.00",
+     "room": "GF kitchen",
+     "sign": -1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "boundary: hand reading vs his perimeter",
+     "qty": "0.15",
+     "room": "GF kitchen",
+     "sign": 1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "GF driver W.C.",
+     "sign": -1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "boundary: hand reading vs his perimeter",
+     "qty": "0.02",
+     "room": "GF driver W.C.",
+     "sign": 1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "GF W.C. by the reception room",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "GF wash by the reception room",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "arch to the reception room, no leaf, no wall",
+     "qty": "1.00",
+     "room": "GF wash by the reception room",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "1F east bath 210 x 225",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "1F bath by the laundry",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "1F W.C. by the laundry",
+     "sign": -1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "boundary: hand reading vs his perimeter",
+     "qty": "0.06",
+     "room": "1F W.C. by the laundry",
+     "sign": 1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "1F west bath A 245 x 205",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "1F west bath B 245 x 205",
+     "sign": -1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "boundary: hand reading vs his perimeter",
+     "qty": "0.1",
+     "room": "1F west bath B 245 x 205",
+     "sign": 1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.90 m",
+     "qty": "0.90",
+     "room": "1F laundry",
+     "sign": -1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "1F laundry",
+     "sign": -1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "boundary: hand reading vs his perimeter",
+     "qty": "0.09",
+     "room": "1F laundry",
+     "sign": 1
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "name": "doorway segment 0.80 m",
+     "qty": "0.80",
+     "room": "2F roof-floor W.C. 300 x 185",
+     "sign": -1
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "name": "boundary: hand reading vs his perimeter",
+     "qty": "0.05",
+     "room": "2F roof-floor W.C. 300 x 185",
+     "sign": -1
+    }
+   ]
+  }
+ ]
+}
