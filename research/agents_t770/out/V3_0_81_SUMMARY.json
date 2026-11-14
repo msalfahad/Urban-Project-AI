@@ -1,0 +1,478 @@
+{
+ "added": {
+  "L-cf5784d8fd9bf3f3aca2": {
+   "item_code": "STR.CONC.SAFETY",
+   "label": "SAFETY",
+   "net": 1.0,
+   "unit": "m3"
+  }
+ },
+ "applied": 496,
+ "base_index_sha256": "0582aac58defff74c13bc23512832b258754dc4cffceff759fcbbda3e71011fb",
+ "blank_non_rebar_after": 295,
+ "blank_non_rebar_before": 691,
+ "by_set": {
+  "FLOOR_BED": {
+   "after": {
+    "RELEASED": 44
+   },
+   "labels": {
+    "DEFAULT": 44
+   },
+   "rows": 44
+  },
+  "PAINT_DRY": {
+   "after": {
+    "RELEASED": 11
+   },
+   "labels": {
+    "ESTIMATE": 11
+   },
+   "rows": 11
+  },
+  "PLASTER_DRY": {
+   "after": {
+    "RELEASED": 11
+   },
+   "labels": {
+    "DEFAULT": 11
+   },
+   "rows": 11
+  },
+  "ROOF_LAYERS": {
+   "after": {
+    "RELEASED": 14
+   },
+   "labels": {
+    "ESTIMATE": 14
+   },
+   "rows": 14
+  },
+  "T-761": {
+   "after": {
+    "IGNORED_SMALL": 13,
+    "RELEASED": 67
+   },
+   "labels": {
+    "DEFAULT": 71,
+    "DRAWING-READ": 2,
+    "ESTIMATE": 3,
+    "SAFETY": 4
+   },
+   "rows": 80
+  },
+  "T-762": {
+   "after": {
+    "NETTED": 33,
+    "RELEASED": 303
+   },
+   "labels": {
+    "DEFAULT": 67,
+    "ESTIMATE": 267,
+    "SAFETY": 2
+   },
+   "rows": 336
+  }
+ },
+ "dropped": {
+  "STR.EARTH.DISPOSAL": 1,
+  "STR.FORMWORK": 118,
+  "STR.FORMWORK.STAIR": 8
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.79",
+ "index_sha256": "3976b262611bc3bdc80e42fd2a45f1bb75dab996bc62b56d3b73987dd930f9c2",
+ "lines": 5276,
+ "lines_before": 5275,
+ "method": "ARCH_TAKEOFF_V3.0.81",
+ "outside_lines_identical": true,
+ "package_sha256": "a427896fbd083847ed3b7d0bb063652f424d9d6aa3ff71e9381140bb7351b7e4",
+ "rule": [
+  "R-T770-1",
+  "R-T770-2"
+ ],
+ "set_sha256": {
+  "MAIN_FILL_ALL": "ad9e2c6f5d5ccdf8442d9427e6d438bdce2fd4f8c47fa7af1bf40157b5d8fd5a",
+  "T-761": "db7c98f773f3d069b228863e436cf69bca7f98da28a12b08578e10aadf7c1588",
+  "T-762": "14ce7ca0b50a263e2decd0c4fcf97f2705421842f4a1e87211a7c60675c13db8"
+ },
+ "totals_moved": {
+  "FIN.FLOOR.BED.DRY [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 23,
+    "released": 10.55
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 12.06,
+    "held_low": 9.05,
+    "lines": 23,
+    "released": 0.0
+   }
+  },
+  "FIN.FLOOR.BED.WET [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 21,
+    "released": 4.28
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 5.13,
+    "held_low": 3.42,
+    "lines": 21,
+    "released": 0.0
+   }
+  },
+  "FIN.PAINT [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 159.35,
+    "held_low": 145.0,
+    "lines": 15,
+    "released": 675.8
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 687.85,
+    "held_low": 603.8,
+    "lines": 15,
+    "released": 217.21
+   }
+  },
+  "FIN.PLASTER [m2]": {
+   "after": {
+    "blank": 3,
+    "held_high": 404.65,
+    "held_low": 288.64,
+    "lines": 81,
+    "released": 1254.71
+   },
+   "before": {
+    "blank": 3,
+    "held_high": 1302.17,
+    "held_low": 1106.95,
+    "lines": 81,
+    "released": 388.58
+   }
+  },
+  "FIN.ROOF.FINISH [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 248.81
+   },
+   "before": {
+    "blank": 1,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 202.22
+   }
+  },
+  "FIN.ROOF.INSULATION [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 248.81
+   },
+   "before": {
+    "blank": 4,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 0.0
+   }
+  },
+  "FIN.ROOF.PROTECTION [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 248.81
+   },
+   "before": {
+    "blank": 4,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 0.0
+   }
+  },
+  "FIN.ROOF.SCREED [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 18.66
+   },
+   "before": {
+    "blank": 4,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 0.0
+   }
+  },
+  "FIN.WP.ROOF [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 116.45,
+    "held_low": 115.66,
+    "lines": 6,
+    "released": 139.78
+   },
+   "before": {
+    "blank": 1,
+    "held_high": 116.45,
+    "held_low": 115.66,
+    "lines": 6,
+    "released": 93.19
+   }
+  },
+  "STR.CONC.BEAM [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 8.41,
+    "held_low": 5.98,
+    "lines": 140,
+    "released": 72.18
+   },
+   "before": {
+    "blank": 16,
+    "held_high": 8.41,
+    "held_low": 5.98,
+    "lines": 142,
+    "released": 66.92
+   }
+  },
+  "STR.CONC.BLINDING [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 13.47,
+    "held_low": 7.64,
+    "lines": 8,
+    "released": 14.69
+   },
+   "before": {
+    "blank": 2,
+    "held_high": 13.47,
+    "held_low": 7.64,
+    "lines": 8,
+    "released": 12.73
+   }
+  },
+  "STR.CONC.BOUNDARY_PAD [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 3.12
+   },
+   "before": {
+    "blank": 1,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 0.0
+   }
+  },
+  "STR.CONC.COLUMN [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 15.5,
+    "held_low": 11.8,
+    "lines": 59,
+    "released": 20.62
+   },
+   "before": {
+    "blank": 2,
+    "held_high": 15.5,
+    "held_low": 11.8,
+    "lines": 59,
+    "released": 19.78
+   }
+  },
+  "STR.CONC.DOME [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 7.62
+   },
+   "before": {
+    "blank": 1,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 5.08
+   }
+  },
+  "STR.CONC.GROUND_BEAM [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 1.57,
+    "held_low": 1.18,
+    "lines": 59,
+    "released": 35.72
+   },
+   "before": {
+    "blank": 21,
+    "held_high": 1.57,
+    "held_low": 1.18,
+    "lines": 61,
+    "released": 23.76
+   }
+  },
+  "STR.CONC.LIFT [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 2.3
+   },
+   "before": {
+    "blank": 2,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 0.0
+   }
+  },
+  "STR.CONC.LINTEL [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 2.05,
+    "held_low": 1.36,
+    "lines": 52,
+    "released": 1.74
+   },
+   "before": {
+    "blank": 21,
+    "held_high": 2.05,
+    "held_low": 1.36,
+    "lines": 61,
+    "released": 1.02
+   }
+  },
+  "STR.CONC.NECK [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 11.35,
+    "held_low": 8.77,
+    "lines": 36,
+    "released": 1.46
+   },
+   "before": {
+    "blank": 4,
+    "held_high": 11.35,
+    "held_low": 8.77,
+    "lines": 36,
+    "released": 0.0
+   }
+  },
+  "STR.CONC.PARAPET [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 24.37
+   },
+   "before": {
+    "blank": 4,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 0.0
+   }
+  },
+  "STR.CONC.POOL [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 7.43
+   },
+   "before": {
+    "blank": 1,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 7.2
+   }
+  },
+  "STR.CONC.SAFETY [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 1.0
+   },
+   "before": {}
+  },
+  "STR.CONC.STAIR [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 11,
+    "released": 9.03
+   },
+   "before": {
+    "blank": 5,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 11,
+    "released": 5.37
+   }
+  },
+  "STR.FORMWORK [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 581,
+    "released": 2166.55
+   },
+   "before": {
+    "blank": 284,
+    "held_high": 132.79,
+    "held_low": 107.2,
+    "lines": 614,
+    "released": 1061.1
+   }
+  },
+  "STR.FORMWORK.STAIR [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 30,
+    "released": 60.33
+   },
+   "before": {
+    "blank": 18,
+    "held_high": 3.22,
+    "held_low": 2.58,
+    "lines": 30,
+    "released": 36.93
+   }
+  }
+ }
+}
