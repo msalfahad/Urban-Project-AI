@@ -1,5 +1,29 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-14 12:19 UTC (Lead). Previous version: 2026-11-14 08:15 UTC. Released default V2.9 + route G
+untouched. Candidate of record now V3.0.85 (not released). Counted your way: lines with no figure, and each trade
+against the freelancer.
+
+Since 08:15 (newest first):
+- Lines with no figure (not rebar): 124 -> 56 -> 44 in the candidate. What is left is two groups: the wall panel /
+  volume lines of the block walls (26, the same walls the block lines already bill) and stair railings, guards and
+  stair-hall skirting (14). Both are now tasks; after them every line has a figure. 8 lines still carry a range.
+- External render: 1,054.0 vs 1,470.0 m2 (-28.3 %): a rule difference (how faces and openings are counted), now in
+  the candidate; exterior paint and spatter follow the same faces.
+- Roof: finish 238.5 vs 285 m2 (-16.3 %, the dome footprints). The dome outer shells are now measured from the
+  structural detail (about 26.7 m2 each, three domes); with them the membrane is 324.1 vs 285 m2 (+13.7 %), the
+  extra being the curved dome surface. Roof upturn 233.0 vs 194 lm (+20.1 %) is not explained yet: task queued.
+- Parapets: the sections show every parapet in concrete: 24.4 m3 of concrete and no block; his 172.9 m2 of parapet
+  block is a material difference. The 1F parapet is drawn about 1.63 m high against the 1.20 m default (at most
+  0.37 m3): added to the designer list. His 41.25 m2 "1F projections" is still not found on the drawings.
+- Concrete: 406.79 vs 352.44 m3 (+15.4 %), unchanged; the beam and other-element residuals are first in line.
+  Reading the structural schedules as tables gives footings within 0.1 % of the candidate; 1F columns differ by
+  11 % (two columns not in the schedule): task queued to settle them member by member.
+- Generalising: one opening table (62 openings, every width and height filled) and one project inputs sheet (it
+  reproduces your storey heights exactly) are merged; nothing reads them yet, the first reader is queued.
+
+Previous section (2026-11-14 08:15):
+
 Last update: 2026-11-14 08:15 UTC (Lead). Previous version: 2026-11-14 00:20 UTC. Released default V2.9 + route G
 untouched. Candidate of record now V3.0.83 (not released); V3.0.84 is with the checker. Counted your way: lines with no
 figure, and each trade against the freelancer.

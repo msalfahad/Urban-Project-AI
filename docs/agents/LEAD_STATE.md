@@ -2,52 +2,51 @@
 
 # LEAD STATE (at most 5 KB; the Lead rewrites it at the end of every run)
 
-Next Lead run: read this file, then only what changed since: `git -C .work/engine log d3367f7e..origin/...`, board
-commits after this run's commit, RUN_LOG lines after 08:12Z 14 Nov, rows changed since. Check every MERGED claim with
+Next Lead run: read this file, then only what changed since: `git -C .work/engine log da27f52f..origin/...`, board
+commits after this run's commit, RUN_LOG lines after 12:16Z 14 Nov, rows changed since. Check every MERGED claim with
 `git merge-base --is-ancestor <sha> origin/...`. Take every time stamp from `date -u` at the moment of writing.
 
 ## Last seen
-- engine origin head: d3367f7e (T-772 merge). Merged since 04:20: T-770 r5 26a82725 (V3.0.82 / 1.82.0), T-779 0d3c07bb +
-  92b00ef0, T-780 09f8f0b2, T-770 r6 35963c4d + eab65f0e (V3.0.83 / 1.83.0), T-785 fcdc94cb, T-772 d3367f7e. No owner
-  engine commit. Main chat 04:34 daily audit: fill_from_index.py formwork step fixed (overlay formwork dropped, T-762).
-- Last Lead run: 2026-11-14 08:12 UTC (session_01E6cPneLBXjpenSNg9tg7SE). Drive readable; no new files (newest 21 Oct).
-- Verifier run 07:51 (session ...nc1RcFNw...) still open at 08:16 (merged T-785, T-772; T-770 r7 next). If no final
-  line by the next run, report it INCOMPLETE.
-- Candidate of record ARCH_TAKEOFF_V3.0.83 (master 1.83.0). NOT RELEASED; V2.9 + route G untouched.
+- engine origin head: da27f52f (T-782 merge). Merged since 08:12: T-770 r7 f9159fac + 60d7202a (V3.0.84 / 1.84.0),
+  T-789 7113111b, T-787 21646f39, T-770 r8 c5b79f10 + 65813f8d (V3.0.85 / 1.85.0), T-784 7b5c5382, T-781 44219b97,
+  T-782 da27f52f. No owner engine commit; no new OWNER_SESSION_CHANGES row since 13 Nov 15:00.
+- Last Lead run: 2026-11-14 12:16 UTC (session_01E6cPnezGV6nNnxiDAVKD6g). Drive readable; no new files (newest 21 Oct).
+- Candidate of record ARCH_TAKEOFF_V3.0.85 (master 1.85.0). NOT RELEASED; V2.9 + route G untouched.
 
-## Hub order (LEAD NOTE 08:15)
-r7 V3.0.84 / 1.84.0 (READY; Checker's own Drive chain = evidence; folded T-424 / T-502 close with it) -> r8 V3.0.85 /
-1.85.0 = T-760 ext render / paint (81 lines, never wired) + T-771 spatter line + T-780 roof + T-785 WP, worker's own
-Drive chain required -> r9 = fix rows of T-786..T-789 as they merge.
+## Hub order (LEAD NOTE 12:19)
+r9 V3.0.86 / 1.86.0 = merged T-787 dome extrados + T-789 parapet / masonry fix rows + any merged of T-786 / T-790 /
+T-791 / T-792 / T-788 / T-794 at claim (max three family groups) -> r10 = the rest.
 
 ## Fill / difference state
-- Blank non-rebar: 211 (V3.0.82) -> 124 (V3.0.83) -> 56 (V3.0.84 READY); r8 about -12 more; then parapet / dome rows.
-- Open differences: concrete UNRESOLVED +7.14 beams / -5.84 other (T-786); cornice -29.1 % (T-788); his 1F
-  projections 41.25 m2 + parapet masonry HELD 0..101.46 (T-789); dome extrados ~83.2 m2 no line (T-787).
-- Closed to causes: masonry -22.2 %, plaster, roof -16 %, wet-room WP +18.8 %, windows -14 %, fence, ext render RULE_DIFF.
+- Blank non-rebar: 124 (V3.0.83) -> 56 (V3.0.84) -> 44 (V3.0.85 package count; blank_lines.py: 40 blank = blockwork
+  ARCH.WALL_PANEL / VOLUME 26 + stairs 14, plus 8 HELD ranges). T-790 / T-791 close the 40.
+- Open differences: concrete +7.14 beams / -5.84 other (T-786); schedule vs candidate columns 1F -11.4 % (T-792);
+  cornice -29.1 % (T-788); roof upturn +20.1 % (T-794); his 1F projections 41.25 m2 UNRESOLVED named (no row: T-789
+  found no element; revisit only if the freelancer sheet names it).
+- Closed to causes: masonry -22.2 %, plaster, roof finish -16 %, roof membrane +13.7 % (dome curvature), parapet
+  masonry (RC, block 0), wet-room WP +18.8 %, windows -14 %, fence, ext render -28.3 % RULE_DIFF.
+- Not yet assigned: wall-tile edge range 0 .. 73.1 lm (T-771 NEW line), disposal range (owner MAIN FILL basis).
 
-## Live rows (08:16)
-- READY: T-770 r7. TODO: W1 T-787, T-784, T-786; W2 T-789, T-781, T-788, T-783 (after T-781 + T-782), T-774 (after
-  T-773); W3 T-770 r8, T-782, T-773 (owner authorises). QUEUED (folded): T-424, T-502 (close with r7).
-  DONE this run: T-750, T-509 (r5), T-363, T-364, T-513 (r6). PAUSED: T-382, T-664, T-450 p2, T-451, T-472.
+## Live rows (12:19)
+- READY: none. TODO: W1 T-786, T-792, T-791; W2 T-790, T-788, T-783, T-774 (after T-773); W3 T-770 r9, T-793,
+  T-794, T-773 (owner authorises). DONE this run: T-424, T-502 (r7). PAUSED: T-382, T-664, T-450 p2, T-451, T-472.
   IN PROGRESS: T-180.
-- Queue check 14 actionable, 0 flagged, 0 stall. Next free T-790.
+- Queue check 12 actionable, 0 flagged, 0 stall. Next free T-795.
 
 ## Rules decided (keep)
 - Board check reads the newest line starting `Lead <date> <hh:mm>` that contains 'LANE ORDER:'; lanes separated by ';'.
-  `board check` pulls first: commit edits before running it. Write "Nth in queue (not blocked ...)" not "after T-nnn"
-  for pure queue order: "after T-" makes the row WAITING.
+  `board check` pulls first: commit edits before running it. Write "Nth in queue (not blocked ...)"; never the words
+  "after T-" for pure queue order (makes the row WAITING). Time stamps: from `date -u` at writing, never ahead.
 - Status word FIRST; 7 cells (id | gate | lane title | description | status | branch | verdict); no '|' in a cell.
   MERGED only after `engine push` + sha on origin.
 - Register: arris once; opening edges in paint = lm; flush parapet screen = one face; railings in the railing family;
-  parapet block body -> A masonry, downstand -> B10; stair concrete + formwork S, finish faces A; boundary wall: under-
-  building band = S (Q-28 A), fence-run foundation = S, fence block / plaster above N.G. = A family via T-769 / T-776.
-  Column / beam joint per T-777 / T-778; dome extrados = roof layers family (T-787), flat roof lines keep the footprint
-  deduction (no double count).
-- Lessons: no new rows (owner reset). PROPOSED stay: L-T727-1, L-T738-1, L-T755-1. Noted, not filed: 'a merged fix-row
-  set can be skipped by the wiring rounds' (T-760 found at r7): the Lead checks every merged fix-row set against the hub.
+  parapet: all RC on Alsenan sections -> STR.CONC.PARAPET whole, block family = complement (R-T789-1); stair concrete +
+  formwork S, finish faces A; boundary wall: under-building band = S (Q-28 A), fence-run foundation = S, fence block /
+  plaster above N.G. = A. Dome extrados = roof layers family (T-787), flat roof lines keep the footprint deduction.
+  ARCH.WALL_PANEL / VOLUME = views of MAS.BLOCK walls: block m2 counted once (T-790 decides reference vs subtotal).
+- Lessons: no new rows (owner reset). PROPOSED stay: L-T727-1, L-T738-1, L-T755-1; R-T789-1 proposed by worker 2.
 
 ## Blockers / open owner items
-- DESIGNER_QUESTIONS (18) with the owner (+ dome build-up when T-787 adds it); ORR-007 stair skirting; Q-34 2F top
-  roof; release switch T-773 is his.
+- DESIGNER_QUESTIONS (19 incl. D-DOME; item 5 now also the 1F parapet height ~1.63 vs 1.20) with the owner; ORR-007
+  stair skirting; Q-34 2F top roof; release switch T-773 is his.
 - Scheduled-task frequency change recommended in DELIVERY_MODE s.7 (owner only). Scout paused (last run failed 27 Oct).

@@ -14,6 +14,20 @@ Drive readable; no new files or photos since 12 Nov. Candidate of record V3.0.79
 OWNER PACKAGE: none new (designer list, stair skirting form, 2F top roof and the release switch remain with you).
 NEEDS FIXING: the formwork step of docs/agents/boq/fill_from_index.py applies a whole member's ratio to each partial line (Checker confirmed); fix it before the next rebuild on a newer index (told 16:4x, still open).
 
+## LEAD REPORT 2026-11-14 00:20 UTC
+Drive readable; no new files or photos since 12 Nov. Candidate of record V3.0.79 (not released); V2.9 + route G untouched. V3.0.81 (concrete / formwork / main fill) with the Checker now (one-test fix, content already verified).
+- Lines with no figure (non-rebar): 691 in V3.0.79 -> 295 in V3.0.81; merged fix rows waiting to be wired: earthworks, waterproofing, fence / site, boundary split (V3.0.82), concrete points, plaster / paint, masonry (V3.0.83). Still unfilled: stair finishes, openings / ceilings / domes, roof annex, missing families.
+- Concrete (m3): 114 ranged lines -> points: 405.60 + 1.20 SAFETY vs freelancer 352.4 (+15.1 %, UNRESOLVED). Beams 79.24 vs 66.09 (+19.9 %); the other elements about +40 (blinding the other way, RULE_DIFFERENCE). Two cause-split tasks.
+- Masonry (m2): block 467.8 -> 981.4 (blank 91 -> 0) vs freelancer 1,260.7 (-22.2 %): RULE_DIFFERENCE (full opening deduction, Q-73) + residual UNRESOLVED; black units 2,571 -> 7,226 pcs.
+- Plaster (m2, ex wet render): 1,236.8 vs 1,169.1 (+5.8 %, UNRESOLVED; he 3.6 m flat): queued with masonry.
+- Fence (m2): block 95.44 vs 74.40: +24.18 printed height 2.65 vs his 2.00 ENGINE_RIGHT, +4.77 RULE_DIFFERENCE, -3.18 columns UNRESOLVED, residual 0. Boundary excavation 47.09 -> 46.32 m3 (fence 44.07 / under-building 44.37 / sea gap 3.50 m).
+- Roof (m2): membrane 255.4 vs 285.0 (-10 %: annex roof about 54.9 without a line), finish 248.8 vs 285 (-12.7 %): new row.
+- Exterior render / paint 1,008.6 .. 1,085.6 vs 1,469.97 (-26 .. -31 %, RULE_DIFFERENCE), unchanged.
+- Decisions: compare-sheet row closed as done by your main chat (Compare sheet + 13 Nov table); new rows beams first, then other concrete, roof (worker 1), blockwork / plaster (worker 2); wiring order V3.0.81 -> .82 -> .83.
+- Team: all runs since 20:20 closed with a final line except the Checker run started 23:51 (still running: merged boundary + masonry, now on V3.0.81); selfcheck PASS (codemap, t061, freeze 0); queue check 19 actionable, 0 flagged, 0 stall.
+OWNER PACKAGE: none new (designer list, stair skirting form, 2F top roof and the release switch remain with you).
+NEEDS FIXING: the formwork step of docs/agents/boq/fill_from_index.py (whole-member ratio on each partial line) is still unchanged since 13 Nov 14:18; fix it before any rebuild on a newer index.
+
 ## LEAD REPORT 2026-11-13 16:40 UTC
 Drive readable; no new files or photos since 12 Nov. Candidate V3.0.78 (not released); default V2.9 + route G untouched.
 - Concrete (m3): blank 80 -> 0 in the merged fix-row set (+58.42 m3 DEFAULT/ESTIMATE + 1.00 m3 SAFETY), not yet wired; beam 78.2 .. 80.6 vs freelancer 66.09 (+18 %, UNRESOLVED: same-mark / 0.60 defaults).

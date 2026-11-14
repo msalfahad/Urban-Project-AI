@@ -46,6 +46,18 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-14 12:19; DELIVERY MODE 2026-11-13 in force)
+
+- FILL (target 17 Nov): V3.0.84 and V3.0.85 merged (stairs, openings / ceilings / domes, missing families, exterior
+  render / paint / spatter, roof layers, wet-room WP); blank non-rebar 124 -> 56 -> 44. Left: blockwork panel / volume
+  26 and stair railings / skirting 14 (rows queued), r9 wires dome extrados + parapet fix rows. Confidence 17 Nov: HIGH
+  for every line with a figure (two fix-row sets + two wiring rounds left, about 1.5 days at today's rate).
+- Freelancer differences: open = concrete residuals +7.14 / -5.84 m3, cornice -29.1 %, roof upturn +20.1 %, 1F
+  columns schedule vs candidate -11.4 %, his 1F projections 41.25 m2; closed today: parapet masonry (all RC), roof
+  membrane (dome curvature).
+- GENERALISE (to 22 Nov): opening table, inputs sheet, schedule-first tables merged (unwired); first consumer of the
+  inputs sheet and the wall-band masonry queued. SECOND VILLA after the release switch (owner).
+
 ## Status (Lead, 2026-11-14 08:15; DELIVERY MODE 2026-11-13 in force)
 
 - FILL (target 17 Nov): wired V3.0.82 (earthworks + waterproofing + fence / site) and V3.0.83 (concrete points + plaster / paint + masonry); blank non-rebar 295 -> 211 -> 124. V3.0.84 (stairs + openings / ceilings / domes + missing families, 124 -> 56) is with the Checker. Last round V3.0.85 = exterior render / paint (81 lines merged 13 Nov, never wired) + roof layers + wet-room WP. The remaining HELD / missing pieces have rows: parapet masonry, dome extrados. Confidence 17 Nov: MEDIUM-HIGH (two Gate B rounds left, each about 2 Checker runs).

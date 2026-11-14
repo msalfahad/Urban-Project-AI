@@ -1,5 +1,18 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-14 12:19 UTC
+Drive readable; no new files or photos since 08:00 (newest project file 21 Oct). Candidate of record ARCH_TAKEOFF_V3.0.85 / master 1.85.0 (not released); V2.9 + route G untouched.
+- Lines with no figure (non-rebar): 124 (V3.0.83) -> 56 (V3.0.84, merged f9159fac 08:40) -> 44 (V3.0.85, merged c5b79f10 11:49; package count). By trade with the MAIN FILL overlay (BLANK_LINES_V3.0.85): 40 blank = blockwork panel / volume 26 + stairs railings / guards / skirting 14; 8 HELD ranges (earthworks disposal 105.6 .. 115.5 m3, mesh strip 856 .. 1,148 lm, sharmat 293 .. 601 pcs, wall-tile edge 0 .. 73.1 lm, 4 small). Both blank sets now have rows (worker 2 / worker 1); FILL target 17 Nov holds.
+- External render (m2): 1,054.0 vs 1,470.0 (-28.3 %, RULE_DIFFERENCE per the merged face ledger); exterior paint = render 1,054.0; spatter 1,054.0. Wired in V3.0.85.
+- Roof (m2): finish 238.5 vs 285 (-16.3 %, dome footprints); with the dome outer shells (3 x 26.685 m2, Checker own read AGREE, wired in r9) membrane 324.09 vs 285 (+13.7 %) = curvature +34.06 RULE_DIFFERENCE. Roof upturn 233.0 vs 194 lm (+20.1 %) UNRESOLVED: new row.
+- Parapets: all runs RC on the sections (Checker AGREE): 24.37 m3 concrete, block 0 m2 DRAWING-READ; his 172.93 m2 parapet masonry = material RULE_DIFFERENCE incl. 68.42 + 7.63 ENGINE_RIGHT. 1F parapet drawn about 1.63 m vs default 1.20 (<= 0.37 m3, designer item 5). His 1F projections 41.25 m2 still UNRESOLVED (named).
+- Concrete (m3): 406.79 vs 352.44 (+15.4 %), unchanged; residuals +7.14 beams / -5.84 other now first for worker 1. Schedule-first read: footings 66.52 vs candidate 66.58 (-0.09 %), GF columns +1.1 %, 1F -11.4 % (PC1 / PC2 not in schedule -1.01), 2F -6.7 %: new row restates where the schedule governs.
+- Openings: one opening table, 62 openings, 0 blank W / H; windows + shutters 100.10 m2 / 29 pcs vs 116.9 (-14.4 %); external doors '12 vs 6' explained (his 12 is an m2 cell). Inputs sheet reproduces the owner heights exactly. Both unwired; first consumer queued.
+- Decisions: r9 = dome extrados + parapet fix rows (+ any merged of the new rows); new T-790 blockwork panel / volume (26), T-791 stairs (14), T-792 schedule-first fix rows, T-793 inputs-sheet height provider, T-794 roof upturn; T-783 unblocked; folded T-424 / T-502 closed with r7.
+- Team: every run since 08:16 closed with a final line; one Checker overlap-guard INCOMPLETE at 11:52 by design (the 10:51 run was still merging r8; it closed 12:00). Number (b) not re-run by the scoreboard tool on V3.0.85 (asked for the next light run). Selfcheck PASS (codemap, t061, freeze 0); queue check 12 actionable, 0 flagged, 0 stall.
+OWNER PACKAGE: none new. With you: designer list (now incl. the dome build-up and the 1F parapet height), stair skirting form, 2F top roof, the release switch.
+NEEDS FIXING: none.
+
 ## LEAD REPORT 2026-11-14 08:15 UTC
 Drive readable; no new files or photos (newest project file 21 Oct). Candidate of record V3.0.83 (not released); V2.9 + route G untouched. V3.0.84 with the Checker.
 - Lines with no figure (non-rebar): 211 (V3.0.82, merged) -> 124 (V3.0.83, merged) -> 56 in V3.0.84 (READY). The last FILL round V3.0.85 wires exterior render / paint (81 lines merged 13 Nov but never wired: found by worker 3 at r7), roof layers, wet-room WP; parapet masonry (HELD 0 .. 101.46 m2) and dome extrados (about 83.2 m2, no line) have rows.
@@ -27,17 +40,3 @@ Drive readable; no new files or photos (newest file in the project folder 21 Oct
 - Team: every run since 00:20 closed with a final line (the Checker run of 23:51 closed at 01:05 after merging V3.0.81); Checker 03:51 still running; selfcheck PASS (codemap, t061, freeze 0); queue check 19 actionable, 0 flagged, 0 stall.
 OWNER PACKAGE: none new (designer list, stair skirting form, 2F top roof and the release switch remain with you).
 NEEDS FIXING: docs/agents/boq/fill_from_index.py formwork step (whole-member ratio on partial lines) still unchanged since 13 Nov 14:18; the wired lines are correct, but fix it before any rebuild on a newer index.
-
-## LEAD REPORT 2026-11-14 00:20 UTC
-Drive readable; no new files or photos since 12 Nov. Candidate of record V3.0.79 (not released); V2.9 + route G untouched. V3.0.81 (concrete / formwork / main fill) with the Checker now (one-test fix, content already verified).
-- Lines with no figure (non-rebar): 691 in V3.0.79 -> 295 in V3.0.81; merged fix rows waiting to be wired: earthworks, waterproofing, fence / site, boundary split (V3.0.82), concrete points, plaster / paint, masonry (V3.0.83). Still unfilled: stair finishes, openings / ceilings / domes, roof annex, missing families.
-- Concrete (m3): 114 ranged lines -> points: 405.60 + 1.20 SAFETY vs freelancer 352.4 (+15.1 %, UNRESOLVED). Beams 79.24 vs 66.09 (+19.9 %); the other elements about +40 (blinding the other way, RULE_DIFFERENCE). Two cause-split tasks.
-- Masonry (m2): block 467.8 -> 981.4 (blank 91 -> 0) vs freelancer 1,260.7 (-22.2 %): RULE_DIFFERENCE (full opening deduction, Q-73) + residual UNRESOLVED; black units 2,571 -> 7,226 pcs.
-- Plaster (m2, ex wet render): 1,236.8 vs 1,169.1 (+5.8 %, UNRESOLVED; he 3.6 m flat): queued with masonry.
-- Fence (m2): block 95.44 vs 74.40: +24.18 printed height 2.65 vs his 2.00 ENGINE_RIGHT, +4.77 RULE_DIFFERENCE, -3.18 columns UNRESOLVED, residual 0. Boundary excavation 47.09 -> 46.32 m3 (fence 44.07 / under-building 44.37 / sea gap 3.50 m).
-- Roof (m2): membrane 255.4 vs 285.0 (-10 %: annex roof about 54.9 without a line), finish 248.8 vs 285 (-12.7 %): new row.
-- Exterior render / paint 1,008.6 .. 1,085.6 vs 1,469.97 (-26 .. -31 %, RULE_DIFFERENCE), unchanged.
-- Decisions: compare-sheet row closed as done by your main chat (Compare sheet + 13 Nov table); new rows beams first, then other concrete, roof (worker 1), blockwork / plaster (worker 2); wiring order V3.0.81 -> .82 -> .83.
-- Team: all runs since 20:20 closed with a final line except the Checker run started 23:51 (still running: merged boundary + masonry, now on V3.0.81); selfcheck PASS (codemap, t061, freeze 0); queue check 19 actionable, 0 flagged, 0 stall.
-OWNER PACKAGE: none new (designer list, stair skirting form, 2F top roof and the release switch remain with you).
-NEEDS FIXING: the formwork step of docs/agents/boq/fill_from_index.py (whole-member ratio on each partial line) is still unchanged since 13 Nov 14:18; fix it before any rebuild on a newer index.
