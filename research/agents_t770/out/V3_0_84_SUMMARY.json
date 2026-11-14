@@ -1,0 +1,1044 @@
+{
+ "added": {
+  "L-1c61475a7907844e532d": {
+   "item_code": "MEP.SAN.BASIN",
+   "label": "MEASURED",
+   "net": 17.0,
+   "set": "T-771",
+   "unit": "pcs"
+  },
+  "L-25ee4cb6145be7bc6d8f": {
+   "high": null,
+   "item_code": "FIN.SPATTER_DASH",
+   "kind": "carrier",
+   "label": "ESTIMATE",
+   "low": null,
+   "net": 1622.0002,
+   "set": "T-771",
+   "set_figure": 1622.0,
+   "unit": "m2"
+  },
+  "L-2b9d5e298285680ad02f": {
+   "item_code": "MEP.SAN.FLOOR_DRAIN_4IN",
+   "label": "MEASURED",
+   "net": 14.0,
+   "set": "T-771",
+   "unit": "pcs"
+  },
+  "L-33d272f5b4d7b33767b6": {
+   "item_code": "FIN.CEILING.CORNICE",
+   "label": "ESTIMATE",
+   "net": 302.88,
+   "set": "T-771",
+   "unit": "lm"
+  },
+  "L-36532b9ddbead9fba932": {
+   "item_code": "MEP.SAN.SHOWER_TRAY",
+   "label": "MEASURED",
+   "net": 3.0,
+   "set": "T-771",
+   "unit": "pcs"
+  },
+  "L-365a42c3ddf2a45ca322": {
+   "item_code": "MEP.SAN.FLOOR_DRAIN_3IN",
+   "label": "MEASURED",
+   "net": 5.0,
+   "set": "T-771",
+   "unit": "pcs"
+  },
+  "L-388f890dd945b896ae27": {
+   "item_code": "FIN.MARBLE.LANDING",
+   "label": "MEASURED",
+   "net": 1.3525,
+   "set": "T-766",
+   "unit": "m2"
+  },
+  "L-40e30b9152f7c7fb784d": {
+   "high": null,
+   "item_code": "FIN.STAIR.NOSING",
+   "kind": "carrier",
+   "label": "ESTIMATE",
+   "low": null,
+   "net": 97.087288,
+   "set": "T-771",
+   "set_figure": 97.09,
+   "unit": "lm"
+  },
+  "L-41b2f150f7779382b976": {
+   "high": 73.1,
+   "item_code": "FIN.WALL.TILE.EDGE",
+   "kind": "ranged",
+   "label": "ESTIMATE",
+   "low": 0.0,
+   "net": null,
+   "set": "T-771",
+   "set_figure": null,
+   "unit": "lm"
+  },
+  "L-46ec916911fc2ffc9ac2": {
+   "item_code": "FIN.WALL.TILE.EDGE",
+   "label": "ESTIMATE",
+   "net": 32.01,
+   "set": "T-771",
+   "unit": "lm"
+  },
+  "L-4a79ab78649d7752c8ff": {
+   "item_code": "MEP.SAN.WASHING_MACHINE_POINT",
+   "label": "ESTIMATE",
+   "net": 1.0,
+   "set": "T-771",
+   "unit": "pcs"
+  },
+  "L-4d7d2430b607e0e3633e": {
+   "item_code": "MEP.SAN.KITCHEN_SINK",
+   "label": "ESTIMATE",
+   "net": 1.0,
+   "set": "T-771",
+   "unit": "pcs"
+  },
+  "L-618e1006d9a2dfc54b78": {
+   "item_code": "MEP.SAN.WC",
+   "label": "MEASURED",
+   "net": 12.0,
+   "set": "T-771",
+   "unit": "pcs"
+  },
+  "L-725e4fca397ae5f3483a": {
+   "high": null,
+   "item_code": "FIN.SPATTER_DASH",
+   "kind": "carrier",
+   "label": "ESTIMATE",
+   "low": null,
+   "net": 179.8425,
+   "set": "T-771",
+   "set_figure": 179.84,
+   "unit": "m2"
+  },
+  "L-81b4ba0582ab355941ac": {
+   "item_code": "JOIN.WARDROBE",
+   "label": "DEFAULT",
+   "net": 3.9,
+   "set": "T-771",
+   "unit": "lm"
+  },
+  "L-82df9974b923558a31b4": {
+   "high": 601.42,
+   "item_code": "MAS.SHARMAT",
+   "kind": "ranged",
+   "label": "ESTIMATE",
+   "low": 293.0,
+   "net": null,
+   "set": "T-771",
+   "set_figure": null,
+   "unit": "pcs"
+  },
+  "L-8b5ad410523bebc4efce": {
+   "high": null,
+   "item_code": "FIN.CEILING.GYPSUM",
+   "kind": "carrier",
+   "label": "ESTIMATE",
+   "low": null,
+   "net": 426.821377,
+   "set": "T-771",
+   "set_figure": 411.34,
+   "unit": "m2"
+  },
+  "L-a356210429fadd18871a": {
+   "item_code": "JOIN.KITCHEN.WALL",
+   "label": "ESTIMATE",
+   "net": 8.42,
+   "set": "T-771",
+   "unit": "lm"
+  },
+  "L-b9bbfc4178816a0a306c": {
+   "item_code": "SITE.EXCAVATION_SUPPORT",
+   "label": "DRAWING-READ",
+   "net": 1.0,
+   "set": "T-771",
+   "unit": "item"
+  },
+  "L-bb0646bb4dc935f242cd": {
+   "item_code": "JOIN.KITCHEN.BASE",
+   "label": "DEFAULT",
+   "net": 11.07,
+   "set": "T-771",
+   "unit": "lm"
+  },
+  "L-d7cfcc86f0d1636a1d9a": {
+   "item_code": "MEP.SAN.SHOWER_WALKIN",
+   "label": "MEASURED",
+   "net": 3.0,
+   "set": "T-771",
+   "unit": "pcs"
+  },
+  "L-d9cf6b275665dda51553": {
+   "item_code": "MET.RAILING.POST",
+   "label": "DRAWING-READ",
+   "net": 10.0,
+   "set": "T-771",
+   "unit": "pcs"
+  },
+  "L-dd8cb71ec09f6a0c0544": {
+   "item_code": "FIN.MARBLE.LANDING",
+   "label": "MEASURED",
+   "net": 1.4375,
+   "set": "T-766",
+   "unit": "m2"
+  },
+  "L-e765c5938bc82e046c3f": {
+   "high": 1147.96,
+   "item_code": "MAS.MESH_STRIP",
+   "kind": "ranged",
+   "label": "ESTIMATE",
+   "low": 856.14,
+   "net": null,
+   "set": "T-771",
+   "set_figure": null,
+   "unit": "lm"
+  }
+ },
+ "applied": 109,
+ "base_index_sha256": "f3a81dfe753f81901adeea07d318aae82d20f729e75ead43bbf3b7abac4a78fe",
+ "blank_in_package_families_after": 33,
+ "blank_in_package_families_before": 101,
+ "blank_non_rebar_after": 56,
+ "blank_non_rebar_before": 124,
+ "by_set": {
+  "T-766": {
+   "labels": {
+    "DRAWING-READ": 20,
+    "ESTIMATE": 23,
+    "MEASURED": 1,
+    "NOT_APPLICABLE": 22
+   },
+   "rows": 66
+  },
+  "T-768": {
+   "labels": {
+    "DEFAULT": 18,
+    "DRAWING-READ": 8,
+    "ESTIMATE": 8,
+    "NOT_APPLICABLE": 9
+   },
+   "rows": 43
+  }
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.83",
+ "index_sha256": "e07948d2376c1a4e6d3e1a3cf3e332d87f392e15253670b6389e5873d662804c",
+ "lines": 5304,
+ "lines_before": 5280,
+ "method": "ARCH_TAKEOFF_V3.0.84",
+ "outside_lines_identical": true,
+ "package_sha256": "3328657fca7475115e0b2d55c67c348839aafc6347db28329670b7b1ad3ac588",
+ "ranged_in_package_families_after": 3,
+ "ranged_in_package_families_before": 44,
+ "ranged_non_rebar_after": 78,
+ "ranged_non_rebar_before": 116,
+ "report": {
+  "carrier_added": [
+   {
+    "element_id": "SPATTER:INTERIOR",
+    "item_code": "FIN.SPATTER_DASH",
+    "line_id": "L-25ee4cb6145be7bc6d8f",
+    "set": "T-771"
+   },
+   {
+    "element_id": "SPATTER:FENCE",
+    "item_code": "FIN.SPATTER_DASH",
+    "line_id": "L-725e4fca397ae5f3483a",
+    "set": "T-771"
+   },
+   {
+    "element_id": "CEILING:GYPSUM_DECOR",
+    "item_code": "FIN.CEILING.GYPSUM",
+    "line_id": "L-8b5ad410523bebc4efce",
+    "set": "T-771"
+   },
+   {
+    "element_id": "STAIR:NOSING",
+    "item_code": "FIN.STAIR.NOSING",
+    "line_id": "L-40e30b9152f7c7fb784d",
+    "set": "T-771"
+   }
+  ],
+  "deferred_added": [
+   {
+    "element_id": "SPATTER:EXTERIOR",
+    "item_code": "FIN.SPATTER_DASH",
+    "reason": "carrier FIN.EXT.FINISH is HELD in V3.0.83 (17 ranged + 1 blank): the merged T-760 exterior render / paint set (Gate A 89be1473) is not wired yet; this line is wired with T-760 in the next T-770 round (recomputed from the wired carrier, R-T770-5 t)",
+    "set": "T-771",
+    "set_figure": 1054.0
+   }
+  ],
+  "excluded_with_reason": [
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-775f62538c1f46077807",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-b77a64fb9a941582f25c",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-a43adc74906d8bcd7b1c",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-ff51392df9e2c8c21efe",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-aed4c2990437f767dc90",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-28c33cd0ab5d19426661",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-2fae5d35b21e97684844",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-32f71724eeeaa46638c9",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-20c2640927e41626893d",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-cfecfcea2280155a6a74",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-8e463d6ce740fc19e60c",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-9b1da1af7c162de2233c",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-caacb4c1425981b2585f",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-193f8e812d9ade5f9c41",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-76de75ce9a315998be99",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-4b902816d29b75fab7fc",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-0ae4be232407b92343ef",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+    "line_id": "L-d980ace38bdd63fa8de4",
+    "reason": "FORM_ALTERNATIVE_ORR-007",
+    "set": "T-766"
+   },
+   {
+    "item_code": "ARCH.THRESHOLD",
+    "line_id": "L-479acdcb1e5e01bf3957",
+    "reason": "NOT_A_THRESHOLD_T-325",
+    "set": "T-768"
+   },
+   {
+    "item_code": "ARCH.THRESHOLD",
+    "line_id": "L-44b8dcf4b30e11a464f5",
+    "reason": "NOT_A_THRESHOLD_T-325",
+    "set": "T-768"
+   },
+   {
+    "item_code": "ARCH.THRESHOLD",
+    "line_id": "L-2991f35326b961a6d238",
+    "reason": "NOT_A_THRESHOLD_T-325",
+    "set": "T-768"
+   },
+   {
+    "item_code": "ARCH.THRESHOLD",
+    "line_id": "L-1c71cd45a5116bdc5260",
+    "reason": "NOT_A_THRESHOLD_T-325",
+    "set": "T-768"
+   },
+   {
+    "item_code": "ARCH.THRESHOLD",
+    "line_id": "L-f4cfd731c98468026078",
+    "reason": "NOT_A_THRESHOLD_T-325",
+    "set": "T-768"
+   },
+   {
+    "item_code": "ARCH.WINDOW_REVEAL",
+    "line_id": "L-3e3a3bf8e2fd272a4c8e",
+    "reason": "NO_SURFACE_FRAME_ON_ROOM_FACE",
+    "set": "T-768"
+   },
+   {
+    "item_code": "ARCH.WINDOW_REVEAL",
+    "line_id": "L-e21b84e60826b8be59fa",
+    "reason": "NO_SURFACE_FRAME_ON_ROOM_FACE",
+    "set": "T-768"
+   },
+   {
+    "item_code": "ARCH.WINDOW_REVEAL",
+    "line_id": "L-29637dbaa9fe1acc7b82",
+    "reason": "NO_SURFACE_FRAME_ON_ROOM_FACE",
+    "set": "T-768"
+   },
+   {
+    "item_code": "FIN.CEILING",
+    "line_id": "L-fc116bb666b184740090",
+    "reason": "CARRIED_BY_L-43bf1f869e1588f1d3bd",
+    "set": "T-768"
+   }
+  ],
+  "ranged_added": [
+   {
+    "element_id": "TILE_EDGE:DOOR_JAMBS",
+    "item_code": "FIN.WALL.TILE.EDGE",
+    "line_id": "L-41b2f150f7779382b976",
+    "set": "T-771"
+   },
+   {
+    "element_id": "MASONRY:MESH_STRIP",
+    "item_code": "MAS.MESH_STRIP",
+    "line_id": "L-e765c5938bc82e046c3f",
+    "set": "T-771"
+   },
+   {
+    "element_id": "MASONRY:SHARMAT",
+    "item_code": "MAS.SHARMAT",
+    "line_id": "L-82df9974b923558a31b4",
+    "set": "T-771"
+   }
+  ],
+  "rows_detail_sets": [
+   "T-766",
+   "T-768"
+  ],
+  "v3": {
+   "basis_corrections": [],
+   "carried": {},
+   "not_applicable_rows": [
+    {
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "line_id": "L-1c082cc60442407ed517",
+     "set": "T-766"
+    },
+    {
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "line_id": "L-ebe230d8c2fbc35332b8",
+     "set": "T-766"
+    },
+    {
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "line_id": "L-1a0d2ab50e42b0219eab",
+     "set": "T-766"
+    },
+    {
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "line_id": "L-c074ce526885a44423d0",
+     "set": "T-766"
+    }
+   ],
+   "restated_safety": [],
+   "source_schemas": {
+    "T-766": null,
+    "T-768": null,
+    "T-771": "URBAN_FIX_ROWS_V1"
+   },
+   "stack": {
+    "deferred": [],
+    "not_applicable": [],
+    "stacked_on_base": [],
+    "stacked_on_row": []
+   }
+  }
+ },
+ "rule": [
+  "R-T770-1",
+  "R-T770-2",
+  "R-T770-3",
+  "R-T770-4",
+  "R-T770-5"
+ ],
+ "set_sha256": {
+  "T-766": "f97c2c91631316fa1ee7ea4a4f18300a32a1519b847a5eccec38cf81cca6234b",
+  "T-768": "1f31fc5bc68bb64afc7069de1ea42cd9524d5cca1807ae732c2275b28b265b3d",
+  "T-771": "5eb803cdd7c6e16424ef2560c6f194c4d631eb6bb84e8e6ac00c623662cd863f"
+ },
+ "totals_moved": {
+  "ARCH.SHUTTER [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 12.5
+   },
+   "before": {
+    "blank": 3,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 0.0
+   }
+  },
+  "ARCH.THRESHOLD [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 9,
+    "released": 1.84
+   },
+   "before": {
+    "blank": 8,
+    "held_high": 1.31,
+    "held_low": 1.31,
+    "lines": 14,
+    "released": 0.0
+   }
+  },
+  "ARCH.WINDOW [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 11.52,
+    "held_low": 9.87,
+    "lines": 5,
+    "released": 90.18
+   },
+   "before": {
+    "blank": 1,
+    "held_high": 11.52,
+    "held_low": 9.87,
+    "lines": 5,
+    "released": 76.26
+   }
+  },
+  "ARCH.WINDOW [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 29.0
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 2.0,
+    "held_low": 1.0,
+    "lines": 4,
+    "released": 28.0
+   }
+  },
+  "ARCH.WINDOW_REVEAL [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 59,
+    "released": 16.77
+   },
+   "before": {
+    "blank": 8,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 62,
+    "released": 12.44
+   }
+  },
+  "DOOR.INTERNAL.PVC [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 5,
+    "released": 37.84
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 9.24,
+    "held_low": 8.03,
+    "lines": 5,
+    "released": 28.6
+   }
+  },
+  "DOOR.INTERNAL.PVC [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 5,
+    "released": 20.0
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 5.0,
+    "held_low": 5.0,
+    "lines": 5,
+    "released": 15.0
+   }
+  },
+  "DOOR.MAIN_ENTRANCE [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 5.0
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 5.0,
+    "held_low": 5.0,
+    "lines": 1,
+    "released": 0.0
+   }
+  },
+  "DOOR.MAIN_ENTRANCE [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 1.0
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 1.0,
+    "held_low": 1.0,
+    "lines": 1,
+    "released": 0.0
+   }
+  },
+  "FIN.CEILING [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 39,
+    "released": 426.82
+   },
+   "before": {
+    "blank": 4,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 40,
+    "released": 411.34
+   }
+  },
+  "FIN.CEILING.BULKHEAD [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 14,
+    "released": 28.92
+   },
+   "before": {
+    "blank": 1,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 14,
+    "released": 27.93
+   }
+  },
+  "FIN.CEILING.CORNICE [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 302.88
+   },
+   "before": {}
+  },
+  "FIN.CEILING.GYPSUM [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 426.82
+   },
+   "before": {}
+  },
+  "FIN.DOME.SOFFIT [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 48.3
+   },
+   "before": {
+    "blank": 2,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 0.0
+   }
+  },
+  "FIN.MARBLE.LANDING [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 5,
+    "released": 20.69
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 9.23,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 10.1
+   }
+  },
+  "FIN.MARBLE.LIFT_SURROUND [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 9.04
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 13.98,
+    "held_low": 2.75,
+    "lines": 3,
+    "released": 0.0
+   }
+  },
+  "FIN.MARBLE.RISER [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 11,
+    "released": 15.32
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 13.74,
+    "held_low": 13.09,
+    "lines": 11,
+    "released": 1.96
+   }
+  },
+  "FIN.MARBLE.TREAD [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 10,
+    "released": 28.87
+   },
+   "before": {
+    "blank": 1,
+    "held_high": 1.32,
+    "held_low": 1.32,
+    "lines": 10,
+    "released": 23.37
+   }
+  },
+  "FIN.SPATTER_DASH [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 1801.84
+   },
+   "before": {}
+  },
+  "FIN.STAIR.FLIGHT [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 9,
+    "released": 25.51
+   },
+   "before": {
+    "blank": 2,
+    "held_high": 20.23,
+    "held_low": 20.23,
+    "lines": 9,
+    "released": 0.0
+   }
+  },
+  "FIN.STAIR.NOSING [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 97.09
+   },
+   "before": {}
+  },
+  "FIN.STAIR.SKIRTING.SLOPED [lm]": {
+   "after": {},
+   "before": {
+    "blank": 18,
+    "held_high": 2.88,
+    "held_low": 2.35,
+    "lines": 20,
+    "released": 0.0
+   }
+  },
+  "FIN.STAIR.SKIRTING.ZIGZAG [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 28.52
+   },
+   "before": {
+    "blank": 18,
+    "held_high": 4.02,
+    "held_low": 2.35,
+    "lines": 20,
+    "released": 0.0
+   }
+  },
+  "FIN.STAIR.SOFFIT [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 31.66
+   },
+   "before": {
+    "blank": 2,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 0.0
+   }
+  },
+  "FIN.STAIR.STEP_LM [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 9,
+    "released": 89.69
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 24.65,
+    "held_low": 19.55,
+    "lines": 9,
+    "released": 67.85
+   }
+  },
+  "FIN.WALL.TILE.EDGE [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 73.1,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 32.01
+   },
+   "before": {}
+  },
+  "JOIN.KITCHEN.BASE [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 11.07
+   },
+   "before": {}
+  },
+  "JOIN.KITCHEN.WALL [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 8.42
+   },
+   "before": {}
+  },
+  "JOIN.WARDROBE [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 3.9
+   },
+   "before": {}
+  },
+  "MAS.MESH_STRIP [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 1147.96,
+    "held_low": 856.14,
+    "lines": 1,
+    "released": 0.0
+   },
+   "before": {}
+  },
+  "MAS.SHARMAT [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 601.42,
+    "held_low": 293.0,
+    "lines": 1,
+    "released": 0.0
+   },
+   "before": {}
+  },
+  "MEP.SAN.BASIN [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 17.0
+   },
+   "before": {}
+  },
+  "MEP.SAN.FLOOR_DRAIN_3IN [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 5.0
+   },
+   "before": {}
+  },
+  "MEP.SAN.FLOOR_DRAIN_4IN [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 14.0
+   },
+   "before": {}
+  },
+  "MEP.SAN.KITCHEN_SINK [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 1.0
+   },
+   "before": {}
+  },
+  "MEP.SAN.SHOWER_TRAY [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 3.0
+   },
+   "before": {}
+  },
+  "MEP.SAN.SHOWER_WALKIN [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 3.0
+   },
+   "before": {}
+  },
+  "MEP.SAN.WASHING_MACHINE_POINT [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 1.0
+   },
+   "before": {}
+  },
+  "MEP.SAN.WC [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 12.0
+   },
+   "before": {}
+  },
+  "MET.RAILING.POST [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 10.0
+   },
+   "before": {}
+  },
+  "SITE.EXCAVATION_SUPPORT [item]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 1.0
+   },
+   "before": {}
+  }
+ }
+}

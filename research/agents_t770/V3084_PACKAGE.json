@@ -1,0 +1,2730 @@
+{
+ "base": "ARCH_TAKEOFF_V3.0.83",
+ "carriers": {
+  "CEILING:GYPSUM_DECOR": {
+   "carrier": [
+    "FIN.CEILING",
+    "m2"
+   ]
+  },
+  "SPATTER:FENCE": {
+   "carrier": [
+    "EXT.FENCE.PLASTER",
+    "m2"
+   ]
+  },
+  "SPATTER:INTERIOR": {
+   "carrier": [
+    "FIN.PLASTER",
+    "m2"
+   ]
+  },
+  "STAIR:NOSING": {
+   "carrier": [
+    "FIN.STAIR.STEP_LM",
+    "lm"
+   ],
+   "plus": 7.4,
+   "plus_source": "T-412 landing / floor arrival nosing edges, DRAWING-CONFIRMED (T-771 basis)"
+  }
+ },
+ "defer_added": {
+  "SPATTER:EXTERIOR": "carrier FIN.EXT.FINISH is HELD in V3.0.83 (17 ranged + 1 blank): the merged T-760 exterior render / paint set (Gate A 89be1473) is not wired yet; this line is wired with T-760 in the next T-770 round (recomputed from the wired carrier, R-T770-5 t)"
+ },
+ "method": "ARCH_TAKEOFF_V3.0.84",
+ "row_bases": [
+  "ARCH_TAKEOFF_V3.0.81"
+ ],
+ "schema": "URBAN_FILL_PACKAGE_V4",
+ "set_names": [
+  "T-766",
+  "T-768",
+  "T-771"
+ ],
+ "set_sha256": {
+  "T-766": "f97c2c91631316fa1ee7ea4a4f18300a32a1519b847a5eccec38cf81cca6234b",
+  "T-768": "1f31fc5bc68bb64afc7069de1ea42cd9524d5cca1807ae732c2275b28b265b3d",
+  "T-771": "5eb803cdd7c6e16424ef2560c6f194c4d631eb6bb84e8e6ac00c623662cd863f"
+ },
+ "sets": [
+  {
+   "base": "agents/task-T-770 (V3.0.81)",
+   "blank_or_ranged_before": 66,
+   "candidate_version": "ARCH_TAKEOFF_V3.0.81",
+   "freelancer": {
+    "E1 landing": 5.1,
+    "E1 skirting lm": 4.37,
+    "E1 steps": "5 x 2.8 = 14",
+    "ST-01 landing": 6.2,
+    "ST-01 skirting lm": 23.1,
+    "ST-01 steps": "63 x 1.2 m2 = 75.6",
+    "ST-02 landing": 1.44,
+    "ST-02 skirting lm": 2.4,
+    "ST-02 steps": "28 x 1.2 m2 = 33.6",
+    "stair soffit paint m2": 39.99
+   },
+   "index_sha16": "3976b262611bc3bd",
+   "left_after": 0,
+   "overlap_with_MAIN_FILL_ALL": 0,
+   "rows": 68,
+   "rows_detail": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 7.7975
+     },
+     "basis": "ST-01 MS2-LD 2.9325 (+7.516) + 2F arrival 4.865 (+9.70), T-493 census, Checker own re-measure 4 / 4 AGREE; inside the held 0 .. 9.225",
+     "before": {
+      "class": "HELD",
+      "high": 9.225001,
+      "low": 0.0,
+      "net": null
+     },
+     "element_id": "2F-R4D1B62:landings",
+     "item_code": "FIN.MARBLE.LANDING",
+     "label": "MEASURED",
+     "line_id": "L-5d2be30dd8d2ffeacc42",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.9044
+     },
+     "basis": "1F MS2-L 12 risers x 1.150 x (0.168000 - 0.030) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 1.9044,
+      "low": 1.9044,
+      "net": null
+     },
+     "element_id": "1F-R78C367:flight 2",
+     "item_code": "FIN.MARBLE.RISER",
+     "label": "DRAWING-READ",
+     "line_id": "L-0f060e9951c28c4cf074",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.886
+     },
+     "basis": "1F MS1-U 12 risers x 1.150 x (0.166667 - 0.030) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 1.886,
+      "low": 1.886,
+      "net": null
+     },
+     "element_id": "1F-R78C367:flight 3",
+     "item_code": "FIN.MARBLE.RISER",
+     "label": "DRAWING-READ",
+     "line_id": "L-07e0855f961a839c1277",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.876833
+     },
+     "basis": "1F MS1-T turn: 5 fronts 6.4159 (as STEP_LM) x (4.50/27 - 0.030)",
+     "before": {
+      "class": "HELD",
+      "high": 1.111337,
+      "low": 0.785833,
+      "net": null
+     },
+     "element_id": "1F-R78C367:flight 5",
+     "item_code": "FIN.MARBLE.RISER",
+     "label": "ESTIMATE",
+     "line_id": "L-820baecf7f726b4d8f1e",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.9044
+     },
+     "basis": "2F MS2-U 12 risers x 1.150 x (0.168000 - 0.030) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 1.9044,
+      "low": 1.9044,
+      "net": null
+     },
+     "element_id": "2F-R4D1B62:flight 2",
+     "item_code": "FIN.MARBLE.RISER",
+     "label": "DRAWING-READ",
+     "line_id": "L-12f56cbfe750f8b30c41",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.571667
+     },
+     "basis": "GF MS1-L 10 risers x 1.150 x (0.166667 - 0.030) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 1.571667,
+      "low": 1.571667,
+      "net": null
+     },
+     "element_id": "GF-R31F8AE:flight 1",
+     "item_code": "FIN.MARBLE.RISER",
+     "label": "DRAWING-READ",
+     "line_id": "L-ecc450d6cc865617f8f6",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.667
+     },
+     "basis": "GF D1 4 risers x 1.150 x (0.175000 - 0.030) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 0.667,
+      "low": 0.667,
+      "net": null
+     },
+     "element_id": "GF-R31F8AE:flight 2",
+     "item_code": "FIN.MARBLE.RISER",
+     "label": "DRAWING-READ",
+     "line_id": "L-8938aa3b25bf605e4b9d",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.987027
+     },
+     "basis": "GF RS-C: 12 drawn riser faces 13.798023 + drawn curtail face arcs 259 0.840283 / 25B 0.562992, x (4.50/28 - 0.030)",
+     "before": {
+      "class": "HELD",
+      "high": 2.131176,
+      "low": 1.803598,
+      "net": null
+     },
+     "element_id": "GF-RC99C2A:flight 1",
+     "item_code": "FIN.MARBLE.RISER",
+     "label": "DRAWING-READ",
+     "line_id": "L-913cda8eb6d73f6e28cc",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.653536
+     },
+     "basis": "GF RS-S 11 risers x 1.150 x (0.160714 - 0.030) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 1.653536,
+      "low": 1.653536,
+      "net": null
+     },
+     "element_id": "GF-RC99C2A:flight 2",
+     "item_code": "FIN.MARBLE.RISER",
+     "label": "DRAWING-READ",
+     "line_id": "L-099fe9fcfa5667fb8b99",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.751607
+     },
+     "basis": "GF RS-A 5 risers x 1.150 x (0.160714 - 0.030) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 0.751607,
+      "low": 0.751607,
+      "net": null
+     },
+     "element_id": "GF-RC99C2A:flight 4",
+     "item_code": "FIN.MARBLE.RISER",
+     "label": "DRAWING-READ",
+     "line_id": "L-16e0c6682725260f28e7",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.1587
+     },
+     "basis": "2F MS2-TR closing riser 1.150 x (0.168 printed levels - 0.030) (T-738 ADD point)",
+     "before": {
+      "class": "HELD",
+      "high": 0.1587,
+      "low": 0.1587,
+      "net": null
+     },
+     "element_id": "T738:ADD:2F-R4D1B62#MS2-TR-closing-riser",
+     "item_code": "FIN.MARBLE.RISER",
+     "label": "DRAWING-READ",
+     "line_id": "L-d014870b8dcae736608d",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.3225
+     },
+     "basis": "1F MS1-T: the 5 winder treads tile the drawn 1.150 x 1.150 turn (T-738 / T-493)",
+     "before": {
+      "class": "HELD",
+      "high": 1.3225,
+      "low": 1.3225,
+      "net": null
+     },
+     "element_id": "1F-R78C367:flight 5",
+     "item_code": "FIN.MARBLE.TREAD",
+     "label": "DRAWING-READ",
+     "line_id": "L-b4660de0ddd98ad0ffc2",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.18014
+     },
+     "basis": "GF RS-C: finish lane r 1.5805 .. 2.7305: 11 x 0.337067 + junction 0.415515 x 1.15/1.25 + curtail 0.090129 beyond the lane (T-415)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-RC99C2A:flight 1",
+     "item_code": "FIN.MARBLE.TREAD",
+     "label": "ESTIMATE",
+     "line_id": "L-fa534ec5f9dc14947899",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.782209
+     },
+     "basis": "1F MS2-L: 11 goings x hypot(0.300, 4.20/25) (T-738 drawn point, released here)",
+     "before": {
+      "class": "HELD",
+      "high": 3.782209,
+      "low": 3.782209,
+      "net": null
+     },
+     "element_id": "1F-R78C367:flight 2",
+     "item_code": "FIN.STAIR.FLIGHT",
+     "label": "DRAWING-READ",
+     "line_id": "L-a08d67ca292ab16ef9c3",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.775064
+     },
+     "basis": "1F MS1-U: 11 goings x hypot(0.300, 4.50/27) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 3.775064,
+      "low": 3.775064,
+      "net": null
+     },
+     "element_id": "1F-R78C367:flight 3",
+     "item_code": "FIN.STAIR.FLIGHT",
+     "label": "DRAWING-READ",
+     "line_id": "L-54eb280b9f7bf5eda65f",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.228914
+     },
+     "basis": "1F MS1-T winder turn: walking line quarter arc r 0.575 (lane centre of the 1.150 turn) = 0.9032 plan, rise +2.667 -> +3.500 = 0.8333 printed: hypot",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-R78C367:flight 5",
+     "item_code": "FIN.STAIR.FLIGHT",
+     "label": "ESTIMATE",
+     "line_id": "L-c6724654ee4ccdb0c508",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.782209
+     },
+     "basis": "2F MS2-U: 11 goings x hypot(0.300, 4.20/25) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 3.782209,
+      "low": 3.782209,
+      "net": null
+     },
+     "element_id": "2F-R4D1B62:flight 2",
+     "item_code": "FIN.STAIR.FLIGHT",
+     "label": "DRAWING-READ",
+     "line_id": "L-48bb13e2f1c94d852a03",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.088689
+     },
+     "basis": "GF MS1-L: 9 goings x hypot(0.300, 4.50/27) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 3.088689,
+      "low": 3.088689,
+      "net": null
+     },
+     "element_id": "GF-R31F8AE:flight 1",
+     "item_code": "FIN.STAIR.FLIGHT",
+     "label": "DRAWING-READ",
+     "line_id": "L-a1a0ab49818d4b9621b5",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.041933
+     },
+     "basis": "GF D1: 3 goings x hypot(0.300, 0.70/4) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 1.041933,
+      "low": 1.041933,
+      "net": null
+     },
+     "element_id": "GF-R31F8AE:flight 2",
+     "item_code": "FIN.STAIR.FLIGHT",
+     "label": "DRAWING-READ",
+     "line_id": "L-cccf54f717124cd750b3",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.046214
+     },
+     "basis": "GF RS-C curved: walking line r 2.1555 x drawn step 7.790996 deg = going 0.2931; 11 x hypot(going, 4.50/28) + junction tread going x 0.415515/0.366379 (drawn plan ratio)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-RC99C2A:flight 1",
+     "item_code": "FIN.STAIR.FLIGHT",
+     "label": "ESTIMATE",
+     "line_id": "L-30009d8eb01996ec6399",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.403367
+     },
+     "basis": "GF RS-S: 10 goings x hypot(0.300, 4.50/28) (T-738 drawn point; riser Q-50 A cond)",
+     "before": {
+      "class": "HELD",
+      "high": 3.403367,
+      "low": 3.403367,
+      "net": null
+     },
+     "element_id": "GF-RC99C2A:flight 2",
+     "item_code": "FIN.STAIR.FLIGHT",
+     "label": "DRAWING-READ",
+     "line_id": "L-509c6af3d162ae145108",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.361347
+     },
+     "basis": "GF RS-A: 4 goings x hypot(0.300, 4.50/28) (T-738 drawn point)",
+     "before": {
+      "class": "HELD",
+      "high": 1.361347,
+      "low": 1.361347,
+      "net": null
+     },
+     "element_id": "GF-RC99C2A:flight 4",
+     "item_code": "FIN.STAIR.FLIGHT",
+     "label": "DRAWING-READ",
+     "line_id": "L-406aae9a9854e015c45e",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "D1.E: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:D1.E",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-775f62538c1f46077807",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "E1.S: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:E1.S",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-b77a64fb9a941582f25c",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS1-L.W1: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-L.W1",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-a43adc74906d8bcd7b1c",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS1-L.W1B: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-L.W1B",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-ff51392df9e2c8c21efe",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS1-L.W1C: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-L.W1C",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-aed4c2990437f767dc90",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS1-T.N: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": 1.420192,
+      "low": 1.15,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-T.N",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-28c33cd0ab5d19426661",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS1-T.W: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": 1.460974,
+      "low": 1.2,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-T.W",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-2fae5d35b21e97684844",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS1-U.E1: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-U.E1",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-32f71724eeeaa46638c9",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS1-U.E2: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-U.E2",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-20c2640927e41626893d",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS1-U.E3a: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-U.E3a",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-cfecfcea2280155a6a74",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS1-U.E3b: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-U.E3b",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-8e463d6ce740fc19e60c",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS2-L.W1: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS2-L.W1",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-9b1da1af7c162de2233c",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS2-L.W1B: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS2-L.W1B",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-caacb4c1425981b2585f",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS2-L.W1C: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS2-L.W1C",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-193f8e812d9ade5f9c41",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS2-TR.N: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS2-TR.N",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-76de75ce9a315998be99",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "MS2-U.E: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS2-U.E",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-4b902816d29b75fab7fc",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+     },
+     "basis": "RS-C.OUT: no wall or column face on the stretch (T-410 / T-501 both layers read); open side carries no skirting (R-T508-1, B7-09 owns the edge)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:RS-C.OUT",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-1c082cc60442407ed517",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+     },
+     "basis": "RS-S.S0: no wall or column face on the stretch (T-410 / T-501 both layers read); open side carries no skirting (R-T508-1, B7-09 owns the edge)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:RS-S.S0",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-ebe230d8c2fbc35332b8",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "RS-S.S1: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:RS-S.S1",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-0ae4be232407b92343ef",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "FORM_ALTERNATIVE_ORR-007"
+     },
+     "basis": "RS-S.S2: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:RS-S.S2",
+     "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-d980ace38bdd63fa8de4",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.6
+     },
+     "basis": "D1.E zigzag 1.6000 lm: T-501 piece plan 0.90 + 4 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:D1.E",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-4548e7ad947b07624e81",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.05
+     },
+     "basis": "E1.S zigzag 2.0500 lm: T-501 piece plan 1.20 + 5 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:E1.S",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-add5acd610925402e0f5",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.733334
+     },
+     "basis": "MS1-L.W1 zigzag 0.7333 lm: T-501 piece plan 0.40 + 2 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-L.W1",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-53f3b7f153af0e1f5538",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.250001
+     },
+     "basis": "MS1-L.W1B zigzag 1.2500 lm: T-501 piece plan 0.75 + 3 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-L.W1B",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-9e5ed7164ee85f0fc196",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.766667
+     },
+     "basis": "MS1-L.W1C zigzag 0.7667 lm: T-501 piece plan 0.50 + 1 riser + return 0.10; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-L.W1C",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-c56a452218763d5e7bbf",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.557801
+     },
+     "basis": "MS1-T.N zigzag 1.5578 lm: winder: plan 1.15 + share of the printed rise 0.8333 by plan length; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": 1.983334,
+      "low": 1.15,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-T.N",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-5f0bd2b45c1718aeefc4",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.625532
+     },
+     "basis": "MS1-T.W zigzag 1.6255 lm: winder: plan 1.20 + share of the printed rise 0.8333 by plan length (total fixed by the levels); ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": 2.033334,
+      "low": 1.2,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-T.W",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-5bc4cea35db33e41d78c",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.616668
+     },
+     "basis": "MS1-U.E1 zigzag 1.6167 lm: T-501 piece plan 0.95 + 4 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-U.E1",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-bc0e1e80ca50865ccd06",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.400001
+     },
+     "basis": "MS1-U.E2 zigzag 1.4000 lm: T-501 piece plan 0.90 + 3 risers; GF opening 33C / 33D head 2.20 default (+3.20) below the flight (+4.08): face solid; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-U.E2",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-1ed4cfaa1c12054b401d",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.816668
+     },
+     "basis": "MS1-U.E3a zigzag 1.8167 lm: T-501 piece plan 1.15 + 4 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-U.E3a",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-9ec979f00305b8ae8049",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.466667
+     },
+     "basis": "MS1-U.E3b zigzag 0.4667 lm: 12th riser: section A-A + ST p.4 edge 459 + FFL (5.50-3.50)/0.166667 = 12 (11 -> 0.182 > 0.175); plan 0.30 + 1 riser; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS1-U.E3b",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "DRAWING-READ",
+     "line_id": "L-984553ed0b69b0f77fe2",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.672
+     },
+     "basis": "MS2-L.W1 zigzag 1.6720 lm: T-501 piece plan 1.00 + 4 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS2-L.W1",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-656ab12cc9b9797d3b1a",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.254
+     },
+     "basis": "MS2-L.W1B zigzag 1.2540 lm: T-501 piece plan 0.75 + 3 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS2-L.W1B",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-20432b887f91dee03925",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.768
+     },
+     "basis": "MS2-L.W1C zigzag 0.7680 lm: T-501 piece plan 0.50 + 1 riser + return 0.10; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS2-L.W1C",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-1c907e0a59c55204e430",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.168
+     },
+     "basis": "MS2-TR.N zigzag 0.1680 lm: closing riser: one rise 7.516 -> 7.684 printed, on the north wall wherever it meets it; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS2-TR.N",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "DRAWING-READ",
+     "line_id": "L-5021b820dba41f631dde",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.316
+     },
+     "basis": "MS2-U.E zigzag 5.3160 lm: T-501 piece plan 3.30 + 12 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:MS2-U.E",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-c8dce28c50dabd7b17fb",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+     },
+     "basis": "RS-C.OUT: no wall or column face on the stretch (T-410 / T-501 both layers read); open side carries no skirting (R-T508-1, B7-09 owns the edge)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:RS-C.OUT",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-1a0d2ab50e42b0219eab",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+     },
+     "basis": "RS-S.S0: no wall or column face on the stretch (T-410 / T-501 both layers read); open side carries no skirting (R-T508-1, B7-09 owns the edge)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:RS-S.S0",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-c074ce526885a44423d0",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.332143
+     },
+     "basis": "RS-S.S1 zigzag 1.3321 lm: T-501 piece plan 0.80 + 3 risers + return 0.05; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:RS-S.S1",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-544b6b11bab9bbf037fb",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.125
+     },
+     "basis": "RS-S.S2 zigzag 3.1250 lm: T-501 piece plan 2.00 + 7 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR-SKIRT:RS-S.S2",
+     "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+     "label": "ESTIMATE",
+     "line_id": "L-8dde910ffeeb94a58323",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 22.139302
+     },
+     "basis": "ST-01: measured rows 20.423364 (T-281 / T-718) + winder / junction plan 1.500 x secant hypot(0.30, 4.50/27)/0.30 = 1.1439",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR:ST-01:soffit",
+     "item_code": "FIN.STAIR.SOFFIT",
+     "label": "ESTIMATE",
+     "line_id": "L-1fcec3328ccd0ea243d4",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 9.525211
+     },
+     "basis": "ST-02: measured RS-S / RS-LD / RS-A rows 4.460946 + RS-C helical underside K 5.064265 (T-415, drawn lane)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "STAIR:ST-02:soffit",
+     "item_code": "FIN.STAIR.SOFFIT",
+     "label": "ESTIMATE",
+     "line_id": "L-c77e3887f7e348b1461d",
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 6.415848
+     },
+     "basis": "1F MS1-T turn: entry 1.150 + fan 22.5 deg 1.2448 + BE6 1.626346 (drawn) + 67.5 deg 1.2448 + exit 1.150 (inside the drawn 5.75 .. 8.1317 bound)",
+     "before": {
+      "class": "HELD",
+      "high": 8.131728,
+      "low": 5.75,
+      "net": null
+     },
+     "element_id": "1F-R78C367:flight 5",
+     "item_code": "FIN.STAIR.STEP_LM",
+     "label": "ESTIMATE",
+     "line_id": "L-e085c168dee5fb19a7fb",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 15.42144
+     },
+     "basis": "GF RS-C: 12 drawn front edges 13.800 (T-718) + drawn curtail front arcs 258 0.949440 / 25A 0.672000",
+     "before": {
+      "class": "HELD",
+      "high": 16.52144,
+      "low": 13.8,
+      "net": null
+     },
+     "element_id": "GF-RC99C2A:flight 1",
+     "item_code": "FIN.STAIR.STEP_LM",
+     "label": "DRAWING-READ",
+     "line_id": "L-95b9555dd144951b071e",
+     "set": "STAIR",
+     "unit": "lm"
+    },
+    {
+     "action": "ADD",
+     "after": {
+      "class": "RELEASED",
+      "net": 1.4375
+     },
+     "basis": "ST-01 MS1-LD +3.50: 1.25 x 1.15 (T-493 census, Checker 4 / 4 AGREE); no line today (silent omission F-3, T-502)",
+     "before": null,
+     "element_id": "STAIR-LANDING:ST01-MS1-LD",
+     "item_code": "FIN.MARBLE.LANDING",
+     "label": "MEASURED",
+     "line_id": null,
+     "set": "STAIR",
+     "unit": "m2"
+    },
+    {
+     "action": "ADD",
+     "after": {
+      "class": "RELEASED",
+      "net": 1.3525
+     },
+     "basis": "ST-02 RS-LD +4.696 (T-493, Checker AGREE); already deducted from 1F porcelain (R04 1.352454): no double count (T-502)",
+     "before": null,
+     "element_id": "STAIR-LANDING:ST02-RS-LD",
+     "item_code": "FIN.MARBLE.LANDING",
+     "label": "MEASURED",
+     "line_id": null,
+     "set": "STAIR",
+     "unit": "m2"
+    }
+   ],
+   "task": "T-766",
+   "totals_after": {
+    "FIN.MARBLE.LANDING": 20.69,
+    "FIN.MARBLE.RISER": 15.32,
+    "FIN.MARBLE.TREAD": 28.87,
+    "FIN.STAIR.FLIGHT": 25.51,
+    "FIN.STAIR.SKIRTING.SLOPED": 0,
+    "FIN.STAIR.SKIRTING.ZIGZAG": 28.52,
+    "FIN.STAIR.SOFFIT": 31.66,
+    "FIN.STAIR.STEP_LM": 89.69
+   }
+  },
+  {
+   "base": "agents/task-T-770 (V3.0.81)",
+   "blank_or_ranged_before": 43,
+   "candidate_version": "ARCH_TAKEOFF_V3.0.81",
+   "freelancer": {
+    "PVC doors / shutters / lift surround / dome / thresholds": "no freelancer row (T-198 NOT COMPARABLE, T-475, T-413)",
+    "W02 freelancer 6.33 x 4.30 vs ours 6.33 x 2.20": 13.293,
+    "split of candidate - freelancer windows m2 (per census row W x H, residual 0.000)": {
+     "W02 head 2.20 (section B-B) vs his 4.30 (W03's printed height): ENGINE_RIGHT": -13.293,
+     "W11 / W12 2.20 between leaves (T-207) and W13 2.30 vs his 2.00: ENGINE_RIGHT": 1.14,
+     "W17 3.29 outer arc (owner Q-39 C) vs his 3.15 chord: RULE_DIFFERENCE": 0.42,
+     "W18 0.50 x 2.16 drawn vs his 0.60 x 0.80: ENGINE_RIGHT": 0.6,
+     "drawn heads 1.50 / 1.60 / 1.70 (T-201 elevations) vs his 2.00 on W08 W09 W10 W14 W24 W25 W26 W27 W29: ENGINE_RIGHT": -5.715
+    },
+    "windows m2 (T-198 W x H, 29 rows)": 116.9,
+    "windows m2 candidate after (incl. W17 9.87 MAIN_FILL_4)": 100.05
+   },
+   "index_sha16": "3976b262611bc3bd",
+   "left_after": 0,
+   "overlap_with_MAIN_FILL_ALL": 0,
+   "rows": 43,
+   "rows_detail": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.29
+     },
+     "basis": "shutter W11 covers its opening: 1.95 printed (sheet03 chain) x 2.20 between the louvred leaves (T-207); no shutter schedule (D-54)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "SHUTTER:W11:AREA",
+     "item_code": "ARCH.SHUTTER",
+     "label": "ESTIMATE",
+     "line_id": "L-1cb158e866920455812a",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.29
+     },
+     "basis": "shutter W12 as W11: 1.95 x 2.20 (T-207); D-54",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "SHUTTER:W12:AREA",
+     "item_code": "ARCH.SHUTTER",
+     "label": "ESTIMATE",
+     "line_id": "L-87d822fcabc5b52241d9",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.92
+     },
+     "basis": "shutter W14 covers its opening: 2.45 x 1.60 printed (SE elevation +6.90 .. +8.50); D-54",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "SHUTTER:W14:AREA",
+     "item_code": "ARCH.SHUTTER",
+     "label": "ESTIMATE",
+     "line_id": "L-9d0c79baa4fe0e9d95c8",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NOT_A_THRESHOLD_T-325"
+     },
+     "basis": "WALL_BAND_REMAINDER 0.031 m2 (D-V26-07, T-325): not a threshold",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-STRIP-SITE-29faecd848edfdc3:unattributed strip",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-479acdcb1e5e01bf3957",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NOT_A_THRESHOLD_T-325"
+     },
+     "basis": "WALL_BAND_REMAINDER 0.034 m2 (D-V26-07, T-325): not a threshold",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-STRIP-SITE-fd160ff889cc7481:unattributed strip",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-44b8dcf4b30e11a464f5",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.18
+     },
+     "basis": "OP-020 leafless passage into the GF W.C.: wet threshold 0.90 x 0.20 (T-325 geometry); treatment default = wet threshold",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-STRIP-OP-020:threshold strip",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "DEFAULT",
+     "line_id": "L-9bcc79e76f84667b244a",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.15
+     },
+     "basis": "A-GF-01 arch OP-027: floor continues (UP-THR-001) 1.000 x 0.150 (T-340 FILL, T-648 fix row)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-STRIP-OP-027:threshold strip",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "DRAWING-READ",
+     "line_id": "L-868aee125705bb8d17f6",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NOT_A_THRESHOLD_T-325"
+     },
+     "basis": "WALL_BAND_REMAINDER 0.036 m2 (D-V26-07, T-325): part of a doorway face, not a threshold",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-STRIP-SITE-19643bcc262b322f:unattributed strip",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-2991f35326b961a6d238",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NOT_A_THRESHOLD_T-325"
+     },
+     "basis": "STRIP_NOT_ATTRIBUTED wall body 0.188 m2 (T-325 Checker-merged): not a threshold piece",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-STRIP-SITE-e3b5d3227c61bc6c:unattributed strip",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-1c71cd45a5116bdc5260",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NOT_A_THRESHOLD_T-325"
+     },
+     "basis": "WALL_BAND_REMAINDER 0.041 m2 (D-V26-07, T-325): not a threshold",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-STRIP-SITE-f829b5b7d673a747:unattributed strip",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-f4cfd731c98468026078",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.2
+     },
+     "basis": "sea-side gate D-GF-15 (G-02): 1.00 gate in the 0.20 band (Q-63 C element, GF plan); designer clarification replaces it",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-THRESHOLD-D-GF-15:threshold strip:HELD",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "ESTIMATE",
+     "line_id": "L-56acf34557c315f65bb1",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.15
+     },
+     "basis": "D-2F-01 external entrance: width x wall depth 0.15 (T-325 ledger, drawn); sill finish unprinted -> company marble threshold",
+     "before": {
+      "class": "HELD",
+      "high": 0.15,
+      "low": 0.15,
+      "net": null
+     },
+     "element_id": "HL:FLOOR_SCOPE:THRESHOLD:2F:OP-001",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "DEFAULT",
+     "line_id": "L-3e5c6b7af8dd06b2836c",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.18
+     },
+     "basis": "D-GF-03 external entrance 0.90 x 0.20 (T-325); finish unprinted",
+     "before": {
+      "class": "HELD",
+      "high": 0.18,
+      "low": 0.18,
+      "net": null
+     },
+     "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-005",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "DEFAULT",
+     "line_id": "L-74cd61b430eec9933d15",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.2
+     },
+     "basis": "D-GF-06 external entrance 1.00 x 0.20 (T-325); finish unprinted",
+     "before": {
+      "class": "HELD",
+      "high": 0.2,
+      "low": 0.2,
+      "net": null
+     },
+     "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-008",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "DEFAULT",
+     "line_id": "L-9fa69ef1a11ef9987967",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.2
+     },
+     "basis": "D-GF-01 external entrance 1.00 x 0.20 (T-325); finish unprinted",
+     "before": {
+      "class": "HELD",
+      "high": 0.2,
+      "low": 0.2,
+      "net": null
+     },
+     "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-009",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "DEFAULT",
+     "line_id": "L-b3933a51bd95e9bc542b",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.18
+     },
+     "basis": "D-GF-09 external entrance 0.90 x 0.20 (T-325); finish unprinted",
+     "before": {
+      "class": "HELD",
+      "high": 0.18,
+      "low": 0.18,
+      "net": null
+     },
+     "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-013",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "DEFAULT",
+     "line_id": "L-8111095f6db78f0e674b",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.4
+     },
+     "basis": "D-GF-07 main entrance 2.00 x 0.20 (T-325); finish unprinted",
+     "before": {
+      "class": "HELD",
+      "high": 0.4,
+      "low": 0.4,
+      "net": null
+     },
+     "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-021",
+     "item_code": "ARCH.THRESHOLD",
+     "label": "DEFAULT",
+     "line_id": "L-ad41b065d825c0190b7d",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 13.926
+     },
+     "basis": "W02 GF saloon: plan '633' x head 2.20 (T-201 section B-B +1.00 .. +3.20); one window on every drawing, the render's pier (D-53) not printed",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "OPENINGS:ARCH_WINDOW:GF:HELD_NO_FIGURE",
+     "item_code": "ARCH.WINDOW",
+     "label": "DRAWING-READ",
+     "line_id": "L-cdf1a9e6bcb2e00c3098",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.0
+     },
+     "basis": "W02: 1 opening on plan, section and elevation (render shows 2, D-53; drawings govern)",
+     "before": {
+      "class": "HELD",
+      "high": 2.0,
+      "low": 1.0,
+      "net": null
+     },
+     "element_id": "OPENINGS:ARCH_WINDOW:GF:HELD",
+     "item_code": "ARCH.WINDOW",
+     "label": "DRAWING-READ",
+     "line_id": "L-dd2ecc97cf3f9dcd86c3",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "pcs"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NO_SURFACE_FRAME_ON_ROOM_FACE"
+     },
+     "basis": "W17 IN jambs / head: glass line on the room face BD2 (T-302 s.1, T-250) -> no inside reveal",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-REVEAL-W17:IN:JAMBS_HEAD:HELD",
+     "item_code": "ARCH.WINDOW_REVEAL",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-3e3a3bf8e2fd272a4c8e",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.609425
+     },
+     "basis": "W17 OUT: glass on the room face BD2 (T-302 s.1) -> full radial 0.20 x (jambs 2.2190 + 2.1676 + head arc 3.6605: centreline chord 3.1331, rise to the 3.00 crown)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-REVEAL-W17:OUT:JAMBS_HEAD:HELD",
+     "item_code": "ARCH.WINDOW_REVEAL",
+     "label": "ESTIMATE",
+     "line_id": "L-ee6793c9a96916a5a7c9",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.62662
+     },
+     "basis": "W17 sill strip (OUT side; IN has no surface): 0.20 x centreline developed 3.1331 (T-302)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-STRIP-COP-001:window reveal strip",
+     "item_code": "ARCH.WINDOW_REVEAL",
+     "label": "ESTIMATE",
+     "line_id": "L-c90d5d6c06a671fc3b99",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.352
+     },
+     "basis": "W02 OUT jambs: 2 x 0.080 (T-313: wall 0.200 - frame band 0.120 flush with the room face) x 2.20 (T-201); head 0.5064 already on L-429605a88ef09abda085",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-REVEAL-W02:OUT:JAMBS_HEAD:HELD",
+     "item_code": "ARCH.WINDOW_REVEAL",
+     "label": "DRAWING-READ",
+     "line_id": "L-bcc55693d203e384d46e",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NO_SURFACE_FRAME_ON_ROOM_FACE"
+     },
+     "basis": "W03 IN jambs / head: frame flush with the room face (as W02, T-313) -> no inside reveal; revert if the frame is read deeper",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-REVEAL-W03:IN:JAMBS_HEAD:HELD",
+     "item_code": "ARCH.WINDOW_REVEAL",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-e21b84e60826b8be59fa",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NO_SURFACE_FRAME_ON_ROOM_FACE"
+     },
+     "basis": "W03 IN floor strip: frame on the room face (as W02) -> the room floor runs to the frame",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-REVEAL-W03:IN:SILL:HELD",
+     "item_code": "ARCH.WINDOW_REVEAL",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-29637dbaa9fe1acc7b82",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.2136
+     },
+     "basis": "W03 OUT jambs + head: 0.080 (frame as W02, same saloon wall and system) x (2 x 4.30 printed + 6.57 printed)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-REVEAL-W03:OUT:JAMBS_HEAD:HELD",
+     "item_code": "ARCH.WINDOW_REVEAL",
+     "label": "ESTIMATE",
+     "line_id": "L-e44e09189fe2941f2d21",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.5256
+     },
+     "basis": "W03 OUT floor strip: 0.080 x 6.57 (frame as W02)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-REVEAL-W03:OUT:SILL:HELD",
+     "item_code": "ARCH.WINDOW_REVEAL",
+     "label": "ESTIMATE",
+     "line_id": "L-30133ea5a4fb6847c519",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.96
+     },
+     "basis": "D-1F-03 1.00 + D-1F-04 0.80 (closure jamb hits, T-198) x 2.20 Q-55 C",
+     "before": {
+      "class": "HELD",
+      "high": 3.96,
+      "low": 3.476,
+      "net": null
+     },
+     "element_id": "OPENINGS:DOOR_INTERNAL_PVC:1F:HELD",
+     "item_code": "DOOR.INTERNAL.PVC",
+     "label": "DEFAULT",
+     "line_id": "L-f4a12cd20b0f5e173430",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.28
+     },
+     "basis": "D-GF-02 0.80 + D-GF-10 0.80 (closure jamb hits, DXF 0.797) + D-GF-14 0.80 (leaf r 0.69 + Q-04 0.10) x 2.20 Q-55 C; closure width as the released PVC lines",
+     "before": {
+      "class": "HELD",
+      "high": 5.28,
+      "low": 4.554,
+      "net": null
+     },
+     "element_id": "OPENINGS:DOOR_INTERNAL_PVC:GF:HELD",
+     "item_code": "DOOR.INTERNAL.PVC",
+     "label": "DEFAULT",
+     "line_id": "L-ac8a0ea9174f53a359dd",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.0
+     },
+     "basis": "D-1F-03 / D-1F-04: 2 doors drawn (T-198 census)",
+     "before": {
+      "class": "HELD",
+      "high": 2.0,
+      "low": 2.0,
+      "net": null
+     },
+     "element_id": "OPENINGS:DOOR_INTERNAL_PVC:1F:HELD",
+     "item_code": "DOOR.INTERNAL.PVC",
+     "label": "DRAWING-READ",
+     "line_id": "L-5fa8e384af588d638eb4",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "pcs"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.0
+     },
+     "basis": "D-GF-02 / D-GF-10 / D-GF-14: 3 doors drawn (T-198 census)",
+     "before": {
+      "class": "HELD",
+      "high": 3.0,
+      "low": 3.0,
+      "net": null
+     },
+     "element_id": "OPENINGS:DOOR_INTERNAL_PVC:GF:HELD",
+     "item_code": "DOOR.INTERNAL.PVC",
+     "label": "DRAWING-READ",
+     "line_id": "L-236f7aba1ca49962667a",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "pcs"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.0
+     },
+     "basis": "D-GF-07 printed 2.00 (sheet03 chain 80 / 200 / 90) x 2.50 (SE elevation chain 85 / 250); render single leaf (D-53) not printed",
+     "before": {
+      "class": "HELD",
+      "high": 5.0,
+      "low": 5.0,
+      "net": null
+     },
+     "element_id": "OPENINGS:DOOR_MAIN_ENTRANCE:GF:HELD",
+     "item_code": "DOOR.MAIN_ENTRANCE",
+     "label": "DRAWING-READ",
+     "line_id": "L-6f06f2eaa7ab76256979",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.0
+     },
+     "basis": "D-GF-07: one double-leaf opening (a double leaf is one opening, T-232)",
+     "before": {
+      "class": "HELD",
+      "high": 1.0,
+      "low": 1.0,
+      "net": null
+     },
+     "element_id": "OPENINGS:DOOR_MAIN_ENTRANCE:GF:HELD",
+     "item_code": "DOOR.MAIN_ENTRANCE",
+     "label": "DRAWING-READ",
+     "line_id": "L-8ee14244d410e740c706",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "pcs"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "CARRIED_BY_L-43bf1f869e1588f1d3bd"
+     },
+     "basis": "1F living parent: board carried whole by the decor group line 51.0496 (R-T284-1, T-573); a figure would count it twice",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "1F-R78C367:ceiling",
+     "item_code": "FIN.CEILING",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-fc116bb666b184740090",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 12.9742
+     },
+     "basis": "2F stair box top under the roof slab 12.9742 drawn (T-271 / T-283 r3, T-640 high end); finished as a ceiling (company default; Q-72 / O-P8-02)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "2F-R4D1B62:stairwell ceiling",
+     "item_code": "FIN.CEILING",
+     "label": "DEFAULT",
+     "line_id": "L-dd6930fd19ca1b908c56",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.75
+     },
+     "basis": "GF stair top under the 1F slab 1.750 drawn (T-283 r3, T-640 high end); flight soffits stay in the stair soffit lines",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-R31F8AE:stairwell ceiling",
+     "item_code": "FIN.CEILING",
+     "label": "DEFAULT",
+     "line_id": "L-2175a965bb7c48a50e6c",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.76
+     },
+     "basis": "GF-RFD4E1D west strip OP-003 3.80 x 0.20 drawn (T-431 / T-640); ceiling as the room",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-RFD4E1D:west-strip:ceiling",
+     "item_code": "FIN.CEILING",
+     "label": "DEFAULT",
+     "line_id": "L-4b41debf41fff9e3faae",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.98142
+     },
+     "basis": "GF-RFD4E1D bulkhead: free beam edge 6.5428 x owner-method drop 0.15 (T-431 / T-640 high end)",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "GF-RFD4E1D:bulkhead",
+     "item_code": "FIN.CEILING.BULKHEAD",
+     "label": "DEFAULT",
+     "line_id": "L-31f9b7008ea883f1b78d",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 24.149555
+     },
+     "basis": "east dome intrados as west (twin shell, T-193): 24.1496; open over void V-06 (T-719); closure D-20 open",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "DOME:EAST:intrados",
+     "item_code": "FIN.DOME.SOFFIT",
+     "label": "DEFAULT",
+     "line_id": "L-f74c0fc7f78b579e6097",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 24.149555
+     },
+     "basis": "west dome intrados: printed 442 / 190 / 10 concentric (T-193): Ri 2.1353, hi 1.80, 2 pi Ri hi = 24.1496; open over void V-05 (T-719); closure D-20 open",
+     "before": {
+      "class": "HELD",
+      "high": null,
+      "low": null,
+      "net": null
+     },
+     "element_id": "DOME:WEST:intrados",
+     "item_code": "FIN.DOME.SOFFIT",
+     "label": "DEFAULT",
+     "line_id": "L-cf3e2b55648f676ffb1d",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.1
+     },
+     "basis": "ELV-01-1F: h 2.10 default x (0.50 + 0.50) + 0.50 x 2.00; faces 0.60 / 0.935 hold the bands (T-475)",
+     "before": {
+      "class": "HELD",
+      "high": 4.7,
+      "low": 1.0,
+      "net": null
+     },
+     "element_id": "LIFT:ELV-01-1F:surround",
+     "item_code": "FIN.MARBLE.LIFT_SURROUND",
+     "label": "DEFAULT",
+     "line_id": "L-d788f643b290e8f92558",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 2.84
+     },
+     "basis": "ELV-01-2F: right face 0.400 to the internal corner (DXF + PDF, T-475): h 2.10 x (0.50 + 0.40) + 0.50 x 1.90",
+     "before": {
+      "class": "HELD",
+      "high": 4.28,
+      "low": 0.75,
+      "net": null
+     },
+     "element_id": "LIFT:ELV-01-2F:surround",
+     "item_code": "FIN.MARBLE.LIFT_SURROUND",
+     "label": "DEFAULT",
+     "line_id": "L-fdbd9636828f045aae5a",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.1
+     },
+     "basis": "ELV-01-GF: h 2.10 default x (0.50 + 0.50) + top 0.50 x (1.00 + 0.50 + 0.50); faces 0.70 / 0.65 hold the bands (T-475)",
+     "before": {
+      "class": "HELD",
+      "high": 5.0,
+      "low": 1.0,
+      "net": null
+     },
+     "element_id": "LIFT:ELV-01-GF:surround",
+     "item_code": "FIN.MARBLE.LIFT_SURROUND",
+     "label": "DEFAULT",
+     "line_id": "L-b66b8e76425d81ff9f19",
+     "set": "OPENINGS_CEILINGS",
+     "unit": "m2"
+    }
+   ],
+   "skipped": {
+    "L-0392d37452e98050dd1b": "W17 m2 carried by MAIN_FILL_4 (owner Q-76 A 9.870)"
+   },
+   "task": "T-768",
+   "totals_after": {
+    "ARCH.SHUTTER m2": 12.5,
+    "ARCH.SHUTTER pcs": 6.0,
+    "ARCH.THRESHOLD m2": 1.84,
+    "ARCH.WINDOW m2": 90.18,
+    "ARCH.WINDOW pcs": 29.0,
+    "ARCH.WINDOW_REVEAL m2": 16.77,
+    "DOOR.INTERNAL.PVC m2": 37.84,
+    "DOOR.INTERNAL.PVC pcs": 20.0,
+    "DOOR.MAIN_ENTRANCE m2": 5.0,
+    "DOOR.MAIN_ENTRANCE pcs": 1.0,
+    "FIN.CEILING m2": 426.82,
+    "FIN.CEILING.BULKHEAD m2": 28.92,
+    "FIN.DOME.SOFFIT m2": 48.3,
+    "FIN.MARBLE.LIFT_SURROUND m2": 9.04
+   }
+  },
+  {
+   "candidate_version": "ARCH_TAKEOFF_V3.0.81",
+   "dispositions": {
+    "B1-01": {
+     "disposition": "COVERED_BY_ROW",
+     "evidence": "T-769 new_lines (MERGED f8319feb), wired by a T-770 round"
+    },
+    "B1-05": {
+     "disposition": "COVERED_BY_ROW",
+     "evidence": "T-769 new_lines (MERGED f8319feb), wired by a T-770 round"
+    },
+    "B1-06": {
+     "disposition": "COVERED_BY_ROW",
+     "evidence": "B1-06a dewatering NOT_APPLICABLE by T-769 (water -4.50 vs formation -1.67); B1-06b support = the new line above; B1-06c none printed (T-358)"
+    },
+    "B1-07": {
+     "disposition": "COVERED_BY_ROW",
+     "evidence": "T-769 new_lines (MERGED f8319feb), wired by a T-770 round"
+    },
+    "B11-02": {
+     "disposition": "PARKED",
+     "evidence": "rebar parked by the owner 2026-11-11: approximate tons by ratio at the end"
+    },
+    "B11-03": {
+     "disposition": "PARKED",
+     "evidence": "rebar parked by the owner 2026-11-11: approximate tons by ratio at the end"
+    },
+    "B11-04": {
+     "disposition": "PARKED",
+     "evidence": "rebar parked by the owner 2026-11-11: approximate tons by ratio at the end"
+    },
+    "B12-02": {
+     "disposition": "HELD_MEP_STAGE",
+     "evidence": "drainage / supply runs: the sanitary sheets are not to scale (plotted 1:108 vs printed 1:100, T-743); runs at the MEP stage (owner default 'drainage runs at MEP')"
+    },
+    "B12-03": {
+     "disposition": "HELD_MEP_STAGE",
+     "evidence": "no electrical drawing in the Drive set; MEP stage"
+    },
+    "B12-04": {
+     "disposition": "HELD_MEP_STAGE",
+     "evidence": "no HVAC drawing in the Drive set; MEP stage"
+    },
+    "B12-05": {
+     "disposition": "HELD_MEP_STAGE",
+     "evidence": "no low-voltage drawing in the Drive set; MEP stage"
+    },
+    "B13-03": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "garden labels only, no landscape / irrigation plan (T-427); out of the owner scope freeze"
+    },
+    "B13-05": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no movement joint or sealant printed on ST p.1-16, ARCH p.1-12, SAN p.1-3 (T-365); owner Q-42 gives a width only; out of the owner scope freeze"
+    },
+    "B13-07": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no canopy or pergola on any sheet (T-199, T-471); railings, gates and shutters are on B7-09 / B13-08 / B13-04 / B6-05"
+    },
+    "B2-01": {
+     "disposition": "REGISTER_NO_LINE",
+     "evidence": "a room register, not a quantity: every line carries its room id (arch_measure.room_id); master 1.45.0 N/A"
+    },
+    "B2-03": {
+     "disposition": "REGISTER_NO_LINE",
+     "evidence": "Lead decision F-T730-5 (master 1.76.0): coverage denominator only, no candidate line",
+     "figure_beside": "gross floor plate MEASURED T-720: GF 278.27, 1F 209.84, 2F 55.08 = 543.19 m2"
+    },
+    "B2-04": {
+     "disposition": "REGISTER_NO_LINE",
+     "evidence": "a functional zone; its floor, wall tile and WP are on B3-02 / B4-01 / B8 lines (T-351)",
+     "figure_beside": "open pantry 4.50 x 3.00 = 13.50 m2 (T-120)"
+    },
+    "B2-05": {
+     "disposition": "REGISTER_NO_LINE",
+     "evidence": "a void is a deduction, not a payable item: the GF light well is out of the GF ceiling (T-147), stair shafts on B7 lines",
+     "figure_beside": "GF light well 23.24 m2 (ST p.4 face; 1F plan VOID 4.00 x 5.87 = 23.48)"
+    },
+    "B3-03": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no marble floor drawn or noted (T-091, 12 arch pages + DXF); GF entrance / hall floor is B3-01 (T-418); the freelancer 'entrance marble' rows are the E1 external stair (B7-02 / B7-04, T-471)"
+    },
+    "B3-07": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "hidden skirting profile printed nowhere (T-409); doorway boundaries carry the marble threshold lines (B3-04); no profile / transition strip printed"
+    },
+    "B4-02": {
+     "disposition": "COVERED_BY_LINE",
+     "evidence": "kitchen / laundry / pantry faces are full-height wet-room tile on FIN.WALL.TILE (B4-01) by owner rule (UP-WET-001, Q-37 A / Q-40 A / Q-48 A); 0 own faces (T-351)"
+    },
+    "B4-04": {
+     "disposition": "COVERED_BY_LINE",
+     "evidence": "external render is FIN.EXT.FINISH (18 lines, T-760 figures), mapped to B4-07 in master 1.81.0: PROPOSAL for the next master: move FIN.EXT.FINISH to B4-04 (render), keep paint / edges in B4-07; no line moves"
+    },
+    "B4-11": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no material legend, 0 of 675 DXF texts name a cladding; render + paint on every face (T-360 MERGED 5bde82a7); porch arch surround on the designer list"
+    },
+    "B5-05": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no access panel drawn or noted; MEP drawings absent: revisit with B12 at the MEP stage"
+    },
+    "B6-08": {
+     "disposition": "COVERED_BY_ROW",
+     "evidence": "T-768 (worker 2, TODO) fills DOOR.LIFT_LANDING: 3 landings GF / 1F / 2F (T-619), 1.00 x 2.10 default; the lines are absent from V3.0.81, so T-768 adds them",
+     "figure_beside": "3 pcs"
+    },
+    "B7-10": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no wall handrail drawn (one FIN.HANDRAIL EXCLUDED_WITH_REASON line, T-199 / UP-STAIR-013)"
+    },
+    "B7-14": {
+     "disposition": "PARKED",
+     "evidence": "rebar parked by the owner 2026-11-11: approximate tons by ratio at the end"
+    },
+    "B8-04": {
+     "disposition": "COVERED_BY_LINE",
+     "evidence": "showers sit inside the wet-room membrane FIN.WP.FLOOR + upturn (B8-01 / B8-03), no separate tanking (Q-40 A, T-369); 6 showers (T-743)"
+    },
+    "B8-07": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "no balcony / terrace label, no slab projecting with a door onto it; the 2F roof terrace and the pool-court slab are on FIN.WP.ROOF (B8-06) (T-486 MERGED)"
+    },
+    "B9-05": {
+     "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "evidence": "parapets carried all-RC on STR.CONC.PARAPET (T-761 MERGED: sections A-A / B-B cut every parapet in RC); ST p.14 typical block-on-upstand alternative noted in T-761's basis"
+    }
+   },
+   "inputs": [
+    "research/agents_t770/out/LINE_INDEX_V3_0_81.json",
+    "rules/coverage/BOQ_FAMILY_MASTER_1.81.0.json",
+    "research/agents_t743/out/T743_ALSENAN_COUNTS.json",
+    "research/agents_t355/summary.json",
+    "research/agents_t362/summary.json",
+    "research/agents_t760/out/FIX_ROWS.json",
+    "research/agents_t763/out/FIX_ROWS.json",
+    "research/agents_t769/out/FIX_ROWS.json"
+   ],
+   "master_mapping_proposal": {
+    "family_field": "disposition (builder Missing sheet skips every disposition but HELD_MEP_STAGE)",
+    "item_codes_to_family": {
+     "FIN.CEILING.CORNICE": "B5-03",
+     "FIN.CEILING.GYPSUM": "B5-02",
+     "FIN.SPATTER_DASH": "B4-05",
+     "FIN.STAIR.NOSING": "B7-05",
+     "FIN.WALL.TILE.EDGE": "B4-10",
+     "JOIN.KITCHEN.BASE": "B13-06",
+     "JOIN.KITCHEN.WALL": "B13-06",
+     "JOIN.WARDROBE": "B13-06",
+     "MAS.MESH_STRIP": "B9-03",
+     "MAS.SHARMAT": "B9-03",
+     "MEP.SAN.BASIN": "B12-01",
+     "MEP.SAN.FLOOR_DRAIN_3IN": "B12-01",
+     "MEP.SAN.FLOOR_DRAIN_4IN": "B12-01",
+     "MEP.SAN.KITCHEN_SINK": "B12-01",
+     "MEP.SAN.SHOWER_TRAY": "B12-01",
+     "MEP.SAN.SHOWER_WALKIN": "B12-01",
+     "MEP.SAN.WASHING_MACHINE_POINT": "B12-01",
+     "MEP.SAN.WC": "B12-01",
+     "MET.RAILING.POST": "B7-11",
+     "SITE.EXCAVATION_SUPPORT": "B1-06"
+    },
+    "move": {
+     "FIN.EXT.FINISH": "B4-07 -> B4-04"
+    }
+   },
+   "new_lines": [
+    {
+     "basis": "ST p.8 note 15 puts excavation protection / shoring on the contractor (extent by his specialist study); faces at the plot line >= 1.50 deep on all 4 sides (T-358 TRIGGERED); 1 lump-sum item, perimeter 2 x (15.00 + 31.37) = 92.74 lm beside",
+     "element_id": "SITE:B1-06b",
+     "family": "B1-06",
+     "item_code": "SITE.EXCAVATION_SUPPORT",
+     "label": "DRAWING-READ",
+     "net": 1.0,
+     "unit": "item"
+    },
+    {
+     "basis": "= carrier FIN.PLASTER m2 total 1622.00 (V3.0.81 index with the merged T-760 / T-763 / T-769 figures; owner OD-V3B-4..7 coat under every finished face once, wet-room tile backing included; recompute from the carrier at wiring)",
+     "element_id": "SPATTER:INTERIOR",
+     "family": "B4-05",
+     "item_code": "FIN.SPATTER_DASH",
+     "label": "ESTIMATE",
+     "net": 1622.0,
+     "unit": "m2",
+     "vs_freelancer": {
+      "diff": 1117.46,
+      "freelancer": 504.54,
+      "pct": 221.5,
+      "verdict": "RULE_DIFFERENCE: freelancer = wet rooms + kitchens 433.83 + under soffit 70.71 only; owner OD-V3B-4..7 = every plastered face"
+     }
+    },
+    {
+     "basis": "= carrier FIN.EXT.FINISH m2 total 1054.00 (V3.0.81 index with the merged T-760 / T-763 / T-769 figures; owner OD-V3B-4..7 coat under every finished face once; recompute from the carrier at wiring)",
+     "element_id": "SPATTER:EXTERIOR",
+     "family": "B4-05",
+     "item_code": "FIN.SPATTER_DASH",
+     "label": "ESTIMATE",
+     "net": 1054.0,
+     "unit": "m2"
+    },
+    {
+     "basis": "= carrier EXT.FENCE.PLASTER m2 total 179.84 (V3.0.81 index with the merged T-760 / T-763 / T-769 figures; owner OD-V3B-4..7 coat under every finished face once; recompute from the carrier at wiring)",
+     "element_id": "SPATTER:FENCE",
+     "family": "B4-05",
+     "item_code": "FIN.SPATTER_DASH",
+     "label": "ESTIMATE",
+     "net": 179.84,
+     "unit": "m2"
+    },
+    {
+     "basis": "T-368 determinate 31.65 lm at the 3.65 tile top x 3.00 / 3.65 (owner tile top 3.00, 13 Nov) = 26.01 + GF-14 wall end and flat stop 2 x 3.00 (no header on the slab plan) = 32.01; finish 45-degree OR steel profile (never both), designer list",
+     "element_id": "TILE_EDGE:CORNERS_AND_ENDS",
+     "family": "B4-10",
+     "item_code": "FIN.WALL.TILE.EDGE",
+     "label": "ESTIMATE",
+     "net": 32.01,
+     "unit": "lm"
+    },
+    {
+     "basis": "door-jamb tile edges: T-368 range 0 .. 73.1 lm (0 when the door frame covers the edge); frame / architrave detail not printed",
+     "element_id": "TILE_EDGE:DOOR_JAMBS",
+     "family": "B4-10",
+     "high": 73.1,
+     "item_code": "FIN.WALL.TILE.EDGE",
+     "label": "ESTIMATE",
+     "low": 0.0,
+     "unit": "lm"
+    },
+    {
+     "basis": "= FIN.CEILING m2 of the candidate 411.34 (4 lines still blank: T-768 fills them; recompute at wiring); owner Q-57 A mod + Q-48 A: gypsum decor ceiling in every room, moisture-resistant board type HELD (not specified); FIN.CEILING stays the physical area (B5-01): wire as the board item, not added to it",
+     "element_id": "CEILING:GYPSUM_DECOR",
+     "family": "B5-02",
+     "item_code": "FIN.CEILING.GYPSUM",
+     "label": "ESTIMATE",
+     "net": 411.34,
+     "unit": "m2",
+     "vs_freelancer": {
+      "diff": 1.76,
+      "freelancer": 409.58,
+      "pct": 0.4,
+      "verdict": "AGREE within 1 % before T-768's blanks"
+     }
+    },
+    {
+     "basis": "T-147 closed-room wall perimeter at the decor ceiling 302.88 lm; no cornice / cove detail printed (Q-57 A mod: cove only with geometry or a detail, not carried); open zones without a wall edge not counted",
+     "element_id": "CEILING:CORNICE",
+     "family": "B5-03",
+     "item_code": "FIN.CEILING.CORNICE",
+     "label": "ESTIMATE",
+     "net": 302.88,
+     "unit": "lm",
+     "vs_freelancer": {
+      "diff": -124.58,
+      "freelancer": 427.46,
+      "pct": -29.1,
+      "verdict": "UNRESOLVED: freelancer rooms 282.85 + wet rooms 144.61 lm; open-zone and wet-room runs to split by room"
+     }
+    },
+    {
+     "basis": "one nosing per step edge = T-766 FIN.STAIR.STEP_LM 89.69 (READY; recompute when merged) + landing / floor arrival edges 7.4 (T-412 DRAWING-CONFIRMED) = 97.09; nosing form not printed (designer list)",
+     "element_id": "STAIR:NOSING",
+     "family": "B7-05",
+     "item_code": "FIN.STAIR.NOSING",
+     "label": "ESTIMATE",
+     "net": 97.09,
+     "unit": "lm"
+    },
+    {
+     "basis": "posts drawn on the roof X railings: RL-02 (NW) 6, RL-01 (SE) 4 = 10 (T-361); glass panels drawn nowhere and not specified: no glass line",
+     "element_id": "RAILING:POSTS",
+     "family": "B7-11",
+     "item_code": "MET.RAILING.POST",
+     "label": "DRAWING-READ",
+     "net": 10.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "strip on every 3rd course of every block wall (Q-77): T-355 black restated by T-362 + white family A (62.5 x 25 face, as T-765): certain 856.14 .. + held levels 291.82; 7 walls of unknown block type not in the range (T-362)",
+     "element_id": "MASONRY:MESH_STRIP",
+     "family": "B9-03",
+     "high": 1147.96,
+     "item_code": "MAS.MESH_STRIP",
+     "label": "ESTIMATE",
+     "low": 856.14,
+     "optional": true,
+     "unit": "lm"
+    },
+    {
+     "basis": "one tie per 3rd course at every wall-to-column junction (Q-77): 293 pcs at 57 resolved junctions .. + 60 held junctions x 5.14 pcs average",
+     "element_id": "MASONRY:SHARMAT",
+     "family": "B9-03",
+     "high": 601.42,
+     "item_code": "MAS.SHARMAT",
+     "label": "ESTIMATE",
+     "low": 293.0,
+     "optional": true,
+     "unit": "pcs"
+    },
+    {
+     "basis": "WC (GF 6, 1F 5, 2F 1): 12 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:WC",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.WC",
+     "label": "MEASURED",
+     "net": 12.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "wash basin (GF 11, 1F 5, 2F 1; 5 on both sheets): 17 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:BASIN",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.BASIN",
+     "label": "MEASURED",
+     "net": 17.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "shower tray (GF 1, 1F 2): 3 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:SHOWER_TRAY",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.SHOWER_TRAY",
+     "label": "MEASURED",
+     "net": 3.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "walk-in shower zone, screen + mixer (1F 2, 2F 1): 3 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:SHOWER_WALKIN",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.SHOWER_WALKIN",
+     "label": "MEASURED",
+     "net": 3.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "floor drain 4 in: 14 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:FLOOR_DRAIN_4IN",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.FLOOR_DRAIN_4IN",
+     "label": "MEASURED",
+     "net": 14.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "floor drain 3 in: 5 pcs counted on sanitary-7757 p.1-3 fitted to the plan (T-743)",
+     "element_id": "SANITARY:FLOOR_DRAIN_3IN",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.FLOOR_DRAIN_3IN",
+     "label": "MEASURED",
+     "net": 5.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "GF kitchen sink (kitchen FD4 drawn, sink symbol not): 1 per room by function (T-743 HELD the symbol); designer list",
+     "element_id": "SANITARY:KITCHEN_SINK",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.KITCHEN_SINK",
+     "label": "ESTIMATE",
+     "net": 1.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "1F laundry washing-machine point (FD4 drawn): 1 per room by function (T-743 HELD the symbol); designer list",
+     "element_id": "SANITARY:WASHING_MACHINE_POINT",
+     "family": "B12-01",
+     "item_code": "MEP.SAN.WASHING_MACHINE_POINT",
+     "label": "ESTIMATE",
+     "net": 1.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "GF lobby box 0.50 x 2.10 (T-223) 2.100 + 1F dressing box 0.50 x 1.80 (T-223 / T-240) 1.800 = 3.900 lm; height 2.40 company default (owner 13 Nov); no interior drawing; boxes drawn on layer 5, no wall line (T-223 joinery rule)",
+     "element_id": "JOINERY:WARDROBE",
+     "family": "B13-06",
+     "item_code": "JOIN.WARDROBE",
+     "label": "DEFAULT",
+     "net": 3.9,
+     "unit": "lm"
+    },
+    {
+     "basis": "GF kitchen L counter north 2.650 + west 2.500 (T-351) 5.150 + GF pantry wall-backed legs 3.066 + 1.450 + 1.400 (T-351) 5.916 = 11.066 lm; height 0.85 company default (owner 13 Nov); no interior drawing; counter outlines drawn; pantry peninsula on the open edge not counted",
+     "element_id": "JOINERY:BASE",
+     "family": "B13-06",
+     "item_code": "JOIN.KITCHEN.BASE",
+     "label": "DEFAULT",
+     "net": 11.07,
+     "unit": "lm"
+    },
+    {
+     "basis": "GF kitchen west leg (north leg under W08) (T-351) 2.500 + GF pantry wall-backed legs (T-351) 5.916 = 8.416 lm; height 0.70 company default (owner 13 Nov); no interior drawing; wall units not drawn: on the wall-backed legs, none under a window",
+     "element_id": "JOINERY:WALL",
+     "family": "B13-06",
+     "item_code": "JOIN.KITCHEN.WALL",
+     "label": "ESTIMATE",
+     "net": 8.42,
+     "unit": "lm"
+    }
+   ],
+   "rows": [],
+   "schema": "URBAN_FIX_ROWS_V1",
+   "summary": {
+    "dispositions": {
+     "COVERED_BY_LINE": [
+      "B4-02",
+      "B4-04",
+      "B8-04"
+     ],
+     "COVERED_BY_ROW": [
+      "B1-01",
+      "B1-05",
+      "B1-06",
+      "B1-07",
+      "B6-08"
+     ],
+     "HELD_MEP_STAGE": [
+      "B12-02",
+      "B12-03",
+      "B12-04",
+      "B12-05"
+     ],
+     "NOT_APPLICABLE_WITH_EVIDENCE": [
+      "B13-03",
+      "B13-05",
+      "B13-07",
+      "B3-03",
+      "B3-07",
+      "B4-11",
+      "B5-05",
+      "B7-10",
+      "B8-07",
+      "B9-05"
+     ],
+     "PARKED": [
+      "B11-02",
+      "B11-03",
+      "B11-04",
+      "B7-14"
+     ],
+     "REGISTER_NO_LINE": [
+      "B2-01",
+      "B2-03",
+      "B2-04",
+      "B2-05"
+     ]
+    },
+    "missing_families_in_candidate": 39,
+    "missing_sheet_after_wiring": [
+     "B12-02",
+     "B12-03",
+     "B12-04",
+     "B12-05"
+    ],
+    "new_lines": 23,
+    "not_covered": [],
+    "with_new_lines": [
+     "B1-06",
+     "B12-01",
+     "B13-06",
+     "B4-05",
+     "B4-10",
+     "B5-02",
+     "B5-03",
+     "B7-05",
+     "B7-11",
+     "B9-03"
+    ]
+   },
+   "task": "T-771"
+  }
+ ]
+}
