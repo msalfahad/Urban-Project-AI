@@ -1,0 +1,870 @@
+{
+ "base": "agents/task-T-770 (V3.0.81)",
+ "blank_or_ranged_before": 43,
+ "candidate_version": "ARCH_TAKEOFF_V3.0.81",
+ "freelancer": {
+  "PVC doors / shutters / lift surround / dome / thresholds": "no freelancer row (T-198 NOT COMPARABLE, T-475, T-413)",
+  "W02 freelancer 6.33 x 4.30 vs ours 6.33 x 2.20": 13.293,
+  "split of candidate - freelancer windows m2 (per census row W x H, residual 0.000)": {
+   "W02 head 2.20 (section B-B) vs his 4.30 (W03's printed height): ENGINE_RIGHT": -13.293,
+   "W11 / W12 2.20 between leaves (T-207) and W13 2.30 vs his 2.00: ENGINE_RIGHT": 1.14,
+   "W17 3.29 outer arc (owner Q-39 C) vs his 3.15 chord: RULE_DIFFERENCE": 0.42,
+   "W18 0.50 x 2.16 drawn vs his 0.60 x 0.80: ENGINE_RIGHT": 0.6,
+   "drawn heads 1.50 / 1.60 / 1.70 (T-201 elevations) vs his 2.00 on W08 W09 W10 W14 W24 W25 W26 W27 W29: ENGINE_RIGHT": -5.715
+  },
+  "windows m2 (T-198 W x H, 29 rows)": 116.9,
+  "windows m2 candidate after (incl. W17 9.87 MAIN_FILL_4)": 100.05
+ },
+ "index_sha16": "3976b262611bc3bd",
+ "left_after": 0,
+ "overlap_with_MAIN_FILL_ALL": 0,
+ "rows": 43,
+ "rows_detail": [
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 4.29
+   },
+   "basis": "shutter W11 covers its opening: 1.95 printed (sheet03 chain) x 2.20 between the louvred leaves (T-207); no shutter schedule (D-54)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "SHUTTER:W11:AREA",
+   "item_code": "ARCH.SHUTTER",
+   "label": "ESTIMATE",
+   "line_id": "L-1cb158e866920455812a",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 4.29
+   },
+   "basis": "shutter W12 as W11: 1.95 x 2.20 (T-207); D-54",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "SHUTTER:W12:AREA",
+   "item_code": "ARCH.SHUTTER",
+   "label": "ESTIMATE",
+   "line_id": "L-87d822fcabc5b52241d9",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.92
+   },
+   "basis": "shutter W14 covers its opening: 2.45 x 1.60 printed (SE elevation +6.90 .. +8.50); D-54",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "SHUTTER:W14:AREA",
+   "item_code": "ARCH.SHUTTER",
+   "label": "ESTIMATE",
+   "line_id": "L-9d0c79baa4fe0e9d95c8",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_A_THRESHOLD_T-325"
+   },
+   "basis": "WALL_BAND_REMAINDER 0.031 m2 (D-V26-07, T-325): not a threshold",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "1F-STRIP-SITE-29faecd848edfdc3:unattributed strip",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-479acdcb1e5e01bf3957",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_A_THRESHOLD_T-325"
+   },
+   "basis": "WALL_BAND_REMAINDER 0.034 m2 (D-V26-07, T-325): not a threshold",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "1F-STRIP-SITE-fd160ff889cc7481:unattributed strip",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-44b8dcf4b30e11a464f5",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.18
+   },
+   "basis": "OP-020 leafless passage into the GF W.C.: wet threshold 0.90 x 0.20 (T-325 geometry); treatment default = wet threshold",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-STRIP-OP-020:threshold strip",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "DEFAULT",
+   "line_id": "L-9bcc79e76f84667b244a",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.15
+   },
+   "basis": "A-GF-01 arch OP-027: floor continues (UP-THR-001) 1.000 x 0.150 (T-340 FILL, T-648 fix row)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-STRIP-OP-027:threshold strip",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "DRAWING-READ",
+   "line_id": "L-868aee125705bb8d17f6",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_A_THRESHOLD_T-325"
+   },
+   "basis": "WALL_BAND_REMAINDER 0.036 m2 (D-V26-07, T-325): part of a doorway face, not a threshold",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-STRIP-SITE-19643bcc262b322f:unattributed strip",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-2991f35326b961a6d238",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_A_THRESHOLD_T-325"
+   },
+   "basis": "STRIP_NOT_ATTRIBUTED wall body 0.188 m2 (T-325 Checker-merged): not a threshold piece",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-STRIP-SITE-e3b5d3227c61bc6c:unattributed strip",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-1c71cd45a5116bdc5260",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_A_THRESHOLD_T-325"
+   },
+   "basis": "WALL_BAND_REMAINDER 0.041 m2 (D-V26-07, T-325): not a threshold",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-STRIP-SITE-f829b5b7d673a747:unattributed strip",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-f4cfd731c98468026078",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.2
+   },
+   "basis": "sea-side gate D-GF-15 (G-02): 1.00 gate in the 0.20 band (Q-63 C element, GF plan); designer clarification replaces it",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-THRESHOLD-D-GF-15:threshold strip:HELD",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "ESTIMATE",
+   "line_id": "L-56acf34557c315f65bb1",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.15
+   },
+   "basis": "D-2F-01 external entrance: width x wall depth 0.15 (T-325 ledger, drawn); sill finish unprinted -> company marble threshold",
+   "before": {
+    "class": "HELD",
+    "high": 0.15,
+    "low": 0.15,
+    "net": null
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:2F:OP-001",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "DEFAULT",
+   "line_id": "L-3e5c6b7af8dd06b2836c",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.18
+   },
+   "basis": "D-GF-03 external entrance 0.90 x 0.20 (T-325); finish unprinted",
+   "before": {
+    "class": "HELD",
+    "high": 0.18,
+    "low": 0.18,
+    "net": null
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-005",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "DEFAULT",
+   "line_id": "L-74cd61b430eec9933d15",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.2
+   },
+   "basis": "D-GF-06 external entrance 1.00 x 0.20 (T-325); finish unprinted",
+   "before": {
+    "class": "HELD",
+    "high": 0.2,
+    "low": 0.2,
+    "net": null
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-008",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "DEFAULT",
+   "line_id": "L-9fa69ef1a11ef9987967",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.2
+   },
+   "basis": "D-GF-01 external entrance 1.00 x 0.20 (T-325); finish unprinted",
+   "before": {
+    "class": "HELD",
+    "high": 0.2,
+    "low": 0.2,
+    "net": null
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-009",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "DEFAULT",
+   "line_id": "L-b3933a51bd95e9bc542b",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.18
+   },
+   "basis": "D-GF-09 external entrance 0.90 x 0.20 (T-325); finish unprinted",
+   "before": {
+    "class": "HELD",
+    "high": 0.18,
+    "low": 0.18,
+    "net": null
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-013",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "DEFAULT",
+   "line_id": "L-8111095f6db78f0e674b",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.4
+   },
+   "basis": "D-GF-07 main entrance 2.00 x 0.20 (T-325); finish unprinted",
+   "before": {
+    "class": "HELD",
+    "high": 0.4,
+    "low": 0.4,
+    "net": null
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-021",
+   "item_code": "ARCH.THRESHOLD",
+   "label": "DEFAULT",
+   "line_id": "L-ad41b065d825c0190b7d",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 13.926
+   },
+   "basis": "W02 GF saloon: plan '633' x head 2.20 (T-201 section B-B +1.00 .. +3.20); one window on every drawing, the render's pier (D-53) not printed",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "OPENINGS:ARCH_WINDOW:GF:HELD_NO_FIGURE",
+   "item_code": "ARCH.WINDOW",
+   "label": "DRAWING-READ",
+   "line_id": "L-cdf1a9e6bcb2e00c3098",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.0
+   },
+   "basis": "W02: 1 opening on plan, section and elevation (render shows 2, D-53; drawings govern)",
+   "before": {
+    "class": "HELD",
+    "high": 2.0,
+    "low": 1.0,
+    "net": null
+   },
+   "element_id": "OPENINGS:ARCH_WINDOW:GF:HELD",
+   "item_code": "ARCH.WINDOW",
+   "label": "DRAWING-READ",
+   "line_id": "L-dd2ecc97cf3f9dcd86c3",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NO_SURFACE_FRAME_ON_ROOM_FACE"
+   },
+   "basis": "W17 IN jambs / head: glass line on the room face BD2 (T-302 s.1, T-250) -> no inside reveal",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "1F-REVEAL-W17:IN:JAMBS_HEAD:HELD",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-3e3a3bf8e2fd272a4c8e",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.609425
+   },
+   "basis": "W17 OUT: glass on the room face BD2 (T-302 s.1) -> full radial 0.20 x (jambs 2.2190 + 2.1676 + head arc 3.6605: centreline chord 3.1331, rise to the 3.00 crown)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "1F-REVEAL-W17:OUT:JAMBS_HEAD:HELD",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "label": "ESTIMATE",
+   "line_id": "L-ee6793c9a96916a5a7c9",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.62662
+   },
+   "basis": "W17 sill strip (OUT side; IN has no surface): 0.20 x centreline developed 3.1331 (T-302)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "1F-STRIP-COP-001:window reveal strip",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "label": "ESTIMATE",
+   "line_id": "L-c90d5d6c06a671fc3b99",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.352
+   },
+   "basis": "W02 OUT jambs: 2 x 0.080 (T-313: wall 0.200 - frame band 0.120 flush with the room face) x 2.20 (T-201); head 0.5064 already on L-429605a88ef09abda085",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-REVEAL-W02:OUT:JAMBS_HEAD:HELD",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "label": "DRAWING-READ",
+   "line_id": "L-bcc55693d203e384d46e",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NO_SURFACE_FRAME_ON_ROOM_FACE"
+   },
+   "basis": "W03 IN jambs / head: frame flush with the room face (as W02, T-313) -> no inside reveal; revert if the frame is read deeper",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-REVEAL-W03:IN:JAMBS_HEAD:HELD",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-e21b84e60826b8be59fa",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NO_SURFACE_FRAME_ON_ROOM_FACE"
+   },
+   "basis": "W03 IN floor strip: frame on the room face (as W02) -> the room floor runs to the frame",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-REVEAL-W03:IN:SILL:HELD",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-29637dbaa9fe1acc7b82",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.2136
+   },
+   "basis": "W03 OUT jambs + head: 0.080 (frame as W02, same saloon wall and system) x (2 x 4.30 printed + 6.57 printed)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-REVEAL-W03:OUT:JAMBS_HEAD:HELD",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "label": "ESTIMATE",
+   "line_id": "L-e44e09189fe2941f2d21",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.5256
+   },
+   "basis": "W03 OUT floor strip: 0.080 x 6.57 (frame as W02)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-REVEAL-W03:OUT:SILL:HELD",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "label": "ESTIMATE",
+   "line_id": "L-30133ea5a4fb6847c519",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.96
+   },
+   "basis": "D-1F-03 1.00 + D-1F-04 0.80 (closure jamb hits, T-198) x 2.20 Q-55 C",
+   "before": {
+    "class": "HELD",
+    "high": 3.96,
+    "low": 3.476,
+    "net": null
+   },
+   "element_id": "OPENINGS:DOOR_INTERNAL_PVC:1F:HELD",
+   "item_code": "DOOR.INTERNAL.PVC",
+   "label": "DEFAULT",
+   "line_id": "L-f4a12cd20b0f5e173430",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 5.28
+   },
+   "basis": "D-GF-02 0.80 + D-GF-10 0.80 (closure jamb hits, DXF 0.797) + D-GF-14 0.80 (leaf r 0.69 + Q-04 0.10) x 2.20 Q-55 C; closure width as the released PVC lines",
+   "before": {
+    "class": "HELD",
+    "high": 5.28,
+    "low": 4.554,
+    "net": null
+   },
+   "element_id": "OPENINGS:DOOR_INTERNAL_PVC:GF:HELD",
+   "item_code": "DOOR.INTERNAL.PVC",
+   "label": "DEFAULT",
+   "line_id": "L-ac8a0ea9174f53a359dd",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 2.0
+   },
+   "basis": "D-1F-03 / D-1F-04: 2 doors drawn (T-198 census)",
+   "before": {
+    "class": "HELD",
+    "high": 2.0,
+    "low": 2.0,
+    "net": null
+   },
+   "element_id": "OPENINGS:DOOR_INTERNAL_PVC:1F:HELD",
+   "item_code": "DOOR.INTERNAL.PVC",
+   "label": "DRAWING-READ",
+   "line_id": "L-5fa8e384af588d638eb4",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.0
+   },
+   "basis": "D-GF-02 / D-GF-10 / D-GF-14: 3 doors drawn (T-198 census)",
+   "before": {
+    "class": "HELD",
+    "high": 3.0,
+    "low": 3.0,
+    "net": null
+   },
+   "element_id": "OPENINGS:DOOR_INTERNAL_PVC:GF:HELD",
+   "item_code": "DOOR.INTERNAL.PVC",
+   "label": "DRAWING-READ",
+   "line_id": "L-236f7aba1ca49962667a",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 5.0
+   },
+   "basis": "D-GF-07 printed 2.00 (sheet03 chain 80 / 200 / 90) x 2.50 (SE elevation chain 85 / 250); render single leaf (D-53) not printed",
+   "before": {
+    "class": "HELD",
+    "high": 5.0,
+    "low": 5.0,
+    "net": null
+   },
+   "element_id": "OPENINGS:DOOR_MAIN_ENTRANCE:GF:HELD",
+   "item_code": "DOOR.MAIN_ENTRANCE",
+   "label": "DRAWING-READ",
+   "line_id": "L-6f06f2eaa7ab76256979",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.0
+   },
+   "basis": "D-GF-07: one double-leaf opening (a double leaf is one opening, T-232)",
+   "before": {
+    "class": "HELD",
+    "high": 1.0,
+    "low": 1.0,
+    "net": null
+   },
+   "element_id": "OPENINGS:DOOR_MAIN_ENTRANCE:GF:HELD",
+   "item_code": "DOOR.MAIN_ENTRANCE",
+   "label": "DRAWING-READ",
+   "line_id": "L-8ee14244d410e740c706",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "CARRIED_BY_L-43bf1f869e1588f1d3bd"
+   },
+   "basis": "1F living parent: board carried whole by the decor group line 51.0496 (R-T284-1, T-573); a figure would count it twice",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "1F-R78C367:ceiling",
+   "item_code": "FIN.CEILING",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-fc116bb666b184740090",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 12.9742
+   },
+   "basis": "2F stair box top under the roof slab 12.9742 drawn (T-271 / T-283 r3, T-640 high end); finished as a ceiling (company default; Q-72 / O-P8-02)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "2F-R4D1B62:stairwell ceiling",
+   "item_code": "FIN.CEILING",
+   "label": "DEFAULT",
+   "line_id": "L-dd6930fd19ca1b908c56",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.75
+   },
+   "basis": "GF stair top under the 1F slab 1.750 drawn (T-283 r3, T-640 high end); flight soffits stay in the stair soffit lines",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-R31F8AE:stairwell ceiling",
+   "item_code": "FIN.CEILING",
+   "label": "DEFAULT",
+   "line_id": "L-2175a965bb7c48a50e6c",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.76
+   },
+   "basis": "GF-RFD4E1D west strip OP-003 3.80 x 0.20 drawn (T-431 / T-640); ceiling as the room",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-RFD4E1D:west-strip:ceiling",
+   "item_code": "FIN.CEILING",
+   "label": "DEFAULT",
+   "line_id": "L-4b41debf41fff9e3faae",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.98142
+   },
+   "basis": "GF-RFD4E1D bulkhead: free beam edge 6.5428 x owner-method drop 0.15 (T-431 / T-640 high end)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-RFD4E1D:bulkhead",
+   "item_code": "FIN.CEILING.BULKHEAD",
+   "label": "DEFAULT",
+   "line_id": "L-31f9b7008ea883f1b78d",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 24.149555
+   },
+   "basis": "east dome intrados as west (twin shell, T-193): 24.1496; open over void V-06 (T-719); closure D-20 open",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "DOME:EAST:intrados",
+   "item_code": "FIN.DOME.SOFFIT",
+   "label": "DEFAULT",
+   "line_id": "L-f74c0fc7f78b579e6097",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 24.149555
+   },
+   "basis": "west dome intrados: printed 442 / 190 / 10 concentric (T-193): Ri 2.1353, hi 1.80, 2 pi Ri hi = 24.1496; open over void V-05 (T-719); closure D-20 open",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "DOME:WEST:intrados",
+   "item_code": "FIN.DOME.SOFFIT",
+   "label": "DEFAULT",
+   "line_id": "L-cf3e2b55648f676ffb1d",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.1
+   },
+   "basis": "ELV-01-1F: h 2.10 default x (0.50 + 0.50) + 0.50 x 2.00; faces 0.60 / 0.935 hold the bands (T-475)",
+   "before": {
+    "class": "HELD",
+    "high": 4.7,
+    "low": 1.0,
+    "net": null
+   },
+   "element_id": "LIFT:ELV-01-1F:surround",
+   "item_code": "FIN.MARBLE.LIFT_SURROUND",
+   "label": "DEFAULT",
+   "line_id": "L-d788f643b290e8f92558",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 2.84
+   },
+   "basis": "ELV-01-2F: right face 0.400 to the internal corner (DXF + PDF, T-475): h 2.10 x (0.50 + 0.40) + 0.50 x 1.90",
+   "before": {
+    "class": "HELD",
+    "high": 4.28,
+    "low": 0.75,
+    "net": null
+   },
+   "element_id": "LIFT:ELV-01-2F:surround",
+   "item_code": "FIN.MARBLE.LIFT_SURROUND",
+   "label": "DEFAULT",
+   "line_id": "L-fdbd9636828f045aae5a",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.1
+   },
+   "basis": "ELV-01-GF: h 2.10 default x (0.50 + 0.50) + top 0.50 x (1.00 + 0.50 + 0.50); faces 0.70 / 0.65 hold the bands (T-475)",
+   "before": {
+    "class": "HELD",
+    "high": 5.0,
+    "low": 1.0,
+    "net": null
+   },
+   "element_id": "LIFT:ELV-01-GF:surround",
+   "item_code": "FIN.MARBLE.LIFT_SURROUND",
+   "label": "DEFAULT",
+   "line_id": "L-b66b8e76425d81ff9f19",
+   "set": "OPENINGS_CEILINGS",
+   "unit": "m2"
+  }
+ ],
+ "skipped": {
+  "L-0392d37452e98050dd1b": "W17 m2 carried by MAIN_FILL_4 (owner Q-76 A 9.870)"
+ },
+ "task": "T-768",
+ "totals_after": {
+  "ARCH.SHUTTER m2": 12.5,
+  "ARCH.SHUTTER pcs": 6.0,
+  "ARCH.THRESHOLD m2": 1.84,
+  "ARCH.WINDOW m2": 90.18,
+  "ARCH.WINDOW pcs": 29.0,
+  "ARCH.WINDOW_REVEAL m2": 16.77,
+  "DOOR.INTERNAL.PVC m2": 37.84,
+  "DOOR.INTERNAL.PVC pcs": 20.0,
+  "DOOR.MAIN_ENTRANCE m2": 5.0,
+  "DOOR.MAIN_ENTRANCE pcs": 1.0,
+  "FIN.CEILING m2": 426.82,
+  "FIN.CEILING.BULKHEAD m2": 28.92,
+  "FIN.DOME.SOFFIT m2": 48.3,
+  "FIN.MARBLE.LIFT_SURROUND m2": 9.04
+ }
+}
