@@ -1,5 +1,12 @@
 # 30-day delivery plan, 2026-10-20 to 2026-11-19 (owned by the Lead; started by the main chat)
 
+> CURRENT STATE (Lead 2026-11-14 16:13 UTC; DELIVERY_MODE.md streams govern): candidate of record ARCH_TAKEOFF_V3.0.86 /
+> master 1.86.0 (not released). FILL (to 17 Nov): blank non-rebar 18 (stairs 14 + held ranges); r10 (concrete beams /
+> columns, roof upturn, cornice if merged) then r11 (stairs, held ranges, disposal) close it. GENERALISE (18-22 Nov):
+> one command skeleton, opening table, inputs sheet, schedule tables merged (unwired); first consumers queued (inputs
+> height provider, schedule structure provider, wall-band masonry). SECOND VILLA (23-27 Nov) after the owner's release
+> word (T-773). The P-table below is history.
+
 **Basis:**
 
 - Today the throughput of released, verified BOQ changes is 0 a week; the merge throughput is 25–40 a day.

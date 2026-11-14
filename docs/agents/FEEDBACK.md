@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-14 16:13 (since 12:19)
+
+- T-770 r9 (V3.0.86 / 1.86.0): WORKED (Gate B PASS 9be5f69a + promotion cb3d2fb1; blank non-rebar 44 -> 18; dome shells 3 x 26.685 m2 Checker DXF AGREE).
+- T-790 blockwork views / mesh / sharmat: WORKED (MERGED 28d6336e, wired in r9; block m2 counted once).
+- T-786 concrete residuals: WORKED (MERGED a2001238; beam 79.24 -> 76.19 m3, UNRESOLVED 7.13 -> 3.48) -> wire in r10 with F-V786-1 (-0.141 m3).
+- T-792 schedule-first column fix rows: WORKED (MERGED 9ff810ac; columns 33.92 -> 33.83 m3) -> r10; provider for a second villa -> NEW T-797.
+- T-794 roof upturn: WORKED (MERGED 8f558cef; 232.97 -> 228.99 lm, gap split to causes, his lump -11.89 lm UNRESOLVED named) -> r10.
+- T-788 cornice: PARTIAL (READY; result -29.1 % -> +0.70 % but the Checker could not re-measure: polygoniser outside the run allow-list) -> worker 2 adds a research/agents_t788 print script first; Checker first slot.
+- Lead finding: board tools apply MAIN FILL overlay over newer wired lines (disposal 10.48 m3 in the index shown as HELD 105.6 .. 115.5) -> NEW T-796; held ranges left -> NEW T-795; number (b) now read from the workbook Compare sheet.
+
 ## Lead 2026-11-13 08:25 (since 04:15)
 
 - T-754 exterior paint edge residuals: PARTIAL (MERGED, 4/7 re-walked AGREE: corners 179.54 .. 180.74 -> 176.94 .. 178.14 lm research, not wired) -> NEW T-756 face ledger re-based for T-314 r3; the 3 unverified items re-walked there.

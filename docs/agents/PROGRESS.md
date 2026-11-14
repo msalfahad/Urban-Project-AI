@@ -1,8 +1,26 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-14 12:19 UTC (Lead). Previous version: 2026-11-14 08:15 UTC. Released default V2.9 + route G
-untouched. Candidate of record now V3.0.85 (not released). Counted your way: lines with no figure, and each trade
+Last update: 2026-11-14 16:13 UTC (Lead). Previous version: 2026-11-14 12:19 UTC. Released default V2.9 + route G
+untouched. Candidate of record now V3.0.86 (not released). Counted your way: lines with no figure, and each trade
 against the freelancer.
+
+Since 12:19 (newest first):
+- Lines with no figure (not rebar): 44 -> 18 in the candidate. Every block-wall line now has a figure. Left: 14 stair
+  railing, guard and stair-hall skirting lines (first task for the structural worker) and a few lines still carried as
+  a range (door-jamb tile edges 0 .. 73 lm, a small floor corner, two space areas): task queued.
+- Earthworks: the candidate carries 10.5 m3 of soil to remove, but the workbook tools still show an older range of
+  105.6 .. 115.5 m3 on top of it (an older fill sheet overrides newer figures). Task queued to fix the tools and to
+  explain the 10x difference in m3.
+- Roof: membrane 324.1 vs 285 m2 (+13.7 %, the curved dome surface), now in the candidate. Roof upturn 233.0 -> 229.0
+  vs 194 lm: the gap is now split into causes (the dome rings 41.6 lm, a rule difference; the pool court 6.3 lm; his
+  typed lump 11.9 lm still not found); goes into the next candidate.
+- Concrete: beams 79.2 -> 76.2 m3 vs 66.0 (+15.5 %): edge bands drawn at the 0.16 m slab thickness, not a 0.60 beam;
+  columns 33.9 -> 33.8 vs 28.6 m3 (the rest is columns he did not carry on the upper floors). Both go into the next
+  candidate.
+- Cornice: 302.9 -> 430.4 vs 427.5 lm (+0.7 %, was -29.1 %): the open rooms had been left out. Waiting for the
+  checker's own re-measure.
+
+Previous section (2026-11-14 12:19):
 
 Since 08:15 (newest first):
 - Lines with no figure (not rebar): 124 -> 56 -> 44 in the candidate. What is left is two groups: the wall panel /
