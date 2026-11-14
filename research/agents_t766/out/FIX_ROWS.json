@@ -1,0 +1,1340 @@
+{
+ "base": "agents/task-T-770 (V3.0.81)",
+ "blank_or_ranged_before": 66,
+ "candidate_version": "ARCH_TAKEOFF_V3.0.81",
+ "freelancer": {
+  "E1 landing": 5.1,
+  "E1 skirting lm": 4.37,
+  "E1 steps": "5 x 2.8 = 14",
+  "ST-01 landing": 6.2,
+  "ST-01 skirting lm": 23.1,
+  "ST-01 steps": "63 x 1.2 m2 = 75.6",
+  "ST-02 landing": 1.44,
+  "ST-02 skirting lm": 2.4,
+  "ST-02 steps": "28 x 1.2 m2 = 33.6",
+  "stair soffit paint m2": 39.99
+ },
+ "index_sha16": "3976b262611bc3bd",
+ "left_after": 0,
+ "overlap_with_MAIN_FILL_ALL": 0,
+ "rows": 68,
+ "rows_detail": [
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 7.7975
+   },
+   "basis": "ST-01 MS2-LD 2.9325 (+7.516) + 2F arrival 4.865 (+9.70), T-493 census, Checker own re-measure 4 / 4 AGREE; inside the held 0 .. 9.225",
+   "before": {
+    "class": "HELD",
+    "high": 9.225001,
+    "low": 0.0,
+    "net": null
+   },
+   "element_id": "2F-R4D1B62:landings",
+   "item_code": "FIN.MARBLE.LANDING",
+   "label": "MEASURED",
+   "line_id": "L-5d2be30dd8d2ffeacc42",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.9044
+   },
+   "basis": "1F MS2-L 12 risers x 1.150 x (0.168000 - 0.030) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 1.9044,
+    "low": 1.9044,
+    "net": null
+   },
+   "element_id": "1F-R78C367:flight 2",
+   "item_code": "FIN.MARBLE.RISER",
+   "label": "DRAWING-READ",
+   "line_id": "L-0f060e9951c28c4cf074",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.886
+   },
+   "basis": "1F MS1-U 12 risers x 1.150 x (0.166667 - 0.030) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 1.886,
+    "low": 1.886,
+    "net": null
+   },
+   "element_id": "1F-R78C367:flight 3",
+   "item_code": "FIN.MARBLE.RISER",
+   "label": "DRAWING-READ",
+   "line_id": "L-07e0855f961a839c1277",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.876833
+   },
+   "basis": "1F MS1-T turn: 5 fronts 6.4159 (as STEP_LM) x (4.50/27 - 0.030)",
+   "before": {
+    "class": "HELD",
+    "high": 1.111337,
+    "low": 0.785833,
+    "net": null
+   },
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.MARBLE.RISER",
+   "label": "ESTIMATE",
+   "line_id": "L-820baecf7f726b4d8f1e",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.9044
+   },
+   "basis": "2F MS2-U 12 risers x 1.150 x (0.168000 - 0.030) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 1.9044,
+    "low": 1.9044,
+    "net": null
+   },
+   "element_id": "2F-R4D1B62:flight 2",
+   "item_code": "FIN.MARBLE.RISER",
+   "label": "DRAWING-READ",
+   "line_id": "L-12f56cbfe750f8b30c41",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.571667
+   },
+   "basis": "GF MS1-L 10 risers x 1.150 x (0.166667 - 0.030) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 1.571667,
+    "low": 1.571667,
+    "net": null
+   },
+   "element_id": "GF-R31F8AE:flight 1",
+   "item_code": "FIN.MARBLE.RISER",
+   "label": "DRAWING-READ",
+   "line_id": "L-ecc450d6cc865617f8f6",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.667
+   },
+   "basis": "GF D1 4 risers x 1.150 x (0.175000 - 0.030) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 0.667,
+    "low": 0.667,
+    "net": null
+   },
+   "element_id": "GF-R31F8AE:flight 2",
+   "item_code": "FIN.MARBLE.RISER",
+   "label": "DRAWING-READ",
+   "line_id": "L-8938aa3b25bf605e4b9d",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.987027
+   },
+   "basis": "GF RS-C: 12 drawn riser faces 13.798023 + drawn curtail face arcs 259 0.840283 / 25B 0.562992, x (4.50/28 - 0.030)",
+   "before": {
+    "class": "HELD",
+    "high": 2.131176,
+    "low": 1.803598,
+    "net": null
+   },
+   "element_id": "GF-RC99C2A:flight 1",
+   "item_code": "FIN.MARBLE.RISER",
+   "label": "DRAWING-READ",
+   "line_id": "L-913cda8eb6d73f6e28cc",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.653536
+   },
+   "basis": "GF RS-S 11 risers x 1.150 x (0.160714 - 0.030) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 1.653536,
+    "low": 1.653536,
+    "net": null
+   },
+   "element_id": "GF-RC99C2A:flight 2",
+   "item_code": "FIN.MARBLE.RISER",
+   "label": "DRAWING-READ",
+   "line_id": "L-099fe9fcfa5667fb8b99",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.751607
+   },
+   "basis": "GF RS-A 5 risers x 1.150 x (0.160714 - 0.030) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 0.751607,
+    "low": 0.751607,
+    "net": null
+   },
+   "element_id": "GF-RC99C2A:flight 4",
+   "item_code": "FIN.MARBLE.RISER",
+   "label": "DRAWING-READ",
+   "line_id": "L-16e0c6682725260f28e7",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.1587
+   },
+   "basis": "2F MS2-TR closing riser 1.150 x (0.168 printed levels - 0.030) (T-738 ADD point)",
+   "before": {
+    "class": "HELD",
+    "high": 0.1587,
+    "low": 0.1587,
+    "net": null
+   },
+   "element_id": "T738:ADD:2F-R4D1B62#MS2-TR-closing-riser",
+   "item_code": "FIN.MARBLE.RISER",
+   "label": "DRAWING-READ",
+   "line_id": "L-d014870b8dcae736608d",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.3225
+   },
+   "basis": "1F MS1-T: the 5 winder treads tile the drawn 1.150 x 1.150 turn (T-738 / T-493)",
+   "before": {
+    "class": "HELD",
+    "high": 1.3225,
+    "low": 1.3225,
+    "net": null
+   },
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.MARBLE.TREAD",
+   "label": "DRAWING-READ",
+   "line_id": "L-b4660de0ddd98ad0ffc2",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 4.18014
+   },
+   "basis": "GF RS-C: finish lane r 1.5805 .. 2.7305: 11 x 0.337067 + junction 0.415515 x 1.15/1.25 + curtail 0.090129 beyond the lane (T-415)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-RC99C2A:flight 1",
+   "item_code": "FIN.MARBLE.TREAD",
+   "label": "ESTIMATE",
+   "line_id": "L-fa534ec5f9dc14947899",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.782209
+   },
+   "basis": "1F MS2-L: 11 goings x hypot(0.300, 4.20/25) (T-738 drawn point, released here)",
+   "before": {
+    "class": "HELD",
+    "high": 3.782209,
+    "low": 3.782209,
+    "net": null
+   },
+   "element_id": "1F-R78C367:flight 2",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "label": "DRAWING-READ",
+   "line_id": "L-a08d67ca292ab16ef9c3",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.775064
+   },
+   "basis": "1F MS1-U: 11 goings x hypot(0.300, 4.50/27) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 3.775064,
+    "low": 3.775064,
+    "net": null
+   },
+   "element_id": "1F-R78C367:flight 3",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "label": "DRAWING-READ",
+   "line_id": "L-54eb280b9f7bf5eda65f",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.228914
+   },
+   "basis": "1F MS1-T winder turn: walking line quarter arc r 0.575 (lane centre of the 1.150 turn) = 0.9032 plan, rise +2.667 -> +3.500 = 0.8333 printed: hypot",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "label": "ESTIMATE",
+   "line_id": "L-c6724654ee4ccdb0c508",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.782209
+   },
+   "basis": "2F MS2-U: 11 goings x hypot(0.300, 4.20/25) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 3.782209,
+    "low": 3.782209,
+    "net": null
+   },
+   "element_id": "2F-R4D1B62:flight 2",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "label": "DRAWING-READ",
+   "line_id": "L-48bb13e2f1c94d852a03",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.088689
+   },
+   "basis": "GF MS1-L: 9 goings x hypot(0.300, 4.50/27) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 3.088689,
+    "low": 3.088689,
+    "net": null
+   },
+   "element_id": "GF-R31F8AE:flight 1",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "label": "DRAWING-READ",
+   "line_id": "L-a1a0ab49818d4b9621b5",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.041933
+   },
+   "basis": "GF D1: 3 goings x hypot(0.300, 0.70/4) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 1.041933,
+    "low": 1.041933,
+    "net": null
+   },
+   "element_id": "GF-R31F8AE:flight 2",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "label": "DRAWING-READ",
+   "line_id": "L-cccf54f717124cd750b3",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 4.046214
+   },
+   "basis": "GF RS-C curved: walking line r 2.1555 x drawn step 7.790996 deg = going 0.2931; 11 x hypot(going, 4.50/28) + junction tread going x 0.415515/0.366379 (drawn plan ratio)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "GF-RC99C2A:flight 1",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "label": "ESTIMATE",
+   "line_id": "L-30009d8eb01996ec6399",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.403367
+   },
+   "basis": "GF RS-S: 10 goings x hypot(0.300, 4.50/28) (T-738 drawn point; riser Q-50 A cond)",
+   "before": {
+    "class": "HELD",
+    "high": 3.403367,
+    "low": 3.403367,
+    "net": null
+   },
+   "element_id": "GF-RC99C2A:flight 2",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "label": "DRAWING-READ",
+   "line_id": "L-509c6af3d162ae145108",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.361347
+   },
+   "basis": "GF RS-A: 4 goings x hypot(0.300, 4.50/28) (T-738 drawn point)",
+   "before": {
+    "class": "HELD",
+    "high": 1.361347,
+    "low": 1.361347,
+    "net": null
+   },
+   "element_id": "GF-RC99C2A:flight 4",
+   "item_code": "FIN.STAIR.FLIGHT",
+   "label": "DRAWING-READ",
+   "line_id": "L-406aae9a9854e015c45e",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "D1.E: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:D1.E",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-775f62538c1f46077807",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "E1.S: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:E1.S",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-b77a64fb9a941582f25c",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS1-L.W1: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-a43adc74906d8bcd7b1c",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS1-L.W1B: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1B",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-ff51392df9e2c8c21efe",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS1-L.W1C: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1C",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-aed4c2990437f767dc90",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS1-T.N: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": 1.420192,
+    "low": 1.15,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-T.N",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-28c33cd0ab5d19426661",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS1-T.W: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": 1.460974,
+    "low": 1.2,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-T.W",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-2fae5d35b21e97684844",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS1-U.E1: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E1",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-32f71724eeeaa46638c9",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS1-U.E2: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E2",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-20c2640927e41626893d",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS1-U.E3a: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E3a",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-cfecfcea2280155a6a74",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS1-U.E3b: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E3b",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-8e463d6ce740fc19e60c",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS2-L.W1: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-9b1da1af7c162de2233c",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS2-L.W1B: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1B",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-caacb4c1425981b2585f",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS2-L.W1C: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1C",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-193f8e812d9ade5f9c41",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS2-TR.N: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-TR.N",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-76de75ce9a315998be99",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "MS2-U.E: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-U.E",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-4b902816d29b75fab7fc",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "RS-C.OUT: no wall or column face on the stretch (T-410 / T-501 both layers read); open side carries no skirting (R-T508-1, B7-09 owns the edge)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-C.OUT",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-1c082cc60442407ed517",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "RS-S.S0: no wall or column face on the stretch (T-410 / T-501 both layers read); open side carries no skirting (R-T508-1, B7-09 owns the edge)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S0",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-ebe230d8c2fbc35332b8",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "RS-S.S1: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S1",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-0ae4be232407b92343ef",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "FORM_ALTERNATIVE_ORR-007"
+   },
+   "basis": "RS-S.S2: ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step); this sloped alternative is never additive with the zigzag line; swap if the owner answers sloped",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S2",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-d980ace38bdd63fa8de4",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.6
+   },
+   "basis": "D1.E zigzag 1.6000 lm: T-501 piece plan 0.90 + 4 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:D1.E",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-4548e7ad947b07624e81",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 2.05
+   },
+   "basis": "E1.S zigzag 2.0500 lm: T-501 piece plan 1.20 + 5 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:E1.S",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-add5acd610925402e0f5",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.733334
+   },
+   "basis": "MS1-L.W1 zigzag 0.7333 lm: T-501 piece plan 0.40 + 2 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-53f3b7f153af0e1f5538",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.250001
+   },
+   "basis": "MS1-L.W1B zigzag 1.2500 lm: T-501 piece plan 0.75 + 3 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1B",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-9e5ed7164ee85f0fc196",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.766667
+   },
+   "basis": "MS1-L.W1C zigzag 0.7667 lm: T-501 piece plan 0.50 + 1 riser + return 0.10; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-L.W1C",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-c56a452218763d5e7bbf",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.557801
+   },
+   "basis": "MS1-T.N zigzag 1.5578 lm: winder: plan 1.15 + share of the printed rise 0.8333 by plan length; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": 1.983334,
+    "low": 1.15,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-T.N",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-5f0bd2b45c1718aeefc4",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.625532
+   },
+   "basis": "MS1-T.W zigzag 1.6255 lm: winder: plan 1.20 + share of the printed rise 0.8333 by plan length (total fixed by the levels); ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": 2.033334,
+    "low": 1.2,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-T.W",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-5bc4cea35db33e41d78c",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.616668
+   },
+   "basis": "MS1-U.E1 zigzag 1.6167 lm: T-501 piece plan 0.95 + 4 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E1",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-bc0e1e80ca50865ccd06",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.400001
+   },
+   "basis": "MS1-U.E2 zigzag 1.4000 lm: T-501 piece plan 0.90 + 3 risers; GF opening 33C / 33D head 2.20 default (+3.20) below the flight (+4.08): face solid; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E2",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-1ed4cfaa1c12054b401d",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.816668
+   },
+   "basis": "MS1-U.E3a zigzag 1.8167 lm: T-501 piece plan 1.15 + 4 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E3a",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-9ec979f00305b8ae8049",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.466667
+   },
+   "basis": "MS1-U.E3b zigzag 0.4667 lm: 12th riser: section A-A + ST p.4 edge 459 + FFL (5.50-3.50)/0.166667 = 12 (11 -> 0.182 > 0.175); plan 0.30 + 1 riser; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS1-U.E3b",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "DRAWING-READ",
+   "line_id": "L-984553ed0b69b0f77fe2",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.672
+   },
+   "basis": "MS2-L.W1 zigzag 1.6720 lm: T-501 piece plan 1.00 + 4 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-656ab12cc9b9797d3b1a",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.254
+   },
+   "basis": "MS2-L.W1B zigzag 1.2540 lm: T-501 piece plan 0.75 + 3 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1B",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-20432b887f91dee03925",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.768
+   },
+   "basis": "MS2-L.W1C zigzag 0.7680 lm: T-501 piece plan 0.50 + 1 riser + return 0.10; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-L.W1C",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-1c907e0a59c55204e430",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 0.168
+   },
+   "basis": "MS2-TR.N zigzag 0.1680 lm: closing riser: one rise 7.516 -> 7.684 printed, on the north wall wherever it meets it; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-TR.N",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "DRAWING-READ",
+   "line_id": "L-5021b820dba41f631dde",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 5.316
+   },
+   "basis": "MS2-U.E zigzag 5.3160 lm: T-501 piece plan 3.30 + 12 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:MS2-U.E",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-c8dce28c50dabd7b17fb",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "RS-C.OUT: no wall or column face on the stretch (T-410 / T-501 both layers read); open side carries no skirting (R-T508-1, B7-09 owns the edge)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-C.OUT",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-1a0d2ab50e42b0219eab",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "basis": "RS-S.S0: no wall or column face on the stretch (T-410 / T-501 both layers read); open side carries no skirting (R-T508-1, B7-09 owns the edge)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S0",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "NOT_APPLICABLE",
+   "line_id": "L-c074ce526885a44423d0",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 1.332143
+   },
+   "basis": "RS-S.S1 zigzag 1.3321 lm: T-501 piece plan 0.80 + 3 risers + return 0.05; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S1",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-544b6b11bab9bbf037fb",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 3.125
+   },
+   "basis": "RS-S.S2 zigzag 3.1250 lm: T-501 piece plan 2.00 + 7 risers; ZIGZAG form carries the strip (ORR-007 open; freelancer measures per step)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR-SKIRT:RS-S.S2",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "label": "ESTIMATE",
+   "line_id": "L-8dde910ffeeb94a58323",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 22.139302
+   },
+   "basis": "ST-01: measured rows 20.423364 (T-281 / T-718) + winder / junction plan 1.500 x secant hypot(0.30, 4.50/27)/0.30 = 1.1439",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR:ST-01:soffit",
+   "item_code": "FIN.STAIR.SOFFIT",
+   "label": "ESTIMATE",
+   "line_id": "L-1fcec3328ccd0ea243d4",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 9.525211
+   },
+   "basis": "ST-02: measured RS-S / RS-LD / RS-A rows 4.460946 + RS-C helical underside K 5.064265 (T-415, drawn lane)",
+   "before": {
+    "class": "HELD",
+    "high": null,
+    "low": null,
+    "net": null
+   },
+   "element_id": "STAIR:ST-02:soffit",
+   "item_code": "FIN.STAIR.SOFFIT",
+   "label": "ESTIMATE",
+   "line_id": "L-c77e3887f7e348b1461d",
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 6.415848
+   },
+   "basis": "1F MS1-T turn: entry 1.150 + fan 22.5 deg 1.2448 + BE6 1.626346 (drawn) + 67.5 deg 1.2448 + exit 1.150 (inside the drawn 5.75 .. 8.1317 bound)",
+   "before": {
+    "class": "HELD",
+    "high": 8.131728,
+    "low": 5.75,
+    "net": null
+   },
+   "element_id": "1F-R78C367:flight 5",
+   "item_code": "FIN.STAIR.STEP_LM",
+   "label": "ESTIMATE",
+   "line_id": "L-e085c168dee5fb19a7fb",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "net": 15.42144
+   },
+   "basis": "GF RS-C: 12 drawn front edges 13.800 (T-718) + drawn curtail front arcs 258 0.949440 / 25A 0.672000",
+   "before": {
+    "class": "HELD",
+    "high": 16.52144,
+    "low": 13.8,
+    "net": null
+   },
+   "element_id": "GF-RC99C2A:flight 1",
+   "item_code": "FIN.STAIR.STEP_LM",
+   "label": "DRAWING-READ",
+   "line_id": "L-95b9555dd144951b071e",
+   "set": "STAIR",
+   "unit": "lm"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "class": "RELEASED",
+    "net": 1.4375
+   },
+   "basis": "ST-01 MS1-LD +3.50: 1.25 x 1.15 (T-493 census, Checker 4 / 4 AGREE); no line today (silent omission F-3, T-502)",
+   "before": null,
+   "element_id": "STAIR-LANDING:ST01-MS1-LD",
+   "item_code": "FIN.MARBLE.LANDING",
+   "label": "MEASURED",
+   "line_id": null,
+   "set": "STAIR",
+   "unit": "m2"
+  },
+  {
+   "action": "ADD",
+   "after": {
+    "class": "RELEASED",
+    "net": 1.3525
+   },
+   "basis": "ST-02 RS-LD +4.696 (T-493, Checker AGREE); already deducted from 1F porcelain (R04 1.352454): no double count (T-502)",
+   "before": null,
+   "element_id": "STAIR-LANDING:ST02-RS-LD",
+   "item_code": "FIN.MARBLE.LANDING",
+   "label": "MEASURED",
+   "line_id": null,
+   "set": "STAIR",
+   "unit": "m2"
+  }
+ ],
+ "task": "T-766",
+ "totals_after": {
+  "FIN.MARBLE.LANDING": 20.69,
+  "FIN.MARBLE.RISER": 15.32,
+  "FIN.MARBLE.TREAD": 28.87,
+  "FIN.STAIR.FLIGHT": 25.51,
+  "FIN.STAIR.SKIRTING.SLOPED": 0,
+  "FIN.STAIR.SKIRTING.ZIGZAG": 28.52,
+  "FIN.STAIR.SOFFIT": 31.66,
+  "FIN.STAIR.STEP_LM": 89.69
+ }
+}
