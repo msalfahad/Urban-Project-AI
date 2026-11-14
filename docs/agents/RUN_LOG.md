@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T05:52Z | Verifier | STARTED | run session_01E6cPnedYoRV6bo8YUZJtto | repo-attached routine | task state: per run log T-780 r1 READY (W1) | self-check pending
 - 2026-11-14 05:28 UTC | Worker 1 | SUCCESS | T-780 READY r1 (agents/task-T-780 @ f3ea8eba) | Roof layers restated on one area per roof (face inside parapet less dome bases): finish 248.8->238.5 m2 vs freelancer 285 (-16.3%), membrane 256.2->244.0 (-14.4%), both closed to named causes (dome footprints 30.72+15.27 RULE_DIFFERENCE, pool court -5.55 ENGINE_RIGHT, residual 0.52 = 0.18%); top roof 46.59 slab panels -> 34.39 (7.70x6.45 DXF re-read less DOME-3); annex already has its membrane (AT220 = ROOF-430). Missing: dome extrados ~83 m2 has no line (beside). | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive OK; problem: none
 - 2026-11-14 05:20 UTC | Worker 1 | STARTED | run session_01E6cPnbhe2APigyke1J42jn | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14T05:01Z | Worker 3 | STARTED | run session_01E6cPnbSxUeEu229vSom64N | repo-attached routine | task state: none yet | self-check pending
