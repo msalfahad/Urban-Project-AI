@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T11:31Z | Worker 1 | SUCCESS | T-784 READY @5376bb44 | Schedule-first SCHEDULE_TABLES_V1 (unwired): Alsenan footings 66.522 vs T-778 66.579 m3 (-0.09 %), GF columns 20.025 vs 19.812 (+1.1 %: 10AE section +0.078 schedule governs, storey bases +0.136 engine right), 1F 9.156 vs 10.332 (-11.4 %: PC1/PC2 not in schedule -1.008, C7 section -0.168), 2F 3.528 vs 3.781 (-6.7 %); all residuals 0; necks count only (heights held Q-21); designer list in research/agents_t784. Drive OK. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-14T11:20Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14 11:06 UTC | Worker 3 | SUCCESS | T-782 READY @ 7b17ad8e (G-04 project inputs sheet) | PROJECT_INPUTS_V1: one sheet per villa (FFL / slab / beam default / ceiling drop / wet ceiling + tile / plinth, grades, wastage, scope), every value with its source; missing storey value refused, never 0; derives plaster 4.34 GF / 4.04 1F,2F / 3.84 annex and ceilings 3.44 / 3.14 / 2.94 dry, 2.70 wet = R-T763-1 exactly; split level flagged, sloped HELD. Missing: scope switches, grades, wastage, plinth HELD (not in the owner table); not yet wired into any family | self-check codemap PASS, t061 PASS, freeze PASS; problem: none
 - 2026-11-14 11:00 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
