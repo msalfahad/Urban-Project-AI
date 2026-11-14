@@ -1,0 +1,110 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.87.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.86",
+  "ARCH_TAKEOFF_V3.0.87"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.86": {
+   "lines": 5341,
+   "lines_sha256": "7563e4116b87c102bbbc49abb0fde41fe6ab8300d5ff24bb85602c78e893174b"
+  },
+  "ARCH_TAKEOFF_V3.0.87": {
+   "lines": 5344,
+   "lines_sha256": "6d7aec737b36fd2affb5b13aa6f00d4f854656a1204ff6a403d1061137318121",
+   "previous": "ARCH_TAKEOFF_V3.0.86",
+   "item_codes": {
+    "FIN.WP.DOORWAY_TRANSITION": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.WP.DOORWAY_TRANSITION_NR": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.WP.ROOF_UPTURN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "FIN.WP.TERMINATION": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.CONC.BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 13,
+     "record": 0
+    },
+    "STR.CONC.COLUMN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-06": {
+     "STR.CONC.COLUMN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B10-07": {
+     "STR.CONC.BEAM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 13,
+      "record": 0
+     }
+    },
+    "B8-02": {
+     "FIN.WP.DOORWAY_TRANSITION": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "FIN.WP.DOORWAY_TRANSITION_NR": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B8-03": {
+     "FIN.WP.TERMINATION": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B8-06": {
+     "FIN.WP.ROOF_UPTURN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 20,
+   "record_only": 0
+  }
+ }
+}

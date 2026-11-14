@@ -1,0 +1,10 @@
+{
+ "barrier_lines": 817,
+ "inserts_in_plan": 135,
+ "insert_lines_added": 775,
+ "outdoor_pieces_R3": 1,
+ "outdoor_area_R3_m2": 0.849,
+ "outdoor_pieces_R4_upper_bound": 1,
+ "outdoor_area_R4_m2": 0.849,
+ "cornice_moves": false
+}

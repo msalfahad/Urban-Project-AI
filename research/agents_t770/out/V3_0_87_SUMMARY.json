@@ -1,0 +1,229 @@
+{
+ "added": {
+  "L-c40499aacac7e26655be": {
+   "item_code": "FIN.WP.TERMINATION",
+   "label": "ESTIMATE",
+   "net": 2.976663,
+   "set": "T-794",
+   "unit": "lm"
+  },
+  "L-efdcd994da8463b2d72d": {
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "label": "DRAWING-READ",
+   "net": 0.2,
+   "set": "T-794",
+   "unit": "m2"
+  },
+  "L-efe521b440f01c32e5d8": {
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "label": "DRAWING-READ",
+   "net": 1.0,
+   "set": "T-794",
+   "unit": "pcs"
+  }
+ },
+ "applied": 17,
+ "base_index_sha256": "350770c0a813491f8c6ea3569b55f3fb6d972184b8e1d525a6e547cff7244187",
+ "blank_in_package_families_after": 0,
+ "blank_in_package_families_before": 0,
+ "blank_non_rebar_after": 18,
+ "blank_non_rebar_before": 18,
+ "by_set": {
+  "F-V786-1": {
+   "labels": {
+    "DEFAULT": 2
+   },
+   "rows": 2
+  },
+  "T-786": {
+   "labels": {
+    "DEFAULT": 11
+   },
+   "rows": 11
+  },
+  "T-792": {
+   "labels": {
+    "DEFAULT": 2
+   },
+   "rows": 2
+  },
+  "T-794": {
+   "labels": {
+    "DRAWING-READ": 2
+   },
+   "rows": 2
+  }
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.86",
+ "index_sha256": "d92c44544119571cb4a2f4f310b1e3e9019e3b7b75b47f7f7c6c45a61809a75d",
+ "lines": 5344,
+ "lines_before": 5341,
+ "method": "ARCH_TAKEOFF_V3.0.87",
+ "outside_lines_identical": true,
+ "package_sha256": "ea610470c23053bfb6c49b7e7057eb85ee1d21172e75dc374c19a922c7201a19",
+ "ranged_in_package_families_after": 0,
+ "ranged_in_package_families_before": 0,
+ "ranged_non_rebar_after": 7,
+ "ranged_non_rebar_before": 7,
+ "report": {
+  "base_basis_corrections": [],
+  "basis_text_rows": [],
+  "checker_finding_sets": [
+   {
+    "finding": "F-V786-1",
+    "rows": 2,
+    "set": "F-V786-1",
+    "verdict": {
+     "gate": "A light",
+     "merge": "a2001238",
+     "task": "T-786",
+     "utc": "2026-11-14T14:05Z"
+    }
+   }
+  ],
+  "no_line_rows": [],
+  "set_base_read": [],
+  "v5": {
+   "na_label_rows": {},
+   "recalled": [],
+   "v4": {
+    "carrier_added": [],
+    "deferred_added": [],
+    "excluded_with_reason": [],
+    "ranged_added": [],
+    "rows_detail_sets": [],
+    "v3": {
+     "basis_corrections": [],
+     "carried": {},
+     "not_applicable_rows": [],
+     "restated_safety": [],
+     "source_schemas": {
+      "F-V786-1": "URBAN_FIX_ROWS_V1",
+      "T-786": "URBAN_FIX_ROWS_V1",
+      "T-792": "URBAN_FIX_ROWS_V1",
+      "T-794": "DELIVERY_FIX_ROWS_V1"
+     },
+     "stack": {
+      "deferred": [],
+      "not_applicable": [],
+      "stacked_on_base": [],
+      "stacked_on_row": []
+     }
+    }
+   }
+  }
+ },
+ "rule": [
+  "R-T770-1",
+  "R-T770-2",
+  "R-T770-3",
+  "R-T770-4",
+  "R-T770-5",
+  "R-T770-6",
+  "R-T770-7",
+  "R-T770-8"
+ ],
+ "set_sha256": {
+  "T-786": "1b60dce5293b90c3389b713ca2b7df9c94c0318ecf43e261c9f696124a6071bf",
+  "T-792": "d699fdb6b93ec39dced27aadc455dadc031a7560c83df9748e2b6465fb74d8a1",
+  "T-794": "e2e5859e286597e7765623d95432976026ef4bee4313689de158939e93bf7632"
+ },
+ "totals_moved": {
+  "FIN.WP.DOORWAY_TRANSITION [m2]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 16,
+    "released": 2.7
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 15,
+    "released": 2.5
+   }
+  },
+  "FIN.WP.DOORWAY_TRANSITION_NR [pcs]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 16,
+    "released": 16.0
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 15,
+    "released": 15.0
+   }
+  },
+  "FIN.WP.ROOF_UPTURN [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 7,
+    "released": 228.99
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 7,
+    "released": 232.97
+   }
+  },
+  "FIN.WP.TERMINATION [lm]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 6,
+    "released": 10.64
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 5,
+    "released": 7.66
+   }
+  },
+  "STR.CONC.BEAM [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 140,
+    "released": 76.05
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 140,
+    "released": 79.24
+   }
+  },
+  "STR.CONC.COLUMN [m3]": {
+   "after": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 59,
+    "released": 33.83
+   },
+   "before": {
+    "blank": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 59,
+    "released": 33.92
+   }
+  }
+ }
+}

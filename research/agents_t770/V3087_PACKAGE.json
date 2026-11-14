@@ -1,0 +1,1113 @@
+{
+ "base": "ARCH_TAKEOFF_V3.0.86",
+ "method": "ARCH_TAKEOFF_V3.0.87",
+ "row_bases": [
+  "ARCH_TAKEOFF_V3.0.85"
+ ],
+ "schema": "URBAN_FILL_PACKAGE_V7",
+ "set_names": [
+  "T-786",
+  "T-792",
+  "T-794",
+  "F-V786-1"
+ ],
+ "set_sha256": {
+  "T-786": "1b60dce5293b90c3389b713ca2b7df9c94c0318ecf43e261c9f696124a6071bf",
+  "T-792": "d699fdb6b93ec39dced27aadc455dadc031a7560c83df9748e2b6465fb74d8a1",
+  "T-794": "e2e5859e286597e7765623d95432976026ef4bee4313689de158939e93bf7632"
+ },
+ "sets": [
+  {
+   "beam_rule_difference": [
+    {
+     "line_id": "L-8ea71184fff91b4357b7",
+     "m3": 0.549624,
+     "reference": "GF BM-GF-059 B24 past its support 1.501 x 0.50 x 0.75 (measured 0.5496): his B24 row 5.75 m = engine B24 3.55 + this 1.50 + 0.70; the same concrete on his B24 line",
+     "verdict": "RULE_DIFFERENCE"
+    }
+   ],
+   "beam_unresolved_named": [
+    {
+     "designer": "D-05",
+     "label": "DEFAULT",
+     "line_id": "L-56c49c3c2596a0869533",
+     "m3": 0.096,
+     "reference": "1F strip at the column at B23's end (0.16 m2, T-724 census; not the outside projection band): beam piece, company 0.60 kept"
+    },
+    {
+     "designer": "D-05",
+     "label": "DEFAULT",
+     "line_id": "L-f113ed57f7875fed9a67",
+     "m3": 0.096,
+     "reference": "GF strip at the column at B20's end (0.16 m2, T-724 census; not the outside projection band): beam piece, company 0.60 kept"
+    },
+    {
+     "designer": "D-04",
+     "label": "DEFAULT",
+     "line_id": "L-7c3edce23ec8faa3d674",
+     "m3": 0.112,
+     "reference": "2F span past a column, adjacent span B1 20 x 40 (ladder step 2)"
+    },
+    {
+     "designer": "D-04",
+     "label": "DEFAULT",
+     "line_id": "L-dc8cbfc119d006ff3927",
+     "m3": 0.112,
+     "reference": "2F span past a column, adjacent span B1 20 x 40 (ladder step 2)"
+    },
+    {
+     "designer": "D-04",
+     "label": "DEFAULT",
+     "line_id": "L-8d031491396379f0cbb1",
+     "m3": 0.1695,
+     "reference": "2F perimeter piece, adjacent span B8 20 x 75 (ladder step 2)"
+    },
+    {
+     "designer": "D-04",
+     "label": "DEFAULT",
+     "line_id": "L-d62d2fcf3d0023ad1ad1",
+     "m3": 0.744,
+     "reference": "2F span past a column, adjacent span B15 20 x 120 (ladder step 2; B15 stand D-44)"
+    },
+    {
+     "designer": "D-04",
+     "label": "DEFAULT",
+     "line_id": "L-f83c4a469845c7e14dfa",
+     "m3": 0.064,
+     "reference": "1F span past a column, adjacent span B2 20 x 40 (ladder step 2)"
+    },
+    {
+     "designer": "D-03",
+     "label": "DEFAULT",
+     "line_id": "L-88ccf8d4505411deb9e5",
+     "m3": 0.3975,
+     "reference": "GF CB3 / 'B3 (with stair)' one beam counted once at CB3 20 x 75 both sides"
+    },
+    {
+     "designer": "D-28",
+     "label": "DEFAULT",
+     "line_id": "L-ab37afa17f2ac5b0efd1",
+     "m3": 0.8996,
+     "reference": "east dome ring at the twin west ring B4 depth 0.50 (same ST p.7 dome detail)"
+    },
+    {
+     "designer": "D-26",
+     "label": "DEFAULT",
+     "line_id": "L-634cefe5e8a7fb458e16",
+     "m3": 0.096,
+     "reference": "projection band at the printed slab thickness: his beam rows omit it; whether his slab area (x 0.16) runs to the facade line is not readable from his rows"
+    },
+    {
+     "designer": "D-26",
+     "label": "DEFAULT",
+     "line_id": "L-331d4bbef719a7f0bbca",
+     "m3": 0.0168,
+     "reference": "projection band at the printed slab thickness: his beam rows omit it; whether his slab area (x 0.16) runs to the facade line is not readable from his rows"
+    },
+    {
+     "designer": "D-26",
+     "label": "DEFAULT",
+     "line_id": "L-67f3d325019e618328eb",
+     "m3": 0.096,
+     "reference": "projection band at the printed slab thickness: his beam rows omit it; whether his slab area (x 0.16) runs to the facade line is not readable from his rows"
+    },
+    {
+     "designer": "D-26",
+     "label": "DEFAULT",
+     "line_id": "L-54e397fe7b1485b2e8fe",
+     "m3": 0.0168,
+     "reference": "projection band at the printed slab thickness: his beam rows omit it; whether his slab area (x 0.16) runs to the facade line is not readable from his rows"
+    },
+    {
+     "designer": "D-26",
+     "label": "DEFAULT",
+     "line_id": "L-aba59a2157a48a69e2fb",
+     "m3": 0.1312,
+     "reference": "projection band at the printed slab thickness: his beam rows omit it; whether his slab area (x 0.16) runs to the facade line is not readable from his rows"
+    },
+    {
+     "designer": "D-26",
+     "label": "DEFAULT",
+     "line_id": "L-a9d5e7dc22013e24d691",
+     "m3": 0.24,
+     "reference": "projection band at the printed slab thickness: his beam rows omit it; whether his slab area (x 0.16) runs to the facade line is not readable from his rows"
+    },
+    {
+     "designer": "D-26",
+     "label": "DEFAULT",
+     "line_id": "L-56d278bedc8dda2837a9",
+     "m3": 0.2471,
+     "reference": "projection band at the printed slab thickness: his beam rows omit it; whether his slab area (x 0.16) runs to the facade line is not readable from his rows"
+    },
+    {
+     "designer": "D-26",
+     "label": "DEFAULT",
+     "line_id": "L-bb49e831f053bd30a6ce",
+     "m3": 0.0432,
+     "reference": "projection band at the printed slab thickness: his beam rows omit it; whether his slab area (x 0.16) runs to the facade line is not readable from his rows"
+    },
+    {
+     "designer": "D-26",
+     "label": "DEFAULT",
+     "line_id": "L-377cb988b2271c2e2e4d",
+     "m3": 0.091,
+     "reference": "projection band at the printed slab thickness: his beam rows omit it; whether his slab area (x 0.16) runs to the facade line is not readable from his rows"
+    },
+    {
+     "designer": "D-26",
+     "label": "DEFAULT",
+     "line_id": "L-fbb65dfd2a66a16714ac",
+     "m3": 0.064,
+     "reference": "projection band at the printed slab thickness: his beam rows omit it; whether his slab area (x 0.16) runs to the facade line is not readable from his rows"
+    },
+    {
+     "designer": "D-26",
+     "label": "DEFAULT",
+     "line_id": "L-17c4238c0ef76656d06e",
+     "m3": 0.0696,
+     "reference": "projection band at the printed slab thickness: his beam rows omit it; whether his slab area (x 0.16) runs to the facade line is not readable from his rows"
+    },
+    {
+     "designer": "D-27 / D-02",
+     "label": "MEASURED / DRAWING-READ",
+     "line_id": "T-777 C2a",
+     "m3": -0.3244,
+     "reference": "drawn width vs his schedule width: GF B21 / B29 / CB2, 1F B6 / CB10 (ST GF and 1F roof slab plans vs schedule)"
+    }
+   ],
+   "candidate_version": "ARCH_TAKEOFF_V3.0.85",
+   "ignored_small": "GF-NW-CORNER / 1F-NW-CORNER (0.0293 m2 each) stay EXCLUDED: at 0.16 they are 0.0047 m3 each, still < 0.05",
+   "inputs": {
+    "drawings": "Drive 'Alsenan chalet project' ST7757 dxf.dxf: SECTION A-A / B-B, GF / 1F roof slab plans (cut lines A / B, edges 2C6 2C7 5E1 5E6 5E5 5E7 5DE 629 5C1 619), slab notes 'check architectural detail of parapet before casting'; P7757_DXF_COMPRESSED.zip SE / NW elevations (dimensions only)",
+    "index": "LINE_INDEX_V3_0_85.json",
+    "t777": "research/agents_t777/out/BEAM_CAUSES.json",
+    "t778": "research/agents_t778/out/NONBEAM_CAUSES.json"
+   },
+   "new_lines": [],
+   "nonbeam_unresolved_named": [
+    {
+     "cause": "N-4 HEIGHT default / low-bound lines",
+     "family": "STR.CONC.NECK",
+     "m3": 0.8151,
+     "reference": "ST p.9 n.1 founding; lift raft level D-43"
+    },
+    {
+     "cause": "C-1 COUNT engine-only mark",
+     "family": "STR.CONC.COLUMN",
+     "m3": 0.504,
+     "reference": "ST p.9 schedule CGT 1ST C6; D-66"
+    },
+    {
+     "cause": "C-2 COUNT 1F",
+     "family": "STR.CONC.COLUMN",
+     "m3": 0.414,
+     "reference": "ST 1F column plan mark assignment C3 / C6 / C7 / C8 / C9; D-66 / T-566"
+    },
+    {
+     "cause": "C-3 SECTION (drawn / CONFLICT reading vs his row)",
+     "family": "STR.CONC.COLUMN",
+     "m3": -0.4695,
+     "reference": "C8 10E0 drawn 0.25 x 0.80 vs schedule; D-66 / T-566"
+    },
+    {
+     "cause": "C-5 STOREY_BASE 2F",
+     "family": "STR.CONC.COLUMN",
+     "m3": -0.1675,
+     "reference": "2F roof section not printed; roof build-up DEFAULT 0.175"
+    },
+    {
+     "cause": "G-1 SECTION DEFAULT interior p.13 class D 0.30",
+     "family": "STR.CONC.GROUND_BEAM (building)",
+     "m3": -2.5553,
+     "reference": "ST p.13 typical GB sections by clear span; D-33 loaded spans, D-34 length basis, D-35 exterior depth 'FOLLOW ARCH.'"
+    },
+    {
+     "cause": "G-1 SECTION DEFAULT interior p.13 class D 0.40",
+     "family": "STR.CONC.GROUND_BEAM (building)",
+     "m3": -1.0962,
+     "reference": "ST p.13 typical GB sections by clear span; D-33 loaded spans, D-34 length basis, D-35 exterior depth 'FOLLOW ARCH.'"
+    },
+    {
+     "cause": "G-1 SECTION DEFAULT interior p.13 class D 0.41",
+     "family": "STR.CONC.GROUND_BEAM (building)",
+     "m3": -0.044,
+     "reference": "ST p.13 typical GB sections by clear span; D-33 loaded spans, D-34 length basis, D-35 exterior depth 'FOLLOW ARCH.'"
+    },
+    {
+     "cause": "G-2 LENGTH his lump 211 m vs the engine's bound runs face to face",
+     "family": "STR.CONC.GROUND_BEAM (building)",
+     "m3": -3.4841,
+     "reference": "his two lumps 100 + 111 m vs the engine's bound runs (T-391 envelope 193.76 .. 231.91 m)"
+    },
+    {
+     "cause": "G-3 unbound piece (no footprint in the band ledger)",
+     "family": "STR.CONC.GROUND_BEAM (building)",
+     "m3": 0.1037,
+     "reference": "BAND0009 no T-170 footprint"
+    },
+    {
+     "cause": "GS-3 engine faces vs own panels (T-391 F3 small reads)",
+     "family": "STR.CONC.GROUND_SLAB",
+     "m3": -0.0823,
+     "reference": "T-391 F3 small reads"
+    },
+    {
+     "cause": "ST-10 ST-01 turn pieces (winders, flat turn, turn riser) DEFAULT",
+     "family": "STR.CONC.STAIR",
+     "m3": 0.4134,
+     "reference": "ST-01 turn pieces; T-711 DEFAULT"
+    },
+    {
+     "cause": "ST-6 ST-02 curved part: his flat 1.2 x 0.28 vs wedges + helicoid waist (ESTIMATE)",
+     "family": "STR.CONC.STAIR",
+     "m3": -1.0259,
+     "reference": "ST-02 curved stair no section; D-08"
+    },
+    {
+     "cause": "ST-8 ST-03 his 0.28 flat vs steps + 0.16 waist on the slope (ESTIMATE)",
+     "family": "STR.CONC.STAIR",
+     "m3": 0.1866,
+     "reference": "ST-03 no waist printed; S-9 / D-56"
+    },
+    {
+     "cause": "L-2 GF tie beam (ST p.8 n.19) not in his sheet",
+     "family": "STR.CONC.LIFT",
+     "m3": 0.65,
+     "reference": "ST p.8 n.19 tie beam size not printed; D-43"
+    }
+   ],
+   "rows": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.096
+     },
+     "basis": "GF roof-edge projection band: 0.20 band north of B20, run 1 (edges 2C6 / 2C7): plan 0.5998 m2 (T-721 DXF) x 0.16 printed slab thickness (ST note 18; band = roof slab carried to the facade line, cast with the slab; UNMARKED_PIECE_DEPTH_V1) = 0.0960 m3; was 0.3599 at the 0.60 beam default; cut by the section, which draws no concrete in it (owner Q-61 (5): not a beam); ST GF roof slab plan, cut A-A crosses it; SECTION A-A = B20 40 x 75 + upstand 20 x 20; D-26 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.3599
+     },
+     "beside": {
+      "beam_default_0.60": 0.3599,
+      "no_concrete_low": 0.0
+     },
+     "designer_item": "D-26",
+     "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.1",
+     "evidence": "section_cut",
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-634cefe5e8a7fb458e16",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.0168
+     },
+     "basis": "GF roof-edge projection band: 0.20 band north of B20, run 2 (edges 2C6 / 2C7): plan 0.1050 m2 (T-721 DXF) x 0.16 printed slab thickness (ST note 18; band = roof slab carried to the facade line, cast with the slab; UNMARKED_PIECE_DEPTH_V1) = 0.0168 m3; was 0.0630 at the 0.60 beam default; cut by the section, which draws no concrete in it (owner Q-61 (5): not a beam); ST GF roof slab plan, same band as run 1 (cut A-A); D-26 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.063
+     },
+     "beside": {
+      "beam_default_0.60": 0.063,
+      "no_concrete_low": 0.0
+     },
+     "designer_item": "D-26",
+     "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.2",
+     "evidence": "section_cut",
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-331d4bbef719a7f0bbca",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.096
+     },
+     "basis": "1F roof-edge projection band: 0.20 band north of B23, run 1 (edges 5E1 / 5E6): plan 0.5997 m2 (T-721 DXF) x 0.16 printed slab thickness (ST note 18; band = roof slab carried to the facade line, cast with the slab; UNMARKED_PIECE_DEPTH_V1) = 0.0960 m3; was 0.3598 at the 0.60 beam default; cut by the section, which draws no concrete in it (owner Q-61 (5): not a beam); ST 1F roof slab plan, cut B-B crosses it; SECTION B-B = B23 45 x 75 + upstand 20 x 20; D-26 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.3598
+     },
+     "beside": {
+      "beam_default_0.60": 0.3598,
+      "no_concrete_low": 0.0
+     },
+     "designer_item": "D-26",
+     "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.1",
+     "evidence": "section_cut",
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-67f3d325019e618328eb",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.0168
+     },
+     "basis": "1F roof-edge projection band: 0.20 band north of B23, run 2 (edges 5E1 / 5E6): plan 0.1048 m2 (T-721 DXF) x 0.16 printed slab thickness (ST note 18; band = roof slab carried to the facade line, cast with the slab; UNMARKED_PIECE_DEPTH_V1) = 0.0168 m3; was 0.0629 at the 0.60 beam default; cut by the section, which draws no concrete in it (owner Q-61 (5): not a beam); ST 1F roof slab plan, same band as run 1 (cut B-B); D-26 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.0629
+     },
+     "beside": {
+      "beam_default_0.60": 0.0629,
+      "no_concrete_low": 0.0
+     },
+     "designer_item": "D-26",
+     "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.2",
+     "evidence": "section_cut",
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-54e397fe7b1485b2e8fe",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.1312
+     },
+     "basis": "GF roof-edge projection band: 0.20 west outer band outside CB5, 4.10 m: plan 0.8200 m2 (T-721 DXF) x 0.16 printed slab thickness (ST note 18; band = roof slab carried to the facade line, cast with the slab; UNMARKED_PIECE_DEPTH_V1) = 0.1312 m3; was 0.4920 at the 0.60 beam default; same drawn type as the bands cut by sections A-A / B-B (unhatched band outside the edge beam on the roof edge, rounded facade corners): same element, not a beam; ST GF roof slab plan, west edge, continues the B20 band round its rounded corner; D-26 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.492
+     },
+     "beside": {
+      "beam_default_0.60": 0.492,
+      "no_concrete_low": 0.0
+     },
+     "designer_item": "D-26",
+     "element_id": "HL:BEAM_LEDGER:GF:BM-GF-061",
+     "evidence": "same_type",
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-aba59a2157a48a69e2fb",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.24
+     },
+     "basis": "1F roof-edge projection band: 0.20 west outer band outside CB10, 7.50 m (edges 5E7 / 5E5): plan 1.4999 m2 (T-721 DXF) x 0.16 printed slab thickness (ST note 18; band = roof slab carried to the facade line, cast with the slab; UNMARKED_PIECE_DEPTH_V1) = 0.2400 m3; was 0.8999 at the 0.60 beam default; same drawn type as the bands cut by sections A-A / B-B (unhatched band outside the edge beam on the roof edge, rounded facade corners): same element, not a beam; ST 1F roof slab plan, west edge, continues the B23 band round its rounded corner; D-26 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.8999
+     },
+     "beside": {
+      "beam_default_0.60": 0.8999,
+      "no_concrete_low": 0.0
+     },
+     "designer_item": "D-26",
+     "element_id": "U-C:BEAMS:1F:BAND0014",
+     "evidence": "same_type",
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-a9d5e7dc22013e24d691",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.2471
+     },
+     "basis": "1F roof-edge projection band: 0.30 band outside CB12 north part, 4.28 m (edges 5DE / 629): plan 1.5441 m2 (T-721 DXF) x 0.16 printed slab thickness (ST note 18; band = roof slab carried to the facade line, cast with the slab; UNMARKED_PIECE_DEPTH_V1) = 0.2471 m3; was 0.9265 at the 0.60 beam default; same drawn type as the bands cut by sections A-A / B-B (unhatched band outside the edge beam on the roof edge, rounded facade corners): same element, not a beam; ST 1F roof slab plan, east edge, rounded NE corner; D-26 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.9265
+     },
+     "beside": {
+      "beam_default_0.60": 0.9265,
+      "no_concrete_low": 0.0
+     },
+     "designer_item": "D-26",
+     "element_id": "HL:BEAM_LEDGER:1F:BM-1F-036#BAND0025",
+     "evidence": "same_type",
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-56d278bedc8dda2837a9",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.0432
+     },
+     "basis": "1F roof-edge projection band: 0.30 x 0.90 SE box outside CB11 / CB12 (edges 5C1 / 619): plan 0.2698 m2 (T-721 DXF) x 0.16 printed slab thickness (ST note 18; band = roof slab carried to the facade line, cast with the slab; UNMARKED_PIECE_DEPTH_V1) = 0.0432 m3; was 0.1619 at the 0.60 beam default; same drawn type as the bands cut by sections A-A / B-B (unhatched band outside the edge beam on the roof edge, rounded facade corners): same element, not a beam; ST 1F roof slab plan, SE corner, rounded; D-26 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.1619
+     },
+     "beside": {
+      "beam_default_0.60": 0.1619,
+      "no_concrete_low": 0.0
+     },
+     "designer_item": "D-26",
+     "element_id": "U-C:BEAMS:1F:BAND0023",
+     "evidence": "same_type",
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-bb49e831f053bd30a6ce",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.091
+     },
+     "basis": "1F roof-edge projection band: 0.10 band outside CB12 south part, 5.69 m: plan 0.5690 m2 (T-721 DXF) x 0.16 printed slab thickness (ST note 18; band = roof slab carried to the facade line, cast with the slab; UNMARKED_PIECE_DEPTH_V1) = 0.0910 m3; was 0.3414 at the 0.60 beam default; same drawn type as the bands cut by sections A-A / B-B (unhatched band outside the edge beam on the roof edge, rounded facade corners): same element, not a beam; ST 1F roof slab plan, east edge; D-26 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.3414
+     },
+     "beside": {
+      "beam_default_0.60": 0.3414,
+      "no_concrete_low": 0.0
+     },
+     "designer_item": "D-26",
+     "element_id": "HL:BEAM_LEDGER:1F:BM-1F-038",
+     "evidence": "same_type",
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-377cb988b2271c2e2e4d",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.064
+     },
+     "basis": "1F roof-edge projection band: 0.40 x 1.00 rounded box outside CB12 at the east column: plan 0.4000 m2 (T-721 DXF) x 0.16 printed slab thickness (ST note 18; band = roof slab carried to the facade line, cast with the slab; UNMARKED_PIECE_DEPTH_V1) = 0.0640 m3; was 0.2400 at the 0.60 beam default; same drawn type as the bands cut by sections A-A / B-B (unhatched band outside the edge beam on the roof edge, rounded facade corners): same element, not a beam; ST 1F roof slab plan, east edge, rounded; D-26 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.24
+     },
+     "beside": {
+      "beam_default_0.60": 0.24,
+      "no_concrete_low": 0.0
+     },
+     "designer_item": "D-26",
+     "element_id": "HL:BEAM_LEDGER:1F:BM-1F-037",
+     "evidence": "same_type",
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-fbb65dfd2a66a16714ac",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.0696
+     },
+     "basis": "2F roof-edge projection band: 0.10 edge band 4.35 m: plan 0.4350 m2 (T-721 DXF) x 0.16 printed slab thickness (ST note 18; band = roof slab carried to the facade line, cast with the slab; UNMARKED_PIECE_DEPTH_V1) = 0.0696 m3; was 0.2610 at the 0.60 beam default; same drawn type as the bands cut by sections A-A / B-B (unhatched band outside the edge beam on the roof edge, rounded facade corners): same element, not a beam; ST 2F roof slab plan, roof edge; D-26 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.261
+     },
+     "beside": {
+      "beam_default_0.60": 0.261,
+      "no_concrete_low": 0.0
+     },
+     "designer_item": "D-26",
+     "element_id": "HL:BEAM_LEDGER:2F:BM-2F-019#2F-031",
+     "evidence": "same_type",
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-17c4238c0ef76656d06e",
+     "unit": "m3"
+    }
+   ],
+   "rule": "UNMARKED_PIECE_DEPTH_V1 (proposed, research/agents_t786/t786_rules.py)",
+   "schema": "URBAN_FIX_ROWS_V1",
+   "summary": {
+    "acceptance": "every remaining UNRESOLVED m3 named with its drawing reference and designer item (beam and non-beam tables); none is replaceable by a printed schedule or section",
+    "beam_delta_m3": -3.0566,
+    "beam_m3_after": 76.187107,
+    "beam_m3_before": 79.243707,
+    "beam_rule_difference_moved_m3": 0.549624,
+    "beam_unresolved_after_m3": 3.4779,
+    "beam_unresolved_before_m3": 7.1341,
+    "beam_vs_freelancer_after": "+10.22 m3 (+15.5 %)",
+    "beam_vs_freelancer_before": "+13.28 m3 (+20.1 %)",
+    "freelancer_beam_m3": 65.965875,
+    "lines_changed": 11,
+    "lines_new": 0,
+    "nonbeam_unresolved_gross_m3": 12.0116,
+    "nonbeam_unresolved_m3": -5.838,
+    "one_pct_of_his_rc_total_m3": 3.52
+   },
+   "task": "T-786"
+  },
+  {
+   "candidate_version": "ARCH_TAKEOFF_V3.0.85",
+   "confirmed_no_change": [
+    {
+     "basis": "10E0 GF: mark C7 by MARK_BY_OUTLINE_FIT_V1 (setting-out plan (text 24E) C7, foundation plan (text 10E1) C8; FOU 10E0 0.80 x 0.30, GFRS 380 0.80 x 0.25, FFRS 69A 0.80 x 0.25; C7 fits every outline, C8 does not); schedule GF C7 25 x 80 governs (company default) = 0.200 m2 x GF h 4.50 (slab tops +0.95 .. +5.45) = 0.9000 m3; drawn section = scheduled section: both methods agree, mark only (was carried as C8)",
+     "beside": {
+      "drawing_derived": 0.9,
+      "schedule_first": 0.9,
+      "schedule_other_mark": 1.0125
+     },
+     "label": "DRAWING-READ",
+     "line_id": "L-4c4496579e5bfa20ae9f",
+     "net": 0.9
+    },
+    {
+     "basis": "PC-1F-A: planted column, no schedule row by type (legend P.C); text 544 'P.C 20x70', GFRS 329 / FFRS 66A drawn 0.70 x 0.20 agree: 0.14 m2 x 4.2 = 0.5880 m3; the freelancer carries the same section; ENGINE_RIGHT vs schedule-first (which cannot see a P.C)",
+     "beside": {
+      "drawing_derived": 0.588,
+      "schedule_first": null
+     },
+     "label": "DRAWING-READ",
+     "line_id": "L-2ac3c9b3b4c2221a0299",
+     "net": 0.588
+    },
+    {
+     "basis": "PC-1F-B: planted column, no schedule row by type (legend P.C); text 548 'P.C 20x50', GFRS 386 / FFRS 69D drawn 0.50 x 0.20 agree: 0.10 m2 x 4.2 = 0.4200 m3; the freelancer carries the same section; ENGINE_RIGHT vs schedule-first (which cannot see a P.C)",
+     "beside": {
+      "drawing_derived": 0.42,
+      "schedule_first": null
+     },
+     "label": "DRAWING-READ",
+     "line_id": "L-31a0424bd0efcc93efba",
+     "net": 0.42
+    },
+    {
+     "basis": "PC-2F: planted column, no schedule row by type (legend P.C); text 77C 'P.C 20x50' (drawn FFRS 77B 0.20 x 0.40; printed size governs, T-757 DEFAULT): 0.10 m2 x 3.325 = 0.3325 m3; the freelancer carries the same section; ENGINE_RIGHT vs schedule-first (which cannot see a P.C)",
+     "beside": {
+      "drawing_derived": 0.3325,
+      "schedule_first": null
+     },
+     "label": "DEFAULT",
+     "line_id": "L-541c7e565bb93ecdb78b",
+     "net": 0.3325
+    }
+   ],
+   "conflict_members": [
+    {
+     "fit_by_mark": {
+      "C": {
+       "FOUNDATION": true,
+       "GF": true
+      },
+      "C3": {
+       "FOUNDATION": true,
+       "GF": false
+      }
+     },
+     "member": "10AE",
+     "outlines": "FOU 10AE 0.50 x 0.30, GF roof slab plan GFRS 350 0.40 x 0.20 (single-storey annex)",
+     "reason": "FITS_EVERY_OUTLINE",
+     "resolved_mark": "C",
+     "tags": {
+      "foundation plan (text 1681)": "C3",
+      "setting-out plan (text 20D)": "C"
+     }
+    },
+    {
+     "fit_by_mark": {
+      "C7": {
+       "1F": true,
+       "FOUNDATION": true,
+       "GF": true
+      },
+      "C8": {
+       "1F": false,
+       "FOUNDATION": true,
+       "GF": true
+      }
+     },
+     "member": "10E0",
+     "outlines": "FOU 10E0 0.80 x 0.30, GFRS 380 0.80 x 0.25, FFRS 69A 0.80 x 0.25",
+     "reason": "FITS_EVERY_OUTLINE",
+     "resolved_mark": "C7",
+     "tags": {
+      "foundation plan (text 10E1)": "C8",
+      "setting-out plan (text 24E)": "C7"
+     }
+    }
+   ],
+   "footing": {
+    "candidate": 66.579,
+    "causes": [
+     "F10 + F drawn as one outline 3.25 x 1.40 x 0.50 (owner Q-31 C 'bigger area') vs schedule rows F10 1.96 + F 0.216: +0.099 RULE_DIFFERENCE (Q-31 C governs)",
+     "FN clipped by F9: notch 0.40 x 0.35 x 0.30 owned by F9 (R-CONC-OWN-1): -0.042 ENGINE_RIGHT",
+     "F7: schedule row, no plan symbol: no member, no line (designer list)"
+    ],
+    "diff": "+0.057 m3 (+0.09 %)",
+    "freelancer": 65.634,
+    "hand_check": "F12: schedule 4.40 x 3.20 x 0.70 = 9.8560 m3, one drawn outline TAGGED",
+    "schedule_first": 66.522,
+    "vs_freelancer": "+0.945 m3 (+1.44 %)"
+   },
+   "inputs": {
+    "drawings": "Drive 'Alsenan chalet project' ST7757 dxf.dxf: column schedule (GF / 1ST / FOU bands), column setting-out plan, foundation plan, GF / 1F roof slab plans (handles 10AE 10E0 350 380 69A 329 386 66A 69D 77B, texts 20D 24E 1681 10E1 544 548 77C)",
+    "index": "LINE_INDEX_V3_0_85.json",
+    "t778": "research/agents_t778/out/NONBEAM_CAUSES.json (freelancer per mark)",
+    "t784": "research/agents_t784/out/SCHEDULE_FIRST.json (re-run on the Drive DXF this run: byte-identical md)"
+   },
+   "necks": {
+    "by_mark": {
+     "C": [
+      5,
+      6
+     ],
+     "C1": [
+      1,
+      1
+     ],
+     "C10": [
+      1,
+      1
+     ],
+     "C11": [
+      2,
+      2
+     ],
+     "C2": [
+      4,
+      4
+     ],
+     "C3": [
+      6,
+      5
+     ],
+     "C4": [
+      2,
+      2
+     ],
+     "C5": [
+      3,
+      3
+     ],
+     "C6": [
+      1,
+      1
+     ],
+     "C7": [
+      1,
+      2
+     ],
+     "C8": [
+      2,
+      1
+     ],
+     "C9": [
+      2,
+      2
+     ],
+     "CN": [
+      6,
+      6
+     ]
+    },
+    "candidate_count": 36,
+    "note": "totals agree 36 = 36; per mark only the two CONFLICT members move (10AE C3 -> C, 10E0 C8 -> C7); their neck lines already carry the 30 x 50 / 30 x 80 sections of the resolved marks (L-15b8ad39 0.4272 = 0.24 x 1.78): mark only, no m3 change; heights stay (Q-21)",
+    "schedule_first_count": 36
+   },
+   "new_lines": [],
+   "not_changed": "formwork of 10AE / 10E0 (face-ledger ESTIMATE lines L-7fe93376 / L-ae0d688f): perimeter +0.20 x 3.875 = +0.78 m2 and -0.10 x 4.20 = -0.42 m2 (net +0.36, gross 1.20 m2 = 0.3 % of the 384.1 m2 column formwork line set, below 1 %): logged, not restated",
+   "outlines_explained": [
+    {
+     "outline": "P322@67413,45123",
+     "reading": "GF start of the turned T.C at C9 / F9 (note 324; T-217 s.7 item 4): the GF member is the SOLID 37A, carried",
+     "size_m": [
+      0.2,
+      1.0
+     ],
+     "status": "UNSCHEDULED_OUTLINE",
+     "storey": "GF"
+    },
+    {
+     "outline": "P329@56705,37848",
+     "reading": "GF start outline of PC-1F-A (text 544 'P.C 20x70'): line L-2ac3c9b3",
+     "size_m": [
+      0.7,
+      0.2
+     ],
+     "status": "UNSCHEDULED_OUTLINE",
+     "storey": "GF"
+    },
+    {
+     "outline": "P344@73263,43748",
+     "reading": "GF C3 at FP 10A0, drawn 0.20 x 0.50 vs GR 25 x 50 (T-256 row 55): carried as a candidate C3 line at the schedule section; schedule-first bound that C3 tag to 31B instead (31B = ANSI35 start of the turned C8 T.C at F8, T-217 s.2): count and m3 neutral (one C3 at GR 25 x 50 x 4.50 either way)",
+     "size_m": [
+      0.2,
+      0.5
+     ],
+     "status": "AMBIGUOUS_OUTLINE",
+     "storey": "GF"
+    },
+    {
+     "outline": "P386@71463,37848",
+     "reading": "GF start outline of PC-1F-B (text 548 'P.C 20x50'): line L-31a0424b",
+     "size_m": [
+      0.5,
+      0.2
+     ],
+     "status": "AMBIGUOUS_OUTLINE",
+     "storey": "GF"
+    },
+    {
+     "outline": "P66A@17981,37848",
+     "reading": "1F PC-1F-A body: line L-2ac3c9b3",
+     "size_m": [
+      0.7,
+      0.2
+     ],
+     "status": "UNSCHEDULED_OUTLINE",
+     "storey": "1F"
+    },
+    {
+     "outline": "P69D@32739,37848",
+     "reading": "1F PC-1F-B body: line L-31a0424b",
+     "size_m": [
+      0.5,
+      0.2
+     ],
+     "status": "AMBIGUOUS_OUTLINE",
+     "storey": "1F"
+    },
+    {
+     "outline": "P77B@26269,44830",
+     "reading": "1F roof start outline of PC-2F (text 77C 'P.C 20x50'): line L-541c7e56",
+     "size_m": [
+      0.2,
+      0.4
+     ],
+     "status": "UNSCHEDULED_OUTLINE",
+     "storey": "1F"
+    },
+    {
+     "outline": "P778@-12455,44830",
+     "reading": "2F PC-2F body: line L-541c7e56",
+     "size_m": [
+      0.2,
+      0.4
+     ],
+     "status": "UNSCHEDULED_OUTLINE",
+     "storey": "2F"
+    }
+   ],
+   "rows": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.3875
+     },
+     "basis": "10AE GF: mark C by MARK_BY_OUTLINE_FIT_V1 (setting-out plan (text 20D) C, foundation plan (text 1681) C3; FOU 10AE 0.50 x 0.30, GF roof slab plan GFRS 350 0.40 x 0.20 (single-storey annex); C fits every outline, C3 does not); schedule GF C 20 x 50 governs (company default) = 0.100 m2 x annex h 3.875 = +4.30 printed finished - 0.175 roof build-up default - base +0.25 (T-757 basis, kept) = 0.3875 m3; D-66 answer replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.31
+     },
+     "beside": {
+      "drawing_derived": 0.31,
+      "schedule_first": 0.3875,
+      "schedule_other_mark": 0.4844
+     },
+     "designer_item": "D-66",
+     "element_id": "P-C:COL:SH12:C3@241094,51256|GF",
+     "item_code": "STR.CONC.COLUMN",
+     "label": "DEFAULT",
+     "line_id": "L-694a75c84dd6e4bb4491",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.672
+     },
+     "basis": "10E0 1F: mark C7 by MARK_BY_OUTLINE_FIT_V1 (setting-out plan (text 24E) C7, foundation plan (text 10E1) C8; FOU 10E0 0.80 x 0.30, GFRS 380 0.80 x 0.25, FFRS 69A 0.80 x 0.25; C7 fits every outline, C8 does not); schedule 1F C7 20 x 80 governs (company default) = 0.160 m2 x 1F h 4.20 (+5.45 .. +9.65) = 0.6720 m3; D-66 answer replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DRAWING-READ",
+      "net": 0.84
+     },
+     "beside": {
+      "drawing_derived": 0.84,
+      "schedule_first": 0.672,
+      "schedule_other_mark": 0.756
+     },
+     "designer_item": "D-66",
+     "element_id": "P-C:COL:SH12:C8@256160,53630|1F",
+     "item_code": "STR.CONC.COLUMN",
+     "label": "DEFAULT",
+     "line_id": "L-1dc713c83bf62e525ff2",
+     "unit": "m3"
+    }
+   ],
+   "rule": "MARK_BY_OUTLINE_FIT_V1 (proposed, research/agents_t792/fill_t792.py) + company default 'schedule governs a column'",
+   "schema": "URBAN_FIX_ROWS_V1",
+   "storeys": [
+    {
+     "after_vs_freelancer": "+2.45 m3 (+14.1 %)",
+     "after_vs_schedule_pct": -0.7,
+     "candidate_after": 19.8894,
+     "candidate_before": 19.8119,
+     "cause": "storey frame: candidate drawing-read bases (annex 3.875 on 4 C members incl. 10AE, +0.25 base 5.20 on C3 / C5) vs the flat 4.50 schedule-first frame: ENGINE_RIGHT (T-576; heights are not in the schedule)",
+     "freelancer": 17.4374,
+     "like_for_like_pct": -0.7,
+     "planted_m3": 0.0,
+     "schedule_first": 20.025,
+     "storey": "GF",
+     "within_5pct": true
+    },
+    {
+     "after_vs_freelancer": "+2.44 m3 (+31.5 %)",
+     "after_vs_schedule_pct": 11.0,
+     "candidate_after": 10.164,
+     "candidate_before": 10.332,
+     "cause": "PC-1F-A / PC-1F-B planted columns 1.008: no schedule row by type; ENGINE_RIGHT (printed P.C size texts, the freelancer carries both)",
+     "freelancer": 7.728,
+     "like_for_like_pct": -0.0,
+     "planted_m3": 1.008,
+     "schedule_first": 9.156,
+     "storey": "1F",
+     "within_5pct": false
+    },
+    {
+     "after_vs_freelancer": "+0.40 m3 (+11.8 %)",
+     "after_vs_schedule_pct": 7.2,
+     "candidate_after": 3.7805,
+     "candidate_before": 3.7805,
+     "cause": "PC-2F 0.3325 (no schedule row by type, ENGINE_RIGHT) and the 2F frame 4.075 (13.90 - 0.175 roof DEFAULT - 9.65) vs 4.20 on six members -0.075: ENGINE_RIGHT (closer drawing read, both DEFAULT)",
+     "freelancer": 3.381,
+     "like_for_like_pct": -2.3,
+     "planted_m3": 0.3325,
+     "schedule_first": 3.528,
+     "storey": "2F",
+     "within_5pct": false
+    }
+   ],
+   "summary": {
+    "acceptance": "per storey schedule-first vs candidate: GF within 5 %; 1F / 2F outside only by the planted columns (like-for-like within 5 %), both figures carried with the cause",
+    "blank_lines_before_after": "0 / 0 (COLUMN, FOOTING, NECK)",
+    "column_delta_m3": -0.0905,
+    "column_m3_after": 33.8339,
+    "column_m3_before": 33.9244,
+    "column_vs_freelancer_after": "+5.29 m3 (+18.5 %)",
+    "column_vs_freelancer_before": "+5.38 m3 (+18.8 %)",
+    "freelancer_column_m3": 28.5465,
+    "lines_changed": 2,
+    "lines_new": 0
+   },
+   "task": "T-792"
+  },
+  {
+   "candidate_version": "ARCH_TAKEOFF_V3.0.85",
+   "inputs": {
+    "dxf_reread": "Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip handles 1280 1281 12BA (D115) 1288 1291 1285 12A7 1278 12B9 12C9 AE1 AE2 AE3 CF0 D0A B5D BC2 B5F C92 B60 BDB BDC C9E CA0 CA3 ADF CFD B3A CEC CED B25 B33 (dimensions only)",
+    "index": "LINE_INDEX_V3_0_85.json",
+    "ledge_split": "research/agents_t522 / agents_t529 (merged)",
+    "roof_faces": "research/agents_t321/ALSENAN_ROOF_LAYERS_INPUT.json"
+   },
+   "new_lines": [
+    {
+     "basis": "2F block door onto the +9.70 roof (block D115 in the 1.000 gap between walls 1280 / 1281): 1.00 x 0.20 = 0.20 m2 (wet-room transition method, owner Q-35 C); moved out of the upturn",
+     "element_id": "2F-ROOF-AT379:doorway transition D115",
+     "family": "B8-06",
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "label": "DRAWING-READ",
+     "line_id": "NEW:2F-ROOF-AT379:doorway transition D115",
+     "net": 0.2,
+     "unit": "m2"
+    },
+    {
+     "basis": "one doorway transition per door (owner Q-35 C reading): the +9.70 roof door D115",
+     "element_id": "2F-ROOF-AT379:wp_door_transition:D115",
+     "family": "B8-06",
+     "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+     "label": "DRAWING-READ",
+     "line_id": "NEW:2F-ROOF-AT379:wp_door_transition:D115",
+     "net": 1.0,
+     "unit": "pcs"
+    },
+    {
+     "basis": "floor-level bay glazing BCE on the +5.50 ledge: membrane terminated under the frame by detail (UP-WP-DOOR-001, T-522 F-T522-3) over its run 2.976663 lm; moved out of the roof upturn",
+     "element_id": "1F-POOLCOURT-550-LEDGE:termination glazing BCE",
+     "family": "B8-06",
+     "item_code": "FIN.WP.TERMINATION",
+     "label": "ESTIMATE",
+     "line_id": "NEW:1F-POOLCOURT-550-LEDGE:termination glazing BCE",
+     "net": 2.976663,
+     "unit": "lm"
+    }
+   ],
+   "rows": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 91.922
+     },
+     "basis": "+9.70 roof inner boundary 65.140 lm (T-321 face, parapets 1285 / 12A7 / 1278 / 12B9 / 12C9 + 2F block walls 1288 / 1281 / 1291) less the door gap 1.000 between walls 1280 and 1281 (door block D115, swing r 0.89: a doorway is a transition, owner Q-24 'as the bathrooms' + Q-35 C walls only) + two dome rings 27.782 (owner Q-24: 20 cm upturn round a dome) = 91.922 lm",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 92.922
+     },
+     "element_id": "2F-ROOF-AT379:wp_upturn",
+     "item_code": "FIN.WP.ROOF_UPTURN",
+     "label": "DRAWING-READ",
+     "line_id": "L-5ce5ba49792e8f9d1f6f",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.551614
+     },
+     "basis": "pool-court ledge bay face 3.528277 = wall BCD 0.250804 + floor-level glazing BCE 2.976663 + wall BD0 0.300810 (T-522 / T-529 split, residual 0): upturn on the two wall pieces only = 0.551614 lm; the glazing frame stands on the slab = a transition by detail (R-T522-1, UP-WP-DOOR-001), its own line; T-767 had carried the whole bay face (engine high bound) as upturn",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 3.528
+     },
+     "element_id": "1F-POOLCOURT-550-LEDGE:wp_upturn",
+     "item_code": "FIN.WP.ROOF_UPTURN",
+     "label": "DRAWING-READ",
+     "line_id": "L-d7d1bf8c5991ccf69ea2",
+     "unit": "lm"
+    }
+   ],
+   "rule": "ROOF_UPTURN_WALLS_ONLY (owner Q-24 'as the bathrooms' + Q-35 C walls only; R-T522-1 frame = transition); no new rule version",
+   "schema": "DELIVERY_FIX_ROWS_V1",
+   "summary": {
+    "after_vs_freelancer_pct": 18.0,
+    "before_vs_freelancer_pct": 20.1,
+    "blank_lines": {
+     "after": 0,
+     "roof upturn family before": 0
+    },
+    "causes_ours_minus_his_lm": {
+     "ENGINE_RIGHT doorway out of the upturn: +9.70 door D115 (his outline counts it)": -1.0,
+     "ENGINE_RIGHT pool-court open-sky slab 5.193544 + bath-window wall under the '84' sill 0.500002 + ledge walls 0.551614 (not in his lump under H1)": 6.245158,
+     "RULE_DIFFERENCE DOME-3 ring on the +13.90 top roof (same rule)": 13.85454,
+     "RULE_DIFFERENCE two +9.70 dome rings (owner Q-24: 20 cm upturn round a dome; his lump keeps domes flat)": 27.782,
+     "TOLERANCE annex arc: engine line 35.727 vs exact quarter-arc perimeter": -0.000876,
+     "UNRESOLVED residual of his typed lump over the four inner boundaries (no sub-rows, formulas not visible)": -11.892124
+    },
+    "fixed_before_to_after_lm": {
+     "FIXED this row: +9.70 door D115 carried as upturn (a transition)": 1.0,
+     "FIXED this row: bay glazing BCE carried as upturn (a transition; line 3.528 rounded)": 2.976386
+    },
+    "freelancer": {
+     "lm": 194.0,
+     "row": "waterproofing sheet, 'roofs and annexes': 194.00 lm, 285.00 m2, x1.00, no sub-rows (re-read this run with the Drive text reader)"
+    },
+    "largest_run_for_the_checker": "ROOF-970 boundary 65.14 lm by hand (18.87 + 11.6 + 6.57 + 6.6 + 8.1 + 2.1 + 4.2 + 7.1), door gap 1280 end to 1281 start = 1.000",
+    "like_for_like_lm": {
+     "his_H1": 194.0,
+     "ours_walls_only_four_roofs": 181.107876,
+     "pct": -6.6
+    },
+    "named_not_fixed": {
+     "terrace east-strip end opening (C9E / CA0 / CA3)": 0.406,
+     "window openings on roof edges taken as solid wall below a sill (sills not printed per window; T-522 printed '84' on the one checked)": 5.857
+    },
+    "ours_after_lm": 228.988698,
+    "ours_before_lm": 232.965084,
+    "per_run": {
+     "POOL-COURT +5.50 (open sky, window wall, ledge)": {
+      "after": 6.245158,
+      "note": "ledge 3.528 -> 0.552 (glazing 2.977 = transition)",
+      "ours": 9.221544
+     },
+     "ROOF-1390 (+13.90 top roof)": {
+      "after": 42.15454,
+      "note": "28.30 inner parapet + DOME-3 ring 13.855 (ESTIMATE, no roof plan, Q-34)",
+      "ours": 42.15454
+     },
+     "ROOF-430 (+4.30 annex, AT220)": {
+      "after": 35.727,
+      "note": "35.728 = 11.8 + 1.3 + 1.4 + 3.2 + 6.4 + 0.7 + arc 1.728 + 2.9 + 6.3; every run solid (window CFD with sill)",
+      "ours": 35.727
+     },
+     "ROOF-970 (+9.70 roof, AT379)": {
+      "after": 91.922,
+      "note": "65.14 = 18.87 + 11.6 + 6.57 + 6.6 + 8.1 + 2.1 + 4.2 + 7.1; + rings 27.782; - door D115 1.000",
+      "ours": 92.922
+     },
+     "TERRACE-550 (+5.50 strips, AT216)": {
+      "after": 52.94,
+      "note": "52.940 = 18.97 + 7.50 + 1.30 + 6.20 + 17.67 + 1.30; walls / parapets / divider CED, windows with sills; opening 0.406 at the east strip end named, not fixed (<1 %)",
+      "ours": 52.94
+     }
+    },
+    "transition_lines_added": 3
+   },
+   "task": "T-794"
+  },
+  {
+   "candidate_version": "ARCH_TAKEOFF_V3.0.86",
+   "finding": "F-V786-1",
+   "kind": "CHECKER_FINDING",
+   "rows": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.0256
+     },
+     "basis": "Checker F-V786-1 (T-786 Gate A light, 2026-11-14T14:05Z): the GF strip at the column at B20's end lies in the same roof-edge band, between the same outer line, as the T-786 projection bands, so by UNMARKED_PIECE_DEPTH_V1 it is PROJECTION_BAND: plan 0.16 m2 (T-724 census) x 0.16 printed slab thickness (ST note 18) = 0.0256 m3; was 0.0960 at the 0.60 beam default; D-05 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.096
+     },
+     "element_id": "T729:CHILD:HL:BEAM_LEDGER:GF:BM-GF-058#GF-STRIP-AT-COL",
+     "hand": [
+      0.16,
+      0.16
+     ],
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-f113ed57f7875fed9a67",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.0256
+     },
+     "basis": "Checker F-V786-1 (T-786 Gate A light, 2026-11-14T14:05Z): the 1F strip at the column at B23's end lies in the same roof-edge band, between the same outer line, as the T-786 projection bands, so by UNMARKED_PIECE_DEPTH_V1 it is PROJECTION_BAND: plan 0.16 m2 (T-724 census) x 0.16 printed slab thickness (ST note 18) = 0.0256 m3; was 0.0960 at the 0.60 beam default; D-05 replaces it",
+     "before": {
+      "class": "RELEASED",
+      "label": "DEFAULT",
+      "net": 0.096
+     },
+     "element_id": "T729:CHILD:HL:BEAM_LEDGER:1F:BM-1F-033#1F-STRIP-AT-COL",
+     "hand": [
+      0.16,
+      0.16
+     ],
+     "item_code": "STR.CONC.BEAM",
+     "label": "DEFAULT",
+     "line_id": "L-56c49c3c2596a0869533",
+     "unit": "m3"
+    }
+   ],
+   "schema": "URBAN_FIX_ROWS_V1",
+   "task": "F-V786-1",
+   "verdict": {
+    "gate": "A light",
+    "merge": "a2001238",
+    "task": "T-786",
+    "utc": "2026-11-14T14:05Z"
+   }
+  }
+ ]
+}

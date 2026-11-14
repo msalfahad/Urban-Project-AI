@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-770g",
+  "merge_commit": "910720692df6a19fcae511d1e57d689f21372862",
+  "verdict_time": "2026-11-14 19:45 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED r10 (Verifier 2026-11-14T19:45Z per `date -u`, run session_01E6cPnbQjHnBqY1ntr1AqGC, lock checker; GATE B PASS; merge 91072069 on c12c8eb4 published by engine push; conflict only in docs/CODEMAP.md: working-branch version taken, maps rebuilt, stale none, freeze 0; in-merge promotion of 1.87.0 (T-770g)",
+  "board_commit": "849b9e47"
+ }
+]
