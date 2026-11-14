@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-770",
+  "merge_commit": "06302fc6ed43578227c6b4928abb52f182555c0b",
+  "verdict_time": "2026-11-14 01:03 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED r4 (Verifier 2026-11-14T01:03Z per `date -u`, run session_01E6cPndR8eTFzSg9PwVd7D4, lock checker; GATE B PASS; merge 06302fc6 on 3b9f35a6 + in-merge promotion, published by engine push (sha in the run-log final line, ls-remote confirmed)",
+  "board_commit": "46d91439"
+ }
+]

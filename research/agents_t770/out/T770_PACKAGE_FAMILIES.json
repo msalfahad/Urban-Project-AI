@@ -1,0 +1,352 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.81.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.79",
+  "ARCH_TAKEOFF_V3.0.81"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.79": {
+   "lines": 5275,
+   "lines_sha256": "aa0ec38a07f599ebed242a4b1934c4f3025e72e3c467ed12d4d56edb8a8557af"
+  },
+  "ARCH_TAKEOFF_V3.0.81": {
+   "lines": 5276,
+   "lines_sha256": "88429a67c3fb7da55b87e81af97a0768b8cff591f9f180e702b044aa9bb5bf1c",
+   "previous": "ARCH_TAKEOFF_V3.0.79",
+   "item_codes": {
+    "FIN.FLOOR.BED.DRY": {
+     "added": 0,
+     "removed": 0,
+     "changed": 23,
+     "record": 0
+    },
+    "FIN.FLOOR.BED.WET": {
+     "added": 0,
+     "removed": 0,
+     "changed": 21,
+     "record": 0
+    },
+    "FIN.PAINT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 11,
+     "record": 0
+    },
+    "FIN.PLASTER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 11,
+     "record": 0
+    },
+    "FIN.ROOF.FINISH": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "FIN.ROOF.INSULATION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.ROOF.PROTECTION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.ROOF.SCREED": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.WP.ROOF": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 16,
+     "record": 0
+    },
+    "STR.CONC.BLINDING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "STR.CONC.BOUNDARY_PAD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.COLUMN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "STR.CONC.DOME": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.GROUND_BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 21,
+     "record": 0
+    },
+    "STR.CONC.LIFT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "STR.CONC.LINTEL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 21,
+     "record": 0
+    },
+    "STR.CONC.NECK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "STR.CONC.PARAPET": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "STR.CONC.POOL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.SAFETY": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.CONC.STAIR": {
+     "added": 0,
+     "removed": 0,
+     "changed": 5,
+     "record": 0
+    },
+    "STR.FORMWORK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 316,
+     "record": 0
+    },
+    "STR.FORMWORK.STAIR": {
+     "added": 0,
+     "removed": 0,
+     "changed": 20,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-01": {
+     "STR.CONC.BLINDING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B10-03": {
+     "STR.CONC.NECK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B10-04": {
+     "STR.CONC.GROUND_BEAM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 21,
+      "record": 0
+     }
+    },
+    "B10-06": {
+     "STR.CONC.COLUMN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B10-07": {
+     "STR.CONC.BEAM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 16,
+      "record": 0
+     }
+    },
+    "B10-09": {
+     "STR.CONC.DOME": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-10": {
+     "STR.CONC.LIFT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     },
+     "STR.CONC.POOL": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-11": {
+     "STR.CONC.BOUNDARY_PAD": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-12": {
+     "STR.CONC.PARAPET": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B10-13": {
+     "STR.FORMWORK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 316,
+      "record": 0
+     }
+    },
+    "B13-01": {
+     "FIN.ROOF.FINISH": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     },
+     "FIN.ROOF.INSULATION": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     },
+     "FIN.ROOF.PROTECTION": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     },
+     "FIN.ROOF.SCREED": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B3-05": {
+     "FIN.FLOOR.BED.DRY": {
+      "added": 0,
+      "removed": 0,
+      "changed": 23,
+      "record": 0
+     },
+     "FIN.FLOOR.BED.WET": {
+      "added": 0,
+      "removed": 0,
+      "changed": 21,
+      "record": 0
+     }
+    },
+    "B4-03": {
+     "FIN.PLASTER": {
+      "added": 0,
+      "removed": 0,
+      "changed": 11,
+      "record": 0
+     }
+    },
+    "B4-06": {
+     "FIN.PAINT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 11,
+      "record": 0
+     }
+    },
+    "B7-12": {
+     "STR.CONC.STAIR": {
+      "added": 0,
+      "removed": 0,
+      "changed": 5,
+      "record": 0
+     }
+    },
+    "B7-13": {
+     "STR.FORMWORK.STAIR": {
+      "added": 0,
+      "removed": 0,
+      "changed": 20,
+      "record": 0
+     }
+    },
+    "B8-06": {
+     "FIN.WP.ROOF": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B9-02": {
+     "STR.CONC.LINTEL": {
+      "added": 0,
+      "removed": 0,
+      "changed": 21,
+      "record": 0
+     },
+     "STR.CONC.SAFETY": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 497,
+   "record_only": 0
+  }
+ }
+}
