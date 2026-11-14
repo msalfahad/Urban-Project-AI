@@ -1,0 +1,144 @@
+{
+ "schema": "DELIVERY_FIX_ROWS_V1",
+ "task": "T-794",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.85",
+ "rule": "ROOF_UPTURN_WALLS_ONLY (owner Q-24 'as the bathrooms' + Q-35 C walls only; R-T522-1 frame = transition); no new rule version",
+ "inputs": {
+  "index": "LINE_INDEX_V3_0_85.json",
+  "roof_faces": "research/agents_t321/ALSENAN_ROOF_LAYERS_INPUT.json",
+  "ledge_split": "research/agents_t522 / agents_t529 (merged)",
+  "dxf_reread": "Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip handles 1280 1281 12BA (D115) 1288 1291 1285 12A7 1278 12B9 12C9 AE1 AE2 AE3 CF0 D0A B5D BC2 B5F C92 B60 BDB BDC C9E CA0 CA3 ADF CFD B3A CEC CED B25 B33 (dimensions only)"
+ },
+ "summary": {
+  "freelancer": {
+   "row": "waterproofing sheet, 'roofs and annexes': 194.00 lm, 285.00 m2, x1.00, no sub-rows (re-read this run with the Drive text reader)",
+   "lm": 194.0
+  },
+  "ours_before_lm": 232.965084,
+  "ours_after_lm": 228.988698,
+  "before_vs_freelancer_pct": 20.1,
+  "after_vs_freelancer_pct": 18.0,
+  "fixed_before_to_after_lm": {
+   "FIXED this row: bay glazing BCE carried as upturn (a transition; line 3.528 rounded)": 2.976386,
+   "FIXED this row: +9.70 door D115 carried as upturn (a transition)": 1.0
+  },
+  "causes_ours_minus_his_lm": {
+   "RULE_DIFFERENCE two +9.70 dome rings (owner Q-24: 20 cm upturn round a dome; his lump keeps domes flat)": 27.782,
+   "RULE_DIFFERENCE DOME-3 ring on the +13.90 top roof (same rule)": 13.85454,
+   "ENGINE_RIGHT pool-court open-sky slab 5.193544 + bath-window wall under the '84' sill 0.500002 + ledge walls 0.551614 (not in his lump under H1)": 6.245158,
+   "ENGINE_RIGHT doorway out of the upturn: +9.70 door D115 (his outline counts it)": -1.0,
+   "UNRESOLVED residual of his typed lump over the four inner boundaries (no sub-rows, formulas not visible)": -11.892124,
+   "TOLERANCE annex arc: engine line 35.727 vs exact quarter-arc perimeter": -0.000876
+  },
+  "like_for_like_lm": {
+   "ours_walls_only_four_roofs": 181.107876,
+   "his_H1": 194.0,
+   "pct": -6.6
+  },
+  "per_run": {
+   "TERRACE-550 (+5.50 strips, AT216)": {
+    "ours": 52.94,
+    "after": 52.94,
+    "note": "52.940 = 18.97 + 7.50 + 1.30 + 6.20 + 17.67 + 1.30; walls / parapets / divider CED, windows with sills; opening 0.406 at the east strip end named, not fixed (<1 %)"
+   },
+   "ROOF-430 (+4.30 annex, AT220)": {
+    "ours": 35.727,
+    "after": 35.727,
+    "note": "35.728 = 11.8 + 1.3 + 1.4 + 3.2 + 6.4 + 0.7 + arc 1.728 + 2.9 + 6.3; every run solid (window CFD with sill)"
+   },
+   "ROOF-970 (+9.70 roof, AT379)": {
+    "ours": 92.922,
+    "after": 91.922,
+    "note": "65.14 = 18.87 + 11.6 + 6.57 + 6.6 + 8.1 + 2.1 + 4.2 + 7.1; + rings 27.782; - door D115 1.000"
+   },
+   "ROOF-1390 (+13.90 top roof)": {
+    "ours": 42.15454,
+    "after": 42.15454,
+    "note": "28.30 inner parapet + DOME-3 ring 13.855 (ESTIMATE, no roof plan, Q-34)"
+   },
+   "POOL-COURT +5.50 (open sky, window wall, ledge)": {
+    "ours": 9.221544,
+    "after": 6.245158,
+    "note": "ledge 3.528 -> 0.552 (glazing 2.977 = transition)"
+   }
+  },
+  "named_not_fixed": {
+   "terrace east-strip end opening (C9E / CA0 / CA3)": 0.406,
+   "window openings on roof edges taken as solid wall below a sill (sills not printed per window; T-522 printed '84' on the one checked)": 5.857
+  },
+  "blank_lines": {
+   "roof upturn family before": 0,
+   "after": 0
+  },
+  "transition_lines_added": 3,
+  "largest_run_for_the_checker": "ROOF-970 boundary 65.14 lm by hand (18.87 + 11.6 + 6.57 + 6.6 + 8.1 + 2.1 + 4.2 + 7.1), door gap 1280 end to 1281 start = 1.000"
+ },
+ "rows": [
+  {
+   "line_id": "L-5ce5ba49792e8f9d1f6f",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "unit": "lm",
+   "element_id": "2F-ROOF-AT379:wp_upturn",
+   "before": {
+    "class": "RELEASED",
+    "net": 92.922,
+    "label": "ESTIMATE"
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 91.922
+   },
+   "label": "DRAWING-READ",
+   "basis": "+9.70 roof inner boundary 65.140 lm (T-321 face, parapets 1285 / 12A7 / 1278 / 12B9 / 12C9 + 2F block walls 1288 / 1281 / 1291) less the door gap 1.000 between walls 1280 and 1281 (door block D115, swing r 0.89: a doorway is a transition, owner Q-24 'as the bathrooms' + Q-35 C walls only) + two dome rings 27.782 (owner Q-24: 20 cm upturn round a dome) = 91.922 lm"
+  },
+  {
+   "line_id": "L-d7d1bf8c5991ccf69ea2",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "unit": "lm",
+   "element_id": "1F-POOLCOURT-550-LEDGE:wp_upturn",
+   "before": {
+    "class": "RELEASED",
+    "net": 3.528,
+    "label": "ESTIMATE"
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.551614
+   },
+   "label": "DRAWING-READ",
+   "basis": "pool-court ledge bay face 3.528277 = wall BCD 0.250804 + floor-level glazing BCE 2.976663 + wall BD0 0.300810 (T-522 / T-529 split, residual 0): upturn on the two wall pieces only = 0.551614 lm; the glazing frame stands on the slab = a transition by detail (R-T522-1, UP-WP-DOOR-001), its own line; T-767 had carried the whole bay face (engine high bound) as upturn"
+  }
+ ],
+ "new_lines": [
+  {
+   "family": "B8-06",
+   "line_id": "NEW:2F-ROOF-AT379:doorway transition D115",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "unit": "m2",
+   "element_id": "2F-ROOF-AT379:doorway transition D115",
+   "label": "DRAWING-READ",
+   "basis": "2F block door onto the +9.70 roof (block D115 in the 1.000 gap between walls 1280 / 1281): 1.00 x 0.20 = 0.20 m2 (wet-room transition method, owner Q-35 C); moved out of the upturn",
+   "net": 0.2
+  },
+  {
+   "family": "B8-06",
+   "line_id": "NEW:2F-ROOF-AT379:wp_door_transition:D115",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "unit": "pcs",
+   "element_id": "2F-ROOF-AT379:wp_door_transition:D115",
+   "label": "DRAWING-READ",
+   "basis": "one doorway transition per door (owner Q-35 C reading): the +9.70 roof door D115",
+   "net": 1.0
+  },
+  {
+   "family": "B8-06",
+   "line_id": "NEW:1F-POOLCOURT-550-LEDGE:termination glazing BCE",
+   "item_code": "FIN.WP.TERMINATION",
+   "unit": "lm",
+   "element_id": "1F-POOLCOURT-550-LEDGE:termination glazing BCE",
+   "label": "ESTIMATE",
+   "basis": "floor-level bay glazing BCE on the +5.50 ledge: membrane terminated under the frame by detail (UP-WP-DOOR-001, T-522 F-T522-3) over its run 2.976663 lm; moved out of the roof upturn",
+   "net": 2.976663
+  }
+ ]
+}

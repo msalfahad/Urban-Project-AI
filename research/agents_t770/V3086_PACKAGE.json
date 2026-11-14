@@ -1,0 +1,904 @@
+{
+ "base": "ARCH_TAKEOFF_V3.0.85",
+ "base_basis_corrections": {
+  "L-122cbab32ca719527de8": {
+   "new": "(B4 rings, Q-44 A) = membrane line",
+   "old": "(B4 rings, Q-44 A) + drawn band 0.1575 = membrane line",
+   "source": "Checker F-V770r8-1 (T-770 r8 Gate B, 2026-11-14T11:49Z): 146.532 - 2 x 15.359 = 115.814 already equals the line; the drawn band is inside the face"
+  },
+  "L-5a04a3ec70ce025ddd95": {
+   "new": "54.651 low (minimum heights) + SW-2 4.40 x (1.20 - 0.385) + NE-1 / SW-1 2 x 0.08 x (1.20 - 1.10) = 58.253",
+   "old": "54.651 low + NE-1 / SW-1 0.08 x 1.20 + SW-2 4.40 x 1.20 = 5.280",
+   "source": "Checker F-V770r8-1 (T-770 r8 Gate B, 2026-11-14T11:49Z): the figure already holds the minimum heights"
+  },
+  "L-e005eb9041acb08d8b87": {
+   "new": "(B4 rings, Q-44 A) = membrane line",
+   "old": "(B4 rings, Q-44 A) + drawn band 0.1575 = membrane line",
+   "source": "Checker F-V770r8-1 (T-770 r8 Gate B, 2026-11-14T11:49Z): 146.532 - 2 x 15.359 = 115.814 already equals the line; the drawn band is inside the face"
+  },
+  "L-e0dc4455bc0c6ee4fa9b": {
+   "new": "(B4 rings, Q-44 A) = membrane line",
+   "old": "(B4 rings, Q-44 A) + drawn band 0.1575 = membrane line",
+   "source": "Checker F-V770r8-1 (T-770 r8 Gate B, 2026-11-14T11:49Z): 146.532 - 2 x 15.359 = 115.814 already equals the line; the drawn band is inside the face"
+  },
+  "L-f4ae7151a6e2b93dd7ad": {
+   "new": "(B4 rings, Q-44 A) = membrane line",
+   "old": "(B4 rings, Q-44 A) + drawn band 0.1575 = membrane line",
+   "source": "Checker F-V770r8-1 (T-770 r8 Gate B, 2026-11-14T11:49Z): 146.532 - 2 x 15.359 = 115.814 already equals the line; the drawn band is inside the face"
+  }
+ },
+ "method": "ARCH_TAKEOFF_V3.0.86",
+ "row_bases": [
+  "ARCH_TAKEOFF_V3.0.84"
+ ],
+ "schema": "URBAN_FILL_PACKAGE_V6",
+ "set_names": [
+  "T-787",
+  "T-789",
+  "T-790"
+ ],
+ "set_sha256": {
+  "T-787": "eabfb415ddc3bf3d8a23cd84a4aad9b0b1fb65df32b9b8dba842788ff3940ff9",
+  "T-789": "7783b7c12108d9ecf620d44c8b25c5d8d64bebc8c9a322f626bddcffeb6dd56d",
+  "T-790": "555a00b8f0049b37aef03841ede50bc6b33a67d8f099ce96be96b2baea2b0c97"
+ },
+ "sets": [
+  {
+   "beside": {
+    "arch_hemisphere_alternative_m2": {
+     "per_dome": 30.549004,
+     "total": 91.647012,
+     "when": "the designer confirms the domes are built to the architect's hemisphere outline (r 2.205, rise = r) instead of the ST 4.42 / 1.90 section: +3.86 m2 per dome per layer (D-DOME)"
+    },
+    "intrados_check": "FIN.DOME.SOFFIT 24.150 m2 per dome (T-768, inner cap R - 0.10, h - 0.10) < extrados 26.685: consistent shell, outer minus inner = 2.535 m2",
+    "ring_beam_outer_face": "the exposed ring / drum face between the roof and the springing is the base upturn (lm) of T-780, not part of the extrados",
+    "screed_insulation_on_shell": "not printed on any section; not added (company default stops at the flat roof); D-DOME asks the build-up"
+   },
+   "candidate_version": "ARCH_TAKEOFF_V3.0.84",
+   "inputs": {
+    "drawings": "Drive 'Alsenan chalet project' ST7757.pdf p.7; P7757_DXF_COMPRESSED.zip handles 23EC 23ED 23EE 2887 23A6 2C86 279F 2CF9 1F95..1FAC 25C8..25DB (dimensions only)",
+    "index": "LINE_INDEX_V3_0_84.json",
+    "t780": "research/agents_t780/out/FIX_ROWS.json (merged)"
+   },
+   "new_lines": [
+    {
+     "basis": "DOME-A extrados membrane (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DRAWING-READ: ST p.7 DETAIL OF DOME printed for this dome (ST p.5 SEE DETAIL): outer chord 4.42 at the ring-beam top, rise 1.90 to the outer crown]; flat roof DOME-W (12EB, +9.70 roof) footprint already deducted with its base upturn (T-780): no double count",
+     "element_id": "DOME:DOME-A:EXTRADOS:MEMBRANE",
+     "family": "B8-06",
+     "item_code": "FIN.WP.ROOF",
+     "label": "DEFAULT",
+     "line_id": "NEW:DOME:DOME-A:EXTRADOS:MEMBRANE",
+     "net": 26.685002,
+     "unit": "m2"
+    },
+    {
+     "basis": "DOME-A extrados protection (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DRAWING-READ: ST p.7 DETAIL OF DOME printed for this dome (ST p.5 SEE DETAIL): outer chord 4.42 at the ring-beam top, rise 1.90 to the outer crown]; flat roof DOME-W (12EB, +9.70 roof) footprint already deducted with its base upturn (T-780): no double count",
+     "element_id": "DOME:DOME-A:EXTRADOS:PROTECTION",
+     "family": "B13-01",
+     "item_code": "FIN.ROOF.PROTECTION",
+     "label": "DEFAULT",
+     "line_id": "NEW:DOME:DOME-A:EXTRADOS:PROTECTION",
+     "net": 26.685002,
+     "unit": "m2"
+    },
+    {
+     "basis": "DOME-B extrados membrane (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DRAWING-READ: ST p.7 DETAIL OF DOME printed for this dome (ST p.5 SEE DETAIL): outer chord 4.42 at the ring-beam top, rise 1.90 to the outer crown]; flat roof DOME-E (2F33, +9.70 roof) footprint already deducted with its base upturn (T-780): no double count",
+     "element_id": "DOME:DOME-B:EXTRADOS:MEMBRANE",
+     "family": "B8-06",
+     "item_code": "FIN.WP.ROOF",
+     "label": "DEFAULT",
+     "line_id": "NEW:DOME:DOME-B:EXTRADOS:MEMBRANE",
+     "net": 26.685002,
+     "unit": "m2"
+    },
+    {
+     "basis": "DOME-B extrados protection (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DRAWING-READ: ST p.7 DETAIL OF DOME printed for this dome (ST p.5 SEE DETAIL): outer chord 4.42 at the ring-beam top, rise 1.90 to the outer crown]; flat roof DOME-E (2F33, +9.70 roof) footprint already deducted with its base upturn (T-780): no double count",
+     "element_id": "DOME:DOME-B:EXTRADOS:PROTECTION",
+     "family": "B13-01",
+     "item_code": "FIN.ROOF.PROTECTION",
+     "label": "DEFAULT",
+     "line_id": "NEW:DOME:DOME-B:EXTRADOS:PROTECTION",
+     "net": 26.685002,
+     "unit": "m2"
+    },
+    {
+     "basis": "DOME-3 extrados membrane (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DEFAULT: no structural section for the 2F dome (D-21); the architect draws it with the identical outline as the +9.70 domes (elevation polyline 4140.0 apart, same 4.41 width), so the only printed shell 4.42 / 1.90 applies, as on its concrete line L-d5401fa8 (T-761); the elevation 2.15 is the part above the +14.40 parapet top, not the rise (T-780 beside read it as a rise: 29.80 refused)]; flat roof DOME-3 (1300, +13.90 top roof) footprint already deducted with its base upturn (T-780): no double count",
+     "element_id": "DOME:DOME-3:EXTRADOS:MEMBRANE",
+     "family": "B8-06",
+     "item_code": "FIN.WP.ROOF",
+     "label": "DEFAULT",
+     "line_id": "NEW:DOME:DOME-3:EXTRADOS:MEMBRANE",
+     "net": 26.685002,
+     "unit": "m2"
+    },
+    {
+     "basis": "DOME-3 extrados protection (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DEFAULT: no structural section for the 2F dome (D-21); the architect draws it with the identical outline as the +9.70 domes (elevation polyline 4140.0 apart, same 4.41 width), so the only printed shell 4.42 / 1.90 applies, as on its concrete line L-d5401fa8 (T-761); the elevation 2.15 is the part above the +14.40 parapet top, not the rise (T-780 beside read it as a rise: 29.80 refused)]; flat roof DOME-3 (1300, +13.90 top roof) footprint already deducted with its base upturn (T-780): no double count",
+     "element_id": "DOME:DOME-3:EXTRADOS:PROTECTION",
+     "family": "B13-01",
+     "item_code": "FIN.ROOF.PROTECTION",
+     "label": "DEFAULT",
+     "line_id": "NEW:DOME:DOME-3:EXTRADOS:PROTECTION",
+     "net": 26.685002,
+     "unit": "m2"
+    },
+    {
+     "basis": "3 dome extrados 80.055 m2 x 8 rolls / 55.559 m2 (T-764 / T-780 method) = 11.53 -> 12 rolls",
+     "element_id": "DOME:ALL:EXTRADOS:wp_rolls_to_buy",
+     "family": "B8-05",
+     "item_code": "FIN.WP.MEMBRANE_ROLLS",
+     "label": "ESTIMATE",
+     "line_id": "NEW:DOME:ALL:EXTRADOS:wp_rolls_to_buy",
+     "net": 12.0,
+     "unit": "pcs"
+    }
+   ],
+   "rows": [],
+   "rule": "DOME_EXTRADOS_V1 (proposed, research/agents_t787/t787_rules.py)",
+   "schema": "URBAN_FIX_ROWS_V1",
+   "summary": {
+    "changed_lines": 0,
+    "domes": 3,
+    "domes_without_extrados_line_after": 0,
+    "domes_without_extrados_line_before": 3,
+    "extrados_m2_per_dome": 26.685002,
+    "extrados_m2_total": 80.055006,
+    "new_lines": 7,
+    "rolls_pcs": 12,
+    "roof_finish_m2": {
+     "unchanged": 238.484216,
+     "why": "the flat-roof tile finish does not sit on a shell"
+    },
+    "roof_membrane_m2": {
+     "after": 324.086089,
+     "after_vs_freelancer_pct": 13.7,
+     "before_t787": 244.031083,
+     "causes_m2_his_minus_ours": {
+      "ENGINE_RIGHT pool-court open-sky slab + ledge +5.50 (membrane, not in his row)": -5.546867,
+      "RULE_DIFFERENCE DOME-3 footprint +13.90 (S0 shell on the slab) : his row gross": 15.274758,
+      "RULE_DIFFERENCE dome extrados (3 shells, curved area) : not in his row": -80.055006,
+      "RULE_DIFFERENCE dome footprints +9.70 (2 openings, B4 rings) : his row gross": 30.718026,
+      "TOLERANCE +9.70 membrane line vs face less exact dome discs (band 0.1575 = arc gain)": 0.0,
+      "TOLERANCE annex corner arc discretisation (55.559 vs exact 55.560)": 0.001332,
+      "UNRESOLVED residual of his row (T-626, below 1 %)": 0.521668
+     },
+     "freelancer": 285.0,
+     "like_for_like_note": "his 285 counts the dome footprints flat (45.99 m2 of plan); the curved shells are 80.06 m2: the +34.06 m2 is the curvature, a RULE_DIFFERENCE, not an error either side"
+    },
+    "t780_beside_error": "DOME-3 rise 2.15 = elevation height above the +14.40 parapet, not the rise: 29.80 -> 26.685 m2 (-3.11)",
+    "t780_beside_estimate_m2": 83.18
+   },
+   "surfaces": {
+    "DOME-3": {
+     "R_m": 2.235289,
+     "chord_m": 4.42,
+     "concrete_line": "L-d5401fa8986900c66c37",
+     "extrados_m2": 26.685002,
+     "label": "DEFAULT",
+     "plan_circle": "DOME-3 (1300, +13.90 top roof)",
+     "rise_m": 1.9
+    },
+    "DOME-A": {
+     "R_m": 2.235289,
+     "chord_m": 4.42,
+     "concrete_line": "L-8ea34765d16b54898140",
+     "extrados_m2": 26.685002,
+     "label": "DRAWING-READ",
+     "plan_circle": "DOME-W (12EB, +9.70 roof)",
+     "rise_m": 1.9
+    },
+    "DOME-B": {
+     "R_m": 2.235289,
+     "chord_m": 4.42,
+     "concrete_line": "L-fffa895ed96b9d6a682c",
+     "extrados_m2": 26.685002,
+     "label": "DRAWING-READ",
+     "plan_circle": "DOME-E (2F33, +9.70 roof)",
+     "rise_m": 1.9
+    }
+   },
+   "task": "T-787"
+  },
+  {
+   "base": "ARCH_TAKEOFF_V3.0.84 (LINE_INDEX_V3_0_84.json)",
+   "freelancer": {
+    "parapet_block_m2": 172.93,
+    "split": "material RULE_DIFFERENCE (he books block, this villa's sections draw RC; designer item 5); his 0.50 m below the finish = edge member concrete ENGINE_RIGHT 68.42 (T-550); his flat 1.80 vs printed 1F heights ENGINE_RIGHT 7.63 (T-550)",
+    "vs_ours_m2": 172.93
+   },
+   "rows": [
+    {
+     "action": "NO_LINE",
+     "after": {
+      "class": "RELEASED",
+      "label": "DRAWING-READ",
+      "net": 0.0
+     },
+     "alternative_P1": {
+      "basis": "ST p.14 P1 typical: RC upstand 0.30 above slab top + block above, H = h + 0.175",
+      "block_m2": 11.24,
+      "concrete_change_m3": -2.2489,
+      "concrete_m3": 1.7991
+     },
+     "basis": "ANNEX: 7 runs, centreline 29.99 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-1d419b64e8ca1af30fb4 STR.CONC.PARAPET 4.048 m3 (T-761, wired; = R-T789-1 ALL_RC 4.0480); masonry is its complement = 0, never both",
+     "before": {
+      "class": "HELD (T-742 draft, never wired)",
+      "high": null,
+      "low": 0.0
+     },
+     "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5)",
+     "element_id": "ANNEX#PARAPET_BLOCK",
+     "id": "F-T789-1",
+     "item_code": "MAS.BLOCK.PARAPET",
+     "line_id": null,
+     "unit": "m2"
+    },
+    {
+     "action": "NO_LINE",
+     "after": {
+      "class": "RELEASED",
+      "label": "DRAWING-READ",
+      "net": 0.0
+     },
+     "alternative_P1": {
+      "basis": "ST p.14 P1 typical: RC upstand 0.30 above slab top + block above, H = h + 0.175",
+      "block_m2": 10.49,
+      "concrete_change_m3": -2.0973,
+      "concrete_m3": 1.6779
+     },
+     "basis": "GF: 3 runs, centreline 27.96 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-b5ffc172a354375ca107 STR.CONC.PARAPET 3.7752 m3 (T-761, wired; = R-T789-1 ALL_RC 3.7752); masonry is its complement = 0, never both",
+     "before": {
+      "class": "HELD (T-742 draft, never wired)",
+      "high": null,
+      "low": 0.0
+     },
+     "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5)",
+     "element_id": "GF#PARAPET_BLOCK",
+     "id": "F-T789-2",
+     "item_code": "MAS.BLOCK.PARAPET",
+     "line_id": null,
+     "unit": "m2"
+    },
+    {
+     "action": "NO_LINE",
+     "after": {
+      "class": "RELEASED",
+      "label": "DRAWING-READ",
+      "net": 0.0
+     },
+     "alternative_P1": {
+      "basis": "ST p.14 P1 typical: RC upstand 0.30 above slab top + block above, H = h + 0.175",
+      "block_m2": 49.7,
+      "concrete_change_m3": -9.9397,
+      "concrete_m3": 2.9495
+     },
+     "basis": "1F: 11 runs, centreline 49.16 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-9a2c81164ec6499cc28c STR.CONC.PARAPET 12.8892 m3 (T-761, wired; = R-T789-1 ALL_RC 12.8892); masonry is its complement = 0, never both; height DEFAULT 1.20 on NE-1, SW-1, SW-2",
+     "before": {
+      "class": "HELD (T-742 draft, never wired)",
+      "high": null,
+      "low": 0.0
+     },
+     "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5)",
+     "element_id": "1F#PARAPET_BLOCK",
+     "id": "F-T789-3",
+     "item_code": "MAS.BLOCK.PARAPET",
+     "line_id": null,
+     "unit": "m2"
+    },
+    {
+     "action": "NO_LINE",
+     "after": {
+      "class": "RELEASED",
+      "label": "DRAWING-READ",
+      "net": 0.0
+     },
+     "alternative_P1": {
+      "basis": "ST p.14 P1 typical: RC upstand 0.30 above slab top + block above, H = h + 0.175",
+      "block_m2": 10.89,
+      "concrete_change_m3": -2.0306,
+      "concrete_m3": 1.6245
+     },
+     "basis": "2F: 4 runs, centreline 29.05 m; this villa's sections A-A / B-B cut every parapet in the slab / beam hatch (block walls unhatched, T-311 s.2): the whole run is billed as L-030538dda6a32c601c4c STR.CONC.PARAPET 3.6551 m3 (T-761, wired; = R-T789-1 ALL_RC 3.6551); masonry is its complement = 0, never both",
+     "before": {
+      "class": "HELD (T-742 draft, never wired)",
+      "high": null,
+      "low": 0.0
+     },
+     "designer_item": "D-39 / Q-65 C (DESIGNER_QUESTIONS item 5)",
+     "element_id": "2F#PARAPET_BLOCK",
+     "id": "F-T789-4",
+     "item_code": "MAS.BLOCK.PARAPET",
+     "line_id": null,
+     "unit": "m2"
+    },
+    {
+     "action": "BASIS_TEXT (supersedes F-T779-1 text)",
+     "after": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 11.389
+     },
+     "basis": "MAIN_S run 16.27 x 0.70 m = 11.389: 0.70 = slab -0.10 down to the governing ground-beam band top -0.80 (T-407 lower bound h >= 0.70; the footing top -0.85 does not govern, Checker F-V779-2); not a printed depth; block under the neighbour-side beam printed (ST p.1 n.2); formation unprinted (Q-21 C)",
+     "before": {
+      "class": "RELEASED",
+      "label": "ESTIMATE",
+      "net": 11.389
+     },
+     "element_id": "HOUSE_BELOW_NG:MAIN_S",
+     "id": "F-T789-5",
+     "item_code": "MAS.BLOCK",
+     "line_id": "L-7503af7cc1eea4e6735d",
+     "unit": "m2"
+    }
+   ],
+   "rule": "R-T789-1 (t789_rules.py, every villa)",
+   "schema": "URBAN_FIX_ROWS_V1",
+   "task": "T-789",
+   "totals": {
+    "alt_P1_block_m2": 82.32,
+    "alt_P1_block_m2_b_edge_0": 58.5,
+    "alt_P1_concrete_m3": 8.0509,
+    "centreline_m": 136.157,
+    "concrete_all_rc_m3": 24.3676,
+    "masonry_m2": 0.0
+   }
+  },
+  {
+   "base": "ARCH_TAKEOFF_V3.0.85 (LINE_INDEX_V3_0_85.json)",
+   "rows": [
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 64.8492
+     },
+     "basis": "= MAS.BLOCK L-c22e309433e7b671cf2d 64.8492 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "1F-WALLS:walls t=0.15",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "DEFAULT",
+     "line_id": "L-9cfe344301b76af03843",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 18.121
+     },
+     "basis": "= MAS.BLOCK L-5ffa7157a2fe483dd008 18.121 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "1F-WALLS:walls t=0.20",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "DEFAULT",
+     "line_id": "L-a471bd68df73e822c28a",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.765
+     },
+     "basis": "= MAS.BLOCK L-246f3c09de4c6b90efe5 1.765 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.15",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "DEFAULT",
+     "line_id": "L-0d84cdb4f25220863c80",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 9.47
+     },
+     "basis": "= MAS.BLOCK L-e1e06ec149b44d4f6f8a 9.47 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "DEFAULT",
+     "line_id": "L-241b48d23536eceb8944",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 25.895
+     },
+     "basis": "= MAS.BLOCK L-9056ebed77701b50abfc 25.895 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "DEFAULT",
+     "line_id": "L-60aa0250729fca805027",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 28.3687
+     },
+     "basis": "= MAS.BLOCK L-afe984a62285e133ec2f 28.3687 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.20",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "ESTIMATE",
+     "line_id": "L-14d6c60fe753e2bae0b4",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.85
+     },
+     "basis": "= MAS.BLOCK L-a6eedf5e4adec6d07618 3.85 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "DEFAULT",
+     "line_id": "L-41d18d2a8210ea353bbf",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 16.225
+     },
+     "basis": "= MAS.BLOCK L-bbb82de298fecbafa11d 16.225 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "DEFAULT",
+     "line_id": "L-18ebc5b6cd1ce1f72d2b",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 21.945
+     },
+     "basis": "= MAS.BLOCK L-76a4d8e50423fb02b914 21.945 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "DEFAULT",
+     "line_id": "L-65d67489ebefd7cd74cc",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 21.7875
+     },
+     "basis": "= MAS.BLOCK L-e90c9dd5ca08ffb64728 21.7875 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "DEFAULT",
+     "line_id": "L-9501404f8bae7a21d588",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 101.0064
+     },
+     "basis": "= MAS.BLOCK L-0d9b9e89bb6455da475d 101.0064 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "GF-WALLS:walls t=0.15",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "ESTIMATE",
+     "line_id": "L-0531a33e040440c62453",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 181.8837
+     },
+     "basis": "= MAS.BLOCK L-4165954ce4871eda30cc 181.8837 m2 (T-765, wired V3.0.83) (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "GF-WALLS:walls t=0.20",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "ESTIMATE",
+     "line_id": "L-63fa78622c74a1c30a1e",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+     },
+     "basis": "view of L-ff06449b7f61f19c418d MAS.BLOCK EXCLUDED (T-765): element GF-H01, a 0.60 m long 0.40 band under beam B20 at the GF reception glazed line (T-103 / T-143 / T-228: material, base and top not drawn, NO_PIECE). It is NOT the Q-28 A plot-boundary band (0.20 x 0.60 B.W beam on the plot line, structure B10, billed by T-776). Owner trade: A masonry if ever drawn as block; 0 blockwork today, so its panel / volume views are NOT_APPLICABLE, never a figure",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "GF-WALLS:walls t=0.40",
+     "item_code": "ARCH.WALL_PANEL",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-8eb5f0bb66e3985f9c7c",
+     "role": "REFERENCE",
+     "unit": "m2"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 9.72738
+     },
+     "basis": "= MAS.BLOCK L-c22e309433e7b671cf2d 64.8492 m2 (T-765, wired V3.0.83) x t 0.15 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "1F-WALLS:walls t=0.15",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "DEFAULT",
+     "line_id": "L-398e95f4d0c65a04525b",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.6242
+     },
+     "basis": "= MAS.BLOCK L-5ffa7157a2fe483dd008 18.121 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "1F-WALLS:walls t=0.20",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "DEFAULT",
+     "line_id": "L-9a560362d91a6e60fd19",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.26475
+     },
+     "basis": "= MAS.BLOCK L-246f3c09de4c6b90efe5 1.765 m2 (T-765, wired V3.0.83) x t 0.15 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.15",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "DEFAULT",
+     "line_id": "L-4f133d45c6e67ddbf631",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1.4205
+     },
+     "basis": "= MAS.BLOCK L-e1e06ec149b44d4f6f8a 9.47 m2 (T-765, wired V3.0.83) x t 0.15 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "DEFAULT",
+     "line_id": "L-cd564967192b34b7d5f5",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.88425
+     },
+     "basis": "= MAS.BLOCK L-9056ebed77701b50abfc 25.895 m2 (T-765, wired V3.0.83) x t 0.15 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "DEFAULT",
+     "line_id": "L-365002c9f6d57d8c7eb4",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 5.67374
+     },
+     "basis": "= MAS.BLOCK L-afe984a62285e133ec2f 28.3687 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.20",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "ESTIMATE",
+     "line_id": "L-0e002eb073c9460e90db",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 0.77
+     },
+     "basis": "= MAS.BLOCK L-a6eedf5e4adec6d07618 3.85 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "DEFAULT",
+     "line_id": "L-1189005753f4561d1517",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 3.245
+     },
+     "basis": "= MAS.BLOCK L-bbb82de298fecbafa11d 16.225 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "DEFAULT",
+     "line_id": "L-d3e5b3c7798bcb531a16",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.389
+     },
+     "basis": "= MAS.BLOCK L-76a4d8e50423fb02b914 21.945 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "DEFAULT",
+     "line_id": "L-081ecda837ea16af64ac",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 4.3575
+     },
+     "basis": "= MAS.BLOCK L-e90c9dd5ca08ffb64728 21.7875 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "DEFAULT",
+     "line_id": "L-99937b4e582e6225e147",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 15.15096
+     },
+     "basis": "= MAS.BLOCK L-0d9b9e89bb6455da475d 101.0064 m2 (T-765, wired V3.0.83) x t 0.15 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "GF-WALLS:walls t=0.15",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "ESTIMATE",
+     "line_id": "L-ed4cf41543c66921a592",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 36.37674
+     },
+     "basis": "= MAS.BLOCK L-4165954ce4871eda30cc 181.8837 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "GF-WALLS:walls t=0.20",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "ESTIMATE",
+     "line_id": "L-4423d85b72b4b4c3e87e",
+     "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "EXCLUDED",
+      "net": null,
+      "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+     },
+     "basis": "view of L-ff06449b7f61f19c418d MAS.BLOCK EXCLUDED (T-765): element GF-H01, a 0.60 m long 0.40 band under beam B20 at the GF reception glazed line (T-103 / T-143 / T-228: material, base and top not drawn, NO_PIECE). It is NOT the Q-28 A plot-boundary band (0.20 x 0.60 B.W beam on the plot line, structure B10, billed by T-776). Owner trade: A masonry if ever drawn as block; 0 blockwork today, so its panel / volume views are NOT_APPLICABLE, never a figure",
+     "before": {
+      "class": "HELD",
+      "net": null
+     },
+     "element_id": "GF-WALLS:walls t=0.40",
+     "item_code": "ARCH.WALL_VOLUME",
+     "label": "NOT_APPLICABLE",
+     "line_id": "L-391cc0e96fb7830363e4",
+     "role": "REFERENCE",
+     "unit": "m3"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 1414.84
+     },
+     "basis": "Q-77 strip on every 3rd course (R-T790-2/3): certain 856.1372 (T-355 black restated by T-362 + white family A) - GF-W26 level above its T-765 top 2.65 + held segments built by the T-765 / company default tops, heads 2.20 / 2.10 and lintels 263.3046 (of 291.8188) + 21 walls with no level placed (annex, lift, below-ground; T-765 heights) 291.8083 + 3 established white areas / 0.753 6.2444; white family A (62.5 x 25) as the white units line (T-765, ESTIMATE); OPTIONAL item, never inside the block m2",
+     "before": {
+      "class": "HELD",
+      "high": 1147.96,
+      "low": 856.14
+     },
+     "element_id": "T-771:NEW:MASONRY:MESH_STRIP",
+     "item_code": "MAS.MESH_STRIP",
+     "label": "ESTIMATE",
+     "line_id": "L-e765c5938bc82e046c3f",
+     "role": "OPTIONAL B9-03",
+     "unit": "lm"
+    },
+    {
+     "after": {
+      "class": "RELEASED",
+      "net": 579
+     },
+     "basis": "Q-77 one tie per 3rd course at every wall-to-column junction: 293 at the resolved junctions (T-355 black 182 + T-362 white A 111) -1 GF-W26 (top 3.50) + the 60 held junctions at the T-765 / company default tops 287 (levels beside the column); OPTIONAL item",
+     "before": {
+      "class": "HELD",
+      "high": 601.42,
+      "low": 293.0
+     },
+     "element_id": "T-771:NEW:MASONRY:SHARMAT",
+     "item_code": "MAS.SHARMAT",
+     "label": "ESTIMATE",
+     "line_id": "L-82df9974b923558a31b4",
+     "role": "OPTIONAL B9-03",
+     "unit": "pcs"
+    }
+   ],
+   "rule": "R-T790-1 .. 3 (t790_rules.py, every villa)",
+   "schema": "URBAN_FIX_ROWS_V1",
+   "summary": {
+    "MAS.BLOCK_m2_all": 981.348,
+    "MAS.BLOCK_m2_same_groups": 962.959,
+    "below_ground_no_view_line_m2": 18.389,
+    "blank_after": 0,
+    "blank_before": 26,
+    "blockwork_subtotal_change_m2": 0.0,
+    "mesh": {
+     "certain_T355_T362_m": 856.1372,
+     "certain_dropped_GF_W26_m": 2.65,
+     "held_T355_T362_m": 291.8188,
+     "held_built_by_defaults_m": 263.3046,
+     "point_m": 1414.84,
+     "white_area_walls_m": 6.2444,
+     "zero_level_walls_m": {
+      "GF-W00": 49.5,
+      "GF-W02": 9.9,
+      "GF-W03": 15.84,
+      "GF-W04": 16.8,
+      "GF-W06": 6.5,
+      "GF-W08": 19.99,
+      "GF-W09": 9.6,
+      "GF-W12": 2.25,
+      "GF-W13": 3.7333,
+      "GF-W14": 19.2,
+      "GF-W17": 11.3,
+      "GF-W18": 16.6,
+      "GF-W23": 7.8,
+      "GF-W24": 24.6,
+      "GF-W25": 27.0,
+      "GF-W27": 6.6,
+      "GF-W30": 8.275,
+      "GF-W35": 8.05,
+      "GF-W36": 2.0,
+      "HOUSE_BELOW_NG:ANNEX_S": 10.0,
+      "HOUSE_BELOW_NG:MAIN_S": 16.27
+     },
+     "zero_level_walls_total_m": 291.8083
+    },
+    "panel_m2_total_after": 962.959,
+    "sharmat": {
+     "GF_W26_correction_pcs": -1,
+     "by_wall": {
+      "1F-W04": 12,
+      "1F-W05": 12,
+      "1F-W10": 32,
+      "1F-W18": 18,
+      "2F-W02": 20,
+      "2F-W05": 18,
+      "2F-W07": 12,
+      "GF-W00": 15,
+      "GF-W01": 6,
+      "GF-W04": 8,
+      "GF-W06": 8,
+      "GF-W08": 19,
+      "GF-W09": 6,
+      "GF-W10": 35,
+      "GF-W12": 5,
+      "GF-W13": 12,
+      "GF-W14": 24,
+      "GF-W16": 5,
+      "GF-W17": 12,
+      "GF-W18": 4,
+      "GF-W36": 4
+     },
+     "certain_pcs": 293,
+     "held_junctions_pcs": 287,
+     "point_pcs": 579
+    }
+   },
+   "task": "T-790"
+  }
+ ]
+}
