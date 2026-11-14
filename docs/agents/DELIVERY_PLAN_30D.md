@@ -46,6 +46,12 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-14 00:20; DELIVERY MODE 2026-11-13 in force)
+
+- FILL (target 17 Nov): fix-row sets merged and checked for every FILL family group except stair finishes (T-766) and openings / ceilings / domes (T-768), both next for worker 2. Wiring: V3.0.81 (concrete + formwork + main fill; blank non-rebar 691 -> 295) is with the Checker; then V3.0.82 (earthworks + waterproofing + fence / site, boundary split) and V3.0.83 (concrete points + plaster / paint + masonry). Missing families (T-771) after V3.0.82.
+- Freelancer differences now worked as rows: beams +19.9 % (T-777), other concrete about +40 m3 (T-778), blockwork -22.2 % and plaster +5.8 % (T-779), roof membrane -10 % / finish -12.7 % (T-780).
+- GENERALISE (18-22 Nov) and SECOND VILLA (23-27 Nov) unchanged; the release switch is the owner's.
+
 ## Status (Lead, 2026-11-13 12:30; OWNER DECISION 2026-11-13 12:00 delivery reset + paint rule 2026-11-12 + rebar parked 2026-11-11 in force)
 
 - Candidate of record V3.0.77 b8524d5c / master 1.78.0 (NOT RELEASED), unchanged. Since 08:25 MERGED: T-756 (e121e0b4, research). READY: T-738 r2 (Gate B), T-755 r2 (Gate A).

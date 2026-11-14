@@ -1,5 +1,19 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-14 00:20 UTC
+Drive readable; no new files or photos since 12 Nov. Candidate of record V3.0.79 (not released); V2.9 + route G untouched. V3.0.81 (concrete / formwork / main fill) with the Checker now (one-test fix, content already verified).
+- Lines with no figure (non-rebar): 691 in V3.0.79 -> 295 in V3.0.81; merged fix rows waiting to be wired: earthworks, waterproofing, fence / site, boundary split (V3.0.82), concrete points, plaster / paint, masonry (V3.0.83). Still unfilled: stair finishes, openings / ceilings / domes, roof annex, missing families.
+- Concrete (m3): 114 ranged lines -> points: 405.60 + 1.20 SAFETY vs freelancer 352.4 (+15.1 %, UNRESOLVED). Beams 79.24 vs 66.09 (+19.9 %); the other elements about +40 (blinding the other way, RULE_DIFFERENCE). Two cause-split tasks.
+- Masonry (m2): block 467.8 -> 981.4 (blank 91 -> 0) vs freelancer 1,260.7 (-22.2 %): RULE_DIFFERENCE (full opening deduction, Q-73) + residual UNRESOLVED; black units 2,571 -> 7,226 pcs.
+- Plaster (m2, ex wet render): 1,236.8 vs 1,169.1 (+5.8 %, UNRESOLVED; he 3.6 m flat): queued with masonry.
+- Fence (m2): block 95.44 vs 74.40: +24.18 printed height 2.65 vs his 2.00 ENGINE_RIGHT, +4.77 RULE_DIFFERENCE, -3.18 columns UNRESOLVED, residual 0. Boundary excavation 47.09 -> 46.32 m3 (fence 44.07 / under-building 44.37 / sea gap 3.50 m).
+- Roof (m2): membrane 255.4 vs 285.0 (-10 %: annex roof about 54.9 without a line), finish 248.8 vs 285 (-12.7 %): new row.
+- Exterior render / paint 1,008.6 .. 1,085.6 vs 1,469.97 (-26 .. -31 %, RULE_DIFFERENCE), unchanged.
+- Decisions: compare-sheet row closed as done by your main chat (Compare sheet + 13 Nov table); new rows beams first, then other concrete, roof (worker 1), blockwork / plaster (worker 2); wiring order V3.0.81 -> .82 -> .83.
+- Team: all runs since 20:20 closed with a final line except the Checker run started 23:51 (still running: merged boundary + masonry, now on V3.0.81); selfcheck PASS (codemap, t061, freeze 0); queue check 19 actionable, 0 flagged, 0 stall.
+OWNER PACKAGE: none new (designer list, stair skirting form, 2F top roof and the release switch remain with you).
+NEEDS FIXING: the formwork step of docs/agents/boq/fill_from_index.py (whole-member ratio on each partial line) is still unchanged since 13 Nov 14:18; fix it before any rebuild on a newer index.
+
 ## LEAD REPORT 2026-11-13 20:20 UTC
 Drive readable; no new files or photos since 12 Nov. Candidate of record V3.0.79 (exterior render + paint, master 1.80.0; not released); V2.9 + route G untouched. Package V3.0.81 with the Checker now.
 - Lines with no figure (non-rebar): 691 in V3.0.79 -> 295 in V3.0.81 (READY); the merged fix rows for earthworks (18), waterproofing (50) and fence / site (37) go in the next round.
@@ -28,17 +42,3 @@ Drive readable; no new files or photos since 12 Nov. Candidate V3.0.78 (not rele
 OWNER PACKAGE: none new (designer list, stair skirting form, 2F top roof and the release switch remain with you).
 NEEDS FIXING: if the Checker confirms the formwork double count, the formwork step of docs/agents/boq/fill_from_index.py needs your fix before any rebuild on a newer index.
 
-## LEAD REPORT 2026-11-13 12:30 UTC
-
-Drive read OK (no file created or modified in the private project folders since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.77 / master 1.78.0 unchanged (NOT RELEASED; released V2.9 + route G untouched). Your delivery reset of 12:00 is applied on the board.
-- EXTERIOR RENDER / PAINT (m2, your gap no. 1, 0 in the candidate today): face ledger merged 10:00 (research, 2 of 126 faces re-measured by hand by the Checker): render = paint face by face 1,009.11 .. 1,087.62 m2, 6 first-floor slab-edge faces held; corners 176.94 .. 178.14 lm. Freelancer 1,469.97 m2 (-31 .. -26 %) stays a rule difference. It goes into the candidate in the next package (Worker 2, started now).
-- TILES + STAIR FINISHES (m2 / lm): tooling fix handed in 09:46; quantities already agreed by the Checker (stair-core wall tile 18.44 .. 44.77 m2, risers 13.09 .. 13.74 m2); waiting 2.7 h for the Checker (see team health).
-- CONCRETE (m3): released 291.48 unchanged. Your 0.1 m3 rule applies to 72 of the 194 held lines (range narrower than 0.1 m3): about +19.69 m3 would be released at their measured low bounds, 3.83 m3 of ignored ranges logged, safety allowance max(1.0, 3.83) = 3.83 m3. New task for Worker 1; not in the candidate yet. The other 122 held lines still wait for designer dimensions.
-- ROOF LAYERS: insulation and protection are printed nowhere; screed at least 10.63 m3. They need your company default values (approved in principle 13 Nov); no agent invents one.
-- Designer list correction handed in (38 lines re-filed to their live cause; no quantity moves); you send the list, the agents do not.
-- Waiting to go in: waterproofing (Worker 3, built in parallel now), earthworks after it. Rebar parked.
-- Team health: the Checker's 09:52 run merged the face ledger but wrote no final line (INCOMPLETE), and Worker 1's 09:19 run also has no final line (its work was taken up at 11:21); W2 10:40 and W3 11:00 were idle because the shared candidate takes one package at a time. Fix: two packages are now built side by side on the tiles package, with reserved version numbers, still checked one at a time. Self-check PASS 3/3.
-
-OWNER PACKAGE: none (no item meets section 2.7). Pending from you already, no new question: the company default values (roof insulation / protection first).
-
-NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).

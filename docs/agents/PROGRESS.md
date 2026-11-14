@@ -1,5 +1,26 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
+Last update: 2026-11-14 00:20 UTC (Lead). Previous version: 2026-11-13 20:20 UTC. Released default V2.9 + route G
+untouched. Candidate of record still V3.0.79; the package with the concrete, formwork and main-fill figures (V3.0.81)
+is with the checker now. Counted your way: lines with no figure, and each trade against the freelancer.
+
+Since 20:20 (newest first):
+- Checked and merged as fix rows (not in the candidate yet): concrete ranges turned into single figures, plaster /
+  paint corrected, masonry blanks filled, boundary-wall foundation split by run type.
+- Concrete: 405.60 m3 + 1.20 m3 safety line vs freelancer 352.4 m3 (+15.1 %). Beams 79.24 vs 66.09 m3 (+19.9 %);
+  the other elements together about +40 m3 (blinding runs the other way: he blinds the whole plot). Both now split
+  element by element in two tasks.
+- Blockwork: 467.8 -> 981.4 m2 (every wall group has a figure) vs freelancer 1,260.7 m2 (-22.2 %): part is the
+  rule difference (we deduct every opening), the rest not explained yet: task queued.
+- Plaster (without wet-room render): 1,236.8 vs 1,169.1 m2 (+5.8 %): queued with blockwork (he uses 3.6 m flat).
+- Fence block 95.44 vs 74.40 m2: fully explained: the drawing prints 2.65 m high, he used 2.00 m (we are right on
+  that part); boundary excavation 47.09 -> 46.32 m3 after the run split.
+- Roof: the annex roof (about 54.9 m2) has no membrane line yet; membrane -10 %, finish -12.7 %: task queued.
+- Lines with no figure (not rebar): 691 in the candidate today, 295 when V3.0.81 merges; the next two packages
+  carry the earthworks / waterproofing / fence and the concrete / plaster / masonry fixes.
+
+Previous section (2026-11-13 20:20):
+
 Last update: 2026-11-13 20:20 UTC (Lead). Previous version: 2026-11-13 08:25 UTC. Released default V2.9 + route G
 untouched. Candidate now V3.0.79 (exterior render / paint in); V3.0.81 with the main fill, formwork and concrete figures
 is with the checker. Progress is now counted your way: lines with no figure, and each trade against the freelancer.

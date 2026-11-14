@@ -1,3 +1,18 @@
+## LEAD REPORT 2026-11-13 12:30 UTC
+
+Drive read OK (no file created or modified in the private project folders since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.77 / master 1.78.0 unchanged (NOT RELEASED; released V2.9 + route G untouched). Your delivery reset of 12:00 is applied on the board.
+- EXTERIOR RENDER / PAINT (m2, your gap no. 1, 0 in the candidate today): face ledger merged 10:00 (research, 2 of 126 faces re-measured by hand by the Checker): render = paint face by face 1,009.11 .. 1,087.62 m2, 6 first-floor slab-edge faces held; corners 176.94 .. 178.14 lm. Freelancer 1,469.97 m2 (-31 .. -26 %) stays a rule difference. It goes into the candidate in the next package (Worker 2, started now).
+- TILES + STAIR FINISHES (m2 / lm): tooling fix handed in 09:46; quantities already agreed by the Checker (stair-core wall tile 18.44 .. 44.77 m2, risers 13.09 .. 13.74 m2); waiting 2.7 h for the Checker (see team health).
+- CONCRETE (m3): released 291.48 unchanged. Your 0.1 m3 rule applies to 72 of the 194 held lines (range narrower than 0.1 m3): about +19.69 m3 would be released at their measured low bounds, 3.83 m3 of ignored ranges logged, safety allowance max(1.0, 3.83) = 3.83 m3. New task for Worker 1; not in the candidate yet. The other 122 held lines still wait for designer dimensions.
+- ROOF LAYERS: insulation and protection are printed nowhere; screed at least 10.63 m3. They need your company default values (approved in principle 13 Nov); no agent invents one.
+- Designer list correction handed in (38 lines re-filed to their live cause; no quantity moves); you send the list, the agents do not.
+- Waiting to go in: waterproofing (Worker 3, built in parallel now), earthworks after it. Rebar parked.
+- Team health: the Checker's 09:52 run merged the face ledger but wrote no final line (INCOMPLETE), and Worker 1's 09:19 run also has no final line (its work was taken up at 11:21); W2 10:40 and W3 11:00 were idle because the shared candidate takes one package at a time. Fix: two packages are now built side by side on the tiles package, with reserved version numbers, still checked one at a time. Self-check PASS 3/3.
+
+OWNER PACKAGE: none (no item meets section 2.7). Pending from you already, no new question: the company default values (roof insulation / protection first).
+
+NEEDS FIXING (owner only): none new. Approved scheduled-task edits remain impossible under the repository settings (unchanged).
+
 ## LEAD REPORT 2026-11-13 08:25 UTC
 
 Drive read OK (no file created or modified in the private project folders since 12:00 UTC 12 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.77 / master 1.78.0 unchanged (NOT RELEASED; released V2.9 + route G untouched). Since 04:15: 1 merged (exterior paint edges, research), 2 sent back with exact faults; no quantity moved in the candidate.
