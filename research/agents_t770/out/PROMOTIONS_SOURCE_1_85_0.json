@@ -1,0 +1,10 @@
+[
+ {
+  "task": "T-770e",
+  "merge_commit": "c5b79f104355e3ce4758a54ad720132ebc49eedf",
+  "verdict_time": "2026-11-14 11:49 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED r8 (Verifier 2026-11-14T11:49Z per `date -u`, run session_01E6cPncRPFyiPS2KixFTtu8, lock checker; GATE B PASS; merge c5b79f10 on 21646f39 published by engine push, ls-remote c5b79f10 confirmed; clean merge, no conflict; freeze 0, codemap stale none; in-merge promotion of 1.85.0 (T-770e)",
+  "board_commit": "581b8e5e"
+ }
+]

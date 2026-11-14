@@ -1,0 +1,298 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.85.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.84",
+  "ARCH_TAKEOFF_V3.0.85"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.84": {
+   "lines": 5304,
+   "lines_sha256": "05a3126c11ff65dced8bd8d3b831914aea7bf2a273b0d0f7bda8b22ee5fd64f3"
+  },
+  "ARCH_TAKEOFF_V3.0.85": {
+   "lines": 5334,
+   "lines_sha256": "f27a447c25ba9a87dddb04aff1eea50a8d2e75205b9f1f1b34a919b4d974e80a",
+   "previous": "ARCH_TAKEOFF_V3.0.84",
+   "item_codes": {
+    "ARCH.FACADE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "ARCH.FACADE_RUN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 3,
+     "record": 0
+    },
+    "FIN.EXT.FINISH": {
+     "added": 0,
+     "removed": 0,
+     "changed": 18,
+     "record": 0
+    },
+    "FIN.EXT.PAINT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 18,
+     "record": 0
+    },
+    "FIN.EXT.PAINT.EDGE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 38,
+     "record": 0
+    },
+    "FIN.ROOF.FINISH": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.ROOF.INSULATION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.ROOF.PROTECTION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.ROOF.SCREED": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.SPATTER_DASH": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.WP.DOORWAY": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.WP.DOORWAY_TRANSITION": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.WP.DOORWAY_TRANSITION_NR": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.WP.MEMBRANE_ROLLS": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "FIN.WP.PENETRATION": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.WP.ROOF": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "FIN.WP.ROOF_UPTURN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "FIN.WP.SUNKEN_RECESS": {
+     "added": 6,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.WP.TERMINATION": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.WP.WALL_UPTURN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 6,
+     "record": 0
+    },
+    "FIN.WP.WALL_UPTURN_LM": {
+     "added": 18,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B13-01": {
+     "FIN.ROOF.FINISH": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     },
+     "FIN.ROOF.INSULATION": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     },
+     "FIN.ROOF.PROTECTION": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     },
+     "FIN.ROOF.SCREED": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B4-04": {
+     "FIN.EXT.FINISH": {
+      "added": 0,
+      "removed": 0,
+      "changed": 18,
+      "record": 0
+     }
+    },
+    "B4-05": {
+     "FIN.SPATTER_DASH": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B4-07": {
+     "ARCH.FACADE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     },
+     "ARCH.FACADE_RUN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 3,
+      "record": 0
+     },
+     "FIN.EXT.PAINT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 18,
+      "record": 0
+     },
+     "FIN.EXT.PAINT.EDGE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 38,
+      "record": 0
+     }
+    },
+    "B8-01": {
+     "FIN.WP.PENETRATION": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "FIN.WP.SUNKEN_RECESS": {
+      "added": 6,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B8-02": {
+     "FIN.WP.DOORWAY": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "FIN.WP.DOORWAY_TRANSITION": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "FIN.WP.DOORWAY_TRANSITION_NR": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B8-03": {
+     "FIN.WP.TERMINATION": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "FIN.WP.WALL_UPTURN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 6,
+      "record": 0
+     },
+     "FIN.WP.WALL_UPTURN_LM": {
+      "added": 18,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B8-05": {
+     "FIN.WP.MEMBRANE_ROLLS": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B8-06": {
+     "FIN.WP.ROOF": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     },
+     "FIN.WP.ROOF_UPTURN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 136,
+   "record_only": 0
+  }
+ }
+}
