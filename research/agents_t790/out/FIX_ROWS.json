@@ -1,0 +1,558 @@
+{
+ "schema": "URBAN_FIX_ROWS_V1",
+ "task": "T-790",
+ "rule": "R-T790-1 .. 3 (t790_rules.py, every villa)",
+ "base": "ARCH_TAKEOFF_V3.0.85 (LINE_INDEX_V3_0_85.json)",
+ "summary": {
+  "blank_before": 26,
+  "blank_after": 0,
+  "panel_m2_total_after": 962.959,
+  "MAS.BLOCK_m2_same_groups": 962.959,
+  "MAS.BLOCK_m2_all": 981.348,
+  "below_ground_no_view_line_m2": 18.389,
+  "blockwork_subtotal_change_m2": 0.0,
+  "mesh": {
+   "certain_T355_T362_m": 856.1372,
+   "held_T355_T362_m": 291.8188,
+   "held_built_by_defaults_m": 263.3046,
+   "certain_dropped_GF_W26_m": 2.65,
+   "zero_level_walls_m": {
+    "GF-W00": 49.5,
+    "GF-W02": 9.9,
+    "GF-W03": 15.84,
+    "GF-W08": 19.99,
+    "GF-W09": 9.6,
+    "GF-W13": 3.7333,
+    "GF-W14": 19.2,
+    "GF-W23": 7.8,
+    "GF-W24": 24.6,
+    "GF-W25": 27.0,
+    "GF-W27": 6.6,
+    "GF-W30": 8.275,
+    "HOUSE_BELOW_NG:MAIN_S": 16.27,
+    "HOUSE_BELOW_NG:ANNEX_S": 10.0,
+    "GF-W04": 16.8,
+    "GF-W06": 6.5,
+    "GF-W12": 2.25,
+    "GF-W17": 11.3,
+    "GF-W18": 16.6,
+    "GF-W35": 8.05,
+    "GF-W36": 2.0
+   },
+   "zero_level_walls_total_m": 291.8083,
+   "white_area_walls_m": 6.2444,
+   "point_m": 1414.84
+  },
+  "sharmat": {
+   "certain_pcs": 293,
+   "GF_W26_correction_pcs": -1,
+   "held_junctions_pcs": 287,
+   "by_wall": {
+    "GF-W00": 15,
+    "GF-W01": 6,
+    "GF-W08": 19,
+    "GF-W09": 6,
+    "GF-W13": 12,
+    "GF-W14": 24,
+    "1F-W18": 18,
+    "2F-W05": 18,
+    "GF-W04": 8,
+    "GF-W06": 8,
+    "GF-W10": 35,
+    "GF-W12": 5,
+    "GF-W16": 5,
+    "GF-W17": 12,
+    "GF-W18": 4,
+    "1F-W04": 12,
+    "1F-W05": 12,
+    "1F-W10": 32,
+    "2F-W02": 20,
+    "2F-W07": 12,
+    "GF-W36": 4
+   },
+   "point_pcs": 579
+  }
+ },
+ "rows": [
+  {
+   "line_id": "L-9cfe344301b76af03843",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "1F-WALLS:walls t=0.15",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 64.8492
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-c22e309433e7b671cf2d 64.8492 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-a471bd68df73e822c28a",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "1F-WALLS:walls t=0.20",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 18.121
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-5ffa7157a2fe483dd008 18.121 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-0d84cdb4f25220863c80",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "2F-WALLS:walls t=0.15",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.765
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-246f3c09de4c6b90efe5 1.765 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-241b48d23536eceb8944",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.47
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-e1e06ec149b44d4f6f8a 9.47 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-60aa0250729fca805027",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 25.895
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-9056ebed77701b50abfc 25.895 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-14d6c60fe753e2bae0b4",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "2F-WALLS:walls t=0.20",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 28.3687
+   },
+   "label": "ESTIMATE",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-afe984a62285e133ec2f 28.3687 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-41d18d2a8210ea353bbf",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.85
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-a6eedf5e4adec6d07618 3.85 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-18ebc5b6cd1ce1f72d2b",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 16.225
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-bbb82de298fecbafa11d 16.225 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-65d67489ebefd7cd74cc",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 21.945
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-76a4d8e50423fb02b914 21.945 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-9501404f8bae7a21d588",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 21.7875
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-e90c9dd5ca08ffb64728 21.7875 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-0531a33e040440c62453",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "GF-WALLS:walls t=0.15",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 101.0064
+   },
+   "label": "ESTIMATE",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-0d9b9e89bb6455da475d 101.0064 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-63fa78622c74a1c30a1e",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "GF-WALLS:walls t=0.20",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 181.8837
+   },
+   "label": "ESTIMATE",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-4165954ce4871eda30cc 181.8837 m2 (T-765, wired V3.0.83) (R-T790-1)"
+  },
+  {
+   "line_id": "L-8eb5f0bb66e3985f9c7c",
+   "item_code": "ARCH.WALL_PANEL",
+   "unit": "m2",
+   "element_id": "GF-WALLS:walls t=0.40",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "label": "NOT_APPLICABLE",
+   "role": "REFERENCE",
+   "basis": "view of L-ff06449b7f61f19c418d MAS.BLOCK EXCLUDED (T-765): element GF-H01, a 0.60 m long 0.40 band under beam B20 at the GF reception glazed line (T-103 / T-143 / T-228: material, base and top not drawn, NO_PIECE). It is NOT the Q-28 A plot-boundary band (0.20 x 0.60 B.W beam on the plot line, structure B10, billed by T-776). Owner trade: A masonry if ever drawn as block; 0 blockwork today, so its panel / volume views are NOT_APPLICABLE, never a figure"
+  },
+  {
+   "line_id": "L-398e95f4d0c65a04525b",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "1F-WALLS:walls t=0.15",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 9.72738
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-c22e309433e7b671cf2d 64.8492 m2 (T-765, wired V3.0.83) x t 0.15 (R-T790-1)"
+  },
+  {
+   "line_id": "L-9a560362d91a6e60fd19",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "1F-WALLS:walls t=0.20",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.6242
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-5ffa7157a2fe483dd008 18.121 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)"
+  },
+  {
+   "line_id": "L-4f133d45c6e67ddbf631",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "2F-WALLS:walls t=0.15",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.26475
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-246f3c09de4c6b90efe5 1.765 m2 (T-765, wired V3.0.83) x t 0.15 (R-T790-1)"
+  },
+  {
+   "line_id": "L-cd564967192b34b7d5f5",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1.4205
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-e1e06ec149b44d4f6f8a 9.47 m2 (T-765, wired V3.0.83) x t 0.15 (R-T790-1)"
+  },
+  {
+   "line_id": "L-365002c9f6d57d8c7eb4",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.88425
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-9056ebed77701b50abfc 25.895 m2 (T-765, wired V3.0.83) x t 0.15 (R-T790-1)"
+  },
+  {
+   "line_id": "L-0e002eb073c9460e90db",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "2F-WALLS:walls t=0.20",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 5.67374
+   },
+   "label": "ESTIMATE",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-afe984a62285e133ec2f 28.3687 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)"
+  },
+  {
+   "line_id": "L-1189005753f4561d1517",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.77
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-a6eedf5e4adec6d07618 3.85 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)"
+  },
+  {
+   "line_id": "L-d3e5b3c7798bcb531a16",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 3.245
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-bbb82de298fecbafa11d 16.225 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)"
+  },
+  {
+   "line_id": "L-081ecda837ea16af64ac",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.389
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-76a4d8e50423fb02b914 21.945 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)"
+  },
+  {
+   "line_id": "L-99937b4e582e6225e147",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 4.3575
+   },
+   "label": "DEFAULT",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-e90c9dd5ca08ffb64728 21.7875 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)"
+  },
+  {
+   "line_id": "L-ed4cf41543c66921a592",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "GF-WALLS:walls t=0.15",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 15.15096
+   },
+   "label": "ESTIMATE",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-0d9b9e89bb6455da475d 101.0064 m2 (T-765, wired V3.0.83) x t 0.15 (R-T790-1)"
+  },
+  {
+   "line_id": "L-4423d85b72b4b4c3e87e",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "GF-WALLS:walls t=0.20",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 36.37674
+   },
+   "label": "ESTIMATE",
+   "role": "REFERENCE (not in the Blockwork subtotal: geometry view, block m2 once)",
+   "basis": "= MAS.BLOCK L-4165954ce4871eda30cc 181.8837 m2 (T-765, wired V3.0.83) x t 0.2 (R-T790-1)"
+  },
+  {
+   "line_id": "L-391cc0e96fb7830363e4",
+   "item_code": "ARCH.WALL_VOLUME",
+   "unit": "m3",
+   "element_id": "GF-WALLS:walls t=0.40",
+   "before": {
+    "class": "HELD",
+    "net": null
+   },
+   "after": {
+    "class": "EXCLUDED",
+    "net": null,
+    "reason": "NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "label": "NOT_APPLICABLE",
+   "role": "REFERENCE",
+   "basis": "view of L-ff06449b7f61f19c418d MAS.BLOCK EXCLUDED (T-765): element GF-H01, a 0.60 m long 0.40 band under beam B20 at the GF reception glazed line (T-103 / T-143 / T-228: material, base and top not drawn, NO_PIECE). It is NOT the Q-28 A plot-boundary band (0.20 x 0.60 B.W beam on the plot line, structure B10, billed by T-776). Owner trade: A masonry if ever drawn as block; 0 blockwork today, so its panel / volume views are NOT_APPLICABLE, never a figure"
+  },
+  {
+   "line_id": "L-e765c5938bc82e046c3f",
+   "item_code": "MAS.MESH_STRIP",
+   "unit": "lm",
+   "element_id": "T-771:NEW:MASONRY:MESH_STRIP",
+   "before": {
+    "class": "HELD",
+    "low": 856.14,
+    "high": 1147.96
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 1414.84
+   },
+   "label": "ESTIMATE",
+   "role": "OPTIONAL B9-03",
+   "basis": "Q-77 strip on every 3rd course (R-T790-2/3): certain 856.1372 (T-355 black restated by T-362 + white family A) - GF-W26 level above its T-765 top 2.65 + held segments built by the T-765 / company default tops, heads 2.20 / 2.10 and lintels 263.3046 (of 291.8188) + 21 walls with no level placed (annex, lift, below-ground; T-765 heights) 291.8083 + 3 established white areas / 0.753 6.2444; white family A (62.5 x 25) as the white units line (T-765, ESTIMATE); OPTIONAL item, never inside the block m2"
+  },
+  {
+   "line_id": "L-82df9974b923558a31b4",
+   "item_code": "MAS.SHARMAT",
+   "unit": "pcs",
+   "element_id": "T-771:NEW:MASONRY:SHARMAT",
+   "before": {
+    "class": "HELD",
+    "low": 293.0,
+    "high": 601.42
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 579
+   },
+   "label": "ESTIMATE",
+   "role": "OPTIONAL B9-03",
+   "basis": "Q-77 one tie per 3rd course at every wall-to-column junction: 293 at the resolved junctions (T-355 black 182 + T-362 white A 111) -1 GF-W26 (top 3.50) + the 60 held junctions at the T-765 / company default tops 287 (levels beside the column); OPTIONAL item"
+  }
+ ]
+}
