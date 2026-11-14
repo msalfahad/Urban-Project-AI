@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T15:19Z | Worker 1 | STARTED | run session_01E6cPnc5tUwXucNChTU2WUm | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14T15:08Z | Worker 3 | SUCCESS | T-794 READY r1 @50559f82 | roof upturn 232.97 -> 228.99 lm vs freelancer 194 (+20.1 -> +18.0 %): +9.70 door D115 1.00 lm and ledge glazing 2.977 lm moved to transition / termination lines; gap split exactly: dome rings +41.64 RULE_DIFF (Q-24), pool court +6.25 ENGINE_RIGHT, door -1.00, his typed lump residual -11.89 UNRESOLVED | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-14T15:00Z | Worker 3 | STARTED | run session_01E6cPndoRLYRe8FpgmSGBAo | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14T14:50Z | Worker 2 | SUCCESS | T-788 READY r1 (agents/task-T-788 @ 49a7b91d) | Ceiling cornice 302.88 -> 430.44 lm ESTIMATE vs freelancer 427.46 (was -124.58 lm / -29.1 %, now +2.98 lm / +0.70 %): T-147/T-771 left every open zone out; wall runs added GF open room 58.59, 1F living 39.44, wash lobby 12.56, pantry 10.48, 2F lobby + shaft top +6.50 (FREELANCER_RIGHT); residual named per room; fix row unwired for T-770 | self-check codemap PASS, pytest t061 PASS, freeze PASS; tests/t788 9 pass, freeze 0; problem: none
