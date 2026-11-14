@@ -2,6 +2,10 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
+## SCOREBOARD NOTE 2026-11-14 12:55 UTC (Verifier, run session_01E6cPnf4YTSFZNan6bMS8u6; after T-790 MERGED 28d6336e, fix rows UNWIRED; candidate stays ARCH_TAKEOFF_V3.0.85 / master 1.85.0, NOT RELEASED; released default unchanged)
+
+Number (a) unchanged on the candidate (44 blank, 9 ranged); when T-770 wires T-790: Blockwork 26 blank -> 0 (24 REFERENCE panel / volume views = MAS.BLOCK of the same group, 962.96 m2, Blockwork subtotal 981.35 m2 unchanged; GF t=0.40 NOT_APPLICABLE) and 2 ranged -> points (mesh strip 1,414.84 lm, sharmat 579 pcs, ESTIMATE OPTIONAL, freelancer has no line: RULE_DIFFERENCE, not compared). Number (b): tools/alsenan_scoreboard.py NOT run (no normalised V3.0.85 row set, freelancer workbooks not downloaded this run; Drive readable: arch DXF read). Verified share unchanged; T-180 slot not worked this run.
+
 ## SCOREBOARD NOTE 2026-11-14 11:53 UTC per `date -u` (Verifier, run session_01E6cPncRPFyiPS2KixFTtu8; after T-770 r8 MERGED c5b79f10 + promotion 65813f8d = candidate ARCH_TAKEOFF_V3.0.85 / master 1.85.0, NOT RELEASED; released default unchanged)
 
 Number (a), lines with no figure (rebar excepted), LINE_INDEX_V3_0_84 -> _V3_0_85 (= the Verifier's own Drive chain run, V3_0_85 f27a447c, 0 disagreements): package summary 56 -> 44 blank, 78 -> 9 ranged. Per trade by blank_lines.py with MAIN FILL overlay (blank / held): External render 7/49 -> 0/0 (row gone), Other 1/20 -> 0/3, Blockwork 26/0, Stairs 14/0, Openings 0/2, Tiles 0/1, Earthworks 0/1 unchanged (BLANK_LINES_V3.0.85.md).
