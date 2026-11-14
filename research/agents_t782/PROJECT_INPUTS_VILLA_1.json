@@ -1,0 +1,39 @@
+{
+ "schema": "PROJECT_INPUTS_V1",
+ "project_id": "VILLA-1 (training villa)",
+ "filled_by": "worker 3, T-782, 2026-11-14, ONLY from the AGENT_BRIEF owner-confirmed table (Heights, Company defaults, Wet-room wall tiles) and R-T763-1 for the annex; no drawing re-read this run",
+ "storey_defaults": {
+  "slab_thickness": {"value": 0.16, "source": "OWNER-DEFAULT", "ref": "AGENT_BRIEF Heights (Q-72, owner 2026-11-02 / 2026-11-13): plaster = storey - slab, 4.50 - 4.34 = 4.20 - 4.04 = 0.16; R-T763-1 'slab 0.16'"},
+  "beam_depth_default": {"value": 0.60, "source": "OWNER-DEFAULT", "ref": "AGENT_BRIEF Company defaults (owner 2026-11-13): beam depth same mark / adjacent span / 0.60"},
+  "ceiling_drop": {"value": 0.90, "source": "OWNER-DEFAULT", "ref": "AGENT_BRIEF Company defaults (owner 2026-11-13): false ceiling = clear height - 0.90"},
+  "wet_ceiling_height": {"value": 2.70, "source": "OWNER-DEFAULT", "ref": "AGENT_BRIEF Company defaults (owner 2026-11-13): wet rooms / kitchen 2.70"},
+  "wet_tile_height": {"value": 3.00, "source": "OWNER-DEFAULT", "ref": "AGENT_BRIEF Wet-room wall tiles (owner 2026-11-13): 3.00 m from F.F.L."},
+  "plinth_height": {"value": null, "source": "HELD", "ref": "not in the owner-confirmed table; the plinth below the lowest F.F.L. is defect L-N10-02"}
+ },
+ "storeys": [
+  {"id": "GF", "name": "ground floor",
+   "ffl": {"value": 1.00, "source": "PRINTED", "ref": "AGENT_BRIEF Heights: printed FFLs govern (architectural section B-B level chain), GF +1.00"},
+   "next_ffl": {"value": 5.50, "source": "PRINTED", "ref": "printed FFL 1F +5.50 (storey 4.50)"}},
+  {"id": "1F", "name": "first floor",
+   "ffl": {"value": 5.50, "source": "PRINTED", "ref": "printed FFL 1F +5.50"},
+   "next_ffl": {"value": 9.70, "source": "PRINTED", "ref": "printed FFL 2F +9.70 (storey 4.20)"}},
+  {"id": "2F", "name": "second floor",
+   "ffl": {"value": 9.70, "source": "PRINTED", "ref": "printed FFL 2F +9.70"},
+   "next_ffl": {"value": 13.90, "source": "PRINTED", "ref": "printed roof level +13.90 (storey 4.20)"}},
+  {"id": "ANNEX", "name": "ground-floor annex (split level)", "parent": "GF",
+   "ffl": {"value": 0.30, "source": "PRINTED", "ref": "annex rooms marked +0.30 on the GF plan (Q-54)"},
+   "next_ffl": {"value": 4.30, "source": "OWNER-DEFAULT", "ref": "R-T763-1 / owner 2026-11-13 FILL 2 (annex storey 4.00, plaster 3.84): +4.30 taken as the slab-top datum; Q-54 datum stays with the designer (a printed roof slab level replaces it)"}}
+ ],
+ "scope": {
+  "foundation_wp": {"value": null, "source": "HELD", "ref": "not in the owner-confirmed table (the candidate carries WP.FOUNDATION lines from T-219 / T-270); owner to set"},
+  "fence": {"value": null, "source": "HELD", "ref": "not in the owner-confirmed table (the candidate carries fence lines from T-769 / T-776); owner to set"}
+ },
+ "grades": {
+  "structural_concrete": {"value": null, "source": "HELD", "ref": "not in the owner-confirmed table"}
+ },
+ "wastage_pct": {
+  "blocks": {"value": null, "source": "HELD", "ref": "owner: waste separate (Q-75 / Q-80); no figure confirmed"},
+  "tiles": {"value": null, "source": "HELD", "ref": "owner: waste separate (Q-45); no figure confirmed"}
+ },
+ "notes": ["Every HELD item stays HELD (never 0) until the owner or the designer fills it; a DESIGNER answer replaces an OWNER-DEFAULT value."]
+}
