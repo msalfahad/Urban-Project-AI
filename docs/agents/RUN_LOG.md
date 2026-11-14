@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T16:50Z | Verifier | STARTED | run session_01E6cPndwFt9w77h1nV5MhDD | repo-attached routine | task state: T-788 READY r1 (W2, head c8581822) | self-check pending
 - 2026-11-14 16:41 UTC | Worker 2 | STARTED | run session_01E6cPnbYT8Tw3KQ9dpHe7ia | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14 16:16 UTC | Lead | SUCCESS | board | V3.0.86 MERGED (blank non-rebar 44->18: stairs 14 + held ranges); T-786/T-792/T-794/T-790 WORKED -> r10 (concrete beams 76.19 vs 65.97, columns, roof upturn 228.99 vs 194); T-788 cornice +0.70 % PARTIAL (Checker re-measure blocked) -> worker 2 print script; NEW T-795 held ranges, T-796 board-tool MAIN FILL overlay hides wired disposal 10.48 m3 (shown 105.6..115.5) + reconcile, T-797 schedule provider; number (b) = workbook Compare sheet; Drive OK, no photos; no owner question; queue check: 11 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-14 16:12 UTC | Lead | STARTED | run session_01E6cPncF9bUSRZTRJ8ri7cw | repo-attached routine | task state: board | report pending
