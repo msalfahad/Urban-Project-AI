@@ -2,6 +2,11 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
+## SCOREBOARD NOTE 2026-11-14 07:05 UTC (Verifier, run session_01E6cPnedYoRV6bo8YUZJtto; after T-770 r6 MERGED 35963c4d + promotion eab65f0e = candidate ARCH_TAKEOFF_V3.0.83 / master 1.83.0, NOT RELEASED; T-780 MERGED 09f8f0b2, fix rows unwired, no candidate line moved)
+
+Number (a), lines with no figure (rebar excepted), LINE_INDEX_V3_0_82 -> _V3_0_83 (= the Verifier's own Drive chain run, 0 disagreements): package summary 211 -> 124 blank, 309 -> 116 ranged. Per trade by blank_lines.py (its own grouping; blank / held): Concrete 0/114 -> 0/0, Blockwork 102/15 -> 26/0, Plaster 8/33 -> 0/0, Paint 3/31 -> 0/0; External render 7/49, Ceilings 7/0, Stairs 55/28, Openings 20/15, Tiles 0/1, Earthworks 0/1, Other 1/17 unchanged.
+Number (b): tools/alsenan_scoreboard.py NOT run (no normalised V3.0.83 row set, freelancer workbooks not downloaded this run). Roof (T-780 rows, merged, not yet wired): finish 238.48 / membrane 244.03 vs his 285 m2 (-16.3 % / -14.4 %), closed to dome footprints 45.99 RULE_DIFFERENCE, pool court -5.55 ENGINE_RIGHT, residual 0.52 (0.18 %); dome extrados ~83.2 m2 has no line (F-V780-1). Workbook Urban_trial_BOQ_V3.0.83 builds (build_boq.py on master 1.83.0 + LINE_INDEX_V3_0_83, 128 rows); *.xlsx git-ignored on agents/control, not committed.
+
 ## SCOREBOARD NOTE 2026-11-14 04:58 UTC (Verifier, run session_01E6cPnejfQQS2dKkBVudU8K; after T-779 MERGED 92b00ef0, research only, no quantity change; candidate stays ARCH_TAKEOFF_V3.0.82, NOT RELEASED)
 
 Number (a) unchanged (211 lines without a figure). Number (b), masonry and internal plaster, freelancer cells re-read by the Checker this run from the two Drive workbooks (masonry, internal plaster), ours from the merged T-765 / T-763 r2 rows; tools/alsenan_scoreboard.py NOT run (no normalised V3.0.82 row set built this run):
