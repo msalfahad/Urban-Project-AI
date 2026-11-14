@@ -2,6 +2,10 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
+## SCOREBOARD NOTE 2026-11-14 14:10 UTC (Verifier, run session_01E6cPnbu6c4ZFiLNAhMa4Jx; after T-786 MERGED a2001238, fix rows UNWIRED; candidate stays ARCH_TAKEOFF_V3.0.85 / master 1.85.0, NOT RELEASED; released default unchanged)
+
+Number (a) unchanged on the candidate (44 blank, 9 ranged). When T-770 wires T-786: STR.CONC.BEAM 79.24 -> 76.19 m3 vs freelancer 65.97 (+20.1 % -> +15.5 %; 11 roof-edge projection bands 0.60 -> 0.16 printed slab, DEFAULT D-26, own DXF re-measure of the largest band 0.2400 m3 AGREE); r10 should add F-V786-1 (two column-front strips in the same band, -0.141 m3) -> 76.05 m3 (+15.3 %). Beam UNRESOLVED 7.13 -> 3.48 m3. Number (b): tools/alsenan_scoreboard.py NOT run: it needs a normalised V3.0.85 BOQ_LINES run (not committed; building it needs tools outside the wrapper's run allow-list, which admits only alsenan_scoreboard.py / alsenan_keymap.py) and the freelancer reference rows. Drive readable (ST7757 dxf.dxf decoded). Verified share unchanged; T-180 slot not worked (no CLOSABLE NOW line).
+
 ## SCOREBOARD NOTE 2026-11-14 12:55 UTC (Verifier, run session_01E6cPnf4YTSFZNan6bMS8u6; after T-790 MERGED 28d6336e, fix rows UNWIRED; candidate stays ARCH_TAKEOFF_V3.0.85 / master 1.85.0, NOT RELEASED; released default unchanged)
 
 Number (a) unchanged on the candidate (44 blank, 9 ranged); when T-770 wires T-790: Blockwork 26 blank -> 0 (24 REFERENCE panel / volume views = MAS.BLOCK of the same group, 962.96 m2, Blockwork subtotal 981.35 m2 unchanged; GF t=0.40 NOT_APPLICABLE) and 2 ranged -> points (mesh strip 1,414.84 lm, sharmat 579 pcs, ESTIMATE OPTIONAL, freelancer has no line: RULE_DIFFERENCE, not compared). Number (b): tools/alsenan_scoreboard.py NOT run (no normalised V3.0.85 row set, freelancer workbooks not downloaded this run; Drive readable: arch DXF read). Verified share unchanged; T-180 slot not worked this run.
