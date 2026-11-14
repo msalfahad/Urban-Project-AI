@@ -1,0 +1,120 @@
+{
+ "schema": "URBAN_FIX_ROWS_V1",
+ "task": "T-795",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.86",
+ "rule": "R-T795-1 .. 2 (research/agents_t795/t795_rules.py, every villa)",
+ "inputs": {
+  "index": "LINE_INDEX_V3_0_86.json",
+  "door_faces": "research/agents_t795/DOOR_FACES_T795.csv",
+  "t312": "research/agents_t312/OPENINGS_T312.csv + FACE_LEDGER_T312.csv (merged)",
+  "t781": "research/agents_t781/out/OPENING_TABLE_ALSENAN.json (merged OPENING_TABLE_V1)",
+  "drawings": "Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip (V2.13 plan read, own run)"
+ },
+ "summary": {
+  "held_ranges_before": 4,
+  "held_ranges_after": 0,
+  "door_faces": 22,
+  "bound_to_opening_table": 15,
+  "jamb_edge_lm": 115.2,
+  "jambs_lm": 96.8,
+  "heads_lm": 18.4,
+  "jamb_edge_lm_old_range": [
+   0.0,
+   73.1
+  ],
+  "old_range_high_restated": "73.1 = the 14 faces of the 12 rooms with a determinate band in T-368 (14 x 4.40 + heads 11.50); the 8 annex / level faces were HELD by band height, which the owner's 3.00 tile top now settles (door head 2.20 < 3.00)",
+  "freelancer": "B4-10 tile edges: no row in his finishes workbook (T-368: 0 rows) -> RULE_DIFFERENCE (scope)",
+  "hand_check_largest_door": "1.00 x 2.20 door / arch on one tiled face: 2 x 2.20 + 1.00 = 5.40 lm (GF-06 kitchen D-GF-05, GF-07 pantry D-GF-06, GF-02 arch A-GF-01)"
+ },
+ "rows": [
+  {
+   "line_id": "L-41b2f150f7779382b976",
+   "item_code": "FIN.WALL.TILE.EDGE",
+   "unit": "lm",
+   "element_id": "T-771:NEW:TILE_EDGE:DOOR_JAMBS",
+   "before": {
+    "class": "HELD",
+    "low": 0.0,
+    "high": 73.1,
+    "label": "ESTIMATE"
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 115.2
+   },
+   "label": "DEFAULT",
+   "basis": "R-T795-1: 22 tiled door faces (T-312 opening ledger, bound to OPENING_TABLE_V1 where the plan reader detects the door) x (2 x min(H, 3.00) + W): jambs 96.8 + heads 18.4 = 115.2 lm; W MEASURED, H 2.20 DEFAULT (Q-55 C, no door head printed); tile top 3.00 (owner 13 Nov); doors between two tiled rooms counted on both faces; rooms with a RELEASED wall-tile line 73.1, rooms whose wall-tile area is still HELD (annex / level) 42.1; arch A-GF-01 head on its 1.00 chord (crown not printed); edge form (frame cover / 45-degree / profile) = designer item",
+   "per_room_lm": {
+    "1F-02": 5.2,
+    "1F-03": 5.2,
+    "1F-07": 10.5,
+    "1F-08": 5.2,
+    "1F-09": 5.2,
+    "1F-12": 5.2,
+    "2F-02": 5.2,
+    "GF-02": 10.6,
+    "GF-03": 5.2,
+    "GF-05": 5.2,
+    "GF-06": 5.4,
+    "GF-07": 5.4,
+    "GF-10": 5.2,
+    "GF-11": 10.5,
+    "GF-12": 5.2,
+    "GF-13": 5.2,
+    "GF-14": 10.4,
+    "GF-16": 5.2
+   }
+  },
+  {
+   "line_id": "L-a788de4672b1f0d2e6c1",
+   "item_code": "FIN.FLOOR.FINISH_HELD",
+   "unit": "m2",
+   "element_id": "GF-R31F8AE:GF-ST-CN",
+   "before": {
+    "class": "HELD",
+    "low": 0.0,
+    "high": 0.23
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.23
+   },
+   "label": "DRAWING-READ",
+   "basis": "R-T795-2: stair-room strip 0.200 x 1.150 = 0.230 m2 (T-418 GF-ST-CN, room-local x 1.15 .. 1.35, y 3.85 .. 5.00) re-read on the arch DXF this run: at the cut plane nothing crosses or bounds it on layers 1 / 5 / S-COL.BON (only HIDDEN layer-2 lines 2C6 / 49C / 49D at 0.10 / 0.15 from its west edge = the winder edge / balustrade ABOVE, and the winder radials meeting at its SW corner); the D1 bottom riser 481 and the divider end 4A6 stop at y 3.85; the north wall 26E closes it at y 5.00; the '+0.30' LEVEL mark is in the same open area: floor of the +0.30 back-door lobby, finish as GF-ST-LOBBY030 (porcelain / marble choice stays HELD by finish, not by area)"
+  },
+  {
+   "line_id": "L-554a525edce9a9235bee",
+   "item_code": "ARCH.SPACE",
+   "unit": "m2",
+   "element_id": "HL:FLOOR_SCOPE:HELD_WITH:GF:GF-OP-003-NO-OPENING:band",
+   "before": {
+    "class": "HELD",
+    "low": 0.604,
+    "high": 0.604
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 0.604
+   },
+   "label": "MEASURED",
+   "basis": "R-T795-2: GF-OP-003 band: the 6.82 x 0.20 strip inside the south facade held with the garden band (T-343 cross-check P-2; V3.0.14 FLOOR_SCOPE HELD_WITH); its finish stays with that band; plan polygon area, low = high = 0.604 m2 (a range of zero width)"
+  },
+  {
+   "line_id": "L-6485382cd3b6f09c192c",
+   "item_code": "ARCH.SPACE",
+   "unit": "m2",
+   "element_id": "HL:FLOOR_SCOPE:UNDER_STAIR_HELD:GF:GF-RC99C2A-UNDER-STAIR",
+   "before": {
+    "class": "HELD",
+    "low": 6.124412,
+    "high": 6.124412
+   },
+   "after": {
+    "class": "RELEASED",
+    "net": 6.124412
+   },
+   "label": "MEASURED",
+   "basis": "R-T795-2: GF open-room floor under the flights drawn below the cut (V3.0.14 FLOOR_SCOPE UNDER_STAIR_HELD); the floor finish under it stays its own designer item; plan polygon area, low = high = 6.124412 m2 (a range of zero width)"
+  }
+ ]
+}
