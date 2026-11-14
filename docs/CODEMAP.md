@@ -18,7 +18,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 6239 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 6244 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 98 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
@@ -1771,9 +1771,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t785_wet_wp_compare/` | 1 |
 | `tests/t786_concrete_residuals/` | 1 |
 | `tests/t787_dome_extrados/` | 1 |
-| `tests/t788/` | 2 |
 | `tests/t789_parapet_masonry/` | 1 |
 | `tests/t790/` | 1 |
+| `tests/t795_door_tile_edges/` | 1 |
+| `tests/t796_overlay_precedence/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -2545,11 +2546,12 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t785/` | 4 |
 | `research/agents_t786/` | 4 |
 | `research/agents_t787/` | 4 |
-| `research/agents_t788/` | 5 |
 | `research/agents_t789/` | 4 |
 | `research/agents_t790/` | 3 |
 | `research/agents_t792/` | 3 |
 | `research/agents_t794/` | 3 |
+| `research/agents_t795/` | 5 |
+| `research/agents_t796/` | 5 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
