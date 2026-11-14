@@ -1,0 +1,155 @@
+{
+ "schema": "URBAN_FIX_ROWS_V1",
+ "task": "T-787",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.84",
+ "rule": "DOME_EXTRADOS_V1 (proposed, research/agents_t787/t787_rules.py)",
+ "inputs": {
+  "index": "LINE_INDEX_V3_0_84.json",
+  "t780": "research/agents_t780/out/FIX_ROWS.json (merged)",
+  "drawings": "Drive 'Alsenan chalet project' ST7757.pdf p.7; P7757_DXF_COMPRESSED.zip handles 23EC 23ED 23EE 2887 23A6 2C86 279F 2CF9 1F95..1FAC 25C8..25DB (dimensions only)"
+ },
+ "summary": {
+  "new_lines": 7,
+  "changed_lines": 0,
+  "domes": 3,
+  "domes_without_extrados_line_before": 3,
+  "domes_without_extrados_line_after": 0,
+  "extrados_m2_per_dome": 26.685002,
+  "extrados_m2_total": 80.055006,
+  "t780_beside_estimate_m2": 83.18,
+  "t780_beside_error": "DOME-3 rise 2.15 = elevation height above the +14.40 parapet, not the rise: 29.80 -> 26.685 m2 (-3.11)",
+  "roof_membrane_m2": {
+   "before_t787": 244.031083,
+   "after": 324.086089,
+   "freelancer": 285.0,
+   "after_vs_freelancer_pct": 13.7,
+   "causes_m2_his_minus_ours": {
+    "RULE_DIFFERENCE dome footprints +9.70 (2 openings, B4 rings) : his row gross": 30.718026,
+    "RULE_DIFFERENCE DOME-3 footprint +13.90 (S0 shell on the slab) : his row gross": 15.274758,
+    "TOLERANCE +9.70 membrane line vs face less exact dome discs (band 0.1575 = arc gain)": 0.0,
+    "TOLERANCE annex corner arc discretisation (55.559 vs exact 55.560)": 0.001332,
+    "UNRESOLVED residual of his row (T-626, below 1 %)": 0.521668,
+    "ENGINE_RIGHT pool-court open-sky slab + ledge +5.50 (membrane, not in his row)": -5.546867,
+    "RULE_DIFFERENCE dome extrados (3 shells, curved area) : not in his row": -80.055006
+   },
+   "like_for_like_note": "his 285 counts the dome footprints flat (45.99 m2 of plan); the curved shells are 80.06 m2: the +34.06 m2 is the curvature, a RULE_DIFFERENCE, not an error either side"
+  },
+  "roof_finish_m2": {
+   "unchanged": 238.484216,
+   "why": "the flat-roof tile finish does not sit on a shell"
+  },
+  "rolls_pcs": 12
+ },
+ "beside": {
+  "arch_hemisphere_alternative_m2": {
+   "per_dome": 30.549004,
+   "total": 91.647012,
+   "when": "the designer confirms the domes are built to the architect's hemisphere outline (r 2.205, rise = r) instead of the ST 4.42 / 1.90 section: +3.86 m2 per dome per layer (D-DOME)"
+  },
+  "intrados_check": "FIN.DOME.SOFFIT 24.150 m2 per dome (T-768, inner cap R - 0.10, h - 0.10) < extrados 26.685: consistent shell, outer minus inner = 2.535 m2",
+  "screed_insulation_on_shell": "not printed on any section; not added (company default stops at the flat roof); D-DOME asks the build-up",
+  "ring_beam_outer_face": "the exposed ring / drum face between the roof and the springing is the base upturn (lm) of T-780, not part of the extrados"
+ },
+ "surfaces": {
+  "DOME-A": {
+   "concrete_line": "L-8ea34765d16b54898140",
+   "plan_circle": "DOME-W (12EB, +9.70 roof)",
+   "chord_m": 4.42,
+   "rise_m": 1.9,
+   "R_m": 2.235289,
+   "extrados_m2": 26.685002,
+   "label": "DRAWING-READ"
+  },
+  "DOME-B": {
+   "concrete_line": "L-fffa895ed96b9d6a682c",
+   "plan_circle": "DOME-E (2F33, +9.70 roof)",
+   "chord_m": 4.42,
+   "rise_m": 1.9,
+   "R_m": 2.235289,
+   "extrados_m2": 26.685002,
+   "label": "DRAWING-READ"
+  },
+  "DOME-3": {
+   "concrete_line": "L-d5401fa8986900c66c37",
+   "plan_circle": "DOME-3 (1300, +13.90 top roof)",
+   "chord_m": 4.42,
+   "rise_m": 1.9,
+   "R_m": 2.235289,
+   "extrados_m2": 26.685002,
+   "label": "DEFAULT"
+  }
+ },
+ "rows": [],
+ "new_lines": [
+  {
+   "family": "B8-06",
+   "line_id": "NEW:DOME:DOME-A:EXTRADOS:MEMBRANE",
+   "item_code": "FIN.WP.ROOF",
+   "unit": "m2",
+   "element_id": "DOME:DOME-A:EXTRADOS:MEMBRANE",
+   "label": "DEFAULT",
+   "basis": "DOME-A extrados membrane (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DRAWING-READ: ST p.7 DETAIL OF DOME printed for this dome (ST p.5 SEE DETAIL): outer chord 4.42 at the ring-beam top, rise 1.90 to the outer crown]; flat roof DOME-W (12EB, +9.70 roof) footprint already deducted with its base upturn (T-780): no double count",
+   "net": 26.685002
+  },
+  {
+   "family": "B13-01",
+   "line_id": "NEW:DOME:DOME-A:EXTRADOS:PROTECTION",
+   "item_code": "FIN.ROOF.PROTECTION",
+   "unit": "m2",
+   "element_id": "DOME:DOME-A:EXTRADOS:PROTECTION",
+   "label": "DEFAULT",
+   "basis": "DOME-A extrados protection (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DRAWING-READ: ST p.7 DETAIL OF DOME printed for this dome (ST p.5 SEE DETAIL): outer chord 4.42 at the ring-beam top, rise 1.90 to the outer crown]; flat roof DOME-W (12EB, +9.70 roof) footprint already deducted with its base upturn (T-780): no double count",
+   "net": 26.685002
+  },
+  {
+   "family": "B8-06",
+   "line_id": "NEW:DOME:DOME-B:EXTRADOS:MEMBRANE",
+   "item_code": "FIN.WP.ROOF",
+   "unit": "m2",
+   "element_id": "DOME:DOME-B:EXTRADOS:MEMBRANE",
+   "label": "DEFAULT",
+   "basis": "DOME-B extrados membrane (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DRAWING-READ: ST p.7 DETAIL OF DOME printed for this dome (ST p.5 SEE DETAIL): outer chord 4.42 at the ring-beam top, rise 1.90 to the outer crown]; flat roof DOME-E (2F33, +9.70 roof) footprint already deducted with its base upturn (T-780): no double count",
+   "net": 26.685002
+  },
+  {
+   "family": "B13-01",
+   "line_id": "NEW:DOME:DOME-B:EXTRADOS:PROTECTION",
+   "item_code": "FIN.ROOF.PROTECTION",
+   "unit": "m2",
+   "element_id": "DOME:DOME-B:EXTRADOS:PROTECTION",
+   "label": "DEFAULT",
+   "basis": "DOME-B extrados protection (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DRAWING-READ: ST p.7 DETAIL OF DOME printed for this dome (ST p.5 SEE DETAIL): outer chord 4.42 at the ring-beam top, rise 1.90 to the outer crown]; flat roof DOME-E (2F33, +9.70 roof) footprint already deducted with its base upturn (T-780): no double count",
+   "net": 26.685002
+  },
+  {
+   "family": "B8-06",
+   "line_id": "NEW:DOME:DOME-3:EXTRADOS:MEMBRANE",
+   "item_code": "FIN.WP.ROOF",
+   "unit": "m2",
+   "element_id": "DOME:DOME-3:EXTRADOS:MEMBRANE",
+   "label": "DEFAULT",
+   "basis": "DOME-3 extrados membrane (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DEFAULT: no structural section for the 2F dome (D-21); the architect draws it with the identical outline as the +9.70 domes (elevation polyline 4140.0 apart, same 4.41 width), so the only printed shell 4.42 / 1.90 applies, as on its concrete line L-d5401fa8 (T-761); the elevation 2.15 is the part above the +14.40 parapet top, not the rise (T-780 beside read it as a rise: 29.80 refused)]; flat roof DOME-3 (1300, +13.90 top roof) footprint already deducted with its base upturn (T-780): no double count",
+   "net": 26.685002
+  },
+  {
+   "family": "B13-01",
+   "line_id": "NEW:DOME:DOME-3:EXTRADOS:PROTECTION",
+   "item_code": "FIN.ROOF.PROTECTION",
+   "unit": "m2",
+   "element_id": "DOME:DOME-3:EXTRADOS:PROTECTION",
+   "label": "DEFAULT",
+   "basis": "DOME-3 extrados protection (company roof default on the shell; screed / insulation / tile finish not printed on a shell, designer item D-DOME): pi (2.21^2 + 1.90^2) = 26.685 m2 [DEFAULT: no structural section for the 2F dome (D-21); the architect draws it with the identical outline as the +9.70 domes (elevation polyline 4140.0 apart, same 4.41 width), so the only printed shell 4.42 / 1.90 applies, as on its concrete line L-d5401fa8 (T-761); the elevation 2.15 is the part above the +14.40 parapet top, not the rise (T-780 beside read it as a rise: 29.80 refused)]; flat roof DOME-3 (1300, +13.90 top roof) footprint already deducted with its base upturn (T-780): no double count",
+   "net": 26.685002
+  },
+  {
+   "family": "B8-05",
+   "line_id": "NEW:DOME:ALL:EXTRADOS:wp_rolls_to_buy",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "unit": "pcs",
+   "element_id": "DOME:ALL:EXTRADOS:wp_rolls_to_buy",
+   "label": "ESTIMATE",
+   "basis": "3 dome extrados 80.055 m2 x 8 rolls / 55.559 m2 (T-764 / T-780 method) = 11.53 -> 12 rolls",
+   "net": 12.0
+  }
+ ]
+}
