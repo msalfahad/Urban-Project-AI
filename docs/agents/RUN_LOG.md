@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-14T09:50Z | Verifier | STARTED | run session_01E6cPnaoNY2qJKy8PbwesTu | repo-attached routine | task state: per run log T-787 READY (W1) | self-check pending
 - 2026-11-14T09:28Z | Worker 1 | SUCCESS | T-787 READY 68d6ab42 | Drive OK. Dome extrados: 3 domes w/o line -> 0; ST p.7 chord 4.42 / rise 1.90 -> pi(2.21^2+1.90^2) = 26.685 m2 per dome (DOME-3 by identical arch outline, DEFAULT); 7 NEW lines (membrane + protection 80.06 m2 each, 12 rolls), 0 changed. T-780's ~83.2 used the 2F dome's elevation height 2.15 above the +14.40 parapet as a rise. Roof membrane 244.03 -> 324.09 vs freelancer 285 (+13.7 %) = dome curvature +34.06 RULE_DIFFERENCE. Designer item 19 D-DOME added. | self-check codemap PASS, pytest t061 PASS, freeze PASS; t787 + t780 tests pass, freeze 0; problem: none
 - 2026-11-14T09:20Z | Worker 1 | STARTED | run session_01E6cPndSBQsrFaZdZ8Tjx7r | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-14T09:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
