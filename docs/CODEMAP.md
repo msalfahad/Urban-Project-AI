@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 20 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 749 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 750 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 6189 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 6192 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 96 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2756 | pytest suites, one folder per round. |
+| `tests/` | 2758 | pytest suites, one folder per round. |
 | `tools/` | 120 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (396 modules)
+## `engine/source/` (397 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -557,7 +557,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `door_standards.py` | 671 | MEDIUM | 7 | DOOR STANDARDS AND SCENARIOS (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner door rules of the knowledge |
 | `door_transition.py` | 124 | MEDIUM | 4 | DOOR FINISH TRANSITION (R8.14) - where one floor finish meets another inside a door threshold, as a TRADE |
 | `drawing_inventory.py` | 280 | CRITICAL | 5 | DRAWING INVENTORY (M1) - what a DXF holds, before any quantity (generic). |
-| `drawing_model.py` | 309 | CRITICAL | 21 | DRAWING MODEL (M2) - a normalized, source-pointed model of one structural drawing set (generic, stdlib). |
+| `drawing_model.py` | 309 | CRITICAL | 22 | DRAWING MODEL (M2) - a normalized, source-pointed model of one structural drawing set (generic, stdlib). |
 | `element_continuity_v1.py` | 354 | MEDIUM | 1 | ELEMENT_CONTINUITY_V1 (T-188, residential review R2 + R3): element inventory across disciplines and storey continuity. |
 | `element_register_v0.py` | 607 | MEDIUM | 2 | ELEMENT REGISTER V0 (T-134; owner management decision 2026-10-20 §4; design docs/agents/ELEMENT_REGISTER.md). |
 | `elevation_binding.py` | 134 | CRITICAL | 2 | ELEVATION BINDING - which physical object a dimension printed on an elevation or section measures (generic). |
@@ -704,8 +704,9 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rule_store_v2.py` | 186 | MEDIUM | 3 | RULE STORE V2 (T-461, owner directive 2026-11-02 C6 (d)) - registers and resolves every URBAN_RULES overlay version |
 | `run_manifest.py` | 180 | MEDIUM | 6 | QTO RUN MANIFEST (R8.11): every result names the exact inputs, claims, policies and method that produced it. |
 | `schedule_grammar.py` | 98 | CRITICAL | 7 | SCHEDULE_GRAMMAR - reinforcement text grammar and schedule-cell provenance for machine-readable (attributed) |
-| `schedule_reader.py` | 352 | CRITICAL | 7 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
+| `schedule_reader.py` | 352 | CRITICAL | 8 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
 | `schedule_table.py` | 181 | MEDIUM | 3 | SCHEDULE TABLE READER (V1) - a drawn schedule (grid lines + values) as rows and cells, fail closed. |
+| `schedule_tables_v1.py` | 335 | MEDIUM | 1 | SCHEDULE TABLES (V1) - schedule-first structure: a structural schedule read as a TABLE, its marks bound to plan |
 | `scope_crosswalk_v1.py` | 397 | MEDIUM | 2 | SCOPE CROSSWALK V1 (T-196; residential review R7, PROJECT_UNDERSTANDING_ASSESSMENT s.6): BOQ scope against the |
 | `scope_quantities.py` | 1377 | CRITICAL | 4 | SCOPE QUANTITIES (M8) - the scope a completeness finding locates, measured from the drawn plan or bounded by a |
 | `section_binding.py` | 461 | MEDIUM | 3 | SECTION BINDING V1 (T-013) - bind the level bands of sections / elevations to the plan floors, and report per floor |
@@ -1760,6 +1761,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t777_beam_compare/` | 1 |
 | `tests/t778_nonbeam_compare/` | 1 |
 | `tests/t780_roof_layers/` | 1 |
+| `tests/t784_schedule_tables/` | 1 |
 | `tests/t785_wet_wp_compare/` | 1 |
 | `tests/t787_dome_extrados/` | 1 |
 | `tests/t789_parapet_masonry/` | 1 |
@@ -2528,6 +2530,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t778/` | 3 |
 | `research/agents_t779/` | 4 |
 | `research/agents_t780/` | 4 |
+| `research/agents_t784/` | 3 |
 | `research/agents_t785/` | 4 |
 | `research/agents_t787/` | 4 |
 | `research/agents_t789/` | 4 |

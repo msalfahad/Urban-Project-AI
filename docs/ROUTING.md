@@ -201,9 +201,9 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 
 **Open first:**
 
-- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 7 directly, 362 transitively)
+- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 8 directly, 364 transitively)
 - `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 10 directly, 441 transitively, SHARED)
-- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 371 transitively)
+- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 373 transitively)
 - `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 389 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/release_safety.py`
